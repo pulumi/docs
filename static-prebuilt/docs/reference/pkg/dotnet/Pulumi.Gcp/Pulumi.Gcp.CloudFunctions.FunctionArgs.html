@@ -76,36 +76,7 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
-    <div class="level3"><span class="xref">FunctionArgs</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">FunctionArgs</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.CloudFunctions.html">Pulumi.Gcp.CloudFunctions</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
@@ -116,7 +87,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Cloudfunctions/Function.cs/#L318">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/CloudFunctions/Function.cs/#L340">View Source</a>
   </span>
   <a id="Pulumi_Gcp_CloudFunctions_FunctionArgs__ctor_" data-uid="Pulumi.Gcp.CloudFunctions.FunctionArgs.#ctor*"></a>
   <h4 id="Pulumi_Gcp_CloudFunctions_FunctionArgs__ctor" data-uid="Pulumi.Gcp.CloudFunctions.FunctionArgs.#ctor">FunctionArgs()</h4>
@@ -129,7 +100,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Cloudfunctions/Function.cs/#L193">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/CloudFunctions/Function.cs/#L203">View Source</a>
   </span>
   <a id="Pulumi_Gcp_CloudFunctions_FunctionArgs_AvailableMemoryMb_" data-uid="Pulumi.Gcp.CloudFunctions.FunctionArgs.AvailableMemoryMb*"></a>
   <h4 id="Pulumi_Gcp_CloudFunctions_FunctionArgs_AvailableMemoryMb" data-uid="Pulumi.Gcp.CloudFunctions.FunctionArgs.AvailableMemoryMb">AvailableMemoryMb</h4>
@@ -138,7 +109,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; AvailableMemoryMb { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? AvailableMemoryMb { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -150,13 +121,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Cloudfunctions/Function.cs/#L199">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/CloudFunctions/Function.cs/#L209">View Source</a>
   </span>
   <a id="Pulumi_Gcp_CloudFunctions_FunctionArgs_Description_" data-uid="Pulumi.Gcp.CloudFunctions.FunctionArgs.Description*"></a>
   <h4 id="Pulumi_Gcp_CloudFunctions_FunctionArgs_Description" data-uid="Pulumi.Gcp.CloudFunctions.FunctionArgs.Description">Description</h4>
@@ -165,7 +136,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Description { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Description { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -177,13 +148,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Cloudfunctions/Function.cs/#L205">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/CloudFunctions/Function.cs/#L215">View Source</a>
   </span>
   <a id="Pulumi_Gcp_CloudFunctions_FunctionArgs_EntryPoint_" data-uid="Pulumi.Gcp.CloudFunctions.FunctionArgs.EntryPoint*"></a>
   <h4 id="Pulumi_Gcp_CloudFunctions_FunctionArgs_EntryPoint" data-uid="Pulumi.Gcp.CloudFunctions.FunctionArgs.EntryPoint">EntryPoint</h4>
@@ -192,7 +163,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; EntryPoint { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? EntryPoint { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -204,13 +175,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Cloudfunctions/Function.cs/#L214">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/CloudFunctions/Function.cs/#L224">View Source</a>
   </span>
   <a id="Pulumi_Gcp_CloudFunctions_FunctionArgs_EnvironmentVariables_" data-uid="Pulumi.Gcp.CloudFunctions.FunctionArgs.EnvironmentVariables*"></a>
   <h4 id="Pulumi_Gcp_CloudFunctions_FunctionArgs_EnvironmentVariables" data-uid="Pulumi.Gcp.CloudFunctions.FunctionArgs.EnvironmentVariables">EnvironmentVariables</h4>
@@ -231,13 +202,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputMap-1.html">InputMap</a>&lt;<span class="xref">System.Object</span>&gt;</td>
+        <td><span class="xref">InputMap</span>&lt;<span class="xref">System.Object</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Cloudfunctions/Function.cs/#L223">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/CloudFunctions/Function.cs/#L233">View Source</a>
   </span>
   <a id="Pulumi_Gcp_CloudFunctions_FunctionArgs_EventTrigger_" data-uid="Pulumi.Gcp.CloudFunctions.FunctionArgs.EventTrigger*"></a>
   <h4 id="Pulumi_Gcp_CloudFunctions_FunctionArgs_EventTrigger" data-uid="Pulumi.Gcp.CloudFunctions.FunctionArgs.EventTrigger">EventTrigger</h4>
@@ -246,7 +217,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;FunctionEventTriggerArgs&gt; EventTrigger { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;FunctionEventTriggerArgs&gt;? EventTrigger { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -258,13 +229,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Gcp.CloudFunctions.Inputs.FunctionEventTriggerArgs.html">FunctionEventTriggerArgs</a>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Gcp.CloudFunctions.Inputs.FunctionEventTriggerArgs.html">FunctionEventTriggerArgs</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Cloudfunctions/Function.cs/#L229">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/CloudFunctions/Function.cs/#L239">View Source</a>
   </span>
   <a id="Pulumi_Gcp_CloudFunctions_FunctionArgs_HttpsTriggerUrl_" data-uid="Pulumi.Gcp.CloudFunctions.FunctionArgs.HttpsTriggerUrl*"></a>
   <h4 id="Pulumi_Gcp_CloudFunctions_FunctionArgs_HttpsTriggerUrl" data-uid="Pulumi.Gcp.CloudFunctions.FunctionArgs.HttpsTriggerUrl">HttpsTriggerUrl</h4>
@@ -273,7 +244,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; HttpsTriggerUrl { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? HttpsTriggerUrl { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -285,13 +256,40 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Cloudfunctions/Function.cs/#L238">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/CloudFunctions/Function.cs/#L245">View Source</a>
+  </span>
+  <a id="Pulumi_Gcp_CloudFunctions_FunctionArgs_IngressSettings_" data-uid="Pulumi.Gcp.CloudFunctions.FunctionArgs.IngressSettings*"></a>
+  <h4 id="Pulumi_Gcp_CloudFunctions_FunctionArgs_IngressSettings" data-uid="Pulumi.Gcp.CloudFunctions.FunctionArgs.IngressSettings">IngressSettings</h4>
+  <div class="markdown level1 summary"><p>String value that controls what traffic can reach the function. Allowed values are ALLOW_ALL and ALLOW_INTERNAL_ONLY. Changes to this field will recreate the cloud function.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? IngressSettings { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/CloudFunctions/Function.cs/#L254">View Source</a>
   </span>
   <a id="Pulumi_Gcp_CloudFunctions_FunctionArgs_Labels_" data-uid="Pulumi.Gcp.CloudFunctions.FunctionArgs.Labels*"></a>
   <h4 id="Pulumi_Gcp_CloudFunctions_FunctionArgs_Labels" data-uid="Pulumi.Gcp.CloudFunctions.FunctionArgs.Labels">Labels</h4>
@@ -312,13 +310,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputMap-1.html">InputMap</a>&lt;<span class="xref">System.Object</span>&gt;</td>
+        <td><span class="xref">InputMap</span>&lt;<span class="xref">System.Object</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Cloudfunctions/Function.cs/#L247">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/CloudFunctions/Function.cs/#L263">View Source</a>
   </span>
   <a id="Pulumi_Gcp_CloudFunctions_FunctionArgs_MaxInstances_" data-uid="Pulumi.Gcp.CloudFunctions.FunctionArgs.MaxInstances*"></a>
   <h4 id="Pulumi_Gcp_CloudFunctions_FunctionArgs_MaxInstances" data-uid="Pulumi.Gcp.CloudFunctions.FunctionArgs.MaxInstances">MaxInstances</h4>
@@ -327,7 +325,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; MaxInstances { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? MaxInstances { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -339,13 +337,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Cloudfunctions/Function.cs/#L253">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/CloudFunctions/Function.cs/#L269">View Source</a>
   </span>
   <a id="Pulumi_Gcp_CloudFunctions_FunctionArgs_Name_" data-uid="Pulumi.Gcp.CloudFunctions.FunctionArgs.Name*"></a>
   <h4 id="Pulumi_Gcp_CloudFunctions_FunctionArgs_Name" data-uid="Pulumi.Gcp.CloudFunctions.FunctionArgs.Name">Name</h4>
@@ -354,7 +352,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Name { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Name { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -366,13 +364,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Cloudfunctions/Function.cs/#L259">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/CloudFunctions/Function.cs/#L275">View Source</a>
   </span>
   <a id="Pulumi_Gcp_CloudFunctions_FunctionArgs_Project_" data-uid="Pulumi.Gcp.CloudFunctions.FunctionArgs.Project*"></a>
   <h4 id="Pulumi_Gcp_CloudFunctions_FunctionArgs_Project" data-uid="Pulumi.Gcp.CloudFunctions.FunctionArgs.Project">Project</h4>
@@ -381,7 +379,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Project { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Project { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -393,13 +391,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Cloudfunctions/Function.cs/#L265">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/CloudFunctions/Function.cs/#L281">View Source</a>
   </span>
   <a id="Pulumi_Gcp_CloudFunctions_FunctionArgs_Region_" data-uid="Pulumi.Gcp.CloudFunctions.FunctionArgs.Region*"></a>
   <h4 id="Pulumi_Gcp_CloudFunctions_FunctionArgs_Region" data-uid="Pulumi.Gcp.CloudFunctions.FunctionArgs.Region">Region</h4>
@@ -408,7 +406,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Region { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Region { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -420,13 +418,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Cloudfunctions/Function.cs/#L272">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/CloudFunctions/Function.cs/#L288">View Source</a>
   </span>
   <a id="Pulumi_Gcp_CloudFunctions_FunctionArgs_Runtime_" data-uid="Pulumi.Gcp.CloudFunctions.FunctionArgs.Runtime*"></a>
   <h4 id="Pulumi_Gcp_CloudFunctions_FunctionArgs_Runtime" data-uid="Pulumi.Gcp.CloudFunctions.FunctionArgs.Runtime">Runtime</h4>
@@ -448,13 +446,13 @@ Eg. <code>&amp;quot;nodejs8&amp;quot;</code>, <code>&amp;quot;nodejs10&amp;quot;
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Cloudfunctions/Function.cs/#L278">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/CloudFunctions/Function.cs/#L294">View Source</a>
   </span>
   <a id="Pulumi_Gcp_CloudFunctions_FunctionArgs_ServiceAccountEmail_" data-uid="Pulumi.Gcp.CloudFunctions.FunctionArgs.ServiceAccountEmail*"></a>
   <h4 id="Pulumi_Gcp_CloudFunctions_FunctionArgs_ServiceAccountEmail" data-uid="Pulumi.Gcp.CloudFunctions.FunctionArgs.ServiceAccountEmail">ServiceAccountEmail</h4>
@@ -463,7 +461,7 @@ Eg. <code>&amp;quot;nodejs8&amp;quot;</code>, <code>&amp;quot;nodejs10&amp;quot;
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; ServiceAccountEmail { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? ServiceAccountEmail { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -475,13 +473,13 @@ Eg. <code>&amp;quot;nodejs8&amp;quot;</code>, <code>&amp;quot;nodejs10&amp;quot;
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Cloudfunctions/Function.cs/#L284">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/CloudFunctions/Function.cs/#L300">View Source</a>
   </span>
   <a id="Pulumi_Gcp_CloudFunctions_FunctionArgs_SourceArchiveBucket_" data-uid="Pulumi.Gcp.CloudFunctions.FunctionArgs.SourceArchiveBucket*"></a>
   <h4 id="Pulumi_Gcp_CloudFunctions_FunctionArgs_SourceArchiveBucket" data-uid="Pulumi.Gcp.CloudFunctions.FunctionArgs.SourceArchiveBucket">SourceArchiveBucket</h4>
@@ -490,7 +488,7 @@ Eg. <code>&amp;quot;nodejs8&amp;quot;</code>, <code>&amp;quot;nodejs10&amp;quot;
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; SourceArchiveBucket { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? SourceArchiveBucket { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -502,13 +500,13 @@ Eg. <code>&amp;quot;nodejs8&amp;quot;</code>, <code>&amp;quot;nodejs10&amp;quot;
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Cloudfunctions/Function.cs/#L290">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/CloudFunctions/Function.cs/#L306">View Source</a>
   </span>
   <a id="Pulumi_Gcp_CloudFunctions_FunctionArgs_SourceArchiveObject_" data-uid="Pulumi.Gcp.CloudFunctions.FunctionArgs.SourceArchiveObject*"></a>
   <h4 id="Pulumi_Gcp_CloudFunctions_FunctionArgs_SourceArchiveObject" data-uid="Pulumi.Gcp.CloudFunctions.FunctionArgs.SourceArchiveObject">SourceArchiveObject</h4>
@@ -517,7 +515,7 @@ Eg. <code>&amp;quot;nodejs8&amp;quot;</code>, <code>&amp;quot;nodejs10&amp;quot;
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; SourceArchiveObject { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? SourceArchiveObject { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -529,13 +527,13 @@ Eg. <code>&amp;quot;nodejs8&amp;quot;</code>, <code>&amp;quot;nodejs10&amp;quot;
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Cloudfunctions/Function.cs/#L297">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/CloudFunctions/Function.cs/#L313">View Source</a>
   </span>
   <a id="Pulumi_Gcp_CloudFunctions_FunctionArgs_SourceRepository_" data-uid="Pulumi.Gcp.CloudFunctions.FunctionArgs.SourceRepository*"></a>
   <h4 id="Pulumi_Gcp_CloudFunctions_FunctionArgs_SourceRepository" data-uid="Pulumi.Gcp.CloudFunctions.FunctionArgs.SourceRepository">SourceRepository</h4>
@@ -545,7 +543,7 @@ Cannot be set alongside <code>source_archive_bucket</code> or <code>source_archi
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;FunctionSourceRepositoryArgs&gt; SourceRepository { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;FunctionSourceRepositoryArgs&gt;? SourceRepository { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -557,13 +555,13 @@ Cannot be set alongside <code>source_archive_bucket</code> or <code>source_archi
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Gcp.CloudFunctions.Inputs.FunctionSourceRepositoryArgs.html">FunctionSourceRepositoryArgs</a>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Gcp.CloudFunctions.Inputs.FunctionSourceRepositoryArgs.html">FunctionSourceRepositoryArgs</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Cloudfunctions/Function.cs/#L303">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/CloudFunctions/Function.cs/#L319">View Source</a>
   </span>
   <a id="Pulumi_Gcp_CloudFunctions_FunctionArgs_Timeout_" data-uid="Pulumi.Gcp.CloudFunctions.FunctionArgs.Timeout*"></a>
   <h4 id="Pulumi_Gcp_CloudFunctions_FunctionArgs_Timeout" data-uid="Pulumi.Gcp.CloudFunctions.FunctionArgs.Timeout">Timeout</h4>
@@ -572,7 +570,7 @@ Cannot be set alongside <code>source_archive_bucket</code> or <code>source_archi
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; Timeout { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? Timeout { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -584,13 +582,13 @@ Cannot be set alongside <code>source_archive_bucket</code> or <code>source_archi
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Cloudfunctions/Function.cs/#L309">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/CloudFunctions/Function.cs/#L325">View Source</a>
   </span>
   <a id="Pulumi_Gcp_CloudFunctions_FunctionArgs_TriggerHttp_" data-uid="Pulumi.Gcp.CloudFunctions.FunctionArgs.TriggerHttp*"></a>
   <h4 id="Pulumi_Gcp_CloudFunctions_FunctionArgs_TriggerHttp" data-uid="Pulumi.Gcp.CloudFunctions.FunctionArgs.TriggerHttp">TriggerHttp</h4>
@@ -599,7 +597,7 @@ Cannot be set alongside <code>source_archive_bucket</code> or <code>source_archi
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; TriggerHttp { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? TriggerHttp { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -611,13 +609,13 @@ Cannot be set alongside <code>source_archive_bucket</code> or <code>source_archi
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Cloudfunctions/Function.cs/#L315">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/CloudFunctions/Function.cs/#L331">View Source</a>
   </span>
   <a id="Pulumi_Gcp_CloudFunctions_FunctionArgs_VpcConnector_" data-uid="Pulumi.Gcp.CloudFunctions.FunctionArgs.VpcConnector*"></a>
   <h4 id="Pulumi_Gcp_CloudFunctions_FunctionArgs_VpcConnector" data-uid="Pulumi.Gcp.CloudFunctions.FunctionArgs.VpcConnector">VpcConnector</h4>
@@ -626,7 +624,7 @@ Cannot be set alongside <code>source_archive_bucket</code> or <code>source_archi
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; VpcConnector { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? VpcConnector { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -638,7 +636,34 @@ Cannot be set alongside <code>source_archive_bucket</code> or <code>source_archi
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/CloudFunctions/Function.cs/#L337">View Source</a>
+  </span>
+  <a id="Pulumi_Gcp_CloudFunctions_FunctionArgs_VpcConnectorEgressSettings_" data-uid="Pulumi.Gcp.CloudFunctions.FunctionArgs.VpcConnectorEgressSettings*"></a>
+  <h4 id="Pulumi_Gcp_CloudFunctions_FunctionArgs_VpcConnectorEgressSettings" data-uid="Pulumi.Gcp.CloudFunctions.FunctionArgs.VpcConnectorEgressSettings">VpcConnectorEgressSettings</h4>
+  <div class="markdown level1 summary"><p>The egress settings for the connector, controlling what traffic is diverted through it. Allowed values are <code>ALL_TRAFFIC</code> and <code>PRIVATE_RANGES_ONLY</code>. Defaults to <code>PRIVATE_RANGES_ONLY</code>. If unset, this field preserves the previously set value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? VpcConnectorEgressSettings { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -650,7 +675,7 @@ Cannot be set alongside <code>source_archive_bucket</code> or <code>source_archi
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Cloudfunctions/Function.cs/#L188" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/CloudFunctions/Function.cs/#L198" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

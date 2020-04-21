@@ -76,36 +76,7 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
-    <div class="level3"><span class="xref">SqlServerState</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">SqlServerState</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Azure.Sql.html">Pulumi.Azure.Sql</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Azure.dll</h6>
@@ -116,7 +87,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Sql/SqlServer.cs/#L261">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Sql/SqlServer.cs/#L274">View Source</a>
   </span>
   <a id="Pulumi_Azure_Sql_SqlServerState__ctor_" data-uid="Pulumi.Azure.Sql.SqlServerState.#ctor*"></a>
   <h4 id="Pulumi_Azure_Sql_SqlServerState__ctor" data-uid="Pulumi.Azure.Sql.SqlServerState.#ctor">SqlServerState()</h4>
@@ -129,7 +100,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Sql/SqlServer.cs/#L198">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Sql/SqlServer.cs/#L205">View Source</a>
   </span>
   <a id="Pulumi_Azure_Sql_SqlServerState_AdministratorLogin_" data-uid="Pulumi.Azure.Sql.SqlServerState.AdministratorLogin*"></a>
   <h4 id="Pulumi_Azure_Sql_SqlServerState_AdministratorLogin" data-uid="Pulumi.Azure.Sql.SqlServerState.AdministratorLogin">AdministratorLogin</h4>
@@ -138,7 +109,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; AdministratorLogin { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? AdministratorLogin { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -150,13 +121,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Sql/SqlServer.cs/#L204">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Sql/SqlServer.cs/#L211">View Source</a>
   </span>
   <a id="Pulumi_Azure_Sql_SqlServerState_AdministratorLoginPassword_" data-uid="Pulumi.Azure.Sql.SqlServerState.AdministratorLoginPassword*"></a>
   <h4 id="Pulumi_Azure_Sql_SqlServerState_AdministratorLoginPassword" data-uid="Pulumi.Azure.Sql.SqlServerState.AdministratorLoginPassword">AdministratorLoginPassword</h4>
@@ -165,7 +136,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; AdministratorLoginPassword { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? AdministratorLoginPassword { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -177,13 +148,40 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Sql/SqlServer.cs/#L210">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Sql/SqlServer.cs/#L217">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_Sql_SqlServerState_ConnectionPolicy_" data-uid="Pulumi.Azure.Sql.SqlServerState.ConnectionPolicy*"></a>
+  <h4 id="Pulumi_Azure_Sql_SqlServerState_ConnectionPolicy" data-uid="Pulumi.Azure.Sql.SqlServerState.ConnectionPolicy">ConnectionPolicy</h4>
+  <div class="markdown level1 summary"><p>The connection policy the server will use. Possible values are <code>Default</code>, <code>Proxy</code>, and <code>Redirect</code>. Defaults to <code>Default</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? ConnectionPolicy { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Sql/SqlServer.cs/#L223">View Source</a>
   </span>
   <a id="Pulumi_Azure_Sql_SqlServerState_ExtendedAuditingPolicy_" data-uid="Pulumi.Azure.Sql.SqlServerState.ExtendedAuditingPolicy*"></a>
   <h4 id="Pulumi_Azure_Sql_SqlServerState_ExtendedAuditingPolicy" data-uid="Pulumi.Azure.Sql.SqlServerState.ExtendedAuditingPolicy">ExtendedAuditingPolicy</h4>
@@ -192,7 +190,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;SqlServerExtendedAuditingPolicyGetArgs&gt; ExtendedAuditingPolicy { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;SqlServerExtendedAuditingPolicyGetArgs&gt;? ExtendedAuditingPolicy { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -204,13 +202,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Azure.Sql.Inputs.SqlServerExtendedAuditingPolicyGetArgs.html">SqlServerExtendedAuditingPolicyGetArgs</a>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Azure.Sql.Inputs.SqlServerExtendedAuditingPolicyGetArgs.html">SqlServerExtendedAuditingPolicyGetArgs</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Sql/SqlServer.cs/#L216">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Sql/SqlServer.cs/#L229">View Source</a>
   </span>
   <a id="Pulumi_Azure_Sql_SqlServerState_FullyQualifiedDomainName_" data-uid="Pulumi.Azure.Sql.SqlServerState.FullyQualifiedDomainName*"></a>
   <h4 id="Pulumi_Azure_Sql_SqlServerState_FullyQualifiedDomainName" data-uid="Pulumi.Azure.Sql.SqlServerState.FullyQualifiedDomainName">FullyQualifiedDomainName</h4>
@@ -219,7 +217,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; FullyQualifiedDomainName { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? FullyQualifiedDomainName { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -231,13 +229,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Sql/SqlServer.cs/#L222">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Sql/SqlServer.cs/#L235">View Source</a>
   </span>
   <a id="Pulumi_Azure_Sql_SqlServerState_Identity_" data-uid="Pulumi.Azure.Sql.SqlServerState.Identity*"></a>
   <h4 id="Pulumi_Azure_Sql_SqlServerState_Identity" data-uid="Pulumi.Azure.Sql.SqlServerState.Identity">Identity</h4>
@@ -246,7 +244,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;SqlServerIdentityGetArgs&gt; Identity { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;SqlServerIdentityGetArgs&gt;? Identity { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -258,13 +256,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Azure.Sql.Inputs.SqlServerIdentityGetArgs.html">SqlServerIdentityGetArgs</a>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Azure.Sql.Inputs.SqlServerIdentityGetArgs.html">SqlServerIdentityGetArgs</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Sql/SqlServer.cs/#L228">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Sql/SqlServer.cs/#L241">View Source</a>
   </span>
   <a id="Pulumi_Azure_Sql_SqlServerState_Location_" data-uid="Pulumi.Azure.Sql.SqlServerState.Location*"></a>
   <h4 id="Pulumi_Azure_Sql_SqlServerState_Location" data-uid="Pulumi.Azure.Sql.SqlServerState.Location">Location</h4>
@@ -273,7 +271,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Location { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Location { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -285,13 +283,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Sql/SqlServer.cs/#L234">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Sql/SqlServer.cs/#L247">View Source</a>
   </span>
   <a id="Pulumi_Azure_Sql_SqlServerState_Name_" data-uid="Pulumi.Azure.Sql.SqlServerState.Name*"></a>
   <h4 id="Pulumi_Azure_Sql_SqlServerState_Name" data-uid="Pulumi.Azure.Sql.SqlServerState.Name">Name</h4>
@@ -300,7 +298,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Name { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Name { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -312,13 +310,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Sql/SqlServer.cs/#L240">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Sql/SqlServer.cs/#L253">View Source</a>
   </span>
   <a id="Pulumi_Azure_Sql_SqlServerState_ResourceGroupName_" data-uid="Pulumi.Azure.Sql.SqlServerState.ResourceGroupName*"></a>
   <h4 id="Pulumi_Azure_Sql_SqlServerState_ResourceGroupName" data-uid="Pulumi.Azure.Sql.SqlServerState.ResourceGroupName">ResourceGroupName</h4>
@@ -327,7 +325,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; ResourceGroupName { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? ResourceGroupName { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -339,13 +337,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Sql/SqlServer.cs/#L249">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Sql/SqlServer.cs/#L262">View Source</a>
   </span>
   <a id="Pulumi_Azure_Sql_SqlServerState_Tags_" data-uid="Pulumi.Azure.Sql.SqlServerState.Tags*"></a>
   <h4 id="Pulumi_Azure_Sql_SqlServerState_Tags" data-uid="Pulumi.Azure.Sql.SqlServerState.Tags">Tags</h4>
@@ -366,13 +364,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputMap-1.html">InputMap</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">InputMap</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Sql/SqlServer.cs/#L258">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Sql/SqlServer.cs/#L271">View Source</a>
   </span>
   <a id="Pulumi_Azure_Sql_SqlServerState_Version_" data-uid="Pulumi.Azure.Sql.SqlServerState.Version*"></a>
   <h4 id="Pulumi_Azure_Sql_SqlServerState_Version" data-uid="Pulumi.Azure.Sql.SqlServerState.Version">Version</h4>
@@ -381,7 +379,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Version { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Version { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -393,7 +391,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -405,7 +403,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Sql/SqlServer.cs/#L193" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Sql/SqlServer.cs/#L200" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

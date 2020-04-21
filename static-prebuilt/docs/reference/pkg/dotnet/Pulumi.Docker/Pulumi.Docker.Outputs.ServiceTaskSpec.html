@@ -78,40 +78,16 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">ServiceTaskSpec</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Docker.Outputs.html">Pulumi.Docker.Outputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Docker.dll</h6>
   <h5 id="Pulumi_Docker_Outputs_ServiceTaskSpec_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class ServiceTaskSpec</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class ServiceTaskSpec : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/Service.cs/#L2084">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/Outputs/ServiceTaskSpec.cs/#L16">View Source</a>
   </span>
   <h4 id="Pulumi_Docker_Outputs_ServiceTaskSpec_ContainerSpec" data-uid="Pulumi.Docker.Outputs.ServiceTaskSpec.ContainerSpec">ContainerSpec</h4>
   <div class="markdown level1 summary"></div>
@@ -136,14 +112,14 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/Service.cs/#L2085">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/Outputs/ServiceTaskSpec.cs/#L17">View Source</a>
   </span>
   <h4 id="Pulumi_Docker_Outputs_ServiceTaskSpec_ForceUpdate" data-uid="Pulumi.Docker.Outputs.ServiceTaskSpec.ForceUpdate">ForceUpdate</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly int ForceUpdate</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly int? ForceUpdate</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -155,16 +131,17 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Int32</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/Service.cs/#L2086">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/Outputs/ServiceTaskSpec.cs/#L21">View Source</a>
   </span>
   <h4 id="Pulumi_Docker_Outputs_ServiceTaskSpec_LogDriver" data-uid="Pulumi.Docker.Outputs.ServiceTaskSpec.LogDriver">LogDriver</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>See Log Driver below for details.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -186,10 +163,11 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/Service.cs/#L2087">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/Outputs/ServiceTaskSpec.cs/#L25">View Source</a>
   </span>
   <h4 id="Pulumi_Docker_Outputs_ServiceTaskSpec_Networks" data-uid="Pulumi.Docker.Outputs.ServiceTaskSpec.Networks">Networks</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Ids of the networks in which the container will be put in.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -205,13 +183,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/Service.cs/#L2088">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/Outputs/ServiceTaskSpec.cs/#L26">View Source</a>
   </span>
   <h4 id="Pulumi_Docker_Outputs_ServiceTaskSpec_Placement" data-uid="Pulumi.Docker.Outputs.ServiceTaskSpec.Placement">Placement</h4>
   <div class="markdown level1 summary"></div>
@@ -236,7 +214,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/Service.cs/#L2089">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/Outputs/ServiceTaskSpec.cs/#L27">View Source</a>
   </span>
   <h4 id="Pulumi_Docker_Outputs_ServiceTaskSpec_Resources" data-uid="Pulumi.Docker.Outputs.ServiceTaskSpec.Resources">Resources</h4>
   <div class="markdown level1 summary"></div>
@@ -261,7 +239,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/Service.cs/#L2090">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/Outputs/ServiceTaskSpec.cs/#L28">View Source</a>
   </span>
   <h4 id="Pulumi_Docker_Outputs_ServiceTaskSpec_RestartPolicy" data-uid="Pulumi.Docker.Outputs.ServiceTaskSpec.RestartPolicy">RestartPolicy</h4>
   <div class="markdown level1 summary"></div>
@@ -286,14 +264,14 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/Service.cs/#L2091">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/Outputs/ServiceTaskSpec.cs/#L29">View Source</a>
   </span>
   <h4 id="Pulumi_Docker_Outputs_ServiceTaskSpec_Runtime" data-uid="Pulumi.Docker.Outputs.ServiceTaskSpec.Runtime">Runtime</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string Runtime</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? Runtime</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -305,7 +283,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -317,7 +295,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/Service.cs/#L2081" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/Outputs/ServiceTaskSpec.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

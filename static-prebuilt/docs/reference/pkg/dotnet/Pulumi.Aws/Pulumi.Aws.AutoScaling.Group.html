@@ -118,53 +118,12 @@ for the proper number of instances to be healthy.</p>
 number of configuration problems. See the <a href="https://docs.aws.amazon.com/ElasticLoadBalancing/latest/DeveloperGuide/elb-troubleshooting.html">AWS Docs on Load Balancer
 Troubleshooting</a>
 for more information.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/autoscaling_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/autoscaling_group.html.markdown</a>.</p>
-</blockquote>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
-    <div class="level3"><span class="xref">Group</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">Group</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.AutoScaling.html">Pulumi.Aws.AutoScaling</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
@@ -175,16 +134,16 @@ for more information.</p>
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Autoscaling/Group.cs/#L304">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/AutoScaling/Group.cs/#L303">View Source</a>
   </span>
   <a id="Pulumi_Aws_AutoScaling_Group__ctor_" data-uid="Pulumi.Aws.AutoScaling.Group.#ctor*"></a>
-  <h4 id="Pulumi_Aws_AutoScaling_Group__ctor_System_String_Pulumi_Aws_AutoScaling_GroupArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.AutoScaling.Group.#ctor(System.String,Pulumi.Aws.AutoScaling.GroupArgs,Pulumi.CustomResourceOptions)">Group(String, GroupArgs, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Aws_AutoScaling_Group__ctor_System_String_Pulumi_Aws_AutoScaling_GroupArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.AutoScaling.Group.#ctor(System.String,Pulumi.Aws.AutoScaling.GroupArgs,System.Nullable{CustomResourceOptions})">Group(String, GroupArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Create a Group resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Group(string name, GroupArgs args, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Group(string name, GroupArgs args, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -209,7 +168,7 @@ for more information.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -219,7 +178,7 @@ for more information.</p>
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Autoscaling/Group.cs/#L86">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/AutoScaling/Group.cs/#L85">View Source</a>
   </span>
   <a id="Pulumi_Aws_AutoScaling_Group_Arn_" data-uid="Pulumi.Aws.AutoScaling.Group.Arn*"></a>
   <h4 id="Pulumi_Aws_AutoScaling_Group_Arn" data-uid="Pulumi.Aws.AutoScaling.Group.Arn">Arn</h4>
@@ -240,13 +199,13 @@ for more information.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Autoscaling/Group.cs/#L92">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/AutoScaling/Group.cs/#L91">View Source</a>
   </span>
   <a id="Pulumi_Aws_AutoScaling_Group_AvailabilityZones_" data-uid="Pulumi.Aws.AutoScaling.Group.AvailabilityZones*"></a>
   <h4 id="Pulumi_Aws_AutoScaling_Group_AvailabilityZones" data-uid="Pulumi.Aws.AutoScaling.Group.AvailabilityZones">AvailabilityZones</h4>
@@ -267,13 +226,13 @@ for more information.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Autoscaling/Group.cs/#L98">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/AutoScaling/Group.cs/#L97">View Source</a>
   </span>
   <a id="Pulumi_Aws_AutoScaling_Group_DefaultCooldown_" data-uid="Pulumi.Aws.AutoScaling.Group.DefaultCooldown*"></a>
   <h4 id="Pulumi_Aws_AutoScaling_Group_DefaultCooldown" data-uid="Pulumi.Aws.AutoScaling.Group.DefaultCooldown">DefaultCooldown</h4>
@@ -294,13 +253,13 @@ for more information.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Autoscaling/Group.cs/#L106">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/AutoScaling/Group.cs/#L105">View Source</a>
   </span>
   <a id="Pulumi_Aws_AutoScaling_Group_DesiredCapacity_" data-uid="Pulumi.Aws.AutoScaling.Group.DesiredCapacity*"></a>
   <h4 id="Pulumi_Aws_AutoScaling_Group_DesiredCapacity" data-uid="Pulumi.Aws.AutoScaling.Group.DesiredCapacity">DesiredCapacity</h4>
@@ -323,13 +282,13 @@ Capacity below.)</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Autoscaling/Group.cs/#L117">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/AutoScaling/Group.cs/#L116">View Source</a>
   </span>
   <a id="Pulumi_Aws_AutoScaling_Group_EnabledMetrics_" data-uid="Pulumi.Aws.AutoScaling.Group.EnabledMetrics*"></a>
   <h4 id="Pulumi_Aws_AutoScaling_Group_EnabledMetrics" data-uid="Pulumi.Aws.AutoScaling.Group.EnabledMetrics">EnabledMetrics</h4>
@@ -357,13 +316,13 @@ this provider to skip all Capacity Waiting behavior.</li>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Autoscaling/Group.cs/#L127">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/AutoScaling/Group.cs/#L126">View Source</a>
   </span>
   <a id="Pulumi_Aws_AutoScaling_Group_ForceDelete_" data-uid="Pulumi.Aws.AutoScaling.Group.ForceDelete*"></a>
   <h4 id="Pulumi_Aws_AutoScaling_Group_ForceDelete" data-uid="Pulumi.Aws.AutoScaling.Group.ForceDelete">ForceDelete</h4>
@@ -388,13 +347,13 @@ behavior and potentially leaves resources dangling.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Autoscaling/Group.cs/#L133">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/AutoScaling/Group.cs/#L132">View Source</a>
   </span>
   <a id="Pulumi_Aws_AutoScaling_Group_HealthCheckGracePeriod_" data-uid="Pulumi.Aws.AutoScaling.Group.HealthCheckGracePeriod*"></a>
   <h4 id="Pulumi_Aws_AutoScaling_Group_HealthCheckGracePeriod" data-uid="Pulumi.Aws.AutoScaling.Group.HealthCheckGracePeriod">HealthCheckGracePeriod</h4>
@@ -415,13 +374,13 @@ behavior and potentially leaves resources dangling.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Autoscaling/Group.cs/#L139">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/AutoScaling/Group.cs/#L138">View Source</a>
   </span>
   <a id="Pulumi_Aws_AutoScaling_Group_HealthCheckType_" data-uid="Pulumi.Aws.AutoScaling.Group.HealthCheckType*"></a>
   <h4 id="Pulumi_Aws_AutoScaling_Group_HealthCheckType" data-uid="Pulumi.Aws.AutoScaling.Group.HealthCheckType">HealthCheckType</h4>
@@ -442,13 +401,13 @@ behavior and potentially leaves resources dangling.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Autoscaling/Group.cs/#L151">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/AutoScaling/Group.cs/#L150">View Source</a>
   </span>
   <a id="Pulumi_Aws_AutoScaling_Group_InitialLifecycleHooks_" data-uid="Pulumi.Aws.AutoScaling.Group.InitialLifecycleHooks*"></a>
   <h4 id="Pulumi_Aws_AutoScaling_Group_InitialLifecycleHooks" data-uid="Pulumi.Aws.AutoScaling.Group.InitialLifecycleHooks">InitialLifecycleHooks</h4>
@@ -463,7 +422,7 @@ a new autoscaling group. For all other use-cases, please use <code>aws.autoscali
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;GroupInitialLifecycleHooks&gt;&gt; InitialLifecycleHooks { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;GroupInitialLifecycleHook&gt;&gt; InitialLifecycleHooks { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -475,13 +434,13 @@ a new autoscaling group. For all other use-cases, please use <code>aws.autoscali
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.AutoScaling.Outputs.GroupInitialLifecycleHooks.html">GroupInitialLifecycleHooks</a>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.AutoScaling.Outputs.GroupInitialLifecycleHook.html">GroupInitialLifecycleHook</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Autoscaling/Group.cs/#L157">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/AutoScaling/Group.cs/#L156">View Source</a>
   </span>
   <a id="Pulumi_Aws_AutoScaling_Group_LaunchConfiguration_" data-uid="Pulumi.Aws.AutoScaling.Group.LaunchConfiguration*"></a>
   <h4 id="Pulumi_Aws_AutoScaling_Group_LaunchConfiguration" data-uid="Pulumi.Aws.AutoScaling.Group.LaunchConfiguration">LaunchConfiguration</h4>
@@ -490,7 +449,7 @@ a new autoscaling group. For all other use-cases, please use <code>aws.autoscali
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; LaunchConfiguration { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; LaunchConfiguration { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -502,13 +461,13 @@ a new autoscaling group. For all other use-cases, please use <code>aws.autoscali
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Autoscaling/Group.cs/#L163">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/AutoScaling/Group.cs/#L162">View Source</a>
   </span>
   <a id="Pulumi_Aws_AutoScaling_Group_LaunchTemplate_" data-uid="Pulumi.Aws.AutoScaling.Group.LaunchTemplate*"></a>
   <h4 id="Pulumi_Aws_AutoScaling_Group_LaunchTemplate" data-uid="Pulumi.Aws.AutoScaling.Group.LaunchTemplate">LaunchTemplate</h4>
@@ -529,13 +488,13 @@ a new autoscaling group. For all other use-cases, please use <code>aws.autoscali
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Aws.AutoScaling.Outputs.GroupLaunchTemplate.html">GroupLaunchTemplate</a>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Aws.AutoScaling.Outputs.GroupLaunchTemplate.html">GroupLaunchTemplate</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Autoscaling/Group.cs/#L170">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/AutoScaling/Group.cs/#L169">View Source</a>
   </span>
   <a id="Pulumi_Aws_AutoScaling_Group_LoadBalancers_" data-uid="Pulumi.Aws.AutoScaling.Group.LoadBalancers*"></a>
   <h4 id="Pulumi_Aws_AutoScaling_Group_LoadBalancers" data-uid="Pulumi.Aws.AutoScaling.Group.LoadBalancers">LoadBalancers</h4>
@@ -557,13 +516,13 @@ group names. Only valid for classic load balancers. For ALBs, use <code>target_g
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Autoscaling/Group.cs/#L176">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/AutoScaling/Group.cs/#L175">View Source</a>
   </span>
   <a id="Pulumi_Aws_AutoScaling_Group_MaxInstanceLifetime_" data-uid="Pulumi.Aws.AutoScaling.Group.MaxInstanceLifetime*"></a>
   <h4 id="Pulumi_Aws_AutoScaling_Group_MaxInstanceLifetime" data-uid="Pulumi.Aws.AutoScaling.Group.MaxInstanceLifetime">MaxInstanceLifetime</h4>
@@ -584,13 +543,13 @@ group names. Only valid for classic load balancers. For ALBs, use <code>target_g
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Autoscaling/Group.cs/#L182">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/AutoScaling/Group.cs/#L181">View Source</a>
   </span>
   <a id="Pulumi_Aws_AutoScaling_Group_MaxSize_" data-uid="Pulumi.Aws.AutoScaling.Group.MaxSize*"></a>
   <h4 id="Pulumi_Aws_AutoScaling_Group_MaxSize" data-uid="Pulumi.Aws.AutoScaling.Group.MaxSize">MaxSize</h4>
@@ -611,13 +570,13 @@ group names. Only valid for classic load balancers. For ALBs, use <code>target_g
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Autoscaling/Group.cs/#L188">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/AutoScaling/Group.cs/#L187">View Source</a>
   </span>
   <a id="Pulumi_Aws_AutoScaling_Group_MetricsGranularity_" data-uid="Pulumi.Aws.AutoScaling.Group.MetricsGranularity*"></a>
   <h4 id="Pulumi_Aws_AutoScaling_Group_MetricsGranularity" data-uid="Pulumi.Aws.AutoScaling.Group.MetricsGranularity">MetricsGranularity</h4>
@@ -626,7 +585,7 @@ group names. Only valid for classic load balancers. For ALBs, use <code>target_g
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; MetricsGranularity { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; MetricsGranularity { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -638,13 +597,13 @@ group names. Only valid for classic load balancers. For ALBs, use <code>target_g
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Autoscaling/Group.cs/#L197">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/AutoScaling/Group.cs/#L196">View Source</a>
   </span>
   <a id="Pulumi_Aws_AutoScaling_Group_MinElbCapacity_" data-uid="Pulumi.Aws.AutoScaling.Group.MinElbCapacity*"></a>
   <h4 id="Pulumi_Aws_AutoScaling_Group_MinElbCapacity" data-uid="Pulumi.Aws.AutoScaling.Group.MinElbCapacity">MinElbCapacity</h4>
@@ -668,13 +627,13 @@ ELB only on creation. Updates will not wait on ELB instance number changes.
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Autoscaling/Group.cs/#L204">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/AutoScaling/Group.cs/#L203">View Source</a>
   </span>
   <a id="Pulumi_Aws_AutoScaling_Group_MinSize_" data-uid="Pulumi.Aws.AutoScaling.Group.MinSize*"></a>
   <h4 id="Pulumi_Aws_AutoScaling_Group_MinSize" data-uid="Pulumi.Aws.AutoScaling.Group.MinSize">MinSize</h4>
@@ -696,13 +655,13 @@ ELB only on creation. Updates will not wait on ELB instance number changes.
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Autoscaling/Group.cs/#L210">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/AutoScaling/Group.cs/#L209">View Source</a>
   </span>
   <a id="Pulumi_Aws_AutoScaling_Group_MixedInstancesPolicy_" data-uid="Pulumi.Aws.AutoScaling.Group.MixedInstancesPolicy*"></a>
   <h4 id="Pulumi_Aws_AutoScaling_Group_MixedInstancesPolicy" data-uid="Pulumi.Aws.AutoScaling.Group.MixedInstancesPolicy">MixedInstancesPolicy</h4>
@@ -723,13 +682,13 @@ ELB only on creation. Updates will not wait on ELB instance number changes.
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Aws.AutoScaling.Outputs.GroupMixedInstancesPolicy.html">GroupMixedInstancesPolicy</a>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Aws.AutoScaling.Outputs.GroupMixedInstancesPolicy.html">GroupMixedInstancesPolicy</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Autoscaling/Group.cs/#L216">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/AutoScaling/Group.cs/#L215">View Source</a>
   </span>
   <a id="Pulumi_Aws_AutoScaling_Group_Name_" data-uid="Pulumi.Aws.AutoScaling.Group.Name*"></a>
   <h4 id="Pulumi_Aws_AutoScaling_Group_Name" data-uid="Pulumi.Aws.AutoScaling.Group.Name">Name</h4>
@@ -750,13 +709,13 @@ ELB only on creation. Updates will not wait on ELB instance number changes.
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Autoscaling/Group.cs/#L223">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/AutoScaling/Group.cs/#L222">View Source</a>
   </span>
   <a id="Pulumi_Aws_AutoScaling_Group_NamePrefix_" data-uid="Pulumi.Aws.AutoScaling.Group.NamePrefix*"></a>
   <h4 id="Pulumi_Aws_AutoScaling_Group_NamePrefix" data-uid="Pulumi.Aws.AutoScaling.Group.NamePrefix">NamePrefix</h4>
@@ -766,7 +725,7 @@ prefix. Conflicts with <code>name</code>.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; NamePrefix { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; NamePrefix { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -778,13 +737,13 @@ prefix. Conflicts with <code>name</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Autoscaling/Group.cs/#L229">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/AutoScaling/Group.cs/#L228">View Source</a>
   </span>
   <a id="Pulumi_Aws_AutoScaling_Group_PlacementGroup_" data-uid="Pulumi.Aws.AutoScaling.Group.PlacementGroup*"></a>
   <h4 id="Pulumi_Aws_AutoScaling_Group_PlacementGroup" data-uid="Pulumi.Aws.AutoScaling.Group.PlacementGroup">PlacementGroup</h4>
@@ -793,7 +752,7 @@ prefix. Conflicts with <code>name</code>.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; PlacementGroup { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; PlacementGroup { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -805,13 +764,13 @@ prefix. Conflicts with <code>name</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Autoscaling/Group.cs/#L237">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/AutoScaling/Group.cs/#L236">View Source</a>
   </span>
   <a id="Pulumi_Aws_AutoScaling_Group_ProtectFromScaleIn_" data-uid="Pulumi.Aws.AutoScaling.Group.ProtectFromScaleIn*"></a>
   <h4 id="Pulumi_Aws_AutoScaling_Group_ProtectFromScaleIn" data-uid="Pulumi.Aws.AutoScaling.Group.ProtectFromScaleIn">ProtectFromScaleIn</h4>
@@ -834,13 +793,13 @@ during scale in events.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Autoscaling/Group.cs/#L243">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/AutoScaling/Group.cs/#L242">View Source</a>
   </span>
   <a id="Pulumi_Aws_AutoScaling_Group_ServiceLinkedRoleArn_" data-uid="Pulumi.Aws.AutoScaling.Group.ServiceLinkedRoleArn*"></a>
   <h4 id="Pulumi_Aws_AutoScaling_Group_ServiceLinkedRoleArn" data-uid="Pulumi.Aws.AutoScaling.Group.ServiceLinkedRoleArn">ServiceLinkedRoleArn</h4>
@@ -861,13 +820,13 @@ during scale in events.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Autoscaling/Group.cs/#L250">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/AutoScaling/Group.cs/#L249">View Source</a>
   </span>
   <a id="Pulumi_Aws_AutoScaling_Group_SuspendedProcesses_" data-uid="Pulumi.Aws.AutoScaling.Group.SuspendedProcesses*"></a>
   <h4 id="Pulumi_Aws_AutoScaling_Group_SuspendedProcesses" data-uid="Pulumi.Aws.AutoScaling.Group.SuspendedProcesses">SuspendedProcesses</h4>
@@ -889,13 +848,13 @@ Note that if you suspend either the <code>Launch</code> or <code>Terminate</code
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Autoscaling/Group.cs/#L256">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/AutoScaling/Group.cs/#L255">View Source</a>
   </span>
   <a id="Pulumi_Aws_AutoScaling_Group_Tags_" data-uid="Pulumi.Aws.AutoScaling.Group.Tags*"></a>
   <h4 id="Pulumi_Aws_AutoScaling_Group_Tags" data-uid="Pulumi.Aws.AutoScaling.Group.Tags">Tags</h4>
@@ -904,7 +863,7 @@ Note that if you suspend either the <code>Launch</code> or <code>Terminate</code
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;GroupTags&gt;&gt; Tags { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;GroupTag&gt;&gt; Tags { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -916,13 +875,13 @@ Note that if you suspend either the <code>Launch</code> or <code>Terminate</code
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.AutoScaling.Outputs.GroupTags.html">GroupTags</a>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.AutoScaling.Outputs.GroupTag.html">GroupTag</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Autoscaling/Group.cs/#L262">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/AutoScaling/Group.cs/#L261">View Source</a>
   </span>
   <a id="Pulumi_Aws_AutoScaling_Group_TagsCollection_" data-uid="Pulumi.Aws.AutoScaling.Group.TagsCollection*"></a>
   <h4 id="Pulumi_Aws_AutoScaling_Group_TagsCollection" data-uid="Pulumi.Aws.AutoScaling.Group.TagsCollection">TagsCollection</h4>
@@ -943,13 +902,13 @@ Note that if you suspend either the <code>Launch</code> or <code>Terminate</code
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Autoscaling/Group.cs/#L268">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/AutoScaling/Group.cs/#L267">View Source</a>
   </span>
   <a id="Pulumi_Aws_AutoScaling_Group_TargetGroupArns_" data-uid="Pulumi.Aws.AutoScaling.Group.TargetGroupArns*"></a>
   <h4 id="Pulumi_Aws_AutoScaling_Group_TargetGroupArns" data-uid="Pulumi.Aws.AutoScaling.Group.TargetGroupArns">TargetGroupArns</h4>
@@ -970,13 +929,13 @@ Note that if you suspend either the <code>Launch</code> or <code>Terminate</code
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Autoscaling/Group.cs/#L274">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/AutoScaling/Group.cs/#L273">View Source</a>
   </span>
   <a id="Pulumi_Aws_AutoScaling_Group_TerminationPolicies_" data-uid="Pulumi.Aws.AutoScaling.Group.TerminationPolicies*"></a>
   <h4 id="Pulumi_Aws_AutoScaling_Group_TerminationPolicies" data-uid="Pulumi.Aws.AutoScaling.Group.TerminationPolicies">TerminationPolicies</h4>
@@ -997,13 +956,13 @@ Note that if you suspend either the <code>Launch</code> or <code>Terminate</code
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Autoscaling/Group.cs/#L280">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/AutoScaling/Group.cs/#L279">View Source</a>
   </span>
   <a id="Pulumi_Aws_AutoScaling_Group_VpcZoneIdentifiers_" data-uid="Pulumi.Aws.AutoScaling.Group.VpcZoneIdentifiers*"></a>
   <h4 id="Pulumi_Aws_AutoScaling_Group_VpcZoneIdentifiers" data-uid="Pulumi.Aws.AutoScaling.Group.VpcZoneIdentifiers">VpcZoneIdentifiers</h4>
@@ -1024,13 +983,13 @@ Note that if you suspend either the <code>Launch</code> or <code>Terminate</code
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Autoscaling/Group.cs/#L283">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/AutoScaling/Group.cs/#L282">View Source</a>
   </span>
   <a id="Pulumi_Aws_AutoScaling_Group_WaitForCapacityTimeout_" data-uid="Pulumi.Aws.AutoScaling.Group.WaitForCapacityTimeout*"></a>
   <h4 id="Pulumi_Aws_AutoScaling_Group_WaitForCapacityTimeout" data-uid="Pulumi.Aws.AutoScaling.Group.WaitForCapacityTimeout">WaitForCapacityTimeout</h4>
@@ -1038,7 +997,7 @@ Note that if you suspend either the <code>Launch</code> or <code>Terminate</code
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; WaitForCapacityTimeout { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; WaitForCapacityTimeout { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1050,13 +1009,13 @@ Note that if you suspend either the <code>Launch</code> or <code>Terminate</code
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Autoscaling/Group.cs/#L293">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/AutoScaling/Group.cs/#L292">View Source</a>
   </span>
   <a id="Pulumi_Aws_AutoScaling_Group_WaitForElbCapacity_" data-uid="Pulumi.Aws.AutoScaling.Group.WaitForElbCapacity*"></a>
   <h4 id="Pulumi_Aws_AutoScaling_Group_WaitForElbCapacity" data-uid="Pulumi.Aws.AutoScaling.Group.WaitForElbCapacity">WaitForElbCapacity</h4>
@@ -1081,7 +1040,7 @@ precedence over <code>min_elb_capacity</code> behavior.)
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -1089,17 +1048,17 @@ precedence over <code>min_elb_capacity</code> behavior.)
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Autoscaling/Group.cs/#L334">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/AutoScaling/Group.cs/#L333">View Source</a>
   </span>
   <a id="Pulumi_Aws_AutoScaling_Group_Get_" data-uid="Pulumi.Aws.AutoScaling.Group.Get*"></a>
-  <h4 id="Pulumi_Aws_AutoScaling_Group_Get_System_String_Pulumi_Input_System_String__Pulumi_Aws_AutoScaling_GroupState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.AutoScaling.Group.Get(System.String,Pulumi.Input{System.String},Pulumi.Aws.AutoScaling.GroupState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, GroupState, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Aws_AutoScaling_Group_Get_System_String_Input_System_String__Pulumi_Aws_AutoScaling_GroupState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.AutoScaling.Group.Get(System.String,Input{System.String},Pulumi.Aws.AutoScaling.GroupState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, GroupState, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Get an existing Group resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Group Get(string name, Input&lt;string&gt; id, GroupState state = null, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Group Get(string name, Input&lt;string&gt; id, GroupState state = null, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1118,7 +1077,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -1130,7 +1089,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -1159,7 +1118,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Autoscaling/Group.cs/#L81" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/AutoScaling/Group.cs/#L80" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

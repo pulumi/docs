@@ -134,53 +134,12 @@
 <li><a href="https://azure.microsoft.com/en-us/documentation/articles/cache-configure/#advanced-settings">Azure Redis Cache: SKU specific configuration limitations</a></li>
 <li><a href="http://redis.io/topics/config">Redis: Available Configuration Settings</a></li>
 </ul>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/redis_cache.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/redis_cache.html.markdown</a>.</p>
-</blockquote>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
-    <div class="level3"><span class="xref">Cache</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">Cache</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Azure.Redis.html">Pulumi.Azure.Redis</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Azure.dll</h6>
@@ -191,16 +150,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Redis/Cache.cs/#L188">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Redis/Cache.cs/#L187">View Source</a>
   </span>
   <a id="Pulumi_Azure_Redis_Cache__ctor_" data-uid="Pulumi.Azure.Redis.Cache.#ctor*"></a>
-  <h4 id="Pulumi_Azure_Redis_Cache__ctor_System_String_Pulumi_Azure_Redis_CacheArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Azure.Redis.Cache.#ctor(System.String,Pulumi.Azure.Redis.CacheArgs,Pulumi.CustomResourceOptions)">Cache(String, CacheArgs, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Azure_Redis_Cache__ctor_System_String_Pulumi_Azure_Redis_CacheArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Azure.Redis.Cache.#ctor(System.String,Pulumi.Azure.Redis.CacheArgs,System.Nullable{CustomResourceOptions})">Cache(String, CacheArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Create a Cache resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Cache(string name, CacheArgs args, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Cache(string name, CacheArgs args, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -225,7 +184,7 @@
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -235,7 +194,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Redis/Cache.cs/#L49">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Redis/Cache.cs/#L48">View Source</a>
   </span>
   <a id="Pulumi_Azure_Redis_Cache_Capacity_" data-uid="Pulumi.Azure.Redis.Cache.Capacity*"></a>
   <h4 id="Pulumi_Azure_Redis_Cache_Capacity" data-uid="Pulumi.Azure.Redis.Cache.Capacity">Capacity</h4>
@@ -256,13 +215,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Redis/Cache.cs/#L55">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Redis/Cache.cs/#L54">View Source</a>
   </span>
   <a id="Pulumi_Azure_Redis_Cache_EnableNonSslPort_" data-uid="Pulumi.Azure.Redis.Cache.EnableNonSslPort*"></a>
   <h4 id="Pulumi_Azure_Redis_Cache_EnableNonSslPort" data-uid="Pulumi.Azure.Redis.Cache.EnableNonSslPort">EnableNonSslPort</h4>
@@ -283,13 +242,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Redis/Cache.cs/#L61">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Redis/Cache.cs/#L60">View Source</a>
   </span>
   <a id="Pulumi_Azure_Redis_Cache_Family_" data-uid="Pulumi.Azure.Redis.Cache.Family*"></a>
   <h4 id="Pulumi_Azure_Redis_Cache_Family" data-uid="Pulumi.Azure.Redis.Cache.Family">Family</h4>
@@ -310,13 +269,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Redis/Cache.cs/#L67">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Redis/Cache.cs/#L66">View Source</a>
   </span>
   <a id="Pulumi_Azure_Redis_Cache_Hostname_" data-uid="Pulumi.Azure.Redis.Cache.Hostname*"></a>
   <h4 id="Pulumi_Azure_Redis_Cache_Hostname" data-uid="Pulumi.Azure.Redis.Cache.Hostname">Hostname</h4>
@@ -337,13 +296,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Redis/Cache.cs/#L73">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Redis/Cache.cs/#L72">View Source</a>
   </span>
   <a id="Pulumi_Azure_Redis_Cache_Location_" data-uid="Pulumi.Azure.Redis.Cache.Location*"></a>
   <h4 id="Pulumi_Azure_Redis_Cache_Location" data-uid="Pulumi.Azure.Redis.Cache.Location">Location</h4>
@@ -364,13 +323,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Redis/Cache.cs/#L79">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Redis/Cache.cs/#L78">View Source</a>
   </span>
   <a id="Pulumi_Azure_Redis_Cache_MinimumTlsVersion_" data-uid="Pulumi.Azure.Redis.Cache.MinimumTlsVersion*"></a>
   <h4 id="Pulumi_Azure_Redis_Cache_MinimumTlsVersion" data-uid="Pulumi.Azure.Redis.Cache.MinimumTlsVersion">MinimumTlsVersion</h4>
@@ -379,7 +338,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; MinimumTlsVersion { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; MinimumTlsVersion { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -391,13 +350,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Redis/Cache.cs/#L86">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Redis/Cache.cs/#L85">View Source</a>
   </span>
   <a id="Pulumi_Azure_Redis_Cache_Name_" data-uid="Pulumi.Azure.Redis.Cache.Name*"></a>
   <h4 id="Pulumi_Azure_Redis_Cache_Name" data-uid="Pulumi.Azure.Redis.Cache.Name">Name</h4>
@@ -419,13 +378,13 @@ new resource to be created.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Redis/Cache.cs/#L92">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Redis/Cache.cs/#L91">View Source</a>
   </span>
   <a id="Pulumi_Azure_Redis_Cache_PatchSchedules_" data-uid="Pulumi.Azure.Redis.Cache.PatchSchedules*"></a>
   <h4 id="Pulumi_Azure_Redis_Cache_PatchSchedules" data-uid="Pulumi.Azure.Redis.Cache.PatchSchedules">PatchSchedules</h4>
@@ -434,7 +393,7 @@ new resource to be created.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;CachePatchSchedules&gt;&gt; PatchSchedules { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;CachePatchSchedule&gt;&gt; PatchSchedules { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -446,13 +405,13 @@ new resource to be created.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Azure.Redis.Outputs.CachePatchSchedules.html">CachePatchSchedules</a>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Azure.Redis.Outputs.CachePatchSchedule.html">CachePatchSchedule</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Redis/Cache.cs/#L98">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Redis/Cache.cs/#L97">View Source</a>
   </span>
   <a id="Pulumi_Azure_Redis_Cache_Port_" data-uid="Pulumi.Azure.Redis.Cache.Port*"></a>
   <h4 id="Pulumi_Azure_Redis_Cache_Port" data-uid="Pulumi.Azure.Redis.Cache.Port">Port</h4>
@@ -473,13 +432,13 @@ new resource to be created.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Redis/Cache.cs/#L104">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Redis/Cache.cs/#L103">View Source</a>
   </span>
   <a id="Pulumi_Azure_Redis_Cache_PrimaryAccessKey_" data-uid="Pulumi.Azure.Redis.Cache.PrimaryAccessKey*"></a>
   <h4 id="Pulumi_Azure_Redis_Cache_PrimaryAccessKey" data-uid="Pulumi.Azure.Redis.Cache.PrimaryAccessKey">PrimaryAccessKey</h4>
@@ -500,13 +459,13 @@ new resource to be created.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Redis/Cache.cs/#L110">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Redis/Cache.cs/#L109">View Source</a>
   </span>
   <a id="Pulumi_Azure_Redis_Cache_PrimaryConnectionString_" data-uid="Pulumi.Azure.Redis.Cache.PrimaryConnectionString*"></a>
   <h4 id="Pulumi_Azure_Redis_Cache_PrimaryConnectionString" data-uid="Pulumi.Azure.Redis.Cache.PrimaryConnectionString">PrimaryConnectionString</h4>
@@ -527,13 +486,13 @@ new resource to be created.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Redis/Cache.cs/#L116">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Redis/Cache.cs/#L115">View Source</a>
   </span>
   <a id="Pulumi_Azure_Redis_Cache_PrivateStaticIpAddress_" data-uid="Pulumi.Azure.Redis.Cache.PrivateStaticIpAddress*"></a>
   <h4 id="Pulumi_Azure_Redis_Cache_PrivateStaticIpAddress" data-uid="Pulumi.Azure.Redis.Cache.PrivateStaticIpAddress">PrivateStaticIpAddress</h4>
@@ -554,13 +513,13 @@ new resource to be created.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Redis/Cache.cs/#L122">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Redis/Cache.cs/#L121">View Source</a>
   </span>
   <a id="Pulumi_Azure_Redis_Cache_RedisConfiguration_" data-uid="Pulumi.Azure.Redis.Cache.RedisConfiguration*"></a>
   <h4 id="Pulumi_Azure_Redis_Cache_RedisConfiguration" data-uid="Pulumi.Azure.Redis.Cache.RedisConfiguration">RedisConfiguration</h4>
@@ -581,13 +540,13 @@ new resource to be created.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Azure.Redis.Outputs.CacheRedisConfiguration.html">CacheRedisConfiguration</a>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Azure.Redis.Outputs.CacheRedisConfiguration.html">CacheRedisConfiguration</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Redis/Cache.cs/#L129">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Redis/Cache.cs/#L128">View Source</a>
   </span>
   <a id="Pulumi_Azure_Redis_Cache_ResourceGroupName_" data-uid="Pulumi.Azure.Redis.Cache.ResourceGroupName*"></a>
   <h4 id="Pulumi_Azure_Redis_Cache_ResourceGroupName" data-uid="Pulumi.Azure.Redis.Cache.ResourceGroupName">ResourceGroupName</h4>
@@ -609,13 +568,13 @@ create the Redis instance.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Redis/Cache.cs/#L135">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Redis/Cache.cs/#L134">View Source</a>
   </span>
   <a id="Pulumi_Azure_Redis_Cache_SecondaryAccessKey_" data-uid="Pulumi.Azure.Redis.Cache.SecondaryAccessKey*"></a>
   <h4 id="Pulumi_Azure_Redis_Cache_SecondaryAccessKey" data-uid="Pulumi.Azure.Redis.Cache.SecondaryAccessKey">SecondaryAccessKey</h4>
@@ -636,13 +595,13 @@ create the Redis instance.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Redis/Cache.cs/#L141">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Redis/Cache.cs/#L140">View Source</a>
   </span>
   <a id="Pulumi_Azure_Redis_Cache_SecondaryConnectionString_" data-uid="Pulumi.Azure.Redis.Cache.SecondaryConnectionString*"></a>
   <h4 id="Pulumi_Azure_Redis_Cache_SecondaryConnectionString" data-uid="Pulumi.Azure.Redis.Cache.SecondaryConnectionString">SecondaryConnectionString</h4>
@@ -663,13 +622,13 @@ create the Redis instance.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Redis/Cache.cs/#L147">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Redis/Cache.cs/#L146">View Source</a>
   </span>
   <a id="Pulumi_Azure_Redis_Cache_ShardCount_" data-uid="Pulumi.Azure.Redis.Cache.ShardCount*"></a>
   <h4 id="Pulumi_Azure_Redis_Cache_ShardCount" data-uid="Pulumi.Azure.Redis.Cache.ShardCount">ShardCount</h4>
@@ -690,13 +649,13 @@ create the Redis instance.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Redis/Cache.cs/#L153">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Redis/Cache.cs/#L152">View Source</a>
   </span>
   <a id="Pulumi_Azure_Redis_Cache_SkuName_" data-uid="Pulumi.Azure.Redis.Cache.SkuName*"></a>
   <h4 id="Pulumi_Azure_Redis_Cache_SkuName" data-uid="Pulumi.Azure.Redis.Cache.SkuName">SkuName</h4>
@@ -717,13 +676,13 @@ create the Redis instance.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Redis/Cache.cs/#L159">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Redis/Cache.cs/#L158">View Source</a>
   </span>
   <a id="Pulumi_Azure_Redis_Cache_SslPort_" data-uid="Pulumi.Azure.Redis.Cache.SslPort*"></a>
   <h4 id="Pulumi_Azure_Redis_Cache_SslPort" data-uid="Pulumi.Azure.Redis.Cache.SslPort">SslPort</h4>
@@ -744,13 +703,13 @@ create the Redis instance.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Redis/Cache.cs/#L165">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Redis/Cache.cs/#L164">View Source</a>
   </span>
   <a id="Pulumi_Azure_Redis_Cache_SubnetId_" data-uid="Pulumi.Azure.Redis.Cache.SubnetId*"></a>
   <h4 id="Pulumi_Azure_Redis_Cache_SubnetId" data-uid="Pulumi.Azure.Redis.Cache.SubnetId">SubnetId</h4>
@@ -759,7 +718,7 @@ create the Redis instance.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; SubnetId { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; SubnetId { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -771,13 +730,13 @@ create the Redis instance.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Redis/Cache.cs/#L171">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Redis/Cache.cs/#L170">View Source</a>
   </span>
   <a id="Pulumi_Azure_Redis_Cache_Tags_" data-uid="Pulumi.Azure.Redis.Cache.Tags*"></a>
   <h4 id="Pulumi_Azure_Redis_Cache_Tags" data-uid="Pulumi.Azure.Redis.Cache.Tags">Tags</h4>
@@ -786,7 +745,7 @@ create the Redis instance.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;&gt; Tags { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;?&gt; Tags { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -798,13 +757,13 @@ create the Redis instance.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Redis/Cache.cs/#L177">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Redis/Cache.cs/#L176">View Source</a>
   </span>
   <a id="Pulumi_Azure_Redis_Cache_Zones_" data-uid="Pulumi.Azure.Redis.Cache.Zones*"></a>
   <h4 id="Pulumi_Azure_Redis_Cache_Zones" data-uid="Pulumi.Azure.Redis.Cache.Zones">Zones</h4>
@@ -813,7 +772,7 @@ create the Redis instance.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Zones { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Zones { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -825,7 +784,7 @@ create the Redis instance.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -833,17 +792,17 @@ create the Redis instance.</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Redis/Cache.cs/#L218">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Redis/Cache.cs/#L217">View Source</a>
   </span>
   <a id="Pulumi_Azure_Redis_Cache_Get_" data-uid="Pulumi.Azure.Redis.Cache.Get*"></a>
-  <h4 id="Pulumi_Azure_Redis_Cache_Get_System_String_Pulumi_Input_System_String__Pulumi_Azure_Redis_CacheState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Azure.Redis.Cache.Get(System.String,Pulumi.Input{System.String},Pulumi.Azure.Redis.CacheState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, CacheState, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Azure_Redis_Cache_Get_System_String_Input_System_String__Pulumi_Azure_Redis_CacheState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Azure.Redis.Cache.Get(System.String,Input{System.String},Pulumi.Azure.Redis.CacheState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, CacheState, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Get an existing Cache resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Cache Get(string name, Input&lt;string&gt; id, CacheState state = null, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Cache Get(string name, Input&lt;string&gt; id, CacheState state = null, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -862,7 +821,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -874,7 +833,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -903,7 +862,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Redis/Cache.cs/#L44" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Redis/Cache.cs/#L43" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -76,36 +76,7 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
-    <div class="level3"><span class="xref">PolicyArgs</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">PolicyArgs</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.Dns.html">Pulumi.Gcp.Dns</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
@@ -116,7 +87,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Dns/Policy.cs/#L162">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Dns/Policy.cs/#L166">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Dns_PolicyArgs__ctor_" data-uid="Pulumi.Gcp.Dns.PolicyArgs.#ctor*"></a>
   <h4 id="Pulumi_Gcp_Dns_PolicyArgs__ctor" data-uid="Pulumi.Gcp.Dns.PolicyArgs.#ctor">PolicyArgs()</h4>
@@ -129,18 +100,17 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Dns/Policy.cs/#L113">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Dns/Policy.cs/#L119">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Dns_PolicyArgs_AlternativeNameServerConfig_" data-uid="Pulumi.Gcp.Dns.PolicyArgs.AlternativeNameServerConfig*"></a>
   <h4 id="Pulumi_Gcp_Dns_PolicyArgs_AlternativeNameServerConfig" data-uid="Pulumi.Gcp.Dns.PolicyArgs.AlternativeNameServerConfig">AlternativeNameServerConfig</h4>
-  <div class="markdown level1 summary"><p>Sets an alternative name server for the associated networks. When specified, all DNS queries are forwarded
-to a name server that you choose. Names such as .internal are not available when an alternative name server
-is specified.</p>
+  <div class="markdown level1 summary"><p>Sets an alternative name server for the associated networks. When specified, all DNS queries are forwarded to a name
+server that you choose. Names such as .internal are not available when an alternative name server is specified.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;PolicyAlternativeNameServerConfigArgs&gt; AlternativeNameServerConfig { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;PolicyAlternativeNameServerConfigArgs&gt;? AlternativeNameServerConfig { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -152,13 +122,13 @@ is specified.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Gcp.Dns.Inputs.PolicyAlternativeNameServerConfigArgs.html">PolicyAlternativeNameServerConfigArgs</a>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Gcp.Dns.Inputs.PolicyAlternativeNameServerConfigArgs.html">PolicyAlternativeNameServerConfigArgs</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Dns/Policy.cs/#L119">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Dns/Policy.cs/#L125">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Dns_PolicyArgs_Description_" data-uid="Pulumi.Gcp.Dns.PolicyArgs.Description*"></a>
   <h4 id="Pulumi_Gcp_Dns_PolicyArgs_Description" data-uid="Pulumi.Gcp.Dns.PolicyArgs.Description">Description</h4>
@@ -167,7 +137,7 @@ is specified.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Description { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Description { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -179,24 +149,23 @@ is specified.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Dns/Policy.cs/#L127">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Dns/Policy.cs/#L132">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Dns_PolicyArgs_EnableInboundForwarding_" data-uid="Pulumi.Gcp.Dns.PolicyArgs.EnableInboundForwarding*"></a>
   <h4 id="Pulumi_Gcp_Dns_PolicyArgs_EnableInboundForwarding" data-uid="Pulumi.Gcp.Dns.PolicyArgs.EnableInboundForwarding">EnableInboundForwarding</h4>
-  <div class="markdown level1 summary"><p>Allows networks bound to this policy to receive DNS queries sent by VMs or applications over VPN
-connections. When enabled, a virtual IP address will be allocated from each of the sub-networks that are
-bound to this policy.</p>
+  <div class="markdown level1 summary"><p>Allows networks bound to this policy to receive DNS queries sent by VMs or applications over VPN connections. When
+enabled, a virtual IP address will be allocated from each of the sub-networks that are bound to this policy.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; EnableInboundForwarding { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? EnableInboundForwarding { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -208,23 +177,22 @@ bound to this policy.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Dns/Policy.cs/#L134">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Dns/Policy.cs/#L138">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Dns_PolicyArgs_EnableLogging_" data-uid="Pulumi.Gcp.Dns.PolicyArgs.EnableLogging*"></a>
   <h4 id="Pulumi_Gcp_Dns_PolicyArgs_EnableLogging" data-uid="Pulumi.Gcp.Dns.PolicyArgs.EnableLogging">EnableLogging</h4>
-  <div class="markdown level1 summary"><p>Controls whether logging is enabled for the networks bound to this policy. Defaults to no logging if not
-set.</p>
+  <div class="markdown level1 summary"><p>Controls whether logging is enabled for the networks bound to this policy. Defaults to no logging if not set.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; EnableLogging { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? EnableLogging { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -236,13 +204,13 @@ set.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Dns/Policy.cs/#L140">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Dns/Policy.cs/#L144">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Dns_PolicyArgs_Name_" data-uid="Pulumi.Gcp.Dns.PolicyArgs.Name*"></a>
   <h4 id="Pulumi_Gcp_Dns_PolicyArgs_Name" data-uid="Pulumi.Gcp.Dns.PolicyArgs.Name">Name</h4>
@@ -251,7 +219,7 @@ set.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Name { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Name { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -263,13 +231,13 @@ set.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Dns/Policy.cs/#L149">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Dns/Policy.cs/#L153">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Dns_PolicyArgs_Networks_" data-uid="Pulumi.Gcp.Dns.PolicyArgs.Networks*"></a>
   <h4 id="Pulumi_Gcp_Dns_PolicyArgs_Networks" data-uid="Pulumi.Gcp.Dns.PolicyArgs.Networks">Networks</h4>
@@ -278,7 +246,7 @@ set.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public InputList&lt;PolicyNetworksArgs&gt; Networks { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public InputList&lt;PolicyNetworkArgs&gt; Networks { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -290,13 +258,13 @@ set.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<a class="xref" href="Pulumi.Gcp.Dns.Inputs.PolicyNetworksArgs.html">PolicyNetworksArgs</a>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<a class="xref" href="Pulumi.Gcp.Dns.Inputs.PolicyNetworkArgs.html">PolicyNetworkArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Dns/Policy.cs/#L159">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Dns/Policy.cs/#L163">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Dns_PolicyArgs_Project_" data-uid="Pulumi.Gcp.Dns.PolicyArgs.Project*"></a>
   <h4 id="Pulumi_Gcp_Dns_PolicyArgs_Project" data-uid="Pulumi.Gcp.Dns.PolicyArgs.Project">Project</h4>
@@ -306,7 +274,7 @@ If it is not provided, the provider project is used.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Project { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Project { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -318,7 +286,7 @@ If it is not provided, the provider project is used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -330,7 +298,7 @@ If it is not provided, the provider project is used.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Dns/Policy.cs/#L106" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Dns/Policy.cs/#L113" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

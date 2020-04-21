@@ -76,36 +76,7 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
-    <div class="level3"><span class="xref">TableTimePartitioningArgs</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">TableTimePartitioningArgs</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.BigQuery.Inputs.html">Pulumi.Gcp.BigQuery.Inputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
@@ -116,7 +87,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Bigquery/Table.cs/#L787">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/BigQuery/Inputs/TableTimePartitioningArgs.cs/#L44">View Source</a>
   </span>
   <a id="Pulumi_Gcp_BigQuery_Inputs_TableTimePartitioningArgs__ctor_" data-uid="Pulumi.Gcp.BigQuery.Inputs.TableTimePartitioningArgs.#ctor*"></a>
   <h4 id="Pulumi_Gcp_BigQuery_Inputs_TableTimePartitioningArgs__ctor" data-uid="Pulumi.Gcp.BigQuery.Inputs.TableTimePartitioningArgs.#ctor">TableTimePartitioningArgs()</h4>
@@ -129,15 +100,17 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Bigquery/Table.cs/#L772">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/BigQuery/Inputs/TableTimePartitioningArgs.cs/#L19">View Source</a>
   </span>
   <a id="Pulumi_Gcp_BigQuery_Inputs_TableTimePartitioningArgs_ExpirationMs_" data-uid="Pulumi.Gcp.BigQuery.Inputs.TableTimePartitioningArgs.ExpirationMs*"></a>
   <h4 id="Pulumi_Gcp_BigQuery_Inputs_TableTimePartitioningArgs_ExpirationMs" data-uid="Pulumi.Gcp.BigQuery.Inputs.TableTimePartitioningArgs.ExpirationMs">ExpirationMs</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Number of milliseconds for which to keep the
+storage for a partition.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; ExpirationMs { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? ExpirationMs { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -149,21 +122,23 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Bigquery/Table.cs/#L775">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/BigQuery/Inputs/TableTimePartitioningArgs.cs/#L26">View Source</a>
   </span>
   <a id="Pulumi_Gcp_BigQuery_Inputs_TableTimePartitioningArgs_Field_" data-uid="Pulumi.Gcp.BigQuery.Inputs.TableTimePartitioningArgs.Field*"></a>
   <h4 id="Pulumi_Gcp_BigQuery_Inputs_TableTimePartitioningArgs_Field" data-uid="Pulumi.Gcp.BigQuery.Inputs.TableTimePartitioningArgs.Field">Field</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The field used to determine how to create a range-based
+partition.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Field { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Field { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -175,21 +150,24 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Bigquery/Table.cs/#L778">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/BigQuery/Inputs/TableTimePartitioningArgs.cs/#L34">View Source</a>
   </span>
   <a id="Pulumi_Gcp_BigQuery_Inputs_TableTimePartitioningArgs_RequirePartitionFilter_" data-uid="Pulumi.Gcp.BigQuery.Inputs.TableTimePartitioningArgs.RequirePartitionFilter*"></a>
   <h4 id="Pulumi_Gcp_BigQuery_Inputs_TableTimePartitioningArgs_RequirePartitionFilter" data-uid="Pulumi.Gcp.BigQuery.Inputs.TableTimePartitioningArgs.RequirePartitionFilter">RequirePartitionFilter</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If set to true, queries over this table
+require a partition filter that can be used for partition elimination to be
+specified.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; RequirePartitionFilter { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? RequirePartitionFilter { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -201,17 +179,18 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Bigquery/Table.cs/#L784">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/BigQuery/Inputs/TableTimePartitioningArgs.cs/#L41">View Source</a>
   </span>
   <a id="Pulumi_Gcp_BigQuery_Inputs_TableTimePartitioningArgs_Type_" data-uid="Pulumi.Gcp.BigQuery.Inputs.TableTimePartitioningArgs.Type*"></a>
   <h4 id="Pulumi_Gcp_BigQuery_Inputs_TableTimePartitioningArgs_Type" data-uid="Pulumi.Gcp.BigQuery.Inputs.TableTimePartitioningArgs.Type">Type</h4>
-  <div class="markdown level1 summary"><p>Describes the table type.</p>
+  <div class="markdown level1 summary"><p>The only type supported is DAY, which will generate
+one partition per day based on data loading time.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -228,7 +207,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -240,7 +219,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Bigquery/Table.cs/#L770" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/BigQuery/Inputs/TableTimePartitioningArgs.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

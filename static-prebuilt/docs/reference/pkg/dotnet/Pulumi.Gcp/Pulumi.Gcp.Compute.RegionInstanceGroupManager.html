@@ -78,53 +78,12 @@ and <a href="https://cloud.google.com/compute/docs/reference/latest/regionInstan
 <blockquote>
 <p><strong>Note:</strong> Use <a href="https://www.terraform.io/docs/providers/google/r/compute_instance_group_manager.html">gcp.compute.InstanceGroupManager</a> to create a single-zone instance group manager.</p>
 </blockquote>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_region_instance_group_manager.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_region_instance_group_manager.html.markdown</a>.</p>
-</blockquote>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
-    <div class="level3"><span class="xref">RegionInstanceGroupManager</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">RegionInstanceGroupManager</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.Compute.html">Pulumi.Gcp.Compute</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
@@ -135,16 +94,16 @@ and <a href="https://cloud.google.com/compute/docs/reference/latest/regionInstan
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/RegionInstanceGroupManager.cs/#L150">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RegionInstanceGroupManager.cs/#L143">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RegionInstanceGroupManager__ctor_" data-uid="Pulumi.Gcp.Compute.RegionInstanceGroupManager.#ctor*"></a>
-  <h4 id="Pulumi_Gcp_Compute_RegionInstanceGroupManager__ctor_System_String_Pulumi_Gcp_Compute_RegionInstanceGroupManagerArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Gcp.Compute.RegionInstanceGroupManager.#ctor(System.String,Pulumi.Gcp.Compute.RegionInstanceGroupManagerArgs,Pulumi.CustomResourceOptions)">RegionInstanceGroupManager(String, RegionInstanceGroupManagerArgs, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Gcp_Compute_RegionInstanceGroupManager__ctor_System_String_Pulumi_Gcp_Compute_RegionInstanceGroupManagerArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Gcp.Compute.RegionInstanceGroupManager.#ctor(System.String,Pulumi.Gcp.Compute.RegionInstanceGroupManagerArgs,System.Nullable{CustomResourceOptions})">RegionInstanceGroupManager(String, RegionInstanceGroupManagerArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Create a RegionInstanceGroupManager resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public RegionInstanceGroupManager(string name, RegionInstanceGroupManagerArgs args, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public RegionInstanceGroupManager(string name, RegionInstanceGroupManagerArgs args, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -169,7 +128,7 @@ and <a href="https://cloud.google.com/compute/docs/reference/latest/regionInstan
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -179,7 +138,7 @@ and <a href="https://cloud.google.com/compute/docs/reference/latest/regionInstan
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/RegionInstanceGroupManager.cs/#L28">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RegionInstanceGroupManager.cs/#L26">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RegionInstanceGroupManager_AutoHealingPolicies_" data-uid="Pulumi.Gcp.Compute.RegionInstanceGroupManager.AutoHealingPolicies*"></a>
   <h4 id="Pulumi_Gcp_Compute_RegionInstanceGroupManager_AutoHealingPolicies" data-uid="Pulumi.Gcp.Compute.RegionInstanceGroupManager.AutoHealingPolicies">AutoHealingPolicies</h4>
@@ -201,13 +160,13 @@ group. You can specify only one value. Structure is documented below. For more i
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Outputs.RegionInstanceGroupManagerAutoHealingPolicies.html">RegionInstanceGroupManagerAutoHealingPolicies</a>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Outputs.RegionInstanceGroupManagerAutoHealingPolicies.html">RegionInstanceGroupManagerAutoHealingPolicies</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/RegionInstanceGroupManager.cs/#L39">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RegionInstanceGroupManager.cs/#L37">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RegionInstanceGroupManager_BaseInstanceName_" data-uid="Pulumi.Gcp.Compute.RegionInstanceGroupManager.BaseInstanceName*"></a>
   <h4 id="Pulumi_Gcp_Compute_RegionInstanceGroupManager_BaseInstanceName" data-uid="Pulumi.Gcp.Compute.RegionInstanceGroupManager.BaseInstanceName">BaseInstanceName</h4>
@@ -233,13 +192,13 @@ name.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/RegionInstanceGroupManager.cs/#L46">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RegionInstanceGroupManager.cs/#L44">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RegionInstanceGroupManager_Description_" data-uid="Pulumi.Gcp.Compute.RegionInstanceGroupManager.Description*"></a>
   <h4 id="Pulumi_Gcp_Compute_RegionInstanceGroupManager_Description" data-uid="Pulumi.Gcp.Compute.RegionInstanceGroupManager.Description">Description</h4>
@@ -249,7 +208,7 @@ group manager.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Description { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Description { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -261,13 +220,13 @@ group manager.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/RegionInstanceGroupManager.cs/#L54">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RegionInstanceGroupManager.cs/#L52">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RegionInstanceGroupManager_DistributionPolicyZones_" data-uid="Pulumi.Gcp.Compute.RegionInstanceGroupManager.DistributionPolicyZones*"></a>
   <h4 id="Pulumi_Gcp_Compute_RegionInstanceGroupManager_DistributionPolicyZones" data-uid="Pulumi.Gcp.Compute.RegionInstanceGroupManager.DistributionPolicyZones">DistributionPolicyZones</h4>
@@ -290,13 +249,13 @@ group. You can specify one or more values. For more information, see the <a href
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/RegionInstanceGroupManager.cs/#L60">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RegionInstanceGroupManager.cs/#L58">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RegionInstanceGroupManager_Fingerprint_" data-uid="Pulumi.Gcp.Compute.RegionInstanceGroupManager.Fingerprint*"></a>
   <h4 id="Pulumi_Gcp_Compute_RegionInstanceGroupManager_Fingerprint" data-uid="Pulumi.Gcp.Compute.RegionInstanceGroupManager.Fingerprint">Fingerprint</h4>
@@ -317,13 +276,13 @@ group. You can specify one or more values. For more information, see the <a href
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/RegionInstanceGroupManager.cs/#L66">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RegionInstanceGroupManager.cs/#L64">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RegionInstanceGroupManager_InstanceGroup_" data-uid="Pulumi.Gcp.Compute.RegionInstanceGroupManager.InstanceGroup*"></a>
   <h4 id="Pulumi_Gcp_Compute_RegionInstanceGroupManager_InstanceGroup" data-uid="Pulumi.Gcp.Compute.RegionInstanceGroupManager.InstanceGroup">InstanceGroup</h4>
@@ -344,20 +303,19 @@ group. You can specify one or more values. For more information, see the <a href
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/RegionInstanceGroupManager.cs/#L75">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RegionInstanceGroupManager.cs/#L70">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RegionInstanceGroupManager_Name_" data-uid="Pulumi.Gcp.Compute.RegionInstanceGroupManager.Name*"></a>
   <h4 id="Pulumi_Gcp_Compute_RegionInstanceGroupManager_Name" data-uid="Pulumi.Gcp.Compute.RegionInstanceGroupManager.Name">Name</h4>
-  <div class="markdown level1 summary"><p>The name of the instance group manager. Must be 1-63
-characters long and comply with
-<a href="https://www.ietf.org/rfc/rfc1035.txt">RFC1035</a>. Supported characters
-include lowercase letters, numbers, and hyphens.</p>
+  <div class="markdown level1 summary"><ul>
+<li>Version name.</li>
+</ul>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -374,13 +332,13 @@ include lowercase letters, numbers, and hyphens.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/RegionInstanceGroupManager.cs/#L82">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RegionInstanceGroupManager.cs/#L77">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RegionInstanceGroupManager_NamedPorts_" data-uid="Pulumi.Gcp.Compute.RegionInstanceGroupManager.NamedPorts*"></a>
   <h4 id="Pulumi_Gcp_Compute_RegionInstanceGroupManager_NamedPorts" data-uid="Pulumi.Gcp.Compute.RegionInstanceGroupManager.NamedPorts">NamedPorts</h4>
@@ -390,7 +348,7 @@ for details on configuration.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;RegionInstanceGroupManagerNamedPorts&gt;&gt; NamedPorts { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;RegionInstanceGroupManagerNamedPort&gt;&gt; NamedPorts { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -402,13 +360,13 @@ for details on configuration.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Outputs.RegionInstanceGroupManagerNamedPorts.html">RegionInstanceGroupManagerNamedPorts</a>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Outputs.RegionInstanceGroupManagerNamedPort.html">RegionInstanceGroupManagerNamedPort</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/RegionInstanceGroupManager.cs/#L89">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RegionInstanceGroupManager.cs/#L84">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RegionInstanceGroupManager_Project_" data-uid="Pulumi.Gcp.Compute.RegionInstanceGroupManager.Project*"></a>
   <h4 id="Pulumi_Gcp_Compute_RegionInstanceGroupManager_Project" data-uid="Pulumi.Gcp.Compute.RegionInstanceGroupManager.Project">Project</h4>
@@ -430,13 +388,13 @@ is not provided, the provider project is used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/RegionInstanceGroupManager.cs/#L95">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RegionInstanceGroupManager.cs/#L90">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RegionInstanceGroupManager_Region_" data-uid="Pulumi.Gcp.Compute.RegionInstanceGroupManager.Region*"></a>
   <h4 id="Pulumi_Gcp_Compute_RegionInstanceGroupManager_Region" data-uid="Pulumi.Gcp.Compute.RegionInstanceGroupManager.Region">Region</h4>
@@ -457,13 +415,13 @@ is not provided, the provider project is used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/RegionInstanceGroupManager.cs/#L101">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RegionInstanceGroupManager.cs/#L96">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RegionInstanceGroupManager_SelfLink_" data-uid="Pulumi.Gcp.Compute.RegionInstanceGroupManager.SelfLink*"></a>
   <h4 id="Pulumi_Gcp_Compute_RegionInstanceGroupManager_SelfLink" data-uid="Pulumi.Gcp.Compute.RegionInstanceGroupManager.SelfLink">SelfLink</h4>
@@ -484,13 +442,13 @@ is not provided, the provider project is used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/RegionInstanceGroupManager.cs/#L109">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RegionInstanceGroupManager.cs/#L104">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RegionInstanceGroupManager_TargetPools_" data-uid="Pulumi.Gcp.Compute.RegionInstanceGroupManager.TargetPools*"></a>
   <h4 id="Pulumi_Gcp_Compute_RegionInstanceGroupManager_TargetPools" data-uid="Pulumi.Gcp.Compute.RegionInstanceGroupManager.TargetPools">TargetPools</h4>
@@ -513,19 +471,19 @@ not affect existing instances.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/RegionInstanceGroupManager.cs/#L117">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RegionInstanceGroupManager.cs/#L110">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RegionInstanceGroupManager_TargetSize_" data-uid="Pulumi.Gcp.Compute.RegionInstanceGroupManager.TargetSize*"></a>
   <h4 id="Pulumi_Gcp_Compute_RegionInstanceGroupManager_TargetSize" data-uid="Pulumi.Gcp.Compute.RegionInstanceGroupManager.TargetSize">TargetSize</h4>
-  <div class="markdown level1 summary"><p>The target number of running instances for this managed
-instance group. This value should always be explicitly set unless this resource is attached to
-an autoscaler, in which case it should never be set. Defaults to <code>0</code>.</p>
+  <div class="markdown level1 summary"><ul>
+<li>The number of instances calculated as a fixed number or a percentage depending on the settings. Structure is documented below.</li>
+</ul>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -542,13 +500,13 @@ an autoscaler, in which case it should never be set. Defaults to <code>0</code>.
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/RegionInstanceGroupManager.cs/#L123">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RegionInstanceGroupManager.cs/#L116">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RegionInstanceGroupManager_UpdatePolicy_" data-uid="Pulumi.Gcp.Compute.RegionInstanceGroupManager.UpdatePolicy*"></a>
   <h4 id="Pulumi_Gcp_Compute_RegionInstanceGroupManager_UpdatePolicy" data-uid="Pulumi.Gcp.Compute.RegionInstanceGroupManager.UpdatePolicy">UpdatePolicy</h4>
@@ -569,13 +527,13 @@ an autoscaler, in which case it should never be set. Defaults to <code>0</code>.
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Outputs.RegionInstanceGroupManagerUpdatePolicy.html">RegionInstanceGroupManagerUpdatePolicy</a>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Outputs.RegionInstanceGroupManagerUpdatePolicy.html">RegionInstanceGroupManagerUpdatePolicy</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/RegionInstanceGroupManager.cs/#L131">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RegionInstanceGroupManager.cs/#L124">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RegionInstanceGroupManager_Versions_" data-uid="Pulumi.Gcp.Compute.RegionInstanceGroupManager.Versions*"></a>
   <h4 id="Pulumi_Gcp_Compute_RegionInstanceGroupManager_Versions" data-uid="Pulumi.Gcp.Compute.RegionInstanceGroupManager.Versions">Versions</h4>
@@ -586,7 +544,7 @@ Structure is documented below.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;RegionInstanceGroupManagerVersions&gt;&gt; Versions { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;RegionInstanceGroupManagerVersion&gt;&gt; Versions { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -598,18 +556,18 @@ Structure is documented below.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Outputs.RegionInstanceGroupManagerVersions.html">RegionInstanceGroupManagerVersions</a>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Outputs.RegionInstanceGroupManagerVersion.html">RegionInstanceGroupManagerVersion</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/RegionInstanceGroupManager.cs/#L139">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RegionInstanceGroupManager.cs/#L132">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RegionInstanceGroupManager_WaitForInstances_" data-uid="Pulumi.Gcp.Compute.RegionInstanceGroupManager.WaitForInstances*"></a>
   <h4 id="Pulumi_Gcp_Compute_RegionInstanceGroupManager_WaitForInstances" data-uid="Pulumi.Gcp.Compute.RegionInstanceGroupManager.WaitForInstances">WaitForInstances</h4>
   <div class="markdown level1 summary"><p>Whether to wait for all instances to be created/updated before
-returning. Note that if this is set to true and the operation does not succeed, this provider will
+returning. Note that if this is set to true and the operation does not succeed, the provider will
 continue trying until it times out.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -627,7 +585,7 @@ continue trying until it times out.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -635,17 +593,17 @@ continue trying until it times out.</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/RegionInstanceGroupManager.cs/#L180">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RegionInstanceGroupManager.cs/#L173">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RegionInstanceGroupManager_Get_" data-uid="Pulumi.Gcp.Compute.RegionInstanceGroupManager.Get*"></a>
-  <h4 id="Pulumi_Gcp_Compute_RegionInstanceGroupManager_Get_System_String_Pulumi_Input_System_String__Pulumi_Gcp_Compute_RegionInstanceGroupManagerState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Gcp.Compute.RegionInstanceGroupManager.Get(System.String,Pulumi.Input{System.String},Pulumi.Gcp.Compute.RegionInstanceGroupManagerState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, RegionInstanceGroupManagerState, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Gcp_Compute_RegionInstanceGroupManager_Get_System_String_Input_System_String__Pulumi_Gcp_Compute_RegionInstanceGroupManagerState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Gcp.Compute.RegionInstanceGroupManager.Get(System.String,Input{System.String},Pulumi.Gcp.Compute.RegionInstanceGroupManagerState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, RegionInstanceGroupManagerState, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Get an existing RegionInstanceGroupManager resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static RegionInstanceGroupManager Get(string name, Input&lt;string&gt; id, RegionInstanceGroupManagerState state = null, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static RegionInstanceGroupManager Get(string name, Input&lt;string&gt; id, RegionInstanceGroupManagerState state = null, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -664,7 +622,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -676,7 +634,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -705,7 +663,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/RegionInstanceGroupManager.cs/#L22" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RegionInstanceGroupManager.cs/#L20" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

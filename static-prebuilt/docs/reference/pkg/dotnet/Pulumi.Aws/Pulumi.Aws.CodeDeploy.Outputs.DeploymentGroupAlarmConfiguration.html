@@ -78,40 +78,16 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">DeploymentGroupAlarmConfiguration</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.CodeDeploy.Outputs.html">Pulumi.Aws.CodeDeploy.Outputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
   <h5 id="Pulumi_Aws_CodeDeploy_Outputs_DeploymentGroupAlarmConfiguration_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class DeploymentGroupAlarmConfiguration</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class DeploymentGroupAlarmConfiguration : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Codedeploy/DeploymentGroup.cs/#L1318">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CodeDeploy/Outputs/DeploymentGroupAlarmConfiguration.cs/#L19">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_CodeDeploy_Outputs_DeploymentGroupAlarmConfiguration_Alarms" data-uid="Pulumi.Aws.CodeDeploy.Outputs.DeploymentGroupAlarmConfiguration.Alarms">Alarms</h4>
   <div class="markdown level1 summary"><p>A list of alarms configured for the deployment group. <em>A maximum of 10 alarms can be added to a deployment group</em>.</p>
@@ -131,16 +107,16 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Codedeploy/DeploymentGroup.cs/#L1322">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CodeDeploy/Outputs/DeploymentGroupAlarmConfiguration.cs/#L23">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_CodeDeploy_Outputs_DeploymentGroupAlarmConfiguration_Enabled" data-uid="Pulumi.Aws.CodeDeploy.Outputs.DeploymentGroupAlarmConfiguration.Enabled">Enabled</h4>
-  <div class="markdown level1 summary"><p>Indicates whether a defined automatic rollback configuration is currently enabled for this Deployment Group. If you enable automatic rollback, you must specify at least one event type.</p>
+  <div class="markdown level1 summary"><p>Indicates whether the alarm configuration is enabled. This option is useful when you want to temporarily deactivate alarm monitoring for a deployment group without having to add the same alarms again later.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -163,7 +139,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Codedeploy/DeploymentGroup.cs/#L1328">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CodeDeploy/Outputs/DeploymentGroupAlarmConfiguration.cs/#L29">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_CodeDeploy_Outputs_DeploymentGroupAlarmConfiguration_IgnorePollAlarmFailure" data-uid="Pulumi.Aws.CodeDeploy.Outputs.DeploymentGroupAlarmConfiguration.IgnorePollAlarmFailure">IgnorePollAlarmFailure</h4>
   <div class="markdown level1 summary"><p>Indicates whether a deployment should continue if information about the current state of alarms cannot be retrieved from CloudWatch. The default value is <code>false</code>.</p>
@@ -199,7 +175,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Codedeploy/DeploymentGroup.cs/#L1312" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CodeDeploy/Outputs/DeploymentGroupAlarmConfiguration.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

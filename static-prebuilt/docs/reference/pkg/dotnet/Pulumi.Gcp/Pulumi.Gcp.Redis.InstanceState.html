@@ -76,36 +76,7 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
-    <div class="level3"><span class="xref">InstanceState</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">InstanceState</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.Redis.html">Pulumi.Gcp.Redis</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
@@ -116,7 +87,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Redis/Instance.cs/#L410">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Redis/Instance.cs/#L441">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Redis_InstanceState__ctor_" data-uid="Pulumi.Gcp.Redis.InstanceState.#ctor*"></a>
   <h4 id="Pulumi_Gcp_Redis_InstanceState__ctor" data-uid="Pulumi.Gcp.Redis.InstanceState.#ctor">InstanceState()</h4>
@@ -129,17 +100,17 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Redis/Instance.cs/#L287">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Redis/Instance.cs/#L311">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Redis_InstanceState_AlternativeLocationId_" data-uid="Pulumi.Gcp.Redis.InstanceState.AlternativeLocationId*"></a>
   <h4 id="Pulumi_Gcp_Redis_InstanceState_AlternativeLocationId" data-uid="Pulumi.Gcp.Redis.InstanceState.AlternativeLocationId">AlternativeLocationId</h4>
-  <div class="markdown level1 summary"><p>Only applicable to STANDARD_HA tier which protects the instance against zonal failures by provisioning it
-across two zones. If provided, it must be a different zone from the one provided in [locationId].</p>
+  <div class="markdown level1 summary"><p>Only applicable to STANDARD_HA tier which protects the instance against zonal failures by provisioning it across two
+zones. If provided, it must be a different zone from the one provided in [locationId].</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; AlternativeLocationId { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? AlternativeLocationId { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -151,23 +122,23 @@ across two zones. If provided, it must be a different zone from the one provided
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Redis/Instance.cs/#L294">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Redis/Instance.cs/#L318">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Redis_InstanceState_AuthorizedNetwork_" data-uid="Pulumi.Gcp.Redis.InstanceState.AuthorizedNetwork*"></a>
   <h4 id="Pulumi_Gcp_Redis_InstanceState_AuthorizedNetwork" data-uid="Pulumi.Gcp.Redis.InstanceState.AuthorizedNetwork">AuthorizedNetwork</h4>
-  <div class="markdown level1 summary"><p>The full name of the Google Compute Engine network to which the instance is connected. If left unspecified,
-the default network will be used.</p>
+  <div class="markdown level1 summary"><p>The full name of the Google Compute Engine network to which the instance is connected. If left unspecified, the default
+network will be used.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; AuthorizedNetwork { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? AuthorizedNetwork { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -179,13 +150,41 @@ the default network will be used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Redis/Instance.cs/#L300">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Redis/Instance.cs/#L325">View Source</a>
+  </span>
+  <a id="Pulumi_Gcp_Redis_InstanceState_ConnectMode_" data-uid="Pulumi.Gcp.Redis.InstanceState.ConnectMode*"></a>
+  <h4 id="Pulumi_Gcp_Redis_InstanceState_ConnectMode" data-uid="Pulumi.Gcp.Redis.InstanceState.ConnectMode">ConnectMode</h4>
+  <div class="markdown level1 summary"><p>The connection mode of the Redis instance. Can be either 'DIRECT_PEERING' or 'PRIVATE_SERVICE_ACCESS'. The default
+connect mode if not provided is 'DIRECT_PEERING'.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? ConnectMode { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Redis/Instance.cs/#L331">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Redis_InstanceState_CreateTime_" data-uid="Pulumi.Gcp.Redis.InstanceState.CreateTime*"></a>
   <h4 id="Pulumi_Gcp_Redis_InstanceState_CreateTime" data-uid="Pulumi.Gcp.Redis.InstanceState.CreateTime">CreateTime</h4>
@@ -194,7 +193,7 @@ the default network will be used.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; CreateTime { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? CreateTime { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -206,24 +205,24 @@ the default network will be used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Redis/Instance.cs/#L308">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Redis/Instance.cs/#L339">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Redis_InstanceState_CurrentLocationId_" data-uid="Pulumi.Gcp.Redis.InstanceState.CurrentLocationId*"></a>
   <h4 id="Pulumi_Gcp_Redis_InstanceState_CurrentLocationId" data-uid="Pulumi.Gcp.Redis.InstanceState.CurrentLocationId">CurrentLocationId</h4>
-  <div class="markdown level1 summary"><p>The current zone where the Redis endpoint is placed. For Basic Tier instances, this will always be the same
-as the [locationId] provided by the user at creation time. For Standard Tier instances, this can be either
-[locationId] or [alternativeLocationId] and can change after a failover event.</p>
+  <div class="markdown level1 summary"><p>The current zone where the Redis endpoint is placed. For Basic Tier instances, this will always be the same as the
+[locationId] provided by the user at creation time. For Standard Tier instances, this can be either [locationId] or
+[alternativeLocationId] and can change after a failover event.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; CurrentLocationId { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? CurrentLocationId { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -235,13 +234,13 @@ as the [locationId] provided by the user at creation time. For Standard Tier ins
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Redis/Instance.cs/#L314">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Redis/Instance.cs/#L345">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Redis_InstanceState_DisplayName_" data-uid="Pulumi.Gcp.Redis.InstanceState.DisplayName*"></a>
   <h4 id="Pulumi_Gcp_Redis_InstanceState_DisplayName" data-uid="Pulumi.Gcp.Redis.InstanceState.DisplayName">DisplayName</h4>
@@ -250,7 +249,7 @@ as the [locationId] provided by the user at creation time. For Standard Tier ins
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; DisplayName { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? DisplayName { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -262,13 +261,13 @@ as the [locationId] provided by the user at creation time. For Standard Tier ins
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Redis/Instance.cs/#L320">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Redis/Instance.cs/#L351">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Redis_InstanceState_Host_" data-uid="Pulumi.Gcp.Redis.InstanceState.Host*"></a>
   <h4 id="Pulumi_Gcp_Redis_InstanceState_Host" data-uid="Pulumi.Gcp.Redis.InstanceState.Host">Host</h4>
@@ -277,7 +276,7 @@ as the [locationId] provided by the user at creation time. For Standard Tier ins
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Host { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Host { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -289,13 +288,13 @@ as the [locationId] provided by the user at creation time. For Standard Tier ins
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Redis/Instance.cs/#L329">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Redis/Instance.cs/#L360">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Redis_InstanceState_Labels_" data-uid="Pulumi.Gcp.Redis.InstanceState.Labels*"></a>
   <h4 id="Pulumi_Gcp_Redis_InstanceState_Labels" data-uid="Pulumi.Gcp.Redis.InstanceState.Labels">Labels</h4>
@@ -316,24 +315,24 @@ as the [locationId] provided by the user at creation time. For Standard Tier ins
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputMap-1.html">InputMap</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">InputMap</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Redis/Instance.cs/#L340">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Redis/Instance.cs/#L371">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Redis_InstanceState_LocationId_" data-uid="Pulumi.Gcp.Redis.InstanceState.LocationId*"></a>
   <h4 id="Pulumi_Gcp_Redis_InstanceState_LocationId" data-uid="Pulumi.Gcp.Redis.InstanceState.LocationId">LocationId</h4>
-  <div class="markdown level1 summary"><p>The zone where the instance will be provisioned. If not provided, the service will choose a zone for the
-instance. For STANDARD_HA tier, instances will be created across two zones for protection against zonal
-failures. If [alternativeLocationId] is also provided, it must be different from [locationId].</p>
+  <div class="markdown level1 summary"><p>The zone where the instance will be provisioned. If not provided, the service will choose a zone for the instance. For
+STANDARD_HA tier, instances will be created across two zones for protection against zonal failures. If
+[alternativeLocationId] is also provided, it must be different from [locationId].</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; LocationId { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? LocationId { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -345,13 +344,13 @@ failures. If [alternativeLocationId] is also provided, it must be different from
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Redis/Instance.cs/#L346">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Redis/Instance.cs/#L377">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Redis_InstanceState_MemorySizeGb_" data-uid="Pulumi.Gcp.Redis.InstanceState.MemorySizeGb*"></a>
   <h4 id="Pulumi_Gcp_Redis_InstanceState_MemorySizeGb" data-uid="Pulumi.Gcp.Redis.InstanceState.MemorySizeGb">MemorySizeGb</h4>
@@ -360,7 +359,7 @@ failures. If [alternativeLocationId] is also provided, it must be different from
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; MemorySizeGb { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? MemorySizeGb { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -372,13 +371,13 @@ failures. If [alternativeLocationId] is also provided, it must be different from
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Redis/Instance.cs/#L352">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Redis/Instance.cs/#L383">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Redis_InstanceState_Name_" data-uid="Pulumi.Gcp.Redis.InstanceState.Name*"></a>
   <h4 id="Pulumi_Gcp_Redis_InstanceState_Name" data-uid="Pulumi.Gcp.Redis.InstanceState.Name">Name</h4>
@@ -387,7 +386,7 @@ failures. If [alternativeLocationId] is also provided, it must be different from
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Name { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Name { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -399,13 +398,13 @@ failures. If [alternativeLocationId] is also provided, it must be different from
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Redis/Instance.cs/#L358">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Redis/Instance.cs/#L389">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Redis_InstanceState_Port_" data-uid="Pulumi.Gcp.Redis.InstanceState.Port*"></a>
   <h4 id="Pulumi_Gcp_Redis_InstanceState_Port" data-uid="Pulumi.Gcp.Redis.InstanceState.Port">Port</h4>
@@ -414,7 +413,7 @@ failures. If [alternativeLocationId] is also provided, it must be different from
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; Port { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? Port { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -426,13 +425,13 @@ failures. If [alternativeLocationId] is also provided, it must be different from
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Redis/Instance.cs/#L365">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Redis/Instance.cs/#L396">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Redis_InstanceState_Project_" data-uid="Pulumi.Gcp.Redis.InstanceState.Project*"></a>
   <h4 id="Pulumi_Gcp_Redis_InstanceState_Project" data-uid="Pulumi.Gcp.Redis.InstanceState.Project">Project</h4>
@@ -442,7 +441,7 @@ If it is not provided, the provider project is used.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Project { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Project { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -454,18 +453,18 @@ If it is not provided, the provider project is used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Redis/Instance.cs/#L376">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Redis/Instance.cs/#L407">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Redis_InstanceState_RedisConfigs_" data-uid="Pulumi.Gcp.Redis.InstanceState.RedisConfigs*"></a>
   <h4 id="Pulumi_Gcp_Redis_InstanceState_RedisConfigs" data-uid="Pulumi.Gcp.Redis.InstanceState.RedisConfigs">RedisConfigs</h4>
-  <div class="markdown level1 summary"><p>Redis configuration parameters, according to <a href="http://redis.io/topics/config">http://redis.io/topics/config</a>. Please check Memorystore
-documentation for the list of supported parameters:
+  <div class="markdown level1 summary"><p>Redis configuration parameters, according to <a href="http://redis.io/topics/config">http://redis.io/topics/config</a>. Please check Memorystore documentation for
+the list of supported parameters:
 <a href="https://cloud.google.com/memorystore/docs/redis/reference/rest/v1/projects.locations.instances#Instance.FIELDS.redis_configs">https://cloud.google.com/memorystore/docs/redis/reference/rest/v1/projects.locations.instances#Instance.FIELDS.redis_configs</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -483,23 +482,23 @@ documentation for the list of supported parameters:
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputMap-1.html">InputMap</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">InputMap</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Redis/Instance.cs/#L386">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Redis/Instance.cs/#L417">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Redis_InstanceState_RedisVersion_" data-uid="Pulumi.Gcp.Redis.InstanceState.RedisVersion*"></a>
   <h4 id="Pulumi_Gcp_Redis_InstanceState_RedisVersion" data-uid="Pulumi.Gcp.Redis.InstanceState.RedisVersion">RedisVersion</h4>
-  <div class="markdown level1 summary"><p>The version of Redis software. If not provided, latest supported version will be used. Currently, the
-supported values are: - REDIS_4_0 for Redis 4.0 compatibility - REDIS_3_2 for Redis 3.2 compatibility</p>
+  <div class="markdown level1 summary"><p>The version of Redis software. If not provided, latest supported version will be used. Currently, the supported values
+are: - REDIS_4_0 for Redis 4.0 compatibility - REDIS_3_2 for Redis 3.2 compatibility</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; RedisVersion { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? RedisVersion { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -511,13 +510,13 @@ supported values are: - REDIS_4_0 for Redis 4.0 compatibility - REDIS_3_2 for Re
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Redis/Instance.cs/#L392">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Redis/Instance.cs/#L423">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Redis_InstanceState_Region_" data-uid="Pulumi.Gcp.Redis.InstanceState.Region*"></a>
   <h4 id="Pulumi_Gcp_Redis_InstanceState_Region" data-uid="Pulumi.Gcp.Redis.InstanceState.Region">Region</h4>
@@ -526,7 +525,7 @@ supported values are: - REDIS_4_0 for Redis 4.0 compatibility - REDIS_3_2 for Re
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Region { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Region { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -538,24 +537,24 @@ supported values are: - REDIS_4_0 for Redis 4.0 compatibility - REDIS_3_2 for Re
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Redis/Instance.cs/#L400">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Redis/Instance.cs/#L431">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Redis_InstanceState_ReservedIpRange_" data-uid="Pulumi.Gcp.Redis.InstanceState.ReservedIpRange*"></a>
   <h4 id="Pulumi_Gcp_Redis_InstanceState_ReservedIpRange" data-uid="Pulumi.Gcp.Redis.InstanceState.ReservedIpRange">ReservedIpRange</h4>
-  <div class="markdown level1 summary"><p>The CIDR range of internal addresses that are reserved for this instance. If not provided, the service will
-choose an unused /29 block, for example, 10.0.0.0/29 or 192.168.0.0/29. Ranges must be unique and
-non-overlapping with existing subnets in an authorized network.</p>
+  <div class="markdown level1 summary"><p>The CIDR range of internal addresses that are reserved for this instance. If not provided, the service will choose an
+unused /29 block, for example, 10.0.0.0/29 or 192.168.0.0/29. Ranges must be unique and non-overlapping with existing
+subnets in an authorized network.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; ReservedIpRange { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? ReservedIpRange { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -567,23 +566,23 @@ non-overlapping with existing subnets in an authorized network.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Redis/Instance.cs/#L407">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Redis/Instance.cs/#L438">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Redis_InstanceState_Tier_" data-uid="Pulumi.Gcp.Redis.InstanceState.Tier*"></a>
   <h4 id="Pulumi_Gcp_Redis_InstanceState_Tier" data-uid="Pulumi.Gcp.Redis.InstanceState.Tier">Tier</h4>
-  <div class="markdown level1 summary"><p>The service tier of the instance. Must be one of these values: - BASIC: standalone instance - STANDARD_HA:
-highly available primary/replica instances</p>
+  <div class="markdown level1 summary"><p>The service tier of the instance. Must be one of these values: - BASIC: standalone instance - STANDARD_HA: highly
+available primary/replica instances</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Tier { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Tier { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -595,7 +594,7 @@ highly available primary/replica instances</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -607,7 +606,7 @@ highly available primary/replica instances</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Redis/Instance.cs/#L281" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Redis/Instance.cs/#L305" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

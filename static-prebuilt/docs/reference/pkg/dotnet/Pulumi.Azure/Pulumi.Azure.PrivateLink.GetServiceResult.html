@@ -78,40 +78,16 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">GetServiceResult</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Azure.PrivateLink.html">Pulumi.Azure.PrivateLink</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Azure.dll</h6>
   <h5 id="Pulumi_Azure_PrivateLink_GetServiceResult_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class GetServiceResult</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class GetServiceResult : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Privatelink/GetService.cs/#L50">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/PrivateLink/GetService.cs/#L53">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_PrivateLink_GetServiceResult_Alias" data-uid="Pulumi.Azure.PrivateLink.GetServiceResult.Alias">Alias</h4>
   <div class="markdown level1 summary"><p>The alias is a globally unique name for your private link service which Azure generates for you. Your can use this alias to request a connection to your private link service.</p>
@@ -137,7 +113,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Privatelink/GetService.cs/#L54">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/PrivateLink/GetService.cs/#L57">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_PrivateLink_GetServiceResult_AutoApprovalSubscriptionIds" data-uid="Pulumi.Azure.PrivateLink.GetServiceResult.AutoApprovalSubscriptionIds">AutoApprovalSubscriptionIds</h4>
   <div class="markdown level1 summary"><p>The list of subscription(s) globally unique identifiers that will be auto approved to use the private link service.</p>
@@ -157,13 +133,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Privatelink/GetService.cs/#L58">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/PrivateLink/GetService.cs/#L61">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_PrivateLink_GetServiceResult_EnableProxyProtocol" data-uid="Pulumi.Azure.PrivateLink.GetServiceResult.EnableProxyProtocol">EnableProxyProtocol</h4>
   <div class="markdown level1 summary"><p>Does the Private Link Service support the Proxy Protocol?</p>
@@ -189,7 +165,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Privatelink/GetService.cs/#L87">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/PrivateLink/GetService.cs/#L65">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_PrivateLink_GetServiceResult_Id" data-uid="Pulumi.Azure.PrivateLink.GetServiceResult.Id">Id</h4>
   <div class="markdown level1 summary"><p>id is the provider-assigned unique ID for this managed resource.</p>
@@ -215,7 +191,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Privatelink/GetService.cs/#L62">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/PrivateLink/GetService.cs/#L69">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_PrivateLink_GetServiceResult_LoadBalancerFrontendIpConfigurationIds" data-uid="Pulumi.Azure.PrivateLink.GetServiceResult.LoadBalancerFrontendIpConfigurationIds">LoadBalancerFrontendIpConfigurationIds</h4>
   <div class="markdown level1 summary"><p>The list of Standard Load Balancer(SLB) resource IDs. The Private Link service is tied to the frontend IP address of a SLB. All traffic destined for the private link service will reach the frontend of the SLB. You can configure SLB rules to direct this traffic to appropriate backend pools where your applications are running.</p>
@@ -235,13 +211,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Privatelink/GetService.cs/#L66">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/PrivateLink/GetService.cs/#L73">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_PrivateLink_GetServiceResult_Location" data-uid="Pulumi.Azure.PrivateLink.GetServiceResult.Location">Location</h4>
   <div class="markdown level1 summary"><p>The supported Azure location where the resource exists.</p>
@@ -267,7 +243,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Privatelink/GetService.cs/#L70">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/PrivateLink/GetService.cs/#L77">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_PrivateLink_GetServiceResult_Name" data-uid="Pulumi.Azure.PrivateLink.GetServiceResult.Name">Name</h4>
   <div class="markdown level1 summary"><p>The name of private link service NAT IP configuration.</p>
@@ -293,7 +269,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Privatelink/GetService.cs/#L74">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/PrivateLink/GetService.cs/#L81">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_PrivateLink_GetServiceResult_NatIpConfigurations" data-uid="Pulumi.Azure.PrivateLink.GetServiceResult.NatIpConfigurations">NatIpConfigurations</h4>
   <div class="markdown level1 summary"><p>The <code>nat_ip_configuration</code> block as defined below.</p>
@@ -301,7 +277,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetServiceNatIpConfigurationsResult&gt; NatIpConfigurations</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetServiceNatIpConfigurationResult&gt; NatIpConfigurations</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -313,13 +289,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Azure.PrivateLink.Outputs.GetServiceNatIpConfigurationsResult.html">GetServiceNatIpConfigurationsResult</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Azure.PrivateLink.Outputs.GetServiceNatIpConfigurationResult.html">GetServiceNatIpConfigurationResult</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Privatelink/GetService.cs/#L75">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/PrivateLink/GetService.cs/#L82">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_PrivateLink_GetServiceResult_ResourceGroupName" data-uid="Pulumi.Azure.PrivateLink.GetServiceResult.ResourceGroupName">ResourceGroupName</h4>
   <div class="markdown level1 summary"></div>
@@ -344,7 +320,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Privatelink/GetService.cs/#L79">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/PrivateLink/GetService.cs/#L86">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_PrivateLink_GetServiceResult_Tags" data-uid="Pulumi.Azure.PrivateLink.GetServiceResult.Tags">Tags</h4>
   <div class="markdown level1 summary"><p>A mapping of tags to assign to the resource.</p>
@@ -364,13 +340,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Privatelink/GetService.cs/#L83">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/PrivateLink/GetService.cs/#L90">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_PrivateLink_GetServiceResult_VisibilitySubscriptionIds" data-uid="Pulumi.Azure.PrivateLink.GetServiceResult.VisibilitySubscriptionIds">VisibilitySubscriptionIds</h4>
   <div class="markdown level1 summary"><p>The list of subscription(s) globally unique identifiers(GUID) that will be able to see the private link service.</p>
@@ -390,7 +366,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -402,7 +378,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Privatelink/GetService.cs/#L44" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/PrivateLink/GetService.cs/#L47" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

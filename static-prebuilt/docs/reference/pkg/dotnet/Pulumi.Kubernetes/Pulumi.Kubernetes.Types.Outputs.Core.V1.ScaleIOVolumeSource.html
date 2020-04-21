@@ -79,40 +79,16 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">ScaleIOVolumeSource</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Core.V1.html">Pulumi.Kubernetes.Types.Outputs.Core.V1</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Kubernetes.dll</h6>
   <h5 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_ScaleIOVolumeSource_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class ScaleIOVolumeSource</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class ScaleIOVolumeSource : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L20951">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L21125">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_ScaleIOVolumeSource_FsType" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.ScaleIOVolumeSource.FsType">FsType</h4>
   <div class="markdown level1 summary"><p>Filesystem type to mount. Must be a filesystem type supported by the host operating
@@ -139,7 +115,7 @@ system. Ex. &quot;ext4&quot;, &quot;xfs&quot;, &quot;ntfs&quot;. Default is &quo
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L20956">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L21130">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_ScaleIOVolumeSource_Gateway" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.ScaleIOVolumeSource.Gateway">Gateway</h4>
   <div class="markdown level1 summary"><p>The host address of the ScaleIO API Gateway.</p>
@@ -165,7 +141,7 @@ system. Ex. &quot;ext4&quot;, &quot;xfs&quot;, &quot;ntfs&quot;. Default is &quo
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L20961">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L21135">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_ScaleIOVolumeSource_ProtectionDomain" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.ScaleIOVolumeSource.ProtectionDomain">ProtectionDomain</h4>
   <div class="markdown level1 summary"><p>The name of the ScaleIO Protection Domain for the configured storage.</p>
@@ -191,7 +167,7 @@ system. Ex. &quot;ext4&quot;, &quot;xfs&quot;, &quot;ntfs&quot;. Default is &quo
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L20967">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L21141">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_ScaleIOVolumeSource_ReadOnly" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.ScaleIOVolumeSource.ReadOnly">ReadOnly</h4>
   <div class="markdown level1 summary"><p>Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in
@@ -218,7 +194,7 @@ VolumeMounts.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L20973">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L21147">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_ScaleIOVolumeSource_SecretRef" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.ScaleIOVolumeSource.SecretRef">SecretRef</h4>
   <div class="markdown level1 summary"><p>SecretRef references to the secret for ScaleIO user and other sensitive information. If
@@ -245,7 +221,7 @@ this is not provided, Login operation will fail.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L20978">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L21152">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_ScaleIOVolumeSource_SslEnabled" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.ScaleIOVolumeSource.SslEnabled">SslEnabled</h4>
   <div class="markdown level1 summary"><p>Flag to enable/disable SSL communication with Gateway, default false</p>
@@ -271,7 +247,7 @@ this is not provided, Login operation will fail.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L20984">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L21158">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_ScaleIOVolumeSource_StorageMode" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.ScaleIOVolumeSource.StorageMode">StorageMode</h4>
   <div class="markdown level1 summary"><p>Indicates whether the storage for a volume should be ThickProvisioned or
@@ -298,7 +274,7 @@ ThinProvisioned. Default is ThinProvisioned.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L20989">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L21163">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_ScaleIOVolumeSource_StoragePool" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.ScaleIOVolumeSource.StoragePool">StoragePool</h4>
   <div class="markdown level1 summary"><p>The ScaleIO Storage Pool associated with the protection domain.</p>
@@ -324,7 +300,7 @@ ThinProvisioned. Default is ThinProvisioned.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L20994">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L21168">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_ScaleIOVolumeSource_System" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.ScaleIOVolumeSource.System">System</h4>
   <div class="markdown level1 summary"><p>The name of the storage system as configured in ScaleIO.</p>
@@ -350,7 +326,7 @@ ThinProvisioned. Default is ThinProvisioned.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L21000">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L21174">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_ScaleIOVolumeSource_VolumeName" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.ScaleIOVolumeSource.VolumeName">VolumeName</h4>
   <div class="markdown level1 summary"><p>The name of a volume already created in the ScaleIO system that is associated with this
@@ -383,7 +359,7 @@ volume source.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L20944" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L21118" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

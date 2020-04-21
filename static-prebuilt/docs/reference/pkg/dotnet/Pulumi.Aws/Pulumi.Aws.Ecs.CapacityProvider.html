@@ -71,50 +71,31 @@
   
   <h1 id="Pulumi_Aws_Ecs_CapacityProvider" data-uid="Pulumi.Aws.Ecs.CapacityProvider" class="text-break">Class CapacityProvider
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Provides an ECS cluster capacity provider. More information can be found on the <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-capacity-providers.html">ECS Developer Guide</a>.</p>
+<blockquote>
+<p><strong>NOTE:</strong> The AWS API does not currently support deleting ECS cluster capacity providers. Removing this resource will only remove the state for it.</p>
+</blockquote>
+<h2 id="auto_scaling_group_provider">auto_scaling_group_provider</h2>
+<p>The <code>auto_scaling_group_provider</code> block supports the following:</p>
+<ul>
+<li><code>auto_scaling_group_arn</code> - (Required) - The Amazon Resource Name (ARN) of the associated auto scaling group.</li>
+<li><code>managed_scaling</code> - (Optional) - Nested argument defining the parameters of the auto scaling. Defined below.</li>
+<li><code>managed_termination_protection</code> - (Optional) - Enables or disables container-aware termination of instances in the auto scaling group when scale-in happens. Valid values are <code>ENABLED</code> and <code>DISABLED</code>.</li>
+</ul>
+<h2 id="managed_scaling">managed_scaling</h2>
+<p>The <code>managed_scaling</code> block supports the following:</p>
+<ul>
+<li><code>maximum_scaling_step_size</code> - (Optional) The maximum step adjustment size. A number between 1 and 10,000.</li>
+<li><code>minimum_scaling_step_size</code> - (Optional) The minimum step adjustment size. A number between 1 and 10,000.</li>
+<li><code>status</code> - (Optional) Whether auto scaling is managed by ECS. Valid values are <code>ENABLED</code> and <code>DISABLED</code>.</li>
+<li><code>target_capacity</code> - (Optional) The target utilization for the capacity provider. A number between 1 and 100.</li>
+</ul>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
-    <div class="level3"><span class="xref">CapacityProvider</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">CapacityProvider</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.Ecs.html">Pulumi.Aws.Ecs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
@@ -125,16 +106,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ecs/CapacityProvider.cs/#L46">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ecs/CapacityProvider.cs/#L69">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ecs_CapacityProvider__ctor_" data-uid="Pulumi.Aws.Ecs.CapacityProvider.#ctor*"></a>
-  <h4 id="Pulumi_Aws_Ecs_CapacityProvider__ctor_System_String_Pulumi_Aws_Ecs_CapacityProviderArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.Ecs.CapacityProvider.#ctor(System.String,Pulumi.Aws.Ecs.CapacityProviderArgs,Pulumi.CustomResourceOptions)">CapacityProvider(String, CapacityProviderArgs, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Aws_Ecs_CapacityProvider__ctor_System_String_Pulumi_Aws_Ecs_CapacityProviderArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.Ecs.CapacityProvider.#ctor(System.String,Pulumi.Aws.Ecs.CapacityProviderArgs,System.Nullable{CustomResourceOptions})">CapacityProvider(String, CapacityProviderArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Create a CapacityProvider resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public CapacityProvider(string name, CapacityProviderArgs args, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public CapacityProvider(string name, CapacityProviderArgs args, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -159,7 +140,7 @@
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -169,7 +150,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ecs/CapacityProvider.cs/#L17">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ecs/CapacityProvider.cs/#L40">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ecs_CapacityProvider_Arn_" data-uid="Pulumi.Aws.Ecs.CapacityProvider.Arn*"></a>
   <h4 id="Pulumi_Aws_Ecs_CapacityProvider_Arn" data-uid="Pulumi.Aws.Ecs.CapacityProvider.Arn">Arn</h4>
@@ -190,13 +171,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ecs/CapacityProvider.cs/#L23">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ecs/CapacityProvider.cs/#L46">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ecs_CapacityProvider_AutoScalingGroupProvider_" data-uid="Pulumi.Aws.Ecs.CapacityProvider.AutoScalingGroupProvider*"></a>
   <h4 id="Pulumi_Aws_Ecs_CapacityProvider_AutoScalingGroupProvider" data-uid="Pulumi.Aws.Ecs.CapacityProvider.AutoScalingGroupProvider">AutoScalingGroupProvider</h4>
@@ -217,13 +198,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Aws.Ecs.Outputs.CapacityProviderAutoScalingGroupProvider.html">CapacityProviderAutoScalingGroupProvider</a>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Aws.Ecs.Outputs.CapacityProviderAutoScalingGroupProvider.html">CapacityProviderAutoScalingGroupProvider</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ecs/CapacityProvider.cs/#L29">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ecs/CapacityProvider.cs/#L52">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ecs_CapacityProvider_Name_" data-uid="Pulumi.Aws.Ecs.CapacityProvider.Name*"></a>
   <h4 id="Pulumi_Aws_Ecs_CapacityProvider_Name" data-uid="Pulumi.Aws.Ecs.CapacityProvider.Name">Name</h4>
@@ -244,13 +225,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ecs/CapacityProvider.cs/#L35">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ecs/CapacityProvider.cs/#L58">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ecs_CapacityProvider_Tags_" data-uid="Pulumi.Aws.Ecs.CapacityProvider.Tags*"></a>
   <h4 id="Pulumi_Aws_Ecs_CapacityProvider_Tags" data-uid="Pulumi.Aws.Ecs.CapacityProvider.Tags">Tags</h4>
@@ -259,7 +240,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;&gt; Tags { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;?&gt; Tags { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -271,7 +252,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -279,17 +260,17 @@
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ecs/CapacityProvider.cs/#L76">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ecs/CapacityProvider.cs/#L99">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ecs_CapacityProvider_Get_" data-uid="Pulumi.Aws.Ecs.CapacityProvider.Get*"></a>
-  <h4 id="Pulumi_Aws_Ecs_CapacityProvider_Get_System_String_Pulumi_Input_System_String__Pulumi_Aws_Ecs_CapacityProviderState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.Ecs.CapacityProvider.Get(System.String,Pulumi.Input{System.String},Pulumi.Aws.Ecs.CapacityProviderState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, CapacityProviderState, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Aws_Ecs_CapacityProvider_Get_System_String_Input_System_String__Pulumi_Aws_Ecs_CapacityProviderState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.Ecs.CapacityProvider.Get(System.String,Input{System.String},Pulumi.Aws.Ecs.CapacityProviderState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, CapacityProviderState, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Get an existing CapacityProvider resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static CapacityProvider Get(string name, Input&lt;string&gt; id, CapacityProviderState state = null, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static CapacityProvider Get(string name, Input&lt;string&gt; id, CapacityProviderState state = null, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -308,7 +289,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -320,7 +301,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -349,7 +330,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ecs/CapacityProvider.cs/#L12" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ecs/CapacityProvider.cs/#L35" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

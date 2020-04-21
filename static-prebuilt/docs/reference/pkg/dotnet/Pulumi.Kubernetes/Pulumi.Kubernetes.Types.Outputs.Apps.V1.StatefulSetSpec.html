@@ -79,40 +79,16 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">StatefulSetSpec</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Apps.V1.html">Pulumi.Kubernetes.Types.Outputs.Apps.V1</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Kubernetes.dll</h6>
   <h5 id="Pulumi_Kubernetes_Types_Outputs_Apps_V1_StatefulSetSpec_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class StatefulSetSpec</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class StatefulSetSpec : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L5388">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L5394">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Apps_V1_StatefulSetSpec_PodManagementPolicy" data-uid="Pulumi.Kubernetes.Types.Outputs.Apps.V1.StatefulSetSpec.PodManagementPolicy">PodManagementPolicy</h4>
   <div class="markdown level1 summary"><p>podManagementPolicy controls how pods are created during initial scale up, when
@@ -144,7 +120,7 @@ delete all pods at once.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L5395">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L5401">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Apps_V1_StatefulSetSpec_Replicas" data-uid="Pulumi.Kubernetes.Types.Outputs.Apps.V1.StatefulSetSpec.Replicas">Replicas</h4>
   <div class="markdown level1 summary"><p>replicas is the desired number of replicas of the given Template. These are replicas in
@@ -172,7 +148,7 @@ also have a consistent identity. If unspecified, defaults to 1.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L5402">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L5408">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Apps_V1_StatefulSetSpec_RevisionHistoryLimit" data-uid="Pulumi.Kubernetes.Types.Outputs.Apps.V1.StatefulSetSpec.RevisionHistoryLimit">RevisionHistoryLimit</h4>
   <div class="markdown level1 summary"><p>revisionHistoryLimit is the maximum number of revisions that will be maintained in the
@@ -200,7 +176,7 @@ represented by a currently applied StatefulSetSpec version. The default value is
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L5409">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L5415">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Apps_V1_StatefulSetSpec_Selector" data-uid="Pulumi.Kubernetes.Types.Outputs.Apps.V1.StatefulSetSpec.Selector">Selector</h4>
   <div class="markdown level1 summary"><p>selector is a label query over pods that should match the replica count. It must match
@@ -228,7 +204,7 @@ the pod template's labels. More info:
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L5418">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L5424">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Apps_V1_StatefulSetSpec_ServiceName" data-uid="Pulumi.Kubernetes.Types.Outputs.Apps.V1.StatefulSetSpec.ServiceName">ServiceName</h4>
   <div class="markdown level1 summary"><p>serviceName is the name of the service that governs this StatefulSet. This service must
@@ -258,7 +234,7 @@ managed by the StatefulSet controller.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L5425">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L5431">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Apps_V1_StatefulSetSpec_Template" data-uid="Pulumi.Kubernetes.Types.Outputs.Apps.V1.StatefulSetSpec.Template">Template</h4>
   <div class="markdown level1 summary"><p>template is the object that describes the pod that will be created if insufficient
@@ -286,7 +262,7 @@ Template, but have a unique identity from the rest of the StatefulSet.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L5431">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L5437">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Apps_V1_StatefulSetSpec_UpdateStrategy" data-uid="Pulumi.Kubernetes.Types.Outputs.Apps.V1.StatefulSetSpec.UpdateStrategy">UpdateStrategy</h4>
   <div class="markdown level1 summary"><p>updateStrategy indicates the StatefulSetUpdateStrategy that will be employed to update
@@ -313,7 +289,7 @@ Pods in the StatefulSet when a revision is made to Template.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L5440">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L5446">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Apps_V1_StatefulSetSpec_VolumeClaimTemplates" data-uid="Pulumi.Kubernetes.Types.Outputs.Apps.V1.StatefulSetSpec.VolumeClaimTemplates">VolumeClaimTemplates</h4>
   <div class="markdown level1 summary"><p>volumeClaimTemplates is a list of claims that pods are allowed to reference. The
@@ -337,7 +313,7 @@ takes precedence over any volumes in the template, with the same name.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Core.V1.PersistentVolumeClaim.html">PersistentVolumeClaim</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Core.V1.PersistentVolumeClaim.html">PersistentVolumeClaim</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -349,7 +325,7 @@ takes precedence over any volumes in the template, with the same name.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L5376" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L5382" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

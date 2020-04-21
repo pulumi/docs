@@ -76,36 +76,7 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
-    <div class="level3"><span class="xref">AnalyticsApplicationInputsGetArgs</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">AnalyticsApplicationInputsGetArgs</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.Kinesis.Inputs.html">Pulumi.Aws.Kinesis.Inputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
@@ -116,7 +87,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Kinesis/AnalyticsApplication.cs/#L444">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Kinesis/Inputs/AnalyticsApplicationInputsGetArgs.cs/#L77">View Source</a>
   </span>
   <a id="Pulumi_Aws_Kinesis_Inputs_AnalyticsApplicationInputsGetArgs__ctor_" data-uid="Pulumi.Aws.Kinesis.Inputs.AnalyticsApplicationInputsGetArgs.#ctor*"></a>
   <h4 id="Pulumi_Aws_Kinesis_Inputs_AnalyticsApplicationInputsGetArgs__ctor" data-uid="Pulumi.Aws.Kinesis.Inputs.AnalyticsApplicationInputsGetArgs.#ctor">AnalyticsApplicationInputsGetArgs()</h4>
@@ -129,7 +100,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Kinesis/AnalyticsApplication.cs/#L407">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Kinesis/Inputs/AnalyticsApplicationInputsGetArgs.cs/#L18">View Source</a>
   </span>
   <a id="Pulumi_Aws_Kinesis_Inputs_AnalyticsApplicationInputsGetArgs_Id_" data-uid="Pulumi.Aws.Kinesis.Inputs.AnalyticsApplicationInputsGetArgs.Id*"></a>
   <h4 id="Pulumi_Aws_Kinesis_Inputs_AnalyticsApplicationInputsGetArgs_Id" data-uid="Pulumi.Aws.Kinesis.Inputs.AnalyticsApplicationInputsGetArgs.Id">Id</h4>
@@ -138,7 +109,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Id { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Id { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -150,21 +121,23 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Kinesis/AnalyticsApplication.cs/#L410">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Kinesis/Inputs/AnalyticsApplicationInputsGetArgs.cs/#L25">View Source</a>
   </span>
   <a id="Pulumi_Aws_Kinesis_Inputs_AnalyticsApplicationInputsGetArgs_KinesisFirehose_" data-uid="Pulumi.Aws.Kinesis.Inputs.AnalyticsApplicationInputsGetArgs.KinesisFirehose*"></a>
   <h4 id="Pulumi_Aws_Kinesis_Inputs_AnalyticsApplicationInputsGetArgs_KinesisFirehose" data-uid="Pulumi.Aws.Kinesis.Inputs.AnalyticsApplicationInputsGetArgs.KinesisFirehose">KinesisFirehose</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The Kinesis Firehose configuration for the streaming source. Conflicts with <code>kinesis_stream</code>.
+See Kinesis Firehose below for more details.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;AnalyticsApplicationInputsKinesisFirehoseGetArgs&gt; KinesisFirehose { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;AnalyticsApplicationInputsKinesisFirehoseGetArgs&gt;? KinesisFirehose { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -176,21 +149,23 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Aws.Kinesis.Inputs.AnalyticsApplicationInputsKinesisFirehoseGetArgs.html">AnalyticsApplicationInputsKinesisFirehoseGetArgs</a>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Aws.Kinesis.Inputs.AnalyticsApplicationInputsKinesisFirehoseGetArgs.html">AnalyticsApplicationInputsKinesisFirehoseGetArgs</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Kinesis/AnalyticsApplication.cs/#L413">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Kinesis/Inputs/AnalyticsApplicationInputsGetArgs.cs/#L32">View Source</a>
   </span>
   <a id="Pulumi_Aws_Kinesis_Inputs_AnalyticsApplicationInputsGetArgs_KinesisStream_" data-uid="Pulumi.Aws.Kinesis.Inputs.AnalyticsApplicationInputsGetArgs.KinesisStream*"></a>
   <h4 id="Pulumi_Aws_Kinesis_Inputs_AnalyticsApplicationInputsGetArgs_KinesisStream" data-uid="Pulumi.Aws.Kinesis.Inputs.AnalyticsApplicationInputsGetArgs.KinesisStream">KinesisStream</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The Kinesis Stream configuration for the streaming source. Conflicts with <code>kinesis_firehose</code>.
+See Kinesis Stream below for more details.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;AnalyticsApplicationInputsKinesisStreamGetArgs&gt; KinesisStream { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;AnalyticsApplicationInputsKinesisStreamGetArgs&gt;? KinesisStream { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -202,17 +177,18 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Aws.Kinesis.Inputs.AnalyticsApplicationInputsKinesisStreamGetArgs.html">AnalyticsApplicationInputsKinesisStreamGetArgs</a>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Aws.Kinesis.Inputs.AnalyticsApplicationInputsKinesisStreamGetArgs.html">AnalyticsApplicationInputsKinesisStreamGetArgs</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Kinesis/AnalyticsApplication.cs/#L416">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Kinesis/Inputs/AnalyticsApplicationInputsGetArgs.cs/#L38">View Source</a>
   </span>
   <a id="Pulumi_Aws_Kinesis_Inputs_AnalyticsApplicationInputsGetArgs_NamePrefix_" data-uid="Pulumi.Aws.Kinesis.Inputs.AnalyticsApplicationInputsGetArgs.NamePrefix*"></a>
   <h4 id="Pulumi_Aws_Kinesis_Inputs_AnalyticsApplicationInputsGetArgs_NamePrefix" data-uid="Pulumi.Aws.Kinesis.Inputs.AnalyticsApplicationInputsGetArgs.NamePrefix">NamePrefix</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The Name Prefix to use when creating an in-application stream.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -228,21 +204,23 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Kinesis/AnalyticsApplication.cs/#L419">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Kinesis/Inputs/AnalyticsApplicationInputsGetArgs.cs/#L45">View Source</a>
   </span>
   <a id="Pulumi_Aws_Kinesis_Inputs_AnalyticsApplicationInputsGetArgs_Parallelism_" data-uid="Pulumi.Aws.Kinesis.Inputs.AnalyticsApplicationInputsGetArgs.Parallelism*"></a>
   <h4 id="Pulumi_Aws_Kinesis_Inputs_AnalyticsApplicationInputsGetArgs_Parallelism" data-uid="Pulumi.Aws.Kinesis.Inputs.AnalyticsApplicationInputsGetArgs.Parallelism">Parallelism</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The number of Parallel in-application streams to create.
+See Parallelism below for more details.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;AnalyticsApplicationInputsParallelismGetArgs&gt; Parallelism { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;AnalyticsApplicationInputsParallelismGetArgs&gt;? Parallelism { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -254,21 +232,23 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Aws.Kinesis.Inputs.AnalyticsApplicationInputsParallelismGetArgs.html">AnalyticsApplicationInputsParallelismGetArgs</a>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Aws.Kinesis.Inputs.AnalyticsApplicationInputsParallelismGetArgs.html">AnalyticsApplicationInputsParallelismGetArgs</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Kinesis/AnalyticsApplication.cs/#L422">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Kinesis/Inputs/AnalyticsApplicationInputsGetArgs.cs/#L52">View Source</a>
   </span>
   <a id="Pulumi_Aws_Kinesis_Inputs_AnalyticsApplicationInputsGetArgs_ProcessingConfiguration_" data-uid="Pulumi.Aws.Kinesis.Inputs.AnalyticsApplicationInputsGetArgs.ProcessingConfiguration*"></a>
   <h4 id="Pulumi_Aws_Kinesis_Inputs_AnalyticsApplicationInputsGetArgs_ProcessingConfiguration" data-uid="Pulumi.Aws.Kinesis.Inputs.AnalyticsApplicationInputsGetArgs.ProcessingConfiguration">ProcessingConfiguration</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The Processing Configuration to transform records as they are received from the stream.
+See Processing Configuration below for more details.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;AnalyticsApplicationInputsProcessingConfigurationGetArgs&gt; ProcessingConfiguration { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;AnalyticsApplicationInputsProcessingConfigurationGetArgs&gt;? ProcessingConfiguration { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -280,17 +260,18 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Aws.Kinesis.Inputs.AnalyticsApplicationInputsProcessingConfigurationGetArgs.html">AnalyticsApplicationInputsProcessingConfigurationGetArgs</a>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Aws.Kinesis.Inputs.AnalyticsApplicationInputsProcessingConfigurationGetArgs.html">AnalyticsApplicationInputsProcessingConfigurationGetArgs</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Kinesis/AnalyticsApplication.cs/#L425">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Kinesis/Inputs/AnalyticsApplicationInputsGetArgs.cs/#L58">View Source</a>
   </span>
   <a id="Pulumi_Aws_Kinesis_Inputs_AnalyticsApplicationInputsGetArgs_Schema_" data-uid="Pulumi.Aws.Kinesis.Inputs.AnalyticsApplicationInputsGetArgs.Schema*"></a>
   <h4 id="Pulumi_Aws_Kinesis_Inputs_AnalyticsApplicationInputsGetArgs_Schema" data-uid="Pulumi.Aws.Kinesis.Inputs.AnalyticsApplicationInputsGetArgs.Schema">Schema</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The Schema format of the data in the streaming source. See Source Schema below for more details.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -306,13 +287,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Aws.Kinesis.Inputs.AnalyticsApplicationInputsSchemaGetArgs.html">AnalyticsApplicationInputsSchemaGetArgs</a>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Aws.Kinesis.Inputs.AnalyticsApplicationInputsSchemaGetArgs.html">AnalyticsApplicationInputsSchemaGetArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Kinesis/AnalyticsApplication.cs/#L430">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Kinesis/Inputs/AnalyticsApplicationInputsGetArgs.cs/#L63">View Source</a>
   </span>
   <a id="Pulumi_Aws_Kinesis_Inputs_AnalyticsApplicationInputsGetArgs_StartingPositionConfigurations_" data-uid="Pulumi.Aws.Kinesis.Inputs.AnalyticsApplicationInputsGetArgs.StartingPositionConfigurations*"></a>
   <h4 id="Pulumi_Aws_Kinesis_Inputs_AnalyticsApplicationInputsGetArgs_StartingPositionConfigurations" data-uid="Pulumi.Aws.Kinesis.Inputs.AnalyticsApplicationInputsGetArgs.StartingPositionConfigurations">StartingPositionConfigurations</h4>
@@ -320,7 +301,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public InputList&lt;AnalyticsApplicationInputsStartingPositionConfigurationsGetArgs&gt; StartingPositionConfigurations { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public InputList&lt;AnalyticsApplicationInputsStartingPositionConfigurationGetArgs&gt; StartingPositionConfigurations { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -332,13 +313,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<a class="xref" href="Pulumi.Aws.Kinesis.Inputs.AnalyticsApplicationInputsStartingPositionConfigurationsGetArgs.html">AnalyticsApplicationInputsStartingPositionConfigurationsGetArgs</a>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<a class="xref" href="Pulumi.Aws.Kinesis.Inputs.AnalyticsApplicationInputsStartingPositionConfigurationGetArgs.html">AnalyticsApplicationInputsStartingPositionConfigurationGetArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Kinesis/AnalyticsApplication.cs/#L438">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Kinesis/Inputs/AnalyticsApplicationInputsGetArgs.cs/#L71">View Source</a>
   </span>
   <a id="Pulumi_Aws_Kinesis_Inputs_AnalyticsApplicationInputsGetArgs_StreamNames_" data-uid="Pulumi.Aws.Kinesis.Inputs.AnalyticsApplicationInputsGetArgs.StreamNames*"></a>
   <h4 id="Pulumi_Aws_Kinesis_Inputs_AnalyticsApplicationInputsGetArgs_StreamNames" data-uid="Pulumi.Aws.Kinesis.Inputs.AnalyticsApplicationInputsGetArgs.StreamNames">StreamNames</h4>
@@ -358,7 +339,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -370,7 +351,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Kinesis/AnalyticsApplication.cs/#L402" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Kinesis/Inputs/AnalyticsApplicationInputsGetArgs.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -77,36 +77,7 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
-    <div class="level3"><span class="xref">FlowSchemaSpecArgs</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">FlowSchemaSpecArgs</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Kubernetes.Types.Inputs.FlowControl.V1Alpha1.html">Pulumi.Kubernetes.Types.Inputs.FlowControl.V1Alpha1</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Kubernetes.dll</h6>
@@ -117,7 +88,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Input.cs/#L22888">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Input.cs/#L23104">View Source</a>
   </span>
   <a id="Pulumi_Kubernetes_Types_Inputs_FlowControl_V1Alpha1_FlowSchemaSpecArgs_DistinguisherMethod_" data-uid="Pulumi.Kubernetes.Types.Inputs.FlowControl.V1Alpha1.FlowSchemaSpecArgs.DistinguisherMethod*"></a>
   <h4 id="Pulumi_Kubernetes_Types_Inputs_FlowControl_V1Alpha1_FlowSchemaSpecArgs_DistinguisherMethod" data-uid="Pulumi.Kubernetes.Types.Inputs.FlowControl.V1Alpha1.FlowSchemaSpecArgs.DistinguisherMethod">DistinguisherMethod</h4>
@@ -128,7 +99,7 @@ always be the empty string.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;FlowDistinguisherMethodArgs&gt; DistinguisherMethod { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;FlowDistinguisherMethodArgs&gt;? DistinguisherMethod { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -140,26 +111,26 @@ always be the empty string.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Inputs.FlowControl.V1Alpha1.FlowDistinguisherMethodArgs.html">FlowDistinguisherMethodArgs</a>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Inputs.FlowControl.V1Alpha1.FlowDistinguisherMethodArgs.html">FlowDistinguisherMethodArgs</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Input.cs/#L22898">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Input.cs/#L23114">View Source</a>
   </span>
   <a id="Pulumi_Kubernetes_Types_Inputs_FlowControl_V1Alpha1_FlowSchemaSpecArgs_MatchingPrecedence_" data-uid="Pulumi.Kubernetes.Types.Inputs.FlowControl.V1Alpha1.FlowSchemaSpecArgs.MatchingPrecedence*"></a>
   <h4 id="Pulumi_Kubernetes_Types_Inputs_FlowControl_V1Alpha1_FlowSchemaSpecArgs_MatchingPrecedence" data-uid="Pulumi.Kubernetes.Types.Inputs.FlowControl.V1Alpha1.FlowSchemaSpecArgs.MatchingPrecedence">MatchingPrecedence</h4>
   <div class="markdown level1 summary"><p><code>matchingPrecedence</code> is used to choose among the FlowSchemas that match a given request.
 The chosen FlowSchema is among those with the numerically lowest (which we take to be
-logically highest) MatchingPrecedence.  Each MatchingPrecedence value must be
-non-negative. Note that if the precedence is not specified or zero, it will be set to
-1000 as default.</p>
+logically highest) MatchingPrecedence.  Each MatchingPrecedence value must be ranged in
+[1,10000]. Note that if the precedence is not specified, it will be set to 1000 as
+default.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; MatchingPrecedence { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? MatchingPrecedence { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -171,13 +142,13 @@ non-negative. Note that if the precedence is not specified or zero, it will be s
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Input.cs/#L22880">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Input.cs/#L23096">View Source</a>
   </span>
   <a id="Pulumi_Kubernetes_Types_Inputs_FlowControl_V1Alpha1_FlowSchemaSpecArgs_PriorityLevelConfiguration_" data-uid="Pulumi.Kubernetes.Types.Inputs.FlowControl.V1Alpha1.FlowSchemaSpecArgs.PriorityLevelConfiguration*"></a>
   <h4 id="Pulumi_Kubernetes_Types_Inputs_FlowControl_V1Alpha1_FlowSchemaSpecArgs_PriorityLevelConfiguration" data-uid="Pulumi.Kubernetes.Types.Inputs.FlowControl.V1Alpha1.FlowSchemaSpecArgs.PriorityLevelConfiguration">PriorityLevelConfiguration</h4>
@@ -200,13 +171,13 @@ as invalid in its status. Required.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Inputs.FlowControl.V1Alpha1.PriorityLevelConfigurationReferenceArgs.html">PriorityLevelConfigurationReferenceArgs</a>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Inputs.FlowControl.V1Alpha1.PriorityLevelConfigurationReferenceArgs.html">PriorityLevelConfigurationReferenceArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Input.cs/#L22909">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Input.cs/#L23125">View Source</a>
   </span>
   <a id="Pulumi_Kubernetes_Types_Inputs_FlowControl_V1Alpha1_FlowSchemaSpecArgs_Rules_" data-uid="Pulumi.Kubernetes.Types.Inputs.FlowControl.V1Alpha1.FlowSchemaSpecArgs.Rules*"></a>
   <h4 id="Pulumi_Kubernetes_Types_Inputs_FlowControl_V1Alpha1_FlowSchemaSpecArgs_Rules" data-uid="Pulumi.Kubernetes.Types.Inputs.FlowControl.V1Alpha1.FlowSchemaSpecArgs.Rules">Rules</h4>
@@ -229,7 +200,7 @@ empty slice, there will be no requests matching the FlowSchema.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Inputs.FlowControl.V1Alpha1.PolicyRulesWithSubjectsArgs.html">PolicyRulesWithSubjectsArgs</a>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Inputs.FlowControl.V1Alpha1.PolicyRulesWithSubjectsArgs.html">PolicyRulesWithSubjectsArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -241,7 +212,7 @@ empty slice, there will be no requests matching the FlowSchema.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Input.cs/#L22873" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Input.cs/#L23089" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

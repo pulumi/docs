@@ -78,40 +78,16 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">ScaleSetRollingUpgradePolicy</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Azure.Compute.Outputs.html">Pulumi.Azure.Compute.Outputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Azure.dll</h6>
   <h5 id="Pulumi_Azure_Compute_Outputs_ScaleSetRollingUpgradePolicy_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class ScaleSetRollingUpgradePolicy</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class ScaleSetRollingUpgradePolicy : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/ScaleSet.cs/#L2547">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/Outputs/ScaleSetRollingUpgradePolicy.cs/#L19">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Compute_Outputs_ScaleSetRollingUpgradePolicy_MaxBatchInstancePercent" data-uid="Pulumi.Azure.Compute.Outputs.ScaleSetRollingUpgradePolicy.MaxBatchInstancePercent">MaxBatchInstancePercent</h4>
   <div class="markdown level1 summary"><p>The maximum percent of total virtual machine instances that will be upgraded simultaneously by the rolling upgrade in one batch. As this is a maximum, unhealthy instances in previous or future batches can cause the percentage of instances in a batch to decrease to ensure higher reliability. Defaults to <code>20</code>.</p>
@@ -137,7 +113,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/ScaleSet.cs/#L2551">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/Outputs/ScaleSetRollingUpgradePolicy.cs/#L23">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Compute_Outputs_ScaleSetRollingUpgradePolicy_MaxUnhealthyInstancePercent" data-uid="Pulumi.Azure.Compute.Outputs.ScaleSetRollingUpgradePolicy.MaxUnhealthyInstancePercent">MaxUnhealthyInstancePercent</h4>
   <div class="markdown level1 summary"><p>The maximum percentage of the total virtual machine instances in the scale set that can be simultaneously unhealthy, either as a result of being upgraded, or by being found in an unhealthy state by the virtual machine health checks before the rolling upgrade aborts. This constraint will be checked prior to starting any batch. Defaults to <code>20</code>.</p>
@@ -163,7 +139,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/ScaleSet.cs/#L2555">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/Outputs/ScaleSetRollingUpgradePolicy.cs/#L27">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Compute_Outputs_ScaleSetRollingUpgradePolicy_MaxUnhealthyUpgradedInstancePercent" data-uid="Pulumi.Azure.Compute.Outputs.ScaleSetRollingUpgradePolicy.MaxUnhealthyUpgradedInstancePercent">MaxUnhealthyUpgradedInstancePercent</h4>
   <div class="markdown level1 summary"><p>The maximum percentage of upgraded virtual machine instances that can be found to be in an unhealthy state. This check will happen after each batch is upgraded. If this percentage is ever exceeded, the rolling update aborts. Defaults to <code>20</code>.</p>
@@ -189,7 +165,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/ScaleSet.cs/#L2559">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/Outputs/ScaleSetRollingUpgradePolicy.cs/#L31">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Compute_Outputs_ScaleSetRollingUpgradePolicy_PauseTimeBetweenBatches" data-uid="Pulumi.Azure.Compute.Outputs.ScaleSetRollingUpgradePolicy.PauseTimeBetweenBatches">PauseTimeBetweenBatches</h4>
   <div class="markdown level1 summary"><p>The wait time between completing the update for all virtual machines in one batch and starting the next batch. The time duration should be specified in ISO 8601 format for duration (<a href="https://en.wikipedia.org/wiki/ISO_8601#Durations">https://en.wikipedia.org/wiki/ISO_8601#Durations</a>). Defaults to <code>0</code> seconds represented as <code>PT0S</code>.</p>
@@ -197,7 +173,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string PauseTimeBetweenBatches</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? PauseTimeBetweenBatches</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -209,7 +185,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -221,7 +197,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/ScaleSet.cs/#L2541" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/Outputs/ScaleSetRollingUpgradePolicy.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

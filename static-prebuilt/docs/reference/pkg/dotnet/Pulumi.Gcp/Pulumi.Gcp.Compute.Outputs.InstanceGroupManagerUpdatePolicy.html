@@ -78,47 +78,24 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">InstanceGroupManagerUpdatePolicy</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.Compute.Outputs.html">Pulumi.Gcp.Compute.Outputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
   <h5 id="Pulumi_Gcp_Compute_Outputs_InstanceGroupManagerUpdatePolicy_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class InstanceGroupManagerUpdatePolicy</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class InstanceGroupManagerUpdatePolicy : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/InstanceGroupManager.cs/#L684">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Outputs/InstanceGroupManagerUpdatePolicy.cs/#L19">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_Outputs_InstanceGroupManagerUpdatePolicy_MaxSurgeFixed" data-uid="Pulumi.Gcp.Compute.Outputs.InstanceGroupManagerUpdatePolicy.MaxSurgeFixed">MaxSurgeFixed</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>, The maximum number of instances that can be created above the specified targetSize during the update process. Conflicts with <code>max_surge_percent</code>. If neither is set, defaults to 1</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly int MaxSurgeFixed</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly int? MaxSurgeFixed</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -130,16 +107,17 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Int32</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/InstanceGroupManager.cs/#L685">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Outputs/InstanceGroupManagerUpdatePolicy.cs/#L23">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_Outputs_InstanceGroupManagerUpdatePolicy_MaxSurgePercent" data-uid="Pulumi.Gcp.Compute.Outputs.InstanceGroupManagerUpdatePolicy.MaxSurgePercent">MaxSurgePercent</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>, The maximum number of instances(calculated as percentage) that can be created above the specified targetSize during the update process. Conflicts with <code>max_surge_fixed</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -161,14 +139,15 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/InstanceGroupManager.cs/#L686">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Outputs/InstanceGroupManagerUpdatePolicy.cs/#L27">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_Outputs_InstanceGroupManagerUpdatePolicy_MaxUnavailableFixed" data-uid="Pulumi.Gcp.Compute.Outputs.InstanceGroupManagerUpdatePolicy.MaxUnavailableFixed">MaxUnavailableFixed</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>, The maximum number of instances that can be unavailable during the update process. Conflicts with <code>max_unavailable_percent</code>. If neither is set, defaults to 1</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly int MaxUnavailableFixed</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly int? MaxUnavailableFixed</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -180,16 +159,17 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Int32</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/InstanceGroupManager.cs/#L687">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Outputs/InstanceGroupManagerUpdatePolicy.cs/#L31">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_Outputs_InstanceGroupManagerUpdatePolicy_MaxUnavailablePercent" data-uid="Pulumi.Gcp.Compute.Outputs.InstanceGroupManagerUpdatePolicy.MaxUnavailablePercent">MaxUnavailablePercent</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>, The maximum number of instances(calculated as percentage) that can be unavailable during the update process. Conflicts with <code>max_unavailable_fixed</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -211,10 +191,13 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/InstanceGroupManager.cs/#L689">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Outputs/InstanceGroupManagerUpdatePolicy.cs/#L40">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_Outputs_InstanceGroupManagerUpdatePolicy_MinimalAction" data-uid="Pulumi.Gcp.Compute.Outputs.InstanceGroupManagerUpdatePolicy.MinimalAction">MinimalAction</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><ul>
+<li>Minimal action to be taken on an instance. You can specify either <code>RESTART</code> to restart existing instances or <code>REPLACE</code> to delete and create new instances from the target template. If you specify a <code>RESTART</code>, the Updater will attempt to perform that action only. However, if the Updater determines that the minimal action you specify is not enough to perform the update, it might perform a more disruptive action.</li>
+</ul>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -236,10 +219,12 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/InstanceGroupManager.cs/#L688">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Outputs/InstanceGroupManagerUpdatePolicy.cs/#L36">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_Outputs_InstanceGroupManagerUpdatePolicy_MinReadySec" data-uid="Pulumi.Gcp.Compute.Outputs.InstanceGroupManagerUpdatePolicy.MinReadySec">MinReadySec</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>, Minimum number of seconds to wait for after a newly created instance becomes available. This value must be from range [0, 3600]</p>
+<hr>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -261,10 +246,13 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/InstanceGroupManager.cs/#L690">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Outputs/InstanceGroupManagerUpdatePolicy.cs/#L44">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_Outputs_InstanceGroupManagerUpdatePolicy_Type" data-uid="Pulumi.Gcp.Compute.Outputs.InstanceGroupManagerUpdatePolicy.Type">Type</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><ul>
+<li>The type of update process. You can specify either <code>PROACTIVE</code> so that the instance group manager proactively executes actions in order to bring instances to their target versions or <code>OPPORTUNISTIC</code> so that no action is proactively executed but the update will be performed as part of other actions (for example, resizes or recreateInstances calls).</li>
+</ul>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -292,7 +280,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/InstanceGroupManager.cs/#L681" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Outputs/InstanceGroupManagerUpdatePolicy.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -76,36 +76,7 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
-    <div class="level3"><span class="xref">DatabaseInstanceArgs</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">DatabaseInstanceArgs</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.Sql.html">Pulumi.Gcp.Sql</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
@@ -116,7 +87,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Sql/DatabaseInstance.cs/#L241">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Sql/DatabaseInstance.cs/#L289">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Sql_DatabaseInstanceArgs__ctor_" data-uid="Pulumi.Gcp.Sql.DatabaseInstanceArgs.#ctor*"></a>
   <h4 id="Pulumi_Gcp_Sql_DatabaseInstanceArgs__ctor" data-uid="Pulumi.Gcp.Sql.DatabaseInstanceArgs.#ctor">DatabaseInstanceArgs()</h4>
@@ -129,7 +100,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Sql/DatabaseInstance.cs/#L180">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Sql/DatabaseInstance.cs/#L220">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Sql_DatabaseInstanceArgs_DatabaseVersion_" data-uid="Pulumi.Gcp.Sql.DatabaseInstanceArgs.DatabaseVersion*"></a>
   <h4 id="Pulumi_Gcp_Sql_DatabaseInstanceArgs_DatabaseVersion" data-uid="Pulumi.Gcp.Sql.DatabaseInstanceArgs.DatabaseVersion">DatabaseVersion</h4>
@@ -143,7 +114,7 @@ includes an up-to-date reference of supported versions.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; DatabaseVersion { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? DatabaseVersion { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -155,21 +126,29 @@ includes an up-to-date reference of supported versions.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Sql/DatabaseInstance.cs/#L183">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Sql/DatabaseInstance.cs/#L234">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Sql_DatabaseInstanceArgs_EncryptionKeyName_" data-uid="Pulumi.Gcp.Sql.DatabaseInstanceArgs.EncryptionKeyName*"></a>
   <h4 id="Pulumi_Gcp_Sql_DatabaseInstanceArgs_EncryptionKeyName" data-uid="Pulumi.Gcp.Sql.DatabaseInstanceArgs.EncryptionKeyName">EncryptionKeyName</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The full path to the encryption key used for the CMEK disk encryption.  Setting
+up disk encryption currently requires manual steps outside of this provider.
+The provided key must be in the same region as the SQL instance.  In order
+to use this feature, a special kind of service account must be created and
+granted permission on this key.  This step can currently only be done
+manually, please see <a href="https://cloud.google.com/sql/docs/mysql/configure-cmek#service-account">this step</a>.
+That service account needs the <code>Cloud KMS &gt; Cloud KMS CryptoKey Encrypter/Decrypter</code> role on your
+key - please see <a href="https://cloud.google.com/sql/docs/mysql/configure-cmek#grantkey">this step</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; EncryptionKeyName { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? EncryptionKeyName { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -181,13 +160,13 @@ includes an up-to-date reference of supported versions.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Sql/DatabaseInstance.cs/#L191">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Sql/DatabaseInstance.cs/#L242">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Sql_DatabaseInstanceArgs_MasterInstanceName_" data-uid="Pulumi.Gcp.Sql.DatabaseInstanceArgs.MasterInstanceName*"></a>
   <h4 id="Pulumi_Gcp_Sql_DatabaseInstanceArgs_MasterInstanceName" data-uid="Pulumi.Gcp.Sql.DatabaseInstanceArgs.MasterInstanceName">MasterInstanceName</h4>
@@ -198,7 +177,7 @@ the master in the replication setup. Note, this requires the master to have
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; MasterInstanceName { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? MasterInstanceName { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -210,25 +189,22 @@ the master in the replication setup. Note, this requires the master to have
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Sql/DatabaseInstance.cs/#L200">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Sql/DatabaseInstance.cs/#L248">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Sql_DatabaseInstanceArgs_Name_" data-uid="Pulumi.Gcp.Sql.DatabaseInstanceArgs.Name*"></a>
   <h4 id="Pulumi_Gcp_Sql_DatabaseInstanceArgs_Name" data-uid="Pulumi.Gcp.Sql.DatabaseInstanceArgs.Name">Name</h4>
-  <div class="markdown level1 summary"><p>The name of the instance. If the name is left
-blank, this provider will randomly generate one when the instance is first
-created. This is done because after a name is used, it cannot be reused for
-up to <a href="https://cloud.google.com/sql/docs/delete-instance">one week</a>.</p>
+  <div class="markdown level1 summary"><p>A name for this whitelist entry.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Name { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Name { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -240,13 +216,13 @@ up to <a href="https://cloud.google.com/sql/docs/delete-instance">one week</a>.<
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Sql/DatabaseInstance.cs/#L207">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Sql/DatabaseInstance.cs/#L255">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Sql_DatabaseInstanceArgs_Project_" data-uid="Pulumi.Gcp.Sql.DatabaseInstanceArgs.Project*"></a>
   <h4 id="Pulumi_Gcp_Sql_DatabaseInstanceArgs_Project" data-uid="Pulumi.Gcp.Sql.DatabaseInstanceArgs.Project">Project</h4>
@@ -256,7 +232,7 @@ is not provided, the provider project is used.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Project { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Project { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -268,13 +244,13 @@ is not provided, the provider project is used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Sql/DatabaseInstance.cs/#L218">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Sql/DatabaseInstance.cs/#L266">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Sql_DatabaseInstanceArgs_Region_" data-uid="Pulumi.Gcp.Sql.DatabaseInstanceArgs.Region*"></a>
   <h4 id="Pulumi_Gcp_Sql_DatabaseInstanceArgs_Region" data-uid="Pulumi.Gcp.Sql.DatabaseInstanceArgs.Region">Region</h4>
@@ -288,7 +264,7 @@ make sure you understand this.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Region { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Region { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -300,13 +276,13 @@ make sure you understand this.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Sql/DatabaseInstance.cs/#L225">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Sql/DatabaseInstance.cs/#L273">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Sql_DatabaseInstanceArgs_ReplicaConfiguration_" data-uid="Pulumi.Gcp.Sql.DatabaseInstanceArgs.ReplicaConfiguration*"></a>
   <h4 id="Pulumi_Gcp_Sql_DatabaseInstanceArgs_ReplicaConfiguration" data-uid="Pulumi.Gcp.Sql.DatabaseInstanceArgs.ReplicaConfiguration">ReplicaConfiguration</h4>
@@ -316,7 +292,7 @@ configuration is detailed below.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;DatabaseInstanceReplicaConfigurationArgs&gt; ReplicaConfiguration { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;DatabaseInstanceReplicaConfigurationArgs&gt;? ReplicaConfiguration { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -328,22 +304,22 @@ configuration is detailed below.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Gcp.Sql.Inputs.DatabaseInstanceReplicaConfigurationArgs.html">DatabaseInstanceReplicaConfigurationArgs</a>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Gcp.Sql.Inputs.DatabaseInstanceReplicaConfigurationArgs.html">DatabaseInstanceReplicaConfigurationArgs</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Sql/DatabaseInstance.cs/#L231">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Sql/DatabaseInstance.cs/#L279">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Sql_DatabaseInstanceArgs_RootPassword_" data-uid="Pulumi.Gcp.Sql.DatabaseInstanceArgs.RootPassword*"></a>
   <h4 id="Pulumi_Gcp_Sql_DatabaseInstanceArgs_RootPassword" data-uid="Pulumi.Gcp.Sql.DatabaseInstanceArgs.RootPassword">RootPassword</h4>
-  <div class="markdown level1 summary"><p>) Initial root password. Required for MS SQL Server, ignored by MySQL and PostgreSQL.</p>
+  <div class="markdown level1 summary"><p>Initial root password. Required for MS SQL Server, ignored by MySQL and PostgreSQL.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; RootPassword { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? RootPassword { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -355,13 +331,13 @@ configuration is detailed below.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Sql/DatabaseInstance.cs/#L238">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Sql/DatabaseInstance.cs/#L286">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Sql_DatabaseInstanceArgs_Settings_" data-uid="Pulumi.Gcp.Sql.DatabaseInstanceArgs.Settings*"></a>
   <h4 id="Pulumi_Gcp_Sql_DatabaseInstanceArgs_Settings" data-uid="Pulumi.Gcp.Sql.DatabaseInstanceArgs.Settings">Settings</h4>
@@ -383,7 +359,7 @@ configuration is detailed below.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Gcp.Sql.Inputs.DatabaseInstanceSettingsArgs.html">DatabaseInstanceSettingsArgs</a>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Gcp.Sql.Inputs.DatabaseInstanceSettingsArgs.html">DatabaseInstanceSettingsArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -395,7 +371,7 @@ configuration is detailed below.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Sql/DatabaseInstance.cs/#L170" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Sql/DatabaseInstance.cs/#L210" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

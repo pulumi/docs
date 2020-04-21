@@ -87,7 +87,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/SpectrumApplication.cs/#L263">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/0bd9f04c975555418218058637580df6ba1cba25/sdk/dotnet/SpectrumApplication.cs/#L328">View Source</a>
   </span>
   <a id="Pulumi_Cloudflare_SpectrumApplicationState__ctor_" data-uid="Pulumi.Cloudflare.SpectrumApplicationState.#ctor*"></a>
   <h4 id="Pulumi_Cloudflare_SpectrumApplicationState__ctor" data-uid="Pulumi.Cloudflare.SpectrumApplicationState.#ctor">SpectrumApplicationState()</h4>
@@ -100,7 +100,34 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/SpectrumApplication.cs/#L200">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/0bd9f04c975555418218058637580df6ba1cba25/sdk/dotnet/SpectrumApplication.cs/#L241">View Source</a>
+  </span>
+  <a id="Pulumi_Cloudflare_SpectrumApplicationState_ArgoSmartRouting_" data-uid="Pulumi.Cloudflare.SpectrumApplicationState.ArgoSmartRouting*"></a>
+  <h4 id="Pulumi_Cloudflare_SpectrumApplicationState_ArgoSmartRouting" data-uid="Pulumi.Cloudflare.SpectrumApplicationState.ArgoSmartRouting">ArgoSmartRouting</h4>
+  <div class="markdown level1 summary"><p>. Enables Argo Smart Routing. Defaults to <code>false</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? ArgoSmartRouting { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/0bd9f04c975555418218058637580df6ba1cba25/sdk/dotnet/SpectrumApplication.cs/#L247">View Source</a>
   </span>
   <a id="Pulumi_Cloudflare_SpectrumApplicationState_Dns_" data-uid="Pulumi.Cloudflare.SpectrumApplicationState.Dns*"></a>
   <h4 id="Pulumi_Cloudflare_SpectrumApplicationState_Dns" data-uid="Pulumi.Cloudflare.SpectrumApplicationState.Dns">Dns</h4>
@@ -127,7 +154,61 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/SpectrumApplication.cs/#L206">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/0bd9f04c975555418218058637580df6ba1cba25/sdk/dotnet/SpectrumApplication.cs/#L253">View Source</a>
+  </span>
+  <a id="Pulumi_Cloudflare_SpectrumApplicationState_EdgeIpConnectivity_" data-uid="Pulumi.Cloudflare.SpectrumApplicationState.EdgeIpConnectivity*"></a>
+  <h4 id="Pulumi_Cloudflare_SpectrumApplicationState_EdgeIpConnectivity" data-uid="Pulumi.Cloudflare.SpectrumApplicationState.EdgeIpConnectivity">EdgeIpConnectivity</h4>
+  <div class="markdown level1 summary"><p>. Choose which types of IP addresses will be provisioned for this subdomain. Valid values are: <code>all</code>, <code>ipv4</code>, <code>ipv6</code>. Defaults to <code>all</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? EdgeIpConnectivity { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/0bd9f04c975555418218058637580df6ba1cba25/sdk/dotnet/SpectrumApplication.cs/#L262">View Source</a>
+  </span>
+  <a id="Pulumi_Cloudflare_SpectrumApplicationState_EdgeIps_" data-uid="Pulumi.Cloudflare.SpectrumApplicationState.EdgeIps*"></a>
+  <h4 id="Pulumi_Cloudflare_SpectrumApplicationState_EdgeIps" data-uid="Pulumi.Cloudflare.SpectrumApplicationState.EdgeIps">EdgeIps</h4>
+  <div class="markdown level1 summary"><p>. A list of edge IPs (IPv4 and/or IPv6) to configure Spectrum application to. Requires <a href="https://developers.cloudflare.com/spectrum/getting-started/byoip/">Bring Your Own IP</a> provisioned.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InputList&lt;string&gt; EdgeIps { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/0bd9f04c975555418218058637580df6ba1cba25/sdk/dotnet/SpectrumApplication.cs/#L271">View Source</a>
   </span>
   <a id="Pulumi_Cloudflare_SpectrumApplicationState_IpFirewall_" data-uid="Pulumi.Cloudflare.SpectrumApplicationState.IpFirewall*"></a>
   <h4 id="Pulumi_Cloudflare_SpectrumApplicationState_IpFirewall" data-uid="Pulumi.Cloudflare.SpectrumApplicationState.IpFirewall">IpFirewall</h4>
@@ -154,7 +235,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/SpectrumApplication.cs/#L215">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/0bd9f04c975555418218058637580df6ba1cba25/sdk/dotnet/SpectrumApplication.cs/#L280">View Source</a>
   </span>
   <a id="Pulumi_Cloudflare_SpectrumApplicationState_OriginDirects_" data-uid="Pulumi.Cloudflare.SpectrumApplicationState.OriginDirects*"></a>
   <h4 id="Pulumi_Cloudflare_SpectrumApplicationState_OriginDirects" data-uid="Pulumi.Cloudflare.SpectrumApplicationState.OriginDirects">OriginDirects</h4>
@@ -181,7 +262,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/SpectrumApplication.cs/#L224">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/0bd9f04c975555418218058637580df6ba1cba25/sdk/dotnet/SpectrumApplication.cs/#L289">View Source</a>
   </span>
   <a id="Pulumi_Cloudflare_SpectrumApplicationState_OriginDns_" data-uid="Pulumi.Cloudflare.SpectrumApplicationState.OriginDns*"></a>
   <h4 id="Pulumi_Cloudflare_SpectrumApplicationState_OriginDns" data-uid="Pulumi.Cloudflare.SpectrumApplicationState.OriginDns">OriginDns</h4>
@@ -208,7 +289,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/SpectrumApplication.cs/#L230">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/0bd9f04c975555418218058637580df6ba1cba25/sdk/dotnet/SpectrumApplication.cs/#L295">View Source</a>
   </span>
   <a id="Pulumi_Cloudflare_SpectrumApplicationState_OriginPort_" data-uid="Pulumi.Cloudflare.SpectrumApplicationState.OriginPort*"></a>
   <h4 id="Pulumi_Cloudflare_SpectrumApplicationState_OriginPort" data-uid="Pulumi.Cloudflare.SpectrumApplicationState.OriginPort">OriginPort</h4>
@@ -235,7 +316,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/SpectrumApplication.cs/#L236">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/0bd9f04c975555418218058637580df6ba1cba25/sdk/dotnet/SpectrumApplication.cs/#L301">View Source</a>
   </span>
   <a id="Pulumi_Cloudflare_SpectrumApplicationState_Protocol_" data-uid="Pulumi.Cloudflare.SpectrumApplicationState.Protocol*"></a>
   <h4 id="Pulumi_Cloudflare_SpectrumApplicationState_Protocol" data-uid="Pulumi.Cloudflare.SpectrumApplicationState.Protocol">Protocol</h4>
@@ -262,7 +343,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/SpectrumApplication.cs/#L242">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/0bd9f04c975555418218058637580df6ba1cba25/sdk/dotnet/SpectrumApplication.cs/#L307">View Source</a>
   </span>
   <a id="Pulumi_Cloudflare_SpectrumApplicationState_ProxyProtocol_" data-uid="Pulumi.Cloudflare.SpectrumApplicationState.ProxyProtocol*"></a>
   <h4 id="Pulumi_Cloudflare_SpectrumApplicationState_ProxyProtocol" data-uid="Pulumi.Cloudflare.SpectrumApplicationState.ProxyProtocol">ProxyProtocol</h4>
@@ -289,7 +370,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/SpectrumApplication.cs/#L248">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/0bd9f04c975555418218058637580df6ba1cba25/sdk/dotnet/SpectrumApplication.cs/#L313">View Source</a>
   </span>
   <a id="Pulumi_Cloudflare_SpectrumApplicationState_Tls_" data-uid="Pulumi.Cloudflare.SpectrumApplicationState.Tls*"></a>
   <h4 id="Pulumi_Cloudflare_SpectrumApplicationState_Tls" data-uid="Pulumi.Cloudflare.SpectrumApplicationState.Tls">Tls</h4>
@@ -316,11 +397,11 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/SpectrumApplication.cs/#L254">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/0bd9f04c975555418218058637580df6ba1cba25/sdk/dotnet/SpectrumApplication.cs/#L319">View Source</a>
   </span>
   <a id="Pulumi_Cloudflare_SpectrumApplicationState_TrafficType_" data-uid="Pulumi.Cloudflare.SpectrumApplicationState.TrafficType*"></a>
   <h4 id="Pulumi_Cloudflare_SpectrumApplicationState_TrafficType" data-uid="Pulumi.Cloudflare.SpectrumApplicationState.TrafficType">TrafficType</h4>
-  <div class="markdown level1 summary"><p>Set's application type. Valid values are: <code>direct</code>, <code>http</code>, <code>https</code>.  Defaults to <code>direct</code>.</p>
+  <div class="markdown level1 summary"><p>Sets application type. Valid values are: <code>direct</code>, <code>http</code>, <code>https</code>.  Defaults to <code>direct</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -343,7 +424,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/SpectrumApplication.cs/#L260">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/0bd9f04c975555418218058637580df6ba1cba25/sdk/dotnet/SpectrumApplication.cs/#L325">View Source</a>
   </span>
   <a id="Pulumi_Cloudflare_SpectrumApplicationState_ZoneId_" data-uid="Pulumi.Cloudflare.SpectrumApplicationState.ZoneId*"></a>
   <h4 id="Pulumi_Cloudflare_SpectrumApplicationState_ZoneId" data-uid="Pulumi.Cloudflare.SpectrumApplicationState.ZoneId">ZoneId</h4>
@@ -376,7 +457,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/SpectrumApplication.cs/#L195" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/0bd9f04c975555418218058637580df6ba1cba25/sdk/dotnet/SpectrumApplication.cs/#L236" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

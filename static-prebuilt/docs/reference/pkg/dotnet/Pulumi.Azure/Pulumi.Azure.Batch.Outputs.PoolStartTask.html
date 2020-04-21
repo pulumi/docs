@@ -78,43 +78,20 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">PoolStartTask</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Azure.Batch.Outputs.html">Pulumi.Azure.Batch.Outputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Azure.dll</h6>
   <h5 id="Pulumi_Azure_Batch_Outputs_PoolStartTask_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class PoolStartTask</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class PoolStartTask : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Batch/Pool.cs/#L1097">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Batch/Outputs/PoolStartTask.cs/#L19">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Batch_Outputs_PoolStartTask_CommandLine" data-uid="Pulumi.Azure.Batch.Outputs.PoolStartTask.CommandLine">CommandLine</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The command line executed by the start task.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -136,14 +113,15 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Batch/Pool.cs/#L1098">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Batch/Outputs/PoolStartTask.cs/#L23">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Batch_Outputs_PoolStartTask_Environment" data-uid="Pulumi.Azure.Batch.Outputs.PoolStartTask.Environment">Environment</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A map of strings (key,value) that represents the environment variables to set in the start task.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly ImmutableDictionary&lt;string, string&gt; Environment</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly ImmutableDictionary&lt;string, string&gt;? Environment</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -155,16 +133,17 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Batch/Pool.cs/#L1099">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Batch/Outputs/PoolStartTask.cs/#L27">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Batch_Outputs_PoolStartTask_MaxTaskRetryCount" data-uid="Pulumi.Azure.Batch.Outputs.PoolStartTask.MaxTaskRetryCount">MaxTaskRetryCount</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The number of retry count. Defaults to <code>1</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -186,14 +165,15 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Batch/Pool.cs/#L1100">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Batch/Outputs/PoolStartTask.cs/#L31">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Batch_Outputs_PoolStartTask_ResourceFiles" data-uid="Pulumi.Azure.Batch.Outputs.PoolStartTask.ResourceFiles">ResourceFiles</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>One or more <code>resource_file</code> blocks that describe the files to be downloaded to a compute node.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;PoolStartTaskResourceFiles&gt; ResourceFiles</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;PoolStartTaskResourceFile&gt; ResourceFiles</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -205,16 +185,17 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Azure.Batch.Outputs.PoolStartTaskResourceFiles.html">PoolStartTaskResourceFiles</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Azure.Batch.Outputs.PoolStartTaskResourceFile.html">PoolStartTaskResourceFile</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Batch/Pool.cs/#L1101">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Batch/Outputs/PoolStartTask.cs/#L35">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Batch_Outputs_PoolStartTask_UserIdentity" data-uid="Pulumi.Azure.Batch.Outputs.PoolStartTask.UserIdentity">UserIdentity</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A <code>user_identity</code> block that describes the user identity under which the start task runs.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -236,10 +217,11 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Batch/Pool.cs/#L1102">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Batch/Outputs/PoolStartTask.cs/#L39">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Batch_Outputs_PoolStartTask_WaitForSuccess" data-uid="Pulumi.Azure.Batch.Outputs.PoolStartTask.WaitForSuccess">WaitForSuccess</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A flag that indicates if the Batch pool should wait for the start task to be completed. Default to <code>false</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -267,7 +249,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Batch/Pool.cs/#L1094" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Batch/Outputs/PoolStartTask.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -76,36 +76,7 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
-    <div class="level3"><span class="xref">CertificateArgs</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">CertificateArgs</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.DigitalOcean.html">Pulumi.DigitalOcean</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.DigitalOcean.dll</h6>
@@ -116,7 +87,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/master/sdk/dotnet/Certificate.cs/#L177">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/Certificate.cs/#L175">View Source</a>
   </span>
   <a id="Pulumi_DigitalOcean_CertificateArgs__ctor_" data-uid="Pulumi.DigitalOcean.CertificateArgs.#ctor*"></a>
   <h4 id="Pulumi_DigitalOcean_CertificateArgs__ctor" data-uid="Pulumi.DigitalOcean.CertificateArgs.#ctor">CertificateArgs()</h4>
@@ -129,7 +100,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/master/sdk/dotnet/Certificate.cs/#L133">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/Certificate.cs/#L131">View Source</a>
   </span>
   <a id="Pulumi_DigitalOcean_CertificateArgs_CertificateChain_" data-uid="Pulumi.DigitalOcean.CertificateArgs.CertificateChain*"></a>
   <h4 id="Pulumi_DigitalOcean_CertificateArgs_CertificateChain" data-uid="Pulumi.DigitalOcean.CertificateArgs.CertificateChain">CertificateChain</h4>
@@ -140,7 +111,7 @@ certificate. Only valid when type is <code>custom</code>.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; CertificateChain { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? CertificateChain { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -152,13 +123,13 @@ certificate. Only valid when type is <code>custom</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/master/sdk/dotnet/Certificate.cs/#L144">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/Certificate.cs/#L142">View Source</a>
   </span>
   <a id="Pulumi_DigitalOcean_CertificateArgs_Domains_" data-uid="Pulumi.DigitalOcean.CertificateArgs.Domains*"></a>
   <h4 id="Pulumi_DigitalOcean_CertificateArgs_Domains" data-uid="Pulumi.DigitalOcean.CertificateArgs.Domains">Domains</h4>
@@ -181,13 +152,13 @@ DigitalOcean's DNS. Only valid when type is <code>lets_encrypt</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/master/sdk/dotnet/Certificate.cs/#L154">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/Certificate.cs/#L152">View Source</a>
   </span>
   <a id="Pulumi_DigitalOcean_CertificateArgs_LeafCertificate_" data-uid="Pulumi.DigitalOcean.CertificateArgs.LeafCertificate*"></a>
   <h4 id="Pulumi_DigitalOcean_CertificateArgs_LeafCertificate" data-uid="Pulumi.DigitalOcean.CertificateArgs.LeafCertificate">LeafCertificate</h4>
@@ -197,7 +168,7 @@ TLS certificate. Only valid when type is <code>custom</code>.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; LeafCertificate { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? LeafCertificate { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -209,13 +180,13 @@ TLS certificate. Only valid when type is <code>custom</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/master/sdk/dotnet/Certificate.cs/#L160">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/Certificate.cs/#L158">View Source</a>
   </span>
   <a id="Pulumi_DigitalOcean_CertificateArgs_Name_" data-uid="Pulumi.DigitalOcean.CertificateArgs.Name*"></a>
   <h4 id="Pulumi_DigitalOcean_CertificateArgs_Name" data-uid="Pulumi.DigitalOcean.CertificateArgs.Name">Name</h4>
@@ -224,7 +195,7 @@ TLS certificate. Only valid when type is <code>custom</code>.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Name { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Name { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -236,13 +207,13 @@ TLS certificate. Only valid when type is <code>custom</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/master/sdk/dotnet/Certificate.cs/#L167">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/Certificate.cs/#L165">View Source</a>
   </span>
   <a id="Pulumi_DigitalOcean_CertificateArgs_PrivateKey_" data-uid="Pulumi.DigitalOcean.CertificateArgs.PrivateKey*"></a>
   <h4 id="Pulumi_DigitalOcean_CertificateArgs_PrivateKey" data-uid="Pulumi.DigitalOcean.CertificateArgs.PrivateKey">PrivateKey</h4>
@@ -252,7 +223,7 @@ corresponding to the SSL certificate. Only valid when type is <code>custom</code
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; PrivateKey { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? PrivateKey { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -264,13 +235,13 @@ corresponding to the SSL certificate. Only valid when type is <code>custom</code
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/master/sdk/dotnet/Certificate.cs/#L174">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/Certificate.cs/#L172">View Source</a>
   </span>
   <a id="Pulumi_DigitalOcean_CertificateArgs_Type_" data-uid="Pulumi.DigitalOcean.CertificateArgs.Type*"></a>
   <h4 id="Pulumi_DigitalOcean_CertificateArgs_Type" data-uid="Pulumi.DigitalOcean.CertificateArgs.Type">Type</h4>
@@ -280,7 +251,7 @@ corresponding to the SSL certificate. Only valid when type is <code>custom</code
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Type { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Type { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -292,7 +263,7 @@ corresponding to the SSL certificate. Only valid when type is <code>custom</code
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -304,7 +275,7 @@ corresponding to the SSL certificate. Only valid when type is <code>custom</code
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/master/sdk/dotnet/Certificate.cs/#L126" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/Certificate.cs/#L124" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

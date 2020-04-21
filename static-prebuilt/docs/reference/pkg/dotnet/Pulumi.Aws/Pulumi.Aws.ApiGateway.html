@@ -81,9 +81,6 @@
 <blockquote>
 <p><strong>Note:</strong> As there is no API method for deleting account settings or resetting it to defaults, destroying this resource will keep your account settings intact</p>
 </blockquote>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_account.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_account.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.ApiGateway.AccountArgs.html">AccountArgs</a></h4>
       <section></section>
@@ -94,9 +91,6 @@
 <blockquote>
 <p><strong>NOTE:</strong> Since the API Gateway usage plans feature was launched on August 11, 2016, usage plans are now <strong>required</strong> to associate an API key with an API stage.</p>
 </blockquote>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_api_key.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_api_key.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.ApiGateway.ApiKeyArgs.html">ApiKeyArgs</a></h4>
       <section></section>
@@ -104,9 +98,6 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.ApiGateway.Authorizer.html">Authorizer</a></h4>
       <section><p>Provides an API Gateway Authorizer.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_authorizer.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_authorizer.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.ApiGateway.AuthorizerArgs.html">AuthorizerArgs</a></h4>
       <section></section>
@@ -116,9 +107,6 @@
       <section><p>Connects a custom domain name registered via <code>aws.apigateway.DomainName</code>
 with a deployed API so that its methods can be called via the
 custom domain name.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_base_path_mapping.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_base_path_mapping.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.ApiGateway.BasePathMappingArgs.html">BasePathMappingArgs</a></h4>
       <section></section>
@@ -126,22 +114,16 @@ custom domain name.</p>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.ApiGateway.ClientCertificate.html">ClientCertificate</a></h4>
       <section><p>Provides an API Gateway Client Certificate.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_client_certificate.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_client_certificate.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.ApiGateway.ClientCertificateArgs.html">ClientCertificateArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.ApiGateway.ClientCertificateState.html">ClientCertificateState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.ApiGateway.Deployment.html">Deployment</a></h4>
-      <section><p>Provides an API Gateway Deployment.</p>
+      <section><p>Provides an API Gateway REST Deployment.</p>
 <blockquote>
 <p><strong>Note:</strong> Depends on having <code>aws.apigateway.Integration</code> inside your rest api (which in turn depends on <code>aws.apigateway.Method</code>). To avoid race conditions
-you might need to add an explicit <code>depends_on = [&amp;quot;aws_api_gateway_integration.name&amp;quot;]</code>.</p>
-</blockquote>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_deployment.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_deployment.html.markdown</a>.</p>
+you might need to add an explicit <code>depends_on = [&amp;quot;${aws_api_gateway_integration.name}&amp;quot;]</code>.</p>
 </blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.ApiGateway.DeploymentArgs.html">DeploymentArgs</a></h4>
@@ -150,9 +132,6 @@ you might need to add an explicit <code>depends_on = [&amp;quot;aws_api_gateway_
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.ApiGateway.DocumentationPart.html">DocumentationPart</a></h4>
       <section><p>Provides a settings of an API Gateway Documentation Part.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_documentation_part.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_documentation_part.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.ApiGateway.DocumentationPartArgs.html">DocumentationPartArgs</a></h4>
       <section></section>
@@ -160,9 +139,6 @@ you might need to add an explicit <code>depends_on = [&amp;quot;aws_api_gateway_
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.ApiGateway.DocumentationVersion.html">DocumentationVersion</a></h4>
       <section><p>Provides a resource to manage an API Gateway Documentation Version.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_documentation_version.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_documentation_version.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.ApiGateway.DocumentationVersionArgs.html">DocumentationVersionArgs</a></h4>
       <section></section>
@@ -198,25 +174,30 @@ from the validation resource where it will be available after the resource creat
 <p><strong>Note:</strong> All arguments including the private key will be stored in the raw state as plain-text.
 <a href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
 </blockquote>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_domain_name.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_domain_name.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.ApiGateway.DomainNameArgs.html">DomainNameArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.ApiGateway.DomainNameState.html">DomainNameState</a></h4>
       <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.ApiGateway.GetKey.html">GetKey</a></h4>
+      <section></section>
       <h4><a class="xref" href="Pulumi.Aws.ApiGateway.GetKeyArgs.html">GetKeyArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.ApiGateway.GetKeyResult.html">GetKeyResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.ApiGateway.GetResource.html">GetResource</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.ApiGateway.GetResourceArgs.html">GetResourceArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.ApiGateway.GetResourceResult.html">GetResourceResult</a></h4>
       <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.ApiGateway.GetRestApi.html">GetRestApi</a></h4>
+      <section></section>
       <h4><a class="xref" href="Pulumi.Aws.ApiGateway.GetRestApiArgs.html">GetRestApiArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.ApiGateway.GetRestApiResult.html">GetRestApiResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.ApiGateway.GetVpcLink.html">GetVpcLink</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.ApiGateway.GetVpcLinkArgs.html">GetVpcLinkArgs</a></h4>
       <section></section>
@@ -224,9 +205,6 @@ from the validation resource where it will be available after the resource creat
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.ApiGateway.Integration.html">Integration</a></h4>
       <section><p>Provides an HTTP Method Integration for an API Gateway Integration.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_integration.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_integration.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.ApiGateway.IntegrationArgs.html">IntegrationArgs</a></h4>
       <section></section>
@@ -236,9 +214,6 @@ from the validation resource where it will be available after the resource creat
 <p><strong>Note:</strong> Depends on having <code>aws.apigateway.Integration</code> inside your rest api. To ensure this
 you might need to add an explicit <code>depends_on</code> for clean runs.</p>
 </blockquote>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_integration_response.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_integration_response.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.ApiGateway.IntegrationResponseArgs.html">IntegrationResponseArgs</a></h4>
       <section></section>
@@ -246,21 +221,13 @@ you might need to add an explicit <code>depends_on</code> for clean runs.</p>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.ApiGateway.IntegrationState.html">IntegrationState</a></h4>
       <section></section>
-      <h4><a class="xref" href="Pulumi.Aws.ApiGateway.Invokes.html">Invokes</a></h4>
-      <section></section>
       <h4><a class="xref" href="Pulumi.Aws.ApiGateway.Method.html">Method</a></h4>
       <section><p>Provides a HTTP Method for an API Gateway Resource.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_method.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_method.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.ApiGateway.MethodArgs.html">MethodArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.ApiGateway.MethodResponse.html">MethodResponse</a></h4>
       <section><p>Provides an HTTP Method Response for an API Gateway Resource.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_method_response.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_method_response.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.ApiGateway.MethodResponseArgs.html">MethodResponseArgs</a></h4>
       <section></section>
@@ -268,9 +235,6 @@ you might need to add an explicit <code>depends_on</code> for clean runs.</p>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.ApiGateway.MethodSettings.html">MethodSettings</a></h4>
       <section><p>Provides an API Gateway Method Settings, e.g. logging or monitoring.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_method_settings.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_method_settings.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.ApiGateway.MethodSettingsArgs.html">MethodSettingsArgs</a></h4>
       <section></section>
@@ -279,10 +243,7 @@ you might need to add an explicit <code>depends_on</code> for clean runs.</p>
       <h4><a class="xref" href="Pulumi.Aws.ApiGateway.MethodState.html">MethodState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.ApiGateway.Model.html">Model</a></h4>
-      <section><p>Provides a Model for a API Gateway.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_model.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_model.html.markdown</a>.</p>
-</blockquote>
+      <section><p>Provides a Model for a REST API Gateway.</p>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.ApiGateway.ModelArgs.html">ModelArgs</a></h4>
       <section></section>
@@ -290,9 +251,6 @@ you might need to add an explicit <code>depends_on</code> for clean runs.</p>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.ApiGateway.RequestValidator.html">RequestValidator</a></h4>
       <section><p>Manages an API Gateway Request Validator.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_request_validator.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_request_validator.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.ApiGateway.RequestValidatorArgs.html">RequestValidatorArgs</a></h4>
       <section></section>
@@ -300,9 +258,6 @@ you might need to add an explicit <code>depends_on</code> for clean runs.</p>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.ApiGateway.Resource.html">Resource</a></h4>
       <section><p>Provides an API Gateway Resource.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_resource.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_resource.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.ApiGateway.ResourceArgs.html">ResourceArgs</a></h4>
       <section></section>
@@ -310,9 +265,6 @@ you might need to add an explicit <code>depends_on</code> for clean runs.</p>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.ApiGateway.Response.html">Response</a></h4>
       <section><p>Provides an API Gateway Gateway Response for a REST API Gateway.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_gateway_response.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_gateway_response.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.ApiGateway.ResponseArgs.html">ResponseArgs</a></h4>
       <section></section>
@@ -321,7 +273,7 @@ you might need to add an explicit <code>depends_on</code> for clean runs.</p>
       <h4><a class="xref" href="Pulumi.Aws.ApiGateway.RestApi.html">RestApi</a></h4>
       <section><p>Provides an API Gateway REST API.</p>
 <blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_rest_api.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_rest_api.html.markdown</a>.</p>
+<p><strong>Note:</strong> Amazon API Gateway Version 1 resources are used for creating and deploying REST APIs. To create and deploy WebSocket and HTTP APIs, use Amazon API Gateway Version 2.</p>
 </blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.ApiGateway.RestApiArgs.html">RestApiArgs</a></h4>
@@ -330,9 +282,6 @@ you might need to add an explicit <code>depends_on</code> for clean runs.</p>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.ApiGateway.Stage.html">Stage</a></h4>
       <section><p>Provides an API Gateway Stage.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_stage.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_stage.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.ApiGateway.StageArgs.html">StageArgs</a></h4>
       <section></section>
@@ -340,17 +289,11 @@ you might need to add an explicit <code>depends_on</code> for clean runs.</p>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.ApiGateway.UsagePlan.html">UsagePlan</a></h4>
       <section><p>Provides an API Gateway Usage Plan.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_usage_plan.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_usage_plan.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.ApiGateway.UsagePlanArgs.html">UsagePlanArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.ApiGateway.UsagePlanKey.html">UsagePlanKey</a></h4>
       <section><p>Provides an API Gateway Usage Plan Key.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_usage_plan_key.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_usage_plan_key.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.ApiGateway.UsagePlanKeyArgs.html">UsagePlanKeyArgs</a></h4>
       <section></section>
@@ -360,9 +303,6 @@ you might need to add an explicit <code>depends_on</code> for clean runs.</p>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.ApiGateway.VpcLink.html">VpcLink</a></h4>
       <section><p>Provides an API Gateway VPC Link.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_vpc_link.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_vpc_link.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.ApiGateway.VpcLinkArgs.html">VpcLinkArgs</a></h4>
       <section></section>

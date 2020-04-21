@@ -87,7 +87,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/GenericClientRoleMapper.cs/#L30">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/GenericClientRoleMapper.cs/#L46">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_GenericClientRoleMapper__ctor_" data-uid="Pulumi.Keycloak.GenericClientRoleMapper.#ctor*"></a>
   <h4 id="Pulumi_Keycloak_GenericClientRoleMapper__ctor_System_String_Pulumi_Keycloak_GenericClientRoleMapperArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Keycloak.GenericClientRoleMapper.#ctor(System.String,Pulumi.Keycloak.GenericClientRoleMapperArgs,System.Nullable{CustomResourceOptions})">GenericClientRoleMapper(String, GenericClientRoleMapperArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
@@ -131,15 +131,16 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/GenericClientRoleMapper.cs/#L13">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/GenericClientRoleMapper.cs/#L17">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_GenericClientRoleMapper_ClientId_" data-uid="Pulumi.Keycloak.GenericClientRoleMapper.ClientId*"></a>
   <h4 id="Pulumi_Keycloak_GenericClientRoleMapper_ClientId" data-uid="Pulumi.Keycloak.GenericClientRoleMapper.ClientId">ClientId</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The destination client of the client role. Cannot be used at the same time as client_scope_id.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ClientId { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; ClientId { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -151,17 +152,45 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/GenericClientRoleMapper.cs/#L16">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/GenericClientRoleMapper.cs/#L23">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_GenericClientRoleMapper_ClientScopeId_" data-uid="Pulumi.Keycloak.GenericClientRoleMapper.ClientScopeId*"></a>
+  <h4 id="Pulumi_Keycloak_GenericClientRoleMapper_ClientScopeId" data-uid="Pulumi.Keycloak.GenericClientRoleMapper.ClientScopeId">ClientScopeId</h4>
+  <div class="markdown level1 summary"><p>The destination client scope of the client role. Cannot be used at the same time as client_id.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; ClientScopeId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/GenericClientRoleMapper.cs/#L29">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_GenericClientRoleMapper_RealmId_" data-uid="Pulumi.Keycloak.GenericClientRoleMapper.RealmId*"></a>
   <h4 id="Pulumi_Keycloak_GenericClientRoleMapper_RealmId" data-uid="Pulumi.Keycloak.GenericClientRoleMapper.RealmId">RealmId</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The realm id where the associated client or client scope exists.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -183,11 +212,12 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/GenericClientRoleMapper.cs/#L19">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/GenericClientRoleMapper.cs/#L35">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_GenericClientRoleMapper_RoleId_" data-uid="Pulumi.Keycloak.GenericClientRoleMapper.RoleId*"></a>
   <h4 id="Pulumi_Keycloak_GenericClientRoleMapper_RoleId" data-uid="Pulumi.Keycloak.GenericClientRoleMapper.RoleId">RoleId</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Id of the role to assign</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -211,7 +241,7 @@
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/GenericClientRoleMapper.cs/#L60">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/GenericClientRoleMapper.cs/#L76">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_GenericClientRoleMapper_Get_" data-uid="Pulumi.Keycloak.GenericClientRoleMapper.Get*"></a>
   <h4 id="Pulumi_Keycloak_GenericClientRoleMapper_Get_System_String_Input_System_String__Pulumi_Keycloak_GenericClientRoleMapperState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Keycloak.GenericClientRoleMapper.Get(System.String,Input{System.String},Pulumi.Keycloak.GenericClientRoleMapperState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, GenericClientRoleMapperState, Nullable&lt;CustomResourceOptions&gt;)</h4>
@@ -281,7 +311,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/GenericClientRoleMapper.cs/#L11" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/GenericClientRoleMapper.cs/#L12" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

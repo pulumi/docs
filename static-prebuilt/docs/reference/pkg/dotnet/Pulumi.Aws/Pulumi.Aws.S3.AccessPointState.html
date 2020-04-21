@@ -76,36 +76,7 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
-    <div class="level3"><span class="xref">AccessPointState</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">AccessPointState</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.S3.html">Pulumi.Aws.S3</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
@@ -116,7 +87,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/S3/AccessPoint.cs/#L216">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/S3/AccessPoint.cs/#L228">View Source</a>
   </span>
   <a id="Pulumi_Aws_S3_AccessPointState__ctor_" data-uid="Pulumi.Aws.S3.AccessPointState.#ctor*"></a>
   <h4 id="Pulumi_Aws_S3_AccessPointState__ctor" data-uid="Pulumi.Aws.S3.AccessPointState.#ctor">AccessPointState()</h4>
@@ -129,15 +100,16 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/S3/AccessPoint.cs/#L158">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/S3/AccessPoint.cs/#L170">View Source</a>
   </span>
   <a id="Pulumi_Aws_S3_AccessPointState_AccountId_" data-uid="Pulumi.Aws.S3.AccessPointState.AccountId*"></a>
   <h4 id="Pulumi_Aws_S3_AccessPointState_AccountId" data-uid="Pulumi.Aws.S3.AccessPointState.AccountId">AccountId</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The AWS account ID for the owner of the bucket for which you want to create an access point. Defaults to automatically determined account ID of the provider.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; AccountId { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? AccountId { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -149,13 +121,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/S3/AccessPoint.cs/#L164">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/S3/AccessPoint.cs/#L176">View Source</a>
   </span>
   <a id="Pulumi_Aws_S3_AccessPointState_Arn_" data-uid="Pulumi.Aws.S3.AccessPointState.Arn*"></a>
   <h4 id="Pulumi_Aws_S3_AccessPointState_Arn" data-uid="Pulumi.Aws.S3.AccessPointState.Arn">Arn</h4>
@@ -164,7 +136,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Arn { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Arn { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -176,13 +148,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/S3/AccessPoint.cs/#L170">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/S3/AccessPoint.cs/#L182">View Source</a>
   </span>
   <a id="Pulumi_Aws_S3_AccessPointState_Bucket_" data-uid="Pulumi.Aws.S3.AccessPointState.Bucket*"></a>
   <h4 id="Pulumi_Aws_S3_AccessPointState_Bucket" data-uid="Pulumi.Aws.S3.AccessPointState.Bucket">Bucket</h4>
@@ -191,7 +163,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Bucket { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Bucket { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -203,13 +175,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/S3/AccessPoint.cs/#L177">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/S3/AccessPoint.cs/#L189">View Source</a>
   </span>
   <a id="Pulumi_Aws_S3_AccessPointState_DomainName_" data-uid="Pulumi.Aws.S3.AccessPointState.DomainName*"></a>
   <h4 id="Pulumi_Aws_S3_AccessPointState_DomainName" data-uid="Pulumi.Aws.S3.AccessPointState.DomainName">DomainName</h4>
@@ -219,7 +191,7 @@ Note: S3 access points only support secure access by HTTPS. HTTP isn't supported
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; DomainName { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? DomainName { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -231,13 +203,13 @@ Note: S3 access points only support secure access by HTTPS. HTTP isn't supported
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/S3/AccessPoint.cs/#L183">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/S3/AccessPoint.cs/#L195">View Source</a>
   </span>
   <a id="Pulumi_Aws_S3_AccessPointState_HasPublicAccessPolicy_" data-uid="Pulumi.Aws.S3.AccessPointState.HasPublicAccessPolicy*"></a>
   <h4 id="Pulumi_Aws_S3_AccessPointState_HasPublicAccessPolicy" data-uid="Pulumi.Aws.S3.AccessPointState.HasPublicAccessPolicy">HasPublicAccessPolicy</h4>
@@ -246,7 +218,7 @@ Note: S3 access points only support secure access by HTTPS. HTTP isn't supported
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; HasPublicAccessPolicy { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? HasPublicAccessPolicy { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -258,13 +230,13 @@ Note: S3 access points only support secure access by HTTPS. HTTP isn't supported
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/S3/AccessPoint.cs/#L189">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/S3/AccessPoint.cs/#L201">View Source</a>
   </span>
   <a id="Pulumi_Aws_S3_AccessPointState_Name_" data-uid="Pulumi.Aws.S3.AccessPointState.Name*"></a>
   <h4 id="Pulumi_Aws_S3_AccessPointState_Name" data-uid="Pulumi.Aws.S3.AccessPointState.Name">Name</h4>
@@ -273,7 +245,7 @@ Note: S3 access points only support secure access by HTTPS. HTTP isn't supported
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Name { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Name { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -285,13 +257,13 @@ Note: S3 access points only support secure access by HTTPS. HTTP isn't supported
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/S3/AccessPoint.cs/#L195">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/S3/AccessPoint.cs/#L207">View Source</a>
   </span>
   <a id="Pulumi_Aws_S3_AccessPointState_NetworkOrigin_" data-uid="Pulumi.Aws.S3.AccessPointState.NetworkOrigin*"></a>
   <h4 id="Pulumi_Aws_S3_AccessPointState_NetworkOrigin" data-uid="Pulumi.Aws.S3.AccessPointState.NetworkOrigin">NetworkOrigin</h4>
@@ -300,7 +272,7 @@ Note: S3 access points only support secure access by HTTPS. HTTP isn't supported
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; NetworkOrigin { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? NetworkOrigin { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -312,13 +284,13 @@ Note: S3 access points only support secure access by HTTPS. HTTP isn't supported
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/S3/AccessPoint.cs/#L201">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/S3/AccessPoint.cs/#L213">View Source</a>
   </span>
   <a id="Pulumi_Aws_S3_AccessPointState_Policy_" data-uid="Pulumi.Aws.S3.AccessPointState.Policy*"></a>
   <h4 id="Pulumi_Aws_S3_AccessPointState_Policy" data-uid="Pulumi.Aws.S3.AccessPointState.Policy">Policy</h4>
@@ -327,7 +299,7 @@ Note: S3 access points only support secure access by HTTPS. HTTP isn't supported
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Policy { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Policy { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -339,13 +311,13 @@ Note: S3 access points only support secure access by HTTPS. HTTP isn't supported
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/S3/AccessPoint.cs/#L207">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/S3/AccessPoint.cs/#L219">View Source</a>
   </span>
   <a id="Pulumi_Aws_S3_AccessPointState_PublicAccessBlockConfiguration_" data-uid="Pulumi.Aws.S3.AccessPointState.PublicAccessBlockConfiguration*"></a>
   <h4 id="Pulumi_Aws_S3_AccessPointState_PublicAccessBlockConfiguration" data-uid="Pulumi.Aws.S3.AccessPointState.PublicAccessBlockConfiguration">PublicAccessBlockConfiguration</h4>
@@ -354,7 +326,7 @@ Note: S3 access points only support secure access by HTTPS. HTTP isn't supported
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;AccessPointPublicAccessBlockConfigurationGetArgs&gt; PublicAccessBlockConfiguration { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;AccessPointPublicAccessBlockConfigurationGetArgs&gt;? PublicAccessBlockConfiguration { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -366,13 +338,13 @@ Note: S3 access points only support secure access by HTTPS. HTTP isn't supported
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Aws.S3.Inputs.AccessPointPublicAccessBlockConfigurationGetArgs.html">AccessPointPublicAccessBlockConfigurationGetArgs</a>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Aws.S3.Inputs.AccessPointPublicAccessBlockConfigurationGetArgs.html">AccessPointPublicAccessBlockConfigurationGetArgs</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/S3/AccessPoint.cs/#L213">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/S3/AccessPoint.cs/#L225">View Source</a>
   </span>
   <a id="Pulumi_Aws_S3_AccessPointState_VpcConfiguration_" data-uid="Pulumi.Aws.S3.AccessPointState.VpcConfiguration*"></a>
   <h4 id="Pulumi_Aws_S3_AccessPointState_VpcConfiguration" data-uid="Pulumi.Aws.S3.AccessPointState.VpcConfiguration">VpcConfiguration</h4>
@@ -381,7 +353,7 @@ Note: S3 access points only support secure access by HTTPS. HTTP isn't supported
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;AccessPointVpcConfigurationGetArgs&gt; VpcConfiguration { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;AccessPointVpcConfigurationGetArgs&gt;? VpcConfiguration { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -393,7 +365,7 @@ Note: S3 access points only support secure access by HTTPS. HTTP isn't supported
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Aws.S3.Inputs.AccessPointVpcConfigurationGetArgs.html">AccessPointVpcConfigurationGetArgs</a>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Aws.S3.Inputs.AccessPointVpcConfigurationGetArgs.html">AccessPointVpcConfigurationGetArgs</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -405,7 +377,7 @@ Note: S3 access points only support secure access by HTTPS. HTTP isn't supported
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/S3/AccessPoint.cs/#L156" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/S3/AccessPoint.cs/#L165" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

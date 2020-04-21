@@ -78,9 +78,6 @@ a different resource datadog_logs_pipeline_order.
 When creating a new pipeline, you need to <strong>explicitly</strong> add this pipeline to the <code>datadog..LogsPipelineOrder</code>
 resource to track the pipeline. Similarly, when a pipeline needs to be destroyed, remove its references from the
 <code>datadog..LogsPipelineOrder</code> resource.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-datadog/blob/master/website/docs/r/logs_custom_pipeline.html.markdown">https://github.com/terraform-providers/terraform-provider-datadog/blob/master/website/docs/r/logs_custom_pipeline.html.markdown</a>.</p>
-</blockquote>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -97,7 +94,7 @@ resource to track the pipeline. Similarly, when a pipeline needs to be destroyed
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/master/sdk/dotnet/LogsCustomPipeline.cs/#L58">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/3a81b71a97f02d7f8327506d74202b4b917affd2/sdk/dotnet/LogsCustomPipeline.cs/#L59">View Source</a>
   </span>
   <a id="Pulumi_Datadog_LogsCustomPipeline__ctor_" data-uid="Pulumi.Datadog.LogsCustomPipeline.#ctor*"></a>
   <h4 id="Pulumi_Datadog_LogsCustomPipeline__ctor_System_String_Pulumi_Datadog_LogsCustomPipelineArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Datadog.LogsCustomPipeline.#ctor(System.String,Pulumi.Datadog.LogsCustomPipelineArgs,System.Nullable{CustomResourceOptions})">LogsCustomPipeline(String, LogsCustomPipelineArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
@@ -141,7 +138,7 @@ resource to track the pipeline. Similarly, when a pipeline needs to be destroyed
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/master/sdk/dotnet/LogsCustomPipeline.cs/#L29">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/3a81b71a97f02d7f8327506d74202b4b917affd2/sdk/dotnet/LogsCustomPipeline.cs/#L30">View Source</a>
   </span>
   <a id="Pulumi_Datadog_LogsCustomPipeline_Filters_" data-uid="Pulumi.Datadog.LogsCustomPipeline.Filters*"></a>
   <h4 id="Pulumi_Datadog_LogsCustomPipeline_Filters" data-uid="Pulumi.Datadog.LogsCustomPipeline.Filters">Filters</h4>
@@ -150,7 +147,7 @@ resource to track the pipeline. Similarly, when a pipeline needs to be destroyed
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;LogsCustomPipelineFilters&gt;&gt; Filters { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;LogsCustomPipelineFilter&gt;&gt; Filters { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -162,13 +159,13 @@ resource to track the pipeline. Similarly, when a pipeline needs to be destroyed
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Datadog.Outputs.LogsCustomPipelineFilters.html">LogsCustomPipelineFilters</a>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Datadog.Outputs.LogsCustomPipelineFilter.html">LogsCustomPipelineFilter</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/master/sdk/dotnet/LogsCustomPipeline.cs/#L35">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/3a81b71a97f02d7f8327506d74202b4b917affd2/sdk/dotnet/LogsCustomPipeline.cs/#L36">View Source</a>
   </span>
   <a id="Pulumi_Datadog_LogsCustomPipeline_IsEnabled_" data-uid="Pulumi.Datadog.LogsCustomPipeline.IsEnabled*"></a>
   <h4 id="Pulumi_Datadog_LogsCustomPipeline_IsEnabled" data-uid="Pulumi.Datadog.LogsCustomPipeline.IsEnabled">IsEnabled</h4>
@@ -195,7 +192,7 @@ resource to track the pipeline. Similarly, when a pipeline needs to be destroyed
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/master/sdk/dotnet/LogsCustomPipeline.cs/#L41">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/3a81b71a97f02d7f8327506d74202b4b917affd2/sdk/dotnet/LogsCustomPipeline.cs/#L42">View Source</a>
   </span>
   <a id="Pulumi_Datadog_LogsCustomPipeline_Name_" data-uid="Pulumi.Datadog.LogsCustomPipeline.Name*"></a>
   <h4 id="Pulumi_Datadog_LogsCustomPipeline_Name" data-uid="Pulumi.Datadog.LogsCustomPipeline.Name">Name</h4>
@@ -222,7 +219,7 @@ resource to track the pipeline. Similarly, when a pipeline needs to be destroyed
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/master/sdk/dotnet/LogsCustomPipeline.cs/#L47">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/3a81b71a97f02d7f8327506d74202b4b917affd2/sdk/dotnet/LogsCustomPipeline.cs/#L48">View Source</a>
   </span>
   <a id="Pulumi_Datadog_LogsCustomPipeline_Processors_" data-uid="Pulumi.Datadog.LogsCustomPipeline.Processors*"></a>
   <h4 id="Pulumi_Datadog_LogsCustomPipeline_Processors" data-uid="Pulumi.Datadog.LogsCustomPipeline.Processors">Processors</h4>
@@ -231,7 +228,7 @@ resource to track the pipeline. Similarly, when a pipeline needs to be destroyed
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;LogsCustomPipelineProcessors&gt;&gt; Processors { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;LogsCustomPipelineProcessor&gt;&gt; Processors { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -243,7 +240,7 @@ resource to track the pipeline. Similarly, when a pipeline needs to be destroyed
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Datadog.Outputs.LogsCustomPipelineProcessors.html">LogsCustomPipelineProcessors</a>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Datadog.Outputs.LogsCustomPipelineProcessor.html">LogsCustomPipelineProcessor</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -251,7 +248,7 @@ resource to track the pipeline. Similarly, when a pipeline needs to be destroyed
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/master/sdk/dotnet/LogsCustomPipeline.cs/#L88">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/3a81b71a97f02d7f8327506d74202b4b917affd2/sdk/dotnet/LogsCustomPipeline.cs/#L89">View Source</a>
   </span>
   <a id="Pulumi_Datadog_LogsCustomPipeline_Get_" data-uid="Pulumi.Datadog.LogsCustomPipeline.Get*"></a>
   <h4 id="Pulumi_Datadog_LogsCustomPipeline_Get_System_String_Input_System_String__Pulumi_Datadog_LogsCustomPipelineState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Datadog.LogsCustomPipeline.Get(System.String,Input{System.String},Pulumi.Datadog.LogsCustomPipelineState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, LogsCustomPipelineState, Nullable&lt;CustomResourceOptions&gt;)</h4>
@@ -321,7 +318,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-datadog/blob/master/sdk/dotnet/LogsCustomPipeline.cs/#L24" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-datadog/blob/3a81b71a97f02d7f8327506d74202b4b917affd2/sdk/dotnet/LogsCustomPipeline.cs/#L25" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

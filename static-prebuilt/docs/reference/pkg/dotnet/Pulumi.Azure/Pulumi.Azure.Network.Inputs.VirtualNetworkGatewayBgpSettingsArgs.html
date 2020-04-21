@@ -76,36 +76,7 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
-    <div class="level3"><span class="xref">VirtualNetworkGatewayBgpSettingsArgs</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">VirtualNetworkGatewayBgpSettingsArgs</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Azure.Network.Inputs.html">Pulumi.Azure.Network.Inputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Azure.dll</h6>
@@ -116,7 +87,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/VirtualNetworkGateway.cs/#L432">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/Inputs/VirtualNetworkGatewayBgpSettingsArgs.cs/#L37">View Source</a>
   </span>
   <a id="Pulumi_Azure_Network_Inputs_VirtualNetworkGatewayBgpSettingsArgs__ctor_" data-uid="Pulumi.Azure.Network.Inputs.VirtualNetworkGatewayBgpSettingsArgs.#ctor*"></a>
   <h4 id="Pulumi_Azure_Network_Inputs_VirtualNetworkGatewayBgpSettingsArgs__ctor" data-uid="Pulumi.Azure.Network.Inputs.VirtualNetworkGatewayBgpSettingsArgs.#ctor">VirtualNetworkGatewayBgpSettingsArgs()</h4>
@@ -129,15 +100,16 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/VirtualNetworkGateway.cs/#L423">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/Inputs/VirtualNetworkGatewayBgpSettingsArgs.cs/#L18">View Source</a>
   </span>
   <a id="Pulumi_Azure_Network_Inputs_VirtualNetworkGatewayBgpSettingsArgs_Asn_" data-uid="Pulumi.Azure.Network.Inputs.VirtualNetworkGatewayBgpSettingsArgs.Asn*"></a>
   <h4 id="Pulumi_Azure_Network_Inputs_VirtualNetworkGatewayBgpSettingsArgs_Asn" data-uid="Pulumi.Azure.Network.Inputs.VirtualNetworkGatewayBgpSettingsArgs.Asn">Asn</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The Autonomous System Number (ASN) to use as part of the BGP.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; Asn { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? Asn { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -149,21 +121,25 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/VirtualNetworkGateway.cs/#L429">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/Inputs/VirtualNetworkGatewayBgpSettingsArgs.cs/#L34">View Source</a>
   </span>
   <a id="Pulumi_Azure_Network_Inputs_VirtualNetworkGatewayBgpSettingsArgs_PeeringAddress_" data-uid="Pulumi.Azure.Network.Inputs.VirtualNetworkGatewayBgpSettingsArgs.PeeringAddress*"></a>
   <h4 id="Pulumi_Azure_Network_Inputs_VirtualNetworkGatewayBgpSettingsArgs_PeeringAddress" data-uid="Pulumi.Azure.Network.Inputs.VirtualNetworkGatewayBgpSettingsArgs.PeeringAddress">PeeringAddress</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The BGP peer IP address of the virtual network
+gateway. This address is needed to configure the created gateway as a BGP Peer
+on the on-premises VPN devices. The IP address must be part of the subnet of
+the Virtual Network Gateway. Changing this forces a new resource to be created.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; PeeringAddress { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? PeeringAddress { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -175,21 +151,23 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/VirtualNetworkGateway.cs/#L426">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/Inputs/VirtualNetworkGatewayBgpSettingsArgs.cs/#L25">View Source</a>
   </span>
   <a id="Pulumi_Azure_Network_Inputs_VirtualNetworkGatewayBgpSettingsArgs_PeerWeight_" data-uid="Pulumi.Azure.Network.Inputs.VirtualNetworkGatewayBgpSettingsArgs.PeerWeight*"></a>
   <h4 id="Pulumi_Azure_Network_Inputs_VirtualNetworkGatewayBgpSettingsArgs_PeerWeight" data-uid="Pulumi.Azure.Network.Inputs.VirtualNetworkGatewayBgpSettingsArgs.PeerWeight">PeerWeight</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The weight added to routes which have been learned
+through BGP peering. Valid values can be between <code>0</code> and <code>100</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; PeerWeight { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? PeerWeight { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -201,7 +179,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -213,7 +191,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/VirtualNetworkGateway.cs/#L421" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/Inputs/VirtualNetworkGatewayBgpSettingsArgs.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

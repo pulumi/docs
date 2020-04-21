@@ -78,53 +78,12 @@
 <blockquote>
 <p><strong>NOTE:</strong> The proper Lambda permission to allow the AWS Config service invoke the Lambda Function must be in place before the rule will successfully create or update. See also the <a href="https://www.terraform.io/docs/providers/aws/r/lambda_permission.html"><code>aws.lambda.Permission</code> resource</a>.</p>
 </blockquote>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/config_organization_custom_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/config_organization_custom_rule.html.markdown</a>.</p>
-</blockquote>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
-    <div class="level3"><span class="xref">OrganizationCustomRule</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">OrganizationCustomRule</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.Cfg.html">Pulumi.Aws.Cfg</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
@@ -135,16 +94,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Cfg/OrganizationCustomRule.cs/#L103">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Cfg/OrganizationCustomRule.cs/#L101">View Source</a>
   </span>
   <a id="Pulumi_Aws_Cfg_OrganizationCustomRule__ctor_" data-uid="Pulumi.Aws.Cfg.OrganizationCustomRule.#ctor*"></a>
-  <h4 id="Pulumi_Aws_Cfg_OrganizationCustomRule__ctor_System_String_Pulumi_Aws_Cfg_OrganizationCustomRuleArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.Cfg.OrganizationCustomRule.#ctor(System.String,Pulumi.Aws.Cfg.OrganizationCustomRuleArgs,Pulumi.CustomResourceOptions)">OrganizationCustomRule(String, OrganizationCustomRuleArgs, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Aws_Cfg_OrganizationCustomRule__ctor_System_String_Pulumi_Aws_Cfg_OrganizationCustomRuleArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.Cfg.OrganizationCustomRule.#ctor(System.String,Pulumi.Aws.Cfg.OrganizationCustomRuleArgs,System.Nullable{CustomResourceOptions})">OrganizationCustomRule(String, OrganizationCustomRuleArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Create a OrganizationCustomRule resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public OrganizationCustomRule(string name, OrganizationCustomRuleArgs args, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public OrganizationCustomRule(string name, OrganizationCustomRuleArgs args, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -169,7 +128,7 @@
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -179,7 +138,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Cfg/OrganizationCustomRule.cs/#L26">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Cfg/OrganizationCustomRule.cs/#L24">View Source</a>
   </span>
   <a id="Pulumi_Aws_Cfg_OrganizationCustomRule_Arn_" data-uid="Pulumi.Aws.Cfg.OrganizationCustomRule.Arn*"></a>
   <h4 id="Pulumi_Aws_Cfg_OrganizationCustomRule_Arn" data-uid="Pulumi.Aws.Cfg.OrganizationCustomRule.Arn">Arn</h4>
@@ -200,13 +159,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Cfg/OrganizationCustomRule.cs/#L32">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Cfg/OrganizationCustomRule.cs/#L30">View Source</a>
   </span>
   <a id="Pulumi_Aws_Cfg_OrganizationCustomRule_Description_" data-uid="Pulumi.Aws.Cfg.OrganizationCustomRule.Description*"></a>
   <h4 id="Pulumi_Aws_Cfg_OrganizationCustomRule_Description" data-uid="Pulumi.Aws.Cfg.OrganizationCustomRule.Description">Description</h4>
@@ -215,7 +174,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Description { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Description { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -227,13 +186,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Cfg/OrganizationCustomRule.cs/#L38">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Cfg/OrganizationCustomRule.cs/#L36">View Source</a>
   </span>
   <a id="Pulumi_Aws_Cfg_OrganizationCustomRule_ExcludedAccounts_" data-uid="Pulumi.Aws.Cfg.OrganizationCustomRule.ExcludedAccounts*"></a>
   <h4 id="Pulumi_Aws_Cfg_OrganizationCustomRule_ExcludedAccounts" data-uid="Pulumi.Aws.Cfg.OrganizationCustomRule.ExcludedAccounts">ExcludedAccounts</h4>
@@ -254,13 +213,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Cfg/OrganizationCustomRule.cs/#L44">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Cfg/OrganizationCustomRule.cs/#L42">View Source</a>
   </span>
   <a id="Pulumi_Aws_Cfg_OrganizationCustomRule_InputParameters_" data-uid="Pulumi.Aws.Cfg.OrganizationCustomRule.InputParameters*"></a>
   <h4 id="Pulumi_Aws_Cfg_OrganizationCustomRule_InputParameters" data-uid="Pulumi.Aws.Cfg.OrganizationCustomRule.InputParameters">InputParameters</h4>
@@ -269,7 +228,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; InputParameters { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; InputParameters { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -281,13 +240,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Cfg/OrganizationCustomRule.cs/#L50">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Cfg/OrganizationCustomRule.cs/#L48">View Source</a>
   </span>
   <a id="Pulumi_Aws_Cfg_OrganizationCustomRule_LambdaFunctionArn_" data-uid="Pulumi.Aws.Cfg.OrganizationCustomRule.LambdaFunctionArn*"></a>
   <h4 id="Pulumi_Aws_Cfg_OrganizationCustomRule_LambdaFunctionArn" data-uid="Pulumi.Aws.Cfg.OrganizationCustomRule.LambdaFunctionArn">LambdaFunctionArn</h4>
@@ -308,13 +267,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Cfg/OrganizationCustomRule.cs/#L56">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Cfg/OrganizationCustomRule.cs/#L54">View Source</a>
   </span>
   <a id="Pulumi_Aws_Cfg_OrganizationCustomRule_MaximumExecutionFrequency_" data-uid="Pulumi.Aws.Cfg.OrganizationCustomRule.MaximumExecutionFrequency*"></a>
   <h4 id="Pulumi_Aws_Cfg_OrganizationCustomRule_MaximumExecutionFrequency" data-uid="Pulumi.Aws.Cfg.OrganizationCustomRule.MaximumExecutionFrequency">MaximumExecutionFrequency</h4>
@@ -323,7 +282,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; MaximumExecutionFrequency { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; MaximumExecutionFrequency { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -335,13 +294,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Cfg/OrganizationCustomRule.cs/#L62">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Cfg/OrganizationCustomRule.cs/#L60">View Source</a>
   </span>
   <a id="Pulumi_Aws_Cfg_OrganizationCustomRule_Name_" data-uid="Pulumi.Aws.Cfg.OrganizationCustomRule.Name*"></a>
   <h4 id="Pulumi_Aws_Cfg_OrganizationCustomRule_Name" data-uid="Pulumi.Aws.Cfg.OrganizationCustomRule.Name">Name</h4>
@@ -362,13 +321,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Cfg/OrganizationCustomRule.cs/#L68">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Cfg/OrganizationCustomRule.cs/#L66">View Source</a>
   </span>
   <a id="Pulumi_Aws_Cfg_OrganizationCustomRule_ResourceIdScope_" data-uid="Pulumi.Aws.Cfg.OrganizationCustomRule.ResourceIdScope*"></a>
   <h4 id="Pulumi_Aws_Cfg_OrganizationCustomRule_ResourceIdScope" data-uid="Pulumi.Aws.Cfg.OrganizationCustomRule.ResourceIdScope">ResourceIdScope</h4>
@@ -377,7 +336,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ResourceIdScope { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; ResourceIdScope { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -389,13 +348,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Cfg/OrganizationCustomRule.cs/#L74">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Cfg/OrganizationCustomRule.cs/#L72">View Source</a>
   </span>
   <a id="Pulumi_Aws_Cfg_OrganizationCustomRule_ResourceTypesScopes_" data-uid="Pulumi.Aws.Cfg.OrganizationCustomRule.ResourceTypesScopes*"></a>
   <h4 id="Pulumi_Aws_Cfg_OrganizationCustomRule_ResourceTypesScopes" data-uid="Pulumi.Aws.Cfg.OrganizationCustomRule.ResourceTypesScopes">ResourceTypesScopes</h4>
@@ -416,13 +375,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Cfg/OrganizationCustomRule.cs/#L80">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Cfg/OrganizationCustomRule.cs/#L78">View Source</a>
   </span>
   <a id="Pulumi_Aws_Cfg_OrganizationCustomRule_TagKeyScope_" data-uid="Pulumi.Aws.Cfg.OrganizationCustomRule.TagKeyScope*"></a>
   <h4 id="Pulumi_Aws_Cfg_OrganizationCustomRule_TagKeyScope" data-uid="Pulumi.Aws.Cfg.OrganizationCustomRule.TagKeyScope">TagKeyScope</h4>
@@ -431,7 +390,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; TagKeyScope { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; TagKeyScope { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -443,13 +402,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Cfg/OrganizationCustomRule.cs/#L86">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Cfg/OrganizationCustomRule.cs/#L84">View Source</a>
   </span>
   <a id="Pulumi_Aws_Cfg_OrganizationCustomRule_TagValueScope_" data-uid="Pulumi.Aws.Cfg.OrganizationCustomRule.TagValueScope*"></a>
   <h4 id="Pulumi_Aws_Cfg_OrganizationCustomRule_TagValueScope" data-uid="Pulumi.Aws.Cfg.OrganizationCustomRule.TagValueScope">TagValueScope</h4>
@@ -458,7 +417,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; TagValueScope { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; TagValueScope { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -470,13 +429,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Cfg/OrganizationCustomRule.cs/#L92">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Cfg/OrganizationCustomRule.cs/#L90">View Source</a>
   </span>
   <a id="Pulumi_Aws_Cfg_OrganizationCustomRule_TriggerTypes_" data-uid="Pulumi.Aws.Cfg.OrganizationCustomRule.TriggerTypes*"></a>
   <h4 id="Pulumi_Aws_Cfg_OrganizationCustomRule_TriggerTypes" data-uid="Pulumi.Aws.Cfg.OrganizationCustomRule.TriggerTypes">TriggerTypes</h4>
@@ -497,7 +456,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -505,17 +464,17 @@
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Cfg/OrganizationCustomRule.cs/#L133">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Cfg/OrganizationCustomRule.cs/#L131">View Source</a>
   </span>
   <a id="Pulumi_Aws_Cfg_OrganizationCustomRule_Get_" data-uid="Pulumi.Aws.Cfg.OrganizationCustomRule.Get*"></a>
-  <h4 id="Pulumi_Aws_Cfg_OrganizationCustomRule_Get_System_String_Pulumi_Input_System_String__Pulumi_Aws_Cfg_OrganizationCustomRuleState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.Cfg.OrganizationCustomRule.Get(System.String,Pulumi.Input{System.String},Pulumi.Aws.Cfg.OrganizationCustomRuleState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, OrganizationCustomRuleState, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Aws_Cfg_OrganizationCustomRule_Get_System_String_Input_System_String__Pulumi_Aws_Cfg_OrganizationCustomRuleState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.Cfg.OrganizationCustomRule.Get(System.String,Input{System.String},Pulumi.Aws.Cfg.OrganizationCustomRuleState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, OrganizationCustomRuleState, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Get an existing OrganizationCustomRule resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static OrganizationCustomRule Get(string name, Input&lt;string&gt; id, OrganizationCustomRuleState state = null, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static OrganizationCustomRule Get(string name, Input&lt;string&gt; id, OrganizationCustomRuleState state = null, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -534,7 +493,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -546,7 +505,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -575,7 +534,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Cfg/OrganizationCustomRule.cs/#L21" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Cfg/OrganizationCustomRule.cs/#L19" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

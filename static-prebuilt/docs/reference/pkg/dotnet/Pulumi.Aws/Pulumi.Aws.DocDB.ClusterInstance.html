@@ -78,53 +78,12 @@ Instances and DocDB manages the replication. You can use the [count][3]
 meta-parameter to make multiple instances and join them all to the same DocDB
 Cluster, or you may specify different Cluster Instance resources with various
 <code>instance_class</code> sizes.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/docdb_cluster_instance.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/docdb_cluster_instance.html.markdown</a>.</p>
-</blockquote>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
-    <div class="level3"><span class="xref">ClusterInstance</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">ClusterInstance</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.DocDB.html">Pulumi.Aws.DocDB</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
@@ -135,16 +94,16 @@ Cluster, or you may specify different Cluster Instance resources with various
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Docdb/ClusterInstance.cs/#L178">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/DocDB/ClusterInstance.cs/#L176">View Source</a>
   </span>
   <a id="Pulumi_Aws_DocDB_ClusterInstance__ctor_" data-uid="Pulumi.Aws.DocDB.ClusterInstance.#ctor*"></a>
-  <h4 id="Pulumi_Aws_DocDB_ClusterInstance__ctor_System_String_Pulumi_Aws_DocDB_ClusterInstanceArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.DocDB.ClusterInstance.#ctor(System.String,Pulumi.Aws.DocDB.ClusterInstanceArgs,Pulumi.CustomResourceOptions)">ClusterInstance(String, ClusterInstanceArgs, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Aws_DocDB_ClusterInstance__ctor_System_String_Pulumi_Aws_DocDB_ClusterInstanceArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.DocDB.ClusterInstance.#ctor(System.String,Pulumi.Aws.DocDB.ClusterInstanceArgs,System.Nullable{CustomResourceOptions})">ClusterInstance(String, ClusterInstanceArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Create a ClusterInstance resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ClusterInstance(string name, ClusterInstanceArgs args, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public ClusterInstance(string name, ClusterInstanceArgs args, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -169,7 +128,7 @@ Cluster, or you may specify different Cluster Instance resources with various
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -179,7 +138,7 @@ Cluster, or you may specify different Cluster Instance resources with various
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Docdb/ClusterInstance.cs/#L30">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/DocDB/ClusterInstance.cs/#L28">View Source</a>
   </span>
   <a id="Pulumi_Aws_DocDB_ClusterInstance_ApplyImmediately_" data-uid="Pulumi.Aws.DocDB.ClusterInstance.ApplyImmediately*"></a>
   <h4 id="Pulumi_Aws_DocDB_ClusterInstance_ApplyImmediately" data-uid="Pulumi.Aws.DocDB.ClusterInstance.ApplyImmediately">ApplyImmediately</h4>
@@ -201,13 +160,13 @@ are applied immediately, or during the next maintenance window. Default is<code>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Docdb/ClusterInstance.cs/#L36">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/DocDB/ClusterInstance.cs/#L34">View Source</a>
   </span>
   <a id="Pulumi_Aws_DocDB_ClusterInstance_Arn_" data-uid="Pulumi.Aws.DocDB.ClusterInstance.Arn*"></a>
   <h4 id="Pulumi_Aws_DocDB_ClusterInstance_Arn" data-uid="Pulumi.Aws.DocDB.ClusterInstance.Arn">Arn</h4>
@@ -228,13 +187,13 @@ are applied immediately, or during the next maintenance window. Default is<code>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Docdb/ClusterInstance.cs/#L42">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/DocDB/ClusterInstance.cs/#L40">View Source</a>
   </span>
   <a id="Pulumi_Aws_DocDB_ClusterInstance_AutoMinorVersionUpgrade_" data-uid="Pulumi.Aws.DocDB.ClusterInstance.AutoMinorVersionUpgrade*"></a>
   <h4 id="Pulumi_Aws_DocDB_ClusterInstance_AutoMinorVersionUpgrade" data-uid="Pulumi.Aws.DocDB.ClusterInstance.AutoMinorVersionUpgrade">AutoMinorVersionUpgrade</h4>
@@ -255,13 +214,13 @@ are applied immediately, or during the next maintenance window. Default is<code>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Docdb/ClusterInstance.cs/#L48">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/DocDB/ClusterInstance.cs/#L46">View Source</a>
   </span>
   <a id="Pulumi_Aws_DocDB_ClusterInstance_AvailabilityZone_" data-uid="Pulumi.Aws.DocDB.ClusterInstance.AvailabilityZone*"></a>
   <h4 id="Pulumi_Aws_DocDB_ClusterInstance_AvailabilityZone" data-uid="Pulumi.Aws.DocDB.ClusterInstance.AvailabilityZone">AvailabilityZone</h4>
@@ -282,13 +241,13 @@ are applied immediately, or during the next maintenance window. Default is<code>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Docdb/ClusterInstance.cs/#L54">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/DocDB/ClusterInstance.cs/#L52">View Source</a>
   </span>
   <a id="Pulumi_Aws_DocDB_ClusterInstance_CaCertIdentifier_" data-uid="Pulumi.Aws.DocDB.ClusterInstance.CaCertIdentifier*"></a>
   <h4 id="Pulumi_Aws_DocDB_ClusterInstance_CaCertIdentifier" data-uid="Pulumi.Aws.DocDB.ClusterInstance.CaCertIdentifier">CaCertIdentifier</h4>
@@ -309,13 +268,13 @@ are applied immediately, or during the next maintenance window. Default is<code>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Docdb/ClusterInstance.cs/#L60">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/DocDB/ClusterInstance.cs/#L58">View Source</a>
   </span>
   <a id="Pulumi_Aws_DocDB_ClusterInstance_ClusterIdentifier_" data-uid="Pulumi.Aws.DocDB.ClusterInstance.ClusterIdentifier*"></a>
   <h4 id="Pulumi_Aws_DocDB_ClusterInstance_ClusterIdentifier" data-uid="Pulumi.Aws.DocDB.ClusterInstance.ClusterIdentifier">ClusterIdentifier</h4>
@@ -336,13 +295,13 @@ are applied immediately, or during the next maintenance window. Default is<code>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Docdb/ClusterInstance.cs/#L72">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/DocDB/ClusterInstance.cs/#L70">View Source</a>
   </span>
   <a id="Pulumi_Aws_DocDB_ClusterInstance_DbiResourceId_" data-uid="Pulumi.Aws.DocDB.ClusterInstance.DbiResourceId*"></a>
   <h4 id="Pulumi_Aws_DocDB_ClusterInstance_DbiResourceId" data-uid="Pulumi.Aws.DocDB.ClusterInstance.DbiResourceId">DbiResourceId</h4>
@@ -363,13 +322,13 @@ are applied immediately, or during the next maintenance window. Default is<code>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Docdb/ClusterInstance.cs/#L66">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/DocDB/ClusterInstance.cs/#L64">View Source</a>
   </span>
   <a id="Pulumi_Aws_DocDB_ClusterInstance_DbSubnetGroupName_" data-uid="Pulumi.Aws.DocDB.ClusterInstance.DbSubnetGroupName*"></a>
   <h4 id="Pulumi_Aws_DocDB_ClusterInstance_DbSubnetGroupName" data-uid="Pulumi.Aws.DocDB.ClusterInstance.DbSubnetGroupName">DbSubnetGroupName</h4>
@@ -390,13 +349,13 @@ are applied immediately, or during the next maintenance window. Default is<code>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Docdb/ClusterInstance.cs/#L78">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/DocDB/ClusterInstance.cs/#L76">View Source</a>
   </span>
   <a id="Pulumi_Aws_DocDB_ClusterInstance_Endpoint_" data-uid="Pulumi.Aws.DocDB.ClusterInstance.Endpoint*"></a>
   <h4 id="Pulumi_Aws_DocDB_ClusterInstance_Endpoint" data-uid="Pulumi.Aws.DocDB.ClusterInstance.Endpoint">Endpoint</h4>
@@ -417,13 +376,13 @@ are applied immediately, or during the next maintenance window. Default is<code>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Docdb/ClusterInstance.cs/#L84">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/DocDB/ClusterInstance.cs/#L82">View Source</a>
   </span>
   <a id="Pulumi_Aws_DocDB_ClusterInstance_Engine_" data-uid="Pulumi.Aws.DocDB.ClusterInstance.Engine*"></a>
   <h4 id="Pulumi_Aws_DocDB_ClusterInstance_Engine" data-uid="Pulumi.Aws.DocDB.ClusterInstance.Engine">Engine</h4>
@@ -432,7 +391,7 @@ are applied immediately, or during the next maintenance window. Default is<code>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Engine { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Engine { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -444,13 +403,13 @@ are applied immediately, or during the next maintenance window. Default is<code>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Docdb/ClusterInstance.cs/#L90">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/DocDB/ClusterInstance.cs/#L88">View Source</a>
   </span>
   <a id="Pulumi_Aws_DocDB_ClusterInstance_EngineVersion_" data-uid="Pulumi.Aws.DocDB.ClusterInstance.EngineVersion*"></a>
   <h4 id="Pulumi_Aws_DocDB_ClusterInstance_EngineVersion" data-uid="Pulumi.Aws.DocDB.ClusterInstance.EngineVersion">EngineVersion</h4>
@@ -471,13 +430,13 @@ are applied immediately, or during the next maintenance window. Default is<code>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Docdb/ClusterInstance.cs/#L96">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/DocDB/ClusterInstance.cs/#L94">View Source</a>
   </span>
   <a id="Pulumi_Aws_DocDB_ClusterInstance_Identifier_" data-uid="Pulumi.Aws.DocDB.ClusterInstance.Identifier*"></a>
   <h4 id="Pulumi_Aws_DocDB_ClusterInstance_Identifier" data-uid="Pulumi.Aws.DocDB.ClusterInstance.Identifier">Identifier</h4>
@@ -498,13 +457,13 @@ are applied immediately, or during the next maintenance window. Default is<code>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Docdb/ClusterInstance.cs/#L102">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/DocDB/ClusterInstance.cs/#L100">View Source</a>
   </span>
   <a id="Pulumi_Aws_DocDB_ClusterInstance_IdentifierPrefix_" data-uid="Pulumi.Aws.DocDB.ClusterInstance.IdentifierPrefix*"></a>
   <h4 id="Pulumi_Aws_DocDB_ClusterInstance_IdentifierPrefix" data-uid="Pulumi.Aws.DocDB.ClusterInstance.IdentifierPrefix">IdentifierPrefix</h4>
@@ -525,13 +484,13 @@ are applied immediately, or during the next maintenance window. Default is<code>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Docdb/ClusterInstance.cs/#L115">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/DocDB/ClusterInstance.cs/#L113">View Source</a>
   </span>
   <a id="Pulumi_Aws_DocDB_ClusterInstance_InstanceClass_" data-uid="Pulumi.Aws.DocDB.ClusterInstance.InstanceClass*"></a>
   <h4 id="Pulumi_Aws_DocDB_ClusterInstance_InstanceClass" data-uid="Pulumi.Aws.DocDB.ClusterInstance.InstanceClass">InstanceClass</h4>
@@ -561,13 +520,13 @@ supports the below instance classes. Please see [AWS Documentation][4] for compl
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Docdb/ClusterInstance.cs/#L121">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/DocDB/ClusterInstance.cs/#L119">View Source</a>
   </span>
   <a id="Pulumi_Aws_DocDB_ClusterInstance_KmsKeyId_" data-uid="Pulumi.Aws.DocDB.ClusterInstance.KmsKeyId*"></a>
   <h4 id="Pulumi_Aws_DocDB_ClusterInstance_KmsKeyId" data-uid="Pulumi.Aws.DocDB.ClusterInstance.KmsKeyId">KmsKeyId</h4>
@@ -588,13 +547,13 @@ supports the below instance classes. Please see [AWS Documentation][4] for compl
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Docdb/ClusterInstance.cs/#L127">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/DocDB/ClusterInstance.cs/#L125">View Source</a>
   </span>
   <a id="Pulumi_Aws_DocDB_ClusterInstance_Port_" data-uid="Pulumi.Aws.DocDB.ClusterInstance.Port*"></a>
   <h4 id="Pulumi_Aws_DocDB_ClusterInstance_Port" data-uid="Pulumi.Aws.DocDB.ClusterInstance.Port">Port</h4>
@@ -615,13 +574,13 @@ supports the below instance classes. Please see [AWS Documentation][4] for compl
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Docdb/ClusterInstance.cs/#L133">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/DocDB/ClusterInstance.cs/#L131">View Source</a>
   </span>
   <a id="Pulumi_Aws_DocDB_ClusterInstance_PreferredBackupWindow_" data-uid="Pulumi.Aws.DocDB.ClusterInstance.PreferredBackupWindow*"></a>
   <h4 id="Pulumi_Aws_DocDB_ClusterInstance_PreferredBackupWindow" data-uid="Pulumi.Aws.DocDB.ClusterInstance.PreferredBackupWindow">PreferredBackupWindow</h4>
@@ -642,13 +601,13 @@ supports the below instance classes. Please see [AWS Documentation][4] for compl
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Docdb/ClusterInstance.cs/#L140">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/DocDB/ClusterInstance.cs/#L138">View Source</a>
   </span>
   <a id="Pulumi_Aws_DocDB_ClusterInstance_PreferredMaintenanceWindow_" data-uid="Pulumi.Aws.DocDB.ClusterInstance.PreferredMaintenanceWindow*"></a>
   <h4 id="Pulumi_Aws_DocDB_ClusterInstance_PreferredMaintenanceWindow" data-uid="Pulumi.Aws.DocDB.ClusterInstance.PreferredMaintenanceWindow">PreferredMaintenanceWindow</h4>
@@ -670,13 +629,13 @@ Syntax: &quot;ddd:hh24:mi-ddd:hh24:mi&quot;. Eg: &quot;Mon:00:00-Mon:03:00&quot;
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Docdb/ClusterInstance.cs/#L146">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/DocDB/ClusterInstance.cs/#L144">View Source</a>
   </span>
   <a id="Pulumi_Aws_DocDB_ClusterInstance_PromotionTier_" data-uid="Pulumi.Aws.DocDB.ClusterInstance.PromotionTier*"></a>
   <h4 id="Pulumi_Aws_DocDB_ClusterInstance_PromotionTier" data-uid="Pulumi.Aws.DocDB.ClusterInstance.PromotionTier">PromotionTier</h4>
@@ -697,13 +656,13 @@ Syntax: &quot;ddd:hh24:mi-ddd:hh24:mi&quot;. Eg: &quot;Mon:00:00-Mon:03:00&quot;
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Docdb/ClusterInstance.cs/#L149">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/DocDB/ClusterInstance.cs/#L147">View Source</a>
   </span>
   <a id="Pulumi_Aws_DocDB_ClusterInstance_PubliclyAccessible_" data-uid="Pulumi.Aws.DocDB.ClusterInstance.PubliclyAccessible*"></a>
   <h4 id="Pulumi_Aws_DocDB_ClusterInstance_PubliclyAccessible" data-uid="Pulumi.Aws.DocDB.ClusterInstance.PubliclyAccessible">PubliclyAccessible</h4>
@@ -723,13 +682,13 @@ Syntax: &quot;ddd:hh24:mi-ddd:hh24:mi&quot;. Eg: &quot;Mon:00:00-Mon:03:00&quot;
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Docdb/ClusterInstance.cs/#L155">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/DocDB/ClusterInstance.cs/#L153">View Source</a>
   </span>
   <a id="Pulumi_Aws_DocDB_ClusterInstance_StorageEncrypted_" data-uid="Pulumi.Aws.DocDB.ClusterInstance.StorageEncrypted*"></a>
   <h4 id="Pulumi_Aws_DocDB_ClusterInstance_StorageEncrypted" data-uid="Pulumi.Aws.DocDB.ClusterInstance.StorageEncrypted">StorageEncrypted</h4>
@@ -750,13 +709,13 @@ Syntax: &quot;ddd:hh24:mi-ddd:hh24:mi&quot;. Eg: &quot;Mon:00:00-Mon:03:00&quot;
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Docdb/ClusterInstance.cs/#L161">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/DocDB/ClusterInstance.cs/#L159">View Source</a>
   </span>
   <a id="Pulumi_Aws_DocDB_ClusterInstance_Tags_" data-uid="Pulumi.Aws.DocDB.ClusterInstance.Tags*"></a>
   <h4 id="Pulumi_Aws_DocDB_ClusterInstance_Tags" data-uid="Pulumi.Aws.DocDB.ClusterInstance.Tags">Tags</h4>
@@ -765,7 +724,7 @@ Syntax: &quot;ddd:hh24:mi-ddd:hh24:mi&quot;. Eg: &quot;Mon:00:00-Mon:03:00&quot;
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;&gt; Tags { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;?&gt; Tags { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -777,13 +736,13 @@ Syntax: &quot;ddd:hh24:mi-ddd:hh24:mi&quot;. Eg: &quot;Mon:00:00-Mon:03:00&quot;
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Docdb/ClusterInstance.cs/#L167">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/DocDB/ClusterInstance.cs/#L165">View Source</a>
   </span>
   <a id="Pulumi_Aws_DocDB_ClusterInstance_Writer_" data-uid="Pulumi.Aws.DocDB.ClusterInstance.Writer*"></a>
   <h4 id="Pulumi_Aws_DocDB_ClusterInstance_Writer" data-uid="Pulumi.Aws.DocDB.ClusterInstance.Writer">Writer</h4>
@@ -804,7 +763,7 @@ Syntax: &quot;ddd:hh24:mi-ddd:hh24:mi&quot;. Eg: &quot;Mon:00:00-Mon:03:00&quot;
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -812,17 +771,17 @@ Syntax: &quot;ddd:hh24:mi-ddd:hh24:mi&quot;. Eg: &quot;Mon:00:00-Mon:03:00&quot;
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Docdb/ClusterInstance.cs/#L208">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/DocDB/ClusterInstance.cs/#L206">View Source</a>
   </span>
   <a id="Pulumi_Aws_DocDB_ClusterInstance_Get_" data-uid="Pulumi.Aws.DocDB.ClusterInstance.Get*"></a>
-  <h4 id="Pulumi_Aws_DocDB_ClusterInstance_Get_System_String_Pulumi_Input_System_String__Pulumi_Aws_DocDB_ClusterInstanceState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.DocDB.ClusterInstance.Get(System.String,Pulumi.Input{System.String},Pulumi.Aws.DocDB.ClusterInstanceState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, ClusterInstanceState, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Aws_DocDB_ClusterInstance_Get_System_String_Input_System_String__Pulumi_Aws_DocDB_ClusterInstanceState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.DocDB.ClusterInstance.Get(System.String,Input{System.String},Pulumi.Aws.DocDB.ClusterInstanceState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, ClusterInstanceState, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Get an existing ClusterInstance resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static ClusterInstance Get(string name, Input&lt;string&gt; id, ClusterInstanceState state = null, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static ClusterInstance Get(string name, Input&lt;string&gt; id, ClusterInstanceState state = null, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -841,7 +800,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -853,7 +812,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -882,7 +841,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Docdb/ClusterInstance.cs/#L24" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/DocDB/ClusterInstance.cs/#L22" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

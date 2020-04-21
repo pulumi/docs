@@ -71,10 +71,7 @@
   
   <h1 id="Pulumi_Datadog_PagerDuty_Integration" data-uid="Pulumi.Datadog.PagerDuty.Integration" class="text-break">Class Integration
   </h1>
-  <div class="markdown level0 summary"><blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-datadog/blob/master/website/docs/r/integration_pagerduty.html.markdown">https://github.com/terraform-providers/terraform-provider-datadog/blob/master/website/docs/r/integration_pagerduty.html.markdown</a>.</p>
-</blockquote>
-</div>
+  <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -90,7 +87,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/master/sdk/dotnet/Pagerduty/Integration.cs/#L53">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/3a81b71a97f02d7f8327506d74202b4b917affd2/sdk/dotnet/PagerDuty/Integration.cs/#L52">View Source</a>
   </span>
   <a id="Pulumi_Datadog_PagerDuty_Integration__ctor_" data-uid="Pulumi.Datadog.PagerDuty.Integration.#ctor*"></a>
   <h4 id="Pulumi_Datadog_PagerDuty_Integration__ctor_System_String_Pulumi_Datadog_PagerDuty_IntegrationArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Datadog.PagerDuty.Integration.#ctor(System.String,Pulumi.Datadog.PagerDuty.IntegrationArgs,System.Nullable{CustomResourceOptions})">Integration(String, IntegrationArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
@@ -134,7 +131,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/master/sdk/dotnet/Pagerduty/Integration.cs/#L18">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/3a81b71a97f02d7f8327506d74202b4b917affd2/sdk/dotnet/PagerDuty/Integration.cs/#L17">View Source</a>
   </span>
   <a id="Pulumi_Datadog_PagerDuty_Integration_ApiToken_" data-uid="Pulumi.Datadog.PagerDuty.Integration.ApiToken*"></a>
   <h4 id="Pulumi_Datadog_PagerDuty_Integration_ApiToken" data-uid="Pulumi.Datadog.PagerDuty.Integration.ApiToken">ApiToken</h4>
@@ -161,7 +158,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/master/sdk/dotnet/Pagerduty/Integration.cs/#L24">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/3a81b71a97f02d7f8327506d74202b4b917affd2/sdk/dotnet/PagerDuty/Integration.cs/#L23">View Source</a>
   </span>
   <a id="Pulumi_Datadog_PagerDuty_Integration_IndividualServices_" data-uid="Pulumi.Datadog.PagerDuty.Integration.IndividualServices*"></a>
   <h4 id="Pulumi_Datadog_PagerDuty_Integration_IndividualServices" data-uid="Pulumi.Datadog.PagerDuty.Integration.IndividualServices">IndividualServices</h4>
@@ -188,7 +185,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/master/sdk/dotnet/Pagerduty/Integration.cs/#L30">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/3a81b71a97f02d7f8327506d74202b4b917affd2/sdk/dotnet/PagerDuty/Integration.cs/#L29">View Source</a>
   </span>
   <a id="Pulumi_Datadog_PagerDuty_Integration_Schedules_" data-uid="Pulumi.Datadog.PagerDuty.Integration.Schedules*"></a>
   <h4 id="Pulumi_Datadog_PagerDuty_Integration_Schedules" data-uid="Pulumi.Datadog.PagerDuty.Integration.Schedules">Schedules</h4>
@@ -215,7 +212,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/master/sdk/dotnet/Pagerduty/Integration.cs/#L36">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/3a81b71a97f02d7f8327506d74202b4b917affd2/sdk/dotnet/PagerDuty/Integration.cs/#L35">View Source</a>
   </span>
   <a id="Pulumi_Datadog_PagerDuty_Integration_Services_" data-uid="Pulumi.Datadog.PagerDuty.Integration.Services*"></a>
   <h4 id="Pulumi_Datadog_PagerDuty_Integration_Services" data-uid="Pulumi.Datadog.PagerDuty.Integration.Services">Services</h4>
@@ -224,7 +221,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;IntegrationServices&gt;&gt; Services { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;IntegrationService&gt;&gt; Services { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -236,13 +233,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Datadog.PagerDuty.Outputs.IntegrationServices.html">IntegrationServices</a>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Datadog.PagerDuty.Outputs.IntegrationService.html">IntegrationService</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/master/sdk/dotnet/Pagerduty/Integration.cs/#L42">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/3a81b71a97f02d7f8327506d74202b4b917affd2/sdk/dotnet/PagerDuty/Integration.cs/#L41">View Source</a>
   </span>
   <a id="Pulumi_Datadog_PagerDuty_Integration_Subdomain_" data-uid="Pulumi.Datadog.PagerDuty.Integration.Subdomain*"></a>
   <h4 id="Pulumi_Datadog_PagerDuty_Integration_Subdomain" data-uid="Pulumi.Datadog.PagerDuty.Integration.Subdomain">Subdomain</h4>
@@ -271,7 +268,7 @@
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/master/sdk/dotnet/Pagerduty/Integration.cs/#L83">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/3a81b71a97f02d7f8327506d74202b4b917affd2/sdk/dotnet/PagerDuty/Integration.cs/#L82">View Source</a>
   </span>
   <a id="Pulumi_Datadog_PagerDuty_Integration_Get_" data-uid="Pulumi.Datadog.PagerDuty.Integration.Get*"></a>
   <h4 id="Pulumi_Datadog_PagerDuty_Integration_Get_System_String_Input_System_String__Pulumi_Datadog_PagerDuty_IntegrationState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Datadog.PagerDuty.Integration.Get(System.String,Input{System.String},Pulumi.Datadog.PagerDuty.IntegrationState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, IntegrationState, Nullable&lt;CustomResourceOptions&gt;)</h4>
@@ -341,7 +338,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-datadog/blob/master/sdk/dotnet/Pagerduty/Integration.cs/#L13" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-datadog/blob/3a81b71a97f02d7f8327506d74202b4b917affd2/sdk/dotnet/PagerDuty/Integration.cs/#L12" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

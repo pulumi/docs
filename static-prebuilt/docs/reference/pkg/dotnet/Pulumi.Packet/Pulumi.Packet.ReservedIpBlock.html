@@ -79,9 +79,6 @@ The IPv6 and private IPv4 blocks can't be created, only imported. With this reso
 <p>Public blocks are allocated in a facility. Addresses from public blocks can only be assigned to devices in the facility. Public blocks can have mask from /24 (256 addresses) to /32 (1 address). If you create public block with this resource, you must fill the facility argmument.</p>
 <p>Addresses from global blocks can be assigned in any facility. Global blocks can have mask from /30 (4 addresses), to /32 (1 address). If you create global block with this resource, you must specify type = &quot;global_ipv4&quot; and you must omit the facility argument.</p>
 <p>Once IP block is allocated or imported, an address from it can be assigned to device with the <code>packet..IpAttachment</code> resource.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/r/reserved_ip_block.html.markdown">https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/r/reserved_ip_block.html.markdown</a>.</p>
-</blockquote>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -98,7 +95,7 @@ The IPv6 and private IPv4 blocks can't be created, only imported. With this reso
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-packet/blob/master/sdk/dotnet/ReservedIpBlock.cs/#L121">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-packet/blob/cab7571f45b92b89a65125a821f651da059375c0/sdk/dotnet/ReservedIpBlock.cs/#L120">View Source</a>
   </span>
   <a id="Pulumi_Packet_ReservedIpBlock__ctor_" data-uid="Pulumi.Packet.ReservedIpBlock.#ctor*"></a>
   <h4 id="Pulumi_Packet_ReservedIpBlock__ctor_System_String_Pulumi_Packet_ReservedIpBlockArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Packet.ReservedIpBlock.#ctor(System.String,Pulumi.Packet.ReservedIpBlockArgs,System.Nullable{CustomResourceOptions})">ReservedIpBlock(String, ReservedIpBlockArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
@@ -142,7 +139,7 @@ The IPv6 and private IPv4 blocks can't be created, only imported. With this reso
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-packet/blob/master/sdk/dotnet/ReservedIpBlock.cs/#L29">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-packet/blob/cab7571f45b92b89a65125a821f651da059375c0/sdk/dotnet/ReservedIpBlock.cs/#L28">View Source</a>
   </span>
   <a id="Pulumi_Packet_ReservedIpBlock_Address_" data-uid="Pulumi.Packet.ReservedIpBlock.Address*"></a>
   <h4 id="Pulumi_Packet_ReservedIpBlock_Address" data-uid="Pulumi.Packet.ReservedIpBlock.Address">Address</h4>
@@ -168,7 +165,7 @@ The IPv6 and private IPv4 blocks can't be created, only imported. With this reso
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-packet/blob/master/sdk/dotnet/ReservedIpBlock.cs/#L35">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-packet/blob/cab7571f45b92b89a65125a821f651da059375c0/sdk/dotnet/ReservedIpBlock.cs/#L34">View Source</a>
   </span>
   <a id="Pulumi_Packet_ReservedIpBlock_AddressFamily_" data-uid="Pulumi.Packet.ReservedIpBlock.AddressFamily*"></a>
   <h4 id="Pulumi_Packet_ReservedIpBlock_AddressFamily" data-uid="Pulumi.Packet.ReservedIpBlock.AddressFamily">AddressFamily</h4>
@@ -195,7 +192,7 @@ The IPv6 and private IPv4 blocks can't be created, only imported. With this reso
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-packet/blob/master/sdk/dotnet/ReservedIpBlock.cs/#L41">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-packet/blob/cab7571f45b92b89a65125a821f651da059375c0/sdk/dotnet/ReservedIpBlock.cs/#L40">View Source</a>
   </span>
   <a id="Pulumi_Packet_ReservedIpBlock_Cidr_" data-uid="Pulumi.Packet.ReservedIpBlock.Cidr*"></a>
   <h4 id="Pulumi_Packet_ReservedIpBlock_Cidr" data-uid="Pulumi.Packet.ReservedIpBlock.Cidr">Cidr</h4>
@@ -222,7 +219,7 @@ The IPv6 and private IPv4 blocks can't be created, only imported. With this reso
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-packet/blob/master/sdk/dotnet/ReservedIpBlock.cs/#L47">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-packet/blob/cab7571f45b92b89a65125a821f651da059375c0/sdk/dotnet/ReservedIpBlock.cs/#L46">View Source</a>
   </span>
   <a id="Pulumi_Packet_ReservedIpBlock_CidrNotation_" data-uid="Pulumi.Packet.ReservedIpBlock.CidrNotation*"></a>
   <h4 id="Pulumi_Packet_ReservedIpBlock_CidrNotation" data-uid="Pulumi.Packet.ReservedIpBlock.CidrNotation">CidrNotation</h4>
@@ -249,7 +246,7 @@ The IPv6 and private IPv4 blocks can't be created, only imported. With this reso
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-packet/blob/master/sdk/dotnet/ReservedIpBlock.cs/#L53">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-packet/blob/cab7571f45b92b89a65125a821f651da059375c0/sdk/dotnet/ReservedIpBlock.cs/#L52">View Source</a>
   </span>
   <a id="Pulumi_Packet_ReservedIpBlock_Description_" data-uid="Pulumi.Packet.ReservedIpBlock.Description*"></a>
   <h4 id="Pulumi_Packet_ReservedIpBlock_Description" data-uid="Pulumi.Packet.ReservedIpBlock.Description">Description</h4>
@@ -276,7 +273,7 @@ The IPv6 and private IPv4 blocks can't be created, only imported. With this reso
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-packet/blob/master/sdk/dotnet/ReservedIpBlock.cs/#L59">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-packet/blob/cab7571f45b92b89a65125a821f651da059375c0/sdk/dotnet/ReservedIpBlock.cs/#L58">View Source</a>
   </span>
   <a id="Pulumi_Packet_ReservedIpBlock_Facility_" data-uid="Pulumi.Packet.ReservedIpBlock.Facility*"></a>
   <h4 id="Pulumi_Packet_ReservedIpBlock_Facility" data-uid="Pulumi.Packet.ReservedIpBlock.Facility">Facility</h4>
@@ -303,7 +300,7 @@ The IPv6 and private IPv4 blocks can't be created, only imported. With this reso
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-packet/blob/master/sdk/dotnet/ReservedIpBlock.cs/#L62">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-packet/blob/cab7571f45b92b89a65125a821f651da059375c0/sdk/dotnet/ReservedIpBlock.cs/#L61">View Source</a>
   </span>
   <a id="Pulumi_Packet_ReservedIpBlock_Gateway_" data-uid="Pulumi.Packet.ReservedIpBlock.Gateway*"></a>
   <h4 id="Pulumi_Packet_ReservedIpBlock_Gateway" data-uid="Pulumi.Packet.ReservedIpBlock.Gateway">Gateway</h4>
@@ -329,7 +326,7 @@ The IPv6 and private IPv4 blocks can't be created, only imported. With this reso
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-packet/blob/master/sdk/dotnet/ReservedIpBlock.cs/#L68">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-packet/blob/cab7571f45b92b89a65125a821f651da059375c0/sdk/dotnet/ReservedIpBlock.cs/#L67">View Source</a>
   </span>
   <a id="Pulumi_Packet_ReservedIpBlock_Global_" data-uid="Pulumi.Packet.ReservedIpBlock.Global*"></a>
   <h4 id="Pulumi_Packet_ReservedIpBlock_Global" data-uid="Pulumi.Packet.ReservedIpBlock.Global">Global</h4>
@@ -356,7 +353,7 @@ The IPv6 and private IPv4 blocks can't be created, only imported. With this reso
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-packet/blob/master/sdk/dotnet/ReservedIpBlock.cs/#L71">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-packet/blob/cab7571f45b92b89a65125a821f651da059375c0/sdk/dotnet/ReservedIpBlock.cs/#L70">View Source</a>
   </span>
   <a id="Pulumi_Packet_ReservedIpBlock_Manageable_" data-uid="Pulumi.Packet.ReservedIpBlock.Manageable*"></a>
   <h4 id="Pulumi_Packet_ReservedIpBlock_Manageable" data-uid="Pulumi.Packet.ReservedIpBlock.Manageable">Manageable</h4>
@@ -382,7 +379,7 @@ The IPv6 and private IPv4 blocks can't be created, only imported. With this reso
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-packet/blob/master/sdk/dotnet/ReservedIpBlock.cs/#L74">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-packet/blob/cab7571f45b92b89a65125a821f651da059375c0/sdk/dotnet/ReservedIpBlock.cs/#L73">View Source</a>
   </span>
   <a id="Pulumi_Packet_ReservedIpBlock_Management_" data-uid="Pulumi.Packet.ReservedIpBlock.Management*"></a>
   <h4 id="Pulumi_Packet_ReservedIpBlock_Management" data-uid="Pulumi.Packet.ReservedIpBlock.Management">Management</h4>
@@ -408,7 +405,7 @@ The IPv6 and private IPv4 blocks can't be created, only imported. With this reso
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-packet/blob/master/sdk/dotnet/ReservedIpBlock.cs/#L80">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-packet/blob/cab7571f45b92b89a65125a821f651da059375c0/sdk/dotnet/ReservedIpBlock.cs/#L79">View Source</a>
   </span>
   <a id="Pulumi_Packet_ReservedIpBlock_Netmask_" data-uid="Pulumi.Packet.ReservedIpBlock.Netmask*"></a>
   <h4 id="Pulumi_Packet_ReservedIpBlock_Netmask" data-uid="Pulumi.Packet.ReservedIpBlock.Netmask">Netmask</h4>
@@ -435,7 +432,7 @@ The IPv6 and private IPv4 blocks can't be created, only imported. With this reso
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-packet/blob/master/sdk/dotnet/ReservedIpBlock.cs/#L86">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-packet/blob/cab7571f45b92b89a65125a821f651da059375c0/sdk/dotnet/ReservedIpBlock.cs/#L85">View Source</a>
   </span>
   <a id="Pulumi_Packet_ReservedIpBlock_Network_" data-uid="Pulumi.Packet.ReservedIpBlock.Network*"></a>
   <h4 id="Pulumi_Packet_ReservedIpBlock_Network" data-uid="Pulumi.Packet.ReservedIpBlock.Network">Network</h4>
@@ -462,7 +459,7 @@ The IPv6 and private IPv4 blocks can't be created, only imported. With this reso
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-packet/blob/master/sdk/dotnet/ReservedIpBlock.cs/#L92">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-packet/blob/cab7571f45b92b89a65125a821f651da059375c0/sdk/dotnet/ReservedIpBlock.cs/#L91">View Source</a>
   </span>
   <a id="Pulumi_Packet_ReservedIpBlock_ProjectId_" data-uid="Pulumi.Packet.ReservedIpBlock.ProjectId*"></a>
   <h4 id="Pulumi_Packet_ReservedIpBlock_ProjectId" data-uid="Pulumi.Packet.ReservedIpBlock.ProjectId">ProjectId</h4>
@@ -489,7 +486,7 @@ The IPv6 and private IPv4 blocks can't be created, only imported. With this reso
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-packet/blob/master/sdk/dotnet/ReservedIpBlock.cs/#L98">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-packet/blob/cab7571f45b92b89a65125a821f651da059375c0/sdk/dotnet/ReservedIpBlock.cs/#L97">View Source</a>
   </span>
   <a id="Pulumi_Packet_ReservedIpBlock_Public_" data-uid="Pulumi.Packet.ReservedIpBlock.Public*"></a>
   <h4 id="Pulumi_Packet_ReservedIpBlock_Public" data-uid="Pulumi.Packet.ReservedIpBlock.Public">Public</h4>
@@ -516,7 +513,7 @@ The IPv6 and private IPv4 blocks can't be created, only imported. With this reso
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-packet/blob/master/sdk/dotnet/ReservedIpBlock.cs/#L104">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-packet/blob/cab7571f45b92b89a65125a821f651da059375c0/sdk/dotnet/ReservedIpBlock.cs/#L103">View Source</a>
   </span>
   <a id="Pulumi_Packet_ReservedIpBlock_Quantity_" data-uid="Pulumi.Packet.ReservedIpBlock.Quantity*"></a>
   <h4 id="Pulumi_Packet_ReservedIpBlock_Quantity" data-uid="Pulumi.Packet.ReservedIpBlock.Quantity">Quantity</h4>
@@ -543,7 +540,7 @@ The IPv6 and private IPv4 blocks can't be created, only imported. With this reso
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-packet/blob/master/sdk/dotnet/ReservedIpBlock.cs/#L110">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-packet/blob/cab7571f45b92b89a65125a821f651da059375c0/sdk/dotnet/ReservedIpBlock.cs/#L109">View Source</a>
   </span>
   <a id="Pulumi_Packet_ReservedIpBlock_Type_" data-uid="Pulumi.Packet.ReservedIpBlock.Type*"></a>
   <h4 id="Pulumi_Packet_ReservedIpBlock_Type" data-uid="Pulumi.Packet.ReservedIpBlock.Type">Type</h4>
@@ -572,7 +569,7 @@ The IPv6 and private IPv4 blocks can't be created, only imported. With this reso
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-packet/blob/master/sdk/dotnet/ReservedIpBlock.cs/#L151">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-packet/blob/cab7571f45b92b89a65125a821f651da059375c0/sdk/dotnet/ReservedIpBlock.cs/#L150">View Source</a>
   </span>
   <a id="Pulumi_Packet_ReservedIpBlock_Get_" data-uid="Pulumi.Packet.ReservedIpBlock.Get*"></a>
   <h4 id="Pulumi_Packet_ReservedIpBlock_Get_System_String_Input_System_String__Pulumi_Packet_ReservedIpBlockState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Packet.ReservedIpBlock.Get(System.String,Input{System.String},Pulumi.Packet.ReservedIpBlockState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, ReservedIpBlockState, Nullable&lt;CustomResourceOptions&gt;)</h4>
@@ -642,7 +639,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-packet/blob/master/sdk/dotnet/ReservedIpBlock.cs/#L27" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-packet/blob/cab7571f45b92b89a65125a821f651da059375c0/sdk/dotnet/ReservedIpBlock.cs/#L26" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

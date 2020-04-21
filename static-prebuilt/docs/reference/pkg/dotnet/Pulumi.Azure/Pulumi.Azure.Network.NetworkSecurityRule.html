@@ -77,53 +77,12 @@
 provides both a standalone Network Security Rule resource, and allows for Network Security Rules to be defined in-line within the Network Security Group resource.
 At this time you cannot use a Network Security Group with in-line Network Security Rules in conjunction with any Network Security Rule resources. Doing so will cause a conflict of rule settings and will overwrite rules.</p>
 </blockquote>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/network_security_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/network_security_rule.html.markdown</a>.</p>
-</blockquote>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
-    <div class="level3"><span class="xref">NetworkSecurityRule</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">NetworkSecurityRule</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Azure.Network.html">Pulumi.Azure.Network</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Azure.dll</h6>
@@ -134,16 +93,16 @@ At this time you cannot use a Network Security Group with in-line Network Securi
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/NetworkSecurityRule.cs/#L139">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/NetworkSecurityRule.cs/#L137">View Source</a>
   </span>
   <a id="Pulumi_Azure_Network_NetworkSecurityRule__ctor_" data-uid="Pulumi.Azure.Network.NetworkSecurityRule.#ctor*"></a>
-  <h4 id="Pulumi_Azure_Network_NetworkSecurityRule__ctor_System_String_Pulumi_Azure_Network_NetworkSecurityRuleArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Azure.Network.NetworkSecurityRule.#ctor(System.String,Pulumi.Azure.Network.NetworkSecurityRuleArgs,Pulumi.CustomResourceOptions)">NetworkSecurityRule(String, NetworkSecurityRuleArgs, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Azure_Network_NetworkSecurityRule__ctor_System_String_Pulumi_Azure_Network_NetworkSecurityRuleArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Azure.Network.NetworkSecurityRule.#ctor(System.String,Pulumi.Azure.Network.NetworkSecurityRuleArgs,System.Nullable{CustomResourceOptions})">NetworkSecurityRule(String, NetworkSecurityRuleArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Create a NetworkSecurityRule resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public NetworkSecurityRule(string name, NetworkSecurityRuleArgs args, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public NetworkSecurityRule(string name, NetworkSecurityRuleArgs args, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -168,7 +127,7 @@ At this time you cannot use a Network Security Group with in-line Network Securi
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -178,7 +137,7 @@ At this time you cannot use a Network Security Group with in-line Network Securi
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/NetworkSecurityRule.cs/#L26">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/NetworkSecurityRule.cs/#L24">View Source</a>
   </span>
   <a id="Pulumi_Azure_Network_NetworkSecurityRule_Access_" data-uid="Pulumi.Azure.Network.NetworkSecurityRule.Access*"></a>
   <h4 id="Pulumi_Azure_Network_NetworkSecurityRule_Access" data-uid="Pulumi.Azure.Network.NetworkSecurityRule.Access">Access</h4>
@@ -199,13 +158,13 @@ At this time you cannot use a Network Security Group with in-line Network Securi
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/NetworkSecurityRule.cs/#L32">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/NetworkSecurityRule.cs/#L30">View Source</a>
   </span>
   <a id="Pulumi_Azure_Network_NetworkSecurityRule_Description_" data-uid="Pulumi.Azure.Network.NetworkSecurityRule.Description*"></a>
   <h4 id="Pulumi_Azure_Network_NetworkSecurityRule_Description" data-uid="Pulumi.Azure.Network.NetworkSecurityRule.Description">Description</h4>
@@ -214,7 +173,7 @@ At this time you cannot use a Network Security Group with in-line Network Securi
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Description { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Description { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -226,13 +185,13 @@ At this time you cannot use a Network Security Group with in-line Network Securi
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/NetworkSecurityRule.cs/#L38">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/NetworkSecurityRule.cs/#L36">View Source</a>
   </span>
   <a id="Pulumi_Azure_Network_NetworkSecurityRule_DestinationAddressPrefix_" data-uid="Pulumi.Azure.Network.NetworkSecurityRule.DestinationAddressPrefix*"></a>
   <h4 id="Pulumi_Azure_Network_NetworkSecurityRule_DestinationAddressPrefix" data-uid="Pulumi.Azure.Network.NetworkSecurityRule.DestinationAddressPrefix">DestinationAddressPrefix</h4>
@@ -241,7 +200,7 @@ At this time you cannot use a Network Security Group with in-line Network Securi
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; DestinationAddressPrefix { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; DestinationAddressPrefix { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -253,13 +212,13 @@ At this time you cannot use a Network Security Group with in-line Network Securi
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/NetworkSecurityRule.cs/#L44">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/NetworkSecurityRule.cs/#L42">View Source</a>
   </span>
   <a id="Pulumi_Azure_Network_NetworkSecurityRule_DestinationAddressPrefixes_" data-uid="Pulumi.Azure.Network.NetworkSecurityRule.DestinationAddressPrefixes*"></a>
   <h4 id="Pulumi_Azure_Network_NetworkSecurityRule_DestinationAddressPrefixes" data-uid="Pulumi.Azure.Network.NetworkSecurityRule.DestinationAddressPrefixes">DestinationAddressPrefixes</h4>
@@ -280,13 +239,13 @@ At this time you cannot use a Network Security Group with in-line Network Securi
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/NetworkSecurityRule.cs/#L50">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/NetworkSecurityRule.cs/#L48">View Source</a>
   </span>
   <a id="Pulumi_Azure_Network_NetworkSecurityRule_DestinationApplicationSecurityGroupIds_" data-uid="Pulumi.Azure.Network.NetworkSecurityRule.DestinationApplicationSecurityGroupIds*"></a>
   <h4 id="Pulumi_Azure_Network_NetworkSecurityRule_DestinationApplicationSecurityGroupIds" data-uid="Pulumi.Azure.Network.NetworkSecurityRule.DestinationApplicationSecurityGroupIds">DestinationApplicationSecurityGroupIds</h4>
@@ -295,7 +254,7 @@ At this time you cannot use a Network Security Group with in-line Network Securi
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; DestinationApplicationSecurityGroupIds { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; DestinationApplicationSecurityGroupIds { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -307,13 +266,13 @@ At this time you cannot use a Network Security Group with in-line Network Securi
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/NetworkSecurityRule.cs/#L56">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/NetworkSecurityRule.cs/#L54">View Source</a>
   </span>
   <a id="Pulumi_Azure_Network_NetworkSecurityRule_DestinationPortRange_" data-uid="Pulumi.Azure.Network.NetworkSecurityRule.DestinationPortRange*"></a>
   <h4 id="Pulumi_Azure_Network_NetworkSecurityRule_DestinationPortRange" data-uid="Pulumi.Azure.Network.NetworkSecurityRule.DestinationPortRange">DestinationPortRange</h4>
@@ -322,7 +281,7 @@ At this time you cannot use a Network Security Group with in-line Network Securi
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; DestinationPortRange { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; DestinationPortRange { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -334,13 +293,13 @@ At this time you cannot use a Network Security Group with in-line Network Securi
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/NetworkSecurityRule.cs/#L62">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/NetworkSecurityRule.cs/#L60">View Source</a>
   </span>
   <a id="Pulumi_Azure_Network_NetworkSecurityRule_DestinationPortRanges_" data-uid="Pulumi.Azure.Network.NetworkSecurityRule.DestinationPortRanges*"></a>
   <h4 id="Pulumi_Azure_Network_NetworkSecurityRule_DestinationPortRanges" data-uid="Pulumi.Azure.Network.NetworkSecurityRule.DestinationPortRanges">DestinationPortRanges</h4>
@@ -361,13 +320,13 @@ At this time you cannot use a Network Security Group with in-line Network Securi
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/NetworkSecurityRule.cs/#L68">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/NetworkSecurityRule.cs/#L66">View Source</a>
   </span>
   <a id="Pulumi_Azure_Network_NetworkSecurityRule_Direction_" data-uid="Pulumi.Azure.Network.NetworkSecurityRule.Direction*"></a>
   <h4 id="Pulumi_Azure_Network_NetworkSecurityRule_Direction" data-uid="Pulumi.Azure.Network.NetworkSecurityRule.Direction">Direction</h4>
@@ -388,13 +347,13 @@ At this time you cannot use a Network Security Group with in-line Network Securi
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/NetworkSecurityRule.cs/#L74">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/NetworkSecurityRule.cs/#L72">View Source</a>
   </span>
   <a id="Pulumi_Azure_Network_NetworkSecurityRule_Name_" data-uid="Pulumi.Azure.Network.NetworkSecurityRule.Name*"></a>
   <h4 id="Pulumi_Azure_Network_NetworkSecurityRule_Name" data-uid="Pulumi.Azure.Network.NetworkSecurityRule.Name">Name</h4>
@@ -415,13 +374,13 @@ At this time you cannot use a Network Security Group with in-line Network Securi
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/NetworkSecurityRule.cs/#L80">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/NetworkSecurityRule.cs/#L78">View Source</a>
   </span>
   <a id="Pulumi_Azure_Network_NetworkSecurityRule_NetworkSecurityGroupName_" data-uid="Pulumi.Azure.Network.NetworkSecurityRule.NetworkSecurityGroupName*"></a>
   <h4 id="Pulumi_Azure_Network_NetworkSecurityRule_NetworkSecurityGroupName" data-uid="Pulumi.Azure.Network.NetworkSecurityRule.NetworkSecurityGroupName">NetworkSecurityGroupName</h4>
@@ -442,13 +401,13 @@ At this time you cannot use a Network Security Group with in-line Network Securi
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/NetworkSecurityRule.cs/#L86">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/NetworkSecurityRule.cs/#L84">View Source</a>
   </span>
   <a id="Pulumi_Azure_Network_NetworkSecurityRule_Priority_" data-uid="Pulumi.Azure.Network.NetworkSecurityRule.Priority*"></a>
   <h4 id="Pulumi_Azure_Network_NetworkSecurityRule_Priority" data-uid="Pulumi.Azure.Network.NetworkSecurityRule.Priority">Priority</h4>
@@ -469,13 +428,13 @@ At this time you cannot use a Network Security Group with in-line Network Securi
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/NetworkSecurityRule.cs/#L92">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/NetworkSecurityRule.cs/#L90">View Source</a>
   </span>
   <a id="Pulumi_Azure_Network_NetworkSecurityRule_Protocol_" data-uid="Pulumi.Azure.Network.NetworkSecurityRule.Protocol*"></a>
   <h4 id="Pulumi_Azure_Network_NetworkSecurityRule_Protocol" data-uid="Pulumi.Azure.Network.NetworkSecurityRule.Protocol">Protocol</h4>
@@ -496,13 +455,13 @@ At this time you cannot use a Network Security Group with in-line Network Securi
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/NetworkSecurityRule.cs/#L98">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/NetworkSecurityRule.cs/#L96">View Source</a>
   </span>
   <a id="Pulumi_Azure_Network_NetworkSecurityRule_ResourceGroupName_" data-uid="Pulumi.Azure.Network.NetworkSecurityRule.ResourceGroupName*"></a>
   <h4 id="Pulumi_Azure_Network_NetworkSecurityRule_ResourceGroupName" data-uid="Pulumi.Azure.Network.NetworkSecurityRule.ResourceGroupName">ResourceGroupName</h4>
@@ -523,13 +482,13 @@ At this time you cannot use a Network Security Group with in-line Network Securi
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/NetworkSecurityRule.cs/#L104">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/NetworkSecurityRule.cs/#L102">View Source</a>
   </span>
   <a id="Pulumi_Azure_Network_NetworkSecurityRule_SourceAddressPrefix_" data-uid="Pulumi.Azure.Network.NetworkSecurityRule.SourceAddressPrefix*"></a>
   <h4 id="Pulumi_Azure_Network_NetworkSecurityRule_SourceAddressPrefix" data-uid="Pulumi.Azure.Network.NetworkSecurityRule.SourceAddressPrefix">SourceAddressPrefix</h4>
@@ -538,7 +497,7 @@ At this time you cannot use a Network Security Group with in-line Network Securi
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; SourceAddressPrefix { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; SourceAddressPrefix { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -550,13 +509,13 @@ At this time you cannot use a Network Security Group with in-line Network Securi
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/NetworkSecurityRule.cs/#L110">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/NetworkSecurityRule.cs/#L108">View Source</a>
   </span>
   <a id="Pulumi_Azure_Network_NetworkSecurityRule_SourceAddressPrefixes_" data-uid="Pulumi.Azure.Network.NetworkSecurityRule.SourceAddressPrefixes*"></a>
   <h4 id="Pulumi_Azure_Network_NetworkSecurityRule_SourceAddressPrefixes" data-uid="Pulumi.Azure.Network.NetworkSecurityRule.SourceAddressPrefixes">SourceAddressPrefixes</h4>
@@ -577,13 +536,13 @@ At this time you cannot use a Network Security Group with in-line Network Securi
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/NetworkSecurityRule.cs/#L116">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/NetworkSecurityRule.cs/#L114">View Source</a>
   </span>
   <a id="Pulumi_Azure_Network_NetworkSecurityRule_SourceApplicationSecurityGroupIds_" data-uid="Pulumi.Azure.Network.NetworkSecurityRule.SourceApplicationSecurityGroupIds*"></a>
   <h4 id="Pulumi_Azure_Network_NetworkSecurityRule_SourceApplicationSecurityGroupIds" data-uid="Pulumi.Azure.Network.NetworkSecurityRule.SourceApplicationSecurityGroupIds">SourceApplicationSecurityGroupIds</h4>
@@ -592,7 +551,7 @@ At this time you cannot use a Network Security Group with in-line Network Securi
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; SourceApplicationSecurityGroupIds { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; SourceApplicationSecurityGroupIds { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -604,13 +563,13 @@ At this time you cannot use a Network Security Group with in-line Network Securi
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/NetworkSecurityRule.cs/#L122">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/NetworkSecurityRule.cs/#L120">View Source</a>
   </span>
   <a id="Pulumi_Azure_Network_NetworkSecurityRule_SourcePortRange_" data-uid="Pulumi.Azure.Network.NetworkSecurityRule.SourcePortRange*"></a>
   <h4 id="Pulumi_Azure_Network_NetworkSecurityRule_SourcePortRange" data-uid="Pulumi.Azure.Network.NetworkSecurityRule.SourcePortRange">SourcePortRange</h4>
@@ -619,7 +578,7 @@ At this time you cannot use a Network Security Group with in-line Network Securi
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; SourcePortRange { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; SourcePortRange { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -631,13 +590,13 @@ At this time you cannot use a Network Security Group with in-line Network Securi
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/NetworkSecurityRule.cs/#L128">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/NetworkSecurityRule.cs/#L126">View Source</a>
   </span>
   <a id="Pulumi_Azure_Network_NetworkSecurityRule_SourcePortRanges_" data-uid="Pulumi.Azure.Network.NetworkSecurityRule.SourcePortRanges*"></a>
   <h4 id="Pulumi_Azure_Network_NetworkSecurityRule_SourcePortRanges" data-uid="Pulumi.Azure.Network.NetworkSecurityRule.SourcePortRanges">SourcePortRanges</h4>
@@ -658,7 +617,7 @@ At this time you cannot use a Network Security Group with in-line Network Securi
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -666,17 +625,17 @@ At this time you cannot use a Network Security Group with in-line Network Securi
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/NetworkSecurityRule.cs/#L169">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/NetworkSecurityRule.cs/#L167">View Source</a>
   </span>
   <a id="Pulumi_Azure_Network_NetworkSecurityRule_Get_" data-uid="Pulumi.Azure.Network.NetworkSecurityRule.Get*"></a>
-  <h4 id="Pulumi_Azure_Network_NetworkSecurityRule_Get_System_String_Pulumi_Input_System_String__Pulumi_Azure_Network_NetworkSecurityRuleState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Azure.Network.NetworkSecurityRule.Get(System.String,Pulumi.Input{System.String},Pulumi.Azure.Network.NetworkSecurityRuleState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, NetworkSecurityRuleState, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Azure_Network_NetworkSecurityRule_Get_System_String_Input_System_String__Pulumi_Azure_Network_NetworkSecurityRuleState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Azure.Network.NetworkSecurityRule.Get(System.String,Input{System.String},Pulumi.Azure.Network.NetworkSecurityRuleState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, NetworkSecurityRuleState, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Get an existing NetworkSecurityRule resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static NetworkSecurityRule Get(string name, Input&lt;string&gt; id, NetworkSecurityRuleState state = null, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static NetworkSecurityRule Get(string name, Input&lt;string&gt; id, NetworkSecurityRuleState state = null, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -695,7 +654,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -707,7 +666,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -736,7 +695,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/NetworkSecurityRule.cs/#L21" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/NetworkSecurityRule.cs/#L19" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -71,50 +71,20 @@
   
   <h1 id="Pulumi_Azure_KeyVault_KeyVault" data-uid="Pulumi.Azure.KeyVault.KeyVault" class="text-break">Class KeyVault
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Manages a Key Vault.</p>
+<h2 id="disclaimers">Disclaimers</h2>
+<blockquote>
+<p><strong>Note:</strong> It's possible to define Key Vault Access Policies both within the <code>azure.keyvault.KeyVault</code> resource via the <code>access_policy</code> block and by using the <code>azure.keyvault.AccessPolicy</code> resource. However it's not possible to use both methods to manage Access Policies within a KeyVault, since there'll be conflicts.</p>
+</blockquote>
+<blockquote>
+<p><strong>Note:</strong> This provi will automatically recover a soft-deleted Key Vault during Creation if one is found - you can opt out of this using the <code>features</code> configuration within the Provider configuration block.</p>
+</blockquote>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
-    <div class="level3"><span class="xref">KeyVault</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">KeyVault</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Azure.KeyVault.html">Pulumi.Azure.KeyVault</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Azure.dll</h6>
@@ -125,16 +95,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Keyvault/KeyVault.cs/#L106">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/KeyVault/KeyVault.cs/#L115">View Source</a>
   </span>
   <a id="Pulumi_Azure_KeyVault_KeyVault__ctor_" data-uid="Pulumi.Azure.KeyVault.KeyVault.#ctor*"></a>
-  <h4 id="Pulumi_Azure_KeyVault_KeyVault__ctor_System_String_Pulumi_Azure_KeyVault_KeyVaultArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Azure.KeyVault.KeyVault.#ctor(System.String,Pulumi.Azure.KeyVault.KeyVaultArgs,Pulumi.CustomResourceOptions)">KeyVault(String, KeyVaultArgs, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Azure_KeyVault_KeyVault__ctor_System_String_Pulumi_Azure_KeyVault_KeyVaultArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Azure.KeyVault.KeyVault.#ctor(System.String,Pulumi.Azure.KeyVault.KeyVaultArgs,System.Nullable{CustomResourceOptions})">KeyVault(String, KeyVaultArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Create a KeyVault resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public KeyVault(string name, KeyVaultArgs args, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public KeyVault(string name, KeyVaultArgs args, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -159,7 +129,7 @@
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -169,16 +139,16 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Keyvault/KeyVault.cs/#L17">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/KeyVault/KeyVault.cs/#L26">View Source</a>
   </span>
   <a id="Pulumi_Azure_KeyVault_KeyVault_AccessPolicies_" data-uid="Pulumi.Azure.KeyVault.KeyVault.AccessPolicies*"></a>
   <h4 id="Pulumi_Azure_KeyVault_KeyVault_AccessPolicies" data-uid="Pulumi.Azure.KeyVault.KeyVault.AccessPolicies">AccessPolicies</h4>
-  <div class="markdown level1 summary"><p><a href="https://www.terraform.io/docs/configuration/attr-as-blocks.html">A list</a> of up to 16 objects describing access policies, as described below.</p>
+  <div class="markdown level1 summary"><p>A list of up to 16 objects describing access policies, as described below.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;KeyVaultAccessPolicies&gt;&gt; AccessPolicies { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;KeyVaultAccessPolicy&gt;&gt; AccessPolicies { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -190,13 +160,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Azure.KeyVault.Outputs.KeyVaultAccessPolicies.html">KeyVaultAccessPolicies</a>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Azure.KeyVault.Outputs.KeyVaultAccessPolicy.html">KeyVaultAccessPolicy</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Keyvault/KeyVault.cs/#L23">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/KeyVault/KeyVault.cs/#L32">View Source</a>
   </span>
   <a id="Pulumi_Azure_KeyVault_KeyVault_EnabledForDeployment_" data-uid="Pulumi.Azure.KeyVault.KeyVault.EnabledForDeployment*"></a>
   <h4 id="Pulumi_Azure_KeyVault_KeyVault_EnabledForDeployment" data-uid="Pulumi.Azure.KeyVault.KeyVault.EnabledForDeployment">EnabledForDeployment</h4>
@@ -217,13 +187,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Keyvault/KeyVault.cs/#L29">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/KeyVault/KeyVault.cs/#L38">View Source</a>
   </span>
   <a id="Pulumi_Azure_KeyVault_KeyVault_EnabledForDiskEncryption_" data-uid="Pulumi.Azure.KeyVault.KeyVault.EnabledForDiskEncryption*"></a>
   <h4 id="Pulumi_Azure_KeyVault_KeyVault_EnabledForDiskEncryption" data-uid="Pulumi.Azure.KeyVault.KeyVault.EnabledForDiskEncryption">EnabledForDiskEncryption</h4>
@@ -244,13 +214,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Keyvault/KeyVault.cs/#L35">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/KeyVault/KeyVault.cs/#L44">View Source</a>
   </span>
   <a id="Pulumi_Azure_KeyVault_KeyVault_EnabledForTemplateDeployment_" data-uid="Pulumi.Azure.KeyVault.KeyVault.EnabledForTemplateDeployment*"></a>
   <h4 id="Pulumi_Azure_KeyVault_KeyVault_EnabledForTemplateDeployment" data-uid="Pulumi.Azure.KeyVault.KeyVault.EnabledForTemplateDeployment">EnabledForTemplateDeployment</h4>
@@ -271,13 +241,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Keyvault/KeyVault.cs/#L41">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/KeyVault/KeyVault.cs/#L50">View Source</a>
   </span>
   <a id="Pulumi_Azure_KeyVault_KeyVault_Location_" data-uid="Pulumi.Azure.KeyVault.KeyVault.Location*"></a>
   <h4 id="Pulumi_Azure_KeyVault_KeyVault_Location" data-uid="Pulumi.Azure.KeyVault.KeyVault.Location">Location</h4>
@@ -298,13 +268,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Keyvault/KeyVault.cs/#L47">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/KeyVault/KeyVault.cs/#L56">View Source</a>
   </span>
   <a id="Pulumi_Azure_KeyVault_KeyVault_Name_" data-uid="Pulumi.Azure.KeyVault.KeyVault.Name*"></a>
   <h4 id="Pulumi_Azure_KeyVault_KeyVault_Name" data-uid="Pulumi.Azure.KeyVault.KeyVault.Name">Name</h4>
@@ -325,13 +295,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Keyvault/KeyVault.cs/#L53">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/KeyVault/KeyVault.cs/#L62">View Source</a>
   </span>
   <a id="Pulumi_Azure_KeyVault_KeyVault_NetworkAcls_" data-uid="Pulumi.Azure.KeyVault.KeyVault.NetworkAcls*"></a>
   <h4 id="Pulumi_Azure_KeyVault_KeyVault_NetworkAcls" data-uid="Pulumi.Azure.KeyVault.KeyVault.NetworkAcls">NetworkAcls</h4>
@@ -352,13 +322,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Azure.KeyVault.Outputs.KeyVaultNetworkAcls.html">KeyVaultNetworkAcls</a>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Azure.KeyVault.Outputs.KeyVaultNetworkAcls.html">KeyVaultNetworkAcls</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Keyvault/KeyVault.cs/#L59">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/KeyVault/KeyVault.cs/#L68">View Source</a>
   </span>
   <a id="Pulumi_Azure_KeyVault_KeyVault_PurgeProtectionEnabled_" data-uid="Pulumi.Azure.KeyVault.KeyVault.PurgeProtectionEnabled*"></a>
   <h4 id="Pulumi_Azure_KeyVault_KeyVault_PurgeProtectionEnabled" data-uid="Pulumi.Azure.KeyVault.KeyVault.PurgeProtectionEnabled">PurgeProtectionEnabled</h4>
@@ -379,13 +349,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Keyvault/KeyVault.cs/#L65">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/KeyVault/KeyVault.cs/#L74">View Source</a>
   </span>
   <a id="Pulumi_Azure_KeyVault_KeyVault_ResourceGroupName_" data-uid="Pulumi.Azure.KeyVault.KeyVault.ResourceGroupName*"></a>
   <h4 id="Pulumi_Azure_KeyVault_KeyVault_ResourceGroupName" data-uid="Pulumi.Azure.KeyVault.KeyVault.ResourceGroupName">ResourceGroupName</h4>
@@ -406,13 +376,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Keyvault/KeyVault.cs/#L71">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/KeyVault/KeyVault.cs/#L80">View Source</a>
   </span>
   <a id="Pulumi_Azure_KeyVault_KeyVault_SkuName_" data-uid="Pulumi.Azure.KeyVault.KeyVault.SkuName*"></a>
   <h4 id="Pulumi_Azure_KeyVault_KeyVault_SkuName" data-uid="Pulumi.Azure.KeyVault.KeyVault.SkuName">SkuName</h4>
@@ -433,13 +403,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Keyvault/KeyVault.cs/#L77">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/KeyVault/KeyVault.cs/#L86">View Source</a>
   </span>
   <a id="Pulumi_Azure_KeyVault_KeyVault_SoftDeleteEnabled_" data-uid="Pulumi.Azure.KeyVault.KeyVault.SoftDeleteEnabled*"></a>
   <h4 id="Pulumi_Azure_KeyVault_KeyVault_SoftDeleteEnabled" data-uid="Pulumi.Azure.KeyVault.KeyVault.SoftDeleteEnabled">SoftDeleteEnabled</h4>
@@ -460,13 +430,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Keyvault/KeyVault.cs/#L83">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/KeyVault/KeyVault.cs/#L92">View Source</a>
   </span>
   <a id="Pulumi_Azure_KeyVault_KeyVault_Tags_" data-uid="Pulumi.Azure.KeyVault.KeyVault.Tags*"></a>
   <h4 id="Pulumi_Azure_KeyVault_KeyVault_Tags" data-uid="Pulumi.Azure.KeyVault.KeyVault.Tags">Tags</h4>
@@ -475,7 +445,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;&gt; Tags { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;?&gt; Tags { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -487,13 +457,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Keyvault/KeyVault.cs/#L89">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/KeyVault/KeyVault.cs/#L98">View Source</a>
   </span>
   <a id="Pulumi_Azure_KeyVault_KeyVault_TenantId_" data-uid="Pulumi.Azure.KeyVault.KeyVault.TenantId*"></a>
   <h4 id="Pulumi_Azure_KeyVault_KeyVault_TenantId" data-uid="Pulumi.Azure.KeyVault.KeyVault.TenantId">TenantId</h4>
@@ -514,13 +484,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Keyvault/KeyVault.cs/#L95">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/KeyVault/KeyVault.cs/#L104">View Source</a>
   </span>
   <a id="Pulumi_Azure_KeyVault_KeyVault_VaultUri_" data-uid="Pulumi.Azure.KeyVault.KeyVault.VaultUri*"></a>
   <h4 id="Pulumi_Azure_KeyVault_KeyVault_VaultUri" data-uid="Pulumi.Azure.KeyVault.KeyVault.VaultUri">VaultUri</h4>
@@ -541,7 +511,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -549,17 +519,17 @@
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Keyvault/KeyVault.cs/#L136">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/KeyVault/KeyVault.cs/#L145">View Source</a>
   </span>
   <a id="Pulumi_Azure_KeyVault_KeyVault_Get_" data-uid="Pulumi.Azure.KeyVault.KeyVault.Get*"></a>
-  <h4 id="Pulumi_Azure_KeyVault_KeyVault_Get_System_String_Pulumi_Input_System_String__Pulumi_Azure_KeyVault_KeyVaultState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Azure.KeyVault.KeyVault.Get(System.String,Pulumi.Input{System.String},Pulumi.Azure.KeyVault.KeyVaultState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, KeyVaultState, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Azure_KeyVault_KeyVault_Get_System_String_Input_System_String__Pulumi_Azure_KeyVault_KeyVaultState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Azure.KeyVault.KeyVault.Get(System.String,Input{System.String},Pulumi.Azure.KeyVault.KeyVaultState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, KeyVaultState, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Get an existing KeyVault resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static KeyVault Get(string name, Input&lt;string&gt; id, KeyVaultState state = null, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static KeyVault Get(string name, Input&lt;string&gt; id, KeyVaultState state = null, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -578,7 +548,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -590,7 +560,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -619,7 +589,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Keyvault/KeyVault.cs/#L12" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/KeyVault/KeyVault.cs/#L21" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

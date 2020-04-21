@@ -72,9 +72,6 @@
   <h1 id="Pulumi_Rancher2_NodePool" data-uid="Pulumi.Rancher2.NodePool" class="text-break">Class NodePool
   </h1>
   <div class="markdown level0 summary"><p>Provides a Rancher v2 Node Pool resource. This can be used to create Node Pool, using Node template for Rancher v2 RKE clusters and retrieve their information.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/node_pool.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/node_pool.html.markdown</a>.</p>
-</blockquote>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -91,7 +88,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/NodePool.cs/#L86">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/NodePool.cs/#L97">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_NodePool__ctor_" data-uid="Pulumi.Rancher2.NodePool.#ctor*"></a>
   <h4 id="Pulumi_Rancher2_NodePool__ctor_System_String_Pulumi_Rancher2_NodePoolArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Rancher2.NodePool.#ctor(System.String,Pulumi.Rancher2.NodePoolArgs,System.Nullable{CustomResourceOptions})">NodePool(String, NodePoolArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
@@ -135,7 +132,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/NodePool.cs/#L21">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/NodePool.cs/#L20">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_NodePool_Annotations_" data-uid="Pulumi.Rancher2.NodePool.Annotations*"></a>
   <h4 id="Pulumi_Rancher2_NodePool_Annotations" data-uid="Pulumi.Rancher2.NodePool.Annotations">Annotations</h4>
@@ -162,7 +159,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/NodePool.cs/#L27">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/NodePool.cs/#L26">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_NodePool_ClusterId_" data-uid="Pulumi.Rancher2.NodePool.ClusterId*"></a>
   <h4 id="Pulumi_Rancher2_NodePool_ClusterId" data-uid="Pulumi.Rancher2.NodePool.ClusterId">ClusterId</h4>
@@ -189,7 +186,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/NodePool.cs/#L33">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/NodePool.cs/#L32">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_NodePool_ControlPlane_" data-uid="Pulumi.Rancher2.NodePool.ControlPlane*"></a>
   <h4 id="Pulumi_Rancher2_NodePool_ControlPlane" data-uid="Pulumi.Rancher2.NodePool.ControlPlane">ControlPlane</h4>
@@ -216,7 +213,34 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/NodePool.cs/#L39">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/NodePool.cs/#L38">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_NodePool_DeleteNotReadyAfterSecs_" data-uid="Pulumi.Rancher2.NodePool.DeleteNotReadyAfterSecs*"></a>
+  <h4 id="Pulumi_Rancher2_NodePool_DeleteNotReadyAfterSecs" data-uid="Pulumi.Rancher2.NodePool.DeleteNotReadyAfterSecs">DeleteNotReadyAfterSecs</h4>
+  <div class="markdown level1 summary"><p>Delete not ready node after secs. For Rancher v2.3.3 or above. Default <code>0</code> (int)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int?&gt; DeleteNotReadyAfterSecs { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/NodePool.cs/#L44">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_NodePool_Etcd_" data-uid="Pulumi.Rancher2.NodePool.Etcd*"></a>
   <h4 id="Pulumi_Rancher2_NodePool_Etcd" data-uid="Pulumi.Rancher2.NodePool.Etcd">Etcd</h4>
@@ -243,7 +267,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/NodePool.cs/#L45">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/NodePool.cs/#L50">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_NodePool_HostnamePrefix_" data-uid="Pulumi.Rancher2.NodePool.HostnamePrefix*"></a>
   <h4 id="Pulumi_Rancher2_NodePool_HostnamePrefix" data-uid="Pulumi.Rancher2.NodePool.HostnamePrefix">HostnamePrefix</h4>
@@ -270,7 +294,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/NodePool.cs/#L51">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/NodePool.cs/#L56">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_NodePool_Labels_" data-uid="Pulumi.Rancher2.NodePool.Labels*"></a>
   <h4 id="Pulumi_Rancher2_NodePool_Labels" data-uid="Pulumi.Rancher2.NodePool.Labels">Labels</h4>
@@ -297,7 +321,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/NodePool.cs/#L57">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/NodePool.cs/#L62">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_NodePool_Name_" data-uid="Pulumi.Rancher2.NodePool.Name*"></a>
   <h4 id="Pulumi_Rancher2_NodePool_Name" data-uid="Pulumi.Rancher2.NodePool.Name">Name</h4>
@@ -324,7 +348,34 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/NodePool.cs/#L63">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/NodePool.cs/#L68">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_NodePool_NodeTaints_" data-uid="Pulumi.Rancher2.NodePool.NodeTaints*"></a>
+  <h4 id="Pulumi_Rancher2_NodePool_NodeTaints" data-uid="Pulumi.Rancher2.NodePool.NodeTaints">NodeTaints</h4>
+  <div class="markdown level1 summary"><p>Node taints. For Rancher v2.3.3 or above (List)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;NodePoolNodeTaint&gt;&gt; NodeTaints { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Rancher2.Outputs.NodePoolNodeTaint.html">NodePoolNodeTaint</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/NodePool.cs/#L74">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_NodePool_NodeTemplateId_" data-uid="Pulumi.Rancher2.NodePool.NodeTemplateId*"></a>
   <h4 id="Pulumi_Rancher2_NodePool_NodeTemplateId" data-uid="Pulumi.Rancher2.NodePool.NodeTemplateId">NodeTemplateId</h4>
@@ -351,7 +402,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/NodePool.cs/#L69">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/NodePool.cs/#L80">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_NodePool_Quantity_" data-uid="Pulumi.Rancher2.NodePool.Quantity*"></a>
   <h4 id="Pulumi_Rancher2_NodePool_Quantity" data-uid="Pulumi.Rancher2.NodePool.Quantity">Quantity</h4>
@@ -378,7 +429,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/NodePool.cs/#L75">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/NodePool.cs/#L86">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_NodePool_Worker_" data-uid="Pulumi.Rancher2.NodePool.Worker*"></a>
   <h4 id="Pulumi_Rancher2_NodePool_Worker" data-uid="Pulumi.Rancher2.NodePool.Worker">Worker</h4>
@@ -407,7 +458,7 @@
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/NodePool.cs/#L116">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/NodePool.cs/#L127">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_NodePool_Get_" data-uid="Pulumi.Rancher2.NodePool.Get*"></a>
   <h4 id="Pulumi_Rancher2_NodePool_Get_System_String_Input_System_String__Pulumi_Rancher2_NodePoolState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Rancher2.NodePool.Get(System.String,Input{System.String},Pulumi.Rancher2.NodePoolState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, NodePoolState, Nullable&lt;CustomResourceOptions&gt;)</h4>
@@ -477,7 +528,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/NodePool.cs/#L16" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/NodePool.cs/#L15" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

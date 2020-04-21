@@ -71,50 +71,21 @@
   
   <h1 id="Pulumi_Gcp_Compute_ForwardingRule" data-uid="Pulumi.Gcp.Compute.ForwardingRule" class="text-break">Class ForwardingRule
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>A ForwardingRule resource. A ForwardingRule resource specifies which pool
+of target virtual machines to forward a packet to if it matches the given
+[IPAddress, IPProtocol, portRange] tuple.</p>
+<p>To get more information about ForwardingRule, see:</p>
+<ul>
+<li><a href="https://cloud.google.com/compute/docs/reference/v1/forwardingRules">API documentation</a></li>
+<li>How-to Guides</li>
+<li><a href="https://cloud.google.com/compute/docs/load-balancing/network/forwarding-rules">Official Documentation</a></li>
+</ul>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
-    <div class="level3"><span class="xref">ForwardingRule</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">ForwardingRule</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.Compute.html">Pulumi.Gcp.Compute</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
@@ -125,16 +96,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/ForwardingRule.cs/#L209">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/ForwardingRule.cs/#L213">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_ForwardingRule__ctor_" data-uid="Pulumi.Gcp.Compute.ForwardingRule.#ctor*"></a>
-  <h4 id="Pulumi_Gcp_Compute_ForwardingRule__ctor_System_String_Pulumi_Gcp_Compute_ForwardingRuleArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Gcp.Compute.ForwardingRule.#ctor(System.String,Pulumi.Gcp.Compute.ForwardingRuleArgs,Pulumi.CustomResourceOptions)">ForwardingRule(String, ForwardingRuleArgs, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Gcp_Compute_ForwardingRule__ctor_System_String_Pulumi_Gcp_Compute_ForwardingRuleArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Gcp.Compute.ForwardingRule.#ctor(System.String,Pulumi.Gcp.Compute.ForwardingRuleArgs,System.Nullable{CustomResourceOptions})">ForwardingRule(String, ForwardingRuleArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Create a ForwardingRule resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ForwardingRule(string name, ForwardingRuleArgs args = null, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public ForwardingRule(string name, ForwardingRuleArgs args = null, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -159,7 +130,7 @@
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -169,12 +140,11 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/ForwardingRule.cs/#L26">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/ForwardingRule.cs/#L37">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_ForwardingRule_AllowGlobalAccess_" data-uid="Pulumi.Gcp.Compute.ForwardingRule.AllowGlobalAccess*"></a>
   <h4 id="Pulumi_Gcp_Compute_ForwardingRule_AllowGlobalAccess" data-uid="Pulumi.Gcp.Compute.ForwardingRule.AllowGlobalAccess">AllowGlobalAccess</h4>
-  <div class="markdown level1 summary"><p>If true, clients can access ILB from all regions. Otherwise only allows from the local region the ILB is
-located at.</p>
+  <div class="markdown level1 summary"><p>If true, clients can access ILB from all regions. Otherwise only allows from the local region the ILB is located at.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -191,19 +161,19 @@ located at.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/ForwardingRule.cs/#L19">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/ForwardingRule.cs/#L31">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_ForwardingRule_AllPorts_" data-uid="Pulumi.Gcp.Compute.ForwardingRule.AllPorts*"></a>
   <h4 id="Pulumi_Gcp_Compute_ForwardingRule_AllPorts" data-uid="Pulumi.Gcp.Compute.ForwardingRule.AllPorts">AllPorts</h4>
-  <div class="markdown level1 summary"><p>For internal TCP/UDP load balancing (i.e. load balancing scheme is INTERNAL and protocol is TCP/UDP), set
-this to true to allow packets addressed to any ports to be forwarded to the backends configured with this
-forwarding rule. Used with backend service. Cannot be set if port or portRange are set.</p>
+  <div class="markdown level1 summary"><p>For internal TCP/UDP load balancing (i.e. load balancing scheme is INTERNAL and protocol is TCP/UDP), set this to true
+to allow packets addressed to any ports to be forwarded to the backends configured with this forwarding rule. Used with
+backend service. Cannot be set if port or portRange are set.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -220,13 +190,13 @@ forwarding rule. Used with backend service. Cannot be set if port or portRange a
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/ForwardingRule.cs/#L32">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/ForwardingRule.cs/#L43">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_ForwardingRule_BackendService_" data-uid="Pulumi.Gcp.Compute.ForwardingRule.BackendService*"></a>
   <h4 id="Pulumi_Gcp_Compute_ForwardingRule_BackendService" data-uid="Pulumi.Gcp.Compute.ForwardingRule.BackendService">BackendService</h4>
@@ -235,7 +205,7 @@ forwarding rule. Used with backend service. Cannot be set if port or portRange a
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; BackendService { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; BackendService { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -247,13 +217,13 @@ forwarding rule. Used with backend service. Cannot be set if port or portRange a
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/ForwardingRule.cs/#L38">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/ForwardingRule.cs/#L49">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_ForwardingRule_CreationTimestamp_" data-uid="Pulumi.Gcp.Compute.ForwardingRule.CreationTimestamp*"></a>
   <h4 id="Pulumi_Gcp_Compute_ForwardingRule_CreationTimestamp" data-uid="Pulumi.Gcp.Compute.ForwardingRule.CreationTimestamp">CreationTimestamp</h4>
@@ -274,13 +244,13 @@ forwarding rule. Used with backend service. Cannot be set if port or portRange a
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/ForwardingRule.cs/#L44">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/ForwardingRule.cs/#L55">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_ForwardingRule_Description_" data-uid="Pulumi.Gcp.Compute.ForwardingRule.Description*"></a>
   <h4 id="Pulumi_Gcp_Compute_ForwardingRule_Description" data-uid="Pulumi.Gcp.Compute.ForwardingRule.Description">Description</h4>
@@ -289,7 +259,7 @@ forwarding rule. Used with backend service. Cannot be set if port or portRange a
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Description { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Description { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -301,28 +271,27 @@ forwarding rule. Used with backend service. Cannot be set if port or portRange a
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/ForwardingRule.cs/#L61">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/ForwardingRule.cs/#L71">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_ForwardingRule_IpAddress_" data-uid="Pulumi.Gcp.Compute.ForwardingRule.IpAddress*"></a>
   <h4 id="Pulumi_Gcp_Compute_ForwardingRule_IpAddress" data-uid="Pulumi.Gcp.Compute.ForwardingRule.IpAddress">IpAddress</h4>
-  <div class="markdown level1 summary"><p>The IP address that this forwarding rule is serving on behalf of. Addresses are restricted based on the
-forwarding rule's load balancing scheme (EXTERNAL or INTERNAL) and scope (global or regional). When the load
-balancing scheme is EXTERNAL, for global forwarding rules, the address must be a global IP, and for regional
-forwarding rules, the address must live in the same region as the forwarding rule. If this field is empty,
-an ephemeral IPv4 address from the same scope (global or regional) will be assigned. A regional forwarding
-rule supports IPv4 only. A global forwarding rule supports either IPv4 or IPv6. When the load balancing
-scheme is INTERNAL, this can only be an RFC 1918 IP address belonging to the network/subnet configured for
-the forwarding rule. By default, if this field is empty, an ephemeral internal IP address will be
-automatically allocated from the IP range of the subnet or network configured for this forwarding rule. An
-address must be specified by a literal IP address. ~&gt; <strong>NOTE</strong>: While the API allows you to specify
-various resource paths for an address resource instead, Terraform requires this to specifically be an IP
-address to avoid needing to fetching the IP address from resource paths on refresh or unnecessary diffs.</p>
+  <div class="markdown level1 summary"><p>The IP address that this forwarding rule is serving on behalf of. Addresses are restricted based on the forwarding
+rule's load balancing scheme (EXTERNAL or INTERNAL) and scope (global or regional). When the load balancing scheme is
+EXTERNAL, for global forwarding rules, the address must be a global IP, and for regional forwarding rules, the address
+must live in the same region as the forwarding rule. If this field is empty, an ephemeral IPv4 address from the same
+scope (global or regional) will be assigned. A regional forwarding rule supports IPv4 only. A global forwarding rule
+supports either IPv4 or IPv6. When the load balancing scheme is INTERNAL, this can only be an RFC 1918 IP address
+belonging to the network/subnet configured for the forwarding rule. By default, if this field is empty, an ephemeral
+internal IP address will be automatically allocated from the IP range of the subnet or network configured for this
+forwarding rule. An address must be specified by a literal IP address. ~&gt; <strong>NOTE</strong>: While the API allows you to specify
+various resource paths for an address resource instead, Terraform requires this to specifically be an IP address to
+avoid needing to fetching the IP address from resource paths on refresh or unnecessary diffs.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -339,18 +308,18 @@ address to avoid needing to fetching the IP address from resource paths on refre
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/ForwardingRule.cs/#L68">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/ForwardingRule.cs/#L78">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_ForwardingRule_IpProtocol_" data-uid="Pulumi.Gcp.Compute.ForwardingRule.IpProtocol*"></a>
   <h4 id="Pulumi_Gcp_Compute_ForwardingRule_IpProtocol" data-uid="Pulumi.Gcp.Compute.ForwardingRule.IpProtocol">IpProtocol</h4>
-  <div class="markdown level1 summary"><p>The IP protocol to which this rule applies. Valid options are TCP, UDP, ESP, AH, SCTP or ICMP. When the load
-balancing scheme is INTERNAL, only TCP and UDP are valid.</p>
+  <div class="markdown level1 summary"><p>The IP protocol to which this rule applies. Valid options are TCP, UDP, ESP, AH, SCTP or ICMP. When the load balancing
+scheme is INTERNAL, only TCP and UDP are valid.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -367,20 +336,19 @@ balancing scheme is INTERNAL, only TCP and UDP are valid.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/ForwardingRule.cs/#L77">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/ForwardingRule.cs/#L86">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_ForwardingRule_IsMirroringCollector_" data-uid="Pulumi.Gcp.Compute.ForwardingRule.IsMirroringCollector*"></a>
   <h4 id="Pulumi_Gcp_Compute_ForwardingRule_IsMirroringCollector" data-uid="Pulumi.Gcp.Compute.ForwardingRule.IsMirroringCollector">IsMirroringCollector</h4>
-  <div class="markdown level1 summary"><p>Indicates whether or not this load balancer can be used as a collector for packet mirroring. To prevent
-mirroring loops, instances behind this load balancer will not have their traffic mirrored even if a
-PacketMirroring rule applies to them. This can only be set to true for load balancers that have their
-loadBalancingScheme set to INTERNAL.</p>
+  <div class="markdown level1 summary"><p>Indicates whether or not this load balancer can be used as a collector for packet mirroring. To prevent mirroring loops,
+instances behind this load balancer will not have their traffic mirrored even if a PacketMirroring rule applies to them.
+This can only be set to true for load balancers that have their loadBalancingScheme set to INTERNAL.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -397,13 +365,13 @@ loadBalancingScheme set to INTERNAL.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/ForwardingRule.cs/#L83">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/ForwardingRule.cs/#L92">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_ForwardingRule_LabelFingerprint_" data-uid="Pulumi.Gcp.Compute.ForwardingRule.LabelFingerprint*"></a>
   <h4 id="Pulumi_Gcp_Compute_ForwardingRule_LabelFingerprint" data-uid="Pulumi.Gcp.Compute.ForwardingRule.LabelFingerprint">LabelFingerprint</h4>
@@ -424,13 +392,13 @@ loadBalancingScheme set to INTERNAL.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/ForwardingRule.cs/#L89">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/ForwardingRule.cs/#L98">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_ForwardingRule_Labels_" data-uid="Pulumi.Gcp.Compute.ForwardingRule.Labels*"></a>
   <h4 id="Pulumi_Gcp_Compute_ForwardingRule_Labels" data-uid="Pulumi.Gcp.Compute.ForwardingRule.Labels">Labels</h4>
@@ -439,7 +407,7 @@ loadBalancingScheme set to INTERNAL.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;&gt; Labels { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;?&gt; Labels { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -451,26 +419,25 @@ loadBalancingScheme set to INTERNAL.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/ForwardingRule.cs/#L99">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/ForwardingRule.cs/#L107">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_ForwardingRule_LoadBalancingScheme_" data-uid="Pulumi.Gcp.Compute.ForwardingRule.LoadBalancingScheme*"></a>
   <h4 id="Pulumi_Gcp_Compute_ForwardingRule_LoadBalancingScheme" data-uid="Pulumi.Gcp.Compute.ForwardingRule.LoadBalancingScheme">LoadBalancingScheme</h4>
-  <div class="markdown level1 summary"><p>This signifies what the ForwardingRule will be used for and can be EXTERNAL, INTERNAL, or INTERNAL_MANAGED.
-EXTERNAL is used for Classic Cloud VPN gateways, protocol forwarding to VMs from an external IP address, and
-HTTP(S), SSL Proxy, TCP Proxy, and Network TCP/UDP load balancers. INTERNAL is used for protocol forwarding
-to VMs from an internal IP address, and internal TCP/UDP load balancers. INTERNAL_MANAGED is used for
-internal HTTP(S) load balancers.</p>
+  <div class="markdown level1 summary"><p>This signifies what the ForwardingRule will be used for and can be EXTERNAL, INTERNAL, or INTERNAL_MANAGED. EXTERNAL is
+used for Classic Cloud VPN gateways, protocol forwarding to VMs from an external IP address, and HTTP(S), SSL Proxy, TCP
+Proxy, and Network TCP/UDP load balancers. INTERNAL is used for protocol forwarding to VMs from an internal IP address,
+and internal TCP/UDP load balancers. INTERNAL_MANAGED is used for internal HTTP(S) load balancers.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; LoadBalancingScheme { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; LoadBalancingScheme { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -482,21 +449,20 @@ internal HTTP(S) load balancers.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/ForwardingRule.cs/#L109">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/ForwardingRule.cs/#L116">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_ForwardingRule_Name_" data-uid="Pulumi.Gcp.Compute.ForwardingRule.Name*"></a>
   <h4 id="Pulumi_Gcp_Compute_ForwardingRule_Name" data-uid="Pulumi.Gcp.Compute.ForwardingRule.Name">Name</h4>
-  <div class="markdown level1 summary"><p>Name of the resource; provided by the client when the resource is created. The name must be 1-63 characters
-long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular
-expression '<a href="%5B-a-z0-9%5D*%5Ba-z0-9%5D">a-z</a>?' which means the first character must be a lowercase letter, and all
-following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be
-a dash.</p>
+  <div class="markdown level1 summary"><p>Name of the resource; provided by the client when the resource is created. The name must be 1-63 characters long, and
+comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
+'<a href="%5B-a-z0-9%5D*%5Ba-z0-9%5D">a-z</a>?' which means the first character must be a lowercase letter, and all following characters
+must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -513,19 +479,19 @@ a dash.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/ForwardingRule.cs/#L117">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/ForwardingRule.cs/#L124">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_ForwardingRule_Network_" data-uid="Pulumi.Gcp.Compute.ForwardingRule.Network*"></a>
   <h4 id="Pulumi_Gcp_Compute_ForwardingRule_Network" data-uid="Pulumi.Gcp.Compute.ForwardingRule.Network">Network</h4>
-  <div class="markdown level1 summary"><p>For internal load balancing, this field identifies the network that the load balanced IP should belong to
-for this Forwarding Rule. If this field is not specified, the default network will be used. This field is
-only used for INTERNAL load balancing.</p>
+  <div class="markdown level1 summary"><p>For internal load balancing, this field identifies the network that the load balanced IP should belong to for this
+Forwarding Rule. If this field is not specified, the default network will be used. This field is only used for INTERNAL
+load balancing.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -542,18 +508,18 @@ only used for INTERNAL load balancing.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/ForwardingRule.cs/#L124">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/ForwardingRule.cs/#L131">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_ForwardingRule_NetworkTier_" data-uid="Pulumi.Gcp.Compute.ForwardingRule.NetworkTier*"></a>
   <h4 id="Pulumi_Gcp_Compute_ForwardingRule_NetworkTier" data-uid="Pulumi.Gcp.Compute.ForwardingRule.NetworkTier">NetworkTier</h4>
-  <div class="markdown level1 summary"><p>The networking tier used for configuring this address. This field can take the following values: PREMIUM or
-STANDARD. If this field is not specified, it is assumed to be PREMIUM.</p>
+  <div class="markdown level1 summary"><p>The networking tier used for configuring this address. This field can take the following values: PREMIUM or STANDARD. If
+this field is not specified, it is assumed to be PREMIUM.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -570,28 +536,28 @@ STANDARD. If this field is not specified, it is assumed to be PREMIUM.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/ForwardingRule.cs/#L136">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/ForwardingRule.cs/#L143">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_ForwardingRule_PortRange_" data-uid="Pulumi.Gcp.Compute.ForwardingRule.PortRange*"></a>
   <h4 id="Pulumi_Gcp_Compute_ForwardingRule_PortRange" data-uid="Pulumi.Gcp.Compute.ForwardingRule.PortRange">PortRange</h4>
-  <div class="markdown level1 summary"><p>This field is used along with the target field for TargetHttpProxy, TargetHttpsProxy, TargetSslProxy,
-TargetTcpProxy, TargetVpnGateway, TargetPool, TargetInstance. Applicable only when IPProtocol is TCP, UDP,
-or SCTP, only packets addressed to ports in the specified range will be forwarded to target. Forwarding
-rules with the same [IPAddress, IPProtocol] pair must have disjoint port ranges. Some types of forwarding
-target have constraints on the acceptable ports: * TargetHttpProxy: 80, 8080 * TargetHttpsProxy: 443 *
-TargetTcpProxy: 25, 43, 110, 143, 195, 443, 465, 587, 700, 993, 995, 1883, 5222 * TargetSslProxy: 25, 43,
-110, 143, 195, 443, 465, 587, 700, 993, 995, 1883, 5222 * TargetVpnGateway: 500, 4500</p>
+  <div class="markdown level1 summary"><p>This field is used along with the target field for TargetHttpProxy, TargetHttpsProxy, TargetSslProxy, TargetTcpProxy,
+TargetVpnGateway, TargetPool, TargetInstance. Applicable only when IPProtocol is TCP, UDP, or SCTP, only packets
+addressed to ports in the specified range will be forwarded to target. Forwarding rules with the same [IPAddress,
+IPProtocol] pair must have disjoint port ranges. Some types of forwarding target have constraints on the acceptable
+ports: * TargetHttpProxy: 80, 8080 * TargetHttpsProxy: 443 * TargetTcpProxy: 25, 43, 110, 143, 195, 443, 465, 587, 700,
+993, 995, 1883, 5222 * TargetSslProxy: 25, 43, 110, 143, 195, 443, 465, 587, 700, 993, 995, 1883, 5222 *
+TargetVpnGateway: 500, 4500</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; PortRange { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; PortRange { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -603,20 +569,19 @@ TargetTcpProxy: 25, 43, 110, 143, 195, 443, 465, 587, 700, 993, 995, 1883, 5222 
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/ForwardingRule.cs/#L145">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/ForwardingRule.cs/#L151">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_ForwardingRule_Ports_" data-uid="Pulumi.Gcp.Compute.ForwardingRule.Ports*"></a>
   <h4 id="Pulumi_Gcp_Compute_ForwardingRule_Ports" data-uid="Pulumi.Gcp.Compute.ForwardingRule.Ports">Ports</h4>
-  <div class="markdown level1 summary"><p>This field is used along with the backend_service field for internal load balancing. When the load balancing
-scheme is INTERNAL, a single port or a comma separated list of ports can be configured. Only packets
-addressed to these ports will be forwarded to the backends configured with this forwarding rule. You may
-specify a maximum of up to 5 ports.</p>
+  <div class="markdown level1 summary"><p>This field is used along with the backend_service field for internal load balancing. When the load balancing scheme is
+INTERNAL, a single port or a comma separated list of ports can be configured. Only packets addressed to these ports will
+be forwarded to the backends configured with this forwarding rule. You may specify a maximum of up to 5 ports.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -633,13 +598,13 @@ specify a maximum of up to 5 ports.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/ForwardingRule.cs/#L152">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/ForwardingRule.cs/#L158">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_ForwardingRule_Project_" data-uid="Pulumi.Gcp.Compute.ForwardingRule.Project*"></a>
   <h4 id="Pulumi_Gcp_Compute_ForwardingRule_Project" data-uid="Pulumi.Gcp.Compute.ForwardingRule.Project">Project</h4>
@@ -661,18 +626,18 @@ If it is not provided, the provider project is used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/ForwardingRule.cs/#L159">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/ForwardingRule.cs/#L165">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_ForwardingRule_Region_" data-uid="Pulumi.Gcp.Compute.ForwardingRule.Region*"></a>
   <h4 id="Pulumi_Gcp_Compute_ForwardingRule_Region" data-uid="Pulumi.Gcp.Compute.ForwardingRule.Region">Region</h4>
-  <div class="markdown level1 summary"><p>A reference to the region where the regional forwarding rule resides. This field is not applicable to global
-forwarding rules.</p>
+  <div class="markdown level1 summary"><p>A reference to the region where the regional forwarding rule resides. This field is not applicable to global forwarding
+rules.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -689,13 +654,13 @@ forwarding rules.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/ForwardingRule.cs/#L165">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/ForwardingRule.cs/#L171">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_ForwardingRule_SelfLink_" data-uid="Pulumi.Gcp.Compute.ForwardingRule.SelfLink*"></a>
   <h4 id="Pulumi_Gcp_Compute_ForwardingRule_SelfLink" data-uid="Pulumi.Gcp.Compute.ForwardingRule.SelfLink">SelfLink</h4>
@@ -716,27 +681,26 @@ forwarding rules.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/ForwardingRule.cs/#L176">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/ForwardingRule.cs/#L181">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_ForwardingRule_ServiceLabel_" data-uid="Pulumi.Gcp.Compute.ForwardingRule.ServiceLabel*"></a>
   <h4 id="Pulumi_Gcp_Compute_ForwardingRule_ServiceLabel" data-uid="Pulumi.Gcp.Compute.ForwardingRule.ServiceLabel">ServiceLabel</h4>
-  <div class="markdown level1 summary"><p>An optional prefix to the service name for this Forwarding Rule. If specified, will be the first label of
-the fully qualified service name. The label must be 1-63 characters long, and comply with RFC1035.
-Specifically, the label must be 1-63 characters long and match the regular expression
-'<a href="%5B-a-z0-9%5D*%5Ba-z0-9%5D">a-z</a>?' which means the first character must be a lowercase letter, and all following
-characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
-This field is only used for INTERNAL load balancing.</p>
+  <div class="markdown level1 summary"><p>An optional prefix to the service name for this Forwarding Rule. If specified, will be the first label of the fully
+qualified service name. The label must be 1-63 characters long, and comply with RFC1035. Specifically, the label must be
+1-63 characters long and match the regular expression '<a href="%5B-a-z0-9%5D*%5Ba-z0-9%5D">a-z</a>?' which means the first character must
+be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last
+character, which cannot be a dash. This field is only used for INTERNAL load balancing.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ServiceLabel { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; ServiceLabel { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -748,18 +712,17 @@ This field is only used for INTERNAL load balancing.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/ForwardingRule.cs/#L183">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/ForwardingRule.cs/#L187">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_ForwardingRule_ServiceName_" data-uid="Pulumi.Gcp.Compute.ForwardingRule.ServiceName*"></a>
   <h4 id="Pulumi_Gcp_Compute_ForwardingRule_ServiceName" data-uid="Pulumi.Gcp.Compute.ForwardingRule.ServiceName">ServiceName</h4>
-  <div class="markdown level1 summary"><p>The internal fully qualified service name for this Forwarding Rule. This field is only used for INTERNAL
-load balancing.</p>
+  <div class="markdown level1 summary"><p>The internal fully qualified service name for this Forwarding Rule. This field is only used for INTERNAL load balancing.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -776,19 +739,19 @@ load balancing.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/ForwardingRule.cs/#L191">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/ForwardingRule.cs/#L195">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_ForwardingRule_Subnetwork_" data-uid="Pulumi.Gcp.Compute.ForwardingRule.Subnetwork*"></a>
   <h4 id="Pulumi_Gcp_Compute_ForwardingRule_Subnetwork" data-uid="Pulumi.Gcp.Compute.ForwardingRule.Subnetwork">Subnetwork</h4>
-  <div class="markdown level1 summary"><p>The subnetwork that the load balanced IP should belong to for this Forwarding Rule. This field is only used
-for INTERNAL load balancing. If the network specified is in auto subnet mode, this field is optional.
-However, if the network is in custom subnet mode, a subnetwork must be specified.</p>
+  <div class="markdown level1 summary"><p>The subnetwork that the load balanced IP should belong to for this Forwarding Rule. This field is only used for INTERNAL
+load balancing. If the network specified is in auto subnet mode, this field is optional. However, if the network is in
+custom subnet mode, a subnetwork must be specified.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -805,23 +768,23 @@ However, if the network is in custom subnet mode, a subnetwork must be specified
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/ForwardingRule.cs/#L198">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/ForwardingRule.cs/#L202">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_ForwardingRule_Target_" data-uid="Pulumi.Gcp.Compute.ForwardingRule.Target*"></a>
   <h4 id="Pulumi_Gcp_Compute_ForwardingRule_Target" data-uid="Pulumi.Gcp.Compute.ForwardingRule.Target">Target</h4>
-  <div class="markdown level1 summary"><p>The URL of the target resource to receive the matched traffic. The target must live in the same region as
-the forwarding rule. The forwarded traffic must be of a type appropriate to the target object.</p>
+  <div class="markdown level1 summary"><p>The URL of the target resource to receive the matched traffic. The target must live in the same region as the forwarding
+rule. The forwarded traffic must be of a type appropriate to the target object.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Target { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Target { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -833,7 +796,7 @@ the forwarding rule. The forwarded traffic must be of a type appropriate to the 
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -841,17 +804,17 @@ the forwarding rule. The forwarded traffic must be of a type appropriate to the 
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/ForwardingRule.cs/#L239">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/ForwardingRule.cs/#L243">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_ForwardingRule_Get_" data-uid="Pulumi.Gcp.Compute.ForwardingRule.Get*"></a>
-  <h4 id="Pulumi_Gcp_Compute_ForwardingRule_Get_System_String_Pulumi_Input_System_String__Pulumi_Gcp_Compute_ForwardingRuleState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Gcp.Compute.ForwardingRule.Get(System.String,Pulumi.Input{System.String},Pulumi.Gcp.Compute.ForwardingRuleState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, ForwardingRuleState, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Gcp_Compute_ForwardingRule_Get_System_String_Input_System_String__Pulumi_Gcp_Compute_ForwardingRuleState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Gcp.Compute.ForwardingRule.Get(System.String,Input{System.String},Pulumi.Gcp.Compute.ForwardingRuleState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, ForwardingRuleState, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Get an existing ForwardingRule resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static ForwardingRule Get(string name, Input&lt;string&gt; id, ForwardingRuleState state = null, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static ForwardingRule Get(string name, Input&lt;string&gt; id, ForwardingRuleState state = null, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -870,7 +833,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -882,7 +845,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -911,7 +874,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/ForwardingRule.cs/#L12" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/ForwardingRule.cs/#L24" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

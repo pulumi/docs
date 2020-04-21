@@ -80,40 +80,16 @@ support ownership management or SELinux relabeling.</p>
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">CephFSVolumeSource</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Core.V1.html">Pulumi.Kubernetes.Types.Outputs.Core.V1</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Kubernetes.dll</h6>
   <h5 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_CephFSVolumeSource_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class CephFSVolumeSource</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class CephFSVolumeSource : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L13931">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L14073">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_CephFSVolumeSource_Monitors" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.CephFSVolumeSource.Monitors">Monitors</h4>
   <div class="markdown level1 summary"><p>Required: Monitors is a collection of Ceph monitors More info:
@@ -134,13 +110,13 @@ support ownership management or SELinux relabeling.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L13936">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L14078">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_CephFSVolumeSource_Path" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.CephFSVolumeSource.Path">Path</h4>
   <div class="markdown level1 summary"><p>Optional: Used as the mounted root, rather than the full Ceph tree, default is /</p>
@@ -166,7 +142,7 @@ support ownership management or SELinux relabeling.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L13943">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L14085">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_CephFSVolumeSource_ReadOnly" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.CephFSVolumeSource.ReadOnly">ReadOnly</h4>
   <div class="markdown level1 summary"><p>Optional: Defaults to false (read/write). ReadOnly here will force the ReadOnly setting
@@ -194,7 +170,7 @@ in VolumeMounts. More info:
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L13949">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L14091">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_CephFSVolumeSource_SecretFile" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.CephFSVolumeSource.SecretFile">SecretFile</h4>
   <div class="markdown level1 summary"><p>Optional: SecretFile is the path to key ring for User, default is /etc/ceph/user.secret
@@ -221,7 +197,7 @@ More info: <a href="https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L13955">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L14097">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_CephFSVolumeSource_SecretRef" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.CephFSVolumeSource.SecretRef">SecretRef</h4>
   <div class="markdown level1 summary"><p>Optional: SecretRef is reference to the authentication secret for User, default is
@@ -248,7 +224,7 @@ empty. More info: <a href="https://examples.k8s.io/volumes/cephfs/README.md#how-
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L13961">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L14103">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_CephFSVolumeSource_User" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.CephFSVolumeSource.User">User</h4>
   <div class="markdown level1 summary"><p>Optional: User is the rados user name, default is admin More info:
@@ -281,7 +257,7 @@ empty. More info: <a href="https://examples.k8s.io/volumes/cephfs/README.md#how-
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L13924" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L14066" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -78,40 +78,16 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">ClusterScalingConfiguration</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.Rds.Outputs.html">Pulumi.Aws.Rds.Outputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
   <h5 id="Pulumi_Aws_Rds_Outputs_ClusterScalingConfiguration_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class ClusterScalingConfiguration</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class ClusterScalingConfiguration : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Rds/Cluster.cs/#L1093">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/Outputs/ClusterScalingConfiguration.cs/#L19">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Rds_Outputs_ClusterScalingConfiguration_AutoPause" data-uid="Pulumi.Aws.Rds.Outputs.ClusterScalingConfiguration.AutoPause">AutoPause</h4>
   <div class="markdown level1 summary"><p>Whether to enable automatic pause. A DB cluster can be paused only when it's idle (it has no connections). If a DB cluster is paused for more than seven days, the DB cluster might be backed up with a snapshot. In this case, the DB cluster is restored when there is a request to connect to it. Defaults to <code>true</code>.</p>
@@ -137,7 +113,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Rds/Cluster.cs/#L1097">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/Outputs/ClusterScalingConfiguration.cs/#L23">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Rds_Outputs_ClusterScalingConfiguration_MaxCapacity" data-uid="Pulumi.Aws.Rds.Outputs.ClusterScalingConfiguration.MaxCapacity">MaxCapacity</h4>
   <div class="markdown level1 summary"><p>The maximum capacity. The maximum capacity must be greater than or equal to the minimum capacity. Valid capacity values are <code>1</code>, <code>2</code>, <code>4</code>, <code>8</code>, <code>16</code>, <code>32</code>, <code>64</code>, <code>128</code>, and <code>256</code>. Defaults to <code>16</code>.</p>
@@ -163,7 +139,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Rds/Cluster.cs/#L1101">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/Outputs/ClusterScalingConfiguration.cs/#L27">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Rds_Outputs_ClusterScalingConfiguration_MinCapacity" data-uid="Pulumi.Aws.Rds.Outputs.ClusterScalingConfiguration.MinCapacity">MinCapacity</h4>
   <div class="markdown level1 summary"><p>The minimum capacity. The minimum capacity must be lesser than or equal to the maximum capacity. Valid capacity values are <code>1</code>, <code>2</code>, <code>4</code>, <code>8</code>, <code>16</code>, <code>32</code>, <code>64</code>, <code>128</code>, and <code>256</code>. Defaults to <code>2</code>.</p>
@@ -189,7 +165,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Rds/Cluster.cs/#L1105">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/Outputs/ClusterScalingConfiguration.cs/#L31">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Rds_Outputs_ClusterScalingConfiguration_SecondsUntilAutoPause" data-uid="Pulumi.Aws.Rds.Outputs.ClusterScalingConfiguration.SecondsUntilAutoPause">SecondsUntilAutoPause</h4>
   <div class="markdown level1 summary"><p>The time, in seconds, before an Aurora DB cluster in serverless mode is paused. Valid values are <code>300</code> through <code>86400</code>. Defaults to <code>300</code>.</p>
@@ -215,7 +191,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Rds/Cluster.cs/#L1109">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/Outputs/ClusterScalingConfiguration.cs/#L35">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Rds_Outputs_ClusterScalingConfiguration_TimeoutAction" data-uid="Pulumi.Aws.Rds.Outputs.ClusterScalingConfiguration.TimeoutAction">TimeoutAction</h4>
   <div class="markdown level1 summary"><p>The action to take when the timeout is reached. Valid values: <code>ForceApplyCapacityChange</code>, <code>RollbackCapacityChange</code>. Defaults to <code>RollbackCapacityChange</code>. See <a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-serverless.how-it-works.html#aurora-serverless.how-it-works.timeout-action">documentation</a>.</p>
@@ -223,7 +199,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string TimeoutAction</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? TimeoutAction</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -235,7 +211,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -247,7 +223,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Rds/Cluster.cs/#L1087" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/Outputs/ClusterScalingConfiguration.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

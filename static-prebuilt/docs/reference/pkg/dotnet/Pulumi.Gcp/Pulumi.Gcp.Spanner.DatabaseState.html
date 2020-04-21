@@ -76,36 +76,7 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
-    <div class="level3"><span class="xref">DatabaseState</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">DatabaseState</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.Spanner.html">Pulumi.Gcp.Spanner</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
@@ -116,7 +87,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Spanner/Database.cs/#L175">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Spanner/Database.cs/#L185">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Spanner_DatabaseState__ctor_" data-uid="Pulumi.Gcp.Spanner.DatabaseState.#ctor*"></a>
   <h4 id="Pulumi_Gcp_Spanner_DatabaseState__ctor" data-uid="Pulumi.Gcp.Spanner.DatabaseState.#ctor">DatabaseState()</h4>
@@ -129,13 +100,13 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Spanner/Database.cs/#L143">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Spanner/Database.cs/#L153">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Spanner_DatabaseState_Ddls_" data-uid="Pulumi.Gcp.Spanner.DatabaseState.Ddls*"></a>
   <h4 id="Pulumi_Gcp_Spanner_DatabaseState_Ddls" data-uid="Pulumi.Gcp.Spanner.DatabaseState.Ddls">Ddls</h4>
-  <div class="markdown level1 summary"><p>An optional list of DDL statements to run inside the newly created database. Statements can create tables,
-indexes, etc. These statements execute atomically with the creation of the database: if there is an error in
-any statement, the database is not created.</p>
+  <div class="markdown level1 summary"><p>An optional list of DDL statements to run inside the newly created database. Statements can create tables, indexes, etc.
+These statements execute atomically with the creation of the database: if there is an error in any statement, the
+database is not created.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -152,13 +123,13 @@ any statement, the database is not created.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Spanner/Database.cs/#L152">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Spanner/Database.cs/#L162">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Spanner_DatabaseState_Instance_" data-uid="Pulumi.Gcp.Spanner.DatabaseState.Instance*"></a>
   <h4 id="Pulumi_Gcp_Spanner_DatabaseState_Instance" data-uid="Pulumi.Gcp.Spanner.DatabaseState.Instance">Instance</h4>
@@ -167,7 +138,7 @@ any statement, the database is not created.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Instance { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Instance { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -179,23 +150,23 @@ any statement, the database is not created.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Spanner/Database.cs/#L159">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Spanner/Database.cs/#L169">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Spanner_DatabaseState_Name_" data-uid="Pulumi.Gcp.Spanner.DatabaseState.Name*"></a>
   <h4 id="Pulumi_Gcp_Spanner_DatabaseState_Name" data-uid="Pulumi.Gcp.Spanner.DatabaseState.Name">Name</h4>
-  <div class="markdown level1 summary"><p>A unique identifier for the database, which cannot be changed after the instance is created. Values are of
-the form [a-z][-a-z0-9]*[a-z0-9].</p>
+  <div class="markdown level1 summary"><p>A unique identifier for the database, which cannot be changed after the instance is created. Values are of the form
+[a-z][-a-z0-9]*[a-z0-9].</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Name { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Name { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -207,13 +178,13 @@ the form [a-z][-a-z0-9]*[a-z0-9].</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Spanner/Database.cs/#L166">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Spanner/Database.cs/#L176">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Spanner_DatabaseState_Project_" data-uid="Pulumi.Gcp.Spanner.DatabaseState.Project*"></a>
   <h4 id="Pulumi_Gcp_Spanner_DatabaseState_Project" data-uid="Pulumi.Gcp.Spanner.DatabaseState.Project">Project</h4>
@@ -223,7 +194,7 @@ If it is not provided, the provider project is used.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Project { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Project { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -235,13 +206,13 @@ If it is not provided, the provider project is used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Spanner/Database.cs/#L172">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Spanner/Database.cs/#L182">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Spanner_DatabaseState_State_" data-uid="Pulumi.Gcp.Spanner.DatabaseState.State*"></a>
   <h4 id="Pulumi_Gcp_Spanner_DatabaseState_State" data-uid="Pulumi.Gcp.Spanner.DatabaseState.State">State</h4>
@@ -250,7 +221,7 @@ If it is not provided, the provider project is used.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; State { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? State { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -262,7 +233,7 @@ If it is not provided, the provider project is used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -274,7 +245,7 @@ If it is not provided, the provider project is used.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Spanner/Database.cs/#L133" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Spanner/Database.cs/#L143" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

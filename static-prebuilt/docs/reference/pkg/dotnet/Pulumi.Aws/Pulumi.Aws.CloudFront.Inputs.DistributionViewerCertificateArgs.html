@@ -76,36 +76,7 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
-    <div class="level3"><span class="xref">DistributionViewerCertificateArgs</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">DistributionViewerCertificateArgs</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.CloudFront.Inputs.html">Pulumi.Aws.CloudFront.Inputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
@@ -116,7 +87,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Cloudfront/Distribution.cs/#L2334">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudFront/Inputs/DistributionViewerCertificateArgs.cs/#L58">View Source</a>
   </span>
   <a id="Pulumi_Aws_CloudFront_Inputs_DistributionViewerCertificateArgs__ctor_" data-uid="Pulumi.Aws.CloudFront.Inputs.DistributionViewerCertificateArgs.#ctor*"></a>
   <h4 id="Pulumi_Aws_CloudFront_Inputs_DistributionViewerCertificateArgs__ctor" data-uid="Pulumi.Aws.CloudFront.Inputs.DistributionViewerCertificateArgs.#ctor">DistributionViewerCertificateArgs()</h4>
@@ -129,7 +100,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Cloudfront/Distribution.cs/#L2297">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudFront/Inputs/DistributionViewerCertificateArgs.cs/#L21">View Source</a>
   </span>
   <a id="Pulumi_Aws_CloudFront_Inputs_DistributionViewerCertificateArgs_AcmCertificateArn_" data-uid="Pulumi.Aws.CloudFront.Inputs.DistributionViewerCertificateArgs.AcmCertificateArn*"></a>
   <h4 id="Pulumi_Aws_CloudFront_Inputs_DistributionViewerCertificateArgs_AcmCertificateArn" data-uid="Pulumi.Aws.CloudFront.Inputs.DistributionViewerCertificateArgs.AcmCertificateArn">AcmCertificateArn</h4>
@@ -141,7 +112,7 @@ certificate must be in  US-EAST-1.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; AcmCertificateArn { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? AcmCertificateArn { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -153,13 +124,13 @@ certificate must be in  US-EAST-1.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Cloudfront/Distribution.cs/#L2305">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudFront/Inputs/DistributionViewerCertificateArgs.cs/#L29">View Source</a>
   </span>
   <a id="Pulumi_Aws_CloudFront_Inputs_DistributionViewerCertificateArgs_CloudfrontDefaultCertificate_" data-uid="Pulumi.Aws.CloudFront.Inputs.DistributionViewerCertificateArgs.CloudfrontDefaultCertificate*"></a>
   <h4 id="Pulumi_Aws_CloudFront_Inputs_DistributionViewerCertificateArgs_CloudfrontDefaultCertificate" data-uid="Pulumi.Aws.CloudFront.Inputs.DistributionViewerCertificateArgs.CloudfrontDefaultCertificate">CloudfrontDefaultCertificate</h4>
@@ -170,7 +141,7 @@ distribution. Specify this, <code>acm_certificate_arn</code>, or <code>iam_certi
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; CloudfrontDefaultCertificate { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? CloudfrontDefaultCertificate { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -182,13 +153,13 @@ distribution. Specify this, <code>acm_certificate_arn</code>, or <code>iam_certi
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Cloudfront/Distribution.cs/#L2313">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudFront/Inputs/DistributionViewerCertificateArgs.cs/#L37">View Source</a>
   </span>
   <a id="Pulumi_Aws_CloudFront_Inputs_DistributionViewerCertificateArgs_IamCertificateId_" data-uid="Pulumi.Aws.CloudFront.Inputs.DistributionViewerCertificateArgs.IamCertificateId*"></a>
   <h4 id="Pulumi_Aws_CloudFront_Inputs_DistributionViewerCertificateArgs_IamCertificateId" data-uid="Pulumi.Aws.CloudFront.Inputs.DistributionViewerCertificateArgs.IamCertificateId">IamCertificateId</h4>
@@ -199,7 +170,7 @@ this, <code>acm_certificate_arn</code>, or <code>cloudfront_default_certificate<
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; IamCertificateId { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? IamCertificateId { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -211,13 +182,13 @@ this, <code>acm_certificate_arn</code>, or <code>cloudfront_default_certificate<
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Cloudfront/Distribution.cs/#L2328">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudFront/Inputs/DistributionViewerCertificateArgs.cs/#L52">View Source</a>
   </span>
   <a id="Pulumi_Aws_CloudFront_Inputs_DistributionViewerCertificateArgs_MinimumProtocolVersion_" data-uid="Pulumi.Aws.CloudFront.Inputs.DistributionViewerCertificateArgs.MinimumProtocolVersion*"></a>
   <h4 id="Pulumi_Aws_CloudFront_Inputs_DistributionViewerCertificateArgs_MinimumProtocolVersion" data-uid="Pulumi.Aws.CloudFront.Inputs.DistributionViewerCertificateArgs.MinimumProtocolVersion">MinimumProtocolVersion</h4>
@@ -235,7 +206,7 @@ must be specified.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; MinimumProtocolVersion { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? MinimumProtocolVersion { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -247,13 +218,13 @@ must be specified.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Cloudfront/Distribution.cs/#L2331">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudFront/Inputs/DistributionViewerCertificateArgs.cs/#L55">View Source</a>
   </span>
   <a id="Pulumi_Aws_CloudFront_Inputs_DistributionViewerCertificateArgs_SslSupportMethod_" data-uid="Pulumi.Aws.CloudFront.Inputs.DistributionViewerCertificateArgs.SslSupportMethod*"></a>
   <h4 id="Pulumi_Aws_CloudFront_Inputs_DistributionViewerCertificateArgs_SslSupportMethod" data-uid="Pulumi.Aws.CloudFront.Inputs.DistributionViewerCertificateArgs.SslSupportMethod">SslSupportMethod</h4>
@@ -261,7 +232,7 @@ must be specified.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; SslSupportMethod { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? SslSupportMethod { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -273,7 +244,7 @@ must be specified.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -285,7 +256,7 @@ must be specified.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Cloudfront/Distribution.cs/#L2289" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudFront/Inputs/DistributionViewerCertificateArgs.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

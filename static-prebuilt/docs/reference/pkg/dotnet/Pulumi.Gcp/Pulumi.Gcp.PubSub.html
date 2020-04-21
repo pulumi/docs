@@ -77,7 +77,15 @@
     <h3 id="classes">Classes
   </h3>
       <h4><a class="xref" href="Pulumi.Gcp.PubSub.Subscription.html">Subscription</a></h4>
-      <section></section>
+      <section><p>A named resource representing the stream of messages from a single,
+specific topic, to be delivered to the subscribing application.</p>
+<p>To get more information about Subscription, see:</p>
+<ul>
+<li><a href="https://cloud.google.com/pubsub/docs/reference/rest/v1/projects.subscriptions">API documentation</a></li>
+<li>How-to Guides</li>
+<li><a href="https://cloud.google.com/pubsub/docs/admin#managing_subscriptions">Managing Subscriptions</a></li>
+</ul>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.PubSub.SubscriptionArgs.html">SubscriptionArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.PubSub.SubscriptionIAMBinding.html">SubscriptionIAMBinding</a></h4>
@@ -92,9 +100,6 @@
 </blockquote>
 <blockquote>
 <p><strong>Note:</strong> <code>gcp.pubsub.SubscriptionIAMBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.pubsub.SubscriptionIAMMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
-</blockquote>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/pubsub_subscription_iam.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/pubsub_subscription_iam.html.markdown</a>.</p>
 </blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.PubSub.SubscriptionIAMBindingArgs.html">SubscriptionIAMBindingArgs</a></h4>
@@ -114,9 +119,6 @@
 <blockquote>
 <p><strong>Note:</strong> <code>gcp.pubsub.SubscriptionIAMBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.pubsub.SubscriptionIAMMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
 </blockquote>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/pubsub_subscription_iam.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/pubsub_subscription_iam.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.PubSub.SubscriptionIAMMemberArgs.html">SubscriptionIAMMemberArgs</a></h4>
       <section></section>
@@ -135,9 +137,6 @@
 <blockquote>
 <p><strong>Note:</strong> <code>gcp.pubsub.SubscriptionIAMBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.pubsub.SubscriptionIAMMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
 </blockquote>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/pubsub_subscription_iam.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/pubsub_subscription_iam.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.PubSub.SubscriptionIAMPolicyArgs.html">SubscriptionIAMPolicyArgs</a></h4>
       <section></section>
@@ -146,23 +145,66 @@
       <h4><a class="xref" href="Pulumi.Gcp.PubSub.SubscriptionState.html">SubscriptionState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.PubSub.Topic.html">Topic</a></h4>
-      <section></section>
+      <section><p>A named resource to which messages are sent by publishers.</p>
+<p>To get more information about Topic, see:</p>
+<ul>
+<li><a href="https://cloud.google.com/pubsub/docs/reference/rest/v1/projects.topics">API documentation</a></li>
+<li>How-to Guides</li>
+<li><a href="https://cloud.google.com/pubsub/docs/admin#managing_topics">Managing Topics</a></li>
+</ul>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.PubSub.TopicArgs.html">TopicArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.PubSub.TopicIAMBinding.html">TopicIAMBinding</a></h4>
-      <section></section>
+      <section><p>Three different resources help you manage your IAM policy for Cloud Pub/Sub Topic. Each of these resources serves a different use case:</p>
+<ul>
+<li><code>gcp.pubsub.TopicIAMPolicy</code>: Authoritative. Sets the IAM policy for the topic and replaces any existing policy already attached.</li>
+<li><code>gcp.pubsub.TopicIAMBinding</code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the topic are preserved.</li>
+<li><code>gcp.pubsub.TopicIAMMember</code>: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the topic are preserved.</li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.pubsub.TopicIAMPolicy</code> <strong>cannot</strong> be used in conjunction with <code>gcp.pubsub.TopicIAMBinding</code> and <code>gcp.pubsub.TopicIAMMember</code> or they will fight over what your policy should be.</p>
+</blockquote>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.pubsub.TopicIAMBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.pubsub.TopicIAMMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
+</blockquote>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.PubSub.TopicIAMBindingArgs.html">TopicIAMBindingArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.PubSub.TopicIAMBindingState.html">TopicIAMBindingState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.PubSub.TopicIAMMember.html">TopicIAMMember</a></h4>
-      <section></section>
+      <section><p>Three different resources help you manage your IAM policy for Cloud Pub/Sub Topic. Each of these resources serves a different use case:</p>
+<ul>
+<li><code>gcp.pubsub.TopicIAMPolicy</code>: Authoritative. Sets the IAM policy for the topic and replaces any existing policy already attached.</li>
+<li><code>gcp.pubsub.TopicIAMBinding</code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the topic are preserved.</li>
+<li><code>gcp.pubsub.TopicIAMMember</code>: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the topic are preserved.</li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.pubsub.TopicIAMPolicy</code> <strong>cannot</strong> be used in conjunction with <code>gcp.pubsub.TopicIAMBinding</code> and <code>gcp.pubsub.TopicIAMMember</code> or they will fight over what your policy should be.</p>
+</blockquote>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.pubsub.TopicIAMBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.pubsub.TopicIAMMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
+</blockquote>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.PubSub.TopicIAMMemberArgs.html">TopicIAMMemberArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.PubSub.TopicIAMMemberState.html">TopicIAMMemberState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.PubSub.TopicIAMPolicy.html">TopicIAMPolicy</a></h4>
-      <section></section>
+      <section><p>Three different resources help you manage your IAM policy for Cloud Pub/Sub Topic. Each of these resources serves a different use case:</p>
+<ul>
+<li><code>gcp.pubsub.TopicIAMPolicy</code>: Authoritative. Sets the IAM policy for the topic and replaces any existing policy already attached.</li>
+<li><code>gcp.pubsub.TopicIAMBinding</code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the topic are preserved.</li>
+<li><code>gcp.pubsub.TopicIAMMember</code>: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the topic are preserved.</li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.pubsub.TopicIAMPolicy</code> <strong>cannot</strong> be used in conjunction with <code>gcp.pubsub.TopicIAMBinding</code> and <code>gcp.pubsub.TopicIAMMember</code> or they will fight over what your policy should be.</p>
+</blockquote>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.pubsub.TopicIAMBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.pubsub.TopicIAMMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
+</blockquote>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.PubSub.TopicIAMPolicyArgs.html">TopicIAMPolicyArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.PubSub.TopicIAMPolicyState.html">TopicIAMPolicyState</a></h4>

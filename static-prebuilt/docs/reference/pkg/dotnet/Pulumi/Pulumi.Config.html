@@ -85,43 +85,19 @@ such as <code>pulumi:foo:a</code>, ..., and <code>pulumi:bar:a</code>, respectiv
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">Config</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.html">Pulumi</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.dll</h6>
   <h5 id="Pulumi_Config_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class Config</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class Config : object</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Config.cs/#L31">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/00acc7999a27043871e8167ea3cc82ea01e2bd53/sdk/dotnet/Pulumi/Config.cs/#L31">View Source</a>
   </span>
   <a id="Pulumi_Config__ctor_" data-uid="Pulumi.Config.#ctor*"></a>
-  <h4 id="Pulumi_Config__ctor_System_String_" data-uid="Pulumi.Config.#ctor(System.String)">Config(String)</h4>
+  <h4 id="Pulumi_Config__ctor_System_Nullable_System_String__" data-uid="Pulumi.Config.#ctor(System.Nullable{System.String})">Config(Nullable&lt;String&gt;)</h4>
   <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Pulumi.Config.html">Config</a> instance. <code data-dev-comment-type="paramref" class="paramref">name</code> is the
 configuration bag's logical name and uniquely identifies it. The default is the name of
 the current project.</p>
@@ -129,7 +105,7 @@ the current project.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Config(string name = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Config(string? name = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -142,7 +118,7 @@ the current project.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">name</span></td>
         <td></td>
       </tr>
@@ -151,7 +127,7 @@ the current project.</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Config.cs/#L60">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/00acc7999a27043871e8167ea3cc82ea01e2bd53/sdk/dotnet/Pulumi/Config.cs/#L60">View Source</a>
   </span>
   <a id="Pulumi_Config_Get_" data-uid="Pulumi.Config.Get*"></a>
   <h4 id="Pulumi_Config_Get_System_String_" data-uid="Pulumi.Config.Get(System.String)">Get(String)</h4>
@@ -160,7 +136,7 @@ the current project.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Get(string key)</code></pre>
+    <pre><code class="lang-csharp hljs">public string? Get(string key)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -189,13 +165,13 @@ the current project.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Config.cs/#L74">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/00acc7999a27043871e8167ea3cc82ea01e2bd53/sdk/dotnet/Pulumi/Config.cs/#L74">View Source</a>
   </span>
   <a id="Pulumi_Config_GetBoolean_" data-uid="Pulumi.Config.GetBoolean*"></a>
   <h4 id="Pulumi_Config_GetBoolean_System_String_" data-uid="Pulumi.Config.GetBoolean(System.String)">GetBoolean(String)</h4>
@@ -240,7 +216,7 @@ If the configuration value isn't a legal boolean, this function will throw an er
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Config.cs/#L94">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/00acc7999a27043871e8167ea3cc82ea01e2bd53/sdk/dotnet/Pulumi/Config.cs/#L94">View Source</a>
   </span>
   <a id="Pulumi_Config_GetInt32_" data-uid="Pulumi.Config.GetInt32*"></a>
   <h4 id="Pulumi_Config_GetInt32_System_String_" data-uid="Pulumi.Config.GetInt32(System.String)">GetInt32(String)</h4>
@@ -285,7 +261,7 @@ If the configuration value isn't a legal number, this function will throw an err
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Config.cs/#L117">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/00acc7999a27043871e8167ea3cc82ea01e2bd53/sdk/dotnet/Pulumi/Config.cs/#L117">View Source</a>
   </span>
   <a id="Pulumi_Config_GetObject_" data-uid="Pulumi.Config.GetObject*"></a>
   <h4 id="Pulumi_Config_GetObject__1_System_String_" data-uid="Pulumi.Config.GetObject``1(System.String)">GetObject&lt;T&gt;(String)</h4>
@@ -346,7 +322,7 @@ it to <see cref="!:JsonSerializer.Deserialize&lt;TValue>(string, JsonSerializerO
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Config.cs/#L67">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/00acc7999a27043871e8167ea3cc82ea01e2bd53/sdk/dotnet/Pulumi/Config.cs/#L67">View Source</a>
   </span>
   <a id="Pulumi_Config_GetSecret_" data-uid="Pulumi.Config.GetSecret*"></a>
   <h4 id="Pulumi_Config_GetSecret_System_String_" data-uid="Pulumi.Config.GetSecret(System.String)">GetSecret(String)</h4>
@@ -390,7 +366,7 @@ it to <see cref="!:JsonSerializer.Deserialize&lt;TValue>(string, JsonSerializerO
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Config.cs/#L87">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/00acc7999a27043871e8167ea3cc82ea01e2bd53/sdk/dotnet/Pulumi/Config.cs/#L87">View Source</a>
   </span>
   <a id="Pulumi_Config_GetSecretBoolean_" data-uid="Pulumi.Config.GetSecretBoolean*"></a>
   <h4 id="Pulumi_Config_GetSecretBoolean_System_String_" data-uid="Pulumi.Config.GetSecretBoolean(System.String)">GetSecretBoolean(String)</h4>
@@ -436,7 +412,7 @@ function will throw an error.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Config.cs/#L109">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/00acc7999a27043871e8167ea3cc82ea01e2bd53/sdk/dotnet/Pulumi/Config.cs/#L109">View Source</a>
   </span>
   <a id="Pulumi_Config_GetSecretInt32_" data-uid="Pulumi.Config.GetSecretInt32*"></a>
   <h4 id="Pulumi_Config_GetSecretInt32_System_String_" data-uid="Pulumi.Config.GetSecretInt32(System.String)">GetSecretInt32(String)</h4>
@@ -482,7 +458,7 @@ If the configuration value isn't a legal number, this function will throw an err
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Config.cs/#L137">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/00acc7999a27043871e8167ea3cc82ea01e2bd53/sdk/dotnet/Pulumi/Config.cs/#L137">View Source</a>
   </span>
   <a id="Pulumi_Config_GetSecretObject_" data-uid="Pulumi.Config.GetSecretObject*"></a>
   <h4 id="Pulumi_Config_GetSecretObject__1_System_String_" data-uid="Pulumi.Config.GetSecretObject``1(System.String)">GetSecretObject&lt;T&gt;(String)</h4>
@@ -542,7 +518,7 @@ or null if it doesn't exist. This works by taking the value associated with <cod
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Config.cs/#L149">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/00acc7999a27043871e8167ea3cc82ea01e2bd53/sdk/dotnet/Pulumi/Config.cs/#L149">View Source</a>
   </span>
   <a id="Pulumi_Config_Require_" data-uid="Pulumi.Config.Require*"></a>
   <h4 id="Pulumi_Config_Require_System_String_" data-uid="Pulumi.Config.Require(System.String)">Require(String)</h4>
@@ -586,7 +562,7 @@ or null if it doesn't exist. This works by taking the value associated with <cod
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Config.cs/#L163">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/00acc7999a27043871e8167ea3cc82ea01e2bd53/sdk/dotnet/Pulumi/Config.cs/#L163">View Source</a>
   </span>
   <a id="Pulumi_Config_RequireBoolean_" data-uid="Pulumi.Config.RequireBoolean*"></a>
   <h4 id="Pulumi_Config_RequireBoolean_System_String_" data-uid="Pulumi.Config.RequireBoolean(System.String)">RequireBoolean(String)</h4>
@@ -631,7 +607,7 @@ configuration value is not a legal boolean, an error is thrown.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Config.cs/#L177">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/00acc7999a27043871e8167ea3cc82ea01e2bd53/sdk/dotnet/Pulumi/Config.cs/#L177">View Source</a>
   </span>
   <a id="Pulumi_Config_RequireInt32_" data-uid="Pulumi.Config.RequireInt32*"></a>
   <h4 id="Pulumi_Config_RequireInt32_System_String_" data-uid="Pulumi.Config.RequireInt32(System.String)">RequireInt32(String)</h4>
@@ -676,7 +652,7 @@ configuration value is not a legal number, an error is thrown.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Config.cs/#L193">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/00acc7999a27043871e8167ea3cc82ea01e2bd53/sdk/dotnet/Pulumi/Config.cs/#L193">View Source</a>
   </span>
   <a id="Pulumi_Config_RequireObject_" data-uid="Pulumi.Config.RequireObject*"></a>
   <h4 id="Pulumi_Config_RequireObject__1_System_String_" data-uid="Pulumi.Config.RequireObject``1(System.String)">RequireObject&lt;T&gt;(String)</h4>
@@ -737,7 +713,7 @@ thrown.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Config.cs/#L156">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/00acc7999a27043871e8167ea3cc82ea01e2bd53/sdk/dotnet/Pulumi/Config.cs/#L156">View Source</a>
   </span>
   <a id="Pulumi_Config_RequireSecret_" data-uid="Pulumi.Config.RequireSecret*"></a>
   <h4 id="Pulumi_Config_RequireSecret_System_String_" data-uid="Pulumi.Config.RequireSecret(System.String)">RequireSecret(String)</h4>
@@ -782,7 +758,7 @@ is thrown.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Config.cs/#L170">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/00acc7999a27043871e8167ea3cc82ea01e2bd53/sdk/dotnet/Pulumi/Config.cs/#L170">View Source</a>
   </span>
   <a id="Pulumi_Config_RequireSecretBoolean_" data-uid="Pulumi.Config.RequireSecretBoolean*"></a>
   <h4 id="Pulumi_Config_RequireSecretBoolean_System_String_" data-uid="Pulumi.Config.RequireSecretBoolean(System.String)">RequireSecretBoolean(String)</h4>
@@ -827,7 +803,7 @@ If it doesn't exist, or the configuration value is not a legal boolean, an error
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Config.cs/#L184">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/00acc7999a27043871e8167ea3cc82ea01e2bd53/sdk/dotnet/Pulumi/Config.cs/#L184">View Source</a>
   </span>
   <a id="Pulumi_Config_RequireSecretInt32_" data-uid="Pulumi.Config.RequireSecretInt32*"></a>
   <h4 id="Pulumi_Config_RequireSecretInt32_System_String_" data-uid="Pulumi.Config.RequireSecretInt32(System.String)">RequireSecretInt32(String)</h4>
@@ -872,7 +848,7 @@ If it doesn't exist, or the configuration value is not a legal number, an error 
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Config.cs/#L208">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/00acc7999a27043871e8167ea3cc82ea01e2bd53/sdk/dotnet/Pulumi/Config.cs/#L208">View Source</a>
   </span>
   <a id="Pulumi_Config_RequireSecretObject_" data-uid="Pulumi.Config.RequireSecretObject*"></a>
   <h4 id="Pulumi_Config_RequireSecretObject__1_System_String_" data-uid="Pulumi.Config.RequireSecretObject``1(System.String)">RequireSecretObject&lt;T&gt;(String)</h4>
@@ -939,7 +915,7 @@ be converted using <see cref="!:JsonSerializer.Deserialize&lt;TValue>(string,   
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Config_Exceptions.cs/#L7" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi/blob/00acc7999a27043871e8167ea3cc82ea01e2bd53/sdk/dotnet/Pulumi/Config_Exceptions.cs/#L7" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

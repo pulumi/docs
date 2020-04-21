@@ -72,53 +72,12 @@
   <h1 id="Pulumi_Azure_ServiceBus_Subscription" data-uid="Pulumi.Azure.ServiceBus.Subscription" class="text-break">Class Subscription
   </h1>
   <div class="markdown level0 summary"><p>Manages a ServiceBus Subscription.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/servicebus_subscription.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/servicebus_subscription.html.markdown</a>.</p>
-</blockquote>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
-    <div class="level3"><span class="xref">Subscription</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">Subscription</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Azure.ServiceBus.html">Pulumi.Azure.ServiceBus</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Azure.dll</h6>
@@ -129,16 +88,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Servicebus/Subscription.cs/#L119">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/ServiceBus/Subscription.cs/#L103">View Source</a>
   </span>
   <a id="Pulumi_Azure_ServiceBus_Subscription__ctor_" data-uid="Pulumi.Azure.ServiceBus.Subscription.#ctor*"></a>
-  <h4 id="Pulumi_Azure_ServiceBus_Subscription__ctor_System_String_Pulumi_Azure_ServiceBus_SubscriptionArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Azure.ServiceBus.Subscription.#ctor(System.String,Pulumi.Azure.ServiceBus.SubscriptionArgs,Pulumi.CustomResourceOptions)">Subscription(String, SubscriptionArgs, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Azure_ServiceBus_Subscription__ctor_System_String_Pulumi_Azure_ServiceBus_SubscriptionArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Azure.ServiceBus.Subscription.#ctor(System.String,Pulumi.Azure.ServiceBus.SubscriptionArgs,System.Nullable{CustomResourceOptions})">Subscription(String, SubscriptionArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Create a Subscription resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Subscription(string name, SubscriptionArgs args, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Subscription(string name, SubscriptionArgs args, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -163,7 +122,7 @@
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -173,13 +132,11 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Servicebus/Subscription.cs/#L24">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/ServiceBus/Subscription.cs/#L20">View Source</a>
   </span>
   <a id="Pulumi_Azure_ServiceBus_Subscription_AutoDeleteOnIdle_" data-uid="Pulumi.Azure.ServiceBus.Subscription.AutoDeleteOnIdle*"></a>
   <h4 id="Pulumi_Azure_ServiceBus_Subscription_AutoDeleteOnIdle" data-uid="Pulumi.Azure.ServiceBus.Subscription.AutoDeleteOnIdle">AutoDeleteOnIdle</h4>
-  <div class="markdown level1 summary"><p>The idle interval after which the
-Subscription is automatically deleted, minimum of 5 minutes. Provided in the
-TimeSpan format.</p>
+  <div class="markdown level1 summary"><p>The idle interval after which the topic is automatically deleted as an <a href="https://en.wikipedia.org/wiki/ISO_8601#Durations">ISO 8601 duration</a>. The minimum duration is <code>5</code> minutes or <code>P5M</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -196,19 +153,17 @@ TimeSpan format.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Servicebus/Subscription.cs/#L32">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/ServiceBus/Subscription.cs/#L26">View Source</a>
   </span>
   <a id="Pulumi_Azure_ServiceBus_Subscription_DeadLetteringOnMessageExpiration_" data-uid="Pulumi.Azure.ServiceBus.Subscription.DeadLetteringOnMessageExpiration*"></a>
   <h4 id="Pulumi_Azure_ServiceBus_Subscription_DeadLetteringOnMessageExpiration" data-uid="Pulumi.Azure.ServiceBus.Subscription.DeadLetteringOnMessageExpiration">DeadLetteringOnMessageExpiration</h4>
-  <div class="markdown level1 summary"><p>Boolean flag which controls
-whether the Subscription has dead letter support when a message expires. Defaults
-to false.</p>
+  <div class="markdown level1 summary"><p>Boolean flag which controls whether the Subscription has dead letter support when a message expires. Defaults to <code>false</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -225,19 +180,17 @@ to false.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Servicebus/Subscription.cs/#L40">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/ServiceBus/Subscription.cs/#L32">View Source</a>
   </span>
   <a id="Pulumi_Azure_ServiceBus_Subscription_DefaultMessageTtl_" data-uid="Pulumi.Azure.ServiceBus.Subscription.DefaultMessageTtl*"></a>
   <h4 id="Pulumi_Azure_ServiceBus_Subscription_DefaultMessageTtl" data-uid="Pulumi.Azure.ServiceBus.Subscription.DefaultMessageTtl">DefaultMessageTtl</h4>
-  <div class="markdown level1 summary"><p>The TTL of messages sent to this Subscription
-if no TTL value is set on the message itself. Provided in the TimeSpan
-format.</p>
+  <div class="markdown level1 summary"><p>The Default message timespan to live as an <a href="https://en.wikipedia.org/wiki/ISO_8601#Durations">ISO 8601 duration</a>. This is the duration after which the message expires, starting from when the message is sent to Service Bus. This is the default value used when TimeToLive is not set on a message itself.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -254,18 +207,17 @@ format.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Servicebus/Subscription.cs/#L47">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/ServiceBus/Subscription.cs/#L38">View Source</a>
   </span>
   <a id="Pulumi_Azure_ServiceBus_Subscription_EnableBatchedOperations_" data-uid="Pulumi.Azure.ServiceBus.Subscription.EnableBatchedOperations*"></a>
   <h4 id="Pulumi_Azure_ServiceBus_Subscription_EnableBatchedOperations" data-uid="Pulumi.Azure.ServiceBus.Subscription.EnableBatchedOperations">EnableBatchedOperations</h4>
-  <div class="markdown level1 summary"><p>Boolean flag which controls whether the
-Subscription supports batched operations. Defaults to false.</p>
+  <div class="markdown level1 summary"><p>Boolean flag which controls whether the Subscription supports batched operations. Defaults to <code>false</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -282,13 +234,13 @@ Subscription supports batched operations. Defaults to false.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Servicebus/Subscription.cs/#L53">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/ServiceBus/Subscription.cs/#L44">View Source</a>
   </span>
   <a id="Pulumi_Azure_ServiceBus_Subscription_ForwardDeadLetteredMessagesTo_" data-uid="Pulumi.Azure.ServiceBus.Subscription.ForwardDeadLetteredMessagesTo*"></a>
   <h4 id="Pulumi_Azure_ServiceBus_Subscription_ForwardDeadLetteredMessagesTo" data-uid="Pulumi.Azure.ServiceBus.Subscription.ForwardDeadLetteredMessagesTo">ForwardDeadLetteredMessagesTo</h4>
@@ -297,7 +249,7 @@ Subscription supports batched operations. Defaults to false.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ForwardDeadLetteredMessagesTo { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; ForwardDeadLetteredMessagesTo { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -309,13 +261,13 @@ Subscription supports batched operations. Defaults to false.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Servicebus/Subscription.cs/#L59">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/ServiceBus/Subscription.cs/#L50">View Source</a>
   </span>
   <a id="Pulumi_Azure_ServiceBus_Subscription_ForwardTo_" data-uid="Pulumi.Azure.ServiceBus.Subscription.ForwardTo*"></a>
   <h4 id="Pulumi_Azure_ServiceBus_Subscription_ForwardTo" data-uid="Pulumi.Azure.ServiceBus.Subscription.ForwardTo">ForwardTo</h4>
@@ -324,7 +276,7 @@ Subscription supports batched operations. Defaults to false.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ForwardTo { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; ForwardTo { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -336,18 +288,17 @@ Subscription supports batched operations. Defaults to false.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Servicebus/Subscription.cs/#L66">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/ServiceBus/Subscription.cs/#L56">View Source</a>
   </span>
   <a id="Pulumi_Azure_ServiceBus_Subscription_LockDuration_" data-uid="Pulumi.Azure.ServiceBus.Subscription.LockDuration*"></a>
   <h4 id="Pulumi_Azure_ServiceBus_Subscription_LockDuration" data-uid="Pulumi.Azure.ServiceBus.Subscription.LockDuration">LockDuration</h4>
-  <div class="markdown level1 summary"><p>The lock duration for the subscription, maximum
-supported value is 5 minutes. Defaults to 1 minute.</p>
+  <div class="markdown level1 summary"><p>The lock duration for the subscription as an <a href="https://en.wikipedia.org/wiki/ISO_8601#Durations">ISO 8601 duration</a>. The default value is <code>1</code> minute or <code>P1M</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -364,13 +315,13 @@ supported value is 5 minutes. Defaults to 1 minute.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Servicebus/Subscription.cs/#L72">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/ServiceBus/Subscription.cs/#L62">View Source</a>
   </span>
   <a id="Pulumi_Azure_ServiceBus_Subscription_MaxDeliveryCount_" data-uid="Pulumi.Azure.ServiceBus.Subscription.MaxDeliveryCount*"></a>
   <h4 id="Pulumi_Azure_ServiceBus_Subscription_MaxDeliveryCount" data-uid="Pulumi.Azure.ServiceBus.Subscription.MaxDeliveryCount">MaxDeliveryCount</h4>
@@ -391,18 +342,17 @@ supported value is 5 minutes. Defaults to 1 minute.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Servicebus/Subscription.cs/#L79">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/ServiceBus/Subscription.cs/#L68">View Source</a>
   </span>
   <a id="Pulumi_Azure_ServiceBus_Subscription_Name_" data-uid="Pulumi.Azure.ServiceBus.Subscription.Name*"></a>
   <h4 id="Pulumi_Azure_ServiceBus_Subscription_Name" data-uid="Pulumi.Azure.ServiceBus.Subscription.Name">Name</h4>
-  <div class="markdown level1 summary"><p>Specifies the name of the ServiceBus Subscription resource.
-Changing this forces a new resource to be created.</p>
+  <div class="markdown level1 summary"><p>Specifies the name of the ServiceBus Subscription resource. Changing this forces a new resource to be created.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -419,18 +369,17 @@ Changing this forces a new resource to be created.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Servicebus/Subscription.cs/#L86">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/ServiceBus/Subscription.cs/#L74">View Source</a>
   </span>
   <a id="Pulumi_Azure_ServiceBus_Subscription_NamespaceName_" data-uid="Pulumi.Azure.ServiceBus.Subscription.NamespaceName*"></a>
   <h4 id="Pulumi_Azure_ServiceBus_Subscription_NamespaceName" data-uid="Pulumi.Azure.ServiceBus.Subscription.NamespaceName">NamespaceName</h4>
-  <div class="markdown level1 summary"><p>The name of the ServiceBus Namespace to create
-this Subscription in. Changing this forces a new resource to be created.</p>
+  <div class="markdown level1 summary"><p>The name of the ServiceBus Namespace to create this Subscription in. Changing this forces a new resource to be created.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -447,19 +396,17 @@ this Subscription in. Changing this forces a new resource to be created.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Servicebus/Subscription.cs/#L94">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/ServiceBus/Subscription.cs/#L80">View Source</a>
   </span>
   <a id="Pulumi_Azure_ServiceBus_Subscription_RequiresSession_" data-uid="Pulumi.Azure.ServiceBus.Subscription.RequiresSession*"></a>
   <h4 id="Pulumi_Azure_ServiceBus_Subscription_RequiresSession" data-uid="Pulumi.Azure.ServiceBus.Subscription.RequiresSession">RequiresSession</h4>
-  <div class="markdown level1 summary"><p>Boolean flag which controls whether this Subscription
-supports the concept of a session. Defaults to false. Changing this forces a
-new resource to be created.</p>
+  <div class="markdown level1 summary"><p>Boolean flag which controls whether this Subscription supports the concept of a session. Defaults to <code>false</code>. Changing this forces a new resource to be created.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -476,18 +423,17 @@ new resource to be created.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Servicebus/Subscription.cs/#L101">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/ServiceBus/Subscription.cs/#L86">View Source</a>
   </span>
   <a id="Pulumi_Azure_ServiceBus_Subscription_ResourceGroupName_" data-uid="Pulumi.Azure.ServiceBus.Subscription.ResourceGroupName*"></a>
   <h4 id="Pulumi_Azure_ServiceBus_Subscription_ResourceGroupName" data-uid="Pulumi.Azure.ServiceBus.Subscription.ResourceGroupName">ResourceGroupName</h4>
-  <div class="markdown level1 summary"><p>The name of the resource group in which to
-create the namespace. Changing this forces a new resource to be created.</p>
+  <div class="markdown level1 summary"><p>The name of the resource group in which to create the namespace. Changing this forces a new resource to be created.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -504,18 +450,17 @@ create the namespace. Changing this forces a new resource to be created.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Servicebus/Subscription.cs/#L108">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/ServiceBus/Subscription.cs/#L92">View Source</a>
   </span>
   <a id="Pulumi_Azure_ServiceBus_Subscription_TopicName_" data-uid="Pulumi.Azure.ServiceBus.Subscription.TopicName*"></a>
   <h4 id="Pulumi_Azure_ServiceBus_Subscription_TopicName" data-uid="Pulumi.Azure.ServiceBus.Subscription.TopicName">TopicName</h4>
-  <div class="markdown level1 summary"><p>The name of the ServiceBus Topic to create
-this Subscription in. Changing this forces a new resource to be created.</p>
+  <div class="markdown level1 summary"><p>The name of the ServiceBus Topic to create this Subscription in. Changing this forces a new resource to be created.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -532,7 +477,7 @@ this Subscription in. Changing this forces a new resource to be created.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -540,17 +485,17 @@ this Subscription in. Changing this forces a new resource to be created.</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Servicebus/Subscription.cs/#L149">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/ServiceBus/Subscription.cs/#L133">View Source</a>
   </span>
   <a id="Pulumi_Azure_ServiceBus_Subscription_Get_" data-uid="Pulumi.Azure.ServiceBus.Subscription.Get*"></a>
-  <h4 id="Pulumi_Azure_ServiceBus_Subscription_Get_System_String_Pulumi_Input_System_String__Pulumi_Azure_ServiceBus_SubscriptionState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Azure.ServiceBus.Subscription.Get(System.String,Pulumi.Input{System.String},Pulumi.Azure.ServiceBus.SubscriptionState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, SubscriptionState, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Azure_ServiceBus_Subscription_Get_System_String_Input_System_String__Pulumi_Azure_ServiceBus_SubscriptionState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Azure.ServiceBus.Subscription.Get(System.String,Input{System.String},Pulumi.Azure.ServiceBus.SubscriptionState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, SubscriptionState, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Get an existing Subscription resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Subscription Get(string name, Input&lt;string&gt; id, SubscriptionState state = null, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Subscription Get(string name, Input&lt;string&gt; id, SubscriptionState state = null, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -569,7 +514,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -581,7 +526,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -610,7 +555,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Servicebus/Subscription.cs/#L17" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/ServiceBus/Subscription.cs/#L15" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

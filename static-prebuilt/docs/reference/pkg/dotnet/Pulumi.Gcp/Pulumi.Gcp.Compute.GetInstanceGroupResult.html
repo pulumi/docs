@@ -78,40 +78,16 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">GetInstanceGroupResult</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.Compute.html">Pulumi.Gcp.Compute</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
   <h5 id="Pulumi_Gcp_Compute_GetInstanceGroupResult_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class GetInstanceGroupResult</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class GetInstanceGroupResult : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/GetInstanceGroup.cs/#L64">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/GetInstanceGroup.cs/#L64">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_GetInstanceGroupResult_Description" data-uid="Pulumi.Gcp.Compute.GetInstanceGroupResult.Description">Description</h4>
   <div class="markdown level1 summary"><p>Textual description of the instance group.</p>
@@ -137,7 +113,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/GetInstanceGroup.cs/#L91">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/GetInstanceGroup.cs/#L68">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_GetInstanceGroupResult_Id" data-uid="Pulumi.Gcp.Compute.GetInstanceGroupResult.Id">Id</h4>
   <div class="markdown level1 summary"><p>id is the provider-assigned unique ID for this managed resource.</p>
@@ -163,7 +139,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/GetInstanceGroup.cs/#L68">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/GetInstanceGroup.cs/#L72">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_GetInstanceGroupResult_Instances" data-uid="Pulumi.Gcp.Compute.GetInstanceGroupResult.Instances">Instances</h4>
   <div class="markdown level1 summary"><p>List of instances in the group.</p>
@@ -183,20 +159,20 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/GetInstanceGroup.cs/#L69">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/GetInstanceGroup.cs/#L73">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_GetInstanceGroupResult_Name" data-uid="Pulumi.Gcp.Compute.GetInstanceGroupResult.Name">Name</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string Name</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? Name</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -208,13 +184,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/GetInstanceGroup.cs/#L73">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/GetInstanceGroup.cs/#L77">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_GetInstanceGroupResult_NamedPorts" data-uid="Pulumi.Gcp.Compute.GetInstanceGroupResult.NamedPorts">NamedPorts</h4>
   <div class="markdown level1 summary"><p>List of named ports in the group.</p>
@@ -222,7 +198,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetInstanceGroupNamedPortsResult&gt; NamedPorts</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetInstanceGroupNamedPortResult&gt; NamedPorts</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -234,13 +210,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Outputs.GetInstanceGroupNamedPortsResult.html">GetInstanceGroupNamedPortsResult</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Outputs.GetInstanceGroupNamedPortResult.html">GetInstanceGroupNamedPortResult</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/GetInstanceGroup.cs/#L77">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/GetInstanceGroup.cs/#L81">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_GetInstanceGroupResult_Network" data-uid="Pulumi.Gcp.Compute.GetInstanceGroupResult.Network">Network</h4>
   <div class="markdown level1 summary"><p>The URL of the network the instance group is in.</p>
@@ -266,7 +242,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/GetInstanceGroup.cs/#L78">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/GetInstanceGroup.cs/#L82">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_GetInstanceGroupResult_Project" data-uid="Pulumi.Gcp.Compute.GetInstanceGroupResult.Project">Project</h4>
   <div class="markdown level1 summary"></div>
@@ -291,7 +267,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/GetInstanceGroup.cs/#L82">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/GetInstanceGroup.cs/#L86">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_GetInstanceGroupResult_SelfLink" data-uid="Pulumi.Gcp.Compute.GetInstanceGroupResult.SelfLink">SelfLink</h4>
   <div class="markdown level1 summary"><p>The URI of the resource.</p>
@@ -317,7 +293,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/GetInstanceGroup.cs/#L86">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/GetInstanceGroup.cs/#L90">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_GetInstanceGroupResult_Size" data-uid="Pulumi.Gcp.Compute.GetInstanceGroupResult.Size">Size</h4>
   <div class="markdown level1 summary"><p>The number of instances in the group.</p>
@@ -343,7 +319,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/GetInstanceGroup.cs/#L87">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/GetInstanceGroup.cs/#L91">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_GetInstanceGroupResult_Zone" data-uid="Pulumi.Gcp.Compute.GetInstanceGroupResult.Zone">Zone</h4>
   <div class="markdown level1 summary"></div>
@@ -374,7 +350,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/GetInstanceGroup.cs/#L58" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/GetInstanceGroup.cs/#L58" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

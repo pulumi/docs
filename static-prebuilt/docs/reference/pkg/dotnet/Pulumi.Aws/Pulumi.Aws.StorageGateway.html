@@ -81,9 +81,6 @@
 <blockquote>
 <p><strong>NOTE:</strong> The Storage Gateway API provides no method to remove a cache disk. Destroying this resource does not perform any Storage Gateway actions.</p>
 </blockquote>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/storagegateway_cache.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/storagegateway_cache.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.StorageGateway.CacheArgs.html">CacheArgs</a></h4>
       <section></section>
@@ -94,13 +91,6 @@
 </blockquote>
 <blockquote>
 <p><strong>NOTE:</strong> The gateway must have an upload buffer added (e.g. via the <a href="https://www.terraform.io/docs/providers/aws/r/storagegateway_upload_buffer.html"><code>aws.storagegateway.UploadBuffer</code></a> resource) before the volume is operational to clients, however the Storage Gateway API will allow volume creation without error in that case and return volume status as <code>UPLOAD BUFFER NOT CONFIGURED</code>.</p>
-</blockquote>
-<h2 id="example-usage">Example Usage</h2>
-<blockquote>
-<p><strong>NOTE:</strong> These examples are referencing the <a href="https://www.terraform.io/docs/providers/aws/r/storagegateway_cache.html"><code>aws.storagegateway.Cache</code></a> resource <code>gateway_arn</code> attribute to ensure this provider properly adds cache before creating the volume. If you are not using this method, you may need to declare an expicit dependency (e.g. via <code>depends_on = [&amp;quot;aws_storagegateway_cache.example&amp;quot;]</code>) to ensure proper ordering.</p>
-</blockquote>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/storagegateway_cached_iscsi_volume.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/storagegateway_cached_iscsi_volume.html.markdown</a>.</p>
 </blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.StorageGateway.CachesIscsiVolumeArgs.html">CachesIscsiVolumeArgs</a></h4>
@@ -114,25 +104,19 @@
 <blockquote>
 <p>NOTE: The Storage Gateway API requires the gateway to be connected to properly return information after activation. If you are receiving <code>The specified gateway is not connected</code> errors during resource creation (gateway activation), ensure your gateway instance meets the <a href="https://docs.aws.amazon.com/storagegateway/latest/userguide/Requirements.html">Storage Gateway requirements</a>.</p>
 </blockquote>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/storagegateway_gateway.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/storagegateway_gateway.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.StorageGateway.GatewayArgs.html">GatewayArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.StorageGateway.GatewayState.html">GatewayState</a></h4>
       <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.StorageGateway.GetLocalDisk.html">GetLocalDisk</a></h4>
+      <section></section>
       <h4><a class="xref" href="Pulumi.Aws.StorageGateway.GetLocalDiskArgs.html">GetLocalDiskArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.StorageGateway.GetLocalDiskResult.html">GetLocalDiskResult</a></h4>
       <section></section>
-      <h4><a class="xref" href="Pulumi.Aws.StorageGateway.Invokes.html">Invokes</a></h4>
-      <section></section>
       <h4><a class="xref" href="Pulumi.Aws.StorageGateway.NfsFileShare.html">NfsFileShare</a></h4>
       <section><p>Manages an AWS Storage Gateway NFS File Share.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/storagegateway_nfs_file_share.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/storagegateway_nfs_file_share.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.StorageGateway.NfsFileShareArgs.html">NfsFileShareArgs</a></h4>
       <section></section>
@@ -140,9 +124,6 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.StorageGateway.SmbFileShare.html">SmbFileShare</a></h4>
       <section><p>Manages an AWS Storage Gateway SMB File Share.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/storagegateway_smb_file_share.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/storagegateway_smb_file_share.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.StorageGateway.SmbFileShareArgs.html">SmbFileShareArgs</a></h4>
       <section></section>
@@ -153,9 +134,6 @@
 <blockquote>
 <p><strong>NOTE:</strong> The Storage Gateway API provides no method to remove an upload buffer disk. Destroying this resource does not perform any Storage Gateway actions.</p>
 </blockquote>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/storagegateway_upload_buffer.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/storagegateway_upload_buffer.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.StorageGateway.UploadBufferArgs.html">UploadBufferArgs</a></h4>
       <section></section>
@@ -165,9 +143,6 @@
       <section><p>Manages an AWS Storage Gateway working storage.</p>
 <blockquote>
 <p><strong>NOTE:</strong> The Storage Gateway API provides no method to remove a working storage disk. Destroying this resource does not perform any Storage Gateway actions.</p>
-</blockquote>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/storagegateway_working_storage.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/storagegateway_working_storage.html.markdown</a>.</p>
 </blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.StorageGateway.WorkingStorageArgs.html">WorkingStorageArgs</a></h4>

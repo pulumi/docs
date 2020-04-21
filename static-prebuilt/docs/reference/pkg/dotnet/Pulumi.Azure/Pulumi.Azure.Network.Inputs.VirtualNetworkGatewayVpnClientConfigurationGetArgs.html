@@ -76,36 +76,7 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
-    <div class="level3"><span class="xref">VirtualNetworkGatewayVpnClientConfigurationGetArgs</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">VirtualNetworkGatewayVpnClientConfigurationGetArgs</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Azure.Network.Inputs.html">Pulumi.Azure.Network.Inputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Azure.dll</h6>
@@ -116,7 +87,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/VirtualNetworkGateway.cs/#L584">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/Inputs/VirtualNetworkGatewayVpnClientConfigurationGetArgs.cs/#L85">View Source</a>
   </span>
   <a id="Pulumi_Azure_Network_Inputs_VirtualNetworkGatewayVpnClientConfigurationGetArgs__ctor_" data-uid="Pulumi.Azure.Network.Inputs.VirtualNetworkGatewayVpnClientConfigurationGetArgs.#ctor*"></a>
   <h4 id="Pulumi_Azure_Network_Inputs_VirtualNetworkGatewayVpnClientConfigurationGetArgs__ctor" data-uid="Pulumi.Azure.Network.Inputs.VirtualNetworkGatewayVpnClientConfigurationGetArgs.#ctor">VirtualNetworkGatewayVpnClientConfigurationGetArgs()</h4>
@@ -129,11 +100,14 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/VirtualNetworkGateway.cs/#L548">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/Inputs/VirtualNetworkGatewayVpnClientConfigurationGetArgs.cs/#L23">View Source</a>
   </span>
   <a id="Pulumi_Azure_Network_Inputs_VirtualNetworkGatewayVpnClientConfigurationGetArgs_AddressSpaces_" data-uid="Pulumi.Azure.Network.Inputs.VirtualNetworkGatewayVpnClientConfigurationGetArgs.AddressSpaces*"></a>
   <h4 id="Pulumi_Azure_Network_Inputs_VirtualNetworkGatewayVpnClientConfigurationGetArgs_AddressSpaces" data-uid="Pulumi.Azure.Network.Inputs.VirtualNetworkGatewayVpnClientConfigurationGetArgs.AddressSpaces">AddressSpaces</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The address space out of which ip addresses for
+vpn clients will be taken. You can provide more than one address space, e.g.
+in CIDR notation.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -149,21 +123,23 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/VirtualNetworkGateway.cs/#L554">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/Inputs/VirtualNetworkGatewayVpnClientConfigurationGetArgs.cs/#L33">View Source</a>
   </span>
   <a id="Pulumi_Azure_Network_Inputs_VirtualNetworkGatewayVpnClientConfigurationGetArgs_RadiusServerAddress_" data-uid="Pulumi.Azure.Network.Inputs.VirtualNetworkGatewayVpnClientConfigurationGetArgs.RadiusServerAddress*"></a>
   <h4 id="Pulumi_Azure_Network_Inputs_VirtualNetworkGatewayVpnClientConfigurationGetArgs_RadiusServerAddress" data-uid="Pulumi.Azure.Network.Inputs.VirtualNetworkGatewayVpnClientConfigurationGetArgs.RadiusServerAddress">RadiusServerAddress</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The address of the Radius server.
+This setting is incompatible with the use of <code>root_certificate</code> and <code>revoked_certificate</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; RadiusServerAddress { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? RadiusServerAddress { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -175,21 +151,23 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/VirtualNetworkGateway.cs/#L557">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/Inputs/VirtualNetworkGatewayVpnClientConfigurationGetArgs.cs/#L40">View Source</a>
   </span>
   <a id="Pulumi_Azure_Network_Inputs_VirtualNetworkGatewayVpnClientConfigurationGetArgs_RadiusServerSecret_" data-uid="Pulumi.Azure.Network.Inputs.VirtualNetworkGatewayVpnClientConfigurationGetArgs.RadiusServerSecret*"></a>
   <h4 id="Pulumi_Azure_Network_Inputs_VirtualNetworkGatewayVpnClientConfigurationGetArgs_RadiusServerSecret" data-uid="Pulumi.Azure.Network.Inputs.VirtualNetworkGatewayVpnClientConfigurationGetArgs.RadiusServerSecret">RadiusServerSecret</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The secret used by the Radius server.
+This setting is incompatible with the use of <code>root_certificate</code> and <code>revoked_certificate</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; RadiusServerSecret { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? RadiusServerSecret { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -201,21 +179,24 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/VirtualNetworkGateway.cs/#L562">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/Inputs/VirtualNetworkGatewayVpnClientConfigurationGetArgs.cs/#L51">View Source</a>
   </span>
   <a id="Pulumi_Azure_Network_Inputs_VirtualNetworkGatewayVpnClientConfigurationGetArgs_RevokedCertificates_" data-uid="Pulumi.Azure.Network.Inputs.VirtualNetworkGatewayVpnClientConfigurationGetArgs.RevokedCertificates*"></a>
   <h4 id="Pulumi_Azure_Network_Inputs_VirtualNetworkGatewayVpnClientConfigurationGetArgs_RevokedCertificates" data-uid="Pulumi.Azure.Network.Inputs.VirtualNetworkGatewayVpnClientConfigurationGetArgs.RevokedCertificates">RevokedCertificates</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>One or more <code>revoked_certificate</code> blocks which
+are defined below.
+This setting is incompatible with the use of <code>radius_server_address</code> and <code>radius_server_secret</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public InputList&lt;VirtualNetworkGatewayVpnClientConfigurationRevokedCertificatesGetArgs&gt; RevokedCertificates { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public InputList&lt;VirtualNetworkGatewayVpnClientConfigurationRevokedCertificateGetArgs&gt; RevokedCertificates { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -227,21 +208,25 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<a class="xref" href="Pulumi.Azure.Network.Inputs.VirtualNetworkGatewayVpnClientConfigurationRevokedCertificatesGetArgs.html">VirtualNetworkGatewayVpnClientConfigurationRevokedCertificatesGetArgs</a>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<a class="xref" href="Pulumi.Azure.Network.Inputs.VirtualNetworkGatewayVpnClientConfigurationRevokedCertificateGetArgs.html">VirtualNetworkGatewayVpnClientConfigurationRevokedCertificateGetArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/VirtualNetworkGateway.cs/#L570">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/Inputs/VirtualNetworkGatewayVpnClientConfigurationGetArgs.cs/#L66">View Source</a>
   </span>
   <a id="Pulumi_Azure_Network_Inputs_VirtualNetworkGatewayVpnClientConfigurationGetArgs_RootCertificates_" data-uid="Pulumi.Azure.Network.Inputs.VirtualNetworkGatewayVpnClientConfigurationGetArgs.RootCertificates*"></a>
   <h4 id="Pulumi_Azure_Network_Inputs_VirtualNetworkGatewayVpnClientConfigurationGetArgs_RootCertificates" data-uid="Pulumi.Azure.Network.Inputs.VirtualNetworkGatewayVpnClientConfigurationGetArgs.RootCertificates">RootCertificates</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>One or more <code>root_certificate</code> blocks which are
+defined below. These root certificates are used to sign the client certificate
+used by the VPN clients to connect to the gateway.
+This setting is incompatible with the use of <code>radius_server_address</code> and <code>radius_server_secret</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public InputList&lt;VirtualNetworkGatewayVpnClientConfigurationRootCertificatesGetArgs&gt; RootCertificates { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public InputList&lt;VirtualNetworkGatewayVpnClientConfigurationRootCertificateGetArgs&gt; RootCertificates { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -253,17 +238,19 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<a class="xref" href="Pulumi.Azure.Network.Inputs.VirtualNetworkGatewayVpnClientConfigurationRootCertificatesGetArgs.html">VirtualNetworkGatewayVpnClientConfigurationRootCertificatesGetArgs</a>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<a class="xref" href="Pulumi.Azure.Network.Inputs.VirtualNetworkGatewayVpnClientConfigurationRootCertificateGetArgs.html">VirtualNetworkGatewayVpnClientConfigurationRootCertificateGetArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/VirtualNetworkGateway.cs/#L578">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/Inputs/VirtualNetworkGatewayVpnClientConfigurationGetArgs.cs/#L79">View Source</a>
   </span>
   <a id="Pulumi_Azure_Network_Inputs_VirtualNetworkGatewayVpnClientConfigurationGetArgs_VpnClientProtocols_" data-uid="Pulumi.Azure.Network.Inputs.VirtualNetworkGatewayVpnClientConfigurationGetArgs.VpnClientProtocols*"></a>
   <h4 id="Pulumi_Azure_Network_Inputs_VirtualNetworkGatewayVpnClientConfigurationGetArgs_VpnClientProtocols" data-uid="Pulumi.Azure.Network.Inputs.VirtualNetworkGatewayVpnClientConfigurationGetArgs.VpnClientProtocols">VpnClientProtocols</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>List of the protocols supported by the vpn client.
+The supported values are <code>SSTP</code>, <code>IkeV2</code> and <code>OpenVPN</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -279,7 +266,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -291,7 +278,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/VirtualNetworkGateway.cs/#L544" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/Inputs/VirtualNetworkGatewayVpnClientConfigurationGetArgs.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

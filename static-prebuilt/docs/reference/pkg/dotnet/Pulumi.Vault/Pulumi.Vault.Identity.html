@@ -77,15 +77,9 @@
     <h3 id="classes">Classes
   </h3>
       <h4><a class="xref" href="Pulumi.Vault.Identity.Entity.html">Entity</a></h4>
-      <section><blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/identity_entity.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/identity_entity.html.markdown</a>.</p>
-</blockquote>
-</section>
+      <section></section>
       <h4><a class="xref" href="Pulumi.Vault.Identity.EntityAlias.html">EntityAlias</a></h4>
-      <section><blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/identity_entity_alias.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/identity_entity_alias.html.markdown</a>.</p>
-</blockquote>
-</section>
+      <section></section>
       <h4><a class="xref" href="Pulumi.Vault.Identity.EntityAliasArgs.html">EntityAliasArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Vault.Identity.EntityAliasState.html">EntityAliasState</a></h4>
@@ -94,9 +88,6 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Vault.Identity.EntityPolicies.html">EntityPolicies</a></h4>
       <section><p>Manages policies for an Identity Entity for Vault. The <a href="https://www.vaultproject.io/docs/secrets/identity/index.html">Identity secrets engine</a> is the identity management solution for Vault.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/identity_entity_policies.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/identity_entity_policies.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Vault.Identity.EntityPoliciesArgs.html">EntityPoliciesArgs</a></h4>
       <section></section>
@@ -104,9 +95,13 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Vault.Identity.EntityState.html">EntityState</a></h4>
       <section></section>
+      <h4><a class="xref" href="Pulumi.Vault.Identity.GetEntity.html">GetEntity</a></h4>
+      <section></section>
       <h4><a class="xref" href="Pulumi.Vault.Identity.GetEntityArgs.html">GetEntityArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Vault.Identity.GetEntityResult.html">GetEntityResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Vault.Identity.GetGroup.html">GetGroup</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Vault.Identity.GetGroupArgs.html">GetGroupArgs</a></h4>
       <section></section>
@@ -115,16 +110,10 @@
       <h4><a class="xref" href="Pulumi.Vault.Identity.Group.html">Group</a></h4>
       <section><p>Creates an Identity Group for Vault. The <a href="https://www.vaultproject.io/docs/secrets/identity/index.html">Identity secrets engine</a> is the identity management solution for Vault.</p>
 <p>A group can contain multiple entities as its members. A group can also have subgroups. Policies set on the group is granted to all members of the group. During request time, when the token's entity ID is being evaluated for the policies that it has access to; along with the policies on the entity itself, policies that are inherited due to group memberships are also granted.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/identity_group.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/identity_group.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Vault.Identity.GroupAlias.html">GroupAlias</a></h4>
       <section><p>Creates an Identity Group Alias for Vault. The <a href="https://www.vaultproject.io/docs/secrets/identity/index.html">Identity secrets engine</a> is the identity management solution for Vault.</p>
 <p>Group aliases allows entity membership in external groups to be managed semi-automatically. External group serves as a mapping to a group that is outside of the identity store. External groups can have one (and only one) alias. This alias should map to a notion of group that is outside of the identity store. For example, groups in LDAP, and teams in GitHub. A username in LDAP, belonging to a group in LDAP, can get its entity ID added as a member of a group in Vault automatically during logins and token renewals. This works only if the group in Vault is an external group and has an alias that maps to the group in LDAP. If the user is removed from the group in LDAP, that change gets reflected in Vault only upon the subsequent login or renewal operation.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/identity_group_alias.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/identity_group_alias.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Vault.Identity.GroupAliasArgs.html">GroupAliasArgs</a></h4>
       <section></section>
@@ -134,17 +123,12 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Vault.Identity.GroupPolicies.html">GroupPolicies</a></h4>
       <section><p>Manages policies for an Identity Group for Vault. The <a href="https://www.vaultproject.io/docs/secrets/identity/index.html">Identity secrets engine</a> is the identity management solution for Vault.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/identity_group_policies.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/identity_group_policies.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Vault.Identity.GroupPoliciesArgs.html">GroupPoliciesArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Vault.Identity.GroupPoliciesState.html">GroupPoliciesState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Vault.Identity.GroupState.html">GroupState</a></h4>
-      <section></section>
-      <h4><a class="xref" href="Pulumi.Vault.Identity.Invokes.html">Invokes</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Vault.Identity.Oidc.html">Oidc</a></h4>
       <section><p>Configure the <a href="https://www.vaultproject.io/docs/secrets/identity/index.html#identity-tokens">Identity Tokens Backend</a>.</p>
@@ -153,22 +137,13 @@ the clients who are recognized by Vault.</p>
 <blockquote>
 <p><strong>NOTE:</strong> Each Vault server may only have one Identity Tokens Backend configuration. Multiple configurations of the resource against the same Vault server will cause a perpetual difference.</p>
 </blockquote>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/identity_oidc.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/identity_oidc.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Vault.Identity.OidcArgs.html">OidcArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Vault.Identity.OidcKey.html">OidcKey</a></h4>
-      <section><blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/identity_oidc_key.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/identity_oidc_key.html.markdown</a>.</p>
-</blockquote>
-</section>
+      <section></section>
       <h4><a class="xref" href="Pulumi.Vault.Identity.OidcKeyAllowedClientID.html">OidcKeyAllowedClientID</a></h4>
-      <section><blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/identity_oidc_key_allowed_client_id.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/identity_oidc_key_allowed_client_id.html.markdown</a>.</p>
-</blockquote>
-</section>
+      <section></section>
       <h4><a class="xref" href="Pulumi.Vault.Identity.OidcKeyAllowedClientIDArgs.html">OidcKeyAllowedClientIDArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Vault.Identity.OidcKeyAllowedClientIDState.html">OidcKeyAllowedClientIDState</a></h4>
@@ -178,10 +153,7 @@ the clients who are recognized by Vault.</p>
       <h4><a class="xref" href="Pulumi.Vault.Identity.OidcKeyState.html">OidcKeyState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Vault.Identity.OidcRole.html">OidcRole</a></h4>
-      <section><blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/identity_oidc_role.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/identity_oidc_role.html.markdown</a>.</p>
-</blockquote>
-</section>
+      <section></section>
       <h4><a class="xref" href="Pulumi.Vault.Identity.OidcRoleArgs.html">OidcRoleArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Vault.Identity.OidcRoleState.html">OidcRoleState</a></h4>

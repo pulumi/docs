@@ -76,32 +76,29 @@
   <div class="markdown level0 remarks"></div>
     <h3 id="classes">Classes
   </h3>
+      <h4><a class="xref" href="Pulumi.Aws.DynamoDB.GetTable.html">GetTable</a></h4>
+      <section></section>
       <h4><a class="xref" href="Pulumi.Aws.DynamoDB.GetTableArgs.html">GetTableArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.DynamoDB.GetTableResult.html">GetTableResult</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.DynamoDB.GlobalTable.html">GlobalTable</a></h4>
-      <section><p>Provides a resource to manage a DynamoDB Global Table. These are layered on top of existing DynamoDB Tables.</p>
+      <section><p>Manages <a href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.V1.html">DynamoDB Global Tables V1 (version 2017.11.29)</a>. These are layered on top of existing DynamoDB Tables.</p>
 <blockquote>
-<p>Note: There are many restrictions before you can properly create DynamoDB Global Tables in multiple regions. See the <a href="http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables_reqs_bestpractices.html">AWS DynamoDB Global Table Requirements</a> for more information.</p>
+<p><strong>NOTE:</strong> To instead manage <a href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.V2.html">DynamoDB Global Tables V2 (version 2019.11.21)</a>, use the <a href="https://www.terraform.io/docs/providers/aws/r/dynamodb_table.html"><code>aws.dynamodb.Table</code> resource</a> <code>replica</code> configuration block.</p>
 </blockquote>
 <blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dynamodb_global_table.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dynamodb_global_table.html.markdown</a>.</p>
+<p>Note: There are many restrictions before you can properly create DynamoDB Global Tables in multiple regions. See the <a href="http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables_reqs_bestpractices.html">AWS DynamoDB Global Table Requirements</a> for more information.</p>
 </blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.DynamoDB.GlobalTableArgs.html">GlobalTableArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.DynamoDB.GlobalTableState.html">GlobalTableState</a></h4>
       <section></section>
-      <h4><a class="xref" href="Pulumi.Aws.DynamoDB.Invokes.html">Invokes</a></h4>
-      <section></section>
       <h4><a class="xref" href="Pulumi.Aws.DynamoDB.Table.html">Table</a></h4>
       <section><p>Provides a DynamoDB table resource</p>
 <blockquote>
-<p><strong>Note:</strong> It is recommended to use <code>lifecycle</code> <a href="https://www.terraform.io/docs/configuration/resources.html#ignore_changes"><code>ignore_changes</code></a> for <code>read_capacity</code> and/or <code>write_capacity</code> if there's <a href="https://www.terraform.io/docs/providers/aws/r/appautoscaling_policy.html">autoscaling policy</a> attached to the table.</p>
-</blockquote>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dynamodb_table.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dynamodb_table.html.markdown</a>.</p>
+<p><strong>Note:</strong> It is recommended to use <a href="https://www.pulumi.com/docs/intro/concepts/programming-model/#ignorechanges"><code>ignoreChanges</code></a> for <code>read_capacity</code> and/or <code>write_capacity</code> if there's <a href="https://www.terraform.io/docs/providers/aws/r/appautoscaling_policy.html">autoscaling policy</a> attached to the table.</p>
 </blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.DynamoDB.TableArgs.html">TableArgs</a></h4>
@@ -111,9 +108,6 @@
 <blockquote>
 <p><strong>Note:</strong> This resource is not meant to be used for managing large amounts of data in your table, it is not designed to scale.
 You should perform <strong>regular backups</strong> of all data in the table, see <a href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/BackupRestore.html">AWS docs for more</a>.</p>
-</blockquote>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dynamodb_table_item.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dynamodb_table_item.html.markdown</a>.</p>
 </blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.DynamoDB.TableItemArgs.html">TableItemArgs</a></h4>

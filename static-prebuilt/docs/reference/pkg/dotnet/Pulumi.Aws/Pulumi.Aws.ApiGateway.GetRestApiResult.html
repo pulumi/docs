@@ -78,40 +78,16 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">GetRestApiResult</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.ApiGateway.html">Pulumi.Aws.ApiGateway</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
   <h5 id="Pulumi_Aws_ApiGateway_GetRestApiResult_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class GetRestApiResult</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class GetRestApiResult : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Apigateway/GetRestApi.cs/#L53">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ApiGateway/GetRestApi.cs/#L60">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_ApiGateway_GetRestApiResult_ApiKeySource" data-uid="Pulumi.Aws.ApiGateway.GetRestApiResult.ApiKeySource">ApiKeySource</h4>
   <div class="markdown level1 summary"><p>The source of the API key for requests.</p>
@@ -137,7 +113,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Apigateway/GetRestApi.cs/#L57">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ApiGateway/GetRestApi.cs/#L64">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_ApiGateway_GetRestApiResult_Arn" data-uid="Pulumi.Aws.ApiGateway.GetRestApiResult.Arn">Arn</h4>
   <div class="markdown level1 summary"><p>The ARN of the REST API.</p>
@@ -163,7 +139,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Apigateway/GetRestApi.cs/#L61">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ApiGateway/GetRestApi.cs/#L68">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_ApiGateway_GetRestApiResult_BinaryMediaTypes" data-uid="Pulumi.Aws.ApiGateway.GetRestApiResult.BinaryMediaTypes">BinaryMediaTypes</h4>
   <div class="markdown level1 summary"><p>The list of binary media types supported by the REST API.</p>
@@ -183,13 +159,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Apigateway/GetRestApi.cs/#L65">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ApiGateway/GetRestApi.cs/#L72">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_ApiGateway_GetRestApiResult_Description" data-uid="Pulumi.Aws.ApiGateway.GetRestApiResult.Description">Description</h4>
   <div class="markdown level1 summary"><p>The description of the REST API.</p>
@@ -215,7 +191,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Apigateway/GetRestApi.cs/#L69">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ApiGateway/GetRestApi.cs/#L76">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_ApiGateway_GetRestApiResult_EndpointConfigurations" data-uid="Pulumi.Aws.ApiGateway.GetRestApiResult.EndpointConfigurations">EndpointConfigurations</h4>
   <div class="markdown level1 summary"><p>The endpoint configuration of this RestApi showing the endpoint types of the API.</p>
@@ -223,7 +199,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetRestApiEndpointConfigurationsResult&gt; EndpointConfigurations</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetRestApiEndpointConfigurationResult&gt; EndpointConfigurations</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -235,13 +211,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.ApiGateway.Outputs.GetRestApiEndpointConfigurationsResult.html">GetRestApiEndpointConfigurationsResult</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.ApiGateway.Outputs.GetRestApiEndpointConfigurationResult.html">GetRestApiEndpointConfigurationResult</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Apigateway/GetRestApi.cs/#L73">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ApiGateway/GetRestApi.cs/#L80">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_ApiGateway_GetRestApiResult_ExecutionArn" data-uid="Pulumi.Aws.ApiGateway.GetRestApiResult.ExecutionArn">ExecutionArn</h4>
   <div class="markdown level1 summary"><p>The execution ARN part to be used in <a href="https://www.terraform.io/docs/providers/aws/r/lambda_permission.html"><code>lambda_permission</code></a>'s <code>source_arn</code> when allowing API Gateway to invoke a Lambda function, e.g. <code>arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j</code>, which can be concatenated with allowed stage, method and resource path.</p>
@@ -267,7 +243,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Apigateway/GetRestApi.cs/#L94">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ApiGateway/GetRestApi.cs/#L84">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_ApiGateway_GetRestApiResult_Id" data-uid="Pulumi.Aws.ApiGateway.GetRestApiResult.Id">Id</h4>
   <div class="markdown level1 summary"><p>id is the provider-assigned unique ID for this managed resource.</p>
@@ -293,7 +269,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Apigateway/GetRestApi.cs/#L77">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ApiGateway/GetRestApi.cs/#L88">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_ApiGateway_GetRestApiResult_MinimumCompressionSize" data-uid="Pulumi.Aws.ApiGateway.GetRestApiResult.MinimumCompressionSize">MinimumCompressionSize</h4>
   <div class="markdown level1 summary"><p>Minimum response size to compress for the REST API.</p>
@@ -319,7 +295,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Apigateway/GetRestApi.cs/#L78">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ApiGateway/GetRestApi.cs/#L89">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_ApiGateway_GetRestApiResult_Name" data-uid="Pulumi.Aws.ApiGateway.GetRestApiResult.Name">Name</h4>
   <div class="markdown level1 summary"></div>
@@ -344,7 +320,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Apigateway/GetRestApi.cs/#L82">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ApiGateway/GetRestApi.cs/#L93">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_ApiGateway_GetRestApiResult_Policy" data-uid="Pulumi.Aws.ApiGateway.GetRestApiResult.Policy">Policy</h4>
   <div class="markdown level1 summary"><p>JSON formatted policy document that controls access to the API Gateway.</p>
@@ -370,7 +346,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Apigateway/GetRestApi.cs/#L86">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ApiGateway/GetRestApi.cs/#L97">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_ApiGateway_GetRestApiResult_RootResourceId" data-uid="Pulumi.Aws.ApiGateway.GetRestApiResult.RootResourceId">RootResourceId</h4>
   <div class="markdown level1 summary"><p>Set to the ID of the API Gateway Resource on the found REST API where the route matches '/'.</p>
@@ -396,7 +372,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Apigateway/GetRestApi.cs/#L90">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ApiGateway/GetRestApi.cs/#L101">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_ApiGateway_GetRestApiResult_Tags" data-uid="Pulumi.Aws.ApiGateway.GetRestApiResult.Tags">Tags</h4>
   <div class="markdown level1 summary"><p>Key-value mapping of resource tags.</p>
@@ -416,7 +392,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;</td>
+        <td><span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -428,7 +404,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Apigateway/GetRestApi.cs/#L47" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ApiGateway/GetRestApi.cs/#L54" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

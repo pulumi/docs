@@ -76,56 +76,12 @@
 <blockquote>
 <p><strong>Note:</strong> The <code>azure.compute.ScaleSet</code> resource has been superseded by the <code>azure.compute.LinuxVirtualMachineScaleSet</code> and <code>azure.compute.WindowsVirtualMachineScaleSet</code> resources. The existing <code>azure.compute.ScaleSet</code> resource will continue to be available throughout the 2.x releases however is in a feature-frozen state to maintain compatibility - new functionality will instead be added to the <code>azure.compute.LinuxVirtualMachineScaleSet</code> and <code>azure.compute.WindowsVirtualMachineScaleSet</code> resources.</p>
 </blockquote>
-<blockquote>
-<p><strong>NOTE:</strong> All arguments including the administrator login and password will be stored in the raw state as plain-text. <a href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
-</blockquote>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/virtual_machine_scale_set.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/virtual_machine_scale_set.html.markdown</a>.</p>
-</blockquote>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
-    <div class="level3"><span class="xref">ScaleSet</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">ScaleSet</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Azure.Compute.html">Pulumi.Azure.Compute</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Azure.dll</h6>
@@ -136,16 +92,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/ScaleSet.cs/#L198">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/ScaleSet.cs/#L194">View Source</a>
   </span>
   <a id="Pulumi_Azure_Compute_ScaleSet__ctor_" data-uid="Pulumi.Azure.Compute.ScaleSet.#ctor*"></a>
-  <h4 id="Pulumi_Azure_Compute_ScaleSet__ctor_System_String_Pulumi_Azure_Compute_ScaleSetArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Azure.Compute.ScaleSet.#ctor(System.String,Pulumi.Azure.Compute.ScaleSetArgs,Pulumi.CustomResourceOptions)">ScaleSet(String, ScaleSetArgs, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Azure_Compute_ScaleSet__ctor_System_String_Pulumi_Azure_Compute_ScaleSetArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Azure.Compute.ScaleSet.#ctor(System.String,Pulumi.Azure.Compute.ScaleSetArgs,System.Nullable{CustomResourceOptions})">ScaleSet(String, ScaleSetArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Create a ScaleSet resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ScaleSet(string name, ScaleSetArgs args, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public ScaleSet(string name, ScaleSetArgs args, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -170,7 +126,7 @@
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -180,7 +136,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/ScaleSet.cs/#L28">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/ScaleSet.cs/#L24">View Source</a>
   </span>
   <a id="Pulumi_Azure_Compute_ScaleSet_AutomaticOsUpgrade_" data-uid="Pulumi.Azure.Compute.ScaleSet.AutomaticOsUpgrade*"></a>
   <h4 id="Pulumi_Azure_Compute_ScaleSet_AutomaticOsUpgrade" data-uid="Pulumi.Azure.Compute.ScaleSet.AutomaticOsUpgrade">AutomaticOsUpgrade</h4>
@@ -201,13 +157,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/ScaleSet.cs/#L34">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/ScaleSet.cs/#L30">View Source</a>
   </span>
   <a id="Pulumi_Azure_Compute_ScaleSet_BootDiagnostics_" data-uid="Pulumi.Azure.Compute.ScaleSet.BootDiagnostics*"></a>
   <h4 id="Pulumi_Azure_Compute_ScaleSet_BootDiagnostics" data-uid="Pulumi.Azure.Compute.ScaleSet.BootDiagnostics">BootDiagnostics</h4>
@@ -228,13 +184,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Azure.Compute.Outputs.ScaleSetBootDiagnostics.html">ScaleSetBootDiagnostics</a>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Azure.Compute.Outputs.ScaleSetBootDiagnostics.html">ScaleSetBootDiagnostics</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/ScaleSet.cs/#L40">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/ScaleSet.cs/#L36">View Source</a>
   </span>
   <a id="Pulumi_Azure_Compute_ScaleSet_EvictionPolicy_" data-uid="Pulumi.Azure.Compute.ScaleSet.EvictionPolicy*"></a>
   <h4 id="Pulumi_Azure_Compute_ScaleSet_EvictionPolicy" data-uid="Pulumi.Azure.Compute.ScaleSet.EvictionPolicy">EvictionPolicy</h4>
@@ -243,7 +199,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; EvictionPolicy { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; EvictionPolicy { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -255,13 +211,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/ScaleSet.cs/#L46">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/ScaleSet.cs/#L42">View Source</a>
   </span>
   <a id="Pulumi_Azure_Compute_ScaleSet_Extensions_" data-uid="Pulumi.Azure.Compute.ScaleSet.Extensions*"></a>
   <h4 id="Pulumi_Azure_Compute_ScaleSet_Extensions" data-uid="Pulumi.Azure.Compute.ScaleSet.Extensions">Extensions</h4>
@@ -270,7 +226,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;ScaleSetExtensions&gt;&gt; Extensions { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;ScaleSetExtension&gt;&gt; Extensions { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -282,13 +238,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Azure.Compute.Outputs.ScaleSetExtensions.html">ScaleSetExtensions</a>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Azure.Compute.Outputs.ScaleSetExtension.html">ScaleSetExtension</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/ScaleSet.cs/#L52">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/ScaleSet.cs/#L48">View Source</a>
   </span>
   <a id="Pulumi_Azure_Compute_ScaleSet_HealthProbeId_" data-uid="Pulumi.Azure.Compute.ScaleSet.HealthProbeId*"></a>
   <h4 id="Pulumi_Azure_Compute_ScaleSet_HealthProbeId" data-uid="Pulumi.Azure.Compute.ScaleSet.HealthProbeId">HealthProbeId</h4>
@@ -297,7 +253,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; HealthProbeId { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; HealthProbeId { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -309,13 +265,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/ScaleSet.cs/#L55">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/ScaleSet.cs/#L51">View Source</a>
   </span>
   <a id="Pulumi_Azure_Compute_ScaleSet_Identity_" data-uid="Pulumi.Azure.Compute.ScaleSet.Identity*"></a>
   <h4 id="Pulumi_Azure_Compute_ScaleSet_Identity" data-uid="Pulumi.Azure.Compute.ScaleSet.Identity">Identity</h4>
@@ -335,13 +291,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Azure.Compute.Outputs.ScaleSetIdentity.html">ScaleSetIdentity</a>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Azure.Compute.Outputs.ScaleSetIdentity.html">ScaleSetIdentity</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/ScaleSet.cs/#L61">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/ScaleSet.cs/#L57">View Source</a>
   </span>
   <a id="Pulumi_Azure_Compute_ScaleSet_LicenseType_" data-uid="Pulumi.Azure.Compute.ScaleSet.LicenseType*"></a>
   <h4 id="Pulumi_Azure_Compute_ScaleSet_LicenseType" data-uid="Pulumi.Azure.Compute.ScaleSet.LicenseType">LicenseType</h4>
@@ -362,13 +318,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/ScaleSet.cs/#L67">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/ScaleSet.cs/#L63">View Source</a>
   </span>
   <a id="Pulumi_Azure_Compute_ScaleSet_Location_" data-uid="Pulumi.Azure.Compute.ScaleSet.Location*"></a>
   <h4 id="Pulumi_Azure_Compute_ScaleSet_Location" data-uid="Pulumi.Azure.Compute.ScaleSet.Location">Location</h4>
@@ -389,17 +345,17 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/ScaleSet.cs/#L73">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/ScaleSet.cs/#L69">View Source</a>
   </span>
   <a id="Pulumi_Azure_Compute_ScaleSet_Name_" data-uid="Pulumi.Azure.Compute.ScaleSet.Name*"></a>
   <h4 id="Pulumi_Azure_Compute_ScaleSet_Name" data-uid="Pulumi.Azure.Compute.ScaleSet.Name">Name</h4>
-  <div class="markdown level1 summary"><p>Specifies the name of the image from the marketplace.</p>
+  <div class="markdown level1 summary"><p>Specifies the name of the virtual machine scale set resource. Changing this forces a new resource to be created.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -416,13 +372,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/ScaleSet.cs/#L79">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/ScaleSet.cs/#L75">View Source</a>
   </span>
   <a id="Pulumi_Azure_Compute_ScaleSet_NetworkProfiles_" data-uid="Pulumi.Azure.Compute.ScaleSet.NetworkProfiles*"></a>
   <h4 id="Pulumi_Azure_Compute_ScaleSet_NetworkProfiles" data-uid="Pulumi.Azure.Compute.ScaleSet.NetworkProfiles">NetworkProfiles</h4>
@@ -431,7 +387,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;ScaleSetNetworkProfiles&gt;&gt; NetworkProfiles { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;ScaleSetNetworkProfile&gt;&gt; NetworkProfiles { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -443,13 +399,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Azure.Compute.Outputs.ScaleSetNetworkProfiles.html">ScaleSetNetworkProfiles</a>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Azure.Compute.Outputs.ScaleSetNetworkProfile.html">ScaleSetNetworkProfile</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/ScaleSet.cs/#L85">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/ScaleSet.cs/#L81">View Source</a>
   </span>
   <a id="Pulumi_Azure_Compute_ScaleSet_OsProfile_" data-uid="Pulumi.Azure.Compute.ScaleSet.OsProfile*"></a>
   <h4 id="Pulumi_Azure_Compute_ScaleSet_OsProfile" data-uid="Pulumi.Azure.Compute.ScaleSet.OsProfile">OsProfile</h4>
@@ -470,13 +426,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Azure.Compute.Outputs.ScaleSetOsProfile.html">ScaleSetOsProfile</a>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Azure.Compute.Outputs.ScaleSetOsProfile.html">ScaleSetOsProfile</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/ScaleSet.cs/#L91">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/ScaleSet.cs/#L87">View Source</a>
   </span>
   <a id="Pulumi_Azure_Compute_ScaleSet_OsProfileLinuxConfig_" data-uid="Pulumi.Azure.Compute.ScaleSet.OsProfileLinuxConfig*"></a>
   <h4 id="Pulumi_Azure_Compute_ScaleSet_OsProfileLinuxConfig" data-uid="Pulumi.Azure.Compute.ScaleSet.OsProfileLinuxConfig">OsProfileLinuxConfig</h4>
@@ -497,13 +453,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Azure.Compute.Outputs.ScaleSetOsProfileLinuxConfig.html">ScaleSetOsProfileLinuxConfig</a>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Azure.Compute.Outputs.ScaleSetOsProfileLinuxConfig.html">ScaleSetOsProfileLinuxConfig</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/ScaleSet.cs/#L97">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/ScaleSet.cs/#L93">View Source</a>
   </span>
   <a id="Pulumi_Azure_Compute_ScaleSet_OsProfileSecrets_" data-uid="Pulumi.Azure.Compute.ScaleSet.OsProfileSecrets*"></a>
   <h4 id="Pulumi_Azure_Compute_ScaleSet_OsProfileSecrets" data-uid="Pulumi.Azure.Compute.ScaleSet.OsProfileSecrets">OsProfileSecrets</h4>
@@ -512,7 +468,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;ScaleSetOsProfileSecrets&gt;&gt; OsProfileSecrets { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;ScaleSetOsProfileSecret&gt;&gt; OsProfileSecrets { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -524,13 +480,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Azure.Compute.Outputs.ScaleSetOsProfileSecrets.html">ScaleSetOsProfileSecrets</a>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Azure.Compute.Outputs.ScaleSetOsProfileSecret.html">ScaleSetOsProfileSecret</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/ScaleSet.cs/#L103">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/ScaleSet.cs/#L99">View Source</a>
   </span>
   <a id="Pulumi_Azure_Compute_ScaleSet_OsProfileWindowsConfig_" data-uid="Pulumi.Azure.Compute.ScaleSet.OsProfileWindowsConfig*"></a>
   <h4 id="Pulumi_Azure_Compute_ScaleSet_OsProfileWindowsConfig" data-uid="Pulumi.Azure.Compute.ScaleSet.OsProfileWindowsConfig">OsProfileWindowsConfig</h4>
@@ -551,13 +507,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Azure.Compute.Outputs.ScaleSetOsProfileWindowsConfig.html">ScaleSetOsProfileWindowsConfig</a>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Azure.Compute.Outputs.ScaleSetOsProfileWindowsConfig.html">ScaleSetOsProfileWindowsConfig</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/ScaleSet.cs/#L109">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/ScaleSet.cs/#L105">View Source</a>
   </span>
   <a id="Pulumi_Azure_Compute_ScaleSet_Overprovision_" data-uid="Pulumi.Azure.Compute.ScaleSet.Overprovision*"></a>
   <h4 id="Pulumi_Azure_Compute_ScaleSet_Overprovision" data-uid="Pulumi.Azure.Compute.ScaleSet.Overprovision">Overprovision</h4>
@@ -578,13 +534,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/ScaleSet.cs/#L115">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/ScaleSet.cs/#L111">View Source</a>
   </span>
   <a id="Pulumi_Azure_Compute_ScaleSet_Plan_" data-uid="Pulumi.Azure.Compute.ScaleSet.Plan*"></a>
   <h4 id="Pulumi_Azure_Compute_ScaleSet_Plan" data-uid="Pulumi.Azure.Compute.ScaleSet.Plan">Plan</h4>
@@ -605,13 +561,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Azure.Compute.Outputs.ScaleSetPlan.html">ScaleSetPlan</a>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Azure.Compute.Outputs.ScaleSetPlan.html">ScaleSetPlan</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/ScaleSet.cs/#L121">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/ScaleSet.cs/#L117">View Source</a>
   </span>
   <a id="Pulumi_Azure_Compute_ScaleSet_Priority_" data-uid="Pulumi.Azure.Compute.ScaleSet.Priority*"></a>
   <h4 id="Pulumi_Azure_Compute_ScaleSet_Priority" data-uid="Pulumi.Azure.Compute.ScaleSet.Priority">Priority</h4>
@@ -620,7 +576,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Priority { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Priority { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -632,13 +588,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/ScaleSet.cs/#L127">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/ScaleSet.cs/#L123">View Source</a>
   </span>
   <a id="Pulumi_Azure_Compute_ScaleSet_ProximityPlacementGroupId_" data-uid="Pulumi.Azure.Compute.ScaleSet.ProximityPlacementGroupId*"></a>
   <h4 id="Pulumi_Azure_Compute_ScaleSet_ProximityPlacementGroupId" data-uid="Pulumi.Azure.Compute.ScaleSet.ProximityPlacementGroupId">ProximityPlacementGroupId</h4>
@@ -647,7 +603,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ProximityPlacementGroupId { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; ProximityPlacementGroupId { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -659,13 +615,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/ScaleSet.cs/#L133">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/ScaleSet.cs/#L129">View Source</a>
   </span>
   <a id="Pulumi_Azure_Compute_ScaleSet_ResourceGroupName_" data-uid="Pulumi.Azure.Compute.ScaleSet.ResourceGroupName*"></a>
   <h4 id="Pulumi_Azure_Compute_ScaleSet_ResourceGroupName" data-uid="Pulumi.Azure.Compute.ScaleSet.ResourceGroupName">ResourceGroupName</h4>
@@ -686,13 +642,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/ScaleSet.cs/#L139">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/ScaleSet.cs/#L135">View Source</a>
   </span>
   <a id="Pulumi_Azure_Compute_ScaleSet_RollingUpgradePolicy_" data-uid="Pulumi.Azure.Compute.ScaleSet.RollingUpgradePolicy*"></a>
   <h4 id="Pulumi_Azure_Compute_ScaleSet_RollingUpgradePolicy" data-uid="Pulumi.Azure.Compute.ScaleSet.RollingUpgradePolicy">RollingUpgradePolicy</h4>
@@ -713,13 +669,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Azure.Compute.Outputs.ScaleSetRollingUpgradePolicy.html">ScaleSetRollingUpgradePolicy</a>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Azure.Compute.Outputs.ScaleSetRollingUpgradePolicy.html">ScaleSetRollingUpgradePolicy</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/ScaleSet.cs/#L145">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/ScaleSet.cs/#L141">View Source</a>
   </span>
   <a id="Pulumi_Azure_Compute_ScaleSet_SinglePlacementGroup_" data-uid="Pulumi.Azure.Compute.ScaleSet.SinglePlacementGroup*"></a>
   <h4 id="Pulumi_Azure_Compute_ScaleSet_SinglePlacementGroup" data-uid="Pulumi.Azure.Compute.ScaleSet.SinglePlacementGroup">SinglePlacementGroup</h4>
@@ -740,17 +696,17 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/ScaleSet.cs/#L151">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/ScaleSet.cs/#L147">View Source</a>
   </span>
   <a id="Pulumi_Azure_Compute_ScaleSet_Sku_" data-uid="Pulumi.Azure.Compute.ScaleSet.Sku*"></a>
   <h4 id="Pulumi_Azure_Compute_ScaleSet_Sku" data-uid="Pulumi.Azure.Compute.ScaleSet.Sku">Sku</h4>
-  <div class="markdown level1 summary"><p>Specifies the SKU of the image used to create the virtual machines.</p>
+  <div class="markdown level1 summary"><p>A sku block as documented below.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -767,13 +723,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Azure.Compute.Outputs.ScaleSetSku.html">ScaleSetSku</a>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Azure.Compute.Outputs.ScaleSetSku.html">ScaleSetSku</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/ScaleSet.cs/#L157">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/ScaleSet.cs/#L153">View Source</a>
   </span>
   <a id="Pulumi_Azure_Compute_ScaleSet_StorageProfileDataDisks_" data-uid="Pulumi.Azure.Compute.ScaleSet.StorageProfileDataDisks*"></a>
   <h4 id="Pulumi_Azure_Compute_ScaleSet_StorageProfileDataDisks" data-uid="Pulumi.Azure.Compute.ScaleSet.StorageProfileDataDisks">StorageProfileDataDisks</h4>
@@ -782,7 +738,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;ScaleSetStorageProfileDataDisks&gt;&gt; StorageProfileDataDisks { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;ScaleSetStorageProfileDataDisk&gt;&gt; StorageProfileDataDisks { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -794,13 +750,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Azure.Compute.Outputs.ScaleSetStorageProfileDataDisks.html">ScaleSetStorageProfileDataDisks</a>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Azure.Compute.Outputs.ScaleSetStorageProfileDataDisk.html">ScaleSetStorageProfileDataDisk</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/ScaleSet.cs/#L163">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/ScaleSet.cs/#L159">View Source</a>
   </span>
   <a id="Pulumi_Azure_Compute_ScaleSet_StorageProfileImageReference_" data-uid="Pulumi.Azure.Compute.ScaleSet.StorageProfileImageReference*"></a>
   <h4 id="Pulumi_Azure_Compute_ScaleSet_StorageProfileImageReference" data-uid="Pulumi.Azure.Compute.ScaleSet.StorageProfileImageReference">StorageProfileImageReference</h4>
@@ -821,13 +777,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Azure.Compute.Outputs.ScaleSetStorageProfileImageReference.html">ScaleSetStorageProfileImageReference</a>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Azure.Compute.Outputs.ScaleSetStorageProfileImageReference.html">ScaleSetStorageProfileImageReference</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/ScaleSet.cs/#L169">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/ScaleSet.cs/#L165">View Source</a>
   </span>
   <a id="Pulumi_Azure_Compute_ScaleSet_StorageProfileOsDisk_" data-uid="Pulumi.Azure.Compute.ScaleSet.StorageProfileOsDisk*"></a>
   <h4 id="Pulumi_Azure_Compute_ScaleSet_StorageProfileOsDisk" data-uid="Pulumi.Azure.Compute.ScaleSet.StorageProfileOsDisk">StorageProfileOsDisk</h4>
@@ -848,13 +804,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Azure.Compute.Outputs.ScaleSetStorageProfileOsDisk.html">ScaleSetStorageProfileOsDisk</a>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Azure.Compute.Outputs.ScaleSetStorageProfileOsDisk.html">ScaleSetStorageProfileOsDisk</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/ScaleSet.cs/#L175">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/ScaleSet.cs/#L171">View Source</a>
   </span>
   <a id="Pulumi_Azure_Compute_ScaleSet_Tags_" data-uid="Pulumi.Azure.Compute.ScaleSet.Tags*"></a>
   <h4 id="Pulumi_Azure_Compute_ScaleSet_Tags" data-uid="Pulumi.Azure.Compute.ScaleSet.Tags">Tags</h4>
@@ -863,7 +819,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;&gt; Tags { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;?&gt; Tags { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -875,13 +831,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/ScaleSet.cs/#L181">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/ScaleSet.cs/#L177">View Source</a>
   </span>
   <a id="Pulumi_Azure_Compute_ScaleSet_UpgradePolicyMode_" data-uid="Pulumi.Azure.Compute.ScaleSet.UpgradePolicyMode*"></a>
   <h4 id="Pulumi_Azure_Compute_ScaleSet_UpgradePolicyMode" data-uid="Pulumi.Azure.Compute.ScaleSet.UpgradePolicyMode">UpgradePolicyMode</h4>
@@ -902,13 +858,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/ScaleSet.cs/#L187">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/ScaleSet.cs/#L183">View Source</a>
   </span>
   <a id="Pulumi_Azure_Compute_ScaleSet_Zones_" data-uid="Pulumi.Azure.Compute.ScaleSet.Zones*"></a>
   <h4 id="Pulumi_Azure_Compute_ScaleSet_Zones" data-uid="Pulumi.Azure.Compute.ScaleSet.Zones">Zones</h4>
@@ -929,7 +885,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -937,17 +893,17 @@
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/ScaleSet.cs/#L228">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/ScaleSet.cs/#L224">View Source</a>
   </span>
   <a id="Pulumi_Azure_Compute_ScaleSet_Get_" data-uid="Pulumi.Azure.Compute.ScaleSet.Get*"></a>
-  <h4 id="Pulumi_Azure_Compute_ScaleSet_Get_System_String_Pulumi_Input_System_String__Pulumi_Azure_Compute_ScaleSetState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Azure.Compute.ScaleSet.Get(System.String,Pulumi.Input{System.String},Pulumi.Azure.Compute.ScaleSetState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, ScaleSetState, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Azure_Compute_ScaleSet_Get_System_String_Input_System_String__Pulumi_Azure_Compute_ScaleSetState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Azure.Compute.ScaleSet.Get(System.String,Input{System.String},Pulumi.Azure.Compute.ScaleSetState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, ScaleSetState, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Get an existing ScaleSet resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static ScaleSet Get(string name, Input&lt;string&gt; id, ScaleSetState state = null, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static ScaleSet Get(string name, Input&lt;string&gt; id, ScaleSetState state = null, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -966,7 +922,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -978,7 +934,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -1007,7 +963,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/ScaleSet.cs/#L23" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/ScaleSet.cs/#L19" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

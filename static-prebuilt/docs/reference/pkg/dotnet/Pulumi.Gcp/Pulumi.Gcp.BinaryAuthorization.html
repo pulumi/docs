@@ -77,23 +77,66 @@
     <h3 id="classes">Classes
   </h3>
       <h4><a class="xref" href="Pulumi.Gcp.BinaryAuthorization.Attestor.html">Attestor</a></h4>
-      <section></section>
+      <section><p>An attestor that attests to container image artifacts.</p>
+<p>To get more information about Attestor, see:</p>
+<ul>
+<li><a href="https://cloud.google.com/binary-authorization/docs/reference/rest/">API documentation</a></li>
+<li>How-to Guides</li>
+<li><a href="https://cloud.google.com/binary-authorization/">Official Documentation</a></li>
+</ul>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.BinaryAuthorization.AttestorArgs.html">AttestorArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.BinaryAuthorization.AttestorIamBinding.html">AttestorIamBinding</a></h4>
-      <section></section>
+      <section><p>Three different resources help you manage your IAM policy for Binary Authorization Attestor. Each of these resources serves a different use case:</p>
+<ul>
+<li><code>gcp.binaryauthorization.AttestorIamPolicy</code>: Authoritative. Sets the IAM policy for the attestor and replaces any existing policy already attached.</li>
+<li><code>gcp.binaryauthorization.AttestorIamBinding</code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the attestor are preserved.</li>
+<li><code>gcp.binaryauthorization.AttestorIamMember</code>: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the attestor are preserved.</li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.binaryauthorization.AttestorIamPolicy</code> <strong>cannot</strong> be used in conjunction with <code>gcp.binaryauthorization.AttestorIamBinding</code> and <code>gcp.binaryauthorization.AttestorIamMember</code> or they will fight over what your policy should be.</p>
+</blockquote>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.binaryauthorization.AttestorIamBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.binaryauthorization.AttestorIamMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
+</blockquote>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.BinaryAuthorization.AttestorIamBindingArgs.html">AttestorIamBindingArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.BinaryAuthorization.AttestorIamBindingState.html">AttestorIamBindingState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.BinaryAuthorization.AttestorIamMember.html">AttestorIamMember</a></h4>
-      <section></section>
+      <section><p>Three different resources help you manage your IAM policy for Binary Authorization Attestor. Each of these resources serves a different use case:</p>
+<ul>
+<li><code>gcp.binaryauthorization.AttestorIamPolicy</code>: Authoritative. Sets the IAM policy for the attestor and replaces any existing policy already attached.</li>
+<li><code>gcp.binaryauthorization.AttestorIamBinding</code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the attestor are preserved.</li>
+<li><code>gcp.binaryauthorization.AttestorIamMember</code>: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the attestor are preserved.</li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.binaryauthorization.AttestorIamPolicy</code> <strong>cannot</strong> be used in conjunction with <code>gcp.binaryauthorization.AttestorIamBinding</code> and <code>gcp.binaryauthorization.AttestorIamMember</code> or they will fight over what your policy should be.</p>
+</blockquote>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.binaryauthorization.AttestorIamBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.binaryauthorization.AttestorIamMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
+</blockquote>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.BinaryAuthorization.AttestorIamMemberArgs.html">AttestorIamMemberArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.BinaryAuthorization.AttestorIamMemberState.html">AttestorIamMemberState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.BinaryAuthorization.AttestorIamPolicy.html">AttestorIamPolicy</a></h4>
-      <section></section>
+      <section><p>Three different resources help you manage your IAM policy for Binary Authorization Attestor. Each of these resources serves a different use case:</p>
+<ul>
+<li><code>gcp.binaryauthorization.AttestorIamPolicy</code>: Authoritative. Sets the IAM policy for the attestor and replaces any existing policy already attached.</li>
+<li><code>gcp.binaryauthorization.AttestorIamBinding</code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the attestor are preserved.</li>
+<li><code>gcp.binaryauthorization.AttestorIamMember</code>: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the attestor are preserved.</li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.binaryauthorization.AttestorIamPolicy</code> <strong>cannot</strong> be used in conjunction with <code>gcp.binaryauthorization.AttestorIamBinding</code> and <code>gcp.binaryauthorization.AttestorIamMember</code> or they will fight over what your policy should be.</p>
+</blockquote>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.binaryauthorization.AttestorIamBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.binaryauthorization.AttestorIamMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
+</blockquote>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.BinaryAuthorization.AttestorIamPolicyArgs.html">AttestorIamPolicyArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.BinaryAuthorization.AttestorIamPolicyState.html">AttestorIamPolicyState</a></h4>
@@ -101,7 +144,14 @@
       <h4><a class="xref" href="Pulumi.Gcp.BinaryAuthorization.AttestorState.html">AttestorState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.BinaryAuthorization.Policy.html">Policy</a></h4>
-      <section></section>
+      <section><p>A policy for container image binary authorization.</p>
+<p>To get more information about Policy, see:</p>
+<ul>
+<li><a href="https://cloud.google.com/binary-authorization/docs/reference/rest/">API documentation</a></li>
+<li>How-to Guides</li>
+<li><a href="https://cloud.google.com/binary-authorization/">Official Documentation</a></li>
+</ul>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.BinaryAuthorization.PolicyArgs.html">PolicyArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.BinaryAuthorization.PolicyState.html">PolicyState</a></h4>

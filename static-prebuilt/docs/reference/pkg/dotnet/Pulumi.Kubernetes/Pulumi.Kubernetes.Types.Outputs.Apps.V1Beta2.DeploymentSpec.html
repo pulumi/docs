@@ -79,40 +79,16 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">DeploymentSpec</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Apps.V1Beta2.html">Pulumi.Kubernetes.Types.Outputs.Apps.V1Beta2</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Kubernetes.dll</h6>
   <h5 id="Pulumi_Kubernetes_Types_Outputs_Apps_V1Beta2_DeploymentSpec_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class DeploymentSpec</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class DeploymentSpec : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L7245">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L7251">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Apps_V1Beta2_DeploymentSpec_MinReadySeconds" data-uid="Pulumi.Kubernetes.Types.Outputs.Apps.V1Beta2.DeploymentSpec.MinReadySeconds">MinReadySeconds</h4>
   <div class="markdown level1 summary"><p>Minimum number of seconds for which a newly created pod should be ready without any of
@@ -140,7 +116,7 @@ considered available as soon as it is ready)</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L7250">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L7256">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Apps_V1Beta2_DeploymentSpec_Paused" data-uid="Pulumi.Kubernetes.Types.Outputs.Apps.V1Beta2.DeploymentSpec.Paused">Paused</h4>
   <div class="markdown level1 summary"><p>Indicates that the deployment is paused.</p>
@@ -166,7 +142,7 @@ considered available as soon as it is ready)</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L7259">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L7265">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Apps_V1Beta2_DeploymentSpec_ProgressDeadlineSeconds" data-uid="Pulumi.Kubernetes.Types.Outputs.Apps.V1Beta2.DeploymentSpec.ProgressDeadlineSeconds">ProgressDeadlineSeconds</h4>
   <div class="markdown level1 summary"><p>The maximum time in seconds for a deployment to make progress before it is considered to
@@ -196,7 +172,7 @@ Defaults to 600s.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L7265">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L7271">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Apps_V1Beta2_DeploymentSpec_Replicas" data-uid="Pulumi.Kubernetes.Types.Outputs.Apps.V1Beta2.DeploymentSpec.Replicas">Replicas</h4>
   <div class="markdown level1 summary"><p>Number of desired pods. This is a pointer to distinguish between explicit zero and not
@@ -223,7 +199,7 @@ specified. Defaults to 1.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L7271">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L7277">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Apps_V1Beta2_DeploymentSpec_RevisionHistoryLimit" data-uid="Pulumi.Kubernetes.Types.Outputs.Apps.V1Beta2.DeploymentSpec.RevisionHistoryLimit">RevisionHistoryLimit</h4>
   <div class="markdown level1 summary"><p>The number of old ReplicaSets to retain to allow rollback. This is a pointer to
@@ -250,7 +226,7 @@ distinguish between explicit zero and not specified. Defaults to 10.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L7277">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L7283">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Apps_V1Beta2_DeploymentSpec_Selector" data-uid="Pulumi.Kubernetes.Types.Outputs.Apps.V1Beta2.DeploymentSpec.Selector">Selector</h4>
   <div class="markdown level1 summary"><p>Label selector for pods. Existing ReplicaSets whose pods are selected by this will be
@@ -277,7 +253,7 @@ the ones affected by this deployment. It must match the pod template's labels.</
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L7282">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L7288">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Apps_V1Beta2_DeploymentSpec_Strategy" data-uid="Pulumi.Kubernetes.Types.Outputs.Apps.V1Beta2.DeploymentSpec.Strategy">Strategy</h4>
   <div class="markdown level1 summary"><p>The deployment strategy to use to replace existing pods with new ones.</p>
@@ -303,7 +279,7 @@ the ones affected by this deployment. It must match the pod template's labels.</
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L7287">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L7293">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Apps_V1Beta2_DeploymentSpec_Template" data-uid="Pulumi.Kubernetes.Types.Outputs.Apps.V1Beta2.DeploymentSpec.Template">Template</h4>
   <div class="markdown level1 summary"><p>Template describes the pods that will be created.</p>
@@ -335,7 +311,7 @@ the ones affected by this deployment. It must match the pod template's labels.</
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L7237" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L7243" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

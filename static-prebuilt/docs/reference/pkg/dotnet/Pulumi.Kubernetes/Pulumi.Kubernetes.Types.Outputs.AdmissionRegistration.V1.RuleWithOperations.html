@@ -80,40 +80,16 @@ that all the tuple expansions are valid.</p>
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">RuleWithOperations</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Kubernetes.Types.Outputs.AdmissionRegistration.V1.html">Pulumi.Kubernetes.Types.Outputs.AdmissionRegistration.V1</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Kubernetes.dll</h6>
   <h5 id="Pulumi_Kubernetes_Types_Outputs_AdmissionRegistration_V1_RuleWithOperations_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class RuleWithOperations</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class RuleWithOperations : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L303">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L303">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_AdmissionRegistration_V1_RuleWithOperations_ApiGroups" data-uid="Pulumi.Kubernetes.Types.Outputs.AdmissionRegistration.V1.RuleWithOperations.ApiGroups">ApiGroups</h4>
   <div class="markdown level1 summary"><p>APIGroups is the API groups the resources belong to. '<em>' is all groups. If '</em>' is
@@ -134,13 +110,13 @@ present, the length of the slice must be one. Required.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L309">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L309">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_AdmissionRegistration_V1_RuleWithOperations_ApiVersions" data-uid="Pulumi.Kubernetes.Types.Outputs.AdmissionRegistration.V1.RuleWithOperations.ApiVersions">ApiVersions</h4>
   <div class="markdown level1 summary"><p>APIVersions is the API versions the resources belong to. '<em>' is all versions. If '</em>' is
@@ -161,13 +137,13 @@ present, the length of the slice must be one. Required.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L315">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L315">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_AdmissionRegistration_V1_RuleWithOperations_Operations" data-uid="Pulumi.Kubernetes.Types.Outputs.AdmissionRegistration.V1.RuleWithOperations.Operations">Operations</h4>
   <div class="markdown level1 summary"><p>Operations is the operations the admission hook cares about - CREATE, UPDATE, or * for
@@ -188,13 +164,13 @@ all operations. If '*' is present, the length of the slice must be one. Required
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L329">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L329">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_AdmissionRegistration_V1_RuleWithOperations_Resources" data-uid="Pulumi.Kubernetes.Types.Outputs.AdmissionRegistration.V1.RuleWithOperations.Resources">Resources</h4>
   <div class="markdown level1 summary"><p>Resources is a list of resources this rule applies to.</p>
@@ -220,13 +196,13 @@ each other.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L338">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L338">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_AdmissionRegistration_V1_RuleWithOperations_Scope" data-uid="Pulumi.Kubernetes.Types.Outputs.AdmissionRegistration.V1.RuleWithOperations.Scope">Scope</h4>
   <div class="markdown level1 summary"><p>scope specifies the scope of this rule. Valid values are &quot;Cluster&quot;, &quot;Namespaced&quot;, and
@@ -262,7 +238,7 @@ scope of their parent resource. Default is &quot;*&quot;.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L296" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L296" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

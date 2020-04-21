@@ -78,40 +78,16 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">ScaleSetStorageProfileOsDisk</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Azure.Compute.Outputs.html">Pulumi.Azure.Compute.Outputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Azure.dll</h6>
   <h5 id="Pulumi_Azure_Compute_Outputs_ScaleSetStorageProfileOsDisk_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class ScaleSetStorageProfileOsDisk</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class ScaleSetStorageProfileOsDisk : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/ScaleSet.cs/#L2690">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/Outputs/ScaleSetStorageProfileOsDisk.cs/#L19">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Compute_Outputs_ScaleSetStorageProfileOsDisk_Caching" data-uid="Pulumi.Azure.Compute.Outputs.ScaleSetStorageProfileOsDisk.Caching">Caching</h4>
   <div class="markdown level1 summary"><p>Specifies the caching requirements. Possible values include: <code>None</code> (default), <code>ReadOnly</code>, <code>ReadWrite</code>.</p>
@@ -119,7 +95,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string Caching</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? Caching</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -131,16 +107,16 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/ScaleSet.cs/#L2694">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/Outputs/ScaleSetStorageProfileOsDisk.cs/#L23">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Compute_Outputs_ScaleSetStorageProfileOsDisk_CreateOption" data-uid="Pulumi.Azure.Compute.Outputs.ScaleSetStorageProfileOsDisk.CreateOption">CreateOption</h4>
-  <div class="markdown level1 summary"><p>Specifies how the data disk should be created. The only possible options are <code>FromImage</code> and <code>Empty</code>.</p>
+  <div class="markdown level1 summary"><p>Specifies how the virtual machine should be created. The only possible option is <code>FromImage</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -163,7 +139,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/ScaleSet.cs/#L2700">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/Outputs/ScaleSetStorageProfileOsDisk.cs/#L29">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Compute_Outputs_ScaleSetStorageProfileOsDisk_Image" data-uid="Pulumi.Azure.Compute.Outputs.ScaleSetStorageProfileOsDisk.Image">Image</h4>
   <div class="markdown level1 summary"><p>Specifies the blob uri for user image. A virtual machine scale set creates an os disk in the same container as the user image.
@@ -173,7 +149,7 @@ When setting this field <code>os_type</code> needs to be specified. Cannot be us
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string Image</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? Image</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -185,21 +161,21 @@ When setting this field <code>os_type</code> needs to be specified. Cannot be us
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/ScaleSet.cs/#L2704">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/Outputs/ScaleSetStorageProfileOsDisk.cs/#L33">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Compute_Outputs_ScaleSetStorageProfileOsDisk_ManagedDiskType" data-uid="Pulumi.Azure.Compute.Outputs.ScaleSetStorageProfileOsDisk.ManagedDiskType">ManagedDiskType</h4>
-  <div class="markdown level1 summary"><p>Specifies the type of managed disk to create. Value must be either <code>Standard_LRS</code>, <code>StandardSSD_LRS</code> or <code>Premium_LRS</code>.</p>
+  <div class="markdown level1 summary"><p>Specifies the type of managed disk to create. Value you must be either <code>Standard_LRS</code>, <code>StandardSSD_LRS</code> or <code>Premium_LRS</code>. Cannot be used when <code>vhd_containers</code> or <code>image</code> is specified.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string ManagedDiskType</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? ManagedDiskType</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -211,21 +187,21 @@ When setting this field <code>os_type</code> needs to be specified. Cannot be us
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/ScaleSet.cs/#L2708">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/Outputs/ScaleSetStorageProfileOsDisk.cs/#L37">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Compute_Outputs_ScaleSetStorageProfileOsDisk_Name" data-uid="Pulumi.Azure.Compute.Outputs.ScaleSetStorageProfileOsDisk.Name">Name</h4>
-  <div class="markdown level1 summary"><p>Specifies the name of the image from the marketplace.</p>
+  <div class="markdown level1 summary"><p>Specifies the disk name. Must be specified when using unmanaged disk ('managed_disk_type' property not set).</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string Name</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? Name</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -237,13 +213,13 @@ When setting this field <code>os_type</code> needs to be specified. Cannot be us
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/ScaleSet.cs/#L2712">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/Outputs/ScaleSetStorageProfileOsDisk.cs/#L41">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Compute_Outputs_ScaleSetStorageProfileOsDisk_OsType" data-uid="Pulumi.Azure.Compute.Outputs.ScaleSetStorageProfileOsDisk.OsType">OsType</h4>
   <div class="markdown level1 summary"><p>Specifies the operating system Type, valid values are windows, linux.</p>
@@ -251,7 +227,7 @@ When setting this field <code>os_type</code> needs to be specified. Cannot be us
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string OsType</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? OsType</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -263,13 +239,13 @@ When setting this field <code>os_type</code> needs to be specified. Cannot be us
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/ScaleSet.cs/#L2716">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/Outputs/ScaleSetStorageProfileOsDisk.cs/#L45">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Compute_Outputs_ScaleSetStorageProfileOsDisk_VhdContainers" data-uid="Pulumi.Azure.Compute.Outputs.ScaleSetStorageProfileOsDisk.VhdContainers">VhdContainers</h4>
   <div class="markdown level1 summary"><p>Specifies the vhd uri. Cannot be used when <code>image</code> or <code>managed_disk_type</code> is specified.</p>
@@ -289,7 +265,7 @@ When setting this field <code>os_type</code> needs to be specified. Cannot be us
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -301,7 +277,7 @@ When setting this field <code>os_type</code> needs to be specified. Cannot be us
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/ScaleSet.cs/#L2684" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/Outputs/ScaleSetStorageProfileOsDisk.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

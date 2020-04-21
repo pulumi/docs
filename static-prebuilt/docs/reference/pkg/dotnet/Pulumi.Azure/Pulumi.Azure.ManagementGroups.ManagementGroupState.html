@@ -76,36 +76,7 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
-    <div class="level3"><span class="xref">ManagementGroupState</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">ManagementGroupState</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Azure.ManagementGroups.html">Pulumi.Azure.ManagementGroups</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Azure.dll</h6>
@@ -116,7 +87,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Managementgroups/ManagementGroup.cs/#L156">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/ManagementGroups/ManagementGroup.cs/#L172">View Source</a>
   </span>
   <a id="Pulumi_Azure_ManagementGroups_ManagementGroupState__ctor_" data-uid="Pulumi.Azure.ManagementGroups.ManagementGroupState.#ctor*"></a>
   <h4 id="Pulumi_Azure_ManagementGroups_ManagementGroupState__ctor" data-uid="Pulumi.Azure.ManagementGroups.ManagementGroupState.#ctor">ManagementGroupState()</h4>
@@ -129,16 +100,16 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Managementgroups/ManagementGroup.cs/#L129">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/ManagementGroups/ManagementGroup.cs/#L139">View Source</a>
   </span>
   <a id="Pulumi_Azure_ManagementGroups_ManagementGroupState_DisplayName_" data-uid="Pulumi.Azure.ManagementGroups.ManagementGroupState.DisplayName*"></a>
   <h4 id="Pulumi_Azure_ManagementGroups_ManagementGroupState_DisplayName" data-uid="Pulumi.Azure.ManagementGroups.ManagementGroupState.DisplayName">DisplayName</h4>
-  <div class="markdown level1 summary"><p>A friendly name for this Management Group. If not specified, this'll be the same as the <code>group_id</code>.</p>
+  <div class="markdown level1 summary"><p>A friendly name for this Management Group. If not specified, this'll be the same as the <code>name</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; DisplayName { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? DisplayName { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -150,22 +121,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Managementgroups/ManagementGroup.cs/#L135">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/ManagementGroups/ManagementGroup.cs/#L145">View Source</a>
   </span>
   <a id="Pulumi_Azure_ManagementGroups_ManagementGroupState_GroupId_" data-uid="Pulumi.Azure.ManagementGroups.ManagementGroupState.GroupId*"></a>
   <h4 id="Pulumi_Azure_ManagementGroups_ManagementGroupState_GroupId" data-uid="Pulumi.Azure.ManagementGroups.ManagementGroupState.GroupId">GroupId</h4>
-  <div class="markdown level1 summary"><p>The UUID for this Management Group, which needs to be unique across your tenant - which will be generated if not provided. Changing this forces a new resource to be created.</p>
+  <div class="markdown level1 summary"><p>The name or UUID for this Management Group, which needs to be unique across your tenant. A new UUID will be generated if not provided. Changing this forces a new resource to be created.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; GroupId { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? GroupId { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -177,13 +148,40 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Managementgroups/ManagementGroup.cs/#L141">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/ManagementGroups/ManagementGroup.cs/#L151">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_ManagementGroups_ManagementGroupState_Name_" data-uid="Pulumi.Azure.ManagementGroups.ManagementGroupState.Name*"></a>
+  <h4 id="Pulumi_Azure_ManagementGroups_ManagementGroupState_Name" data-uid="Pulumi.Azure.ManagementGroups.ManagementGroupState.Name">Name</h4>
+  <div class="markdown level1 summary"><p>The name or UUID for this Management Group, which needs to be unique across your tenant. A new UUID will be generated if not provided. Changing this forces a new resource to be created.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Name { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/ManagementGroups/ManagementGroup.cs/#L157">View Source</a>
   </span>
   <a id="Pulumi_Azure_ManagementGroups_ManagementGroupState_ParentManagementGroupId_" data-uid="Pulumi.Azure.ManagementGroups.ManagementGroupState.ParentManagementGroupId*"></a>
   <h4 id="Pulumi_Azure_ManagementGroups_ManagementGroupState_ParentManagementGroupId" data-uid="Pulumi.Azure.ManagementGroups.ManagementGroupState.ParentManagementGroupId">ParentManagementGroupId</h4>
@@ -192,7 +190,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; ParentManagementGroupId { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? ParentManagementGroupId { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -204,13 +202,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Managementgroups/ManagementGroup.cs/#L150">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/ManagementGroups/ManagementGroup.cs/#L166">View Source</a>
   </span>
   <a id="Pulumi_Azure_ManagementGroups_ManagementGroupState_SubscriptionIds_" data-uid="Pulumi.Azure.ManagementGroups.ManagementGroupState.SubscriptionIds*"></a>
   <h4 id="Pulumi_Azure_ManagementGroups_ManagementGroupState_SubscriptionIds" data-uid="Pulumi.Azure.ManagementGroups.ManagementGroupState.SubscriptionIds">SubscriptionIds</h4>
@@ -231,7 +229,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -243,7 +241,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Managementgroups/ManagementGroup.cs/#L124" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/ManagementGroups/ManagementGroup.cs/#L134" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

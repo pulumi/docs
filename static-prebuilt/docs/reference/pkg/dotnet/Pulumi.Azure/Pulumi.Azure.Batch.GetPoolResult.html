@@ -78,40 +78,16 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">GetPoolResult</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Azure.Batch.html">Pulumi.Azure.Batch</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Azure.dll</h6>
   <h5 id="Pulumi_Azure_Batch_GetPoolResult_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class GetPoolResult</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class GetPoolResult : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Batch/GetPool.cs/#L59">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Batch/GetPool.cs/#L75">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Batch_GetPoolResult_AccountName" data-uid="Pulumi.Azure.Batch.GetPoolResult.AccountName">AccountName</h4>
   <div class="markdown level1 summary"><p>The name of the Batch account.</p>
@@ -137,7 +113,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Batch/GetPool.cs/#L63">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Batch/GetPool.cs/#L79">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Batch_GetPoolResult_AutoScales" data-uid="Pulumi.Azure.Batch.GetPoolResult.AutoScales">AutoScales</h4>
   <div class="markdown level1 summary"><p>A <code>auto_scale</code> block that describes the scale settings when using auto scale.</p>
@@ -145,7 +121,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetPoolAutoScalesResult&gt; AutoScales</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetPoolAutoScaleResult&gt; AutoScales</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -157,13 +133,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Azure.Batch.Outputs.GetPoolAutoScalesResult.html">GetPoolAutoScalesResult</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Azure.Batch.Outputs.GetPoolAutoScaleResult.html">GetPoolAutoScaleResult</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Batch/GetPool.cs/#L67">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Batch/GetPool.cs/#L83">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Batch_GetPoolResult_Certificates" data-uid="Pulumi.Azure.Batch.GetPoolResult.Certificates">Certificates</h4>
   <div class="markdown level1 summary"><p>One or more <code>certificate</code> blocks that describe the certificates installed on each compute node in the pool.</p>
@@ -171,7 +147,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetPoolCertificatesResult&gt; Certificates</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetPoolCertificateResult&gt; Certificates</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -183,13 +159,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Azure.Batch.Outputs.GetPoolCertificatesResult.html">GetPoolCertificatesResult</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Azure.Batch.Outputs.GetPoolCertificateResult.html">GetPoolCertificateResult</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Batch/GetPool.cs/#L71">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Batch/GetPool.cs/#L87">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Batch_GetPoolResult_ContainerConfigurations" data-uid="Pulumi.Azure.Batch.GetPoolResult.ContainerConfigurations">ContainerConfigurations</h4>
   <div class="markdown level1 summary"><p>The container configuration used in the pool's VMs.</p>
@@ -197,7 +173,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetPoolContainerConfigurationsResult&gt; ContainerConfigurations</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetPoolContainerConfigurationResult&gt; ContainerConfigurations</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -209,13 +185,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Azure.Batch.Outputs.GetPoolContainerConfigurationsResult.html">GetPoolContainerConfigurationsResult</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Azure.Batch.Outputs.GetPoolContainerConfigurationResult.html">GetPoolContainerConfigurationResult</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Batch/GetPool.cs/#L72">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Batch/GetPool.cs/#L88">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Batch_GetPoolResult_DisplayName" data-uid="Pulumi.Azure.Batch.GetPoolResult.DisplayName">DisplayName</h4>
   <div class="markdown level1 summary"></div>
@@ -240,7 +216,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Batch/GetPool.cs/#L76">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Batch/GetPool.cs/#L92">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Batch_GetPoolResult_FixedScales" data-uid="Pulumi.Azure.Batch.GetPoolResult.FixedScales">FixedScales</h4>
   <div class="markdown level1 summary"><p>A <code>fixed_scale</code> block that describes the scale settings when using fixed scale.</p>
@@ -248,7 +224,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetPoolFixedScalesResult&gt; FixedScales</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetPoolFixedScaleResult&gt; FixedScales</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -260,13 +236,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Azure.Batch.Outputs.GetPoolFixedScalesResult.html">GetPoolFixedScalesResult</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Azure.Batch.Outputs.GetPoolFixedScaleResult.html">GetPoolFixedScaleResult</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Batch/GetPool.cs/#L107">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Batch/GetPool.cs/#L96">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Batch_GetPoolResult_Id" data-uid="Pulumi.Azure.Batch.GetPoolResult.Id">Id</h4>
   <div class="markdown level1 summary"><p>id is the provider-assigned unique ID for this managed resource.</p>
@@ -292,7 +268,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Batch/GetPool.cs/#L80">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Batch/GetPool.cs/#L100">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Batch_GetPoolResult_MaxTasksPerNode" data-uid="Pulumi.Azure.Batch.GetPoolResult.MaxTasksPerNode">MaxTasksPerNode</h4>
   <div class="markdown level1 summary"><p>The maximum number of tasks that can run concurrently on a single compute node in the pool.</p>
@@ -318,7 +294,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Batch/GetPool.cs/#L81">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Batch/GetPool.cs/#L101">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Batch_GetPoolResult_Metadata" data-uid="Pulumi.Azure.Batch.GetPoolResult.Metadata">Metadata</h4>
   <div class="markdown level1 summary"></div>
@@ -337,13 +313,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Batch/GetPool.cs/#L85">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Batch/GetPool.cs/#L105">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Batch_GetPoolResult_Name" data-uid="Pulumi.Azure.Batch.GetPoolResult.Name">Name</h4>
   <div class="markdown level1 summary"><p>The name of the endpoint.</p>
@@ -369,7 +345,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Batch/GetPool.cs/#L86">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Batch/GetPool.cs/#L106">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Batch_GetPoolResult_NetworkConfiguration" data-uid="Pulumi.Azure.Batch.GetPoolResult.NetworkConfiguration">NetworkConfiguration</h4>
   <div class="markdown level1 summary"></div>
@@ -394,7 +370,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Batch/GetPool.cs/#L90">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Batch/GetPool.cs/#L110">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Batch_GetPoolResult_NodeAgentSkuId" data-uid="Pulumi.Azure.Batch.GetPoolResult.NodeAgentSkuId">NodeAgentSkuId</h4>
   <div class="markdown level1 summary"><p>The Sku of the node agents in the Batch pool.</p>
@@ -420,7 +396,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Batch/GetPool.cs/#L91">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Batch/GetPool.cs/#L111">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Batch_GetPoolResult_ResourceGroupName" data-uid="Pulumi.Azure.Batch.GetPoolResult.ResourceGroupName">ResourceGroupName</h4>
   <div class="markdown level1 summary"></div>
@@ -445,7 +421,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Batch/GetPool.cs/#L95">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Batch/GetPool.cs/#L115">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Batch_GetPoolResult_StartTask" data-uid="Pulumi.Azure.Batch.GetPoolResult.StartTask">StartTask</h4>
   <div class="markdown level1 summary"><p>A <code>start_task</code> block that describes the start task settings for the Batch pool.</p>
@@ -471,7 +447,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Batch/GetPool.cs/#L99">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Batch/GetPool.cs/#L119">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Batch_GetPoolResult_StorageImageReferences" data-uid="Pulumi.Azure.Batch.GetPoolResult.StorageImageReferences">StorageImageReferences</h4>
   <div class="markdown level1 summary"><p>The reference of the storage image used by the nodes in the Batch pool.</p>
@@ -479,7 +455,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetPoolStorageImageReferencesResult&gt; StorageImageReferences</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetPoolStorageImageReferenceResult&gt; StorageImageReferences</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -491,13 +467,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Azure.Batch.Outputs.GetPoolStorageImageReferencesResult.html">GetPoolStorageImageReferencesResult</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Azure.Batch.Outputs.GetPoolStorageImageReferenceResult.html">GetPoolStorageImageReferenceResult</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Batch/GetPool.cs/#L103">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Batch/GetPool.cs/#L123">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Batch_GetPoolResult_VmSize" data-uid="Pulumi.Azure.Batch.GetPoolResult.VmSize">VmSize</h4>
   <div class="markdown level1 summary"><p>The size of the VM created in the Batch pool.</p>
@@ -529,7 +505,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Batch/GetPool.cs/#L53" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Batch/GetPool.cs/#L69" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

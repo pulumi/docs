@@ -81,26 +81,59 @@
 <a href="https://cloud.google.com/deployment-manager/runtime-configurator/">official documentation</a>,
 or the
 <a href="https://cloud.google.com/deployment-manager/runtime-configurator/reference/rest/">JSON API</a>.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/runtimeconfig_config.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/runtimeconfig_config.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.RuntimeConfig.ConfigArgs.html">ConfigArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.RuntimeConfig.ConfigIamBinding.html">ConfigIamBinding</a></h4>
-      <section></section>
+      <section><p>Three different resources help you manage your IAM policy for Cloud Runtime Configuration Config. Each of these resources serves a different use case:</p>
+<ul>
+<li><code>gcp.runtimeconfig.ConfigIamPolicy</code>: Authoritative. Sets the IAM policy for the config and replaces any existing policy already attached.</li>
+<li><code>gcp.runtimeconfig.ConfigIamBinding</code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the config are preserved.</li>
+<li><code>gcp.runtimeconfig.ConfigIamMember</code>: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the config are preserved.</li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.runtimeconfig.ConfigIamPolicy</code> <strong>cannot</strong> be used in conjunction with <code>gcp.runtimeconfig.ConfigIamBinding</code> and <code>gcp.runtimeconfig.ConfigIamMember</code> or they will fight over what your policy should be.</p>
+</blockquote>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.runtimeconfig.ConfigIamBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.runtimeconfig.ConfigIamMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
+</blockquote>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.RuntimeConfig.ConfigIamBindingArgs.html">ConfigIamBindingArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.RuntimeConfig.ConfigIamBindingState.html">ConfigIamBindingState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.RuntimeConfig.ConfigIamMember.html">ConfigIamMember</a></h4>
-      <section></section>
+      <section><p>Three different resources help you manage your IAM policy for Cloud Runtime Configuration Config. Each of these resources serves a different use case:</p>
+<ul>
+<li><code>gcp.runtimeconfig.ConfigIamPolicy</code>: Authoritative. Sets the IAM policy for the config and replaces any existing policy already attached.</li>
+<li><code>gcp.runtimeconfig.ConfigIamBinding</code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the config are preserved.</li>
+<li><code>gcp.runtimeconfig.ConfigIamMember</code>: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the config are preserved.</li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.runtimeconfig.ConfigIamPolicy</code> <strong>cannot</strong> be used in conjunction with <code>gcp.runtimeconfig.ConfigIamBinding</code> and <code>gcp.runtimeconfig.ConfigIamMember</code> or they will fight over what your policy should be.</p>
+</blockquote>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.runtimeconfig.ConfigIamBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.runtimeconfig.ConfigIamMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
+</blockquote>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.RuntimeConfig.ConfigIamMemberArgs.html">ConfigIamMemberArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.RuntimeConfig.ConfigIamMemberState.html">ConfigIamMemberState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.RuntimeConfig.ConfigIamPolicy.html">ConfigIamPolicy</a></h4>
-      <section></section>
+      <section><p>Three different resources help you manage your IAM policy for Cloud Runtime Configuration Config. Each of these resources serves a different use case:</p>
+<ul>
+<li><code>gcp.runtimeconfig.ConfigIamPolicy</code>: Authoritative. Sets the IAM policy for the config and replaces any existing policy already attached.</li>
+<li><code>gcp.runtimeconfig.ConfigIamBinding</code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the config are preserved.</li>
+<li><code>gcp.runtimeconfig.ConfigIamMember</code>: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the config are preserved.</li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.runtimeconfig.ConfigIamPolicy</code> <strong>cannot</strong> be used in conjunction with <code>gcp.runtimeconfig.ConfigIamBinding</code> and <code>gcp.runtimeconfig.ConfigIamMember</code> or they will fight over what your policy should be.</p>
+</blockquote>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.runtimeconfig.ConfigIamBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.runtimeconfig.ConfigIamMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
+</blockquote>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.RuntimeConfig.ConfigIamPolicyArgs.html">ConfigIamPolicyArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.RuntimeConfig.ConfigIamPolicyState.html">ConfigIamPolicyState</a></h4>
@@ -112,9 +145,6 @@ or the
 <a href="https://cloud.google.com/deployment-manager/runtime-configurator/">official documentation</a>,
 or the
 <a href="https://cloud.google.com/deployment-manager/runtime-configurator/reference/rest/">JSON API</a>.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/runtimeconfig_variable.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/runtimeconfig_variable.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.RuntimeConfig.VariableArgs.html">VariableArgs</a></h4>
       <section></section>

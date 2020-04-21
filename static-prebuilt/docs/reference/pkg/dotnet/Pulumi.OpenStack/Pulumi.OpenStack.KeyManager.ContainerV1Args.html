@@ -87,7 +87,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Keymanager/ContainerV1.cs/#L164">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/KeyManager/ContainerV1.cs/#L177">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_KeyManager_ContainerV1Args__ctor_" data-uid="Pulumi.OpenStack.KeyManager.ContainerV1Args.#ctor*"></a>
   <h4 id="Pulumi_OpenStack_KeyManager_ContainerV1Args__ctor" data-uid="Pulumi.OpenStack.KeyManager.ContainerV1Args.#ctor">ContainerV1Args()</h4>
@@ -100,12 +100,40 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Keymanager/ContainerV1.cs/#L133">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/KeyManager/ContainerV1.cs/#L140">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_KeyManager_ContainerV1Args_Acl_" data-uid="Pulumi.OpenStack.KeyManager.ContainerV1Args.Acl*"></a>
+  <h4 id="Pulumi_OpenStack_KeyManager_ContainerV1Args_Acl" data-uid="Pulumi.OpenStack.KeyManager.ContainerV1Args.Acl">Acl</h4>
+  <div class="markdown level1 summary"><p>Allows to control an access to a container. Currently only
+the <code>read</code> operation is supported. If not specified, the container is
+accessible project wide. The <code>read</code> structure is described below.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;ContainerV1AclArgs&gt;? Acl { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.OpenStack.KeyManager.Inputs.ContainerV1AclArgs.html">ContainerV1AclArgs</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/KeyManager/ContainerV1.cs/#L146">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_KeyManager_ContainerV1Args_Name_" data-uid="Pulumi.OpenStack.KeyManager.ContainerV1Args.Name*"></a>
   <h4 id="Pulumi_OpenStack_KeyManager_ContainerV1Args_Name" data-uid="Pulumi.OpenStack.KeyManager.ContainerV1Args.Name">Name</h4>
-  <div class="markdown level1 summary"><p>Human-readable name for the Container. Does not have
-to be unique.</p>
+  <div class="markdown level1 summary"><p>The name of the secret reference. The reference names must correspond the container type, more details are available <a href="https://docs.openstack.org/barbican/stein/api/reference/containers.html">here</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -128,7 +156,7 @@ to be unique.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Keymanager/ContainerV1.cs/#L142">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/KeyManager/ContainerV1.cs/#L155">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_KeyManager_ContainerV1Args_Region_" data-uid="Pulumi.OpenStack.KeyManager.ContainerV1Args.Region*"></a>
   <h4 id="Pulumi_OpenStack_KeyManager_ContainerV1Args_Region" data-uid="Pulumi.OpenStack.KeyManager.ContainerV1Args.Region">Region</h4>
@@ -158,7 +186,7 @@ V1 container.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Keymanager/ContainerV1.cs/#L152">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/KeyManager/ContainerV1.cs/#L165">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_KeyManager_ContainerV1Args_SecretRefs_" data-uid="Pulumi.OpenStack.KeyManager.ContainerV1Args.SecretRefs*"></a>
   <h4 id="Pulumi_OpenStack_KeyManager_ContainerV1Args_SecretRefs" data-uid="Pulumi.OpenStack.KeyManager.ContainerV1Args.SecretRefs">SecretRefs</h4>
@@ -168,7 +196,7 @@ below.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public InputList&lt;ContainerV1SecretRefsArgs&gt; SecretRefs { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public InputList&lt;ContainerV1SecretRefArgs&gt; SecretRefs { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -180,13 +208,13 @@ below.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">InputList</span>&lt;<a class="xref" href="Pulumi.OpenStack.KeyManager.Inputs.ContainerV1SecretRefsArgs.html">ContainerV1SecretRefsArgs</a>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<a class="xref" href="Pulumi.OpenStack.KeyManager.Inputs.ContainerV1SecretRefArgs.html">ContainerV1SecretRefArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Keymanager/ContainerV1.cs/#L161">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/KeyManager/ContainerV1.cs/#L174">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_KeyManager_ContainerV1Args_Type_" data-uid="Pulumi.OpenStack.KeyManager.ContainerV1Args.Type*"></a>
   <h4 id="Pulumi_OpenStack_KeyManager_ContainerV1Args_Type" data-uid="Pulumi.OpenStack.KeyManager.ContainerV1Args.Type">Type</h4>
@@ -219,7 +247,7 @@ below.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Keymanager/ContainerV1.cs/#L127" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/KeyManager/ContainerV1.cs/#L133" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

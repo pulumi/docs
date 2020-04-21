@@ -76,36 +76,7 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
-    <div class="level3"><span class="xref">RouterInterfaceArgs</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">RouterInterfaceArgs</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.Compute.html">Pulumi.Gcp.Compute</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
@@ -116,7 +87,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/RouterInterface.cs/#L174">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RouterInterface.cs/#L172">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RouterInterfaceArgs__ctor_" data-uid="Pulumi.Gcp.Compute.RouterInterfaceArgs.#ctor*"></a>
   <h4 id="Pulumi_Gcp_Compute_RouterInterfaceArgs__ctor" data-uid="Pulumi.Gcp.Compute.RouterInterfaceArgs.#ctor">RouterInterfaceArgs()</h4>
@@ -129,7 +100,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/RouterInterface.cs/#L127">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RouterInterface.cs/#L125">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RouterInterfaceArgs_InterconnectAttachment_" data-uid="Pulumi.Gcp.Compute.RouterInterfaceArgs.InterconnectAttachment*"></a>
   <h4 id="Pulumi_Gcp_Compute_RouterInterfaceArgs_InterconnectAttachment" data-uid="Pulumi.Gcp.Compute.RouterInterfaceArgs.InterconnectAttachment">InterconnectAttachment</h4>
@@ -141,7 +112,7 @@ specified.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; InterconnectAttachment { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? InterconnectAttachment { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -153,13 +124,13 @@ specified.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/RouterInterface.cs/#L134">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RouterInterface.cs/#L132">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RouterInterfaceArgs_IpRange_" data-uid="Pulumi.Gcp.Compute.RouterInterfaceArgs.IpRange*"></a>
   <h4 id="Pulumi_Gcp_Compute_RouterInterfaceArgs_IpRange" data-uid="Pulumi.Gcp.Compute.RouterInterfaceArgs.IpRange">IpRange</h4>
@@ -169,7 +140,7 @@ in the RFC3927 link-local IP space. Changing this forces a new interface to be c
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; IpRange { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? IpRange { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -181,13 +152,13 @@ in the RFC3927 link-local IP space. Changing this forces a new interface to be c
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/RouterInterface.cs/#L141">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RouterInterface.cs/#L139">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RouterInterfaceArgs_Name_" data-uid="Pulumi.Gcp.Compute.RouterInterfaceArgs.Name*"></a>
   <h4 id="Pulumi_Gcp_Compute_RouterInterfaceArgs_Name" data-uid="Pulumi.Gcp.Compute.RouterInterfaceArgs.Name">Name</h4>
@@ -197,7 +168,7 @@ this forces a new interface to be created.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Name { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Name { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -209,13 +180,13 @@ this forces a new interface to be created.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/RouterInterface.cs/#L148">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RouterInterface.cs/#L146">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RouterInterfaceArgs_Project_" data-uid="Pulumi.Gcp.Compute.RouterInterfaceArgs.Project*"></a>
   <h4 id="Pulumi_Gcp_Compute_RouterInterfaceArgs_Project" data-uid="Pulumi.Gcp.Compute.RouterInterfaceArgs.Project">Project</h4>
@@ -225,7 +196,7 @@ is not provided, the provider project is used. Changing this forces a new interf
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Project { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Project { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -237,13 +208,13 @@ is not provided, the provider project is used. Changing this forces a new interf
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/RouterInterface.cs/#L156">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RouterInterface.cs/#L154">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RouterInterfaceArgs_Region_" data-uid="Pulumi.Gcp.Compute.RouterInterfaceArgs.Region*"></a>
   <h4 id="Pulumi_Gcp_Compute_RouterInterfaceArgs_Region" data-uid="Pulumi.Gcp.Compute.RouterInterfaceArgs.Region">Region</h4>
@@ -254,7 +225,7 @@ created.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Region { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Region { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -266,13 +237,13 @@ created.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/RouterInterface.cs/#L163">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RouterInterface.cs/#L161">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RouterInterfaceArgs_Router_" data-uid="Pulumi.Gcp.Compute.RouterInterfaceArgs.Router*"></a>
   <h4 id="Pulumi_Gcp_Compute_RouterInterfaceArgs_Router" data-uid="Pulumi.Gcp.Compute.RouterInterfaceArgs.Router">Router</h4>
@@ -294,13 +265,13 @@ Changing this forces a new interface to be created.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/RouterInterface.cs/#L171">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RouterInterface.cs/#L169">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RouterInterfaceArgs_VpnTunnel_" data-uid="Pulumi.Gcp.Compute.RouterInterfaceArgs.VpnTunnel*"></a>
   <h4 id="Pulumi_Gcp_Compute_RouterInterfaceArgs_VpnTunnel" data-uid="Pulumi.Gcp.Compute.RouterInterfaceArgs.VpnTunnel">VpnTunnel</h4>
@@ -311,7 +282,7 @@ one of <code>vpn_tunnel</code> and <code>interconnect_attachment</code> can be s
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; VpnTunnel { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? VpnTunnel { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -323,7 +294,7 @@ one of <code>vpn_tunnel</code> and <code>interconnect_attachment</code> can be s
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -335,7 +306,7 @@ one of <code>vpn_tunnel</code> and <code>interconnect_attachment</code> can be s
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/RouterInterface.cs/#L119" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RouterInterface.cs/#L117" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

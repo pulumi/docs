@@ -73,53 +73,12 @@
   </h1>
   <div class="markdown level0 summary"><p>Provides a resource to manage the accepter's side of a Direct Connect hosted private virtual interface.
 This resource accepts ownership of a private virtual interface created by another AWS account.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dx_hosted_private_virtual_interface_accepter.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dx_hosted_private_virtual_interface_accepter.html.markdown</a>.</p>
-</blockquote>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
-    <div class="level3"><span class="xref">HostedPrivateVirtualInterfaceAccepter</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">HostedPrivateVirtualInterfaceAccepter</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.DirectConnect.html">Pulumi.Aws.DirectConnect</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
@@ -130,16 +89,16 @@ This resource accepts ownership of a private virtual interface created by anothe
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Directconnect/HostedPrivateVirtualInterfaceAccepter.cs/#L58">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/DirectConnect/HostedPrivateVirtualInterfaceAccepter.cs/#L56">View Source</a>
   </span>
   <a id="Pulumi_Aws_DirectConnect_HostedPrivateVirtualInterfaceAccepter__ctor_" data-uid="Pulumi.Aws.DirectConnect.HostedPrivateVirtualInterfaceAccepter.#ctor*"></a>
-  <h4 id="Pulumi_Aws_DirectConnect_HostedPrivateVirtualInterfaceAccepter__ctor_System_String_Pulumi_Aws_DirectConnect_HostedPrivateVirtualInterfaceAccepterArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.DirectConnect.HostedPrivateVirtualInterfaceAccepter.#ctor(System.String,Pulumi.Aws.DirectConnect.HostedPrivateVirtualInterfaceAccepterArgs,Pulumi.CustomResourceOptions)">HostedPrivateVirtualInterfaceAccepter(String, HostedPrivateVirtualInterfaceAccepterArgs, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Aws_DirectConnect_HostedPrivateVirtualInterfaceAccepter__ctor_System_String_Pulumi_Aws_DirectConnect_HostedPrivateVirtualInterfaceAccepterArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.DirectConnect.HostedPrivateVirtualInterfaceAccepter.#ctor(System.String,Pulumi.Aws.DirectConnect.HostedPrivateVirtualInterfaceAccepterArgs,System.Nullable{CustomResourceOptions})">HostedPrivateVirtualInterfaceAccepter(String, HostedPrivateVirtualInterfaceAccepterArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Create a HostedPrivateVirtualInterfaceAccepter resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public HostedPrivateVirtualInterfaceAccepter(string name, HostedPrivateVirtualInterfaceAccepterArgs args, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public HostedPrivateVirtualInterfaceAccepter(string name, HostedPrivateVirtualInterfaceAccepterArgs args, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -164,7 +123,7 @@ This resource accepts ownership of a private virtual interface created by anothe
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -174,7 +133,7 @@ This resource accepts ownership of a private virtual interface created by anothe
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Directconnect/HostedPrivateVirtualInterfaceAccepter.cs/#L23">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/DirectConnect/HostedPrivateVirtualInterfaceAccepter.cs/#L21">View Source</a>
   </span>
   <a id="Pulumi_Aws_DirectConnect_HostedPrivateVirtualInterfaceAccepter_Arn_" data-uid="Pulumi.Aws.DirectConnect.HostedPrivateVirtualInterfaceAccepter.Arn*"></a>
   <h4 id="Pulumi_Aws_DirectConnect_HostedPrivateVirtualInterfaceAccepter_Arn" data-uid="Pulumi.Aws.DirectConnect.HostedPrivateVirtualInterfaceAccepter.Arn">Arn</h4>
@@ -195,13 +154,13 @@ This resource accepts ownership of a private virtual interface created by anothe
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Directconnect/HostedPrivateVirtualInterfaceAccepter.cs/#L29">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/DirectConnect/HostedPrivateVirtualInterfaceAccepter.cs/#L27">View Source</a>
   </span>
   <a id="Pulumi_Aws_DirectConnect_HostedPrivateVirtualInterfaceAccepter_DxGatewayId_" data-uid="Pulumi.Aws.DirectConnect.HostedPrivateVirtualInterfaceAccepter.DxGatewayId*"></a>
   <h4 id="Pulumi_Aws_DirectConnect_HostedPrivateVirtualInterfaceAccepter_DxGatewayId" data-uid="Pulumi.Aws.DirectConnect.HostedPrivateVirtualInterfaceAccepter.DxGatewayId">DxGatewayId</h4>
@@ -210,7 +169,7 @@ This resource accepts ownership of a private virtual interface created by anothe
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; DxGatewayId { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; DxGatewayId { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -222,13 +181,13 @@ This resource accepts ownership of a private virtual interface created by anothe
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Directconnect/HostedPrivateVirtualInterfaceAccepter.cs/#L35">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/DirectConnect/HostedPrivateVirtualInterfaceAccepter.cs/#L33">View Source</a>
   </span>
   <a id="Pulumi_Aws_DirectConnect_HostedPrivateVirtualInterfaceAccepter_Tags_" data-uid="Pulumi.Aws.DirectConnect.HostedPrivateVirtualInterfaceAccepter.Tags*"></a>
   <h4 id="Pulumi_Aws_DirectConnect_HostedPrivateVirtualInterfaceAccepter_Tags" data-uid="Pulumi.Aws.DirectConnect.HostedPrivateVirtualInterfaceAccepter.Tags">Tags</h4>
@@ -237,7 +196,7 @@ This resource accepts ownership of a private virtual interface created by anothe
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;&gt; Tags { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;?&gt; Tags { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -249,13 +208,13 @@ This resource accepts ownership of a private virtual interface created by anothe
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Directconnect/HostedPrivateVirtualInterfaceAccepter.cs/#L41">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/DirectConnect/HostedPrivateVirtualInterfaceAccepter.cs/#L39">View Source</a>
   </span>
   <a id="Pulumi_Aws_DirectConnect_HostedPrivateVirtualInterfaceAccepter_VirtualInterfaceId_" data-uid="Pulumi.Aws.DirectConnect.HostedPrivateVirtualInterfaceAccepter.VirtualInterfaceId*"></a>
   <h4 id="Pulumi_Aws_DirectConnect_HostedPrivateVirtualInterfaceAccepter_VirtualInterfaceId" data-uid="Pulumi.Aws.DirectConnect.HostedPrivateVirtualInterfaceAccepter.VirtualInterfaceId">VirtualInterfaceId</h4>
@@ -276,13 +235,13 @@ This resource accepts ownership of a private virtual interface created by anothe
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Directconnect/HostedPrivateVirtualInterfaceAccepter.cs/#L47">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/DirectConnect/HostedPrivateVirtualInterfaceAccepter.cs/#L45">View Source</a>
   </span>
   <a id="Pulumi_Aws_DirectConnect_HostedPrivateVirtualInterfaceAccepter_VpnGatewayId_" data-uid="Pulumi.Aws.DirectConnect.HostedPrivateVirtualInterfaceAccepter.VpnGatewayId*"></a>
   <h4 id="Pulumi_Aws_DirectConnect_HostedPrivateVirtualInterfaceAccepter_VpnGatewayId" data-uid="Pulumi.Aws.DirectConnect.HostedPrivateVirtualInterfaceAccepter.VpnGatewayId">VpnGatewayId</h4>
@@ -291,7 +250,7 @@ This resource accepts ownership of a private virtual interface created by anothe
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; VpnGatewayId { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; VpnGatewayId { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -303,7 +262,7 @@ This resource accepts ownership of a private virtual interface created by anothe
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -311,17 +270,17 @@ This resource accepts ownership of a private virtual interface created by anothe
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Directconnect/HostedPrivateVirtualInterfaceAccepter.cs/#L88">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/DirectConnect/HostedPrivateVirtualInterfaceAccepter.cs/#L86">View Source</a>
   </span>
   <a id="Pulumi_Aws_DirectConnect_HostedPrivateVirtualInterfaceAccepter_Get_" data-uid="Pulumi.Aws.DirectConnect.HostedPrivateVirtualInterfaceAccepter.Get*"></a>
-  <h4 id="Pulumi_Aws_DirectConnect_HostedPrivateVirtualInterfaceAccepter_Get_System_String_Pulumi_Input_System_String__Pulumi_Aws_DirectConnect_HostedPrivateVirtualInterfaceAccepterState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.DirectConnect.HostedPrivateVirtualInterfaceAccepter.Get(System.String,Pulumi.Input{System.String},Pulumi.Aws.DirectConnect.HostedPrivateVirtualInterfaceAccepterState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, HostedPrivateVirtualInterfaceAccepterState, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Aws_DirectConnect_HostedPrivateVirtualInterfaceAccepter_Get_System_String_Input_System_String__Pulumi_Aws_DirectConnect_HostedPrivateVirtualInterfaceAccepterState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.DirectConnect.HostedPrivateVirtualInterfaceAccepter.Get(System.String,Input{System.String},Pulumi.Aws.DirectConnect.HostedPrivateVirtualInterfaceAccepterState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, HostedPrivateVirtualInterfaceAccepterState, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Get an existing HostedPrivateVirtualInterfaceAccepter resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static HostedPrivateVirtualInterfaceAccepter Get(string name, Input&lt;string&gt; id, HostedPrivateVirtualInterfaceAccepterState state = null, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static HostedPrivateVirtualInterfaceAccepter Get(string name, Input&lt;string&gt; id, HostedPrivateVirtualInterfaceAccepterState state = null, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -340,7 +299,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -352,7 +311,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -381,7 +340,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Directconnect/HostedPrivateVirtualInterfaceAccepter.cs/#L18" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/DirectConnect/HostedPrivateVirtualInterfaceAccepter.cs/#L16" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -79,40 +79,16 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">HorizontalPodAutoscalerSpec</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Autoscaling.V1.html">Pulumi.Kubernetes.Types.Outputs.Autoscaling.V1</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Kubernetes.dll</h6>
   <h5 id="Pulumi_Kubernetes_Types_Outputs_Autoscaling_V1_HorizontalPodAutoscalerSpec_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class HorizontalPodAutoscalerSpec</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class HorizontalPodAutoscalerSpec : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L10371">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L10377">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Autoscaling_V1_HorizontalPodAutoscalerSpec_MaxReplicas" data-uid="Pulumi.Kubernetes.Types.Outputs.Autoscaling.V1.HorizontalPodAutoscalerSpec.MaxReplicas">MaxReplicas</h4>
   <div class="markdown level1 summary"><p>upper limit for the number of pods that can be set by the autoscaler; cannot be smaller
@@ -139,7 +115,7 @@ than MinReplicas.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L10379">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L10385">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Autoscaling_V1_HorizontalPodAutoscalerSpec_MinReplicas" data-uid="Pulumi.Kubernetes.Types.Outputs.Autoscaling.V1.HorizontalPodAutoscalerSpec.MinReplicas">MinReplicas</h4>
   <div class="markdown level1 summary"><p>minReplicas is the lower limit for the number of replicas to which the autoscaler can
@@ -168,7 +144,7 @@ Scaling is active as long as at least one metric value is available.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L10385">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L10391">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Autoscaling_V1_HorizontalPodAutoscalerSpec_ScaleTargetRef" data-uid="Pulumi.Kubernetes.Types.Outputs.Autoscaling.V1.HorizontalPodAutoscalerSpec.ScaleTargetRef">ScaleTargetRef</h4>
   <div class="markdown level1 summary"><p>reference to scaled resource; horizontal pod autoscaler will learn the current resource
@@ -195,7 +171,7 @@ consumption and will set the desired number of pods by using its Scale subresour
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L10391">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L10397">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Autoscaling_V1_HorizontalPodAutoscalerSpec_TargetCPUUtilizationPercentage" data-uid="Pulumi.Kubernetes.Types.Outputs.Autoscaling.V1.HorizontalPodAutoscalerSpec.TargetCPUUtilizationPercentage">TargetCPUUtilizationPercentage</h4>
   <div class="markdown level1 summary"><p>target average CPU utilization (represented as a percentage of requested CPU) over all
@@ -228,7 +204,7 @@ the pods; if not specified the default autoscaling policy will be used.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L10364" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L10370" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

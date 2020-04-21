@@ -78,47 +78,24 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">ClusterClusterConfigWorkerConfig</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.Dataproc.Outputs.html">Pulumi.Gcp.Dataproc.Outputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
   <h5 id="Pulumi_Gcp_Dataproc_Outputs_ClusterClusterConfigWorkerConfig_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class ClusterClusterConfigWorkerConfig</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class ClusterClusterConfigWorkerConfig : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Dataproc/Cluster.cs/#L1365">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Dataproc/Outputs/ClusterClusterConfigWorkerConfig.cs/#L19">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Dataproc_Outputs_ClusterClusterConfigWorkerConfig_Accelerators" data-uid="Pulumi.Gcp.Dataproc.Outputs.ClusterClusterConfigWorkerConfig.Accelerators">Accelerators</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The Compute Engine accelerator configuration for these instances. Can be specified multiple times.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;ClusterClusterConfigWorkerConfigAccelerators&gt; Accelerators</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;ClusterClusterConfigWorkerConfigAccelerator&gt; Accelerators</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -130,16 +107,17 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Gcp.Dataproc.Outputs.ClusterClusterConfigWorkerConfigAccelerators.html">ClusterClusterConfigWorkerConfigAccelerators</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Gcp.Dataproc.Outputs.ClusterClusterConfigWorkerConfigAccelerator.html">ClusterClusterConfigWorkerConfigAccelerator</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Dataproc/Cluster.cs/#L1366">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Dataproc/Outputs/ClusterClusterConfigWorkerConfig.cs/#L23">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Dataproc_Outputs_ClusterClusterConfigWorkerConfig_DiskConfig" data-uid="Pulumi.Gcp.Dataproc.Outputs.ClusterClusterConfigWorkerConfig.DiskConfig">DiskConfig</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Disk Config</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -161,14 +139,16 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Dataproc/Cluster.cs/#L1367">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Dataproc/Outputs/ClusterClusterConfigWorkerConfig.cs/#L28">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Dataproc_Outputs_ClusterClusterConfigWorkerConfig_ImageUri" data-uid="Pulumi.Gcp.Dataproc.Outputs.ClusterClusterConfigWorkerConfig.ImageUri">ImageUri</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The URI for the image to use for this worker.  See <a href="https://cloud.google.com/dataproc/docs/guides/dataproc-images">the guide</a>
+for more information.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string ImageUri</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? ImageUri</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -180,13 +160,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Dataproc/Cluster.cs/#L1368">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Dataproc/Outputs/ClusterClusterConfigWorkerConfig.cs/#L29">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Dataproc_Outputs_ClusterClusterConfigWorkerConfig_InstanceNames" data-uid="Pulumi.Gcp.Dataproc.Outputs.ClusterClusterConfigWorkerConfig.InstanceNames">InstanceNames</h4>
   <div class="markdown level1 summary"></div>
@@ -205,20 +185,23 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Dataproc/Cluster.cs/#L1369">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Dataproc/Outputs/ClusterClusterConfigWorkerConfig.cs/#L35">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Dataproc_Outputs_ClusterClusterConfigWorkerConfig_MachineType" data-uid="Pulumi.Gcp.Dataproc.Outputs.ClusterClusterConfigWorkerConfig.MachineType">MachineType</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The name of a Google Compute Engine machine type
+to create for the worker nodes. If not specified, GCP will default to a predetermined
+computed value (currently <code>n1-standard-4</code>).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string MachineType</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? MachineType</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -230,20 +213,24 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Dataproc/Cluster.cs/#L1370">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Dataproc/Outputs/ClusterClusterConfigWorkerConfig.cs/#L42">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Dataproc_Outputs_ClusterClusterConfigWorkerConfig_MinCpuPlatform" data-uid="Pulumi.Gcp.Dataproc.Outputs.ClusterClusterConfigWorkerConfig.MinCpuPlatform">MinCpuPlatform</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The name of a minimum generation of CPU family
+for the master. If not specified, GCP will default to a predetermined computed value
+for each zone. See <a href="https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform">the guide</a>
+for details about which CPU families are available (and defaulted) for each zone.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string MinCpuPlatform</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? MinCpuPlatform</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -255,20 +242,20 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Dataproc/Cluster.cs/#L1371">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Dataproc/Outputs/ClusterClusterConfigWorkerConfig.cs/#L43">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Dataproc_Outputs_ClusterClusterConfigWorkerConfig_NumInstances" data-uid="Pulumi.Gcp.Dataproc.Outputs.ClusterClusterConfigWorkerConfig.NumInstances">NumInstances</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly int NumInstances</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly int? NumInstances</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -280,7 +267,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Int32</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -292,7 +279,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Dataproc/Cluster.cs/#L1362" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Dataproc/Outputs/ClusterClusterConfigWorkerConfig.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

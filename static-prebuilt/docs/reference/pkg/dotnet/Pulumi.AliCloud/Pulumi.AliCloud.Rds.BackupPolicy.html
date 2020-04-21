@@ -75,53 +75,12 @@
 <blockquote>
 <p><strong>NOTE:</strong> Each DB instance has a backup policy and it will be set default values when destroying the resource.</p>
 </blockquote>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/db_backup_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/db_backup_policy.html.markdown</a>.</p>
-</blockquote>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
-    <div class="level3"><span class="xref">BackupPolicy</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">BackupPolicy</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.AliCloud.Rds.html">Pulumi.AliCloud.Rds</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.AliCloud.dll</h6>
@@ -132,16 +91,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Rds/BackupPolicy.cs/#L143">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Rds/BackupPolicy.cs/#L141">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Rds_BackupPolicy__ctor_" data-uid="Pulumi.AliCloud.Rds.BackupPolicy.#ctor*"></a>
-  <h4 id="Pulumi_AliCloud_Rds_BackupPolicy__ctor_System_String_Pulumi_AliCloud_Rds_BackupPolicyArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.AliCloud.Rds.BackupPolicy.#ctor(System.String,Pulumi.AliCloud.Rds.BackupPolicyArgs,Pulumi.CustomResourceOptions)">BackupPolicy(String, BackupPolicyArgs, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_AliCloud_Rds_BackupPolicy__ctor_System_String_Pulumi_AliCloud_Rds_BackupPolicyArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.AliCloud.Rds.BackupPolicy.#ctor(System.String,Pulumi.AliCloud.Rds.BackupPolicyArgs,System.Nullable{CustomResourceOptions})">BackupPolicy(String, BackupPolicyArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Create a BackupPolicy resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public BackupPolicy(string name, BackupPolicyArgs args, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public BackupPolicy(string name, BackupPolicyArgs args, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -166,7 +125,7 @@
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -176,7 +135,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Rds/BackupPolicy.cs/#L24">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Rds/BackupPolicy.cs/#L22">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Rds_BackupPolicy_ArchiveBackupKeepCount_" data-uid="Pulumi.AliCloud.Rds.BackupPolicy.ArchiveBackupKeepCount*"></a>
   <h4 id="Pulumi_AliCloud_Rds_BackupPolicy_ArchiveBackupKeepCount" data-uid="Pulumi.AliCloud.Rds.BackupPolicy.ArchiveBackupKeepCount">ArchiveBackupKeepCount</h4>
@@ -197,13 +156,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Rds/BackupPolicy.cs/#L30">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Rds/BackupPolicy.cs/#L28">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Rds_BackupPolicy_ArchiveBackupKeepPolicy_" data-uid="Pulumi.AliCloud.Rds.BackupPolicy.ArchiveBackupKeepPolicy*"></a>
   <h4 id="Pulumi_AliCloud_Rds_BackupPolicy_ArchiveBackupKeepPolicy" data-uid="Pulumi.AliCloud.Rds.BackupPolicy.ArchiveBackupKeepPolicy">ArchiveBackupKeepPolicy</h4>
@@ -224,13 +183,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Rds/BackupPolicy.cs/#L36">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Rds/BackupPolicy.cs/#L34">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Rds_BackupPolicy_ArchiveBackupRetentionPeriod_" data-uid="Pulumi.AliCloud.Rds.BackupPolicy.ArchiveBackupRetentionPeriod*"></a>
   <h4 id="Pulumi_AliCloud_Rds_BackupPolicy_ArchiveBackupRetentionPeriod" data-uid="Pulumi.AliCloud.Rds.BackupPolicy.ArchiveBackupRetentionPeriod">ArchiveBackupRetentionPeriod</h4>
@@ -251,13 +210,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Rds/BackupPolicy.cs/#L42">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Rds/BackupPolicy.cs/#L40">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Rds_BackupPolicy_BackupPeriods_" data-uid="Pulumi.AliCloud.Rds.BackupPolicy.BackupPeriods*"></a>
   <h4 id="Pulumi_AliCloud_Rds_BackupPolicy_BackupPeriods" data-uid="Pulumi.AliCloud.Rds.BackupPolicy.BackupPeriods">BackupPeriods</h4>
@@ -278,13 +237,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Rds/BackupPolicy.cs/#L48">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Rds/BackupPolicy.cs/#L46">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Rds_BackupPolicy_BackupRetentionPeriod_" data-uid="Pulumi.AliCloud.Rds.BackupPolicy.BackupRetentionPeriod*"></a>
   <h4 id="Pulumi_AliCloud_Rds_BackupPolicy_BackupRetentionPeriod" data-uid="Pulumi.AliCloud.Rds.BackupPolicy.BackupRetentionPeriod">BackupRetentionPeriod</h4>
@@ -305,13 +264,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Rds/BackupPolicy.cs/#L54">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Rds/BackupPolicy.cs/#L52">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Rds_BackupPolicy_BackupTime_" data-uid="Pulumi.AliCloud.Rds.BackupPolicy.BackupTime*"></a>
   <h4 id="Pulumi_AliCloud_Rds_BackupPolicy_BackupTime" data-uid="Pulumi.AliCloud.Rds.BackupPolicy.BackupTime">BackupTime</h4>
@@ -332,13 +291,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Rds/BackupPolicy.cs/#L60">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Rds/BackupPolicy.cs/#L58">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Rds_BackupPolicy_CompressType_" data-uid="Pulumi.AliCloud.Rds.BackupPolicy.CompressType*"></a>
   <h4 id="Pulumi_AliCloud_Rds_BackupPolicy_CompressType" data-uid="Pulumi.AliCloud.Rds.BackupPolicy.CompressType">CompressType</h4>
@@ -359,13 +318,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Rds/BackupPolicy.cs/#L66">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Rds/BackupPolicy.cs/#L64">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Rds_BackupPolicy_EnableBackupLog_" data-uid="Pulumi.AliCloud.Rds.BackupPolicy.EnableBackupLog*"></a>
   <h4 id="Pulumi_AliCloud_Rds_BackupPolicy_EnableBackupLog" data-uid="Pulumi.AliCloud.Rds.BackupPolicy.EnableBackupLog">EnableBackupLog</h4>
@@ -386,13 +345,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Rds/BackupPolicy.cs/#L72">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Rds/BackupPolicy.cs/#L70">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Rds_BackupPolicy_HighSpaceUsageProtection_" data-uid="Pulumi.AliCloud.Rds.BackupPolicy.HighSpaceUsageProtection*"></a>
   <h4 id="Pulumi_AliCloud_Rds_BackupPolicy_HighSpaceUsageProtection" data-uid="Pulumi.AliCloud.Rds.BackupPolicy.HighSpaceUsageProtection">HighSpaceUsageProtection</h4>
@@ -401,7 +360,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; HighSpaceUsageProtection { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; HighSpaceUsageProtection { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -413,13 +372,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Rds/BackupPolicy.cs/#L78">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Rds/BackupPolicy.cs/#L76">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Rds_BackupPolicy_InstanceId_" data-uid="Pulumi.AliCloud.Rds.BackupPolicy.InstanceId*"></a>
   <h4 id="Pulumi_AliCloud_Rds_BackupPolicy_InstanceId" data-uid="Pulumi.AliCloud.Rds.BackupPolicy.InstanceId">InstanceId</h4>
@@ -440,13 +399,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Rds/BackupPolicy.cs/#L84">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Rds/BackupPolicy.cs/#L82">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Rds_BackupPolicy_LocalLogRetentionHours_" data-uid="Pulumi.AliCloud.Rds.BackupPolicy.LocalLogRetentionHours*"></a>
   <h4 id="Pulumi_AliCloud_Rds_BackupPolicy_LocalLogRetentionHours" data-uid="Pulumi.AliCloud.Rds.BackupPolicy.LocalLogRetentionHours">LocalLogRetentionHours</h4>
@@ -467,13 +426,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Rds/BackupPolicy.cs/#L90">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Rds/BackupPolicy.cs/#L88">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Rds_BackupPolicy_LocalLogRetentionSpace_" data-uid="Pulumi.AliCloud.Rds.BackupPolicy.LocalLogRetentionSpace*"></a>
   <h4 id="Pulumi_AliCloud_Rds_BackupPolicy_LocalLogRetentionSpace" data-uid="Pulumi.AliCloud.Rds.BackupPolicy.LocalLogRetentionSpace">LocalLogRetentionSpace</h4>
@@ -494,13 +453,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Rds/BackupPolicy.cs/#L96">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Rds/BackupPolicy.cs/#L94">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Rds_BackupPolicy_LogBackup_" data-uid="Pulumi.AliCloud.Rds.BackupPolicy.LogBackup*"></a>
   <h4 id="Pulumi_AliCloud_Rds_BackupPolicy_LogBackup" data-uid="Pulumi.AliCloud.Rds.BackupPolicy.LogBackup">LogBackup</h4>
@@ -521,13 +480,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Rds/BackupPolicy.cs/#L102">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Rds/BackupPolicy.cs/#L100">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Rds_BackupPolicy_LogBackupFrequency_" data-uid="Pulumi.AliCloud.Rds.BackupPolicy.LogBackupFrequency*"></a>
   <h4 id="Pulumi_AliCloud_Rds_BackupPolicy_LogBackupFrequency" data-uid="Pulumi.AliCloud.Rds.BackupPolicy.LogBackupFrequency">LogBackupFrequency</h4>
@@ -548,13 +507,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Rds/BackupPolicy.cs/#L108">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Rds/BackupPolicy.cs/#L106">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Rds_BackupPolicy_LogBackupRetentionPeriod_" data-uid="Pulumi.AliCloud.Rds.BackupPolicy.LogBackupRetentionPeriod*"></a>
   <h4 id="Pulumi_AliCloud_Rds_BackupPolicy_LogBackupRetentionPeriod" data-uid="Pulumi.AliCloud.Rds.BackupPolicy.LogBackupRetentionPeriod">LogBackupRetentionPeriod</h4>
@@ -575,13 +534,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Rds/BackupPolicy.cs/#L114">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Rds/BackupPolicy.cs/#L112">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Rds_BackupPolicy_LogRetentionPeriod_" data-uid="Pulumi.AliCloud.Rds.BackupPolicy.LogRetentionPeriod*"></a>
   <h4 id="Pulumi_AliCloud_Rds_BackupPolicy_LogRetentionPeriod" data-uid="Pulumi.AliCloud.Rds.BackupPolicy.LogRetentionPeriod">LogRetentionPeriod</h4>
@@ -602,13 +561,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Rds/BackupPolicy.cs/#L120">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Rds/BackupPolicy.cs/#L118">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Rds_BackupPolicy_PreferredBackupPeriods_" data-uid="Pulumi.AliCloud.Rds.BackupPolicy.PreferredBackupPeriods*"></a>
   <h4 id="Pulumi_AliCloud_Rds_BackupPolicy_PreferredBackupPeriods" data-uid="Pulumi.AliCloud.Rds.BackupPolicy.PreferredBackupPeriods">PreferredBackupPeriods</h4>
@@ -629,13 +588,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Rds/BackupPolicy.cs/#L126">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Rds/BackupPolicy.cs/#L124">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Rds_BackupPolicy_PreferredBackupTime_" data-uid="Pulumi.AliCloud.Rds.BackupPolicy.PreferredBackupTime*"></a>
   <h4 id="Pulumi_AliCloud_Rds_BackupPolicy_PreferredBackupTime" data-uid="Pulumi.AliCloud.Rds.BackupPolicy.PreferredBackupTime">PreferredBackupTime</h4>
@@ -644,7 +603,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; PreferredBackupTime { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; PreferredBackupTime { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -656,13 +615,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Rds/BackupPolicy.cs/#L132">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Rds/BackupPolicy.cs/#L130">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Rds_BackupPolicy_RetentionPeriod_" data-uid="Pulumi.AliCloud.Rds.BackupPolicy.RetentionPeriod*"></a>
   <h4 id="Pulumi_AliCloud_Rds_BackupPolicy_RetentionPeriod" data-uid="Pulumi.AliCloud.Rds.BackupPolicy.RetentionPeriod">RetentionPeriod</h4>
@@ -683,7 +642,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -691,17 +650,17 @@
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Rds/BackupPolicy.cs/#L173">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Rds/BackupPolicy.cs/#L171">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Rds_BackupPolicy_Get_" data-uid="Pulumi.AliCloud.Rds.BackupPolicy.Get*"></a>
-  <h4 id="Pulumi_AliCloud_Rds_BackupPolicy_Get_System_String_Pulumi_Input_System_String__Pulumi_AliCloud_Rds_BackupPolicyState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.AliCloud.Rds.BackupPolicy.Get(System.String,Pulumi.Input{System.String},Pulumi.AliCloud.Rds.BackupPolicyState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, BackupPolicyState, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_AliCloud_Rds_BackupPolicy_Get_System_String_Input_System_String__Pulumi_AliCloud_Rds_BackupPolicyState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.AliCloud.Rds.BackupPolicy.Get(System.String,Input{System.String},Pulumi.AliCloud.Rds.BackupPolicyState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, BackupPolicyState, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Get an existing BackupPolicy resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static BackupPolicy Get(string name, Input&lt;string&gt; id, BackupPolicyState state = null, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static BackupPolicy Get(string name, Input&lt;string&gt; id, BackupPolicyState state = null, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -720,7 +679,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -732,7 +691,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -761,7 +720,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Rds/BackupPolicy.cs/#L19" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Rds/BackupPolicy.cs/#L17" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

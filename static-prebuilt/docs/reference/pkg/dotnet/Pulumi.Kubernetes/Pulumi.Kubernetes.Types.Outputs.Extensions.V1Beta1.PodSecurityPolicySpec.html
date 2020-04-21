@@ -80,40 +80,16 @@ from policy API Group instead.</p>
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">PodSecurityPolicySpec</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Extensions.V1Beta1.html">Pulumi.Kubernetes.Types.Outputs.Extensions.V1Beta1</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Kubernetes.dll</h6>
   <h5 id="Pulumi_Kubernetes_Types_Outputs_Extensions_V1Beta1_PodSecurityPolicySpec_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class PodSecurityPolicySpec</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class PodSecurityPolicySpec : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L25094">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L25337">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Extensions_V1Beta1_PodSecurityPolicySpec_AllowedCapabilities" data-uid="Pulumi.Kubernetes.Types.Outputs.Extensions.V1Beta1.PodSecurityPolicySpec.AllowedCapabilities">AllowedCapabilities</h4>
   <div class="markdown level1 summary"><p>allowedCapabilities is a list of capabilities that can be requested to add to the
@@ -135,13 +111,13 @@ must not list a capability in both allowedCapabilities and requiredDropCapabilit
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L25087">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L25330">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Extensions_V1Beta1_PodSecurityPolicySpec_AllowedCSIDrivers" data-uid="Pulumi.Kubernetes.Types.Outputs.Extensions.V1Beta1.PodSecurityPolicySpec.AllowedCSIDrivers">AllowedCSIDrivers</h4>
   <div class="markdown level1 summary"><p>AllowedCSIDrivers is a whitelist of inline CSI drivers that must be explicitly set to be
@@ -163,13 +139,13 @@ inline ephemeral volumes.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Extensions.V1Beta1.AllowedCSIDriver.html">AllowedCSIDriver</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Extensions.V1Beta1.AllowedCSIDriver.html">AllowedCSIDriver</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L25101">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L25344">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Extensions_V1Beta1_PodSecurityPolicySpec_AllowedFlexVolumes" data-uid="Pulumi.Kubernetes.Types.Outputs.Extensions.V1Beta1.PodSecurityPolicySpec.AllowedFlexVolumes">AllowedFlexVolumes</h4>
   <div class="markdown level1 summary"><p>allowedFlexVolumes is a whitelist of allowed Flexvolumes.  Empty or nil indicates that
@@ -191,13 +167,13 @@ Flexvolumes is allowed in the &quot;volumes&quot; field.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Extensions.V1Beta1.AllowedFlexVolume.html">AllowedFlexVolume</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Extensions.V1Beta1.AllowedFlexVolume.html">AllowedFlexVolume</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L25107">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L25350">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Extensions_V1Beta1_PodSecurityPolicySpec_AllowedHostPaths" data-uid="Pulumi.Kubernetes.Types.Outputs.Extensions.V1Beta1.PodSecurityPolicySpec.AllowedHostPaths">AllowedHostPaths</h4>
   <div class="markdown level1 summary"><p>allowedHostPaths is a white list of allowed host paths. Empty indicates that all host
@@ -218,13 +194,13 @@ paths may be used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Extensions.V1Beta1.AllowedHostPath.html">AllowedHostPath</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Extensions.V1Beta1.AllowedHostPath.html">AllowedHostPath</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L25114">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L25357">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Extensions_V1Beta1_PodSecurityPolicySpec_AllowedProcMountTypes" data-uid="Pulumi.Kubernetes.Types.Outputs.Extensions.V1Beta1.PodSecurityPolicySpec.AllowedProcMountTypes">AllowedProcMountTypes</h4>
   <div class="markdown level1 summary"><p>AllowedProcMountTypes is a whitelist of allowed ProcMountTypes. Empty or nil indicates
@@ -246,13 +222,13 @@ flag to be enabled.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L25125">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L25368">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Extensions_V1Beta1_PodSecurityPolicySpec_AllowedUnsafeSysctls" data-uid="Pulumi.Kubernetes.Types.Outputs.Extensions.V1Beta1.PodSecurityPolicySpec.AllowedUnsafeSysctls">AllowedUnsafeSysctls</h4>
   <div class="markdown level1 summary"><p>allowedUnsafeSysctls is a list of explicitly allowed unsafe sysctls, defaults to none.
@@ -277,13 +253,13 @@ has to whitelist all allowed unsafe sysctls explicitly to avoid rejection.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L25080">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L25323">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Extensions_V1Beta1_PodSecurityPolicySpec_AllowPrivilegeEscalation" data-uid="Pulumi.Kubernetes.Types.Outputs.Extensions.V1Beta1.PodSecurityPolicySpec.AllowPrivilegeEscalation">AllowPrivilegeEscalation</h4>
   <div class="markdown level1 summary"><p>allowPrivilegeEscalation determines if a pod can request to allow privilege escalation.
@@ -310,7 +286,7 @@ If unspecified, defaults to true.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L25134">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L25377">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Extensions_V1Beta1_PodSecurityPolicySpec_DefaultAddCapabilities" data-uid="Pulumi.Kubernetes.Types.Outputs.Extensions.V1Beta1.PodSecurityPolicySpec.DefaultAddCapabilities">DefaultAddCapabilities</h4>
   <div class="markdown level1 summary"><p>defaultAddCapabilities is the default set of capabilities that will be added to the
@@ -334,13 +310,13 @@ list.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L25140">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L25383">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Extensions_V1Beta1_PodSecurityPolicySpec_DefaultAllowPrivilegeEscalation" data-uid="Pulumi.Kubernetes.Types.Outputs.Extensions.V1Beta1.PodSecurityPolicySpec.DefaultAllowPrivilegeEscalation">DefaultAllowPrivilegeEscalation</h4>
   <div class="markdown level1 summary"><p>defaultAllowPrivilegeEscalation controls the default setting for whether a process can
@@ -367,7 +343,7 @@ gain more privileges than its parent process.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L25150">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L25393">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Extensions_V1Beta1_PodSecurityPolicySpec_ForbiddenSysctls" data-uid="Pulumi.Kubernetes.Types.Outputs.Extensions.V1Beta1.PodSecurityPolicySpec.ForbiddenSysctls">ForbiddenSysctls</h4>
   <div class="markdown level1 summary"><p>forbiddenSysctls is a list of explicitly forbidden sysctls, defaults to none. Each entry
@@ -391,13 +367,13 @@ of forbidden sysctls. Single * means all sysctls are forbidden.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L25155">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L25398">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Extensions_V1Beta1_PodSecurityPolicySpec_FsGroup" data-uid="Pulumi.Kubernetes.Types.Outputs.Extensions.V1Beta1.PodSecurityPolicySpec.FsGroup">FsGroup</h4>
   <div class="markdown level1 summary"><p>fsGroup is the strategy that will dictate what fs group is used by the SecurityContext.</p>
@@ -423,7 +399,7 @@ of forbidden sysctls. Single * means all sysctls are forbidden.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L25160">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L25403">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Extensions_V1Beta1_PodSecurityPolicySpec_HostIPC" data-uid="Pulumi.Kubernetes.Types.Outputs.Extensions.V1Beta1.PodSecurityPolicySpec.HostIPC">HostIPC</h4>
   <div class="markdown level1 summary"><p>hostIPC determines if the policy allows the use of HostIPC in the pod spec.</p>
@@ -449,7 +425,7 @@ of forbidden sysctls. Single * means all sysctls are forbidden.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L25165">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L25408">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Extensions_V1Beta1_PodSecurityPolicySpec_HostNetwork" data-uid="Pulumi.Kubernetes.Types.Outputs.Extensions.V1Beta1.PodSecurityPolicySpec.HostNetwork">HostNetwork</h4>
   <div class="markdown level1 summary"><p>hostNetwork determines if the policy allows the use of HostNetwork in the pod spec.</p>
@@ -475,7 +451,7 @@ of forbidden sysctls. Single * means all sysctls are forbidden.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L25170">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L25413">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Extensions_V1Beta1_PodSecurityPolicySpec_HostPID" data-uid="Pulumi.Kubernetes.Types.Outputs.Extensions.V1Beta1.PodSecurityPolicySpec.HostPID">HostPID</h4>
   <div class="markdown level1 summary"><p>hostPID determines if the policy allows the use of HostPID in the pod spec.</p>
@@ -501,7 +477,7 @@ of forbidden sysctls. Single * means all sysctls are forbidden.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L25175">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L25418">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Extensions_V1Beta1_PodSecurityPolicySpec_HostPorts" data-uid="Pulumi.Kubernetes.Types.Outputs.Extensions.V1Beta1.PodSecurityPolicySpec.HostPorts">HostPorts</h4>
   <div class="markdown level1 summary"><p>hostPorts determines which host port ranges are allowed to be exposed.</p>
@@ -521,13 +497,13 @@ of forbidden sysctls. Single * means all sysctls are forbidden.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Extensions.V1Beta1.HostPortRange.html">HostPortRange</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Extensions.V1Beta1.HostPortRange.html">HostPortRange</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L25180">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L25423">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Extensions_V1Beta1_PodSecurityPolicySpec_Privileged" data-uid="Pulumi.Kubernetes.Types.Outputs.Extensions.V1Beta1.PodSecurityPolicySpec.Privileged">Privileged</h4>
   <div class="markdown level1 summary"><p>privileged determines if a pod can request to be run as privileged.</p>
@@ -553,7 +529,7 @@ of forbidden sysctls. Single * means all sysctls are forbidden.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L25188">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L25431">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Extensions_V1Beta1_PodSecurityPolicySpec_ReadOnlyRootFilesystem" data-uid="Pulumi.Kubernetes.Types.Outputs.Extensions.V1Beta1.PodSecurityPolicySpec.ReadOnlyRootFilesystem">ReadOnlyRootFilesystem</h4>
   <div class="markdown level1 summary"><p>readOnlyRootFilesystem when set to true will force containers to run with a read only
@@ -582,7 +558,7 @@ a read only root file system if it wishes but it will not be forced to.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L25194">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L25437">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Extensions_V1Beta1_PodSecurityPolicySpec_RequiredDropCapabilities" data-uid="Pulumi.Kubernetes.Types.Outputs.Extensions.V1Beta1.PodSecurityPolicySpec.RequiredDropCapabilities">RequiredDropCapabilities</h4>
   <div class="markdown level1 summary"><p>requiredDropCapabilities are the capabilities that will be dropped from the container.
@@ -603,13 +579,13 @@ These are required to be dropped and cannot be added.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L25201">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L25444">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Extensions_V1Beta1_PodSecurityPolicySpec_RunAsGroup" data-uid="Pulumi.Kubernetes.Types.Outputs.Extensions.V1Beta1.PodSecurityPolicySpec.RunAsGroup">RunAsGroup</h4>
   <div class="markdown level1 summary"><p>RunAsGroup is the strategy that will dictate the allowable RunAsGroup values that may be
@@ -637,7 +613,7 @@ requires the RunAsGroup feature gate to be enabled.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L25207">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L25450">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Extensions_V1Beta1_PodSecurityPolicySpec_RunAsUser" data-uid="Pulumi.Kubernetes.Types.Outputs.Extensions.V1Beta1.PodSecurityPolicySpec.RunAsUser">RunAsUser</h4>
   <div class="markdown level1 summary"><p>runAsUser is the strategy that will dictate the allowable RunAsUser values that may be
@@ -664,7 +640,7 @@ set.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L25214">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L25457">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Extensions_V1Beta1_PodSecurityPolicySpec_RuntimeClass" data-uid="Pulumi.Kubernetes.Types.Outputs.Extensions.V1Beta1.PodSecurityPolicySpec.RuntimeClass">RuntimeClass</h4>
   <div class="markdown level1 summary"><p>runtimeClass is the strategy that will dictate the allowable RuntimeClasses for a pod.
@@ -692,7 +668,7 @@ of this field depends on the RuntimeClass feature gate being enabled.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L25219">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L25462">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Extensions_V1Beta1_PodSecurityPolicySpec_SeLinux" data-uid="Pulumi.Kubernetes.Types.Outputs.Extensions.V1Beta1.PodSecurityPolicySpec.SeLinux">SeLinux</h4>
   <div class="markdown level1 summary"><p>seLinux is the strategy that will dictate the allowable labels that may be set.</p>
@@ -718,7 +694,7 @@ of this field depends on the RuntimeClass feature gate being enabled.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L25225">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L25468">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Extensions_V1Beta1_PodSecurityPolicySpec_SupplementalGroups" data-uid="Pulumi.Kubernetes.Types.Outputs.Extensions.V1Beta1.PodSecurityPolicySpec.SupplementalGroups">SupplementalGroups</h4>
   <div class="markdown level1 summary"><p>supplementalGroups is the strategy that will dictate what supplemental groups are used
@@ -745,7 +721,7 @@ by the SecurityContext.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L25231">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L25474">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Extensions_V1Beta1_PodSecurityPolicySpec_Volumes" data-uid="Pulumi.Kubernetes.Types.Outputs.Extensions.V1Beta1.PodSecurityPolicySpec.Volumes">Volumes</h4>
   <div class="markdown level1 summary"><p>volumes is a white list of allowed volume plugins. Empty indicates that no volumes may
@@ -766,7 +742,7 @@ be used. To allow all volumes you may use '*'.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -778,7 +754,7 @@ be used. To allow all volumes you may use '*'.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L25073" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L25316" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

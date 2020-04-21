@@ -80,9 +80,6 @@
       <section><p>Creates a Lambda function alias. Creates an alias that points to the specified Lambda function version.</p>
 <p>For information about Lambda and how to use it, see [What is AWS Lambda?][1]
 For information about function aliases, see [CreateAlias][2] and [AliasRoutingConfiguration][3] in the API docs.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/lambda_alias.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/lambda_alias.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Lambda.AliasArgs.html">AliasArgs</a></h4>
       <section></section>
@@ -92,23 +89,31 @@ For information about function aliases, see [CreateAlias][2] and [AliasRoutingCo
       <section><p>Provides a Lambda event source mapping. This allows Lambda functions to get events from Kinesis, DynamoDB and SQS.</p>
 <p>For information about Lambda and how to use it, see [What is AWS Lambda?][1].
 For information about event source mappings, see [CreateEventSourceMapping][2] in the API docs.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/lambda_event_source_mapping.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/lambda_event_source_mapping.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Lambda.EventSourceMappingArgs.html">EventSourceMappingArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Lambda.EventSourceMappingState.html">EventSourceMappingState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Lambda.Function.html">Function</a></h4>
-      <section></section>
+      <section><p>Provides a Lambda Function resource. Lambda allows you to trigger execution of code in response to events in AWS, enabling serverless backend solutions. The Lambda Function itself includes source code and runtime configuration.</p>
+<p>For information about Lambda and how to use it, see [What is AWS Lambda?][1]</p>
+<blockquote>
+<p><strong>NOTE:</strong> Due to <a href="https://aws.amazon.com/blogs/compute/announcing-improved-vpc-networking-for-aws-lambda-functions/">AWS Lambda improved VPC networking changes that began deploying in September 2019</a>, EC2 subnets and security groups associated with Lambda Functions can take up to 45 minutes to successfully delete.</p>
+</blockquote>
+<h2 id="specifying-the-deployment-package">Specifying the Deployment Package</h2>
+<p>AWS Lambda expects source code to be provided as a deployment package whose structure varies depending on which <code>runtime</code> is in use.
+See [Runtimes][6] for the valid values of <code>runtime</code>. The expected structure of the deployment package can be found in
+[the AWS Lambda documentation for each runtime][8].</p>
+<p>Once you have created your deployment package you can specify it either directly as a local file (using the <code>filename</code> argument) or
+indirectly via Amazon S3 (using the <code>s3_bucket</code>, <code>s3_key</code> and <code>s3_object_version</code> arguments). When providing the deployment
+package via S3 it may be useful to use the <code>aws.s3.BucketObject</code> resource to upload it.</p>
+<p>For larger deployment packages it is recommended by Amazon to upload via S3, since the S3 API has better support for uploading
+large files efficiently.</p>
+</section>
       <h4><a class="xref" href="Pulumi.Aws.Lambda.FunctionArgs.html">FunctionArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Lambda.FunctionEventInvokeConfig.html">FunctionEventInvokeConfig</a></h4>
       <section><p>Manages an asynchronous invocation configuration for a Lambda Function or Alias. More information about asynchronous invocations and the configurable values can be found in the <a href="https://docs.aws.amazon.com/lambda/latest/dg/invocation-async.html">Lambda Developer Guide</a>.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/lambda_function_event_invoke_config.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/lambda_function_event_invoke_config.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Lambda.FunctionEventInvokeConfigArgs.html">FunctionEventInvokeConfigArgs</a></h4>
       <section></section>
@@ -116,23 +121,29 @@ For information about event source mappings, see [CreateEventSourceMapping][2] i
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Lambda.FunctionState.html">FunctionState</a></h4>
       <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Lambda.GetAlias.html">GetAlias</a></h4>
+      <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Lambda.GetAliasArgs.html">GetAliasArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Lambda.GetAliasResult.html">GetAliasResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Lambda.GetFunction.html">GetFunction</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Lambda.GetFunctionArgs.html">GetFunctionArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Lambda.GetFunctionResult.html">GetFunctionResult</a></h4>
       <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Lambda.GetInvocation.html">GetInvocation</a></h4>
+      <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Lambda.GetInvocationArgs.html">GetInvocationArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Lambda.GetInvocationResult.html">GetInvocationResult</a></h4>
       <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Lambda.GetLayerVersion.html">GetLayerVersion</a></h4>
+      <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Lambda.GetLayerVersionArgs.html">GetLayerVersionArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Lambda.GetLayerVersionResult.html">GetLayerVersionResult</a></h4>
-      <section></section>
-      <h4><a class="xref" href="Pulumi.Aws.Lambda.Invokes.html">Invokes</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Lambda.LayerVersion.html">LayerVersion</a></h4>
       <section><p>Provides a Lambda Layer Version resource. Lambda Layers allow you to reuse shared bits of code across multiple lambda functions.</p>
@@ -145,9 +156,6 @@ indirectly via Amazon S3 (using the <code>s3_bucket</code>, <code>s3_key</code> 
 package via S3 it may be useful to use the <code>aws.s3.BucketObject</code> resource to upload it.</p>
 <p>For larger deployment packages it is recommended by Amazon to upload via S3, since the S3 API has better support for uploading
 large files efficiently.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/lambda_layer_version.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/lambda_layer_version.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Lambda.LayerVersionArgs.html">LayerVersionArgs</a></h4>
       <section></section>
@@ -156,9 +164,6 @@ large files efficiently.</p>
       <h4><a class="xref" href="Pulumi.Aws.Lambda.Permission.html">Permission</a></h4>
       <section><p>Creates a Lambda permission to allow external sources invoking the Lambda function
 (e.g. CloudWatch Event Rule, SNS or S3).</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/lambda_permission.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/lambda_permission.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Lambda.PermissionArgs.html">PermissionArgs</a></h4>
       <section></section>
@@ -166,9 +171,6 @@ large files efficiently.</p>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Lambda.ProvisionedConcurrencyConfig.html">ProvisionedConcurrencyConfig</a></h4>
       <section><p>Manages a Lambda Provisioned Concurrency Configuration.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/lambda_provisioned_concurrency_config.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/lambda_provisioned_concurrency_config.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Lambda.ProvisionedConcurrencyConfigArgs.html">ProvisionedConcurrencyConfigArgs</a></h4>
       <section></section>

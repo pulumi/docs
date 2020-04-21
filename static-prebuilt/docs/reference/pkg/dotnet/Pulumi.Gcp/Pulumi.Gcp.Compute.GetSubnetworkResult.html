@@ -78,40 +78,16 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">GetSubnetworkResult</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.Compute.html">Pulumi.Gcp.Compute</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
   <h5 id="Pulumi_Gcp_Compute_GetSubnetworkResult_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class GetSubnetworkResult</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class GetSubnetworkResult : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/GetSubnetwork.cs/#L64">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/GetSubnetwork.cs/#L67">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_GetSubnetworkResult_Description" data-uid="Pulumi.Gcp.Compute.GetSubnetworkResult.Description">Description</h4>
   <div class="markdown level1 summary"><p>Description of this subnetwork.</p>
@@ -137,7 +113,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/GetSubnetwork.cs/#L68">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/GetSubnetwork.cs/#L71">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_GetSubnetworkResult_GatewayAddress" data-uid="Pulumi.Gcp.Compute.GetSubnetworkResult.GatewayAddress">GatewayAddress</h4>
   <div class="markdown level1 summary"><p>The IP address of the gateway.</p>
@@ -163,7 +139,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/GetSubnetwork.cs/#L97">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/GetSubnetwork.cs/#L75">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_GetSubnetworkResult_Id" data-uid="Pulumi.Gcp.Compute.GetSubnetworkResult.Id">Id</h4>
   <div class="markdown level1 summary"><p>id is the provider-assigned unique ID for this managed resource.</p>
@@ -189,7 +165,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/GetSubnetwork.cs/#L73">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/GetSubnetwork.cs/#L80">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_GetSubnetworkResult_IpCidrRange" data-uid="Pulumi.Gcp.Compute.GetSubnetworkResult.IpCidrRange">IpCidrRange</h4>
   <div class="markdown level1 summary"><p>The range of IP addresses belonging to this subnetwork
@@ -216,14 +192,14 @@ secondary range.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/GetSubnetwork.cs/#L74">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/GetSubnetwork.cs/#L81">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_GetSubnetworkResult_Name" data-uid="Pulumi.Gcp.Compute.GetSubnetworkResult.Name">Name</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string Name</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? Name</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -235,13 +211,13 @@ secondary range.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/GetSubnetwork.cs/#L79">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/GetSubnetwork.cs/#L86">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_GetSubnetworkResult_Network" data-uid="Pulumi.Gcp.Compute.GetSubnetworkResult.Network">Network</h4>
   <div class="markdown level1 summary"><p>The network name or resource link to the parent
@@ -268,7 +244,7 @@ network of this subnetwork.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/GetSubnetwork.cs/#L85">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/GetSubnetwork.cs/#L92">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_GetSubnetworkResult_PrivateIpGoogleAccess" data-uid="Pulumi.Gcp.Compute.GetSubnetworkResult.PrivateIpGoogleAccess">PrivateIpGoogleAccess</h4>
   <div class="markdown level1 summary"><p>Whether the VMs in this subnet
@@ -296,7 +272,7 @@ addresses.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/GetSubnetwork.cs/#L86">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/GetSubnetwork.cs/#L93">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_GetSubnetworkResult_Project" data-uid="Pulumi.Gcp.Compute.GetSubnetworkResult.Project">Project</h4>
   <div class="markdown level1 summary"></div>
@@ -321,7 +297,7 @@ addresses.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/GetSubnetwork.cs/#L87">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/GetSubnetwork.cs/#L94">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_GetSubnetworkResult_Region" data-uid="Pulumi.Gcp.Compute.GetSubnetworkResult.Region">Region</h4>
   <div class="markdown level1 summary"></div>
@@ -346,7 +322,7 @@ addresses.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/GetSubnetwork.cs/#L92">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/GetSubnetwork.cs/#L99">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_GetSubnetworkResult_SecondaryIpRanges" data-uid="Pulumi.Gcp.Compute.GetSubnetworkResult.SecondaryIpRanges">SecondaryIpRanges</h4>
   <div class="markdown level1 summary"><p>An array of configurations for secondary IP ranges for
@@ -355,7 +331,7 @@ VM instances contained in this subnetwork. Structure is documented below.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetSubnetworkSecondaryIpRangesResult&gt; SecondaryIpRanges</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetSubnetworkSecondaryIpRangeResult&gt; SecondaryIpRanges</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -367,13 +343,13 @@ VM instances contained in this subnetwork. Structure is documented below.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Outputs.GetSubnetworkSecondaryIpRangesResult.html">GetSubnetworkSecondaryIpRangesResult</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Outputs.GetSubnetworkSecondaryIpRangeResult.html">GetSubnetworkSecondaryIpRangeResult</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/GetSubnetwork.cs/#L93">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/GetSubnetwork.cs/#L100">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_GetSubnetworkResult_SelfLink" data-uid="Pulumi.Gcp.Compute.GetSubnetworkResult.SelfLink">SelfLink</h4>
   <div class="markdown level1 summary"></div>
@@ -404,7 +380,7 @@ VM instances contained in this subnetwork. Structure is documented below.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/GetSubnetwork.cs/#L58" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/GetSubnetwork.cs/#L61" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

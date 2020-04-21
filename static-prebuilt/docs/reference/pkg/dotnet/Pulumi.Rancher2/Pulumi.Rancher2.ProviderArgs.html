@@ -87,7 +87,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Provider.cs/#L91">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/Provider.cs/#L95">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_ProviderArgs__ctor_" data-uid="Pulumi.Rancher2.ProviderArgs.#ctor*"></a>
   <h4 id="Pulumi_Rancher2_ProviderArgs__ctor" data-uid="Pulumi.Rancher2.ProviderArgs.#ctor">ProviderArgs()</h4>
@@ -100,7 +100,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Provider.cs/#L51">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/Provider.cs/#L50">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_ProviderArgs_AccessKey_" data-uid="Pulumi.Rancher2.ProviderArgs.AccessKey*"></a>
   <h4 id="Pulumi_Rancher2_ProviderArgs_AccessKey" data-uid="Pulumi.Rancher2.ProviderArgs.AccessKey">AccessKey</h4>
@@ -127,7 +127,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Provider.cs/#L57">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/Provider.cs/#L56">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_ProviderArgs_ApiUrl_" data-uid="Pulumi.Rancher2.ProviderArgs.ApiUrl*"></a>
   <h4 id="Pulumi_Rancher2_ProviderArgs_ApiUrl" data-uid="Pulumi.Rancher2.ProviderArgs.ApiUrl">ApiUrl</h4>
@@ -154,7 +154,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Provider.cs/#L63">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/Provider.cs/#L62">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_ProviderArgs_Bootstrap_" data-uid="Pulumi.Rancher2.ProviderArgs.Bootstrap*"></a>
   <h4 id="Pulumi_Rancher2_ProviderArgs_Bootstrap" data-uid="Pulumi.Rancher2.ProviderArgs.Bootstrap">Bootstrap</h4>
@@ -181,12 +181,11 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Provider.cs/#L70">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/Provider.cs/#L68">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_ProviderArgs_CaCerts_" data-uid="Pulumi.Rancher2.ProviderArgs.CaCerts*"></a>
   <h4 id="Pulumi_Rancher2_ProviderArgs_CaCerts" data-uid="Pulumi.Rancher2.ProviderArgs.CaCerts">CaCerts</h4>
-  <div class="markdown level1 summary"><p>CA certificates used to sign rancher server tls certificates. Mandatory if self signed tls and insecure
-option false</p>
+  <div class="markdown level1 summary"><p>CA certificates used to sign rancher server tls certificates. Mandatory if self signed tls and insecure option false</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -209,7 +208,7 @@ option false</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Provider.cs/#L76">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/Provider.cs/#L74">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_ProviderArgs_Insecure_" data-uid="Pulumi.Rancher2.ProviderArgs.Insecure*"></a>
   <h4 id="Pulumi_Rancher2_ProviderArgs_Insecure" data-uid="Pulumi.Rancher2.ProviderArgs.Insecure">Insecure</h4>
@@ -236,7 +235,34 @@ option false</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Provider.cs/#L82">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/Provider.cs/#L80">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_ProviderArgs_Retries_" data-uid="Pulumi.Rancher2.ProviderArgs.Retries*"></a>
+  <h4 id="Pulumi_Rancher2_ProviderArgs_Retries" data-uid="Pulumi.Rancher2.ProviderArgs.Retries">Retries</h4>
+  <div class="markdown level1 summary"><p>Rancher connection retries</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? Retries { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/Provider.cs/#L86">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_ProviderArgs_SecretKey_" data-uid="Pulumi.Rancher2.ProviderArgs.SecretKey*"></a>
   <h4 id="Pulumi_Rancher2_ProviderArgs_SecretKey" data-uid="Pulumi.Rancher2.ProviderArgs.SecretKey">SecretKey</h4>
@@ -263,7 +289,7 @@ option false</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Provider.cs/#L88">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/Provider.cs/#L92">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_ProviderArgs_TokenKey_" data-uid="Pulumi.Rancher2.ProviderArgs.TokenKey*"></a>
   <h4 id="Pulumi_Rancher2_ProviderArgs_TokenKey" data-uid="Pulumi.Rancher2.ProviderArgs.TokenKey">TokenKey</h4>
@@ -296,7 +322,7 @@ option false</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Provider.cs/#L46" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/Provider.cs/#L45" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

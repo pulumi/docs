@@ -79,40 +79,16 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">ReplicationControllerStatus</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Core.V1.html">Pulumi.Kubernetes.Types.Outputs.Core.V1</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Kubernetes.dll</h6>
   <h5 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_ReplicationControllerStatus_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class ReplicationControllerStatus</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class ReplicationControllerStatus : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L20533">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L20707">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_ReplicationControllerStatus_AvailableReplicas" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.ReplicationControllerStatus.AvailableReplicas">AvailableReplicas</h4>
   <div class="markdown level1 summary"><p>The number of available replicas (ready for at least minReadySeconds) for this
@@ -139,7 +115,7 @@ replication controller.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L20539">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L20713">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_ReplicationControllerStatus_Conditions" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.ReplicationControllerStatus.Conditions">Conditions</h4>
   <div class="markdown level1 summary"><p>Represents the latest available observations of a replication controller's current
@@ -160,13 +136,13 @@ state.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Core.V1.ReplicationControllerCondition.html">ReplicationControllerCondition</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Core.V1.ReplicationControllerCondition.html">ReplicationControllerCondition</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L20545">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L20719">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_ReplicationControllerStatus_FullyLabeledReplicas" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.ReplicationControllerStatus.FullyLabeledReplicas">FullyLabeledReplicas</h4>
   <div class="markdown level1 summary"><p>The number of pods that have labels matching the labels of the pod template of the
@@ -193,7 +169,7 @@ replication controller.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L20551">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L20725">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_ReplicationControllerStatus_ObservedGeneration" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.ReplicationControllerStatus.ObservedGeneration">ObservedGeneration</h4>
   <div class="markdown level1 summary"><p>ObservedGeneration reflects the generation of the most recently observed replication
@@ -220,7 +196,7 @@ controller.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L20556">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L20730">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_ReplicationControllerStatus_ReadyReplicas" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.ReplicationControllerStatus.ReadyReplicas">ReadyReplicas</h4>
   <div class="markdown level1 summary"><p>The number of ready replicas for this replication controller.</p>
@@ -246,7 +222,7 @@ controller.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L20562">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L20736">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_ReplicationControllerStatus_Replicas" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.ReplicationControllerStatus.Replicas">Replicas</h4>
   <div class="markdown level1 summary"><p>Replicas is the most recently oberved number of replicas. More info:
@@ -279,7 +255,7 @@ controller.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L20526" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L20700" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -79,40 +79,16 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">APIResource</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Meta.V1.html">Pulumi.Kubernetes.Types.Outputs.Meta.V1</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Kubernetes.dll</h6>
   <h5 id="Pulumi_Kubernetes_Types_Outputs_Meta_V1_APIResource_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class APIResource</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class APIResource : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L26853">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L27096">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Meta_V1_APIResource_Categories" data-uid="Pulumi.Kubernetes.Types.Outputs.Meta.V1.APIResource.Categories">Categories</h4>
   <div class="markdown level1 summary"><p>categories is a list of the grouped resources this resource belongs to (e.g. 'all')</p>
@@ -132,13 +108,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L26859">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L27102">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Meta_V1_APIResource_Group" data-uid="Pulumi.Kubernetes.Types.Outputs.Meta.V1.APIResource.Group">Group</h4>
   <div class="markdown level1 summary"><p>group is the preferred group of the resource.  Empty implies the group of the containing
@@ -165,7 +141,7 @@ resource list. For subresources, this may have a different value, for example: S
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L26864">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L27107">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Meta_V1_APIResource_Kind" data-uid="Pulumi.Kubernetes.Types.Outputs.Meta.V1.APIResource.Kind">Kind</h4>
   <div class="markdown level1 summary"><p>kind is the kind for the resource (e.g. 'Foo' is the kind for a resource 'foo')</p>
@@ -191,7 +167,7 @@ resource list. For subresources, this may have a different value, for example: S
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L26869">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L27112">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Meta_V1_APIResource_Name" data-uid="Pulumi.Kubernetes.Types.Outputs.Meta.V1.APIResource.Name">Name</h4>
   <div class="markdown level1 summary"><p>name is the plural name of the resource.</p>
@@ -217,7 +193,7 @@ resource list. For subresources, this may have a different value, for example: S
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L26874">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L27117">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Meta_V1_APIResource_Namespaced" data-uid="Pulumi.Kubernetes.Types.Outputs.Meta.V1.APIResource.Namespaced">Namespaced</h4>
   <div class="markdown level1 summary"><p>namespaced indicates if a resource is namespaced or not.</p>
@@ -243,7 +219,7 @@ resource list. For subresources, this may have a different value, for example: S
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L26879">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L27122">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Meta_V1_APIResource_ShortNames" data-uid="Pulumi.Kubernetes.Types.Outputs.Meta.V1.APIResource.ShortNames">ShortNames</h4>
   <div class="markdown level1 summary"><p>shortNames is a list of suggested short names of the resource.</p>
@@ -263,13 +239,13 @@ resource list. For subresources, this may have a different value, for example: S
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L26886">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L27129">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Meta_V1_APIResource_SingularName" data-uid="Pulumi.Kubernetes.Types.Outputs.Meta.V1.APIResource.SingularName">SingularName</h4>
   <div class="markdown level1 summary"><p>singularName is the singular name of the resource.  This allows clients to handle plural
@@ -297,7 +273,7 @@ item and both singular and plural are allowed from the kubectl CLI interface.</p
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L26895">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L27138">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Meta_V1_APIResource_StorageVersionHash" data-uid="Pulumi.Kubernetes.Types.Outputs.Meta.V1.APIResource.StorageVersionHash">StorageVersionHash</h4>
   <div class="markdown level1 summary"><p>The hash value of the storage version, the version this resource is converted to when
@@ -327,7 +303,7 @@ feature gate is enabled. This field will remain optional even if it graduates.</
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L26901">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L27144">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Meta_V1_APIResource_Verbs" data-uid="Pulumi.Kubernetes.Types.Outputs.Meta.V1.APIResource.Verbs">Verbs</h4>
   <div class="markdown level1 summary"><p>verbs is a list of supported kube verbs (this includes get, list, watch, create, update,
@@ -348,13 +324,13 @@ patch, delete, deletecollection, and proxy)</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L26908">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L27151">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Meta_V1_APIResource_Version" data-uid="Pulumi.Kubernetes.Types.Outputs.Meta.V1.APIResource.Version">Version</h4>
   <div class="markdown level1 summary"><p>version is the preferred version of the resource.  Empty implies the version of the
@@ -388,7 +364,7 @@ v1 (while inside a v1beta1 version of the core resource's group)&quot;.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L26847" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L27090" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

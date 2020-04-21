@@ -76,36 +76,7 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
-    <div class="level3"><span class="xref">AppServiceSiteConfigArgs</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">AppServiceSiteConfigArgs</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Azure.AppService.Inputs.html">Pulumi.Azure.AppService.Inputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Azure.dll</h6>
@@ -116,7 +87,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Appservice/AppService.cs/#L1258">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/Inputs/AppServiceSiteConfigArgs.cs/#L168">View Source</a>
   </span>
   <a id="Pulumi_Azure_AppService_Inputs_AppServiceSiteConfigArgs__ctor_" data-uid="Pulumi.Azure.AppService.Inputs.AppServiceSiteConfigArgs.#ctor*"></a>
   <h4 id="Pulumi_Azure_AppService_Inputs_AppServiceSiteConfigArgs__ctor" data-uid="Pulumi.Azure.AppService.Inputs.AppServiceSiteConfigArgs.#ctor">AppServiceSiteConfigArgs()</h4>
@@ -129,15 +100,16 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Appservice/AppService.cs/#L1176">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/Inputs/AppServiceSiteConfigArgs.cs/#L18">View Source</a>
   </span>
   <a id="Pulumi_Azure_AppService_Inputs_AppServiceSiteConfigArgs_AlwaysOn_" data-uid="Pulumi.Azure.AppService.Inputs.AppServiceSiteConfigArgs.AlwaysOn*"></a>
   <h4 id="Pulumi_Azure_AppService_Inputs_AppServiceSiteConfigArgs_AlwaysOn" data-uid="Pulumi.Azure.AppService.Inputs.AppServiceSiteConfigArgs.AlwaysOn">AlwaysOn</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Should the app be loaded at all times? Defaults to <code>false</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; AlwaysOn { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? AlwaysOn { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -149,21 +121,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Appservice/AppService.cs/#L1179">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/Inputs/AppServiceSiteConfigArgs.cs/#L24">View Source</a>
   </span>
   <a id="Pulumi_Azure_AppService_Inputs_AppServiceSiteConfigArgs_AppCommandLine_" data-uid="Pulumi.Azure.AppService.Inputs.AppServiceSiteConfigArgs.AppCommandLine*"></a>
   <h4 id="Pulumi_Azure_AppService_Inputs_AppServiceSiteConfigArgs_AppCommandLine" data-uid="Pulumi.Azure.AppService.Inputs.AppServiceSiteConfigArgs.AppCommandLine">AppCommandLine</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>App command line to launch, e.g. <code>/sbin/myserver -b 0.0.0.0</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; AppCommandLine { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? AppCommandLine { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -175,13 +148,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Appservice/AppService.cs/#L1182">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/Inputs/AppServiceSiteConfigArgs.cs/#L27">View Source</a>
   </span>
   <a id="Pulumi_Azure_AppService_Inputs_AppServiceSiteConfigArgs_AutoSwapSlotName_" data-uid="Pulumi.Azure.AppService.Inputs.AppServiceSiteConfigArgs.AutoSwapSlotName*"></a>
   <h4 id="Pulumi_Azure_AppService_Inputs_AppServiceSiteConfigArgs_AutoSwapSlotName" data-uid="Pulumi.Azure.AppService.Inputs.AppServiceSiteConfigArgs.AutoSwapSlotName">AutoSwapSlotName</h4>
@@ -189,7 +162,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; AutoSwapSlotName { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? AutoSwapSlotName { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -201,21 +174,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Appservice/AppService.cs/#L1185">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/Inputs/AppServiceSiteConfigArgs.cs/#L33">View Source</a>
   </span>
   <a id="Pulumi_Azure_AppService_Inputs_AppServiceSiteConfigArgs_Cors_" data-uid="Pulumi.Azure.AppService.Inputs.AppServiceSiteConfigArgs.Cors*"></a>
   <h4 id="Pulumi_Azure_AppService_Inputs_AppServiceSiteConfigArgs_Cors" data-uid="Pulumi.Azure.AppService.Inputs.AppServiceSiteConfigArgs.Cors">Cors</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A <code>cors</code> block as defined below.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;AppServiceSiteConfigCorsArgs&gt; Cors { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;AppServiceSiteConfigCorsArgs&gt;? Cors { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -227,17 +201,18 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Azure.AppService.Inputs.AppServiceSiteConfigCorsArgs.html">AppServiceSiteConfigCorsArgs</a>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Azure.AppService.Inputs.AppServiceSiteConfigCorsArgs.html">AppServiceSiteConfigCorsArgs</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Appservice/AppService.cs/#L1190">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/Inputs/AppServiceSiteConfigArgs.cs/#L42">View Source</a>
   </span>
   <a id="Pulumi_Azure_AppService_Inputs_AppServiceSiteConfigArgs_DefaultDocuments_" data-uid="Pulumi.Azure.AppService.Inputs.AppServiceSiteConfigArgs.DefaultDocuments*"></a>
   <h4 id="Pulumi_Azure_AppService_Inputs_AppServiceSiteConfigArgs_DefaultDocuments" data-uid="Pulumi.Azure.AppService.Inputs.AppServiceSiteConfigArgs.DefaultDocuments">DefaultDocuments</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The ordering of default documents to load, if an address isn't specified.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -253,21 +228,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Appservice/AppService.cs/#L1196">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/Inputs/AppServiceSiteConfigArgs.cs/#L51">View Source</a>
   </span>
   <a id="Pulumi_Azure_AppService_Inputs_AppServiceSiteConfigArgs_DotnetFrameworkVersion_" data-uid="Pulumi.Azure.AppService.Inputs.AppServiceSiteConfigArgs.DotnetFrameworkVersion*"></a>
   <h4 id="Pulumi_Azure_AppService_Inputs_AppServiceSiteConfigArgs_DotnetFrameworkVersion" data-uid="Pulumi.Azure.AppService.Inputs.AppServiceSiteConfigArgs.DotnetFrameworkVersion">DotnetFrameworkVersion</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The version of the .net framework's CLR used in this App Service. Possible values are <code>v2.0</code> (which will use the latest version of the .net framework for the .net CLR v2 - currently <code>.net 3.5</code>) and <code>v4.0</code> (which corresponds to the latest version of the .net CLR v4 - which at the time of writing is <code>.net 4.7.1</code>). <a href="https://en.wikipedia.org/wiki/.NET_Framework_version_history#Overview">For more information on which .net CLR version to use based on the .net framework you're targeting - please see this table</a>. Defaults to <code>v4.0</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; DotnetFrameworkVersion { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? DotnetFrameworkVersion { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -279,21 +255,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Appservice/AppService.cs/#L1199">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/Inputs/AppServiceSiteConfigArgs.cs/#L57">View Source</a>
   </span>
   <a id="Pulumi_Azure_AppService_Inputs_AppServiceSiteConfigArgs_FtpsState_" data-uid="Pulumi.Azure.AppService.Inputs.AppServiceSiteConfigArgs.FtpsState*"></a>
   <h4 id="Pulumi_Azure_AppService_Inputs_AppServiceSiteConfigArgs_FtpsState" data-uid="Pulumi.Azure.AppService.Inputs.AppServiceSiteConfigArgs.FtpsState">FtpsState</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>State of FTP / FTPS service for this App Service. Possible values include: <code>AllAllowed</code>, <code>FtpsOnly</code> and <code>Disabled</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; FtpsState { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? FtpsState { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -305,21 +282,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Appservice/AppService.cs/#L1202">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/Inputs/AppServiceSiteConfigArgs.cs/#L63">View Source</a>
   </span>
   <a id="Pulumi_Azure_AppService_Inputs_AppServiceSiteConfigArgs_Http2Enabled_" data-uid="Pulumi.Azure.AppService.Inputs.AppServiceSiteConfigArgs.Http2Enabled*"></a>
   <h4 id="Pulumi_Azure_AppService_Inputs_AppServiceSiteConfigArgs_Http2Enabled" data-uid="Pulumi.Azure.AppService.Inputs.AppServiceSiteConfigArgs.Http2Enabled">Http2Enabled</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Is HTTP2 Enabled on this App Service? Defaults to <code>false</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; Http2Enabled { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? Http2Enabled { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -331,21 +309,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Appservice/AppService.cs/#L1207">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/Inputs/AppServiceSiteConfigArgs.cs/#L72">View Source</a>
   </span>
   <a id="Pulumi_Azure_AppService_Inputs_AppServiceSiteConfigArgs_IpRestrictions_" data-uid="Pulumi.Azure.AppService.Inputs.AppServiceSiteConfigArgs.IpRestrictions*"></a>
   <h4 id="Pulumi_Azure_AppService_Inputs_AppServiceSiteConfigArgs_IpRestrictions" data-uid="Pulumi.Azure.AppService.Inputs.AppServiceSiteConfigArgs.IpRestrictions">IpRestrictions</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A list of objects representing ip restrictions as defined below.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public InputList&lt;AppServiceSiteConfigIpRestrictionsArgs&gt; IpRestrictions { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public InputList&lt;AppServiceSiteConfigIpRestrictionArgs&gt; IpRestrictions { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -357,21 +336,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<a class="xref" href="Pulumi.Azure.AppService.Inputs.AppServiceSiteConfigIpRestrictionsArgs.html">AppServiceSiteConfigIpRestrictionsArgs</a>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<a class="xref" href="Pulumi.Azure.AppService.Inputs.AppServiceSiteConfigIpRestrictionArgs.html">AppServiceSiteConfigIpRestrictionArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Appservice/AppService.cs/#L1213">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/Inputs/AppServiceSiteConfigArgs.cs/#L81">View Source</a>
   </span>
   <a id="Pulumi_Azure_AppService_Inputs_AppServiceSiteConfigArgs_JavaContainer_" data-uid="Pulumi.Azure.AppService.Inputs.AppServiceSiteConfigArgs.JavaContainer*"></a>
   <h4 id="Pulumi_Azure_AppService_Inputs_AppServiceSiteConfigArgs_JavaContainer" data-uid="Pulumi.Azure.AppService.Inputs.AppServiceSiteConfigArgs.JavaContainer">JavaContainer</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The Java Container to use. If specified <code>java_version</code> and <code>java_container_version</code> must also be specified. Possible values are <code>JAVA</code>, <code>JETTY</code>, and <code>TOMCAT</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; JavaContainer { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? JavaContainer { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -383,21 +363,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Appservice/AppService.cs/#L1216">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/Inputs/AppServiceSiteConfigArgs.cs/#L87">View Source</a>
   </span>
   <a id="Pulumi_Azure_AppService_Inputs_AppServiceSiteConfigArgs_JavaContainerVersion_" data-uid="Pulumi.Azure.AppService.Inputs.AppServiceSiteConfigArgs.JavaContainerVersion*"></a>
   <h4 id="Pulumi_Azure_AppService_Inputs_AppServiceSiteConfigArgs_JavaContainerVersion" data-uid="Pulumi.Azure.AppService.Inputs.AppServiceSiteConfigArgs.JavaContainerVersion">JavaContainerVersion</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The version of the Java Container to use. If specified <code>java_version</code> and <code>java_container</code> must also be specified.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; JavaContainerVersion { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? JavaContainerVersion { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -409,21 +390,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Appservice/AppService.cs/#L1219">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/Inputs/AppServiceSiteConfigArgs.cs/#L93">View Source</a>
   </span>
   <a id="Pulumi_Azure_AppService_Inputs_AppServiceSiteConfigArgs_JavaVersion_" data-uid="Pulumi.Azure.AppService.Inputs.AppServiceSiteConfigArgs.JavaVersion*"></a>
   <h4 id="Pulumi_Azure_AppService_Inputs_AppServiceSiteConfigArgs_JavaVersion" data-uid="Pulumi.Azure.AppService.Inputs.AppServiceSiteConfigArgs.JavaVersion">JavaVersion</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The version of Java to use. If specified <code>java_container</code> and <code>java_container_version</code> must also be specified. Possible values are <code>1.7</code>, <code>1.8</code> and <code>11</code> and their specific versions - except for Java 11 (e.g. <code>1.7.0_80</code>, <code>1.8.0_181</code>, <code>11</code>)</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; JavaVersion { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? JavaVersion { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -435,21 +417,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Appservice/AppService.cs/#L1222">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/Inputs/AppServiceSiteConfigArgs.cs/#L99">View Source</a>
   </span>
   <a id="Pulumi_Azure_AppService_Inputs_AppServiceSiteConfigArgs_LinuxFxVersion_" data-uid="Pulumi.Azure.AppService.Inputs.AppServiceSiteConfigArgs.LinuxFxVersion*"></a>
   <h4 id="Pulumi_Azure_AppService_Inputs_AppServiceSiteConfigArgs_LinuxFxVersion" data-uid="Pulumi.Azure.AppService.Inputs.AppServiceSiteConfigArgs.LinuxFxVersion">LinuxFxVersion</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Linux App Framework and version for the App Service. Possible options are a Docker container (<code>DOCKER|&amp;lt;user/image:tag&gt;</code>), a base-64 encoded Docker Compose file (<code>COMPOSE|${filebase64(&amp;quot;compose.yml&amp;quot;)}</code>) or a base-64 encoded Kubernetes Manifest (<code>KUBE|${filebase64(&amp;quot;kubernetes.yml&amp;quot;)}</code>).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; LinuxFxVersion { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? LinuxFxVersion { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -461,21 +444,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Appservice/AppService.cs/#L1225">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/Inputs/AppServiceSiteConfigArgs.cs/#L105">View Source</a>
   </span>
   <a id="Pulumi_Azure_AppService_Inputs_AppServiceSiteConfigArgs_LocalMysqlEnabled_" data-uid="Pulumi.Azure.AppService.Inputs.AppServiceSiteConfigArgs.LocalMysqlEnabled*"></a>
   <h4 id="Pulumi_Azure_AppService_Inputs_AppServiceSiteConfigArgs_LocalMysqlEnabled" data-uid="Pulumi.Azure.AppService.Inputs.AppServiceSiteConfigArgs.LocalMysqlEnabled">LocalMysqlEnabled</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Is &quot;MySQL In App&quot; Enabled? This runs a local MySQL instance with your app and shares resources from the App Service plan.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; LocalMysqlEnabled { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? LocalMysqlEnabled { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -487,21 +471,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Appservice/AppService.cs/#L1228">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/Inputs/AppServiceSiteConfigArgs.cs/#L111">View Source</a>
   </span>
   <a id="Pulumi_Azure_AppService_Inputs_AppServiceSiteConfigArgs_ManagedPipelineMode_" data-uid="Pulumi.Azure.AppService.Inputs.AppServiceSiteConfigArgs.ManagedPipelineMode*"></a>
   <h4 id="Pulumi_Azure_AppService_Inputs_AppServiceSiteConfigArgs_ManagedPipelineMode" data-uid="Pulumi.Azure.AppService.Inputs.AppServiceSiteConfigArgs.ManagedPipelineMode">ManagedPipelineMode</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The Managed Pipeline Mode. Possible values are <code>Integrated</code> and <code>Classic</code>. Defaults to <code>Integrated</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; ManagedPipelineMode { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? ManagedPipelineMode { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -513,21 +498,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Appservice/AppService.cs/#L1231">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/Inputs/AppServiceSiteConfigArgs.cs/#L117">View Source</a>
   </span>
   <a id="Pulumi_Azure_AppService_Inputs_AppServiceSiteConfigArgs_MinTlsVersion_" data-uid="Pulumi.Azure.AppService.Inputs.AppServiceSiteConfigArgs.MinTlsVersion*"></a>
   <h4 id="Pulumi_Azure_AppService_Inputs_AppServiceSiteConfigArgs_MinTlsVersion" data-uid="Pulumi.Azure.AppService.Inputs.AppServiceSiteConfigArgs.MinTlsVersion">MinTlsVersion</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The minimum supported TLS version for the app service. Possible values are <code>1.0</code>, <code>1.1</code>, and <code>1.2</code>. Defaults to <code>1.2</code> for new app services.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; MinTlsVersion { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? MinTlsVersion { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -539,21 +525,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Appservice/AppService.cs/#L1234">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/Inputs/AppServiceSiteConfigArgs.cs/#L123">View Source</a>
   </span>
   <a id="Pulumi_Azure_AppService_Inputs_AppServiceSiteConfigArgs_PhpVersion_" data-uid="Pulumi.Azure.AppService.Inputs.AppServiceSiteConfigArgs.PhpVersion*"></a>
   <h4 id="Pulumi_Azure_AppService_Inputs_AppServiceSiteConfigArgs_PhpVersion" data-uid="Pulumi.Azure.AppService.Inputs.AppServiceSiteConfigArgs.PhpVersion">PhpVersion</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The version of PHP to use in this App Service. Possible values are <code>5.5</code>, <code>5.6</code>, <code>7.0</code>, <code>7.1</code>, <code>7.2</code>, and <code>7.3</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; PhpVersion { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? PhpVersion { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -565,21 +552,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Appservice/AppService.cs/#L1237">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/Inputs/AppServiceSiteConfigArgs.cs/#L129">View Source</a>
   </span>
   <a id="Pulumi_Azure_AppService_Inputs_AppServiceSiteConfigArgs_PythonVersion_" data-uid="Pulumi.Azure.AppService.Inputs.AppServiceSiteConfigArgs.PythonVersion*"></a>
   <h4 id="Pulumi_Azure_AppService_Inputs_AppServiceSiteConfigArgs_PythonVersion" data-uid="Pulumi.Azure.AppService.Inputs.AppServiceSiteConfigArgs.PythonVersion">PythonVersion</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The version of Python to use in this App Service. Possible values are <code>2.7</code> and <code>3.4</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; PythonVersion { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? PythonVersion { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -591,21 +579,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Appservice/AppService.cs/#L1240">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/Inputs/AppServiceSiteConfigArgs.cs/#L135">View Source</a>
   </span>
   <a id="Pulumi_Azure_AppService_Inputs_AppServiceSiteConfigArgs_RemoteDebuggingEnabled_" data-uid="Pulumi.Azure.AppService.Inputs.AppServiceSiteConfigArgs.RemoteDebuggingEnabled*"></a>
   <h4 id="Pulumi_Azure_AppService_Inputs_AppServiceSiteConfigArgs_RemoteDebuggingEnabled" data-uid="Pulumi.Azure.AppService.Inputs.AppServiceSiteConfigArgs.RemoteDebuggingEnabled">RemoteDebuggingEnabled</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Is Remote Debugging Enabled? Defaults to <code>false</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; RemoteDebuggingEnabled { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? RemoteDebuggingEnabled { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -617,21 +606,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Appservice/AppService.cs/#L1243">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/Inputs/AppServiceSiteConfigArgs.cs/#L141">View Source</a>
   </span>
   <a id="Pulumi_Azure_AppService_Inputs_AppServiceSiteConfigArgs_RemoteDebuggingVersion_" data-uid="Pulumi.Azure.AppService.Inputs.AppServiceSiteConfigArgs.RemoteDebuggingVersion*"></a>
   <h4 id="Pulumi_Azure_AppService_Inputs_AppServiceSiteConfigArgs_RemoteDebuggingVersion" data-uid="Pulumi.Azure.AppService.Inputs.AppServiceSiteConfigArgs.RemoteDebuggingVersion">RemoteDebuggingVersion</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Which version of Visual Studio should the Remote Debugger be compatible with? Possible values are <code>VS2012</code>, <code>VS2013</code>, <code>VS2015</code> and <code>VS2017</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; RemoteDebuggingVersion { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? RemoteDebuggingVersion { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -643,21 +633,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Appservice/AppService.cs/#L1246">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/Inputs/AppServiceSiteConfigArgs.cs/#L147">View Source</a>
   </span>
   <a id="Pulumi_Azure_AppService_Inputs_AppServiceSiteConfigArgs_ScmType_" data-uid="Pulumi.Azure.AppService.Inputs.AppServiceSiteConfigArgs.ScmType*"></a>
   <h4 id="Pulumi_Azure_AppService_Inputs_AppServiceSiteConfigArgs_ScmType" data-uid="Pulumi.Azure.AppService.Inputs.AppServiceSiteConfigArgs.ScmType">ScmType</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The type of Source Control enabled for this App Service. Defaults to <code>None</code>. Possible values are: <code>BitbucketGit</code>, <code>BitbucketHg</code>, <code>CodePlexGit</code>, <code>CodePlexHg</code>, <code>Dropbox</code>, <code>ExternalGit</code>, <code>ExternalHg</code>, <code>GitHub</code>, <code>LocalGit</code>, <code>None</code>, <code>OneDrive</code>, <code>Tfs</code>, <code>VSO</code>, and <code>VSTSRM</code></p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; ScmType { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? ScmType { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -669,21 +660,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Appservice/AppService.cs/#L1249">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/Inputs/AppServiceSiteConfigArgs.cs/#L153">View Source</a>
   </span>
   <a id="Pulumi_Azure_AppService_Inputs_AppServiceSiteConfigArgs_Use32BitWorkerProcess_" data-uid="Pulumi.Azure.AppService.Inputs.AppServiceSiteConfigArgs.Use32BitWorkerProcess*"></a>
   <h4 id="Pulumi_Azure_AppService_Inputs_AppServiceSiteConfigArgs_Use32BitWorkerProcess" data-uid="Pulumi.Azure.AppService.Inputs.AppServiceSiteConfigArgs.Use32BitWorkerProcess">Use32BitWorkerProcess</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Should the App Service run in 32 bit mode, rather than 64 bit mode?</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; Use32BitWorkerProcess { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? Use32BitWorkerProcess { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -695,21 +687,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Appservice/AppService.cs/#L1252">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/Inputs/AppServiceSiteConfigArgs.cs/#L159">View Source</a>
   </span>
   <a id="Pulumi_Azure_AppService_Inputs_AppServiceSiteConfigArgs_WebsocketsEnabled_" data-uid="Pulumi.Azure.AppService.Inputs.AppServiceSiteConfigArgs.WebsocketsEnabled*"></a>
   <h4 id="Pulumi_Azure_AppService_Inputs_AppServiceSiteConfigArgs_WebsocketsEnabled" data-uid="Pulumi.Azure.AppService.Inputs.AppServiceSiteConfigArgs.WebsocketsEnabled">WebsocketsEnabled</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Should WebSockets be enabled?</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; WebsocketsEnabled { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? WebsocketsEnabled { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -721,21 +714,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Appservice/AppService.cs/#L1255">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/Inputs/AppServiceSiteConfigArgs.cs/#L165">View Source</a>
   </span>
   <a id="Pulumi_Azure_AppService_Inputs_AppServiceSiteConfigArgs_WindowsFxVersion_" data-uid="Pulumi.Azure.AppService.Inputs.AppServiceSiteConfigArgs.WindowsFxVersion*"></a>
   <h4 id="Pulumi_Azure_AppService_Inputs_AppServiceSiteConfigArgs_WindowsFxVersion" data-uid="Pulumi.Azure.AppService.Inputs.AppServiceSiteConfigArgs.WindowsFxVersion">WindowsFxVersion</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The Windows Docker container image (<code>DOCKER|&amp;lt;user/image:tag&gt;</code>)</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; WindowsFxVersion { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? WindowsFxVersion { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -747,7 +741,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -759,7 +753,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Appservice/AppService.cs/#L1174" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/Inputs/AppServiceSiteConfigArgs.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

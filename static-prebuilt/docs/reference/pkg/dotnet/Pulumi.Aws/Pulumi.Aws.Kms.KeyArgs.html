@@ -76,36 +76,7 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
-    <div class="level3"><span class="xref">KeyArgs</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">KeyArgs</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.Kms.html">Pulumi.Aws.Kms</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
@@ -116,7 +87,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Kms/Key.cs/#L181">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Kms/Key.cs/#L185">View Source</a>
   </span>
   <a id="Pulumi_Aws_Kms_KeyArgs__ctor_" data-uid="Pulumi.Aws.Kms.KeyArgs.#ctor*"></a>
   <h4 id="Pulumi_Aws_Kms_KeyArgs__ctor" data-uid="Pulumi.Aws.Kms.KeyArgs.#ctor">KeyArgs()</h4>
@@ -129,7 +100,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Kms/Key.cs/#L130">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Kms/Key.cs/#L131">View Source</a>
   </span>
   <a id="Pulumi_Aws_Kms_KeyArgs_CustomerMasterKeySpec_" data-uid="Pulumi.Aws.Kms.KeyArgs.CustomerMasterKeySpec*"></a>
   <h4 id="Pulumi_Aws_Kms_KeyArgs_CustomerMasterKeySpec" data-uid="Pulumi.Aws.Kms.KeyArgs.CustomerMasterKeySpec">CustomerMasterKeySpec</h4>
@@ -139,7 +110,7 @@ Valid values: <code>SYMMETRIC_DEFAULT</code>,  <code>RSA_2048</code>, <code>RSA_
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; CustomerMasterKeySpec { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? CustomerMasterKeySpec { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -151,13 +122,13 @@ Valid values: <code>SYMMETRIC_DEFAULT</code>,  <code>RSA_2048</code>, <code>RSA_
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Kms/Key.cs/#L137">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Kms/Key.cs/#L138">View Source</a>
   </span>
   <a id="Pulumi_Aws_Kms_KeyArgs_DeletionWindowInDays_" data-uid="Pulumi.Aws.Kms.KeyArgs.DeletionWindowInDays*"></a>
   <h4 id="Pulumi_Aws_Kms_KeyArgs_DeletionWindowInDays" data-uid="Pulumi.Aws.Kms.KeyArgs.DeletionWindowInDays">DeletionWindowInDays</h4>
@@ -167,7 +138,7 @@ after destruction of the resource, must be between 7 and 30 days. Defaults to 30
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; DeletionWindowInDays { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? DeletionWindowInDays { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -179,13 +150,13 @@ after destruction of the resource, must be between 7 and 30 days. Defaults to 30
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Kms/Key.cs/#L143">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Kms/Key.cs/#L144">View Source</a>
   </span>
   <a id="Pulumi_Aws_Kms_KeyArgs_Description_" data-uid="Pulumi.Aws.Kms.KeyArgs.Description*"></a>
   <h4 id="Pulumi_Aws_Kms_KeyArgs_Description" data-uid="Pulumi.Aws.Kms.KeyArgs.Description">Description</h4>
@@ -194,7 +165,7 @@ after destruction of the resource, must be between 7 and 30 days. Defaults to 30
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Description { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Description { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -206,13 +177,13 @@ after destruction of the resource, must be between 7 and 30 days. Defaults to 30
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Kms/Key.cs/#L150">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Kms/Key.cs/#L151">View Source</a>
   </span>
   <a id="Pulumi_Aws_Kms_KeyArgs_EnableKeyRotation_" data-uid="Pulumi.Aws.Kms.KeyArgs.EnableKeyRotation*"></a>
   <h4 id="Pulumi_Aws_Kms_KeyArgs_EnableKeyRotation" data-uid="Pulumi.Aws.Kms.KeyArgs.EnableKeyRotation">EnableKeyRotation</h4>
@@ -222,7 +193,7 @@ is enabled. Defaults to false.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; EnableKeyRotation { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? EnableKeyRotation { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -234,13 +205,13 @@ is enabled. Defaults to false.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Kms/Key.cs/#L156">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Kms/Key.cs/#L157">View Source</a>
   </span>
   <a id="Pulumi_Aws_Kms_KeyArgs_IsEnabled_" data-uid="Pulumi.Aws.Kms.KeyArgs.IsEnabled*"></a>
   <h4 id="Pulumi_Aws_Kms_KeyArgs_IsEnabled" data-uid="Pulumi.Aws.Kms.KeyArgs.IsEnabled">IsEnabled</h4>
@@ -249,7 +220,7 @@ is enabled. Defaults to false.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; IsEnabled { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? IsEnabled { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -261,13 +232,13 @@ is enabled. Defaults to false.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Kms/Key.cs/#L163">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Kms/Key.cs/#L164">View Source</a>
   </span>
   <a id="Pulumi_Aws_Kms_KeyArgs_KeyUsage_" data-uid="Pulumi.Aws.Kms.KeyArgs.KeyUsage*"></a>
   <h4 id="Pulumi_Aws_Kms_KeyArgs_KeyUsage" data-uid="Pulumi.Aws.Kms.KeyArgs.KeyUsage">KeyUsage</h4>
@@ -277,7 +248,7 @@ Defaults to <code>ENCRYPT_DECRYPT</code>.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; KeyUsage { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? KeyUsage { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -289,21 +260,22 @@ Defaults to <code>ENCRYPT_DECRYPT</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Kms/Key.cs/#L166">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Kms/Key.cs/#L170">View Source</a>
   </span>
   <a id="Pulumi_Aws_Kms_KeyArgs_Policy_" data-uid="Pulumi.Aws.Kms.KeyArgs.Policy*"></a>
   <h4 id="Pulumi_Aws_Kms_KeyArgs_Policy" data-uid="Pulumi.Aws.Kms.KeyArgs.Policy">Policy</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A valid policy JSON document.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Policy { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Policy { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -315,13 +287,13 @@ Defaults to <code>ENCRYPT_DECRYPT</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Kms/Key.cs/#L175">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Kms/Key.cs/#L179">View Source</a>
   </span>
   <a id="Pulumi_Aws_Kms_KeyArgs_Tags_" data-uid="Pulumi.Aws.Kms.KeyArgs.Tags*"></a>
   <h4 id="Pulumi_Aws_Kms_KeyArgs_Tags" data-uid="Pulumi.Aws.Kms.KeyArgs.Tags">Tags</h4>
@@ -342,7 +314,7 @@ Defaults to <code>ENCRYPT_DECRYPT</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputMap-1.html">InputMap</a>&lt;<span class="xref">System.Object</span>&gt;</td>
+        <td><span class="xref">InputMap</span>&lt;<span class="xref">System.Object</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -354,7 +326,7 @@ Defaults to <code>ENCRYPT_DECRYPT</code>.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Kms/Key.cs/#L124" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Kms/Key.cs/#L125" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

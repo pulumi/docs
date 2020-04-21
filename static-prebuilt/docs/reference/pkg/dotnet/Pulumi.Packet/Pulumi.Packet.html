@@ -80,9 +80,6 @@
       <section><p>Provides a resource to manage BGP sessions in Packet Host. Refer to <a href="https://www.packet.com/developers/docs/network/advanced/local-and-global-bgp/">Packet BGP documentation</a> for more details.</p>
 <p>You need to have BGP config enabled in your project.</p>
 <p>BGP session must be linked to a device running <a href="https://bird.network.cz">BIRD</a> or other BGP routing daemon which will control route advertisements via the session to Packet's upstream routers.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/r/bgp_session.html.markdown">https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/r/bgp_session.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Packet.BgpSessionArgs.html">BgpSessionArgs</a></h4>
       <section></section>
@@ -98,51 +95,64 @@ modify, and delete devices.</p>
 the raw state as plain-text.
 <a href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
 </blockquote>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/r/device.html.markdown">https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/r/device.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Packet.DeviceArgs.html">DeviceArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Packet.DeviceState.html">DeviceState</a></h4>
       <section></section>
+      <h4><a class="xref" href="Pulumi.Packet.GetDevice.html">GetDevice</a></h4>
+      <section></section>
       <h4><a class="xref" href="Pulumi.Packet.GetDeviceArgs.html">GetDeviceArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Packet.GetDeviceResult.html">GetDeviceResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Packet.GetIpBlockRanges.html">GetIpBlockRanges</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Packet.GetIpBlockRangesArgs.html">GetIpBlockRangesArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Packet.GetIpBlockRangesResult.html">GetIpBlockRangesResult</a></h4>
       <section></section>
+      <h4><a class="xref" href="Pulumi.Packet.GetOperatingSystem.html">GetOperatingSystem</a></h4>
+      <section></section>
       <h4><a class="xref" href="Pulumi.Packet.GetOperatingSystemArgs.html">GetOperatingSystemArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Packet.GetOperatingSystemResult.html">GetOperatingSystemResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Packet.GetOrganization.html">GetOrganization</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Packet.GetOrganizationArgs.html">GetOrganizationArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Packet.GetOrganizationResult.html">GetOrganizationResult</a></h4>
       <section></section>
+      <h4><a class="xref" href="Pulumi.Packet.GetPrecreatedIpBlock.html">GetPrecreatedIpBlock</a></h4>
+      <section></section>
       <h4><a class="xref" href="Pulumi.Packet.GetPrecreatedIpBlockArgs.html">GetPrecreatedIpBlockArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Packet.GetPrecreatedIpBlockResult.html">GetPrecreatedIpBlockResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Packet.GetProject.html">GetProject</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Packet.GetProjectArgs.html">GetProjectArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Packet.GetProjectResult.html">GetProjectResult</a></h4>
       <section></section>
+      <h4><a class="xref" href="Pulumi.Packet.GetSpotMarketPrice.html">GetSpotMarketPrice</a></h4>
+      <section></section>
       <h4><a class="xref" href="Pulumi.Packet.GetSpotMarketPriceArgs.html">GetSpotMarketPriceArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Packet.GetSpotMarketPriceResult.html">GetSpotMarketPriceResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Packet.GetSpotMarketRequest.html">GetSpotMarketRequest</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Packet.GetSpotMarketRequestArgs.html">GetSpotMarketRequestArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Packet.GetSpotMarketRequestResult.html">GetSpotMarketRequestResult</a></h4>
       <section></section>
+      <h4><a class="xref" href="Pulumi.Packet.GetVolume.html">GetVolume</a></h4>
+      <section></section>
       <h4><a class="xref" href="Pulumi.Packet.GetVolumeArgs.html">GetVolumeArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Packet.GetVolumeResult.html">GetVolumeResult</a></h4>
-      <section></section>
-      <h4><a class="xref" href="Pulumi.Packet.Invokes.html">Invokes</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Packet.IpAttachment.html">IpAttachment</a></h4>
       <section><p>Provides a resource to attach elastic IP subnets to devices.</p>
@@ -152,9 +162,6 @@ one of your reserved blocks in the same project and facility as the target devic
 block as one subnet to a device; or 2 subnets with CIDRs 147.229.10.152/31' and 147.229.10.154/31; or 4 subnets
 with mask prefix length 32. More about the elastic IP subnets is <a href="https://www.packet.com/developers/docs/network/basic/elastic-ips/">here</a>.</p>
 <p>Device and reserved block must be in the same facility.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/r/ip_attachment.html.markdown">https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/r/ip_attachment.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Packet.IpAttachmentArgs.html">IpAttachmentArgs</a></h4>
       <section></section>
@@ -162,9 +169,6 @@ with mask prefix length 32. More about the elastic IP subnets is <a href="https:
       <section></section>
       <h4><a class="xref" href="Pulumi.Packet.Organization.html">Organization</a></h4>
       <section><p>Provides a resource to manage organization resource in Packet.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/r/organization.html.markdown">https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/r/organization.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Packet.OrganizationArgs.html">OrganizationArgs</a></h4>
       <section></section>
@@ -185,9 +189,6 @@ with mask prefix length 32. More about the elastic IP subnets is <a href="https:
 <li><code>vlan_id</code> - UUID of VLAN API resource</li>
 <li><code>port_id</code> - UUID of device port</li>
 </ul>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/r/port_vlan_attachment.html.markdown">https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/r/port_vlan_attachment.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Packet.PortVlanAttachmentArgs.html">PortVlanAttachmentArgs</a></h4>
       <section></section>
@@ -196,18 +197,12 @@ with mask prefix length 32. More about the elastic IP subnets is <a href="https:
       <h4><a class="xref" href="Pulumi.Packet.Project.html">Project</a></h4>
       <section><p>Provides a Packet project resource to allow you manage devices
 in your projects.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/r/project.html.markdown">https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/r/project.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Packet.ProjectArgs.html">ProjectArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Packet.ProjectSshKey.html">ProjectSshKey</a></h4>
       <section><p>Provides a Packet project SSH key resource to manage project-specific SSH keys.
 Project SSH keys will only be populated onto servers that belong to that project, in contrast to User SSH Keys.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/r/project_ssh_key.html.markdown">https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/r/project_ssh_key.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Packet.ProjectSshKeyArgs.html">ProjectSshKeyArgs</a></h4>
       <section></section>
@@ -220,9 +215,6 @@ Project SSH keys will only be populated onto servers that belong to that project
 settings, however an explicit <code>Provider</code> instance may be created and passed during resource
 construction to achieve fine-grained programmatic control over provider settings. See the
 <a href="https://www.pulumi.com/docs/reference/programming-model/#providers">documentation</a> for more information.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/index.html.markdown">https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/index.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Packet.ProviderArgs.html">ProviderArgs</a></h4>
       <section></section>
@@ -235,9 +227,6 @@ The IPv6 and private IPv4 blocks can't be created, only imported. With this reso
 <p>Public blocks are allocated in a facility. Addresses from public blocks can only be assigned to devices in the facility. Public blocks can have mask from /24 (256 addresses) to /32 (1 address). If you create public block with this resource, you must fill the facility argmument.</p>
 <p>Addresses from global blocks can be assigned in any facility. Global blocks can have mask from /30 (4 addresses), to /32 (1 address). If you create global block with this resource, you must specify type = &quot;global_ipv4&quot; and you must omit the facility argument.</p>
 <p>Once IP block is allocated or imported, an address from it can be assigned to device with the <code>packet..IpAttachment</code> resource.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/r/reserved_ip_block.html.markdown">https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/r/reserved_ip_block.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Packet.ReservedIpBlockArgs.html">ReservedIpBlockArgs</a></h4>
       <section></section>
@@ -246,9 +235,6 @@ The IPv6 and private IPv4 blocks can't be created, only imported. With this reso
       <h4><a class="xref" href="Pulumi.Packet.SpotMarketRequest.html">SpotMarketRequest</a></h4>
       <section><p>Provides a Packet Spot Market Request resource to allow you to
 manage spot market requests on your account. For more detail on Spot Market, see <a href="https://www.packet.com/developers/docs/getting-started/deployment-options/spot-market/">this article in Packing documentaion</a>.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/r/spot_market_request.html.markdown">https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/r/spot_market_request.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Packet.SpotMarketRequestArgs.html">SpotMarketRequestArgs</a></h4>
       <section></section>
@@ -257,9 +243,6 @@ manage spot market requests on your account. For more detail on Spot Market, see
       <h4><a class="xref" href="Pulumi.Packet.SshKey.html">SshKey</a></h4>
       <section><p>Provides a resource to manage User SSH keys on your Packet user account. If you create a new device in a project, all the keys of the project's collaborators will be injected to the device.</p>
 <p>The link between User SSH key and device is implicit. If you want to make sure that a key will be copied to a device, you must ensure that the device resource <code>depends_on</code> the key resource.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/r/ssh_key.html.markdown">https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/r/ssh_key.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Packet.SshKeyArgs.html">SshKeyArgs</a></h4>
       <section></section>
@@ -272,26 +255,17 @@ manage spot market requests on your account. For more detail on Spot Market, see
 <li><a href="https://www.packet.com/resources/guides/layer-2-configurations/">https://www.packet.com/resources/guides/layer-2-configurations/</a></li>
 <li><a href="https://www.packet.com/developers/docs/network/advanced/layer-2/">https://www.packet.com/developers/docs/network/advanced/layer-2/</a></li>
 </ul>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/r/vlan.html.markdown">https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/r/vlan.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Packet.VlanArgs.html">VlanArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Packet.VlanState.html">VlanState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Packet.Volume.html">Volume</a></h4>
-      <section><blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/r/volume.html.markdown">https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/r/volume.html.markdown</a>.</p>
-</blockquote>
-</section>
+      <section></section>
       <h4><a class="xref" href="Pulumi.Packet.VolumeArgs.html">VolumeArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Packet.VolumeAttachment.html">VolumeAttachment</a></h4>
-      <section><blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/r/volume_attachment.html.markdown">https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/r/volume_attachment.html.markdown</a>.</p>
-</blockquote>
-</section>
+      <section></section>
       <h4><a class="xref" href="Pulumi.Packet.VolumeAttachmentArgs.html">VolumeAttachmentArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Packet.VolumeAttachmentState.html">VolumeAttachmentState</a></h4>

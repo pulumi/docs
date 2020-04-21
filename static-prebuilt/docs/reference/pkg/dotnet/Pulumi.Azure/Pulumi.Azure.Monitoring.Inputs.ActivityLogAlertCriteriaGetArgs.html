@@ -76,36 +76,7 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
-    <div class="level3"><span class="xref">ActivityLogAlertCriteriaGetArgs</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">ActivityLogAlertCriteriaGetArgs</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Azure.Monitoring.Inputs.html">Pulumi.Azure.Monitoring.Inputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Azure.dll</h6>
@@ -116,7 +87,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Monitoring/ActivityLogAlert.cs/#L365">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Monitoring/Inputs/ActivityLogAlertCriteriaGetArgs.cs/#L75">View Source</a>
   </span>
   <a id="Pulumi_Azure_Monitoring_Inputs_ActivityLogAlertCriteriaGetArgs__ctor_" data-uid="Pulumi.Azure.Monitoring.Inputs.ActivityLogAlertCriteriaGetArgs.#ctor*"></a>
   <h4 id="Pulumi_Azure_Monitoring_Inputs_ActivityLogAlertCriteriaGetArgs__ctor" data-uid="Pulumi.Azure.Monitoring.Inputs.ActivityLogAlertCriteriaGetArgs.#ctor">ActivityLogAlertCriteriaGetArgs()</h4>
@@ -129,15 +100,16 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Monitoring/ActivityLogAlert.cs/#L335">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Monitoring/Inputs/ActivityLogAlertCriteriaGetArgs.cs/#L18">View Source</a>
   </span>
   <a id="Pulumi_Azure_Monitoring_Inputs_ActivityLogAlertCriteriaGetArgs_Caller_" data-uid="Pulumi.Azure.Monitoring.Inputs.ActivityLogAlertCriteriaGetArgs.Caller*"></a>
   <h4 id="Pulumi_Azure_Monitoring_Inputs_ActivityLogAlertCriteriaGetArgs_Caller" data-uid="Pulumi.Azure.Monitoring.Inputs.ActivityLogAlertCriteriaGetArgs.Caller">Caller</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The email address or Azure Active Directory identifier of the user who performed the operation.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Caller { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Caller { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -149,17 +121,18 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Monitoring/ActivityLogAlert.cs/#L338">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Monitoring/Inputs/ActivityLogAlertCriteriaGetArgs.cs/#L24">View Source</a>
   </span>
   <a id="Pulumi_Azure_Monitoring_Inputs_ActivityLogAlertCriteriaGetArgs_Category_" data-uid="Pulumi.Azure.Monitoring.Inputs.ActivityLogAlertCriteriaGetArgs.Category*"></a>
   <h4 id="Pulumi_Azure_Monitoring_Inputs_ActivityLogAlertCriteriaGetArgs_Category" data-uid="Pulumi.Azure.Monitoring.Inputs.ActivityLogAlertCriteriaGetArgs.Category">Category</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The category of the operation. Possible values are <code>Administrative</code>, <code>Autoscale</code>, <code>Policy</code>, <code>Recommendation</code>, <code>ResourceHealth</code>, <code>Security</code> and <code>ServiceHealth</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -175,21 +148,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Monitoring/ActivityLogAlert.cs/#L341">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Monitoring/Inputs/ActivityLogAlertCriteriaGetArgs.cs/#L30">View Source</a>
   </span>
   <a id="Pulumi_Azure_Monitoring_Inputs_ActivityLogAlertCriteriaGetArgs_Level_" data-uid="Pulumi.Azure.Monitoring.Inputs.ActivityLogAlertCriteriaGetArgs.Level*"></a>
   <h4 id="Pulumi_Azure_Monitoring_Inputs_ActivityLogAlertCriteriaGetArgs_Level" data-uid="Pulumi.Azure.Monitoring.Inputs.ActivityLogAlertCriteriaGetArgs.Level">Level</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The severity level of the event. Possible values are <code>Verbose</code>, <code>Informational</code>, <code>Warning</code>, <code>Error</code>, and <code>Critical</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Level { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Level { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -201,21 +175,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Monitoring/ActivityLogAlert.cs/#L344">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Monitoring/Inputs/ActivityLogAlertCriteriaGetArgs.cs/#L36">View Source</a>
   </span>
   <a id="Pulumi_Azure_Monitoring_Inputs_ActivityLogAlertCriteriaGetArgs_OperationName_" data-uid="Pulumi.Azure.Monitoring.Inputs.ActivityLogAlertCriteriaGetArgs.OperationName*"></a>
   <h4 id="Pulumi_Azure_Monitoring_Inputs_ActivityLogAlertCriteriaGetArgs_OperationName" data-uid="Pulumi.Azure.Monitoring.Inputs.ActivityLogAlertCriteriaGetArgs.OperationName">OperationName</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The Resource Manager Role-Based Access Control operation name. Supported operation should be of the form: <code>&amp;lt;resourceProvider&gt;/&amp;lt;resourceType&gt;/&amp;lt;operation&gt;</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; OperationName { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? OperationName { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -227,21 +202,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Monitoring/ActivityLogAlert.cs/#L347">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Monitoring/Inputs/ActivityLogAlertCriteriaGetArgs.cs/#L42">View Source</a>
   </span>
   <a id="Pulumi_Azure_Monitoring_Inputs_ActivityLogAlertCriteriaGetArgs_ResourceGroup_" data-uid="Pulumi.Azure.Monitoring.Inputs.ActivityLogAlertCriteriaGetArgs.ResourceGroup*"></a>
   <h4 id="Pulumi_Azure_Monitoring_Inputs_ActivityLogAlertCriteriaGetArgs_ResourceGroup" data-uid="Pulumi.Azure.Monitoring.Inputs.ActivityLogAlertCriteriaGetArgs.ResourceGroup">ResourceGroup</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The name of resource group monitored by the activity log alert.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; ResourceGroup { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? ResourceGroup { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -253,21 +229,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Monitoring/ActivityLogAlert.cs/#L350">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Monitoring/Inputs/ActivityLogAlertCriteriaGetArgs.cs/#L48">View Source</a>
   </span>
   <a id="Pulumi_Azure_Monitoring_Inputs_ActivityLogAlertCriteriaGetArgs_ResourceId_" data-uid="Pulumi.Azure.Monitoring.Inputs.ActivityLogAlertCriteriaGetArgs.ResourceId*"></a>
   <h4 id="Pulumi_Azure_Monitoring_Inputs_ActivityLogAlertCriteriaGetArgs_ResourceId" data-uid="Pulumi.Azure.Monitoring.Inputs.ActivityLogAlertCriteriaGetArgs.ResourceId">ResourceId</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The specific resource monitored by the activity log alert. It should be within one of the <code>scopes</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; ResourceId { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? ResourceId { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -279,21 +256,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Monitoring/ActivityLogAlert.cs/#L353">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Monitoring/Inputs/ActivityLogAlertCriteriaGetArgs.cs/#L54">View Source</a>
   </span>
   <a id="Pulumi_Azure_Monitoring_Inputs_ActivityLogAlertCriteriaGetArgs_ResourceProvider_" data-uid="Pulumi.Azure.Monitoring.Inputs.ActivityLogAlertCriteriaGetArgs.ResourceProvider*"></a>
   <h4 id="Pulumi_Azure_Monitoring_Inputs_ActivityLogAlertCriteriaGetArgs_ResourceProvider" data-uid="Pulumi.Azure.Monitoring.Inputs.ActivityLogAlertCriteriaGetArgs.ResourceProvider">ResourceProvider</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The name of the resource provider monitored by the activity log alert.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; ResourceProvider { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? ResourceProvider { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -305,21 +283,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Monitoring/ActivityLogAlert.cs/#L356">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Monitoring/Inputs/ActivityLogAlertCriteriaGetArgs.cs/#L60">View Source</a>
   </span>
   <a id="Pulumi_Azure_Monitoring_Inputs_ActivityLogAlertCriteriaGetArgs_ResourceType_" data-uid="Pulumi.Azure.Monitoring.Inputs.ActivityLogAlertCriteriaGetArgs.ResourceType*"></a>
   <h4 id="Pulumi_Azure_Monitoring_Inputs_ActivityLogAlertCriteriaGetArgs_ResourceType" data-uid="Pulumi.Azure.Monitoring.Inputs.ActivityLogAlertCriteriaGetArgs.ResourceType">ResourceType</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The resource type monitored by the activity log alert.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; ResourceType { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? ResourceType { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -331,21 +310,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Monitoring/ActivityLogAlert.cs/#L359">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Monitoring/Inputs/ActivityLogAlertCriteriaGetArgs.cs/#L66">View Source</a>
   </span>
   <a id="Pulumi_Azure_Monitoring_Inputs_ActivityLogAlertCriteriaGetArgs_Status_" data-uid="Pulumi.Azure.Monitoring.Inputs.ActivityLogAlertCriteriaGetArgs.Status*"></a>
   <h4 id="Pulumi_Azure_Monitoring_Inputs_ActivityLogAlertCriteriaGetArgs_Status" data-uid="Pulumi.Azure.Monitoring.Inputs.ActivityLogAlertCriteriaGetArgs.Status">Status</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The status of the event. For example, <code>Started</code>, <code>Failed</code>, or <code>Succeeded</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Status { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Status { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -357,21 +337,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Monitoring/ActivityLogAlert.cs/#L362">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Monitoring/Inputs/ActivityLogAlertCriteriaGetArgs.cs/#L72">View Source</a>
   </span>
   <a id="Pulumi_Azure_Monitoring_Inputs_ActivityLogAlertCriteriaGetArgs_SubStatus_" data-uid="Pulumi.Azure.Monitoring.Inputs.ActivityLogAlertCriteriaGetArgs.SubStatus*"></a>
   <h4 id="Pulumi_Azure_Monitoring_Inputs_ActivityLogAlertCriteriaGetArgs_SubStatus" data-uid="Pulumi.Azure.Monitoring.Inputs.ActivityLogAlertCriteriaGetArgs.SubStatus">SubStatus</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The sub status of the event.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; SubStatus { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? SubStatus { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -383,7 +364,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -395,7 +376,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Monitoring/ActivityLogAlert.cs/#L333" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Monitoring/Inputs/ActivityLogAlertCriteriaGetArgs.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

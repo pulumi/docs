@@ -78,40 +78,16 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">NfsFileShareNfsFileShareDefaults</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.StorageGateway.Outputs.html">Pulumi.Aws.StorageGateway.Outputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
   <h5 id="Pulumi_Aws_StorageGateway_Outputs_NfsFileShareNfsFileShareDefaults_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class NfsFileShareNfsFileShareDefaults</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class NfsFileShareNfsFileShareDefaults : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Storagegateway/NfsFileShare.cs/#L452">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/StorageGateway/Outputs/NfsFileShareNfsFileShareDefaults.cs/#L19">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_StorageGateway_Outputs_NfsFileShareNfsFileShareDefaults_DirectoryMode" data-uid="Pulumi.Aws.StorageGateway.Outputs.NfsFileShareNfsFileShareDefaults.DirectoryMode">DirectoryMode</h4>
   <div class="markdown level1 summary"><p>The Unix directory mode in the string form &quot;nnnn&quot;. Defaults to <code>&amp;quot;0777&amp;quot;</code>.</p>
@@ -119,7 +95,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string DirectoryMode</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? DirectoryMode</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -131,13 +107,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Storagegateway/NfsFileShare.cs/#L456">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/StorageGateway/Outputs/NfsFileShareNfsFileShareDefaults.cs/#L23">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_StorageGateway_Outputs_NfsFileShareNfsFileShareDefaults_FileMode" data-uid="Pulumi.Aws.StorageGateway.Outputs.NfsFileShareNfsFileShareDefaults.FileMode">FileMode</h4>
   <div class="markdown level1 summary"><p>The Unix file mode in the string form &quot;nnnn&quot;. Defaults to <code>&amp;quot;0666&amp;quot;</code>.</p>
@@ -145,7 +121,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string FileMode</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? FileMode</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -157,13 +133,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Storagegateway/NfsFileShare.cs/#L460">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/StorageGateway/Outputs/NfsFileShareNfsFileShareDefaults.cs/#L27">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_StorageGateway_Outputs_NfsFileShareNfsFileShareDefaults_GroupId" data-uid="Pulumi.Aws.StorageGateway.Outputs.NfsFileShareNfsFileShareDefaults.GroupId">GroupId</h4>
   <div class="markdown level1 summary"><p>The default group ID for the file share (unless the files have another group ID specified). Defaults to <code>65534</code> (<code>nfsnobody</code>). Valid values: <code>0</code> through <code>4294967294</code>.</p>
@@ -189,7 +165,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Storagegateway/NfsFileShare.cs/#L464">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/StorageGateway/Outputs/NfsFileShareNfsFileShareDefaults.cs/#L31">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_StorageGateway_Outputs_NfsFileShareNfsFileShareDefaults_OwnerId" data-uid="Pulumi.Aws.StorageGateway.Outputs.NfsFileShareNfsFileShareDefaults.OwnerId">OwnerId</h4>
   <div class="markdown level1 summary"><p>The default owner ID for the file share (unless the files have another owner ID specified). Defaults to <code>65534</code> (<code>nfsnobody</code>). Valid values: <code>0</code> through <code>4294967294</code>.</p>
@@ -221,7 +197,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Storagegateway/NfsFileShare.cs/#L446" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/StorageGateway/Outputs/NfsFileShareNfsFileShareDefaults.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

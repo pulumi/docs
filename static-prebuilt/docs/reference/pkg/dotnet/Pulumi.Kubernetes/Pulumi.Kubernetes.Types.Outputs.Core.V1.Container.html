@@ -79,40 +79,16 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">Container</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Core.V1.html">Pulumi.Kubernetes.Types.Outputs.Core.V1</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Kubernetes.dll</h6>
   <h5 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_Container_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class Container</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class Container : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L14568">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L14720">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_Container_Args" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.Container.Args">Args</h4>
   <div class="markdown level1 summary"><p>Arguments to the entrypoint. The docker image's CMD is used if this is not provided.
@@ -138,13 +114,13 @@ updated. More info:
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L14579">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L14731">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_Container_Command" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.Container.Command">Command</h4>
   <div class="markdown level1 summary"><p>Entrypoint array. Not executed within a shell. The docker image's ENTRYPOINT is used if
@@ -170,13 +146,13 @@ not. Cannot be updated. More info:
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L14584">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L14736">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_Container_Env" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.Container.Env">Env</h4>
   <div class="markdown level1 summary"><p>List of environment variables to set in the container. Cannot be updated.</p>
@@ -196,13 +172,13 @@ not. Cannot be updated. More info:
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Core.V1.EnvVar.html">EnvVar</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Core.V1.EnvVar.html">EnvVar</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L14593">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L14745">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_Container_EnvFrom" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.Container.EnvFrom">EnvFrom</h4>
   <div class="markdown level1 summary"><p>List of sources to populate environment variables in the container. The keys defined
@@ -226,13 +202,13 @@ duplicate key will take precedence. Cannot be updated.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Core.V1.EnvFromSource.html">EnvFromSource</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Core.V1.EnvFromSource.html">EnvFromSource</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L14600">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L14752">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_Container_Image" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.Container.Image">Image</h4>
   <div class="markdown level1 summary"><p>Docker image name. More info: <a href="https://kubernetes.io/docs/concepts/containers/images">https://kubernetes.io/docs/concepts/containers/images</a> This
@@ -260,7 +236,7 @@ container images in workload controllers like Deployments and StatefulSets.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L14607">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L14759">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_Container_ImagePullPolicy" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.Container.ImagePullPolicy">ImagePullPolicy</h4>
   <div class="markdown level1 summary"><p>Image pull policy. One of Always, Never, IfNotPresent. Defaults to Always if :latest tag
@@ -288,7 +264,7 @@ is specified, or IfNotPresent otherwise. Cannot be updated. More info:
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L14613">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L14765">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_Container_Lifecycle" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.Container.Lifecycle">Lifecycle</h4>
   <div class="markdown level1 summary"><p>Actions that the management system should take in response to container lifecycle
@@ -315,7 +291,7 @@ events. Cannot be updated.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L14620">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L14772">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_Container_LivenessProbe" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.Container.LivenessProbe">LivenessProbe</h4>
   <div class="markdown level1 summary"><p>Periodic probe of container liveness. Container will be restarted if the probe fails.
@@ -343,7 +319,7 @@ Cannot be updated. More info:
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L14626">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L14778">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_Container_Name" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.Container.Name">Name</h4>
   <div class="markdown level1 summary"><p>Name of the container specified as a DNS_LABEL. Each container in a pod must have a
@@ -370,7 +346,7 @@ unique name (DNS_LABEL). Cannot be updated.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L14635">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L14787">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_Container_Ports" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.Container.Ports">Ports</h4>
   <div class="markdown level1 summary"><p>List of ports to expose from the container. Exposing a port here gives the system
@@ -394,13 +370,13 @@ accessible from the network. Cannot be updated.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Core.V1.ContainerPort.html">ContainerPort</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Core.V1.ContainerPort.html">ContainerPort</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L14642">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L14794">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_Container_ReadinessProbe" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.Container.ReadinessProbe">ReadinessProbe</h4>
   <div class="markdown level1 summary"><p>Periodic probe of container service readiness. Container will be removed from service
@@ -428,7 +404,7 @@ endpoints if the probe fails. Cannot be updated. More info:
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L14648">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L14800">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_Container_Resources" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.Container.Resources">Resources</h4>
   <div class="markdown level1 summary"><p>Compute Resources required by this container. Cannot be updated. More info:
@@ -455,7 +431,7 @@ endpoints if the probe fails. Cannot be updated. More info:
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L14655">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L14807">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_Container_SecurityContext" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.Container.SecurityContext">SecurityContext</h4>
   <div class="markdown level1 summary"><p>Security options the pod should run with. More info:
@@ -483,7 +459,7 @@ endpoints if the probe fails. Cannot be updated. More info:
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L14666">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L14818">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_Container_StartupProbe" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.Container.StartupProbe">StartupProbe</h4>
   <div class="markdown level1 summary"><p>StartupProbe indicates that the Pod has successfully initialized. If specified, no other
@@ -491,7 +467,7 @@ probes are executed until this completes successfully. If this probe fails, the 
 be restarted, just as if the livenessProbe failed. This can be used to provide different
 probe parameters at the beginning of a Pod's lifecycle, when it might take a long time
 to load data or warm a cache, than during steady-state operation. This cannot be
-updated. This is an alpha feature enabled by the StartupProbe feature flag. More info:
+updated. This is a beta feature enabled by the StartupProbe feature flag. More info:
 <a href="https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes">https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -515,7 +491,7 @@ updated. This is an alpha feature enabled by the StartupProbe feature flag. More
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L14673">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L14825">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_Container_Stdin" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.Container.Stdin">Stdin</h4>
   <div class="markdown level1 summary"><p>Whether this container should allocate a buffer for stdin in the container runtime. If
@@ -543,7 +519,7 @@ false.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L14684">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L14836">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_Container_StdinOnce" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.Container.StdinOnce">StdinOnce</h4>
   <div class="markdown level1 summary"><p>Whether the container runtime should close the stdin channel after it has been opened by
@@ -575,7 +551,7 @@ stdin will never receive an EOF. Default is false</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L14693">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L14845">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_Container_TerminationMessagePath" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.Container.TerminationMessagePath">TerminationMessagePath</h4>
   <div class="markdown level1 summary"><p>Optional: Path at which the file to which the container's termination message will be
@@ -605,7 +581,7 @@ limited to 12kb. Defaults to /dev/termination-log. Cannot be updated.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L14703">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L14855">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_Container_TerminationMessagePolicy" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.Container.TerminationMessagePolicy">TerminationMessagePolicy</h4>
   <div class="markdown level1 summary"><p>Indicate how the termination message should be populated. File will use the contents of
@@ -636,7 +612,7 @@ updated.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L14709">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L14861">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_Container_Tty" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.Container.Tty">Tty</h4>
   <div class="markdown level1 summary"><p>Whether this container should allocate a TTY for itself, also requires 'stdin' to be
@@ -663,11 +639,10 @@ true. Default is false.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L14715">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L14866">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_Container_VolumeDevices" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.Container.VolumeDevices">VolumeDevices</h4>
-  <div class="markdown level1 summary"><p>volumeDevices is the list of block devices to be used by the container. This is a beta
-feature.</p>
+  <div class="markdown level1 summary"><p>volumeDevices is the list of block devices to be used by the container.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -684,13 +659,13 @@ feature.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Core.V1.VolumeDevice.html">VolumeDevice</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Core.V1.VolumeDevice.html">VolumeDevice</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L14720">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L14871">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_Container_VolumeMounts" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.Container.VolumeMounts">VolumeMounts</h4>
   <div class="markdown level1 summary"><p>Pod volumes to mount into the container's filesystem. Cannot be updated.</p>
@@ -710,13 +685,13 @@ feature.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Core.V1.VolumeMount.html">VolumeMount</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Core.V1.VolumeMount.html">VolumeMount</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L14726">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L14877">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_Container_WorkingDir" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.Container.WorkingDir">WorkingDir</h4>
   <div class="markdown level1 summary"><p>Container's working directory. If not specified, the container runtime's default will be
@@ -749,7 +724,7 @@ used, which might be configured in the container image. Cannot be updated.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L14556" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L14708" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

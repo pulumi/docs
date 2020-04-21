@@ -78,9 +78,6 @@
   </h3>
       <h4><a class="xref" href="Pulumi.Aws.Cfg.AggregateAuthorization.html">AggregateAuthorization</a></h4>
       <section><p>Manages an AWS Config Aggregate Authorization</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/config_aggregate_authorization.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/config_aggregate_authorization.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Cfg.AggregateAuthorizationArgs.html">AggregateAuthorizationArgs</a></h4>
       <section></section>
@@ -88,9 +85,6 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Cfg.ConfigurationAggregator.html">ConfigurationAggregator</a></h4>
       <section><p>Manages an AWS Config Configuration Aggregator</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/config_configuration_aggregator.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/config_configuration_aggregator.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Cfg.ConfigurationAggregatorArgs.html">ConfigurationAggregatorArgs</a></h4>
       <section></section>
@@ -100,9 +94,6 @@
       <section><p>Provides an AWS Config Delivery Channel.</p>
 <blockquote>
 <p><strong>Note:</strong> Delivery Channel requires a <a href="https://www.terraform.io/docs/providers/aws/r/config_configuration_recorder.html">Configuration Recorder</a> to be present. Use of <code>depends_on</code> (as shown below) is recommended to avoid race conditions.</p>
-</blockquote>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/config_delivery_channel.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/config_delivery_channel.html.markdown</a>.</p>
 </blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Cfg.DeliveryChannelArgs.html">DeliveryChannelArgs</a></h4>
@@ -117,9 +108,6 @@
 <blockquote>
 <p><strong>NOTE:</strong> The proper Lambda permission to allow the AWS Config service invoke the Lambda Function must be in place before the rule will successfully create or update. See also the <a href="https://www.terraform.io/docs/providers/aws/r/lambda_permission.html"><code>aws.lambda.Permission</code> resource</a>.</p>
 </blockquote>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/config_organization_custom_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/config_organization_custom_rule.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Cfg.OrganizationCustomRuleArgs.html">OrganizationCustomRuleArgs</a></h4>
       <section></section>
@@ -133,9 +121,6 @@
 <blockquote>
 <p><strong>NOTE:</strong> Every Organization account except those configured in the <code>excluded_accounts</code> argument must have a Configuration Recorder with proper IAM permissions before the rule will successfully create or update. See also the <a href="https://www.terraform.io/docs/providers/aws/r/config_configuration_recorder.html"><code>aws.cfg.Recorder</code> resource</a>.</p>
 </blockquote>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/config_organization_managed_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/config_organization_managed_rule.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Cfg.OrganizationManagedRuleArgs.html">OrganizationManagedRuleArgs</a></h4>
       <section></section>
@@ -145,9 +130,6 @@
       <section><p>Provides an AWS Config Configuration Recorder. Please note that this resource <strong>does not start</strong> the created recorder automatically.</p>
 <blockquote>
 <p><strong>Note:</strong> <em>Starting</em> the Configuration Recorder requires a <a href="https://www.terraform.io/docs/providers/aws/r/config_delivery_channel.html">delivery channel</a> (while delivery channel creation requires Configuration Recorder). This is why <a href="https://www.terraform.io/docs/providers/aws/r/config_configuration_recorder_status.html"><code>aws.cfg.RecorderStatus</code></a> is a separate resource.</p>
-</blockquote>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/config_configuration_recorder.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/config_configuration_recorder.html.markdown</a>.</p>
 </blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Cfg.RecorderArgs.html">RecorderArgs</a></h4>
@@ -159,9 +141,6 @@
 <blockquote>
 <p><strong>Note:</strong> Starting Configuration Recorder requires a <a href="https://www.terraform.io/docs/providers/aws/r/config_delivery_channel.html">Delivery Channel</a> to be present. Use of <code>depends_on</code> (as shown below) is recommended to avoid race conditions.</p>
 </blockquote>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/config_configuration_recorder_status.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/config_configuration_recorder_status.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Cfg.RecorderStatusArgs.html">RecorderStatusArgs</a></h4>
       <section></section>
@@ -171,9 +150,6 @@
       <section><p>Provides an AWS Config Rule.</p>
 <blockquote>
 <p><strong>Note:</strong> Config Rule requires an existing <a href="https://www.terraform.io/docs/providers/aws/r/config_configuration_recorder.html">Configuration Recorder</a> to be present. Use of <code>depends_on</code> is recommended (as shown below) to avoid race conditions.</p>
-</blockquote>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/config_config_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/config_config_rule.html.markdown</a>.</p>
 </blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Cfg.RuleArgs.html">RuleArgs</a></h4>

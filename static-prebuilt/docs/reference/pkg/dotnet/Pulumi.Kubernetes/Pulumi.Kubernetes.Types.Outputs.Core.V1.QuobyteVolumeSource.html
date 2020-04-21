@@ -80,40 +80,16 @@ ownership management or SELinux relabeling.</p>
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">QuobyteVolumeSource</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Core.V1.html">Pulumi.Kubernetes.Types.Outputs.Core.V1</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Kubernetes.dll</h6>
   <h5 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_QuobyteVolumeSource_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class QuobyteVolumeSource</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class QuobyteVolumeSource : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L20108">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L20282">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_QuobyteVolumeSource_Group" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.QuobyteVolumeSource.Group">Group</h4>
   <div class="markdown level1 summary"><p>Group to map volume access to Default is no group</p>
@@ -139,7 +115,7 @@ ownership management or SELinux relabeling.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L20114">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L20288">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_QuobyteVolumeSource_ReadOnly" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.QuobyteVolumeSource.ReadOnly">ReadOnly</h4>
   <div class="markdown level1 summary"><p>ReadOnly here will force the Quobyte volume to be mounted with read-only permissions.
@@ -166,7 +142,7 @@ Defaults to false.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L20121">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L20295">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_QuobyteVolumeSource_Registry" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.QuobyteVolumeSource.Registry">Registry</h4>
   <div class="markdown level1 summary"><p>Registry represents a single or multiple Quobyte Registry services specified as a string
@@ -194,7 +170,7 @@ registry for volumes</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L20127">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L20301">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_QuobyteVolumeSource_Tenant" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.QuobyteVolumeSource.Tenant">Tenant</h4>
   <div class="markdown level1 summary"><p>Tenant owning the given Quobyte volume in the Backend Used with dynamically provisioned
@@ -221,7 +197,7 @@ Quobyte volumes, value is set by the plugin</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L20132">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L20306">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_QuobyteVolumeSource_User" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.QuobyteVolumeSource.User">User</h4>
   <div class="markdown level1 summary"><p>User to map volume access to Defaults to serivceaccount user</p>
@@ -247,7 +223,7 @@ Quobyte volumes, value is set by the plugin</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L20137">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L20311">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_QuobyteVolumeSource_Volume" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.QuobyteVolumeSource.Volume">Volume</h4>
   <div class="markdown level1 summary"><p>Volume is a string that references an already created Quobyte volume by name.</p>
@@ -279,7 +255,7 @@ Quobyte volumes, value is set by the plugin</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L20102" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L20276" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

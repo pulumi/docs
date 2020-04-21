@@ -73,9 +73,6 @@
   </h1>
   <div class="markdown level0 summary"><p>Creates an Identity Group Alias for Vault. The <a href="https://www.vaultproject.io/docs/secrets/identity/index.html">Identity secrets engine</a> is the identity management solution for Vault.</p>
 <p>Group aliases allows entity membership in external groups to be managed semi-automatically. External group serves as a mapping to a group that is outside of the identity store. External groups can have one (and only one) alias. This alias should map to a notion of group that is outside of the identity store. For example, groups in LDAP, and teams in GitHub. A username in LDAP, belonging to a group in LDAP, can get its entity ID added as a member of a group in Vault automatically during logins and token renewals. This works only if the group in Vault is an external group and has an alias that maps to the group in LDAP. If the user is removed from the group in LDAP, that change gets reflected in Vault only upon the subsequent login or renewal operation.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/identity_group_alias.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/identity_group_alias.html.markdown</a>.</p>
-</blockquote>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -92,7 +89,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Identity/GroupAlias.cs/#L46">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Identity/GroupAlias.cs/#L45">View Source</a>
   </span>
   <a id="Pulumi_Vault_Identity_GroupAlias__ctor_" data-uid="Pulumi.Vault.Identity.GroupAlias.#ctor*"></a>
   <h4 id="Pulumi_Vault_Identity_GroupAlias__ctor_System_String_Pulumi_Vault_Identity_GroupAliasArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Vault.Identity.GroupAlias.#ctor(System.String,Pulumi.Vault.Identity.GroupAliasArgs,System.Nullable{CustomResourceOptions})">GroupAlias(String, GroupAliasArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
@@ -136,7 +133,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Identity/GroupAlias.cs/#L23">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Identity/GroupAlias.cs/#L22">View Source</a>
   </span>
   <a id="Pulumi_Vault_Identity_GroupAlias_CanonicalId_" data-uid="Pulumi.Vault.Identity.GroupAlias.CanonicalId*"></a>
   <h4 id="Pulumi_Vault_Identity_GroupAlias_CanonicalId" data-uid="Pulumi.Vault.Identity.GroupAlias.CanonicalId">CanonicalId</h4>
@@ -163,7 +160,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Identity/GroupAlias.cs/#L29">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Identity/GroupAlias.cs/#L28">View Source</a>
   </span>
   <a id="Pulumi_Vault_Identity_GroupAlias_MountAccessor_" data-uid="Pulumi.Vault.Identity.GroupAlias.MountAccessor*"></a>
   <h4 id="Pulumi_Vault_Identity_GroupAlias_MountAccessor" data-uid="Pulumi.Vault.Identity.GroupAlias.MountAccessor">MountAccessor</h4>
@@ -190,7 +187,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Identity/GroupAlias.cs/#L35">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Identity/GroupAlias.cs/#L34">View Source</a>
   </span>
   <a id="Pulumi_Vault_Identity_GroupAlias_Name_" data-uid="Pulumi.Vault.Identity.GroupAlias.Name*"></a>
   <h4 id="Pulumi_Vault_Identity_GroupAlias_Name" data-uid="Pulumi.Vault.Identity.GroupAlias.Name">Name</h4>
@@ -219,7 +216,7 @@
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Identity/GroupAlias.cs/#L76">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Identity/GroupAlias.cs/#L75">View Source</a>
   </span>
   <a id="Pulumi_Vault_Identity_GroupAlias_Get_" data-uid="Pulumi.Vault.Identity.GroupAlias.Get*"></a>
   <h4 id="Pulumi_Vault_Identity_GroupAlias_Get_System_String_Input_System_String__Pulumi_Vault_Identity_GroupAliasState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Vault.Identity.GroupAlias.Get(System.String,Input{System.String},Pulumi.Vault.Identity.GroupAliasState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, GroupAliasState, Nullable&lt;CustomResourceOptions&gt;)</h4>
@@ -289,7 +286,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/Identity/GroupAlias.cs/#L18" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Identity/GroupAlias.cs/#L17" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -87,7 +87,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gitlab/blob/master/sdk/dotnet/ServiceJira.cs/#L148">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/6a56e91b5f378ee1e76cf91ba3517f80b45380f9/sdk/dotnet/ServiceJira.cs/#L183">View Source</a>
   </span>
   <a id="Pulumi_GitLab_ServiceJiraArgs__ctor_" data-uid="Pulumi.GitLab.ServiceJiraArgs.#ctor*"></a>
   <h4 id="Pulumi_GitLab_ServiceJiraArgs__ctor" data-uid="Pulumi.GitLab.ServiceJiraArgs.#ctor">ServiceJiraArgs()</h4>
@@ -100,7 +100,61 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gitlab/blob/master/sdk/dotnet/ServiceJira.cs/#L115">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/6a56e91b5f378ee1e76cf91ba3517f80b45380f9/sdk/dotnet/ServiceJira.cs/#L132">View Source</a>
+  </span>
+  <a id="Pulumi_GitLab_ServiceJiraArgs_CommentOnEventEnabled_" data-uid="Pulumi.GitLab.ServiceJiraArgs.CommentOnEventEnabled*"></a>
+  <h4 id="Pulumi_GitLab_ServiceJiraArgs_CommentOnEventEnabled" data-uid="Pulumi.GitLab.ServiceJiraArgs.CommentOnEventEnabled">CommentOnEventEnabled</h4>
+  <div class="markdown level1 summary"><p>Enable comments inside Jira issues on each GitLab event (commit / merge request)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? CommentOnEventEnabled { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/6a56e91b5f378ee1e76cf91ba3517f80b45380f9/sdk/dotnet/ServiceJira.cs/#L138">View Source</a>
+  </span>
+  <a id="Pulumi_GitLab_ServiceJiraArgs_CommitEvents_" data-uid="Pulumi.GitLab.ServiceJiraArgs.CommitEvents*"></a>
+  <h4 id="Pulumi_GitLab_ServiceJiraArgs_CommitEvents" data-uid="Pulumi.GitLab.ServiceJiraArgs.CommitEvents">CommitEvents</h4>
+  <div class="markdown level1 summary"><p>Enable notifications for commit events</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? CommitEvents { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/6a56e91b5f378ee1e76cf91ba3517f80b45380f9/sdk/dotnet/ServiceJira.cs/#L144">View Source</a>
   </span>
   <a id="Pulumi_GitLab_ServiceJiraArgs_JiraIssueTransitionId_" data-uid="Pulumi.GitLab.ServiceJiraArgs.JiraIssueTransitionId*"></a>
   <h4 id="Pulumi_GitLab_ServiceJiraArgs_JiraIssueTransitionId" data-uid="Pulumi.GitLab.ServiceJiraArgs.JiraIssueTransitionId">JiraIssueTransitionId</h4>
@@ -127,7 +181,34 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gitlab/blob/master/sdk/dotnet/ServiceJira.cs/#L121">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/6a56e91b5f378ee1e76cf91ba3517f80b45380f9/sdk/dotnet/ServiceJira.cs/#L150">View Source</a>
+  </span>
+  <a id="Pulumi_GitLab_ServiceJiraArgs_MergeRequestsEvents_" data-uid="Pulumi.GitLab.ServiceJiraArgs.MergeRequestsEvents*"></a>
+  <h4 id="Pulumi_GitLab_ServiceJiraArgs_MergeRequestsEvents" data-uid="Pulumi.GitLab.ServiceJiraArgs.MergeRequestsEvents">MergeRequestsEvents</h4>
+  <div class="markdown level1 summary"><p>Enable notifications for merge request events</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? MergeRequestsEvents { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/6a56e91b5f378ee1e76cf91ba3517f80b45380f9/sdk/dotnet/ServiceJira.cs/#L156">View Source</a>
   </span>
   <a id="Pulumi_GitLab_ServiceJiraArgs_Password_" data-uid="Pulumi.GitLab.ServiceJiraArgs.Password*"></a>
   <h4 id="Pulumi_GitLab_ServiceJiraArgs_Password" data-uid="Pulumi.GitLab.ServiceJiraArgs.Password">Password</h4>
@@ -154,7 +235,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gitlab/blob/master/sdk/dotnet/ServiceJira.cs/#L127">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/6a56e91b5f378ee1e76cf91ba3517f80b45380f9/sdk/dotnet/ServiceJira.cs/#L162">View Source</a>
   </span>
   <a id="Pulumi_GitLab_ServiceJiraArgs_Project_" data-uid="Pulumi.GitLab.ServiceJiraArgs.Project*"></a>
   <h4 id="Pulumi_GitLab_ServiceJiraArgs_Project" data-uid="Pulumi.GitLab.ServiceJiraArgs.Project">Project</h4>
@@ -181,7 +262,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gitlab/blob/master/sdk/dotnet/ServiceJira.cs/#L133">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/6a56e91b5f378ee1e76cf91ba3517f80b45380f9/sdk/dotnet/ServiceJira.cs/#L168">View Source</a>
   </span>
   <a id="Pulumi_GitLab_ServiceJiraArgs_ProjectKey_" data-uid="Pulumi.GitLab.ServiceJiraArgs.ProjectKey*"></a>
   <h4 id="Pulumi_GitLab_ServiceJiraArgs_ProjectKey" data-uid="Pulumi.GitLab.ServiceJiraArgs.ProjectKey">ProjectKey</h4>
@@ -208,7 +289,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gitlab/blob/master/sdk/dotnet/ServiceJira.cs/#L139">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/6a56e91b5f378ee1e76cf91ba3517f80b45380f9/sdk/dotnet/ServiceJira.cs/#L174">View Source</a>
   </span>
   <a id="Pulumi_GitLab_ServiceJiraArgs_Url_" data-uid="Pulumi.GitLab.ServiceJiraArgs.Url*"></a>
   <h4 id="Pulumi_GitLab_ServiceJiraArgs_Url" data-uid="Pulumi.GitLab.ServiceJiraArgs.Url">Url</h4>
@@ -235,7 +316,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gitlab/blob/master/sdk/dotnet/ServiceJira.cs/#L145">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/6a56e91b5f378ee1e76cf91ba3517f80b45380f9/sdk/dotnet/ServiceJira.cs/#L180">View Source</a>
   </span>
   <a id="Pulumi_GitLab_ServiceJiraArgs_Username_" data-uid="Pulumi.GitLab.ServiceJiraArgs.Username*"></a>
   <h4 id="Pulumi_GitLab_ServiceJiraArgs_Username" data-uid="Pulumi.GitLab.ServiceJiraArgs.Username">Username</h4>
@@ -268,7 +349,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gitlab/blob/master/sdk/dotnet/ServiceJira.cs/#L110" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gitlab/blob/6a56e91b5f378ee1e76cf91ba3517f80b45380f9/sdk/dotnet/ServiceJira.cs/#L127" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

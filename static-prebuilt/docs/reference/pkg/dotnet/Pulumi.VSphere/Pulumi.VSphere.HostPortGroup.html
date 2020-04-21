@@ -76,9 +76,6 @@ port groups on an ESXi host. These port groups are connected to standard
 virtual switches, which can be managed by the
 <a href="/docs/providers/vsphere/r/host_virtual_switch.html"><code>vsphere..HostVirtualSwitch</code></a> resource.</p>
 <p>For an overview on vSphere networking concepts, see <a href="https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.networking.doc/GUID-2B11DBB8-CB3C-4AFF-8885-EFEA0FC562F4.html">this page</a>.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/host_port_group.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/host_port_group.html.markdown</a>.</p>
-</blockquote>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -95,7 +92,7 @@ virtual switches, which can be managed by the
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/HostPortGroup.cs/#L166">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/HostPortGroup.cs/#L164">View Source</a>
   </span>
   <a id="Pulumi_VSphere_HostPortGroup__ctor_" data-uid="Pulumi.VSphere.HostPortGroup.#ctor*"></a>
   <h4 id="Pulumi_VSphere_HostPortGroup__ctor_System_String_Pulumi_VSphere_HostPortGroupArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.VSphere.HostPortGroup.#ctor(System.String,Pulumi.VSphere.HostPortGroupArgs,System.Nullable{CustomResourceOptions})">HostPortGroup(String, HostPortGroupArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
@@ -139,7 +136,7 @@ virtual switches, which can be managed by the
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/HostPortGroup.cs/#L29">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/HostPortGroup.cs/#L28">View Source</a>
   </span>
   <a id="Pulumi_VSphere_HostPortGroup_ActiveNics_" data-uid="Pulumi.VSphere.HostPortGroup.ActiveNics*"></a>
   <h4 id="Pulumi_VSphere_HostPortGroup_ActiveNics" data-uid="Pulumi.VSphere.HostPortGroup.ActiveNics">ActiveNics</h4>
@@ -166,12 +163,12 @@ virtual switches, which can be managed by the
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/HostPortGroup.cs/#L36">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/HostPortGroup.cs/#L35">View Source</a>
   </span>
   <a id="Pulumi_VSphere_HostPortGroup_AllowForgedTransmits_" data-uid="Pulumi.VSphere.HostPortGroup.AllowForgedTransmits*"></a>
   <h4 id="Pulumi_VSphere_HostPortGroup_AllowForgedTransmits" data-uid="Pulumi.VSphere.HostPortGroup.AllowForgedTransmits">AllowForgedTransmits</h4>
-  <div class="markdown level1 summary"><p>Controls whether or not the virtual network adapter is allowed to send network traffic with a different MAC
-address than that of its own.</p>
+  <div class="markdown level1 summary"><p>Controls whether or not the virtual network adapter is allowed to send network traffic with a different MAC address than
+that of its own.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -194,7 +191,7 @@ address than that of its own.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/HostPortGroup.cs/#L42">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/HostPortGroup.cs/#L41">View Source</a>
   </span>
   <a id="Pulumi_VSphere_HostPortGroup_AllowMacChanges_" data-uid="Pulumi.VSphere.HostPortGroup.AllowMacChanges*"></a>
   <h4 id="Pulumi_VSphere_HostPortGroup_AllowMacChanges" data-uid="Pulumi.VSphere.HostPortGroup.AllowMacChanges">AllowMacChanges</h4>
@@ -221,12 +218,11 @@ address than that of its own.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/HostPortGroup.cs/#L49">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/HostPortGroup.cs/#L47">View Source</a>
   </span>
   <a id="Pulumi_VSphere_HostPortGroup_AllowPromiscuous_" data-uid="Pulumi.VSphere.HostPortGroup.AllowPromiscuous*"></a>
   <h4 id="Pulumi_VSphere_HostPortGroup_AllowPromiscuous" data-uid="Pulumi.VSphere.HostPortGroup.AllowPromiscuous">AllowPromiscuous</h4>
-  <div class="markdown level1 summary"><p>Enable promiscuous mode on the network. This flag indicates whether or not all traffic is seen on a given
-port.</p>
+  <div class="markdown level1 summary"><p>Enable promiscuous mode on the network. This flag indicates whether or not all traffic is seen on a given port.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -249,12 +245,12 @@ port.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/HostPortGroup.cs/#L56">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/HostPortGroup.cs/#L54">View Source</a>
   </span>
   <a id="Pulumi_VSphere_HostPortGroup_CheckBeacon_" data-uid="Pulumi.VSphere.HostPortGroup.CheckBeacon*"></a>
   <h4 id="Pulumi_VSphere_HostPortGroup_CheckBeacon" data-uid="Pulumi.VSphere.HostPortGroup.CheckBeacon">CheckBeacon</h4>
-  <div class="markdown level1 summary"><p>Enable beacon probing. Requires that the vSwitch has been configured to use a beacon. If disabled, link
-status is used only.</p>
+  <div class="markdown level1 summary"><p>Enable beacon probing. Requires that the vSwitch has been configured to use a beacon. If disabled, link status is used
+only.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -277,7 +273,7 @@ status is used only.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/HostPortGroup.cs/#L64">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/HostPortGroup.cs/#L62">View Source</a>
   </span>
   <a id="Pulumi_VSphere_HostPortGroup_ComputedPolicy_" data-uid="Pulumi.VSphere.HostPortGroup.ComputedPolicy*"></a>
   <h4 id="Pulumi_VSphere_HostPortGroup_ComputedPolicy" data-uid="Pulumi.VSphere.HostPortGroup.ComputedPolicy">ComputedPolicy</h4>
@@ -306,7 +302,7 @@ explaining the effective policy for this port group.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/HostPortGroup.cs/#L70">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/HostPortGroup.cs/#L68">View Source</a>
   </span>
   <a id="Pulumi_VSphere_HostPortGroup_Failback_" data-uid="Pulumi.VSphere.HostPortGroup.Failback*"></a>
   <h4 id="Pulumi_VSphere_HostPortGroup_Failback" data-uid="Pulumi.VSphere.HostPortGroup.Failback">Failback</h4>
@@ -333,7 +329,7 @@ explaining the effective policy for this port group.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/HostPortGroup.cs/#L77">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/HostPortGroup.cs/#L75">View Source</a>
   </span>
   <a id="Pulumi_VSphere_HostPortGroup_HostSystemId_" data-uid="Pulumi.VSphere.HostPortGroup.HostSystemId*"></a>
   <h4 id="Pulumi_VSphere_HostPortGroup_HostSystemId" data-uid="Pulumi.VSphere.HostPortGroup.HostSystemId">HostSystemId</h4>
@@ -361,7 +357,7 @@ the host to set the port group up on. Forces a new resource if changed.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/HostPortGroup.cs/#L83">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/HostPortGroup.cs/#L81">View Source</a>
   </span>
   <a id="Pulumi_VSphere_HostPortGroup_Key_" data-uid="Pulumi.VSphere.HostPortGroup.Key*"></a>
   <h4 id="Pulumi_VSphere_HostPortGroup_Key" data-uid="Pulumi.VSphere.HostPortGroup.Key">Key</h4>
@@ -388,7 +384,7 @@ the host to set the port group up on. Forces a new resource if changed.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/HostPortGroup.cs/#L90">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/HostPortGroup.cs/#L88">View Source</a>
   </span>
   <a id="Pulumi_VSphere_HostPortGroup_Name_" data-uid="Pulumi.VSphere.HostPortGroup.Name*"></a>
   <h4 id="Pulumi_VSphere_HostPortGroup_Name" data-uid="Pulumi.VSphere.HostPortGroup.Name">Name</h4>
@@ -416,7 +412,7 @@ changed.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/HostPortGroup.cs/#L96">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/HostPortGroup.cs/#L94">View Source</a>
   </span>
   <a id="Pulumi_VSphere_HostPortGroup_NotifySwitches_" data-uid="Pulumi.VSphere.HostPortGroup.NotifySwitches*"></a>
   <h4 id="Pulumi_VSphere_HostPortGroup_NotifySwitches" data-uid="Pulumi.VSphere.HostPortGroup.NotifySwitches">NotifySwitches</h4>
@@ -443,7 +439,7 @@ changed.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/HostPortGroup.cs/#L102">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/HostPortGroup.cs/#L100">View Source</a>
   </span>
   <a id="Pulumi_VSphere_HostPortGroup_Ports_" data-uid="Pulumi.VSphere.HostPortGroup.Ports*"></a>
   <h4 id="Pulumi_VSphere_HostPortGroup_Ports" data-uid="Pulumi.VSphere.HostPortGroup.Ports">Ports</h4>
@@ -470,7 +466,7 @@ changed.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/HostPortGroup.cs/#L108">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/HostPortGroup.cs/#L106">View Source</a>
   </span>
   <a id="Pulumi_VSphere_HostPortGroup_ShapingAverageBandwidth_" data-uid="Pulumi.VSphere.HostPortGroup.ShapingAverageBandwidth*"></a>
   <h4 id="Pulumi_VSphere_HostPortGroup_ShapingAverageBandwidth" data-uid="Pulumi.VSphere.HostPortGroup.ShapingAverageBandwidth">ShapingAverageBandwidth</h4>
@@ -497,7 +493,7 @@ changed.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/HostPortGroup.cs/#L114">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/HostPortGroup.cs/#L112">View Source</a>
   </span>
   <a id="Pulumi_VSphere_HostPortGroup_ShapingBurstSize_" data-uid="Pulumi.VSphere.HostPortGroup.ShapingBurstSize*"></a>
   <h4 id="Pulumi_VSphere_HostPortGroup_ShapingBurstSize" data-uid="Pulumi.VSphere.HostPortGroup.ShapingBurstSize">ShapingBurstSize</h4>
@@ -524,7 +520,7 @@ changed.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/HostPortGroup.cs/#L120">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/HostPortGroup.cs/#L118">View Source</a>
   </span>
   <a id="Pulumi_VSphere_HostPortGroup_ShapingEnabled_" data-uid="Pulumi.VSphere.HostPortGroup.ShapingEnabled*"></a>
   <h4 id="Pulumi_VSphere_HostPortGroup_ShapingEnabled" data-uid="Pulumi.VSphere.HostPortGroup.ShapingEnabled">ShapingEnabled</h4>
@@ -551,7 +547,7 @@ changed.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/HostPortGroup.cs/#L126">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/HostPortGroup.cs/#L124">View Source</a>
   </span>
   <a id="Pulumi_VSphere_HostPortGroup_ShapingPeakBandwidth_" data-uid="Pulumi.VSphere.HostPortGroup.ShapingPeakBandwidth*"></a>
   <h4 id="Pulumi_VSphere_HostPortGroup_ShapingPeakBandwidth" data-uid="Pulumi.VSphere.HostPortGroup.ShapingPeakBandwidth">ShapingPeakBandwidth</h4>
@@ -578,7 +574,7 @@ changed.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/HostPortGroup.cs/#L132">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/HostPortGroup.cs/#L130">View Source</a>
   </span>
   <a id="Pulumi_VSphere_HostPortGroup_StandbyNics_" data-uid="Pulumi.VSphere.HostPortGroup.StandbyNics*"></a>
   <h4 id="Pulumi_VSphere_HostPortGroup_StandbyNics" data-uid="Pulumi.VSphere.HostPortGroup.StandbyNics">StandbyNics</h4>
@@ -605,7 +601,7 @@ changed.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/HostPortGroup.cs/#L139">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/HostPortGroup.cs/#L137">View Source</a>
   </span>
   <a id="Pulumi_VSphere_HostPortGroup_TeamingPolicy_" data-uid="Pulumi.VSphere.HostPortGroup.TeamingPolicy*"></a>
   <h4 id="Pulumi_VSphere_HostPortGroup_TeamingPolicy" data-uid="Pulumi.VSphere.HostPortGroup.TeamingPolicy">TeamingPolicy</h4>
@@ -633,7 +629,7 @@ failover_explicit.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/HostPortGroup.cs/#L146">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/HostPortGroup.cs/#L144">View Source</a>
   </span>
   <a id="Pulumi_VSphere_HostPortGroup_VirtualSwitchName_" data-uid="Pulumi.VSphere.HostPortGroup.VirtualSwitchName*"></a>
   <h4 id="Pulumi_VSphere_HostPortGroup_VirtualSwitchName" data-uid="Pulumi.VSphere.HostPortGroup.VirtualSwitchName">VirtualSwitchName</h4>
@@ -661,7 +657,7 @@ this port group to. Forces a new resource if changed.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/HostPortGroup.cs/#L155">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/HostPortGroup.cs/#L153">View Source</a>
   </span>
   <a id="Pulumi_VSphere_HostPortGroup_VlanId_" data-uid="Pulumi.VSphere.HostPortGroup.VlanId*"></a>
   <h4 id="Pulumi_VSphere_HostPortGroup_VlanId" data-uid="Pulumi.VSphere.HostPortGroup.VlanId">VlanId</h4>
@@ -693,7 +689,7 @@ tagging. Default: <code>0</code>.</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/HostPortGroup.cs/#L196">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/HostPortGroup.cs/#L194">View Source</a>
   </span>
   <a id="Pulumi_VSphere_HostPortGroup_Get_" data-uid="Pulumi.VSphere.HostPortGroup.Get*"></a>
   <h4 id="Pulumi_VSphere_HostPortGroup_Get_System_String_Input_System_String__Pulumi_VSphere_HostPortGroupState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.VSphere.HostPortGroup.Get(System.String,Input{System.String},Pulumi.VSphere.HostPortGroupState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, HostPortGroupState, Nullable&lt;CustomResourceOptions&gt;)</h4>
@@ -763,7 +759,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/HostPortGroup.cs/#L24" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/HostPortGroup.cs/#L23" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

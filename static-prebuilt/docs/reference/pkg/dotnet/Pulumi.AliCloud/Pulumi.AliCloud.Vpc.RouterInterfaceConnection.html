@@ -85,53 +85,12 @@ After that, all of the two router interfaces will be active.</p>
 <blockquote>
 <p><strong>NOTE:</strong> Please remember to add a <code>depends_on</code> clause in the router interface connection from the InitiatingSide to the AcceptingSide, because the connection from the AcceptingSide to the InitiatingSide must be done first.</p>
 </blockquote>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/router_interface_connection.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/router_interface_connection.html.markdown</a>.</p>
-</blockquote>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
-    <div class="level3"><span class="xref">RouterInterfaceConnection</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">RouterInterfaceConnection</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.AliCloud.Vpc.html">Pulumi.AliCloud.Vpc</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.AliCloud.dll</h6>
@@ -142,16 +101,16 @@ After that, all of the two router interfaces will be active.</p>
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Vpc/RouterInterfaceConnection.cs/#L63">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Vpc/RouterInterfaceConnection.cs/#L61">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Vpc_RouterInterfaceConnection__ctor_" data-uid="Pulumi.AliCloud.Vpc.RouterInterfaceConnection.#ctor*"></a>
-  <h4 id="Pulumi_AliCloud_Vpc_RouterInterfaceConnection__ctor_System_String_Pulumi_AliCloud_Vpc_RouterInterfaceConnectionArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.AliCloud.Vpc.RouterInterfaceConnection.#ctor(System.String,Pulumi.AliCloud.Vpc.RouterInterfaceConnectionArgs,Pulumi.CustomResourceOptions)">RouterInterfaceConnection(String, RouterInterfaceConnectionArgs, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_AliCloud_Vpc_RouterInterfaceConnection__ctor_System_String_Pulumi_AliCloud_Vpc_RouterInterfaceConnectionArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.AliCloud.Vpc.RouterInterfaceConnection.#ctor(System.String,Pulumi.AliCloud.Vpc.RouterInterfaceConnectionArgs,System.Nullable{CustomResourceOptions})">RouterInterfaceConnection(String, RouterInterfaceConnectionArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Create a RouterInterfaceConnection resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public RouterInterfaceConnection(string name, RouterInterfaceConnectionArgs args, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public RouterInterfaceConnection(string name, RouterInterfaceConnectionArgs args, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -176,7 +135,7 @@ After that, all of the two router interfaces will be active.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -186,7 +145,7 @@ After that, all of the two router interfaces will be active.</p>
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Vpc/RouterInterfaceConnection.cs/#L31">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Vpc/RouterInterfaceConnection.cs/#L29">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Vpc_RouterInterfaceConnection_InterfaceId_" data-uid="Pulumi.AliCloud.Vpc.RouterInterfaceConnection.InterfaceId*"></a>
   <h4 id="Pulumi_AliCloud_Vpc_RouterInterfaceConnection_InterfaceId" data-uid="Pulumi.AliCloud.Vpc.RouterInterfaceConnection.InterfaceId">InterfaceId</h4>
@@ -207,13 +166,13 @@ After that, all of the two router interfaces will be active.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Vpc/RouterInterfaceConnection.cs/#L37">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Vpc/RouterInterfaceConnection.cs/#L35">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Vpc_RouterInterfaceConnection_OppositeInterfaceId_" data-uid="Pulumi.AliCloud.Vpc.RouterInterfaceConnection.OppositeInterfaceId*"></a>
   <h4 id="Pulumi_AliCloud_Vpc_RouterInterfaceConnection_OppositeInterfaceId" data-uid="Pulumi.AliCloud.Vpc.RouterInterfaceConnection.OppositeInterfaceId">OppositeInterfaceId</h4>
@@ -234,13 +193,13 @@ After that, all of the two router interfaces will be active.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Vpc/RouterInterfaceConnection.cs/#L40">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Vpc/RouterInterfaceConnection.cs/#L38">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Vpc_RouterInterfaceConnection_OppositeInterfaceOwnerId_" data-uid="Pulumi.AliCloud.Vpc.RouterInterfaceConnection.OppositeInterfaceOwnerId*"></a>
   <h4 id="Pulumi_AliCloud_Vpc_RouterInterfaceConnection_OppositeInterfaceOwnerId" data-uid="Pulumi.AliCloud.Vpc.RouterInterfaceConnection.OppositeInterfaceOwnerId">OppositeInterfaceOwnerId</h4>
@@ -260,13 +219,13 @@ After that, all of the two router interfaces will be active.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Vpc/RouterInterfaceConnection.cs/#L46">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Vpc/RouterInterfaceConnection.cs/#L44">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Vpc_RouterInterfaceConnection_OppositeRouterId_" data-uid="Pulumi.AliCloud.Vpc.RouterInterfaceConnection.OppositeRouterId*"></a>
   <h4 id="Pulumi_AliCloud_Vpc_RouterInterfaceConnection_OppositeRouterId" data-uid="Pulumi.AliCloud.Vpc.RouterInterfaceConnection.OppositeRouterId">OppositeRouterId</h4>
@@ -287,13 +246,13 @@ After that, all of the two router interfaces will be active.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Vpc/RouterInterfaceConnection.cs/#L52">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Vpc/RouterInterfaceConnection.cs/#L50">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Vpc_RouterInterfaceConnection_OppositeRouterType_" data-uid="Pulumi.AliCloud.Vpc.RouterInterfaceConnection.OppositeRouterType*"></a>
   <h4 id="Pulumi_AliCloud_Vpc_RouterInterfaceConnection_OppositeRouterType" data-uid="Pulumi.AliCloud.Vpc.RouterInterfaceConnection.OppositeRouterType">OppositeRouterType</h4>
@@ -302,7 +261,7 @@ After that, all of the two router interfaces will be active.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; OppositeRouterType { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; OppositeRouterType { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -314,7 +273,7 @@ After that, all of the two router interfaces will be active.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -322,17 +281,17 @@ After that, all of the two router interfaces will be active.</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Vpc/RouterInterfaceConnection.cs/#L93">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Vpc/RouterInterfaceConnection.cs/#L91">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Vpc_RouterInterfaceConnection_Get_" data-uid="Pulumi.AliCloud.Vpc.RouterInterfaceConnection.Get*"></a>
-  <h4 id="Pulumi_AliCloud_Vpc_RouterInterfaceConnection_Get_System_String_Pulumi_Input_System_String__Pulumi_AliCloud_Vpc_RouterInterfaceConnectionState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.AliCloud.Vpc.RouterInterfaceConnection.Get(System.String,Pulumi.Input{System.String},Pulumi.AliCloud.Vpc.RouterInterfaceConnectionState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, RouterInterfaceConnectionState, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_AliCloud_Vpc_RouterInterfaceConnection_Get_System_String_Input_System_String__Pulumi_AliCloud_Vpc_RouterInterfaceConnectionState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.AliCloud.Vpc.RouterInterfaceConnection.Get(System.String,Input{System.String},Pulumi.AliCloud.Vpc.RouterInterfaceConnectionState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, RouterInterfaceConnectionState, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Get an existing RouterInterfaceConnection resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static RouterInterfaceConnection Get(string name, Input&lt;string&gt; id, RouterInterfaceConnectionState state = null, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static RouterInterfaceConnection Get(string name, Input&lt;string&gt; id, RouterInterfaceConnectionState state = null, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -351,7 +310,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -363,7 +322,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -392,7 +351,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Vpc/RouterInterfaceConnection.cs/#L26" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Vpc/RouterInterfaceConnection.cs/#L24" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

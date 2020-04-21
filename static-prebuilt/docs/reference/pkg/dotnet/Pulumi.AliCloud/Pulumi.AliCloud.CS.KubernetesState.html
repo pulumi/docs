@@ -76,36 +76,7 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
-    <div class="level3"><span class="xref">KubernetesState</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">KubernetesState</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.AliCloud.CS.html">Pulumi.AliCloud.CS</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.AliCloud.dll</h6>
@@ -116,7 +87,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Cs/Kubernetes.cs/#L1099">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/CS/Kubernetes.cs/#L1027">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_CS_KubernetesState__ctor_" data-uid="Pulumi.AliCloud.CS.KubernetesState.#ctor*"></a>
   <h4 id="Pulumi_AliCloud_CS_KubernetesState__ctor" data-uid="Pulumi.AliCloud.CS.KubernetesState.#ctor">KubernetesState()</h4>
@@ -129,7 +100,33 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Cs/Kubernetes.cs/#L723">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/CS/Kubernetes.cs/#L672">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_CS_KubernetesState_Addons_" data-uid="Pulumi.AliCloud.CS.KubernetesState.Addons*"></a>
+  <h4 id="Pulumi_AliCloud_CS_KubernetesState_Addons" data-uid="Pulumi.AliCloud.CS.KubernetesState.Addons">Addons</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InputList&lt;KubernetesAddonGetArgs&gt; Addons { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">InputList</span>&lt;<a class="xref" href="Pulumi.AliCloud.CS.Inputs.KubernetesAddonGetArgs.html">KubernetesAddonGetArgs</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/CS/Kubernetes.cs/#L681">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_CS_KubernetesState_AvailabilityZone_" data-uid="Pulumi.AliCloud.CS.KubernetesState.AvailabilityZone*"></a>
   <h4 id="Pulumi_AliCloud_CS_KubernetesState_AvailabilityZone" data-uid="Pulumi.AliCloud.CS.KubernetesState.AvailabilityZone">AvailabilityZone</h4>
@@ -138,7 +135,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; AvailabilityZone { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? AvailabilityZone { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -150,13 +147,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Cs/Kubernetes.cs/#L729">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/CS/Kubernetes.cs/#L687">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_CS_KubernetesState_ClientCert_" data-uid="Pulumi.AliCloud.CS.KubernetesState.ClientCert*"></a>
   <h4 id="Pulumi_AliCloud_CS_KubernetesState_ClientCert" data-uid="Pulumi.AliCloud.CS.KubernetesState.ClientCert">ClientCert</h4>
@@ -165,7 +162,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; ClientCert { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? ClientCert { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -177,13 +174,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Cs/Kubernetes.cs/#L735">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/CS/Kubernetes.cs/#L693">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_CS_KubernetesState_ClientKey_" data-uid="Pulumi.AliCloud.CS.KubernetesState.ClientKey*"></a>
   <h4 id="Pulumi_AliCloud_CS_KubernetesState_ClientKey" data-uid="Pulumi.AliCloud.CS.KubernetesState.ClientKey">ClientKey</h4>
@@ -192,7 +189,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; ClientKey { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? ClientKey { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -204,13 +201,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Cs/Kubernetes.cs/#L741">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/CS/Kubernetes.cs/#L699">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_CS_KubernetesState_ClusterCaCert_" data-uid="Pulumi.AliCloud.CS.KubernetesState.ClusterCaCert*"></a>
   <h4 id="Pulumi_AliCloud_CS_KubernetesState_ClusterCaCert" data-uid="Pulumi.AliCloud.CS.KubernetesState.ClusterCaCert">ClusterCaCert</h4>
@@ -219,7 +216,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; ClusterCaCert { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? ClusterCaCert { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -231,40 +228,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Cs/Kubernetes.cs/#L747">View Source</a>
-  </span>
-  <a id="Pulumi_AliCloud_CS_KubernetesState_ClusterNetworkType_" data-uid="Pulumi.AliCloud.CS.KubernetesState.ClusterNetworkType*"></a>
-  <h4 id="Pulumi_AliCloud_CS_KubernetesState_ClusterNetworkType" data-uid="Pulumi.AliCloud.CS.KubernetesState.ClusterNetworkType">ClusterNetworkType</h4>
-  <div class="markdown level1 summary"><p>The network that cluster uses, use <code>flannel</code> or <code>terway</code>.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; ClusterNetworkType { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Cs/Kubernetes.cs/#L753">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/CS/Kubernetes.cs/#L705">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_CS_KubernetesState_Connections_" data-uid="Pulumi.AliCloud.CS.KubernetesState.Connections*"></a>
   <h4 id="Pulumi_AliCloud_CS_KubernetesState_Connections" data-uid="Pulumi.AliCloud.CS.KubernetesState.Connections">Connections</h4>
@@ -273,7 +243,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;KubernetesConnectionsGetArgs&gt; Connections { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;KubernetesConnectionsGetArgs&gt;? Connections { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -285,22 +255,49 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.AliCloud.CS.Inputs.KubernetesConnectionsGetArgs.html">KubernetesConnectionsGetArgs</a>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.AliCloud.CS.Inputs.KubernetesConnectionsGetArgs.html">KubernetesConnectionsGetArgs</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Cs/Kubernetes.cs/#L759">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/CS/Kubernetes.cs/#L711">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_CS_KubernetesState_CpuPolicy_" data-uid="Pulumi.AliCloud.CS.KubernetesState.CpuPolicy*"></a>
+  <h4 id="Pulumi_AliCloud_CS_KubernetesState_CpuPolicy" data-uid="Pulumi.AliCloud.CS.KubernetesState.CpuPolicy">CpuPolicy</h4>
+  <div class="markdown level1 summary"><p>kubelet cpu policy. options: static|none. default: none.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? CpuPolicy { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/CS/Kubernetes.cs/#L717">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_CS_KubernetesState_EnableSsh_" data-uid="Pulumi.AliCloud.CS.KubernetesState.EnableSsh*"></a>
   <h4 id="Pulumi_AliCloud_CS_KubernetesState_EnableSsh" data-uid="Pulumi.AliCloud.CS.KubernetesState.EnableSsh">EnableSsh</h4>
-  <div class="markdown level1 summary"><p>Whether to allow to SSH login kubernetes. Default to false.</p>
+  <div class="markdown level1 summary"><p>Enable login to the node through SSH. default: false</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; EnableSsh { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? EnableSsh { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -312,48 +309,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Cs/Kubernetes.cs/#L765">View Source</a>
-  </span>
-  <a id="Pulumi_AliCloud_CS_KubernetesState_ForceUpdate_" data-uid="Pulumi.AliCloud.CS.KubernetesState.ForceUpdate*"></a>
-  <h4 id="Pulumi_AliCloud_CS_KubernetesState_ForceUpdate" data-uid="Pulumi.AliCloud.CS.KubernetesState.ForceUpdate">ForceUpdate</h4>
-  <div class="markdown level1 summary"><p>Whether to force the update of kubernetes cluster arguments. Default to false.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; ForceUpdate { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Cs/Kubernetes.cs/#L768">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/CS/Kubernetes.cs/#L723">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_CS_KubernetesState_ImageId_" data-uid="Pulumi.AliCloud.CS.KubernetesState.ImageId*"></a>
   <h4 id="Pulumi_AliCloud_CS_KubernetesState_ImageId" data-uid="Pulumi.AliCloud.CS.KubernetesState.ImageId">ImageId</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Custom Image support. Must based on CentOS7 or AliyunLinux2.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; ImageId { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? ImageId { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -365,22 +336,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Cs/Kubernetes.cs/#L774">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/CS/Kubernetes.cs/#L729">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_CS_KubernetesState_InstallCloudMonitor_" data-uid="Pulumi.AliCloud.CS.KubernetesState.InstallCloudMonitor*"></a>
   <h4 id="Pulumi_AliCloud_CS_KubernetesState_InstallCloudMonitor" data-uid="Pulumi.AliCloud.CS.KubernetesState.InstallCloudMonitor">InstallCloudMonitor</h4>
-  <div class="markdown level1 summary"><p>Whether to install cloud monitor for the kubernetes' node.</p>
+  <div class="markdown level1 summary"><p>Install cloud monitor agent on ECS. default: true</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; InstallCloudMonitor { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? InstallCloudMonitor { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -392,49 +363,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Cs/Kubernetes.cs/#L780">View Source</a>
-  </span>
-  <a id="Pulumi_AliCloud_CS_KubernetesState_IsOutdated_" data-uid="Pulumi.AliCloud.CS.KubernetesState.IsOutdated*"></a>
-  <h4 id="Pulumi_AliCloud_CS_KubernetesState_IsOutdated" data-uid="Pulumi.AliCloud.CS.KubernetesState.IsOutdated">IsOutdated</h4>
-  <div class="markdown level1 summary"><p>Whether to use outdated instance type. Default to false.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; IsOutdated { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Cs/Kubernetes.cs/#L786">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/CS/Kubernetes.cs/#L735">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_CS_KubernetesState_KeyName_" data-uid="Pulumi.AliCloud.CS.KubernetesState.KeyName*"></a>
   <h4 id="Pulumi_AliCloud_CS_KubernetesState_KeyName" data-uid="Pulumi.AliCloud.CS.KubernetesState.KeyName">KeyName</h4>
-  <div class="markdown level1 summary"><p>The keypair of ssh login cluster node, you have to create it first.</p>
+  <div class="markdown level1 summary"><p>The keypair of ssh login cluster node, you have to create it first. You have to specify one of <code>password</code> <code>key_name</code> <code>kms_encrypted_password</code> fields.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; KeyName { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? KeyName { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -446,22 +390,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Cs/Kubernetes.cs/#L792">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/CS/Kubernetes.cs/#L741">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_CS_KubernetesState_KmsEncryptedPassword_" data-uid="Pulumi.AliCloud.CS.KubernetesState.KmsEncryptedPassword*"></a>
   <h4 id="Pulumi_AliCloud_CS_KubernetesState_KmsEncryptedPassword" data-uid="Pulumi.AliCloud.CS.KubernetesState.KmsEncryptedPassword">KmsEncryptedPassword</h4>
-  <div class="markdown level1 summary"><p>An KMS encrypts password used to a cs kubernetes. It is conflicted with <code>password</code> and <code>key_name</code>.</p>
+  <div class="markdown level1 summary"><p>An KMS encrypts password used to a cs kubernetes. You have to specify one of <code>password</code> <code>key_name</code> <code>kms_encrypted_password</code> fields.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; KmsEncryptedPassword { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? KmsEncryptedPassword { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -473,13 +417,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Cs/Kubernetes.cs/#L801">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/CS/Kubernetes.cs/#L750">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_CS_KubernetesState_KmsEncryptionContext_" data-uid="Pulumi.AliCloud.CS.KubernetesState.KmsEncryptionContext*"></a>
   <h4 id="Pulumi_AliCloud_CS_KubernetesState_KmsEncryptionContext" data-uid="Pulumi.AliCloud.CS.KubernetesState.KmsEncryptionContext">KmsEncryptionContext</h4>
@@ -500,13 +444,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputMap-1.html">InputMap</a>&lt;<span class="xref">System.Object</span>&gt;</td>
+        <td><span class="xref">InputMap</span>&lt;<span class="xref">System.Object</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Cs/Kubernetes.cs/#L810">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/CS/Kubernetes.cs/#L759">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_CS_KubernetesState_KubeConfig_" data-uid="Pulumi.AliCloud.CS.KubernetesState.KubeConfig*"></a>
   <h4 id="Pulumi_AliCloud_CS_KubernetesState_KubeConfig" data-uid="Pulumi.AliCloud.CS.KubernetesState.KubeConfig">KubeConfig</h4>
@@ -515,7 +459,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; KubeConfig { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? KubeConfig { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -527,40 +471,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Cs/Kubernetes.cs/#L816">View Source</a>
-  </span>
-  <a id="Pulumi_AliCloud_CS_KubernetesState_LogConfig_" data-uid="Pulumi.AliCloud.CS.KubernetesState.LogConfig*"></a>
-  <h4 id="Pulumi_AliCloud_CS_KubernetesState_LogConfig" data-uid="Pulumi.AliCloud.CS.KubernetesState.LogConfig">LogConfig</h4>
-  <div class="markdown level1 summary"><p>A list of one element containing information about the associated log store. It contains the following attributes:</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;KubernetesLogConfigGetArgs&gt; LogConfig { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.AliCloud.CS.Inputs.KubernetesLogConfigGetArgs.html">KubernetesLogConfigGetArgs</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Cs/Kubernetes.cs/#L822">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/CS/Kubernetes.cs/#L765">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_CS_KubernetesState_MasterAutoRenew_" data-uid="Pulumi.AliCloud.CS.KubernetesState.MasterAutoRenew*"></a>
   <h4 id="Pulumi_AliCloud_CS_KubernetesState_MasterAutoRenew" data-uid="Pulumi.AliCloud.CS.KubernetesState.MasterAutoRenew">MasterAutoRenew</h4>
@@ -569,7 +486,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; MasterAutoRenew { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? MasterAutoRenew { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -581,13 +498,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Cs/Kubernetes.cs/#L828">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/CS/Kubernetes.cs/#L771">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_CS_KubernetesState_MasterAutoRenewPeriod_" data-uid="Pulumi.AliCloud.CS.KubernetesState.MasterAutoRenewPeriod*"></a>
   <h4 id="Pulumi_AliCloud_CS_KubernetesState_MasterAutoRenewPeriod" data-uid="Pulumi.AliCloud.CS.KubernetesState.MasterAutoRenewPeriod">MasterAutoRenewPeriod</h4>
@@ -596,7 +513,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; MasterAutoRenewPeriod { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? MasterAutoRenewPeriod { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -608,13 +525,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Cs/Kubernetes.cs/#L834">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/CS/Kubernetes.cs/#L777">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_CS_KubernetesState_MasterDiskCategory_" data-uid="Pulumi.AliCloud.CS.KubernetesState.MasterDiskCategory*"></a>
   <h4 id="Pulumi_AliCloud_CS_KubernetesState_MasterDiskCategory" data-uid="Pulumi.AliCloud.CS.KubernetesState.MasterDiskCategory">MasterDiskCategory</h4>
@@ -623,7 +540,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; MasterDiskCategory { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? MasterDiskCategory { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -635,13 +552,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Cs/Kubernetes.cs/#L840">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/CS/Kubernetes.cs/#L783">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_CS_KubernetesState_MasterDiskSize_" data-uid="Pulumi.AliCloud.CS.KubernetesState.MasterDiskSize*"></a>
   <h4 id="Pulumi_AliCloud_CS_KubernetesState_MasterDiskSize" data-uid="Pulumi.AliCloud.CS.KubernetesState.MasterDiskSize">MasterDiskSize</h4>
@@ -650,7 +567,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; MasterDiskSize { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? MasterDiskSize { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -662,13 +579,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Cs/Kubernetes.cs/#L846">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/CS/Kubernetes.cs/#L789">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_CS_KubernetesState_MasterInstanceChargeType_" data-uid="Pulumi.AliCloud.CS.KubernetesState.MasterInstanceChargeType*"></a>
   <h4 id="Pulumi_AliCloud_CS_KubernetesState_MasterInstanceChargeType" data-uid="Pulumi.AliCloud.CS.KubernetesState.MasterInstanceChargeType">MasterInstanceChargeType</h4>
@@ -677,7 +594,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; MasterInstanceChargeType { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? MasterInstanceChargeType { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -689,44 +606,18 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Cs/Kubernetes.cs/#L852">View Source</a>
-  </span>
-  <a id="Pulumi_AliCloud_CS_KubernetesState_MasterInstanceType_" data-uid="Pulumi.AliCloud.CS.KubernetesState.MasterInstanceType*"></a>
-  <h4 id="Pulumi_AliCloud_CS_KubernetesState_MasterInstanceType" data-uid="Pulumi.AliCloud.CS.KubernetesState.MasterInstanceType">MasterInstanceType</h4>
-  <div class="markdown level1 summary"><p>(Required, Force new resource) The instance type of master node.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; MasterInstanceType { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Cs/Kubernetes.cs/#L857">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/CS/Kubernetes.cs/#L798">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_CS_KubernetesState_MasterInstanceTypes_" data-uid="Pulumi.AliCloud.CS.KubernetesState.MasterInstanceTypes*"></a>
   <h4 id="Pulumi_AliCloud_CS_KubernetesState_MasterInstanceTypes" data-uid="Pulumi.AliCloud.CS.KubernetesState.MasterInstanceTypes">MasterInstanceTypes</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The instance type of master node. Specify one type for single AZ Cluster, three types for MultiAZ Cluster.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -742,13 +633,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Cs/Kubernetes.cs/#L869">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/CS/Kubernetes.cs/#L810">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_CS_KubernetesState_MasterNodes_" data-uid="Pulumi.AliCloud.CS.KubernetesState.MasterNodes*"></a>
   <h4 id="Pulumi_AliCloud_CS_KubernetesState_MasterNodes" data-uid="Pulumi.AliCloud.CS.KubernetesState.MasterNodes">MasterNodes</h4>
@@ -757,7 +648,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public InputList&lt;KubernetesMasterNodesGetArgs&gt; MasterNodes { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public InputList&lt;KubernetesMasterNodeGetArgs&gt; MasterNodes { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -769,13 +660,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<a class="xref" href="Pulumi.AliCloud.CS.Inputs.KubernetesMasterNodesGetArgs.html">KubernetesMasterNodesGetArgs</a>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<a class="xref" href="Pulumi.AliCloud.CS.Inputs.KubernetesMasterNodeGetArgs.html">KubernetesMasterNodeGetArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Cs/Kubernetes.cs/#L878">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/CS/Kubernetes.cs/#L819">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_CS_KubernetesState_MasterPeriod_" data-uid="Pulumi.AliCloud.CS.KubernetesState.MasterPeriod*"></a>
   <h4 id="Pulumi_AliCloud_CS_KubernetesState_MasterPeriod" data-uid="Pulumi.AliCloud.CS.KubernetesState.MasterPeriod">MasterPeriod</h4>
@@ -784,7 +675,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; MasterPeriod { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? MasterPeriod { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -796,13 +687,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Cs/Kubernetes.cs/#L884">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/CS/Kubernetes.cs/#L825">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_CS_KubernetesState_MasterPeriodUnit_" data-uid="Pulumi.AliCloud.CS.KubernetesState.MasterPeriodUnit*"></a>
   <h4 id="Pulumi_AliCloud_CS_KubernetesState_MasterPeriodUnit" data-uid="Pulumi.AliCloud.CS.KubernetesState.MasterPeriodUnit">MasterPeriodUnit</h4>
@@ -811,7 +702,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; MasterPeriodUnit { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? MasterPeriodUnit { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -823,22 +714,48 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Cs/Kubernetes.cs/#L890">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/CS/Kubernetes.cs/#L830">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_CS_KubernetesState_MasterVswitchIds_" data-uid="Pulumi.AliCloud.CS.KubernetesState.MasterVswitchIds*"></a>
+  <h4 id="Pulumi_AliCloud_CS_KubernetesState_MasterVswitchIds" data-uid="Pulumi.AliCloud.CS.KubernetesState.MasterVswitchIds">MasterVswitchIds</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InputList&lt;string&gt; MasterVswitchIds { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/CS/Kubernetes.cs/#L839">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_CS_KubernetesState_Name_" data-uid="Pulumi.AliCloud.CS.KubernetesState.Name*"></a>
   <h4 id="Pulumi_AliCloud_CS_KubernetesState_Name" data-uid="Pulumi.AliCloud.CS.KubernetesState.Name">Name</h4>
-  <div class="markdown level1 summary"><p>The kubernetes cluster's name. It is the only in one Alicloud account.</p>
+  <div class="markdown level1 summary"><p>The kubernetes cluster's name. It is unique in one Alicloud account.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Name { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Name { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -850,13 +767,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Cs/Kubernetes.cs/#L893">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/CS/Kubernetes.cs/#L842">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_CS_KubernetesState_NamePrefix_" data-uid="Pulumi.AliCloud.CS.KubernetesState.NamePrefix*"></a>
   <h4 id="Pulumi_AliCloud_CS_KubernetesState_NamePrefix" data-uid="Pulumi.AliCloud.CS.KubernetesState.NamePrefix">NamePrefix</h4>
@@ -864,7 +781,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; NamePrefix { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? NamePrefix { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -876,13 +793,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Cs/Kubernetes.cs/#L899">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/CS/Kubernetes.cs/#L848">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_CS_KubernetesState_NatGatewayId_" data-uid="Pulumi.AliCloud.CS.KubernetesState.NatGatewayId*"></a>
   <h4 id="Pulumi_AliCloud_CS_KubernetesState_NatGatewayId" data-uid="Pulumi.AliCloud.CS.KubernetesState.NatGatewayId">NatGatewayId</h4>
@@ -891,7 +808,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; NatGatewayId { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? NatGatewayId { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -903,22 +820,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Cs/Kubernetes.cs/#L905">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/CS/Kubernetes.cs/#L854">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_CS_KubernetesState_NewNatGateway_" data-uid="Pulumi.AliCloud.CS.KubernetesState.NewNatGateway*"></a>
   <h4 id="Pulumi_AliCloud_CS_KubernetesState_NewNatGateway" data-uid="Pulumi.AliCloud.CS.KubernetesState.NewNatGateway">NewNatGateway</h4>
-  <div class="markdown level1 summary"><p>Whether to create a new nat gateway while creating kubernetes cluster. Default to true.</p>
+  <div class="markdown level1 summary"><p>Whether to create a new nat gateway while creating kubernetes cluster. Default to true. Then openapi in Alibaba Cloud are not all on intranet, So turn this option on is a good choice.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; NewNatGateway { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? NewNatGateway { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -930,23 +847,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Cs/Kubernetes.cs/#L912">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/CS/Kubernetes.cs/#L860">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_CS_KubernetesState_NodeCidrMask_" data-uid="Pulumi.AliCloud.CS.KubernetesState.NodeCidrMask*"></a>
   <h4 id="Pulumi_AliCloud_CS_KubernetesState_NodeCidrMask" data-uid="Pulumi.AliCloud.CS.KubernetesState.NodeCidrMask">NodeCidrMask</h4>
-  <div class="markdown level1 summary"><p>The network mask used on pods for each node, ranging from <code>24</code> to <code>28</code>.
-Larger this number is, less pods can be allocated on each node. Default value is <code>24</code>, means you can allocate 256 pods on each node.</p>
+  <div class="markdown level1 summary"><p>The node cidr block to specific how many pods can run on single node. 24-28 is allowed. 24 means 2^(32-24)-1=255 and the node can run at most 255 pods. default: 24</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; NodeCidrMask { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? NodeCidrMask { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -958,40 +874,13 @@ Larger this number is, less pods can be allocated on each node. Default value is
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Cs/Kubernetes.cs/#L917">View Source</a>
-  </span>
-  <a id="Pulumi_AliCloud_CS_KubernetesState_Nodes_" data-uid="Pulumi.AliCloud.CS.KubernetesState.Nodes*"></a>
-  <h4 id="Pulumi_AliCloud_CS_KubernetesState_Nodes" data-uid="Pulumi.AliCloud.CS.KubernetesState.Nodes">Nodes</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Field 'nodes' has been deprecated from provider version 1.9.4. New field 'master_nodes' replaces it.&quot;)]
-public InputList&lt;string&gt; Nodes { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Cs/Kubernetes.cs/#L927">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/CS/Kubernetes.cs/#L866">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_CS_KubernetesState_Password_" data-uid="Pulumi.AliCloud.CS.KubernetesState.Password*"></a>
   <h4 id="Pulumi_AliCloud_CS_KubernetesState_Password" data-uid="Pulumi.AliCloud.CS.KubernetesState.Password">Password</h4>
@@ -1000,7 +889,7 @@ public InputList&lt;string&gt; Nodes { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Password { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Password { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1012,24 +901,22 @@ public InputList&lt;string&gt; Nodes { get; set; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Cs/Kubernetes.cs/#L935">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/CS/Kubernetes.cs/#L872">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_CS_KubernetesState_PodCidr_" data-uid="Pulumi.AliCloud.CS.KubernetesState.PodCidr*"></a>
   <h4 id="Pulumi_AliCloud_CS_KubernetesState_PodCidr" data-uid="Pulumi.AliCloud.CS.KubernetesState.PodCidr">PodCidr</h4>
-  <div class="markdown level1 summary"><p>The CIDR block for the pod network. It will be allocated automatically when <code>vswitch_ids</code> is not specified.
-It cannot be duplicated with the VPC CIDR and CIDR used by Kubernetes cluster in VPC, cannot be modified after creation.
-Maximum number of hosts allowed in the cluster: 256. Refer to <a href="https://www.alibabacloud.com/help/doc-detail/64530.htm">Plan Kubernetes CIDR blocks under VPC</a>.</p>
+  <div class="markdown level1 summary"><p>[Flannel Specific] The CIDR block for the pod network when using Flannel.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; PodCidr { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? PodCidr { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1041,13 +928,67 @@ Maximum number of hosts allowed in the cluster: 256. Refer to <a href="https://w
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Cs/Kubernetes.cs/#L941">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/CS/Kubernetes.cs/#L881">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_CS_KubernetesState_PodVswitchIds_" data-uid="Pulumi.AliCloud.CS.KubernetesState.PodVswitchIds*"></a>
+  <h4 id="Pulumi_AliCloud_CS_KubernetesState_PodVswitchIds" data-uid="Pulumi.AliCloud.CS.KubernetesState.PodVswitchIds">PodVswitchIds</h4>
+  <div class="markdown level1 summary"><p>[Terway Specific] The vswitches for the pod network when using Terway.Be careful the <code>pod_vswitch_ids</code> can not equal to <code>worker_vswtich_ids</code> or <code>master_vswtich_ids</code> but must be in same availability zones.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InputList&lt;string&gt; PodVswitchIds { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/CS/Kubernetes.cs/#L890">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_CS_KubernetesState_ProxyMode_" data-uid="Pulumi.AliCloud.CS.KubernetesState.ProxyMode*"></a>
+  <h4 id="Pulumi_AliCloud_CS_KubernetesState_ProxyMode" data-uid="Pulumi.AliCloud.CS.KubernetesState.ProxyMode">ProxyMode</h4>
+  <div class="markdown level1 summary"><p>Proxy mode is option of kube-proxy. options: iptables|ipvs. default: ipvs.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? ProxyMode { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/CS/Kubernetes.cs/#L896">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_CS_KubernetesState_SecurityGroupId_" data-uid="Pulumi.AliCloud.CS.KubernetesState.SecurityGroupId*"></a>
   <h4 id="Pulumi_AliCloud_CS_KubernetesState_SecurityGroupId" data-uid="Pulumi.AliCloud.CS.KubernetesState.SecurityGroupId">SecurityGroupId</h4>
@@ -1056,7 +997,7 @@ Maximum number of hosts allowed in the cluster: 256. Refer to <a href="https://w
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; SecurityGroupId { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? SecurityGroupId { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1068,23 +1009,22 @@ Maximum number of hosts allowed in the cluster: 256. Refer to <a href="https://w
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Cs/Kubernetes.cs/#L948">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/CS/Kubernetes.cs/#L902">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_CS_KubernetesState_ServiceCidr_" data-uid="Pulumi.AliCloud.CS.KubernetesState.ServiceCidr*"></a>
   <h4 id="Pulumi_AliCloud_CS_KubernetesState_ServiceCidr" data-uid="Pulumi.AliCloud.CS.KubernetesState.ServiceCidr">ServiceCidr</h4>
-  <div class="markdown level1 summary"><p>The CIDR block for the service network.
-It cannot be duplicated with the VPC CIDR and CIDR used by Kubernetes cluster in VPC, cannot be modified after creation.</p>
+  <div class="markdown level1 summary"><p>The CIDR block for the service network. It cannot be duplicated with the VPC CIDR and CIDR used by Kubernetes cluster in VPC, cannot be modified after creation.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; ServiceCidr { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? ServiceCidr { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1096,13 +1036,13 @@ It cannot be duplicated with the VPC CIDR and CIDR used by Kubernetes cluster in
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Cs/Kubernetes.cs/#L951">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/CS/Kubernetes.cs/#L905">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_CS_KubernetesState_SlbId_" data-uid="Pulumi.AliCloud.CS.KubernetesState.SlbId*"></a>
   <h4 id="Pulumi_AliCloud_CS_KubernetesState_SlbId" data-uid="Pulumi.AliCloud.CS.KubernetesState.SlbId">SlbId</h4>
@@ -1110,7 +1050,7 @@ It cannot be duplicated with the VPC CIDR and CIDR used by Kubernetes cluster in
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; SlbId { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? SlbId { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1122,13 +1062,13 @@ It cannot be duplicated with the VPC CIDR and CIDR used by Kubernetes cluster in
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Cs/Kubernetes.cs/#L954">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/CS/Kubernetes.cs/#L908">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_CS_KubernetesState_SlbInternet_" data-uid="Pulumi.AliCloud.CS.KubernetesState.SlbInternet*"></a>
   <h4 id="Pulumi_AliCloud_CS_KubernetesState_SlbInternet" data-uid="Pulumi.AliCloud.CS.KubernetesState.SlbInternet">SlbInternet</h4>
@@ -1136,7 +1076,7 @@ It cannot be duplicated with the VPC CIDR and CIDR used by Kubernetes cluster in
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; SlbInternet { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? SlbInternet { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1148,13 +1088,13 @@ It cannot be duplicated with the VPC CIDR and CIDR used by Kubernetes cluster in
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Cs/Kubernetes.cs/#L960">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/CS/Kubernetes.cs/#L914">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_CS_KubernetesState_SlbInternetEnabled_" data-uid="Pulumi.AliCloud.CS.KubernetesState.SlbInternetEnabled*"></a>
   <h4 id="Pulumi_AliCloud_CS_KubernetesState_SlbInternetEnabled" data-uid="Pulumi.AliCloud.CS.KubernetesState.SlbInternetEnabled">SlbInternetEnabled</h4>
@@ -1163,7 +1103,7 @@ It cannot be duplicated with the VPC CIDR and CIDR used by Kubernetes cluster in
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; SlbInternetEnabled { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? SlbInternetEnabled { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1175,13 +1115,13 @@ It cannot be duplicated with the VPC CIDR and CIDR used by Kubernetes cluster in
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Cs/Kubernetes.cs/#L966">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/CS/Kubernetes.cs/#L920">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_CS_KubernetesState_SlbIntranet_" data-uid="Pulumi.AliCloud.CS.KubernetesState.SlbIntranet*"></a>
   <h4 id="Pulumi_AliCloud_CS_KubernetesState_SlbIntranet" data-uid="Pulumi.AliCloud.CS.KubernetesState.SlbIntranet">SlbIntranet</h4>
@@ -1190,7 +1130,7 @@ It cannot be duplicated with the VPC CIDR and CIDR used by Kubernetes cluster in
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; SlbIntranet { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? SlbIntranet { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1202,13 +1142,13 @@ It cannot be duplicated with the VPC CIDR and CIDR used by Kubernetes cluster in
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Cs/Kubernetes.cs/#L972">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/CS/Kubernetes.cs/#L926">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_CS_KubernetesState_UserCa_" data-uid="Pulumi.AliCloud.CS.KubernetesState.UserCa*"></a>
   <h4 id="Pulumi_AliCloud_CS_KubernetesState_UserCa" data-uid="Pulumi.AliCloud.CS.KubernetesState.UserCa">UserCa</h4>
@@ -1217,7 +1157,7 @@ It cannot be duplicated with the VPC CIDR and CIDR used by Kubernetes cluster in
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; UserCa { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? UserCa { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1229,13 +1169,13 @@ It cannot be duplicated with the VPC CIDR and CIDR used by Kubernetes cluster in
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Cs/Kubernetes.cs/#L978">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/CS/Kubernetes.cs/#L932">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_CS_KubernetesState_Version_" data-uid="Pulumi.AliCloud.CS.KubernetesState.Version*"></a>
   <h4 id="Pulumi_AliCloud_CS_KubernetesState_Version" data-uid="Pulumi.AliCloud.CS.KubernetesState.Version">Version</h4>
@@ -1244,7 +1184,7 @@ It cannot be duplicated with the VPC CIDR and CIDR used by Kubernetes cluster in
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Version { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Version { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1256,13 +1196,13 @@ It cannot be duplicated with the VPC CIDR and CIDR used by Kubernetes cluster in
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Cs/Kubernetes.cs/#L984">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/CS/Kubernetes.cs/#L938">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_CS_KubernetesState_VpcId_" data-uid="Pulumi.AliCloud.CS.KubernetesState.VpcId*"></a>
   <h4 id="Pulumi_AliCloud_CS_KubernetesState_VpcId" data-uid="Pulumi.AliCloud.CS.KubernetesState.VpcId">VpcId</h4>
@@ -1271,7 +1211,7 @@ It cannot be duplicated with the VPC CIDR and CIDR used by Kubernetes cluster in
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; VpcId { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? VpcId { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1283,67 +1223,13 @@ It cannot be duplicated with the VPC CIDR and CIDR used by Kubernetes cluster in
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Cs/Kubernetes.cs/#L990">View Source</a>
-  </span>
-  <a id="Pulumi_AliCloud_CS_KubernetesState_VswitchId_" data-uid="Pulumi.AliCloud.CS.KubernetesState.VswitchId*"></a>
-  <h4 id="Pulumi_AliCloud_CS_KubernetesState_VswitchId" data-uid="Pulumi.AliCloud.CS.KubernetesState.VswitchId">VswitchId</h4>
-  <div class="markdown level1 summary"><p>(Force new resource) The vswitch where new kubernetes cluster will be located. If it is not specified, a new VPC and VSwicth will be built. It must be in the zone which <code>availability_zone</code> specified.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; VswitchId { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Cs/Kubernetes.cs/#L999">View Source</a>
-  </span>
-  <a id="Pulumi_AliCloud_CS_KubernetesState_VswitchIds_" data-uid="Pulumi.AliCloud.CS.KubernetesState.VswitchIds*"></a>
-  <h4 id="Pulumi_AliCloud_CS_KubernetesState_VswitchIds" data-uid="Pulumi.AliCloud.CS.KubernetesState.VswitchIds">VswitchIds</h4>
-  <div class="markdown level1 summary"><p>The vswitch where new kubernetes cluster will be located. Specify one or more vswitch's id. It must be in the zone which <code>availability_zone</code> specified.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public InputList&lt;string&gt; VswitchIds { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Cs/Kubernetes.cs/#L1008">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/CS/Kubernetes.cs/#L944">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_CS_KubernetesState_WorkerAutoRenew_" data-uid="Pulumi.AliCloud.CS.KubernetesState.WorkerAutoRenew*"></a>
   <h4 id="Pulumi_AliCloud_CS_KubernetesState_WorkerAutoRenew" data-uid="Pulumi.AliCloud.CS.KubernetesState.WorkerAutoRenew">WorkerAutoRenew</h4>
@@ -1352,7 +1238,7 @@ It cannot be duplicated with the VPC CIDR and CIDR used by Kubernetes cluster in
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; WorkerAutoRenew { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? WorkerAutoRenew { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1364,13 +1250,13 @@ It cannot be duplicated with the VPC CIDR and CIDR used by Kubernetes cluster in
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Cs/Kubernetes.cs/#L1014">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/CS/Kubernetes.cs/#L950">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_CS_KubernetesState_WorkerAutoRenewPeriod_" data-uid="Pulumi.AliCloud.CS.KubernetesState.WorkerAutoRenewPeriod*"></a>
   <h4 id="Pulumi_AliCloud_CS_KubernetesState_WorkerAutoRenewPeriod" data-uid="Pulumi.AliCloud.CS.KubernetesState.WorkerAutoRenewPeriod">WorkerAutoRenewPeriod</h4>
@@ -1379,7 +1265,7 @@ It cannot be duplicated with the VPC CIDR and CIDR used by Kubernetes cluster in
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; WorkerAutoRenewPeriod { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? WorkerAutoRenewPeriod { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1391,22 +1277,21 @@ It cannot be duplicated with the VPC CIDR and CIDR used by Kubernetes cluster in
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Cs/Kubernetes.cs/#L1020">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/CS/Kubernetes.cs/#L953">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_CS_KubernetesState_WorkerDataDiskCategory_" data-uid="Pulumi.AliCloud.CS.KubernetesState.WorkerDataDiskCategory*"></a>
   <h4 id="Pulumi_AliCloud_CS_KubernetesState_WorkerDataDiskCategory" data-uid="Pulumi.AliCloud.CS.KubernetesState.WorkerDataDiskCategory">WorkerDataDiskCategory</h4>
-  <div class="markdown level1 summary"><p>The data disk category of worker node. Its valid value are <code>cloud_ssd</code> and <code>cloud_efficiency</code>, if not set, data disk will not be created.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; WorkerDataDiskCategory { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? WorkerDataDiskCategory { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1418,22 +1303,21 @@ It cannot be duplicated with the VPC CIDR and CIDR used by Kubernetes cluster in
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Cs/Kubernetes.cs/#L1026">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/CS/Kubernetes.cs/#L956">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_CS_KubernetesState_WorkerDataDiskSize_" data-uid="Pulumi.AliCloud.CS.KubernetesState.WorkerDataDiskSize*"></a>
   <h4 id="Pulumi_AliCloud_CS_KubernetesState_WorkerDataDiskSize" data-uid="Pulumi.AliCloud.CS.KubernetesState.WorkerDataDiskSize">WorkerDataDiskSize</h4>
-  <div class="markdown level1 summary"><p>The data disk size of worker node. Its valid value range [20~32768] in GB. When <code>worker_data_disk_category</code> is presented, it defaults to 40.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; WorkerDataDiskSize { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? WorkerDataDiskSize { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1445,13 +1329,13 @@ It cannot be duplicated with the VPC CIDR and CIDR used by Kubernetes cluster in
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Cs/Kubernetes.cs/#L1032">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/CS/Kubernetes.cs/#L962">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_CS_KubernetesState_WorkerDiskCategory_" data-uid="Pulumi.AliCloud.CS.KubernetesState.WorkerDiskCategory*"></a>
   <h4 id="Pulumi_AliCloud_CS_KubernetesState_WorkerDiskCategory" data-uid="Pulumi.AliCloud.CS.KubernetesState.WorkerDiskCategory">WorkerDiskCategory</h4>
@@ -1460,7 +1344,7 @@ It cannot be duplicated with the VPC CIDR and CIDR used by Kubernetes cluster in
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; WorkerDiskCategory { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? WorkerDiskCategory { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1472,13 +1356,13 @@ It cannot be duplicated with the VPC CIDR and CIDR used by Kubernetes cluster in
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Cs/Kubernetes.cs/#L1038">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/CS/Kubernetes.cs/#L968">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_CS_KubernetesState_WorkerDiskSize_" data-uid="Pulumi.AliCloud.CS.KubernetesState.WorkerDiskSize*"></a>
   <h4 id="Pulumi_AliCloud_CS_KubernetesState_WorkerDiskSize" data-uid="Pulumi.AliCloud.CS.KubernetesState.WorkerDiskSize">WorkerDiskSize</h4>
@@ -1487,7 +1371,7 @@ It cannot be duplicated with the VPC CIDR and CIDR used by Kubernetes cluster in
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; WorkerDiskSize { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? WorkerDiskSize { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1499,13 +1383,13 @@ It cannot be duplicated with the VPC CIDR and CIDR used by Kubernetes cluster in
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Cs/Kubernetes.cs/#L1044">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/CS/Kubernetes.cs/#L974">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_CS_KubernetesState_WorkerInstanceChargeType_" data-uid="Pulumi.AliCloud.CS.KubernetesState.WorkerInstanceChargeType*"></a>
   <h4 id="Pulumi_AliCloud_CS_KubernetesState_WorkerInstanceChargeType" data-uid="Pulumi.AliCloud.CS.KubernetesState.WorkerInstanceChargeType">WorkerInstanceChargeType</h4>
@@ -1514,7 +1398,7 @@ It cannot be duplicated with the VPC CIDR and CIDR used by Kubernetes cluster in
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; WorkerInstanceChargeType { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? WorkerInstanceChargeType { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1526,44 +1410,18 @@ It cannot be duplicated with the VPC CIDR and CIDR used by Kubernetes cluster in
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Cs/Kubernetes.cs/#L1050">View Source</a>
-  </span>
-  <a id="Pulumi_AliCloud_CS_KubernetesState_WorkerInstanceType_" data-uid="Pulumi.AliCloud.CS.KubernetesState.WorkerInstanceType*"></a>
-  <h4 id="Pulumi_AliCloud_CS_KubernetesState_WorkerInstanceType" data-uid="Pulumi.AliCloud.CS.KubernetesState.WorkerInstanceType">WorkerInstanceType</h4>
-  <div class="markdown level1 summary"><p>(Required, Force new resource) The instance type of worker node.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; WorkerInstanceType { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Cs/Kubernetes.cs/#L1055">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/CS/Kubernetes.cs/#L983">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_CS_KubernetesState_WorkerInstanceTypes_" data-uid="Pulumi.AliCloud.CS.KubernetesState.WorkerInstanceTypes*"></a>
   <h4 id="Pulumi_AliCloud_CS_KubernetesState_WorkerInstanceTypes" data-uid="Pulumi.AliCloud.CS.KubernetesState.WorkerInstanceTypes">WorkerInstanceTypes</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The instance type of worker node. Specify one type for single AZ Cluster, three types for MultiAZ Cluster.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1579,13 +1437,13 @@ It cannot be duplicated with the VPC CIDR and CIDR used by Kubernetes cluster in
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Cs/Kubernetes.cs/#L1067">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/CS/Kubernetes.cs/#L995">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_CS_KubernetesState_WorkerNodes_" data-uid="Pulumi.AliCloud.CS.KubernetesState.WorkerNodes*"></a>
   <h4 id="Pulumi_AliCloud_CS_KubernetesState_WorkerNodes" data-uid="Pulumi.AliCloud.CS.KubernetesState.WorkerNodes">WorkerNodes</h4>
@@ -1594,7 +1452,7 @@ It cannot be duplicated with the VPC CIDR and CIDR used by Kubernetes cluster in
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public InputList&lt;KubernetesWorkerNodesGetArgs&gt; WorkerNodes { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public InputList&lt;KubernetesWorkerNodeGetArgs&gt; WorkerNodes { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1606,13 +1464,13 @@ It cannot be duplicated with the VPC CIDR and CIDR used by Kubernetes cluster in
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<a class="xref" href="Pulumi.AliCloud.CS.Inputs.KubernetesWorkerNodesGetArgs.html">KubernetesWorkerNodesGetArgs</a>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<a class="xref" href="Pulumi.AliCloud.CS.Inputs.KubernetesWorkerNodeGetArgs.html">KubernetesWorkerNodeGetArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Cs/Kubernetes.cs/#L1076">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/CS/Kubernetes.cs/#L1004">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_CS_KubernetesState_WorkerNumber_" data-uid="Pulumi.AliCloud.CS.KubernetesState.WorkerNumber*"></a>
   <h4 id="Pulumi_AliCloud_CS_KubernetesState_WorkerNumber" data-uid="Pulumi.AliCloud.CS.KubernetesState.WorkerNumber">WorkerNumber</h4>
@@ -1621,7 +1479,7 @@ It cannot be duplicated with the VPC CIDR and CIDR used by Kubernetes cluster in
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; WorkerNumber { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? WorkerNumber { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1633,39 +1491,13 @@ It cannot be duplicated with the VPC CIDR and CIDR used by Kubernetes cluster in
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Cs/Kubernetes.cs/#L1081">View Source</a>
-  </span>
-  <a id="Pulumi_AliCloud_CS_KubernetesState_WorkerNumbers_" data-uid="Pulumi.AliCloud.CS.KubernetesState.WorkerNumbers*"></a>
-  <h4 id="Pulumi_AliCloud_CS_KubernetesState_WorkerNumbers" data-uid="Pulumi.AliCloud.CS.KubernetesState.WorkerNumbers">WorkerNumbers</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public InputList&lt;int&gt; WorkerNumbers { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Cs/Kubernetes.cs/#L1090">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/CS/Kubernetes.cs/#L1010">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_CS_KubernetesState_WorkerPeriod_" data-uid="Pulumi.AliCloud.CS.KubernetesState.WorkerPeriod*"></a>
   <h4 id="Pulumi_AliCloud_CS_KubernetesState_WorkerPeriod" data-uid="Pulumi.AliCloud.CS.KubernetesState.WorkerPeriod">WorkerPeriod</h4>
@@ -1674,7 +1506,7 @@ It cannot be duplicated with the VPC CIDR and CIDR used by Kubernetes cluster in
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; WorkerPeriod { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? WorkerPeriod { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1686,13 +1518,13 @@ It cannot be duplicated with the VPC CIDR and CIDR used by Kubernetes cluster in
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Cs/Kubernetes.cs/#L1096">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/CS/Kubernetes.cs/#L1016">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_CS_KubernetesState_WorkerPeriodUnit_" data-uid="Pulumi.AliCloud.CS.KubernetesState.WorkerPeriodUnit*"></a>
   <h4 id="Pulumi_AliCloud_CS_KubernetesState_WorkerPeriodUnit" data-uid="Pulumi.AliCloud.CS.KubernetesState.WorkerPeriodUnit">WorkerPeriodUnit</h4>
@@ -1701,7 +1533,7 @@ It cannot be duplicated with the VPC CIDR and CIDR used by Kubernetes cluster in
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; WorkerPeriodUnit { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? WorkerPeriodUnit { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1713,7 +1545,33 @@ It cannot be duplicated with the VPC CIDR and CIDR used by Kubernetes cluster in
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/CS/Kubernetes.cs/#L1021">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_CS_KubernetesState_WorkerVswitchIds_" data-uid="Pulumi.AliCloud.CS.KubernetesState.WorkerVswitchIds*"></a>
+  <h4 id="Pulumi_AliCloud_CS_KubernetesState_WorkerVswitchIds" data-uid="Pulumi.AliCloud.CS.KubernetesState.WorkerVswitchIds">WorkerVswitchIds</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InputList&lt;string&gt; WorkerVswitchIds { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -1725,7 +1583,7 @@ It cannot be duplicated with the VPC CIDR and CIDR used by Kubernetes cluster in
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Cs/Kubernetes.cs/#L718" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/CS/Kubernetes.cs/#L668" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

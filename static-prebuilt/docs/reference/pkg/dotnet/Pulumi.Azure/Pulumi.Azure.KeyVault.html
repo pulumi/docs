@@ -84,9 +84,6 @@
 <blockquote>
 <p><strong>NOTE:</strong> Azure permits a maximum of 1024 Access Policies per Key Vault - <a href="https://docs.microsoft.com/en-us/azure/key-vault/key-vault-secure-your-key-vault#data-plane-access-control">more information can be found in this document</a>.</p>
 </blockquote>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/key_vault_access_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/key_vault_access_policy.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.KeyVault.AccessPolicyArgs.html">AccessPolicyArgs</a></h4>
       <section></section>
@@ -94,9 +91,6 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.KeyVault.Certifiate.html">Certifiate</a></h4>
       <section><p>Manages a Key Vault Certificate.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/key_vault_certificate.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/key_vault_certificate.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.KeyVault.CertifiateArgs.html">CertifiateArgs</a></h4>
       <section></section>
@@ -104,57 +98,58 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.KeyVault.Certificate.html">Certificate</a></h4>
       <section><p>Manages a Key Vault Certificate.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/key_vault_certificate.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/key_vault_certificate.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.KeyVault.CertificateArgs.html">CertificateArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.KeyVault.CertificateState.html">CertificateState</a></h4>
       <section></section>
+      <h4><a class="xref" href="Pulumi.Azure.KeyVault.GetAccessPolicy.html">GetAccessPolicy</a></h4>
+      <section></section>
       <h4><a class="xref" href="Pulumi.Azure.KeyVault.GetAccessPolicyArgs.html">GetAccessPolicyArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.KeyVault.GetAccessPolicyResult.html">GetAccessPolicyResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Azure.KeyVault.GetKey.html">GetKey</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.KeyVault.GetKeyArgs.html">GetKeyArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.KeyVault.GetKeyResult.html">GetKeyResult</a></h4>
       <section></section>
+      <h4><a class="xref" href="Pulumi.Azure.KeyVault.GetKeyVault.html">GetKeyVault</a></h4>
+      <section></section>
       <h4><a class="xref" href="Pulumi.Azure.KeyVault.GetKeyVaultArgs.html">GetKeyVaultArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.KeyVault.GetKeyVaultResult.html">GetKeyVaultResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Azure.KeyVault.GetSecret.html">GetSecret</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.KeyVault.GetSecretArgs.html">GetSecretArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.KeyVault.GetSecretResult.html">GetSecretResult</a></h4>
       <section></section>
-      <h4><a class="xref" href="Pulumi.Azure.KeyVault.Invokes.html">Invokes</a></h4>
-      <section></section>
       <h4><a class="xref" href="Pulumi.Azure.KeyVault.Key.html">Key</a></h4>
       <section><p>Manages a Key Vault Key.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/key_vault_key.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/key_vault_key.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.KeyVault.KeyArgs.html">KeyArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.KeyVault.KeyState.html">KeyState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.KeyVault.KeyVault.html">KeyVault</a></h4>
-      <section></section>
+      <section><p>Manages a Key Vault.</p>
+<h2 id="disclaimers">Disclaimers</h2>
+<blockquote>
+<p><strong>Note:</strong> It's possible to define Key Vault Access Policies both within the <code>azure.keyvault.KeyVault</code> resource via the <code>access_policy</code> block and by using the <code>azure.keyvault.AccessPolicy</code> resource. However it's not possible to use both methods to manage Access Policies within a KeyVault, since there'll be conflicts.</p>
+</blockquote>
+<blockquote>
+<p><strong>Note:</strong> This provi will automatically recover a soft-deleted Key Vault during Creation if one is found - you can opt out of this using the <code>features</code> configuration within the Provider configuration block.</p>
+</blockquote>
+</section>
       <h4><a class="xref" href="Pulumi.Azure.KeyVault.KeyVaultArgs.html">KeyVaultArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.KeyVault.KeyVaultState.html">KeyVaultState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.KeyVault.Secret.html">Secret</a></h4>
       <section><p>Manages a Key Vault Secret.</p>
-<blockquote>
-<p><strong>Note:</strong> All arguments including the secret value will be stored in the raw state as plain-text.
-<a href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
-</blockquote>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/key_vault_secret.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/key_vault_secret.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.KeyVault.SecretArgs.html">SecretArgs</a></h4>
       <section></section>

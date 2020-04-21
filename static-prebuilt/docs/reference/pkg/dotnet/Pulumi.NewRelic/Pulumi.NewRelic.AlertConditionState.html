@@ -87,7 +87,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-newrelic/blob/master/sdk/dotnet/AlertCondition.cs/#L477">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/e117538f1d6f9afc14c4d6c49f32e875e5293d6a/sdk/dotnet/AlertCondition.cs/#L450">View Source</a>
   </span>
   <a id="Pulumi_NewRelic_AlertConditionState__ctor_" data-uid="Pulumi.NewRelic.AlertConditionState.#ctor*"></a>
   <h4 id="Pulumi_NewRelic_AlertConditionState__ctor" data-uid="Pulumi.NewRelic.AlertConditionState.#ctor">AlertConditionState()</h4>
@@ -100,7 +100,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-newrelic/blob/master/sdk/dotnet/AlertCondition.cs/#L344">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/e117538f1d6f9afc14c4d6c49f32e875e5293d6a/sdk/dotnet/AlertCondition.cs/#L326">View Source</a>
   </span>
   <a id="Pulumi_NewRelic_AlertConditionState_ConditionScope_" data-uid="Pulumi.NewRelic.AlertConditionState.ConditionScope*"></a>
   <h4 id="Pulumi_NewRelic_AlertConditionState_ConditionScope" data-uid="Pulumi.NewRelic.AlertConditionState.ConditionScope">ConditionScope</h4>
@@ -127,11 +127,12 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-newrelic/blob/master/sdk/dotnet/AlertCondition.cs/#L347">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/e117538f1d6f9afc14c4d6c49f32e875e5293d6a/sdk/dotnet/AlertCondition.cs/#L332">View Source</a>
   </span>
   <a id="Pulumi_NewRelic_AlertConditionState_Enabled_" data-uid="Pulumi.NewRelic.AlertConditionState.Enabled*"></a>
   <h4 id="Pulumi_NewRelic_AlertConditionState_Enabled" data-uid="Pulumi.NewRelic.AlertConditionState.Enabled">Enabled</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Whether the condition is enabled or not. Defaults to true.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -153,11 +154,11 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-newrelic/blob/master/sdk/dotnet/AlertCondition.cs/#L356">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/e117538f1d6f9afc14c4d6c49f32e875e5293d6a/sdk/dotnet/AlertCondition.cs/#L341">View Source</a>
   </span>
   <a id="Pulumi_NewRelic_AlertConditionState_Entities_" data-uid="Pulumi.NewRelic.AlertConditionState.Entities*"></a>
   <h4 id="Pulumi_NewRelic_AlertConditionState_Entities" data-uid="Pulumi.NewRelic.AlertConditionState.Entities">Entities</h4>
-  <div class="markdown level1 summary"><p>The instance IDS associated with this condition.</p>
+  <div class="markdown level1 summary"><p>The instance IDs associated with this condition.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -180,11 +181,11 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-newrelic/blob/master/sdk/dotnet/AlertCondition.cs/#L365">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/e117538f1d6f9afc14c4d6c49f32e875e5293d6a/sdk/dotnet/AlertCondition.cs/#L350">View Source</a>
   </span>
   <a id="Pulumi_NewRelic_AlertConditionState_GcMetric_" data-uid="Pulumi.NewRelic.AlertConditionState.GcMetric*"></a>
   <h4 id="Pulumi_NewRelic_AlertConditionState_GcMetric" data-uid="Pulumi.NewRelic.AlertConditionState.GcMetric">GcMetric</h4>
-  <div class="markdown level1 summary"><p>A valid Garbage Collection metric e.g. <code>GC/G1 Young Generation</code>. This is required if you are using <code>apm_jvm_metric</code> with <code>gc_cpu_time</code> condition type.</p>
+  <div class="markdown level1 summary"><p>A valid Garbage Collection metric e.g. <code>GC/G1 Young Generation</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -207,7 +208,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-newrelic/blob/master/sdk/dotnet/AlertCondition.cs/#L420">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/e117538f1d6f9afc14c4d6c49f32e875e5293d6a/sdk/dotnet/AlertCondition.cs/#L393">View Source</a>
   </span>
   <a id="Pulumi_NewRelic_AlertConditionState_Metric_" data-uid="Pulumi.NewRelic.AlertConditionState.Metric*"></a>
   <h4 id="Pulumi_NewRelic_AlertConditionState_Metric" data-uid="Pulumi.NewRelic.AlertConditionState.Metric">Metric</h4>
@@ -221,11 +222,6 @@
 <li><code>throughput_background</code></li>
 <li><code>throughput_web</code></li>
 <li><code>user_defined</code></li>
-<li><code>apm_jvm_metric</code></li>
-<li><code>cpu_utilization_time</code></li>
-<li><code>deadlocked_threads</code></li>
-<li><code>gc_cpu_time</code></li>
-<li><code>heap_memory_usage</code></li>
 <li><code>apm_kt_metric</code></li>
 <li><code>apdex</code></li>
 <li><code>error_count</code></li>
@@ -255,13 +251,6 @@
 <li><code>status_error_percentage</code></li>
 <li><code>user_defined</code></li>
 <li><code>view_loading</code></li>
-<li><code>servers_metric</code></li>
-<li><code>cpu_percentage</code></li>
-<li><code>disk_io_percentage</code></li>
-<li><code>fullest_disk_percentage</code></li>
-<li><code>load_average_one_minute</code></li>
-<li><code>memory_percentage</code></li>
-<li><code>user_defined</code></li>
 </ul>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -285,7 +274,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-newrelic/blob/master/sdk/dotnet/AlertCondition.cs/#L426">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/e117538f1d6f9afc14c4d6c49f32e875e5293d6a/sdk/dotnet/AlertCondition.cs/#L399">View Source</a>
   </span>
   <a id="Pulumi_NewRelic_AlertConditionState_Name_" data-uid="Pulumi.NewRelic.AlertConditionState.Name*"></a>
   <h4 id="Pulumi_NewRelic_AlertConditionState_Name" data-uid="Pulumi.NewRelic.AlertConditionState.Name">Name</h4>
@@ -312,7 +301,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-newrelic/blob/master/sdk/dotnet/AlertCondition.cs/#L432">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/e117538f1d6f9afc14c4d6c49f32e875e5293d6a/sdk/dotnet/AlertCondition.cs/#L405">View Source</a>
   </span>
   <a id="Pulumi_NewRelic_AlertConditionState_PolicyId_" data-uid="Pulumi.NewRelic.AlertConditionState.PolicyId*"></a>
   <h4 id="Pulumi_NewRelic_AlertConditionState_PolicyId" data-uid="Pulumi.NewRelic.AlertConditionState.PolicyId">PolicyId</h4>
@@ -339,7 +328,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-newrelic/blob/master/sdk/dotnet/AlertCondition.cs/#L438">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/e117538f1d6f9afc14c4d6c49f32e875e5293d6a/sdk/dotnet/AlertCondition.cs/#L411">View Source</a>
   </span>
   <a id="Pulumi_NewRelic_AlertConditionState_RunbookUrl_" data-uid="Pulumi.NewRelic.AlertConditionState.RunbookUrl*"></a>
   <h4 id="Pulumi_NewRelic_AlertConditionState_RunbookUrl" data-uid="Pulumi.NewRelic.AlertConditionState.RunbookUrl">RunbookUrl</h4>
@@ -366,7 +355,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-newrelic/blob/master/sdk/dotnet/AlertCondition.cs/#L447">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/e117538f1d6f9afc14c4d6c49f32e875e5293d6a/sdk/dotnet/AlertCondition.cs/#L420">View Source</a>
   </span>
   <a id="Pulumi_NewRelic_AlertConditionState_Terms_" data-uid="Pulumi.NewRelic.AlertConditionState.Terms*"></a>
   <h4 id="Pulumi_NewRelic_AlertConditionState_Terms" data-uid="Pulumi.NewRelic.AlertConditionState.Terms">Terms</h4>
@@ -375,7 +364,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public InputList&lt;AlertConditionTermsGetArgs&gt; Terms { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public InputList&lt;AlertConditionTermGetArgs&gt; Terms { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -387,17 +376,17 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">InputList</span>&lt;<a class="xref" href="Pulumi.NewRelic.Inputs.AlertConditionTermsGetArgs.html">AlertConditionTermsGetArgs</a>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<a class="xref" href="Pulumi.NewRelic.Inputs.AlertConditionTermGetArgs.html">AlertConditionTermGetArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-newrelic/blob/master/sdk/dotnet/AlertCondition.cs/#L456">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/e117538f1d6f9afc14c4d6c49f32e875e5293d6a/sdk/dotnet/AlertCondition.cs/#L429">View Source</a>
   </span>
   <a id="Pulumi_NewRelic_AlertConditionState_Type_" data-uid="Pulumi.NewRelic.AlertConditionState.Type*"></a>
   <h4 id="Pulumi_NewRelic_AlertConditionState_Type" data-uid="Pulumi.NewRelic.AlertConditionState.Type">Type</h4>
-  <div class="markdown level1 summary"><p>The type of condition. One of: <code>apm_app_metric</code>, <code>apm_jvm_metric</code>, <code>apm_kt_metric</code>, <code>servers_metric</code>, <code>browser_metric</code>, <code>mobile_metric</code></p>
+  <div class="markdown level1 summary"><p>The type of condition. One of: <code>apm_app_metric</code>, <code>apm_kt_metric</code>, <code>browser_metric</code>, <code>mobile_metric</code></p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -420,7 +409,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-newrelic/blob/master/sdk/dotnet/AlertCondition.cs/#L462">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/e117538f1d6f9afc14c4d6c49f32e875e5293d6a/sdk/dotnet/AlertCondition.cs/#L435">View Source</a>
   </span>
   <a id="Pulumi_NewRelic_AlertConditionState_UserDefinedMetric_" data-uid="Pulumi.NewRelic.AlertConditionState.UserDefinedMetric*"></a>
   <h4 id="Pulumi_NewRelic_AlertConditionState_UserDefinedMetric" data-uid="Pulumi.NewRelic.AlertConditionState.UserDefinedMetric">UserDefinedMetric</h4>
@@ -447,7 +436,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-newrelic/blob/master/sdk/dotnet/AlertCondition.cs/#L468">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/e117538f1d6f9afc14c4d6c49f32e875e5293d6a/sdk/dotnet/AlertCondition.cs/#L441">View Source</a>
   </span>
   <a id="Pulumi_NewRelic_AlertConditionState_UserDefinedValueFunction_" data-uid="Pulumi.NewRelic.AlertConditionState.UserDefinedValueFunction*"></a>
   <h4 id="Pulumi_NewRelic_AlertConditionState_UserDefinedValueFunction" data-uid="Pulumi.NewRelic.AlertConditionState.UserDefinedValueFunction">UserDefinedValueFunction</h4>
@@ -474,7 +463,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-newrelic/blob/master/sdk/dotnet/AlertCondition.cs/#L474">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/e117538f1d6f9afc14c4d6c49f32e875e5293d6a/sdk/dotnet/AlertCondition.cs/#L447">View Source</a>
   </span>
   <a id="Pulumi_NewRelic_AlertConditionState_ViolationCloseTimer_" data-uid="Pulumi.NewRelic.AlertConditionState.ViolationCloseTimer*"></a>
   <h4 id="Pulumi_NewRelic_AlertConditionState_ViolationCloseTimer" data-uid="Pulumi.NewRelic.AlertConditionState.ViolationCloseTimer">ViolationCloseTimer</h4>
@@ -507,7 +496,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-newrelic/blob/master/sdk/dotnet/AlertCondition.cs/#L339" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-newrelic/blob/e117538f1d6f9afc14c4d6c49f32e875e5293d6a/sdk/dotnet/AlertCondition.cs/#L321" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

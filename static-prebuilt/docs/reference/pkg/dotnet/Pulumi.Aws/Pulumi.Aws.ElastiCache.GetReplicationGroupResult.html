@@ -78,40 +78,16 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">GetReplicationGroupResult</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.ElastiCache.html">Pulumi.Aws.ElastiCache</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
   <h5 id="Pulumi_Aws_ElastiCache_GetReplicationGroupResult_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class GetReplicationGroupResult</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class GetReplicationGroupResult : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Elasticache/GetReplicationGroup.cs/#L42">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ElastiCache/GetReplicationGroup.cs/#L45">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_ElastiCache_GetReplicationGroupResult_AuthTokenEnabled" data-uid="Pulumi.Aws.ElastiCache.GetReplicationGroupResult.AuthTokenEnabled">AuthTokenEnabled</h4>
   <div class="markdown level1 summary"><p>A flag that enables using an AuthToken (password) when issuing Redis commands.</p>
@@ -137,7 +113,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Elasticache/GetReplicationGroup.cs/#L46">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ElastiCache/GetReplicationGroup.cs/#L49">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_ElastiCache_GetReplicationGroupResult_AutomaticFailoverEnabled" data-uid="Pulumi.Aws.ElastiCache.GetReplicationGroupResult.AutomaticFailoverEnabled">AutomaticFailoverEnabled</h4>
   <div class="markdown level1 summary"><p>A flag whether a read-only replica will be automatically promoted to read/write primary if the existing primary fails.</p>
@@ -163,7 +139,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Elasticache/GetReplicationGroup.cs/#L50">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ElastiCache/GetReplicationGroup.cs/#L53">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_ElastiCache_GetReplicationGroupResult_ConfigurationEndpointAddress" data-uid="Pulumi.Aws.ElastiCache.GetReplicationGroupResult.ConfigurationEndpointAddress">ConfigurationEndpointAddress</h4>
   <div class="markdown level1 summary"><p>The configuration endpoint address to allow host discovery.</p>
@@ -189,7 +165,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Elasticache/GetReplicationGroup.cs/#L90">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ElastiCache/GetReplicationGroup.cs/#L57">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_ElastiCache_GetReplicationGroupResult_Id" data-uid="Pulumi.Aws.ElastiCache.GetReplicationGroupResult.Id">Id</h4>
   <div class="markdown level1 summary"><p>id is the provider-assigned unique ID for this managed resource.</p>
@@ -215,7 +191,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Elasticache/GetReplicationGroup.cs/#L54">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ElastiCache/GetReplicationGroup.cs/#L61">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_ElastiCache_GetReplicationGroupResult_MemberClusters" data-uid="Pulumi.Aws.ElastiCache.GetReplicationGroupResult.MemberClusters">MemberClusters</h4>
   <div class="markdown level1 summary"><p>The identifiers of all the nodes that are part of this replication group.</p>
@@ -235,13 +211,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Elasticache/GetReplicationGroup.cs/#L58">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ElastiCache/GetReplicationGroup.cs/#L65">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_ElastiCache_GetReplicationGroupResult_NodeType" data-uid="Pulumi.Aws.ElastiCache.GetReplicationGroupResult.NodeType">NodeType</h4>
   <div class="markdown level1 summary"><p>The cluster node type.</p>
@@ -267,7 +243,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Elasticache/GetReplicationGroup.cs/#L62">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ElastiCache/GetReplicationGroup.cs/#L69">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_ElastiCache_GetReplicationGroupResult_NumberCacheClusters" data-uid="Pulumi.Aws.ElastiCache.GetReplicationGroupResult.NumberCacheClusters">NumberCacheClusters</h4>
   <div class="markdown level1 summary"><p>The number of cache clusters that the replication group has.</p>
@@ -293,7 +269,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Elasticache/GetReplicationGroup.cs/#L66">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ElastiCache/GetReplicationGroup.cs/#L73">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_ElastiCache_GetReplicationGroupResult_Port" data-uid="Pulumi.Aws.ElastiCache.GetReplicationGroupResult.Port">Port</h4>
   <div class="markdown level1 summary"><p>The port number on which the configuration endpoint will accept connections.</p>
@@ -319,7 +295,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Elasticache/GetReplicationGroup.cs/#L70">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ElastiCache/GetReplicationGroup.cs/#L77">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_ElastiCache_GetReplicationGroupResult_PrimaryEndpointAddress" data-uid="Pulumi.Aws.ElastiCache.GetReplicationGroupResult.PrimaryEndpointAddress">PrimaryEndpointAddress</h4>
   <div class="markdown level1 summary"><p>The endpoint of the primary node in this node group (shard).</p>
@@ -345,7 +321,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Elasticache/GetReplicationGroup.cs/#L74">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ElastiCache/GetReplicationGroup.cs/#L81">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_ElastiCache_GetReplicationGroupResult_ReplicationGroupDescription" data-uid="Pulumi.Aws.ElastiCache.GetReplicationGroupResult.ReplicationGroupDescription">ReplicationGroupDescription</h4>
   <div class="markdown level1 summary"><p>The description of the replication group.</p>
@@ -371,7 +347,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Elasticache/GetReplicationGroup.cs/#L78">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ElastiCache/GetReplicationGroup.cs/#L85">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_ElastiCache_GetReplicationGroupResult_ReplicationGroupId" data-uid="Pulumi.Aws.ElastiCache.GetReplicationGroupResult.ReplicationGroupId">ReplicationGroupId</h4>
   <div class="markdown level1 summary"><p>The identifier for the replication group.</p>
@@ -397,7 +373,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Elasticache/GetReplicationGroup.cs/#L82">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ElastiCache/GetReplicationGroup.cs/#L89">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_ElastiCache_GetReplicationGroupResult_SnapshotRetentionLimit" data-uid="Pulumi.Aws.ElastiCache.GetReplicationGroupResult.SnapshotRetentionLimit">SnapshotRetentionLimit</h4>
   <div class="markdown level1 summary"><p>The number of days for which ElastiCache retains automatic cache cluster snapshots before deleting them.</p>
@@ -423,7 +399,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Elasticache/GetReplicationGroup.cs/#L86">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ElastiCache/GetReplicationGroup.cs/#L93">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_ElastiCache_GetReplicationGroupResult_SnapshotWindow" data-uid="Pulumi.Aws.ElastiCache.GetReplicationGroupResult.SnapshotWindow">SnapshotWindow</h4>
   <div class="markdown level1 summary"><p>The daily time range (in UTC) during which ElastiCache begins taking a daily snapshot of your node group (shard).</p>
@@ -455,7 +431,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Elasticache/GetReplicationGroup.cs/#L36" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ElastiCache/GetReplicationGroup.cs/#L39" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

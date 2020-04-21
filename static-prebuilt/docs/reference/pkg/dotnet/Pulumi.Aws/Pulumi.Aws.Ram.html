@@ -76,11 +76,11 @@
   <div class="markdown level0 remarks"></div>
     <h3 id="classes">Classes
   </h3>
+      <h4><a class="xref" href="Pulumi.Aws.Ram.GetResourceShare.html">GetResourceShare</a></h4>
+      <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Ram.GetResourceShareArgs.html">GetResourceShareArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Ram.GetResourceShareResult.html">GetResourceShareResult</a></h4>
-      <section></section>
-      <h4><a class="xref" href="Pulumi.Aws.Ram.Invokes.html">Invokes</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Ram.PrincipalAssociation.html">PrincipalAssociation</a></h4>
       <section><p>Provides a Resource Access Manager (RAM) principal association. Depending if <a href="https://docs.aws.amazon.com/ram/latest/userguide/getting-started-sharing.html#getting-started-sharing-orgs">RAM Sharing with AWS Organizations is enabled</a>, the RAM behavior with different principal types changes.</p>
@@ -94,9 +94,6 @@
 <li>Organization and Organizational Unit principals cannot be used.</li>
 <li>For AWS Account ID principals, a resource share invitation is sent and must be accepted before resources become available. See the <a href="https://www.terraform.io/docs/providers/aws/r/ram_resource_share_accepter.html"><code>aws.ram.ResourceShareAccepter</code> resource</a> to accept these invitations.</li>
 </ul>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ram_principal_association.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ram_principal_association.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Ram.PrincipalAssociationArgs.html">PrincipalAssociationArgs</a></h4>
       <section></section>
@@ -107,27 +104,18 @@
 <blockquote>
 <p><em>NOTE:</em> Certain AWS resources (e.g. EC2 Subnets) can only be shared in an AWS account that is a member of an AWS Organizations organization with organization-wide Resource Access Manager functionality enabled. See the <a href="https://docs.aws.amazon.com/ram/latest/userguide/what-is.html">Resource Access Manager User Guide</a> and AWS service specific documentation for additional information.</p>
 </blockquote>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ram_resource_association.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ram_resource_association.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Ram.ResourceAssociationArgs.html">ResourceAssociationArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Ram.ResourceAssociationState.html">ResourceAssociationState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Ram.ResourceShare.html">ResourceShare</a></h4>
-      <section><p>Manages a Resource Access Manager (RAM) Resource Share. To association principals with the share, see the <a href="https://www.terraform.io/docs/providers/aws/r/ram_principal_association.html"><code>aws.ram.PrincipalAssociation</code> resource</a>. To associate resources with the share, see the <a href="https://www.terraform.io/docs/providers/aws/r/ram_resource_association.html"><code>aws.ram.ResourceAssociation</code> resource</a>.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ram_resource_share.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ram_resource_share.markdown</a>.</p>
-</blockquote>
+      <section><p>Manages a Resource Access Manager (RAM) Resource Share. To associate principals with the share, see the <a href="https://www.terraform.io/docs/providers/aws/r/ram_principal_association.html"><code>aws.ram.PrincipalAssociation</code> resource</a>. To associate resources with the share, see the <a href="https://www.terraform.io/docs/providers/aws/r/ram_resource_association.html"><code>aws.ram.ResourceAssociation</code> resource</a>.</p>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Ram.ResourceShareAccepter.html">ResourceShareAccepter</a></h4>
       <section><p>Manage accepting a Resource Access Manager (RAM) Resource Share invitation. From a <em>receiver</em> AWS account, accept an invitation to share resources that were shared by a <em>sender</em> AWS account. To create a resource share in the <em>sender</em>, see the <a href="https://www.terraform.io/docs/providers/aws/r/ram_resource_share.html"><code>aws.ram.ResourceShare</code> resource</a>.</p>
 <blockquote>
 <p><strong>Note:</strong> If both AWS accounts are in the same Organization and <a href="https://docs.aws.amazon.com/ram/latest/userguide/getting-started-sharing.html#getting-started-sharing-orgs">RAM Sharing with AWS Organizations is enabled</a>, this resource is not necessary as RAM Resource Share invitations are not used.</p>
-</blockquote>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ram_resource_share_accepter.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ram_resource_share_accepter.markdown</a>.</p>
 </blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Ram.ResourceShareAccepterArgs.html">ResourceShareAccepterArgs</a></h4>

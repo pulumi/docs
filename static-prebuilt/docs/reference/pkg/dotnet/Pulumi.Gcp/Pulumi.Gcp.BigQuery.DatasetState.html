@@ -76,36 +76,7 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
-    <div class="level3"><span class="xref">DatasetState</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">DatasetState</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.BigQuery.html">Pulumi.Gcp.BigQuery</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
@@ -116,7 +87,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Bigquery/Dataset.cs/#L415">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/BigQuery/Dataset.cs/#L412">View Source</a>
   </span>
   <a id="Pulumi_Gcp_BigQuery_DatasetState__ctor_" data-uid="Pulumi.Gcp.BigQuery.DatasetState.#ctor*"></a>
   <h4 id="Pulumi_Gcp_BigQuery_DatasetState__ctor" data-uid="Pulumi.Gcp.BigQuery.DatasetState.#ctor">DatasetState()</h4>
@@ -129,7 +100,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Bigquery/Dataset.cs/#L293">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/BigQuery/Dataset.cs/#L292">View Source</a>
   </span>
   <a id="Pulumi_Gcp_BigQuery_DatasetState_Accesses_" data-uid="Pulumi.Gcp.BigQuery.DatasetState.Accesses*"></a>
   <h4 id="Pulumi_Gcp_BigQuery_DatasetState_Accesses" data-uid="Pulumi.Gcp.BigQuery.DatasetState.Accesses">Accesses</h4>
@@ -138,7 +109,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public InputList&lt;DatasetAccessesGetArgs&gt; Accesses { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public InputList&lt;DatasetAccessGetArgs&gt; Accesses { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -150,13 +121,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<a class="xref" href="Pulumi.Gcp.BigQuery.Inputs.DatasetAccessesGetArgs.html">DatasetAccessesGetArgs</a>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<a class="xref" href="Pulumi.Gcp.BigQuery.Inputs.DatasetAccessGetArgs.html">DatasetAccessGetArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Bigquery/Dataset.cs/#L302">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/BigQuery/Dataset.cs/#L301">View Source</a>
   </span>
   <a id="Pulumi_Gcp_BigQuery_DatasetState_CreationTime_" data-uid="Pulumi.Gcp.BigQuery.DatasetState.CreationTime*"></a>
   <h4 id="Pulumi_Gcp_BigQuery_DatasetState_CreationTime" data-uid="Pulumi.Gcp.BigQuery.DatasetState.CreationTime">CreationTime</h4>
@@ -165,7 +136,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; CreationTime { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? CreationTime { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -177,23 +148,23 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Bigquery/Dataset.cs/#L309">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/BigQuery/Dataset.cs/#L308">View Source</a>
   </span>
   <a id="Pulumi_Gcp_BigQuery_DatasetState_DatasetId_" data-uid="Pulumi.Gcp.BigQuery.DatasetState.DatasetId*"></a>
   <h4 id="Pulumi_Gcp_BigQuery_DatasetState_DatasetId" data-uid="Pulumi.Gcp.BigQuery.DatasetState.DatasetId">DatasetId</h4>
-  <div class="markdown level1 summary"><p>A unique ID for this dataset, without the project name. The ID must contain only letters (a-z, A-Z), numbers
-(0-9), or underscores (_). The maximum length is 1,024 characters.</p>
+  <div class="markdown level1 summary"><p>A unique ID for this dataset, without the project name. The ID must contain only letters (a-z, A-Z), numbers (0-9), or
+underscores (_). The maximum length is 1,024 characters.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; DatasetId { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? DatasetId { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -205,24 +176,24 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Bigquery/Dataset.cs/#L317">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/BigQuery/Dataset.cs/#L316">View Source</a>
   </span>
   <a id="Pulumi_Gcp_BigQuery_DatasetState_DefaultEncryptionConfiguration_" data-uid="Pulumi.Gcp.BigQuery.DatasetState.DefaultEncryptionConfiguration*"></a>
   <h4 id="Pulumi_Gcp_BigQuery_DatasetState_DefaultEncryptionConfiguration" data-uid="Pulumi.Gcp.BigQuery.DatasetState.DefaultEncryptionConfiguration">DefaultEncryptionConfiguration</h4>
-  <div class="markdown level1 summary"><p>The default encryption key for all tables in the dataset. Once this property is set, all newly-created
-partitioned tables in the dataset will have encryption key set to this value, unless table creation request
-(or query) overrides the key.</p>
+  <div class="markdown level1 summary"><p>The default encryption key for all tables in the dataset. Once this property is set, all newly-created partitioned
+tables in the dataset will have encryption key set to this value, unless table creation request (or query) overrides the
+key.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;DatasetDefaultEncryptionConfigurationGetArgs&gt; DefaultEncryptionConfiguration { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;DatasetDefaultEncryptionConfigurationGetArgs&gt;? DefaultEncryptionConfiguration { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -234,29 +205,29 @@ partitioned tables in the dataset will have encryption key set to this value, un
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Gcp.BigQuery.Inputs.DatasetDefaultEncryptionConfigurationGetArgs.html">DatasetDefaultEncryptionConfigurationGetArgs</a>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Gcp.BigQuery.Inputs.DatasetDefaultEncryptionConfigurationGetArgs.html">DatasetDefaultEncryptionConfigurationGetArgs</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Bigquery/Dataset.cs/#L330">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/BigQuery/Dataset.cs/#L329">View Source</a>
   </span>
   <a id="Pulumi_Gcp_BigQuery_DatasetState_DefaultPartitionExpirationMs_" data-uid="Pulumi.Gcp.BigQuery.DatasetState.DefaultPartitionExpirationMs*"></a>
   <h4 id="Pulumi_Gcp_BigQuery_DatasetState_DefaultPartitionExpirationMs" data-uid="Pulumi.Gcp.BigQuery.DatasetState.DefaultPartitionExpirationMs">DefaultPartitionExpirationMs</h4>
-  <div class="markdown level1 summary"><p>The default partition expiration for all partitioned tables in the dataset, in milliseconds. Once this
-property is set, all newly-created partitioned tables in the dataset will have an 'expirationMs' property in
-the 'timePartitioning' settings set to this value, and changing the value will only affect new tables, not
-existing ones. The storage in a partition will have an expiration time of its partition time plus this
-value. Setting this property overrides the use of 'defaultTableExpirationMs' for partitioned tables: only
-one of 'defaultTableExpirationMs' and 'defaultPartitionExpirationMs' will be used for any new partitioned
-table. If you provide an explicit 'timePartitioning.expirationMs' when creating or updating a partitioned
-table, that value takes precedence over the default partition expiration time indicated by this property.</p>
+  <div class="markdown level1 summary"><p>The default partition expiration for all partitioned tables in the dataset, in milliseconds. Once this property is set,
+all newly-created partitioned tables in the dataset will have an 'expirationMs' property in the 'timePartitioning'
+settings set to this value, and changing the value will only affect new tables, not existing ones. The storage in a
+partition will have an expiration time of its partition time plus this value. Setting this property overrides the use of
+'defaultTableExpirationMs' for partitioned tables: only one of 'defaultTableExpirationMs' and
+'defaultPartitionExpirationMs' will be used for any new partitioned table. If you provide an explicit
+'timePartitioning.expirationMs' when creating or updating a partitioned table, that value takes precedence over the
+default partition expiration time indicated by this property.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; DefaultPartitionExpirationMs { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? DefaultPartitionExpirationMs { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -268,28 +239,27 @@ table, that value takes precedence over the default partition expiration time in
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Bigquery/Dataset.cs/#L342">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/BigQuery/Dataset.cs/#L340">View Source</a>
   </span>
   <a id="Pulumi_Gcp_BigQuery_DatasetState_DefaultTableExpirationMs_" data-uid="Pulumi.Gcp.BigQuery.DatasetState.DefaultTableExpirationMs*"></a>
   <h4 id="Pulumi_Gcp_BigQuery_DatasetState_DefaultTableExpirationMs" data-uid="Pulumi.Gcp.BigQuery.DatasetState.DefaultTableExpirationMs">DefaultTableExpirationMs</h4>
-  <div class="markdown level1 summary"><p>The default lifetime of all tables in the dataset, in milliseconds. The minimum value is 3600000
-milliseconds (one hour). Once this property is set, all newly-created tables in the dataset will have an
-'expirationTime' property set to the creation time plus the value in this property, and changing the value
-will only affect new tables, not existing ones. When the 'expirationTime' for a given table is reached, that
-table will be deleted automatically. If a table's 'expirationTime' is modified or removed before the table
-expires, or if you provide an explicit 'expirationTime' when creating a table, that value takes precedence
-over the default expiration time indicated by this property.</p>
+  <div class="markdown level1 summary"><p>The default lifetime of all tables in the dataset, in milliseconds. The minimum value is 3600000 milliseconds (one
+hour). Once this property is set, all newly-created tables in the dataset will have an 'expirationTime' property set to
+the creation time plus the value in this property, and changing the value will only affect new tables, not existing
+ones. When the 'expirationTime' for a given table is reached, that table will be deleted automatically. If a table's
+'expirationTime' is modified or removed before the table expires, or if you provide an explicit 'expirationTime' when
+creating a table, that value takes precedence over the default expiration time indicated by this property.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; DefaultTableExpirationMs { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? DefaultTableExpirationMs { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -301,13 +271,13 @@ over the default expiration time indicated by this property.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Bigquery/Dataset.cs/#L350">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/BigQuery/Dataset.cs/#L348">View Source</a>
   </span>
   <a id="Pulumi_Gcp_BigQuery_DatasetState_DeleteContentsOnDestroy_" data-uid="Pulumi.Gcp.BigQuery.DatasetState.DeleteContentsOnDestroy*"></a>
   <h4 id="Pulumi_Gcp_BigQuery_DatasetState_DeleteContentsOnDestroy" data-uid="Pulumi.Gcp.BigQuery.DatasetState.DeleteContentsOnDestroy">DeleteContentsOnDestroy</h4>
@@ -318,7 +288,7 @@ destroying the resource will fail if tables are present.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; DeleteContentsOnDestroy { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? DeleteContentsOnDestroy { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -330,13 +300,13 @@ destroying the resource will fail if tables are present.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Bigquery/Dataset.cs/#L356">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/BigQuery/Dataset.cs/#L354">View Source</a>
   </span>
   <a id="Pulumi_Gcp_BigQuery_DatasetState_Description_" data-uid="Pulumi.Gcp.BigQuery.DatasetState.Description*"></a>
   <h4 id="Pulumi_Gcp_BigQuery_DatasetState_Description" data-uid="Pulumi.Gcp.BigQuery.DatasetState.Description">Description</h4>
@@ -345,7 +315,7 @@ destroying the resource will fail if tables are present.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Description { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Description { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -357,13 +327,13 @@ destroying the resource will fail if tables are present.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Bigquery/Dataset.cs/#L362">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/BigQuery/Dataset.cs/#L360">View Source</a>
   </span>
   <a id="Pulumi_Gcp_BigQuery_DatasetState_Etag_" data-uid="Pulumi.Gcp.BigQuery.DatasetState.Etag*"></a>
   <h4 id="Pulumi_Gcp_BigQuery_DatasetState_Etag" data-uid="Pulumi.Gcp.BigQuery.DatasetState.Etag">Etag</h4>
@@ -372,7 +342,7 @@ destroying the resource will fail if tables are present.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Etag { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Etag { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -384,13 +354,13 @@ destroying the resource will fail if tables are present.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Bigquery/Dataset.cs/#L368">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/BigQuery/Dataset.cs/#L366">View Source</a>
   </span>
   <a id="Pulumi_Gcp_BigQuery_DatasetState_FriendlyName_" data-uid="Pulumi.Gcp.BigQuery.DatasetState.FriendlyName*"></a>
   <h4 id="Pulumi_Gcp_BigQuery_DatasetState_FriendlyName" data-uid="Pulumi.Gcp.BigQuery.DatasetState.FriendlyName">FriendlyName</h4>
@@ -399,7 +369,7 @@ destroying the resource will fail if tables are present.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; FriendlyName { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? FriendlyName { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -411,13 +381,13 @@ destroying the resource will fail if tables are present.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Bigquery/Dataset.cs/#L377">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/BigQuery/Dataset.cs/#L375">View Source</a>
   </span>
   <a id="Pulumi_Gcp_BigQuery_DatasetState_Labels_" data-uid="Pulumi.Gcp.BigQuery.DatasetState.Labels*"></a>
   <h4 id="Pulumi_Gcp_BigQuery_DatasetState_Labels" data-uid="Pulumi.Gcp.BigQuery.DatasetState.Labels">Labels</h4>
@@ -438,13 +408,13 @@ destroying the resource will fail if tables are present.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputMap-1.html">InputMap</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">InputMap</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Bigquery/Dataset.cs/#L386">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/BigQuery/Dataset.cs/#L384">View Source</a>
   </span>
   <a id="Pulumi_Gcp_BigQuery_DatasetState_LastModifiedTime_" data-uid="Pulumi.Gcp.BigQuery.DatasetState.LastModifiedTime*"></a>
   <h4 id="Pulumi_Gcp_BigQuery_DatasetState_LastModifiedTime" data-uid="Pulumi.Gcp.BigQuery.DatasetState.LastModifiedTime">LastModifiedTime</h4>
@@ -453,7 +423,7 @@ destroying the resource will fail if tables are present.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; LastModifiedTime { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? LastModifiedTime { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -465,29 +435,28 @@ destroying the resource will fail if tables are present.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Bigquery/Dataset.cs/#L399">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/BigQuery/Dataset.cs/#L396">View Source</a>
   </span>
   <a id="Pulumi_Gcp_BigQuery_DatasetState_Location_" data-uid="Pulumi.Gcp.BigQuery.DatasetState.Location*"></a>
   <h4 id="Pulumi_Gcp_BigQuery_DatasetState_Location" data-uid="Pulumi.Gcp.BigQuery.DatasetState.Location">Location</h4>
   <div class="markdown level1 summary"><p>The geographic location where the dataset should reside. See <a href="https://cloud.google.com/bigquery/docs/dataset-locations">official
-docs</a>. There are two types of locations, regional
-or multi-regional. A regional location is a specific geographic place, such as Tokyo, and a multi-regional
-location is a large geographic area, such as the United States, that contains at least two geographic
-places. Possible regional values include: 'asia-east1', 'asia-northeast1', 'asia-southeast1',
-'australia-southeast1', 'europe-north1', 'europe-west2' and 'us-east4'. Possible multi-regional values: 'EU'
-and 'US'. The default value is multi-regional location 'US'. Changing this forces a new resource to be
-created.</p>
+docs</a>. There are two types of locations, regional or
+multi-regional. A regional location is a specific geographic place, such as Tokyo, and a multi-regional location is a
+large geographic area, such as the United States, that contains at least two geographic places. Possible regional values
+include: 'asia-east1', 'asia-northeast1', 'asia-southeast1', 'australia-southeast1', 'europe-north1', 'europe-west2' and
+'us-east4'. Possible multi-regional values: 'EU' and 'US'. The default value is multi-regional location 'US'. Changing
+this forces a new resource to be created.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Location { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Location { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -499,13 +468,13 @@ created.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Bigquery/Dataset.cs/#L406">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/BigQuery/Dataset.cs/#L403">View Source</a>
   </span>
   <a id="Pulumi_Gcp_BigQuery_DatasetState_Project_" data-uid="Pulumi.Gcp.BigQuery.DatasetState.Project*"></a>
   <h4 id="Pulumi_Gcp_BigQuery_DatasetState_Project" data-uid="Pulumi.Gcp.BigQuery.DatasetState.Project">Project</h4>
@@ -515,7 +484,7 @@ If it is not provided, the provider project is used.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Project { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Project { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -527,13 +496,13 @@ If it is not provided, the provider project is used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Bigquery/Dataset.cs/#L412">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/BigQuery/Dataset.cs/#L409">View Source</a>
   </span>
   <a id="Pulumi_Gcp_BigQuery_DatasetState_SelfLink_" data-uid="Pulumi.Gcp.BigQuery.DatasetState.SelfLink*"></a>
   <h4 id="Pulumi_Gcp_BigQuery_DatasetState_SelfLink" data-uid="Pulumi.Gcp.BigQuery.DatasetState.SelfLink">SelfLink</h4>
@@ -542,7 +511,7 @@ If it is not provided, the provider project is used.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; SelfLink { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? SelfLink { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -554,7 +523,7 @@ If it is not provided, the provider project is used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -566,7 +535,7 @@ If it is not provided, the provider project is used.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Bigquery/Dataset.cs/#L285" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/BigQuery/Dataset.cs/#L284" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

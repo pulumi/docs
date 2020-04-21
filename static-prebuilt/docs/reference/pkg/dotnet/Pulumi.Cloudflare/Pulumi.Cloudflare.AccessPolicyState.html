@@ -87,7 +87,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/AccessPolicy.cs/#L285">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/0bd9f04c975555418218058637580df6ba1cba25/sdk/dotnet/AccessPolicy.cs/#L261">View Source</a>
   </span>
   <a id="Pulumi_Cloudflare_AccessPolicyState__ctor_" data-uid="Pulumi.Cloudflare.AccessPolicyState.#ctor*"></a>
   <h4 id="Pulumi_Cloudflare_AccessPolicyState__ctor" data-uid="Pulumi.Cloudflare.AccessPolicyState.#ctor">AccessPolicyState()</h4>
@@ -100,7 +100,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/AccessPolicy.cs/#L217">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/0bd9f04c975555418218058637580df6ba1cba25/sdk/dotnet/AccessPolicy.cs/#L196">View Source</a>
   </span>
   <a id="Pulumi_Cloudflare_AccessPolicyState_ApplicationId_" data-uid="Pulumi.Cloudflare.AccessPolicyState.ApplicationId*"></a>
   <h4 id="Pulumi_Cloudflare_AccessPolicyState_ApplicationId" data-uid="Pulumi.Cloudflare.AccessPolicyState.ApplicationId">ApplicationId</h4>
@@ -128,12 +128,12 @@ associated with.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/AccessPolicy.cs/#L224">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/0bd9f04c975555418218058637580df6ba1cba25/sdk/dotnet/AccessPolicy.cs/#L203">View Source</a>
   </span>
   <a id="Pulumi_Cloudflare_AccessPolicyState_Decision_" data-uid="Pulumi.Cloudflare.AccessPolicyState.Decision*"></a>
   <h4 id="Pulumi_Cloudflare_AccessPolicyState_Decision" data-uid="Pulumi.Cloudflare.AccessPolicyState.Decision">Decision</h4>
   <div class="markdown level1 summary"><p>Defines the action Access will take if the policy matches the user.
-Allowed values: <code>allow</code>, <code>deny</code>, <code>bypass</code></p>
+Allowed values: <code>allow</code>, <code>deny</code>, <code>non_identity</code>, <code>bypass</code></p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -156,17 +156,16 @@ Allowed values: <code>allow</code>, <code>deny</code>, <code>bypass</code></p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/AccessPolicy.cs/#L234">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/0bd9f04c975555418218058637580df6ba1cba25/sdk/dotnet/AccessPolicy.cs/#L212">View Source</a>
   </span>
   <a id="Pulumi_Cloudflare_AccessPolicyState_Excludes_" data-uid="Pulumi.Cloudflare.AccessPolicyState.Excludes*"></a>
   <h4 id="Pulumi_Cloudflare_AccessPolicyState_Excludes" data-uid="Pulumi.Cloudflare.AccessPolicyState.Excludes">Excludes</h4>
-  <div class="markdown level1 summary"><p>A series of access conditions, see below for
-full list.</p>
+  <div class="markdown level1 summary"><p>A series of access conditions, see <a href="https://www.terraform.io/docs/providers/cloudflare/r/access_group.html#conditions">Access Groups</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public InputList&lt;AccessPolicyExcludesGetArgs&gt; Excludes { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public InputList&lt;AccessPolicyExcludeGetArgs&gt; Excludes { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -178,23 +177,22 @@ full list.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">InputList</span>&lt;<a class="xref" href="Pulumi.Cloudflare.Inputs.AccessPolicyExcludesGetArgs.html">AccessPolicyExcludesGetArgs</a>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<a class="xref" href="Pulumi.Cloudflare.Inputs.AccessPolicyExcludeGetArgs.html">AccessPolicyExcludeGetArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/AccessPolicy.cs/#L247">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/0bd9f04c975555418218058637580df6ba1cba25/sdk/dotnet/AccessPolicy.cs/#L224">View Source</a>
   </span>
   <a id="Pulumi_Cloudflare_AccessPolicyState_Includes_" data-uid="Pulumi.Cloudflare.AccessPolicyState.Includes*"></a>
   <h4 id="Pulumi_Cloudflare_AccessPolicyState_Includes" data-uid="Pulumi.Cloudflare.AccessPolicyState.Includes">Includes</h4>
-  <div class="markdown level1 summary"><p>A series of access conditions, see below for
-full list.</p>
+  <div class="markdown level1 summary"><p>A series of access conditions, see <a href="https://www.terraform.io/docs/providers/cloudflare/r/access_group.html#conditions">Access Groups</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public InputList&lt;AccessPolicyIncludesGetArgs&gt; Includes { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public InputList&lt;AccessPolicyIncludeGetArgs&gt; Includes { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -206,13 +204,13 @@ full list.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">InputList</span>&lt;<a class="xref" href="Pulumi.Cloudflare.Inputs.AccessPolicyIncludesGetArgs.html">AccessPolicyIncludesGetArgs</a>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<a class="xref" href="Pulumi.Cloudflare.Inputs.AccessPolicyIncludeGetArgs.html">AccessPolicyIncludeGetArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/AccessPolicy.cs/#L256">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/0bd9f04c975555418218058637580df6ba1cba25/sdk/dotnet/AccessPolicy.cs/#L233">View Source</a>
   </span>
   <a id="Pulumi_Cloudflare_AccessPolicyState_Name_" data-uid="Pulumi.Cloudflare.AccessPolicyState.Name*"></a>
   <h4 id="Pulumi_Cloudflare_AccessPolicyState_Name" data-uid="Pulumi.Cloudflare.AccessPolicyState.Name">Name</h4>
@@ -239,7 +237,7 @@ full list.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/AccessPolicy.cs/#L262">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/0bd9f04c975555418218058637580df6ba1cba25/sdk/dotnet/AccessPolicy.cs/#L239">View Source</a>
   </span>
   <a id="Pulumi_Cloudflare_AccessPolicyState_Precedence_" data-uid="Pulumi.Cloudflare.AccessPolicyState.Precedence*"></a>
   <h4 id="Pulumi_Cloudflare_AccessPolicyState_Precedence" data-uid="Pulumi.Cloudflare.AccessPolicyState.Precedence">Precedence</h4>
@@ -266,17 +264,16 @@ full list.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/AccessPolicy.cs/#L272">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/0bd9f04c975555418218058637580df6ba1cba25/sdk/dotnet/AccessPolicy.cs/#L248">View Source</a>
   </span>
   <a id="Pulumi_Cloudflare_AccessPolicyState_Requires_" data-uid="Pulumi.Cloudflare.AccessPolicyState.Requires*"></a>
   <h4 id="Pulumi_Cloudflare_AccessPolicyState_Requires" data-uid="Pulumi.Cloudflare.AccessPolicyState.Requires">Requires</h4>
-  <div class="markdown level1 summary"><p>A series of access conditions, see below for
-full list.</p>
+  <div class="markdown level1 summary"><p>A series of access conditions, see <a href="https://www.terraform.io/docs/providers/cloudflare/r/access_group.html#conditions">Access Groups</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public InputList&lt;AccessPolicyRequiresGetArgs&gt; Requires { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public InputList&lt;AccessPolicyRequireGetArgs&gt; Requires { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -288,13 +285,13 @@ full list.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">InputList</span>&lt;<a class="xref" href="Pulumi.Cloudflare.Inputs.AccessPolicyRequiresGetArgs.html">AccessPolicyRequiresGetArgs</a>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<a class="xref" href="Pulumi.Cloudflare.Inputs.AccessPolicyRequireGetArgs.html">AccessPolicyRequireGetArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/AccessPolicy.cs/#L282">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/0bd9f04c975555418218058637580df6ba1cba25/sdk/dotnet/AccessPolicy.cs/#L258">View Source</a>
   </span>
   <a id="Pulumi_Cloudflare_AccessPolicyState_ZoneId_" data-uid="Pulumi.Cloudflare.AccessPolicyState.ZoneId*"></a>
   <h4 id="Pulumi_Cloudflare_AccessPolicyState_ZoneId" data-uid="Pulumi.Cloudflare.AccessPolicyState.ZoneId">ZoneId</h4>
@@ -328,7 +325,7 @@ added.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/AccessPolicy.cs/#L211" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/0bd9f04c975555418218058637580df6ba1cba25/sdk/dotnet/AccessPolicy.cs/#L190" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

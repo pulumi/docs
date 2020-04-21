@@ -71,50 +71,24 @@
   
   <h1 id="Pulumi_Gcp_Iap_WebBackendServiceIamBinding" data-uid="Pulumi.Gcp.Iap.WebBackendServiceIamBinding" class="text-break">Class WebBackendServiceIamBinding
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Three different resources help you manage your IAM policy for Identity-Aware Proxy WebBackendService. Each of these resources serves a different use case:</p>
+<ul>
+<li><code>gcp.iap.WebBackendServiceIamPolicy</code>: Authoritative. Sets the IAM policy for the webbackendservice and replaces any existing policy already attached.</li>
+<li><code>gcp.iap.WebBackendServiceIamBinding</code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the webbackendservice are preserved.</li>
+<li><code>gcp.iap.WebBackendServiceIamMember</code>: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the webbackendservice are preserved.</li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.iap.WebBackendServiceIamPolicy</code> <strong>cannot</strong> be used in conjunction with <code>gcp.iap.WebBackendServiceIamBinding</code> and <code>gcp.iap.WebBackendServiceIamMember</code> or they will fight over what your policy should be.</p>
+</blockquote>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.iap.WebBackendServiceIamBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.iap.WebBackendServiceIamMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
+</blockquote>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
-    <div class="level3"><span class="xref">WebBackendServiceIamBinding</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">WebBackendServiceIamBinding</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.Iap.html">Pulumi.Gcp.Iap</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
@@ -125,16 +99,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Iap/WebBackendServiceIamBinding.cs/#L59">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Iap/WebBackendServiceIamBinding.cs/#L70">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Iap_WebBackendServiceIamBinding__ctor_" data-uid="Pulumi.Gcp.Iap.WebBackendServiceIamBinding.#ctor*"></a>
-  <h4 id="Pulumi_Gcp_Iap_WebBackendServiceIamBinding__ctor_System_String_Pulumi_Gcp_Iap_WebBackendServiceIamBindingArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Gcp.Iap.WebBackendServiceIamBinding.#ctor(System.String,Pulumi.Gcp.Iap.WebBackendServiceIamBindingArgs,Pulumi.CustomResourceOptions)">WebBackendServiceIamBinding(String, WebBackendServiceIamBindingArgs, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Gcp_Iap_WebBackendServiceIamBinding__ctor_System_String_Pulumi_Gcp_Iap_WebBackendServiceIamBindingArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Gcp.Iap.WebBackendServiceIamBinding.#ctor(System.String,Pulumi.Gcp.Iap.WebBackendServiceIamBindingArgs,System.Nullable{CustomResourceOptions})">WebBackendServiceIamBinding(String, WebBackendServiceIamBindingArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Create a WebBackendServiceIamBinding resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public WebBackendServiceIamBinding(string name, WebBackendServiceIamBindingArgs args, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public WebBackendServiceIamBinding(string name, WebBackendServiceIamBindingArgs args, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -159,7 +133,7 @@
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -169,7 +143,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Iap/WebBackendServiceIamBinding.cs/#L18">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Iap/WebBackendServiceIamBinding.cs/#L29">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Iap_WebBackendServiceIamBinding_Condition_" data-uid="Pulumi.Gcp.Iap.WebBackendServiceIamBinding.Condition*"></a>
   <h4 id="Pulumi_Gcp_Iap_WebBackendServiceIamBinding_Condition" data-uid="Pulumi.Gcp.Iap.WebBackendServiceIamBinding.Condition">Condition</h4>
@@ -191,13 +165,13 @@ Structure is documented below.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Gcp.Iap.Outputs.WebBackendServiceIamBindingCondition.html">WebBackendServiceIamBindingCondition</a>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Gcp.Iap.Outputs.WebBackendServiceIamBindingCondition.html">WebBackendServiceIamBindingCondition</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Iap/WebBackendServiceIamBinding.cs/#L24">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Iap/WebBackendServiceIamBinding.cs/#L35">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Iap_WebBackendServiceIamBinding_Etag_" data-uid="Pulumi.Gcp.Iap.WebBackendServiceIamBinding.Etag*"></a>
   <h4 id="Pulumi_Gcp_Iap_WebBackendServiceIamBinding_Etag" data-uid="Pulumi.Gcp.Iap.WebBackendServiceIamBinding.Etag">Etag</h4>
@@ -218,13 +192,13 @@ Structure is documented below.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Iap/WebBackendServiceIamBinding.cs/#L27">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Iap/WebBackendServiceIamBinding.cs/#L38">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Iap_WebBackendServiceIamBinding_Members_" data-uid="Pulumi.Gcp.Iap.WebBackendServiceIamBinding.Members*"></a>
   <h4 id="Pulumi_Gcp_Iap_WebBackendServiceIamBinding_Members" data-uid="Pulumi.Gcp.Iap.WebBackendServiceIamBinding.Members">Members</h4>
@@ -244,13 +218,13 @@ Structure is documented below.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Iap/WebBackendServiceIamBinding.cs/#L34">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Iap/WebBackendServiceIamBinding.cs/#L45">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Iap_WebBackendServiceIamBinding_Project_" data-uid="Pulumi.Gcp.Iap.WebBackendServiceIamBinding.Project*"></a>
   <h4 id="Pulumi_Gcp_Iap_WebBackendServiceIamBinding_Project" data-uid="Pulumi.Gcp.Iap.WebBackendServiceIamBinding.Project">Project</h4>
@@ -272,13 +246,13 @@ If it is not provided, the project will be parsed from the identifier of the par
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Iap/WebBackendServiceIamBinding.cs/#L42">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Iap/WebBackendServiceIamBinding.cs/#L53">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Iap_WebBackendServiceIamBinding_Role_" data-uid="Pulumi.Gcp.Iap.WebBackendServiceIamBinding.Role*"></a>
   <h4 id="Pulumi_Gcp_Iap_WebBackendServiceIamBinding_Role" data-uid="Pulumi.Gcp.Iap.WebBackendServiceIamBinding.Role">Role</h4>
@@ -301,13 +275,13 @@ If it is not provided, the project will be parsed from the identifier of the par
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Iap/WebBackendServiceIamBinding.cs/#L48">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Iap/WebBackendServiceIamBinding.cs/#L59">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Iap_WebBackendServiceIamBinding_WebBackendService_" data-uid="Pulumi.Gcp.Iap.WebBackendServiceIamBinding.WebBackendService*"></a>
   <h4 id="Pulumi_Gcp_Iap_WebBackendServiceIamBinding_WebBackendService" data-uid="Pulumi.Gcp.Iap.WebBackendServiceIamBinding.WebBackendService">WebBackendService</h4>
@@ -328,7 +302,7 @@ If it is not provided, the project will be parsed from the identifier of the par
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -336,17 +310,17 @@ If it is not provided, the project will be parsed from the identifier of the par
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Iap/WebBackendServiceIamBinding.cs/#L89">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Iap/WebBackendServiceIamBinding.cs/#L100">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Iap_WebBackendServiceIamBinding_Get_" data-uid="Pulumi.Gcp.Iap.WebBackendServiceIamBinding.Get*"></a>
-  <h4 id="Pulumi_Gcp_Iap_WebBackendServiceIamBinding_Get_System_String_Pulumi_Input_System_String__Pulumi_Gcp_Iap_WebBackendServiceIamBindingState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Gcp.Iap.WebBackendServiceIamBinding.Get(System.String,Pulumi.Input{System.String},Pulumi.Gcp.Iap.WebBackendServiceIamBindingState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, WebBackendServiceIamBindingState, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Gcp_Iap_WebBackendServiceIamBinding_Get_System_String_Input_System_String__Pulumi_Gcp_Iap_WebBackendServiceIamBindingState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Gcp.Iap.WebBackendServiceIamBinding.Get(System.String,Input{System.String},Pulumi.Gcp.Iap.WebBackendServiceIamBindingState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, WebBackendServiceIamBindingState, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Get an existing WebBackendServiceIamBinding resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static WebBackendServiceIamBinding Get(string name, Input&lt;string&gt; id, WebBackendServiceIamBindingState state = null, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static WebBackendServiceIamBinding Get(string name, Input&lt;string&gt; id, WebBackendServiceIamBindingState state = null, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -365,7 +339,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -377,7 +351,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -406,7 +380,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Iap/WebBackendServiceIamBinding.cs/#L12" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Iap/WebBackendServiceIamBinding.cs/#L23" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

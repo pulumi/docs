@@ -72,9 +72,6 @@
   <h1 id="Pulumi_F5BigIP_CM_DeviceGroup" data-uid="Pulumi.F5BigIP.CM.DeviceGroup" class="text-break">Class DeviceGroup
   </h1>
   <div class="markdown level0 summary"><p><code>f5bigip.cm.DeviceGroup</code> A device group is a collection of BIG-IP devices that are configured to securely synchronize their BIG-IP configuration data, and fail over when needed.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/cm_devicegroup.html.markdown">https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/cm_devicegroup.html.markdown</a>.</p>
-</blockquote>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -91,7 +88,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/master/sdk/dotnet/Cm/DeviceGroup.cs/#L87">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/c99b82127e8ea2f6d3a94d861b1a2a8d26b28e9a/sdk/dotnet/CM/DeviceGroup.cs/#L85">View Source</a>
   </span>
   <a id="Pulumi_F5BigIP_CM_DeviceGroup__ctor_" data-uid="Pulumi.F5BigIP.CM.DeviceGroup.#ctor*"></a>
   <h4 id="Pulumi_F5BigIP_CM_DeviceGroup__ctor_System_String_Pulumi_F5BigIP_CM_DeviceGroupArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.F5BigIP.CM.DeviceGroup.#ctor(System.String,Pulumi.F5BigIP.CM.DeviceGroupArgs,System.Nullable{CustomResourceOptions})">DeviceGroup(String, DeviceGroupArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
@@ -135,7 +132,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/master/sdk/dotnet/Cm/DeviceGroup.cs/#L21">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/c99b82127e8ea2f6d3a94d861b1a2a8d26b28e9a/sdk/dotnet/CM/DeviceGroup.cs/#L20">View Source</a>
   </span>
   <a id="Pulumi_F5BigIP_CM_DeviceGroup_AutoSync_" data-uid="Pulumi.F5BigIP.CM.DeviceGroup.AutoSync*"></a>
   <h4 id="Pulumi_F5BigIP_CM_DeviceGroup_AutoSync" data-uid="Pulumi.F5BigIP.CM.DeviceGroup.AutoSync">AutoSync</h4>
@@ -162,7 +159,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/master/sdk/dotnet/Cm/DeviceGroup.cs/#L27">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/c99b82127e8ea2f6d3a94d861b1a2a8d26b28e9a/sdk/dotnet/CM/DeviceGroup.cs/#L26">View Source</a>
   </span>
   <a id="Pulumi_F5BigIP_CM_DeviceGroup_Description_" data-uid="Pulumi.F5BigIP.CM.DeviceGroup.Description*"></a>
   <h4 id="Pulumi_F5BigIP_CM_DeviceGroup_Description" data-uid="Pulumi.F5BigIP.CM.DeviceGroup.Description">Description</h4>
@@ -189,7 +186,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/master/sdk/dotnet/Cm/DeviceGroup.cs/#L33">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/c99b82127e8ea2f6d3a94d861b1a2a8d26b28e9a/sdk/dotnet/CM/DeviceGroup.cs/#L32">View Source</a>
   </span>
   <a id="Pulumi_F5BigIP_CM_DeviceGroup_Devices_" data-uid="Pulumi.F5BigIP.CM.DeviceGroup.Devices*"></a>
   <h4 id="Pulumi_F5BigIP_CM_DeviceGroup_Devices" data-uid="Pulumi.F5BigIP.CM.DeviceGroup.Devices">Devices</h4>
@@ -198,7 +195,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;DeviceGroupDevices&gt;&gt; Devices { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;DeviceGroupDevice&gt;&gt; Devices { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -210,13 +207,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.F5BigIP.CM.Outputs.DeviceGroupDevices.html">DeviceGroupDevices</a>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.F5BigIP.CM.Outputs.DeviceGroupDevice.html">DeviceGroupDevice</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/master/sdk/dotnet/Cm/DeviceGroup.cs/#L39">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/c99b82127e8ea2f6d3a94d861b1a2a8d26b28e9a/sdk/dotnet/CM/DeviceGroup.cs/#L38">View Source</a>
   </span>
   <a id="Pulumi_F5BigIP_CM_DeviceGroup_FullLoadOnSync_" data-uid="Pulumi.F5BigIP.CM.DeviceGroup.FullLoadOnSync*"></a>
   <h4 id="Pulumi_F5BigIP_CM_DeviceGroup_FullLoadOnSync" data-uid="Pulumi.F5BigIP.CM.DeviceGroup.FullLoadOnSync">FullLoadOnSync</h4>
@@ -243,12 +240,11 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/master/sdk/dotnet/Cm/DeviceGroup.cs/#L46">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/c99b82127e8ea2f6d3a94d861b1a2a8d26b28e9a/sdk/dotnet/CM/DeviceGroup.cs/#L44">View Source</a>
   </span>
   <a id="Pulumi_F5BigIP_CM_DeviceGroup_IncrementalConfig_" data-uid="Pulumi.F5BigIP.CM.DeviceGroup.IncrementalConfig*"></a>
   <h4 id="Pulumi_F5BigIP_CM_DeviceGroup_IncrementalConfig" data-uid="Pulumi.F5BigIP.CM.DeviceGroup.IncrementalConfig">IncrementalConfig</h4>
-  <div class="markdown level1 summary"><p>Specifies the maximum size (in KB) to devote to incremental config sync cached transactions. The default is
-1024 KB.</p>
+  <div class="markdown level1 summary"><p>Specifies the maximum size (in KB) to devote to incremental config sync cached transactions. The default is 1024 KB.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -271,7 +267,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/master/sdk/dotnet/Cm/DeviceGroup.cs/#L52">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/c99b82127e8ea2f6d3a94d861b1a2a8d26b28e9a/sdk/dotnet/CM/DeviceGroup.cs/#L50">View Source</a>
   </span>
   <a id="Pulumi_F5BigIP_CM_DeviceGroup_Name_" data-uid="Pulumi.F5BigIP.CM.DeviceGroup.Name*"></a>
   <h4 id="Pulumi_F5BigIP_CM_DeviceGroup_Name" data-uid="Pulumi.F5BigIP.CM.DeviceGroup.Name">Name</h4>
@@ -298,7 +294,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/master/sdk/dotnet/Cm/DeviceGroup.cs/#L58">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/c99b82127e8ea2f6d3a94d861b1a2a8d26b28e9a/sdk/dotnet/CM/DeviceGroup.cs/#L56">View Source</a>
   </span>
   <a id="Pulumi_F5BigIP_CM_DeviceGroup_NetworkFailover_" data-uid="Pulumi.F5BigIP.CM.DeviceGroup.NetworkFailover*"></a>
   <h4 id="Pulumi_F5BigIP_CM_DeviceGroup_NetworkFailover" data-uid="Pulumi.F5BigIP.CM.DeviceGroup.NetworkFailover">NetworkFailover</h4>
@@ -325,7 +321,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/master/sdk/dotnet/Cm/DeviceGroup.cs/#L64">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/c99b82127e8ea2f6d3a94d861b1a2a8d26b28e9a/sdk/dotnet/CM/DeviceGroup.cs/#L62">View Source</a>
   </span>
   <a id="Pulumi_F5BigIP_CM_DeviceGroup_Partition_" data-uid="Pulumi.F5BigIP.CM.DeviceGroup.Partition*"></a>
   <h4 id="Pulumi_F5BigIP_CM_DeviceGroup_Partition" data-uid="Pulumi.F5BigIP.CM.DeviceGroup.Partition">Partition</h4>
@@ -352,7 +348,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/master/sdk/dotnet/Cm/DeviceGroup.cs/#L70">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/c99b82127e8ea2f6d3a94d861b1a2a8d26b28e9a/sdk/dotnet/CM/DeviceGroup.cs/#L68">View Source</a>
   </span>
   <a id="Pulumi_F5BigIP_CM_DeviceGroup_SaveOnAutoSync_" data-uid="Pulumi.F5BigIP.CM.DeviceGroup.SaveOnAutoSync*"></a>
   <h4 id="Pulumi_F5BigIP_CM_DeviceGroup_SaveOnAutoSync" data-uid="Pulumi.F5BigIP.CM.DeviceGroup.SaveOnAutoSync">SaveOnAutoSync</h4>
@@ -379,7 +375,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/master/sdk/dotnet/Cm/DeviceGroup.cs/#L76">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/c99b82127e8ea2f6d3a94d861b1a2a8d26b28e9a/sdk/dotnet/CM/DeviceGroup.cs/#L74">View Source</a>
   </span>
   <a id="Pulumi_F5BigIP_CM_DeviceGroup_Type_" data-uid="Pulumi.F5BigIP.CM.DeviceGroup.Type*"></a>
   <h4 id="Pulumi_F5BigIP_CM_DeviceGroup_Type" data-uid="Pulumi.F5BigIP.CM.DeviceGroup.Type">Type</h4>
@@ -408,7 +404,7 @@
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/master/sdk/dotnet/Cm/DeviceGroup.cs/#L117">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/c99b82127e8ea2f6d3a94d861b1a2a8d26b28e9a/sdk/dotnet/CM/DeviceGroup.cs/#L115">View Source</a>
   </span>
   <a id="Pulumi_F5BigIP_CM_DeviceGroup_Get_" data-uid="Pulumi.F5BigIP.CM.DeviceGroup.Get*"></a>
   <h4 id="Pulumi_F5BigIP_CM_DeviceGroup_Get_System_String_Input_System_String__Pulumi_F5BigIP_CM_DeviceGroupState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.F5BigIP.CM.DeviceGroup.Get(System.String,Input{System.String},Pulumi.F5BigIP.CM.DeviceGroupState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, DeviceGroupState, Nullable&lt;CustomResourceOptions&gt;)</h4>
@@ -478,7 +474,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/master/sdk/dotnet/Cm/DeviceGroup.cs/#L16" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/c99b82127e8ea2f6d3a94d861b1a2a8d26b28e9a/sdk/dotnet/CM/DeviceGroup.cs/#L15" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

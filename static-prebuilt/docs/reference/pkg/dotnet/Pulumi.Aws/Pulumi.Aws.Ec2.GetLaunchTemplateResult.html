@@ -78,40 +78,16 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">GetLaunchTemplateResult</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.Ec2.html">Pulumi.Aws.Ec2</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
   <h5 id="Pulumi_Aws_Ec2_GetLaunchTemplateResult_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class GetLaunchTemplateResult</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class GetLaunchTemplateResult : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/GetLaunchTemplate.cs/#L50">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/GetLaunchTemplate.cs/#L69">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Ec2_GetLaunchTemplateResult_Arn" data-uid="Pulumi.Aws.Ec2.GetLaunchTemplateResult.Arn">Arn</h4>
   <div class="markdown level1 summary"><p>Amazon Resource Name (ARN) of the launch template.</p>
@@ -137,7 +113,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/GetLaunchTemplate.cs/#L54">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/GetLaunchTemplate.cs/#L73">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Ec2_GetLaunchTemplateResult_BlockDeviceMappings" data-uid="Pulumi.Aws.Ec2.GetLaunchTemplateResult.BlockDeviceMappings">BlockDeviceMappings</h4>
   <div class="markdown level1 summary"><p>Specify volumes to attach to the instance besides the volumes specified by the AMI.</p>
@@ -145,7 +121,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetLaunchTemplateBlockDeviceMappingsResult&gt; BlockDeviceMappings</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetLaunchTemplateBlockDeviceMappingResult&gt; BlockDeviceMappings</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -157,13 +133,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.Ec2.Outputs.GetLaunchTemplateBlockDeviceMappingsResult.html">GetLaunchTemplateBlockDeviceMappingsResult</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.Ec2.Outputs.GetLaunchTemplateBlockDeviceMappingResult.html">GetLaunchTemplateBlockDeviceMappingResult</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/GetLaunchTemplate.cs/#L59">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/GetLaunchTemplate.cs/#L78">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Ec2_GetLaunchTemplateResult_CreditSpecifications" data-uid="Pulumi.Aws.Ec2.GetLaunchTemplateResult.CreditSpecifications">CreditSpecifications</h4>
   <div class="markdown level1 summary"><p>Customize the credit specification of the instance. See Credit
@@ -172,7 +148,7 @@ Specification below for more details.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetLaunchTemplateCreditSpecificationsResult&gt; CreditSpecifications</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetLaunchTemplateCreditSpecificationResult&gt; CreditSpecifications</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -184,13 +160,13 @@ Specification below for more details.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.Ec2.Outputs.GetLaunchTemplateCreditSpecificationsResult.html">GetLaunchTemplateCreditSpecificationsResult</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.Ec2.Outputs.GetLaunchTemplateCreditSpecificationResult.html">GetLaunchTemplateCreditSpecificationResult</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/GetLaunchTemplate.cs/#L63">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/GetLaunchTemplate.cs/#L82">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Ec2_GetLaunchTemplateResult_DefaultVersion" data-uid="Pulumi.Aws.Ec2.GetLaunchTemplateResult.DefaultVersion">DefaultVersion</h4>
   <div class="markdown level1 summary"><p>The default version of the launch template.</p>
@@ -216,7 +192,7 @@ Specification below for more details.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/GetLaunchTemplate.cs/#L67">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/GetLaunchTemplate.cs/#L86">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Ec2_GetLaunchTemplateResult_Description" data-uid="Pulumi.Aws.Ec2.GetLaunchTemplateResult.Description">Description</h4>
   <div class="markdown level1 summary"><p>Description of the launch template.</p>
@@ -242,7 +218,7 @@ Specification below for more details.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/GetLaunchTemplate.cs/#L72">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/GetLaunchTemplate.cs/#L91">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Ec2_GetLaunchTemplateResult_DisableApiTermination" data-uid="Pulumi.Aws.Ec2.GetLaunchTemplateResult.DisableApiTermination">DisableApiTermination</h4>
   <div class="markdown level1 summary"><p>If <code>true</code>, enables <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingDisableAPITermination">EC2 Instance
@@ -269,7 +245,7 @@ Termination Protection</a></p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/GetLaunchTemplate.cs/#L76">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/GetLaunchTemplate.cs/#L95">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Ec2_GetLaunchTemplateResult_EbsOptimized" data-uid="Pulumi.Aws.Ec2.GetLaunchTemplateResult.EbsOptimized">EbsOptimized</h4>
   <div class="markdown level1 summary"><p>If <code>true</code>, the launched EC2 instance will be EBS-optimized.</p>
@@ -295,7 +271,7 @@ Termination Protection</a></p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/GetLaunchTemplate.cs/#L81">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/GetLaunchTemplate.cs/#L100">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Ec2_GetLaunchTemplateResult_ElasticGpuSpecifications" data-uid="Pulumi.Aws.Ec2.GetLaunchTemplateResult.ElasticGpuSpecifications">ElasticGpuSpecifications</h4>
   <div class="markdown level1 summary"><p>The elastic GPU to attach to the instance. See Elastic GPU
@@ -304,7 +280,7 @@ below for more details.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetLaunchTemplateElasticGpuSpecificationsResult&gt; ElasticGpuSpecifications</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetLaunchTemplateElasticGpuSpecificationResult&gt; ElasticGpuSpecifications</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -316,13 +292,64 @@ below for more details.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.Ec2.Outputs.GetLaunchTemplateElasticGpuSpecificationsResult.html">GetLaunchTemplateElasticGpuSpecificationsResult</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.Ec2.Outputs.GetLaunchTemplateElasticGpuSpecificationResult.html">GetLaunchTemplateElasticGpuSpecificationResult</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/GetLaunchTemplate.cs/#L86">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/GetLaunchTemplate.cs/#L101">View Source</a>
+  </span>
+  <h4 id="Pulumi_Aws_Ec2_GetLaunchTemplateResult_Filters" data-uid="Pulumi.Aws.Ec2.GetLaunchTemplateResult.Filters">Filters</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetLaunchTemplateFilterResult&gt; Filters</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.Ec2.Outputs.GetLaunchTemplateFilterResult.html">GetLaunchTemplateFilterResult</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/GetLaunchTemplate.cs/#L105">View Source</a>
+  </span>
+  <h4 id="Pulumi_Aws_Ec2_GetLaunchTemplateResult_HibernationOptions" data-uid="Pulumi.Aws.Ec2.GetLaunchTemplateResult.HibernationOptions">HibernationOptions</h4>
+  <div class="markdown level1 summary"><p>The hibernation options for the instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetLaunchTemplateHibernationOptionResult&gt; HibernationOptions</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.Ec2.Outputs.GetLaunchTemplateHibernationOptionResult.html">GetLaunchTemplateHibernationOptionResult</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/GetLaunchTemplate.cs/#L110">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Ec2_GetLaunchTemplateResult_IamInstanceProfiles" data-uid="Pulumi.Aws.Ec2.GetLaunchTemplateResult.IamInstanceProfiles">IamInstanceProfiles</h4>
   <div class="markdown level1 summary"><p>The IAM Instance Profile to launch the instance with. See Instance Profile
@@ -331,7 +358,7 @@ below for more details.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetLaunchTemplateIamInstanceProfilesResult&gt; IamInstanceProfiles</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetLaunchTemplateIamInstanceProfileResult&gt; IamInstanceProfiles</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -343,13 +370,13 @@ below for more details.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.Ec2.Outputs.GetLaunchTemplateIamInstanceProfilesResult.html">GetLaunchTemplateIamInstanceProfilesResult</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.Ec2.Outputs.GetLaunchTemplateIamInstanceProfileResult.html">GetLaunchTemplateIamInstanceProfileResult</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/GetLaunchTemplate.cs/#L159">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/GetLaunchTemplate.cs/#L114">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Ec2_GetLaunchTemplateResult_Id" data-uid="Pulumi.Aws.Ec2.GetLaunchTemplateResult.Id">Id</h4>
   <div class="markdown level1 summary"><p>id is the provider-assigned unique ID for this managed resource.</p>
@@ -375,7 +402,7 @@ below for more details.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/GetLaunchTemplate.cs/#L90">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/GetLaunchTemplate.cs/#L118">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Ec2_GetLaunchTemplateResult_ImageId" data-uid="Pulumi.Aws.Ec2.GetLaunchTemplateResult.ImageId">ImageId</h4>
   <div class="markdown level1 summary"><p>The AMI from which to launch the instance.</p>
@@ -401,7 +428,7 @@ below for more details.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/GetLaunchTemplate.cs/#L95">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/GetLaunchTemplate.cs/#L123">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Ec2_GetLaunchTemplateResult_InstanceInitiatedShutdownBehavior" data-uid="Pulumi.Aws.Ec2.GetLaunchTemplateResult.InstanceInitiatedShutdownBehavior">InstanceInitiatedShutdownBehavior</h4>
   <div class="markdown level1 summary"><p>Shutdown behavior for the instance. Can be <code>stop</code> or <code>terminate</code>.
@@ -428,7 +455,7 @@ below for more details.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/GetLaunchTemplate.cs/#L100">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/GetLaunchTemplate.cs/#L128">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Ec2_GetLaunchTemplateResult_InstanceMarketOptions" data-uid="Pulumi.Aws.Ec2.GetLaunchTemplateResult.InstanceMarketOptions">InstanceMarketOptions</h4>
   <div class="markdown level1 summary"><p>The market (purchasing) option for the instance.
@@ -437,7 +464,7 @@ below for details.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetLaunchTemplateInstanceMarketOptionsResult&gt; InstanceMarketOptions</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetLaunchTemplateInstanceMarketOptionResult&gt; InstanceMarketOptions</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -449,13 +476,13 @@ below for details.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.Ec2.Outputs.GetLaunchTemplateInstanceMarketOptionsResult.html">GetLaunchTemplateInstanceMarketOptionsResult</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.Ec2.Outputs.GetLaunchTemplateInstanceMarketOptionResult.html">GetLaunchTemplateInstanceMarketOptionResult</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/GetLaunchTemplate.cs/#L104">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/GetLaunchTemplate.cs/#L132">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Ec2_GetLaunchTemplateResult_InstanceType" data-uid="Pulumi.Aws.Ec2.GetLaunchTemplateResult.InstanceType">InstanceType</h4>
   <div class="markdown level1 summary"><p>The type of the instance.</p>
@@ -481,7 +508,7 @@ below for details.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/GetLaunchTemplate.cs/#L108">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/GetLaunchTemplate.cs/#L136">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Ec2_GetLaunchTemplateResult_KernelId" data-uid="Pulumi.Aws.Ec2.GetLaunchTemplateResult.KernelId">KernelId</h4>
   <div class="markdown level1 summary"><p>The kernel ID.</p>
@@ -507,7 +534,7 @@ below for details.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/GetLaunchTemplate.cs/#L112">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/GetLaunchTemplate.cs/#L140">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Ec2_GetLaunchTemplateResult_KeyName" data-uid="Pulumi.Aws.Ec2.GetLaunchTemplateResult.KeyName">KeyName</h4>
   <div class="markdown level1 summary"><p>The key name to use for the instance.</p>
@@ -533,7 +560,7 @@ below for details.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/GetLaunchTemplate.cs/#L116">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/GetLaunchTemplate.cs/#L144">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Ec2_GetLaunchTemplateResult_LatestVersion" data-uid="Pulumi.Aws.Ec2.GetLaunchTemplateResult.LatestVersion">LatestVersion</h4>
   <div class="markdown level1 summary"><p>The latest version of the launch template.</p>
@@ -559,7 +586,33 @@ below for details.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/GetLaunchTemplate.cs/#L120">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/GetLaunchTemplate.cs/#L148">View Source</a>
+  </span>
+  <h4 id="Pulumi_Aws_Ec2_GetLaunchTemplateResult_MetadataOptions" data-uid="Pulumi.Aws.Ec2.GetLaunchTemplateResult.MetadataOptions">MetadataOptions</h4>
+  <div class="markdown level1 summary"><p>The metadata options for the instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetLaunchTemplateMetadataOptionResult&gt; MetadataOptions</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.Ec2.Outputs.GetLaunchTemplateMetadataOptionResult.html">GetLaunchTemplateMetadataOptionResult</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/GetLaunchTemplate.cs/#L152">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Ec2_GetLaunchTemplateResult_Monitorings" data-uid="Pulumi.Aws.Ec2.GetLaunchTemplateResult.Monitorings">Monitorings</h4>
   <div class="markdown level1 summary"><p>The monitoring option for the instance.</p>
@@ -567,7 +620,7 @@ below for details.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetLaunchTemplateMonitoringsResult&gt; Monitorings</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetLaunchTemplateMonitoringResult&gt; Monitorings</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -579,20 +632,20 @@ below for details.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.Ec2.Outputs.GetLaunchTemplateMonitoringsResult.html">GetLaunchTemplateMonitoringsResult</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.Ec2.Outputs.GetLaunchTemplateMonitoringResult.html">GetLaunchTemplateMonitoringResult</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/GetLaunchTemplate.cs/#L121">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/GetLaunchTemplate.cs/#L153">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Ec2_GetLaunchTemplateResult_Name" data-uid="Pulumi.Aws.Ec2.GetLaunchTemplateResult.Name">Name</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string Name</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? Name</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -604,13 +657,13 @@ below for details.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/GetLaunchTemplate.cs/#L126">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/GetLaunchTemplate.cs/#L158">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Ec2_GetLaunchTemplateResult_NetworkInterfaces" data-uid="Pulumi.Aws.Ec2.GetLaunchTemplateResult.NetworkInterfaces">NetworkInterfaces</h4>
   <div class="markdown level1 summary"><p>Customize network interfaces to be attached at instance boot time. See Network
@@ -619,7 +672,7 @@ Interfaces below for more details.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetLaunchTemplateNetworkInterfacesResult&gt; NetworkInterfaces</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetLaunchTemplateNetworkInterfaceResult&gt; NetworkInterfaces</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -631,13 +684,13 @@ Interfaces below for more details.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.Ec2.Outputs.GetLaunchTemplateNetworkInterfacesResult.html">GetLaunchTemplateNetworkInterfacesResult</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.Ec2.Outputs.GetLaunchTemplateNetworkInterfaceResult.html">GetLaunchTemplateNetworkInterfaceResult</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/GetLaunchTemplate.cs/#L130">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/GetLaunchTemplate.cs/#L162">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Ec2_GetLaunchTemplateResult_Placements" data-uid="Pulumi.Aws.Ec2.GetLaunchTemplateResult.Placements">Placements</h4>
   <div class="markdown level1 summary"><p>The placement of the instance.</p>
@@ -645,7 +698,7 @@ Interfaces below for more details.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetLaunchTemplatePlacementsResult&gt; Placements</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetLaunchTemplatePlacementResult&gt; Placements</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -657,13 +710,13 @@ Interfaces below for more details.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.Ec2.Outputs.GetLaunchTemplatePlacementsResult.html">GetLaunchTemplatePlacementsResult</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.Ec2.Outputs.GetLaunchTemplatePlacementResult.html">GetLaunchTemplatePlacementResult</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/GetLaunchTemplate.cs/#L134">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/GetLaunchTemplate.cs/#L166">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Ec2_GetLaunchTemplateResult_RamDiskId" data-uid="Pulumi.Aws.Ec2.GetLaunchTemplateResult.RamDiskId">RamDiskId</h4>
   <div class="markdown level1 summary"><p>The ID of the RAM disk.</p>
@@ -689,7 +742,7 @@ Interfaces below for more details.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/GetLaunchTemplate.cs/#L139">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/GetLaunchTemplate.cs/#L171">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Ec2_GetLaunchTemplateResult_SecurityGroupNames" data-uid="Pulumi.Aws.Ec2.GetLaunchTemplateResult.SecurityGroupNames">SecurityGroupNames</h4>
   <div class="markdown level1 summary"><p>A list of security group names to associate with. If you are creating Instances in a VPC, use
@@ -710,13 +763,13 @@ Interfaces below for more details.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/GetLaunchTemplate.cs/#L147">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/GetLaunchTemplate.cs/#L179">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Ec2_GetLaunchTemplateResult_Tags" data-uid="Pulumi.Aws.Ec2.GetLaunchTemplateResult.Tags">Tags</h4>
   <div class="markdown level1 summary"><p>(Optional) A mapping of tags to assign to the launch template.</p>
@@ -736,13 +789,13 @@ Interfaces below for more details.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;</td>
+        <td><span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/GetLaunchTemplate.cs/#L143">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/GetLaunchTemplate.cs/#L175">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Ec2_GetLaunchTemplateResult_TagSpecifications" data-uid="Pulumi.Aws.Ec2.GetLaunchTemplateResult.TagSpecifications">TagSpecifications</h4>
   <div class="markdown level1 summary"><p>The tags to apply to the resources during launch.</p>
@@ -750,7 +803,7 @@ Interfaces below for more details.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetLaunchTemplateTagSpecificationsResult&gt; TagSpecifications</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetLaunchTemplateTagSpecificationResult&gt; TagSpecifications</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -762,13 +815,13 @@ Interfaces below for more details.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.Ec2.Outputs.GetLaunchTemplateTagSpecificationsResult.html">GetLaunchTemplateTagSpecificationsResult</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.Ec2.Outputs.GetLaunchTemplateTagSpecificationResult.html">GetLaunchTemplateTagSpecificationResult</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/GetLaunchTemplate.cs/#L151">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/GetLaunchTemplate.cs/#L183">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Ec2_GetLaunchTemplateResult_UserData" data-uid="Pulumi.Aws.Ec2.GetLaunchTemplateResult.UserData">UserData</h4>
   <div class="markdown level1 summary"><p>The Base64-encoded user data to provide when launching the instance.</p>
@@ -794,7 +847,7 @@ Interfaces below for more details.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/GetLaunchTemplate.cs/#L155">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/GetLaunchTemplate.cs/#L187">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Ec2_GetLaunchTemplateResult_VpcSecurityGroupIds" data-uid="Pulumi.Aws.Ec2.GetLaunchTemplateResult.VpcSecurityGroupIds">VpcSecurityGroupIds</h4>
   <div class="markdown level1 summary"><p>A list of security group IDs to associate with.</p>
@@ -814,7 +867,7 @@ Interfaces below for more details.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -826,7 +879,7 @@ Interfaces below for more details.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/GetLaunchTemplate.cs/#L44" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/GetLaunchTemplate.cs/#L63" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -81,27 +81,21 @@
 <blockquote>
 <p><strong>NOTE:</strong> Azure Backup for Azure File Shares is currently in public preview. During the preview, the service is subject to additional limitations and unsupported backup scenarios. <a href="https://docs.microsoft.com/en-us/azure/backup/backup-azure-files#limitations-for-azure-file-share-backup-during-preview">Read More</a></p>
 </blockquote>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/backup_container_storage_account.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/backup_container_storage_account.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.Backup.ContainerStorageAccountArgs.html">ContainerStorageAccountArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.Backup.ContainerStorageAccountState.html">ContainerStorageAccountState</a></h4>
       <section></section>
+      <h4><a class="xref" href="Pulumi.Azure.Backup.GetPolicyVM.html">GetPolicyVM</a></h4>
+      <section></section>
       <h4><a class="xref" href="Pulumi.Azure.Backup.GetPolicyVMArgs.html">GetPolicyVMArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.Backup.GetPolicyVMResult.html">GetPolicyVMResult</a></h4>
-      <section></section>
-      <h4><a class="xref" href="Pulumi.Azure.Backup.Invokes.html">Invokes</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.Backup.PolicyFileShare.html">PolicyFileShare</a></h4>
       <section><p>Manages an Azure File Share Backup Policy within a Recovery Services vault.</p>
 <blockquote>
 <p><strong>NOTE:</strong> Azure Backup for Azure File Shares is currently in public preview. During the preview, the service is subject to additional limitations and unsupported backup scenarios. <a href="https://docs.microsoft.com/en-us/azure/backup/backup-azure-files#limitations-for-azure-file-share-backup-during-preview">Read More</a></p>
-</blockquote>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/backup_policy_file_share.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/backup_policy_file_share.markdown</a>.</p>
 </blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.Backup.PolicyFileShareArgs.html">PolicyFileShareArgs</a></h4>
@@ -110,25 +104,26 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.Backup.PolicyVM.html">PolicyVM</a></h4>
       <section><p>Manages an Azure Backup VM Backup Policy.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/backup_policy_vm.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/backup_policy_vm.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.Backup.PolicyVMArgs.html">PolicyVMArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.Backup.PolicyVMState.html">PolicyVMState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.Backup.ProtectedFileShare.html">ProtectedFileShare</a></h4>
-      <section></section>
+      <section><p>Manages an Azure Backup Protected File Share to enable backups for file shares within an Azure Storage Account</p>
+<blockquote>
+<p><strong>NOTE:</strong> Azure Backup for Azure File Shares is currently in public preview. During the preview, the service is subject to additional limitations and unsupported backup scenarios. <a href="https://docs.microsoft.com/en-us/azure/backup/backup-azure-files#limitations-for-azure-file-share-backup-during-preview">Read More</a></p>
+</blockquote>
+<blockquote>
+<p><strong>NOTE</strong> Azure Backup for Azure File Shares does not support Soft Delete at this time. Deleting this resource will also delete all associated backup data. Please exercise caution. Consider using <a href="https://www.pulumi.com/docs/intro/concepts/programming-model/#protect"><code>protect</code></a> to guard against accidental deletion.</p>
+</blockquote>
+</section>
       <h4><a class="xref" href="Pulumi.Azure.Backup.ProtectedFileShareArgs.html">ProtectedFileShareArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.Backup.ProtectedFileShareState.html">ProtectedFileShareState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Azure.Backup.ProtectedVM.html">ProtectedVM</a></h4>
       <section><p>Manages Azure Backup for an Azure VM</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/backup_protected_vm.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/backup_protected_vm.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Azure.Backup.ProtectedVMArgs.html">ProtectedVMArgs</a></h4>
       <section></section>

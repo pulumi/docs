@@ -87,18 +87,41 @@ and
 <a href="https://cloud.google.com/storage/docs/json_api/v1/buckets">API</a>.</p>
 <p><strong>Note</strong>: If the project id is not set on the resource or in the provider block it will be dynamically
 determined which will require enabling the compute api.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/storage_bucket.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/storage_bucket.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Storage.BucketAccessControl.html">BucketAccessControl</a></h4>
-      <section></section>
+      <section><p>Bucket ACLs can be managed authoritatively using the
+<code>storage_bucket_acl</code> resource. Do not use these two resources in conjunction to manage the same bucket.</p>
+<p>The BucketAccessControls resource manages the Access Control List
+(ACLs) for a single entity/role pairing on a bucket. ACLs let you specify who
+has access to your data and to what extent.</p>
+<p>There are three roles that can be assigned to an entity:</p>
+<p>READERs can get the bucket, though no acl property will be returned, and
+list the bucket's objects.  WRITERs are READERs, and they can insert
+objects into the bucket and delete the bucket's objects.  OWNERs are
+WRITERs, and they can get the acl property of a bucket, update a bucket,
+and call all BucketAccessControls methods on the bucket.  For more
+information, see Access Control, with the caveat that this API uses
+READER, WRITER, and OWNER instead of READ, WRITE, and FULL_CONTROL.</p>
+<p>To get more information about BucketAccessControl, see:</p>
+<ul>
+<li><a href="https://cloud.google.com/storage/docs/json_api/v1/bucketAccessControls">API documentation</a></li>
+<li>How-to Guides</li>
+<li><a href="https://cloud.google.com/storage/docs/access-control/lists">Official Documentation</a></li>
+</ul>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.Storage.BucketAccessControlArgs.html">BucketAccessControlArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Storage.BucketAccessControlState.html">BucketAccessControlState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Storage.BucketACL.html">BucketACL</a></h4>
-      <section></section>
+      <section><p>Authoritatively manages a bucket's ACLs in Google cloud storage service (GCS). For more information see
+<a href="https://cloud.google.com/storage/docs/access-control/lists">the official documentation</a>
+and
+<a href="https://cloud.google.com/storage/docs/json_api/v1/bucketAccessControls">API</a>.</p>
+<p>Bucket ACLs can be managed non authoritatively using the <code>storage_bucket_access_control</code> resource. Do not use these two resources in conjunction to manage the same bucket.</p>
+<p>Permissions can be granted either by ACLs or Cloud IAM policies. In general, permissions granted by Cloud IAM policies do not appear in ACLs, and permissions granted by ACLs do not appear in Cloud IAM policies. The only exception is for ACLs applied directly on a bucket and certain bucket-level Cloud IAM policies, as described in <a href="https://cloud.google.com/storage/docs/access-control/iam#acls">Cloud IAM relation to ACLs</a>.</p>
+<p><strong>NOTE</strong> This resource will not remove the <code>project-owners-&amp;lt;project_id&gt;</code> entity from the <code>OWNER</code> role.</p>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.Storage.BucketACLArgs.html">BucketACLArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Storage.BucketACLState.html">BucketACLState</a></h4>
@@ -106,19 +129,55 @@ determined which will require enabling the compute api.</p>
       <h4><a class="xref" href="Pulumi.Gcp.Storage.BucketArgs.html">BucketArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Storage.BucketIAMBinding.html">BucketIAMBinding</a></h4>
-      <section></section>
+      <section><p>Three different resources help you manage your IAM policy for Cloud Storage Bucket. Each of these resources serves a different use case:</p>
+<ul>
+<li><code>gcp.storage.BucketIAMPolicy</code>: Authoritative. Sets the IAM policy for the bucket and replaces any existing policy already attached.</li>
+<li><code>gcp.storage.BucketIAMBinding</code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the bucket are preserved.</li>
+<li><code>gcp.storage.BucketIAMMember</code>: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the bucket are preserved.</li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.storage.BucketIAMPolicy</code> <strong>cannot</strong> be used in conjunction with <code>gcp.storage.BucketIAMBinding</code> and <code>gcp.storage.BucketIAMMember</code> or they will fight over what your policy should be.</p>
+</blockquote>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.storage.BucketIAMBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.storage.BucketIAMMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
+</blockquote>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.Storage.BucketIAMBindingArgs.html">BucketIAMBindingArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Storage.BucketIAMBindingState.html">BucketIAMBindingState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Storage.BucketIAMMember.html">BucketIAMMember</a></h4>
-      <section></section>
+      <section><p>Three different resources help you manage your IAM policy for Cloud Storage Bucket. Each of these resources serves a different use case:</p>
+<ul>
+<li><code>gcp.storage.BucketIAMPolicy</code>: Authoritative. Sets the IAM policy for the bucket and replaces any existing policy already attached.</li>
+<li><code>gcp.storage.BucketIAMBinding</code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the bucket are preserved.</li>
+<li><code>gcp.storage.BucketIAMMember</code>: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the bucket are preserved.</li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.storage.BucketIAMPolicy</code> <strong>cannot</strong> be used in conjunction with <code>gcp.storage.BucketIAMBinding</code> and <code>gcp.storage.BucketIAMMember</code> or they will fight over what your policy should be.</p>
+</blockquote>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.storage.BucketIAMBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.storage.BucketIAMMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
+</blockquote>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.Storage.BucketIAMMemberArgs.html">BucketIAMMemberArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Storage.BucketIAMMemberState.html">BucketIAMMemberState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Storage.BucketIAMPolicy.html">BucketIAMPolicy</a></h4>
-      <section></section>
+      <section><p>Three different resources help you manage your IAM policy for Cloud Storage Bucket. Each of these resources serves a different use case:</p>
+<ul>
+<li><code>gcp.storage.BucketIAMPolicy</code>: Authoritative. Sets the IAM policy for the bucket and replaces any existing policy already attached.</li>
+<li><code>gcp.storage.BucketIAMBinding</code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the bucket are preserved.</li>
+<li><code>gcp.storage.BucketIAMMember</code>: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the bucket are preserved.</li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.storage.BucketIAMPolicy</code> <strong>cannot</strong> be used in conjunction with <code>gcp.storage.BucketIAMBinding</code> and <code>gcp.storage.BucketIAMMember</code> or they will fight over what your policy should be.</p>
+</blockquote>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.storage.BucketIAMBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.storage.BucketIAMMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
+</blockquote>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.Storage.BucketIAMPolicyArgs.html">BucketIAMPolicyArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Storage.BucketIAMPolicyState.html">BucketIAMPolicyState</a></h4>
@@ -130,9 +189,6 @@ For more information see
 <a href="https://cloud.google.com/storage/docs/key-terms#objects">the official documentation</a>
 and
 <a href="https://cloud.google.com/storage/docs/json_api/v1/objects">API</a>.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/storage_bucket_object.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/storage_bucket_object.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Storage.BucketObjectArgs.html">BucketObjectArgs</a></h4>
       <section></section>
@@ -158,9 +214,6 @@ uses READER and OWNER instead of READ and FULL_CONTROL.</p>
 <li>How-to Guides</li>
 <li><a href="https://cloud.google.com/storage/docs/access-control/create-manage-lists">Official Documentation</a></li>
 </ul>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/storage_default_object_access_control.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/storage_default_object_access_control.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Storage.DefaultObjectAccessControlArgs.html">DefaultObjectAccessControlArgs</a></h4>
       <section></section>
@@ -181,37 +234,54 @@ and
 <p>Want fine-grained control over default object ACLs? Use <code>gcp.storage.DefaultObjectAccessControl</code>
 to control individual role entity pairs.</p>
 </blockquote>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/storage_default_object_acl.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/storage_default_object_acl.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Storage.DefaultObjectACLArgs.html">DefaultObjectACLArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Storage.DefaultObjectACLState.html">DefaultObjectACLState</a></h4>
       <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.Storage.GetBucketObject.html">GetBucketObject</a></h4>
+      <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Storage.GetBucketObjectArgs.html">GetBucketObjectArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Storage.GetBucketObjectResult.html">GetBucketObjectResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.Storage.GetObjectSignedUrl.html">GetObjectSignedUrl</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Storage.GetObjectSignedUrlArgs.html">GetObjectSignedUrlArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Storage.GetObjectSignedUrlResult.html">GetObjectSignedUrlResult</a></h4>
       <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.Storage.GetProjectServiceAccount.html">GetProjectServiceAccount</a></h4>
+      <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Storage.GetProjectServiceAccountArgs.html">GetProjectServiceAccountArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Storage.GetProjectServiceAccountResult.html">GetProjectServiceAccountResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.Storage.GetTransferProjectServieAccount.html">GetTransferProjectServieAccount</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Storage.GetTransferProjectServieAccountArgs.html">GetTransferProjectServieAccountArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Storage.GetTransferProjectServieAccountResult.html">GetTransferProjectServieAccountResult</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Storage.HmacKey.html">HmacKey</a></h4>
-      <section></section>
+      <section><p>The hmacKeys resource represents an HMAC key within Cloud Storage. The resource
+consists of a secret and HMAC key metadata. HMAC keys can be used as credentials
+for service accounts.</p>
+<p>To get more information about HmacKey, see:</p>
+<ul>
+<li><a href="https://cloud.google.com/storage/docs/json_api/v1/projects/hmacKeys">API documentation</a></li>
+<li>How-to Guides</li>
+<li><a href="https://cloud.google.com/storage/docs/authentication/managing-hmackeys">Official Documentation</a></li>
+</ul>
+<blockquote>
+<p><strong>Warning:</strong> All arguments including the <code>secret</code> value will be stored in the raw
+state as plain-text. <a href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.
+On import, the <code>secret</code> value will not be retrieved.</p>
+</blockquote>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.Storage.HmacKeyArgs.html">HmacKeyArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Storage.HmacKeyState.html">HmacKeyState</a></h4>
-      <section></section>
-      <h4><a class="xref" href="Pulumi.Gcp.Storage.Invokes.html">Invokes</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Storage.Notification.html">Notification</a></h4>
       <section><p>Creates a new notification configuration on a specified bucket, establishing a flow of event notifications from GCS to a Cloud Pub/Sub topic.
@@ -225,7 +295,8 @@ account's email address, use the <code>gcp.storage.getProjectServiceAccount</cod
 for an example of enabling notifications by granting the correct IAM permission. See
 <a href="https://cloud.google.com/storage/docs/gsutil/commands/notification">the notifications documentation</a> for more details.</p>
 <blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/storage_notification.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/storage_notification.html.markdown</a>.</p>
+<p><strong>NOTE</strong>: This resource can affect your storage IAM policy. If you are using this in the same config as your storage IAM policy resources, consider
+making this resource dependent on those IAM resources via <code>depends_on</code>. This will safeguard against errors due to IAM race conditions.</p>
 </blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Storage.NotificationArgs.html">NotificationArgs</a></h4>
@@ -249,9 +320,6 @@ uses READER and OWNER instead of READ and FULL_CONTROL.</p>
 <li>How-to Guides</li>
 <li><a href="https://cloud.google.com/storage/docs/access-control/create-manage-lists">Official Documentation</a></li>
 </ul>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/storage_object_access_control.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/storage_object_access_control.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Storage.ObjectAccessControlArgs.html">ObjectAccessControlArgs</a></h4>
       <section></section>
@@ -269,9 +337,6 @@ and
 <p>Want fine-grained control over object ACLs? Use <code>gcp.storage.ObjectAccessControl</code> to control individual
 role entity pairs.</p>
 </blockquote>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/storage_object_acl.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/storage_object_acl.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Storage.ObjectACLArgs.html">ObjectACLArgs</a></h4>
       <section></section>
@@ -286,9 +351,6 @@ role entity pairs.</p>
 <li>How-to Guides</li>
 <li><a href="https://cloud.google.com/storage-transfer/docs/configure-access">Configuring Access to Data Sources and Sinks</a></li>
 </ul>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/storage_transfer_job.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/storage_transfer_job.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Storage.TransferJobArgs.html">TransferJobArgs</a></h4>
       <section></section>

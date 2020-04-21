@@ -71,50 +71,18 @@
   
   <h1 id="Pulumi_Gcp_Compute_URLMap" data-uid="Pulumi.Gcp.Compute.URLMap" class="text-break">Class URLMap
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>UrlMaps are used to route requests to a backend service based on rules
+that you define for the host and path of an incoming URL.</p>
+<p>To get more information about UrlMap, see:</p>
+<ul>
+<li><a href="https://cloud.google.com/compute/docs/reference/rest/v1/urlMaps">API documentation</a></li>
+</ul>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
-    <div class="level3"><span class="xref">URLMap</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">URLMap</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.Compute.html">Pulumi.Gcp.Compute</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
@@ -125,16 +93,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/URLMap.cs/#L102">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/URLMap.cs/#L109">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_URLMap__ctor_" data-uid="Pulumi.Gcp.Compute.URLMap.#ctor*"></a>
-  <h4 id="Pulumi_Gcp_Compute_URLMap__ctor_System_String_Pulumi_Gcp_Compute_URLMapArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Gcp.Compute.URLMap.#ctor(System.String,Pulumi.Gcp.Compute.URLMapArgs,Pulumi.CustomResourceOptions)">URLMap(String, URLMapArgs, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Gcp_Compute_URLMap__ctor_System_String_Pulumi_Gcp_Compute_URLMapArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Gcp.Compute.URLMap.#ctor(System.String,Pulumi.Gcp.Compute.URLMapArgs,System.Nullable{CustomResourceOptions})">URLMap(String, URLMapArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Create a URLMap resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public URLMap(string name, URLMapArgs args = null, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public URLMap(string name, URLMapArgs args = null, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -159,7 +127,7 @@
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -169,7 +137,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/URLMap.cs/#L17">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/URLMap.cs/#L26">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_URLMap_CreationTimestamp_" data-uid="Pulumi.Gcp.Compute.URLMap.CreationTimestamp*"></a>
   <h4 id="Pulumi_Gcp_Compute_URLMap_CreationTimestamp" data-uid="Pulumi.Gcp.Compute.URLMap.CreationTimestamp">CreationTimestamp</h4>
@@ -190,13 +158,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/URLMap.cs/#L23">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/URLMap.cs/#L32">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_URLMap_DefaultService_" data-uid="Pulumi.Gcp.Compute.URLMap.DefaultService*"></a>
   <h4 id="Pulumi_Gcp_Compute_URLMap_DefaultService" data-uid="Pulumi.Gcp.Compute.URLMap.DefaultService">DefaultService</h4>
@@ -205,7 +173,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; DefaultService { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; DefaultService { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -217,13 +185,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/URLMap.cs/#L29">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/URLMap.cs/#L38">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_URLMap_Description_" data-uid="Pulumi.Gcp.Compute.URLMap.Description*"></a>
   <h4 id="Pulumi_Gcp_Compute_URLMap_Description" data-uid="Pulumi.Gcp.Compute.URLMap.Description">Description</h4>
@@ -232,7 +200,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Description { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Description { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -244,18 +212,17 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/URLMap.cs/#L36">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/URLMap.cs/#L44">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_URLMap_Fingerprint_" data-uid="Pulumi.Gcp.Compute.URLMap.Fingerprint*"></a>
   <h4 id="Pulumi_Gcp_Compute_URLMap_Fingerprint" data-uid="Pulumi.Gcp.Compute.URLMap.Fingerprint">Fingerprint</h4>
-  <div class="markdown level1 summary"><p>Fingerprint of this resource. A hash of the contents stored in this object. This field is used in optimistic
-locking.</p>
+  <div class="markdown level1 summary"><p>Fingerprint of this resource. A hash of the contents stored in this object. This field is used in optimistic locking.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -272,18 +239,18 @@ locking.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/URLMap.cs/#L43">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/URLMap.cs/#L51">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_URLMap_HeaderAction_" data-uid="Pulumi.Gcp.Compute.URLMap.HeaderAction*"></a>
   <h4 id="Pulumi_Gcp_Compute_URLMap_HeaderAction" data-uid="Pulumi.Gcp.Compute.URLMap.HeaderAction">HeaderAction</h4>
-  <div class="markdown level1 summary"><p>Specifies changes to request and response headers that need to take effect for the selected backendService.
-The headerAction specified here take effect after headerAction specified under pathMatcher.</p>
+  <div class="markdown level1 summary"><p>Specifies changes to request and response headers that need to take effect for the selected backendService. The
+headerAction specified here take effect after headerAction specified under pathMatcher.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -300,13 +267,13 @@ The headerAction specified here take effect after headerAction specified under p
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Outputs.URLMapHeaderAction.html">URLMapHeaderAction</a>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Outputs.URLMapHeaderAction.html">URLMapHeaderAction</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/URLMap.cs/#L49">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/URLMap.cs/#L57">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_URLMap_HostRules_" data-uid="Pulumi.Gcp.Compute.URLMap.HostRules*"></a>
   <h4 id="Pulumi_Gcp_Compute_URLMap_HostRules" data-uid="Pulumi.Gcp.Compute.URLMap.HostRules">HostRules</h4>
@@ -315,7 +282,7 @@ The headerAction specified here take effect after headerAction specified under p
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;URLMapHostRules&gt;&gt; HostRules { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;URLMapHostRule&gt;&gt; HostRules { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -327,13 +294,13 @@ The headerAction specified here take effect after headerAction specified under p
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Outputs.URLMapHostRules.html">URLMapHostRules</a>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Outputs.URLMapHostRule.html">URLMapHostRule</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/URLMap.cs/#L55">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/URLMap.cs/#L63">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_URLMap_MapId_" data-uid="Pulumi.Gcp.Compute.URLMap.MapId*"></a>
   <h4 id="Pulumi_Gcp_Compute_URLMap_MapId" data-uid="Pulumi.Gcp.Compute.URLMap.MapId">MapId</h4>
@@ -354,21 +321,20 @@ The headerAction specified here take effect after headerAction specified under p
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/URLMap.cs/#L65">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/URLMap.cs/#L72">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_URLMap_Name_" data-uid="Pulumi.Gcp.Compute.URLMap.Name*"></a>
   <h4 id="Pulumi_Gcp_Compute_URLMap_Name" data-uid="Pulumi.Gcp.Compute.URLMap.Name">Name</h4>
-  <div class="markdown level1 summary"><p>Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters
-long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular
-expression '<a href="%5B-a-z0-9%5D*%5Ba-z0-9%5D">a-z</a>?' which means the first character must be a lowercase letter, and all
-following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be
-a dash.</p>
+  <div class="markdown level1 summary"><p>Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
+comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
+'<a href="%5B-a-z0-9%5D*%5Ba-z0-9%5D">a-z</a>?' which means the first character must be a lowercase letter, and all following characters
+must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -385,13 +351,13 @@ a dash.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/URLMap.cs/#L71">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/URLMap.cs/#L78">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_URLMap_PathMatchers_" data-uid="Pulumi.Gcp.Compute.URLMap.PathMatchers*"></a>
   <h4 id="Pulumi_Gcp_Compute_URLMap_PathMatchers" data-uid="Pulumi.Gcp.Compute.URLMap.PathMatchers">PathMatchers</h4>
@@ -400,7 +366,7 @@ a dash.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;URLMapPathMatchers&gt;&gt; PathMatchers { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;URLMapPathMatcher&gt;&gt; PathMatchers { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -412,13 +378,13 @@ a dash.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Outputs.URLMapPathMatchers.html">URLMapPathMatchers</a>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Outputs.URLMapPathMatcher.html">URLMapPathMatcher</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/URLMap.cs/#L78">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/URLMap.cs/#L85">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_URLMap_Project_" data-uid="Pulumi.Gcp.Compute.URLMap.Project*"></a>
   <h4 id="Pulumi_Gcp_Compute_URLMap_Project" data-uid="Pulumi.Gcp.Compute.URLMap.Project">Project</h4>
@@ -440,13 +406,13 @@ If it is not provided, the provider project is used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/URLMap.cs/#L84">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/URLMap.cs/#L91">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_URLMap_SelfLink_" data-uid="Pulumi.Gcp.Compute.URLMap.SelfLink*"></a>
   <h4 id="Pulumi_Gcp_Compute_URLMap_SelfLink" data-uid="Pulumi.Gcp.Compute.URLMap.SelfLink">SelfLink</h4>
@@ -467,23 +433,23 @@ If it is not provided, the provider project is used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/URLMap.cs/#L91">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/URLMap.cs/#L98">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_URLMap_Tests_" data-uid="Pulumi.Gcp.Compute.URLMap.Tests*"></a>
   <h4 id="Pulumi_Gcp_Compute_URLMap_Tests" data-uid="Pulumi.Gcp.Compute.URLMap.Tests">Tests</h4>
-  <div class="markdown level1 summary"><p>The list of expected URL mapping tests. Request to update this UrlMap will succeed only if all of the test
-cases pass. You can specify a maximum of 100 tests per UrlMap.</p>
+  <div class="markdown level1 summary"><p>The list of expected URL mapping tests. Request to update this UrlMap will succeed only if all of the test cases pass.
+You can specify a maximum of 100 tests per UrlMap.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;URLMapTests&gt;&gt; Tests { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;URLMapTest&gt;&gt; Tests { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -495,7 +461,7 @@ cases pass. You can specify a maximum of 100 tests per UrlMap.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Outputs.URLMapTests.html">URLMapTests</a>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Outputs.URLMapTest.html">URLMapTest</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -503,17 +469,17 @@ cases pass. You can specify a maximum of 100 tests per UrlMap.</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/URLMap.cs/#L132">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/URLMap.cs/#L139">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_URLMap_Get_" data-uid="Pulumi.Gcp.Compute.URLMap.Get*"></a>
-  <h4 id="Pulumi_Gcp_Compute_URLMap_Get_System_String_Pulumi_Input_System_String__Pulumi_Gcp_Compute_URLMapState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Gcp.Compute.URLMap.Get(System.String,Pulumi.Input{System.String},Pulumi.Gcp.Compute.URLMapState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, URLMapState, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Gcp_Compute_URLMap_Get_System_String_Input_System_String__Pulumi_Gcp_Compute_URLMapState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Gcp.Compute.URLMap.Get(System.String,Input{System.String},Pulumi.Gcp.Compute.URLMapState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, URLMapState, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Get an existing URLMap resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static URLMap Get(string name, Input&lt;string&gt; id, URLMapState state = null, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static URLMap Get(string name, Input&lt;string&gt; id, URLMapState state = null, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -532,7 +498,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -544,7 +510,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -573,7 +539,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/URLMap.cs/#L12" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/URLMap.cs/#L21" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

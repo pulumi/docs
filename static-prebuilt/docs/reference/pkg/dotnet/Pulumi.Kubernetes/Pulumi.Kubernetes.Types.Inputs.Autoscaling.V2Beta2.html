@@ -94,6 +94,10 @@ Kubernetes object.</p>
 automatically manages the replica count of any resource implementing the scale subresource
 based on the metrics specified.</p>
 </section>
+      <h4><a class="xref" href="Pulumi.Kubernetes.Types.Inputs.Autoscaling.V2Beta2.HorizontalPodAutoscalerBehaviorArgs.html">HorizontalPodAutoscalerBehaviorArgs</a></h4>
+      <section><p>HorizontalPodAutoscalerBehavior configures the scaling behavior of the target in both Up and
+Down directions (scaleUp and scaleDown fields respectively).</p>
+</section>
       <h4><a class="xref" href="Pulumi.Kubernetes.Types.Inputs.Autoscaling.V2Beta2.HorizontalPodAutoscalerConditionArgs.html">HorizontalPodAutoscalerConditionArgs</a></h4>
       <section><p>HorizontalPodAutoscalerCondition describes the state of a HorizontalPodAutoscaler at a
 certain point.</p>
@@ -107,6 +111,16 @@ HorizontalPodAutoscaler.</p>
 </section>
       <h4><a class="xref" href="Pulumi.Kubernetes.Types.Inputs.Autoscaling.V2Beta2.HorizontalPodAutoscalerStatusArgs.html">HorizontalPodAutoscalerStatusArgs</a></h4>
       <section><p>HorizontalPodAutoscalerStatus describes the current status of a horizontal pod autoscaler.</p>
+</section>
+      <h4><a class="xref" href="Pulumi.Kubernetes.Types.Inputs.Autoscaling.V2Beta2.HPAScalingPolicyArgs.html">HPAScalingPolicyArgs</a></h4>
+      <section><p>HPAScalingPolicy is a single policy which must hold true for a specified past interval.</p>
+</section>
+      <h4><a class="xref" href="Pulumi.Kubernetes.Types.Inputs.Autoscaling.V2Beta2.HPAScalingRulesArgs.html">HPAScalingRulesArgs</a></h4>
+      <section><p>HPAScalingRules configures the scaling behavior for one direction. These Rules are applied
+after calculating DesiredReplicas from metrics for the HPA. They can limit the scaling
+velocity by specifying scaling policies. They can prevent flapping by specifying the
+stabilization window, so that the number of replicas is not set instantly, instead, the
+safest value from the stabilization window is chosen.</p>
 </section>
       <h4><a class="xref" href="Pulumi.Kubernetes.Types.Inputs.Autoscaling.V2Beta2.MetricIdentifierArgs.html">MetricIdentifierArgs</a></h4>
       <section><p>MetricIdentifier defines the name and optionally selector for a metric</p>

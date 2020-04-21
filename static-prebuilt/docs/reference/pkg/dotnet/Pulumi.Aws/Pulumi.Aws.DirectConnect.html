@@ -78,9 +78,6 @@
   </h3>
       <h4><a class="xref" href="Pulumi.Aws.DirectConnect.BgpPeer.html">BgpPeer</a></h4>
       <section><p>Provides a Direct Connect BGP peer resource.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dx_bgp_peer.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dx_bgp_peer.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.DirectConnect.BgpPeerArgs.html">BgpPeerArgs</a></h4>
       <section></section>
@@ -88,17 +85,11 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.DirectConnect.Connection.html">Connection</a></h4>
       <section><p>Provides a Connection of Direct Connect.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dx_connection.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dx_connection.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.DirectConnect.ConnectionArgs.html">ConnectionArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.DirectConnect.ConnectionAssociation.html">ConnectionAssociation</a></h4>
       <section><p>Associates a Direct Connect Connection with a LAG.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dx_connection_association.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dx_connection_association.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.DirectConnect.ConnectionAssociationArgs.html">ConnectionAssociationArgs</a></h4>
       <section></section>
@@ -108,9 +99,6 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.DirectConnect.Gateway.html">Gateway</a></h4>
       <section><p>Provides a Direct Connect Gateway.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dx_gateway.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dx_gateway.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.DirectConnect.GatewayArgs.html">GatewayArgs</a></h4>
       <section></section>
@@ -119,17 +107,11 @@
 <p>To create a cross-account association, create an <a href="https://www.terraform.io/docs/providers/aws/r/dx_gateway_association_proposal.html"><code>aws.directconnect.GatewayAssociationProposal</code> resource</a>
 in the AWS account that owns the VGW or transit gateway and then accept the proposal in the AWS account that owns the Direct Connect Gateway
 by creating an <code>aws.directconnect.GatewayAssociation</code> resource with the <code>proposal_id</code> and <code>associated_gateway_owner_account_id</code> attributes set.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dx_gateway_association.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dx_gateway_association.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.DirectConnect.GatewayAssociationArgs.html">GatewayAssociationArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.DirectConnect.GatewayAssociationProposal.html">GatewayAssociationProposal</a></h4>
       <section><p>Manages a Direct Connect Gateway Association Proposal, typically for enabling cross-account associations. For single account associations, see the <a href="https://www.terraform.io/docs/providers/aws/r/dx_gateway_association.html"><code>aws.directconnect.GatewayAssociation</code> resource</a>.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dx_gateway_association_proposal.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dx_gateway_association_proposal.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.DirectConnect.GatewayAssociationProposalArgs.html">GatewayAssociationProposalArgs</a></h4>
       <section></section>
@@ -139,6 +121,8 @@ by creating an <code>aws.directconnect.GatewayAssociation</code> resource with t
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.DirectConnect.GatewayState.html">GatewayState</a></h4>
       <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.DirectConnect.GetGateway.html">GetGateway</a></h4>
+      <section></section>
       <h4><a class="xref" href="Pulumi.Aws.DirectConnect.GetGatewayArgs.html">GetGatewayArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.DirectConnect.GetGatewayResult.html">GetGatewayResult</a></h4>
@@ -146,16 +130,10 @@ by creating an <code>aws.directconnect.GatewayAssociation</code> resource with t
       <h4><a class="xref" href="Pulumi.Aws.DirectConnect.HostedPrivateVirtualInterface.html">HostedPrivateVirtualInterface</a></h4>
       <section><p>Provides a Direct Connect hosted private virtual interface resource. This resource represents the allocator's side of the hosted virtual interface.
 A hosted virtual interface is a virtual interface that is owned by another AWS account.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dx_hosted_private_virtual_interface.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dx_hosted_private_virtual_interface.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.DirectConnect.HostedPrivateVirtualInterfaceAccepter.html">HostedPrivateVirtualInterfaceAccepter</a></h4>
       <section><p>Provides a resource to manage the accepter's side of a Direct Connect hosted private virtual interface.
 This resource accepts ownership of a private virtual interface created by another AWS account.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dx_hosted_private_virtual_interface_accepter.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dx_hosted_private_virtual_interface_accepter.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.DirectConnect.HostedPrivateVirtualInterfaceAccepterArgs.html">HostedPrivateVirtualInterfaceAccepterArgs</a></h4>
       <section></section>
@@ -168,16 +146,10 @@ This resource accepts ownership of a private virtual interface created by anothe
       <h4><a class="xref" href="Pulumi.Aws.DirectConnect.HostedPublicVirtualInterface.html">HostedPublicVirtualInterface</a></h4>
       <section><p>Provides a Direct Connect hosted public virtual interface resource. This resource represents the allocator's side of the hosted virtual interface.
 A hosted virtual interface is a virtual interface that is owned by another AWS account.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dx_hosted_public_virtual_interface.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dx_hosted_public_virtual_interface.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.DirectConnect.HostedPublicVirtualInterfaceAccepter.html">HostedPublicVirtualInterfaceAccepter</a></h4>
       <section><p>Provides a resource to manage the accepter's side of a Direct Connect hosted public virtual interface.
 This resource accepts ownership of a public virtual interface created by another AWS account.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dx_hosted_public_virtual_interface_accepter.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dx_hosted_public_virtual_interface_accepter.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.DirectConnect.HostedPublicVirtualInterfaceAccepterArgs.html">HostedPublicVirtualInterfaceAccepterArgs</a></h4>
       <section></section>
@@ -191,12 +163,14 @@ This resource accepts ownership of a public virtual interface created by another
       <section><p>Provides a Direct Connect hosted transit virtual interface resource.
 This resource represents the allocator's side of the hosted virtual interface.
 A hosted virtual interface is a virtual interface that is owned by another AWS account.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dx_hosted_transit_virtual_interface.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dx_hosted_transit_virtual_interface.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.DirectConnect.HostedTransitVirtualInterfaceAcceptor.html">HostedTransitVirtualInterfaceAcceptor</a></h4>
-      <section></section>
+      <section><p>Provides a resource to manage the accepter's side of a Direct Connect hosted transit virtual interface.
+This resource accepts ownership of a transit virtual interface created by another AWS account.</p>
+<blockquote>
+<p><strong>NOTE:</strong> AWS allows a Direct Connect hosted transit virtual interface to be deleted from either the allocator's or accepter's side. However, this provider only allows the Direct Connect hosted transit virtual interface to be deleted from the allocator's side by removing the corresponding <code>aws.directconnect.HostedTransitVirtualInterface</code> resource from your configuration. Removing a <code>aws.directconnect.HostedTransitVirtualInterfaceAcceptor</code> resource from your configuration will remove it from your statefile and management, <strong>but will not delete the Direct Connect virtual interface.</strong></p>
+</blockquote>
+</section>
       <h4><a class="xref" href="Pulumi.Aws.DirectConnect.HostedTransitVirtualInterfaceAcceptorArgs.html">HostedTransitVirtualInterfaceAcceptorArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.DirectConnect.HostedTransitVirtualInterfaceAcceptorState.html">HostedTransitVirtualInterfaceAcceptorState</a></h4>
@@ -205,15 +179,10 @@ A hosted virtual interface is a virtual interface that is owned by another AWS a
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.DirectConnect.HostedTransitVirtualInterfaceState.html">HostedTransitVirtualInterfaceState</a></h4>
       <section></section>
-      <h4><a class="xref" href="Pulumi.Aws.DirectConnect.Invokes.html">Invokes</a></h4>
-      <section></section>
       <h4><a class="xref" href="Pulumi.Aws.DirectConnect.LinkAggregationGroup.html">LinkAggregationGroup</a></h4>
       <section><p>Provides a Direct Connect LAG. Connections can be added to the LAG via the <a href="https://www.terraform.io/docs/providers/aws/r/dx_connection.html"><code>aws.directconnect.Connection</code></a> and <a href="https://www.terraform.io/docs/providers/aws/r/dx_connection_association.html"><code>aws.directconnect.ConnectionAssociation</code></a> resources.</p>
 <blockquote>
 <p><em>NOTE:</em> When creating a LAG, Direct Connect requires creating a Connection. This provider will remove this unmanaged connection during resource creation.</p>
-</blockquote>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dx_lag.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dx_lag.html.markdown</a>.</p>
 </blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.DirectConnect.LinkAggregationGroupArgs.html">LinkAggregationGroupArgs</a></h4>
@@ -222,9 +191,6 @@ A hosted virtual interface is a virtual interface that is owned by another AWS a
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.DirectConnect.PrivateVirtualInterface.html">PrivateVirtualInterface</a></h4>
       <section><p>Provides a Direct Connect private virtual interface resource.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dx_private_virtual_interface.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dx_private_virtual_interface.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.DirectConnect.PrivateVirtualInterfaceArgs.html">PrivateVirtualInterfaceArgs</a></h4>
       <section></section>
@@ -232,9 +198,6 @@ A hosted virtual interface is a virtual interface that is owned by another AWS a
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.DirectConnect.PublicVirtualInterface.html">PublicVirtualInterface</a></h4>
       <section><p>Provides a Direct Connect public virtual interface resource.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dx_public_virtual_interface.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dx_public_virtual_interface.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.DirectConnect.PublicVirtualInterfaceArgs.html">PublicVirtualInterfaceArgs</a></h4>
       <section></section>
@@ -243,9 +206,6 @@ A hosted virtual interface is a virtual interface that is owned by another AWS a
       <h4><a class="xref" href="Pulumi.Aws.DirectConnect.TransitVirtualInterface.html">TransitVirtualInterface</a></h4>
       <section><p>Provides a Direct Connect transit virtual interface resource.
 A transit virtual interface is a VLAN that transports traffic from a Direct Connect gateway to one or more transit gateways.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dx_transit_virtual_interface.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dx_transit_virtual_interface.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.DirectConnect.TransitVirtualInterfaceArgs.html">TransitVirtualInterfaceArgs</a></h4>
       <section></section>

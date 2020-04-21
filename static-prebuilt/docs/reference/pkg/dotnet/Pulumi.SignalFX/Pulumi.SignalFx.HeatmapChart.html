@@ -72,9 +72,6 @@
   <h1 id="Pulumi_SignalFx_HeatmapChart" data-uid="Pulumi.SignalFx.HeatmapChart" class="text-break">Class HeatmapChart
   </h1>
   <div class="markdown level0 summary"><p>This chart type displays the specified plot in a heatmap fashion. This format is similar to the <a href="https://signalfx-product-docs.readthedocs-hosted.com/en/latest/built-in-content/infra-nav.html#infra">Infrastructure Navigator</a>, with squares representing each source for the selected metric, and the color of each square representing the value range of the metric.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-signalfx/blob/master/website/docs/r/heatmap_chart.html.markdown">https://github.com/terraform-providers/terraform-provider-signalfx/blob/master/website/docs/r/heatmap_chart.html.markdown</a>.</p>
-</blockquote>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -91,7 +88,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/HeatmapChart.cs/#L110">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/d4472048557dab7779ed8888ed156d31ff9205d0/sdk/dotnet/HeatmapChart.cs/#L109">View Source</a>
   </span>
   <a id="Pulumi_SignalFx_HeatmapChart__ctor_" data-uid="Pulumi.SignalFx.HeatmapChart.#ctor*"></a>
   <h4 id="Pulumi_SignalFx_HeatmapChart__ctor_System_String_Pulumi_SignalFx_HeatmapChartArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.SignalFx.HeatmapChart.#ctor(System.String,Pulumi.SignalFx.HeatmapChartArgs,System.Nullable{CustomResourceOptions})">HeatmapChart(String, HeatmapChartArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
@@ -135,7 +132,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/HeatmapChart.cs/#L21">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/d4472048557dab7779ed8888ed156d31ff9205d0/sdk/dotnet/HeatmapChart.cs/#L20">View Source</a>
   </span>
   <a id="Pulumi_SignalFx_HeatmapChart_ColorRange_" data-uid="Pulumi.SignalFx.HeatmapChart.ColorRange*"></a>
   <h4 id="Pulumi_SignalFx_HeatmapChart_ColorRange" data-uid="Pulumi.SignalFx.HeatmapChart.ColorRange">ColorRange</h4>
@@ -162,16 +159,16 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/HeatmapChart.cs/#L27">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/d4472048557dab7779ed8888ed156d31ff9205d0/sdk/dotnet/HeatmapChart.cs/#L26">View Source</a>
   </span>
   <a id="Pulumi_SignalFx_HeatmapChart_ColorScales_" data-uid="Pulumi.SignalFx.HeatmapChart.ColorScales*"></a>
   <h4 id="Pulumi_SignalFx_HeatmapChart_ColorScales" data-uid="Pulumi.SignalFx.HeatmapChart.ColorScales">ColorScales</h4>
-  <div class="markdown level1 summary"><p>Single color range including both the color to display for that range and the borders of the range. Example: <code>[{ gt = 60, color = &amp;quot;blue&amp;quot; }, { lte = 60, color = &amp;quot;yellow&amp;quot; }]</code>. Look at this <a href="https://docs.signalfx.com/en/latest/charts/chart-options-tab.html">link</a>.</p>
+  <div class="markdown level1 summary"><p>One to N blocks, each defining a single color range including both the color to display for that range and the borders of the range. Example: <code>color_scale { gt = 60, color = &amp;quot;blue&amp;quot; } color_scale { lte = 60, color = &amp;quot;yellow&amp;quot; }</code>. Look at this <a href="https://docs.signalfx.com/en/latest/charts/chart-options-tab.html">link</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;HeatmapChartColorScales&gt;&gt; ColorScales { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;HeatmapChartColorScale&gt;&gt; ColorScales { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -183,13 +180,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.SignalFx.Outputs.HeatmapChartColorScales.html">HeatmapChartColorScales</a>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.SignalFx.Outputs.HeatmapChartColorScale.html">HeatmapChartColorScale</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/HeatmapChart.cs/#L33">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/d4472048557dab7779ed8888ed156d31ff9205d0/sdk/dotnet/HeatmapChart.cs/#L32">View Source</a>
   </span>
   <a id="Pulumi_SignalFx_HeatmapChart_Description_" data-uid="Pulumi.SignalFx.HeatmapChart.Description*"></a>
   <h4 id="Pulumi_SignalFx_HeatmapChart_Description" data-uid="Pulumi.SignalFx.HeatmapChart.Description">Description</h4>
@@ -216,7 +213,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/HeatmapChart.cs/#L39">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/d4472048557dab7779ed8888ed156d31ff9205d0/sdk/dotnet/HeatmapChart.cs/#L38">View Source</a>
   </span>
   <a id="Pulumi_SignalFx_HeatmapChart_DisableSampling_" data-uid="Pulumi.SignalFx.HeatmapChart.DisableSampling*"></a>
   <h4 id="Pulumi_SignalFx_HeatmapChart_DisableSampling" data-uid="Pulumi.SignalFx.HeatmapChart.DisableSampling">DisableSampling</h4>
@@ -243,7 +240,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/HeatmapChart.cs/#L45">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/d4472048557dab7779ed8888ed156d31ff9205d0/sdk/dotnet/HeatmapChart.cs/#L44">View Source</a>
   </span>
   <a id="Pulumi_SignalFx_HeatmapChart_GroupBies_" data-uid="Pulumi.SignalFx.HeatmapChart.GroupBies*"></a>
   <h4 id="Pulumi_SignalFx_HeatmapChart_GroupBies" data-uid="Pulumi.SignalFx.HeatmapChart.GroupBies">GroupBies</h4>
@@ -270,7 +267,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/HeatmapChart.cs/#L51">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/d4472048557dab7779ed8888ed156d31ff9205d0/sdk/dotnet/HeatmapChart.cs/#L50">View Source</a>
   </span>
   <a id="Pulumi_SignalFx_HeatmapChart_HideTimestamp_" data-uid="Pulumi.SignalFx.HeatmapChart.HideTimestamp*"></a>
   <h4 id="Pulumi_SignalFx_HeatmapChart_HideTimestamp" data-uid="Pulumi.SignalFx.HeatmapChart.HideTimestamp">HideTimestamp</h4>
@@ -297,7 +294,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/HeatmapChart.cs/#L57">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/d4472048557dab7779ed8888ed156d31ff9205d0/sdk/dotnet/HeatmapChart.cs/#L56">View Source</a>
   </span>
   <a id="Pulumi_SignalFx_HeatmapChart_MaxDelay_" data-uid="Pulumi.SignalFx.HeatmapChart.MaxDelay*"></a>
   <h4 id="Pulumi_SignalFx_HeatmapChart_MaxDelay" data-uid="Pulumi.SignalFx.HeatmapChart.MaxDelay">MaxDelay</h4>
@@ -324,7 +321,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/HeatmapChart.cs/#L63">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/d4472048557dab7779ed8888ed156d31ff9205d0/sdk/dotnet/HeatmapChart.cs/#L62">View Source</a>
   </span>
   <a id="Pulumi_SignalFx_HeatmapChart_MinimumResolution_" data-uid="Pulumi.SignalFx.HeatmapChart.MinimumResolution*"></a>
   <h4 id="Pulumi_SignalFx_HeatmapChart_MinimumResolution" data-uid="Pulumi.SignalFx.HeatmapChart.MinimumResolution">MinimumResolution</h4>
@@ -351,7 +348,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/HeatmapChart.cs/#L69">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/d4472048557dab7779ed8888ed156d31ff9205d0/sdk/dotnet/HeatmapChart.cs/#L68">View Source</a>
   </span>
   <a id="Pulumi_SignalFx_HeatmapChart_Name_" data-uid="Pulumi.SignalFx.HeatmapChart.Name*"></a>
   <h4 id="Pulumi_SignalFx_HeatmapChart_Name" data-uid="Pulumi.SignalFx.HeatmapChart.Name">Name</h4>
@@ -378,7 +375,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/HeatmapChart.cs/#L75">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/d4472048557dab7779ed8888ed156d31ff9205d0/sdk/dotnet/HeatmapChart.cs/#L74">View Source</a>
   </span>
   <a id="Pulumi_SignalFx_HeatmapChart_ProgramText_" data-uid="Pulumi.SignalFx.HeatmapChart.ProgramText*"></a>
   <h4 id="Pulumi_SignalFx_HeatmapChart_ProgramText" data-uid="Pulumi.SignalFx.HeatmapChart.ProgramText">ProgramText</h4>
@@ -405,7 +402,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/HeatmapChart.cs/#L81">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/d4472048557dab7779ed8888ed156d31ff9205d0/sdk/dotnet/HeatmapChart.cs/#L80">View Source</a>
   </span>
   <a id="Pulumi_SignalFx_HeatmapChart_RefreshInterval_" data-uid="Pulumi.SignalFx.HeatmapChart.RefreshInterval*"></a>
   <h4 id="Pulumi_SignalFx_HeatmapChart_RefreshInterval" data-uid="Pulumi.SignalFx.HeatmapChart.RefreshInterval">RefreshInterval</h4>
@@ -432,7 +429,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/HeatmapChart.cs/#L87">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/d4472048557dab7779ed8888ed156d31ff9205d0/sdk/dotnet/HeatmapChart.cs/#L86">View Source</a>
   </span>
   <a id="Pulumi_SignalFx_HeatmapChart_SortBy_" data-uid="Pulumi.SignalFx.HeatmapChart.SortBy*"></a>
   <h4 id="Pulumi_SignalFx_HeatmapChart_SortBy" data-uid="Pulumi.SignalFx.HeatmapChart.SortBy">SortBy</h4>
@@ -459,7 +456,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/HeatmapChart.cs/#L93">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/d4472048557dab7779ed8888ed156d31ff9205d0/sdk/dotnet/HeatmapChart.cs/#L92">View Source</a>
   </span>
   <a id="Pulumi_SignalFx_HeatmapChart_UnitPrefix_" data-uid="Pulumi.SignalFx.HeatmapChart.UnitPrefix*"></a>
   <h4 id="Pulumi_SignalFx_HeatmapChart_UnitPrefix" data-uid="Pulumi.SignalFx.HeatmapChart.UnitPrefix">UnitPrefix</h4>
@@ -486,7 +483,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/HeatmapChart.cs/#L99">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/d4472048557dab7779ed8888ed156d31ff9205d0/sdk/dotnet/HeatmapChart.cs/#L98">View Source</a>
   </span>
   <a id="Pulumi_SignalFx_HeatmapChart_Url_" data-uid="Pulumi.SignalFx.HeatmapChart.Url*"></a>
   <h4 id="Pulumi_SignalFx_HeatmapChart_Url" data-uid="Pulumi.SignalFx.HeatmapChart.Url">Url</h4>
@@ -515,7 +512,7 @@
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/HeatmapChart.cs/#L140">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/d4472048557dab7779ed8888ed156d31ff9205d0/sdk/dotnet/HeatmapChart.cs/#L139">View Source</a>
   </span>
   <a id="Pulumi_SignalFx_HeatmapChart_Get_" data-uid="Pulumi.SignalFx.HeatmapChart.Get*"></a>
   <h4 id="Pulumi_SignalFx_HeatmapChart_Get_System_String_Input_System_String__Pulumi_SignalFx_HeatmapChartState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.SignalFx.HeatmapChart.Get(System.String,Input{System.String},Pulumi.SignalFx.HeatmapChartState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, HeatmapChartState, Nullable&lt;CustomResourceOptions&gt;)</h4>
@@ -585,7 +582,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/HeatmapChart.cs/#L16" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-signalfx/blob/d4472048557dab7779ed8888ed156d31ff9205d0/sdk/dotnet/HeatmapChart.cs/#L15" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -90,9 +90,6 @@
 <li><code>attribute_friendly_name</code> - (Optional) The friendly name of attribute to search for in assertion.  You can leave this blank and specify an attribute name instead.</li>
 <li><code>claim_name</code> - (Optional) The claim name.</li>
 </ul>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/attribute_importer_identity_provider_mapper.html.markdown">https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/attribute_importer_identity_provider_mapper.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Keycloak.AttributeImporterIdentityProviderMapperArgs.html">AttributeImporterIdentityProviderMapperArgs</a></h4>
       <section></section>
@@ -107,10 +104,7 @@
       <h4><a class="xref" href="Pulumi.Keycloak.Config.html">Config</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Keycloak.CustomUserFederation.html">CustomUserFederation</a></h4>
-      <section><blockquote>
-<p>This content is derived from <a href="https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/custom_user_federation.html.markdown">https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/custom_user_federation.html.markdown</a>.</p>
-</blockquote>
-</section>
+      <section></section>
       <h4><a class="xref" href="Pulumi.Keycloak.CustomUserFederationArgs.html">CustomUserFederationArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Keycloak.CustomUserFederationState.html">CustomUserFederationState</a></h4>
@@ -126,9 +120,6 @@ by <code>keycloak..GroupMemberships</code>.</p>
 <li><code>realm_id</code> - (Required) The realm this group exists in.</li>
 <li><code>group_ids</code> - (Required) A set of group ids that should be default groups on the realm referenced by <code>realm_id</code>.</li>
 </ul>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/default_groups.html.markdown">https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/default_groups.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Keycloak.DefaultGroupsArgs.html">DefaultGroupsArgs</a></h4>
       <section></section>
@@ -155,9 +146,6 @@ Therefore, if possible, a specific mapper should be used.</p>
 compatible with the specified client.</li>
 <li><code>config</code> - (Required) A map with key / value pairs for configuring the protocol mapper. The supported keys depends on the protocol mapper.</li>
 </ul>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/generic_client_protocol_mapper.html.markdown">https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/generic_client_protocol_mapper.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Keycloak.GenericClientProtocolMapperArgs.html">GenericClientProtocolMapperArgs</a></h4>
       <section></section>
@@ -169,17 +157,25 @@ compatible with the specified client.</li>
       <section></section>
       <h4><a class="xref" href="Pulumi.Keycloak.GenericClientRoleMapperState.html">GenericClientRoleMapperState</a></h4>
       <section></section>
+      <h4><a class="xref" href="Pulumi.Keycloak.GetGroup.html">GetGroup</a></h4>
+      <section></section>
       <h4><a class="xref" href="Pulumi.Keycloak.GetGroupArgs.html">GetGroupArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Keycloak.GetGroupResult.html">GetGroupResult</a></h4>
       <section></section>
+      <h4><a class="xref" href="Pulumi.Keycloak.GetRealm.html">GetRealm</a></h4>
+      <section></section>
       <h4><a class="xref" href="Pulumi.Keycloak.GetRealmArgs.html">GetRealmArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Keycloak.GetRealmKeys.html">GetRealmKeys</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Keycloak.GetRealmKeysArgs.html">GetRealmKeysArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Keycloak.GetRealmKeysResult.html">GetRealmKeysResult</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Keycloak.GetRealmResult.html">GetRealmResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Keycloak.GetRole.html">GetRole</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Keycloak.GetRoleArgs.html">GetRoleArgs</a></h4>
       <section></section>
@@ -207,26 +203,17 @@ This resource <strong>should not</strong> be used to manage groups that were cre
 <ul>
 <li><code>path</code> - The complete path of the group. For example, the child group's path in the example configuration would be <code>/parent-group/child-group</code>.</li>
 </ul>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/group.html.markdown">https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/group.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Keycloak.GroupArgs.html">GroupArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Keycloak.GroupMemberships.html">GroupMemberships</a></h4>
-      <section><blockquote>
-<p>This content is derived from <a href="https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/group_memberships.html.markdown">https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/group_memberships.html.markdown</a>.</p>
-</blockquote>
-</section>
+      <section></section>
       <h4><a class="xref" href="Pulumi.Keycloak.GroupMembershipsArgs.html">GroupMembershipsArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Keycloak.GroupMembershipsState.html">GroupMembershipsState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Keycloak.GroupRoles.html">GroupRoles</a></h4>
-      <section><blockquote>
-<p>This content is derived from <a href="https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/group_roles.html.markdown">https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/group_roles.html.markdown</a>.</p>
-</blockquote>
-</section>
+      <section></section>
       <h4><a class="xref" href="Pulumi.Keycloak.GroupRolesArgs.html">GroupRolesArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Keycloak.GroupRolesState.html">GroupRolesState</a></h4>
@@ -245,24 +232,16 @@ This resource <strong>should not</strong> be used to manage groups that were cre
       <section></section>
       <h4><a class="xref" href="Pulumi.Keycloak.HardcodedRoleIdentityMapperState.html">HardcodedRoleIdentityMapperState</a></h4>
       <section></section>
-      <h4><a class="xref" href="Pulumi.Keycloak.Invokes.html">Invokes</a></h4>
-      <section></section>
       <h4><a class="xref" href="Pulumi.Keycloak.Provider.html">Provider</a></h4>
       <section><p>The provider type for the keycloak package. By default, resources use package-wide configuration
 settings, however an explicit <code>Provider</code> instance may be created and passed during resource
 construction to achieve fine-grained programmatic control over provider settings. See the
 <a href="https://www.pulumi.com/docs/reference/programming-model/#providers">documentation</a> for more information.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/index.html.markdown">https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/index.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Keycloak.ProviderArgs.html">ProviderArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Keycloak.Realm.html">Realm</a></h4>
-      <section><blockquote>
-<p>This content is derived from <a href="https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/realm.html.markdown">https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/realm.html.markdown</a>.</p>
-</blockquote>
-</section>
+      <section></section>
       <h4><a class="xref" href="Pulumi.Keycloak.RealmArgs.html">RealmArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Keycloak.RealmEvents.html">RealmEvents</a></h4>
@@ -279,9 +258,6 @@ construction to achieve fine-grained programmatic control over provider settings
 <li><code>enabled_event_types</code> - (Optional) The event types that will be saved to the database. Omitting this field enables all event types. Defaults to <code>[]</code> or all event types.</li>
 <li><code>events_listeners</code> - (Optional) The event listeners that events should be sent to. Defaults to <code>[]</code> or none. Note that new realms enable the <code>jboss-logging</code> listener by default, and this resource will remove that unless it is specified.</li>
 </ul>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/realm_events.html.markdown">https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/realm_events.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Keycloak.RealmEventsArgs.html">RealmEventsArgs</a></h4>
       <section></section>
@@ -312,9 +288,6 @@ a client role attached to the client with the provided ID</li>
 composite role, composed of all roles that have an ID present within
 this list.</li>
 </ul>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/role.html.markdown">https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/role.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Keycloak.RoleArgs.html">RoleArgs</a></h4>
       <section></section>
@@ -340,9 +313,6 @@ This attribute is only respected during initial user creation.</li>
 <li><code>first_name</code> - (Optional) The user's first name.</li>
 <li><code>last_name</code> - (Optional) The user's last name.</li>
 </ul>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/user.html.markdown">https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/user.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Keycloak.UserArgs.html">UserArgs</a></h4>
       <section></section>

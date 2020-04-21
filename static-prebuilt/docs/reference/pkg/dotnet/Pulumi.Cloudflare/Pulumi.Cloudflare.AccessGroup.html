@@ -84,12 +84,72 @@ conditions which can be applied. The conditions are:</p>
 <code>email = [&amp;quot;test@example.com&amp;quot;]</code></li>
 <li><code>email_domain</code> - (Optional) A list of email domains. Example:
 <code>email_domain = [&amp;quot;example.com&amp;quot;]</code></li>
+<li><code>service_token</code> - (Optional) A list of service token ids. Example:
+<code>service_token = cloudflare_access_service_token.demo.id</code></li>
+<li><code>any_valid_service_token</code> - (Optional) Boolean indicating if allow
+all tokens to be granted. Example: <code>any_valid_service_token = true</code></li>
+<li><code>group</code> - (Optional) A list of access group ids. Example:
+<code>group = [cloudflare_access_group.demo.id]</code></li>
 <li><code>everyone</code> - (Optional) Boolean indicating permitting access for all
 requests. Example: <code>everyone = true</code></li>
+<li><code>certificate</code> - (Optional) Whether to use mTLS certificate authentication.</li>
+<li><code>common_name</code> - (Optional) Use a certificate common name to authenticate with.</li>
+<li><code>gsuite</code> - (Optional) Use GSuite as the authentication mechanism. Example:</li>
 </ul>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/access_group.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/access_group.html.markdown</a>.</p>
-</blockquote>
+<pre><code class="lang-hcl"># ... other configuration
+include {
+gsuite {
+  email = &amp;quot;admins@example.com&amp;quot;
+  identity_provider_id = &amp;quot;ca298b82-93b5-41bf-bc2d-10493f09b761&amp;quot;
+}
+}
+</code></pre>
+<ul>
+<li><code>github</code> - (Optional) Use a GitHub team as the <code>include</code> condition. Example:</li>
+</ul>
+<pre><code class="lang-hcl"># ... other configuration
+include {
+github {
+  name = &amp;quot;my-github-team-name&amp;quot;
+  identity_provider_id = &amp;quot;ca298b82-93b5-41bf-bc2d-10493f09b761&amp;quot;
+}
+}
+</code></pre>
+<ul>
+<li><code>azure</code> - (Optional) Use Azure AD as the <code>include</code> condition. Example:</li>
+</ul>
+<pre><code class="lang-hcl"># ... other configuration
+include {
+azure {
+  id = &amp;quot;86773093-5feb-48dd-814b-7ccd3676ff50e&amp;quot;
+  identity_provider_id = &amp;quot;ca298b82-93b5-41bf-bc2d-10493f09b761&amp;quot;
+}
+}
+</code></pre>
+<ul>
+<li><code>okta</code> - (Optional) Use Okta as the <code>include</code> condition. Example:</li>
+</ul>
+<pre><code class="lang-hcl"># ... other configuration
+include {
+okta {
+  name = &amp;quot;admins&amp;quot;
+  identity_provider_id = &amp;quot;ca298b82-93b5-41bf-bc2d-10493f09b761&amp;quot;
+}
+}
+</code></pre>
+<ul>
+<li><code>saml</code> - (Optional) Use an external SAML setup as the <code>include</code> condition.
+Example:</li>
+</ul>
+<pre><code class="lang-hcl"># ... other configuration
+include {
+saml {
+  attribute_name = &amp;quot;group&amp;quot;
+  attribute_value = &amp;quot;admins&amp;quot;
+  identity_provider_id = &amp;quot;ca298b82-93b5-41bf-bc2d-10493f09b761&amp;quot;
+}
+}
+</code></pre>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -106,7 +166,7 @@ requests. Example: <code>everyone = true</code></li>
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/AccessGroup.cs/#L76">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/0bd9f04c975555418218058637580df6ba1cba25/sdk/dotnet/AccessGroup.cs/#L141">View Source</a>
   </span>
   <a id="Pulumi_Cloudflare_AccessGroup__ctor_" data-uid="Pulumi.Cloudflare.AccessGroup.#ctor*"></a>
   <h4 id="Pulumi_Cloudflare_AccessGroup__ctor_System_String_Pulumi_Cloudflare_AccessGroupArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Cloudflare.AccessGroup.#ctor(System.String,Pulumi.Cloudflare.AccessGroupArgs,System.Nullable{CustomResourceOptions})">AccessGroup(String, AccessGroupArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
@@ -150,7 +210,7 @@ requests. Example: <code>everyone = true</code></li>
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/AccessGroup.cs/#L38">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/0bd9f04c975555418218058637580df6ba1cba25/sdk/dotnet/AccessGroup.cs/#L103">View Source</a>
   </span>
   <a id="Pulumi_Cloudflare_AccessGroup_AccountId_" data-uid="Pulumi.Cloudflare.AccessGroup.AccountId*"></a>
   <h4 id="Pulumi_Cloudflare_AccessGroup_AccountId" data-uid="Pulumi.Cloudflare.AccessGroup.AccountId">AccountId</h4>
@@ -178,7 +238,7 @@ associated with.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/AccessGroup.cs/#L45">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/0bd9f04c975555418218058637580df6ba1cba25/sdk/dotnet/AccessGroup.cs/#L110">View Source</a>
   </span>
   <a id="Pulumi_Cloudflare_AccessGroup_Excludes_" data-uid="Pulumi.Cloudflare.AccessGroup.Excludes*"></a>
   <h4 id="Pulumi_Cloudflare_AccessGroup_Excludes" data-uid="Pulumi.Cloudflare.AccessGroup.Excludes">Excludes</h4>
@@ -188,7 +248,7 @@ full list.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;AccessGroupExcludes&gt;&gt; Excludes { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;AccessGroupExclude&gt;&gt; Excludes { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -200,13 +260,13 @@ full list.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Cloudflare.Outputs.AccessGroupExcludes.html">AccessGroupExcludes</a>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Cloudflare.Outputs.AccessGroupExclude.html">AccessGroupExclude</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/AccessGroup.cs/#L52">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/0bd9f04c975555418218058637580df6ba1cba25/sdk/dotnet/AccessGroup.cs/#L117">View Source</a>
   </span>
   <a id="Pulumi_Cloudflare_AccessGroup_Includes_" data-uid="Pulumi.Cloudflare.AccessGroup.Includes*"></a>
   <h4 id="Pulumi_Cloudflare_AccessGroup_Includes" data-uid="Pulumi.Cloudflare.AccessGroup.Includes">Includes</h4>
@@ -216,7 +276,7 @@ full list.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;AccessGroupIncludes&gt;&gt; Includes { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;AccessGroupInclude&gt;&gt; Includes { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -228,13 +288,13 @@ full list.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Cloudflare.Outputs.AccessGroupIncludes.html">AccessGroupIncludes</a>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Cloudflare.Outputs.AccessGroupInclude.html">AccessGroupInclude</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/AccessGroup.cs/#L58">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/0bd9f04c975555418218058637580df6ba1cba25/sdk/dotnet/AccessGroup.cs/#L123">View Source</a>
   </span>
   <a id="Pulumi_Cloudflare_AccessGroup_Name_" data-uid="Pulumi.Cloudflare.AccessGroup.Name*"></a>
   <h4 id="Pulumi_Cloudflare_AccessGroup_Name" data-uid="Pulumi.Cloudflare.AccessGroup.Name">Name</h4>
@@ -261,7 +321,7 @@ full list.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/AccessGroup.cs/#L65">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/0bd9f04c975555418218058637580df6ba1cba25/sdk/dotnet/AccessGroup.cs/#L130">View Source</a>
   </span>
   <a id="Pulumi_Cloudflare_AccessGroup_Requires_" data-uid="Pulumi.Cloudflare.AccessGroup.Requires*"></a>
   <h4 id="Pulumi_Cloudflare_AccessGroup_Requires" data-uid="Pulumi.Cloudflare.AccessGroup.Requires">Requires</h4>
@@ -271,7 +331,7 @@ full list.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;AccessGroupRequires&gt;&gt; Requires { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;AccessGroupRequire&gt;&gt; Requires { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -283,7 +343,7 @@ full list.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Cloudflare.Outputs.AccessGroupRequires.html">AccessGroupRequires</a>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Cloudflare.Outputs.AccessGroupRequire.html">AccessGroupRequire</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -291,7 +351,7 @@ full list.</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/AccessGroup.cs/#L106">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/0bd9f04c975555418218058637580df6ba1cba25/sdk/dotnet/AccessGroup.cs/#L171">View Source</a>
   </span>
   <a id="Pulumi_Cloudflare_AccessGroup_Get_" data-uid="Pulumi.Cloudflare.AccessGroup.Get*"></a>
   <h4 id="Pulumi_Cloudflare_AccessGroup_Get_System_String_Input_System_String__Pulumi_Cloudflare_AccessGroupState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Cloudflare.AccessGroup.Get(System.String,Input{System.String},Pulumi.Cloudflare.AccessGroupState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, AccessGroupState, Nullable&lt;CustomResourceOptions&gt;)</h4>
@@ -361,7 +421,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/AccessGroup.cs/#L32" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/0bd9f04c975555418218058637580df6ba1cba25/sdk/dotnet/AccessGroup.cs/#L97" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

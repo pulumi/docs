@@ -76,36 +76,7 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
-    <div class="level3"><span class="xref">ClusterMasterAuthGetArgs</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">ClusterMasterAuthGetArgs</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.Container.Inputs.html">Pulumi.Gcp.Container.Inputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
@@ -116,7 +87,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/Cluster.cs/#L1716">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Inputs/ClusterMasterAuthGetArgs.cs/#L44">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Container_Inputs_ClusterMasterAuthGetArgs__ctor_" data-uid="Pulumi.Gcp.Container.Inputs.ClusterMasterAuthGetArgs.#ctor*"></a>
   <h4 id="Pulumi_Gcp_Container_Inputs_ClusterMasterAuthGetArgs__ctor" data-uid="Pulumi.Gcp.Container.Inputs.ClusterMasterAuthGetArgs.#ctor">ClusterMasterAuthGetArgs()</h4>
@@ -129,7 +100,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/Cluster.cs/#L1698">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Inputs/ClusterMasterAuthGetArgs.cs/#L15">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Container_Inputs_ClusterMasterAuthGetArgs_ClientCertificate_" data-uid="Pulumi.Gcp.Container.Inputs.ClusterMasterAuthGetArgs.ClientCertificate*"></a>
   <h4 id="Pulumi_Gcp_Container_Inputs_ClusterMasterAuthGetArgs_ClientCertificate" data-uid="Pulumi.Gcp.Container.Inputs.ClusterMasterAuthGetArgs.ClientCertificate">ClientCertificate</h4>
@@ -137,7 +108,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; ClientCertificate { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? ClientCertificate { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -149,21 +120,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/Cluster.cs/#L1701">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Inputs/ClusterMasterAuthGetArgs.cs/#L21">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Container_Inputs_ClusterMasterAuthGetArgs_ClientCertificateConfig_" data-uid="Pulumi.Gcp.Container.Inputs.ClusterMasterAuthGetArgs.ClientCertificateConfig*"></a>
   <h4 id="Pulumi_Gcp_Container_Inputs_ClusterMasterAuthGetArgs_ClientCertificateConfig" data-uid="Pulumi.Gcp.Container.Inputs.ClusterMasterAuthGetArgs.ClientCertificateConfig">ClientCertificateConfig</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Whether client certificate authorization is enabled for this cluster.  For example:</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;ClusterMasterAuthClientCertificateConfigGetArgs&gt; ClientCertificateConfig { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;ClusterMasterAuthClientCertificateConfigGetArgs&gt;? ClientCertificateConfig { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -175,13 +147,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Gcp.Container.Inputs.ClusterMasterAuthClientCertificateConfigGetArgs.html">ClusterMasterAuthClientCertificateConfigGetArgs</a>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Gcp.Container.Inputs.ClusterMasterAuthClientCertificateConfigGetArgs.html">ClusterMasterAuthClientCertificateConfigGetArgs</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/Cluster.cs/#L1704">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Inputs/ClusterMasterAuthGetArgs.cs/#L24">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Container_Inputs_ClusterMasterAuthGetArgs_ClientKey_" data-uid="Pulumi.Gcp.Container.Inputs.ClusterMasterAuthGetArgs.ClientKey*"></a>
   <h4 id="Pulumi_Gcp_Container_Inputs_ClusterMasterAuthGetArgs_ClientKey" data-uid="Pulumi.Gcp.Container.Inputs.ClusterMasterAuthGetArgs.ClientKey">ClientKey</h4>
@@ -189,7 +161,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; ClientKey { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? ClientKey { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -201,13 +173,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/Cluster.cs/#L1707">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Inputs/ClusterMasterAuthGetArgs.cs/#L27">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Container_Inputs_ClusterMasterAuthGetArgs_ClusterCaCertificate_" data-uid="Pulumi.Gcp.Container.Inputs.ClusterMasterAuthGetArgs.ClusterCaCertificate*"></a>
   <h4 id="Pulumi_Gcp_Container_Inputs_ClusterMasterAuthGetArgs_ClusterCaCertificate" data-uid="Pulumi.Gcp.Container.Inputs.ClusterMasterAuthGetArgs.ClusterCaCertificate">ClusterCaCertificate</h4>
@@ -215,7 +187,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; ClusterCaCertificate { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? ClusterCaCertificate { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -227,21 +199,23 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/Cluster.cs/#L1710">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Inputs/ClusterMasterAuthGetArgs.cs/#L34">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Container_Inputs_ClusterMasterAuthGetArgs_Password_" data-uid="Pulumi.Gcp.Container.Inputs.ClusterMasterAuthGetArgs.Password*"></a>
   <h4 id="Pulumi_Gcp_Container_Inputs_ClusterMasterAuthGetArgs_Password" data-uid="Pulumi.Gcp.Container.Inputs.ClusterMasterAuthGetArgs.Password">Password</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The password to use for HTTP basic authentication when accessing
+the Kubernetes master endpoint.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Password { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Password { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -253,21 +227,23 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/Cluster.cs/#L1713">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Inputs/ClusterMasterAuthGetArgs.cs/#L41">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Container_Inputs_ClusterMasterAuthGetArgs_Username_" data-uid="Pulumi.Gcp.Container.Inputs.ClusterMasterAuthGetArgs.Username*"></a>
   <h4 id="Pulumi_Gcp_Container_Inputs_ClusterMasterAuthGetArgs_Username" data-uid="Pulumi.Gcp.Container.Inputs.ClusterMasterAuthGetArgs.Username">Username</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The username to use for HTTP basic authentication when accessing
+the Kubernetes master endpoint. If not present basic auth will be disabled.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Username { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Username { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -279,7 +255,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -291,7 +267,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/Cluster.cs/#L1696" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Inputs/ClusterMasterAuthGetArgs.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

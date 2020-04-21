@@ -76,36 +76,7 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
-    <div class="level3"><span class="xref">BackendServiceState</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">BackendServiceState</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.Compute.html">Pulumi.Gcp.Compute</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
@@ -116,7 +87,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/BackendService.cs/#L630">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/BackendService.cs/#L631">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_BackendServiceState__ctor_" data-uid="Pulumi.Gcp.Compute.BackendServiceState.#ctor*"></a>
   <h4 id="Pulumi_Gcp_Compute_BackendServiceState__ctor" data-uid="Pulumi.Gcp.Compute.BackendServiceState.#ctor">BackendServiceState()</h4>
@@ -129,18 +100,18 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/BackendService.cs/#L437">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/BackendService.cs/#L443">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_BackendServiceState_AffinityCookieTtlSec_" data-uid="Pulumi.Gcp.Compute.BackendServiceState.AffinityCookieTtlSec*"></a>
   <h4 id="Pulumi_Gcp_Compute_BackendServiceState_AffinityCookieTtlSec" data-uid="Pulumi.Gcp.Compute.BackendServiceState.AffinityCookieTtlSec">AffinityCookieTtlSec</h4>
-  <div class="markdown level1 summary"><p>Lifetime of cookies in seconds if session_affinity is GENERATED_COOKIE. If set to 0, the cookie is
-non-persistent and lasts only until the end of the browser session (or equivalent). The maximum allowed
-value for TTL is one day. When the load balancing scheme is INTERNAL, this field is not used.</p>
+  <div class="markdown level1 summary"><p>Lifetime of cookies in seconds if session_affinity is GENERATED_COOKIE. If set to 0, the cookie is non-persistent and
+lasts only until the end of the browser session (or equivalent). The maximum allowed value for TTL is one day. When the
+load balancing scheme is INTERNAL, this field is not used.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; AffinityCookieTtlSec { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? AffinityCookieTtlSec { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -152,13 +123,13 @@ value for TTL is one day. When the load balancing scheme is INTERNAL, this field
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/BackendService.cs/#L446">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/BackendService.cs/#L452">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_BackendServiceState_Backends_" data-uid="Pulumi.Gcp.Compute.BackendServiceState.Backends*"></a>
   <h4 id="Pulumi_Gcp_Compute_BackendServiceState_Backends" data-uid="Pulumi.Gcp.Compute.BackendServiceState.Backends">Backends</h4>
@@ -167,7 +138,7 @@ value for TTL is one day. When the load balancing scheme is INTERNAL, this field
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public InputList&lt;BackendServiceBackendsGetArgs&gt; Backends { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public InputList&lt;BackendServiceBackendGetArgs&gt; Backends { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -179,13 +150,13 @@ value for TTL is one day. When the load balancing scheme is INTERNAL, this field
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Inputs.BackendServiceBackendsGetArgs.html">BackendServiceBackendsGetArgs</a>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Inputs.BackendServiceBackendGetArgs.html">BackendServiceBackendGetArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/BackendService.cs/#L455">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/BackendService.cs/#L461">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_BackendServiceState_CdnPolicy_" data-uid="Pulumi.Gcp.Compute.BackendServiceState.CdnPolicy*"></a>
   <h4 id="Pulumi_Gcp_Compute_BackendServiceState_CdnPolicy" data-uid="Pulumi.Gcp.Compute.BackendServiceState.CdnPolicy">CdnPolicy</h4>
@@ -194,7 +165,7 @@ value for TTL is one day. When the load balancing scheme is INTERNAL, this field
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;BackendServiceCdnPolicyGetArgs&gt; CdnPolicy { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;BackendServiceCdnPolicyGetArgs&gt;? CdnPolicy { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -206,13 +177,13 @@ value for TTL is one day. When the load balancing scheme is INTERNAL, this field
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Inputs.BackendServiceCdnPolicyGetArgs.html">BackendServiceCdnPolicyGetArgs</a>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Inputs.BackendServiceCdnPolicyGetArgs.html">BackendServiceCdnPolicyGetArgs</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/BackendService.cs/#L462">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/BackendService.cs/#L468">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_BackendServiceState_CircuitBreakers_" data-uid="Pulumi.Gcp.Compute.BackendServiceState.CircuitBreakers*"></a>
   <h4 id="Pulumi_Gcp_Compute_BackendServiceState_CircuitBreakers" data-uid="Pulumi.Gcp.Compute.BackendServiceState.CircuitBreakers">CircuitBreakers</h4>
@@ -222,7 +193,7 @@ load_balancing_scheme is set to INTERNAL_SELF_MANAGED.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;BackendServiceCircuitBreakersGetArgs&gt; CircuitBreakers { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;BackendServiceCircuitBreakersGetArgs&gt;? CircuitBreakers { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -234,13 +205,13 @@ load_balancing_scheme is set to INTERNAL_SELF_MANAGED.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Inputs.BackendServiceCircuitBreakersGetArgs.html">BackendServiceCircuitBreakersGetArgs</a>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Inputs.BackendServiceCircuitBreakersGetArgs.html">BackendServiceCircuitBreakersGetArgs</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/BackendService.cs/#L468">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/BackendService.cs/#L474">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_BackendServiceState_ConnectionDrainingTimeoutSec_" data-uid="Pulumi.Gcp.Compute.BackendServiceState.ConnectionDrainingTimeoutSec*"></a>
   <h4 id="Pulumi_Gcp_Compute_BackendServiceState_ConnectionDrainingTimeoutSec" data-uid="Pulumi.Gcp.Compute.BackendServiceState.ConnectionDrainingTimeoutSec">ConnectionDrainingTimeoutSec</h4>
@@ -249,7 +220,7 @@ load_balancing_scheme is set to INTERNAL_SELF_MANAGED.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; ConnectionDrainingTimeoutSec { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? ConnectionDrainingTimeoutSec { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -261,27 +232,26 @@ load_balancing_scheme is set to INTERNAL_SELF_MANAGED.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/BackendService.cs/#L479">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/BackendService.cs/#L484">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_BackendServiceState_ConsistentHash_" data-uid="Pulumi.Gcp.Compute.BackendServiceState.ConsistentHash*"></a>
   <h4 id="Pulumi_Gcp_Compute_BackendServiceState_ConsistentHash" data-uid="Pulumi.Gcp.Compute.BackendServiceState.ConsistentHash">ConsistentHash</h4>
-  <div class="markdown level1 summary"><p>Consistent Hash-based load balancing can be used to provide soft session affinity based on HTTP headers,
-cookies or other properties. This load balancing policy is applicable only for HTTP connections. The
-affinity to a particular destination host will be lost when one or more hosts are added/removed from the
-destination service. This field specifies parameters that control consistent hashing. This field only
-applies if the load_balancing_scheme is set to INTERNAL_SELF_MANAGED. This field is only applicable when
-locality_lb_policy is set to MAGLEV or RING_HASH.</p>
+  <div class="markdown level1 summary"><p>Consistent Hash-based load balancing can be used to provide soft session affinity based on HTTP headers, cookies or
+other properties. This load balancing policy is applicable only for HTTP connections. The affinity to a particular
+destination host will be lost when one or more hosts are added/removed from the destination service. This field
+specifies parameters that control consistent hashing. This field only applies if the load_balancing_scheme is set to
+INTERNAL_SELF_MANAGED. This field is only applicable when locality_lb_policy is set to MAGLEV or RING_HASH.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;BackendServiceConsistentHashGetArgs&gt; ConsistentHash { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;BackendServiceConsistentHashGetArgs&gt;? ConsistentHash { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -293,13 +263,13 @@ locality_lb_policy is set to MAGLEV or RING_HASH.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Inputs.BackendServiceConsistentHashGetArgs.html">BackendServiceConsistentHashGetArgs</a>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Inputs.BackendServiceConsistentHashGetArgs.html">BackendServiceConsistentHashGetArgs</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/BackendService.cs/#L485">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/BackendService.cs/#L490">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_BackendServiceState_CreationTimestamp_" data-uid="Pulumi.Gcp.Compute.BackendServiceState.CreationTimestamp*"></a>
   <h4 id="Pulumi_Gcp_Compute_BackendServiceState_CreationTimestamp" data-uid="Pulumi.Gcp.Compute.BackendServiceState.CreationTimestamp">CreationTimestamp</h4>
@@ -308,7 +278,7 @@ locality_lb_policy is set to MAGLEV or RING_HASH.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; CreationTimestamp { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? CreationTimestamp { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -320,13 +290,13 @@ locality_lb_policy is set to MAGLEV or RING_HASH.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/BackendService.cs/#L494">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/BackendService.cs/#L499">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_BackendServiceState_CustomRequestHeaders_" data-uid="Pulumi.Gcp.Compute.BackendServiceState.CustomRequestHeaders*"></a>
   <h4 id="Pulumi_Gcp_Compute_BackendServiceState_CustomRequestHeaders" data-uid="Pulumi.Gcp.Compute.BackendServiceState.CustomRequestHeaders">CustomRequestHeaders</h4>
@@ -347,13 +317,13 @@ locality_lb_policy is set to MAGLEV or RING_HASH.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/BackendService.cs/#L503">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/BackendService.cs/#L508">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_BackendServiceState_Description_" data-uid="Pulumi.Gcp.Compute.BackendServiceState.Description*"></a>
   <h4 id="Pulumi_Gcp_Compute_BackendServiceState_Description" data-uid="Pulumi.Gcp.Compute.BackendServiceState.Description">Description</h4>
@@ -362,7 +332,7 @@ locality_lb_policy is set to MAGLEV or RING_HASH.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Description { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Description { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -374,13 +344,13 @@ locality_lb_policy is set to MAGLEV or RING_HASH.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/BackendService.cs/#L509">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/BackendService.cs/#L514">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_BackendServiceState_EnableCdn_" data-uid="Pulumi.Gcp.Compute.BackendServiceState.EnableCdn*"></a>
   <h4 id="Pulumi_Gcp_Compute_BackendServiceState_EnableCdn" data-uid="Pulumi.Gcp.Compute.BackendServiceState.EnableCdn">EnableCdn</h4>
@@ -389,7 +359,7 @@ locality_lb_policy is set to MAGLEV or RING_HASH.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; EnableCdn { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? EnableCdn { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -401,23 +371,22 @@ locality_lb_policy is set to MAGLEV or RING_HASH.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/BackendService.cs/#L516">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/BackendService.cs/#L520">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_BackendServiceState_Fingerprint_" data-uid="Pulumi.Gcp.Compute.BackendServiceState.Fingerprint*"></a>
   <h4 id="Pulumi_Gcp_Compute_BackendServiceState_Fingerprint" data-uid="Pulumi.Gcp.Compute.BackendServiceState.Fingerprint">Fingerprint</h4>
-  <div class="markdown level1 summary"><p>Fingerprint of this resource. A hash of the contents stored in this object. This field is used in optimistic
-locking.</p>
+  <div class="markdown level1 summary"><p>Fingerprint of this resource. A hash of the contents stored in this object. This field is used in optimistic locking.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Fingerprint { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Fingerprint { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -429,24 +398,24 @@ locking.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/BackendService.cs/#L524">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/BackendService.cs/#L528">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_BackendServiceState_HealthChecks_" data-uid="Pulumi.Gcp.Compute.BackendServiceState.HealthChecks*"></a>
   <h4 id="Pulumi_Gcp_Compute_BackendServiceState_HealthChecks" data-uid="Pulumi.Gcp.Compute.BackendServiceState.HealthChecks">HealthChecks</h4>
-  <div class="markdown level1 summary"><p>The set of URLs to the HttpHealthCheck or HttpsHealthCheck resource for health checking this BackendService.
-Currently at most one health check can be specified, and a health check is required. For internal load
-balancing, a URL to a HealthCheck resource must be specified instead.</p>
+  <div class="markdown level1 summary"><p>The set of URLs to the HttpHealthCheck or HttpsHealthCheck resource for health checking this BackendService. Currently
+at most one health check can be specified, and a health check is required. For internal load balancing, a URL to a
+HealthCheck resource must be specified instead.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; HealthChecks { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? HealthChecks { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -458,13 +427,13 @@ balancing, a URL to a HealthCheck resource must be specified instead.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/BackendService.cs/#L530">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/BackendService.cs/#L534">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_BackendServiceState_Iap_" data-uid="Pulumi.Gcp.Compute.BackendServiceState.Iap*"></a>
   <h4 id="Pulumi_Gcp_Compute_BackendServiceState_Iap" data-uid="Pulumi.Gcp.Compute.BackendServiceState.Iap">Iap</h4>
@@ -473,7 +442,7 @@ balancing, a URL to a HealthCheck resource must be specified instead.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;BackendServiceIapGetArgs&gt; Iap { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;BackendServiceIapGetArgs&gt;? Iap { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -485,24 +454,24 @@ balancing, a URL to a HealthCheck resource must be specified instead.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Inputs.BackendServiceIapGetArgs.html">BackendServiceIapGetArgs</a>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Inputs.BackendServiceIapGetArgs.html">BackendServiceIapGetArgs</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/BackendService.cs/#L538">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/BackendService.cs/#L542">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_BackendServiceState_LoadBalancingScheme_" data-uid="Pulumi.Gcp.Compute.BackendServiceState.LoadBalancingScheme*"></a>
   <h4 id="Pulumi_Gcp_Compute_BackendServiceState_LoadBalancingScheme" data-uid="Pulumi.Gcp.Compute.BackendServiceState.LoadBalancingScheme">LoadBalancingScheme</h4>
-  <div class="markdown level1 summary"><p>Indicates whether the backend service will be used with internal or external load balancing. A backend
-service created for one type of load balancing cannot be used with the other. Must be 'EXTERNAL' or
-'INTERNAL_SELF_MANAGED' for a global backend service. Defaults to 'EXTERNAL'.</p>
+  <div class="markdown level1 summary"><p>Indicates whether the backend service will be used with internal or external load balancing. A backend service created
+for one type of load balancing cannot be used with the other. Must be 'EXTERNAL' or 'INTERNAL_SELF_MANAGED' for a global
+backend service. Defaults to 'EXTERNAL'.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; LoadBalancingScheme { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? LoadBalancingScheme { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -514,33 +483,32 @@ service created for one type of load balancing cannot be used with the other. Mu
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/BackendService.cs/#L555">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/BackendService.cs/#L558">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_BackendServiceState_LocalityLbPolicy_" data-uid="Pulumi.Gcp.Compute.BackendServiceState.LocalityLbPolicy*"></a>
   <h4 id="Pulumi_Gcp_Compute_BackendServiceState_LocalityLbPolicy" data-uid="Pulumi.Gcp.Compute.BackendServiceState.LocalityLbPolicy">LocalityLbPolicy</h4>
-  <div class="markdown level1 summary"><p>The load balancing algorithm used within the scope of the locality. The possible values are - ROUND_ROBIN -
-This is a simple policy in which each healthy backend is selected in round robin order. LEAST_REQUEST - An
-O(1) algorithm which selects two random healthy hosts and picks the host which has fewer active requests.
-RING_HASH - The ring/modulo hash load balancer implements consistent hashing to backends. The algorithm has
-the property that the addition/removal of a host from a set of N hosts only affects 1/N of the requests.
-RANDOM - The load balancer selects a random healthy host. ORIGINAL_DESTINATION - Backend host is selected
-based on the client connection metadata, i.e., connections are opened to the same address as the destination
-address of the incoming connection before the connection was redirected to the load balancer. MAGLEV - used
-as a drop in replacement for the ring hash load balancer. Maglev is not as stable as ring hash but has
-faster table lookup build times and host selection times. For more information about Maglev, refer to
-<a href="https://ai.google/research/pubs/pub44824">https://ai.google/research/pubs/pub44824</a> This field is applicable only when the load_balancing_scheme is set
-to INTERNAL_SELF_MANAGED.</p>
+  <div class="markdown level1 summary"><p>The load balancing algorithm used within the scope of the locality. The possible values are - ROUND_ROBIN - This is a
+simple policy in which each healthy backend is selected in round robin order. LEAST_REQUEST - An O(1) algorithm which
+selects two random healthy hosts and picks the host which has fewer active requests. RING_HASH - The ring/modulo hash
+load balancer implements consistent hashing to backends. The algorithm has the property that the addition/removal of a
+host from a set of N hosts only affects 1/N of the requests. RANDOM - The load balancer selects a random healthy host.
+ORIGINAL_DESTINATION - Backend host is selected based on the client connection metadata, i.e., connections are opened to
+the same address as the destination address of the incoming connection before the connection was redirected to the load
+balancer. MAGLEV - used as a drop in replacement for the ring hash load balancer. Maglev is not as stable as ring hash
+but has faster table lookup build times and host selection times. For more information about Maglev, refer to
+<a href="https://ai.google/research/pubs/pub44824">https://ai.google/research/pubs/pub44824</a> This field is applicable only when the load_balancing_scheme is set to
+INTERNAL_SELF_MANAGED.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; LocalityLbPolicy { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? LocalityLbPolicy { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -552,23 +520,23 @@ to INTERNAL_SELF_MANAGED.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/BackendService.cs/#L562">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/BackendService.cs/#L565">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_BackendServiceState_LogConfig_" data-uid="Pulumi.Gcp.Compute.BackendServiceState.LogConfig*"></a>
   <h4 id="Pulumi_Gcp_Compute_BackendServiceState_LogConfig" data-uid="Pulumi.Gcp.Compute.BackendServiceState.LogConfig">LogConfig</h4>
-  <div class="markdown level1 summary"><p>This field denotes the logging options for the load balancer traffic served by this backend service. If
-logging is enabled, logs will be exported to Stackdriver.</p>
+  <div class="markdown level1 summary"><p>This field denotes the logging options for the load balancer traffic served by this backend service. If logging is
+enabled, logs will be exported to Stackdriver.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;BackendServiceLogConfigGetArgs&gt; LogConfig { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;BackendServiceLogConfigGetArgs&gt;? LogConfig { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -580,26 +548,25 @@ logging is enabled, logs will be exported to Stackdriver.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Inputs.BackendServiceLogConfigGetArgs.html">BackendServiceLogConfigGetArgs</a>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Inputs.BackendServiceLogConfigGetArgs.html">BackendServiceLogConfigGetArgs</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/BackendService.cs/#L572">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/BackendService.cs/#L574">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_BackendServiceState_Name_" data-uid="Pulumi.Gcp.Compute.BackendServiceState.Name*"></a>
   <h4 id="Pulumi_Gcp_Compute_BackendServiceState_Name" data-uid="Pulumi.Gcp.Compute.BackendServiceState.Name">Name</h4>
-  <div class="markdown level1 summary"><p>Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters
-long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular
-expression '<a href="%5B-a-z0-9%5D*%5Ba-z0-9%5D">a-z</a>?' which means the first character must be a lowercase letter, and all
-following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be
-a dash.</p>
+  <div class="markdown level1 summary"><p>Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
+comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
+'<a href="%5B-a-z0-9%5D*%5Ba-z0-9%5D">a-z</a>?' which means the first character must be a lowercase letter, and all following characters
+must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Name { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Name { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -611,23 +578,23 @@ a dash.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/BackendService.cs/#L579">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/BackendService.cs/#L581">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_BackendServiceState_OutlierDetection_" data-uid="Pulumi.Gcp.Compute.BackendServiceState.OutlierDetection*"></a>
   <h4 id="Pulumi_Gcp_Compute_BackendServiceState_OutlierDetection" data-uid="Pulumi.Gcp.Compute.BackendServiceState.OutlierDetection">OutlierDetection</h4>
-  <div class="markdown level1 summary"><p>Settings controlling eviction of unhealthy hosts from the load balancing pool. This field is applicable only
-when the load_balancing_scheme is set to INTERNAL_SELF_MANAGED.</p>
+  <div class="markdown level1 summary"><p>Settings controlling eviction of unhealthy hosts from the load balancing pool. This field is applicable only when the
+load_balancing_scheme is set to INTERNAL_SELF_MANAGED.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;BackendServiceOutlierDetectionGetArgs&gt; OutlierDetection { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;BackendServiceOutlierDetectionGetArgs&gt;? OutlierDetection { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -639,23 +606,23 @@ when the load_balancing_scheme is set to INTERNAL_SELF_MANAGED.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Inputs.BackendServiceOutlierDetectionGetArgs.html">BackendServiceOutlierDetectionGetArgs</a>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Inputs.BackendServiceOutlierDetectionGetArgs.html">BackendServiceOutlierDetectionGetArgs</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/BackendService.cs/#L586">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/BackendService.cs/#L588">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_BackendServiceState_PortName_" data-uid="Pulumi.Gcp.Compute.BackendServiceState.PortName*"></a>
   <h4 id="Pulumi_Gcp_Compute_BackendServiceState_PortName" data-uid="Pulumi.Gcp.Compute.BackendServiceState.PortName">PortName</h4>
-  <div class="markdown level1 summary"><p>Name of backend port. The same name should appear in the instance groups referenced by this service.
-Required when the load balancing scheme is EXTERNAL.</p>
+  <div class="markdown level1 summary"><p>Name of backend port. The same name should appear in the instance groups referenced by this service. Required when the
+load balancing scheme is EXTERNAL.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; PortName { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? PortName { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -667,13 +634,13 @@ Required when the load balancing scheme is EXTERNAL.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/BackendService.cs/#L593">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/BackendService.cs/#L595">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_BackendServiceState_Project_" data-uid="Pulumi.Gcp.Compute.BackendServiceState.Project*"></a>
   <h4 id="Pulumi_Gcp_Compute_BackendServiceState_Project" data-uid="Pulumi.Gcp.Compute.BackendServiceState.Project">Project</h4>
@@ -683,7 +650,7 @@ If it is not provided, the provider project is used.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Project { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Project { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -695,24 +662,24 @@ If it is not provided, the provider project is used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/BackendService.cs/#L601">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/BackendService.cs/#L603">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_BackendServiceState_Protocol_" data-uid="Pulumi.Gcp.Compute.BackendServiceState.Protocol*"></a>
   <h4 id="Pulumi_Gcp_Compute_BackendServiceState_Protocol" data-uid="Pulumi.Gcp.Compute.BackendServiceState.Protocol">Protocol</h4>
-  <div class="markdown level1 summary"><p>The protocol this BackendService uses to communicate with backends. Possible values are HTTP, HTTPS, HTTP2,
-TCP, and SSL. The default is HTTP. <strong>NOTE</strong>: HTTP2 is only valid for beta HTTP/2 load balancer types and may
-result in errors if used with the GA API.</p>
+  <div class="markdown level1 summary"><p>The protocol this BackendService uses to communicate with backends. Possible values are HTTP, HTTPS, HTTP2, TCP, and
+SSL. The default is HTTP. <strong>NOTE</strong>: HTTP2 is only valid for beta HTTP/2 load balancer types and may result in errors if
+used with the GA API.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Protocol { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Protocol { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -724,13 +691,13 @@ result in errors if used with the GA API.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/BackendService.cs/#L607">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/BackendService.cs/#L609">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_BackendServiceState_SecurityPolicy_" data-uid="Pulumi.Gcp.Compute.BackendServiceState.SecurityPolicy*"></a>
   <h4 id="Pulumi_Gcp_Compute_BackendServiceState_SecurityPolicy" data-uid="Pulumi.Gcp.Compute.BackendServiceState.SecurityPolicy">SecurityPolicy</h4>
@@ -739,7 +706,7 @@ result in errors if used with the GA API.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; SecurityPolicy { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? SecurityPolicy { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -751,13 +718,13 @@ result in errors if used with the GA API.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/BackendService.cs/#L613">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/BackendService.cs/#L615">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_BackendServiceState_SelfLink_" data-uid="Pulumi.Gcp.Compute.BackendServiceState.SelfLink*"></a>
   <h4 id="Pulumi_Gcp_Compute_BackendServiceState_SelfLink" data-uid="Pulumi.Gcp.Compute.BackendServiceState.SelfLink">SelfLink</h4>
@@ -766,7 +733,7 @@ result in errors if used with the GA API.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; SelfLink { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? SelfLink { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -778,23 +745,22 @@ result in errors if used with the GA API.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/BackendService.cs/#L620">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/BackendService.cs/#L621">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_BackendServiceState_SessionAffinity_" data-uid="Pulumi.Gcp.Compute.BackendServiceState.SessionAffinity*"></a>
   <h4 id="Pulumi_Gcp_Compute_BackendServiceState_SessionAffinity" data-uid="Pulumi.Gcp.Compute.BackendServiceState.SessionAffinity">SessionAffinity</h4>
-  <div class="markdown level1 summary"><p>Type of session affinity to use. The default is NONE. Session affinity is not applicable if the protocol is
-UDP.</p>
+  <div class="markdown level1 summary"><p>Type of session affinity to use. The default is NONE. Session affinity is not applicable if the protocol is UDP.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; SessionAffinity { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? SessionAffinity { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -806,23 +772,23 @@ UDP.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/BackendService.cs/#L627">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/BackendService.cs/#L628">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_BackendServiceState_TimeoutSec_" data-uid="Pulumi.Gcp.Compute.BackendServiceState.TimeoutSec*"></a>
   <h4 id="Pulumi_Gcp_Compute_BackendServiceState_TimeoutSec" data-uid="Pulumi.Gcp.Compute.BackendServiceState.TimeoutSec">TimeoutSec</h4>
-  <div class="markdown level1 summary"><p>How many seconds to wait for the backend before considering it a failed request. Default is 30 seconds.
-Valid range is [1, 86400].</p>
+  <div class="markdown level1 summary"><p>How many seconds to wait for the backend before considering it a failed request. Default is 30 seconds. Valid range is
+[1, 86400].</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; TimeoutSec { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? TimeoutSec { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -834,7 +800,7 @@ Valid range is [1, 86400].</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -846,7 +812,7 @@ Valid range is [1, 86400].</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/BackendService.cs/#L430" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/BackendService.cs/#L436" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

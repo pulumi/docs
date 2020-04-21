@@ -71,50 +71,25 @@
   
   <h1 id="Pulumi_Gcp_Compute_Reservation" data-uid="Pulumi.Gcp.Compute.Reservation" class="text-break">Class Reservation
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Represents a reservation resource. A reservation ensures that capacity is
+held in a specific zone even if the reserved VMs are not running.</p>
+<p>Reservations apply only to Compute Engine, Cloud Dataproc, and Google
+Kubernetes Engine VM usage.Reservations do not apply to <code>f1-micro</code> or
+<code>g1-small</code> machine types, preemptible VMs, sole tenant nodes, or other
+services not listed above
+like Cloud SQL and Dataflow.</p>
+<p>To get more information about Reservation, see:</p>
+<ul>
+<li><a href="https://cloud.google.com/compute/docs/reference/rest/v1/reservations">API documentation</a></li>
+<li>How-to Guides</li>
+<li><a href="https://cloud.google.com/compute/docs/instances/reserving-zonal-resources">Reserving zonal resources</a></li>
+</ul>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
-    <div class="level3"><span class="xref">Reservation</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">Reservation</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.Compute.html">Pulumi.Gcp.Compute</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
@@ -125,16 +100,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/Reservation.cs/#L85">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Reservation.cs/#L104">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_Reservation__ctor_" data-uid="Pulumi.Gcp.Compute.Reservation.#ctor*"></a>
-  <h4 id="Pulumi_Gcp_Compute_Reservation__ctor_System_String_Pulumi_Gcp_Compute_ReservationArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Gcp.Compute.Reservation.#ctor(System.String,Pulumi.Gcp.Compute.ReservationArgs,Pulumi.CustomResourceOptions)">Reservation(String, ReservationArgs, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Gcp_Compute_Reservation__ctor_System_String_Pulumi_Gcp_Compute_ReservationArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Gcp.Compute.Reservation.#ctor(System.String,Pulumi.Gcp.Compute.ReservationArgs,System.Nullable{CustomResourceOptions})">Reservation(String, ReservationArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Create a Reservation resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Reservation(string name, ReservationArgs args, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Reservation(string name, ReservationArgs args, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -159,7 +134,7 @@
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -169,12 +144,11 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/Reservation.cs/#L18">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Reservation.cs/#L34">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_Reservation_Commitment_" data-uid="Pulumi.Gcp.Compute.Reservation.Commitment*"></a>
   <h4 id="Pulumi_Gcp_Compute_Reservation_Commitment" data-uid="Pulumi.Gcp.Compute.Reservation.Commitment">Commitment</h4>
-  <div class="markdown level1 summary"><p>Full or partial URL to a parent commitment. This field displays for reservations that are tied to a
-commitment.</p>
+  <div class="markdown level1 summary"><p>Full or partial URL to a parent commitment. This field displays for reservations that are tied to a commitment.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -191,13 +165,13 @@ commitment.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/Reservation.cs/#L24">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Reservation.cs/#L40">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_Reservation_CreationTimestamp_" data-uid="Pulumi.Gcp.Compute.Reservation.CreationTimestamp*"></a>
   <h4 id="Pulumi_Gcp_Compute_Reservation_CreationTimestamp" data-uid="Pulumi.Gcp.Compute.Reservation.CreationTimestamp">CreationTimestamp</h4>
@@ -218,13 +192,13 @@ commitment.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/Reservation.cs/#L30">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Reservation.cs/#L46">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_Reservation_Description_" data-uid="Pulumi.Gcp.Compute.Reservation.Description*"></a>
   <h4 id="Pulumi_Gcp_Compute_Reservation_Description" data-uid="Pulumi.Gcp.Compute.Reservation.Description">Description</h4>
@@ -233,7 +207,7 @@ commitment.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Description { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Description { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -245,21 +219,20 @@ commitment.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/Reservation.cs/#L40">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Reservation.cs/#L55">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_Reservation_Name_" data-uid="Pulumi.Gcp.Compute.Reservation.Name*"></a>
   <h4 id="Pulumi_Gcp_Compute_Reservation_Name" data-uid="Pulumi.Gcp.Compute.Reservation.Name">Name</h4>
-  <div class="markdown level1 summary"><p>Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters
-long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular
-expression '<a href="%5B-a-z0-9%5D*%5Ba-z0-9%5D">a-z</a>?' which means the first character must be a lowercase letter, and all
-following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be
-a dash.</p>
+  <div class="markdown level1 summary"><p>Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
+comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
+'<a href="%5B-a-z0-9%5D*%5Ba-z0-9%5D">a-z</a>?' which means the first character must be a lowercase letter, and all following characters
+must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -276,17 +249,19 @@ a dash.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/Reservation.cs/#L43">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Reservation.cs/#L62">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_Reservation_Project_" data-uid="Pulumi.Gcp.Compute.Reservation.Project*"></a>
   <h4 id="Pulumi_Gcp_Compute_Reservation_Project" data-uid="Pulumi.Gcp.Compute.Reservation.Project">Project</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -302,13 +277,13 @@ a dash.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/Reservation.cs/#L49">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Reservation.cs/#L68">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_Reservation_SelfLink_" data-uid="Pulumi.Gcp.Compute.Reservation.SelfLink*"></a>
   <h4 id="Pulumi_Gcp_Compute_Reservation_SelfLink" data-uid="Pulumi.Gcp.Compute.Reservation.SelfLink">SelfLink</h4>
@@ -329,13 +304,13 @@ a dash.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/Reservation.cs/#L55">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Reservation.cs/#L74">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_Reservation_SpecificReservation_" data-uid="Pulumi.Gcp.Compute.Reservation.SpecificReservation*"></a>
   <h4 id="Pulumi_Gcp_Compute_Reservation_SpecificReservation" data-uid="Pulumi.Gcp.Compute.Reservation.SpecificReservation">SpecificReservation</h4>
@@ -356,18 +331,18 @@ a dash.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Outputs.ReservationSpecificReservation.html">ReservationSpecificReservation</a>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Outputs.ReservationSpecificReservation.html">ReservationSpecificReservation</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/Reservation.cs/#L62">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Reservation.cs/#L81">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_Reservation_SpecificReservationRequired_" data-uid="Pulumi.Gcp.Compute.Reservation.SpecificReservationRequired*"></a>
   <h4 id="Pulumi_Gcp_Compute_Reservation_SpecificReservationRequired" data-uid="Pulumi.Gcp.Compute.Reservation.SpecificReservationRequired">SpecificReservationRequired</h4>
-  <div class="markdown level1 summary"><p>When set to true, only VMs that target this reservation by name can consume this reservation. Otherwise, it
-can be consumed by VMs with affinity for any reservation. Defaults to false.</p>
+  <div class="markdown level1 summary"><p>When set to true, only VMs that target this reservation by name can consume this reservation. Otherwise, it can be
+consumed by VMs with affinity for any reservation. Defaults to false.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -384,13 +359,13 @@ can be consumed by VMs with affinity for any reservation. Defaults to false.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/Reservation.cs/#L68">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Reservation.cs/#L87">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_Reservation_Status_" data-uid="Pulumi.Gcp.Compute.Reservation.Status*"></a>
   <h4 id="Pulumi_Gcp_Compute_Reservation_Status" data-uid="Pulumi.Gcp.Compute.Reservation.Status">Status</h4>
@@ -411,13 +386,13 @@ can be consumed by VMs with affinity for any reservation. Defaults to false.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/Reservation.cs/#L74">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Reservation.cs/#L93">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_Reservation_Zone_" data-uid="Pulumi.Gcp.Compute.Reservation.Zone*"></a>
   <h4 id="Pulumi_Gcp_Compute_Reservation_Zone" data-uid="Pulumi.Gcp.Compute.Reservation.Zone">Zone</h4>
@@ -438,7 +413,7 @@ can be consumed by VMs with affinity for any reservation. Defaults to false.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -446,17 +421,17 @@ can be consumed by VMs with affinity for any reservation. Defaults to false.</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/Reservation.cs/#L115">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Reservation.cs/#L134">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_Reservation_Get_" data-uid="Pulumi.Gcp.Compute.Reservation.Get*"></a>
-  <h4 id="Pulumi_Gcp_Compute_Reservation_Get_System_String_Pulumi_Input_System_String__Pulumi_Gcp_Compute_ReservationState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Gcp.Compute.Reservation.Get(System.String,Pulumi.Input{System.String},Pulumi.Gcp.Compute.ReservationState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, ReservationState, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Gcp_Compute_Reservation_Get_System_String_Input_System_String__Pulumi_Gcp_Compute_ReservationState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Gcp.Compute.Reservation.Get(System.String,Input{System.String},Pulumi.Gcp.Compute.ReservationState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, ReservationState, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Get an existing Reservation resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Reservation Get(string name, Input&lt;string&gt; id, ReservationState state = null, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Reservation Get(string name, Input&lt;string&gt; id, ReservationState state = null, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -475,7 +450,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -487,7 +462,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -516,7 +491,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/Reservation.cs/#L12" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Reservation.cs/#L29" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

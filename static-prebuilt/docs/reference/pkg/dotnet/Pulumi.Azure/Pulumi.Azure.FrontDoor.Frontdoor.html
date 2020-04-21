@@ -79,53 +79,12 @@
 <li>Use Front Door to improve application performance with SSL offload and routing requests to the fastest available application backend.</li>
 <li>Use Front Door for application layer security and DDoS protection for your application.</li>
 </ul>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/frontdoor.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/frontdoor.html.markdown</a>.</p>
-</blockquote>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
-    <div class="level3"><span class="xref">Frontdoor</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">Frontdoor</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Azure.FrontDoor.html">Pulumi.Azure.FrontDoor</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Azure.dll</h6>
@@ -136,16 +95,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Frontdoor/Frontdoor.cs/#L109">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/FrontDoor/Frontdoor.cs/#L107">View Source</a>
   </span>
   <a id="Pulumi_Azure_FrontDoor_Frontdoor__ctor_" data-uid="Pulumi.Azure.FrontDoor.Frontdoor.#ctor*"></a>
-  <h4 id="Pulumi_Azure_FrontDoor_Frontdoor__ctor_System_String_Pulumi_Azure_FrontDoor_FrontdoorArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Azure.FrontDoor.Frontdoor.#ctor(System.String,Pulumi.Azure.FrontDoor.FrontdoorArgs,Pulumi.CustomResourceOptions)">Frontdoor(String, FrontdoorArgs, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Azure_FrontDoor_Frontdoor__ctor_System_String_Pulumi_Azure_FrontDoor_FrontdoorArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Azure.FrontDoor.Frontdoor.#ctor(System.String,Pulumi.Azure.FrontDoor.FrontdoorArgs,System.Nullable{CustomResourceOptions})">Frontdoor(String, FrontdoorArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Create a Frontdoor resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Frontdoor(string name, FrontdoorArgs args, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Frontdoor(string name, FrontdoorArgs args, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -170,7 +129,7 @@
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -180,7 +139,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Frontdoor/Frontdoor.cs/#L35">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/FrontDoor/Frontdoor.cs/#L27">View Source</a>
   </span>
   <a id="Pulumi_Azure_FrontDoor_Frontdoor_BackendPoolHealthProbes_" data-uid="Pulumi.Azure.FrontDoor.Frontdoor.BackendPoolHealthProbes*"></a>
   <h4 id="Pulumi_Azure_FrontDoor_Frontdoor_BackendPoolHealthProbes" data-uid="Pulumi.Azure.FrontDoor.Frontdoor.BackendPoolHealthProbes">BackendPoolHealthProbes</h4>
@@ -189,7 +148,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;FrontdoorBackendPoolHealthProbes&gt;&gt; BackendPoolHealthProbes { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;FrontdoorBackendPoolHealthProbe&gt;&gt; BackendPoolHealthProbes { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -201,13 +160,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Azure.FrontDoor.Outputs.FrontdoorBackendPoolHealthProbes.html">FrontdoorBackendPoolHealthProbes</a>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Azure.FrontDoor.Outputs.FrontdoorBackendPoolHealthProbe.html">FrontdoorBackendPoolHealthProbe</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Frontdoor/Frontdoor.cs/#L41">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/FrontDoor/Frontdoor.cs/#L33">View Source</a>
   </span>
   <a id="Pulumi_Azure_FrontDoor_Frontdoor_BackendPoolLoadBalancings_" data-uid="Pulumi.Azure.FrontDoor.Frontdoor.BackendPoolLoadBalancings*"></a>
   <h4 id="Pulumi_Azure_FrontDoor_Frontdoor_BackendPoolLoadBalancings" data-uid="Pulumi.Azure.FrontDoor.Frontdoor.BackendPoolLoadBalancings">BackendPoolLoadBalancings</h4>
@@ -216,7 +175,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;FrontdoorBackendPoolLoadBalancings&gt;&gt; BackendPoolLoadBalancings { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;FrontdoorBackendPoolLoadBalancing&gt;&gt; BackendPoolLoadBalancings { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -228,13 +187,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Azure.FrontDoor.Outputs.FrontdoorBackendPoolLoadBalancings.html">FrontdoorBackendPoolLoadBalancings</a>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Azure.FrontDoor.Outputs.FrontdoorBackendPoolLoadBalancing.html">FrontdoorBackendPoolLoadBalancing</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Frontdoor/Frontdoor.cs/#L29">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/FrontDoor/Frontdoor.cs/#L39">View Source</a>
   </span>
   <a id="Pulumi_Azure_FrontDoor_Frontdoor_BackendPools_" data-uid="Pulumi.Azure.FrontDoor.Frontdoor.BackendPools*"></a>
   <h4 id="Pulumi_Azure_FrontDoor_Frontdoor_BackendPools" data-uid="Pulumi.Azure.FrontDoor.Frontdoor.BackendPools">BackendPools</h4>
@@ -243,7 +202,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;FrontdoorBackendPools&gt;&gt; BackendPools { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;FrontdoorBackendPool&gt;&gt; BackendPools { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -255,13 +214,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Azure.FrontDoor.Outputs.FrontdoorBackendPools.html">FrontdoorBackendPools</a>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Azure.FrontDoor.Outputs.FrontdoorBackendPool.html">FrontdoorBackendPool</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Frontdoor/Frontdoor.cs/#L47">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/FrontDoor/Frontdoor.cs/#L45">View Source</a>
   </span>
   <a id="Pulumi_Azure_FrontDoor_Frontdoor_Cname_" data-uid="Pulumi.Azure.FrontDoor.Frontdoor.Cname*"></a>
   <h4 id="Pulumi_Azure_FrontDoor_Frontdoor_Cname" data-uid="Pulumi.Azure.FrontDoor.Frontdoor.Cname">Cname</h4>
@@ -282,13 +241,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Frontdoor/Frontdoor.cs/#L53">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/FrontDoor/Frontdoor.cs/#L51">View Source</a>
   </span>
   <a id="Pulumi_Azure_FrontDoor_Frontdoor_EnforceBackendPoolsCertificateNameCheck_" data-uid="Pulumi.Azure.FrontDoor.Frontdoor.EnforceBackendPoolsCertificateNameCheck*"></a>
   <h4 id="Pulumi_Azure_FrontDoor_Frontdoor_EnforceBackendPoolsCertificateNameCheck" data-uid="Pulumi.Azure.FrontDoor.Frontdoor.EnforceBackendPoolsCertificateNameCheck">EnforceBackendPoolsCertificateNameCheck</h4>
@@ -309,13 +268,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Frontdoor/Frontdoor.cs/#L59">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/FrontDoor/Frontdoor.cs/#L57">View Source</a>
   </span>
   <a id="Pulumi_Azure_FrontDoor_Frontdoor_FriendlyName_" data-uid="Pulumi.Azure.FrontDoor.Frontdoor.FriendlyName*"></a>
   <h4 id="Pulumi_Azure_FrontDoor_Frontdoor_FriendlyName" data-uid="Pulumi.Azure.FrontDoor.Frontdoor.FriendlyName">FriendlyName</h4>
@@ -324,7 +283,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; FriendlyName { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; FriendlyName { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -336,13 +295,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Frontdoor/Frontdoor.cs/#L65">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/FrontDoor/Frontdoor.cs/#L63">View Source</a>
   </span>
   <a id="Pulumi_Azure_FrontDoor_Frontdoor_FrontendEndpoints_" data-uid="Pulumi.Azure.FrontDoor.Frontdoor.FrontendEndpoints*"></a>
   <h4 id="Pulumi_Azure_FrontDoor_Frontdoor_FrontendEndpoints" data-uid="Pulumi.Azure.FrontDoor.Frontdoor.FrontendEndpoints">FrontendEndpoints</h4>
@@ -351,7 +310,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;FrontdoorFrontendEndpoints&gt;&gt; FrontendEndpoints { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;FrontdoorFrontendEndpoint&gt;&gt; FrontendEndpoints { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -363,13 +322,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Azure.FrontDoor.Outputs.FrontdoorFrontendEndpoints.html">FrontdoorFrontendEndpoints</a>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Azure.FrontDoor.Outputs.FrontdoorFrontendEndpoint.html">FrontdoorFrontendEndpoint</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Frontdoor/Frontdoor.cs/#L71">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/FrontDoor/Frontdoor.cs/#L69">View Source</a>
   </span>
   <a id="Pulumi_Azure_FrontDoor_Frontdoor_LoadBalancerEnabled_" data-uid="Pulumi.Azure.FrontDoor.Frontdoor.LoadBalancerEnabled*"></a>
   <h4 id="Pulumi_Azure_FrontDoor_Frontdoor_LoadBalancerEnabled" data-uid="Pulumi.Azure.FrontDoor.Frontdoor.LoadBalancerEnabled">LoadBalancerEnabled</h4>
@@ -390,13 +349,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Frontdoor/Frontdoor.cs/#L74">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/FrontDoor/Frontdoor.cs/#L72">View Source</a>
   </span>
   <a id="Pulumi_Azure_FrontDoor_Frontdoor_Location_" data-uid="Pulumi.Azure.FrontDoor.Frontdoor.Location*"></a>
   <h4 id="Pulumi_Azure_FrontDoor_Frontdoor_Location" data-uid="Pulumi.Azure.FrontDoor.Frontdoor.Location">Location</h4>
@@ -416,13 +375,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Frontdoor/Frontdoor.cs/#L80">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/FrontDoor/Frontdoor.cs/#L78">View Source</a>
   </span>
   <a id="Pulumi_Azure_FrontDoor_Frontdoor_Name_" data-uid="Pulumi.Azure.FrontDoor.Frontdoor.Name*"></a>
   <h4 id="Pulumi_Azure_FrontDoor_Frontdoor_Name" data-uid="Pulumi.Azure.FrontDoor.Frontdoor.Name">Name</h4>
@@ -443,13 +402,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Frontdoor/Frontdoor.cs/#L86">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/FrontDoor/Frontdoor.cs/#L84">View Source</a>
   </span>
   <a id="Pulumi_Azure_FrontDoor_Frontdoor_ResourceGroupName_" data-uid="Pulumi.Azure.FrontDoor.Frontdoor.ResourceGroupName*"></a>
   <h4 id="Pulumi_Azure_FrontDoor_Frontdoor_ResourceGroupName" data-uid="Pulumi.Azure.FrontDoor.Frontdoor.ResourceGroupName">ResourceGroupName</h4>
@@ -470,13 +429,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Frontdoor/Frontdoor.cs/#L92">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/FrontDoor/Frontdoor.cs/#L90">View Source</a>
   </span>
   <a id="Pulumi_Azure_FrontDoor_Frontdoor_RoutingRules_" data-uid="Pulumi.Azure.FrontDoor.Frontdoor.RoutingRules*"></a>
   <h4 id="Pulumi_Azure_FrontDoor_Frontdoor_RoutingRules" data-uid="Pulumi.Azure.FrontDoor.Frontdoor.RoutingRules">RoutingRules</h4>
@@ -485,7 +444,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;FrontdoorRoutingRules&gt;&gt; RoutingRules { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;FrontdoorRoutingRule&gt;&gt; RoutingRules { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -497,13 +456,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Azure.FrontDoor.Outputs.FrontdoorRoutingRules.html">FrontdoorRoutingRules</a>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Azure.FrontDoor.Outputs.FrontdoorRoutingRule.html">FrontdoorRoutingRule</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Frontdoor/Frontdoor.cs/#L98">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/FrontDoor/Frontdoor.cs/#L96">View Source</a>
   </span>
   <a id="Pulumi_Azure_FrontDoor_Frontdoor_Tags_" data-uid="Pulumi.Azure.FrontDoor.Frontdoor.Tags*"></a>
   <h4 id="Pulumi_Azure_FrontDoor_Frontdoor_Tags" data-uid="Pulumi.Azure.FrontDoor.Frontdoor.Tags">Tags</h4>
@@ -512,7 +471,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;&gt; Tags { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;?&gt; Tags { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -524,7 +483,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -532,17 +491,17 @@
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Frontdoor/Frontdoor.cs/#L139">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/FrontDoor/Frontdoor.cs/#L137">View Source</a>
   </span>
   <a id="Pulumi_Azure_FrontDoor_Frontdoor_Get_" data-uid="Pulumi.Azure.FrontDoor.Frontdoor.Get*"></a>
-  <h4 id="Pulumi_Azure_FrontDoor_Frontdoor_Get_System_String_Pulumi_Input_System_String__Pulumi_Azure_FrontDoor_FrontdoorState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Azure.FrontDoor.Frontdoor.Get(System.String,Pulumi.Input{System.String},Pulumi.Azure.FrontDoor.FrontdoorState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, FrontdoorState, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Azure_FrontDoor_Frontdoor_Get_System_String_Input_System_String__Pulumi_Azure_FrontDoor_FrontdoorState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Azure.FrontDoor.Frontdoor.Get(System.String,Input{System.String},Pulumi.Azure.FrontDoor.FrontdoorState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, FrontdoorState, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Get an existing Frontdoor resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Frontdoor Get(string name, Input&lt;string&gt; id, FrontdoorState state = null, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Frontdoor Get(string name, Input&lt;string&gt; id, FrontdoorState state = null, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -561,7 +520,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -573,7 +532,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -602,7 +561,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Frontdoor/Frontdoor.cs/#L24" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/FrontDoor/Frontdoor.cs/#L22" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

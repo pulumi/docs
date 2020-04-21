@@ -78,40 +78,16 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">GroupMixedInstancesPolicyInstancesDistribution</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.AutoScaling.Outputs.html">Pulumi.Aws.AutoScaling.Outputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
   <h5 id="Pulumi_Aws_AutoScaling_Outputs_GroupMixedInstancesPolicyInstancesDistribution_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class GroupMixedInstancesPolicyInstancesDistribution</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class GroupMixedInstancesPolicyInstancesDistribution : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Autoscaling/Group.cs/#L1417">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/AutoScaling/Outputs/GroupMixedInstancesPolicyInstancesDistribution.cs/#L19">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_AutoScaling_Outputs_GroupMixedInstancesPolicyInstancesDistribution_OnDemandAllocationStrategy" data-uid="Pulumi.Aws.AutoScaling.Outputs.GroupMixedInstancesPolicyInstancesDistribution.OnDemandAllocationStrategy">OnDemandAllocationStrategy</h4>
   <div class="markdown level1 summary"><p>Strategy to use when launching on-demand instances. Valid values: <code>prioritized</code>. Default: <code>prioritized</code>.</p>
@@ -119,7 +95,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string OnDemandAllocationStrategy</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? OnDemandAllocationStrategy</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -131,13 +107,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Autoscaling/Group.cs/#L1421">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/AutoScaling/Outputs/GroupMixedInstancesPolicyInstancesDistribution.cs/#L23">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_AutoScaling_Outputs_GroupMixedInstancesPolicyInstancesDistribution_OnDemandBaseCapacity" data-uid="Pulumi.Aws.AutoScaling.Outputs.GroupMixedInstancesPolicyInstancesDistribution.OnDemandBaseCapacity">OnDemandBaseCapacity</h4>
   <div class="markdown level1 summary"><p>Absolute minimum amount of desired capacity that must be fulfilled by on-demand instances. Default: <code>0</code>.</p>
@@ -163,7 +139,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Autoscaling/Group.cs/#L1425">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/AutoScaling/Outputs/GroupMixedInstancesPolicyInstancesDistribution.cs/#L27">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_AutoScaling_Outputs_GroupMixedInstancesPolicyInstancesDistribution_OnDemandPercentageAboveBaseCapacity" data-uid="Pulumi.Aws.AutoScaling.Outputs.GroupMixedInstancesPolicyInstancesDistribution.OnDemandPercentageAboveBaseCapacity">OnDemandPercentageAboveBaseCapacity</h4>
   <div class="markdown level1 summary"><p>Percentage split between on-demand and Spot instances above the base on-demand capacity. Default: <code>100</code>.</p>
@@ -189,7 +165,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Autoscaling/Group.cs/#L1429">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/AutoScaling/Outputs/GroupMixedInstancesPolicyInstancesDistribution.cs/#L31">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_AutoScaling_Outputs_GroupMixedInstancesPolicyInstancesDistribution_SpotAllocationStrategy" data-uid="Pulumi.Aws.AutoScaling.Outputs.GroupMixedInstancesPolicyInstancesDistribution.SpotAllocationStrategy">SpotAllocationStrategy</h4>
   <div class="markdown level1 summary"><p>How to allocate capacity across the Spot pools. Valid values: <code>lowest-price</code>, <code>capacity-optimized</code>. Default: <code>lowest-price</code>.</p>
@@ -197,7 +173,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string SpotAllocationStrategy</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? SpotAllocationStrategy</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -209,13 +185,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Autoscaling/Group.cs/#L1433">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/AutoScaling/Outputs/GroupMixedInstancesPolicyInstancesDistribution.cs/#L35">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_AutoScaling_Outputs_GroupMixedInstancesPolicyInstancesDistribution_SpotInstancePools" data-uid="Pulumi.Aws.AutoScaling.Outputs.GroupMixedInstancesPolicyInstancesDistribution.SpotInstancePools">SpotInstancePools</h4>
   <div class="markdown level1 summary"><p>Number of Spot pools per availability zone to allocate capacity. EC2 Auto Scaling selects the cheapest Spot pools and evenly allocates Spot capacity across the number of Spot pools that you specify. Default: <code>2</code>.</p>
@@ -223,7 +199,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly int SpotInstancePools</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly int? SpotInstancePools</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -235,13 +211,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Int32</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Autoscaling/Group.cs/#L1437">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/AutoScaling/Outputs/GroupMixedInstancesPolicyInstancesDistribution.cs/#L39">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_AutoScaling_Outputs_GroupMixedInstancesPolicyInstancesDistribution_SpotMaxPrice" data-uid="Pulumi.Aws.AutoScaling.Outputs.GroupMixedInstancesPolicyInstancesDistribution.SpotMaxPrice">SpotMaxPrice</h4>
   <div class="markdown level1 summary"><p>Maximum price per unit hour that the user is willing to pay for the Spot instances. Default: an empty string which means the on-demand price.</p>
@@ -249,7 +225,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string SpotMaxPrice</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? SpotMaxPrice</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -261,7 +237,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -273,7 +249,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Autoscaling/Group.cs/#L1411" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/AutoScaling/Outputs/GroupMixedInstancesPolicyInstancesDistribution.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

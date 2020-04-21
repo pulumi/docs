@@ -76,36 +76,7 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
-    <div class="level3"><span class="xref">NotificationChannelArgs</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">NotificationChannelArgs</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.Monitoring.html">Pulumi.Gcp.Monitoring</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
@@ -116,7 +87,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Monitoring/NotificationChannel.cs/#L217">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Monitoring/NotificationChannel.cs/#L253">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Monitoring_NotificationChannelArgs__ctor_" data-uid="Pulumi.Gcp.Monitoring.NotificationChannelArgs.#ctor*"></a>
   <h4 id="Pulumi_Gcp_Monitoring_NotificationChannelArgs__ctor" data-uid="Pulumi.Gcp.Monitoring.NotificationChannelArgs.#ctor">NotificationChannelArgs()</h4>
@@ -129,17 +100,17 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Monitoring/NotificationChannel.cs/#L147">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Monitoring/NotificationChannel.cs/#L177">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Monitoring_NotificationChannelArgs_Description_" data-uid="Pulumi.Gcp.Monitoring.NotificationChannelArgs.Description*"></a>
   <h4 id="Pulumi_Gcp_Monitoring_NotificationChannelArgs_Description" data-uid="Pulumi.Gcp.Monitoring.NotificationChannelArgs.Description">Description</h4>
-  <div class="markdown level1 summary"><p>An optional human-readable description of this notification channel. This description may provide additional
-details, beyond the display name, for the channel. This may not exceed 1024 Unicode characters.</p>
+  <div class="markdown level1 summary"><p>An optional human-readable description of this notification channel. This description may provide additional details,
+beyond the display name, for the channel. This may not exceed 1024 Unicode characters.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Description { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Description { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -151,19 +122,19 @@ details, beyond the display name, for the channel. This may not exceed 1024 Unic
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Monitoring/NotificationChannel.cs/#L155">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Monitoring/NotificationChannel.cs/#L185">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Monitoring_NotificationChannelArgs_DisplayName_" data-uid="Pulumi.Gcp.Monitoring.NotificationChannelArgs.DisplayName*"></a>
   <h4 id="Pulumi_Gcp_Monitoring_NotificationChannelArgs_DisplayName" data-uid="Pulumi.Gcp.Monitoring.NotificationChannelArgs.DisplayName">DisplayName</h4>
-  <div class="markdown level1 summary"><p>An optional human-readable name for this notification channel. It is recommended that you specify a
-non-empty and unique name in order to make it easier to identify the channels in your project, though this
-is not enforced. The display name is limited to 512 Unicode characters.</p>
+  <div class="markdown level1 summary"><p>An optional human-readable name for this notification channel. It is recommended that you specify a non-empty and unique
+name in order to make it easier to identify the channels in your project, though this is not enforced. The display name
+is limited to 512 Unicode characters.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -180,25 +151,25 @@ is not enforced. The display name is limited to 512 Unicode characters.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Monitoring/NotificationChannel.cs/#L164">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Monitoring/NotificationChannel.cs/#L194">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Monitoring_NotificationChannelArgs_Enabled_" data-uid="Pulumi.Gcp.Monitoring.NotificationChannelArgs.Enabled*"></a>
   <h4 id="Pulumi_Gcp_Monitoring_NotificationChannelArgs_Enabled" data-uid="Pulumi.Gcp.Monitoring.NotificationChannelArgs.Enabled">Enabled</h4>
   <div class="markdown level1 summary"><p>Whether notifications are forwarded to the described channel. This makes it possible to disable delivery of
-notifications to a particular channel without removing the channel from all alerting policies that reference
-the channel. This is a more convenient approach when the change is temporary and you want to receive
-notifications from the same set of alerting policies on the channel at some point in the future.</p>
+notifications to a particular channel without removing the channel from all alerting policies that reference the
+channel. This is a more convenient approach when the change is temporary and you want to receive notifications from the
+same set of alerting policies on the channel at some point in the future.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; Enabled { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? Enabled { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -210,23 +181,20 @@ notifications from the same set of alerting policies on the channel at some poin
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Monitoring/NotificationChannel.cs/#L179">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Monitoring/NotificationChannel.cs/#L206">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Monitoring_NotificationChannelArgs_Labels_" data-uid="Pulumi.Gcp.Monitoring.NotificationChannelArgs.Labels*"></a>
   <h4 id="Pulumi_Gcp_Monitoring_NotificationChannelArgs_Labels" data-uid="Pulumi.Gcp.Monitoring.NotificationChannelArgs.Labels">Labels</h4>
-  <div class="markdown level1 summary"><p>Configuration fields that define the channel and its behavior. The permissible and required labels are
-specified in the NotificationChannelDescriptor corresponding to the type field. <strong>Note</strong>: Some
-NotificationChannelDescriptor labels are sensitive and the API will return an partially-obfuscated value.
-For example, for '&quot;type&quot;: &quot;slack&quot;' channels, an 'auth_token' label with value &quot;SECRET&quot; will be obfuscated as
-&quot;**CRET&quot;. In order to avoid a diff, Terraform will use the state value if it appears that the obfuscated
-value matches the state value in length/unobfuscated characters. However, Terraform will not detect a diff
-if the obfuscated portion of the value was changed outside of Terraform.</p>
+  <div class="markdown level1 summary"><p>Configuration fields that define the channel and its behavior. The permissible and required labels are specified in the
+NotificationChannelDescriptor corresponding to the type field. Labels with sensitive data are obfuscated by the API and
+therefore Terraform cannot determine if there are upstream changes to these fields. They can also be configured via the
+sensitive_labels block, but cannot be configured in both places.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -243,13 +211,13 @@ if the obfuscated portion of the value was changed outside of Terraform.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputMap-1.html">InputMap</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">InputMap</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Monitoring/NotificationChannel.cs/#L189">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Monitoring/NotificationChannel.cs/#L216">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Monitoring_NotificationChannelArgs_Project_" data-uid="Pulumi.Gcp.Monitoring.NotificationChannelArgs.Project*"></a>
   <h4 id="Pulumi_Gcp_Monitoring_NotificationChannelArgs_Project" data-uid="Pulumi.Gcp.Monitoring.NotificationChannelArgs.Project">Project</h4>
@@ -259,7 +227,7 @@ If it is not provided, the provider project is used.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Project { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Project { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -271,20 +239,50 @@ If it is not provided, the provider project is used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Monitoring/NotificationChannel.cs/#L198">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Monitoring/NotificationChannel.cs/#L226">View Source</a>
+  </span>
+  <a id="Pulumi_Gcp_Monitoring_NotificationChannelArgs_SensitiveLabels_" data-uid="Pulumi.Gcp.Monitoring.NotificationChannelArgs.SensitiveLabels*"></a>
+  <h4 id="Pulumi_Gcp_Monitoring_NotificationChannelArgs_SensitiveLabels" data-uid="Pulumi.Gcp.Monitoring.NotificationChannelArgs.SensitiveLabels">SensitiveLabels</h4>
+  <div class="markdown level1 summary"><p>Different notification type behaviors are configured primarily using the the 'labels' field on this resource. This block
+contains the labels which contain secrets or passwords so that they can be marked sensitive and hidden from plan output.
+The name of the field, eg: password, will be the key in the 'labels' map in the api request. Credentials may not be
+specified in both locations and will cause an error. Changing from one location to a different credential configuration
+in the config will require an apply to update state.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;NotificationChannelSensitiveLabelsArgs&gt;? SensitiveLabels { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Gcp.Monitoring.Inputs.NotificationChannelSensitiveLabelsArgs.html">NotificationChannelSensitiveLabelsArgs</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Monitoring/NotificationChannel.cs/#L234">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Monitoring_NotificationChannelArgs_Type_" data-uid="Pulumi.Gcp.Monitoring.NotificationChannelArgs.Type*"></a>
   <h4 id="Pulumi_Gcp_Monitoring_NotificationChannelArgs_Type" data-uid="Pulumi.Gcp.Monitoring.NotificationChannelArgs.Type">Type</h4>
-  <div class="markdown level1 summary"><p>The type of the notification channel. This field matches the value of the NotificationChannelDescriptor.type
-field. See
-<a href="https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.notificationChannelDescriptors/list">https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.notificationChannelDescriptors/list</a> to get
-the list of valid values such as &quot;email&quot;, &quot;slack&quot;, etc...</p>
+  <div class="markdown level1 summary"><p>The type of the notification channel. This field matches the value of the NotificationChannelDescriptor.type field. See
+<a href="https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.notificationChannelDescriptors/list">https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.notificationChannelDescriptors/list</a> to get the list of
+valid values such as &quot;email&quot;, &quot;slack&quot;, etc...</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -301,21 +299,21 @@ the list of valid values such as &quot;email&quot;, &quot;slack&quot;, etc...</p
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Monitoring/NotificationChannel.cs/#L211">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Monitoring/NotificationChannel.cs/#L247">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Monitoring_NotificationChannelArgs_UserLabels_" data-uid="Pulumi.Gcp.Monitoring.NotificationChannelArgs.UserLabels*"></a>
   <h4 id="Pulumi_Gcp_Monitoring_NotificationChannelArgs_UserLabels" data-uid="Pulumi.Gcp.Monitoring.NotificationChannelArgs.UserLabels">UserLabels</h4>
-  <div class="markdown level1 summary"><p>User-supplied key/value data that does not need to conform to the corresponding
-NotificationChannelDescriptor's schema, unlike the labels field. This field is intended to be used for
-organizing and identifying the NotificationChannel objects.The field can contain up to 64 entries. Each key
-and value is limited to 63 Unicode characters or 128 bytes, whichever is smaller. Labels and values can
-contain only lowercase letters, numerals, underscores, and dashes. Keys must begin with a letter.</p>
+  <div class="markdown level1 summary"><p>User-supplied key/value data that does not need to conform to the corresponding NotificationChannelDescriptor's schema,
+unlike the labels field. This field is intended to be used for organizing and identifying the NotificationChannel
+objects.The field can contain up to 64 entries. Each key and value is limited to 63 Unicode characters or 128 bytes,
+whichever is smaller. Labels and values can contain only lowercase letters, numerals, underscores, and dashes. Keys must
+begin with a letter.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -332,7 +330,7 @@ contain only lowercase letters, numerals, underscores, and dashes. Keys must beg
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputMap-1.html">InputMap</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">InputMap</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -344,7 +342,7 @@ contain only lowercase letters, numerals, underscores, and dashes. Keys must beg
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Monitoring/NotificationChannel.cs/#L141" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Monitoring/NotificationChannel.cs/#L171" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -76,36 +76,7 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
-    <div class="level3"><span class="xref">TrailArgs</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">TrailArgs</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.CloudTrail.html">Pulumi.Aws.CloudTrail</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
@@ -116,7 +87,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Cloudtrail/Trail.cs/#L277">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudTrail/Trail.cs/#L275">View Source</a>
   </span>
   <a id="Pulumi_Aws_CloudTrail_TrailArgs__ctor_" data-uid="Pulumi.Aws.CloudTrail.TrailArgs.#ctor*"></a>
   <h4 id="Pulumi_Aws_CloudTrail_TrailArgs__ctor" data-uid="Pulumi.Aws.CloudTrail.TrailArgs.#ctor">TrailArgs()</h4>
@@ -129,7 +100,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Cloudtrail/Trail.cs/#L177">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudTrail/Trail.cs/#L175">View Source</a>
   </span>
   <a id="Pulumi_Aws_CloudTrail_TrailArgs_CloudWatchLogsGroupArn_" data-uid="Pulumi.Aws.CloudTrail.TrailArgs.CloudWatchLogsGroupArn*"></a>
   <h4 id="Pulumi_Aws_CloudTrail_TrailArgs_CloudWatchLogsGroupArn" data-uid="Pulumi.Aws.CloudTrail.TrailArgs.CloudWatchLogsGroupArn">CloudWatchLogsGroupArn</h4>
@@ -139,7 +110,7 @@ that represents the log group to which CloudTrail logs will be delivered.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; CloudWatchLogsGroupArn { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? CloudWatchLogsGroupArn { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -151,13 +122,13 @@ that represents the log group to which CloudTrail logs will be delivered.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Cloudtrail/Trail.cs/#L184">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudTrail/Trail.cs/#L182">View Source</a>
   </span>
   <a id="Pulumi_Aws_CloudTrail_TrailArgs_CloudWatchLogsRoleArn_" data-uid="Pulumi.Aws.CloudTrail.TrailArgs.CloudWatchLogsRoleArn*"></a>
   <h4 id="Pulumi_Aws_CloudTrail_TrailArgs_CloudWatchLogsRoleArn" data-uid="Pulumi.Aws.CloudTrail.TrailArgs.CloudWatchLogsRoleArn">CloudWatchLogsRoleArn</h4>
@@ -167,7 +138,7 @@ endpoint to assume to write to a user’s log group.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; CloudWatchLogsRoleArn { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? CloudWatchLogsRoleArn { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -179,13 +150,13 @@ endpoint to assume to write to a user’s log group.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Cloudtrail/Trail.cs/#L191">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudTrail/Trail.cs/#L189">View Source</a>
   </span>
   <a id="Pulumi_Aws_CloudTrail_TrailArgs_EnableLogFileValidation_" data-uid="Pulumi.Aws.CloudTrail.TrailArgs.EnableLogFileValidation*"></a>
   <h4 id="Pulumi_Aws_CloudTrail_TrailArgs_EnableLogFileValidation" data-uid="Pulumi.Aws.CloudTrail.TrailArgs.EnableLogFileValidation">EnableLogFileValidation</h4>
@@ -195,7 +166,7 @@ Defaults to <code>false</code>.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; EnableLogFileValidation { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? EnableLogFileValidation { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -207,13 +178,13 @@ Defaults to <code>false</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Cloudtrail/Trail.cs/#L198">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudTrail/Trail.cs/#L196">View Source</a>
   </span>
   <a id="Pulumi_Aws_CloudTrail_TrailArgs_EnableLogging_" data-uid="Pulumi.Aws.CloudTrail.TrailArgs.EnableLogging*"></a>
   <h4 id="Pulumi_Aws_CloudTrail_TrailArgs_EnableLogging" data-uid="Pulumi.Aws.CloudTrail.TrailArgs.EnableLogging">EnableLogging</h4>
@@ -223,7 +194,7 @@ Setting this to <code>false</code> will pause logging.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; EnableLogging { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? EnableLogging { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -235,13 +206,13 @@ Setting this to <code>false</code> will pause logging.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Cloudtrail/Trail.cs/#L207">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudTrail/Trail.cs/#L205">View Source</a>
   </span>
   <a id="Pulumi_Aws_CloudTrail_TrailArgs_EventSelectors_" data-uid="Pulumi.Aws.CloudTrail.TrailArgs.EventSelectors*"></a>
   <h4 id="Pulumi_Aws_CloudTrail_TrailArgs_EventSelectors" data-uid="Pulumi.Aws.CloudTrail.TrailArgs.EventSelectors">EventSelectors</h4>
@@ -250,7 +221,7 @@ Setting this to <code>false</code> will pause logging.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public InputList&lt;TrailEventSelectorsArgs&gt; EventSelectors { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public InputList&lt;TrailEventSelectorArgs&gt; EventSelectors { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -262,13 +233,13 @@ Setting this to <code>false</code> will pause logging.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<a class="xref" href="Pulumi.Aws.CloudTrail.Inputs.TrailEventSelectorsArgs.html">TrailEventSelectorsArgs</a>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<a class="xref" href="Pulumi.Aws.CloudTrail.Inputs.TrailEventSelectorArgs.html">TrailEventSelectorArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Cloudtrail/Trail.cs/#L217">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudTrail/Trail.cs/#L215">View Source</a>
   </span>
   <a id="Pulumi_Aws_CloudTrail_TrailArgs_IncludeGlobalServiceEvents_" data-uid="Pulumi.Aws.CloudTrail.TrailArgs.IncludeGlobalServiceEvents*"></a>
   <h4 id="Pulumi_Aws_CloudTrail_TrailArgs_IncludeGlobalServiceEvents" data-uid="Pulumi.Aws.CloudTrail.TrailArgs.IncludeGlobalServiceEvents">IncludeGlobalServiceEvents</h4>
@@ -278,7 +249,7 @@ from global services such as IAM to the log files. Defaults to <code>true</code>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; IncludeGlobalServiceEvents { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? IncludeGlobalServiceEvents { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -290,13 +261,13 @@ from global services such as IAM to the log files. Defaults to <code>true</code>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Cloudtrail/Trail.cs/#L224">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudTrail/Trail.cs/#L222">View Source</a>
   </span>
   <a id="Pulumi_Aws_CloudTrail_TrailArgs_IsMultiRegionTrail_" data-uid="Pulumi.Aws.CloudTrail.TrailArgs.IsMultiRegionTrail*"></a>
   <h4 id="Pulumi_Aws_CloudTrail_TrailArgs_IsMultiRegionTrail" data-uid="Pulumi.Aws.CloudTrail.TrailArgs.IsMultiRegionTrail">IsMultiRegionTrail</h4>
@@ -306,7 +277,7 @@ region or in all regions. Defaults to <code>false</code>.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; IsMultiRegionTrail { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? IsMultiRegionTrail { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -318,13 +289,13 @@ region or in all regions. Defaults to <code>false</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Cloudtrail/Trail.cs/#L230">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudTrail/Trail.cs/#L228">View Source</a>
   </span>
   <a id="Pulumi_Aws_CloudTrail_TrailArgs_IsOrganizationTrail_" data-uid="Pulumi.Aws.CloudTrail.TrailArgs.IsOrganizationTrail*"></a>
   <h4 id="Pulumi_Aws_CloudTrail_TrailArgs_IsOrganizationTrail" data-uid="Pulumi.Aws.CloudTrail.TrailArgs.IsOrganizationTrail">IsOrganizationTrail</h4>
@@ -333,7 +304,7 @@ region or in all regions. Defaults to <code>false</code>.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; IsOrganizationTrail { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? IsOrganizationTrail { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -345,13 +316,13 @@ region or in all regions. Defaults to <code>false</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Cloudtrail/Trail.cs/#L236">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudTrail/Trail.cs/#L234">View Source</a>
   </span>
   <a id="Pulumi_Aws_CloudTrail_TrailArgs_KmsKeyId_" data-uid="Pulumi.Aws.CloudTrail.TrailArgs.KmsKeyId*"></a>
   <h4 id="Pulumi_Aws_CloudTrail_TrailArgs_KmsKeyId" data-uid="Pulumi.Aws.CloudTrail.TrailArgs.KmsKeyId">KmsKeyId</h4>
@@ -360,7 +331,7 @@ region or in all regions. Defaults to <code>false</code>.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; KmsKeyId { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? KmsKeyId { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -372,13 +343,13 @@ region or in all regions. Defaults to <code>false</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Cloudtrail/Trail.cs/#L242">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudTrail/Trail.cs/#L240">View Source</a>
   </span>
   <a id="Pulumi_Aws_CloudTrail_TrailArgs_Name_" data-uid="Pulumi.Aws.CloudTrail.TrailArgs.Name*"></a>
   <h4 id="Pulumi_Aws_CloudTrail_TrailArgs_Name" data-uid="Pulumi.Aws.CloudTrail.TrailArgs.Name">Name</h4>
@@ -387,7 +358,7 @@ region or in all regions. Defaults to <code>false</code>.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Name { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Name { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -399,13 +370,13 @@ region or in all regions. Defaults to <code>false</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Cloudtrail/Trail.cs/#L248">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudTrail/Trail.cs/#L246">View Source</a>
   </span>
   <a id="Pulumi_Aws_CloudTrail_TrailArgs_S3BucketName_" data-uid="Pulumi.Aws.CloudTrail.TrailArgs.S3BucketName*"></a>
   <h4 id="Pulumi_Aws_CloudTrail_TrailArgs_S3BucketName" data-uid="Pulumi.Aws.CloudTrail.TrailArgs.S3BucketName">S3BucketName</h4>
@@ -426,13 +397,13 @@ region or in all regions. Defaults to <code>false</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Cloudtrail/Trail.cs/#L255">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudTrail/Trail.cs/#L253">View Source</a>
   </span>
   <a id="Pulumi_Aws_CloudTrail_TrailArgs_S3KeyPrefix_" data-uid="Pulumi.Aws.CloudTrail.TrailArgs.S3KeyPrefix*"></a>
   <h4 id="Pulumi_Aws_CloudTrail_TrailArgs_S3KeyPrefix" data-uid="Pulumi.Aws.CloudTrail.TrailArgs.S3KeyPrefix">S3KeyPrefix</h4>
@@ -442,7 +413,7 @@ the name of the bucket you have designated for log file delivery.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; S3KeyPrefix { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? S3KeyPrefix { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -454,13 +425,13 @@ the name of the bucket you have designated for log file delivery.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Cloudtrail/Trail.cs/#L262">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudTrail/Trail.cs/#L260">View Source</a>
   </span>
   <a id="Pulumi_Aws_CloudTrail_TrailArgs_SnsTopicName_" data-uid="Pulumi.Aws.CloudTrail.TrailArgs.SnsTopicName*"></a>
   <h4 id="Pulumi_Aws_CloudTrail_TrailArgs_SnsTopicName" data-uid="Pulumi.Aws.CloudTrail.TrailArgs.SnsTopicName">SnsTopicName</h4>
@@ -470,7 +441,7 @@ defined for notification of log file delivery.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; SnsTopicName { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? SnsTopicName { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -482,13 +453,13 @@ defined for notification of log file delivery.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Cloudtrail/Trail.cs/#L271">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudTrail/Trail.cs/#L269">View Source</a>
   </span>
   <a id="Pulumi_Aws_CloudTrail_TrailArgs_Tags_" data-uid="Pulumi.Aws.CloudTrail.TrailArgs.Tags*"></a>
   <h4 id="Pulumi_Aws_CloudTrail_TrailArgs_Tags" data-uid="Pulumi.Aws.CloudTrail.TrailArgs.Tags">Tags</h4>
@@ -509,7 +480,7 @@ defined for notification of log file delivery.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputMap-1.html">InputMap</a>&lt;<span class="xref">System.Object</span>&gt;</td>
+        <td><span class="xref">InputMap</span>&lt;<span class="xref">System.Object</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -521,7 +492,7 @@ defined for notification of log file delivery.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Cloudtrail/Trail.cs/#L171" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudTrail/Trail.cs/#L169" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

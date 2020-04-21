@@ -76,36 +76,7 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
-    <div class="level3"><span class="xref">AuthorizerState</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">AuthorizerState</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.ApiGateway.html">Pulumi.Aws.ApiGateway</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
@@ -116,7 +87,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Apigateway/Authorizer.cs/#L276">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ApiGateway/Authorizer.cs/#L274">View Source</a>
   </span>
   <a id="Pulumi_Aws_ApiGateway_AuthorizerState__ctor_" data-uid="Pulumi.Aws.ApiGateway.AuthorizerState.#ctor*"></a>
   <h4 id="Pulumi_Aws_ApiGateway_AuthorizerState__ctor" data-uid="Pulumi.Aws.ApiGateway.AuthorizerState.#ctor">AuthorizerState()</h4>
@@ -129,7 +100,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Apigateway/Authorizer.cs/#L210">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ApiGateway/Authorizer.cs/#L208">View Source</a>
   </span>
   <a id="Pulumi_Aws_ApiGateway_AuthorizerState_AuthorizerCredentials_" data-uid="Pulumi.Aws.ApiGateway.AuthorizerState.AuthorizerCredentials*"></a>
   <h4 id="Pulumi_Aws_ApiGateway_AuthorizerState_AuthorizerCredentials" data-uid="Pulumi.Aws.ApiGateway.AuthorizerState.AuthorizerCredentials">AuthorizerCredentials</h4>
@@ -139,7 +110,7 @@ To specify an IAM Role for API Gateway to assume, use the IAM Role ARN.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; AuthorizerCredentials { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? AuthorizerCredentials { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -151,13 +122,13 @@ To specify an IAM Role for API Gateway to assume, use the IAM Role ARN.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Apigateway/Authorizer.cs/#L217">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ApiGateway/Authorizer.cs/#L215">View Source</a>
   </span>
   <a id="Pulumi_Aws_ApiGateway_AuthorizerState_AuthorizerResultTtlInSeconds_" data-uid="Pulumi.Aws.ApiGateway.AuthorizerState.AuthorizerResultTtlInSeconds*"></a>
   <h4 id="Pulumi_Aws_ApiGateway_AuthorizerState_AuthorizerResultTtlInSeconds" data-uid="Pulumi.Aws.ApiGateway.AuthorizerState.AuthorizerResultTtlInSeconds">AuthorizerResultTtlInSeconds</h4>
@@ -167,7 +138,7 @@ Defaults to <code>300</code>.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; AuthorizerResultTtlInSeconds { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? AuthorizerResultTtlInSeconds { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -179,13 +150,13 @@ Defaults to <code>300</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Apigateway/Authorizer.cs/#L225">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ApiGateway/Authorizer.cs/#L223">View Source</a>
   </span>
   <a id="Pulumi_Aws_ApiGateway_AuthorizerState_AuthorizerUri_" data-uid="Pulumi.Aws.ApiGateway.AuthorizerState.AuthorizerUri*"></a>
   <h4 id="Pulumi_Aws_ApiGateway_AuthorizerState_AuthorizerUri" data-uid="Pulumi.Aws.ApiGateway.AuthorizerState.AuthorizerUri">AuthorizerUri</h4>
@@ -196,7 +167,7 @@ e.g. <code>arn:aws:apigateway:us-west-2:lambda:path/2015-03-31/functions/arn:aws
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; AuthorizerUri { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? AuthorizerUri { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -208,13 +179,13 @@ e.g. <code>arn:aws:apigateway:us-west-2:lambda:path/2015-03-31/functions/arn:aws
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Apigateway/Authorizer.cs/#L232">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ApiGateway/Authorizer.cs/#L230">View Source</a>
   </span>
   <a id="Pulumi_Aws_ApiGateway_AuthorizerState_IdentitySource_" data-uid="Pulumi.Aws.ApiGateway.AuthorizerState.IdentitySource*"></a>
   <h4 id="Pulumi_Aws_ApiGateway_AuthorizerState_IdentitySource" data-uid="Pulumi.Aws.ApiGateway.AuthorizerState.IdentitySource">IdentitySource</h4>
@@ -224,7 +195,7 @@ Defaults to <code>method.request.header.Authorization</code>. For <code>REQUEST<
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; IdentitySource { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? IdentitySource { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -236,13 +207,13 @@ Defaults to <code>method.request.header.Authorization</code>. For <code>REQUEST<
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Apigateway/Authorizer.cs/#L241">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ApiGateway/Authorizer.cs/#L239">View Source</a>
   </span>
   <a id="Pulumi_Aws_ApiGateway_AuthorizerState_IdentityValidationExpression_" data-uid="Pulumi.Aws.ApiGateway.AuthorizerState.IdentityValidationExpression*"></a>
   <h4 id="Pulumi_Aws_ApiGateway_AuthorizerState_IdentityValidationExpression" data-uid="Pulumi.Aws.ApiGateway.AuthorizerState.IdentityValidationExpression">IdentityValidationExpression</h4>
@@ -254,7 +225,7 @@ the client receives a 401 Unauthorized response.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; IdentityValidationExpression { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? IdentityValidationExpression { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -266,13 +237,13 @@ the client receives a 401 Unauthorized response.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Apigateway/Authorizer.cs/#L247">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ApiGateway/Authorizer.cs/#L245">View Source</a>
   </span>
   <a id="Pulumi_Aws_ApiGateway_AuthorizerState_Name_" data-uid="Pulumi.Aws.ApiGateway.AuthorizerState.Name*"></a>
   <h4 id="Pulumi_Aws_ApiGateway_AuthorizerState_Name" data-uid="Pulumi.Aws.ApiGateway.AuthorizerState.Name">Name</h4>
@@ -281,7 +252,7 @@ the client receives a 401 Unauthorized response.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Name { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Name { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -293,13 +264,13 @@ the client receives a 401 Unauthorized response.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Apigateway/Authorizer.cs/#L257">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ApiGateway/Authorizer.cs/#L255">View Source</a>
   </span>
   <a id="Pulumi_Aws_ApiGateway_AuthorizerState_ProviderArns_" data-uid="Pulumi.Aws.ApiGateway.AuthorizerState.ProviderArns*"></a>
   <h4 id="Pulumi_Aws_ApiGateway_AuthorizerState_ProviderArns" data-uid="Pulumi.Aws.ApiGateway.AuthorizerState.ProviderArns">ProviderArns</h4>
@@ -321,13 +292,13 @@ Each element is of this format: <code>arn:aws:cognito-idp:{region}:{account_id}:
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Apigateway/Authorizer.cs/#L266">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ApiGateway/Authorizer.cs/#L264">View Source</a>
   </span>
   <a id="Pulumi_Aws_ApiGateway_AuthorizerState_RestApi_" data-uid="Pulumi.Aws.ApiGateway.AuthorizerState.RestApi*"></a>
   <h4 id="Pulumi_Aws_ApiGateway_AuthorizerState_RestApi" data-uid="Pulumi.Aws.ApiGateway.AuthorizerState.RestApi">RestApi</h4>
@@ -336,7 +307,7 @@ Each element is of this format: <code>arn:aws:cognito-idp:{region}:{account_id}:
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; RestApi { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? RestApi { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -348,13 +319,13 @@ Each element is of this format: <code>arn:aws:cognito-idp:{region}:{account_id}:
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Apigateway/Authorizer.cs/#L273">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ApiGateway/Authorizer.cs/#L271">View Source</a>
   </span>
   <a id="Pulumi_Aws_ApiGateway_AuthorizerState_Type_" data-uid="Pulumi.Aws.ApiGateway.AuthorizerState.Type*"></a>
   <h4 id="Pulumi_Aws_ApiGateway_AuthorizerState_Type" data-uid="Pulumi.Aws.ApiGateway.AuthorizerState.Type">Type</h4>
@@ -364,7 +335,7 @@ Defaults to <code>TOKEN</code>.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Type { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Type { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -376,7 +347,7 @@ Defaults to <code>TOKEN</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -388,7 +359,7 @@ Defaults to <code>TOKEN</code>.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Apigateway/Authorizer.cs/#L204" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ApiGateway/Authorizer.cs/#L202" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

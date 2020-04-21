@@ -79,40 +79,16 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">UserInfo</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Authentication.V1.html">Pulumi.Kubernetes.Types.Outputs.Authentication.V1</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Kubernetes.dll</h6>
   <h5 id="Pulumi_Kubernetes_Types_Outputs_Authentication_V1_UserInfo_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class UserInfo</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class UserInfo : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L8831">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L8837">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Authentication_V1_UserInfo_Extra" data-uid="Pulumi.Kubernetes.Types.Outputs.Authentication.V1.UserInfo.Extra">Extra</h4>
   <div class="markdown level1 summary"><p>Any additional information provided by the authenticator.</p>
@@ -132,13 +108,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L8836">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L8842">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Authentication_V1_UserInfo_Groups" data-uid="Pulumi.Kubernetes.Types.Outputs.Authentication.V1.UserInfo.Groups">Groups</h4>
   <div class="markdown level1 summary"><p>The names of groups this user is a part of.</p>
@@ -158,13 +134,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L8842">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L8848">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Authentication_V1_UserInfo_Uid" data-uid="Pulumi.Kubernetes.Types.Outputs.Authentication.V1.UserInfo.Uid">Uid</h4>
   <div class="markdown level1 summary"><p>A unique value that identifies this user across time. If this user is deleted and
@@ -191,7 +167,7 @@ another user by the same name is added, they will have different UIDs.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L8847">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L8853">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Authentication_V1_UserInfo_Username" data-uid="Pulumi.Kubernetes.Types.Outputs.Authentication.V1.UserInfo.Username">Username</h4>
   <div class="markdown level1 summary"><p>The name that uniquely identifies this user among all active users.</p>
@@ -223,7 +199,7 @@ another user by the same name is added, they will have different UIDs.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L8825" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L8831" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

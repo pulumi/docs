@@ -76,36 +76,7 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
-    <div class="level3"><span class="xref">CrawlerState</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">CrawlerState</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.Glue.html">Pulumi.Aws.Glue</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
@@ -116,7 +87,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Glue/Crawler.cs/#L415">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Glue/Crawler.cs/#L413">View Source</a>
   </span>
   <a id="Pulumi_Aws_Glue_CrawlerState__ctor_" data-uid="Pulumi.Aws.Glue.CrawlerState.#ctor*"></a>
   <h4 id="Pulumi_Aws_Glue_CrawlerState__ctor" data-uid="Pulumi.Aws.Glue.CrawlerState.#ctor">CrawlerState()</h4>
@@ -129,7 +100,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Glue/Crawler.cs/#L290">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Glue/Crawler.cs/#L288">View Source</a>
   </span>
   <a id="Pulumi_Aws_Glue_CrawlerState_Arn_" data-uid="Pulumi.Aws.Glue.CrawlerState.Arn*"></a>
   <h4 id="Pulumi_Aws_Glue_CrawlerState_Arn" data-uid="Pulumi.Aws.Glue.CrawlerState.Arn">Arn</h4>
@@ -138,7 +109,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Arn { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Arn { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -150,13 +121,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Glue/Crawler.cs/#L295">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Glue/Crawler.cs/#L293">View Source</a>
   </span>
   <a id="Pulumi_Aws_Glue_CrawlerState_CatalogTargets_" data-uid="Pulumi.Aws.Glue.CrawlerState.CatalogTargets*"></a>
   <h4 id="Pulumi_Aws_Glue_CrawlerState_CatalogTargets" data-uid="Pulumi.Aws.Glue.CrawlerState.CatalogTargets">CatalogTargets</h4>
@@ -164,7 +135,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public InputList&lt;CrawlerCatalogTargetsGetArgs&gt; CatalogTargets { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public InputList&lt;CrawlerCatalogTargetGetArgs&gt; CatalogTargets { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -176,13 +147,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<a class="xref" href="Pulumi.Aws.Glue.Inputs.CrawlerCatalogTargetsGetArgs.html">CrawlerCatalogTargetsGetArgs</a>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<a class="xref" href="Pulumi.Aws.Glue.Inputs.CrawlerCatalogTargetGetArgs.html">CrawlerCatalogTargetGetArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Glue/Crawler.cs/#L307">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Glue/Crawler.cs/#L305">View Source</a>
   </span>
   <a id="Pulumi_Aws_Glue_CrawlerState_Classifiers_" data-uid="Pulumi.Aws.Glue.CrawlerState.Classifiers*"></a>
   <h4 id="Pulumi_Aws_Glue_CrawlerState_Classifiers" data-uid="Pulumi.Aws.Glue.CrawlerState.Classifiers">Classifiers</h4>
@@ -203,13 +174,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Glue/Crawler.cs/#L316">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Glue/Crawler.cs/#L314">View Source</a>
   </span>
   <a id="Pulumi_Aws_Glue_CrawlerState_Configuration_" data-uid="Pulumi.Aws.Glue.CrawlerState.Configuration*"></a>
   <h4 id="Pulumi_Aws_Glue_CrawlerState_Configuration" data-uid="Pulumi.Aws.Glue.CrawlerState.Configuration">Configuration</h4>
@@ -218,7 +189,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Configuration { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Configuration { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -230,22 +201,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Glue/Crawler.cs/#L322">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Glue/Crawler.cs/#L320">View Source</a>
   </span>
   <a id="Pulumi_Aws_Glue_CrawlerState_DatabaseName_" data-uid="Pulumi.Aws.Glue.CrawlerState.DatabaseName*"></a>
   <h4 id="Pulumi_Aws_Glue_CrawlerState_DatabaseName" data-uid="Pulumi.Aws.Glue.CrawlerState.DatabaseName">DatabaseName</h4>
-  <div class="markdown level1 summary"><p>The name of the Glue database to be synchronized.</p>
+  <div class="markdown level1 summary"><p>Glue database where results are written.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; DatabaseName { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? DatabaseName { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -257,13 +228,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Glue/Crawler.cs/#L328">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Glue/Crawler.cs/#L326">View Source</a>
   </span>
   <a id="Pulumi_Aws_Glue_CrawlerState_Description_" data-uid="Pulumi.Aws.Glue.CrawlerState.Description*"></a>
   <h4 id="Pulumi_Aws_Glue_CrawlerState_Description" data-uid="Pulumi.Aws.Glue.CrawlerState.Description">Description</h4>
@@ -272,7 +243,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Description { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Description { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -284,13 +255,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Glue/Crawler.cs/#L337">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Glue/Crawler.cs/#L335">View Source</a>
   </span>
   <a id="Pulumi_Aws_Glue_CrawlerState_DynamodbTargets_" data-uid="Pulumi.Aws.Glue.CrawlerState.DynamodbTargets*"></a>
   <h4 id="Pulumi_Aws_Glue_CrawlerState_DynamodbTargets" data-uid="Pulumi.Aws.Glue.CrawlerState.DynamodbTargets">DynamodbTargets</h4>
@@ -299,7 +270,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public InputList&lt;CrawlerDynamodbTargetsGetArgs&gt; DynamodbTargets { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public InputList&lt;CrawlerDynamodbTargetGetArgs&gt; DynamodbTargets { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -311,13 +282,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<a class="xref" href="Pulumi.Aws.Glue.Inputs.CrawlerDynamodbTargetsGetArgs.html">CrawlerDynamodbTargetsGetArgs</a>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<a class="xref" href="Pulumi.Aws.Glue.Inputs.CrawlerDynamodbTargetGetArgs.html">CrawlerDynamodbTargetGetArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Glue/Crawler.cs/#L349">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Glue/Crawler.cs/#L347">View Source</a>
   </span>
   <a id="Pulumi_Aws_Glue_CrawlerState_JdbcTargets_" data-uid="Pulumi.Aws.Glue.CrawlerState.JdbcTargets*"></a>
   <h4 id="Pulumi_Aws_Glue_CrawlerState_JdbcTargets" data-uid="Pulumi.Aws.Glue.CrawlerState.JdbcTargets">JdbcTargets</h4>
@@ -326,7 +297,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public InputList&lt;CrawlerJdbcTargetsGetArgs&gt; JdbcTargets { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public InputList&lt;CrawlerJdbcTargetGetArgs&gt; JdbcTargets { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -338,13 +309,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<a class="xref" href="Pulumi.Aws.Glue.Inputs.CrawlerJdbcTargetsGetArgs.html">CrawlerJdbcTargetsGetArgs</a>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<a class="xref" href="Pulumi.Aws.Glue.Inputs.CrawlerJdbcTargetGetArgs.html">CrawlerJdbcTargetGetArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Glue/Crawler.cs/#L358">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Glue/Crawler.cs/#L356">View Source</a>
   </span>
   <a id="Pulumi_Aws_Glue_CrawlerState_Name_" data-uid="Pulumi.Aws.Glue.CrawlerState.Name*"></a>
   <h4 id="Pulumi_Aws_Glue_CrawlerState_Name" data-uid="Pulumi.Aws.Glue.CrawlerState.Name">Name</h4>
@@ -353,7 +324,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Name { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Name { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -365,13 +336,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Glue/Crawler.cs/#L364">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Glue/Crawler.cs/#L362">View Source</a>
   </span>
   <a id="Pulumi_Aws_Glue_CrawlerState_Role_" data-uid="Pulumi.Aws.Glue.CrawlerState.Role*"></a>
   <h4 id="Pulumi_Aws_Glue_CrawlerState_Role" data-uid="Pulumi.Aws.Glue.CrawlerState.Role">Role</h4>
@@ -380,7 +351,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Role { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Role { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -392,13 +363,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Glue/Crawler.cs/#L373">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Glue/Crawler.cs/#L371">View Source</a>
   </span>
   <a id="Pulumi_Aws_Glue_CrawlerState_S3Targets_" data-uid="Pulumi.Aws.Glue.CrawlerState.S3Targets*"></a>
   <h4 id="Pulumi_Aws_Glue_CrawlerState_S3Targets" data-uid="Pulumi.Aws.Glue.CrawlerState.S3Targets">S3Targets</h4>
@@ -407,7 +378,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public InputList&lt;CrawlerS3TargetsGetArgs&gt; S3Targets { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public InputList&lt;CrawlerS3TargetGetArgs&gt; S3Targets { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -419,13 +390,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<a class="xref" href="Pulumi.Aws.Glue.Inputs.CrawlerS3TargetsGetArgs.html">CrawlerS3TargetsGetArgs</a>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<a class="xref" href="Pulumi.Aws.Glue.Inputs.CrawlerS3TargetGetArgs.html">CrawlerS3TargetGetArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Glue/Crawler.cs/#L382">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Glue/Crawler.cs/#L380">View Source</a>
   </span>
   <a id="Pulumi_Aws_Glue_CrawlerState_Schedule_" data-uid="Pulumi.Aws.Glue.CrawlerState.Schedule*"></a>
   <h4 id="Pulumi_Aws_Glue_CrawlerState_Schedule" data-uid="Pulumi.Aws.Glue.CrawlerState.Schedule">Schedule</h4>
@@ -434,7 +405,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Schedule { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Schedule { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -446,13 +417,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Glue/Crawler.cs/#L388">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Glue/Crawler.cs/#L386">View Source</a>
   </span>
   <a id="Pulumi_Aws_Glue_CrawlerState_SchemaChangePolicy_" data-uid="Pulumi.Aws.Glue.CrawlerState.SchemaChangePolicy*"></a>
   <h4 id="Pulumi_Aws_Glue_CrawlerState_SchemaChangePolicy" data-uid="Pulumi.Aws.Glue.CrawlerState.SchemaChangePolicy">SchemaChangePolicy</h4>
@@ -461,7 +432,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;CrawlerSchemaChangePolicyGetArgs&gt; SchemaChangePolicy { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;CrawlerSchemaChangePolicyGetArgs&gt;? SchemaChangePolicy { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -473,13 +444,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Aws.Glue.Inputs.CrawlerSchemaChangePolicyGetArgs.html">CrawlerSchemaChangePolicyGetArgs</a>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Aws.Glue.Inputs.CrawlerSchemaChangePolicyGetArgs.html">CrawlerSchemaChangePolicyGetArgs</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Glue/Crawler.cs/#L394">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Glue/Crawler.cs/#L392">View Source</a>
   </span>
   <a id="Pulumi_Aws_Glue_CrawlerState_SecurityConfiguration_" data-uid="Pulumi.Aws.Glue.CrawlerState.SecurityConfiguration*"></a>
   <h4 id="Pulumi_Aws_Glue_CrawlerState_SecurityConfiguration" data-uid="Pulumi.Aws.Glue.CrawlerState.SecurityConfiguration">SecurityConfiguration</h4>
@@ -488,7 +459,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; SecurityConfiguration { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? SecurityConfiguration { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -500,13 +471,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Glue/Crawler.cs/#L400">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Glue/Crawler.cs/#L398">View Source</a>
   </span>
   <a id="Pulumi_Aws_Glue_CrawlerState_TablePrefix_" data-uid="Pulumi.Aws.Glue.CrawlerState.TablePrefix*"></a>
   <h4 id="Pulumi_Aws_Glue_CrawlerState_TablePrefix" data-uid="Pulumi.Aws.Glue.CrawlerState.TablePrefix">TablePrefix</h4>
@@ -515,7 +486,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; TablePrefix { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? TablePrefix { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -527,13 +498,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Glue/Crawler.cs/#L409">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Glue/Crawler.cs/#L407">View Source</a>
   </span>
   <a id="Pulumi_Aws_Glue_CrawlerState_Tags_" data-uid="Pulumi.Aws.Glue.CrawlerState.Tags*"></a>
   <h4 id="Pulumi_Aws_Glue_CrawlerState_Tags" data-uid="Pulumi.Aws.Glue.CrawlerState.Tags">Tags</h4>
@@ -554,7 +525,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputMap-1.html">InputMap</a>&lt;<span class="xref">System.Object</span>&gt;</td>
+        <td><span class="xref">InputMap</span>&lt;<span class="xref">System.Object</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -566,7 +537,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Glue/Crawler.cs/#L285" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Glue/Crawler.cs/#L283" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

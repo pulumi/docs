@@ -76,36 +76,7 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
-    <div class="level3"><span class="xref">ServiceTaskSpecRestartPolicyGetArgs</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">ServiceTaskSpecRestartPolicyGetArgs</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Docker.Inputs.html">Pulumi.Docker.Inputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Docker.dll</h6>
@@ -116,7 +87,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/Service.cs/#L1844">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/Inputs/ServiceTaskSpecRestartPolicyGetArgs.cs/#L31">View Source</a>
   </span>
   <a id="Pulumi_Docker_Inputs_ServiceTaskSpecRestartPolicyGetArgs__ctor_" data-uid="Pulumi.Docker.Inputs.ServiceTaskSpecRestartPolicyGetArgs.#ctor*"></a>
   <h4 id="Pulumi_Docker_Inputs_ServiceTaskSpecRestartPolicyGetArgs__ctor" data-uid="Pulumi.Docker.Inputs.ServiceTaskSpecRestartPolicyGetArgs.#ctor">ServiceTaskSpecRestartPolicyGetArgs()</h4>
@@ -129,7 +100,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/Service.cs/#L1832">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/Inputs/ServiceTaskSpecRestartPolicyGetArgs.cs/#L15">View Source</a>
   </span>
   <a id="Pulumi_Docker_Inputs_ServiceTaskSpecRestartPolicyGetArgs_Condition_" data-uid="Pulumi.Docker.Inputs.ServiceTaskSpecRestartPolicyGetArgs.Condition*"></a>
   <h4 id="Pulumi_Docker_Inputs_ServiceTaskSpecRestartPolicyGetArgs_Condition" data-uid="Pulumi.Docker.Inputs.ServiceTaskSpecRestartPolicyGetArgs.Condition">Condition</h4>
@@ -137,7 +108,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Condition { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Condition { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -149,21 +120,23 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/Service.cs/#L1835">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/Inputs/ServiceTaskSpecRestartPolicyGetArgs.cs/#L22">View Source</a>
   </span>
   <a id="Pulumi_Docker_Inputs_ServiceTaskSpecRestartPolicyGetArgs_Delay_" data-uid="Pulumi.Docker.Inputs.ServiceTaskSpecRestartPolicyGetArgs.Delay*"></a>
   <h4 id="Pulumi_Docker_Inputs_ServiceTaskSpecRestartPolicyGetArgs_Delay" data-uid="Pulumi.Docker.Inputs.ServiceTaskSpecRestartPolicyGetArgs.Delay">Delay</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Delay between updates <code>(ns|us|ms|s|m|h)</code>, e.g. <code>5s</code>.
+all tasks are up when a service is created, or to check if all tasks are successfully updated on an update. Default: <code>7s</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Delay { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Delay { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -175,13 +148,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/Service.cs/#L1838">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/Inputs/ServiceTaskSpecRestartPolicyGetArgs.cs/#L25">View Source</a>
   </span>
   <a id="Pulumi_Docker_Inputs_ServiceTaskSpecRestartPolicyGetArgs_MaxAttempts_" data-uid="Pulumi.Docker.Inputs.ServiceTaskSpecRestartPolicyGetArgs.MaxAttempts*"></a>
   <h4 id="Pulumi_Docker_Inputs_ServiceTaskSpecRestartPolicyGetArgs_MaxAttempts" data-uid="Pulumi.Docker.Inputs.ServiceTaskSpecRestartPolicyGetArgs.MaxAttempts">MaxAttempts</h4>
@@ -189,7 +162,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; MaxAttempts { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? MaxAttempts { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -201,13 +174,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/Service.cs/#L1841">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/Inputs/ServiceTaskSpecRestartPolicyGetArgs.cs/#L28">View Source</a>
   </span>
   <a id="Pulumi_Docker_Inputs_ServiceTaskSpecRestartPolicyGetArgs_Window_" data-uid="Pulumi.Docker.Inputs.ServiceTaskSpecRestartPolicyGetArgs.Window*"></a>
   <h4 id="Pulumi_Docker_Inputs_ServiceTaskSpecRestartPolicyGetArgs_Window" data-uid="Pulumi.Docker.Inputs.ServiceTaskSpecRestartPolicyGetArgs.Window">Window</h4>
@@ -215,7 +188,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Window { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Window { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -227,7 +200,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -239,7 +212,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/Service.cs/#L1830" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/Inputs/ServiceTaskSpecRestartPolicyGetArgs.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

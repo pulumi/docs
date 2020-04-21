@@ -78,40 +78,16 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">GetLaunchConfigurationResult</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.Ec2.html">Pulumi.Aws.Ec2</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
   <h5 id="Pulumi_Aws_Ec2_GetLaunchConfigurationResult_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class GetLaunchConfigurationResult</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class GetLaunchConfigurationResult : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/GetLaunchConfiguration.cs/#L42">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/GetLaunchConfiguration.cs/#L45">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Ec2_GetLaunchConfigurationResult_Arn" data-uid="Pulumi.Aws.Ec2.GetLaunchConfigurationResult.Arn">Arn</h4>
   <div class="markdown level1 summary"><p>The Amazon Resource Name of the launch configuration.</p>
@@ -137,7 +113,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/GetLaunchConfiguration.cs/#L46">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/GetLaunchConfiguration.cs/#L49">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Ec2_GetLaunchConfigurationResult_AssociatePublicIpAddress" data-uid="Pulumi.Aws.Ec2.GetLaunchConfigurationResult.AssociatePublicIpAddress">AssociatePublicIpAddress</h4>
   <div class="markdown level1 summary"><p>Whether a Public IP address is associated with the instance.</p>
@@ -163,7 +139,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/GetLaunchConfiguration.cs/#L50">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/GetLaunchConfiguration.cs/#L53">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Ec2_GetLaunchConfigurationResult_EbsBlockDevices" data-uid="Pulumi.Aws.Ec2.GetLaunchConfigurationResult.EbsBlockDevices">EbsBlockDevices</h4>
   <div class="markdown level1 summary"><p>The EBS Block Devices attached to the instance.</p>
@@ -171,7 +147,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetLaunchConfigurationEbsBlockDevicesResult&gt; EbsBlockDevices</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetLaunchConfigurationEbsBlockDeviceResult&gt; EbsBlockDevices</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -183,13 +159,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.Ec2.Outputs.GetLaunchConfigurationEbsBlockDevicesResult.html">GetLaunchConfigurationEbsBlockDevicesResult</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.Ec2.Outputs.GetLaunchConfigurationEbsBlockDeviceResult.html">GetLaunchConfigurationEbsBlockDeviceResult</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/GetLaunchConfiguration.cs/#L54">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/GetLaunchConfiguration.cs/#L57">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Ec2_GetLaunchConfigurationResult_EbsOptimized" data-uid="Pulumi.Aws.Ec2.GetLaunchConfigurationResult.EbsOptimized">EbsOptimized</h4>
   <div class="markdown level1 summary"><p>Whether the launched EC2 instance will be EBS-optimized.</p>
@@ -215,7 +191,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/GetLaunchConfiguration.cs/#L58">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/GetLaunchConfiguration.cs/#L61">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Ec2_GetLaunchConfigurationResult_EnableMonitoring" data-uid="Pulumi.Aws.Ec2.GetLaunchConfigurationResult.EnableMonitoring">EnableMonitoring</h4>
   <div class="markdown level1 summary"><p>Whether Detailed Monitoring is Enabled.</p>
@@ -241,7 +217,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/GetLaunchConfiguration.cs/#L62">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/GetLaunchConfiguration.cs/#L65">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Ec2_GetLaunchConfigurationResult_EphemeralBlockDevices" data-uid="Pulumi.Aws.Ec2.GetLaunchConfigurationResult.EphemeralBlockDevices">EphemeralBlockDevices</h4>
   <div class="markdown level1 summary"><p>The Ephemeral volumes on the instance.</p>
@@ -249,7 +225,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetLaunchConfigurationEphemeralBlockDevicesResult&gt; EphemeralBlockDevices</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetLaunchConfigurationEphemeralBlockDeviceResult&gt; EphemeralBlockDevices</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -261,13 +237,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.Ec2.Outputs.GetLaunchConfigurationEphemeralBlockDevicesResult.html">GetLaunchConfigurationEphemeralBlockDevicesResult</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.Ec2.Outputs.GetLaunchConfigurationEphemeralBlockDeviceResult.html">GetLaunchConfigurationEphemeralBlockDeviceResult</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/GetLaunchConfiguration.cs/#L66">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/GetLaunchConfiguration.cs/#L69">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Ec2_GetLaunchConfigurationResult_IamInstanceProfile" data-uid="Pulumi.Aws.Ec2.GetLaunchConfigurationResult.IamInstanceProfile">IamInstanceProfile</h4>
   <div class="markdown level1 summary"><p>The IAM Instance Profile to associate with launched instances.</p>
@@ -293,7 +269,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/GetLaunchConfiguration.cs/#L114">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/GetLaunchConfiguration.cs/#L73">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Ec2_GetLaunchConfigurationResult_Id" data-uid="Pulumi.Aws.Ec2.GetLaunchConfigurationResult.Id">Id</h4>
   <div class="markdown level1 summary"><p>id is the provider-assigned unique ID for this managed resource.</p>
@@ -319,7 +295,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/GetLaunchConfiguration.cs/#L70">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/GetLaunchConfiguration.cs/#L77">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Ec2_GetLaunchConfigurationResult_ImageId" data-uid="Pulumi.Aws.Ec2.GetLaunchConfigurationResult.ImageId">ImageId</h4>
   <div class="markdown level1 summary"><p>The EC2 Image ID of the instance.</p>
@@ -345,7 +321,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/GetLaunchConfiguration.cs/#L74">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/GetLaunchConfiguration.cs/#L81">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Ec2_GetLaunchConfigurationResult_InstanceType" data-uid="Pulumi.Aws.Ec2.GetLaunchConfigurationResult.InstanceType">InstanceType</h4>
   <div class="markdown level1 summary"><p>The Instance Type of the instance to launch.</p>
@@ -371,7 +347,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/GetLaunchConfiguration.cs/#L78">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/GetLaunchConfiguration.cs/#L85">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Ec2_GetLaunchConfigurationResult_KeyName" data-uid="Pulumi.Aws.Ec2.GetLaunchConfigurationResult.KeyName">KeyName</h4>
   <div class="markdown level1 summary"><p>The Key Name that should be used for the instance.</p>
@@ -397,7 +373,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/GetLaunchConfiguration.cs/#L82">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/GetLaunchConfiguration.cs/#L89">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Ec2_GetLaunchConfigurationResult_Name" data-uid="Pulumi.Aws.Ec2.GetLaunchConfigurationResult.Name">Name</h4>
   <div class="markdown level1 summary"><p>The Name of the launch configuration.</p>
@@ -423,7 +399,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/GetLaunchConfiguration.cs/#L86">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/GetLaunchConfiguration.cs/#L93">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Ec2_GetLaunchConfigurationResult_PlacementTenancy" data-uid="Pulumi.Aws.Ec2.GetLaunchConfigurationResult.PlacementTenancy">PlacementTenancy</h4>
   <div class="markdown level1 summary"><p>The Tenancy of the instance.</p>
@@ -449,7 +425,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/GetLaunchConfiguration.cs/#L90">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/GetLaunchConfiguration.cs/#L97">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Ec2_GetLaunchConfigurationResult_RootBlockDevices" data-uid="Pulumi.Aws.Ec2.GetLaunchConfigurationResult.RootBlockDevices">RootBlockDevices</h4>
   <div class="markdown level1 summary"><p>The Root Block Device of the instance.</p>
@@ -457,7 +433,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetLaunchConfigurationRootBlockDevicesResult&gt; RootBlockDevices</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetLaunchConfigurationRootBlockDeviceResult&gt; RootBlockDevices</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -469,13 +445,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.Ec2.Outputs.GetLaunchConfigurationRootBlockDevicesResult.html">GetLaunchConfigurationRootBlockDevicesResult</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.Ec2.Outputs.GetLaunchConfigurationRootBlockDeviceResult.html">GetLaunchConfigurationRootBlockDeviceResult</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/GetLaunchConfiguration.cs/#L94">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/GetLaunchConfiguration.cs/#L101">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Ec2_GetLaunchConfigurationResult_SecurityGroups" data-uid="Pulumi.Aws.Ec2.GetLaunchConfigurationResult.SecurityGroups">SecurityGroups</h4>
   <div class="markdown level1 summary"><p>A list of associated Security Group IDS.</p>
@@ -495,13 +471,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/GetLaunchConfiguration.cs/#L98">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/GetLaunchConfiguration.cs/#L105">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Ec2_GetLaunchConfigurationResult_SpotPrice" data-uid="Pulumi.Aws.Ec2.GetLaunchConfigurationResult.SpotPrice">SpotPrice</h4>
   <div class="markdown level1 summary"><p>The Price to use for reserving Spot instances.</p>
@@ -527,7 +503,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/GetLaunchConfiguration.cs/#L102">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/GetLaunchConfiguration.cs/#L109">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Ec2_GetLaunchConfigurationResult_UserData" data-uid="Pulumi.Aws.Ec2.GetLaunchConfigurationResult.UserData">UserData</h4>
   <div class="markdown level1 summary"><p>The User Data of the instance.</p>
@@ -553,7 +529,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/GetLaunchConfiguration.cs/#L106">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/GetLaunchConfiguration.cs/#L113">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Ec2_GetLaunchConfigurationResult_VpcClassicLinkId" data-uid="Pulumi.Aws.Ec2.GetLaunchConfigurationResult.VpcClassicLinkId">VpcClassicLinkId</h4>
   <div class="markdown level1 summary"><p>The ID of a ClassicLink-enabled VPC.</p>
@@ -579,7 +555,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/GetLaunchConfiguration.cs/#L110">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/GetLaunchConfiguration.cs/#L117">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Ec2_GetLaunchConfigurationResult_VpcClassicLinkSecurityGroups" data-uid="Pulumi.Aws.Ec2.GetLaunchConfigurationResult.VpcClassicLinkSecurityGroups">VpcClassicLinkSecurityGroups</h4>
   <div class="markdown level1 summary"><p>The IDs of one or more Security Groups for the specified ClassicLink-enabled VPC.</p>
@@ -599,7 +575,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -611,7 +587,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/GetLaunchConfiguration.cs/#L36" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/GetLaunchConfiguration.cs/#L39" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

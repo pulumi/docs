@@ -79,40 +79,16 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">VolumeMount</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Core.V1.html">Pulumi.Kubernetes.Types.Outputs.Core.V1</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Kubernetes.dll</h6>
   <h5 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_VolumeMount_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class VolumeMount</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class VolumeMount : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L22717">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L22912">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_VolumeMount_MountPath" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.VolumeMount.MountPath">MountPath</h4>
   <div class="markdown level1 summary"><p>Path within the container at which the volume should be mounted.  Must not contain ':'.</p>
@@ -138,7 +114,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L22724">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L22919">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_VolumeMount_MountPropagation" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.VolumeMount.MountPropagation">MountPropagation</h4>
   <div class="markdown level1 summary"><p>mountPropagation determines how mounts are propagated from the host to container and the
@@ -166,7 +142,7 @@ other way around. When not set, MountPropagationNone is used. This field is beta
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L22729">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L22924">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_VolumeMount_Name" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.VolumeMount.Name">Name</h4>
   <div class="markdown level1 summary"><p>This must match the Name of a Volume.</p>
@@ -192,7 +168,7 @@ other way around. When not set, MountPropagationNone is used. This field is beta
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L22735">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L22930">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_VolumeMount_ReadOnly" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.VolumeMount.ReadOnly">ReadOnly</h4>
   <div class="markdown level1 summary"><p>Mounted read-only if true, read-write otherwise (false or unspecified). Defaults to
@@ -219,7 +195,7 @@ false.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L22741">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L22936">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_VolumeMount_SubPath" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.VolumeMount.SubPath">SubPath</h4>
   <div class="markdown level1 summary"><p>Path within the volume from which the container's volume should be mounted. Defaults to
@@ -246,7 +222,7 @@ false.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L22749">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L22944">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_VolumeMount_SubPathExpr" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.VolumeMount.SubPathExpr">SubPathExpr</h4>
   <div class="markdown level1 summary"><p>Expanded path within the volume from which the container's volume should be mounted.
@@ -281,7 +257,7 @@ and SubPath are mutually exclusive.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L22711" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L22906" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

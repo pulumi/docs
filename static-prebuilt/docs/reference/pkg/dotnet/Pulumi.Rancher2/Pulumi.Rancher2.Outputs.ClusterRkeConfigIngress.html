@@ -87,7 +87,33 @@
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Cluster.cs/#L8043">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/Outputs/ClusterRkeConfigIngress.cs/#L19">View Source</a>
+  </span>
+  <h4 id="Pulumi_Rancher2_Outputs_ClusterRkeConfigIngress_DnsPolicy" data-uid="Pulumi.Rancher2.Outputs.ClusterRkeConfigIngress.DnsPolicy">DnsPolicy</h4>
+  <div class="markdown level1 summary"><p>Ingress controller DNS policy. <code>ClusterFirstWithHostNet</code>, <code>ClusterFirst</code>, <code>Default</code>, and <code>None</code> are supported. <a href="https://kubernetes.io/docs/concepts/services-networking/dns-pod-service/#pod-s-dns-policy">K8S dns Policy</a> (string)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly string? DnsPolicy</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/Outputs/ClusterRkeConfigIngress.cs/#L23">View Source</a>
   </span>
   <h4 id="Pulumi_Rancher2_Outputs_ClusterRkeConfigIngress_ExtraArgs" data-uid="Pulumi.Rancher2.Outputs.ClusterRkeConfigIngress.ExtraArgs">ExtraArgs</h4>
   <div class="markdown level1 summary"><p>Extra arguments for scheduler service (map)</p>
@@ -95,7 +121,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly ImmutableDictionary&lt;string, object&gt; ExtraArgs</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly ImmutableDictionary&lt;string, object&gt;? ExtraArgs</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -107,13 +133,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Cluster.cs/#L8047">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/Outputs/ClusterRkeConfigIngress.cs/#L27">View Source</a>
   </span>
   <h4 id="Pulumi_Rancher2_Outputs_ClusterRkeConfigIngress_NodeSelector" data-uid="Pulumi.Rancher2.Outputs.ClusterRkeConfigIngress.NodeSelector">NodeSelector</h4>
   <div class="markdown level1 summary"><p>Node selector for RKE Ingress (map)</p>
@@ -121,7 +147,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly ImmutableDictionary&lt;string, object&gt; NodeSelector</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly ImmutableDictionary&lt;string, object&gt;? NodeSelector</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -133,13 +159,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Cluster.cs/#L8051">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/Outputs/ClusterRkeConfigIngress.cs/#L31">View Source</a>
   </span>
   <h4 id="Pulumi_Rancher2_Outputs_ClusterRkeConfigIngress_Options" data-uid="Pulumi.Rancher2.Outputs.ClusterRkeConfigIngress.Options">Options</h4>
   <div class="markdown level1 summary"><p>RKE options for network (map)</p>
@@ -147,7 +173,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly ImmutableDictionary&lt;string, object&gt; Options</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly ImmutableDictionary&lt;string, object&gt;? Options</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -159,13 +185,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Cluster.cs/#L8055">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/Outputs/ClusterRkeConfigIngress.cs/#L35">View Source</a>
   </span>
   <h4 id="Pulumi_Rancher2_Outputs_ClusterRkeConfigIngress_Provider" data-uid="Pulumi.Rancher2.Outputs.ClusterRkeConfigIngress.Provider">Provider</h4>
   <div class="markdown level1 summary"><p>Provider for RKE monitoring (string)</p>
@@ -173,7 +199,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string Provider</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? Provider</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -185,7 +211,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -197,7 +223,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Cluster.cs/#L8037" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/Outputs/ClusterRkeConfigIngress.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

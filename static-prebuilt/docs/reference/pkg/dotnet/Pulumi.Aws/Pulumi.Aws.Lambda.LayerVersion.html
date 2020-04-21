@@ -81,53 +81,12 @@ indirectly via Amazon S3 (using the <code>s3_bucket</code>, <code>s3_key</code> 
 package via S3 it may be useful to use the <code>aws.s3.BucketObject</code> resource to upload it.</p>
 <p>For larger deployment packages it is recommended by Amazon to upload via S3, since the S3 API has better support for uploading
 large files efficiently.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/lambda_layer_version.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/lambda_layer_version.html.markdown</a>.</p>
-</blockquote>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
-    <div class="level3"><span class="xref">LayerVersion</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">LayerVersion</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.Lambda.html">Pulumi.Aws.Lambda</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
@@ -138,16 +97,16 @@ large files efficiently.</p>
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Lambda/LayerVersion.cs/#L125">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Lambda/LayerVersion.cs/#L124">View Source</a>
   </span>
   <a id="Pulumi_Aws_Lambda_LayerVersion__ctor_" data-uid="Pulumi.Aws.Lambda.LayerVersion.#ctor*"></a>
-  <h4 id="Pulumi_Aws_Lambda_LayerVersion__ctor_System_String_Pulumi_Aws_Lambda_LayerVersionArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.Lambda.LayerVersion.#ctor(System.String,Pulumi.Aws.Lambda.LayerVersionArgs,Pulumi.CustomResourceOptions)">LayerVersion(String, LayerVersionArgs, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Aws_Lambda_LayerVersion__ctor_System_String_Pulumi_Aws_Lambda_LayerVersionArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.Lambda.LayerVersion.#ctor(System.String,Pulumi.Aws.Lambda.LayerVersionArgs,System.Nullable{CustomResourceOptions})">LayerVersion(String, LayerVersionArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Create a LayerVersion resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public LayerVersion(string name, LayerVersionArgs args, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public LayerVersion(string name, LayerVersionArgs args, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -172,7 +131,7 @@ large files efficiently.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -182,7 +141,7 @@ large files efficiently.</p>
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Lambda/LayerVersion.cs/#L36">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Lambda/LayerVersion.cs/#L35">View Source</a>
   </span>
   <a id="Pulumi_Aws_Lambda_LayerVersion_Arn_" data-uid="Pulumi.Aws.Lambda.LayerVersion.Arn*"></a>
   <h4 id="Pulumi_Aws_Lambda_LayerVersion_Arn" data-uid="Pulumi.Aws.Lambda.LayerVersion.Arn">Arn</h4>
@@ -203,13 +162,13 @@ large files efficiently.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Lambda/LayerVersion.cs/#L60">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Lambda/LayerVersion.cs/#L41">View Source</a>
   </span>
   <a id="Pulumi_Aws_Lambda_LayerVersion_Code_" data-uid="Pulumi.Aws.Lambda.LayerVersion.Code*"></a>
   <h4 id="Pulumi_Aws_Lambda_LayerVersion_Code" data-uid="Pulumi.Aws.Lambda.LayerVersion.Code">Code</h4>
@@ -218,7 +177,7 @@ large files efficiently.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;Archive&gt; Code { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;Archive?&gt; Code { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -230,13 +189,13 @@ large files efficiently.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="../Pulumi/Pulumi.Archive.html">Archive</a>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">Archive</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Lambda/LayerVersion.cs/#L42">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Lambda/LayerVersion.cs/#L47">View Source</a>
   </span>
   <a id="Pulumi_Aws_Lambda_LayerVersion_CompatibleRuntimes_" data-uid="Pulumi.Aws.Lambda.LayerVersion.CompatibleRuntimes*"></a>
   <h4 id="Pulumi_Aws_Lambda_LayerVersion_CompatibleRuntimes" data-uid="Pulumi.Aws.Lambda.LayerVersion.CompatibleRuntimes">CompatibleRuntimes</h4>
@@ -257,13 +216,13 @@ large files efficiently.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Lambda/LayerVersion.cs/#L48">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Lambda/LayerVersion.cs/#L53">View Source</a>
   </span>
   <a id="Pulumi_Aws_Lambda_LayerVersion_CreatedDate_" data-uid="Pulumi.Aws.Lambda.LayerVersion.CreatedDate*"></a>
   <h4 id="Pulumi_Aws_Lambda_LayerVersion_CreatedDate" data-uid="Pulumi.Aws.Lambda.LayerVersion.CreatedDate">CreatedDate</h4>
@@ -284,13 +243,13 @@ large files efficiently.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Lambda/LayerVersion.cs/#L54">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Lambda/LayerVersion.cs/#L59">View Source</a>
   </span>
   <a id="Pulumi_Aws_Lambda_LayerVersion_Description_" data-uid="Pulumi.Aws.Lambda.LayerVersion.Description*"></a>
   <h4 id="Pulumi_Aws_Lambda_LayerVersion_Description" data-uid="Pulumi.Aws.Lambda.LayerVersion.Description">Description</h4>
@@ -299,7 +258,7 @@ large files efficiently.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Description { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Description { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -311,13 +270,13 @@ large files efficiently.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Lambda/LayerVersion.cs/#L66">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Lambda/LayerVersion.cs/#L65">View Source</a>
   </span>
   <a id="Pulumi_Aws_Lambda_LayerVersion_LayerArn_" data-uid="Pulumi.Aws.Lambda.LayerVersion.LayerArn*"></a>
   <h4 id="Pulumi_Aws_Lambda_LayerVersion_LayerArn" data-uid="Pulumi.Aws.Lambda.LayerVersion.LayerArn">LayerArn</h4>
@@ -338,13 +297,13 @@ large files efficiently.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Lambda/LayerVersion.cs/#L72">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Lambda/LayerVersion.cs/#L71">View Source</a>
   </span>
   <a id="Pulumi_Aws_Lambda_LayerVersion_LayerName_" data-uid="Pulumi.Aws.Lambda.LayerVersion.LayerName*"></a>
   <h4 id="Pulumi_Aws_Lambda_LayerVersion_LayerName" data-uid="Pulumi.Aws.Lambda.LayerVersion.LayerName">LayerName</h4>
@@ -365,13 +324,13 @@ large files efficiently.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Lambda/LayerVersion.cs/#L78">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Lambda/LayerVersion.cs/#L77">View Source</a>
   </span>
   <a id="Pulumi_Aws_Lambda_LayerVersion_LicenseInfo_" data-uid="Pulumi.Aws.Lambda.LayerVersion.LicenseInfo*"></a>
   <h4 id="Pulumi_Aws_Lambda_LayerVersion_LicenseInfo" data-uid="Pulumi.Aws.Lambda.LayerVersion.LicenseInfo">LicenseInfo</h4>
@@ -380,7 +339,7 @@ large files efficiently.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; LicenseInfo { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; LicenseInfo { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -392,13 +351,13 @@ large files efficiently.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Lambda/LayerVersion.cs/#L84">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Lambda/LayerVersion.cs/#L83">View Source</a>
   </span>
   <a id="Pulumi_Aws_Lambda_LayerVersion_S3Bucket_" data-uid="Pulumi.Aws.Lambda.LayerVersion.S3Bucket*"></a>
   <h4 id="Pulumi_Aws_Lambda_LayerVersion_S3Bucket" data-uid="Pulumi.Aws.Lambda.LayerVersion.S3Bucket">S3Bucket</h4>
@@ -407,7 +366,7 @@ large files efficiently.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; S3Bucket { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; S3Bucket { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -419,13 +378,13 @@ large files efficiently.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Lambda/LayerVersion.cs/#L90">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Lambda/LayerVersion.cs/#L89">View Source</a>
   </span>
   <a id="Pulumi_Aws_Lambda_LayerVersion_S3Key_" data-uid="Pulumi.Aws.Lambda.LayerVersion.S3Key*"></a>
   <h4 id="Pulumi_Aws_Lambda_LayerVersion_S3Key" data-uid="Pulumi.Aws.Lambda.LayerVersion.S3Key">S3Key</h4>
@@ -434,7 +393,7 @@ large files efficiently.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; S3Key { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; S3Key { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -446,13 +405,13 @@ large files efficiently.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Lambda/LayerVersion.cs/#L96">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Lambda/LayerVersion.cs/#L95">View Source</a>
   </span>
   <a id="Pulumi_Aws_Lambda_LayerVersion_S3ObjectVersion_" data-uid="Pulumi.Aws.Lambda.LayerVersion.S3ObjectVersion*"></a>
   <h4 id="Pulumi_Aws_Lambda_LayerVersion_S3ObjectVersion" data-uid="Pulumi.Aws.Lambda.LayerVersion.S3ObjectVersion">S3ObjectVersion</h4>
@@ -461,7 +420,7 @@ large files efficiently.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; S3ObjectVersion { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; S3ObjectVersion { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -473,13 +432,13 @@ large files efficiently.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Lambda/LayerVersion.cs/#L102">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Lambda/LayerVersion.cs/#L101">View Source</a>
   </span>
   <a id="Pulumi_Aws_Lambda_LayerVersion_SourceCodeHash_" data-uid="Pulumi.Aws.Lambda.LayerVersion.SourceCodeHash*"></a>
   <h4 id="Pulumi_Aws_Lambda_LayerVersion_SourceCodeHash" data-uid="Pulumi.Aws.Lambda.LayerVersion.SourceCodeHash">SourceCodeHash</h4>
@@ -500,13 +459,13 @@ large files efficiently.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Lambda/LayerVersion.cs/#L108">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Lambda/LayerVersion.cs/#L107">View Source</a>
   </span>
   <a id="Pulumi_Aws_Lambda_LayerVersion_SourceCodeSize_" data-uid="Pulumi.Aws.Lambda.LayerVersion.SourceCodeSize*"></a>
   <h4 id="Pulumi_Aws_Lambda_LayerVersion_SourceCodeSize" data-uid="Pulumi.Aws.Lambda.LayerVersion.SourceCodeSize">SourceCodeSize</h4>
@@ -527,13 +486,13 @@ large files efficiently.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Lambda/LayerVersion.cs/#L114">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Lambda/LayerVersion.cs/#L113">View Source</a>
   </span>
   <a id="Pulumi_Aws_Lambda_LayerVersion_Version_" data-uid="Pulumi.Aws.Lambda.LayerVersion.Version*"></a>
   <h4 id="Pulumi_Aws_Lambda_LayerVersion_Version" data-uid="Pulumi.Aws.Lambda.LayerVersion.Version">Version</h4>
@@ -554,7 +513,7 @@ large files efficiently.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -562,17 +521,17 @@ large files efficiently.</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Lambda/LayerVersion.cs/#L155">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Lambda/LayerVersion.cs/#L154">View Source</a>
   </span>
   <a id="Pulumi_Aws_Lambda_LayerVersion_Get_" data-uid="Pulumi.Aws.Lambda.LayerVersion.Get*"></a>
-  <h4 id="Pulumi_Aws_Lambda_LayerVersion_Get_System_String_Pulumi_Input_System_String__Pulumi_Aws_Lambda_LayerVersionState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.Lambda.LayerVersion.Get(System.String,Pulumi.Input{System.String},Pulumi.Aws.Lambda.LayerVersionState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, LayerVersionState, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Aws_Lambda_LayerVersion_Get_System_String_Input_System_String__Pulumi_Aws_Lambda_LayerVersionState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.Lambda.LayerVersion.Get(System.String,Input{System.String},Pulumi.Aws.Lambda.LayerVersionState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, LayerVersionState, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Get an existing LayerVersion resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static LayerVersion Get(string name, Input&lt;string&gt; id, LayerVersionState state = null, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static LayerVersion Get(string name, Input&lt;string&gt; id, LayerVersionState state = null, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -591,7 +550,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -603,7 +562,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -632,7 +591,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Lambda/LayerVersion.cs/#L31" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Lambda/LayerVersion.cs/#L30" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

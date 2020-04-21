@@ -72,53 +72,12 @@
   <h1 id="Pulumi_Azure_EventHub_Queue" data-uid="Pulumi.Azure.EventHub.Queue" class="text-break">Class Queue
   </h1>
   <div class="markdown level0 summary"><p>Manages a ServiceBus Queue.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/servicebus_queue.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/servicebus_queue.html.markdown</a>.</p>
-</blockquote>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
-    <div class="level3"><span class="xref">Queue</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">Queue</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Azure.EventHub.html">Pulumi.Azure.EventHub</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Azure.dll</h6>
@@ -129,16 +88,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Eventhub/Queue.cs/#L130">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/EventHub/Queue.cs/#L128">View Source</a>
   </span>
   <a id="Pulumi_Azure_EventHub_Queue__ctor_" data-uid="Pulumi.Azure.EventHub.Queue.#ctor*"></a>
-  <h4 id="Pulumi_Azure_EventHub_Queue__ctor_System_String_Pulumi_Azure_EventHub_QueueArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Azure.EventHub.Queue.#ctor(System.String,Pulumi.Azure.EventHub.QueueArgs,Pulumi.CustomResourceOptions)">Queue(String, QueueArgs, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Azure_EventHub_Queue__ctor_System_String_Pulumi_Azure_EventHub_QueueArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Azure.EventHub.Queue.#ctor(System.String,Pulumi.Azure.EventHub.QueueArgs,System.Nullable{CustomResourceOptions})">Queue(String, QueueArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Create a Queue resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Queue(string name, QueueArgs args, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Queue(string name, QueueArgs args, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -163,7 +122,7 @@
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -173,7 +132,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Eventhub/Queue.cs/#L23">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/EventHub/Queue.cs/#L21">View Source</a>
   </span>
   <a id="Pulumi_Azure_EventHub_Queue_AutoDeleteOnIdle_" data-uid="Pulumi.Azure.EventHub.Queue.AutoDeleteOnIdle*"></a>
   <h4 id="Pulumi_Azure_EventHub_Queue_AutoDeleteOnIdle" data-uid="Pulumi.Azure.EventHub.Queue.AutoDeleteOnIdle">AutoDeleteOnIdle</h4>
@@ -195,13 +154,13 @@ Queue is automatically deleted, minimum of 5 minutes.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Eventhub/Queue.cs/#L29">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/EventHub/Queue.cs/#L27">View Source</a>
   </span>
   <a id="Pulumi_Azure_EventHub_Queue_DeadLetteringOnMessageExpiration_" data-uid="Pulumi.Azure.EventHub.Queue.DeadLetteringOnMessageExpiration*"></a>
   <h4 id="Pulumi_Azure_EventHub_Queue_DeadLetteringOnMessageExpiration" data-uid="Pulumi.Azure.EventHub.Queue.DeadLetteringOnMessageExpiration">DeadLetteringOnMessageExpiration</h4>
@@ -222,13 +181,13 @@ Queue is automatically deleted, minimum of 5 minutes.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Eventhub/Queue.cs/#L36">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/EventHub/Queue.cs/#L34">View Source</a>
   </span>
   <a id="Pulumi_Azure_EventHub_Queue_DefaultMessageTtl_" data-uid="Pulumi.Azure.EventHub.Queue.DefaultMessageTtl*"></a>
   <h4 id="Pulumi_Azure_EventHub_Queue_DefaultMessageTtl" data-uid="Pulumi.Azure.EventHub.Queue.DefaultMessageTtl">DefaultMessageTtl</h4>
@@ -250,13 +209,13 @@ queue. This is the default value used when TTL is not set on message itself.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Eventhub/Queue.cs/#L43">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/EventHub/Queue.cs/#L41">View Source</a>
   </span>
   <a id="Pulumi_Azure_EventHub_Queue_DuplicateDetectionHistoryTimeWindow_" data-uid="Pulumi.Azure.EventHub.Queue.DuplicateDetectionHistoryTimeWindow*"></a>
   <h4 id="Pulumi_Azure_EventHub_Queue_DuplicateDetectionHistoryTimeWindow" data-uid="Pulumi.Azure.EventHub.Queue.DuplicateDetectionHistoryTimeWindow">DuplicateDetectionHistoryTimeWindow</h4>
@@ -278,13 +237,13 @@ duplicates can be detected. Default value is 10 minutes. (<code>PT10M</code>)</p
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Eventhub/Queue.cs/#L52">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/EventHub/Queue.cs/#L50">View Source</a>
   </span>
   <a id="Pulumi_Azure_EventHub_Queue_EnableExpress_" data-uid="Pulumi.Azure.EventHub.Queue.EnableExpress*"></a>
   <h4 id="Pulumi_Azure_EventHub_Queue_EnableExpress" data-uid="Pulumi.Azure.EventHub.Queue.EnableExpress">EnableExpress</h4>
@@ -308,13 +267,13 @@ be set to <code>false</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Eventhub/Queue.cs/#L61">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/EventHub/Queue.cs/#L59">View Source</a>
   </span>
   <a id="Pulumi_Azure_EventHub_Queue_EnablePartitioning_" data-uid="Pulumi.Azure.EventHub.Queue.EnablePartitioning*"></a>
   <h4 id="Pulumi_Azure_EventHub_Queue_EnablePartitioning" data-uid="Pulumi.Azure.EventHub.Queue.EnablePartitioning">EnablePartitioning</h4>
@@ -338,13 +297,13 @@ be set to <code>true</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Eventhub/Queue.cs/#L67">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/EventHub/Queue.cs/#L65">View Source</a>
   </span>
   <a id="Pulumi_Azure_EventHub_Queue_LockDuration_" data-uid="Pulumi.Azure.EventHub.Queue.LockDuration*"></a>
   <h4 id="Pulumi_Azure_EventHub_Queue_LockDuration" data-uid="Pulumi.Azure.EventHub.Queue.LockDuration">LockDuration</h4>
@@ -365,13 +324,13 @@ be set to <code>true</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Eventhub/Queue.cs/#L73">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/EventHub/Queue.cs/#L71">View Source</a>
   </span>
   <a id="Pulumi_Azure_EventHub_Queue_MaxDeliveryCount_" data-uid="Pulumi.Azure.EventHub.Queue.MaxDeliveryCount*"></a>
   <h4 id="Pulumi_Azure_EventHub_Queue_MaxDeliveryCount" data-uid="Pulumi.Azure.EventHub.Queue.MaxDeliveryCount">MaxDeliveryCount</h4>
@@ -392,13 +351,13 @@ be set to <code>true</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Eventhub/Queue.cs/#L81">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/EventHub/Queue.cs/#L79">View Source</a>
   </span>
   <a id="Pulumi_Azure_EventHub_Queue_MaxSizeInMegabytes_" data-uid="Pulumi.Azure.EventHub.Queue.MaxSizeInMegabytes*"></a>
   <h4 id="Pulumi_Azure_EventHub_Queue_MaxSizeInMegabytes" data-uid="Pulumi.Azure.EventHub.Queue.MaxSizeInMegabytes">MaxSizeInMegabytes</h4>
@@ -421,13 +380,13 @@ section of <a href="https://docs.microsoft.com/en-us/azure/service-bus-messaging
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Eventhub/Queue.cs/#L88">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/EventHub/Queue.cs/#L86">View Source</a>
   </span>
   <a id="Pulumi_Azure_EventHub_Queue_Name_" data-uid="Pulumi.Azure.EventHub.Queue.Name*"></a>
   <h4 id="Pulumi_Azure_EventHub_Queue_Name" data-uid="Pulumi.Azure.EventHub.Queue.Name">Name</h4>
@@ -449,13 +408,13 @@ new resource to be created.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Eventhub/Queue.cs/#L95">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/EventHub/Queue.cs/#L93">View Source</a>
   </span>
   <a id="Pulumi_Azure_EventHub_Queue_NamespaceName_" data-uid="Pulumi.Azure.EventHub.Queue.NamespaceName*"></a>
   <h4 id="Pulumi_Azure_EventHub_Queue_NamespaceName" data-uid="Pulumi.Azure.EventHub.Queue.NamespaceName">NamespaceName</h4>
@@ -477,13 +436,13 @@ this queue in. Changing this forces a new resource to be created.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Eventhub/Queue.cs/#L103">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/EventHub/Queue.cs/#L101">View Source</a>
   </span>
   <a id="Pulumi_Azure_EventHub_Queue_RequiresDuplicateDetection_" data-uid="Pulumi.Azure.EventHub.Queue.RequiresDuplicateDetection*"></a>
   <h4 id="Pulumi_Azure_EventHub_Queue_RequiresDuplicateDetection" data-uid="Pulumi.Azure.EventHub.Queue.RequiresDuplicateDetection">RequiresDuplicateDetection</h4>
@@ -506,13 +465,13 @@ a new resource to be created. Defaults to <code>false</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Eventhub/Queue.cs/#L112">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/EventHub/Queue.cs/#L110">View Source</a>
   </span>
   <a id="Pulumi_Azure_EventHub_Queue_RequiresSession_" data-uid="Pulumi.Azure.EventHub.Queue.RequiresSession*"></a>
   <h4 id="Pulumi_Azure_EventHub_Queue_RequiresSession" data-uid="Pulumi.Azure.EventHub.Queue.RequiresSession">RequiresSession</h4>
@@ -536,13 +495,13 @@ Changing this forces a new resource to be created. Defaults to <code>false</code
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Eventhub/Queue.cs/#L119">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/EventHub/Queue.cs/#L117">View Source</a>
   </span>
   <a id="Pulumi_Azure_EventHub_Queue_ResourceGroupName_" data-uid="Pulumi.Azure.EventHub.Queue.ResourceGroupName*"></a>
   <h4 id="Pulumi_Azure_EventHub_Queue_ResourceGroupName" data-uid="Pulumi.Azure.EventHub.Queue.ResourceGroupName">ResourceGroupName</h4>
@@ -564,7 +523,7 @@ create the namespace. Changing this forces a new resource to be created.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -572,17 +531,17 @@ create the namespace. Changing this forces a new resource to be created.</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Eventhub/Queue.cs/#L160">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/EventHub/Queue.cs/#L158">View Source</a>
   </span>
   <a id="Pulumi_Azure_EventHub_Queue_Get_" data-uid="Pulumi.Azure.EventHub.Queue.Get*"></a>
-  <h4 id="Pulumi_Azure_EventHub_Queue_Get_System_String_Pulumi_Input_System_String__Pulumi_Azure_EventHub_QueueState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Azure.EventHub.Queue.Get(System.String,Pulumi.Input{System.String},Pulumi.Azure.EventHub.QueueState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, QueueState, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Azure_EventHub_Queue_Get_System_String_Input_System_String__Pulumi_Azure_EventHub_QueueState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Azure.EventHub.Queue.Get(System.String,Input{System.String},Pulumi.Azure.EventHub.QueueState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, QueueState, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Get an existing Queue resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Queue Get(string name, Input&lt;string&gt; id, QueueState state = null, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Queue Get(string name, Input&lt;string&gt; id, QueueState state = null, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -601,7 +560,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -613,7 +572,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -642,7 +601,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Eventhub/Queue.cs/#L17" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/EventHub/Queue.cs/#L15" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

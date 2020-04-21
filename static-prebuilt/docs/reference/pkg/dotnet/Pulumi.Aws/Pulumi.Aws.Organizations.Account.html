@@ -76,53 +76,12 @@
 <p><strong>Note:</strong> Account management must be done from the organization's master account.</p>
 </blockquote>
 <p>!&gt; <strong>WARNING:</strong> Deleting this resource will only remove an AWS account from an organization. This provider will not close the account. The member account must be prepared to be a standalone account beforehand. See the <a href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html">AWS Organizations documentation</a> for more information.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/organizations_account.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/organizations_account.html.markdown</a>.</p>
-</blockquote>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
-    <div class="level3"><span class="xref">Account</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">Account</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.Organizations.html">Pulumi.Aws.Organizations</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
@@ -133,16 +92,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Organizations/Account.cs/#L82">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Organizations/Account.cs/#L80">View Source</a>
   </span>
   <a id="Pulumi_Aws_Organizations_Account__ctor_" data-uid="Pulumi.Aws.Organizations.Account.#ctor*"></a>
-  <h4 id="Pulumi_Aws_Organizations_Account__ctor_System_String_Pulumi_Aws_Organizations_AccountArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.Organizations.Account.#ctor(System.String,Pulumi.Aws.Organizations.AccountArgs,Pulumi.CustomResourceOptions)">Account(String, AccountArgs, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Aws_Organizations_Account__ctor_System_String_Pulumi_Aws_Organizations_AccountArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.Organizations.Account.#ctor(System.String,Pulumi.Aws.Organizations.AccountArgs,System.Nullable{CustomResourceOptions})">Account(String, AccountArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Create a Account resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Account(string name, AccountArgs args, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Account(string name, AccountArgs args, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -167,7 +126,7 @@
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -177,7 +136,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Organizations/Account.cs/#L26">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Organizations/Account.cs/#L24">View Source</a>
   </span>
   <a id="Pulumi_Aws_Organizations_Account_Arn_" data-uid="Pulumi.Aws.Organizations.Account.Arn*"></a>
   <h4 id="Pulumi_Aws_Organizations_Account_Arn" data-uid="Pulumi.Aws.Organizations.Account.Arn">Arn</h4>
@@ -198,13 +157,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Organizations/Account.cs/#L32">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Organizations/Account.cs/#L30">View Source</a>
   </span>
   <a id="Pulumi_Aws_Organizations_Account_Email_" data-uid="Pulumi.Aws.Organizations.Account.Email*"></a>
   <h4 id="Pulumi_Aws_Organizations_Account_Email" data-uid="Pulumi.Aws.Organizations.Account.Email">Email</h4>
@@ -225,13 +184,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Organizations/Account.cs/#L38">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Organizations/Account.cs/#L36">View Source</a>
   </span>
   <a id="Pulumi_Aws_Organizations_Account_IamUserAccessToBilling_" data-uid="Pulumi.Aws.Organizations.Account.IamUserAccessToBilling*"></a>
   <h4 id="Pulumi_Aws_Organizations_Account_IamUserAccessToBilling" data-uid="Pulumi.Aws.Organizations.Account.IamUserAccessToBilling">IamUserAccessToBilling</h4>
@@ -240,7 +199,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; IamUserAccessToBilling { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; IamUserAccessToBilling { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -252,13 +211,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Organizations/Account.cs/#L41">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Organizations/Account.cs/#L39">View Source</a>
   </span>
   <a id="Pulumi_Aws_Organizations_Account_JoinedMethod_" data-uid="Pulumi.Aws.Organizations.Account.JoinedMethod*"></a>
   <h4 id="Pulumi_Aws_Organizations_Account_JoinedMethod" data-uid="Pulumi.Aws.Organizations.Account.JoinedMethod">JoinedMethod</h4>
@@ -278,13 +237,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Organizations/Account.cs/#L44">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Organizations/Account.cs/#L42">View Source</a>
   </span>
   <a id="Pulumi_Aws_Organizations_Account_JoinedTimestamp_" data-uid="Pulumi.Aws.Organizations.Account.JoinedTimestamp*"></a>
   <h4 id="Pulumi_Aws_Organizations_Account_JoinedTimestamp" data-uid="Pulumi.Aws.Organizations.Account.JoinedTimestamp">JoinedTimestamp</h4>
@@ -304,13 +263,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Organizations/Account.cs/#L50">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Organizations/Account.cs/#L48">View Source</a>
   </span>
   <a id="Pulumi_Aws_Organizations_Account_Name_" data-uid="Pulumi.Aws.Organizations.Account.Name*"></a>
   <h4 id="Pulumi_Aws_Organizations_Account_Name" data-uid="Pulumi.Aws.Organizations.Account.Name">Name</h4>
@@ -331,13 +290,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Organizations/Account.cs/#L56">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Organizations/Account.cs/#L54">View Source</a>
   </span>
   <a id="Pulumi_Aws_Organizations_Account_ParentId_" data-uid="Pulumi.Aws.Organizations.Account.ParentId*"></a>
   <h4 id="Pulumi_Aws_Organizations_Account_ParentId" data-uid="Pulumi.Aws.Organizations.Account.ParentId">ParentId</h4>
@@ -358,22 +317,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Organizations/Account.cs/#L62">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Organizations/Account.cs/#L60">View Source</a>
   </span>
   <a id="Pulumi_Aws_Organizations_Account_RoleName_" data-uid="Pulumi.Aws.Organizations.Account.RoleName*"></a>
   <h4 id="Pulumi_Aws_Organizations_Account_RoleName" data-uid="Pulumi.Aws.Organizations.Account.RoleName">RoleName</h4>
-  <div class="markdown level1 summary"><p>The name of an IAM role that Organizations automatically preconfigures in the new member account. This role trusts the master account, allowing users in the master account to assume the role, as permitted by the master account administrator. The role has administrator permissions in the new member account. The Organizations API provides no method for reading this information after account creation, so this provider cannot perform drift detection on its value and will always show a difference for a configured value after import unless <a href="https://www.terraform.io/docs/configuration/resources.html#ignore_changes"><code>ignore_changes</code></a> is used.</p>
+  <div class="markdown level1 summary"><p>The name of an IAM role that Organizations automatically preconfigures in the new member account. This role trusts the master account, allowing users in the master account to assume the role, as permitted by the master account administrator. The role has administrator permissions in the new member account. The Organizations API provides no method for reading this information after account creation, so this provider cannot perform drift detection on its value and will always show a difference for a configured value after import unless <a href="https://www.pulumi.com/docs/intro/concepts/programming-model/#ignorechanges"><code>ignoreChanges</code></a> is used.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; RoleName { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; RoleName { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -385,13 +344,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Organizations/Account.cs/#L65">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Organizations/Account.cs/#L63">View Source</a>
   </span>
   <a id="Pulumi_Aws_Organizations_Account_Status_" data-uid="Pulumi.Aws.Organizations.Account.Status*"></a>
   <h4 id="Pulumi_Aws_Organizations_Account_Status" data-uid="Pulumi.Aws.Organizations.Account.Status">Status</h4>
@@ -411,13 +370,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Organizations/Account.cs/#L71">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Organizations/Account.cs/#L69">View Source</a>
   </span>
   <a id="Pulumi_Aws_Organizations_Account_Tags_" data-uid="Pulumi.Aws.Organizations.Account.Tags*"></a>
   <h4 id="Pulumi_Aws_Organizations_Account_Tags" data-uid="Pulumi.Aws.Organizations.Account.Tags">Tags</h4>
@@ -426,7 +385,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;&gt; Tags { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;?&gt; Tags { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -438,7 +397,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -446,17 +405,17 @@
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Organizations/Account.cs/#L112">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Organizations/Account.cs/#L110">View Source</a>
   </span>
   <a id="Pulumi_Aws_Organizations_Account_Get_" data-uid="Pulumi.Aws.Organizations.Account.Get*"></a>
-  <h4 id="Pulumi_Aws_Organizations_Account_Get_System_String_Pulumi_Input_System_String__Pulumi_Aws_Organizations_AccountState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.Organizations.Account.Get(System.String,Pulumi.Input{System.String},Pulumi.Aws.Organizations.AccountState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, AccountState, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Aws_Organizations_Account_Get_System_String_Input_System_String__Pulumi_Aws_Organizations_AccountState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.Organizations.Account.Get(System.String,Input{System.String},Pulumi.Aws.Organizations.AccountState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, AccountState, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Get an existing Account resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Account Get(string name, Input&lt;string&gt; id, AccountState state = null, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Account Get(string name, Input&lt;string&gt; id, AccountState state = null, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -475,7 +434,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -487,7 +446,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -516,7 +475,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Organizations/Account.cs/#L21" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Organizations/Account.cs/#L19" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

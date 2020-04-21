@@ -83,40 +83,16 @@ defined.</p>
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">StatusDetails</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Meta.V1.html">Pulumi.Kubernetes.Types.Outputs.Meta.V1</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Kubernetes.dll</h6>
   <h5 id="Pulumi_Kubernetes_Types_Outputs_Meta_V1_StatusDetails_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class StatusDetails</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class StatusDetails : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L27800">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L28043">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Meta_V1_StatusDetails_Causes" data-uid="Pulumi.Kubernetes.Types.Outputs.Meta.V1.StatusDetails.Causes">Causes</h4>
   <div class="markdown level1 summary"><p>The Causes array includes more details associated with the StatusReason failure. Not all
@@ -137,13 +113,13 @@ StatusReasons may provide detailed causes.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Meta.V1.StatusCause.html">StatusCause</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Meta.V1.StatusCause.html">StatusCause</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L27805">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L28048">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Meta_V1_StatusDetails_Group" data-uid="Pulumi.Kubernetes.Types.Outputs.Meta.V1.StatusDetails.Group">Group</h4>
   <div class="markdown level1 summary"><p>The group attribute of the resource associated with the status StatusReason.</p>
@@ -169,7 +145,7 @@ StatusReasons may provide detailed causes.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L27812">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L28055">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Meta_V1_StatusDetails_Kind" data-uid="Pulumi.Kubernetes.Types.Outputs.Meta.V1.StatusDetails.Kind">Kind</h4>
   <div class="markdown level1 summary"><p>The kind attribute of the resource associated with the status StatusReason. On some
@@ -197,7 +173,7 @@ operations may differ from the requested resource Kind. More info:
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L27818">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L28061">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Meta_V1_StatusDetails_Name" data-uid="Pulumi.Kubernetes.Types.Outputs.Meta.V1.StatusDetails.Name">Name</h4>
   <div class="markdown level1 summary"><p>The name attribute of the resource associated with the status StatusReason (when there
@@ -224,7 +200,7 @@ is a single name which can be described).</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L27825">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L28068">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Meta_V1_StatusDetails_RetryAfterSeconds" data-uid="Pulumi.Kubernetes.Types.Outputs.Meta.V1.StatusDetails.RetryAfterSeconds">RetryAfterSeconds</h4>
   <div class="markdown level1 summary"><p>If specified, the time in seconds before the operation should be retried. Some errors
@@ -252,7 +228,7 @@ indicate how long to wait before taking the alternate action.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L27831">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L28074">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Meta_V1_StatusDetails_Uid" data-uid="Pulumi.Kubernetes.Types.Outputs.Meta.V1.StatusDetails.Uid">Uid</h4>
   <div class="markdown level1 summary"><p>UID of the resource. (when there is a single resource which can be described). More
@@ -285,7 +261,7 @@ info: <a href="http://kubernetes.io/docs/user-guide/identifiers#uids">http://kub
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L27793" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L28036" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -71,50 +71,17 @@
   
   <h1 id="Pulumi_Gcp_Logging_FolderSink" data-uid="Pulumi.Gcp.Logging.FolderSink" class="text-break">Class FolderSink
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Manages a folder-level logging sink. For more information see
+<a href="https://cloud.google.com/logging/docs/">the official documentation</a> and
+<a href="https://cloud.google.com/logging/docs/api/tasks/exporting-logs">Exporting Logs in the API</a>.</p>
+<p>Note that you must have the &quot;Logs Configuration Writer&quot; IAM role (<code>roles/logging.configWriter</code>)
+granted to the credentials used with this provider.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
-    <div class="level3"><span class="xref">FolderSink</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">FolderSink</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.Logging.html">Pulumi.Gcp.Logging</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
@@ -125,16 +92,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Logging/FolderSink.cs/#L71">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Logging/FolderSink.cs/#L79">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Logging_FolderSink__ctor_" data-uid="Pulumi.Gcp.Logging.FolderSink.#ctor*"></a>
-  <h4 id="Pulumi_Gcp_Logging_FolderSink__ctor_System_String_Pulumi_Gcp_Logging_FolderSinkArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Gcp.Logging.FolderSink.#ctor(System.String,Pulumi.Gcp.Logging.FolderSinkArgs,Pulumi.CustomResourceOptions)">FolderSink(String, FolderSinkArgs, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Gcp_Logging_FolderSink__ctor_System_String_Pulumi_Gcp_Logging_FolderSinkArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Gcp.Logging.FolderSink.#ctor(System.String,Pulumi.Gcp.Logging.FolderSinkArgs,System.Nullable{CustomResourceOptions})">FolderSink(String, FolderSinkArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Create a FolderSink resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public FolderSink(string name, FolderSinkArgs args, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public FolderSink(string name, FolderSinkArgs args, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -159,7 +126,7 @@
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -169,7 +136,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Logging/FolderSink.cs/#L17">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Logging/FolderSink.cs/#L25">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Logging_FolderSink_BigqueryOptions_" data-uid="Pulumi.Gcp.Logging.FolderSink.BigqueryOptions*"></a>
   <h4 id="Pulumi_Gcp_Logging_FolderSink_BigqueryOptions" data-uid="Pulumi.Gcp.Logging.FolderSink.BigqueryOptions">BigqueryOptions</h4>
@@ -190,13 +157,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Gcp.Logging.Outputs.FolderSinkBigqueryOptions.html">FolderSinkBigqueryOptions</a>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Gcp.Logging.Outputs.FolderSinkBigqueryOptions.html">FolderSinkBigqueryOptions</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Logging/FolderSink.cs/#L25">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Logging/FolderSink.cs/#L33">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Logging_FolderSink_Destination_" data-uid="Pulumi.Gcp.Logging.FolderSink.Destination*"></a>
   <h4 id="Pulumi_Gcp_Logging_FolderSink_Destination" data-uid="Pulumi.Gcp.Logging.FolderSink.Destination">Destination</h4>
@@ -219,13 +186,13 @@ The writer associated with the sink must have access to write to the above resou
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Logging/FolderSink.cs/#L33">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Logging/FolderSink.cs/#L41">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Logging_FolderSink_Filter_" data-uid="Pulumi.Gcp.Logging.FolderSink.Filter*"></a>
   <h4 id="Pulumi_Gcp_Logging_FolderSink_Filter" data-uid="Pulumi.Gcp.Logging.FolderSink.Filter">Filter</h4>
@@ -236,7 +203,7 @@ write a filter.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Filter { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Filter { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -248,13 +215,13 @@ write a filter.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Logging/FolderSink.cs/#L40">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Logging/FolderSink.cs/#L48">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Logging_FolderSink_Folder_" data-uid="Pulumi.Gcp.Logging.FolderSink.Folder*"></a>
   <h4 id="Pulumi_Gcp_Logging_FolderSink_Folder" data-uid="Pulumi.Gcp.Logging.FolderSink.Folder">Folder</h4>
@@ -276,13 +243,13 @@ accepted.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Logging/FolderSink.cs/#L47">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Logging/FolderSink.cs/#L55">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Logging_FolderSink_IncludeChildren_" data-uid="Pulumi.Gcp.Logging.FolderSink.IncludeChildren*"></a>
   <h4 id="Pulumi_Gcp_Logging_FolderSink_IncludeChildren" data-uid="Pulumi.Gcp.Logging.FolderSink.IncludeChildren">IncludeChildren</h4>
@@ -304,13 +271,13 @@ associated with child projects are also exported; otherwise only logs relating t
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Logging/FolderSink.cs/#L53">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Logging/FolderSink.cs/#L61">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Logging_FolderSink_Name_" data-uid="Pulumi.Gcp.Logging.FolderSink.Name*"></a>
   <h4 id="Pulumi_Gcp_Logging_FolderSink_Name" data-uid="Pulumi.Gcp.Logging.FolderSink.Name">Name</h4>
@@ -331,13 +298,13 @@ associated with child projects are also exported; otherwise only logs relating t
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Logging/FolderSink.cs/#L60">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Logging/FolderSink.cs/#L68">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Logging_FolderSink_WriterIdentity_" data-uid="Pulumi.Gcp.Logging.FolderSink.WriterIdentity*"></a>
   <h4 id="Pulumi_Gcp_Logging_FolderSink_WriterIdentity" data-uid="Pulumi.Gcp.Logging.FolderSink.WriterIdentity">WriterIdentity</h4>
@@ -359,7 +326,7 @@ configured <code>destination</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -367,17 +334,17 @@ configured <code>destination</code>.</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Logging/FolderSink.cs/#L101">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Logging/FolderSink.cs/#L109">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Logging_FolderSink_Get_" data-uid="Pulumi.Gcp.Logging.FolderSink.Get*"></a>
-  <h4 id="Pulumi_Gcp_Logging_FolderSink_Get_System_String_Pulumi_Input_System_String__Pulumi_Gcp_Logging_FolderSinkState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Gcp.Logging.FolderSink.Get(System.String,Pulumi.Input{System.String},Pulumi.Gcp.Logging.FolderSinkState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, FolderSinkState, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Gcp_Logging_FolderSink_Get_System_String_Input_System_String__Pulumi_Gcp_Logging_FolderSinkState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Gcp.Logging.FolderSink.Get(System.String,Input{System.String},Pulumi.Gcp.Logging.FolderSinkState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, FolderSinkState, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Get an existing FolderSink resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static FolderSink Get(string name, Input&lt;string&gt; id, FolderSinkState state = null, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static FolderSink Get(string name, Input&lt;string&gt; id, FolderSinkState state = null, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -396,7 +363,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -408,7 +375,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -437,7 +404,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Logging/FolderSink.cs/#L12" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Logging/FolderSink.cs/#L20" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

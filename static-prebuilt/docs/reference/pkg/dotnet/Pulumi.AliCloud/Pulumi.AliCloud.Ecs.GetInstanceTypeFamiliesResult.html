@@ -78,47 +78,23 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">GetInstanceTypeFamiliesResult</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.AliCloud.Ecs.html">Pulumi.AliCloud.Ecs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.AliCloud.dll</h6>
   <h5 id="Pulumi_AliCloud_Ecs_GetInstanceTypeFamiliesResult_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class GetInstanceTypeFamiliesResult</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class GetInstanceTypeFamiliesResult : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Ecs/GetInstanceTypeFamilies.cs/#L62">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Ecs/GetInstanceTypeFamilies.cs/#L65">View Source</a>
   </span>
   <h4 id="Pulumi_AliCloud_Ecs_GetInstanceTypeFamiliesResult_Families" data-uid="Pulumi.AliCloud.Ecs.GetInstanceTypeFamiliesResult.Families">Families</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetInstanceTypeFamiliesFamiliesResult&gt; Families</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetInstanceTypeFamiliesFamilyResult&gt; Families</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -130,13 +106,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.AliCloud.Ecs.Outputs.GetInstanceTypeFamiliesFamiliesResult.html">GetInstanceTypeFamiliesFamiliesResult</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.AliCloud.Ecs.Outputs.GetInstanceTypeFamiliesFamilyResult.html">GetInstanceTypeFamiliesFamilyResult</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Ecs/GetInstanceTypeFamilies.cs/#L66">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Ecs/GetInstanceTypeFamilies.cs/#L69">View Source</a>
   </span>
   <h4 id="Pulumi_AliCloud_Ecs_GetInstanceTypeFamiliesResult_Generation" data-uid="Pulumi.AliCloud.Ecs.GetInstanceTypeFamiliesResult.Generation">Generation</h4>
   <div class="markdown level1 summary"><p>The generation of the instance type family.</p>
@@ -144,7 +120,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string Generation</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? Generation</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -156,13 +132,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Ecs/GetInstanceTypeFamilies.cs/#L78">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Ecs/GetInstanceTypeFamilies.cs/#L73">View Source</a>
   </span>
   <h4 id="Pulumi_AliCloud_Ecs_GetInstanceTypeFamiliesResult_Id" data-uid="Pulumi.AliCloud.Ecs.GetInstanceTypeFamiliesResult.Id">Id</h4>
   <div class="markdown level1 summary"><p>id is the provider-assigned unique ID for this managed resource.</p>
@@ -188,7 +164,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Ecs/GetInstanceTypeFamilies.cs/#L70">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Ecs/GetInstanceTypeFamilies.cs/#L77">View Source</a>
   </span>
   <h4 id="Pulumi_AliCloud_Ecs_GetInstanceTypeFamiliesResult_Ids" data-uid="Pulumi.AliCloud.Ecs.GetInstanceTypeFamiliesResult.Ids">Ids</h4>
   <div class="markdown level1 summary"><p>A list of instance type family IDs.</p>
@@ -208,20 +184,20 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Ecs/GetInstanceTypeFamilies.cs/#L71">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Ecs/GetInstanceTypeFamilies.cs/#L78">View Source</a>
   </span>
   <h4 id="Pulumi_AliCloud_Ecs_GetInstanceTypeFamiliesResult_InstanceChargeType" data-uid="Pulumi.AliCloud.Ecs.GetInstanceTypeFamiliesResult.InstanceChargeType">InstanceChargeType</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string InstanceChargeType</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? InstanceChargeType</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -233,20 +209,20 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Ecs/GetInstanceTypeFamilies.cs/#L72">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Ecs/GetInstanceTypeFamilies.cs/#L79">View Source</a>
   </span>
   <h4 id="Pulumi_AliCloud_Ecs_GetInstanceTypeFamiliesResult_OutputFile" data-uid="Pulumi.AliCloud.Ecs.GetInstanceTypeFamiliesResult.OutputFile">OutputFile</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string OutputFile</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? OutputFile</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -258,20 +234,20 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Ecs/GetInstanceTypeFamilies.cs/#L73">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Ecs/GetInstanceTypeFamilies.cs/#L80">View Source</a>
   </span>
   <h4 id="Pulumi_AliCloud_Ecs_GetInstanceTypeFamiliesResult_SpotStrategy" data-uid="Pulumi.AliCloud.Ecs.GetInstanceTypeFamiliesResult.SpotStrategy">SpotStrategy</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string SpotStrategy</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? SpotStrategy</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -283,20 +259,20 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Ecs/GetInstanceTypeFamilies.cs/#L74">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Ecs/GetInstanceTypeFamilies.cs/#L81">View Source</a>
   </span>
   <h4 id="Pulumi_AliCloud_Ecs_GetInstanceTypeFamiliesResult_ZoneId" data-uid="Pulumi.AliCloud.Ecs.GetInstanceTypeFamiliesResult.ZoneId">ZoneId</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string ZoneId</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? ZoneId</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -308,7 +284,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -320,7 +296,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Ecs/GetInstanceTypeFamilies.cs/#L59" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Ecs/GetInstanceTypeFamilies.cs/#L62" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

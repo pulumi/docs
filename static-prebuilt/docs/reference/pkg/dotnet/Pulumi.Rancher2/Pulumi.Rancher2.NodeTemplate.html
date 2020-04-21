@@ -72,11 +72,8 @@
   <h1 id="Pulumi_Rancher2_NodeTemplate" data-uid="Pulumi.Rancher2.NodeTemplate" class="text-break">Class NodeTemplate
   </h1>
   <div class="markdown level0 summary"><p>Provides a Rancher v2 Node Template resource. This can be used to create Node Template for Rancher v2 and retrieve their information.</p>
-<p>amazonec2, azure, digitalocean, openstack and vsphere drivers are supported for node templates.</p>
+<p>amazonec2, azure, digitalocean, linode, opennebula, openstack, and vsphere drivers are supported for node templates.</p>
 <p><strong>Note</strong> If you are upgrading to Rancher v2.3.3, please take a look to final section</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/node_template.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/node_template.html.markdown</a>.</p>
-</blockquote>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -93,7 +90,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/NodeTemplate.cs/#L156">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/NodeTemplate.cs/#L173">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_NodeTemplate__ctor_" data-uid="Pulumi.Rancher2.NodeTemplate.#ctor*"></a>
   <h4 id="Pulumi_Rancher2_NodeTemplate__ctor_System_String_Pulumi_Rancher2_NodeTemplateArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Rancher2.NodeTemplate.#ctor(System.String,Pulumi.Rancher2.NodeTemplateArgs,System.Nullable{CustomResourceOptions})">NodeTemplate(String, NodeTemplateArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
@@ -137,7 +134,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/NodeTemplate.cs/#L25">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/NodeTemplate.cs/#L24">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_NodeTemplate_Amazonec2Config_" data-uid="Pulumi.Rancher2.NodeTemplate.Amazonec2Config*"></a>
   <h4 id="Pulumi_Rancher2_NodeTemplate_Amazonec2Config" data-uid="Pulumi.Rancher2.NodeTemplate.Amazonec2Config">Amazonec2Config</h4>
@@ -164,7 +161,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/NodeTemplate.cs/#L31">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/NodeTemplate.cs/#L30">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_NodeTemplate_Annotations_" data-uid="Pulumi.Rancher2.NodeTemplate.Annotations*"></a>
   <h4 id="Pulumi_Rancher2_NodeTemplate_Annotations" data-uid="Pulumi.Rancher2.NodeTemplate.Annotations">Annotations</h4>
@@ -191,7 +188,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/NodeTemplate.cs/#L37">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/NodeTemplate.cs/#L36">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_NodeTemplate_AuthCertificateAuthority_" data-uid="Pulumi.Rancher2.NodeTemplate.AuthCertificateAuthority*"></a>
   <h4 id="Pulumi_Rancher2_NodeTemplate_AuthCertificateAuthority" data-uid="Pulumi.Rancher2.NodeTemplate.AuthCertificateAuthority">AuthCertificateAuthority</h4>
@@ -218,7 +215,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/NodeTemplate.cs/#L43">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/NodeTemplate.cs/#L42">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_NodeTemplate_AuthKey_" data-uid="Pulumi.Rancher2.NodeTemplate.AuthKey*"></a>
   <h4 id="Pulumi_Rancher2_NodeTemplate_AuthKey" data-uid="Pulumi.Rancher2.NodeTemplate.AuthKey">AuthKey</h4>
@@ -245,7 +242,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/NodeTemplate.cs/#L49">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/NodeTemplate.cs/#L48">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_NodeTemplate_AzureConfig_" data-uid="Pulumi.Rancher2.NodeTemplate.AzureConfig*"></a>
   <h4 id="Pulumi_Rancher2_NodeTemplate_AzureConfig" data-uid="Pulumi.Rancher2.NodeTemplate.AzureConfig">AzureConfig</h4>
@@ -272,7 +269,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/NodeTemplate.cs/#L55">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/NodeTemplate.cs/#L54">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_NodeTemplate_CloudCredentialId_" data-uid="Pulumi.Rancher2.NodeTemplate.CloudCredentialId*"></a>
   <h4 id="Pulumi_Rancher2_NodeTemplate_CloudCredentialId" data-uid="Pulumi.Rancher2.NodeTemplate.CloudCredentialId">CloudCredentialId</h4>
@@ -299,7 +296,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/NodeTemplate.cs/#L61">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/NodeTemplate.cs/#L60">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_NodeTemplate_Description_" data-uid="Pulumi.Rancher2.NodeTemplate.Description*"></a>
   <h4 id="Pulumi_Rancher2_NodeTemplate_Description" data-uid="Pulumi.Rancher2.NodeTemplate.Description">Description</h4>
@@ -326,7 +323,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/NodeTemplate.cs/#L67">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/NodeTemplate.cs/#L66">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_NodeTemplate_DigitaloceanConfig_" data-uid="Pulumi.Rancher2.NodeTemplate.DigitaloceanConfig*"></a>
   <h4 id="Pulumi_Rancher2_NodeTemplate_DigitaloceanConfig" data-uid="Pulumi.Rancher2.NodeTemplate.DigitaloceanConfig">DigitaloceanConfig</h4>
@@ -353,7 +350,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/NodeTemplate.cs/#L73">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/NodeTemplate.cs/#L72">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_NodeTemplate_Driver_" data-uid="Pulumi.Rancher2.NodeTemplate.Driver*"></a>
   <h4 id="Pulumi_Rancher2_NodeTemplate_Driver" data-uid="Pulumi.Rancher2.NodeTemplate.Driver">Driver</h4>
@@ -380,7 +377,34 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/NodeTemplate.cs/#L79">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/NodeTemplate.cs/#L78">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_NodeTemplate_DriverId_" data-uid="Pulumi.Rancher2.NodeTemplate.DriverId*"></a>
+  <h4 id="Pulumi_Rancher2_NodeTemplate_DriverId" data-uid="Pulumi.Rancher2.NodeTemplate.DriverId">DriverId</h4>
+  <div class="markdown level1 summary"><p>The node driver id used by the node template. It's required if the node driver isn't built in Rancher (string)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; DriverId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/NodeTemplate.cs/#L84">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_NodeTemplate_EngineEnv_" data-uid="Pulumi.Rancher2.NodeTemplate.EngineEnv*"></a>
   <h4 id="Pulumi_Rancher2_NodeTemplate_EngineEnv" data-uid="Pulumi.Rancher2.NodeTemplate.EngineEnv">EngineEnv</h4>
@@ -407,7 +431,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/NodeTemplate.cs/#L85">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/NodeTemplate.cs/#L90">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_NodeTemplate_EngineInsecureRegistries_" data-uid="Pulumi.Rancher2.NodeTemplate.EngineInsecureRegistries*"></a>
   <h4 id="Pulumi_Rancher2_NodeTemplate_EngineInsecureRegistries" data-uid="Pulumi.Rancher2.NodeTemplate.EngineInsecureRegistries">EngineInsecureRegistries</h4>
@@ -434,7 +458,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/NodeTemplate.cs/#L91">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/NodeTemplate.cs/#L96">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_NodeTemplate_EngineInstallUrl_" data-uid="Pulumi.Rancher2.NodeTemplate.EngineInstallUrl*"></a>
   <h4 id="Pulumi_Rancher2_NodeTemplate_EngineInstallUrl" data-uid="Pulumi.Rancher2.NodeTemplate.EngineInstallUrl">EngineInstallUrl</h4>
@@ -461,7 +485,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/NodeTemplate.cs/#L97">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/NodeTemplate.cs/#L102">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_NodeTemplate_EngineLabel_" data-uid="Pulumi.Rancher2.NodeTemplate.EngineLabel*"></a>
   <h4 id="Pulumi_Rancher2_NodeTemplate_EngineLabel" data-uid="Pulumi.Rancher2.NodeTemplate.EngineLabel">EngineLabel</h4>
@@ -488,7 +512,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/NodeTemplate.cs/#L103">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/NodeTemplate.cs/#L108">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_NodeTemplate_EngineOpt_" data-uid="Pulumi.Rancher2.NodeTemplate.EngineOpt*"></a>
   <h4 id="Pulumi_Rancher2_NodeTemplate_EngineOpt" data-uid="Pulumi.Rancher2.NodeTemplate.EngineOpt">EngineOpt</h4>
@@ -515,7 +539,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/NodeTemplate.cs/#L109">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/NodeTemplate.cs/#L114">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_NodeTemplate_EngineRegistryMirrors_" data-uid="Pulumi.Rancher2.NodeTemplate.EngineRegistryMirrors*"></a>
   <h4 id="Pulumi_Rancher2_NodeTemplate_EngineRegistryMirrors" data-uid="Pulumi.Rancher2.NodeTemplate.EngineRegistryMirrors">EngineRegistryMirrors</h4>
@@ -542,7 +566,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/NodeTemplate.cs/#L115">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/NodeTemplate.cs/#L120">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_NodeTemplate_EngineStorageDriver_" data-uid="Pulumi.Rancher2.NodeTemplate.EngineStorageDriver*"></a>
   <h4 id="Pulumi_Rancher2_NodeTemplate_EngineStorageDriver" data-uid="Pulumi.Rancher2.NodeTemplate.EngineStorageDriver">EngineStorageDriver</h4>
@@ -569,7 +593,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/NodeTemplate.cs/#L121">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/NodeTemplate.cs/#L126">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_NodeTemplate_Labels_" data-uid="Pulumi.Rancher2.NodeTemplate.Labels*"></a>
   <h4 id="Pulumi_Rancher2_NodeTemplate_Labels" data-uid="Pulumi.Rancher2.NodeTemplate.Labels">Labels</h4>
@@ -596,7 +620,34 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/NodeTemplate.cs/#L127">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/NodeTemplate.cs/#L132">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_NodeTemplate_LinodeConfig_" data-uid="Pulumi.Rancher2.NodeTemplate.LinodeConfig*"></a>
+  <h4 id="Pulumi_Rancher2_NodeTemplate_LinodeConfig" data-uid="Pulumi.Rancher2.NodeTemplate.LinodeConfig">LinodeConfig</h4>
+  <div class="markdown level1 summary"><p>Linode config for the Node Template (list maxitems:1)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;NodeTemplateLinodeConfig&gt; LinodeConfig { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Rancher2.Outputs.NodeTemplateLinodeConfig.html">NodeTemplateLinodeConfig</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/NodeTemplate.cs/#L138">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_NodeTemplate_Name_" data-uid="Pulumi.Rancher2.NodeTemplate.Name*"></a>
   <h4 id="Pulumi_Rancher2_NodeTemplate_Name" data-uid="Pulumi.Rancher2.NodeTemplate.Name">Name</h4>
@@ -623,7 +674,34 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/NodeTemplate.cs/#L133">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/NodeTemplate.cs/#L144">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_NodeTemplate_OpennebulaConfig_" data-uid="Pulumi.Rancher2.NodeTemplate.OpennebulaConfig*"></a>
+  <h4 id="Pulumi_Rancher2_NodeTemplate_OpennebulaConfig" data-uid="Pulumi.Rancher2.NodeTemplate.OpennebulaConfig">OpennebulaConfig</h4>
+  <div class="markdown level1 summary"><p>Opennebula config for the Node Template (list maxitems:1)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;NodeTemplateOpennebulaConfig&gt; OpennebulaConfig { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Rancher2.Outputs.NodeTemplateOpennebulaConfig.html">NodeTemplateOpennebulaConfig</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/NodeTemplate.cs/#L150">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_NodeTemplate_OpenstackConfig_" data-uid="Pulumi.Rancher2.NodeTemplate.OpenstackConfig*"></a>
   <h4 id="Pulumi_Rancher2_NodeTemplate_OpenstackConfig" data-uid="Pulumi.Rancher2.NodeTemplate.OpenstackConfig">OpenstackConfig</h4>
@@ -650,7 +728,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/NodeTemplate.cs/#L139">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/NodeTemplate.cs/#L156">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_NodeTemplate_UseInternalIpAddress_" data-uid="Pulumi.Rancher2.NodeTemplate.UseInternalIpAddress*"></a>
   <h4 id="Pulumi_Rancher2_NodeTemplate_UseInternalIpAddress" data-uid="Pulumi.Rancher2.NodeTemplate.UseInternalIpAddress">UseInternalIpAddress</h4>
@@ -677,7 +755,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/NodeTemplate.cs/#L145">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/NodeTemplate.cs/#L162">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_NodeTemplate_VsphereConfig_" data-uid="Pulumi.Rancher2.NodeTemplate.VsphereConfig*"></a>
   <h4 id="Pulumi_Rancher2_NodeTemplate_VsphereConfig" data-uid="Pulumi.Rancher2.NodeTemplate.VsphereConfig">VsphereConfig</h4>
@@ -706,7 +784,7 @@
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/NodeTemplate.cs/#L186">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/NodeTemplate.cs/#L203">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_NodeTemplate_Get_" data-uid="Pulumi.Rancher2.NodeTemplate.Get*"></a>
   <h4 id="Pulumi_Rancher2_NodeTemplate_Get_System_String_Input_System_String__Pulumi_Rancher2_NodeTemplateState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Rancher2.NodeTemplate.Get(System.String,Input{System.String},Pulumi.Rancher2.NodeTemplateState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, NodeTemplateState, Nullable&lt;CustomResourceOptions&gt;)</h4>
@@ -776,7 +854,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/NodeTemplate.cs/#L20" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/NodeTemplate.cs/#L19" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

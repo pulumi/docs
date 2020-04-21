@@ -76,36 +76,7 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
-    <div class="level3"><span class="xref">LogMetricFilterMetricTransformationGetArgs</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">LogMetricFilterMetricTransformationGetArgs</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.CloudWatch.Inputs.html">Pulumi.Aws.CloudWatch.Inputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
@@ -116,7 +87,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Cloudwatch/LogMetricFilter.cs/#L197">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudWatch/Inputs/LogMetricFilterMetricTransformationGetArgs.cs/#L39">View Source</a>
   </span>
   <a id="Pulumi_Aws_CloudWatch_Inputs_LogMetricFilterMetricTransformationGetArgs__ctor_" data-uid="Pulumi.Aws.CloudWatch.Inputs.LogMetricFilterMetricTransformationGetArgs.#ctor*"></a>
   <h4 id="Pulumi_Aws_CloudWatch_Inputs_LogMetricFilterMetricTransformationGetArgs__ctor" data-uid="Pulumi.Aws.CloudWatch.Inputs.LogMetricFilterMetricTransformationGetArgs.#ctor">LogMetricFilterMetricTransformationGetArgs()</h4>
@@ -129,15 +100,16 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Cloudwatch/LogMetricFilter.cs/#L182">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudWatch/Inputs/LogMetricFilterMetricTransformationGetArgs.cs/#L18">View Source</a>
   </span>
   <a id="Pulumi_Aws_CloudWatch_Inputs_LogMetricFilterMetricTransformationGetArgs_DefaultValue_" data-uid="Pulumi.Aws.CloudWatch.Inputs.LogMetricFilterMetricTransformationGetArgs.DefaultValue*"></a>
   <h4 id="Pulumi_Aws_CloudWatch_Inputs_LogMetricFilterMetricTransformationGetArgs_DefaultValue" data-uid="Pulumi.Aws.CloudWatch.Inputs.LogMetricFilterMetricTransformationGetArgs.DefaultValue">DefaultValue</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The value to emit when a filter pattern does not match a log event.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; DefaultValue { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? DefaultValue { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -149,17 +121,17 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Cloudwatch/LogMetricFilter.cs/#L188">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudWatch/Inputs/LogMetricFilterMetricTransformationGetArgs.cs/#L24">View Source</a>
   </span>
   <a id="Pulumi_Aws_CloudWatch_Inputs_LogMetricFilterMetricTransformationGetArgs_Name_" data-uid="Pulumi.Aws.CloudWatch.Inputs.LogMetricFilterMetricTransformationGetArgs.Name*"></a>
   <h4 id="Pulumi_Aws_CloudWatch_Inputs_LogMetricFilterMetricTransformationGetArgs_Name" data-uid="Pulumi.Aws.CloudWatch.Inputs.LogMetricFilterMetricTransformationGetArgs.Name">Name</h4>
-  <div class="markdown level1 summary"><p>A name for the metric filter.</p>
+  <div class="markdown level1 summary"><p>The name of the CloudWatch metric to which the monitored log information should be published (e.g. <code>ErrorCount</code>)</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -176,17 +148,18 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Cloudwatch/LogMetricFilter.cs/#L191">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudWatch/Inputs/LogMetricFilterMetricTransformationGetArgs.cs/#L30">View Source</a>
   </span>
   <a id="Pulumi_Aws_CloudWatch_Inputs_LogMetricFilterMetricTransformationGetArgs_Namespace_" data-uid="Pulumi.Aws.CloudWatch.Inputs.LogMetricFilterMetricTransformationGetArgs.Namespace*"></a>
   <h4 id="Pulumi_Aws_CloudWatch_Inputs_LogMetricFilterMetricTransformationGetArgs_Namespace" data-uid="Pulumi.Aws.CloudWatch.Inputs.LogMetricFilterMetricTransformationGetArgs.Namespace">Namespace</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The destination namespace of the CloudWatch metric.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -202,17 +175,18 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Cloudwatch/LogMetricFilter.cs/#L194">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudWatch/Inputs/LogMetricFilterMetricTransformationGetArgs.cs/#L36">View Source</a>
   </span>
   <a id="Pulumi_Aws_CloudWatch_Inputs_LogMetricFilterMetricTransformationGetArgs_Value_" data-uid="Pulumi.Aws.CloudWatch.Inputs.LogMetricFilterMetricTransformationGetArgs.Value*"></a>
   <h4 id="Pulumi_Aws_CloudWatch_Inputs_LogMetricFilterMetricTransformationGetArgs_Value" data-uid="Pulumi.Aws.CloudWatch.Inputs.LogMetricFilterMetricTransformationGetArgs.Value">Value</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>What to publish to the metric. For example, if you're counting the occurrences of a particular term like &quot;Error&quot;, the value will be &quot;1&quot; for each occurrence. If you're counting the bytes transferred the published value will be the value in the log event.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -228,7 +202,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -240,7 +214,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Cloudwatch/LogMetricFilter.cs/#L180" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudWatch/Inputs/LogMetricFilterMetricTransformationGetArgs.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

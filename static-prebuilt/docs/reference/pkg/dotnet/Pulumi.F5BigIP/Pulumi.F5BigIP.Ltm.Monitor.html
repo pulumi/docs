@@ -73,9 +73,6 @@
   </h1>
   <div class="markdown level0 summary"><p><code>f5bigip.ltm.Monitor</code> Configures a custom monitor for use by health checks.</p>
 <p>For resources should be named with their &quot;full path&quot;. The full path is the combination of the partition + name of the resource. For example /Common/my-pool.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/ltm_monitor.html.markdown">https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/ltm_monitor.html.markdown</a>.</p>
-</blockquote>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -92,7 +89,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/master/sdk/dotnet/Ltm/Monitor.cs/#L143">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/c99b82127e8ea2f6d3a94d861b1a2a8d26b28e9a/sdk/dotnet/Ltm/Monitor.cs/#L147">View Source</a>
   </span>
   <a id="Pulumi_F5BigIP_Ltm_Monitor__ctor_" data-uid="Pulumi.F5BigIP.Ltm.Monitor.#ctor*"></a>
   <h4 id="Pulumi_F5BigIP_Ltm_Monitor__ctor_System_String_Pulumi_F5BigIP_Ltm_MonitorArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.F5BigIP.Ltm.Monitor.#ctor(System.String,Pulumi.F5BigIP.Ltm.MonitorArgs,System.Nullable{CustomResourceOptions})">Monitor(String, MonitorArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
@@ -136,7 +133,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/master/sdk/dotnet/Ltm/Monitor.cs/#L23">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/c99b82127e8ea2f6d3a94d861b1a2a8d26b28e9a/sdk/dotnet/Ltm/Monitor.cs/#L22">View Source</a>
   </span>
   <a id="Pulumi_F5BigIP_Ltm_Monitor_Adaptive_" data-uid="Pulumi.F5BigIP.Ltm.Monitor.Adaptive*"></a>
   <h4 id="Pulumi_F5BigIP_Ltm_Monitor_Adaptive" data-uid="Pulumi.F5BigIP.Ltm.Monitor.Adaptive">Adaptive</h4>
@@ -163,7 +160,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/master/sdk/dotnet/Ltm/Monitor.cs/#L29">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/c99b82127e8ea2f6d3a94d861b1a2a8d26b28e9a/sdk/dotnet/Ltm/Monitor.cs/#L28">View Source</a>
   </span>
   <a id="Pulumi_F5BigIP_Ltm_Monitor_AdaptiveLimit_" data-uid="Pulumi.F5BigIP.Ltm.Monitor.AdaptiveLimit*"></a>
   <h4 id="Pulumi_F5BigIP_Ltm_Monitor_AdaptiveLimit" data-uid="Pulumi.F5BigIP.Ltm.Monitor.AdaptiveLimit">AdaptiveLimit</h4>
@@ -190,7 +187,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/master/sdk/dotnet/Ltm/Monitor.cs/#L35">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/c99b82127e8ea2f6d3a94d861b1a2a8d26b28e9a/sdk/dotnet/Ltm/Monitor.cs/#L34">View Source</a>
   </span>
   <a id="Pulumi_F5BigIP_Ltm_Monitor_Compatibility_" data-uid="Pulumi.F5BigIP.Ltm.Monitor.Compatibility*"></a>
   <h4 id="Pulumi_F5BigIP_Ltm_Monitor_Compatibility" data-uid="Pulumi.F5BigIP.Ltm.Monitor.Compatibility">Compatibility</h4>
@@ -217,12 +214,38 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/master/sdk/dotnet/Ltm/Monitor.cs/#L42">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/c99b82127e8ea2f6d3a94d861b1a2a8d26b28e9a/sdk/dotnet/Ltm/Monitor.cs/#L40">View Source</a>
+  </span>
+  <a id="Pulumi_F5BigIP_Ltm_Monitor_Database_" data-uid="Pulumi.F5BigIP.Ltm.Monitor.Database*"></a>
+  <h4 id="Pulumi_F5BigIP_Ltm_Monitor_Database" data-uid="Pulumi.F5BigIP.Ltm.Monitor.Database">Database</h4>
+  <div class="markdown level1 summary"><p>Specifies the database in which the user is created</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Database { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/c99b82127e8ea2f6d3a94d861b1a2a8d26b28e9a/sdk/dotnet/Ltm/Monitor.cs/#L46">View Source</a>
   </span>
   <a id="Pulumi_F5BigIP_Ltm_Monitor_DefaultsFrom_" data-uid="Pulumi.F5BigIP.Ltm.Monitor.DefaultsFrom*"></a>
   <h4 id="Pulumi_F5BigIP_Ltm_Monitor_DefaultsFrom" data-uid="Pulumi.F5BigIP.Ltm.Monitor.DefaultsFrom">DefaultsFrom</h4>
-  <div class="markdown level1 summary"><p>Existing monitor to inherit from. Must be one of /Common/http, /Common/https, /Common/icmp or
-/Common/gateway-icmp.</p>
+  <div class="markdown level1 summary"><p>Existing monitor to inherit from. Must be one of /Common/http, /Common/https, /Common/icmp or /Common/gateway-icmp.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -245,7 +268,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/master/sdk/dotnet/Ltm/Monitor.cs/#L48">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/c99b82127e8ea2f6d3a94d861b1a2a8d26b28e9a/sdk/dotnet/Ltm/Monitor.cs/#L52">View Source</a>
   </span>
   <a id="Pulumi_F5BigIP_Ltm_Monitor_Destination_" data-uid="Pulumi.F5BigIP.Ltm.Monitor.Destination*"></a>
   <h4 id="Pulumi_F5BigIP_Ltm_Monitor_Destination" data-uid="Pulumi.F5BigIP.Ltm.Monitor.Destination">Destination</h4>
@@ -272,7 +295,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/master/sdk/dotnet/Ltm/Monitor.cs/#L54">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/c99b82127e8ea2f6d3a94d861b1a2a8d26b28e9a/sdk/dotnet/Ltm/Monitor.cs/#L58">View Source</a>
   </span>
   <a id="Pulumi_F5BigIP_Ltm_Monitor_Filename_" data-uid="Pulumi.F5BigIP.Ltm.Monitor.Filename*"></a>
   <h4 id="Pulumi_F5BigIP_Ltm_Monitor_Filename" data-uid="Pulumi.F5BigIP.Ltm.Monitor.Filename">Filename</h4>
@@ -299,7 +322,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/master/sdk/dotnet/Ltm/Monitor.cs/#L60">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/c99b82127e8ea2f6d3a94d861b1a2a8d26b28e9a/sdk/dotnet/Ltm/Monitor.cs/#L64">View Source</a>
   </span>
   <a id="Pulumi_F5BigIP_Ltm_Monitor_Interval_" data-uid="Pulumi.F5BigIP.Ltm.Monitor.Interval*"></a>
   <h4 id="Pulumi_F5BigIP_Ltm_Monitor_Interval" data-uid="Pulumi.F5BigIP.Ltm.Monitor.Interval">Interval</h4>
@@ -326,7 +349,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/master/sdk/dotnet/Ltm/Monitor.cs/#L63">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/c99b82127e8ea2f6d3a94d861b1a2a8d26b28e9a/sdk/dotnet/Ltm/Monitor.cs/#L67">View Source</a>
   </span>
   <a id="Pulumi_F5BigIP_Ltm_Monitor_IpDscp_" data-uid="Pulumi.F5BigIP.Ltm.Monitor.IpDscp*"></a>
   <h4 id="Pulumi_F5BigIP_Ltm_Monitor_IpDscp" data-uid="Pulumi.F5BigIP.Ltm.Monitor.IpDscp">IpDscp</h4>
@@ -352,7 +375,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/master/sdk/dotnet/Ltm/Monitor.cs/#L66">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/c99b82127e8ea2f6d3a94d861b1a2a8d26b28e9a/sdk/dotnet/Ltm/Monitor.cs/#L70">View Source</a>
   </span>
   <a id="Pulumi_F5BigIP_Ltm_Monitor_ManualResume_" data-uid="Pulumi.F5BigIP.Ltm.Monitor.ManualResume*"></a>
   <h4 id="Pulumi_F5BigIP_Ltm_Monitor_ManualResume" data-uid="Pulumi.F5BigIP.Ltm.Monitor.ManualResume">ManualResume</h4>
@@ -378,7 +401,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/master/sdk/dotnet/Ltm/Monitor.cs/#L72">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/c99b82127e8ea2f6d3a94d861b1a2a8d26b28e9a/sdk/dotnet/Ltm/Monitor.cs/#L76">View Source</a>
   </span>
   <a id="Pulumi_F5BigIP_Ltm_Monitor_Mode_" data-uid="Pulumi.F5BigIP.Ltm.Monitor.Mode*"></a>
   <h4 id="Pulumi_F5BigIP_Ltm_Monitor_Mode" data-uid="Pulumi.F5BigIP.Ltm.Monitor.Mode">Mode</h4>
@@ -405,7 +428,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/master/sdk/dotnet/Ltm/Monitor.cs/#L78">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/c99b82127e8ea2f6d3a94d861b1a2a8d26b28e9a/sdk/dotnet/Ltm/Monitor.cs/#L82">View Source</a>
   </span>
   <a id="Pulumi_F5BigIP_Ltm_Monitor_Name_" data-uid="Pulumi.F5BigIP.Ltm.Monitor.Name*"></a>
   <h4 id="Pulumi_F5BigIP_Ltm_Monitor_Name" data-uid="Pulumi.F5BigIP.Ltm.Monitor.Name">Name</h4>
@@ -432,7 +455,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/master/sdk/dotnet/Ltm/Monitor.cs/#L84">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/c99b82127e8ea2f6d3a94d861b1a2a8d26b28e9a/sdk/dotnet/Ltm/Monitor.cs/#L88">View Source</a>
   </span>
   <a id="Pulumi_F5BigIP_Ltm_Monitor_Parent_" data-uid="Pulumi.F5BigIP.Ltm.Monitor.Parent*"></a>
   <h4 id="Pulumi_F5BigIP_Ltm_Monitor_Parent" data-uid="Pulumi.F5BigIP.Ltm.Monitor.Parent">Parent</h4>
@@ -459,7 +482,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/master/sdk/dotnet/Ltm/Monitor.cs/#L90">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/c99b82127e8ea2f6d3a94d861b1a2a8d26b28e9a/sdk/dotnet/Ltm/Monitor.cs/#L94">View Source</a>
   </span>
   <a id="Pulumi_F5BigIP_Ltm_Monitor_Password_" data-uid="Pulumi.F5BigIP.Ltm.Monitor.Password*"></a>
   <h4 id="Pulumi_F5BigIP_Ltm_Monitor_Password" data-uid="Pulumi.F5BigIP.Ltm.Monitor.Password">Password</h4>
@@ -486,7 +509,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/master/sdk/dotnet/Ltm/Monitor.cs/#L96">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/c99b82127e8ea2f6d3a94d861b1a2a8d26b28e9a/sdk/dotnet/Ltm/Monitor.cs/#L100">View Source</a>
   </span>
   <a id="Pulumi_F5BigIP_Ltm_Monitor_Receive_" data-uid="Pulumi.F5BigIP.Ltm.Monitor.Receive*"></a>
   <h4 id="Pulumi_F5BigIP_Ltm_Monitor_Receive" data-uid="Pulumi.F5BigIP.Ltm.Monitor.Receive">Receive</h4>
@@ -513,7 +536,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/master/sdk/dotnet/Ltm/Monitor.cs/#L102">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/c99b82127e8ea2f6d3a94d861b1a2a8d26b28e9a/sdk/dotnet/Ltm/Monitor.cs/#L106">View Source</a>
   </span>
   <a id="Pulumi_F5BigIP_Ltm_Monitor_ReceiveDisable_" data-uid="Pulumi.F5BigIP.Ltm.Monitor.ReceiveDisable*"></a>
   <h4 id="Pulumi_F5BigIP_Ltm_Monitor_ReceiveDisable" data-uid="Pulumi.F5BigIP.Ltm.Monitor.ReceiveDisable">ReceiveDisable</h4>
@@ -540,7 +563,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/master/sdk/dotnet/Ltm/Monitor.cs/#L105">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/c99b82127e8ea2f6d3a94d861b1a2a8d26b28e9a/sdk/dotnet/Ltm/Monitor.cs/#L109">View Source</a>
   </span>
   <a id="Pulumi_F5BigIP_Ltm_Monitor_Reverse_" data-uid="Pulumi.F5BigIP.Ltm.Monitor.Reverse*"></a>
   <h4 id="Pulumi_F5BigIP_Ltm_Monitor_Reverse" data-uid="Pulumi.F5BigIP.Ltm.Monitor.Reverse">Reverse</h4>
@@ -566,7 +589,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/master/sdk/dotnet/Ltm/Monitor.cs/#L111">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/c99b82127e8ea2f6d3a94d861b1a2a8d26b28e9a/sdk/dotnet/Ltm/Monitor.cs/#L115">View Source</a>
   </span>
   <a id="Pulumi_F5BigIP_Ltm_Monitor_Send_" data-uid="Pulumi.F5BigIP.Ltm.Monitor.Send*"></a>
   <h4 id="Pulumi_F5BigIP_Ltm_Monitor_Send" data-uid="Pulumi.F5BigIP.Ltm.Monitor.Send">Send</h4>
@@ -593,7 +616,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/master/sdk/dotnet/Ltm/Monitor.cs/#L123">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/c99b82127e8ea2f6d3a94d861b1a2a8d26b28e9a/sdk/dotnet/Ltm/Monitor.cs/#L127">View Source</a>
   </span>
   <a id="Pulumi_F5BigIP_Ltm_Monitor_Timeout_" data-uid="Pulumi.F5BigIP.Ltm.Monitor.Timeout*"></a>
   <h4 id="Pulumi_F5BigIP_Ltm_Monitor_Timeout" data-uid="Pulumi.F5BigIP.Ltm.Monitor.Timeout">Timeout</h4>
@@ -620,7 +643,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/master/sdk/dotnet/Ltm/Monitor.cs/#L117">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/c99b82127e8ea2f6d3a94d861b1a2a8d26b28e9a/sdk/dotnet/Ltm/Monitor.cs/#L121">View Source</a>
   </span>
   <a id="Pulumi_F5BigIP_Ltm_Monitor_TimeUntilUp_" data-uid="Pulumi.F5BigIP.Ltm.Monitor.TimeUntilUp*"></a>
   <h4 id="Pulumi_F5BigIP_Ltm_Monitor_TimeUntilUp" data-uid="Pulumi.F5BigIP.Ltm.Monitor.TimeUntilUp">TimeUntilUp</h4>
@@ -647,7 +670,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/master/sdk/dotnet/Ltm/Monitor.cs/#L126">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/c99b82127e8ea2f6d3a94d861b1a2a8d26b28e9a/sdk/dotnet/Ltm/Monitor.cs/#L130">View Source</a>
   </span>
   <a id="Pulumi_F5BigIP_Ltm_Monitor_Transparent_" data-uid="Pulumi.F5BigIP.Ltm.Monitor.Transparent*"></a>
   <h4 id="Pulumi_F5BigIP_Ltm_Monitor_Transparent" data-uid="Pulumi.F5BigIP.Ltm.Monitor.Transparent">Transparent</h4>
@@ -673,7 +696,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/master/sdk/dotnet/Ltm/Monitor.cs/#L132">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/c99b82127e8ea2f6d3a94d861b1a2a8d26b28e9a/sdk/dotnet/Ltm/Monitor.cs/#L136">View Source</a>
   </span>
   <a id="Pulumi_F5BigIP_Ltm_Monitor_Username_" data-uid="Pulumi.F5BigIP.Ltm.Monitor.Username*"></a>
   <h4 id="Pulumi_F5BigIP_Ltm_Monitor_Username" data-uid="Pulumi.F5BigIP.Ltm.Monitor.Username">Username</h4>
@@ -702,7 +725,7 @@
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/master/sdk/dotnet/Ltm/Monitor.cs/#L173">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/c99b82127e8ea2f6d3a94d861b1a2a8d26b28e9a/sdk/dotnet/Ltm/Monitor.cs/#L177">View Source</a>
   </span>
   <a id="Pulumi_F5BigIP_Ltm_Monitor_Get_" data-uid="Pulumi.F5BigIP.Ltm.Monitor.Get*"></a>
   <h4 id="Pulumi_F5BigIP_Ltm_Monitor_Get_System_String_Input_System_String__Pulumi_F5BigIP_Ltm_MonitorState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.F5BigIP.Ltm.Monitor.Get(System.String,Input{System.String},Pulumi.F5BigIP.Ltm.MonitorState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, MonitorState, Nullable&lt;CustomResourceOptions&gt;)</h4>
@@ -772,7 +795,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/master/sdk/dotnet/Ltm/Monitor.cs/#L18" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/c99b82127e8ea2f6d3a94d861b1a2a8d26b28e9a/sdk/dotnet/Ltm/Monitor.cs/#L17" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

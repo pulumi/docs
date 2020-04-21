@@ -78,47 +78,24 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">NetworkPacketCaptureStorageLocation</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Azure.Network.Outputs.html">Pulumi.Azure.Network.Outputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Azure.dll</h6>
   <h5 id="Pulumi_Azure_Network_Outputs_NetworkPacketCaptureStorageLocation_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class NetworkPacketCaptureStorageLocation</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class NetworkPacketCaptureStorageLocation : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/NetworkPacketCapture.cs/#L368">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/Outputs/NetworkPacketCaptureStorageLocation.cs/#L19">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Network_Outputs_NetworkPacketCaptureStorageLocation_FilePath" data-uid="Pulumi.Azure.Network.Outputs.NetworkPacketCaptureStorageLocation.FilePath">FilePath</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A valid local path on the targeting VM. Must include the name of the capture file (*.cap). For linux virtual machine it must start with <code>/var/captures</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string FilePath</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? FilePath</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -130,20 +107,21 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/NetworkPacketCapture.cs/#L369">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/Outputs/NetworkPacketCaptureStorageLocation.cs/#L23">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Network_Outputs_NetworkPacketCaptureStorageLocation_StorageAccountId" data-uid="Pulumi.Azure.Network.Outputs.NetworkPacketCaptureStorageLocation.StorageAccountId">StorageAccountId</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The ID of the storage account to save the packet capture session</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string StorageAccountId</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? StorageAccountId</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -155,13 +133,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/NetworkPacketCapture.cs/#L373">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/Outputs/NetworkPacketCaptureStorageLocation.cs/#L27">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Network_Outputs_NetworkPacketCaptureStorageLocation_StoragePath" data-uid="Pulumi.Azure.Network.Outputs.NetworkPacketCaptureStorageLocation.StoragePath">StoragePath</h4>
   <div class="markdown level1 summary"><p>The URI of the storage path to save the packet capture.</p>
@@ -169,7 +147,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string StoragePath</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? StoragePath</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -181,7 +159,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -193,7 +171,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/NetworkPacketCapture.cs/#L365" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/Outputs/NetworkPacketCaptureStorageLocation.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

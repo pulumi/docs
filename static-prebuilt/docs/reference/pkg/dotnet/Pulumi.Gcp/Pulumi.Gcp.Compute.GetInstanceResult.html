@@ -78,40 +78,16 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">GetInstanceResult</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.Compute.html">Pulumi.Gcp.Compute</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
   <h5 id="Pulumi_Gcp_Compute_GetInstanceResult_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class GetInstanceResult</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class GetInstanceResult : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/GetInstance.cs/#L64">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/GetInstance.cs/#L68">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_GetInstanceResult_AllowStoppingForUpdate" data-uid="Pulumi.Gcp.Compute.GetInstanceResult.AllowStoppingForUpdate">AllowStoppingForUpdate</h4>
   <div class="markdown level1 summary"></div>
@@ -136,7 +112,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/GetInstance.cs/#L68">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/GetInstance.cs/#L72">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_GetInstanceResult_AttachedDisks" data-uid="Pulumi.Gcp.Compute.GetInstanceResult.AttachedDisks">AttachedDisks</h4>
   <div class="markdown level1 summary"><p>List of disks attached to the instance. Structure is documented below.</p>
@@ -144,7 +120,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetInstanceAttachedDisksResult&gt; AttachedDisks</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetInstanceAttachedDiskResult&gt; AttachedDisks</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -156,13 +132,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Outputs.GetInstanceAttachedDisksResult.html">GetInstanceAttachedDisksResult</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Outputs.GetInstanceAttachedDiskResult.html">GetInstanceAttachedDiskResult</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/GetInstance.cs/#L72">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/GetInstance.cs/#L76">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_GetInstanceResult_BootDisks" data-uid="Pulumi.Gcp.Compute.GetInstanceResult.BootDisks">BootDisks</h4>
   <div class="markdown level1 summary"><p>The boot disk for the instance. Structure is documented below.</p>
@@ -170,7 +146,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetInstanceBootDisksResult&gt; BootDisks</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetInstanceBootDiskResult&gt; BootDisks</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -182,13 +158,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Outputs.GetInstanceBootDisksResult.html">GetInstanceBootDisksResult</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Outputs.GetInstanceBootDiskResult.html">GetInstanceBootDiskResult</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/GetInstance.cs/#L76">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/GetInstance.cs/#L80">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_GetInstanceResult_CanIpForward" data-uid="Pulumi.Gcp.Compute.GetInstanceResult.CanIpForward">CanIpForward</h4>
   <div class="markdown level1 summary"><p>Whether sending and receiving of packets with non-matching source or destination IPs is allowed.</p>
@@ -214,7 +190,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/GetInstance.cs/#L80">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/GetInstance.cs/#L84">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_GetInstanceResult_CpuPlatform" data-uid="Pulumi.Gcp.Compute.GetInstanceResult.CpuPlatform">CpuPlatform</h4>
   <div class="markdown level1 summary"><p>The CPU platform used by this instance.</p>
@@ -240,7 +216,32 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/GetInstance.cs/#L84">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/GetInstance.cs/#L85">View Source</a>
+  </span>
+  <h4 id="Pulumi_Gcp_Compute_GetInstanceResult_CurrentStatus" data-uid="Pulumi.Gcp.Compute.GetInstanceResult.CurrentStatus">CurrentStatus</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly string CurrentStatus</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/GetInstance.cs/#L89">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_GetInstanceResult_DeletionProtection" data-uid="Pulumi.Gcp.Compute.GetInstanceResult.DeletionProtection">DeletionProtection</h4>
   <div class="markdown level1 summary"><p>Whether deletion protection is enabled on this instance.</p>
@@ -266,7 +267,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/GetInstance.cs/#L88">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/GetInstance.cs/#L93">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_GetInstanceResult_Description" data-uid="Pulumi.Gcp.Compute.GetInstanceResult.Description">Description</h4>
   <div class="markdown level1 summary"><p>A brief description of the resource.</p>
@@ -292,7 +293,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/GetInstance.cs/#L89">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/GetInstance.cs/#L94">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_GetInstanceResult_DesiredStatus" data-uid="Pulumi.Gcp.Compute.GetInstanceResult.DesiredStatus">DesiredStatus</h4>
   <div class="markdown level1 summary"></div>
@@ -317,7 +318,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/GetInstance.cs/#L90">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/GetInstance.cs/#L95">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_GetInstanceResult_EnableDisplay" data-uid="Pulumi.Gcp.Compute.GetInstanceResult.EnableDisplay">EnableDisplay</h4>
   <div class="markdown level1 summary"></div>
@@ -342,7 +343,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/GetInstance.cs/#L94">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/GetInstance.cs/#L99">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_GetInstanceResult_GuestAccelerators" data-uid="Pulumi.Gcp.Compute.GetInstanceResult.GuestAccelerators">GuestAccelerators</h4>
   <div class="markdown level1 summary"><p>List of the type and count of accelerator cards attached to the instance. Structure is documented below.</p>
@@ -350,7 +351,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetInstanceGuestAcceleratorsResult&gt; GuestAccelerators</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetInstanceGuestAcceleratorResult&gt; GuestAccelerators</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -362,13 +363,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Outputs.GetInstanceGuestAcceleratorsResult.html">GetInstanceGuestAcceleratorsResult</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Outputs.GetInstanceGuestAcceleratorResult.html">GetInstanceGuestAcceleratorResult</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/GetInstance.cs/#L95">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/GetInstance.cs/#L100">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_GetInstanceResult_Hostname" data-uid="Pulumi.Gcp.Compute.GetInstanceResult.Hostname">Hostname</h4>
   <div class="markdown level1 summary"></div>
@@ -393,7 +394,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/GetInstance.cs/#L163">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/GetInstance.cs/#L104">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_GetInstanceResult_Id" data-uid="Pulumi.Gcp.Compute.GetInstanceResult.Id">Id</h4>
   <div class="markdown level1 summary"><p>id is the provider-assigned unique ID for this managed resource.</p>
@@ -419,7 +420,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/GetInstance.cs/#L99">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/GetInstance.cs/#L108">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_GetInstanceResult_InstanceId" data-uid="Pulumi.Gcp.Compute.GetInstanceResult.InstanceId">InstanceId</h4>
   <div class="markdown level1 summary"><p>The server-assigned unique identifier of this instance.</p>
@@ -445,7 +446,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/GetInstance.cs/#L103">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/GetInstance.cs/#L112">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_GetInstanceResult_LabelFingerprint" data-uid="Pulumi.Gcp.Compute.GetInstanceResult.LabelFingerprint">LabelFingerprint</h4>
   <div class="markdown level1 summary"><p>The unique fingerprint of the labels.</p>
@@ -471,7 +472,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/GetInstance.cs/#L107">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/GetInstance.cs/#L116">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_GetInstanceResult_Labels" data-uid="Pulumi.Gcp.Compute.GetInstanceResult.Labels">Labels</h4>
   <div class="markdown level1 summary"><p>A set of key/value label pairs assigned to the instance.</p>
@@ -491,13 +492,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/GetInstance.cs/#L111">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/GetInstance.cs/#L120">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_GetInstanceResult_MachineType" data-uid="Pulumi.Gcp.Compute.GetInstanceResult.MachineType">MachineType</h4>
   <div class="markdown level1 summary"><p>The machine type to create.</p>
@@ -523,7 +524,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/GetInstance.cs/#L115">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/GetInstance.cs/#L124">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_GetInstanceResult_Metadata" data-uid="Pulumi.Gcp.Compute.GetInstanceResult.Metadata">Metadata</h4>
   <div class="markdown level1 summary"><p>Metadata key/value pairs made available within the instance.</p>
@@ -543,13 +544,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/GetInstance.cs/#L119">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/GetInstance.cs/#L128">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_GetInstanceResult_MetadataFingerprint" data-uid="Pulumi.Gcp.Compute.GetInstanceResult.MetadataFingerprint">MetadataFingerprint</h4>
   <div class="markdown level1 summary"><p>The unique fingerprint of the metadata.</p>
@@ -575,7 +576,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/GetInstance.cs/#L120">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/GetInstance.cs/#L129">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_GetInstanceResult_MetadataStartupScript" data-uid="Pulumi.Gcp.Compute.GetInstanceResult.MetadataStartupScript">MetadataStartupScript</h4>
   <div class="markdown level1 summary"></div>
@@ -600,7 +601,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/GetInstance.cs/#L124">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/GetInstance.cs/#L133">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_GetInstanceResult_MinCpuPlatform" data-uid="Pulumi.Gcp.Compute.GetInstanceResult.MinCpuPlatform">MinCpuPlatform</h4>
   <div class="markdown level1 summary"><p>The minimum CPU platform specified for the VM instance.</p>
@@ -626,14 +627,14 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/GetInstance.cs/#L125">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/GetInstance.cs/#L134">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_GetInstanceResult_Name" data-uid="Pulumi.Gcp.Compute.GetInstanceResult.Name">Name</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string Name</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? Name</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -645,13 +646,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/GetInstance.cs/#L129">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/GetInstance.cs/#L138">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_GetInstanceResult_NetworkInterfaces" data-uid="Pulumi.Gcp.Compute.GetInstanceResult.NetworkInterfaces">NetworkInterfaces</h4>
   <div class="markdown level1 summary"><p>The networks attached to the instance. Structure is documented below.</p>
@@ -659,7 +660,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetInstanceNetworkInterfacesResult&gt; NetworkInterfaces</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetInstanceNetworkInterfaceResult&gt; NetworkInterfaces</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -671,20 +672,20 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Outputs.GetInstanceNetworkInterfacesResult.html">GetInstanceNetworkInterfacesResult</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Outputs.GetInstanceNetworkInterfaceResult.html">GetInstanceNetworkInterfaceResult</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/GetInstance.cs/#L130">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/GetInstance.cs/#L139">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_GetInstanceResult_Project" data-uid="Pulumi.Gcp.Compute.GetInstanceResult.Project">Project</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string Project</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? Project</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -696,13 +697,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/GetInstance.cs/#L134">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/GetInstance.cs/#L143">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_GetInstanceResult_Schedulings" data-uid="Pulumi.Gcp.Compute.GetInstanceResult.Schedulings">Schedulings</h4>
   <div class="markdown level1 summary"><p>The scheduling strategy being used by the instance.</p>
@@ -710,7 +711,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetInstanceSchedulingsResult&gt; Schedulings</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetInstanceSchedulingResult&gt; Schedulings</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -722,13 +723,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Outputs.GetInstanceSchedulingsResult.html">GetInstanceSchedulingsResult</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Outputs.GetInstanceSchedulingResult.html">GetInstanceSchedulingResult</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/GetInstance.cs/#L138">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/GetInstance.cs/#L147">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_GetInstanceResult_ScratchDisks" data-uid="Pulumi.Gcp.Compute.GetInstanceResult.ScratchDisks">ScratchDisks</h4>
   <div class="markdown level1 summary"><p>The scratch disks attached to the instance. Structure is documented below.</p>
@@ -736,7 +737,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetInstanceScratchDisksResult&gt; ScratchDisks</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetInstanceScratchDiskResult&gt; ScratchDisks</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -748,13 +749,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Outputs.GetInstanceScratchDisksResult.html">GetInstanceScratchDisksResult</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Outputs.GetInstanceScratchDiskResult.html">GetInstanceScratchDiskResult</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/GetInstance.cs/#L142">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/GetInstance.cs/#L151">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_GetInstanceResult_SelfLink" data-uid="Pulumi.Gcp.Compute.GetInstanceResult.SelfLink">SelfLink</h4>
   <div class="markdown level1 summary"><p>The URI of the created resource.</p>
@@ -762,7 +763,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string SelfLink</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? SelfLink</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -774,13 +775,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/GetInstance.cs/#L146">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/GetInstance.cs/#L155">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_GetInstanceResult_ServiceAccounts" data-uid="Pulumi.Gcp.Compute.GetInstanceResult.ServiceAccounts">ServiceAccounts</h4>
   <div class="markdown level1 summary"><p>The service account to attach to the instance. Structure is documented below.</p>
@@ -788,7 +789,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetInstanceServiceAccountsResult&gt; ServiceAccounts</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetInstanceServiceAccountResult&gt; ServiceAccounts</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -800,13 +801,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Outputs.GetInstanceServiceAccountsResult.html">GetInstanceServiceAccountsResult</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Outputs.GetInstanceServiceAccountResult.html">GetInstanceServiceAccountResult</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/GetInstance.cs/#L150">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/GetInstance.cs/#L159">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_GetInstanceResult_ShieldedInstanceConfigs" data-uid="Pulumi.Gcp.Compute.GetInstanceResult.ShieldedInstanceConfigs">ShieldedInstanceConfigs</h4>
   <div class="markdown level1 summary"><p>The shielded vm config being used by the instance. Structure is documented below.</p>
@@ -814,7 +815,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetInstanceShieldedInstanceConfigsResult&gt; ShieldedInstanceConfigs</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetInstanceShieldedInstanceConfigResult&gt; ShieldedInstanceConfigs</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -826,13 +827,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Outputs.GetInstanceShieldedInstanceConfigsResult.html">GetInstanceShieldedInstanceConfigsResult</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Outputs.GetInstanceShieldedInstanceConfigResult.html">GetInstanceShieldedInstanceConfigResult</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/GetInstance.cs/#L154">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/GetInstance.cs/#L163">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_GetInstanceResult_Tags" data-uid="Pulumi.Gcp.Compute.GetInstanceResult.Tags">Tags</h4>
   <div class="markdown level1 summary"><p>The list of tags attached to the instance.</p>
@@ -852,13 +853,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/GetInstance.cs/#L158">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/GetInstance.cs/#L167">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_GetInstanceResult_TagsFingerprint" data-uid="Pulumi.Gcp.Compute.GetInstanceResult.TagsFingerprint">TagsFingerprint</h4>
   <div class="markdown level1 summary"><p>The unique fingerprint of the tags.</p>
@@ -884,14 +885,14 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/GetInstance.cs/#L159">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/GetInstance.cs/#L168">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_GetInstanceResult_Zone" data-uid="Pulumi.Gcp.Compute.GetInstanceResult.Zone">Zone</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string Zone</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? Zone</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -903,7 +904,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -915,7 +916,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/GetInstance.cs/#L61" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/GetInstance.cs/#L65" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

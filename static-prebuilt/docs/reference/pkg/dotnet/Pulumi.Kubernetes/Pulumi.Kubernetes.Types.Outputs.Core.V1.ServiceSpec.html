@@ -79,40 +79,16 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">ServiceSpec</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Core.V1.html">Pulumi.Kubernetes.Types.Outputs.Core.V1</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Kubernetes.dll</h6>
   <h5 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_ServiceSpec_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class ServiceSpec</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class ServiceSpec : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L21832">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L22027">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_ServiceSpec_ClusterIP" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.ServiceSpec.ClusterIP">ClusterIP</h4>
   <div class="markdown level1 summary"><p>clusterIP is the IP address of the service and is usually assigned randomly by the
@@ -145,7 +121,7 @@ ExternalName. More info:
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L21840">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L22035">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_ServiceSpec_ExternalIPs" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.ServiceSpec.ExternalIPs">ExternalIPs</h4>
   <div class="markdown level1 summary"><p>externalIPs is a list of IP addresses for which nodes in the cluster will also accept
@@ -168,13 +144,13 @@ is external load-balancers that are not part of the Kubernetes system.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L21847">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L22042">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_ServiceSpec_ExternalName" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.ServiceSpec.ExternalName">ExternalName</h4>
   <div class="markdown level1 summary"><p>externalName is the external reference that kubedns or equivalent will return as a CNAME
@@ -202,7 +178,7 @@ record for this service. No proxying will be involved. Must be a valid RFC-1123 
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L21856">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L22051">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_ServiceSpec_ExternalTrafficPolicy" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.ServiceSpec.ExternalTrafficPolicy">ExternalTrafficPolicy</h4>
   <div class="markdown level1 summary"><p>externalTrafficPolicy denotes if this Service desires to route external traffic to
@@ -232,7 +208,7 @@ second hop to another node, but should have good overall load-spreading.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L21864">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L22059">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_ServiceSpec_HealthCheckNodePort" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.ServiceSpec.HealthCheckNodePort">HealthCheckNodePort</h4>
   <div class="markdown level1 summary"><p>healthCheckNodePort specifies the healthcheck nodePort for the service. If not
@@ -261,7 +237,7 @@ effects when Type is set to LoadBalancer and ExternalTrafficPolicy is set to Loc
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L21877">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L22072">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_ServiceSpec_IpFamily" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.ServiceSpec.IpFamily">IpFamily</h4>
   <div class="markdown level1 summary"><p>ipFamily specifies whether this Service has a preference for a particular IP family
@@ -295,7 +271,7 @@ will fail during clusterIP assignment.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L21885">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L22080">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_ServiceSpec_LoadBalancerIP" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.ServiceSpec.LoadBalancerIP">LoadBalancerIP</h4>
   <div class="markdown level1 summary"><p>Only applies to Service Type: LoadBalancer LoadBalancer will get created with the IP
@@ -324,7 +300,7 @@ be ignored if the cloud-provider does not support the feature.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L21893">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L22088">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_ServiceSpec_LoadBalancerSourceRanges" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.ServiceSpec.LoadBalancerSourceRanges">LoadBalancerSourceRanges</h4>
   <div class="markdown level1 summary"><p>If specified and supported by the platform, this will restrict traffic through the
@@ -347,13 +323,13 @@ will be ignored if the cloud-provider does not support the feature.&quot; More i
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L21899">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L22094">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_ServiceSpec_Ports" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.ServiceSpec.Ports">Ports</h4>
   <div class="markdown level1 summary"><p>The list of ports that are exposed by this service. More info:
@@ -374,13 +350,13 @@ will be ignored if the cloud-provider does not support the feature.&quot; More i
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Core.V1.ServicePort.html">ServicePort</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Core.V1.ServicePort.html">ServicePort</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L21908">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L22103">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_ServiceSpec_PublishNotReadyAddresses" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.ServiceSpec.PublishNotReadyAddresses">PublishNotReadyAddresses</h4>
   <div class="markdown level1 summary"><p>publishNotReadyAddresses, when set to true, indicates that DNS implementations must
@@ -410,7 +386,7 @@ their readiness for purpose of peer discovery.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L21917">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L22112">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_ServiceSpec_Selector" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.ServiceSpec.Selector">Selector</h4>
   <div class="markdown level1 summary"><p>Route service traffic to pods with label keys and values matching this selector. If
@@ -434,13 +410,13 @@ and LoadBalancer. Ignored if type is ExternalName. More info:
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L21924">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L22119">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_ServiceSpec_SessionAffinity" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.ServiceSpec.SessionAffinity">SessionAffinity</h4>
   <div class="markdown level1 summary"><p>Supports &quot;ClientIP&quot; and &quot;None&quot;. Used to maintain session affinity. Enable client IP
@@ -468,7 +444,7 @@ based session affinity. Must be ClientIP or None. Defaults to None. More info:
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L21929">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L22124">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_ServiceSpec_SessionAffinityConfig" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.ServiceSpec.SessionAffinityConfig">SessionAffinityConfig</h4>
   <div class="markdown level1 summary"><p>sessionAffinityConfig contains the configurations of session affinity.</p>
@@ -494,7 +470,7 @@ based session affinity. Must be ClientIP or None. Defaults to None. More info:
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L21942">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L22137">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_ServiceSpec_TopologyKeys" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.ServiceSpec.TopologyKeys">TopologyKeys</h4>
   <div class="markdown level1 summary"><p>topologyKeys is a preference-order list of topology keys which implementations of
@@ -522,13 +498,13 @@ list. If this is not specified or empty, no topology constraints will be applied
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L21957">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L22152">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_ServiceSpec_Type" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.ServiceSpec.Type">Type</h4>
   <div class="markdown level1 summary"><p>type determines how the Service is exposed. Defaults to ClusterIP. Valid options are
@@ -570,7 +546,7 @@ info:
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L21819" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L22014" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

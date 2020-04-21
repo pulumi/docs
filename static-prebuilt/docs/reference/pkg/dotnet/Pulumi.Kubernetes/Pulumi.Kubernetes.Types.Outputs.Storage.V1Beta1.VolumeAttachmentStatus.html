@@ -79,40 +79,16 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">VolumeAttachmentStatus</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Storage.V1Beta1.html">Pulumi.Kubernetes.Types.Outputs.Storage.V1Beta1</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Kubernetes.dll</h6>
   <h5 id="Pulumi_Kubernetes_Types_Outputs_Storage_V1Beta1_VolumeAttachmentStatus_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class VolumeAttachmentStatus</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class VolumeAttachmentStatus : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L33624">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L34215">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Storage_V1Beta1_VolumeAttachmentStatus_Attached" data-uid="Pulumi.Kubernetes.Types.Outputs.Storage.V1Beta1.VolumeAttachmentStatus.Attached">Attached</h4>
   <div class="markdown level1 summary"><p>Indicates the volume is successfully attached. This field must only be set by the entity
@@ -139,7 +115,7 @@ completing the attach operation, i.e. the external-attacher.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L33618">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L34209">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Storage_V1Beta1_VolumeAttachmentStatus_AttachError" data-uid="Pulumi.Kubernetes.Types.Outputs.Storage.V1Beta1.VolumeAttachmentStatus.AttachError">AttachError</h4>
   <div class="markdown level1 summary"><p>The last error encountered during attach operation, if any. This field must only be set
@@ -166,7 +142,7 @@ by the entity completing the attach operation, i.e. the external-attacher.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L33632">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L34223">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Storage_V1Beta1_VolumeAttachmentStatus_AttachmentMetadata" data-uid="Pulumi.Kubernetes.Types.Outputs.Storage.V1Beta1.VolumeAttachmentStatus.AttachmentMetadata">AttachmentMetadata</h4>
   <div class="markdown level1 summary"><p>Upon successful attach, this field is populated with any information returned by the
@@ -189,13 +165,13 @@ external-attacher.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L33638">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L34229">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Storage_V1Beta1_VolumeAttachmentStatus_DetachError" data-uid="Pulumi.Kubernetes.Types.Outputs.Storage.V1Beta1.VolumeAttachmentStatus.DetachError">DetachError</h4>
   <div class="markdown level1 summary"><p>The last error encountered during detach operation, if any. This field must only be set
@@ -228,7 +204,7 @@ by the entity completing the detach operation, i.e. the external-attacher.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L33611" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L34202" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

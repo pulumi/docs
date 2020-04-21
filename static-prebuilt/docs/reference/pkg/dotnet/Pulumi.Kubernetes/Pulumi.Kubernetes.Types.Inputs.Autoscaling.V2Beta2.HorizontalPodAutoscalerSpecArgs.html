@@ -78,36 +78,7 @@ HorizontalPodAutoscaler.</p>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
-    <div class="level3"><span class="xref">HorizontalPodAutoscalerSpecArgs</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">HorizontalPodAutoscalerSpecArgs</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Kubernetes.Types.Inputs.Autoscaling.V2Beta2.html">Pulumi.Kubernetes.Types.Inputs.Autoscaling.V2Beta2</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Kubernetes.dll</h6>
@@ -118,7 +89,36 @@ HorizontalPodAutoscaler.</p>
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Input.cs/#L10036">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Input.cs/#L10152">View Source</a>
+  </span>
+  <a id="Pulumi_Kubernetes_Types_Inputs_Autoscaling_V2Beta2_HorizontalPodAutoscalerSpecArgs_Behavior_" data-uid="Pulumi.Kubernetes.Types.Inputs.Autoscaling.V2Beta2.HorizontalPodAutoscalerSpecArgs.Behavior*"></a>
+  <h4 id="Pulumi_Kubernetes_Types_Inputs_Autoscaling_V2Beta2_HorizontalPodAutoscalerSpecArgs_Behavior" data-uid="Pulumi.Kubernetes.Types.Inputs.Autoscaling.V2Beta2.HorizontalPodAutoscalerSpecArgs.Behavior">Behavior</h4>
+  <div class="markdown level1 summary"><p>behavior configures the scaling behavior of the target in both Up and Down directions
+(scaleUp and scaleDown fields respectively). If not set, the default HPAScalingRules for
+scale up and scale down are used.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;HorizontalPodAutoscalerBehaviorArgs&gt;? Behavior { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Inputs.Autoscaling.V2Beta2.HorizontalPodAutoscalerBehaviorArgs.html">HorizontalPodAutoscalerBehaviorArgs</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Input.cs/#L10137">View Source</a>
   </span>
   <a id="Pulumi_Kubernetes_Types_Inputs_Autoscaling_V2Beta2_HorizontalPodAutoscalerSpecArgs_MaxReplicas_" data-uid="Pulumi.Kubernetes.Types.Inputs.Autoscaling.V2Beta2.HorizontalPodAutoscalerSpecArgs.MaxReplicas*"></a>
   <h4 id="Pulumi_Kubernetes_Types_Inputs_Autoscaling_V2Beta2_HorizontalPodAutoscalerSpecArgs_MaxReplicas" data-uid="Pulumi.Kubernetes.Types.Inputs.Autoscaling.V2Beta2.HorizontalPodAutoscalerSpecArgs.MaxReplicas">MaxReplicas</h4>
@@ -140,13 +140,13 @@ scale up. It cannot be less that minReplicas.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Input.cs/#L10058">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Input.cs/#L10167">View Source</a>
   </span>
   <a id="Pulumi_Kubernetes_Types_Inputs_Autoscaling_V2Beta2_HorizontalPodAutoscalerSpecArgs_Metrics_" data-uid="Pulumi.Kubernetes.Types.Inputs.Autoscaling.V2Beta2.HorizontalPodAutoscalerSpecArgs.Metrics*"></a>
   <h4 id="Pulumi_Kubernetes_Types_Inputs_Autoscaling_V2Beta2_HorizontalPodAutoscalerSpecArgs_Metrics" data-uid="Pulumi.Kubernetes.Types.Inputs.Autoscaling.V2Beta2.HorizontalPodAutoscalerSpecArgs.Metrics">Metrics</h4>
@@ -173,13 +173,13 @@ to 80% average CPU utilization.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Inputs.Autoscaling.V2Beta2.MetricSpecArgs.html">MetricSpecArgs</a>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Inputs.Autoscaling.V2Beta2.MetricSpecArgs.html">MetricSpecArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Input.cs/#L10070">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Input.cs/#L10179">View Source</a>
   </span>
   <a id="Pulumi_Kubernetes_Types_Inputs_Autoscaling_V2Beta2_HorizontalPodAutoscalerSpecArgs_MinReplicas_" data-uid="Pulumi.Kubernetes.Types.Inputs.Autoscaling.V2Beta2.HorizontalPodAutoscalerSpecArgs.MinReplicas*"></a>
   <h4 id="Pulumi_Kubernetes_Types_Inputs_Autoscaling_V2Beta2_HorizontalPodAutoscalerSpecArgs_MinReplicas" data-uid="Pulumi.Kubernetes.Types.Inputs.Autoscaling.V2Beta2.HorizontalPodAutoscalerSpecArgs.MinReplicas">MinReplicas</h4>
@@ -191,7 +191,7 @@ Scaling is active as long as at least one metric value is available.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; MinReplicas { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? MinReplicas { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -203,13 +203,13 @@ Scaling is active as long as at least one metric value is available.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Input.cs/#L10043">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Input.cs/#L10144">View Source</a>
   </span>
   <a id="Pulumi_Kubernetes_Types_Inputs_Autoscaling_V2Beta2_HorizontalPodAutoscalerSpecArgs_ScaleTargetRef_" data-uid="Pulumi.Kubernetes.Types.Inputs.Autoscaling.V2Beta2.HorizontalPodAutoscalerSpecArgs.ScaleTargetRef*"></a>
   <h4 id="Pulumi_Kubernetes_Types_Inputs_Autoscaling_V2Beta2_HorizontalPodAutoscalerSpecArgs_ScaleTargetRef" data-uid="Pulumi.Kubernetes.Types.Inputs.Autoscaling.V2Beta2.HorizontalPodAutoscalerSpecArgs.ScaleTargetRef">ScaleTargetRef</h4>
@@ -231,7 +231,7 @@ metrics should be collected, as well as to actually change the replica count.</p
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Inputs.Autoscaling.V2Beta2.CrossVersionObjectReferenceArgs.html">CrossVersionObjectReferenceArgs</a>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Inputs.Autoscaling.V2Beta2.CrossVersionObjectReferenceArgs.html">CrossVersionObjectReferenceArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -243,7 +243,7 @@ metrics should be collected, as well as to actually change the replica count.</p
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Input.cs/#L10030" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Input.cs/#L10131" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

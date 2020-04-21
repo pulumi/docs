@@ -78,40 +78,16 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">DeploymentGroupLoadBalancerInfoTargetGroupPairInfo</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.CodeDeploy.Outputs.html">Pulumi.Aws.CodeDeploy.Outputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
   <h5 id="Pulumi_Aws_CodeDeploy_Outputs_DeploymentGroupLoadBalancerInfoTargetGroupPairInfo_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class DeploymentGroupLoadBalancerInfoTargetGroupPairInfo</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class DeploymentGroupLoadBalancerInfoTargetGroupPairInfo : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Codedeploy/DeploymentGroup.cs/#L1636">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CodeDeploy/Outputs/DeploymentGroupLoadBalancerInfoTargetGroupPairInfo.cs/#L19">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_CodeDeploy_Outputs_DeploymentGroupLoadBalancerInfoTargetGroupPairInfo_ProdTrafficRoute" data-uid="Pulumi.Aws.CodeDeploy.Outputs.DeploymentGroupLoadBalancerInfoTargetGroupPairInfo.ProdTrafficRoute">ProdTrafficRoute</h4>
   <div class="markdown level1 summary"><p>Configuration block for the production traffic route (documented below).</p>
@@ -137,7 +113,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Codedeploy/DeploymentGroup.cs/#L1640">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CodeDeploy/Outputs/DeploymentGroupLoadBalancerInfoTargetGroupPairInfo.cs/#L23">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_CodeDeploy_Outputs_DeploymentGroupLoadBalancerInfoTargetGroupPairInfo_TargetGroups" data-uid="Pulumi.Aws.CodeDeploy.Outputs.DeploymentGroupLoadBalancerInfoTargetGroupPairInfo.TargetGroups">TargetGroups</h4>
   <div class="markdown level1 summary"><p>Configuration blocks for a target group within a target group pair (documented below).</p>
@@ -145,7 +121,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTargetGroups&gt; TargetGroups</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTargetGroup&gt; TargetGroups</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -157,13 +133,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.CodeDeploy.Outputs.DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTargetGroups.html">DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTargetGroups</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.CodeDeploy.Outputs.DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTargetGroup.html">DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTargetGroup</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Codedeploy/DeploymentGroup.cs/#L1644">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CodeDeploy/Outputs/DeploymentGroupLoadBalancerInfoTargetGroupPairInfo.cs/#L27">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_CodeDeploy_Outputs_DeploymentGroupLoadBalancerInfoTargetGroupPairInfo_TestTrafficRoute" data-uid="Pulumi.Aws.CodeDeploy.Outputs.DeploymentGroupLoadBalancerInfoTargetGroupPairInfo.TestTrafficRoute">TestTrafficRoute</h4>
   <div class="markdown level1 summary"><p>Configuration block for the test traffic route (documented below).</p>
@@ -195,7 +171,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Codedeploy/DeploymentGroup.cs/#L1630" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CodeDeploy/Outputs/DeploymentGroupLoadBalancerInfoTargetGroupPairInfo.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

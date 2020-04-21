@@ -76,36 +76,7 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
-    <div class="level3"><span class="xref">PolicyVMRetentionMonthlyGetArgs</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">PolicyVMRetentionMonthlyGetArgs</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Azure.Backup.Inputs.html">Pulumi.Azure.Backup.Inputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Azure.dll</h6>
@@ -116,7 +87,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Backup/PolicyVM.cs/#L381">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Backup/Inputs/PolicyVMRetentionMonthlyGetArgs.cs/#L45">View Source</a>
   </span>
   <a id="Pulumi_Azure_Backup_Inputs_PolicyVMRetentionMonthlyGetArgs__ctor_" data-uid="Pulumi.Azure.Backup.Inputs.PolicyVMRetentionMonthlyGetArgs.#ctor*"></a>
   <h4 id="Pulumi_Azure_Backup_Inputs_PolicyVMRetentionMonthlyGetArgs__ctor" data-uid="Pulumi.Azure.Backup.Inputs.PolicyVMRetentionMonthlyGetArgs.#ctor">PolicyVMRetentionMonthlyGetArgs()</h4>
@@ -129,11 +100,12 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Backup/PolicyVM.cs/#L362">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Backup/Inputs/PolicyVMRetentionMonthlyGetArgs.cs/#L18">View Source</a>
   </span>
   <a id="Pulumi_Azure_Backup_Inputs_PolicyVMRetentionMonthlyGetArgs_Count_" data-uid="Pulumi.Azure.Backup.Inputs.PolicyVMRetentionMonthlyGetArgs.Count*"></a>
   <h4 id="Pulumi_Azure_Backup_Inputs_PolicyVMRetentionMonthlyGetArgs_Count" data-uid="Pulumi.Azure.Backup.Inputs.PolicyVMRetentionMonthlyGetArgs.Count">Count</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The number of yearly backups to keep. Must be between <code>1</code> and <code>9999</code></p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -149,17 +121,18 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Backup/PolicyVM.cs/#L367">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Backup/Inputs/PolicyVMRetentionMonthlyGetArgs.cs/#L27">View Source</a>
   </span>
   <a id="Pulumi_Azure_Backup_Inputs_PolicyVMRetentionMonthlyGetArgs_Weekdays_" data-uid="Pulumi.Azure.Backup.Inputs.PolicyVMRetentionMonthlyGetArgs.Weekdays*"></a>
   <h4 id="Pulumi_Azure_Backup_Inputs_PolicyVMRetentionMonthlyGetArgs_Weekdays" data-uid="Pulumi.Azure.Backup.Inputs.PolicyVMRetentionMonthlyGetArgs.Weekdays">Weekdays</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The weekday backups to retain . Must be one of <code>Sunday</code>, <code>Monday</code>, <code>Tuesday</code>, <code>Wednesday</code>, <code>Thursday</code>, <code>Friday</code> or <code>Saturday</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -175,17 +148,18 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Backup/PolicyVM.cs/#L375">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Backup/Inputs/PolicyVMRetentionMonthlyGetArgs.cs/#L39">View Source</a>
   </span>
   <a id="Pulumi_Azure_Backup_Inputs_PolicyVMRetentionMonthlyGetArgs_Weeks_" data-uid="Pulumi.Azure.Backup.Inputs.PolicyVMRetentionMonthlyGetArgs.Weeks*"></a>
   <h4 id="Pulumi_Azure_Backup_Inputs_PolicyVMRetentionMonthlyGetArgs_Weeks" data-uid="Pulumi.Azure.Backup.Inputs.PolicyVMRetentionMonthlyGetArgs.Weeks">Weeks</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The weeks of the month to retain backups of. Must be one of <code>First</code>, <code>Second</code>, <code>Third</code>, <code>Fourth</code>, <code>Last</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -201,7 +175,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -213,7 +187,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Backup/PolicyVM.cs/#L360" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Backup/Inputs/PolicyVMRetentionMonthlyGetArgs.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -76,36 +76,7 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
-    <div class="level3"><span class="xref">EventHubCaptureDescriptionDestinationArgs</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">EventHubCaptureDescriptionDestinationArgs</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Azure.EventHub.Inputs.html">Pulumi.Azure.EventHub.Inputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Azure.dll</h6>
@@ -116,7 +87,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Eventhub/EventHub.cs/#L248">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/EventHub/Inputs/EventHubCaptureDescriptionDestinationArgs.cs/#L39">View Source</a>
   </span>
   <a id="Pulumi_Azure_EventHub_Inputs_EventHubCaptureDescriptionDestinationArgs__ctor_" data-uid="Pulumi.Azure.EventHub.Inputs.EventHubCaptureDescriptionDestinationArgs.#ctor*"></a>
   <h4 id="Pulumi_Azure_EventHub_Inputs_EventHubCaptureDescriptionDestinationArgs__ctor" data-uid="Pulumi.Azure.EventHub.Inputs.EventHubCaptureDescriptionDestinationArgs.#ctor">EventHubCaptureDescriptionDestinationArgs()</h4>
@@ -129,11 +100,12 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Eventhub/EventHub.cs/#L233">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/EventHub/Inputs/EventHubCaptureDescriptionDestinationArgs.cs/#L18">View Source</a>
   </span>
   <a id="Pulumi_Azure_EventHub_Inputs_EventHubCaptureDescriptionDestinationArgs_ArchiveNameFormat_" data-uid="Pulumi.Azure.EventHub.Inputs.EventHubCaptureDescriptionDestinationArgs.ArchiveNameFormat*"></a>
   <h4 id="Pulumi_Azure_EventHub_Inputs_EventHubCaptureDescriptionDestinationArgs_ArchiveNameFormat" data-uid="Pulumi.Azure.EventHub.Inputs.EventHubCaptureDescriptionDestinationArgs.ArchiveNameFormat">ArchiveNameFormat</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The Blob naming convention for archiving. e.g. <code>{Namespace}/{EventHub}/{PartitionId}/{Year}/{Month}/{Day}/{Hour}/{Minute}/{Second}</code>. Here all the parameters (Namespace,EventHub .. etc) are mandatory irrespective of order</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -149,17 +121,18 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Eventhub/EventHub.cs/#L236">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/EventHub/Inputs/EventHubCaptureDescriptionDestinationArgs.cs/#L24">View Source</a>
   </span>
   <a id="Pulumi_Azure_EventHub_Inputs_EventHubCaptureDescriptionDestinationArgs_BlobContainerName_" data-uid="Pulumi.Azure.EventHub.Inputs.EventHubCaptureDescriptionDestinationArgs.BlobContainerName*"></a>
   <h4 id="Pulumi_Azure_EventHub_Inputs_EventHubCaptureDescriptionDestinationArgs_BlobContainerName" data-uid="Pulumi.Azure.EventHub.Inputs.EventHubCaptureDescriptionDestinationArgs.BlobContainerName">BlobContainerName</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The name of the Container within the Blob Storage Account where messages should be archived.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -175,17 +148,17 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Eventhub/EventHub.cs/#L242">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/EventHub/Inputs/EventHubCaptureDescriptionDestinationArgs.cs/#L30">View Source</a>
   </span>
   <a id="Pulumi_Azure_EventHub_Inputs_EventHubCaptureDescriptionDestinationArgs_Name_" data-uid="Pulumi.Azure.EventHub.Inputs.EventHubCaptureDescriptionDestinationArgs.Name*"></a>
   <h4 id="Pulumi_Azure_EventHub_Inputs_EventHubCaptureDescriptionDestinationArgs_Name" data-uid="Pulumi.Azure.EventHub.Inputs.EventHubCaptureDescriptionDestinationArgs.Name">Name</h4>
-  <div class="markdown level1 summary"><p>Specifies the name of the EventHub Namespace resource. Changing this forces a new resource to be created.</p>
+  <div class="markdown level1 summary"><p>The Name of the Destination where the capture should take place. At this time the only supported value is <code>EventHubArchive.AzureBlockBlob</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -202,17 +175,18 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Eventhub/EventHub.cs/#L245">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/EventHub/Inputs/EventHubCaptureDescriptionDestinationArgs.cs/#L36">View Source</a>
   </span>
   <a id="Pulumi_Azure_EventHub_Inputs_EventHubCaptureDescriptionDestinationArgs_StorageAccountId_" data-uid="Pulumi.Azure.EventHub.Inputs.EventHubCaptureDescriptionDestinationArgs.StorageAccountId*"></a>
   <h4 id="Pulumi_Azure_EventHub_Inputs_EventHubCaptureDescriptionDestinationArgs_StorageAccountId" data-uid="Pulumi.Azure.EventHub.Inputs.EventHubCaptureDescriptionDestinationArgs.StorageAccountId">StorageAccountId</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The ID of the Blob Storage Account where messages should be archived.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -228,7 +202,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -240,7 +214,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Eventhub/EventHub.cs/#L231" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/EventHub/Inputs/EventHubCaptureDescriptionDestinationArgs.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

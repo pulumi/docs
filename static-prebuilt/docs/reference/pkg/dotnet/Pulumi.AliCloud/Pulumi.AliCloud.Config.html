@@ -78,50 +78,54 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">Config</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.AliCloud.html">Pulumi.AliCloud</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.AliCloud.dll</h6>
   <h5 id="Pulumi_AliCloud_Config_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static class Config</code></pre>
+    <pre><code class="lang-csharp hljs">public static class Config : object</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Config/Config.cs/#L16">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Config/Config.cs/#L15">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Config_AccessKey_" data-uid="Pulumi.AliCloud.Config.AccessKey*"></a>
   <h4 id="Pulumi_AliCloud_Config_AccessKey" data-uid="Pulumi.AliCloud.Config.AccessKey">AccessKey</h4>
-  <div class="markdown level1 summary"><p>The access key for API operations. You can retrieve this from the 'Security Management' section of the
+  <div class="markdown level1 summary"><p>The access key for API operations. You can retrieve this from the 'Security Management' section of the Alibaba Cloud
+console.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string? AccessKey { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Config/Config.cs/#L21">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Config_AccountId_" data-uid="Pulumi.AliCloud.Config.AccountId*"></a>
+  <h4 id="Pulumi_AliCloud_Config_AccountId" data-uid="Pulumi.AliCloud.Config.AccountId">AccountId</h4>
+  <div class="markdown level1 summary"><p>The account ID for some service API operations. You can retrieve this from the 'Security Settings' section of the
 Alibaba Cloud console.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static string AccessKey { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static string? AccountId { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -133,41 +137,13 @@ Alibaba Cloud console.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Config/Config.cs/#L22">View Source</a>
-  </span>
-  <a id="Pulumi_AliCloud_Config_AccountId_" data-uid="Pulumi.AliCloud.Config.AccountId*"></a>
-  <h4 id="Pulumi_AliCloud_Config_AccountId" data-uid="Pulumi.AliCloud.Config.AccountId">AccountId</h4>
-  <div class="markdown level1 summary"><p>The account ID for some service API operations. You can retrieve this from the 'Security Settings' section
-of the Alibaba Cloud console.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static string AccountId { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Config/Config.cs/#L24">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Config/Config.cs/#L23">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Config_AssumeRole_" data-uid="Pulumi.AliCloud.Config.AssumeRole*"></a>
   <h4 id="Pulumi_AliCloud_Config_AssumeRole" data-uid="Pulumi.AliCloud.Config.AssumeRole">AssumeRole</h4>
@@ -175,7 +151,7 @@ of the Alibaba Cloud console.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static AssumeRole AssumeRole { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static Config.Types.AssumeRole AssumeRole { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -187,13 +163,13 @@ of the Alibaba Cloud console.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Pulumi.AliCloud.ConfigTypes.AssumeRole.html">AssumeRole</a></td>
+        <td><a class="xref" href="Pulumi.AliCloud.Config.Types.AssumeRole.html">Config.Types.AssumeRole</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Config/Config.cs/#L29">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Config/Config.cs/#L28">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Config_ConfigurationSource_" data-uid="Pulumi.AliCloud.Config.ConfigurationSource*"></a>
   <h4 id="Pulumi_AliCloud_Config_ConfigurationSource" data-uid="Pulumi.AliCloud.Config.ConfigurationSource">ConfigurationSource</h4>
@@ -202,7 +178,7 @@ of the Alibaba Cloud console.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static string ConfigurationSource { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static string? ConfigurationSource { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -214,23 +190,23 @@ of the Alibaba Cloud console.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Config/Config.cs/#L35">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Config/Config.cs/#L34">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Config_EcsRoleName_" data-uid="Pulumi.AliCloud.Config.EcsRoleName*"></a>
   <h4 id="Pulumi_AliCloud_Config_EcsRoleName" data-uid="Pulumi.AliCloud.Config.EcsRoleName">EcsRoleName</h4>
-  <div class="markdown level1 summary"><p>The RAM Role Name attached on a ECS instance for API operations. You can retrieve this from the 'Access
-Control' section of the Alibaba Cloud console.</p>
+  <div class="markdown level1 summary"><p>The RAM Role Name attached on a ECS instance for API operations. You can retrieve this from the 'Access Control' section
+of the Alibaba Cloud console.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static string EcsRoleName { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static string? EcsRoleName { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -242,13 +218,13 @@ Control' section of the Alibaba Cloud console.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Config/Config.cs/#L37">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Config/Config.cs/#L36">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Config_Endpoints_" data-uid="Pulumi.AliCloud.Config.Endpoints*"></a>
   <h4 id="Pulumi_AliCloud_Config_Endpoints" data-uid="Pulumi.AliCloud.Config.Endpoints">Endpoints</h4>
@@ -256,7 +232,7 @@ Control' section of the Alibaba Cloud console.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static ImmutableArray&lt;Endpoints&gt; Endpoints { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static ImmutableArray&lt;Config.Types.Endpoints&gt; Endpoints { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -268,13 +244,13 @@ Control' section of the Alibaba Cloud console.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.AliCloud.ConfigTypes.Endpoints.html">Endpoints</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.AliCloud.Config.Types.Endpoints.html">Config.Types.Endpoints</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Config/Config.cs/#L39">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Config/Config.cs/#L38">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Config_Fc_" data-uid="Pulumi.AliCloud.Config.Fc*"></a>
   <h4 id="Pulumi_AliCloud_Config_Fc" data-uid="Pulumi.AliCloud.Config.Fc">Fc</h4>
@@ -282,7 +258,7 @@ Control' section of the Alibaba Cloud console.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static string Fc { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static string? Fc { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -294,13 +270,13 @@ Control' section of the Alibaba Cloud console.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Config/Config.cs/#L41">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Config/Config.cs/#L40">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Config_LogEndpoint_" data-uid="Pulumi.AliCloud.Config.LogEndpoint*"></a>
   <h4 id="Pulumi_AliCloud_Config_LogEndpoint" data-uid="Pulumi.AliCloud.Config.LogEndpoint">LogEndpoint</h4>
@@ -308,7 +284,7 @@ Control' section of the Alibaba Cloud console.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static string LogEndpoint { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static string? LogEndpoint { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -320,13 +296,13 @@ Control' section of the Alibaba Cloud console.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Config/Config.cs/#L43">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Config/Config.cs/#L42">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Config_MnsEndpoint_" data-uid="Pulumi.AliCloud.Config.MnsEndpoint*"></a>
   <h4 id="Pulumi_AliCloud_Config_MnsEndpoint" data-uid="Pulumi.AliCloud.Config.MnsEndpoint">MnsEndpoint</h4>
@@ -334,7 +310,7 @@ Control' section of the Alibaba Cloud console.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static string MnsEndpoint { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static string? MnsEndpoint { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -346,13 +322,13 @@ Control' section of the Alibaba Cloud console.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Config/Config.cs/#L45">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Config/Config.cs/#L44">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Config_OtsInstanceName_" data-uid="Pulumi.AliCloud.Config.OtsInstanceName*"></a>
   <h4 id="Pulumi_AliCloud_Config_OtsInstanceName" data-uid="Pulumi.AliCloud.Config.OtsInstanceName">OtsInstanceName</h4>
@@ -360,7 +336,7 @@ Control' section of the Alibaba Cloud console.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static string OtsInstanceName { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static string? OtsInstanceName { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -372,23 +348,22 @@ Control' section of the Alibaba Cloud console.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Config/Config.cs/#L51">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Config/Config.cs/#L49">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Config_Profile_" data-uid="Pulumi.AliCloud.Config.Profile*"></a>
   <h4 id="Pulumi_AliCloud_Config_Profile" data-uid="Pulumi.AliCloud.Config.Profile">Profile</h4>
-  <div class="markdown level1 summary"><p>The profile for API operations. If not set, the default profile created with <code>aliyun configure</code> will be
-used.</p>
+  <div class="markdown level1 summary"><p>The profile for API operations. If not set, the default profile created with <code>aliyun configure</code> will be used.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static string Profile { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static string? Profile { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -400,13 +375,13 @@ used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Config/Config.cs/#L53">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Config/Config.cs/#L51">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Config_Protocol_" data-uid="Pulumi.AliCloud.Config.Protocol*"></a>
   <h4 id="Pulumi_AliCloud_Config_Protocol" data-uid="Pulumi.AliCloud.Config.Protocol">Protocol</h4>
@@ -414,7 +389,7 @@ used.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static string Protocol { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static string? Protocol { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -426,23 +401,22 @@ used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Config/Config.cs/#L59">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Config/Config.cs/#L56">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Config_Region_" data-uid="Pulumi.AliCloud.Config.Region*"></a>
   <h4 id="Pulumi_AliCloud_Config_Region" data-uid="Pulumi.AliCloud.Config.Region">Region</h4>
-  <div class="markdown level1 summary"><p>The region where Alibaba Cloud operations will take place. Examples are cn-beijing, cn-hangzhou,
-eu-central-1, etc.</p>
+  <div class="markdown level1 summary"><p>The region where Alibaba Cloud operations will take place. Examples are cn-beijing, cn-hangzhou, eu-central-1, etc.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static string Region { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static string? Region { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -454,23 +428,23 @@ eu-central-1, etc.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Config/Config.cs/#L65">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Config/Config.cs/#L62">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Config_SecretKey_" data-uid="Pulumi.AliCloud.Config.SecretKey*"></a>
   <h4 id="Pulumi_AliCloud_Config_SecretKey" data-uid="Pulumi.AliCloud.Config.SecretKey">SecretKey</h4>
-  <div class="markdown level1 summary"><p>The secret key for API operations. You can retrieve this from the 'Security Management' section of the
-Alibaba Cloud console.</p>
+  <div class="markdown level1 summary"><p>The secret key for API operations. You can retrieve this from the 'Security Management' section of the Alibaba Cloud
+console.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static string SecretKey { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static string? SecretKey { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -482,13 +456,13 @@ Alibaba Cloud console.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Config/Config.cs/#L70">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Config/Config.cs/#L67">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Config_SecurityToken_" data-uid="Pulumi.AliCloud.Config.SecurityToken*"></a>
   <h4 id="Pulumi_AliCloud_Config_SecurityToken" data-uid="Pulumi.AliCloud.Config.SecurityToken">SecurityToken</h4>
@@ -497,7 +471,7 @@ Alibaba Cloud console.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static string SecurityToken { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static string? SecurityToken { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -509,13 +483,13 @@ Alibaba Cloud console.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Config/Config.cs/#L75">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Config/Config.cs/#L72">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Config_SharedCredentialsFile_" data-uid="Pulumi.AliCloud.Config.SharedCredentialsFile*"></a>
   <h4 id="Pulumi_AliCloud_Config_SharedCredentialsFile" data-uid="Pulumi.AliCloud.Config.SharedCredentialsFile">SharedCredentialsFile</h4>
@@ -524,7 +498,7 @@ Alibaba Cloud console.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static string SharedCredentialsFile { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static string? SharedCredentialsFile { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -536,18 +510,18 @@ Alibaba Cloud console.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Config/Config.cs/#L81">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Config/Config.cs/#L78">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Config_SkipRegionValidation_" data-uid="Pulumi.AliCloud.Config.SkipRegionValidation*"></a>
   <h4 id="Pulumi_AliCloud_Config_SkipRegionValidation" data-uid="Pulumi.AliCloud.Config.SkipRegionValidation">SkipRegionValidation</h4>
-  <div class="markdown level1 summary"><p>Skip static validation of region ID. Used by users of alternative AlibabaCloud-like APIs or users w/ access
-to regions that are not public (yet).</p>
+  <div class="markdown level1 summary"><p>Skip static validation of region ID. Used by users of alternative AlibabaCloud-like APIs or users w/ access to regions
+that are not public (yet).</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -576,7 +550,7 @@ to regions that are not public (yet).</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Config/Config.cs/#L8" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Config/Config.cs/#L8" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

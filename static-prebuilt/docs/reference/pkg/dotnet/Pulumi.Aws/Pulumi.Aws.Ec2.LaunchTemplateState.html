@@ -76,36 +76,7 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
-    <div class="level3"><span class="xref">LaunchTemplateState</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">LaunchTemplateState</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.Ec2.html">Pulumi.Aws.Ec2</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
@@ -116,7 +87,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/LaunchTemplate.cs/#L735">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/LaunchTemplate.cs/#L769">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_LaunchTemplateState__ctor_" data-uid="Pulumi.Aws.Ec2.LaunchTemplateState.#ctor*"></a>
   <h4 id="Pulumi_Aws_Ec2_LaunchTemplateState__ctor" data-uid="Pulumi.Aws.Ec2.LaunchTemplateState.#ctor">LaunchTemplateState()</h4>
@@ -129,16 +100,16 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/LaunchTemplate.cs/#L495">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/LaunchTemplate.cs/#L517">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_LaunchTemplateState_Arn_" data-uid="Pulumi.Aws.Ec2.LaunchTemplateState.Arn*"></a>
   <h4 id="Pulumi_Aws_Ec2_LaunchTemplateState_Arn" data-uid="Pulumi.Aws.Ec2.LaunchTemplateState.Arn">Arn</h4>
-  <div class="markdown level1 summary"><p>Amazon Resource Name (ARN) of the launch template.</p>
+  <div class="markdown level1 summary"><p>The Amazon Resource Name (ARN) of the instance profile.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Arn { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Arn { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -150,13 +121,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/LaunchTemplate.cs/#L505">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/LaunchTemplate.cs/#L527">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_LaunchTemplateState_BlockDeviceMappings_" data-uid="Pulumi.Aws.Ec2.LaunchTemplateState.BlockDeviceMappings*"></a>
   <h4 id="Pulumi_Aws_Ec2_LaunchTemplateState_BlockDeviceMappings" data-uid="Pulumi.Aws.Ec2.LaunchTemplateState.BlockDeviceMappings">BlockDeviceMappings</h4>
@@ -166,7 +137,7 @@ See Block Devices below for details.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public InputList&lt;LaunchTemplateBlockDeviceMappingsGetArgs&gt; BlockDeviceMappings { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public InputList&lt;LaunchTemplateBlockDeviceMappingGetArgs&gt; BlockDeviceMappings { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -178,13 +149,13 @@ See Block Devices below for details.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<a class="xref" href="Pulumi.Aws.Ec2.Inputs.LaunchTemplateBlockDeviceMappingsGetArgs.html">LaunchTemplateBlockDeviceMappingsGetArgs</a>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<a class="xref" href="Pulumi.Aws.Ec2.Inputs.LaunchTemplateBlockDeviceMappingGetArgs.html">LaunchTemplateBlockDeviceMappingGetArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/LaunchTemplate.cs/#L514">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/LaunchTemplate.cs/#L536">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_LaunchTemplateState_CapacityReservationSpecification_" data-uid="Pulumi.Aws.Ec2.LaunchTemplateState.CapacityReservationSpecification*"></a>
   <h4 id="Pulumi_Aws_Ec2_LaunchTemplateState_CapacityReservationSpecification" data-uid="Pulumi.Aws.Ec2.LaunchTemplateState.CapacityReservationSpecification">CapacityReservationSpecification</h4>
@@ -193,7 +164,7 @@ See Block Devices below for details.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;LaunchTemplateCapacityReservationSpecificationGetArgs&gt; CapacityReservationSpecification { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;LaunchTemplateCapacityReservationSpecificationGetArgs&gt;? CapacityReservationSpecification { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -205,13 +176,13 @@ See Block Devices below for details.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Aws.Ec2.Inputs.LaunchTemplateCapacityReservationSpecificationGetArgs.html">LaunchTemplateCapacityReservationSpecificationGetArgs</a>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Aws.Ec2.Inputs.LaunchTemplateCapacityReservationSpecificationGetArgs.html">LaunchTemplateCapacityReservationSpecificationGetArgs</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/LaunchTemplate.cs/#L520">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/LaunchTemplate.cs/#L542">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_LaunchTemplateState_CpuOptions_" data-uid="Pulumi.Aws.Ec2.LaunchTemplateState.CpuOptions*"></a>
   <h4 id="Pulumi_Aws_Ec2_LaunchTemplateState_CpuOptions" data-uid="Pulumi.Aws.Ec2.LaunchTemplateState.CpuOptions">CpuOptions</h4>
@@ -220,7 +191,7 @@ See Block Devices below for details.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;LaunchTemplateCpuOptionsGetArgs&gt; CpuOptions { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;LaunchTemplateCpuOptionsGetArgs&gt;? CpuOptions { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -232,13 +203,13 @@ See Block Devices below for details.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Aws.Ec2.Inputs.LaunchTemplateCpuOptionsGetArgs.html">LaunchTemplateCpuOptionsGetArgs</a>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Aws.Ec2.Inputs.LaunchTemplateCpuOptionsGetArgs.html">LaunchTemplateCpuOptionsGetArgs</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/LaunchTemplate.cs/#L527">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/LaunchTemplate.cs/#L549">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_LaunchTemplateState_CreditSpecification_" data-uid="Pulumi.Aws.Ec2.LaunchTemplateState.CreditSpecification*"></a>
   <h4 id="Pulumi_Aws_Ec2_LaunchTemplateState_CreditSpecification" data-uid="Pulumi.Aws.Ec2.LaunchTemplateState.CreditSpecification">CreditSpecification</h4>
@@ -248,7 +219,7 @@ Specification below for more details.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;LaunchTemplateCreditSpecificationGetArgs&gt; CreditSpecification { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;LaunchTemplateCreditSpecificationGetArgs&gt;? CreditSpecification { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -260,13 +231,13 @@ Specification below for more details.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Aws.Ec2.Inputs.LaunchTemplateCreditSpecificationGetArgs.html">LaunchTemplateCreditSpecificationGetArgs</a>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Aws.Ec2.Inputs.LaunchTemplateCreditSpecificationGetArgs.html">LaunchTemplateCreditSpecificationGetArgs</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/LaunchTemplate.cs/#L533">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/LaunchTemplate.cs/#L555">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_LaunchTemplateState_DefaultVersion_" data-uid="Pulumi.Aws.Ec2.LaunchTemplateState.DefaultVersion*"></a>
   <h4 id="Pulumi_Aws_Ec2_LaunchTemplateState_DefaultVersion" data-uid="Pulumi.Aws.Ec2.LaunchTemplateState.DefaultVersion">DefaultVersion</h4>
@@ -275,7 +246,7 @@ Specification below for more details.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; DefaultVersion { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? DefaultVersion { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -287,13 +258,13 @@ Specification below for more details.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/LaunchTemplate.cs/#L539">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/LaunchTemplate.cs/#L561">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_LaunchTemplateState_Description_" data-uid="Pulumi.Aws.Ec2.LaunchTemplateState.Description*"></a>
   <h4 id="Pulumi_Aws_Ec2_LaunchTemplateState_Description" data-uid="Pulumi.Aws.Ec2.LaunchTemplateState.Description">Description</h4>
@@ -302,7 +273,7 @@ Specification below for more details.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Description { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Description { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -314,13 +285,13 @@ Specification below for more details.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/LaunchTemplate.cs/#L546">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/LaunchTemplate.cs/#L568">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_LaunchTemplateState_DisableApiTermination_" data-uid="Pulumi.Aws.Ec2.LaunchTemplateState.DisableApiTermination*"></a>
   <h4 id="Pulumi_Aws_Ec2_LaunchTemplateState_DisableApiTermination" data-uid="Pulumi.Aws.Ec2.LaunchTemplateState.DisableApiTermination">DisableApiTermination</h4>
@@ -330,7 +301,7 @@ Termination Protection</a></p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; DisableApiTermination { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? DisableApiTermination { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -342,13 +313,13 @@ Termination Protection</a></p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/LaunchTemplate.cs/#L552">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/LaunchTemplate.cs/#L574">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_LaunchTemplateState_EbsOptimized_" data-uid="Pulumi.Aws.Ec2.LaunchTemplateState.EbsOptimized*"></a>
   <h4 id="Pulumi_Aws_Ec2_LaunchTemplateState_EbsOptimized" data-uid="Pulumi.Aws.Ec2.LaunchTemplateState.EbsOptimized">EbsOptimized</h4>
@@ -357,7 +328,7 @@ Termination Protection</a></p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; EbsOptimized { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? EbsOptimized { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -369,13 +340,13 @@ Termination Protection</a></p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/LaunchTemplate.cs/#L562">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/LaunchTemplate.cs/#L584">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_LaunchTemplateState_ElasticGpuSpecifications_" data-uid="Pulumi.Aws.Ec2.LaunchTemplateState.ElasticGpuSpecifications*"></a>
   <h4 id="Pulumi_Aws_Ec2_LaunchTemplateState_ElasticGpuSpecifications" data-uid="Pulumi.Aws.Ec2.LaunchTemplateState.ElasticGpuSpecifications">ElasticGpuSpecifications</h4>
@@ -385,7 +356,7 @@ below for more details.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public InputList&lt;LaunchTemplateElasticGpuSpecificationsGetArgs&gt; ElasticGpuSpecifications { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public InputList&lt;LaunchTemplateElasticGpuSpecificationGetArgs&gt; ElasticGpuSpecifications { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -397,13 +368,13 @@ below for more details.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<a class="xref" href="Pulumi.Aws.Ec2.Inputs.LaunchTemplateElasticGpuSpecificationsGetArgs.html">LaunchTemplateElasticGpuSpecificationsGetArgs</a>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<a class="xref" href="Pulumi.Aws.Ec2.Inputs.LaunchTemplateElasticGpuSpecificationGetArgs.html">LaunchTemplateElasticGpuSpecificationGetArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/LaunchTemplate.cs/#L571">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/LaunchTemplate.cs/#L593">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_LaunchTemplateState_ElasticInferenceAccelerator_" data-uid="Pulumi.Aws.Ec2.LaunchTemplateState.ElasticInferenceAccelerator*"></a>
   <h4 id="Pulumi_Aws_Ec2_LaunchTemplateState_ElasticInferenceAccelerator" data-uid="Pulumi.Aws.Ec2.LaunchTemplateState.ElasticInferenceAccelerator">ElasticInferenceAccelerator</h4>
@@ -412,7 +383,7 @@ below for more details.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;LaunchTemplateElasticInferenceAcceleratorGetArgs&gt; ElasticInferenceAccelerator { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;LaunchTemplateElasticInferenceAcceleratorGetArgs&gt;? ElasticInferenceAccelerator { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -424,13 +395,40 @@ below for more details.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Aws.Ec2.Inputs.LaunchTemplateElasticInferenceAcceleratorGetArgs.html">LaunchTemplateElasticInferenceAcceleratorGetArgs</a>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Aws.Ec2.Inputs.LaunchTemplateElasticInferenceAcceleratorGetArgs.html">LaunchTemplateElasticInferenceAcceleratorGetArgs</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/LaunchTemplate.cs/#L578">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/LaunchTemplate.cs/#L599">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Ec2_LaunchTemplateState_HibernationOptions_" data-uid="Pulumi.Aws.Ec2.LaunchTemplateState.HibernationOptions*"></a>
+  <h4 id="Pulumi_Aws_Ec2_LaunchTemplateState_HibernationOptions" data-uid="Pulumi.Aws.Ec2.LaunchTemplateState.HibernationOptions">HibernationOptions</h4>
+  <div class="markdown level1 summary"><p>The hibernation options for the instance. See Hibernation Options below for more details.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;LaunchTemplateHibernationOptionsGetArgs&gt;? HibernationOptions { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Aws.Ec2.Inputs.LaunchTemplateHibernationOptionsGetArgs.html">LaunchTemplateHibernationOptionsGetArgs</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/LaunchTemplate.cs/#L606">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_LaunchTemplateState_IamInstanceProfile_" data-uid="Pulumi.Aws.Ec2.LaunchTemplateState.IamInstanceProfile*"></a>
   <h4 id="Pulumi_Aws_Ec2_LaunchTemplateState_IamInstanceProfile" data-uid="Pulumi.Aws.Ec2.LaunchTemplateState.IamInstanceProfile">IamInstanceProfile</h4>
@@ -440,7 +438,7 @@ below for more details.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;LaunchTemplateIamInstanceProfileGetArgs&gt; IamInstanceProfile { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;LaunchTemplateIamInstanceProfileGetArgs&gt;? IamInstanceProfile { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -452,13 +450,13 @@ below for more details.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Aws.Ec2.Inputs.LaunchTemplateIamInstanceProfileGetArgs.html">LaunchTemplateIamInstanceProfileGetArgs</a>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Aws.Ec2.Inputs.LaunchTemplateIamInstanceProfileGetArgs.html">LaunchTemplateIamInstanceProfileGetArgs</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/LaunchTemplate.cs/#L584">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/LaunchTemplate.cs/#L612">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_LaunchTemplateState_ImageId_" data-uid="Pulumi.Aws.Ec2.LaunchTemplateState.ImageId*"></a>
   <h4 id="Pulumi_Aws_Ec2_LaunchTemplateState_ImageId" data-uid="Pulumi.Aws.Ec2.LaunchTemplateState.ImageId">ImageId</h4>
@@ -467,7 +465,7 @@ below for more details.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; ImageId { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? ImageId { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -479,13 +477,13 @@ below for more details.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/LaunchTemplate.cs/#L591">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/LaunchTemplate.cs/#L619">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_LaunchTemplateState_InstanceInitiatedShutdownBehavior_" data-uid="Pulumi.Aws.Ec2.LaunchTemplateState.InstanceInitiatedShutdownBehavior*"></a>
   <h4 id="Pulumi_Aws_Ec2_LaunchTemplateState_InstanceInitiatedShutdownBehavior" data-uid="Pulumi.Aws.Ec2.LaunchTemplateState.InstanceInitiatedShutdownBehavior">InstanceInitiatedShutdownBehavior</h4>
@@ -495,7 +493,7 @@ below for more details.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; InstanceInitiatedShutdownBehavior { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? InstanceInitiatedShutdownBehavior { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -507,13 +505,13 @@ below for more details.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/LaunchTemplate.cs/#L598">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/LaunchTemplate.cs/#L626">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_LaunchTemplateState_InstanceMarketOptions_" data-uid="Pulumi.Aws.Ec2.LaunchTemplateState.InstanceMarketOptions*"></a>
   <h4 id="Pulumi_Aws_Ec2_LaunchTemplateState_InstanceMarketOptions" data-uid="Pulumi.Aws.Ec2.LaunchTemplateState.InstanceMarketOptions">InstanceMarketOptions</h4>
@@ -523,7 +521,7 @@ below for details.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;LaunchTemplateInstanceMarketOptionsGetArgs&gt; InstanceMarketOptions { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;LaunchTemplateInstanceMarketOptionsGetArgs&gt;? InstanceMarketOptions { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -535,13 +533,13 @@ below for details.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Aws.Ec2.Inputs.LaunchTemplateInstanceMarketOptionsGetArgs.html">LaunchTemplateInstanceMarketOptionsGetArgs</a>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Aws.Ec2.Inputs.LaunchTemplateInstanceMarketOptionsGetArgs.html">LaunchTemplateInstanceMarketOptionsGetArgs</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/LaunchTemplate.cs/#L604">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/LaunchTemplate.cs/#L632">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_LaunchTemplateState_InstanceType_" data-uid="Pulumi.Aws.Ec2.LaunchTemplateState.InstanceType*"></a>
   <h4 id="Pulumi_Aws_Ec2_LaunchTemplateState_InstanceType" data-uid="Pulumi.Aws.Ec2.LaunchTemplateState.InstanceType">InstanceType</h4>
@@ -550,7 +548,7 @@ below for details.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; InstanceType { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? InstanceType { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -562,13 +560,13 @@ below for details.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/LaunchTemplate.cs/#L610">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/LaunchTemplate.cs/#L638">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_LaunchTemplateState_KernelId_" data-uid="Pulumi.Aws.Ec2.LaunchTemplateState.KernelId*"></a>
   <h4 id="Pulumi_Aws_Ec2_LaunchTemplateState_KernelId" data-uid="Pulumi.Aws.Ec2.LaunchTemplateState.KernelId">KernelId</h4>
@@ -577,7 +575,7 @@ below for details.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; KernelId { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? KernelId { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -589,13 +587,13 @@ below for details.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/LaunchTemplate.cs/#L616">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/LaunchTemplate.cs/#L644">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_LaunchTemplateState_KeyName_" data-uid="Pulumi.Aws.Ec2.LaunchTemplateState.KeyName*"></a>
   <h4 id="Pulumi_Aws_Ec2_LaunchTemplateState_KeyName" data-uid="Pulumi.Aws.Ec2.LaunchTemplateState.KeyName">KeyName</h4>
@@ -604,7 +602,7 @@ below for details.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; KeyName { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? KeyName { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -616,13 +614,13 @@ below for details.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/LaunchTemplate.cs/#L622">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/LaunchTemplate.cs/#L650">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_LaunchTemplateState_LatestVersion_" data-uid="Pulumi.Aws.Ec2.LaunchTemplateState.LatestVersion*"></a>
   <h4 id="Pulumi_Aws_Ec2_LaunchTemplateState_LatestVersion" data-uid="Pulumi.Aws.Ec2.LaunchTemplateState.LatestVersion">LatestVersion</h4>
@@ -631,7 +629,7 @@ below for details.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; LatestVersion { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? LatestVersion { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -643,13 +641,13 @@ below for details.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/LaunchTemplate.cs/#L631">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/LaunchTemplate.cs/#L659">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_LaunchTemplateState_LicenseSpecifications_" data-uid="Pulumi.Aws.Ec2.LaunchTemplateState.LicenseSpecifications*"></a>
   <h4 id="Pulumi_Aws_Ec2_LaunchTemplateState_LicenseSpecifications" data-uid="Pulumi.Aws.Ec2.LaunchTemplateState.LicenseSpecifications">LicenseSpecifications</h4>
@@ -658,7 +656,7 @@ below for details.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public InputList&lt;LaunchTemplateLicenseSpecificationsGetArgs&gt; LicenseSpecifications { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public InputList&lt;LaunchTemplateLicenseSpecificationGetArgs&gt; LicenseSpecifications { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -670,13 +668,40 @@ below for details.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<a class="xref" href="Pulumi.Aws.Ec2.Inputs.LaunchTemplateLicenseSpecificationsGetArgs.html">LaunchTemplateLicenseSpecificationsGetArgs</a>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<a class="xref" href="Pulumi.Aws.Ec2.Inputs.LaunchTemplateLicenseSpecificationGetArgs.html">LaunchTemplateLicenseSpecificationGetArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/LaunchTemplate.cs/#L640">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/LaunchTemplate.cs/#L668">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Ec2_LaunchTemplateState_MetadataOptions_" data-uid="Pulumi.Aws.Ec2.LaunchTemplateState.MetadataOptions*"></a>
+  <h4 id="Pulumi_Aws_Ec2_LaunchTemplateState_MetadataOptions" data-uid="Pulumi.Aws.Ec2.LaunchTemplateState.MetadataOptions">MetadataOptions</h4>
+  <div class="markdown level1 summary"><p>Customize the metadata options for the instance. See Metadata Options below for more details.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;LaunchTemplateMetadataOptionsGetArgs&gt;? MetadataOptions { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Aws.Ec2.Inputs.LaunchTemplateMetadataOptionsGetArgs.html">LaunchTemplateMetadataOptionsGetArgs</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/LaunchTemplate.cs/#L674">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_LaunchTemplateState_Monitoring_" data-uid="Pulumi.Aws.Ec2.LaunchTemplateState.Monitoring*"></a>
   <h4 id="Pulumi_Aws_Ec2_LaunchTemplateState_Monitoring" data-uid="Pulumi.Aws.Ec2.LaunchTemplateState.Monitoring">Monitoring</h4>
@@ -685,7 +710,7 @@ below for details.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;LaunchTemplateMonitoringGetArgs&gt; Monitoring { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;LaunchTemplateMonitoringGetArgs&gt;? Monitoring { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -697,13 +722,13 @@ below for details.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Aws.Ec2.Inputs.LaunchTemplateMonitoringGetArgs.html">LaunchTemplateMonitoringGetArgs</a>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Aws.Ec2.Inputs.LaunchTemplateMonitoringGetArgs.html">LaunchTemplateMonitoringGetArgs</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/LaunchTemplate.cs/#L646">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/LaunchTemplate.cs/#L680">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_LaunchTemplateState_Name_" data-uid="Pulumi.Aws.Ec2.LaunchTemplateState.Name*"></a>
   <h4 id="Pulumi_Aws_Ec2_LaunchTemplateState_Name" data-uid="Pulumi.Aws.Ec2.LaunchTemplateState.Name">Name</h4>
@@ -712,7 +737,7 @@ below for details.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Name { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Name { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -724,13 +749,13 @@ below for details.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/LaunchTemplate.cs/#L652">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/LaunchTemplate.cs/#L686">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_LaunchTemplateState_NamePrefix_" data-uid="Pulumi.Aws.Ec2.LaunchTemplateState.NamePrefix*"></a>
   <h4 id="Pulumi_Aws_Ec2_LaunchTemplateState_NamePrefix" data-uid="Pulumi.Aws.Ec2.LaunchTemplateState.NamePrefix">NamePrefix</h4>
@@ -739,7 +764,7 @@ below for details.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; NamePrefix { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? NamePrefix { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -751,13 +776,13 @@ below for details.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/LaunchTemplate.cs/#L662">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/LaunchTemplate.cs/#L696">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_LaunchTemplateState_NetworkInterfaces_" data-uid="Pulumi.Aws.Ec2.LaunchTemplateState.NetworkInterfaces*"></a>
   <h4 id="Pulumi_Aws_Ec2_LaunchTemplateState_NetworkInterfaces" data-uid="Pulumi.Aws.Ec2.LaunchTemplateState.NetworkInterfaces">NetworkInterfaces</h4>
@@ -767,7 +792,7 @@ Interfaces below for more details.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public InputList&lt;LaunchTemplateNetworkInterfacesGetArgs&gt; NetworkInterfaces { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public InputList&lt;LaunchTemplateNetworkInterfaceGetArgs&gt; NetworkInterfaces { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -779,13 +804,13 @@ Interfaces below for more details.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<a class="xref" href="Pulumi.Aws.Ec2.Inputs.LaunchTemplateNetworkInterfacesGetArgs.html">LaunchTemplateNetworkInterfacesGetArgs</a>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<a class="xref" href="Pulumi.Aws.Ec2.Inputs.LaunchTemplateNetworkInterfaceGetArgs.html">LaunchTemplateNetworkInterfaceGetArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/LaunchTemplate.cs/#L671">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/LaunchTemplate.cs/#L705">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_LaunchTemplateState_Placement_" data-uid="Pulumi.Aws.Ec2.LaunchTemplateState.Placement*"></a>
   <h4 id="Pulumi_Aws_Ec2_LaunchTemplateState_Placement" data-uid="Pulumi.Aws.Ec2.LaunchTemplateState.Placement">Placement</h4>
@@ -794,7 +819,7 @@ Interfaces below for more details.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;LaunchTemplatePlacementGetArgs&gt; Placement { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;LaunchTemplatePlacementGetArgs&gt;? Placement { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -806,13 +831,13 @@ Interfaces below for more details.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Aws.Ec2.Inputs.LaunchTemplatePlacementGetArgs.html">LaunchTemplatePlacementGetArgs</a>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Aws.Ec2.Inputs.LaunchTemplatePlacementGetArgs.html">LaunchTemplatePlacementGetArgs</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/LaunchTemplate.cs/#L677">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/LaunchTemplate.cs/#L711">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_LaunchTemplateState_RamDiskId_" data-uid="Pulumi.Aws.Ec2.LaunchTemplateState.RamDiskId*"></a>
   <h4 id="Pulumi_Aws_Ec2_LaunchTemplateState_RamDiskId" data-uid="Pulumi.Aws.Ec2.LaunchTemplateState.RamDiskId">RamDiskId</h4>
@@ -821,7 +846,7 @@ Interfaces below for more details.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; RamDiskId { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? RamDiskId { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -833,13 +858,13 @@ Interfaces below for more details.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/LaunchTemplate.cs/#L687">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/LaunchTemplate.cs/#L721">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_LaunchTemplateState_SecurityGroupNames_" data-uid="Pulumi.Aws.Ec2.LaunchTemplateState.SecurityGroupNames*"></a>
   <h4 id="Pulumi_Aws_Ec2_LaunchTemplateState_SecurityGroupNames" data-uid="Pulumi.Aws.Ec2.LaunchTemplateState.SecurityGroupNames">SecurityGroupNames</h4>
@@ -861,13 +886,13 @@ Interfaces below for more details.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/LaunchTemplate.cs/#L711">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/LaunchTemplate.cs/#L745">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_LaunchTemplateState_Tags_" data-uid="Pulumi.Aws.Ec2.LaunchTemplateState.Tags*"></a>
   <h4 id="Pulumi_Aws_Ec2_LaunchTemplateState_Tags" data-uid="Pulumi.Aws.Ec2.LaunchTemplateState.Tags">Tags</h4>
@@ -888,13 +913,13 @@ Interfaces below for more details.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputMap-1.html">InputMap</a>&lt;<span class="xref">System.Object</span>&gt;</td>
+        <td><span class="xref">InputMap</span>&lt;<span class="xref">System.Object</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/LaunchTemplate.cs/#L699">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/LaunchTemplate.cs/#L733">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_LaunchTemplateState_TagSpecifications_" data-uid="Pulumi.Aws.Ec2.LaunchTemplateState.TagSpecifications*"></a>
   <h4 id="Pulumi_Aws_Ec2_LaunchTemplateState_TagSpecifications" data-uid="Pulumi.Aws.Ec2.LaunchTemplateState.TagSpecifications">TagSpecifications</h4>
@@ -903,7 +928,7 @@ Interfaces below for more details.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public InputList&lt;LaunchTemplateTagSpecificationsGetArgs&gt; TagSpecifications { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public InputList&lt;LaunchTemplateTagSpecificationGetArgs&gt; TagSpecifications { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -915,13 +940,13 @@ Interfaces below for more details.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<a class="xref" href="Pulumi.Aws.Ec2.Inputs.LaunchTemplateTagSpecificationsGetArgs.html">LaunchTemplateTagSpecificationsGetArgs</a>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<a class="xref" href="Pulumi.Aws.Ec2.Inputs.LaunchTemplateTagSpecificationGetArgs.html">LaunchTemplateTagSpecificationGetArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/LaunchTemplate.cs/#L720">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/LaunchTemplate.cs/#L754">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_LaunchTemplateState_UserData_" data-uid="Pulumi.Aws.Ec2.LaunchTemplateState.UserData*"></a>
   <h4 id="Pulumi_Aws_Ec2_LaunchTemplateState_UserData" data-uid="Pulumi.Aws.Ec2.LaunchTemplateState.UserData">UserData</h4>
@@ -930,7 +955,7 @@ Interfaces below for more details.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; UserData { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? UserData { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -942,13 +967,13 @@ Interfaces below for more details.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/LaunchTemplate.cs/#L729">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/LaunchTemplate.cs/#L763">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_LaunchTemplateState_VpcSecurityGroupIds_" data-uid="Pulumi.Aws.Ec2.LaunchTemplateState.VpcSecurityGroupIds*"></a>
   <h4 id="Pulumi_Aws_Ec2_LaunchTemplateState_VpcSecurityGroupIds" data-uid="Pulumi.Aws.Ec2.LaunchTemplateState.VpcSecurityGroupIds">VpcSecurityGroupIds</h4>
@@ -969,7 +994,7 @@ Interfaces below for more details.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -981,7 +1006,7 @@ Interfaces below for more details.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/LaunchTemplate.cs/#L490" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/LaunchTemplate.cs/#L512" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

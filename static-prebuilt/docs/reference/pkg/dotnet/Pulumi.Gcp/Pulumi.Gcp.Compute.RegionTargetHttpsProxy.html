@@ -71,50 +71,20 @@
   
   <h1 id="Pulumi_Gcp_Compute_RegionTargetHttpsProxy" data-uid="Pulumi.Gcp.Compute.RegionTargetHttpsProxy" class="text-break">Class RegionTargetHttpsProxy
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Represents a RegionTargetHttpsProxy resource, which is used by one or more
+forwarding rules to route incoming HTTPS requests to a URL map.</p>
+<p>To get more information about RegionTargetHttpsProxy, see:</p>
+<ul>
+<li><a href="https://cloud.google.com/compute/docs/reference/rest/beta/regionTargetHttpsProxies">API documentation</a></li>
+<li>How-to Guides</li>
+<li><a href="https://cloud.google.com/compute/docs/load-balancing/http/target-proxies">Official Documentation</a></li>
+</ul>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
-    <div class="level3"><span class="xref">RegionTargetHttpsProxy</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">RegionTargetHttpsProxy</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.Compute.html">Pulumi.Gcp.Compute</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
@@ -125,16 +95,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/RegionTargetHttpsProxy.cs/#L83">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RegionTargetHttpsProxy.cs/#L91">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RegionTargetHttpsProxy__ctor_" data-uid="Pulumi.Gcp.Compute.RegionTargetHttpsProxy.#ctor*"></a>
-  <h4 id="Pulumi_Gcp_Compute_RegionTargetHttpsProxy__ctor_System_String_Pulumi_Gcp_Compute_RegionTargetHttpsProxyArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Gcp.Compute.RegionTargetHttpsProxy.#ctor(System.String,Pulumi.Gcp.Compute.RegionTargetHttpsProxyArgs,Pulumi.CustomResourceOptions)">RegionTargetHttpsProxy(String, RegionTargetHttpsProxyArgs, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Gcp_Compute_RegionTargetHttpsProxy__ctor_System_String_Pulumi_Gcp_Compute_RegionTargetHttpsProxyArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Gcp.Compute.RegionTargetHttpsProxy.#ctor(System.String,Pulumi.Gcp.Compute.RegionTargetHttpsProxyArgs,System.Nullable{CustomResourceOptions})">RegionTargetHttpsProxy(String, RegionTargetHttpsProxyArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Create a RegionTargetHttpsProxy resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public RegionTargetHttpsProxy(string name, RegionTargetHttpsProxyArgs args, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public RegionTargetHttpsProxy(string name, RegionTargetHttpsProxyArgs args, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -159,7 +129,7 @@
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -169,7 +139,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/RegionTargetHttpsProxy.cs/#L17">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RegionTargetHttpsProxy.cs/#L27">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RegionTargetHttpsProxy_CreationTimestamp_" data-uid="Pulumi.Gcp.Compute.RegionTargetHttpsProxy.CreationTimestamp*"></a>
   <h4 id="Pulumi_Gcp_Compute_RegionTargetHttpsProxy_CreationTimestamp" data-uid="Pulumi.Gcp.Compute.RegionTargetHttpsProxy.CreationTimestamp">CreationTimestamp</h4>
@@ -190,13 +160,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/RegionTargetHttpsProxy.cs/#L23">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RegionTargetHttpsProxy.cs/#L33">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RegionTargetHttpsProxy_Description_" data-uid="Pulumi.Gcp.Compute.RegionTargetHttpsProxy.Description*"></a>
   <h4 id="Pulumi_Gcp_Compute_RegionTargetHttpsProxy_Description" data-uid="Pulumi.Gcp.Compute.RegionTargetHttpsProxy.Description">Description</h4>
@@ -205,7 +175,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Description { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Description { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -217,21 +187,20 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/RegionTargetHttpsProxy.cs/#L33">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RegionTargetHttpsProxy.cs/#L42">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RegionTargetHttpsProxy_Name_" data-uid="Pulumi.Gcp.Compute.RegionTargetHttpsProxy.Name*"></a>
   <h4 id="Pulumi_Gcp_Compute_RegionTargetHttpsProxy_Name" data-uid="Pulumi.Gcp.Compute.RegionTargetHttpsProxy.Name">Name</h4>
-  <div class="markdown level1 summary"><p>Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters
-long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular
-expression '<a href="%5B-a-z0-9%5D*%5Ba-z0-9%5D">a-z</a>?' which means the first character must be a lowercase letter, and all
-following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be
-a dash.</p>
+  <div class="markdown level1 summary"><p>Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
+comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
+'<a href="%5B-a-z0-9%5D*%5Ba-z0-9%5D">a-z</a>?' which means the first character must be a lowercase letter, and all following characters
+must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -248,13 +217,13 @@ a dash.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/RegionTargetHttpsProxy.cs/#L40">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RegionTargetHttpsProxy.cs/#L49">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RegionTargetHttpsProxy_Project_" data-uid="Pulumi.Gcp.Compute.RegionTargetHttpsProxy.Project*"></a>
   <h4 id="Pulumi_Gcp_Compute_RegionTargetHttpsProxy_Project" data-uid="Pulumi.Gcp.Compute.RegionTargetHttpsProxy.Project">Project</h4>
@@ -276,13 +245,13 @@ If it is not provided, the provider project is used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/RegionTargetHttpsProxy.cs/#L46">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RegionTargetHttpsProxy.cs/#L55">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RegionTargetHttpsProxy_ProxyId_" data-uid="Pulumi.Gcp.Compute.RegionTargetHttpsProxy.ProxyId*"></a>
   <h4 id="Pulumi_Gcp_Compute_RegionTargetHttpsProxy_ProxyId" data-uid="Pulumi.Gcp.Compute.RegionTargetHttpsProxy.ProxyId">ProxyId</h4>
@@ -303,18 +272,17 @@ If it is not provided, the provider project is used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/RegionTargetHttpsProxy.cs/#L53">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RegionTargetHttpsProxy.cs/#L61">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RegionTargetHttpsProxy_Region_" data-uid="Pulumi.Gcp.Compute.RegionTargetHttpsProxy.Region*"></a>
   <h4 id="Pulumi_Gcp_Compute_RegionTargetHttpsProxy_Region" data-uid="Pulumi.Gcp.Compute.RegionTargetHttpsProxy.Region">Region</h4>
-  <div class="markdown level1 summary"><p>The Region in which the created target https proxy should reside. If it is not provided, the provider region
-is used.</p>
+  <div class="markdown level1 summary"><p>The Region in which the created target https proxy should reside. If it is not provided, the provider region is used.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -331,13 +299,13 @@ is used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/RegionTargetHttpsProxy.cs/#L59">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RegionTargetHttpsProxy.cs/#L67">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RegionTargetHttpsProxy_SelfLink_" data-uid="Pulumi.Gcp.Compute.RegionTargetHttpsProxy.SelfLink*"></a>
   <h4 id="Pulumi_Gcp_Compute_RegionTargetHttpsProxy_SelfLink" data-uid="Pulumi.Gcp.Compute.RegionTargetHttpsProxy.SelfLink">SelfLink</h4>
@@ -358,18 +326,18 @@ is used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/RegionTargetHttpsProxy.cs/#L66">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RegionTargetHttpsProxy.cs/#L74">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RegionTargetHttpsProxy_SslCertificates_" data-uid="Pulumi.Gcp.Compute.RegionTargetHttpsProxy.SslCertificates*"></a>
   <h4 id="Pulumi_Gcp_Compute_RegionTargetHttpsProxy_SslCertificates" data-uid="Pulumi.Gcp.Compute.RegionTargetHttpsProxy.SslCertificates">SslCertificates</h4>
-  <div class="markdown level1 summary"><p>A list of RegionSslCertificate resources that are used to authenticate connections between users and the
-load balancer. Currently, exactly one SSL certificate must be specified.</p>
+  <div class="markdown level1 summary"><p>A list of RegionSslCertificate resources that are used to authenticate connections between users and the load balancer.
+Currently, exactly one SSL certificate must be specified.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -386,13 +354,13 @@ load balancer. Currently, exactly one SSL certificate must be specified.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/RegionTargetHttpsProxy.cs/#L72">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RegionTargetHttpsProxy.cs/#L80">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RegionTargetHttpsProxy_UrlMap_" data-uid="Pulumi.Gcp.Compute.RegionTargetHttpsProxy.UrlMap*"></a>
   <h4 id="Pulumi_Gcp_Compute_RegionTargetHttpsProxy_UrlMap" data-uid="Pulumi.Gcp.Compute.RegionTargetHttpsProxy.UrlMap">UrlMap</h4>
@@ -413,7 +381,7 @@ load balancer. Currently, exactly one SSL certificate must be specified.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -421,17 +389,17 @@ load balancer. Currently, exactly one SSL certificate must be specified.</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/RegionTargetHttpsProxy.cs/#L113">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RegionTargetHttpsProxy.cs/#L121">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RegionTargetHttpsProxy_Get_" data-uid="Pulumi.Gcp.Compute.RegionTargetHttpsProxy.Get*"></a>
-  <h4 id="Pulumi_Gcp_Compute_RegionTargetHttpsProxy_Get_System_String_Pulumi_Input_System_String__Pulumi_Gcp_Compute_RegionTargetHttpsProxyState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Gcp.Compute.RegionTargetHttpsProxy.Get(System.String,Pulumi.Input{System.String},Pulumi.Gcp.Compute.RegionTargetHttpsProxyState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, RegionTargetHttpsProxyState, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Gcp_Compute_RegionTargetHttpsProxy_Get_System_String_Input_System_String__Pulumi_Gcp_Compute_RegionTargetHttpsProxyState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Gcp.Compute.RegionTargetHttpsProxy.Get(System.String,Input{System.String},Pulumi.Gcp.Compute.RegionTargetHttpsProxyState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, RegionTargetHttpsProxyState, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Get an existing RegionTargetHttpsProxy resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static RegionTargetHttpsProxy Get(string name, Input&lt;string&gt; id, RegionTargetHttpsProxyState state = null, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static RegionTargetHttpsProxy Get(string name, Input&lt;string&gt; id, RegionTargetHttpsProxyState state = null, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -450,7 +418,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -462,7 +430,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -491,7 +459,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/RegionTargetHttpsProxy.cs/#L12" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RegionTargetHttpsProxy.cs/#L22" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

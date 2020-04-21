@@ -76,53 +76,12 @@
 the <code>create_before_destroy</code> lifecycle flag set, to avoid conflicts with
 unique names during the brief period where both the old and new resources
 exist concurrently.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-random/blob/master/website/docs/r/integer.html.md">https://github.com/terraform-providers/terraform-provider-random/blob/master/website/docs/r/integer.html.md</a>.</p>
-</blockquote>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
-    <div class="level3"><span class="xref">RandomInteger</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">RandomInteger</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Random.html">Pulumi.Random</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Random.dll</h6>
@@ -133,16 +92,16 @@ exist concurrently.</p>
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-random/blob/master/sdk/dotnet/RandomInteger.cs/#L64">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-random/blob/43ad94e18c78fcc04aceb40df0061307cf81525a/sdk/dotnet/RandomInteger.cs/#L62">View Source</a>
   </span>
   <a id="Pulumi_Random_RandomInteger__ctor_" data-uid="Pulumi.Random.RandomInteger.#ctor*"></a>
-  <h4 id="Pulumi_Random_RandomInteger__ctor_System_String_Pulumi_Random_RandomIntegerArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Random.RandomInteger.#ctor(System.String,Pulumi.Random.RandomIntegerArgs,Pulumi.CustomResourceOptions)">RandomInteger(String, RandomIntegerArgs, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Random_RandomInteger__ctor_System_String_Pulumi_Random_RandomIntegerArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Random.RandomInteger.#ctor(System.String,Pulumi.Random.RandomIntegerArgs,System.Nullable{CustomResourceOptions})">RandomInteger(String, RandomIntegerArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Create a RandomInteger resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public RandomInteger(string name, RandomIntegerArgs args, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public RandomInteger(string name, RandomIntegerArgs args, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -167,7 +126,7 @@ exist concurrently.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -177,7 +136,7 @@ exist concurrently.</p>
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-random/blob/master/sdk/dotnet/RandomInteger.cs/#L29">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-random/blob/43ad94e18c78fcc04aceb40df0061307cf81525a/sdk/dotnet/RandomInteger.cs/#L27">View Source</a>
   </span>
   <a id="Pulumi_Random_RandomInteger_Keepers_" data-uid="Pulumi.Random.RandomInteger.Keepers*"></a>
   <h4 id="Pulumi_Random_RandomInteger_Keepers" data-uid="Pulumi.Random.RandomInteger.Keepers">Keepers</h4>
@@ -188,7 +147,7 @@ the main provider documentation for more information.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;&gt; Keepers { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;?&gt; Keepers { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -200,13 +159,13 @@ the main provider documentation for more information.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-random/blob/master/sdk/dotnet/RandomInteger.cs/#L35">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-random/blob/43ad94e18c78fcc04aceb40df0061307cf81525a/sdk/dotnet/RandomInteger.cs/#L33">View Source</a>
   </span>
   <a id="Pulumi_Random_RandomInteger_Max_" data-uid="Pulumi.Random.RandomInteger.Max*"></a>
   <h4 id="Pulumi_Random_RandomInteger_Max" data-uid="Pulumi.Random.RandomInteger.Max">Max</h4>
@@ -227,13 +186,13 @@ the main provider documentation for more information.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-random/blob/master/sdk/dotnet/RandomInteger.cs/#L41">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-random/blob/43ad94e18c78fcc04aceb40df0061307cf81525a/sdk/dotnet/RandomInteger.cs/#L39">View Source</a>
   </span>
   <a id="Pulumi_Random_RandomInteger_Min_" data-uid="Pulumi.Random.RandomInteger.Min*"></a>
   <h4 id="Pulumi_Random_RandomInteger_Min" data-uid="Pulumi.Random.RandomInteger.Min">Min</h4>
@@ -254,13 +213,13 @@ the main provider documentation for more information.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-random/blob/master/sdk/dotnet/RandomInteger.cs/#L47">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-random/blob/43ad94e18c78fcc04aceb40df0061307cf81525a/sdk/dotnet/RandomInteger.cs/#L45">View Source</a>
   </span>
   <a id="Pulumi_Random_RandomInteger_Result_" data-uid="Pulumi.Random.RandomInteger.Result*"></a>
   <h4 id="Pulumi_Random_RandomInteger_Result" data-uid="Pulumi.Random.RandomInteger.Result">Result</h4>
@@ -281,13 +240,13 @@ the main provider documentation for more information.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-random/blob/master/sdk/dotnet/RandomInteger.cs/#L53">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-random/blob/43ad94e18c78fcc04aceb40df0061307cf81525a/sdk/dotnet/RandomInteger.cs/#L51">View Source</a>
   </span>
   <a id="Pulumi_Random_RandomInteger_Seed_" data-uid="Pulumi.Random.RandomInteger.Seed*"></a>
   <h4 id="Pulumi_Random_RandomInteger_Seed" data-uid="Pulumi.Random.RandomInteger.Seed">Seed</h4>
@@ -296,7 +255,7 @@ the main provider documentation for more information.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Seed { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Seed { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -308,7 +267,7 @@ the main provider documentation for more information.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -316,17 +275,17 @@ the main provider documentation for more information.</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-random/blob/master/sdk/dotnet/RandomInteger.cs/#L94">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-random/blob/43ad94e18c78fcc04aceb40df0061307cf81525a/sdk/dotnet/RandomInteger.cs/#L92">View Source</a>
   </span>
   <a id="Pulumi_Random_RandomInteger_Get_" data-uid="Pulumi.Random.RandomInteger.Get*"></a>
-  <h4 id="Pulumi_Random_RandomInteger_Get_System_String_Pulumi_Input_System_String__Pulumi_Random_RandomIntegerState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Random.RandomInteger.Get(System.String,Pulumi.Input{System.String},Pulumi.Random.RandomIntegerState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, RandomIntegerState, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Random_RandomInteger_Get_System_String_Input_System_String__Pulumi_Random_RandomIntegerState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Random.RandomInteger.Get(System.String,Input{System.String},Pulumi.Random.RandomIntegerState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, RandomIntegerState, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Get an existing RandomInteger resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static RandomInteger Get(string name, Input&lt;string&gt; id, RandomIntegerState state = null, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static RandomInteger Get(string name, Input&lt;string&gt; id, RandomIntegerState state = null, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -345,7 +304,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -357,7 +316,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -386,7 +345,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-random/blob/master/sdk/dotnet/RandomInteger.cs/#L22" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-random/blob/43ad94e18c78fcc04aceb40df0061307cf81525a/sdk/dotnet/RandomInteger.cs/#L20" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

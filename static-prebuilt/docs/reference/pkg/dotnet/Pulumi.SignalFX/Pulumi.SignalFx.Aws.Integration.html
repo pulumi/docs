@@ -72,15 +72,14 @@
   <h1 id="Pulumi_SignalFx_Aws_Integration" data-uid="Pulumi.SignalFx.Aws.Integration" class="text-break">Class Integration
   </h1>
   <div class="markdown level0 summary"><p>SignalFx AWS CloudWatch integrations. For help with this integration see <a href="https://docs.signalfx.com/en/latest/integrations/amazon-web-services.html#monitor-amazon-web-services">Monitoring Amazon Web Services</a>.</p>
-<p><strong>Note:</strong> When managing integrations you'll need to use an admin token to authenticate the SignalFx provider.</p>
+<blockquote>
+<p><strong>NOTE</strong> When managing integrations you'll need to use an admin token to authenticate the SignalFx provider.</p>
+</blockquote>
 <blockquote>
 <p><strong>WARNING</strong> This resource implements a part of a workflow. You must use it with one of either <code>signalfx.aws.ExternalIntegration</code> or <code>signalfx.aws.TokenIntegration</code>.</p>
 </blockquote>
 <h2 id="service-names">Service Names</h2>
-<p>Fields that expect an AWS service/namespace will work with one of: &quot;AWS/ApiGateway&quot; &quot;AWS/AppStream&quot; &quot;AWS/AutoScaling&quot; &quot;AWS/Billing&quot; &quot;AWS/CloudFront&quot; &quot;AWS/CloudSearch&quot; &quot;AWS/Events&quot; &quot;AWS/Logs&quot; &quot;AWS/Connect&quot; &quot;AWS/DMS&quot; &quot;AWS/DX&quot; &quot;AWS/DynamoDB&quot; &quot;AWS/EC2&quot; &quot;AWS/EC2Spot&quot; &quot;AWS/ECS&quot; &quot;AWS/ElasticBeanstalk&quot; &quot;AWS/EBS&quot; &quot;AWS/EFS&quot; &quot;AWS/ELB&quot; &quot;AWS/ApplicationELB&quot; &quot;AWS/NetworkELB&quot; &quot;AWS/ElasticTranscoder&quot; &quot;AWS/ElastiCache&quot; &quot;AWS/ES&quot; &quot;AWS/ElasticMapReduce&quot; &quot;AWS/GameLift&quot; &quot;AWS/Inspector&quot; &quot;AWS/IoT&quot; &quot;AWS/KMS&quot; &quot;AWS/KinesisAnalytics&quot; &quot;AWS/Firehose&quot; &quot;AWS/Kinesis&quot; &quot;AWS/KinesisVideo&quot; &quot;AWS/Lambda&quot; &quot;AWS/Lex&quot; &quot;AWS/ML&quot; &quot;AWS/OpsWorks&quot; &quot;AWS/Polly&quot; &quot;AWS/Redshift&quot; &quot;AWS/RDS&quot; &quot;AWS/Route53&quot; &quot;AWS/SageMaker&quot; &quot;AWS/DDoSProtection&quot; &quot;AWS/SES&quot; &quot;AWS/SNS&quot; &quot;AWS/SQS&quot; &quot;AWS/S3&quot; &quot;AWS/SWF&quot; &quot;AWS/States&quot; &quot;AWS/StorageGateway&quot; &quot;AWS/Translate&quot; &quot;AWS/NATGateway&quot; &quot;AWS/VPN (VPN)&quot; &quot;WAF&quot; &quot;AWS/WorkSpaces&quot;.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-signalfx/blob/master/website/docs/r/aws_integration.html.markdown">https://github.com/terraform-providers/terraform-provider-signalfx/blob/master/website/docs/r/aws_integration.html.markdown</a>.</p>
-</blockquote>
+<p>Fields that expect an AWS service/namespace will work with one of: &quot;AWS/ApiGateway&quot; &quot;AWS/AppStream&quot; &quot;AWS/AutoScaling&quot; &quot;AWS/Billing&quot; &quot;AWS/CloudFront&quot; &quot;AWS/CloudSearch&quot; &quot;AWS/Events&quot; &quot;AWS/Logs&quot; &quot;AWS/Connect&quot; &quot;AWS/DMS&quot; &quot;AWS/DX&quot; &quot;AWS/DynamoDB&quot; &quot;AWS/EC2&quot; &quot;AWS/EC2Spot&quot; &quot;AWS/ECS&quot; &quot;AWS/ElasticBeanstalk&quot; &quot;AWS/EBS&quot; &quot;AWS/EFS&quot; &quot;AWS/ELB&quot; &quot;AWS/ApplicationELB&quot; &quot;AWS/NetworkELB&quot; &quot;AWS/ElasticTranscoder&quot; &quot;AWS/ElastiCache&quot; &quot;AWS/ES&quot; &quot;AWS/ElasticMapReduce&quot; &quot;AWS/GameLift&quot; &quot;AWS/Inspector&quot; &quot;AWS/IoT&quot; &quot;AWS/KMS&quot; &quot;AWS/KinesisAnalytics&quot; &quot;AWS/Firehose&quot; &quot;AWS/Kinesis&quot; &quot;AWS/KinesisVideo&quot; &quot;AWS/Lambda&quot; &quot;AWS/Lex&quot; &quot;AWS/ML&quot; &quot;AWS/OpsWorks&quot; &quot;AWS/Polly&quot; &quot;AWS/Redshift&quot; &quot;AWS/RDS&quot; &quot;AWS/Route53&quot; &quot;AWS/SageMaker&quot; &quot;AWS/DDoSProtection&quot; &quot;AWS/SES&quot; &quot;AWS/SNS&quot; &quot;AWS/SQS&quot; &quot;AWS/S3&quot; &quot;AWS/SWF&quot; &quot;AWS/States&quot; &quot;AWS/StorageGateway&quot; &quot;AWS/Translate&quot; &quot;AWS/NATGateway&quot; &quot;AWS/VPN&quot; &quot;WAF&quot; &quot;AWS/WorkSpaces&quot;.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -97,7 +96,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/Aws/Integration.cs/#L124">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/d4472048557dab7779ed8888ed156d31ff9205d0/sdk/dotnet/Aws/Integration.cs/#L124">View Source</a>
   </span>
   <a id="Pulumi_SignalFx_Aws_Integration__ctor_" data-uid="Pulumi.SignalFx.Aws.Integration.#ctor*"></a>
   <h4 id="Pulumi_SignalFx_Aws_Integration__ctor_System_String_Pulumi_SignalFx_Aws_IntegrationArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.SignalFx.Aws.Integration.#ctor(System.String,Pulumi.SignalFx.Aws.IntegrationArgs,System.Nullable{CustomResourceOptions})">Integration(String, IntegrationArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
@@ -141,7 +140,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/Aws/Integration.cs/#L29">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/d4472048557dab7779ed8888ed156d31ff9205d0/sdk/dotnet/Aws/Integration.cs/#L29">View Source</a>
   </span>
   <a id="Pulumi_SignalFx_Aws_Integration_CustomCloudwatchNamespaces_" data-uid="Pulumi.SignalFx.Aws.Integration.CustomCloudwatchNamespaces*"></a>
   <h4 id="Pulumi_SignalFx_Aws_Integration_CustomCloudwatchNamespaces" data-uid="Pulumi.SignalFx.Aws.Integration.CustomCloudwatchNamespaces">CustomCloudwatchNamespaces</h4>
@@ -168,7 +167,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/Aws/Integration.cs/#L35">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/d4472048557dab7779ed8888ed156d31ff9205d0/sdk/dotnet/Aws/Integration.cs/#L35">View Source</a>
   </span>
   <a id="Pulumi_SignalFx_Aws_Integration_CustomNamespaceSyncRules_" data-uid="Pulumi.SignalFx.Aws.Integration.CustomNamespaceSyncRules*"></a>
   <h4 id="Pulumi_SignalFx_Aws_Integration_CustomNamespaceSyncRules" data-uid="Pulumi.SignalFx.Aws.Integration.CustomNamespaceSyncRules">CustomNamespaceSyncRules</h4>
@@ -177,7 +176,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;IntegrationCustomNamespaceSyncRules&gt;&gt; CustomNamespaceSyncRules { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;IntegrationCustomNamespaceSyncRule&gt;&gt; CustomNamespaceSyncRules { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -189,13 +188,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.SignalFx.Aws.Outputs.IntegrationCustomNamespaceSyncRules.html">IntegrationCustomNamespaceSyncRules</a>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.SignalFx.Aws.Outputs.IntegrationCustomNamespaceSyncRule.html">IntegrationCustomNamespaceSyncRule</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/Aws/Integration.cs/#L41">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/d4472048557dab7779ed8888ed156d31ff9205d0/sdk/dotnet/Aws/Integration.cs/#L41">View Source</a>
   </span>
   <a id="Pulumi_SignalFx_Aws_Integration_EnableAwsUsage_" data-uid="Pulumi.SignalFx.Aws.Integration.EnableAwsUsage*"></a>
   <h4 id="Pulumi_SignalFx_Aws_Integration_EnableAwsUsage" data-uid="Pulumi.SignalFx.Aws.Integration.EnableAwsUsage">EnableAwsUsage</h4>
@@ -222,7 +221,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/Aws/Integration.cs/#L47">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/d4472048557dab7779ed8888ed156d31ff9205d0/sdk/dotnet/Aws/Integration.cs/#L47">View Source</a>
   </span>
   <a id="Pulumi_SignalFx_Aws_Integration_Enabled_" data-uid="Pulumi.SignalFx.Aws.Integration.Enabled*"></a>
   <h4 id="Pulumi_SignalFx_Aws_Integration_Enabled" data-uid="Pulumi.SignalFx.Aws.Integration.Enabled">Enabled</h4>
@@ -249,7 +248,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/Aws/Integration.cs/#L53">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/d4472048557dab7779ed8888ed156d31ff9205d0/sdk/dotnet/Aws/Integration.cs/#L53">View Source</a>
   </span>
   <a id="Pulumi_SignalFx_Aws_Integration_ExternalId_" data-uid="Pulumi.SignalFx.Aws.Integration.ExternalId*"></a>
   <h4 id="Pulumi_SignalFx_Aws_Integration_ExternalId" data-uid="Pulumi.SignalFx.Aws.Integration.ExternalId">ExternalId</h4>
@@ -276,7 +275,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/Aws/Integration.cs/#L59">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/d4472048557dab7779ed8888ed156d31ff9205d0/sdk/dotnet/Aws/Integration.cs/#L59">View Source</a>
   </span>
   <a id="Pulumi_SignalFx_Aws_Integration_ImportCloudWatch_" data-uid="Pulumi.SignalFx.Aws.Integration.ImportCloudWatch*"></a>
   <h4 id="Pulumi_SignalFx_Aws_Integration_ImportCloudWatch" data-uid="Pulumi.SignalFx.Aws.Integration.ImportCloudWatch">ImportCloudWatch</h4>
@@ -303,7 +302,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/Aws/Integration.cs/#L65">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/d4472048557dab7779ed8888ed156d31ff9205d0/sdk/dotnet/Aws/Integration.cs/#L65">View Source</a>
   </span>
   <a id="Pulumi_SignalFx_Aws_Integration_IntegrationId_" data-uid="Pulumi.SignalFx.Aws.Integration.IntegrationId*"></a>
   <h4 id="Pulumi_SignalFx_Aws_Integration_IntegrationId" data-uid="Pulumi.SignalFx.Aws.Integration.IntegrationId">IntegrationId</h4>
@@ -330,7 +329,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/Aws/Integration.cs/#L71">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/d4472048557dab7779ed8888ed156d31ff9205d0/sdk/dotnet/Aws/Integration.cs/#L71">View Source</a>
   </span>
   <a id="Pulumi_SignalFx_Aws_Integration_Key_" data-uid="Pulumi.SignalFx.Aws.Integration.Key*"></a>
   <h4 id="Pulumi_SignalFx_Aws_Integration_Key" data-uid="Pulumi.SignalFx.Aws.Integration.Key">Key</h4>
@@ -357,7 +356,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/Aws/Integration.cs/#L77">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/d4472048557dab7779ed8888ed156d31ff9205d0/sdk/dotnet/Aws/Integration.cs/#L77">View Source</a>
   </span>
   <a id="Pulumi_SignalFx_Aws_Integration_NamespaceSyncRules_" data-uid="Pulumi.SignalFx.Aws.Integration.NamespaceSyncRules*"></a>
   <h4 id="Pulumi_SignalFx_Aws_Integration_NamespaceSyncRules" data-uid="Pulumi.SignalFx.Aws.Integration.NamespaceSyncRules">NamespaceSyncRules</h4>
@@ -366,7 +365,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;IntegrationNamespaceSyncRules&gt;&gt; NamespaceSyncRules { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;IntegrationNamespaceSyncRule&gt;&gt; NamespaceSyncRules { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -378,13 +377,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.SignalFx.Aws.Outputs.IntegrationNamespaceSyncRules.html">IntegrationNamespaceSyncRules</a>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.SignalFx.Aws.Outputs.IntegrationNamespaceSyncRule.html">IntegrationNamespaceSyncRule</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/Aws/Integration.cs/#L83">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/d4472048557dab7779ed8888ed156d31ff9205d0/sdk/dotnet/Aws/Integration.cs/#L83">View Source</a>
   </span>
   <a id="Pulumi_SignalFx_Aws_Integration_PollRate_" data-uid="Pulumi.SignalFx.Aws.Integration.PollRate*"></a>
   <h4 id="Pulumi_SignalFx_Aws_Integration_PollRate" data-uid="Pulumi.SignalFx.Aws.Integration.PollRate">PollRate</h4>
@@ -411,7 +410,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/Aws/Integration.cs/#L89">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/d4472048557dab7779ed8888ed156d31ff9205d0/sdk/dotnet/Aws/Integration.cs/#L89">View Source</a>
   </span>
   <a id="Pulumi_SignalFx_Aws_Integration_Regions_" data-uid="Pulumi.SignalFx.Aws.Integration.Regions*"></a>
   <h4 id="Pulumi_SignalFx_Aws_Integration_Regions" data-uid="Pulumi.SignalFx.Aws.Integration.Regions">Regions</h4>
@@ -438,7 +437,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/Aws/Integration.cs/#L95">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/d4472048557dab7779ed8888ed156d31ff9205d0/sdk/dotnet/Aws/Integration.cs/#L95">View Source</a>
   </span>
   <a id="Pulumi_SignalFx_Aws_Integration_RoleArn_" data-uid="Pulumi.SignalFx.Aws.Integration.RoleArn*"></a>
   <h4 id="Pulumi_SignalFx_Aws_Integration_RoleArn" data-uid="Pulumi.SignalFx.Aws.Integration.RoleArn">RoleArn</h4>
@@ -465,7 +464,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/Aws/Integration.cs/#L101">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/d4472048557dab7779ed8888ed156d31ff9205d0/sdk/dotnet/Aws/Integration.cs/#L101">View Source</a>
   </span>
   <a id="Pulumi_SignalFx_Aws_Integration_Services_" data-uid="Pulumi.SignalFx.Aws.Integration.Services*"></a>
   <h4 id="Pulumi_SignalFx_Aws_Integration_Services" data-uid="Pulumi.SignalFx.Aws.Integration.Services">Services</h4>
@@ -492,7 +491,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/Aws/Integration.cs/#L107">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/d4472048557dab7779ed8888ed156d31ff9205d0/sdk/dotnet/Aws/Integration.cs/#L107">View Source</a>
   </span>
   <a id="Pulumi_SignalFx_Aws_Integration_Token_" data-uid="Pulumi.SignalFx.Aws.Integration.Token*"></a>
   <h4 id="Pulumi_SignalFx_Aws_Integration_Token" data-uid="Pulumi.SignalFx.Aws.Integration.Token">Token</h4>
@@ -519,7 +518,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/Aws/Integration.cs/#L113">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/d4472048557dab7779ed8888ed156d31ff9205d0/sdk/dotnet/Aws/Integration.cs/#L113">View Source</a>
   </span>
   <a id="Pulumi_SignalFx_Aws_Integration_UseGetMetricDataMethod_" data-uid="Pulumi.SignalFx.Aws.Integration.UseGetMetricDataMethod*"></a>
   <h4 id="Pulumi_SignalFx_Aws_Integration_UseGetMetricDataMethod" data-uid="Pulumi.SignalFx.Aws.Integration.UseGetMetricDataMethod">UseGetMetricDataMethod</h4>
@@ -548,7 +547,7 @@
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/Aws/Integration.cs/#L154">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/d4472048557dab7779ed8888ed156d31ff9205d0/sdk/dotnet/Aws/Integration.cs/#L154">View Source</a>
   </span>
   <a id="Pulumi_SignalFx_Aws_Integration_Get_" data-uid="Pulumi.SignalFx.Aws.Integration.Get*"></a>
   <h4 id="Pulumi_SignalFx_Aws_Integration_Get_System_String_Input_System_String__Pulumi_SignalFx_Aws_IntegrationState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.SignalFx.Aws.Integration.Get(System.String,Input{System.String},Pulumi.SignalFx.Aws.IntegrationState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, IntegrationState, Nullable&lt;CustomResourceOptions&gt;)</h4>
@@ -618,7 +617,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/Aws/Integration.cs/#L24" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-signalfx/blob/d4472048557dab7779ed8888ed156d31ff9205d0/sdk/dotnet/Aws/Integration.cs/#L24" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

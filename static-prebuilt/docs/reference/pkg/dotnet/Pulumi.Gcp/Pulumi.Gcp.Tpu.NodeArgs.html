@@ -76,36 +76,7 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
-    <div class="level3"><span class="xref">NodeArgs</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">NodeArgs</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.Tpu.html">Pulumi.Gcp.Tpu</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
@@ -116,7 +87,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Tpu/Node.cs/#L213">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Tpu/Node.cs/#L222">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Tpu_NodeArgs__ctor_" data-uid="Pulumi.Gcp.Tpu.NodeArgs.#ctor*"></a>
   <h4 id="Pulumi_Gcp_Tpu_NodeArgs__ctor" data-uid="Pulumi.Gcp.Tpu.NodeArgs.#ctor">NodeArgs()</h4>
@@ -129,7 +100,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Tpu/Node.cs/#L144">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Tpu/Node.cs/#L153">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Tpu_NodeArgs_AcceleratorType_" data-uid="Pulumi.Gcp.Tpu.NodeArgs.AcceleratorType*"></a>
   <h4 id="Pulumi_Gcp_Tpu_NodeArgs_AcceleratorType" data-uid="Pulumi.Gcp.Tpu.NodeArgs.AcceleratorType">AcceleratorType</h4>
@@ -150,21 +121,21 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Tpu/Node.cs/#L154">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Tpu/Node.cs/#L163">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Tpu_NodeArgs_CidrBlock_" data-uid="Pulumi.Gcp.Tpu.NodeArgs.CidrBlock*"></a>
   <h4 id="Pulumi_Gcp_Tpu_NodeArgs_CidrBlock" data-uid="Pulumi.Gcp.Tpu.NodeArgs.CidrBlock">CidrBlock</h4>
-  <div class="markdown level1 summary"><p>The CIDR block that the TPU node will use when selecting an IP address. This CIDR block must be a /29 block;
-the Compute Engine networks API forbids a smaller block, and using a larger block would be wasteful (a node
-can only consume one IP address). Errors will occur if the CIDR block has already been used for a currently
-existing TPU node, the CIDR block conflicts with any subnetworks in the user's provided network, or the
-provided network is peered with another network that is using that CIDR block.</p>
+  <div class="markdown level1 summary"><p>The CIDR block that the TPU node will use when selecting an IP address. This CIDR block must be a /29 block; the Compute
+Engine networks API forbids a smaller block, and using a larger block would be wasteful (a node can only consume one IP
+address). Errors will occur if the CIDR block has already been used for a currently existing TPU node, the CIDR block
+conflicts with any subnetworks in the user's provided network, or the provided network is peered with another network
+that is using that CIDR block.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -181,13 +152,13 @@ provided network is peered with another network that is using that CIDR block.</
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Tpu/Node.cs/#L160">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Tpu/Node.cs/#L169">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Tpu_NodeArgs_Description_" data-uid="Pulumi.Gcp.Tpu.NodeArgs.Description*"></a>
   <h4 id="Pulumi_Gcp_Tpu_NodeArgs_Description" data-uid="Pulumi.Gcp.Tpu.NodeArgs.Description">Description</h4>
@@ -196,7 +167,7 @@ provided network is peered with another network that is using that CIDR block.</
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Description { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Description { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -208,13 +179,13 @@ provided network is peered with another network that is using that CIDR block.</
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Tpu/Node.cs/#L169">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Tpu/Node.cs/#L178">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Tpu_NodeArgs_Labels_" data-uid="Pulumi.Gcp.Tpu.NodeArgs.Labels*"></a>
   <h4 id="Pulumi_Gcp_Tpu_NodeArgs_Labels" data-uid="Pulumi.Gcp.Tpu.NodeArgs.Labels">Labels</h4>
@@ -235,13 +206,13 @@ provided network is peered with another network that is using that CIDR block.</
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputMap-1.html">InputMap</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">InputMap</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Tpu/Node.cs/#L178">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Tpu/Node.cs/#L187">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Tpu_NodeArgs_Name_" data-uid="Pulumi.Gcp.Tpu.NodeArgs.Name*"></a>
   <h4 id="Pulumi_Gcp_Tpu_NodeArgs_Name" data-uid="Pulumi.Gcp.Tpu.NodeArgs.Name">Name</h4>
@@ -250,7 +221,7 @@ provided network is peered with another network that is using that CIDR block.</
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Name { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Name { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -262,23 +233,23 @@ provided network is peered with another network that is using that CIDR block.</
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Tpu/Node.cs/#L185">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Tpu/Node.cs/#L194">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Tpu_NodeArgs_Network_" data-uid="Pulumi.Gcp.Tpu.NodeArgs.Network*"></a>
   <h4 id="Pulumi_Gcp_Tpu_NodeArgs_Network" data-uid="Pulumi.Gcp.Tpu.NodeArgs.Network">Network</h4>
-  <div class="markdown level1 summary"><p>The name of a network to peer the TPU node to. It must be a preexisting Compute Engine network inside of the
-project on which this API has been activated. If none is provided, &quot;default&quot; will be used.</p>
+  <div class="markdown level1 summary"><p>The name of a network to peer the TPU node to. It must be a preexisting Compute Engine network inside of the project on
+which this API has been activated. If none is provided, &quot;default&quot; will be used.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Network { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Network { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -290,13 +261,13 @@ project on which this API has been activated. If none is provided, &quot;default
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Tpu/Node.cs/#L192">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Tpu/Node.cs/#L201">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Tpu_NodeArgs_Project_" data-uid="Pulumi.Gcp.Tpu.NodeArgs.Project*"></a>
   <h4 id="Pulumi_Gcp_Tpu_NodeArgs_Project" data-uid="Pulumi.Gcp.Tpu.NodeArgs.Project">Project</h4>
@@ -306,7 +277,7 @@ If it is not provided, the provider project is used.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Project { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Project { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -318,13 +289,13 @@ If it is not provided, the provider project is used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Tpu/Node.cs/#L198">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Tpu/Node.cs/#L207">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Tpu_NodeArgs_SchedulingConfig_" data-uid="Pulumi.Gcp.Tpu.NodeArgs.SchedulingConfig*"></a>
   <h4 id="Pulumi_Gcp_Tpu_NodeArgs_SchedulingConfig" data-uid="Pulumi.Gcp.Tpu.NodeArgs.SchedulingConfig">SchedulingConfig</h4>
@@ -333,7 +304,7 @@ If it is not provided, the provider project is used.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;NodeSchedulingConfigArgs&gt; SchedulingConfig { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;NodeSchedulingConfigArgs&gt;? SchedulingConfig { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -345,13 +316,13 @@ If it is not provided, the provider project is used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Gcp.Tpu.Inputs.NodeSchedulingConfigArgs.html">NodeSchedulingConfigArgs</a>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Gcp.Tpu.Inputs.NodeSchedulingConfigArgs.html">NodeSchedulingConfigArgs</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Tpu/Node.cs/#L204">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Tpu/Node.cs/#L213">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Tpu_NodeArgs_TensorflowVersion_" data-uid="Pulumi.Gcp.Tpu.NodeArgs.TensorflowVersion*"></a>
   <h4 id="Pulumi_Gcp_Tpu_NodeArgs_TensorflowVersion" data-uid="Pulumi.Gcp.Tpu.NodeArgs.TensorflowVersion">TensorflowVersion</h4>
@@ -372,13 +343,13 @@ If it is not provided, the provider project is used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Tpu/Node.cs/#L210">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Tpu/Node.cs/#L219">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Tpu_NodeArgs_Zone_" data-uid="Pulumi.Gcp.Tpu.NodeArgs.Zone*"></a>
   <h4 id="Pulumi_Gcp_Tpu_NodeArgs_Zone" data-uid="Pulumi.Gcp.Tpu.NodeArgs.Zone">Zone</h4>
@@ -399,7 +370,7 @@ If it is not provided, the provider project is used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -411,7 +382,7 @@ If it is not provided, the provider project is used.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Tpu/Node.cs/#L139" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Tpu/Node.cs/#L148" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

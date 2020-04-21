@@ -78,43 +78,21 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">ClusterClusterConfig</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.Dataproc.Outputs.html">Pulumi.Gcp.Dataproc.Outputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
   <h5 id="Pulumi_Gcp_Dataproc_Outputs_ClusterClusterConfig_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class ClusterClusterConfig</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class ClusterClusterConfig : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Dataproc/Cluster.cs/#L1033">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Dataproc/Outputs/ClusterClusterConfig.cs/#L20">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Dataproc_Outputs_ClusterClusterConfig_AutoscalingConfig" data-uid="Pulumi.Gcp.Dataproc.Outputs.ClusterClusterConfig.AutoscalingConfig">AutoscalingConfig</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The autoscaling policy config associated with the cluster.
+Structure defined below.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -136,14 +114,14 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Dataproc/Cluster.cs/#L1034">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Dataproc/Outputs/ClusterClusterConfig.cs/#L21">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Dataproc_Outputs_ClusterClusterConfig_Bucket" data-uid="Pulumi.Gcp.Dataproc.Outputs.ClusterClusterConfig.Bucket">Bucket</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string Bucket</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? Bucket</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -155,16 +133,18 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Dataproc/Cluster.cs/#L1035">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Dataproc/Outputs/ClusterClusterConfig.cs/#L26">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Dataproc_Outputs_ClusterClusterConfig_EncryptionConfig" data-uid="Pulumi.Gcp.Dataproc.Outputs.ClusterClusterConfig.EncryptionConfig">EncryptionConfig</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The Customer managed encryption keys settings for the cluster.
+Structure defined below.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -186,10 +166,12 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Dataproc/Cluster.cs/#L1036">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Dataproc/Outputs/ClusterClusterConfig.cs/#L31">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Dataproc_Outputs_ClusterClusterConfig_GceClusterConfig" data-uid="Pulumi.Gcp.Dataproc.Outputs.ClusterClusterConfig.GceClusterConfig">GceClusterConfig</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Common config settings for resources of Google Compute Engine cluster
+instances, applicable to all instances in the cluster. Structure defined below.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -211,14 +193,16 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Dataproc/Cluster.cs/#L1037">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Dataproc/Outputs/ClusterClusterConfig.cs/#L36">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Dataproc_Outputs_ClusterClusterConfig_InitializationActions" data-uid="Pulumi.Gcp.Dataproc.Outputs.ClusterClusterConfig.InitializationActions">InitializationActions</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Commands to execute on each node after config is completed.
+You can specify multiple versions of these. Structure defined below.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;ClusterClusterConfigInitializationActions&gt; InitializationActions</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;ClusterClusterConfigInitializationAction&gt; InitializationActions</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -230,13 +214,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Gcp.Dataproc.Outputs.ClusterClusterConfigInitializationActions.html">ClusterClusterConfigInitializationActions</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Gcp.Dataproc.Outputs.ClusterClusterConfigInitializationAction.html">ClusterClusterConfigInitializationAction</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Dataproc/Cluster.cs/#L1038">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Dataproc/Outputs/ClusterClusterConfig.cs/#L37">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Dataproc_Outputs_ClusterClusterConfig_LifecycleConfig" data-uid="Pulumi.Gcp.Dataproc.Outputs.ClusterClusterConfig.LifecycleConfig">LifecycleConfig</h4>
   <div class="markdown level1 summary"></div>
@@ -261,10 +245,12 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Dataproc/Cluster.cs/#L1039">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Dataproc/Outputs/ClusterClusterConfig.cs/#L42">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Dataproc_Outputs_ClusterClusterConfig_MasterConfig" data-uid="Pulumi.Gcp.Dataproc.Outputs.ClusterClusterConfig.MasterConfig">MasterConfig</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The Google Compute Engine config settings for the master instances
+in a cluster.. Structure defined below.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -286,10 +272,12 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Dataproc/Cluster.cs/#L1040">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Dataproc/Outputs/ClusterClusterConfig.cs/#L47">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Dataproc_Outputs_ClusterClusterConfig_PreemptibleWorkerConfig" data-uid="Pulumi.Gcp.Dataproc.Outputs.ClusterClusterConfig.PreemptibleWorkerConfig">PreemptibleWorkerConfig</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The Google Compute Engine config settings for the additional (aka
+preemptible) instances in a cluster. Structure defined below.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -311,10 +299,11 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Dataproc/Cluster.cs/#L1041">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Dataproc/Outputs/ClusterClusterConfig.cs/#L51">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Dataproc_Outputs_ClusterClusterConfig_SecurityConfig" data-uid="Pulumi.Gcp.Dataproc.Outputs.ClusterClusterConfig.SecurityConfig">SecurityConfig</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Security related configuration. Structure defined below.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -336,10 +325,12 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Dataproc/Cluster.cs/#L1042">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Dataproc/Outputs/ClusterClusterConfig.cs/#L56">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Dataproc_Outputs_ClusterClusterConfig_SoftwareConfig" data-uid="Pulumi.Gcp.Dataproc.Outputs.ClusterClusterConfig.SoftwareConfig">SoftwareConfig</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The config settings for software inside the cluster.
+Structure defined below.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -361,14 +352,21 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Dataproc/Cluster.cs/#L1043">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Dataproc/Outputs/ClusterClusterConfig.cs/#L66">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Dataproc_Outputs_ClusterClusterConfig_StagingBucket" data-uid="Pulumi.Gcp.Dataproc.Outputs.ClusterClusterConfig.StagingBucket">StagingBucket</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The Cloud Storage staging bucket used to stage files,
+such as Hadoop jars, between client machines and the cluster.
+Note: If you don't explicitly specify a <code>staging_bucket</code>
+then GCP will auto create / assign one for you. However, you are not guaranteed
+an auto generated bucket which is solely dedicated to your cluster; it may be shared
+with other clusters in the same region/zone also choosing to use the auto generation
+option.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string StagingBucket</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? StagingBucket</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -380,16 +378,18 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Dataproc/Cluster.cs/#L1044">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Dataproc/Outputs/ClusterClusterConfig.cs/#L71">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Dataproc_Outputs_ClusterClusterConfig_WorkerConfig" data-uid="Pulumi.Gcp.Dataproc.Outputs.ClusterClusterConfig.WorkerConfig">WorkerConfig</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The Google Compute Engine config settings for the worker instances
+in a cluster.. Structure defined below.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -417,7 +417,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Dataproc/Cluster.cs/#L1030" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Dataproc/Outputs/ClusterClusterConfig.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -74,9 +74,6 @@
   <div class="markdown level0 summary"><p>Provides a Datadog <a href="https://docs.datadoghq.com/api/?lang=python#logs-indexes">Logs Index API</a> resource. This can be used to create and manage Datadog logs indexes.</p>
 <h2 id="important-notes">Important Notes</h2>
 <p>The order of indexes is maintained in the separated resource datadog_logs_index_order.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-datadog/blob/master/website/docs/r/logs_index.html.markdown">https://github.com/terraform-providers/terraform-provider-datadog/blob/master/website/docs/r/logs_index.html.markdown</a>.</p>
-</blockquote>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -93,7 +90,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/master/sdk/dotnet/LogsIndex.cs/#L44">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/3a81b71a97f02d7f8327506d74202b4b917affd2/sdk/dotnet/LogsIndex.cs/#L45">View Source</a>
   </span>
   <a id="Pulumi_Datadog_LogsIndex__ctor_" data-uid="Pulumi.Datadog.LogsIndex.#ctor*"></a>
   <h4 id="Pulumi_Datadog_LogsIndex__ctor_System_String_Pulumi_Datadog_LogsIndexArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Datadog.LogsIndex.#ctor(System.String,Pulumi.Datadog.LogsIndexArgs,System.Nullable{CustomResourceOptions})">LogsIndex(String, LogsIndexArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
@@ -137,7 +134,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/master/sdk/dotnet/LogsIndex.cs/#L24">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/3a81b71a97f02d7f8327506d74202b4b917affd2/sdk/dotnet/LogsIndex.cs/#L25">View Source</a>
   </span>
   <a id="Pulumi_Datadog_LogsIndex_ExclusionFilters_" data-uid="Pulumi.Datadog.LogsIndex.ExclusionFilters*"></a>
   <h4 id="Pulumi_Datadog_LogsIndex_ExclusionFilters" data-uid="Pulumi.Datadog.LogsIndex.ExclusionFilters">ExclusionFilters</h4>
@@ -146,7 +143,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;LogsIndexExclusionFilters&gt;&gt; ExclusionFilters { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;LogsIndexExclusionFilter&gt;&gt; ExclusionFilters { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -158,13 +155,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Datadog.Outputs.LogsIndexExclusionFilters.html">LogsIndexExclusionFilters</a>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Datadog.Outputs.LogsIndexExclusionFilter.html">LogsIndexExclusionFilter</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/master/sdk/dotnet/LogsIndex.cs/#L27">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/3a81b71a97f02d7f8327506d74202b4b917affd2/sdk/dotnet/LogsIndex.cs/#L28">View Source</a>
   </span>
   <a id="Pulumi_Datadog_LogsIndex_Filters_" data-uid="Pulumi.Datadog.LogsIndex.Filters*"></a>
   <h4 id="Pulumi_Datadog_LogsIndex_Filters" data-uid="Pulumi.Datadog.LogsIndex.Filters">Filters</h4>
@@ -172,7 +169,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;LogsIndexFilters&gt;&gt; Filters { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;LogsIndexFilter&gt;&gt; Filters { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -184,13 +181,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Datadog.Outputs.LogsIndexFilters.html">LogsIndexFilters</a>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Datadog.Outputs.LogsIndexFilter.html">LogsIndexFilter</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/master/sdk/dotnet/LogsIndex.cs/#L33">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/3a81b71a97f02d7f8327506d74202b4b917affd2/sdk/dotnet/LogsIndex.cs/#L34">View Source</a>
   </span>
   <a id="Pulumi_Datadog_LogsIndex_Name_" data-uid="Pulumi.Datadog.LogsIndex.Name*"></a>
   <h4 id="Pulumi_Datadog_LogsIndex_Name" data-uid="Pulumi.Datadog.LogsIndex.Name">Name</h4>
@@ -219,7 +216,7 @@
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/master/sdk/dotnet/LogsIndex.cs/#L74">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/3a81b71a97f02d7f8327506d74202b4b917affd2/sdk/dotnet/LogsIndex.cs/#L75">View Source</a>
   </span>
   <a id="Pulumi_Datadog_LogsIndex_Get_" data-uid="Pulumi.Datadog.LogsIndex.Get*"></a>
   <h4 id="Pulumi_Datadog_LogsIndex_Get_System_String_Input_System_String__Pulumi_Datadog_LogsIndexState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Datadog.LogsIndex.Get(System.String,Input{System.String},Pulumi.Datadog.LogsIndexState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, LogsIndexState, Nullable&lt;CustomResourceOptions&gt;)</h4>
@@ -289,7 +286,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-datadog/blob/master/sdk/dotnet/LogsIndex.cs/#L19" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-datadog/blob/3a81b71a97f02d7f8327506d74202b4b917affd2/sdk/dotnet/LogsIndex.cs/#L20" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -78,40 +78,16 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">RouteSpecHttpRouteMatch</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.AppMesh.Outputs.html">Pulumi.Aws.AppMesh.Outputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
   <h5 id="Pulumi_Aws_AppMesh_Outputs_RouteSpecHttpRouteMatch_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class RouteSpecHttpRouteMatch</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class RouteSpecHttpRouteMatch : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Appmesh/Route.cs/#L823">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/AppMesh/Outputs/RouteSpecHttpRouteMatch.cs/#L19">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_AppMesh_Outputs_RouteSpecHttpRouteMatch_Headers" data-uid="Pulumi.Aws.AppMesh.Outputs.RouteSpecHttpRouteMatch.Headers">Headers</h4>
   <div class="markdown level1 summary"><p>The client request headers to match on.</p>
@@ -119,7 +95,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;RouteSpecHttpRouteMatchHeaders&gt; Headers</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;RouteSpecHttpRouteMatchHeader&gt; Headers</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -131,13 +107,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.AppMesh.Outputs.RouteSpecHttpRouteMatchHeaders.html">RouteSpecHttpRouteMatchHeaders</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.AppMesh.Outputs.RouteSpecHttpRouteMatchHeader.html">RouteSpecHttpRouteMatchHeader</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Appmesh/Route.cs/#L827">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/AppMesh/Outputs/RouteSpecHttpRouteMatch.cs/#L23">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_AppMesh_Outputs_RouteSpecHttpRouteMatch_Method" data-uid="Pulumi.Aws.AppMesh.Outputs.RouteSpecHttpRouteMatch.Method">Method</h4>
   <div class="markdown level1 summary"><p>The client request header method to match on. Valid values: <code>GET</code>, <code>HEAD</code>, <code>POST</code>, <code>PUT</code>, <code>DELETE</code>, <code>CONNECT</code>, <code>OPTIONS</code>, <code>TRACE</code>, <code>PATCH</code>.</p>
@@ -145,7 +121,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string Method</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? Method</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -157,16 +133,17 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Appmesh/Route.cs/#L832">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/AppMesh/Outputs/RouteSpecHttpRouteMatch.cs/#L29">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_AppMesh_Outputs_RouteSpecHttpRouteMatch_Prefix" data-uid="Pulumi.Aws.AppMesh.Outputs.RouteSpecHttpRouteMatch.Prefix">Prefix</h4>
-  <div class="markdown level1 summary"><p>The header value sent by the client must begin with the specified characters.</p>
+  <div class="markdown level1 summary"><p>Specifies the path with which to match requests.
+This parameter must always start with /, which by itself matches all requests to the virtual router service name.</p>
 <ul>
 <li><code>range</code>- (Optional) The object that specifies the range of numbers that the header value sent by the client must be included in.</li>
 </ul>
@@ -192,7 +169,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Appmesh/Route.cs/#L836">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/AppMesh/Outputs/RouteSpecHttpRouteMatch.cs/#L33">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_AppMesh_Outputs_RouteSpecHttpRouteMatch_Scheme" data-uid="Pulumi.Aws.AppMesh.Outputs.RouteSpecHttpRouteMatch.Scheme">Scheme</h4>
   <div class="markdown level1 summary"><p>The client request header scheme to match on. Valid values: <code>http</code>, <code>https</code>.</p>
@@ -200,7 +177,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string Scheme</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? Scheme</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -212,7 +189,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -224,7 +201,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Appmesh/Route.cs/#L817" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/AppMesh/Outputs/RouteSpecHttpRouteMatch.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

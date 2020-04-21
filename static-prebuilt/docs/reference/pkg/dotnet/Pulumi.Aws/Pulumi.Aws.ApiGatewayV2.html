@@ -1,0 +1,201 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Namespace Pulumi.Aws.ApiGatewayV2
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Namespace Pulumi.Aws.ApiGatewayV2
+   ">
+    <meta name="generator" content="docfx 2.49.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.Aws.ApiGatewayV2">
+  
+  <h1 id="Pulumi_Aws_ApiGatewayV2" data-uid="Pulumi.Aws.ApiGatewayV2" class="text-break">Namespace Pulumi.Aws.ApiGatewayV2
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="markdown level0 remarks"></div>
+    <h3 id="classes">Classes
+  </h3>
+      <h4><a class="xref" href="Pulumi.Aws.ApiGatewayV2.Api.html">Api</a></h4>
+      <section><p>Manages an Amazon API Gateway Version 2 API.</p>
+<blockquote>
+<p><strong>Note:</strong> Amazon API Gateway Version 2 resources are used for creating and deploying WebSocket and HTTP APIs. To create and deploy REST APIs, use Amazon API Gateway Version 1.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Aws.ApiGatewayV2.ApiArgs.html">ApiArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.ApiGatewayV2.ApiState.html">ApiState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.ApiGatewayV2.Authorizer.html">Authorizer</a></h4>
+      <section><p>Manages an Amazon API Gateway Version 2 authorizer.
+More information can be found in the <a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api.html">Amazon API Gateway Developer Guide</a>.</p>
+</section>
+      <h4><a class="xref" href="Pulumi.Aws.ApiGatewayV2.AuthorizerArgs.html">AuthorizerArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.ApiGatewayV2.AuthorizerState.html">AuthorizerState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.ApiGatewayV2.Deployment.html">Deployment</a></h4>
+      <section><p>Manages an Amazon API Gateway Version 2 deployment.
+More information can be found in the <a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api.html">Amazon API Gateway Developer Guide</a>.</p>
+<blockquote>
+<p><strong>Note:</strong> Creating a deployment for an API requires at least one <code>aws.apigatewayv2.Route</code> resource associated with that API.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Aws.ApiGatewayV2.DeploymentArgs.html">DeploymentArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.ApiGatewayV2.DeploymentState.html">DeploymentState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.ApiGatewayV2.DomainName.html">DomainName</a></h4>
+      <section><p>Manages an Amazon API Gateway Version 2 domain name.
+More information can be found in the <a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-custom-domains.html">Amazon API Gateway Developer Guide</a>.</p>
+<blockquote>
+<p><strong>Note:</strong> This resource establishes ownership of and the TLS settings for
+a particular domain name. An API stage can be associated with the domain name using the <code>aws_apigatewayv2_api_mapping</code> resource.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Aws.ApiGatewayV2.DomainNameArgs.html">DomainNameArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.ApiGatewayV2.DomainNameState.html">DomainNameState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.ApiGatewayV2.Integration.html">Integration</a></h4>
+      <section><p>Manages an Amazon API Gateway Version 2 integration.
+More information can be found in the <a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api.html">Amazon API Gateway Developer Guide</a>.</p>
+</section>
+      <h4><a class="xref" href="Pulumi.Aws.ApiGatewayV2.IntegrationArgs.html">IntegrationArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.ApiGatewayV2.IntegrationResponse.html">IntegrationResponse</a></h4>
+      <section><p>Manages an Amazon API Gateway Version 2 integration response.
+More information can be found in the <a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api.html">Amazon API Gateway Developer Guide</a>.</p>
+</section>
+      <h4><a class="xref" href="Pulumi.Aws.ApiGatewayV2.IntegrationResponseArgs.html">IntegrationResponseArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.ApiGatewayV2.IntegrationResponseState.html">IntegrationResponseState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.ApiGatewayV2.IntegrationState.html">IntegrationState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.ApiGatewayV2.Model.html">Model</a></h4>
+      <section><p>Manages an Amazon API Gateway Version 2 <a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/models-mappings.html#models-mappings-models">model</a>.</p>
+</section>
+      <h4><a class="xref" href="Pulumi.Aws.ApiGatewayV2.ModelArgs.html">ModelArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.ApiGatewayV2.ModelState.html">ModelState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.ApiGatewayV2.Route.html">Route</a></h4>
+      <section><p>Manages an Amazon API Gateway Version 2 route.
+More information can be found in the <a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api.html">Amazon API Gateway Developer Guide</a>.</p>
+</section>
+      <h4><a class="xref" href="Pulumi.Aws.ApiGatewayV2.RouteArgs.html">RouteArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.ApiGatewayV2.RouteResponse.html">RouteResponse</a></h4>
+      <section><p>Manages an Amazon API Gateway Version 2 route response.
+More information can be found in the <a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api.html">Amazon API Gateway Developer Guide</a>.</p>
+</section>
+      <h4><a class="xref" href="Pulumi.Aws.ApiGatewayV2.RouteResponseArgs.html">RouteResponseArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.ApiGatewayV2.RouteResponseState.html">RouteResponseState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.ApiGatewayV2.RouteState.html">RouteState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.ApiGatewayV2.Stage.html">Stage</a></h4>
+      <section><p>Manages an Amazon API Gateway Version 2 stage.
+More information can be found in the <a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api.html">Amazon API Gateway Developer Guide</a>.</p>
+</section>
+      <h4><a class="xref" href="Pulumi.Aws.ApiGatewayV2.StageArgs.html">StageArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.ApiGatewayV2.StageState.html">StageState</a></h4>
+      <section></section>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

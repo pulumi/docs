@@ -75,53 +75,12 @@
 <blockquote>
 <p><strong>NOTE</strong> When using this resource, the Load Balancer needs to have a FrontEnd IP Configuration and a Backend Address Pool Attached.</p>
 </blockquote>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/lb_outbound_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/lb_outbound_rule.html.markdown</a>.</p>
-</blockquote>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
-    <div class="level3"><span class="xref">OutboundRule</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">OutboundRule</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Azure.Lb.html">Pulumi.Azure.Lb</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Azure.dll</h6>
@@ -132,16 +91,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Lb/OutboundRule.cs/#L83">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Lb/OutboundRule.cs/#L81">View Source</a>
   </span>
   <a id="Pulumi_Azure_Lb_OutboundRule__ctor_" data-uid="Pulumi.Azure.Lb.OutboundRule.#ctor*"></a>
-  <h4 id="Pulumi_Azure_Lb_OutboundRule__ctor_System_String_Pulumi_Azure_Lb_OutboundRuleArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Azure.Lb.OutboundRule.#ctor(System.String,Pulumi.Azure.Lb.OutboundRuleArgs,Pulumi.CustomResourceOptions)">OutboundRule(String, OutboundRuleArgs, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Azure_Lb_OutboundRule__ctor_System_String_Pulumi_Azure_Lb_OutboundRuleArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Azure.Lb.OutboundRule.#ctor(System.String,Pulumi.Azure.Lb.OutboundRuleArgs,System.Nullable{CustomResourceOptions})">OutboundRule(String, OutboundRuleArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Create a OutboundRule resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public OutboundRule(string name, OutboundRuleArgs args, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public OutboundRule(string name, OutboundRuleArgs args, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -166,7 +125,7 @@
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -176,7 +135,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Lb/OutboundRule.cs/#L24">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Lb/OutboundRule.cs/#L22">View Source</a>
   </span>
   <a id="Pulumi_Azure_Lb_OutboundRule_AllocatedOutboundPorts_" data-uid="Pulumi.Azure.Lb.OutboundRule.AllocatedOutboundPorts*"></a>
   <h4 id="Pulumi_Azure_Lb_OutboundRule_AllocatedOutboundPorts" data-uid="Pulumi.Azure.Lb.OutboundRule.AllocatedOutboundPorts">AllocatedOutboundPorts</h4>
@@ -197,13 +156,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Lb/OutboundRule.cs/#L30">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Lb/OutboundRule.cs/#L28">View Source</a>
   </span>
   <a id="Pulumi_Azure_Lb_OutboundRule_BackendAddressPoolId_" data-uid="Pulumi.Azure.Lb.OutboundRule.BackendAddressPoolId*"></a>
   <h4 id="Pulumi_Azure_Lb_OutboundRule_BackendAddressPoolId" data-uid="Pulumi.Azure.Lb.OutboundRule.BackendAddressPoolId">BackendAddressPoolId</h4>
@@ -224,13 +183,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Lb/OutboundRule.cs/#L36">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Lb/OutboundRule.cs/#L34">View Source</a>
   </span>
   <a id="Pulumi_Azure_Lb_OutboundRule_EnableTcpReset_" data-uid="Pulumi.Azure.Lb.OutboundRule.EnableTcpReset*"></a>
   <h4 id="Pulumi_Azure_Lb_OutboundRule_EnableTcpReset" data-uid="Pulumi.Azure.Lb.OutboundRule.EnableTcpReset">EnableTcpReset</h4>
@@ -251,13 +210,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Lb/OutboundRule.cs/#L42">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Lb/OutboundRule.cs/#L40">View Source</a>
   </span>
   <a id="Pulumi_Azure_Lb_OutboundRule_FrontendIpConfigurations_" data-uid="Pulumi.Azure.Lb.OutboundRule.FrontendIpConfigurations*"></a>
   <h4 id="Pulumi_Azure_Lb_OutboundRule_FrontendIpConfigurations" data-uid="Pulumi.Azure.Lb.OutboundRule.FrontendIpConfigurations">FrontendIpConfigurations</h4>
@@ -266,7 +225,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;OutboundRuleFrontendIpConfigurations&gt;&gt; FrontendIpConfigurations { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;OutboundRuleFrontendIpConfiguration&gt;&gt; FrontendIpConfigurations { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -278,13 +237,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Azure.Lb.Outputs.OutboundRuleFrontendIpConfigurations.html">OutboundRuleFrontendIpConfigurations</a>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Azure.Lb.Outputs.OutboundRuleFrontendIpConfiguration.html">OutboundRuleFrontendIpConfiguration</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Lb/OutboundRule.cs/#L48">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Lb/OutboundRule.cs/#L46">View Source</a>
   </span>
   <a id="Pulumi_Azure_Lb_OutboundRule_IdleTimeoutInMinutes_" data-uid="Pulumi.Azure.Lb.OutboundRule.IdleTimeoutInMinutes*"></a>
   <h4 id="Pulumi_Azure_Lb_OutboundRule_IdleTimeoutInMinutes" data-uid="Pulumi.Azure.Lb.OutboundRule.IdleTimeoutInMinutes">IdleTimeoutInMinutes</h4>
@@ -305,13 +264,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Lb/OutboundRule.cs/#L54">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Lb/OutboundRule.cs/#L52">View Source</a>
   </span>
   <a id="Pulumi_Azure_Lb_OutboundRule_LoadbalancerId_" data-uid="Pulumi.Azure.Lb.OutboundRule.LoadbalancerId*"></a>
   <h4 id="Pulumi_Azure_Lb_OutboundRule_LoadbalancerId" data-uid="Pulumi.Azure.Lb.OutboundRule.LoadbalancerId">LoadbalancerId</h4>
@@ -332,13 +291,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Lb/OutboundRule.cs/#L60">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Lb/OutboundRule.cs/#L58">View Source</a>
   </span>
   <a id="Pulumi_Azure_Lb_OutboundRule_Name_" data-uid="Pulumi.Azure.Lb.OutboundRule.Name*"></a>
   <h4 id="Pulumi_Azure_Lb_OutboundRule_Name" data-uid="Pulumi.Azure.Lb.OutboundRule.Name">Name</h4>
@@ -359,13 +318,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Lb/OutboundRule.cs/#L66">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Lb/OutboundRule.cs/#L64">View Source</a>
   </span>
   <a id="Pulumi_Azure_Lb_OutboundRule_Protocol_" data-uid="Pulumi.Azure.Lb.OutboundRule.Protocol*"></a>
   <h4 id="Pulumi_Azure_Lb_OutboundRule_Protocol" data-uid="Pulumi.Azure.Lb.OutboundRule.Protocol">Protocol</h4>
@@ -386,13 +345,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Lb/OutboundRule.cs/#L72">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Lb/OutboundRule.cs/#L70">View Source</a>
   </span>
   <a id="Pulumi_Azure_Lb_OutboundRule_ResourceGroupName_" data-uid="Pulumi.Azure.Lb.OutboundRule.ResourceGroupName*"></a>
   <h4 id="Pulumi_Azure_Lb_OutboundRule_ResourceGroupName" data-uid="Pulumi.Azure.Lb.OutboundRule.ResourceGroupName">ResourceGroupName</h4>
@@ -413,7 +372,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -421,17 +380,17 @@
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Lb/OutboundRule.cs/#L113">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Lb/OutboundRule.cs/#L111">View Source</a>
   </span>
   <a id="Pulumi_Azure_Lb_OutboundRule_Get_" data-uid="Pulumi.Azure.Lb.OutboundRule.Get*"></a>
-  <h4 id="Pulumi_Azure_Lb_OutboundRule_Get_System_String_Pulumi_Input_System_String__Pulumi_Azure_Lb_OutboundRuleState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Azure.Lb.OutboundRule.Get(System.String,Pulumi.Input{System.String},Pulumi.Azure.Lb.OutboundRuleState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, OutboundRuleState, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Azure_Lb_OutboundRule_Get_System_String_Input_System_String__Pulumi_Azure_Lb_OutboundRuleState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Azure.Lb.OutboundRule.Get(System.String,Input{System.String},Pulumi.Azure.Lb.OutboundRuleState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, OutboundRuleState, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Get an existing OutboundRule resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static OutboundRule Get(string name, Input&lt;string&gt; id, OutboundRuleState state = null, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static OutboundRule Get(string name, Input&lt;string&gt; id, OutboundRuleState state = null, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -450,7 +409,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -462,7 +421,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -491,7 +450,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Lb/OutboundRule.cs/#L19" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Lb/OutboundRule.cs/#L17" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

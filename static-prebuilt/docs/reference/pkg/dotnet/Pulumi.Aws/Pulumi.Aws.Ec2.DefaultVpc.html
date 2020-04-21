@@ -79,53 +79,12 @@ using it. Please read this document in its entirety before using this resource.<
 <p>The <code>aws.ec2.DefaultVpc</code> behaves differently from normal resources, in that
 this provider does not <em>create</em> this resource, but instead &quot;adopts&quot; it
 into management.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/default_vpc.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/default_vpc.html.markdown</a>.</p>
-</blockquote>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
-    <div class="level3"><span class="xref">DefaultVpc</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">DefaultVpc</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.Ec2.html">Pulumi.Aws.Ec2</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
@@ -136,16 +95,16 @@ into management.</p>
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/DefaultVpc.cs/#L137">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/DefaultVpc.cs/#L135">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_DefaultVpc__ctor_" data-uid="Pulumi.Aws.Ec2.DefaultVpc.#ctor*"></a>
-  <h4 id="Pulumi_Aws_Ec2_DefaultVpc__ctor_System_String_Pulumi_Aws_Ec2_DefaultVpcArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.Ec2.DefaultVpc.#ctor(System.String,Pulumi.Aws.Ec2.DefaultVpcArgs,Pulumi.CustomResourceOptions)">DefaultVpc(String, DefaultVpcArgs, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Aws_Ec2_DefaultVpc__ctor_System_String_Pulumi_Aws_Ec2_DefaultVpcArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.Ec2.DefaultVpc.#ctor(System.String,Pulumi.Aws.Ec2.DefaultVpcArgs,System.Nullable{CustomResourceOptions})">DefaultVpc(String, DefaultVpcArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Create a DefaultVpc resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public DefaultVpc(string name, DefaultVpcArgs args = null, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public DefaultVpc(string name, DefaultVpcArgs args = null, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -170,7 +129,7 @@ into management.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -180,7 +139,7 @@ into management.</p>
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/DefaultVpc.cs/#L31">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/DefaultVpc.cs/#L29">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_DefaultVpc_Arn_" data-uid="Pulumi.Aws.Ec2.DefaultVpc.Arn*"></a>
   <h4 id="Pulumi_Aws_Ec2_DefaultVpc_Arn" data-uid="Pulumi.Aws.Ec2.DefaultVpc.Arn">Arn</h4>
@@ -201,13 +160,13 @@ into management.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/DefaultVpc.cs/#L38">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/DefaultVpc.cs/#L36">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_DefaultVpc_AssignGeneratedIpv6CidrBlock_" data-uid="Pulumi.Aws.Ec2.DefaultVpc.AssignGeneratedIpv6CidrBlock*"></a>
   <h4 id="Pulumi_Aws_Ec2_DefaultVpc_AssignGeneratedIpv6CidrBlock" data-uid="Pulumi.Aws.Ec2.DefaultVpc.AssignGeneratedIpv6CidrBlock">AssignGeneratedIpv6CidrBlock</h4>
@@ -229,13 +188,13 @@ block with a /56 prefix length for the VPC was assigned</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/DefaultVpc.cs/#L44">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/DefaultVpc.cs/#L42">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_DefaultVpc_CidrBlock_" data-uid="Pulumi.Aws.Ec2.DefaultVpc.CidrBlock*"></a>
   <h4 id="Pulumi_Aws_Ec2_DefaultVpc_CidrBlock" data-uid="Pulumi.Aws.Ec2.DefaultVpc.CidrBlock">CidrBlock</h4>
@@ -256,13 +215,13 @@ block with a /56 prefix length for the VPC was assigned</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/DefaultVpc.cs/#L50">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/DefaultVpc.cs/#L48">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_DefaultVpc_DefaultNetworkAclId_" data-uid="Pulumi.Aws.Ec2.DefaultVpc.DefaultNetworkAclId*"></a>
   <h4 id="Pulumi_Aws_Ec2_DefaultVpc_DefaultNetworkAclId" data-uid="Pulumi.Aws.Ec2.DefaultVpc.DefaultNetworkAclId">DefaultNetworkAclId</h4>
@@ -283,13 +242,13 @@ block with a /56 prefix length for the VPC was assigned</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/DefaultVpc.cs/#L56">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/DefaultVpc.cs/#L54">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_DefaultVpc_DefaultRouteTableId_" data-uid="Pulumi.Aws.Ec2.DefaultVpc.DefaultRouteTableId*"></a>
   <h4 id="Pulumi_Aws_Ec2_DefaultVpc_DefaultRouteTableId" data-uid="Pulumi.Aws.Ec2.DefaultVpc.DefaultRouteTableId">DefaultRouteTableId</h4>
@@ -310,13 +269,13 @@ block with a /56 prefix length for the VPC was assigned</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/DefaultVpc.cs/#L62">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/DefaultVpc.cs/#L60">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_DefaultVpc_DefaultSecurityGroupId_" data-uid="Pulumi.Aws.Ec2.DefaultVpc.DefaultSecurityGroupId*"></a>
   <h4 id="Pulumi_Aws_Ec2_DefaultVpc_DefaultSecurityGroupId" data-uid="Pulumi.Aws.Ec2.DefaultVpc.DefaultSecurityGroupId">DefaultSecurityGroupId</h4>
@@ -337,13 +296,13 @@ block with a /56 prefix length for the VPC was assigned</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/DefaultVpc.cs/#L65">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/DefaultVpc.cs/#L63">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_DefaultVpc_DhcpOptionsId_" data-uid="Pulumi.Aws.Ec2.DefaultVpc.DhcpOptionsId*"></a>
   <h4 id="Pulumi_Aws_Ec2_DefaultVpc_DhcpOptionsId" data-uid="Pulumi.Aws.Ec2.DefaultVpc.DhcpOptionsId">DhcpOptionsId</h4>
@@ -363,13 +322,13 @@ block with a /56 prefix length for the VPC was assigned</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/DefaultVpc.cs/#L73">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/DefaultVpc.cs/#L71">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_DefaultVpc_EnableClassiclink_" data-uid="Pulumi.Aws.Ec2.DefaultVpc.EnableClassiclink*"></a>
   <h4 id="Pulumi_Aws_Ec2_DefaultVpc_EnableClassiclink" data-uid="Pulumi.Aws.Ec2.DefaultVpc.EnableClassiclink">EnableClassiclink</h4>
@@ -392,13 +351,13 @@ See the [ClassicLink documentation][1] for more information. Defaults false.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/DefaultVpc.cs/#L76">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/DefaultVpc.cs/#L74">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_DefaultVpc_EnableClassiclinkDnsSupport_" data-uid="Pulumi.Aws.Ec2.DefaultVpc.EnableClassiclinkDnsSupport*"></a>
   <h4 id="Pulumi_Aws_Ec2_DefaultVpc_EnableClassiclinkDnsSupport" data-uid="Pulumi.Aws.Ec2.DefaultVpc.EnableClassiclinkDnsSupport">EnableClassiclinkDnsSupport</h4>
@@ -418,13 +377,13 @@ See the [ClassicLink documentation][1] for more information. Defaults false.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/DefaultVpc.cs/#L82">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/DefaultVpc.cs/#L80">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_DefaultVpc_EnableDnsHostnames_" data-uid="Pulumi.Aws.Ec2.DefaultVpc.EnableDnsHostnames*"></a>
   <h4 id="Pulumi_Aws_Ec2_DefaultVpc_EnableDnsHostnames" data-uid="Pulumi.Aws.Ec2.DefaultVpc.EnableDnsHostnames">EnableDnsHostnames</h4>
@@ -445,13 +404,13 @@ See the [ClassicLink documentation][1] for more information. Defaults false.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/DefaultVpc.cs/#L88">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/DefaultVpc.cs/#L86">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_DefaultVpc_EnableDnsSupport_" data-uid="Pulumi.Aws.Ec2.DefaultVpc.EnableDnsSupport*"></a>
   <h4 id="Pulumi_Aws_Ec2_DefaultVpc_EnableDnsSupport" data-uid="Pulumi.Aws.Ec2.DefaultVpc.EnableDnsSupport">EnableDnsSupport</h4>
@@ -472,13 +431,13 @@ See the [ClassicLink documentation][1] for more information. Defaults false.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/DefaultVpc.cs/#L94">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/DefaultVpc.cs/#L92">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_DefaultVpc_InstanceTenancy_" data-uid="Pulumi.Aws.Ec2.DefaultVpc.InstanceTenancy*"></a>
   <h4 id="Pulumi_Aws_Ec2_DefaultVpc_InstanceTenancy" data-uid="Pulumi.Aws.Ec2.DefaultVpc.InstanceTenancy">InstanceTenancy</h4>
@@ -499,13 +458,13 @@ See the [ClassicLink documentation][1] for more information. Defaults false.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/DefaultVpc.cs/#L100">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/DefaultVpc.cs/#L98">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_DefaultVpc_Ipv6AssociationId_" data-uid="Pulumi.Aws.Ec2.DefaultVpc.Ipv6AssociationId*"></a>
   <h4 id="Pulumi_Aws_Ec2_DefaultVpc_Ipv6AssociationId" data-uid="Pulumi.Aws.Ec2.DefaultVpc.Ipv6AssociationId">Ipv6AssociationId</h4>
@@ -526,13 +485,13 @@ See the [ClassicLink documentation][1] for more information. Defaults false.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/DefaultVpc.cs/#L106">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/DefaultVpc.cs/#L104">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_DefaultVpc_Ipv6CidrBlock_" data-uid="Pulumi.Aws.Ec2.DefaultVpc.Ipv6CidrBlock*"></a>
   <h4 id="Pulumi_Aws_Ec2_DefaultVpc_Ipv6CidrBlock" data-uid="Pulumi.Aws.Ec2.DefaultVpc.Ipv6CidrBlock">Ipv6CidrBlock</h4>
@@ -553,13 +512,13 @@ See the [ClassicLink documentation][1] for more information. Defaults false.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/DefaultVpc.cs/#L114">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/DefaultVpc.cs/#L112">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_DefaultVpc_MainRouteTableId_" data-uid="Pulumi.Aws.Ec2.DefaultVpc.MainRouteTableId*"></a>
   <h4 id="Pulumi_Aws_Ec2_DefaultVpc_MainRouteTableId" data-uid="Pulumi.Aws.Ec2.DefaultVpc.MainRouteTableId">MainRouteTableId</h4>
@@ -582,13 +541,13 @@ this VPC. Note that you can change a VPC's main route table by using an
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/DefaultVpc.cs/#L120">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/DefaultVpc.cs/#L118">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_DefaultVpc_OwnerId_" data-uid="Pulumi.Aws.Ec2.DefaultVpc.OwnerId*"></a>
   <h4 id="Pulumi_Aws_Ec2_DefaultVpc_OwnerId" data-uid="Pulumi.Aws.Ec2.DefaultVpc.OwnerId">OwnerId</h4>
@@ -609,13 +568,13 @@ this VPC. Note that you can change a VPC's main route table by using an
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/DefaultVpc.cs/#L126">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/DefaultVpc.cs/#L124">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_DefaultVpc_Tags_" data-uid="Pulumi.Aws.Ec2.DefaultVpc.Tags*"></a>
   <h4 id="Pulumi_Aws_Ec2_DefaultVpc_Tags" data-uid="Pulumi.Aws.Ec2.DefaultVpc.Tags">Tags</h4>
@@ -624,7 +583,7 @@ this VPC. Note that you can change a VPC's main route table by using an
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;&gt; Tags { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;?&gt; Tags { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -636,7 +595,7 @@ this VPC. Note that you can change a VPC's main route table by using an
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -644,17 +603,17 @@ this VPC. Note that you can change a VPC's main route table by using an
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/DefaultVpc.cs/#L167">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/DefaultVpc.cs/#L165">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_DefaultVpc_Get_" data-uid="Pulumi.Aws.Ec2.DefaultVpc.Get*"></a>
-  <h4 id="Pulumi_Aws_Ec2_DefaultVpc_Get_System_String_Pulumi_Input_System_String__Pulumi_Aws_Ec2_DefaultVpcState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.Ec2.DefaultVpc.Get(System.String,Pulumi.Input{System.String},Pulumi.Aws.Ec2.DefaultVpcState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, DefaultVpcState, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Aws_Ec2_DefaultVpc_Get_System_String_Input_System_String__Pulumi_Aws_Ec2_DefaultVpcState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.Ec2.DefaultVpc.Get(System.String,Input{System.String},Pulumi.Aws.Ec2.DefaultVpcState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, DefaultVpcState, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Get an existing DefaultVpc resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static DefaultVpc Get(string name, Input&lt;string&gt; id, DefaultVpcState state = null, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static DefaultVpc Get(string name, Input&lt;string&gt; id, DefaultVpcState state = null, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -673,7 +632,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -685,7 +644,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -714,7 +673,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/DefaultVpc.cs/#L26" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/DefaultVpc.cs/#L24" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

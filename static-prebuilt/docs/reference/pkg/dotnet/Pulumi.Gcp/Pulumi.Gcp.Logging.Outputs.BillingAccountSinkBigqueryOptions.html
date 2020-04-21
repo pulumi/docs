@@ -78,43 +78,23 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">BillingAccountSinkBigqueryOptions</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.Logging.Outputs.html">Pulumi.Gcp.Logging.Outputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
   <h5 id="Pulumi_Gcp_Logging_Outputs_BillingAccountSinkBigqueryOptions_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class BillingAccountSinkBigqueryOptions</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class BillingAccountSinkBigqueryOptions : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Logging/BillingAccountSink.cs/#L230">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Logging/Outputs/BillingAccountSinkBigqueryOptions.cs/#L22">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Logging_Outputs_BillingAccountSinkBigqueryOptions_UsePartitionedTables" data-uid="Pulumi.Gcp.Logging.Outputs.BillingAccountSinkBigqueryOptions.UsePartitionedTables">UsePartitionedTables</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Whether to use <a href="https://cloud.google.com/bigquery/docs/partitioned-tables">BigQuery's partition tables</a>.
+By default, Logging creates dated tables based on the log entries' timestamps, e.g. syslog_20170523. With partitioned
+tables the date suffix is no longer present and <a href="https://cloud.google.com/bigquery/docs/querying-partitioned-tables">special query syntax</a>
+has to be used instead. In both cases, tables are sharded based on UTC timezone.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -142,7 +122,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Logging/BillingAccountSink.cs/#L227" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Logging/Outputs/BillingAccountSinkBigqueryOptions.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

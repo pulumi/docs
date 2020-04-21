@@ -78,43 +78,27 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">ClusterNodeConfigWorkloadMetadataConfig</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.Container.Outputs.html">Pulumi.Gcp.Container.Outputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
   <h5 id="Pulumi_Gcp_Container_Outputs_ClusterNodeConfigWorkloadMetadataConfig_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class ClusterNodeConfigWorkloadMetadataConfig</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class ClusterNodeConfigWorkloadMetadataConfig : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/Cluster.cs/#L3302">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Outputs/ClusterNodeConfigWorkloadMetadataConfig.cs/#L24">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Container_Outputs_ClusterNodeConfigWorkloadMetadataConfig_NodeMetadata" data-uid="Pulumi.Gcp.Container.Outputs.ClusterNodeConfigWorkloadMetadataConfig.NodeMetadata">NodeMetadata</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>How to expose the node metadata to the workload running on the node.
+Accepted values are:</p>
+<ul>
+<li>UNSPECIFIED: Not Set</li>
+<li>SECURE: Prevent workloads not in hostNetwork from accessing certain VM metadata, specifically kube-env, which contains Kubelet credentials, and the instance identity token. See <a href="https://cloud.google.com/kubernetes-engine/docs/how-to/metadata-proxy">Metadata Concealment</a> documentation.</li>
+<li>EXPOSE: Expose all VM metadata to pods.</li>
+<li>GKE_METADATA_SERVER: Enables <a href="https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity">workload identity</a> on the node.</li>
+</ul>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -142,7 +126,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/Cluster.cs/#L3299" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Outputs/ClusterNodeConfigWorkloadMetadataConfig.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

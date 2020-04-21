@@ -77,36 +77,7 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
-    <div class="level3"><span class="xref">WindowsSecurityContextOptionsArgs</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">WindowsSecurityContextOptionsArgs</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Kubernetes.Types.Inputs.Core.V1.html">Pulumi.Kubernetes.Types.Inputs.Core.V1</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Kubernetes.dll</h6>
@@ -117,19 +88,18 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Input.cs/#L20080">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Input.cs/#L20250">View Source</a>
   </span>
   <a id="Pulumi_Kubernetes_Types_Inputs_Core_V1_WindowsSecurityContextOptionsArgs_GmsaCredentialSpec_" data-uid="Pulumi.Kubernetes.Types.Inputs.Core.V1.WindowsSecurityContextOptionsArgs.GmsaCredentialSpec*"></a>
   <h4 id="Pulumi_Kubernetes_Types_Inputs_Core_V1_WindowsSecurityContextOptionsArgs_GmsaCredentialSpec" data-uid="Pulumi.Kubernetes.Types.Inputs.Core.V1.WindowsSecurityContextOptionsArgs.GmsaCredentialSpec">GmsaCredentialSpec</h4>
   <div class="markdown level1 summary"><p>GMSACredentialSpec is where the GMSA admission webhook
 (<a href="https://github.com/kubernetes-sigs/windows-gmsa">https://github.com/kubernetes-sigs/windows-gmsa</a>) inlines the contents of the GMSA
-credential spec named by the GMSACredentialSpecName field. This field is alpha-level and
-is only honored by servers that enable the WindowsGMSA feature flag.</p>
+credential spec named by the GMSACredentialSpecName field.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; GmsaCredentialSpec { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? GmsaCredentialSpec { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -141,23 +111,22 @@ is only honored by servers that enable the WindowsGMSA feature flag.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Input.cs/#L20087">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Input.cs/#L20256">View Source</a>
   </span>
   <a id="Pulumi_Kubernetes_Types_Inputs_Core_V1_WindowsSecurityContextOptionsArgs_GmsaCredentialSpecName_" data-uid="Pulumi.Kubernetes.Types.Inputs.Core.V1.WindowsSecurityContextOptionsArgs.GmsaCredentialSpecName*"></a>
   <h4 id="Pulumi_Kubernetes_Types_Inputs_Core_V1_WindowsSecurityContextOptionsArgs_GmsaCredentialSpecName" data-uid="Pulumi.Kubernetes.Types.Inputs.Core.V1.WindowsSecurityContextOptionsArgs.GmsaCredentialSpecName">GmsaCredentialSpecName</h4>
-  <div class="markdown level1 summary"><p>GMSACredentialSpecName is the name of the GMSA credential spec to use. This field is
-alpha-level and is only honored by servers that enable the WindowsGMSA feature flag.</p>
+  <div class="markdown level1 summary"><p>GMSACredentialSpecName is the name of the GMSA credential spec to use.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; GmsaCredentialSpecName { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? GmsaCredentialSpecName { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -169,26 +138,25 @@ alpha-level and is only honored by servers that enable the WindowsGMSA feature f
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Input.cs/#L20097">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Input.cs/#L20265">View Source</a>
   </span>
   <a id="Pulumi_Kubernetes_Types_Inputs_Core_V1_WindowsSecurityContextOptionsArgs_RunAsUserName_" data-uid="Pulumi.Kubernetes.Types.Inputs.Core.V1.WindowsSecurityContextOptionsArgs.RunAsUserName*"></a>
   <h4 id="Pulumi_Kubernetes_Types_Inputs_Core_V1_WindowsSecurityContextOptionsArgs_RunAsUserName" data-uid="Pulumi.Kubernetes.Types.Inputs.Core.V1.WindowsSecurityContextOptionsArgs.RunAsUserName">RunAsUserName</h4>
   <div class="markdown level1 summary"><p>The UserName in Windows to run the entrypoint of the container process. Defaults to the
 user specified in image metadata if unspecified. May also be set in PodSecurityContext.
 If set in both SecurityContext and PodSecurityContext, the value specified in
-SecurityContext takes precedence. This field is beta-level and may be disabled with the
-WindowsRunAsUserName feature flag.</p>
+SecurityContext takes precedence.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; RunAsUserName { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? RunAsUserName { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -200,7 +168,7 @@ WindowsRunAsUserName feature flag.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -212,7 +180,7 @@ WindowsRunAsUserName feature flag.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Input.cs/#L20072" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Input.cs/#L20243" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

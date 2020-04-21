@@ -81,10 +81,7 @@
 <a href="https://cloud.google.com/logging/docs/">the official documentation</a> and
 <a href="https://cloud.google.com/logging/docs/exclusions">Excluding Logs</a>.</p>
 <p>Note that you must have the &quot;Logs Configuration Writer&quot; IAM role (<code>roles/logging.configWriter</code>)
-granted to the credentials used with this provider.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/logging_billing_account_exclusion.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/logging_billing_account_exclusion.html.markdown</a>.</p>
-</blockquote>
+granted to the credentials used with the provider.</p>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Logging.BillingAccountExclusionArgs.html">BillingAccountExclusionArgs</a></h4>
       <section></section>
@@ -100,9 +97,6 @@ granted to the credentials used with this provider.</p>
 the credentials used with this provider. <a href="https://cloud.google.com/billing/docs/how-to/billing-access">IAM roles granted on a billing account</a> are separate from the
 typical IAM roles granted on a project.</p>
 </blockquote>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/logging_billing_account_sink.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/logging_billing_account_sink.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Logging.BillingAccountSinkArgs.html">BillingAccountSinkArgs</a></h4>
       <section></section>
@@ -114,22 +108,33 @@ typical IAM roles granted on a project.</p>
 <a href="https://cloud.google.com/logging/docs/exclusions">Excluding Logs</a>.</p>
 <p>Note that you must have the &quot;Logs Configuration Writer&quot; IAM role (<code>roles/logging.configWriter</code>)
 granted to the credentials used with this provider.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/logging_folder_exclusion.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/logging_folder_exclusion.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Logging.FolderExclusionArgs.html">FolderExclusionArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Logging.FolderExclusionState.html">FolderExclusionState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Logging.FolderSink.html">FolderSink</a></h4>
-      <section></section>
+      <section><p>Manages a folder-level logging sink. For more information see
+<a href="https://cloud.google.com/logging/docs/">the official documentation</a> and
+<a href="https://cloud.google.com/logging/docs/api/tasks/exporting-logs">Exporting Logs in the API</a>.</p>
+<p>Note that you must have the &quot;Logs Configuration Writer&quot; IAM role (<code>roles/logging.configWriter</code>)
+granted to the credentials used with this provider.</p>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.Logging.FolderSinkArgs.html">FolderSinkArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Logging.FolderSinkState.html">FolderSinkState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Logging.Metric.html">Metric</a></h4>
-      <section></section>
+      <section><p>Logs-based metric can also be used to extract values from logs and create a a distribution
+of the values. The distribution records the statistics of the extracted values along with
+an optional histogram of the values as specified by the bucket options.</p>
+<p>To get more information about Metric, see:</p>
+<ul>
+<li><a href="https://cloud.google.com/logging/docs/reference/v2/rest/v2/projects.metrics/create">API documentation</a></li>
+<li>How-to Guides</li>
+<li><a href="https://cloud.google.com/logging/docs/apis">Official Documentation</a></li>
+</ul>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.Logging.MetricArgs.html">MetricArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Logging.MetricState.html">MetricState</a></h4>
@@ -140,16 +145,18 @@ granted to the credentials used with this provider.</p>
 <a href="https://cloud.google.com/logging/docs/exclusions">Excluding Logs</a>.</p>
 <p>Note that you must have the &quot;Logs Configuration Writer&quot; IAM role (<code>roles/logging.configWriter</code>)
 granted to the credentials used with this provider.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/logging_organization_exclusion.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/logging_organization_exclusion.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Logging.OrganizationExclusionArgs.html">OrganizationExclusionArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Logging.OrganizationExclusionState.html">OrganizationExclusionState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Logging.OrganizationSink.html">OrganizationSink</a></h4>
-      <section></section>
+      <section><p>Manages a organization-level logging sink. For more information see
+<a href="https://cloud.google.com/logging/docs/">the official documentation</a> and
+<a href="https://cloud.google.com/logging/docs/api/tasks/exporting-logs">Exporting Logs in the API</a>.</p>
+<p>Note that you must have the &quot;Logs Configuration Writer&quot; IAM role (<code>roles/logging.configWriter</code>)
+granted to the credentials used with this provider.</p>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.Logging.OrganizationSinkArgs.html">OrganizationSinkArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Logging.OrganizationSinkState.html">OrganizationSinkState</a></h4>
@@ -160,16 +167,24 @@ granted to the credentials used with this provider.</p>
 <a href="https://cloud.google.com/logging/docs/exclusions">Excluding Logs</a>.</p>
 <p>Note that you must have the &quot;Logs Configuration Writer&quot; IAM role (<code>roles/logging.configWriter</code>)
 granted to the credentials used with this provider.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/logging_project_exclusion.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/logging_project_exclusion.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Logging.ProjectExclusionArgs.html">ProjectExclusionArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Logging.ProjectExclusionState.html">ProjectExclusionState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Logging.ProjectSink.html">ProjectSink</a></h4>
-      <section></section>
+      <section><p>Manages a project-level logging sink. For more information see
+<a href="https://cloud.google.com/logging/docs/">the official documentation</a>,
+<a href="https://cloud.google.com/logging/docs/api/tasks/exporting-logs">Exporting Logs in the API</a>
+and
+<a href="https://cloud.google.com/logging/docs/reference/v2/rest/">API</a>.</p>
+<blockquote>
+<p><strong>Note:</strong> You must have <a href="https://cloud.google.com/logging/docs/access-control">granted the &quot;Logs Configuration Writer&quot;</a> IAM role (<code>roles/logging.configWriter</code>) to the credentials used with this provider.</p>
+</blockquote>
+<blockquote>
+<p><strong>Note</strong> You must <a href="https://console.cloud.google.com/apis/library/cloudresourcemanager.googleapis.com">enable the Cloud Resource Manager API</a></p>
+</blockquote>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.Logging.ProjectSinkArgs.html">ProjectSinkArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Logging.ProjectSinkState.html">ProjectSinkState</a></h4>

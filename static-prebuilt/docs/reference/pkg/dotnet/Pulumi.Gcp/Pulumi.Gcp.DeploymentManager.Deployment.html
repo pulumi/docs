@@ -71,50 +71,25 @@
   
   <h1 id="Pulumi_Gcp_DeploymentManager_Deployment" data-uid="Pulumi.Gcp.DeploymentManager.Deployment" class="text-break">Class Deployment
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>A collection of resources that are deployed and managed together using
+a configuration file</p>
+<blockquote>
+<p><strong>Warning:</strong> This resource is intended only to manage a Deployment resource,
+and attempts to manage the Deployment's resources in the provider as well
+will likely result in errors or unexpected behavior as the two tools
+fight over ownership. We strongly discourage doing so unless you are an
+experienced user of both tools.</p>
+</blockquote>
+<p>In addition, due to limitations of the API, the provider will treat
+deployments in preview as recreate-only for any update operation other
+than actually deploying an in-preview deployment (i.e. <code>preview=true</code> to
+<code>preview=false</code>).</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
-    <div class="level3"><span class="xref">Deployment</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">Deployment</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.DeploymentManager.html">Pulumi.Gcp.DeploymentManager</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
@@ -125,16 +100,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Deploymentmanager/Deployment.cs/#L95">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/DeploymentManager/Deployment.cs/#L114">View Source</a>
   </span>
   <a id="Pulumi_Gcp_DeploymentManager_Deployment__ctor_" data-uid="Pulumi.Gcp.DeploymentManager.Deployment.#ctor*"></a>
-  <h4 id="Pulumi_Gcp_DeploymentManager_Deployment__ctor_System_String_Pulumi_Gcp_DeploymentManager_DeploymentArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Gcp.DeploymentManager.Deployment.#ctor(System.String,Pulumi.Gcp.DeploymentManager.DeploymentArgs,Pulumi.CustomResourceOptions)">Deployment(String, DeploymentArgs, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Gcp_DeploymentManager_Deployment__ctor_System_String_Pulumi_Gcp_DeploymentManager_DeploymentArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Gcp.DeploymentManager.Deployment.#ctor(System.String,Pulumi.Gcp.DeploymentManager.DeploymentArgs,System.Nullable{CustomResourceOptions})">Deployment(String, DeploymentArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Create a Deployment resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Deployment(string name, DeploymentArgs args, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Deployment(string name, DeploymentArgs args, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -159,7 +134,7 @@
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -169,19 +144,18 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Deploymentmanager/Deployment.cs/#L20">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/DeploymentManager/Deployment.cs/#L36">View Source</a>
   </span>
   <a id="Pulumi_Gcp_DeploymentManager_Deployment_CreatePolicy_" data-uid="Pulumi.Gcp.DeploymentManager.Deployment.CreatePolicy*"></a>
   <h4 id="Pulumi_Gcp_DeploymentManager_Deployment_CreatePolicy" data-uid="Pulumi.Gcp.DeploymentManager.Deployment.CreatePolicy">CreatePolicy</h4>
-  <div class="markdown level1 summary"><p>Set the policy to use for creating new resources. Only used on create and update. Valid values are
-'CREATE_OR_ACQUIRE' (default) or 'ACQUIRE'. If set to 'ACQUIRE' and resources do not already exist, the
-deployment will fail. Note that updating this field does not actually affect the deployment, just how it is
-updated.</p>
+  <div class="markdown level1 summary"><p>Set the policy to use for creating new resources. Only used on create and update. Valid values are 'CREATE_OR_ACQUIRE'
+(default) or 'ACQUIRE'. If set to 'ACQUIRE' and resources do not already exist, the deployment will fail. Note that
+updating this field does not actually affect the deployment, just how it is updated.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; CreatePolicy { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; CreatePolicy { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -193,25 +167,25 @@ updated.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Deploymentmanager/Deployment.cs/#L29">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/DeploymentManager/Deployment.cs/#L45">View Source</a>
   </span>
   <a id="Pulumi_Gcp_DeploymentManager_Deployment_DeletePolicy_" data-uid="Pulumi.Gcp.DeploymentManager.Deployment.DeletePolicy*"></a>
   <h4 id="Pulumi_Gcp_DeploymentManager_Deployment_DeletePolicy" data-uid="Pulumi.Gcp.DeploymentManager.Deployment.DeletePolicy">DeletePolicy</h4>
-  <div class="markdown level1 summary"><p>Set the policy to use for deleting new resources on update/delete. Valid values are 'DELETE' (default) or
-'ABANDON'. If 'DELETE', resource is deleted after removal from Deployment Manager. If 'ABANDON', the
-resource is only removed from Deployment Manager and is not actually deleted. Note that updating this field
-does not actually change the deployment, just how it is updated.</p>
+  <div class="markdown level1 summary"><p>Set the policy to use for deleting new resources on update/delete. Valid values are 'DELETE' (default) or 'ABANDON'. If
+'DELETE', resource is deleted after removal from Deployment Manager. If 'ABANDON', the resource is only removed from
+Deployment Manager and is not actually deleted. Note that updating this field does not actually change the deployment,
+just how it is updated.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; DeletePolicy { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; DeletePolicy { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -223,13 +197,13 @@ does not actually change the deployment, just how it is updated.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Deploymentmanager/Deployment.cs/#L35">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/DeploymentManager/Deployment.cs/#L51">View Source</a>
   </span>
   <a id="Pulumi_Gcp_DeploymentManager_Deployment_DeploymentId_" data-uid="Pulumi.Gcp.DeploymentManager.Deployment.DeploymentId*"></a>
   <h4 id="Pulumi_Gcp_DeploymentManager_Deployment_DeploymentId" data-uid="Pulumi.Gcp.DeploymentManager.Deployment.DeploymentId">DeploymentId</h4>
@@ -250,13 +224,13 @@ does not actually change the deployment, just how it is updated.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Deploymentmanager/Deployment.cs/#L41">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/DeploymentManager/Deployment.cs/#L57">View Source</a>
   </span>
   <a id="Pulumi_Gcp_DeploymentManager_Deployment_Description_" data-uid="Pulumi.Gcp.DeploymentManager.Deployment.Description*"></a>
   <h4 id="Pulumi_Gcp_DeploymentManager_Deployment_Description" data-uid="Pulumi.Gcp.DeploymentManager.Deployment.Description">Description</h4>
@@ -265,7 +239,7 @@ does not actually change the deployment, just how it is updated.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Description { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Description { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -277,13 +251,13 @@ does not actually change the deployment, just how it is updated.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Deploymentmanager/Deployment.cs/#L47">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/DeploymentManager/Deployment.cs/#L63">View Source</a>
   </span>
   <a id="Pulumi_Gcp_DeploymentManager_Deployment_Labels_" data-uid="Pulumi.Gcp.DeploymentManager.Deployment.Labels*"></a>
   <h4 id="Pulumi_Gcp_DeploymentManager_Deployment_Labels" data-uid="Pulumi.Gcp.DeploymentManager.Deployment.Labels">Labels</h4>
@@ -292,7 +266,7 @@ does not actually change the deployment, just how it is updated.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;DeploymentLabels&gt;&gt; Labels { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;DeploymentLabel&gt;&gt; Labels { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -304,13 +278,13 @@ does not actually change the deployment, just how it is updated.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Gcp.DeploymentManager.Outputs.DeploymentLabels.html">DeploymentLabels</a>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Gcp.DeploymentManager.Outputs.DeploymentLabel.html">DeploymentLabel</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Deploymentmanager/Deployment.cs/#L53">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/DeploymentManager/Deployment.cs/#L69">View Source</a>
   </span>
   <a id="Pulumi_Gcp_DeploymentManager_Deployment_Manifest_" data-uid="Pulumi.Gcp.DeploymentManager.Deployment.Manifest*"></a>
   <h4 id="Pulumi_Gcp_DeploymentManager_Deployment_Manifest" data-uid="Pulumi.Gcp.DeploymentManager.Deployment.Manifest">Manifest</h4>
@@ -331,13 +305,13 @@ does not actually change the deployment, just how it is updated.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Deploymentmanager/Deployment.cs/#L59">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/DeploymentManager/Deployment.cs/#L75">View Source</a>
   </span>
   <a id="Pulumi_Gcp_DeploymentManager_Deployment_Name_" data-uid="Pulumi.Gcp.DeploymentManager.Deployment.Name*"></a>
   <h4 id="Pulumi_Gcp_DeploymentManager_Deployment_Name" data-uid="Pulumi.Gcp.DeploymentManager.Deployment.Name">Name</h4>
@@ -358,21 +332,20 @@ does not actually change the deployment, just how it is updated.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Deploymentmanager/Deployment.cs/#L69">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/DeploymentManager/Deployment.cs/#L84">View Source</a>
   </span>
   <a id="Pulumi_Gcp_DeploymentManager_Deployment_Preview_" data-uid="Pulumi.Gcp.DeploymentManager.Deployment.Preview*"></a>
   <h4 id="Pulumi_Gcp_DeploymentManager_Deployment_Preview" data-uid="Pulumi.Gcp.DeploymentManager.Deployment.Preview">Preview</h4>
-  <div class="markdown level1 summary"><p>If set to true, a deployment is created with &quot;shell&quot; resources that are not actually instantiated. This
-allows you to preview a deployment. It can be updated to false to actually deploy with real resources.
-~&gt;<strong>NOTE</strong>: Deployment Manager does not allow update of a deployment in preview (unless updating to
-preview=false). Thus, Terraform will force-recreate deployments if either preview is updated to true or if
-other fields are updated while preview is true.</p>
+  <div class="markdown level1 summary"><p>If set to true, a deployment is created with &quot;shell&quot; resources that are not actually instantiated. This allows you to
+preview a deployment. It can be updated to false to actually deploy with real resources. ~&gt;<strong>NOTE</strong>: Deployment Manager
+does not allow update of a deployment in preview (unless updating to preview=false). Thus, Terraform will force-recreate
+deployments if either preview is updated to true or if other fields are updated while preview is true.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -389,17 +362,19 @@ other fields are updated while preview is true.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Deploymentmanager/Deployment.cs/#L72">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/DeploymentManager/Deployment.cs/#L91">View Source</a>
   </span>
   <a id="Pulumi_Gcp_DeploymentManager_Deployment_Project_" data-uid="Pulumi.Gcp.DeploymentManager.Deployment.Project*"></a>
   <h4 id="Pulumi_Gcp_DeploymentManager_Deployment_Project" data-uid="Pulumi.Gcp.DeploymentManager.Deployment.Project">Project</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -415,13 +390,13 @@ other fields are updated while preview is true.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Deploymentmanager/Deployment.cs/#L78">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/DeploymentManager/Deployment.cs/#L97">View Source</a>
   </span>
   <a id="Pulumi_Gcp_DeploymentManager_Deployment_SelfLink_" data-uid="Pulumi.Gcp.DeploymentManager.Deployment.SelfLink*"></a>
   <h4 id="Pulumi_Gcp_DeploymentManager_Deployment_SelfLink" data-uid="Pulumi.Gcp.DeploymentManager.Deployment.SelfLink">SelfLink</h4>
@@ -442,13 +417,13 @@ other fields are updated while preview is true.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Deploymentmanager/Deployment.cs/#L84">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/DeploymentManager/Deployment.cs/#L103">View Source</a>
   </span>
   <a id="Pulumi_Gcp_DeploymentManager_Deployment_Target_" data-uid="Pulumi.Gcp.DeploymentManager.Deployment.Target*"></a>
   <h4 id="Pulumi_Gcp_DeploymentManager_Deployment_Target" data-uid="Pulumi.Gcp.DeploymentManager.Deployment.Target">Target</h4>
@@ -469,7 +444,7 @@ other fields are updated while preview is true.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Gcp.DeploymentManager.Outputs.DeploymentTarget.html">DeploymentTarget</a>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Gcp.DeploymentManager.Outputs.DeploymentTarget.html">DeploymentTarget</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -477,17 +452,17 @@ other fields are updated while preview is true.</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Deploymentmanager/Deployment.cs/#L125">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/DeploymentManager/Deployment.cs/#L144">View Source</a>
   </span>
   <a id="Pulumi_Gcp_DeploymentManager_Deployment_Get_" data-uid="Pulumi.Gcp.DeploymentManager.Deployment.Get*"></a>
-  <h4 id="Pulumi_Gcp_DeploymentManager_Deployment_Get_System_String_Pulumi_Input_System_String__Pulumi_Gcp_DeploymentManager_DeploymentState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Gcp.DeploymentManager.Deployment.Get(System.String,Pulumi.Input{System.String},Pulumi.Gcp.DeploymentManager.DeploymentState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, DeploymentState, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Gcp_DeploymentManager_Deployment_Get_System_String_Input_System_String__Pulumi_Gcp_DeploymentManager_DeploymentState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Gcp.DeploymentManager.Deployment.Get(System.String,Input{System.String},Pulumi.Gcp.DeploymentManager.DeploymentState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, DeploymentState, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Get an existing Deployment resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Deployment Get(string name, Input&lt;string&gt; id, DeploymentState state = null, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Deployment Get(string name, Input&lt;string&gt; id, DeploymentState state = null, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -506,7 +481,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -518,7 +493,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -547,7 +522,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Deploymentmanager/Deployment.cs/#L12" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/DeploymentManager/Deployment.cs/#L29" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

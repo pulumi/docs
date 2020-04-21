@@ -76,36 +76,7 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
-    <div class="level3"><span class="xref">RegionHealthCheckArgs</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">RegionHealthCheckArgs</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.Compute.html">Pulumi.Gcp.Compute</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
@@ -116,7 +87,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/RegionHealthCheck.cs/#L252">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RegionHealthCheck.cs/#L264">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RegionHealthCheckArgs__ctor_" data-uid="Pulumi.Gcp.Compute.RegionHealthCheckArgs.#ctor*"></a>
   <h4 id="Pulumi_Gcp_Compute_RegionHealthCheckArgs__ctor" data-uid="Pulumi.Gcp.Compute.RegionHealthCheckArgs.#ctor">RegionHealthCheckArgs()</h4>
@@ -129,7 +100,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/RegionHealthCheck.cs/#L168">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RegionHealthCheck.cs/#L184">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RegionHealthCheckArgs_CheckIntervalSec_" data-uid="Pulumi.Gcp.Compute.RegionHealthCheckArgs.CheckIntervalSec*"></a>
   <h4 id="Pulumi_Gcp_Compute_RegionHealthCheckArgs_CheckIntervalSec" data-uid="Pulumi.Gcp.Compute.RegionHealthCheckArgs.CheckIntervalSec">CheckIntervalSec</h4>
@@ -138,7 +109,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; CheckIntervalSec { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? CheckIntervalSec { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -150,13 +121,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/RegionHealthCheck.cs/#L174">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RegionHealthCheck.cs/#L190">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RegionHealthCheckArgs_Description_" data-uid="Pulumi.Gcp.Compute.RegionHealthCheckArgs.Description*"></a>
   <h4 id="Pulumi_Gcp_Compute_RegionHealthCheckArgs_Description" data-uid="Pulumi.Gcp.Compute.RegionHealthCheckArgs.Description">Description</h4>
@@ -165,7 +136,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Description { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Description { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -177,23 +148,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/RegionHealthCheck.cs/#L181">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RegionHealthCheck.cs/#L196">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RegionHealthCheckArgs_HealthyThreshold_" data-uid="Pulumi.Gcp.Compute.RegionHealthCheckArgs.HealthyThreshold*"></a>
   <h4 id="Pulumi_Gcp_Compute_RegionHealthCheckArgs_HealthyThreshold" data-uid="Pulumi.Gcp.Compute.RegionHealthCheckArgs.HealthyThreshold">HealthyThreshold</h4>
-  <div class="markdown level1 summary"><p>A so-far unhealthy instance will be marked healthy after this many consecutive successes. The default value
-is 2.</p>
+  <div class="markdown level1 summary"><p>A so-far unhealthy instance will be marked healthy after this many consecutive successes. The default value is 2.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; HealthyThreshold { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? HealthyThreshold { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -205,13 +175,13 @@ is 2.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/RegionHealthCheck.cs/#L187">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RegionHealthCheck.cs/#L202">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RegionHealthCheckArgs_Http2HealthCheck_" data-uid="Pulumi.Gcp.Compute.RegionHealthCheckArgs.Http2HealthCheck*"></a>
   <h4 id="Pulumi_Gcp_Compute_RegionHealthCheckArgs_Http2HealthCheck" data-uid="Pulumi.Gcp.Compute.RegionHealthCheckArgs.Http2HealthCheck">Http2HealthCheck</h4>
@@ -220,7 +190,7 @@ is 2.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;RegionHealthCheckHttp2HealthCheckArgs&gt; Http2HealthCheck { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;RegionHealthCheckHttp2HealthCheckArgs&gt;? Http2HealthCheck { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -232,13 +202,13 @@ is 2.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Inputs.RegionHealthCheckHttp2HealthCheckArgs.html">RegionHealthCheckHttp2HealthCheckArgs</a>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Inputs.RegionHealthCheckHttp2HealthCheckArgs.html">RegionHealthCheckHttp2HealthCheckArgs</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/RegionHealthCheck.cs/#L193">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RegionHealthCheck.cs/#L208">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RegionHealthCheckArgs_HttpHealthCheck_" data-uid="Pulumi.Gcp.Compute.RegionHealthCheckArgs.HttpHealthCheck*"></a>
   <h4 id="Pulumi_Gcp_Compute_RegionHealthCheckArgs_HttpHealthCheck" data-uid="Pulumi.Gcp.Compute.RegionHealthCheckArgs.HttpHealthCheck">HttpHealthCheck</h4>
@@ -247,7 +217,7 @@ is 2.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;RegionHealthCheckHttpHealthCheckArgs&gt; HttpHealthCheck { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;RegionHealthCheckHttpHealthCheckArgs&gt;? HttpHealthCheck { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -259,13 +229,13 @@ is 2.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Inputs.RegionHealthCheckHttpHealthCheckArgs.html">RegionHealthCheckHttpHealthCheckArgs</a>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Inputs.RegionHealthCheckHttpHealthCheckArgs.html">RegionHealthCheckHttpHealthCheckArgs</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/RegionHealthCheck.cs/#L199">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RegionHealthCheck.cs/#L214">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RegionHealthCheckArgs_HttpsHealthCheck_" data-uid="Pulumi.Gcp.Compute.RegionHealthCheckArgs.HttpsHealthCheck*"></a>
   <h4 id="Pulumi_Gcp_Compute_RegionHealthCheckArgs_HttpsHealthCheck" data-uid="Pulumi.Gcp.Compute.RegionHealthCheckArgs.HttpsHealthCheck">HttpsHealthCheck</h4>
@@ -274,7 +244,7 @@ is 2.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;RegionHealthCheckHttpsHealthCheckArgs&gt; HttpsHealthCheck { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;RegionHealthCheckHttpsHealthCheckArgs&gt;? HttpsHealthCheck { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -286,26 +256,25 @@ is 2.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Inputs.RegionHealthCheckHttpsHealthCheckArgs.html">RegionHealthCheckHttpsHealthCheckArgs</a>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Inputs.RegionHealthCheckHttpsHealthCheckArgs.html">RegionHealthCheckHttpsHealthCheckArgs</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/RegionHealthCheck.cs/#L209">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RegionHealthCheck.cs/#L223">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RegionHealthCheckArgs_Name_" data-uid="Pulumi.Gcp.Compute.RegionHealthCheckArgs.Name*"></a>
   <h4 id="Pulumi_Gcp_Compute_RegionHealthCheckArgs_Name" data-uid="Pulumi.Gcp.Compute.RegionHealthCheckArgs.Name">Name</h4>
-  <div class="markdown level1 summary"><p>Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters
-long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular
-expression '<a href="%5B-a-z0-9%5D*%5Ba-z0-9%5D">a-z</a>?' which means the first character must be a lowercase letter, and all
-following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be
-a dash.</p>
+  <div class="markdown level1 summary"><p>Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
+comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
+'<a href="%5B-a-z0-9%5D*%5Ba-z0-9%5D">a-z</a>?' which means the first character must be a lowercase letter, and all following characters
+must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Name { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Name { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -317,13 +286,13 @@ a dash.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/RegionHealthCheck.cs/#L216">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RegionHealthCheck.cs/#L230">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RegionHealthCheckArgs_Project_" data-uid="Pulumi.Gcp.Compute.RegionHealthCheckArgs.Project*"></a>
   <h4 id="Pulumi_Gcp_Compute_RegionHealthCheckArgs_Project" data-uid="Pulumi.Gcp.Compute.RegionHealthCheckArgs.Project">Project</h4>
@@ -333,7 +302,7 @@ If it is not provided, the provider project is used.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Project { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Project { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -345,23 +314,22 @@ If it is not provided, the provider project is used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/RegionHealthCheck.cs/#L223">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RegionHealthCheck.cs/#L236">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RegionHealthCheckArgs_Region_" data-uid="Pulumi.Gcp.Compute.RegionHealthCheckArgs.Region*"></a>
   <h4 id="Pulumi_Gcp_Compute_RegionHealthCheckArgs_Region" data-uid="Pulumi.Gcp.Compute.RegionHealthCheckArgs.Region">Region</h4>
-  <div class="markdown level1 summary"><p>The Region in which the created health check should reside. If it is not provided, the provider region is
-used.</p>
+  <div class="markdown level1 summary"><p>The Region in which the created health check should reside. If it is not provided, the provider region is used.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Region { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Region { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -373,13 +341,13 @@ used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/RegionHealthCheck.cs/#L229">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RegionHealthCheck.cs/#L242">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RegionHealthCheckArgs_SslHealthCheck_" data-uid="Pulumi.Gcp.Compute.RegionHealthCheckArgs.SslHealthCheck*"></a>
   <h4 id="Pulumi_Gcp_Compute_RegionHealthCheckArgs_SslHealthCheck" data-uid="Pulumi.Gcp.Compute.RegionHealthCheckArgs.SslHealthCheck">SslHealthCheck</h4>
@@ -388,7 +356,7 @@ used.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;RegionHealthCheckSslHealthCheckArgs&gt; SslHealthCheck { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;RegionHealthCheckSslHealthCheckArgs&gt;? SslHealthCheck { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -400,13 +368,13 @@ used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Inputs.RegionHealthCheckSslHealthCheckArgs.html">RegionHealthCheckSslHealthCheckArgs</a>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Inputs.RegionHealthCheckSslHealthCheckArgs.html">RegionHealthCheckSslHealthCheckArgs</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/RegionHealthCheck.cs/#L235">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RegionHealthCheck.cs/#L248">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RegionHealthCheckArgs_TcpHealthCheck_" data-uid="Pulumi.Gcp.Compute.RegionHealthCheckArgs.TcpHealthCheck*"></a>
   <h4 id="Pulumi_Gcp_Compute_RegionHealthCheckArgs_TcpHealthCheck" data-uid="Pulumi.Gcp.Compute.RegionHealthCheckArgs.TcpHealthCheck">TcpHealthCheck</h4>
@@ -415,7 +383,7 @@ used.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;RegionHealthCheckTcpHealthCheckArgs&gt; TcpHealthCheck { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;RegionHealthCheckTcpHealthCheckArgs&gt;? TcpHealthCheck { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -427,23 +395,23 @@ used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Inputs.RegionHealthCheckTcpHealthCheckArgs.html">RegionHealthCheckTcpHealthCheckArgs</a>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Inputs.RegionHealthCheckTcpHealthCheckArgs.html">RegionHealthCheckTcpHealthCheckArgs</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/RegionHealthCheck.cs/#L242">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RegionHealthCheck.cs/#L255">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RegionHealthCheckArgs_TimeoutSec_" data-uid="Pulumi.Gcp.Compute.RegionHealthCheckArgs.TimeoutSec*"></a>
   <h4 id="Pulumi_Gcp_Compute_RegionHealthCheckArgs_TimeoutSec" data-uid="Pulumi.Gcp.Compute.RegionHealthCheckArgs.TimeoutSec">TimeoutSec</h4>
-  <div class="markdown level1 summary"><p>How long (in seconds) to wait before claiming failure. The default value is 5 seconds. It is invalid for
-timeoutSec to have greater value than checkIntervalSec.</p>
+  <div class="markdown level1 summary"><p>How long (in seconds) to wait before claiming failure. The default value is 5 seconds. It is invalid for timeoutSec to
+have greater value than checkIntervalSec.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; TimeoutSec { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? TimeoutSec { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -455,23 +423,22 @@ timeoutSec to have greater value than checkIntervalSec.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/RegionHealthCheck.cs/#L249">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RegionHealthCheck.cs/#L261">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RegionHealthCheckArgs_UnhealthyThreshold_" data-uid="Pulumi.Gcp.Compute.RegionHealthCheckArgs.UnhealthyThreshold*"></a>
   <h4 id="Pulumi_Gcp_Compute_RegionHealthCheckArgs_UnhealthyThreshold" data-uid="Pulumi.Gcp.Compute.RegionHealthCheckArgs.UnhealthyThreshold">UnhealthyThreshold</h4>
-  <div class="markdown level1 summary"><p>A so-far healthy instance will be marked unhealthy after this many consecutive failures. The default value
-is 2.</p>
+  <div class="markdown level1 summary"><p>A so-far healthy instance will be marked unhealthy after this many consecutive failures. The default value is 2.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; UnhealthyThreshold { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? UnhealthyThreshold { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -483,7 +450,7 @@ is 2.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -495,7 +462,7 @@ is 2.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/RegionHealthCheck.cs/#L163" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RegionHealthCheck.cs/#L179" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

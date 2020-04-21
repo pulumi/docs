@@ -75,53 +75,12 @@
 <blockquote>
 <p>Glue functionality, such as monitoring and logging of jobs, is typically managed with the <code>default_arguments</code> argument. See the <a href="https://docs.aws.amazon.com/glue/latest/dg/aws-glue-programming-etl-glue-arguments.html">Special Parameters Used by AWS Glue</a> topic in the Glue developer guide for additional information.</p>
 </blockquote>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/glue_job.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/glue_job.html.markdown</a>.</p>
-</blockquote>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
-    <div class="level3"><span class="xref">Job</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">Job</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.Glue.html">Pulumi.Aws.Glue</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
@@ -132,16 +91,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Glue/Job.cs/#L137">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Glue/Job.cs/#L135">View Source</a>
   </span>
   <a id="Pulumi_Aws_Glue_Job__ctor_" data-uid="Pulumi.Aws.Glue.Job.#ctor*"></a>
-  <h4 id="Pulumi_Aws_Glue_Job__ctor_System_String_Pulumi_Aws_Glue_JobArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.Glue.Job.#ctor(System.String,Pulumi.Aws.Glue.JobArgs,Pulumi.CustomResourceOptions)">Job(String, JobArgs, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Aws_Glue_Job__ctor_System_String_Pulumi_Aws_Glue_JobArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.Glue.Job.#ctor(System.String,Pulumi.Aws.Glue.JobArgs,System.Nullable{CustomResourceOptions})">Job(String, JobArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Create a Job resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Job(string name, JobArgs args, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Job(string name, JobArgs args, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -166,7 +125,7 @@
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -176,7 +135,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Glue/Job.cs/#L24">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Glue/Job.cs/#L22">View Source</a>
   </span>
   <a id="Pulumi_Aws_Glue_Job_AllocatedCapacity_" data-uid="Pulumi.Aws.Glue.Job.AllocatedCapacity*"></a>
   <h4 id="Pulumi_Aws_Glue_Job_AllocatedCapacity" data-uid="Pulumi.Aws.Glue.Job.AllocatedCapacity">AllocatedCapacity</h4>
@@ -197,13 +156,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Glue/Job.cs/#L30">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Glue/Job.cs/#L28">View Source</a>
   </span>
   <a id="Pulumi_Aws_Glue_Job_Arn_" data-uid="Pulumi.Aws.Glue.Job.Arn*"></a>
   <h4 id="Pulumi_Aws_Glue_Job_Arn" data-uid="Pulumi.Aws.Glue.Job.Arn">Arn</h4>
@@ -224,13 +183,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Glue/Job.cs/#L36">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Glue/Job.cs/#L34">View Source</a>
   </span>
   <a id="Pulumi_Aws_Glue_Job_Command_" data-uid="Pulumi.Aws.Glue.Job.Command*"></a>
   <h4 id="Pulumi_Aws_Glue_Job_Command" data-uid="Pulumi.Aws.Glue.Job.Command">Command</h4>
@@ -251,13 +210,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Aws.Glue.Outputs.JobCommand.html">JobCommand</a>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Aws.Glue.Outputs.JobCommand.html">JobCommand</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Glue/Job.cs/#L42">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Glue/Job.cs/#L40">View Source</a>
   </span>
   <a id="Pulumi_Aws_Glue_Job_Connections_" data-uid="Pulumi.Aws.Glue.Job.Connections*"></a>
   <h4 id="Pulumi_Aws_Glue_Job_Connections" data-uid="Pulumi.Aws.Glue.Job.Connections">Connections</h4>
@@ -278,13 +237,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Glue/Job.cs/#L48">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Glue/Job.cs/#L46">View Source</a>
   </span>
   <a id="Pulumi_Aws_Glue_Job_DefaultArguments_" data-uid="Pulumi.Aws.Glue.Job.DefaultArguments*"></a>
   <h4 id="Pulumi_Aws_Glue_Job_DefaultArguments" data-uid="Pulumi.Aws.Glue.Job.DefaultArguments">DefaultArguments</h4>
@@ -293,7 +252,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;&gt; DefaultArguments { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;?&gt; DefaultArguments { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -305,13 +264,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Glue/Job.cs/#L54">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Glue/Job.cs/#L52">View Source</a>
   </span>
   <a id="Pulumi_Aws_Glue_Job_Description_" data-uid="Pulumi.Aws.Glue.Job.Description*"></a>
   <h4 id="Pulumi_Aws_Glue_Job_Description" data-uid="Pulumi.Aws.Glue.Job.Description">Description</h4>
@@ -320,7 +279,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Description { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Description { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -332,13 +291,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Glue/Job.cs/#L60">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Glue/Job.cs/#L58">View Source</a>
   </span>
   <a id="Pulumi_Aws_Glue_Job_ExecutionProperty_" data-uid="Pulumi.Aws.Glue.Job.ExecutionProperty*"></a>
   <h4 id="Pulumi_Aws_Glue_Job_ExecutionProperty" data-uid="Pulumi.Aws.Glue.Job.ExecutionProperty">ExecutionProperty</h4>
@@ -359,13 +318,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Aws.Glue.Outputs.JobExecutionProperty.html">JobExecutionProperty</a>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Aws.Glue.Outputs.JobExecutionProperty.html">JobExecutionProperty</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Glue/Job.cs/#L66">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Glue/Job.cs/#L64">View Source</a>
   </span>
   <a id="Pulumi_Aws_Glue_Job_GlueVersion_" data-uid="Pulumi.Aws.Glue.Job.GlueVersion*"></a>
   <h4 id="Pulumi_Aws_Glue_Job_GlueVersion" data-uid="Pulumi.Aws.Glue.Job.GlueVersion">GlueVersion</h4>
@@ -386,13 +345,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Glue/Job.cs/#L72">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Glue/Job.cs/#L70">View Source</a>
   </span>
   <a id="Pulumi_Aws_Glue_Job_MaxCapacity_" data-uid="Pulumi.Aws.Glue.Job.MaxCapacity*"></a>
   <h4 id="Pulumi_Aws_Glue_Job_MaxCapacity" data-uid="Pulumi.Aws.Glue.Job.MaxCapacity">MaxCapacity</h4>
@@ -413,13 +372,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Double</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Double</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Glue/Job.cs/#L78">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Glue/Job.cs/#L76">View Source</a>
   </span>
   <a id="Pulumi_Aws_Glue_Job_MaxRetries_" data-uid="Pulumi.Aws.Glue.Job.MaxRetries*"></a>
   <h4 id="Pulumi_Aws_Glue_Job_MaxRetries" data-uid="Pulumi.Aws.Glue.Job.MaxRetries">MaxRetries</h4>
@@ -440,17 +399,17 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Glue/Job.cs/#L84">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Glue/Job.cs/#L82">View Source</a>
   </span>
   <a id="Pulumi_Aws_Glue_Job_Name_" data-uid="Pulumi.Aws.Glue.Job.Name*"></a>
   <h4 id="Pulumi_Aws_Glue_Job_Name" data-uid="Pulumi.Aws.Glue.Job.Name">Name</h4>
-  <div class="markdown level1 summary"><p>The name of the job command. Defaults to <code>glueetl</code>. Use <code>pythonshell</code> for Python Shell Job Type, <code>max_capacity</code> needs to be set if <code>pythonshell</code> is chosen.</p>
+  <div class="markdown level1 summary"><p>The name you assign to this job. It must be unique in your account.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -467,13 +426,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Glue/Job.cs/#L90">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Glue/Job.cs/#L88">View Source</a>
   </span>
   <a id="Pulumi_Aws_Glue_Job_NotificationProperty_" data-uid="Pulumi.Aws.Glue.Job.NotificationProperty*"></a>
   <h4 id="Pulumi_Aws_Glue_Job_NotificationProperty" data-uid="Pulumi.Aws.Glue.Job.NotificationProperty">NotificationProperty</h4>
@@ -494,13 +453,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Aws.Glue.Outputs.JobNotificationProperty.html">JobNotificationProperty</a>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Aws.Glue.Outputs.JobNotificationProperty.html">JobNotificationProperty</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Glue/Job.cs/#L96">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Glue/Job.cs/#L94">View Source</a>
   </span>
   <a id="Pulumi_Aws_Glue_Job_NumberOfWorkers_" data-uid="Pulumi.Aws.Glue.Job.NumberOfWorkers*"></a>
   <h4 id="Pulumi_Aws_Glue_Job_NumberOfWorkers" data-uid="Pulumi.Aws.Glue.Job.NumberOfWorkers">NumberOfWorkers</h4>
@@ -521,13 +480,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Glue/Job.cs/#L102">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Glue/Job.cs/#L100">View Source</a>
   </span>
   <a id="Pulumi_Aws_Glue_Job_RoleArn_" data-uid="Pulumi.Aws.Glue.Job.RoleArn*"></a>
   <h4 id="Pulumi_Aws_Glue_Job_RoleArn" data-uid="Pulumi.Aws.Glue.Job.RoleArn">RoleArn</h4>
@@ -548,13 +507,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Glue/Job.cs/#L108">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Glue/Job.cs/#L106">View Source</a>
   </span>
   <a id="Pulumi_Aws_Glue_Job_SecurityConfiguration_" data-uid="Pulumi.Aws.Glue.Job.SecurityConfiguration*"></a>
   <h4 id="Pulumi_Aws_Glue_Job_SecurityConfiguration" data-uid="Pulumi.Aws.Glue.Job.SecurityConfiguration">SecurityConfiguration</h4>
@@ -563,7 +522,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; SecurityConfiguration { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; SecurityConfiguration { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -575,13 +534,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Glue/Job.cs/#L114">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Glue/Job.cs/#L112">View Source</a>
   </span>
   <a id="Pulumi_Aws_Glue_Job_Tags_" data-uid="Pulumi.Aws.Glue.Job.Tags*"></a>
   <h4 id="Pulumi_Aws_Glue_Job_Tags" data-uid="Pulumi.Aws.Glue.Job.Tags">Tags</h4>
@@ -590,7 +549,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;&gt; Tags { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;?&gt; Tags { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -602,13 +561,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Glue/Job.cs/#L120">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Glue/Job.cs/#L118">View Source</a>
   </span>
   <a id="Pulumi_Aws_Glue_Job_Timeout_" data-uid="Pulumi.Aws.Glue.Job.Timeout*"></a>
   <h4 id="Pulumi_Aws_Glue_Job_Timeout" data-uid="Pulumi.Aws.Glue.Job.Timeout">Timeout</h4>
@@ -629,13 +588,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Glue/Job.cs/#L126">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Glue/Job.cs/#L124">View Source</a>
   </span>
   <a id="Pulumi_Aws_Glue_Job_WorkerType_" data-uid="Pulumi.Aws.Glue.Job.WorkerType*"></a>
   <h4 id="Pulumi_Aws_Glue_Job_WorkerType" data-uid="Pulumi.Aws.Glue.Job.WorkerType">WorkerType</h4>
@@ -644,7 +603,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; WorkerType { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; WorkerType { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -656,7 +615,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -664,17 +623,17 @@
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Glue/Job.cs/#L167">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Glue/Job.cs/#L165">View Source</a>
   </span>
   <a id="Pulumi_Aws_Glue_Job_Get_" data-uid="Pulumi.Aws.Glue.Job.Get*"></a>
-  <h4 id="Pulumi_Aws_Glue_Job_Get_System_String_Pulumi_Input_System_String__Pulumi_Aws_Glue_JobState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.Glue.Job.Get(System.String,Pulumi.Input{System.String},Pulumi.Aws.Glue.JobState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, JobState, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Aws_Glue_Job_Get_System_String_Input_System_String__Pulumi_Aws_Glue_JobState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.Glue.Job.Get(System.String,Input{System.String},Pulumi.Aws.Glue.JobState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, JobState, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Get an existing Job resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Job Get(string name, Input&lt;string&gt; id, JobState state = null, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Job Get(string name, Input&lt;string&gt; id, JobState state = null, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -693,7 +652,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -705,7 +664,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -734,7 +693,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Glue/Job.cs/#L19" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Glue/Job.cs/#L17" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

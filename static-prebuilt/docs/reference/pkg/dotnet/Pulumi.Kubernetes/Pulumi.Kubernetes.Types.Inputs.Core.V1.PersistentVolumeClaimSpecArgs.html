@@ -78,36 +78,7 @@ Source for provider-specific attributes</p>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
-    <div class="level3"><span class="xref">PersistentVolumeClaimSpecArgs</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">PersistentVolumeClaimSpecArgs</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Kubernetes.Types.Inputs.Core.V1.html">Pulumi.Kubernetes.Types.Inputs.Core.V1</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Kubernetes.dll</h6>
@@ -118,7 +89,7 @@ Source for provider-specific attributes</p>
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Input.cs/#L15975">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Input.cs/#L16115">View Source</a>
   </span>
   <a id="Pulumi_Kubernetes_Types_Inputs_Core_V1_PersistentVolumeClaimSpecArgs_AccessModes_" data-uid="Pulumi.Kubernetes.Types.Inputs.Core.V1.PersistentVolumeClaimSpecArgs.AccessModes*"></a>
   <h4 id="Pulumi_Kubernetes_Types_Inputs_Core_V1_PersistentVolumeClaimSpecArgs_AccessModes" data-uid="Pulumi.Kubernetes.Types.Inputs.Core.V1.PersistentVolumeClaimSpecArgs.AccessModes">AccessModes</h4>
@@ -140,28 +111,31 @@ Source for provider-specific attributes</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Input.cs/#L15990">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Input.cs/#L16133">View Source</a>
   </span>
   <a id="Pulumi_Kubernetes_Types_Inputs_Core_V1_PersistentVolumeClaimSpecArgs_DataSource_" data-uid="Pulumi.Kubernetes.Types.Inputs.Core.V1.PersistentVolumeClaimSpecArgs.DataSource*"></a>
   <h4 id="Pulumi_Kubernetes_Types_Inputs_Core_V1_PersistentVolumeClaimSpecArgs_DataSource" data-uid="Pulumi.Kubernetes.Types.Inputs.Core.V1.PersistentVolumeClaimSpecArgs.DataSource">DataSource</h4>
-  <div class="markdown level1 summary"><p>This field requires the VolumeSnapshotDataSource alpha feature gate to be enabled and
-currently VolumeSnapshot is the only supported data source. If the provisioner can
-support VolumeSnapshot data source, it will create a new volume and data will be
-restored to the volume at the same time. If the provisioner does not support
-VolumeSnapshot data source, volume will not be created and the failure will be reported
-as an event. In the future, we plan to support more data source types and the behavior
-of the provisioner may change.</p>
+  <div class="markdown level1 summary"><p>This field can be used to specify either: * An existing VolumeSnapshot object
+(snapshot.storage.k8s.io/VolumeSnapshot - Beta) * An existing PVC
+(PersistentVolumeClaim) * An existing custom resource/object that implements data
+population (Alpha) In order to use VolumeSnapshot object types, the appropriate feature
+gate must be enabled (VolumeSnapshotDataSource or AnyVolumeDataSource) If the
+provisioner or an external controller can support the specified data source, it will
+create a new volume based on the contents of the specified data source. If the specified
+data source is not supported, the volume will not be created and the failure will be
+reported as an event. In the future, we plan to support more data source types and the
+behavior of the provisioner may change.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;TypedLocalObjectReferenceArgs&gt; DataSource { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;TypedLocalObjectReferenceArgs&gt;? DataSource { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -173,13 +147,13 @@ of the provisioner may change.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Inputs.Core.V1.TypedLocalObjectReferenceArgs.html">TypedLocalObjectReferenceArgs</a>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Inputs.Core.V1.TypedLocalObjectReferenceArgs.html">TypedLocalObjectReferenceArgs</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Input.cs/#L15997">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Input.cs/#L16140">View Source</a>
   </span>
   <a id="Pulumi_Kubernetes_Types_Inputs_Core_V1_PersistentVolumeClaimSpecArgs_Resources_" data-uid="Pulumi.Kubernetes.Types.Inputs.Core.V1.PersistentVolumeClaimSpecArgs.Resources*"></a>
   <h4 id="Pulumi_Kubernetes_Types_Inputs_Core_V1_PersistentVolumeClaimSpecArgs_Resources" data-uid="Pulumi.Kubernetes.Types.Inputs.Core.V1.PersistentVolumeClaimSpecArgs.Resources">Resources</h4>
@@ -189,7 +163,7 @@ of the provisioner may change.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;ResourceRequirementsArgs&gt; Resources { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;ResourceRequirementsArgs&gt;? Resources { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -201,13 +175,13 @@ of the provisioner may change.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Inputs.Core.V1.ResourceRequirementsArgs.html">ResourceRequirementsArgs</a>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Inputs.Core.V1.ResourceRequirementsArgs.html">ResourceRequirementsArgs</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Input.cs/#L16003">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Input.cs/#L16146">View Source</a>
   </span>
   <a id="Pulumi_Kubernetes_Types_Inputs_Core_V1_PersistentVolumeClaimSpecArgs_Selector_" data-uid="Pulumi.Kubernetes.Types.Inputs.Core.V1.PersistentVolumeClaimSpecArgs.Selector*"></a>
   <h4 id="Pulumi_Kubernetes_Types_Inputs_Core_V1_PersistentVolumeClaimSpecArgs_Selector" data-uid="Pulumi.Kubernetes.Types.Inputs.Core.V1.PersistentVolumeClaimSpecArgs.Selector">Selector</h4>
@@ -216,7 +190,7 @@ of the provisioner may change.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;LabelSelectorArgs&gt; Selector { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;LabelSelectorArgs&gt;? Selector { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -228,13 +202,13 @@ of the provisioner may change.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Inputs.Meta.V1.LabelSelectorArgs.html">LabelSelectorArgs</a>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Inputs.Meta.V1.LabelSelectorArgs.html">LabelSelectorArgs</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Input.cs/#L16010">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Input.cs/#L16153">View Source</a>
   </span>
   <a id="Pulumi_Kubernetes_Types_Inputs_Core_V1_PersistentVolumeClaimSpecArgs_StorageClassName_" data-uid="Pulumi.Kubernetes.Types.Inputs.Core.V1.PersistentVolumeClaimSpecArgs.StorageClassName*"></a>
   <h4 id="Pulumi_Kubernetes_Types_Inputs_Core_V1_PersistentVolumeClaimSpecArgs_StorageClassName" data-uid="Pulumi.Kubernetes.Types.Inputs.Core.V1.PersistentVolumeClaimSpecArgs.StorageClassName">StorageClassName</h4>
@@ -244,7 +218,7 @@ of the provisioner may change.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; StorageClassName { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? StorageClassName { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -256,23 +230,23 @@ of the provisioner may change.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Input.cs/#L16017">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Input.cs/#L16160">View Source</a>
   </span>
   <a id="Pulumi_Kubernetes_Types_Inputs_Core_V1_PersistentVolumeClaimSpecArgs_VolumeMode_" data-uid="Pulumi.Kubernetes.Types.Inputs.Core.V1.PersistentVolumeClaimSpecArgs.VolumeMode*"></a>
   <h4 id="Pulumi_Kubernetes_Types_Inputs_Core_V1_PersistentVolumeClaimSpecArgs_VolumeMode" data-uid="Pulumi.Kubernetes.Types.Inputs.Core.V1.PersistentVolumeClaimSpecArgs.VolumeMode">VolumeMode</h4>
   <div class="markdown level1 summary"><p>volumeMode defines what type of volume is required by the claim. Value of Filesystem is
-implied when not included in claim spec. This is a beta feature.</p>
+implied when not included in claim spec.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; VolumeMode { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? VolumeMode { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -284,13 +258,13 @@ implied when not included in claim spec. This is a beta feature.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Input.cs/#L16023">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Input.cs/#L16166">View Source</a>
   </span>
   <a id="Pulumi_Kubernetes_Types_Inputs_Core_V1_PersistentVolumeClaimSpecArgs_VolumeName_" data-uid="Pulumi.Kubernetes.Types.Inputs.Core.V1.PersistentVolumeClaimSpecArgs.VolumeName*"></a>
   <h4 id="Pulumi_Kubernetes_Types_Inputs_Core_V1_PersistentVolumeClaimSpecArgs_VolumeName" data-uid="Pulumi.Kubernetes.Types.Inputs.Core.V1.PersistentVolumeClaimSpecArgs.VolumeName">VolumeName</h4>
@@ -299,7 +273,7 @@ implied when not included in claim spec. This is a beta feature.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; VolumeName { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? VolumeName { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -311,7 +285,7 @@ implied when not included in claim spec. This is a beta feature.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -323,7 +297,7 @@ implied when not included in claim spec. This is a beta feature.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Input.cs/#L15966" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Input.cs/#L16106" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

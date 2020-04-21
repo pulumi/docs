@@ -76,36 +76,7 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
-    <div class="level3"><span class="xref">ClusterNodeConfigArgs</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">ClusterNodeConfigArgs</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.Container.Inputs.html">Pulumi.Gcp.Container.Inputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
@@ -116,7 +87,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/Cluster.cs/#L1889">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Inputs/ClusterNodeConfigArgs.cs/#L193">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Container_Inputs_ClusterNodeConfigArgs__ctor_" data-uid="Pulumi.Gcp.Container.Inputs.ClusterNodeConfigArgs.#ctor*"></a>
   <h4 id="Pulumi_Gcp_Container_Inputs_ClusterNodeConfigArgs__ctor" data-uid="Pulumi.Gcp.Container.Inputs.ClusterNodeConfigArgs.#ctor">ClusterNodeConfigArgs()</h4>
@@ -129,15 +100,16 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/Cluster.cs/#L1805">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Inputs/ClusterNodeConfigArgs.cs/#L18">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Container_Inputs_ClusterNodeConfigArgs_BootDiskKmsKey_" data-uid="Pulumi.Gcp.Container.Inputs.ClusterNodeConfigArgs.BootDiskKmsKey*"></a>
   <h4 id="Pulumi_Gcp_Container_Inputs_ClusterNodeConfigArgs_BootDiskKmsKey" data-uid="Pulumi.Gcp.Container.Inputs.ClusterNodeConfigArgs.BootDiskKmsKey">BootDiskKmsKey</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The Customer Managed Encryption Key used to encrypt the boot disk attached to each node in the node pool. This should be of the form projects/[KEY_PROJECT_ID]/locations/[LOCATION]/keyRings/[RING_NAME]/cryptoKeys/[KEY_NAME]. For more information about protecting resources with Cloud KMS Keys please see: <a href="https://cloud.google.com/compute/docs/disks/customer-managed-encryption">https://cloud.google.com/compute/docs/disks/customer-managed-encryption</a></p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; BootDiskKmsKey { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? BootDiskKmsKey { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -149,21 +121,23 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/Cluster.cs/#L1808">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Inputs/ClusterNodeConfigArgs.cs/#L25">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Container_Inputs_ClusterNodeConfigArgs_DiskSizeGb_" data-uid="Pulumi.Gcp.Container.Inputs.ClusterNodeConfigArgs.DiskSizeGb*"></a>
   <h4 id="Pulumi_Gcp_Container_Inputs_ClusterNodeConfigArgs_DiskSizeGb" data-uid="Pulumi.Gcp.Container.Inputs.ClusterNodeConfigArgs.DiskSizeGb">DiskSizeGb</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Size of the disk attached to each node, specified
+in GB. The smallest allowed disk size is 10GB. Defaults to 100GB.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; DiskSizeGb { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? DiskSizeGb { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -175,21 +149,23 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/Cluster.cs/#L1811">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Inputs/ClusterNodeConfigArgs.cs/#L32">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Container_Inputs_ClusterNodeConfigArgs_DiskType_" data-uid="Pulumi.Gcp.Container.Inputs.ClusterNodeConfigArgs.DiskType*"></a>
   <h4 id="Pulumi_Gcp_Container_Inputs_ClusterNodeConfigArgs_DiskType" data-uid="Pulumi.Gcp.Container.Inputs.ClusterNodeConfigArgs.DiskType">DiskType</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Type of the disk attached to each node
+(e.g. 'pd-standard' or 'pd-ssd'). If unspecified, the default disk type is 'pd-standard'</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; DiskType { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? DiskType { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -201,21 +177,23 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/Cluster.cs/#L1816">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Inputs/ClusterNodeConfigArgs.cs/#L42">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Container_Inputs_ClusterNodeConfigArgs_GuestAccelerators_" data-uid="Pulumi.Gcp.Container.Inputs.ClusterNodeConfigArgs.GuestAccelerators*"></a>
   <h4 id="Pulumi_Gcp_Container_Inputs_ClusterNodeConfigArgs_GuestAccelerators" data-uid="Pulumi.Gcp.Container.Inputs.ClusterNodeConfigArgs.GuestAccelerators">GuestAccelerators</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>List of the type and count of accelerator cards attached to the instance.
+Structure documented below.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public InputList&lt;ClusterNodeConfigGuestAcceleratorsArgs&gt; GuestAccelerators { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public InputList&lt;ClusterNodeConfigGuestAcceleratorArgs&gt; GuestAccelerators { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -227,21 +205,23 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<a class="xref" href="Pulumi.Gcp.Container.Inputs.ClusterNodeConfigGuestAcceleratorsArgs.html">ClusterNodeConfigGuestAcceleratorsArgs</a>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<a class="xref" href="Pulumi.Gcp.Container.Inputs.ClusterNodeConfigGuestAcceleratorArgs.html">ClusterNodeConfigGuestAcceleratorArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/Cluster.cs/#L1822">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Inputs/ClusterNodeConfigArgs.cs/#L52">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Container_Inputs_ClusterNodeConfigArgs_ImageType_" data-uid="Pulumi.Gcp.Container.Inputs.ClusterNodeConfigArgs.ImageType*"></a>
   <h4 id="Pulumi_Gcp_Container_Inputs_ClusterNodeConfigArgs_ImageType" data-uid="Pulumi.Gcp.Container.Inputs.ClusterNodeConfigArgs.ImageType">ImageType</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The image type to use for this node. Note that changing the image type
+will delete and recreate all nodes in the node pool.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; ImageType { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? ImageType { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -253,17 +233,18 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/Cluster.cs/#L1827">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Inputs/ClusterNodeConfigArgs.cs/#L61">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Container_Inputs_ClusterNodeConfigArgs_Labels_" data-uid="Pulumi.Gcp.Container.Inputs.ClusterNodeConfigArgs.Labels*"></a>
   <h4 id="Pulumi_Gcp_Container_Inputs_ClusterNodeConfigArgs_Labels" data-uid="Pulumi.Gcp.Container.Inputs.ClusterNodeConfigArgs.Labels">Labels</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The Kubernetes labels (key/value pairs) to be applied to each node.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -279,21 +260,23 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputMap-1.html">InputMap</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">InputMap</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/Cluster.cs/#L1833">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Inputs/ClusterNodeConfigArgs.cs/#L71">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Container_Inputs_ClusterNodeConfigArgs_LocalSsdCount_" data-uid="Pulumi.Gcp.Container.Inputs.ClusterNodeConfigArgs.LocalSsdCount*"></a>
   <h4 id="Pulumi_Gcp_Container_Inputs_ClusterNodeConfigArgs_LocalSsdCount" data-uid="Pulumi.Gcp.Container.Inputs.ClusterNodeConfigArgs.LocalSsdCount">LocalSsdCount</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The amount of local SSD disks that will be
+attached to each cluster node. Defaults to 0.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; LocalSsdCount { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? LocalSsdCount { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -305,21 +288,24 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/Cluster.cs/#L1836">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Inputs/ClusterNodeConfigArgs.cs/#L79">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Container_Inputs_ClusterNodeConfigArgs_MachineType_" data-uid="Pulumi.Gcp.Container.Inputs.ClusterNodeConfigArgs.MachineType*"></a>
   <h4 id="Pulumi_Gcp_Container_Inputs_ClusterNodeConfigArgs_MachineType" data-uid="Pulumi.Gcp.Container.Inputs.ClusterNodeConfigArgs.MachineType">MachineType</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The name of a Google Compute Engine machine type.
+Defaults to <code>n1-standard-1</code>. To create a custom machine type, value should be set as specified
+<a href="https://cloud.google.com/compute/docs/reference/latest/instances#machineType">here</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; MachineType { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? MachineType { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -331,17 +317,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/Cluster.cs/#L1841">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Inputs/ClusterNodeConfigArgs.cs/#L92">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Container_Inputs_ClusterNodeConfigArgs_Metadata_" data-uid="Pulumi.Gcp.Container.Inputs.ClusterNodeConfigArgs.Metadata*"></a>
   <h4 id="Pulumi_Gcp_Container_Inputs_ClusterNodeConfigArgs_Metadata" data-uid="Pulumi.Gcp.Container.Inputs.ClusterNodeConfigArgs.Metadata">Metadata</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The metadata key/value pairs assigned to instances in
+the cluster. From GKE <code>1.12</code> onwards, <code>disable-legacy-endpoints</code> is set to
+<code>true</code> by the API; if <code>metadata</code> is set but that default value is not
+included, the provider will attempt to unset the value. To avoid this, set the
+value in your config.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -357,21 +348,26 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputMap-1.html">InputMap</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">InputMap</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/Cluster.cs/#L1847">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Inputs/ClusterNodeConfigArgs.cs/#L105">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Container_Inputs_ClusterNodeConfigArgs_MinCpuPlatform_" data-uid="Pulumi.Gcp.Container.Inputs.ClusterNodeConfigArgs.MinCpuPlatform*"></a>
   <h4 id="Pulumi_Gcp_Container_Inputs_ClusterNodeConfigArgs_MinCpuPlatform" data-uid="Pulumi.Gcp.Container.Inputs.ClusterNodeConfigArgs.MinCpuPlatform">MinCpuPlatform</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Minimum CPU platform to be used by this instance.
+The instance may be scheduled on the specified or newer CPU platform. Applicable
+values are the friendly names of CPU platforms, such as <code>Intel Haswell</code>. See the
+<a href="https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform">official documentation</a>
+for more information.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; MinCpuPlatform { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? MinCpuPlatform { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -383,17 +379,21 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/Cluster.cs/#L1852">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Inputs/ClusterNodeConfigArgs.cs/#L117">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Container_Inputs_ClusterNodeConfigArgs_OauthScopes_" data-uid="Pulumi.Gcp.Container.Inputs.ClusterNodeConfigArgs.OauthScopes*"></a>
   <h4 id="Pulumi_Gcp_Container_Inputs_ClusterNodeConfigArgs_OauthScopes" data-uid="Pulumi.Gcp.Container.Inputs.ClusterNodeConfigArgs.OauthScopes">OauthScopes</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The set of Google API scopes to be made available
+on all of the node VMs under the &quot;default&quot; service account. These can be
+either FQDNs, or scope aliases. The following scopes are necessary to ensure
+the correct functioning of the cluster:</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -409,21 +409,24 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/Cluster.cs/#L1858">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Inputs/ClusterNodeConfigArgs.cs/#L128">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Container_Inputs_ClusterNodeConfigArgs_Preemptible_" data-uid="Pulumi.Gcp.Container.Inputs.ClusterNodeConfigArgs.Preemptible*"></a>
   <h4 id="Pulumi_Gcp_Container_Inputs_ClusterNodeConfigArgs_Preemptible" data-uid="Pulumi.Gcp.Container.Inputs.ClusterNodeConfigArgs.Preemptible">Preemptible</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A boolean that represents whether or not the underlying node VMs
+are preemptible. See the <a href="https://cloud.google.com/container-engine/docs/preemptible-vm">official documentation</a>
+for more information. Defaults to false.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; Preemptible { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? Preemptible { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -435,21 +438,23 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/Cluster.cs/#L1861">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Inputs/ClusterNodeConfigArgs.cs/#L135">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Container_Inputs_ClusterNodeConfigArgs_SandboxConfig_" data-uid="Pulumi.Gcp.Container.Inputs.ClusterNodeConfigArgs.SandboxConfig*"></a>
   <h4 id="Pulumi_Gcp_Container_Inputs_ClusterNodeConfigArgs_SandboxConfig" data-uid="Pulumi.Gcp.Container.Inputs.ClusterNodeConfigArgs.SandboxConfig">SandboxConfig</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p><a href="https://cloud.google.com/kubernetes-engine/docs/how-to/sandbox-pods">GKE Sandbox</a> configuration. When enabling this feature you must specify <code>image_type = &amp;quot;COS_CONTAINERD&amp;quot;</code> and <code>node_version = &amp;quot;1.12.7-gke.17&amp;quot;</code> or later to use it.
+Structure is documented below.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;ClusterNodeConfigSandboxConfigArgs&gt; SandboxConfig { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;ClusterNodeConfigSandboxConfigArgs&gt;? SandboxConfig { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -461,21 +466,26 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Gcp.Container.Inputs.ClusterNodeConfigSandboxConfigArgs.html">ClusterNodeConfigSandboxConfigArgs</a>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Gcp.Container.Inputs.ClusterNodeConfigSandboxConfigArgs.html">ClusterNodeConfigSandboxConfigArgs</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/Cluster.cs/#L1864">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Inputs/ClusterNodeConfigArgs.cs/#L145">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Container_Inputs_ClusterNodeConfigArgs_ServiceAccount_" data-uid="Pulumi.Gcp.Container.Inputs.ClusterNodeConfigArgs.ServiceAccount*"></a>
   <h4 id="Pulumi_Gcp_Container_Inputs_ClusterNodeConfigArgs_ServiceAccount" data-uid="Pulumi.Gcp.Container.Inputs.ClusterNodeConfigArgs.ServiceAccount">ServiceAccount</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The service account to be used by the Node VMs.
+If not specified, the &quot;default&quot; service account is used.
+In order to use the configured <code>oauth_scopes</code> for logging and monitoring, the service account being used needs the
+<a href="https://cloud.google.com/iam/docs/understanding-roles#stackdriver_logging_roles">roles/logging.logWriter</a> and
+<a href="https://cloud.google.com/iam/docs/understanding-roles#stackdriver_monitoring_roles">roles/monitoring.metricWriter</a> roles.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; ServiceAccount { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? ServiceAccount { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -487,21 +497,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/Cluster.cs/#L1867">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Inputs/ClusterNodeConfigArgs.cs/#L151">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Container_Inputs_ClusterNodeConfigArgs_ShieldedInstanceConfig_" data-uid="Pulumi.Gcp.Container.Inputs.ClusterNodeConfigArgs.ShieldedInstanceConfig*"></a>
   <h4 id="Pulumi_Gcp_Container_Inputs_ClusterNodeConfigArgs_ShieldedInstanceConfig" data-uid="Pulumi.Gcp.Container.Inputs.ClusterNodeConfigArgs.ShieldedInstanceConfig">ShieldedInstanceConfig</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Shielded Instance options. Structure is documented below.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;ClusterNodeConfigShieldedInstanceConfigArgs&gt; ShieldedInstanceConfig { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;ClusterNodeConfigShieldedInstanceConfigArgs&gt;? ShieldedInstanceConfig { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -513,17 +524,19 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Gcp.Container.Inputs.ClusterNodeConfigShieldedInstanceConfigArgs.html">ClusterNodeConfigShieldedInstanceConfigArgs</a>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Gcp.Container.Inputs.ClusterNodeConfigShieldedInstanceConfigArgs.html">ClusterNodeConfigShieldedInstanceConfigArgs</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/Cluster.cs/#L1872">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Inputs/ClusterNodeConfigArgs.cs/#L161">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Container_Inputs_ClusterNodeConfigArgs_Tags_" data-uid="Pulumi.Gcp.Container.Inputs.ClusterNodeConfigArgs.Tags*"></a>
   <h4 id="Pulumi_Gcp_Container_Inputs_ClusterNodeConfigArgs_Tags" data-uid="Pulumi.Gcp.Container.Inputs.ClusterNodeConfigArgs.Tags">Tags</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The list of instance tags applied to all nodes. Tags are used to identify
+valid sources or targets for network firewalls.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -539,21 +552,29 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/Cluster.cs/#L1880">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Inputs/ClusterNodeConfigArgs.cs/#L180">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Container_Inputs_ClusterNodeConfigArgs_Taints_" data-uid="Pulumi.Gcp.Container.Inputs.ClusterNodeConfigArgs.Taints*"></a>
   <h4 id="Pulumi_Gcp_Container_Inputs_ClusterNodeConfigArgs_Taints" data-uid="Pulumi.Gcp.Container.Inputs.ClusterNodeConfigArgs.Taints">Taints</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A list of <a href="https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/">Kubernetes taints</a>
+to apply to nodes. GKE's API can only set this field on cluster creation.
+However, GKE will add taints to your nodes if you enable certain features such
+as GPUs. If this field is set, any diffs on this field will cause the provider to
+recreate the underlying resource. Taint values can be updated safely in
+Kubernetes (eg. through <code>kubectl</code>), and it's recommended that you do not use
+this field to manage taints. If you do, <code>lifecycle.ignore_changes</code> is
+recommended. Structure is documented below.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public InputList&lt;ClusterNodeConfigTaintsArgs&gt; Taints { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public InputList&lt;ClusterNodeConfigTaintArgs&gt; Taints { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -565,21 +586,23 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<a class="xref" href="Pulumi.Gcp.Container.Inputs.ClusterNodeConfigTaintsArgs.html">ClusterNodeConfigTaintsArgs</a>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<a class="xref" href="Pulumi.Gcp.Container.Inputs.ClusterNodeConfigTaintArgs.html">ClusterNodeConfigTaintArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/Cluster.cs/#L1886">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Inputs/ClusterNodeConfigArgs.cs/#L190">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Container_Inputs_ClusterNodeConfigArgs_WorkloadMetadataConfig_" data-uid="Pulumi.Gcp.Container.Inputs.ClusterNodeConfigArgs.WorkloadMetadataConfig*"></a>
   <h4 id="Pulumi_Gcp_Container_Inputs_ClusterNodeConfigArgs_WorkloadMetadataConfig" data-uid="Pulumi.Gcp.Container.Inputs.ClusterNodeConfigArgs.WorkloadMetadataConfig">WorkloadMetadataConfig</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Metadata configuration to expose to workloads on the node pool.
+Structure is documented below.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;ClusterNodeConfigWorkloadMetadataConfigArgs&gt; WorkloadMetadataConfig { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;ClusterNodeConfigWorkloadMetadataConfigArgs&gt;? WorkloadMetadataConfig { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -591,7 +614,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Gcp.Container.Inputs.ClusterNodeConfigWorkloadMetadataConfigArgs.html">ClusterNodeConfigWorkloadMetadataConfigArgs</a>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Gcp.Container.Inputs.ClusterNodeConfigWorkloadMetadataConfigArgs.html">ClusterNodeConfigWorkloadMetadataConfigArgs</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -603,7 +626,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/Cluster.cs/#L1803" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Inputs/ClusterNodeConfigArgs.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

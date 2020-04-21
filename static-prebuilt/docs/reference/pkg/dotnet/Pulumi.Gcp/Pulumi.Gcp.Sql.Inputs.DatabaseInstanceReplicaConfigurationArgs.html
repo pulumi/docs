@@ -76,36 +76,7 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
-    <div class="level3"><span class="xref">DatabaseInstanceReplicaConfigurationArgs</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">DatabaseInstanceReplicaConfigurationArgs</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.Sql.Inputs.html">Pulumi.Gcp.Sql.Inputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
@@ -116,7 +87,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Sql/DatabaseInstance.cs/#L424">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Sql/Inputs/DatabaseInstanceReplicaConfigurationArgs.cs/#L88">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Sql_Inputs_DatabaseInstanceReplicaConfigurationArgs__ctor_" data-uid="Pulumi.Gcp.Sql.Inputs.DatabaseInstanceReplicaConfigurationArgs.#ctor*"></a>
   <h4 id="Pulumi_Gcp_Sql_Inputs_DatabaseInstanceReplicaConfigurationArgs__ctor" data-uid="Pulumi.Gcp.Sql.Inputs.DatabaseInstanceReplicaConfigurationArgs.#ctor">DatabaseInstanceReplicaConfigurationArgs()</h4>
@@ -129,15 +100,17 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Sql/DatabaseInstance.cs/#L391">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Sql/Inputs/DatabaseInstanceReplicaConfigurationArgs.cs/#L19">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Sql_Inputs_DatabaseInstanceReplicaConfigurationArgs_CaCertificate_" data-uid="Pulumi.Gcp.Sql.Inputs.DatabaseInstanceReplicaConfigurationArgs.CaCertificate*"></a>
   <h4 id="Pulumi_Gcp_Sql_Inputs_DatabaseInstanceReplicaConfigurationArgs_CaCertificate" data-uid="Pulumi.Gcp.Sql.Inputs.DatabaseInstanceReplicaConfigurationArgs.CaCertificate">CaCertificate</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>PEM representation of the trusted CA's x509
+certificate.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; CaCertificate { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? CaCertificate { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -149,21 +122,23 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Sql/DatabaseInstance.cs/#L394">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Sql/Inputs/DatabaseInstanceReplicaConfigurationArgs.cs/#L26">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Sql_Inputs_DatabaseInstanceReplicaConfigurationArgs_ClientCertificate_" data-uid="Pulumi.Gcp.Sql.Inputs.DatabaseInstanceReplicaConfigurationArgs.ClientCertificate*"></a>
   <h4 id="Pulumi_Gcp_Sql_Inputs_DatabaseInstanceReplicaConfigurationArgs_ClientCertificate" data-uid="Pulumi.Gcp.Sql.Inputs.DatabaseInstanceReplicaConfigurationArgs.ClientCertificate">ClientCertificate</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>PEM representation of the slave's x509
+certificate.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; ClientCertificate { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? ClientCertificate { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -175,21 +150,23 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Sql/DatabaseInstance.cs/#L397">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Sql/Inputs/DatabaseInstanceReplicaConfigurationArgs.cs/#L33">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Sql_Inputs_DatabaseInstanceReplicaConfigurationArgs_ClientKey_" data-uid="Pulumi.Gcp.Sql.Inputs.DatabaseInstanceReplicaConfigurationArgs.ClientKey*"></a>
   <h4 id="Pulumi_Gcp_Sql_Inputs_DatabaseInstanceReplicaConfigurationArgs_ClientKey" data-uid="Pulumi.Gcp.Sql.Inputs.DatabaseInstanceReplicaConfigurationArgs.ClientKey">ClientKey</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>PEM representation of the slave's private key. The
+corresponding public key in encoded in the <code>client_certificate</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; ClientKey { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? ClientKey { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -201,21 +178,23 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Sql/DatabaseInstance.cs/#L400">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Sql/Inputs/DatabaseInstanceReplicaConfigurationArgs.cs/#L40">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Sql_Inputs_DatabaseInstanceReplicaConfigurationArgs_ConnectRetryInterval_" data-uid="Pulumi.Gcp.Sql.Inputs.DatabaseInstanceReplicaConfigurationArgs.ConnectRetryInterval*"></a>
   <h4 id="Pulumi_Gcp_Sql_Inputs_DatabaseInstanceReplicaConfigurationArgs_ConnectRetryInterval" data-uid="Pulumi.Gcp.Sql.Inputs.DatabaseInstanceReplicaConfigurationArgs.ConnectRetryInterval">ConnectRetryInterval</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The number of seconds
+between connect retries.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; ConnectRetryInterval { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? ConnectRetryInterval { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -227,21 +206,23 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Sql/DatabaseInstance.cs/#L403">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Sql/Inputs/DatabaseInstanceReplicaConfigurationArgs.cs/#L47">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Sql_Inputs_DatabaseInstanceReplicaConfigurationArgs_DumpFilePath_" data-uid="Pulumi.Gcp.Sql.Inputs.DatabaseInstanceReplicaConfigurationArgs.DumpFilePath*"></a>
   <h4 id="Pulumi_Gcp_Sql_Inputs_DatabaseInstanceReplicaConfigurationArgs_DumpFilePath" data-uid="Pulumi.Gcp.Sql.Inputs.DatabaseInstanceReplicaConfigurationArgs.DumpFilePath">DumpFilePath</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Path to a SQL file in GCS from which slave
+instances are created. Format is <code>gs://bucket/filename</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; DumpFilePath { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? DumpFilePath { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -253,21 +234,25 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Sql/DatabaseInstance.cs/#L406">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Sql/Inputs/DatabaseInstanceReplicaConfigurationArgs.cs/#L56">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Sql_Inputs_DatabaseInstanceReplicaConfigurationArgs_FailoverTarget_" data-uid="Pulumi.Gcp.Sql.Inputs.DatabaseInstanceReplicaConfigurationArgs.FailoverTarget*"></a>
   <h4 id="Pulumi_Gcp_Sql_Inputs_DatabaseInstanceReplicaConfigurationArgs_FailoverTarget" data-uid="Pulumi.Gcp.Sql.Inputs.DatabaseInstanceReplicaConfigurationArgs.FailoverTarget">FailoverTarget</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Specifies if the replica is the failover target.
+If the field is set to true the replica will be designated as a failover replica.
+If the master instance fails, the replica instance will be promoted as
+the new master instance.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; FailoverTarget { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? FailoverTarget { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -279,21 +264,23 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Sql/DatabaseInstance.cs/#L409">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Sql/Inputs/DatabaseInstanceReplicaConfigurationArgs.cs/#L63">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Sql_Inputs_DatabaseInstanceReplicaConfigurationArgs_MasterHeartbeatPeriod_" data-uid="Pulumi.Gcp.Sql.Inputs.DatabaseInstanceReplicaConfigurationArgs.MasterHeartbeatPeriod*"></a>
   <h4 id="Pulumi_Gcp_Sql_Inputs_DatabaseInstanceReplicaConfigurationArgs_MasterHeartbeatPeriod" data-uid="Pulumi.Gcp.Sql.Inputs.DatabaseInstanceReplicaConfigurationArgs.MasterHeartbeatPeriod">MasterHeartbeatPeriod</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Time in ms between replication
+heartbeats.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; MasterHeartbeatPeriod { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? MasterHeartbeatPeriod { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -305,21 +292,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Sql/DatabaseInstance.cs/#L412">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Sql/Inputs/DatabaseInstanceReplicaConfigurationArgs.cs/#L69">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Sql_Inputs_DatabaseInstanceReplicaConfigurationArgs_Password_" data-uid="Pulumi.Gcp.Sql.Inputs.DatabaseInstanceReplicaConfigurationArgs.Password*"></a>
   <h4 id="Pulumi_Gcp_Sql_Inputs_DatabaseInstanceReplicaConfigurationArgs_Password" data-uid="Pulumi.Gcp.Sql.Inputs.DatabaseInstanceReplicaConfigurationArgs.Password">Password</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Password for the replication connection.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Password { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Password { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -331,13 +319,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Sql/DatabaseInstance.cs/#L415">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Sql/Inputs/DatabaseInstanceReplicaConfigurationArgs.cs/#L72">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Sql_Inputs_DatabaseInstanceReplicaConfigurationArgs_SslCipher_" data-uid="Pulumi.Gcp.Sql.Inputs.DatabaseInstanceReplicaConfigurationArgs.SslCipher*"></a>
   <h4 id="Pulumi_Gcp_Sql_Inputs_DatabaseInstanceReplicaConfigurationArgs_SslCipher" data-uid="Pulumi.Gcp.Sql.Inputs.DatabaseInstanceReplicaConfigurationArgs.SslCipher">SslCipher</h4>
@@ -345,7 +333,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; SslCipher { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? SslCipher { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -357,21 +345,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Sql/DatabaseInstance.cs/#L418">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Sql/Inputs/DatabaseInstanceReplicaConfigurationArgs.cs/#L78">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Sql_Inputs_DatabaseInstanceReplicaConfigurationArgs_Username_" data-uid="Pulumi.Gcp.Sql.Inputs.DatabaseInstanceReplicaConfigurationArgs.Username*"></a>
   <h4 id="Pulumi_Gcp_Sql_Inputs_DatabaseInstanceReplicaConfigurationArgs_Username" data-uid="Pulumi.Gcp.Sql.Inputs.DatabaseInstanceReplicaConfigurationArgs.Username">Username</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Username for replication connection.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Username { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Username { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -383,21 +372,23 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Sql/DatabaseInstance.cs/#L421">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Sql/Inputs/DatabaseInstanceReplicaConfigurationArgs.cs/#L85">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Sql_Inputs_DatabaseInstanceReplicaConfigurationArgs_VerifyServerCertificate_" data-uid="Pulumi.Gcp.Sql.Inputs.DatabaseInstanceReplicaConfigurationArgs.VerifyServerCertificate*"></a>
   <h4 id="Pulumi_Gcp_Sql_Inputs_DatabaseInstanceReplicaConfigurationArgs_VerifyServerCertificate" data-uid="Pulumi.Gcp.Sql.Inputs.DatabaseInstanceReplicaConfigurationArgs.VerifyServerCertificate">VerifyServerCertificate</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>True if the master's common name
+value is checked during the SSL handshake.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; VerifyServerCertificate { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? VerifyServerCertificate { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -409,7 +400,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -421,7 +412,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Sql/DatabaseInstance.cs/#L389" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Sql/Inputs/DatabaseInstanceReplicaConfigurationArgs.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
