@@ -100,32 +100,18 @@ func main() {
 
 ```csharp
 using Pulumi;
-using Gcp = Pulumi.Gcp;
+using Pulumi.Gcp.Storage;
 
 class MyStack : Stack
 {
     public MyStack()
     {
-        // Let's create a customer managed key and use that for encryption
-        // instead of the default Google-managed key.
-        var keyRing = new Gcp.Kms.KeyRing("my-keyring", new Gcp.Kms.KeyRingArgs
-        {
-            Location = "global",
-        });
-
-        var cryptoKey = new Gcp.Kms.CryptoKey("my-cryptokey", new Gcp.Kms.CryptoKeyArgs
-        {
-            KeyRing = keyRing.SelfLink,
-            RotationPeriod = "100000s",
-        });
-
         // Create a GCP resource (Storage Bucket)
-        var bucket = new Gcp.Storage.Bucket("my-bucket", new Gcp.Storage.BucketArgs
-        {
-            Encryption = new Gcp.Storage.Inputs.BucketEncryptionArgs
+        var bucket = new Bucket("my-bucket", new BucketArgs{
+            Labels =
             {
-                DefaultKmsKeyName = cryptoKey.SelfLink,
-            },
+                { "environment", "dev" }
+            }
         });
 
         // Export the DNS name of the bucket
