@@ -21,16 +21,16 @@ $ pulumi up
 This command instructs Pulumi to determine the resources needed to create the stack. First, a preview is shown of the changes that will be made:
 
 ```
+$ pulumi up
 Previewing update (dev):
-
-     Type                   Name            Plan
+     Type                   Name       Plan
  +   pulumi:pulumi:Stack    quickstart-dev  create
- +   └─ gcp:storage:Bucket  my-bucket       create
+ +   └─ gcp:storage:Bucket  my-bucket  create
 
 Resources:
     + 2 to create
 
-Do you want to perform this update?
+Do you want to perform this update?  [Use arrows to move, enter to select, type to filter]
   yes
 > no
   details
