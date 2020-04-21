@@ -1,6 +1,7 @@
 ---
 title: "Kubernetes"
-block_external_search_index: true
+title_tag: "Package Kubernetes"
+meta_desc: "A Pulumi package for creating and managing Kubernetes resources."
 menu:
     reference:
         parent: API Reference
@@ -11,7 +12,7 @@ menu:
 
 A Pulumi package for creating and managing Kubernetes resources.
 
-<h3>Modules</h3>
+<h2 id="modules">Modules</h2>
 <ul class="api">
     <li><a href="admissionregistration/" title="admissionregistration"><span class="symbol module"></span>admissionregistration</a></li>
     <li><a href="apiextensions/" title="apiextensions"><span class="symbol module"></span>apiextensions</a></li>
@@ -29,6 +30,7 @@ A Pulumi package for creating and managing Kubernetes resources.
     <li><a href="events/" title="events"><span class="symbol module"></span>events</a></li>
     <li><a href="extensions/" title="extensions"><span class="symbol module"></span>extensions</a></li>
     <li><a href="flowcontrol/" title="flowcontrol"><span class="symbol module"></span>flowcontrol</a></li>
+    <li><a href="helm/" title="helm"><span class="symbol module"></span>helm</a></li>
     <li><a href="meta/" title="meta"><span class="symbol module"></span>meta</a></li>
     <li><a href="networking/" title="networking"><span class="symbol module"></span>networking</a></li>
     <li><a href="node/" title="node"><span class="symbol module"></span>node</a></li>
@@ -37,19 +39,21 @@ A Pulumi package for creating and managing Kubernetes resources.
     <li><a href="scheduling/" title="scheduling"><span class="symbol module"></span>scheduling</a></li>
     <li><a href="settings/" title="settings"><span class="symbol module"></span>settings</a></li>
     <li><a href="storage/" title="storage"><span class="symbol module"></span>storage</a></li>
+    <li><a href="yaml/" title="yaml"><span class="symbol module"></span>yaml</a></li>
 </ul>
 
-<h3>Resources</h3>
+<h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="provider" title="Provider"><span class="symbol resource"></span>Provider</a></li>
 </ul>
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-kubernetes">https://github.com/pulumi/pulumi-kubernetes</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    
+	<dt>Version</dt>
+	<dd>2.0.0</dd>
 </dl>
 
