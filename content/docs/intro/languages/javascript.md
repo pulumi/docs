@@ -31,17 +31,52 @@ $ pulumi new javascript
 
 This will create a `Pulumi.yaml` [project file]({{< relref "../concepts/project" >}}), a `package.json` file for dependencies, and an `index.js` file, containing your program. The name of the directory is used as the project name in `Pulumi.yaml`.
 
-## Optional `async` Entrypoint
+## Entrypoint
 
-Optionally, you may choose to export a top level `async` function so that you can easily write `async/await` code throughout the rest of your program:
+Pulumi executes your program by loading the entrypoint file as a Node module: `require("index.ts")`. By default, Pulumi will load `index.ts` or `index.js`. Alternatively, if you specify `main` within your `package.json`, Pulumi will load that module instead:
+
+```json
+{
+    "name": "my-package",
+    "version": "1.0.0",
+    ...
+    "main": "src/entry.ts"
+}
+```
 
 {{< chooser language "javascript,typescript" >}}
+
+Your entrypoint can either return a module object with properties for each stack output:
+
+{{% choosable language "javascript" %}}
+
+```javascript
+// create resources
+...
+exports.out = myResource.output;
+```
+
+{{% /choosable %}}
+
+{{% choosable language "typescript" %}}
+
+```typescript
+// create resources
+...
+export const out = myResource.output;
+```
+
+{{% /choosable %}}
+
+Or alternatively, your entrypoint can export a top level `async` function that returns an object with members for each stack output.
+Pulumi will automatically call this function and await the result:
 
 {{% choosable language "javascript" %}}
 
 ```javascript
 module.exports = async () => {
-    // user code.
+    // create resources
+    return { out: myResource.output };
 }
 ```
 
@@ -51,7 +86,8 @@ module.exports = async () => {
 
 ```typescript
 export = async () => {
-     // user code
+    // create resources
+    return { out: myResource.output };
 }
 ```
 
@@ -59,7 +95,7 @@ export = async () => {
 
 {{< /chooser >}}
 
-Pulumi will automatically call this function and await the result.
+Most Pulumi programs use the first option, but programs that need to do async work at the top level (such as calling [`getOutputValue`]({{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi#StackReference-getOutputValue" >}})) may find they want to use the second.
 
 ## TypeScript
 
