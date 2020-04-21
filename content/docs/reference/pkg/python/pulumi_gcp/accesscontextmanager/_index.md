@@ -333,7 +333,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.accesscontextmanager.ServicePerimeter">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.accesscontextmanager.</code><code class="sig-name descname">ServicePerimeter</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">parent=None</em>, <em class="sig-param">perimeter_type=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">title=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.accesscontextmanager.ServicePerimeter" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.accesscontextmanager.</code><code class="sig-name descname">ServicePerimeter</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">parent=None</em>, <em class="sig-param">perimeter_type=None</em>, <em class="sig-param">spec=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">title=None</em>, <em class="sig-param">use_explicit_dry_run_spec=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.accesscontextmanager.ServicePerimeter" title="Permalink to this definition">¶</a></dt>
 <dd><p>ServicePerimeter describes a set of GCP resources which can freely import
 and export data amongst themselves, but not export outside of the
 ServicePerimeter. If a request with a source within this ServicePerimeter
@@ -371,12 +371,33 @@ bridge only contains resources. Cross project operations are permitted if all ef
 the regular perimeter that resource is in. Perimeter Bridges are typically useful when building more complex topologies
 with many independent perimeters that need to share some data with a common perimeter, but should not be able to share
 data among themselves.</p></li>
+<li><p><strong>spec</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Proposed (or dry run) ServicePerimeter configuration. This configuration allows to specify and test ServicePerimeter
+configuration without enforcing actual access restrictions. Only allowed to be set when the ‘useExplicitDryRunSpec’ flag
+is set.</p></li>
 <li><p><strong>status</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – ServicePerimeter configuration. Specifies sets of resources, restricted services and access levels that determine
 perimeter content and boundaries.</p></li>
 <li><p><strong>title</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Human readable title. Must be unique within the Policy.</p></li>
+<li><p><strong>use_explicit_dry_run_spec</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Use explicit dry run spec flag. Ordinarily, a dry-run spec implicitly exists for all Service Perimeters, and that spec
+is identical to the status for those Service Perimeters. When this flag is set, it inhibits the generation of the
+implicit spec, thereby allowing the user to explicitly provide a configuration (“spec”) to use in a dry-run version of
+the Service Perimeter. This allows the user to test changes to the enforced config (“status”) without actually enforcing
+them. This testing is done through analyzing the differences between currently enforced and suggested restrictions.
+useExplicitDryRunSpec must bet set to True if any of the fields in the spec are set to non-default values.</p></li>
 </ul>
 </dd>
 </dl>
+<p>The <strong>spec</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">accessLevels</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">resources</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">restrictedServices</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">vpcAccessibleServices</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowedServices</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enableRestriction</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+</ul>
+</li>
+</ul>
 <p>The <strong>status</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">accessLevels</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
@@ -428,6 +449,25 @@ data among themselves.</p>
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_gcp.accesscontextmanager.ServicePerimeter.spec">
+<code class="sig-name descname">spec</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.accesscontextmanager.ServicePerimeter.spec" title="Permalink to this definition">¶</a></dt>
+<dd><p>Proposed (or dry run) ServicePerimeter configuration. This configuration allows to specify and test ServicePerimeter
+configuration without enforcing actual access restrictions. Only allowed to be set when the ‘useExplicitDryRunSpec’ flag
+is set.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">accessLevels</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">resources</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">restrictedServices</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">vpcAccessibleServices</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowedServices</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enableRestriction</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+</ul>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_gcp.accesscontextmanager.ServicePerimeter.status">
 <code class="sig-name descname">status</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.accesscontextmanager.ServicePerimeter.status" title="Permalink to this definition">¶</a></dt>
 <dd><p>ServicePerimeter configuration. Specifies sets of resources, restricted services and access levels that determine
@@ -457,9 +497,20 @@ perimeter content and boundaries.</p>
 <dd><p>Time the AccessPolicy was updated in UTC.</p>
 </dd></dl>
 
+<dl class="attribute">
+<dt id="pulumi_gcp.accesscontextmanager.ServicePerimeter.use_explicit_dry_run_spec">
+<code class="sig-name descname">use_explicit_dry_run_spec</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.accesscontextmanager.ServicePerimeter.use_explicit_dry_run_spec" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use explicit dry run spec flag. Ordinarily, a dry-run spec implicitly exists for all Service Perimeters, and that spec
+is identical to the status for those Service Perimeters. When this flag is set, it inhibits the generation of the
+implicit spec, thereby allowing the user to explicitly provide a configuration (“spec”) to use in a dry-run version of
+the Service Perimeter. This allows the user to test changes to the enforced config (“status”) without actually enforcing
+them. This testing is done through analyzing the differences between currently enforced and suggested restrictions.
+useExplicitDryRunSpec must bet set to True if any of the fields in the spec are set to non-default values.</p>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_gcp.accesscontextmanager.ServicePerimeter.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">create_time=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">parent=None</em>, <em class="sig-param">perimeter_type=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">title=None</em>, <em class="sig-param">update_time=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.accesscontextmanager.ServicePerimeter.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">create_time=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">parent=None</em>, <em class="sig-param">perimeter_type=None</em>, <em class="sig-param">spec=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">title=None</em>, <em class="sig-param">update_time=None</em>, <em class="sig-param">use_explicit_dry_run_spec=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.accesscontextmanager.ServicePerimeter.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing ServicePerimeter resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -481,13 +532,34 @@ bridge only contains resources. Cross project operations are permitted if all ef
 the regular perimeter that resource is in. Perimeter Bridges are typically useful when building more complex topologies
 with many independent perimeters that need to share some data with a common perimeter, but should not be able to share
 data among themselves.</p></li>
+<li><p><strong>spec</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Proposed (or dry run) ServicePerimeter configuration. This configuration allows to specify and test ServicePerimeter
+configuration without enforcing actual access restrictions. Only allowed to be set when the ‘useExplicitDryRunSpec’ flag
+is set.</p></li>
 <li><p><strong>status</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – ServicePerimeter configuration. Specifies sets of resources, restricted services and access levels that determine
 perimeter content and boundaries.</p></li>
 <li><p><strong>title</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Human readable title. Must be unique within the Policy.</p></li>
 <li><p><strong>update_time</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Time the AccessPolicy was updated in UTC.</p></li>
+<li><p><strong>use_explicit_dry_run_spec</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Use explicit dry run spec flag. Ordinarily, a dry-run spec implicitly exists for all Service Perimeters, and that spec
+is identical to the status for those Service Perimeters. When this flag is set, it inhibits the generation of the
+implicit spec, thereby allowing the user to explicitly provide a configuration (“spec”) to use in a dry-run version of
+the Service Perimeter. This allows the user to test changes to the enforced config (“status”) without actually enforcing
+them. This testing is done through analyzing the differences between currently enforced and suggested restrictions.
+useExplicitDryRunSpec must bet set to True if any of the fields in the spec are set to non-default values.</p></li>
 </ul>
 </dd>
 </dl>
+<p>The <strong>spec</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">accessLevels</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">resources</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">restrictedServices</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">vpcAccessibleServices</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowedServices</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enableRestriction</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+</ul>
+</li>
+</ul>
 <p>The <strong>status</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">accessLevels</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
