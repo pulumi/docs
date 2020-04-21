@@ -1,6 +1,7 @@
 ---
 title: "Keycloak"
-block_external_search_index: true
+title_tag: "Package Keycloak"
+meta_desc: "A Pulumi package for creating and managing keycloak cloud resources."
 menu:
     reference:
         parent: API Reference
@@ -56,7 +57,7 @@ A Pulumi package for creating and managing keycloak cloud resources.
 	<dd><a href="https://github.com/pulumi/pulumi-keycloak">https://github.com/pulumi/pulumi-keycloak</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`keycloak` Terraform Provider](https://github.com/mrparkers/terraform-provider-keycloak).</dd>
 	<dt>Version</dt>
 	<dd>2.1.0</dd>

@@ -1,7 +1,8 @@
 
 ---
 title: "AttributeImporterIdentityProviderMapper"
-block_external_search_index: true
+title_tag: "Resource AttributeImporterIdentityProviderMapper | Package Keycloak"
+meta_desc: "Explore the AttributeImporterIdentityProviderMapper resource of the Keycloak package, including examples, input properties, output properties, lookup functions, and supporting types. ## # keycloak..AttributeImporterIdentityProviderMapper"
 ---
 
 
@@ -991,8 +992,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-keycloak">https://github.com/pulumi/pulumi-keycloak</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`keycloak` Terraform Provider](https://github.com/mrparkers/terraform-provider-keycloak).</dd>
-	
 </dl>
 
