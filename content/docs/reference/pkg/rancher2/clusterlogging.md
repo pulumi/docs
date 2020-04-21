@@ -1,7 +1,8 @@
 
 ---
 title: "ClusterLogging"
-block_external_search_index: true
+title_tag: "Resource ClusterLogging | Package Rancher 2"
+meta_desc: "Explore the ClusterLogging resource of the Rancher 2 package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Rancher v2 Cluster Logging resource. This can be used to configure Cluster Logging for Rancher v2 environments and retrieve their information."
 ---
 
 
@@ -37,7 +38,7 @@ const foo = new rancher2.ClusterLogging("foo", {
 
 
 
-## Create a ClusterLogging Resource
+## Create a ClusterLogging Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -127,7 +128,7 @@ const foo = new rancher2.ClusterLogging("foo", {
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -204,7 +205,7 @@ const foo = new rancher2.ClusterLogging("foo", {
 
 {{% /choosable %}}
 
-## ClusterLogging Resource Properties
+## ClusterLogging Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
@@ -789,12 +790,77 @@ The ClusterLogging resource accepts the following [input]({{< relref "/docs/intr
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. The ClusterLogging resource does not produce any additional output properties.
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the ClusterLogging resource produces the following output properties:
 
 
 
 
-## Look up an Existing ClusterLogging Resource
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+
+
+## Look up an Existing ClusterLogging Resource {#look-up}
 
 Get an existing ClusterLogging resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -1493,7 +1559,8 @@ The following state arguments are supported:
 
 ## Supporting Types
 
-<h4>Cluster<wbr>Logging<wbr>Custom<wbr>Target<wbr>Config</h4>
+
+<h4 id="clusterloggingcustomtargetconfig">Cluster<wbr>Logging<wbr>Custom<wbr>Target<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterLoggingCustomTargetConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterLoggingCustomTargetConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1680,7 +1747,7 @@ The following state arguments are supported:
 
 
 
-<h4>Cluster<wbr>Logging<wbr>Elasticsearch<wbr>Config</h4>
+<h4 id="clusterloggingelasticsearchconfig">Cluster<wbr>Logging<wbr>Elasticsearch<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterLoggingElasticsearchConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterLoggingElasticsearchConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2119,7 +2186,7 @@ The following state arguments are supported:
 
 
 
-<h4>Cluster<wbr>Logging<wbr>Fluentd<wbr>Config</h4>
+<h4 id="clusterloggingfluentdconfig">Cluster<wbr>Logging<wbr>Fluentd<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterLoggingFluentdConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterLoggingFluentdConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2306,7 +2373,7 @@ The following state arguments are supported:
 
 
 
-<h4>Cluster<wbr>Logging<wbr>Fluentd<wbr>Config<wbr>Fluent<wbr>Server</h4>
+<h4 id="clusterloggingfluentdconfigfluentserver">Cluster<wbr>Logging<wbr>Fluentd<wbr>Config<wbr>Fluent<wbr>Server</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterLoggingFluentdConfigFluentServer">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterLoggingFluentdConfigFluentServer">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2601,7 +2668,7 @@ The following state arguments are supported:
 
 
 
-<h4>Cluster<wbr>Logging<wbr>Kafka<wbr>Config</h4>
+<h4 id="clusterloggingkafkaconfig">Cluster<wbr>Logging<wbr>Kafka<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterLoggingKafkaConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterLoggingKafkaConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2860,7 +2927,7 @@ The following state arguments are supported:
 
 
 
-<h4>Cluster<wbr>Logging<wbr>Splunk<wbr>Config</h4>
+<h4 id="clusterloggingsplunkconfig">Cluster<wbr>Logging<wbr>Splunk<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterLoggingSplunkConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterLoggingSplunkConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3227,7 +3294,7 @@ The following state arguments are supported:
 
 
 
-<h4>Cluster<wbr>Logging<wbr>Syslog<wbr>Config</h4>
+<h4 id="clusterloggingsyslogconfig">Cluster<wbr>Logging<wbr>Syslog<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterLoggingSyslogConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterLoggingSyslogConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3598,14 +3665,13 @@ The following state arguments are supported:
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-rancher2">https://github.com/pulumi/pulumi-rancher2</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`rancher2` Terraform Provider](https://github.com/terraform-providers/terraform-provider-rancher2).</dd>
-	
 </dl>
 
