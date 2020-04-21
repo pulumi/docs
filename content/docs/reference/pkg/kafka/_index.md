@@ -1,6 +1,7 @@
 ---
 title: "Kafka"
-block_external_search_index: true
+title_tag: "Module Kafka | Package Kafka"
+meta_desc: "A Pulumi package for creating and managing Kafka."
 menu:
     reference:
         parent: API Reference
@@ -11,20 +12,20 @@ menu:
 
 A Pulumi package for creating and managing Kafka.
 
-<h3>Resources</h3>
+<h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="acl" title="Acl"><span class="symbol resource"></span>Acl</a></li>
     <li><a href="provider" title="Provider"><span class="symbol resource"></span>Provider</a></li>
     <li><a href="topic" title="Topic"><span class="symbol resource"></span>Topic</a></li>
 </ul>
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-kafka">https://github.com/pulumi/pulumi-kafka</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`kafka` Terraform Provider](https://github.com/Mongey/terraform-provider-kafka).</dd>
 	<dt>Version</dt>
 	<dd>2.0.0</dd>
