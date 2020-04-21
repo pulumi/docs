@@ -1,7 +1,8 @@
 
 ---
 title: "Recorder"
-block_external_search_index: true
+title_tag: "Resource Recorder | Module cfg | Package AWS"
+meta_desc: "Explore the Recorder resource of the cfg module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an AWS Config Configuration Recorder. Please note that this resource **does not start** the created recorder automatically."
 ---
 
 
@@ -902,8 +903,7 @@ See [relevant part of AWS Docs](http://docs.aws.amazon.com/config/latest/APIRefe
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
-	
 </dl>
 

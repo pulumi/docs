@@ -1,7 +1,8 @@
 
 ---
 title: "HostedPublicVirtualInterface"
-block_external_search_index: true
+title_tag: "Resource HostedPublicVirtualInterface | Module directconnect | Package AWS"
+meta_desc: "Explore the HostedPublicVirtualInterface resource of the directconnect module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Direct Connect hosted public virtual interface resource. This resource represents the allocator&#39;s side of the hosted virtual interface."
 ---
 
 
@@ -1413,8 +1414,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
-	
 </dl>
 

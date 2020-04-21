@@ -1,7 +1,8 @@
 
 ---
 title: "VpcEndpoint"
-block_external_search_index: true
+title_tag: "Resource VpcEndpoint | Module ec2 | Package AWS"
+meta_desc: "Explore the VpcEndpoint resource of the ec2 module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a VPC Endpoint resource."
 ---
 
 
@@ -84,13 +85,13 @@ const ptfeServiceVpcEndpoint = new aws.ec2.VpcEndpoint("ptfe_service", {
     vpcEndpointType: "Interface",
     vpcId: var_vpc_id,
 });
-const internal = aws.route53.getZone({
+const internal = pulumi.output(aws.route53.getZone({
     name: "vpc.internal.",
     privateZone: true,
     vpcId: var_vpc_id,
-});
+}, { async: true }));
 const ptfeServiceRecord = new aws.route53.Record("ptfe_service", {
-    name: `ptfe.${internal.name!}`,
+    name: pulumi.interpolate`ptfe.${internal.name!}`,
     records: [ptfeServiceVpcEndpoint.dnsEntries.apply(dnsEntries => (<any>dnsEntries[0])["dns_name"])],
     ttl: 300,
     type: "CNAME",
@@ -1904,8 +1905,7 @@ Defaults to `false`.
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
-	
 </dl>
 

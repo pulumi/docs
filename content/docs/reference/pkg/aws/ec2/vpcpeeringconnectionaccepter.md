@@ -1,7 +1,8 @@
 
 ---
 title: "VpcPeeringConnectionAccepter"
-block_external_search_index: true
+title_tag: "Resource VpcPeeringConnectionAccepter | Module ec2 | Package AWS"
+meta_desc: "Explore the VpcPeeringConnectionAccepter resource of the ec2 module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a resource to manage the accepter&#39;s side of a VPC Peering Connection."
 ---
 
 
@@ -34,8 +35,8 @@ const main = new aws.ec2.Vpc("main", {
 });
 const peerVpc = new aws.ec2.Vpc("peer", {
     cidrBlock: "10.1.0.0/16",
-}, {provider: peer});
-const peerCallerIdentity = aws.getCallerIdentity({provider: peer});
+}, { provider: peer });
+const peerCallerIdentity = pulumi.output(aws.getCallerIdentity({ provider: peer, async: true }));
 // Requester's side of the connection.
 const peerVpcPeeringConnection = new aws.ec2.VpcPeeringConnection("peer", {
     autoAccept: false,
@@ -54,7 +55,7 @@ const peerVpcPeeringConnectionAccepter = new aws.ec2.VpcPeeringConnectionAccepte
         Side: "Accepter",
     },
     vpcPeeringConnectionId: peerVpcPeeringConnection.id,
-}, {provider: peer});
+}, { provider: peer });
 ```
 
 {{% /example %}}
@@ -1576,8 +1577,7 @@ connection in the peer VPC over the VPC Peering Connection.
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
-	
 </dl>
 

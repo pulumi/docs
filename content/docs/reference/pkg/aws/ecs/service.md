@@ -1,7 +1,8 @@
 
 ---
 title: "Service"
-block_external_search_index: true
+title_tag: "Resource Service | Module ecs | Package AWS"
+meta_desc: "Explore the Service resource of the ecs module, including examples, input properties, output properties, lookup functions, and supporting types. &gt; **Note:** To prevent a race condition during service deletion, make sure to set `depends_on` to the related `aws.iam.RolePolicy`; otherwise, the policy may be destroyed too soon and the ECS service will then get stuck in the `DRAINING` state."
 ---
 
 
@@ -30,7 +31,7 @@ import * as aws from "@pulumi/aws";
 const example = new aws.ecs.Service("example", {
     // Example: Create service with 2 instances to start
     desiredCount: 2,
-}, {ignoreChanges: ["desiredCount"]});
+}, { ignoreChanges: ["desiredCount"] });
 ```
 
 {{% /example %}}
@@ -3072,8 +3073,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
-	
 </dl>
 

@@ -1,7 +1,8 @@
 
 ---
 title: "ClusterSnapshot"
-block_external_search_index: true
+title_tag: "Resource ClusterSnapshot | Module rds | Package AWS"
+meta_desc: "Explore the ClusterSnapshot resource of the rds module, including examples, input properties, output properties, lookup functions, and supporting types. Manages a RDS database cluster snapshot for Aurora clusters. For managing RDS database instance snapshots, see the [`aws.rds.Snapshot` resource](https://www.terraform.io/docs/providers/aws/r/db_snapshot.html)."
 ---
 
 
@@ -1612,8 +1613,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
-	
 </dl>
 

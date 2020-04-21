@@ -1,7 +1,8 @@
 
 ---
 title: "Alias"
-block_external_search_index: true
+title_tag: "Resource Alias | Module kms | Package AWS"
+meta_desc: "Explore the Alias resource of the kms module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an alias for a KMS customer master key. AWS Console enforces 1-to-1 mapping between aliases &amp; keys,"
 ---
 
 
@@ -846,8 +847,7 @@ The name must start with the word "alias" followed by a forward slash (alias/). 
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
-	
 </dl>
 

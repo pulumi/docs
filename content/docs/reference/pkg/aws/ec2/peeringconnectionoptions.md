@@ -1,7 +1,8 @@
 
 ---
 title: "PeeringConnectionOptions"
-block_external_search_index: true
+title_tag: "Resource PeeringConnectionOptions | Module ec2 | Package AWS"
+meta_desc: "Explore the PeeringConnectionOptions resource of the ec2 module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a resource to manage VPC peering connection options."
 ---
 
 
@@ -61,13 +62,13 @@ const main = new aws.ec2.Vpc("main", {
     cidrBlock: "10.0.0.0/16",
     enableDnsHostnames: true,
     enableDnsSupport: true,
-}, {provider: requester});
+}, { provider: requester });
 const peerVpc = new aws.ec2.Vpc("peer", {
     cidrBlock: "10.1.0.0/16",
     enableDnsHostnames: true,
     enableDnsSupport: true,
-}, {provider: accepter});
-const peerCallerIdentity = aws.getCallerIdentity({provider: accepter});
+}, { provider: accepter });
+const peerCallerIdentity = pulumi.output(aws.getCallerIdentity({ provider: accepter, async: true }));
 // Requester's side of the connection.
 const peerVpcPeeringConnection = new aws.ec2.VpcPeeringConnection("peer", {
     autoAccept: false,
@@ -77,7 +78,7 @@ const peerVpcPeeringConnection = new aws.ec2.VpcPeeringConnection("peer", {
         Side: "Requester",
     },
     vpcId: main.id,
-}, {provider: requester});
+}, { provider: requester });
 // Accepter's side of the connection.
 const peerVpcPeeringConnectionAccepter = new aws.ec2.VpcPeeringConnectionAccepter("peer", {
     autoAccept: true,
@@ -85,7 +86,7 @@ const peerVpcPeeringConnectionAccepter = new aws.ec2.VpcPeeringConnectionAccepte
         Side: "Accepter",
     },
     vpcPeeringConnectionId: peerVpcPeeringConnection.id,
-}, {provider: accepter});
+}, { provider: accepter });
 const requesterPeeringConnectionOptions = new aws.ec2.PeeringConnectionOptions("requester", {
     requester: {
         allowRemoteVpcDnsResolution: true,
@@ -93,13 +94,13 @@ const requesterPeeringConnectionOptions = new aws.ec2.PeeringConnectionOptions("
     // As options can't be set until the connection has been accepted
     // create an explicit dependency on the accepter.
     vpcPeeringConnectionId: peerVpcPeeringConnectionAccepter.id,
-}, {provider: requester});
+}, { provider: requester });
 const accepterPeeringConnectionOptions = new aws.ec2.PeeringConnectionOptions("accepter", {
     accepter: {
         allowRemoteVpcDnsResolution: true,
     },
     vpcPeeringConnectionId: peerVpcPeeringConnectionAccepter.id,
-}, {provider: accepter});
+}, { provider: accepter });
 ```
 
 
@@ -1146,8 +1147,7 @@ connection. This option is not supported for inter-region VPC peering.
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
-	
 </dl>
 

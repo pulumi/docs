@@ -1,7 +1,8 @@
 
 ---
 title: "NodeGroup"
-block_external_search_index: true
+title_tag: "Resource NodeGroup | Module eks | Package AWS"
+meta_desc: "Explore the NodeGroup resource of the eks module, including examples, input properties, output properties, lookup functions, and supporting types. Manages an EKS Node Group, which can provision and optionally update an Auto Scaling Group of Kubernetes worker nodes compatible with EKS. Additional documentation about this functionality can be found in the [EKS User Guide](https://docs.aws.amazon.com/eks/latest/userguide/managed-node-groups.html)."
 ---
 
 
@@ -2080,8 +2081,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
-	
 </dl>
 

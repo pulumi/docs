@@ -1,7 +1,8 @@
 
 ---
 title: "ResourceShareAccepter"
-block_external_search_index: true
+title_tag: "Resource ResourceShareAccepter | Module ram | Package AWS"
+meta_desc: "Explore the ResourceShareAccepter resource of the ram module, including examples, input properties, output properties, lookup functions, and supporting types. Manage accepting a Resource Access Manager (RAM) Resource Share invitation. From a _receiver_ AWS account, accept an invitation to share resources that were shared by a _sender_ AWS account. To create a resource share in the _sender_, see the [`aws.ram.ResourceShare` resource](https://www.terraform.io/docs/providers/aws/r/ram_resource_share.html)."
 ---
 
 
@@ -31,12 +32,12 @@ const senderShare = new aws.ram.ResourceShare("sender_share", {
     tags: {
         Name: "tf-test-resource-share",
     },
-}, {provider: alternate});
-const receiver = aws.getCallerIdentity();
+}, { provider: alternate });
+const receiver = pulumi.output(aws.getCallerIdentity({ async: true }));
 const senderInvite = new aws.ram.PrincipalAssociation("sender_invite", {
     principal: receiver.accountId,
     resourceShareArn: senderShare.arn,
-}, {provider: alternate});
+}, { provider: alternate });
 const receiverAccept = new aws.ram.ResourceShareAccepter("receiver_accept", {
     shareArn: senderInvite.resourceShareArn,
 });
@@ -1069,8 +1070,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
-	
 </dl>
 

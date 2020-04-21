@@ -1,7 +1,8 @@
 
 ---
 title: "DomainDkim"
-block_external_search_index: true
+title_tag: "Resource DomainDkim | Module ses | Package AWS"
+meta_desc: "Explore the DomainDkim resource of the ses module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an SES domain DKIM generation resource."
 ---
 
 
@@ -674,8 +675,7 @@ in the [AWS SES docs](http://docs.aws.amazon.com/ses/latest/DeveloperGuide/easy-
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
-	
 </dl>
 

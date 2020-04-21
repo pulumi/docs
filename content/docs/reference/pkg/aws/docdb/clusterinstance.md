@@ -1,7 +1,8 @@
 
 ---
 title: "ClusterInstance"
-block_external_search_index: true
+title_tag: "Resource ClusterInstance | Module docdb | Package AWS"
+meta_desc: "Explore the ClusterInstance resource of the docdb module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an DocDB Cluster Resource Instance. A Cluster Instance Resource defines"
 ---
 
 
@@ -2217,8 +2218,7 @@ Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
-	
 </dl>
 

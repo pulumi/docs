@@ -1,7 +1,8 @@
 
 ---
 title: "InviteAccepter"
-block_external_search_index: true
+title_tag: "Resource InviteAccepter | Module guardduty | Package AWS"
+meta_desc: "Explore the InviteAccepter resource of the guardduty module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a resource to accept a pending GuardDuty invite on creation, ensure the detector has the correct master account on read, and disassociate with the master account upon removal."
 ---
 
 
@@ -606,8 +607,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
-	
 </dl>
 

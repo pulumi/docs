@@ -1,7 +1,8 @@
 
 ---
 title: "JobDefinition"
-block_external_search_index: true
+title_tag: "Resource JobDefinition | Module batch | Package AWS"
+meta_desc: "Explore the JobDefinition resource of the batch module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Batch Job Definition resource."
 ---
 
 
@@ -1266,8 +1267,7 @@ Maximum number of `retry_strategy` is `1`.  Defined below.
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
-	
 </dl>
 

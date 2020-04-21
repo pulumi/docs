@@ -1,7 +1,8 @@
 
 ---
 title: "GcmChannel"
-block_external_search_index: true
+title_tag: "Resource GcmChannel | Module pinpoint | Package AWS"
+meta_desc: "Explore the GcmChannel resource of the pinpoint module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Pinpoint GCM Channel resource."
 ---
 
 
@@ -697,8 +698,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
-	
 </dl>
 

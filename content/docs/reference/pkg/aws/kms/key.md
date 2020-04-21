@@ -1,7 +1,8 @@
 
 ---
 title: "Key"
-block_external_search_index: true
+title_tag: "Resource Key | Module kms | Package AWS"
+meta_desc: "Explore the Key resource of the kms module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a KMS customer master key."
 ---
 
 
@@ -1228,8 +1229,7 @@ Defaults to `ENCRYPT_DECRYPT`.
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
-	
 </dl>
 

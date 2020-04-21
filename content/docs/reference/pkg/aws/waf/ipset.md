@@ -1,7 +1,8 @@
 
 ---
 title: "IpSet"
-block_external_search_index: true
+title_tag: "Resource IpSet | Module waf | Package AWS"
+meta_desc: "Explore the IpSet resource of the waf module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a WAF IPSet Resource"
 ---
 
 
@@ -825,8 +826,7 @@ e.g. `192.0.2.44/32` or `1111:0000:0000:0000:0000:0000:0000:0000/64`
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
-	
 </dl>
 

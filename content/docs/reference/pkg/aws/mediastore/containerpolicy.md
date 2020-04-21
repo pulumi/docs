@@ -1,7 +1,8 @@
 
 ---
 title: "ContainerPolicy"
-block_external_search_index: true
+title_tag: "Resource ContainerPolicy | Module mediastore | Package AWS"
+meta_desc: "Explore the ContainerPolicy resource of the mediastore module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a MediaStore Container Policy."
 ---
 
 
@@ -19,8 +20,8 @@ Provides a MediaStore Container Policy.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const currentRegion = aws.getRegion();
-const currentCallerIdentity = aws.getCallerIdentity();
+const currentRegion = pulumi.output(aws.getRegion({ async: true }));
+const currentCallerIdentity = pulumi.output(aws.getCallerIdentity({ async: true }));
 const exampleContainer = new aws.mediastore.Container("example", {});
 const exampleContainerPolicy = new aws.mediastore.ContainerPolicy("example", {
     containerName: exampleContainer.name,
@@ -636,8 +637,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
-	
 </dl>
 

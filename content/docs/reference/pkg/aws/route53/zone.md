@@ -1,7 +1,8 @@
 
 ---
 title: "Zone"
-block_external_search_index: true
+title_tag: "Resource Zone | Module route53 | Package AWS"
+meta_desc: "Explore the Zone resource of the route53 module, including examples, input properties, output properties, lookup functions, and supporting types. Manages a Route53 Hosted Zone."
 ---
 
 
@@ -1231,8 +1232,7 @@ Find more about delegation sets in [AWS docs](https://docs.aws.amazon.com/Route5
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
-	
 </dl>
 

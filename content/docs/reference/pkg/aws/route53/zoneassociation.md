@@ -1,7 +1,8 @@
 
 ---
 title: "ZoneAssociation"
-block_external_search_index: true
+title_tag: "Resource ZoneAssociation | Module route53 | Package AWS"
+meta_desc: "Explore the ZoneAssociation resource of the route53 module, including examples, input properties, output properties, lookup functions, and supporting types. Manages a Route53 Hosted Zone VPC association. VPC associations can only be made on private zones."
 ---
 
 
@@ -42,7 +43,7 @@ const example = new aws.route53.Zone("example", {
     vpcs: [{
         vpcId: primary.id,
     }],
-}, {ignoreChanges: ["vpcId", "vpcRegion", "vpcs"]});
+}, { ignoreChanges: ["vpcId", "vpcRegion", "vpcs"] });
 const secondaryZoneAssociation = new aws.route53.ZoneAssociation("secondary", {
     vpcId: secondaryVpc.id,
     zoneId: example.zoneId,
@@ -716,8 +717,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
-	
 </dl>
 

@@ -1,7 +1,8 @@
 
 ---
 title: "NotificationRule"
-block_external_search_index: true
+title_tag: "Resource NotificationRule | Module codestarnotifications | Package AWS"
+meta_desc: "Explore the NotificationRule resource of the codestarnotifications module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a CodeStar Notifications Rule."
 ---
 
 
@@ -1203,8 +1204,7 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
-	
 </dl>
 

@@ -1,7 +1,8 @@
 
 ---
 title: "Stage"
-block_external_search_index: true
+title_tag: "Resource Stage | Module apigateway | Package AWS"
+meta_desc: "Explore the Stage resource of the apigateway module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an API Gateway Stage."
 ---
 
 
@@ -42,7 +43,7 @@ const testIntegration = new aws.apigateway.Integration("test", {
 const testDeployment = new aws.apigateway.Deployment("test", {
     restApi: testRestApi.id,
     stageName: "dev",
-}, {dependsOn: [testIntegration]});
+}, { dependsOn: [testIntegration] });
 const testStage = new aws.apigateway.Stage("test", {
     deployment: testDeployment.id,
     restApi: testRestApi.id,
@@ -80,7 +81,7 @@ const exampleLogGroup = new aws.cloudwatch.LogGroup("example", {
 });
 const exampleStage = new aws.apigateway.Stage("example", {
     name: stageName,
-}, {dependsOn: [exampleLogGroup]});
+}, { dependsOn: [exampleLogGroup] });
 ```
 
 {{% /example %}}
@@ -1771,8 +1772,7 @@ For more information on configuring the log format rules visit the AWS [document
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
-	
 </dl>
 

@@ -1,7 +1,8 @@
 
 ---
 title: "LaunchTemplate"
-block_external_search_index: true
+title_tag: "Resource LaunchTemplate | Module ec2 | Package AWS"
+meta_desc: "Explore the LaunchTemplate resource of the ec2 module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an EC2 launch template resource. Can be used to create instances or auto scaling groups."
 ---
 
 
@@ -5666,8 +5667,7 @@ Otherwise, specify the default value of 2.
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
-	
 </dl>
 

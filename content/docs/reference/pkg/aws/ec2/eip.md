@@ -1,7 +1,8 @@
 
 ---
 title: "Eip"
-block_external_search_index: true
+title_tag: "Resource Eip | Module ec2 | Package AWS"
+meta_desc: "Explore the Eip resource of the ec2 module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an Elastic IP resource."
 ---
 
 
@@ -73,7 +74,7 @@ const tfTestSubnet = new aws.ec2.Subnet("tf_test_subnet", {
     cidrBlock: "10.0.0.0/24",
     mapPublicIpOnLaunch: true,
     vpcId: defaultVpc.id,
-}, {dependsOn: [gw]});
+}, { dependsOn: [gw] });
 const foo = new aws.ec2.Instance("foo", {
     // us-west-2
     ami: "ami-5189a661",
@@ -85,7 +86,7 @@ const bar = new aws.ec2.Eip("bar", {
     associateWithPrivateIp: "10.0.0.12",
     instance: foo.id,
     vpc: true,
-}, {dependsOn: [gw]});
+}, { dependsOn: [gw] });
 ```
 
 Allocating EIP from the BYOIP pool:
@@ -1479,8 +1480,7 @@ the Elastic IP address is associated with the primary private IP address.
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
-	
 </dl>
 

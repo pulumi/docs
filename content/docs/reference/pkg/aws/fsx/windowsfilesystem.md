@@ -1,7 +1,8 @@
 
 ---
 title: "WindowsFileSystem"
-block_external_search_index: true
+title_tag: "Resource WindowsFileSystem | Module fsx | Package AWS"
+meta_desc: "Explore the WindowsFileSystem resource of the fsx module, including examples, input properties, output properties, lookup functions, and supporting types. Manages a FSx Windows File System. See the [FSx Windows Guide](https://docs.aws.amazon.com/fsx/latest/WindowsGuide/what-is.html) for more information."
 ---
 
 
@@ -2073,8 +2074,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
-	
 </dl>
 

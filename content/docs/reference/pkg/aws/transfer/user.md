@@ -1,7 +1,8 @@
 
 ---
 title: "User"
-block_external_search_index: true
+title_tag: "Resource User | Module transfer | Package AWS"
+meta_desc: "Explore the User resource of the transfer module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a AWS Transfer User resource. Managing SSH keys can be accomplished with the [`aws.transfer.SshKey` resource](https://www.terraform.io/docs/providers/aws/r/transfer_ssh_key.html)."
 ---
 
 
@@ -1013,8 +1014,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
-	
 </dl>
 

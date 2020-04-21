@@ -1,7 +1,8 @@
 
 ---
 title: "AccessPoint"
-block_external_search_index: true
+title_tag: "Resource AccessPoint | Module s3 | Package AWS"
+meta_desc: "Explore the AccessPoint resource of the s3 module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a resource to manage an S3 Access Point."
 ---
 
 
@@ -1486,8 +1487,7 @@ Note: S3 access points only support secure access by HTTPS. HTTP isn't supported
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
-	
 </dl>
 

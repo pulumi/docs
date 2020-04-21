@@ -1,7 +1,8 @@
 
 ---
 title: "IdentityPool"
-block_external_search_index: true
+title_tag: "Resource IdentityPool | Module cognito | Package AWS"
+meta_desc: "Explore the IdentityPool resource of the cognito module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an AWS Cognito Identity Pool."
 ---
 
 
@@ -1311,8 +1312,7 @@ backend and the Cognito service to communicate about the developer provider.
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
-	
 </dl>
 

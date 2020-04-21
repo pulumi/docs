@@ -1,7 +1,8 @@
 
 ---
 title: "Hsm"
-block_external_search_index: true
+title_tag: "Resource Hsm | Module cloudhsmv2 | Package AWS"
+meta_desc: "Explore the Hsm resource of the cloudhsmv2 module, including examples, input properties, output properties, lookup functions, and supporting types. Creates an HSM module in Amazon CloudHSM v2 cluster."
 ---
 
 
@@ -21,12 +22,12 @@ The following example below creates an HSM module in CloudHSM cluster.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const cluster = aws.cloudhsmv2.getCluster({
+const cluster = pulumi.output(aws.cloudhsmv2.getCluster({
     clusterId: var_cloudhsm_cluster_id,
-});
+}, { async: true }));
 const cloudhsmV2Hsm = new aws.cloudhsmv2.Hsm("cloudhsm_v2_hsm", {
     clusterId: cluster.clusterId,
-    subnetId: cluster.subnetIds[0],
+    subnetId: cluster.apply(cluster => cluster.subnetIds[0]),
 });
 ```
 
@@ -985,8 +986,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
-	
 </dl>
 

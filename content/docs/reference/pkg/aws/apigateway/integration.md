@@ -1,7 +1,8 @@
 
 ---
 title: "Integration"
-block_external_search_index: true
+title_tag: "Resource Integration | Module apigateway | Package AWS"
+meta_desc: "Explore the Integration resource of the apigateway module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an HTTP Method Integration for an API Gateway Integration."
 ---
 
 
@@ -1840,8 +1841,7 @@ e.g. `arn:aws:apigateway:eu-west-1:lambda:path/2015-03-31/functions/arn:aws:lamb
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
-	
 </dl>
 

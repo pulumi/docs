@@ -1,7 +1,8 @@
 
 ---
 title: "Project"
-block_external_search_index: true
+title_tag: "Resource Project | Module codebuild | Package AWS"
+meta_desc: "Explore the Project resource of the codebuild module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a CodeBuild Project resource. See also the [`aws.codebuild.Webhook` resource](https://www.terraform.io/docs/providers/aws/r/codebuild_webhook.html), which manages the webhook to the source (e.g. the &#34;rebuild every time a code change is pushed&#34; option in the CodeBuild web console)."
 ---
 
 
@@ -5157,8 +5158,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
-	
 </dl>
 

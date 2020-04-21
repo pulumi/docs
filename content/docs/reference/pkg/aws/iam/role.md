@@ -1,7 +1,8 @@
 
 ---
 title: "Role"
-block_external_search_index: true
+title_tag: "Resource Role | Module iam | Package AWS"
+meta_desc: "Explore the Role resource of the iam module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an IAM role."
 ---
 
 
@@ -50,7 +51,7 @@ const testRole = new aws.iam.Role("test_role", {
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const instance_assume_role_policy = aws.iam.getPolicyDocument({
+const instance_assume_role_policy = pulumi.output(aws.iam.getPolicyDocument({
     statements: [{
         actions: ["sts:AssumeRole"],
         principals: [{
@@ -58,7 +59,7 @@ const instance_assume_role_policy = aws.iam.getPolicyDocument({
             type: "Service",
         }],
     }],
-});
+}, { async: true }));
 const instance = new aws.iam.Role("instance", {
     assumeRolePolicy: instance_assume_role_policy.json,
     path: "/system/",
@@ -1385,8 +1386,7 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
-	
 </dl>
 

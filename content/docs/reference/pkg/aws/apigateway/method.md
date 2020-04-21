@@ -1,7 +1,8 @@
 
 ---
 title: "Method"
-block_external_search_index: true
+title_tag: "Resource Method | Module apigateway | Package AWS"
+meta_desc: "Explore the Method resource of the apigateway module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a HTTP Method for an API Gateway Resource."
 ---
 
 
@@ -46,9 +47,9 @@ import * as aws from "@pulumi/aws";
 const config = new pulumi.Config();
 const cognitoUserPoolName = config.require("cognitoUserPoolName");
 
-const thisUserPools = aws.cognito.getUserPools({
+const thisUserPools = pulumi.output(aws.cognito.getUserPools({
     name: cognitoUserPoolName,
-});
+}, { async: true }));
 const thisRestApi = new aws.apigateway.RestApi("this", {});
 const thisResource = new aws.apigateway.Resource("this", {
     parentId: thisRestApi.rootResourceId,
@@ -1264,8 +1265,7 @@ For example: `request_parameters = {"method.request.header.X-Some-Header" = true
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
-	
 </dl>
 

@@ -1,7 +1,8 @@
 
 ---
 title: "Domain"
-block_external_search_index: true
+title_tag: "Resource Domain | Module elasticsearch | Package AWS"
+meta_desc: "Explore the Domain resource of the elasticsearch module, including examples, input properties, output properties, lookup functions, and supporting types. Manages an AWS Elasticsearch Domain."
 ---
 
 
@@ -48,10 +49,10 @@ import * as aws from "@pulumi/aws";
 const config = new pulumi.Config();
 const domain = config.get("domain") || "tf-test";
 
-const currentRegion = aws.getRegion();
-const currentCallerIdentity = aws.getCallerIdentity();
+const currentRegion = pulumi.output(aws.getRegion({ async: true }));
+const currentCallerIdentity = pulumi.output(aws.getCallerIdentity({ async: true }));
 const example = new aws.elasticsearch.Domain("example", {
-    accessPolicies: `{
+    accessPolicies: pulumi.interpolate`{
   "Version": "2012-10-17",
   "Statement": [
     {
@@ -119,19 +120,19 @@ const config = new pulumi.Config();
 const vpc = config.require("vpc");
 const domain = config.get("domain") || "tf-test";
 
-const selectedVpc = aws.ec2.getVpc({
+const selectedVpc = pulumi.output(aws.ec2.getVpc({
     tags: {
         Name: vpc,
     },
-});
-const selectedSubnetIds = aws.ec2.getSubnetIds({
+}, { async: true }));
+const selectedSubnetIds = selectedVpc.apply(selectedVpc => aws.ec2.getSubnetIds({
     tags: {
         Tier: "private",
     },
     vpcId: selectedVpc.id!,
-});
-const currentRegion = aws.getRegion();
-const currentCallerIdentity = aws.getCallerIdentity();
+}, { async: true }));
+const currentRegion = pulumi.output(aws.getRegion({ async: true }));
+const currentCallerIdentity = pulumi.output(aws.getCallerIdentity({ async: true }));
 const esSecurityGroup = new aws.ec2.SecurityGroup("es", {
     description: "Managed by Pulumi",
     ingress: [{
@@ -146,7 +147,7 @@ const esServiceLinkedRole = new aws.iam.ServiceLinkedRole("es", {
     awsServiceName: "es.amazonaws.com",
 });
 const esDomain = new aws.elasticsearch.Domain("es", {
-    accessPolicies: `{
+    accessPolicies: pulumi.interpolate`{
 	"Version": "2012-10-17",
 	"Statement": [
 		{
@@ -174,11 +175,11 @@ const esDomain = new aws.elasticsearch.Domain("es", {
     vpcOptions: {
         securityGroupIds: [aws_security_group_elasticsearch.id],
         subnetIds: [
-            selectedSubnetIds.ids[0],
-            selectedSubnetIds.ids[1],
+            selectedSubnetIds.apply(selectedSubnetIds => selectedSubnetIds.ids[0]),
+            selectedSubnetIds.apply(selectedSubnetIds => selectedSubnetIds.ids[1]),
         ],
     },
-}, {dependsOn: [esServiceLinkedRole]});
+}, { dependsOn: [esServiceLinkedRole] });
 ```
 
 {{% /example %}}
@@ -3444,8 +3445,7 @@ snapshot of the indices in the domain.
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
-	
 </dl>
 

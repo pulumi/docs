@@ -1,7 +1,8 @@
 
 ---
 title: "Attachment"
-block_external_search_index: true
+title_tag: "Resource Attachment | Module autoscaling | Package AWS"
+meta_desc: "Explore the Attachment resource of the autoscaling module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an AutoScaling Attachment resource."
 ---
 
 
@@ -711,8 +712,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
-	
 </dl>
 

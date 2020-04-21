@@ -1,7 +1,8 @@
 
 ---
 title: "VirtualNode"
-block_external_search_index: true
+title_tag: "Resource VirtualNode | Module appmesh | Package AWS"
+meta_desc: "Explore the VirtualNode resource of the appmesh module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an AWS App Mesh virtual node resource."
 ---
 
 
@@ -2585,8 +2586,7 @@ Use the [`aws.servicediscovery.HttpNamespace`](https://www.terraform.io/docs/pro
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
-	
 </dl>
 

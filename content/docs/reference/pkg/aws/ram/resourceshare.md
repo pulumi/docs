@@ -1,7 +1,8 @@
 
 ---
 title: "ResourceShare"
-block_external_search_index: true
+title_tag: "Resource ResourceShare | Module ram | Package AWS"
+meta_desc: "Explore the ResourceShare resource of the ram module, including examples, input properties, output properties, lookup functions, and supporting types. Manages a Resource Access Manager (RAM) Resource Share. To associate principals with the share, see the [`aws.ram.PrincipalAssociation` resource](https://www.terraform.io/docs/providers/aws/r/ram_principal_association.html). To associate resources with the share, see the [`aws.ram.ResourceAssociation` resource](https://www.terraform.io/docs/providers/aws/r/ram_resource_association.html)."
 ---
 
 
@@ -766,8 +767,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
-	
 </dl>
 

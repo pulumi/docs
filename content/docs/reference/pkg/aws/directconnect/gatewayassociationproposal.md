@@ -1,7 +1,8 @@
 
 ---
 title: "GatewayAssociationProposal"
-block_external_search_index: true
+title_tag: "Resource GatewayAssociationProposal | Module directconnect | Package AWS"
+meta_desc: "Explore the GatewayAssociationProposal resource of the directconnect module, including examples, input properties, output properties, lookup functions, and supporting types. Manages a Direct Connect Gateway Association Proposal, typically for enabling cross-account associations. For single account associations, see the [`aws.directconnect.GatewayAssociation` resource](https://www.terraform.io/docs/providers/aws/r/dx_gateway_association.html)."
 ---
 
 
@@ -983,8 +984,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
-	
 </dl>
 

@@ -1,7 +1,8 @@
 
 ---
 title: "Cluster"
-block_external_search_index: true
+title_tag: "Resource Cluster | Module cloudhsmv2 | Package AWS"
+meta_desc: "Explore the Cluster resource of the cloudhsmv2 module, including examples, input properties, output properties, lookup functions, and supporting types. Creates an Amazon CloudHSM v2 cluster."
 ---
 
 
@@ -30,7 +31,7 @@ The following example below creates a CloudHSM cluster.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const available = aws.getAvailabilityZones();
+const available = pulumi.output(aws.getAvailabilityZones({ async: true }));
 const cloudhsmV2Vpc = new aws.ec2.Vpc("cloudhsm_v2_vpc", {
     cidrBlock: "10.0.0.0/16",
     tags: {
@@ -40,7 +41,7 @@ const cloudhsmV2Vpc = new aws.ec2.Vpc("cloudhsm_v2_vpc", {
 const cloudhsmV2Subnets: aws.ec2.Subnet[] = [];
 for (let i = 0; i < 2; i++) {
     cloudhsmV2Subnets.push(new aws.ec2.Subnet(`cloudhsm_v2_subnets-${i}`, {
-        availabilityZone: available.names[i],
+        availabilityZone: available.apply(available => available.names[i]),
         cidrBlock: var_subnets[i],
         mapPublicIpOnLaunch: false,
         tags: {
@@ -1406,8 +1407,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
-	
 </dl>
 

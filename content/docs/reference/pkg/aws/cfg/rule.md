@@ -1,7 +1,8 @@
 
 ---
 title: "Rule"
-block_external_search_index: true
+title_tag: "Resource Rule | Module cfg | Package AWS"
+meta_desc: "Explore the Rule resource of the cfg module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an AWS Config Rule."
 ---
 
 
@@ -49,7 +50,7 @@ const rule = new aws.cfg.Rule("r", {
         owner: "AWS",
         sourceIdentifier: "S3_BUCKET_VERSIONING_ENABLED",
     },
-}, {dependsOn: [foo]});
+}, { dependsOn: [foo] });
 const rolePolicy = new aws.iam.RolePolicy("p", {
     policy: `{
   "Version": "2012-10-17",
@@ -89,7 +90,7 @@ const exampleRule = new aws.cfg.Rule("example", {
         owner: "CUSTOM_LAMBDA",
         sourceIdentifier: exampleFunction.arn,
     },
-}, {dependsOn: [exampleRecorder, examplePermission]});
+}, { dependsOn: [exampleRecorder, examplePermission] });
 ```
 
 {{% /example %}}
@@ -1726,8 +1727,7 @@ is triggered periodically. If specified, requires `message_type` to be `Schedule
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
-	
 </dl>
 

@@ -1,7 +1,8 @@
 
 ---
 title: "PrincipalAssociation"
-block_external_search_index: true
+title_tag: "Resource PrincipalAssociation | Module ram | Package AWS"
+meta_desc: "Explore the PrincipalAssociation resource of the ram module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Resource Access Manager (RAM) principal association. Depending if [RAM Sharing with AWS Organizations is enabled](https://docs.aws.amazon.com/ram/latest/userguide/getting-started-sharing.html#getting-started-sharing-orgs), the RAM behavior with different principal types changes."
 ---
 
 
@@ -650,8 +651,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
-	
 </dl>
 

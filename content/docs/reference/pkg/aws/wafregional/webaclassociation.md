@@ -1,7 +1,8 @@
 
 ---
 title: "WebAclAssociation"
-block_external_search_index: true
+title_tag: "Resource WebAclAssociation | Module wafregional | Package AWS"
+meta_desc: "Explore the WebAclAssociation resource of the wafregional module, including examples, input properties, output properties, lookup functions, and supporting types. Manages an association with WAF Regional Web ACL."
 ---
 
 
@@ -49,14 +50,14 @@ const fooWebAcl = new aws.wafregional.WebAcl("foo", {
 const fooVpc = new aws.ec2.Vpc("foo", {
     cidrBlock: "10.1.0.0/16",
 });
-const available = aws.getAvailabilityZones();
+const available = pulumi.output(aws.getAvailabilityZones({ async: true }));
 const fooSubnet = new aws.ec2.Subnet("foo", {
-    availabilityZone: available.names[0],
+    availabilityZone: available.apply(available => available.names[0]),
     cidrBlock: "10.1.1.0/24",
     vpcId: fooVpc.id,
 });
 const bar = new aws.ec2.Subnet("bar", {
-    availabilityZone: available.names[1],
+    availabilityZone: available.apply(available => available.names[1]),
     cidrBlock: "10.1.2.0/24",
     vpcId: fooVpc.id,
 });
@@ -140,7 +141,7 @@ const testIntegrationResponse = new aws.apigateway.IntegrationResponse("test", {
 });
 const testDeployment = new aws.apigateway.Deployment("test", {
     restApi: testRestApi.id,
-}, {dependsOn: [testIntegrationResponse]});
+}, { dependsOn: [testIntegrationResponse] });
 const testStage = new aws.apigateway.Stage("test", {
     deployment: testDeployment.id,
     restApi: testRestApi.id,
@@ -744,8 +745,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
-	
 </dl>
 

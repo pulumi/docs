@@ -1,7 +1,8 @@
 
 ---
 title: "Trail"
-block_external_search_index: true
+title_tag: "Resource Trail | Module cloudtrail | Package AWS"
+meta_desc: "Explore the Trail resource of the cloudtrail module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a CloudTrail resource."
 ---
 
 
@@ -28,10 +29,10 @@ For capturing events from services like IAM, `include_global_service_events` mus
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const current = aws.getCallerIdentity();
+const current = pulumi.output(aws.getCallerIdentity({ async: true }));
 const foo = new aws.s3.Bucket("foo", {
     forceDestroy: true,
-    policy: `{
+    policy: pulumi.interpolate`{
     "Version": "2012-10-17",
     "Statement": [
         {
@@ -116,16 +117,16 @@ const example = new aws.cloudtrail.Trail("example", {
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const important_bucket = aws.s3.getBucket({
+const important_bucket = pulumi.output(aws.s3.getBucket({
     bucket: "important-bucket",
-});
+}, { async: true }));
 const example = new aws.cloudtrail.Trail("example", {
     eventSelectors: [{
         dataResources: [{
             type: "AWS::S3::Object",
             // Make sure to append a trailing '/' to your ARN if you want
             // to monitor all objects in a bucket.
-            values: [`${important_bucket.arn}/`],
+            values: [pulumi.interpolate`${important_bucket.arn}/`],
         }],
         includeManagementEvents: true,
         readWriteType: "All",
@@ -2072,8 +2073,7 @@ defined for notification of log file delivery.
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
-	
 </dl>
 

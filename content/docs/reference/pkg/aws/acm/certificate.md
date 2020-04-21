@@ -1,7 +1,8 @@
 
 ---
 title: "Certificate"
-block_external_search_index: true
+title_tag: "Resource Certificate | Module acm | Package AWS"
+meta_desc: "Explore the Certificate resource of the acm module, including examples, input properties, output properties, lookup functions, and supporting types. The ACM certificate resource allows requesting and management of certificates"
 ---
 
 
@@ -1674,8 +1675,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
-	
 </dl>
 

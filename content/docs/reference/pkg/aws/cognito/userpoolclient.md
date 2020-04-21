@@ -1,7 +1,8 @@
 
 ---
 title: "UserPoolClient"
-block_external_search_index: true
+title_tag: "Resource UserPoolClient | Module cognito | Package AWS"
+meta_desc: "Explore the UserPoolClient resource of the cognito module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Cognito User Pool Client resource."
 ---
 
 
@@ -51,7 +52,7 @@ const client = new aws.cognito.UserPoolClient("client", {
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const current = aws.getCallerIdentity();
+const current = pulumi.output(aws.getCallerIdentity({ async: true }));
 const testUserPool = new aws.cognito.UserPool("test", {});
 const testApp = new aws.pinpoint.App("test", {});
 const testRole = new aws.iam.Role("test", {
@@ -1966,8 +1967,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
-	
 </dl>
 

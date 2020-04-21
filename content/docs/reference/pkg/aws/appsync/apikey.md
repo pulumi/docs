@@ -1,7 +1,8 @@
 
 ---
 title: "ApiKey"
-block_external_search_index: true
+title_tag: "Resource ApiKey | Module appsync | Package AWS"
+meta_desc: "Explore the ApiKey resource of the appsync module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an AppSync API Key."
 ---
 
 
@@ -767,8 +768,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
-	
 </dl>
 

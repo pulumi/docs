@@ -1,7 +1,8 @@
 
 ---
 title: "HostedPublicVirtualInterfaceAccepter"
-block_external_search_index: true
+title_tag: "Resource HostedPublicVirtualInterfaceAccepter | Module directconnect | Package AWS"
+meta_desc: "Explore the HostedPublicVirtualInterfaceAccepter resource of the directconnect module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a resource to manage the accepter&#39;s side of a Direct Connect hosted public virtual interface."
 ---
 
 
@@ -21,7 +22,7 @@ import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 const accepter = new aws.Provider("accepter", {});
-const accepterCallerIdentity = aws.getCallerIdentity({provider: accepter});
+const accepterCallerIdentity = pulumi.output(aws.getCallerIdentity({ provider: accepter, async: true }));
 // Creator's side of the VIF
 const creator = new aws.directconnect.HostedPublicVirtualInterface("creator", {
     addressFamily: "ipv4",
@@ -42,7 +43,7 @@ const accepterHostedPublicVirtualInterfaceAccepter = new aws.directconnect.Hoste
         Side: "Accepter",
     },
     virtualInterfaceId: creator.id,
-}, {provider: accepter});
+}, { provider: accepter });
 ```
 
 {{% /example %}}
@@ -712,8 +713,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
-	
 </dl>
 

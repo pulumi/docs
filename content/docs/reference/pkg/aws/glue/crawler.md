@@ -1,7 +1,8 @@
 
 ---
 title: "Crawler"
-block_external_search_index: true
+title_tag: "Resource Crawler | Module glue | Package AWS"
+meta_desc: "Explore the Crawler resource of the glue module, including examples, input properties, output properties, lookup functions, and supporting types. Manages a Glue Crawler. More information can be found in the [AWS Glue Developer Guide](https://docs.aws.amazon.com/glue/latest/dg/add-crawler.html)"
 ---
 
 
@@ -2270,8 +2271,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
-	
 </dl>
 

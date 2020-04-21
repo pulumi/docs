@@ -1,7 +1,8 @@
 
 ---
 title: "ReplicationGroup"
-block_external_search_index: true
+title_tag: "Resource ReplicationGroup | Module elasticache | Package AWS"
+meta_desc: "Explore the ReplicationGroup resource of the elasticache module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an ElastiCache Replication Group resource."
 ---
 
 
@@ -67,7 +68,7 @@ const example = new aws.elasticache.ReplicationGroup("example", {
     parameterGroupName: "default.redis3.2",
     port: 6379,
     replicationGroupDescription: "test description",
-}, {ignoreChanges: ["numberCacheClusters"]});
+}, { ignoreChanges: ["numberCacheClusters"] });
 const replica = new aws.elasticache.Cluster("replica", {
     replicationGroupId: example.id,
 });
@@ -2922,8 +2923,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
-	
 </dl>
 

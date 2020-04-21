@@ -1,7 +1,8 @@
 
 ---
 title: "Instance"
-block_external_search_index: true
+title_tag: "Resource Instance | Module lightsail | Package AWS"
+meta_desc: "Explore the Instance resource of the lightsail module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Lightsail Instance. Amazon Lightsail is a service to provide easy virtual private servers"
 ---
 
 
@@ -1728,8 +1729,7 @@ Lightsail console (cannot use `aws.ec2.KeyPair` at this time)
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
-	
 </dl>
 

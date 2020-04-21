@@ -1,7 +1,8 @@
 
 ---
 title: "FunctionEventInvokeConfig"
-block_external_search_index: true
+title_tag: "Resource FunctionEventInvokeConfig | Module lambda | Package AWS"
+meta_desc: "Explore the FunctionEventInvokeConfig resource of the lambda module, including examples, input properties, output properties, lookup functions, and supporting types. Manages an asynchronous invocation configuration for a Lambda Function or Alias. More information about asynchronous invocations and the configurable values can be found in the [Lambda Developer Guide](https://docs.aws.amazon.com/lambda/latest/dg/invocation-async.html)."
 ---
 
 
@@ -1101,8 +1102,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
-	
 </dl>
 

@@ -1,7 +1,8 @@
 
 ---
 title: "Pipeline"
-block_external_search_index: true
+title_tag: "Resource Pipeline | Module codepipeline | Package AWS"
+meta_desc: "Explore the Pipeline resource of the codepipeline module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a CodePipeline."
 ---
 
 
@@ -69,9 +70,9 @@ const codepipelinePolicy = new aws.iam.RolePolicy("codepipeline_policy", {
 `,
     role: codepipelineRole.id,
 });
-const s3kmskey = aws.kms.getAlias({
+const s3kmskey = pulumi.output(aws.kms.getAlias({
     name: "alias/myKmsKey",
-});
+}, { async: true }));
 const codepipeline = new aws.codepipeline.Pipeline("codepipeline", {
     artifactStores: {
         encryptionKey: {
@@ -1881,8 +1882,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
-	
 </dl>
 

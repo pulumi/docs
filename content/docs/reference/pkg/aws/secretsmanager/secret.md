@@ -1,7 +1,8 @@
 
 ---
 title: "Secret"
-block_external_search_index: true
+title_tag: "Resource Secret | Module secretsmanager | Package AWS"
+meta_desc: "Explore the Secret resource of the secretsmanager module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a resource to manage AWS Secrets Manager secret metadata. To manage a secret value, see the [`aws.secretsmanager.SecretVersion` resource](https://www.terraform.io/docs/providers/aws/r/secretsmanager_secret_version.html)."
 ---
 
 
@@ -1374,8 +1375,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
-	
 </dl>
 

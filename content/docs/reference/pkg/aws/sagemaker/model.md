@@ -1,7 +1,8 @@
 
 ---
 title: "Model"
-block_external_search_index: true
+title_tag: "Resource Model | Module sagemaker | Package AWS"
+meta_desc: "Explore the Model resource of the sagemaker module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a SageMaker model resource."
 ---
 
 
@@ -27,7 +28,7 @@ const model = new aws.sagemaker.Model("m", {
         image: "174872318107.dkr.ecr.us-west-2.amazonaws.com/kmeans:1",
     },
 });
-const assumeRole = aws.iam.getPolicyDocument({
+const assumeRole = pulumi.output(aws.iam.getPolicyDocument({
     statements: [{
         actions: ["sts:AssumeRole"],
         principals: [{
@@ -35,7 +36,7 @@ const assumeRole = aws.iam.getPolicyDocument({
             type: "Service",
         }],
     }],
-});
+}, { async: true }));
 const role = new aws.iam.Role("r", {
     assumeRolePolicy: assumeRole.json,
 });
@@ -1563,8 +1564,7 @@ A list of key value pairs.
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
-	
 </dl>
 
