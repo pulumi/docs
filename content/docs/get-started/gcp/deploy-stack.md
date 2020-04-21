@@ -23,16 +23,12 @@ This command instructs Pulumi to determine the resources needed to create the st
 ```
 $ pulumi up
 Previewing update (dev):
-     Type                   Name               Plan       Info
-     pulumi:pulumi:Stack    quickstart-dev
- ~   └─ gcp:storage:Bucket  my-bucket          update     [diff: ~labels]
-
-Outputs:
-  ~ bucketName: "gs://my-bucket-d8d30a1" => output<string>
+     Type                   Name       Plan
+ +   pulumi:pulumi:Stack    quickstart-dev  create
+ +   └─ gcp:storage:Bucket  my-bucket  create
 
 Resources:
-    ~ 1 to update
-    1 unchanged
+    + 2 to create
 
 Do you want to perform this update?  [Use arrows to move, enter to select, type to filter]
   yes
