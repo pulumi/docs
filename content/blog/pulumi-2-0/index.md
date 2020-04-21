@@ -1,6 +1,6 @@
 ---
 date: "2020-04-21"
-title: "Announcing Pulumi 2.0 -- Now with Superpowers"
+title: "Announcing Pulumi 2.0, Now with Superpowers"
 authors: ["joe-duffy"]
 tags: ["Pulumi-News"]
 meta_desc: "Today we are announcing Pulumi 2.0, a modern infrastructure as code platform with advanced capabilities including new languages, testing, and policy as code."
