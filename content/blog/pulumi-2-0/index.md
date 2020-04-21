@@ -22,7 +22,7 @@ Today we are excited to announce Pulumi 2.0, the next major stage in our journey
 
 ## What is Pulumi?
 
-Pulumi's approach to modern infrastructure as code is unique:
+We call Pulumi's unique approach _Modern Infrastructure as Code_:
 
 * **Real Languages**. Use the best languages and tools to declare infrastructure and gain best-in-class productivity and engineering capabilities. Connect to existing communities and ecosystems and leverage world-class language and tooling innovation.
 
