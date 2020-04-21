@@ -31,6 +31,36 @@ $ pulumi new javascript
 
 This will create a `Pulumi.yaml` [project file]({{< relref "../concepts/project" >}}), a `package.json` file for dependencies, and an `index.js` file, containing your program. The name of the directory is used as the project name in `Pulumi.yaml`.
 
+## Optional `async` Entrypoint
+
+Optionally, you may choose to export a top level `async` function so that you can easily write `async/await` code throughout the rest of your program:
+
+{{< chooser language "javascript,typescript" >}}
+
+{{% choosable language "javascript" %}}
+
+```javascript
+module.exports = async () => {
+    // user code.
+}
+```
+
+{{% /choosable %}}
+
+{{% choosable language "typescript" %}}
+
+```typescript
+export = async () => {
+     // user code
+}
+```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
+
+Pulumi will automatically call this function and await the result.
+
 ## TypeScript
 
 You can elect to write Pulumi programs in TypeScript to get additional verification and tooling benefits. As of version 0.15.0, Pulumi supports TypeScript natively so you don't need to explicitly run `tsc` on your program before running `pulumi`

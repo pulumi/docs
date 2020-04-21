@@ -48,6 +48,8 @@ const version: Output<string> = pulumi.output(gcp.container.getEngineVersions())
 
 {{% choosable language python %}}
 
+Optionally, you can use an `async` function [entrypoint]({{< relref "/docs/intro/languages/javascript#optional-async-entrypoint" >}}) to more easily write `async/await` code throughout the rest of your program.
+
 ### Update Dependencies
 
 Modify your `requirements.txt` file to update the Pulumi SDK and related providers as below:
