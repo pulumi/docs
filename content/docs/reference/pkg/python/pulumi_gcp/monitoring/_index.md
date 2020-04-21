@@ -394,6 +394,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="class">
+<dt id="pulumi_gcp.monitoring.AwaitableGetAppEngineServiceResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.monitoring.</code><code class="sig-name descname">AwaitableGetAppEngineServiceResult</code><span class="sig-paren">(</span><em class="sig-param">display_name=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">module_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">service_id=None</em>, <em class="sig-param">telemetries=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.monitoring.AwaitableGetAppEngineServiceResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
 <dt id="pulumi_gcp.monitoring.AwaitableGetNotificationChannelResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.monitoring.</code><code class="sig-name descname">AwaitableGetNotificationChannelResult</code><span class="sig-paren">(</span><em class="sig-param">description=None</em>, <em class="sig-param">display_name=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">sensitive_labels=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">user_labels=None</em>, <em class="sig-param">verification_status=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.monitoring.AwaitableGetNotificationChannelResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
@@ -407,6 +412,120 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_gcp.monitoring.AwaitableGetUptimeCheckIPsResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.monitoring.</code><code class="sig-name descname">AwaitableGetUptimeCheckIPsResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">uptime_check_ips=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.monitoring.AwaitableGetUptimeCheckIPsResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
+
+<dl class="class">
+<dt id="pulumi_gcp.monitoring.CustomService">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.monitoring.</code><code class="sig-name descname">CustomService</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">display_name=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">service_id=None</em>, <em class="sig-param">telemetry=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.monitoring.CustomService" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a CustomService resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] display_name: Name used for UI elements listing this Service.
+:param pulumi.Input[str] service_id: An optional service ID to use. If not given, the server will generate a service ID.
+:param pulumi.Input[dict] telemetry: Configuration for how to query telemetry on a Service.</p>
+<p>The <strong>telemetry</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">resourceName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<dl class="attribute">
+<dt id="pulumi_gcp.monitoring.CustomService.display_name">
+<code class="sig-name descname">display_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.monitoring.CustomService.display_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name used for UI elements listing this Service.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.monitoring.CustomService.name">
+<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.monitoring.CustomService.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The full resource name for this service. The syntax is: projects/[PROJECT_ID]/services/[SERVICE_ID].</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.monitoring.CustomService.service_id">
+<code class="sig-name descname">service_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.monitoring.CustomService.service_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>An optional service ID to use. If not given, the server will generate a service ID.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.monitoring.CustomService.telemetry">
+<code class="sig-name descname">telemetry</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.monitoring.CustomService.telemetry" title="Permalink to this definition">¶</a></dt>
+<dd><p>Configuration for how to query telemetry on a Service.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">resourceName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_gcp.monitoring.CustomService.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">display_name=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">service_id=None</em>, <em class="sig-param">telemetry=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.monitoring.CustomService.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing CustomService resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>display_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name used for UI elements listing this Service.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The full resource name for this service. The syntax is: projects/[PROJECT_ID]/services/[SERVICE_ID].</p></li>
+<li><p><strong>service_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An optional service ID to use. If not given, the server will generate a service ID.</p></li>
+<li><p><strong>telemetry</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configuration for how to query telemetry on a Service.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>telemetry</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">resourceName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_gcp.monitoring.CustomService.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.monitoring.CustomService.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_gcp.monitoring.CustomService.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.monitoring.CustomService.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_gcp.monitoring.GetAppEngineServiceResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.monitoring.</code><code class="sig-name descname">GetAppEngineServiceResult</code><span class="sig-paren">(</span><em class="sig-param">display_name=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">module_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">service_id=None</em>, <em class="sig-param">telemetries=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.monitoring.GetAppEngineServiceResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getAppEngineService.</p>
+<dl class="attribute">
+<dt id="pulumi_gcp.monitoring.GetAppEngineServiceResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.monitoring.GetAppEngineServiceResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+</dd></dl>
 
 <dl class="class">
 <dt id="pulumi_gcp.monitoring.GetNotificationChannelResult">
@@ -868,6 +987,202 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="class">
+<dt id="pulumi_gcp.monitoring.Slo">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.monitoring.</code><code class="sig-name descname">Slo</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">basic_sli=None</em>, <em class="sig-param">calendar_period=None</em>, <em class="sig-param">display_name=None</em>, <em class="sig-param">goal=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">rolling_period_days=None</em>, <em class="sig-param">service=None</em>, <em class="sig-param">slo_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.monitoring.Slo" title="Permalink to this definition">¶</a></dt>
+<dd><p>A Service-Level Objective (SLO) describes the level of desired good
+service. It consists of a service-level indicator (SLI), a performance
+goal, and a period over which the objective is to be evaluated against
+that goal. The SLO can use SLIs defined in a number of different manners.
+Typical SLOs might include “99% of requests in each rolling week have
+latency below 200 milliseconds” or “99.5% of requests in each calendar
+month return successfully.”</p>
+<p>To get more information about Slo, see:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://cloud.google.com/monitoring/api/ref_v3/rest/v3/services.serviceLevelObjectives">API documentation</a></p></li>
+<li><p>How-to Guides</p>
+<ul>
+<li><p><a class="reference external" href="https://cloud.google.com/monitoring/service-monitoring">Service Monitoring</a></p></li>
+<li><p><a class="reference external" href="https://cloud.google.com/monitoring/api/v3/">Monitoring API Documentation</a></p></li>
+</ul>
+</li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>basic_sli</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Basic Service-Level Indicator (SLI) on a well-known service type. Performance will be computed on the basis of
+pre-defined metrics. SLIs are used to measure and calculate the quality of the Service’s performance with respect to a
+single aspect of service quality.</p></li>
+<li><p><strong>calendar_period</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A calendar period, semantically “since the start of the current <span class="raw-html-m2r"><calendarPeriod></span>”.</p></li>
+<li><p><strong>display_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name used for UI elements listing this SLO.</p></li>
+<li><p><strong>goal</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The fraction of service that must be good in order for this objective to be met. 0 &lt; goal &lt;= 0.999</p></li>
+<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</p></li>
+<li><p><strong>rolling_period_days</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – A rolling time period, semantically “in the past X days”. Must be between 1 to 30 days, inclusive.</p></li>
+<li><p><strong>service</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ID of the service to which this SLO belongs.</p></li>
+<li><p><strong>slo_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The id to use for this ServiceLevelObjective. If omitted, an id will be generated instead.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>basic_sli</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">latency</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">threshold</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">locations</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">methods</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">versions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+</ul>
+<dl class="attribute">
+<dt id="pulumi_gcp.monitoring.Slo.basic_sli">
+<code class="sig-name descname">basic_sli</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.monitoring.Slo.basic_sli" title="Permalink to this definition">¶</a></dt>
+<dd><p>Basic Service-Level Indicator (SLI) on a well-known service type. Performance will be computed on the basis of
+pre-defined metrics. SLIs are used to measure and calculate the quality of the Service’s performance with respect to a
+single aspect of service quality.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">latency</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">threshold</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">locations</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">methods</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">versions</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+</ul>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.monitoring.Slo.calendar_period">
+<code class="sig-name descname">calendar_period</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.monitoring.Slo.calendar_period" title="Permalink to this definition">¶</a></dt>
+<dd><p>A calendar period, semantically “since the start of the current <span class="raw-html-m2r"><calendarPeriod></span>”.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.monitoring.Slo.display_name">
+<code class="sig-name descname">display_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.monitoring.Slo.display_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name used for UI elements listing this SLO.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.monitoring.Slo.goal">
+<code class="sig-name descname">goal</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.monitoring.Slo.goal" title="Permalink to this definition">¶</a></dt>
+<dd><p>The fraction of service that must be good in order for this objective to be met. 0 &lt; goal &lt;= 0.999</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.monitoring.Slo.name">
+<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.monitoring.Slo.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The full resource name for this service. The syntax is:
+projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]/serviceLevelObjectives/[SLO_NAME]</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.monitoring.Slo.project">
+<code class="sig-name descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.monitoring.Slo.project" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.monitoring.Slo.rolling_period_days">
+<code class="sig-name descname">rolling_period_days</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.monitoring.Slo.rolling_period_days" title="Permalink to this definition">¶</a></dt>
+<dd><p>A rolling time period, semantically “in the past X days”. Must be between 1 to 30 days, inclusive.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.monitoring.Slo.service">
+<code class="sig-name descname">service</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.monitoring.Slo.service" title="Permalink to this definition">¶</a></dt>
+<dd><p>ID of the service to which this SLO belongs.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.monitoring.Slo.slo_id">
+<code class="sig-name descname">slo_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.monitoring.Slo.slo_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The id to use for this ServiceLevelObjective. If omitted, an id will be generated instead.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_gcp.monitoring.Slo.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">basic_sli=None</em>, <em class="sig-param">calendar_period=None</em>, <em class="sig-param">display_name=None</em>, <em class="sig-param">goal=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">rolling_period_days=None</em>, <em class="sig-param">service=None</em>, <em class="sig-param">slo_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.monitoring.Slo.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Slo resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>basic_sli</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Basic Service-Level Indicator (SLI) on a well-known service type. Performance will be computed on the basis of
+pre-defined metrics. SLIs are used to measure and calculate the quality of the Service’s performance with respect to a
+single aspect of service quality.</p></li>
+<li><p><strong>calendar_period</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A calendar period, semantically “since the start of the current <span class="raw-html-m2r"><calendarPeriod></span>”.</p></li>
+<li><p><strong>display_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name used for UI elements listing this SLO.</p></li>
+<li><p><strong>goal</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The fraction of service that must be good in order for this objective to be met. 0 &lt; goal &lt;= 0.999</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The full resource name for this service. The syntax is:
+projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]/serviceLevelObjectives/[SLO_NAME]</p></li>
+<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</p></li>
+<li><p><strong>rolling_period_days</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – A rolling time period, semantically “in the past X days”. Must be between 1 to 30 days, inclusive.</p></li>
+<li><p><strong>service</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ID of the service to which this SLO belongs.</p></li>
+<li><p><strong>slo_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The id to use for this ServiceLevelObjective. If omitted, an id will be generated instead.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>basic_sli</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">latency</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">threshold</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">locations</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">methods</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">versions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+</ul>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_gcp.monitoring.Slo.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.monitoring.Slo.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_gcp.monitoring.Slo.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.monitoring.Slo.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="pulumi_gcp.monitoring.UptimeCheckConfig">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.monitoring.</code><code class="sig-name descname">UptimeCheckConfig</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">content_matchers=None</em>, <em class="sig-param">display_name=None</em>, <em class="sig-param">http_check=None</em>, <em class="sig-param">monitored_resource=None</em>, <em class="sig-param">period=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">resource_group=None</em>, <em class="sig-param">selected_regions=None</em>, <em class="sig-param">tcp_check=None</em>, <em class="sig-param">timeout=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.monitoring.UptimeCheckConfig" title="Permalink to this definition">¶</a></dt>
 <dd><p>This message configures which resources and services to monitor for availability.</p>
@@ -1160,6 +1475,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 </dd></dl>
 
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_gcp.monitoring.get_app_engine_service">
+<code class="sig-prename descclassname">pulumi_gcp.monitoring.</code><code class="sig-name descname">get_app_engine_service</code><span class="sig-paren">(</span><em class="sig-param">module_id=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.monitoring.get_app_engine_service" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use this data source to access information about an existing resource.</p>
 </dd></dl>
 
 <dl class="function">

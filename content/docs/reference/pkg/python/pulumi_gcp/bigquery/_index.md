@@ -359,6 +359,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_gcp.bigquery.Dataset">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.bigquery.</code><code class="sig-name descname">Dataset</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">accesses=None</em>, <em class="sig-param">dataset_id=None</em>, <em class="sig-param">default_encryption_configuration=None</em>, <em class="sig-param">default_partition_expiration_ms=None</em>, <em class="sig-param">default_table_expiration_ms=None</em>, <em class="sig-param">delete_contents_on_destroy=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">friendly_name=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigquery.Dataset" title="Permalink to this definition">¶</a></dt>
 <dd><p>Datasets allow you to organize and control access to your tables.</p>
+<p>To get more information about Dataset, see:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://cloud.google.com/bigquery/docs/reference/rest/v2/datasets">API documentation</a></p></li>
+<li><p>How-to Guides</p>
+<ul>
+<li><p><a class="reference external" href="https://cloud.google.com/bigquery/docs/datasets-intro">Datasets Intro</a></p></li>
+</ul>
+</li>
+</ul>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -366,7 +375,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>accesses</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – An array of objects that define dataset access for one or more entities.</p></li>
 <li><p><strong>dataset*id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>A unique ID for this dataset, without the project name. The ID must contain only letters (a-z, A-Z), numbers (0-9), or
-underscores (<a href="#id3"><span class="problematic" id="id4">*</span></a>). The maximum length is 1,024 characters.</p>
+underscores (<a href="#id4"><span class="problematic" id="id5">*</span></a>). The maximum length is 1,024 characters.</p>
 </p></li>
 <li><p><strong>default_encryption_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The default encryption key for all tables in the dataset. Once this property is set, all newly-created partitioned
 tables in the dataset will have encryption key set to this value, unless table creation request (or query) overrides the
@@ -406,10 +415,10 @@ If it is not provided, the provider project is used.</p></li>
 <p>The <strong>accesses</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">domain</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">groupByEmail</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">group_by_email</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">role</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">specialGroup</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">userByEmail</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">special_group</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">user_by_email</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">view</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">dataset_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
@@ -428,10 +437,10 @@ If it is not provided, the provider project is used.</p></li>
 <dd><p>An array of objects that define dataset access for one or more entities.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">domain</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">groupByEmail</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">group_by_email</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">role</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">specialGroup</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">userByEmail</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">special_group</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">user_by_email</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">view</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">dataset_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
@@ -567,7 +576,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>accesses</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – An array of objects that define dataset access for one or more entities.</p></li>
 <li><p><strong>creation_time</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The time when this dataset was created, in milliseconds since the epoch.</p></li>
 <li><p><strong>dataset*id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>A unique ID for this dataset, without the project name. The ID must contain only letters (a-z, A-Z), numbers (0-9), or
-underscores (<a href="#id8"><span class="problematic" id="id9">*</span></a>). The maximum length is 1,024 characters.</p>
+underscores (<a href="#id9"><span class="problematic" id="id10">*</span></a>). The maximum length is 1,024 characters.</p>
 </p></li>
 <li><p><strong>default_encryption_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The default encryption key for all tables in the dataset. Once this property is set, all newly-created partitioned
 tables in the dataset will have encryption key set to this value, unless table creation request (or query) overrides the
@@ -611,10 +620,10 @@ If it is not provided, the provider project is used.</p></li>
 <p>The <strong>accesses</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">domain</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">groupByEmail</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">group_by_email</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">role</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">specialGroup</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">userByEmail</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">special_group</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">user_by_email</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">view</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">dataset_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
@@ -650,6 +659,211 @@ into a format of their choosing before writing those properties to the resource 
 <dl class="method">
 <dt id="pulumi_gcp.bigquery.Dataset.translate_input_property">
 <code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigquery.Dataset.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_gcp.bigquery.DatasetAccess">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.bigquery.</code><code class="sig-name descname">DatasetAccess</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">dataset_id=None</em>, <em class="sig-param">domain=None</em>, <em class="sig-param">group_by_email=None</em>, <em class="sig-param">iam_member=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">special_group=None</em>, <em class="sig-param">user_by_email=None</em>, <em class="sig-param">view=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigquery.DatasetAccess" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gives dataset access for a single entity. This resource is intended to be used in cases where
+it is not possible to compile a full list of access blocks to include in a
+<code class="docutils literal notranslate"><span class="pre">bigquery.Dataset</span></code> resource, to enable them to be added separately.</p>
+<blockquote>
+<div><p><strong>Note:</strong> If this resource is used alongside a <code class="docutils literal notranslate"><span class="pre">bigquery.Dataset</span></code> resource, the
+dataset resource must either have no defined <code class="docutils literal notranslate"><span class="pre">access</span></code> blocks or a <code class="docutils literal notranslate"><span class="pre">lifecycle</span></code> block with
+<code class="docutils literal notranslate"><span class="pre">ignore_changes</span> <span class="pre">=</span> <span class="pre">[access]</span></code> so they don’t fight over which accesses should be on the dataset.</p>
+</div></blockquote>
+<p>To get more information about DatasetAccess, see:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://cloud.google.com/bigquery/docs/reference/rest/v2/datasets">API documentation</a></p></li>
+<li><p>How-to Guides</p>
+<ul>
+<li><p><a class="reference external" href="https://cloud.google.com/bigquery/docs/dataset-access-controls">Controlling access to datasets</a></p></li>
+</ul>
+</li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>dataset*id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>A unique ID for this dataset, without the project name. The ID must contain only letters (a-z, A-Z), numbers (0-9), or
+underscores (<a href="#id15"><span class="problematic" id="id16">*</span></a>). The maximum length is 1,024 characters.</p>
+</p></li>
+<li><p><strong>domain</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A domain to grant access to. Any users signed in with the domain specified will be granted the specified access</p></li>
+<li><p><strong>group_by_email</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An email address of a Google Group to grant access to.</p></li>
+<li><p><strong>iam_member</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Some other type of member that appears in the IAM Policy but isn’t a user, group, domain, or special group. For example:
+‘allUsers’</p></li>
+<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</p></li>
+<li><p><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Describes the rights granted to the user specified by the other member of the access object. Primitive, Predefined and
+custom roles are supported. Predefined roles that have equivalent primitive roles are swapped by the API to their
+Primitive counterparts, and will show a diff post-create. See <a class="reference external" href="https://cloud.google.com/bigquery/docs/access-control">official
+docs</a>.</p>
+</p></li>
+<li><p><strong>special_group</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A special group to grant access to. Possible values include: * ‘projectOwners’: Owners of the enclosing project. *
+‘projectReaders’: Readers of the enclosing project. * ‘projectWriters’: Writers of the enclosing project. *
+‘allAuthenticatedUsers’: All authenticated BigQuery users.</p></li>
+<li><p><strong>user_by_email</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An email address of a user to grant access to. For example: <a class="reference external" href="mailto:fred&#37;&#52;&#48;example&#46;com">fred<span>&#64;</span>example<span>&#46;</span>com</a></p></li>
+<li><p><strong>view</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A view from a different dataset to grant access to. Queries executed against that view will have read access to tables
+in this dataset. The role field is not required when this field is set. If that view is updated by any user, access to
+the view needs to be granted again via an update operation.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>view</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">dataset_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">project_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">table_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<dl class="attribute">
+<dt id="pulumi_gcp.bigquery.DatasetAccess.dataset_id">
+<code class="sig-name descname">dataset_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.DatasetAccess.dataset_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>A unique ID for this dataset, without the project name. The ID must contain only letters (a-z, A-Z), numbers (0-9), or
+underscores (_). The maximum length is 1,024 characters.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.bigquery.DatasetAccess.domain">
+<code class="sig-name descname">domain</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.DatasetAccess.domain" title="Permalink to this definition">¶</a></dt>
+<dd><p>A domain to grant access to. Any users signed in with the domain specified will be granted the specified access</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.bigquery.DatasetAccess.group_by_email">
+<code class="sig-name descname">group_by_email</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.DatasetAccess.group_by_email" title="Permalink to this definition">¶</a></dt>
+<dd><p>An email address of a Google Group to grant access to.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.bigquery.DatasetAccess.iam_member">
+<code class="sig-name descname">iam_member</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.DatasetAccess.iam_member" title="Permalink to this definition">¶</a></dt>
+<dd><p>Some other type of member that appears in the IAM Policy but isn’t a user, group, domain, or special group. For example:
+‘allUsers’</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.bigquery.DatasetAccess.project">
+<code class="sig-name descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.DatasetAccess.project" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.bigquery.DatasetAccess.role">
+<code class="sig-name descname">role</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.DatasetAccess.role" title="Permalink to this definition">¶</a></dt>
+<dd><p>Describes the rights granted to the user specified by the other member of the access object. Primitive, Predefined and
+custom roles are supported. Predefined roles that have equivalent primitive roles are swapped by the API to their
+Primitive counterparts, and will show a diff post-create. See <a class="reference external" href="https://cloud.google.com/bigquery/docs/access-control">official
+docs</a>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.bigquery.DatasetAccess.special_group">
+<code class="sig-name descname">special_group</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.DatasetAccess.special_group" title="Permalink to this definition">¶</a></dt>
+<dd><p>A special group to grant access to. Possible values include: * ‘projectOwners’: Owners of the enclosing project. *
+‘projectReaders’: Readers of the enclosing project. * ‘projectWriters’: Writers of the enclosing project. *
+‘allAuthenticatedUsers’: All authenticated BigQuery users.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.bigquery.DatasetAccess.user_by_email">
+<code class="sig-name descname">user_by_email</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.DatasetAccess.user_by_email" title="Permalink to this definition">¶</a></dt>
+<dd><p>An email address of a user to grant access to. For example: <a class="reference external" href="mailto:fred&#37;&#52;&#48;example&#46;com">fred<span>&#64;</span>example<span>&#46;</span>com</a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.bigquery.DatasetAccess.view">
+<code class="sig-name descname">view</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.DatasetAccess.view" title="Permalink to this definition">¶</a></dt>
+<dd><p>A view from a different dataset to grant access to. Queries executed against that view will have read access to tables
+in this dataset. The role field is not required when this field is set. If that view is updated by any user, access to
+the view needs to be granted again via an update operation.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">dataset_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">project_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">table_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_gcp.bigquery.DatasetAccess.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">dataset_id=None</em>, <em class="sig-param">domain=None</em>, <em class="sig-param">group_by_email=None</em>, <em class="sig-param">iam_member=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">special_group=None</em>, <em class="sig-param">user_by_email=None</em>, <em class="sig-param">view=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigquery.DatasetAccess.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing DatasetAccess resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>dataset*id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>A unique ID for this dataset, without the project name. The ID must contain only letters (a-z, A-Z), numbers (0-9), or
+underscores (<a href="#id21"><span class="problematic" id="id22">*</span></a>). The maximum length is 1,024 characters.</p>
+</p></li>
+<li><p><strong>domain</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A domain to grant access to. Any users signed in with the domain specified will be granted the specified access</p></li>
+<li><p><strong>group_by_email</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An email address of a Google Group to grant access to.</p></li>
+<li><p><strong>iam_member</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Some other type of member that appears in the IAM Policy but isn’t a user, group, domain, or special group. For example:
+‘allUsers’</p></li>
+<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</p></li>
+<li><p><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Describes the rights granted to the user specified by the other member of the access object. Primitive, Predefined and
+custom roles are supported. Predefined roles that have equivalent primitive roles are swapped by the API to their
+Primitive counterparts, and will show a diff post-create. See <a class="reference external" href="https://cloud.google.com/bigquery/docs/access-control">official
+docs</a>.</p>
+</p></li>
+<li><p><strong>special_group</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A special group to grant access to. Possible values include: * ‘projectOwners’: Owners of the enclosing project. *
+‘projectReaders’: Readers of the enclosing project. * ‘projectWriters’: Writers of the enclosing project. *
+‘allAuthenticatedUsers’: All authenticated BigQuery users.</p></li>
+<li><p><strong>user_by_email</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An email address of a user to grant access to. For example: <a class="reference external" href="mailto:fred&#37;&#52;&#48;example&#46;com">fred<span>&#64;</span>example<span>&#46;</span>com</a></p></li>
+<li><p><strong>view</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A view from a different dataset to grant access to. Queries executed against that view will have read access to tables
+in this dataset. The role field is not required when this field is set. If that view is updated by any user, access to
+the view needs to be granted again via an update operation.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>view</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">dataset_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">project_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">table_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_gcp.bigquery.DatasetAccess.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigquery.DatasetAccess.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_gcp.bigquery.DatasetAccess.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigquery.DatasetAccess.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
