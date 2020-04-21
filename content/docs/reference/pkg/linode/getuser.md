@@ -22,9 +22,9 @@ The following example shows how one might use this data source to access informa
 import * as pulumi from "@pulumi/pulumi";
 import * as linode from "@pulumi/linode";
 
-const foo = pulumi.output(linode.getUser({
+const foo = linode.getUser({
     username: "foo",
-}, { async: true }));
+});
 ```
 
 {{% /example %}}

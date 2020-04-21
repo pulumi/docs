@@ -47,11 +47,13 @@ anything, please consult the source <a class="reference external" href="https://
 <li class="toctree-l1"><a class="reference internal" href="iam/">iam</a></li>
 <li class="toctree-l1"><a class="reference internal" href="iap/">iap</a></li>
 <li class="toctree-l1"><a class="reference internal" href="identityplatform/">identityplatform</a></li>
+<li class="toctree-l1"><a class="reference internal" href="iot/">iot</a></li>
 <li class="toctree-l1"><a class="reference internal" href="kms/">kms</a></li>
 <li class="toctree-l1"><a class="reference internal" href="logging/">logging</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ml/">ml</a></li>
 <li class="toctree-l1"><a class="reference internal" href="monitoring/">monitoring</a></li>
 <li class="toctree-l1"><a class="reference internal" href="organizations/">organizations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="oslogin/">oslogin</a></li>
 <li class="toctree-l1"><a class="reference internal" href="projects/">projects</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pubsub/">pubsub</a></li>
 <li class="toctree-l1"><a class="reference internal" href="redis/">redis</a></li>

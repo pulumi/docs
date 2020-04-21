@@ -22,9 +22,9 @@ The following example shows how one might use this data source to access informa
 import * as pulumi from "@pulumi/pulumi";
 import * as linode from "@pulumi/linode";
 
-const primary = pulumi.output(linode.getObjectStorageCluster({
+const primary = linode.getObjectStorageCluster({
     id: "us-east-1",
-}, { async: true }));
+});
 ```
 
 {{% /example %}}
@@ -84,7 +84,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The unique ID of this cluster. 
+    <dd>{{% md %}}The unique ID of this cluster.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -132,7 +132,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The unique ID of this cluster. 
+    <dd>{{% md %}}The unique ID of this cluster.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -180,7 +180,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The unique ID of this cluster. 
+    <dd>{{% md %}}The unique ID of this cluster.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -228,7 +228,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The unique ID of this cluster. 
+    <dd>{{% md %}}The unique ID of this cluster.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

@@ -22,9 +22,9 @@ The following example shows how the resource might be used to obtain additional 
 import * as pulumi from "@pulumi/pulumi";
 import * as linode from "@pulumi/linode";
 
-const region = pulumi.output(linode.getRegion({
+const region = linode.getRegion({
     id: "us-east",
-}, { async: true }));
+});
 ```
 
 {{% /example %}}

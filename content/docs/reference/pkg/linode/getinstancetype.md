@@ -22,9 +22,9 @@ The following example shows how one might use this data source to access informa
 import * as pulumi from "@pulumi/pulumi";
 import * as linode from "@pulumi/linode";
 
-const defaultInstanceType = pulumi.output(linode.getInstanceType({
+const defaultInstanceType = linode.getInstanceType({
     id: "g6-standard-2",
-}, { async: true }));
+});
 ```
 
 {{% /example %}}
