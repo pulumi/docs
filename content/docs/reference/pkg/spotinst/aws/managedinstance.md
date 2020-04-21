@@ -1,7 +1,8 @@
 
 ---
 title: "ManagedInstance"
-block_external_search_index: true
+title_tag: "Resource ManagedInstance | Module aws | Package Spotinst"
+meta_desc: "Explore the ManagedInstance resource of the aws module, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 
 
@@ -12,7 +13,7 @@ block_external_search_index: true
 
 
 
-## Create a ManagedInstance Resource
+## Create a ManagedInstance Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -102,7 +103,7 @@ block_external_search_index: true
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -179,7 +180,7 @@ block_external_search_index: true
 
 {{% /choosable %}}
 
-## ManagedInstance Resource Properties
+## ManagedInstance Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
@@ -1672,12 +1673,77 @@ Default: `"false"`.
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. The ManagedInstance resource does not produce any additional output properties.
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the ManagedInstance resource produces the following output properties:
 
 
 
 
-## Look up an Existing ManagedInstance Resource
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+
+
+## Look up an Existing ManagedInstance Resource {#look-up}
 
 Get an existing ManagedInstance resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -3284,7 +3350,8 @@ Default: `"false"`.
 
 ## Supporting Types
 
-<h4>Managed<wbr>Instance<wbr>Integration<wbr>Route53</h4>
+
+<h4 id="managedinstanceintegrationroute53">Managed<wbr>Instance<wbr>Integration<wbr>Route53</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ManagedInstanceIntegrationRoute53">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ManagedInstanceIntegrationRoute53">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3359,7 +3426,7 @@ Default: `"false"`.
 
 
 
-<h4>Managed<wbr>Instance<wbr>Integration<wbr>Route53Domain</h4>
+<h4 id="managedinstanceintegrationroute53domain">Managed<wbr>Instance<wbr>Integration<wbr>Route53Domain</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ManagedInstanceIntegrationRoute53Domain">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ManagedInstanceIntegrationRoute53Domain">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3498,7 +3565,7 @@ Default: `"false"`.
 
 
 
-<h4>Managed<wbr>Instance<wbr>Integration<wbr>Route53Domain<wbr>Record<wbr>Set</h4>
+<h4 id="managedinstanceintegrationroute53domainrecordset">Managed<wbr>Instance<wbr>Integration<wbr>Route53Domain<wbr>Record<wbr>Set</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ManagedInstanceIntegrationRoute53DomainRecordSet">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ManagedInstanceIntegrationRoute53DomainRecordSet">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3609,7 +3676,7 @@ Default: `"false"`.
 
 
 
-<h4>Managed<wbr>Instance<wbr>Load<wbr>Balancer</h4>
+<h4 id="managedinstanceloadbalancer">Managed<wbr>Instance<wbr>Load<wbr>Balancer</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ManagedInstanceLoadBalancer">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ManagedInstanceLoadBalancer">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3880,7 +3947,7 @@ Default: `"false"`.
 
 
 
-<h4>Managed<wbr>Instance<wbr>Network<wbr>Interface</h4>
+<h4 id="managedinstancenetworkinterface">Managed<wbr>Instance<wbr>Network<wbr>Interface</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ManagedInstanceNetworkInterface">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ManagedInstanceNetworkInterface">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4019,7 +4086,7 @@ Default: `"false"`.
 
 
 
-<h4>Managed<wbr>Instance<wbr>Revert<wbr>To<wbr>Spot</h4>
+<h4 id="managedinstancereverttospot">Managed<wbr>Instance<wbr>Revert<wbr>To<wbr>Spot</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ManagedInstanceRevertToSpot">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ManagedInstanceRevertToSpot">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4102,7 +4169,7 @@ Default `"never"`.
 
 
 
-<h4>Managed<wbr>Instance<wbr>Scheduled<wbr>Task</h4>
+<h4 id="managedinstancescheduledtask">Managed<wbr>Instance<wbr>Scheduled<wbr>Task</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ManagedInstanceScheduledTask">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ManagedInstanceScheduledTask">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4305,7 +4372,7 @@ Default `"never"`.
 
 
 
-<h4>Managed<wbr>Instance<wbr>Tag</h4>
+<h4 id="managedinstancetag">Managed<wbr>Instance<wbr>Tag</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ManagedInstanceTag">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ManagedInstanceTag">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4424,14 +4491,13 @@ Default `"never"`.
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-spotinst">https://github.com/pulumi/pulumi-spotinst</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`spotinst` Terraform Provider](https://github.com/terraform-providers/terraform-provider-spotinst).</dd>
-	
 </dl>
 

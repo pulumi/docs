@@ -1,7 +1,8 @@
 
 ---
 title: "Ocean"
-block_external_search_index: true
+title_tag: "Resource Ocean | Module aws | Package Spotinst"
+meta_desc: "Explore the Ocean resource of the aws module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Spotinst Ocean AWS resource."
 ---
 
 
@@ -111,7 +112,7 @@ import * as pulumi from "@pulumi/pulumi";
 
 
 
-## Create a Ocean Resource
+## Create a Ocean Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -201,7 +202,7 @@ import * as pulumi from "@pulumi/pulumi";
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -278,7 +279,7 @@ import * as pulumi from "@pulumi/pulumi";
 
 {{% /choosable %}}
 
-## Ocean Resource Properties
+## Ocean Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
@@ -1319,12 +1320,77 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. The Ocean resource does not produce any additional output properties.
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the Ocean resource produces the following output properties:
 
 
 
 
-## Look up an Existing Ocean Resource
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+
+
+## Look up an Existing Ocean Resource {#look-up}
 
 Get an existing Ocean resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -2479,7 +2545,8 @@ The following state arguments are supported:
 
 ## Supporting Types
 
-<h4>Ocean<wbr>Autoscaler</h4>
+
+<h4 id="oceanautoscaler">Ocean<wbr>Autoscaler</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#OceanAutoscaler">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#OceanAutoscaler">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2774,7 +2841,7 @@ The following state arguments are supported:
 
 
 
-<h4>Ocean<wbr>Autoscaler<wbr>Autoscale<wbr>Down</h4>
+<h4 id="oceanautoscalerautoscaledown">Ocean<wbr>Autoscaler<wbr>Autoscale<wbr>Down</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#OceanAutoscalerAutoscaleDown">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#OceanAutoscalerAutoscaleDown">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2889,7 +2956,7 @@ The following state arguments are supported:
 
 
 
-<h4>Ocean<wbr>Autoscaler<wbr>Autoscale<wbr>Headroom</h4>
+<h4 id="oceanautoscalerautoscaleheadroom">Ocean<wbr>Autoscaler<wbr>Autoscale<wbr>Headroom</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#OceanAutoscalerAutoscaleHeadroom">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#OceanAutoscalerAutoscaleHeadroom">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3076,7 +3143,7 @@ The following state arguments are supported:
 
 
 
-<h4>Ocean<wbr>Autoscaler<wbr>Resource<wbr>Limits</h4>
+<h4 id="oceanautoscalerresourcelimits">Ocean<wbr>Autoscaler<wbr>Resource<wbr>Limits</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#OceanAutoscalerResourceLimits">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#OceanAutoscalerResourceLimits">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3191,7 +3258,7 @@ The following state arguments are supported:
 
 
 
-<h4>Ocean<wbr>Load<wbr>Balancer</h4>
+<h4 id="oceanloadbalancer">Ocean<wbr>Load<wbr>Balancer</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#OceanLoadBalancer">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#OceanLoadBalancer">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3342,7 +3409,7 @@ The following state arguments are supported:
 
 
 
-<h4>Ocean<wbr>Scheduled<wbr>Task</h4>
+<h4 id="oceanscheduledtask">Ocean<wbr>Scheduled<wbr>Task</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#OceanScheduledTask">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#OceanScheduledTask">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3449,7 +3516,7 @@ The following state arguments are supported:
 
 
 
-<h4>Ocean<wbr>Scheduled<wbr>Task<wbr>Shutdown<wbr>Hours</h4>
+<h4 id="oceanscheduledtaskshutdownhours">Ocean<wbr>Scheduled<wbr>Task<wbr>Shutdown<wbr>Hours</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#OceanScheduledTaskShutdownHours">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#OceanScheduledTaskShutdownHours">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3556,7 +3623,7 @@ The following state arguments are supported:
 
 
 
-<h4>Ocean<wbr>Scheduled<wbr>Task<wbr>Task</h4>
+<h4 id="oceanscheduledtasktask">Ocean<wbr>Scheduled<wbr>Task<wbr>Task</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#OceanScheduledTaskTask">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#OceanScheduledTaskTask">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3695,7 +3762,7 @@ The following state arguments are supported:
 
 
 
-<h4>Ocean<wbr>Tag</h4>
+<h4 id="oceantag">Ocean<wbr>Tag</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#OceanTag">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#OceanTag">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3810,7 +3877,7 @@ The following state arguments are supported:
 
 
 
-<h4>Ocean<wbr>Update<wbr>Policy</h4>
+<h4 id="oceanupdatepolicy">Ocean<wbr>Update<wbr>Policy</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#OceanUpdatePolicy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#OceanUpdatePolicy">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3917,7 +3984,7 @@ The following state arguments are supported:
 
 
 
-<h4>Ocean<wbr>Update<wbr>Policy<wbr>Roll<wbr>Config</h4>
+<h4 id="oceanupdatepolicyrollconfig">Ocean<wbr>Update<wbr>Policy<wbr>Roll<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#OceanUpdatePolicyRollConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#OceanUpdatePolicyRollConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3996,14 +4063,13 @@ The following state arguments are supported:
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-spotinst">https://github.com/pulumi/pulumi-spotinst</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`spotinst` Terraform Provider](https://github.com/terraform-providers/terraform-provider-spotinst).</dd>
-	
 </dl>
 
