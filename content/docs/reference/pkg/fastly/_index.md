@@ -1,6 +1,7 @@
 ---
 title: "Fastly"
-block_external_search_index: true
+title_tag: "Module Fastly | Package Fastly"
+meta_desc: "A Pulumi package for creating and managing fastly cloud resources."
 menu:
     reference:
         parent: API Reference
@@ -32,7 +33,7 @@ A Pulumi package for creating and managing fastly cloud resources.
 	<dd><a href="https://github.com/GrubhubProd/pulumi-fastly">https://github.com/GrubhubProd/pulumi-fastly</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`fastly` Terraform Provider](https://github.com/terraform-providers/terraform-provider-fastly).</dd>
 	<dt>Version</dt>
 	<dd>2.1.0</dd>
