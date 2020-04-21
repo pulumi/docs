@@ -1,8 +1,7 @@
 
 ---
 title: "ManagedZone"
-title_tag: "Resource ManagedZone | Module dns | Package GCP"
-meta_desc: "Explore the ManagedZone resource of the dns module, including examples, input properties, output properties, lookup functions, and supporting types. A zone is a subtree of the DNS namespace under one administrative"
+block_external_search_index: true
 ---
 
 
@@ -27,14 +26,10 @@ To get more information about ManagedZone, see:
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
-import * as random from "@pulumi/random";
 
-const rnd = new random.RandomId("rnd", {
-    byteLength: 4,
-});
 const example_zone = new gcp.dns.ManagedZone("example-zone", {
     description: "Example DNS zone",
-    dnsName: pulumi.interpolate`example-${rnd.hex}.com.`,
+    dnsName: "my-domain.com.",
     labels: {
         foo: "bar",
     },
@@ -2231,7 +2226,8 @@ Cloud resources. Must be one of: 'public', 'private'.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-	<dt>Notes</dt>
+    <dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	
 </dl>
 

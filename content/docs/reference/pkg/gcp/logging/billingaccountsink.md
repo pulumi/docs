@@ -1,8 +1,7 @@
 
 ---
 title: "BillingAccountSink"
-title_tag: "Resource BillingAccountSink | Module logging | Package GCP"
-meta_desc: "Explore the BillingAccountSink resource of the logging module, including examples, input properties, output properties, lookup functions, and supporting types. Manages a billing account logging sink. For more information see"
+block_external_search_index: true
 ---
 
 
@@ -1063,7 +1062,8 @@ has to be used instead. In both cases, tables are sharded based on UTC timezone.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-	<dt>Notes</dt>
+    <dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	
 </dl>
 

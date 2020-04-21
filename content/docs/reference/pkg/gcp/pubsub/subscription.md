@@ -1,8 +1,7 @@
 
 ---
 title: "Subscription"
-title_tag: "Resource Subscription | Module pubsub | Package GCP"
-meta_desc: "Explore the Subscription resource of the pubsub module, including examples, input properties, output properties, lookup functions, and supporting types. A named resource representing the stream of messages from a single,"
+block_external_search_index: true
 ---
 
 
@@ -1854,7 +1853,8 @@ backlog, even if they are acknowledged, until they fall out of the messageRetent
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-	<dt>Notes</dt>
+    <dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	
 </dl>
 

@@ -1,8 +1,7 @@
 
 ---
 title: "IAMPolicy"
-title_tag: "Resource IAMPolicy | Module serviceAccount | Package GCP"
-meta_desc: "Explore the IAMPolicy resource of the serviceAccount module, including examples, input properties, output properties, lookup functions, and supporting types. When managing IAM roles, you can treat a service account either as a resource or as an identity. This resource is to add iam policy bindings to a service account resource **to configure permissions for who can edit the service account**. To configure permissions for a service account to act as an identity that can manage other GCP resources, use the google_project_iam set of resources."
+block_external_search_index: true
 ---
 
 
@@ -694,7 +693,8 @@ a `gcp.organizations.getIAMPolicy` data source.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-	<dt>Notes</dt>
+    <dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	
 </dl>
 

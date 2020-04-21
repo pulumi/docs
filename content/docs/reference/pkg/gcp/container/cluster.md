@@ -1,8 +1,7 @@
 
 ---
 title: "Cluster"
-title_tag: "Resource Cluster | Module container | Package GCP"
-meta_desc: "Explore the Cluster resource of the container module, including examples, input properties, output properties, lookup functions, and supporting types. Manages a Google Kubernetes Engine (GKE) cluster. For more information see"
+block_external_search_index: true
 ---
 
 
@@ -12,7 +11,7 @@ meta_desc: "Explore the Cluster resource of the container module, including exam
 
 Manages a Google Kubernetes Engine (GKE) cluster. For more information see
 [the official documentation](https://cloud.google.com/container-engine/docs/clusters)
-and [the API reference](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1/projects.locations.clusters).
+and [the API reference](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1beta1/projects.locations.clusters).
 
 > **Note:** All arguments and attributes, including basic auth username and
 passwords as well as certificate outputs will be stored in the raw state as
@@ -50,10 +49,10 @@ const primary = new gcp.container.Cluster("primary", {
             "bar",
         ],
     },
-}, { timeouts: {
+}, {timeouts: {
     create: "30m",
     update: "40m",
-} });
+}});
 ```
 
 
@@ -12034,7 +12033,8 @@ If enabled, pods must be valid under a PodSecurityPolicy to be created.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-	<dt>Notes</dt>
+    <dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	
 </dl>
 

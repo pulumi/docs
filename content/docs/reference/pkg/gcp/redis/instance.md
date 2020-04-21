@@ -1,8 +1,7 @@
 
 ---
 title: "Instance"
-title_tag: "Resource Instance | Module redis | Package GCP"
-meta_desc: "Explore the Instance resource of the redis module, including examples, input properties, output properties, lookup functions, and supporting types. A Google Cloud Redis instance."
+block_external_search_index: true
 ---
 
 
@@ -1887,7 +1886,8 @@ available primary/replica instances
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-	<dt>Notes</dt>
+    <dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	
 </dl>
 

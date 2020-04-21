@@ -1,8 +1,7 @@
 
 ---
 title: "TransferJob"
-title_tag: "Resource TransferJob | Module storage | Package GCP"
-meta_desc: "Explore the TransferJob resource of the storage module, including examples, input properties, output properties, lookup functions, and supporting types. Creates a new Transfer Job in Google Cloud Storage Transfer."
+block_external_search_index: true
 ---
 
 
@@ -2844,7 +2843,8 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-	<dt>Notes</dt>
+    <dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	
 </dl>
 

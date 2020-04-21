@@ -1,8 +1,7 @@
 
 ---
 title: "Table"
-title_tag: "Resource Table | Module bigquery | Package GCP"
-meta_desc: "Explore the Table resource of the bigquery module, including examples, input properties, output properties, lookup functions, and supporting types. Creates a table resource in a dataset for Google BigQuery. For more information see"
+block_external_search_index: true
 ---
 
 
@@ -3868,7 +3867,8 @@ The default value is true. If set to false, the view will use BigQuery's standar
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-	<dt>Notes</dt>
+    <dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	
 </dl>
 

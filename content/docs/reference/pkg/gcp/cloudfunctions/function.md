@@ -1,8 +1,7 @@
 
 ---
 title: "Function"
-title_tag: "Resource Function | Module cloudfunctions | Package GCP"
-meta_desc: "Explore the Function resource of the cloudfunctions module, including examples, input properties, output properties, lookup functions, and supporting types. Creates a new Cloud Function. For more information see"
+block_external_search_index: true
 ---
 
 
@@ -2356,7 +2355,8 @@ which to observe events. For example, `"myBucket"` or `"projects/my-project/topi
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-	<dt>Notes</dt>
+    <dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	
 </dl>
 

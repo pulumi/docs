@@ -1,8 +1,7 @@
 
 ---
 title: "Realm"
-title_tag: "Resource Realm | Module gameservices | Package GCP"
-meta_desc: "Explore the Realm resource of the gameservices module, including examples, input properties, output properties, lookup functions, and supporting types. A Realm resource."
+block_external_search_index: true
 ---
 
 
@@ -1066,7 +1065,8 @@ zone database: https://www.iana.org/time-zones.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-	<dt>Notes</dt>
+    <dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	
 </dl>
 

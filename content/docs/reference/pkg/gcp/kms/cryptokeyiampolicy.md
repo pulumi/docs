@@ -1,8 +1,7 @@
 
 ---
 title: "CryptoKeyIAMPolicy"
-title_tag: "Resource CryptoKeyIAMPolicy | Module kms | Package GCP"
-meta_desc: "Explore the CryptoKeyIAMPolicy resource of the kms module, including examples, input properties, output properties, lookup functions, and supporting types. Three different resources help you manage your IAM policy for KMS crypto key. Each of these resources serves a different use case:"
+block_external_search_index: true
 ---
 
 
@@ -26,7 +25,7 @@ With IAM Conditions:
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const admin = pulumi.output(gcp.organizations.getIAMPolicy({
+const admin = gcp.organizations.getIAMPolicy({
     bindings: [{
         condition: {
             description: "Expiring at midnight of 2019-12-31",
@@ -36,7 +35,7 @@ const admin = pulumi.output(gcp.organizations.getIAMPolicy({
         members: ["user:jane@example.com"],
         role: "roles/cloudkms.cryptoKeyEncrypter",
     }],
-}, { async: true }));
+});
 ```
 
 With IAM Conditions:
@@ -740,7 +739,8 @@ a `gcp.organizations.getIAMPolicy` data source.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-	<dt>Notes</dt>
+    <dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	
 </dl>
 

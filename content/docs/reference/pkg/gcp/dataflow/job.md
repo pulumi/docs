@@ -1,8 +1,7 @@
 
 ---
 title: "Job"
-title_tag: "Resource Job | Module dataflow | Package GCP"
-meta_desc: "Explore the Job resource of the dataflow module, including examples, input properties, output properties, lookup functions, and supporting types. Creates a job on Dataflow, which is an implementation of Apache Beam running on Google Compute Engine. For more information see"
+block_external_search_index: true
 ---
 
 
@@ -1802,7 +1801,8 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-	<dt>Notes</dt>
+    <dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	
 </dl>
 

@@ -1,8 +1,7 @@
 
 ---
 title: "SubscriptionIAMMember"
-title_tag: "Resource SubscriptionIAMMember | Module pubsub | Package GCP"
-meta_desc: "Explore the SubscriptionIAMMember resource of the pubsub module, including examples, input properties, output properties, lookup functions, and supporting types. Three different resources help you manage your IAM policy for pubsub subscription. Each of these resources serves a different use case:"
+block_external_search_index: true
 ---
 
 
@@ -1079,7 +1078,8 @@ is not provided, the provider project is used.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-	<dt>Notes</dt>
+    <dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	
 </dl>
 

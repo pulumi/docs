@@ -1,8 +1,7 @@
 
 ---
 title: "Project"
-title_tag: "Resource Project | Module organizations | Package GCP"
-meta_desc: "Explore the Project resource of the organizations module, including examples, input properties, output properties, lookup functions, and supporting types. Allows creation and management of a Google Cloud Platform project."
+block_external_search_index: true
 ---
 
 
@@ -1256,7 +1255,8 @@ without deleting the Project via the Google API.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-	<dt>Notes</dt>
+    <dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	
 </dl>
 

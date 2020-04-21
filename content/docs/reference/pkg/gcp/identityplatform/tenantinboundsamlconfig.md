@@ -1,8 +1,7 @@
 
 ---
 title: "TenantInboundSamlConfig"
-title_tag: "Resource TenantInboundSamlConfig | Module identityplatform | Package GCP"
-meta_desc: "Explore the TenantInboundSamlConfig resource of the identityplatform module, including examples, input properties, output properties, lookup functions, and supporting types. Inbound SAML configuration for a Identity Toolkit tenant."
+block_external_search_index: true
 ---
 
 
@@ -1466,7 +1465,8 @@ authentication assertion issued by a SAML identity provider.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-	<dt>Notes</dt>
+    <dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	
 </dl>
 

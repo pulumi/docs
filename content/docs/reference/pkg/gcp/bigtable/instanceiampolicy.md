@@ -1,8 +1,7 @@
 
 ---
 title: "InstanceIamPolicy"
-title_tag: "Resource InstanceIamPolicy | Module bigtable | Package GCP"
-meta_desc: "Explore the InstanceIamPolicy resource of the bigtable module, including examples, input properties, output properties, lookup functions, and supporting types. Three different resources help you manage IAM policies on bigtable instances. Each of these resources serves a different use case:"
+block_external_search_index: true
 ---
 
 
@@ -790,7 +789,8 @@ is not provided, a default will be supplied.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-	<dt>Notes</dt>
+    <dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	
 </dl>
 

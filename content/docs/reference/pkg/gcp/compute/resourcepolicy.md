@@ -1,8 +1,7 @@
 
 ---
 title: "ResourcePolicy"
-title_tag: "Resource ResourcePolicy | Module compute | Package GCP"
-meta_desc: "Explore the ResourcePolicy resource of the compute module, including examples, input properties, output properties, lookup functions, and supporting types. A policy that can be attached to a resource to specify or schedule actions on that resource."
+block_external_search_index: true
 ---
 
 
@@ -1830,7 +1829,8 @@ If it is not provided, the provider project is used.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-	<dt>Notes</dt>
+    <dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	
 </dl>
 

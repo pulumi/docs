@@ -1,8 +1,7 @@
 
 ---
 title: "SourceRepresentationInstance"
-title_tag: "Resource SourceRepresentationInstance | Module sql | Package GCP"
-meta_desc: "Explore the SourceRepresentationInstance resource of the sql module, including examples, input properties, output properties, lookup functions, and supporting types. A source representation instance is a Cloud SQL instance that represents"
+block_external_search_index: true
 ---
 
 
@@ -921,7 +920,8 @@ If it is not provided, the provider project is used.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-	<dt>Notes</dt>
+    <dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	
 </dl>
 

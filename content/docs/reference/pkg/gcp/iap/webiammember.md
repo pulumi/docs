@@ -1,8 +1,7 @@
 
 ---
 title: "WebIamMember"
-title_tag: "Resource WebIamMember | Module iap | Package GCP"
-meta_desc: "Explore the WebIamMember resource of the iap module, including examples, input properties, output properties, lookup functions, and supporting types. Three different resources help you manage your IAM policy for Identity-Aware Proxy Web. Each of these resources serves a different use case:"
+block_external_search_index: true
 ---
 
 
@@ -1009,7 +1008,8 @@ If it is not provided, the project will be parsed from the identifier of the par
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-	<dt>Notes</dt>
+    <dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	
 </dl>
 

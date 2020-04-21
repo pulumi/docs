@@ -1,8 +1,7 @@
 
 ---
 title: "DefaultObjectACL"
-title_tag: "Resource DefaultObjectACL | Module storage | Package GCP"
-meta_desc: "Explore the DefaultObjectACL resource of the storage module, including examples, input properties, output properties, lookup functions, and supporting types. Authoritatively manages the default object ACLs for a Google Cloud Storage bucket"
+block_external_search_index: true
 ---
 
 
@@ -635,7 +634,8 @@ Omitting the field is the same as providing an empty list.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-	<dt>Notes</dt>
+    <dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	
 </dl>
 

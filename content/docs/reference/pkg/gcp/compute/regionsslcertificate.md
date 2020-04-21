@@ -1,8 +1,7 @@
 
 ---
 title: "RegionSslCertificate"
-title_tag: "Resource RegionSslCertificate | Module compute | Package GCP"
-meta_desc: "Explore the RegionSslCertificate resource of the compute module, including examples, input properties, output properties, lookup functions, and supporting types. A RegionSslCertificate resource, used for HTTPS load balancing. This resource"
+block_external_search_index: true
 ---
 
 
@@ -1253,7 +1252,8 @@ used.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-	<dt>Notes</dt>
+    <dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	
 </dl>
 

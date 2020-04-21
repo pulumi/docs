@@ -1,8 +1,7 @@
 
 ---
 title: "Trigger"
-title_tag: "Resource Trigger | Module cloudbuild | Package GCP"
-meta_desc: "Explore the Trigger resource of the cloudbuild module, including examples, input properties, output properties, lookup functions, and supporting types. Configuration for an automated build in response to source repository changes."
+block_external_search_index: true
 ---
 
 
@@ -2822,7 +2821,8 @@ One of 'trigger_template' or 'github' must be provided.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-	<dt>Notes</dt>
+    <dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	
 </dl>
 

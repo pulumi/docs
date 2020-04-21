@@ -1,8 +1,7 @@
 
 ---
 title: "ServicePerimeterResource"
-title_tag: "Resource ServicePerimeterResource | Module accesscontextmanager | Package GCP"
-meta_desc: "Explore the ServicePerimeterResource resource of the accesscontextmanager module, including examples, input properties, output properties, lookup functions, and supporting types. Allows configuring a single GCP resource that should be inside of a service perimeter."
+block_external_search_index: true
 ---
 
 
@@ -626,7 +625,8 @@ projects/{project_number}
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-	<dt>Notes</dt>
+    <dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	
 </dl>
 

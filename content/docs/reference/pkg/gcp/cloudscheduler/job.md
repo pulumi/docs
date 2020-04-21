@@ -1,8 +1,7 @@
 
 ---
 title: "Job"
-title_tag: "Resource Job | Module cloudscheduler | Package GCP"
-meta_desc: "Explore the Job resource of the cloudscheduler module, including examples, input properties, output properties, lookup functions, and supporting types. A scheduled job that can publish a pubsub message or a http request"
+block_external_search_index: true
 ---
 
 
@@ -2509,7 +2508,8 @@ tz database.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-	<dt>Notes</dt>
+    <dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	
 </dl>
 

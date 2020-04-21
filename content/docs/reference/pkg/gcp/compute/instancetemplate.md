@@ -1,8 +1,7 @@
 
 ---
 title: "InstanceTemplate"
-title_tag: "Resource InstanceTemplate | Module compute | Package GCP"
-meta_desc: "Explore the InstanceTemplate resource of the compute module, including examples, input properties, output properties, lookup functions, and supporting types. Manages a VM instance template resource within GCE. For more information see"
+block_external_search_index: true
 ---
 
 
@@ -2427,6 +2426,7 @@ read-write mode.
     </dt>
     <dd>{{% md %}}The name (**not self_link**)
 of the disk (such as those managed by `gcp.compute.Disk`) to attach.
+> **Note:** Either `source` or `source_image` is **required** when creating a new instance except for when creating a local SSD. Check the API [docs](https://cloud.google.com/compute/docs/reference/rest/v1/instanceTemplates/insert) for details.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2441,6 +2441,7 @@ initialize this disk. This can be one of: the image's `self_link`,
 `projects/{project}/global/images/family/{family}`, `global/images/{image}`,
 `global/images/family/{family}`, `family/{family}`, `{project}/{family}`,
 `{project}/{image}`, `{family}`, or `{image}`.
+> **Note:** Either `source` or `source_image` is **required** when creating a new instance except for when creating a local SSD. Check the API [docs](https://cloud.google.com/compute/docs/reference/rest/v1/instanceTemplates/insert) for details.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2568,6 +2569,7 @@ read-write mode.
     </dt>
     <dd>{{% md %}}The name (**not self_link**)
 of the disk (such as those managed by `gcp.compute.Disk`) to attach.
+> **Note:** Either `source` or `source_image` is **required** when creating a new instance except for when creating a local SSD. Check the API [docs](https://cloud.google.com/compute/docs/reference/rest/v1/instanceTemplates/insert) for details.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2582,6 +2584,7 @@ initialize this disk. This can be one of: the image's `self_link`,
 `projects/{project}/global/images/family/{family}`, `global/images/{image}`,
 `global/images/family/{family}`, `family/{family}`, `{project}/{family}`,
 `{project}/{image}`, `{family}`, or `{image}`.
+> **Note:** Either `source` or `source_image` is **required** when creating a new instance except for when creating a local SSD. Check the API [docs](https://cloud.google.com/compute/docs/reference/rest/v1/instanceTemplates/insert) for details.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2709,6 +2712,7 @@ read-write mode.
     </dt>
     <dd>{{% md %}}The name (**not self_link**)
 of the disk (such as those managed by `gcp.compute.Disk`) to attach.
+> **Note:** Either `source` or `source_image` is **required** when creating a new instance except for when creating a local SSD. Check the API [docs](https://cloud.google.com/compute/docs/reference/rest/v1/instanceTemplates/insert) for details.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2723,6 +2727,7 @@ initialize this disk. This can be one of: the image's `self_link`,
 `projects/{project}/global/images/family/{family}`, `global/images/{image}`,
 `global/images/family/{family}`, `family/{family}`, `{project}/{family}`,
 `{project}/{image}`, `{family}`, or `{image}`.
+> **Note:** Either `source` or `source_image` is **required** when creating a new instance except for when creating a local SSD. Check the API [docs](https://cloud.google.com/compute/docs/reference/rest/v1/instanceTemplates/insert) for details.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2850,6 +2855,7 @@ read-write mode.
     </dt>
     <dd>{{% md %}}The name (**not self_link**)
 of the disk (such as those managed by `gcp.compute.Disk`) to attach.
+> **Note:** Either `source` or `source_image` is **required** when creating a new instance except for when creating a local SSD. Check the API [docs](https://cloud.google.com/compute/docs/reference/rest/v1/instanceTemplates/insert) for details.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2864,6 +2870,7 @@ initialize this disk. This can be one of: the image's `self_link`,
 `projects/{project}/global/images/family/{family}`, `global/images/{image}`,
 `global/images/family/{family}`, `family/{family}`, `{project}/{family}`,
 `{project}/{image}`, `{family}`, or `{image}`.
+> **Note:** Either `source` or `source_image` is **required** when creating a new instance except for when creating a local SSD. Check the API [docs](https://cloud.google.com/compute/docs/reference/rest/v1/instanceTemplates/insert) for details.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4387,7 +4394,8 @@ default Google Compute Engine service account is used.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-	<dt>Notes</dt>
+    <dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	
 </dl>
 
