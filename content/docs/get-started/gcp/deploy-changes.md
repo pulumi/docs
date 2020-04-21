@@ -24,9 +24,9 @@ Pulumi computes the minimally disruptive change to achieve the desired state des
 $ pulumi up
 Previewing update (dev):
      Type                   Name               Plan       Info
-     pulumi:pulumi:Stack    quickstart-dev             
+     pulumi:pulumi:Stack    quickstart-dev
  ~   └─ gcp:storage:Bucket  my-bucket          update     [diff: ~labels]
- 
+
 Outputs:
   ~ bucketName: "gs://my-bucket-d8d30a1" => output<string>
 
@@ -48,9 +48,9 @@ Choosing `yes` will proceed with the update.
 Do you want to perform this update? yes
 Updating (dev):
      Type                   Name               Status      Info
-     pulumi:pulumi:Stack    quickstart-dev              
+     pulumi:pulumi:Stack    quickstart-dev
  ~   └─ gcp:storage:Bucket  my-bucket          updated     [diff: ~labels]
- 
+
 Outputs:
     bucketName: "gs://my-bucket-d8d30a1"
 
