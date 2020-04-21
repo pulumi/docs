@@ -4908,6 +4908,266 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="class">
+<dt id="pulumi_gcp.compute.GlobalNetworkEndpoint">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.compute.</code><code class="sig-name descname">GlobalNetworkEndpoint</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">fqdn=None</em>, <em class="sig-param">global_network_endpoint_group=None</em>, <em class="sig-param">ip_address=None</em>, <em class="sig-param">port=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.GlobalNetworkEndpoint" title="Permalink to this definition">¶</a></dt>
+<dd><p>A Global Network endpoint represents a IP address and port combination that exists outside of GCP.
+<strong>NOTE</strong>: Global network endpoints cannot be created outside of a
+global network endpoint group.</p>
+<p>To get more information about GlobalNetworkEndpoint, see:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://cloud.google.com/compute/docs/reference/rest/beta/networkEndpointGroups">API documentation</a></p></li>
+<li><p>How-to Guides</p>
+<ul>
+<li><p><a class="reference external" href="https://cloud.google.com/load-balancing/docs/negs/">Official Documentation</a></p></li>
+</ul>
+</li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>fqdn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Fully qualified domain name of network endpoint. This can only be specified when network_endpoint_type of the NEG is
+INTERNET_FQDN_PORT.</p></li>
+<li><p><strong>global_network_endpoint_group</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The global network endpoint group this endpoint is part of.</p></li>
+<li><p><strong>ip_address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – IPv4 address external endpoint.</p></li>
+<li><p><strong>port</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Port number of the external endpoint.</p></li>
+<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="attribute">
+<dt id="pulumi_gcp.compute.GlobalNetworkEndpoint.fqdn">
+<code class="sig-name descname">fqdn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.GlobalNetworkEndpoint.fqdn" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fully qualified domain name of network endpoint. This can only be specified when network_endpoint_type of the NEG is
+INTERNET_FQDN_PORT.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.compute.GlobalNetworkEndpoint.global_network_endpoint_group">
+<code class="sig-name descname">global_network_endpoint_group</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.GlobalNetworkEndpoint.global_network_endpoint_group" title="Permalink to this definition">¶</a></dt>
+<dd><p>The global network endpoint group this endpoint is part of.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.compute.GlobalNetworkEndpoint.ip_address">
+<code class="sig-name descname">ip_address</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.GlobalNetworkEndpoint.ip_address" title="Permalink to this definition">¶</a></dt>
+<dd><p>IPv4 address external endpoint.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.compute.GlobalNetworkEndpoint.port">
+<code class="sig-name descname">port</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.GlobalNetworkEndpoint.port" title="Permalink to this definition">¶</a></dt>
+<dd><p>Port number of the external endpoint.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.compute.GlobalNetworkEndpoint.project">
+<code class="sig-name descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.GlobalNetworkEndpoint.project" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_gcp.compute.GlobalNetworkEndpoint.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">fqdn=None</em>, <em class="sig-param">global_network_endpoint_group=None</em>, <em class="sig-param">ip_address=None</em>, <em class="sig-param">port=None</em>, <em class="sig-param">project=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.GlobalNetworkEndpoint.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing GlobalNetworkEndpoint resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>fqdn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Fully qualified domain name of network endpoint. This can only be specified when network_endpoint_type of the NEG is
+INTERNET_FQDN_PORT.</p></li>
+<li><p><strong>global_network_endpoint_group</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The global network endpoint group this endpoint is part of.</p></li>
+<li><p><strong>ip_address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – IPv4 address external endpoint.</p></li>
+<li><p><strong>port</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Port number of the external endpoint.</p></li>
+<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_gcp.compute.GlobalNetworkEndpoint.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.GlobalNetworkEndpoint.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_gcp.compute.GlobalNetworkEndpoint.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.GlobalNetworkEndpoint.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_gcp.compute.GlobalNetworkEndpointGroup">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.compute.</code><code class="sig-name descname">GlobalNetworkEndpointGroup</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">default_port=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_endpoint_type=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.GlobalNetworkEndpointGroup" title="Permalink to this definition">¶</a></dt>
+<dd><p>A global network endpoint group contains endpoints that reside outside of Google Cloud.
+Currently a global network endpoint group can only support a single endpoint.</p>
+<p>To get more information about GlobalNetworkEndpointGroup, see:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://cloud.google.com/compute/docs/reference/rest/beta/networkEndpointGroups">API documentation</a></p></li>
+<li><p>How-to Guides</p>
+<ul>
+<li><p><a class="reference external" href="https://cloud.google.com/load-balancing/docs/negs/internet-neg-concepts">Official Documentation</a></p></li>
+</ul>
+</li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>default_port</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The default port used if the port number is not specified in the network endpoint.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An optional description of this resource. Provide this property when you create the resource.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Name of the resource; provided by the client when the resource is created. The name must be 1-63 characters long, and
+comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
+‘<a class="reference external" href="[-a-z0-9]*[a-z0-9]">a-z</a>?’ which means the first character must be a lowercase letter, and all following characters
+must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.</p>
+</p></li>
+<li><p><strong>network_endpoint_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Type of network endpoints in this network endpoint group. Supported values are: * INTERNET_IP_PORT * INTERNET_FQDN_PORT</p></li>
+<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="attribute">
+<dt id="pulumi_gcp.compute.GlobalNetworkEndpointGroup.default_port">
+<code class="sig-name descname">default_port</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.GlobalNetworkEndpointGroup.default_port" title="Permalink to this definition">¶</a></dt>
+<dd><p>The default port used if the port number is not specified in the network endpoint.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.compute.GlobalNetworkEndpointGroup.description">
+<code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.GlobalNetworkEndpointGroup.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>An optional description of this resource. Provide this property when you create the resource.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.compute.GlobalNetworkEndpointGroup.name">
+<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.GlobalNetworkEndpointGroup.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of the resource; provided by the client when the resource is created. The name must be 1-63 characters long, and
+comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
+‘<a class="reference external" href="[-a-z0-9]*[a-z0-9]">a-z</a>?’ which means the first character must be a lowercase letter, and all following characters
+must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.compute.GlobalNetworkEndpointGroup.network_endpoint_type">
+<code class="sig-name descname">network_endpoint_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.GlobalNetworkEndpointGroup.network_endpoint_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Type of network endpoints in this network endpoint group. Supported values are: * INTERNET_IP_PORT * INTERNET_FQDN_PORT</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.compute.GlobalNetworkEndpointGroup.project">
+<code class="sig-name descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.GlobalNetworkEndpointGroup.project" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.compute.GlobalNetworkEndpointGroup.self_link">
+<code class="sig-name descname">self_link</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.GlobalNetworkEndpointGroup.self_link" title="Permalink to this definition">¶</a></dt>
+<dd><p>The URI of the created resource.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_gcp.compute.GlobalNetworkEndpointGroup.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">default_port=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_endpoint_type=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">self_link=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.GlobalNetworkEndpointGroup.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing GlobalNetworkEndpointGroup resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>default_port</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The default port used if the port number is not specified in the network endpoint.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An optional description of this resource. Provide this property when you create the resource.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Name of the resource; provided by the client when the resource is created. The name must be 1-63 characters long, and
+comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
+‘<a class="reference external" href="[-a-z0-9]*[a-z0-9]">a-z</a>?’ which means the first character must be a lowercase letter, and all following characters
+must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.</p>
+</p></li>
+<li><p><strong>network_endpoint_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Type of network endpoints in this network endpoint group. Supported values are: * INTERNET_IP_PORT * INTERNET_FQDN_PORT</p></li>
+<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</p></li>
+<li><p><strong>self_link</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The URI of the created resource.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_gcp.compute.GlobalNetworkEndpointGroup.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.GlobalNetworkEndpointGroup.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_gcp.compute.GlobalNetworkEndpointGroup.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.GlobalNetworkEndpointGroup.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="pulumi_gcp.compute.HaVpnGateway">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.compute.</code><code class="sig-name descname">HaVpnGateway</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.HaVpnGateway" title="Permalink to this definition">¶</a></dt>
 <dd><p>Represents a VPN gateway running in GCP. This virtual device is managed
@@ -5064,7 +5324,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.compute.HealthCheck">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.compute.</code><code class="sig-name descname">HealthCheck</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">check_interval_sec=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">healthy_threshold=None</em>, <em class="sig-param">http2_health_check=None</em>, <em class="sig-param">http_health_check=None</em>, <em class="sig-param">https_health_check=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">ssl_health_check=None</em>, <em class="sig-param">tcp_health_check=None</em>, <em class="sig-param">timeout_sec=None</em>, <em class="sig-param">unhealthy_threshold=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.HealthCheck" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.compute.</code><code class="sig-name descname">HealthCheck</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">check_interval_sec=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">healthy_threshold=None</em>, <em class="sig-param">http2_health_check=None</em>, <em class="sig-param">http_health_check=None</em>, <em class="sig-param">https_health_check=None</em>, <em class="sig-param">log_config=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">ssl_health_check=None</em>, <em class="sig-param">tcp_health_check=None</em>, <em class="sig-param">timeout_sec=None</em>, <em class="sig-param">unhealthy_threshold=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.HealthCheck" title="Permalink to this definition">¶</a></dt>
 <dd><p>Health Checks determine whether instances are responsive and able to do work.
 They are an important part of a comprehensive load balancing configuration,
 as they enable monitoring instances behind load balancers.</p>
@@ -5095,6 +5355,7 @@ healthy again and can receive new connections.</p>
 <li><p><strong>http2_health_check</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A nested object resource</p></li>
 <li><p><strong>http_health_check</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A nested object resource</p></li>
 <li><p><strong>https_health_check</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A nested object resource</p></li>
+<li><p><strong>log_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configure logging on this health check.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
 comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
 ‘<a class="reference external" href="[-a-z0-9]*[a-z0-9]">a-z</a>?’ which means the first character must be a lowercase letter, and all following characters
@@ -5139,6 +5400,10 @@ have greater value than checkIntervalSec.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">proxy_header</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">request_path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">response</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<p>The <strong>log_config</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">enable</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 </ul>
 <p>The <strong>ssl_health_check</strong> object supports the following:</p>
 <ul class="simple">
@@ -5228,6 +5493,15 @@ have greater value than checkIntervalSec.</p></li>
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_gcp.compute.HealthCheck.log_config">
+<code class="sig-name descname">log_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.HealthCheck.log_config" title="Permalink to this definition">¶</a></dt>
+<dd><p>Configure logging on this health check.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">enable</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+</ul>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_gcp.compute.HealthCheck.name">
 <code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.HealthCheck.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
@@ -5298,7 +5572,7 @@ have greater value than checkIntervalSec.</p>
 
 <dl class="method">
 <dt id="pulumi_gcp.compute.HealthCheck.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">check_interval_sec=None</em>, <em class="sig-param">creation_timestamp=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">healthy_threshold=None</em>, <em class="sig-param">http2_health_check=None</em>, <em class="sig-param">http_health_check=None</em>, <em class="sig-param">https_health_check=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">self_link=None</em>, <em class="sig-param">ssl_health_check=None</em>, <em class="sig-param">tcp_health_check=None</em>, <em class="sig-param">timeout_sec=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">unhealthy_threshold=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.HealthCheck.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">check_interval_sec=None</em>, <em class="sig-param">creation_timestamp=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">healthy_threshold=None</em>, <em class="sig-param">http2_health_check=None</em>, <em class="sig-param">http_health_check=None</em>, <em class="sig-param">https_health_check=None</em>, <em class="sig-param">log_config=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">self_link=None</em>, <em class="sig-param">ssl_health_check=None</em>, <em class="sig-param">tcp_health_check=None</em>, <em class="sig-param">timeout_sec=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">unhealthy_threshold=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.HealthCheck.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing HealthCheck resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -5314,6 +5588,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>http2_health_check</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A nested object resource</p></li>
 <li><p><strong>http_health_check</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A nested object resource</p></li>
 <li><p><strong>https_health_check</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A nested object resource</p></li>
+<li><p><strong>log_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configure logging on this health check.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
 comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
 ‘<a class="reference external" href="[-a-z0-9]*[a-z0-9]">a-z</a>?’ which means the first character must be a lowercase letter, and all following characters
@@ -5360,6 +5635,10 @@ have greater value than checkIntervalSec.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">proxy_header</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">request_path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">response</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<p>The <strong>log_config</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">enable</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 </ul>
 <p>The <strong>ssl_health_check</strong> object supports the following:</p>
 <ul class="simple">
@@ -8358,7 +8637,7 @@ this configuration option are detailed below.</p></li>
 </dd>
 </dl>
 <p>The <strong>disks</strong> object supports the following:</p>
-<ul class="simple">
+<ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">autoDelete</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether or not the disk should be auto-deleted.
 This defaults to true.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">boot</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Indicates that this is a boot disk.</p></li>
@@ -8366,7 +8645,7 @@ This defaults to true.</p></li>
 /dev/  tree of a Linux operating system running within the instance. If not
 specified, the server chooses a default device name to apply to this disk.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">disk_encryption_key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Encrypts or decrypts a disk using a customer-supplied encryption key.</p>
-<ul>
+<ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">kmsKeySelfLink</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The self link of the encryption key that is stored in Google Cloud KMS</p></li>
 </ul>
 </li>
@@ -8385,13 +8664,23 @@ created from this template,</p></li>
 or READ_ONLY. If you are attaching or creating a boot disk, this must
 read-write mode.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">source</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name (<strong>not self_link</strong>)
-of the disk (such as those managed by <code class="docutils literal notranslate"><span class="pre">compute.Disk</span></code>) to attach.</p></li>
+of the disk (such as those managed by <code class="docutils literal notranslate"><span class="pre">compute.Disk</span></code>) to attach.
+..</p>
+<blockquote>
+<div><p><strong>Note:</strong> Either <code class="docutils literal notranslate"><span class="pre">source</span></code> or <code class="docutils literal notranslate"><span class="pre">source_image</span></code> is <strong>required</strong> when creating a new instance except for when creating a local SSD. Check the API <a class="reference external" href="https://cloud.google.com/compute/docs/reference/rest/v1/instanceTemplates/insert">docs</a> for details.</p>
+</div></blockquote>
+</li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sourceImage</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The image from which to
 initialize this disk. This can be one of: the image’s <code class="docutils literal notranslate"><span class="pre">self_link</span></code>,
 <code class="docutils literal notranslate"><span class="pre">projects/{project}/global/images/{image}</span></code>,
 <code class="docutils literal notranslate"><span class="pre">projects/{project}/global/images/family/{family}</span></code>, <code class="docutils literal notranslate"><span class="pre">global/images/{image}</span></code>,
 <code class="docutils literal notranslate"><span class="pre">global/images/family/{family}</span></code>, <code class="docutils literal notranslate"><span class="pre">family/{family}</span></code>, <code class="docutils literal notranslate"><span class="pre">{project}/{family}</span></code>,
-<code class="docutils literal notranslate"><span class="pre">{project}/{image}</span></code>, <code class="docutils literal notranslate"><span class="pre">{family}</span></code>, or <code class="docutils literal notranslate"><span class="pre">{image}</span></code>.</p></li>
+<code class="docutils literal notranslate"><span class="pre">{project}/{image}</span></code>, <code class="docutils literal notranslate"><span class="pre">{family}</span></code>, or <code class="docutils literal notranslate"><span class="pre">{image}</span></code>.
+..</p>
+<blockquote>
+<div><p><strong>Note:</strong> Either <code class="docutils literal notranslate"><span class="pre">source</span></code> or <code class="docutils literal notranslate"><span class="pre">source_image</span></code> is <strong>required</strong> when creating a new instance except for when creating a local SSD. Check the API <a class="reference external" href="https://cloud.google.com/compute/docs/reference/rest/v1/instanceTemplates/insert">docs</a> for details.</p>
+</div></blockquote>
+</li>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The accelerator type resource to expose to this instance. E.g. <code class="docutils literal notranslate"><span class="pre">nvidia-tesla-k80</span></code>.</p></li>
 </ul>
 <p>The <strong>guest_accelerators</strong> object supports the following:</p>
@@ -8499,7 +8788,7 @@ packets with non-matching source or destination IPs. This defaults to false.</p>
 <dd><p>Disks to attach to instances created from this template.
 This can be specified multiple times for multiple disks. Structure is
 documented below.</p>
-<ul class="simple">
+<ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">autoDelete</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Whether or not the disk should be auto-deleted.
 This defaults to true.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">boot</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Indicates that this is a boot disk.</p></li>
@@ -8507,7 +8796,7 @@ This defaults to true.</p></li>
 /dev/  tree of a Linux operating system running within the instance. If not
 specified, the server chooses a default device name to apply to this disk.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">disk_encryption_key</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Encrypts or decrypts a disk using a customer-supplied encryption key.</p>
-<ul>
+<ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">kmsKeySelfLink</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The self link of the encryption key that is stored in Google Cloud KMS</p></li>
 </ul>
 </li>
@@ -8526,13 +8815,23 @@ created from this template,</p></li>
 or READ_ONLY. If you are attaching or creating a boot disk, this must
 read-write mode.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">source</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name (<strong>not self_link</strong>)
-of the disk (such as those managed by <code class="docutils literal notranslate"><span class="pre">compute.Disk</span></code>) to attach.</p></li>
+of the disk (such as those managed by <code class="docutils literal notranslate"><span class="pre">compute.Disk</span></code>) to attach.
+..</p>
+<blockquote>
+<div><p><strong>Note:</strong> Either <code class="docutils literal notranslate"><span class="pre">source</span></code> or <code class="docutils literal notranslate"><span class="pre">source_image</span></code> is <strong>required</strong> when creating a new instance except for when creating a local SSD. Check the API <a class="reference external" href="https://cloud.google.com/compute/docs/reference/rest/v1/instanceTemplates/insert">docs</a> for details.</p>
+</div></blockquote>
+</li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sourceImage</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The image from which to
 initialize this disk. This can be one of: the image’s <code class="docutils literal notranslate"><span class="pre">self_link</span></code>,
 <code class="docutils literal notranslate"><span class="pre">projects/{project}/global/images/{image}</span></code>,
 <code class="docutils literal notranslate"><span class="pre">projects/{project}/global/images/family/{family}</span></code>, <code class="docutils literal notranslate"><span class="pre">global/images/{image}</span></code>,
 <code class="docutils literal notranslate"><span class="pre">global/images/family/{family}</span></code>, <code class="docutils literal notranslate"><span class="pre">family/{family}</span></code>, <code class="docutils literal notranslate"><span class="pre">{project}/{family}</span></code>,
-<code class="docutils literal notranslate"><span class="pre">{project}/{image}</span></code>, <code class="docutils literal notranslate"><span class="pre">{family}</span></code>, or <code class="docutils literal notranslate"><span class="pre">{image}</span></code>.</p></li>
+<code class="docutils literal notranslate"><span class="pre">{project}/{image}</span></code>, <code class="docutils literal notranslate"><span class="pre">{family}</span></code>, or <code class="docutils literal notranslate"><span class="pre">{image}</span></code>.
+..</p>
+<blockquote>
+<div><p><strong>Note:</strong> Either <code class="docutils literal notranslate"><span class="pre">source</span></code> or <code class="docutils literal notranslate"><span class="pre">source_image</span></code> is <strong>required</strong> when creating a new instance except for when creating a local SSD. Check the API <a class="reference external" href="https://cloud.google.com/compute/docs/reference/rest/v1/instanceTemplates/insert">docs</a> for details.</p>
+</div></blockquote>
+</li>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The accelerator type resource to expose to this instance. E.g. <code class="docutils literal notranslate"><span class="pre">nvidia-tesla-k80</span></code>.</p></li>
 </ul>
 </dd></dl>
@@ -8822,7 +9121,7 @@ this configuration option are detailed below.</p></li>
 </dd>
 </dl>
 <p>The <strong>disks</strong> object supports the following:</p>
-<ul class="simple">
+<ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">autoDelete</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether or not the disk should be auto-deleted.
 This defaults to true.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">boot</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Indicates that this is a boot disk.</p></li>
@@ -8830,7 +9129,7 @@ This defaults to true.</p></li>
 /dev/  tree of a Linux operating system running within the instance. If not
 specified, the server chooses a default device name to apply to this disk.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">disk_encryption_key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Encrypts or decrypts a disk using a customer-supplied encryption key.</p>
-<ul>
+<ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">kmsKeySelfLink</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The self link of the encryption key that is stored in Google Cloud KMS</p></li>
 </ul>
 </li>
@@ -8849,13 +9148,23 @@ created from this template,</p></li>
 or READ_ONLY. If you are attaching or creating a boot disk, this must
 read-write mode.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">source</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name (<strong>not self_link</strong>)
-of the disk (such as those managed by <code class="docutils literal notranslate"><span class="pre">compute.Disk</span></code>) to attach.</p></li>
+of the disk (such as those managed by <code class="docutils literal notranslate"><span class="pre">compute.Disk</span></code>) to attach.
+..</p>
+<blockquote>
+<div><p><strong>Note:</strong> Either <code class="docutils literal notranslate"><span class="pre">source</span></code> or <code class="docutils literal notranslate"><span class="pre">source_image</span></code> is <strong>required</strong> when creating a new instance except for when creating a local SSD. Check the API <a class="reference external" href="https://cloud.google.com/compute/docs/reference/rest/v1/instanceTemplates/insert">docs</a> for details.</p>
+</div></blockquote>
+</li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sourceImage</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The image from which to
 initialize this disk. This can be one of: the image’s <code class="docutils literal notranslate"><span class="pre">self_link</span></code>,
 <code class="docutils literal notranslate"><span class="pre">projects/{project}/global/images/{image}</span></code>,
 <code class="docutils literal notranslate"><span class="pre">projects/{project}/global/images/family/{family}</span></code>, <code class="docutils literal notranslate"><span class="pre">global/images/{image}</span></code>,
 <code class="docutils literal notranslate"><span class="pre">global/images/family/{family}</span></code>, <code class="docutils literal notranslate"><span class="pre">family/{family}</span></code>, <code class="docutils literal notranslate"><span class="pre">{project}/{family}</span></code>,
-<code class="docutils literal notranslate"><span class="pre">{project}/{image}</span></code>, <code class="docutils literal notranslate"><span class="pre">{family}</span></code>, or <code class="docutils literal notranslate"><span class="pre">{image}</span></code>.</p></li>
+<code class="docutils literal notranslate"><span class="pre">{project}/{image}</span></code>, <code class="docutils literal notranslate"><span class="pre">{family}</span></code>, or <code class="docutils literal notranslate"><span class="pre">{image}</span></code>.
+..</p>
+<blockquote>
+<div><p><strong>Note:</strong> Either <code class="docutils literal notranslate"><span class="pre">source</span></code> or <code class="docutils literal notranslate"><span class="pre">source_image</span></code> is <strong>required</strong> when creating a new instance except for when creating a local SSD. Check the API <a class="reference external" href="https://cloud.google.com/compute/docs/reference/rest/v1/instanceTemplates/insert">docs</a> for details.</p>
+</div></blockquote>
+</li>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The accelerator type resource to expose to this instance. E.g. <code class="docutils literal notranslate"><span class="pre">nvidia-tesla-k80</span></code>.</p></li>
 </ul>
 <p>The <strong>guest_accelerators</strong> object supports the following:</p>
@@ -9973,7 +10282,7 @@ comply with RFC1035. Specifically, the name must be 1-63 characters long and mat
 must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.</p>
 </p></li>
 <li><p><strong>network</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The network to which all network endpoints in the NEG belong. Uses “default” project network if unspecified.</p></li>
-<li><p><strong>network_endpoint_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Type of network endpoints in this network endpoint group. Currently the only supported value is GCE_VM_IP_PORT.</p></li>
+<li><p><strong>network_endpoint_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Type of network endpoints in this network endpoint group. The only supported value is GCE_VM_IP_PORT</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
 <li><p><strong>subnetwork</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Optional subnetwork to which all network endpoints in the NEG belong.</p></li>
@@ -10011,7 +10320,7 @@ must be a dash, lowercase letter, or digit, except the last character, which can
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.NetworkEndpointGroup.network_endpoint_type">
 <code class="sig-name descname">network_endpoint_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.NetworkEndpointGroup.network_endpoint_type" title="Permalink to this definition">¶</a></dt>
-<dd><p>Type of network endpoints in this network endpoint group. Currently the only supported value is GCE_VM_IP_PORT.</p>
+<dd><p>Type of network endpoints in this network endpoint group. The only supported value is GCE_VM_IP_PORT</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -10064,7 +10373,7 @@ comply with RFC1035. Specifically, the name must be 1-63 characters long and mat
 must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.</p>
 </p></li>
 <li><p><strong>network</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The network to which all network endpoints in the NEG belong. Uses “default” project network if unspecified.</p></li>
-<li><p><strong>network_endpoint_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Type of network endpoints in this network endpoint group. Currently the only supported value is GCE_VM_IP_PORT.</p></li>
+<li><p><strong>network_endpoint_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Type of network endpoints in this network endpoint group. The only supported value is GCE_VM_IP_PORT</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
 <li><p><strong>self_link</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The URI of the created resource.</p></li>
@@ -12502,7 +12811,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.compute.RegionHealthCheck">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.compute.</code><code class="sig-name descname">RegionHealthCheck</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">check_interval_sec=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">healthy_threshold=None</em>, <em class="sig-param">http2_health_check=None</em>, <em class="sig-param">http_health_check=None</em>, <em class="sig-param">https_health_check=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">ssl_health_check=None</em>, <em class="sig-param">tcp_health_check=None</em>, <em class="sig-param">timeout_sec=None</em>, <em class="sig-param">unhealthy_threshold=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.RegionHealthCheck" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.compute.</code><code class="sig-name descname">RegionHealthCheck</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">check_interval_sec=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">healthy_threshold=None</em>, <em class="sig-param">http2_health_check=None</em>, <em class="sig-param">http_health_check=None</em>, <em class="sig-param">https_health_check=None</em>, <em class="sig-param">log_config=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">ssl_health_check=None</em>, <em class="sig-param">tcp_health_check=None</em>, <em class="sig-param">timeout_sec=None</em>, <em class="sig-param">unhealthy_threshold=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.RegionHealthCheck" title="Permalink to this definition">¶</a></dt>
 <dd><p>Health Checks determine whether instances are responsive and able to do work.
 They are an important part of a comprehensive load balancing configuration,
 as they enable monitoring instances behind load balancers.</p>
@@ -12533,6 +12842,7 @@ healthy again and can receive new connections.</p>
 <li><p><strong>http2_health_check</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A nested object resource</p></li>
 <li><p><strong>http_health_check</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A nested object resource</p></li>
 <li><p><strong>https_health_check</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A nested object resource</p></li>
+<li><p><strong>log_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configure logging on this health check.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
 comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
 ‘<a class="reference external" href="[-a-z0-9]*[a-z0-9]">a-z</a>?’ which means the first character must be a lowercase letter, and all following characters
@@ -12578,6 +12888,10 @@ have greater value than checkIntervalSec.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">proxy_header</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">request_path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">response</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<p>The <strong>log_config</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">enable</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 </ul>
 <p>The <strong>ssl_health_check</strong> object supports the following:</p>
 <ul class="simple">
@@ -12667,6 +12981,15 @@ have greater value than checkIntervalSec.</p></li>
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_gcp.compute.RegionHealthCheck.log_config">
+<code class="sig-name descname">log_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.RegionHealthCheck.log_config" title="Permalink to this definition">¶</a></dt>
+<dd><p>Configure logging on this health check.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">enable</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+</ul>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_gcp.compute.RegionHealthCheck.name">
 <code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.RegionHealthCheck.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
@@ -12743,7 +13066,7 @@ have greater value than checkIntervalSec.</p>
 
 <dl class="method">
 <dt id="pulumi_gcp.compute.RegionHealthCheck.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">check_interval_sec=None</em>, <em class="sig-param">creation_timestamp=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">healthy_threshold=None</em>, <em class="sig-param">http2_health_check=None</em>, <em class="sig-param">http_health_check=None</em>, <em class="sig-param">https_health_check=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">self_link=None</em>, <em class="sig-param">ssl_health_check=None</em>, <em class="sig-param">tcp_health_check=None</em>, <em class="sig-param">timeout_sec=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">unhealthy_threshold=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.RegionHealthCheck.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">check_interval_sec=None</em>, <em class="sig-param">creation_timestamp=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">healthy_threshold=None</em>, <em class="sig-param">http2_health_check=None</em>, <em class="sig-param">http_health_check=None</em>, <em class="sig-param">https_health_check=None</em>, <em class="sig-param">log_config=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">self_link=None</em>, <em class="sig-param">ssl_health_check=None</em>, <em class="sig-param">tcp_health_check=None</em>, <em class="sig-param">timeout_sec=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">unhealthy_threshold=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.RegionHealthCheck.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing RegionHealthCheck resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -12759,6 +13082,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>http2_health_check</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A nested object resource</p></li>
 <li><p><strong>http_health_check</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A nested object resource</p></li>
 <li><p><strong>https_health_check</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A nested object resource</p></li>
+<li><p><strong>log_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configure logging on this health check.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
 comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
 ‘<a class="reference external" href="[-a-z0-9]*[a-z0-9]">a-z</a>?’ which means the first character must be a lowercase letter, and all following characters
@@ -12806,6 +13130,10 @@ have greater value than checkIntervalSec.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">proxy_header</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">request_path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">response</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<p>The <strong>log_config</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">enable</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 </ul>
 <p>The <strong>ssl_health_check</strong> object supports the following:</p>
 <ul class="simple">
@@ -21331,7 +21659,7 @@ provided, the provider region is used.</p></li>
 <dt id="pulumi_gcp.compute.get_regions">
 <code class="sig-prename descclassname">pulumi_gcp.compute.</code><code class="sig-name descname">get_regions</code><span class="sig-paren">(</span><em class="sig-param">project=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.get_regions" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides access to available Google Compute regions for a given project.
-See more about <a class="reference external" href="https://cloud.google.com/compute/docs/regions-zones/">regions and regions</a> in the upstream docs.</p>
+See more about <a class="reference external" href="https://cloud.google.com/compute/docs/regions-zones/">regions and zones</a> in the upstream docs.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
