@@ -103,5 +103,21 @@
                 }
             }
         }
+
+        @screen lg {
+
+            &.two-thirds {
+
+                .header-hero-item {
+                    &:first-of-type {
+                        flex: 2;
+                    }
+
+                    &:last-of-type {
+                        flex: 1;
+                    }
+                }
+            }
+        }
     }
 }
