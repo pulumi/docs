@@ -55,17 +55,11 @@ export const bucketName = bucket.url;
 
 ```python
 import pulumi
-from pulumi_gcp import storage, kms
+from pulumi_gcp import storage
 
-# Create a KMS KeyRing and CryptoKey to use with the Bucket
-keyRing = kms.KeyRing('my-keyring', location='global')
-cryptoKey = kms.CryptoKey('my-cryptokey',
-                          key_ring=keyRing.self_link,
-                          rotation_period="100000s")
-
-# Create a GCP resource (Storage Bucket) with customer-managed encryption key
+# Create a GCP resource (Storage Bucket)
 bucket = storage.Bucket('my-bucket',
-                        encryption={'defaultKmsKeyName': cryptoKey.self_link})
+    labels={'environemnt': "dev"})
 
 # Export the DNS name of the bucket
 pulumi.export('bucket_name',  bucket.url)
