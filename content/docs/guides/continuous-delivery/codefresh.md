@@ -108,7 +108,7 @@ steps:
       - pulumi stack select dev
       # (Optional) Use pulumi stack to get more information in CI/CD logs about the current stack
       - pulumi stack
-      - pulumi up --non-interactive
+      - pulumi up --non-interactive --yes
 ```
 
 This pipeline uses a Kubernetes/Typescript Pulumi stack. Once you run it you should see a new entry in your Pulumi history as well as the deployment in the Codefresh Kubernetes Dashboard.
