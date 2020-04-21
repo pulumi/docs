@@ -24,7 +24,7 @@ The following example shows how one might use this data source to access account
 import * as pulumi from "@pulumi/pulumi";
 import * as linode from "@pulumi/linode";
 
-const account = pulumi.output(linode.getAccount({ async: true }));
+const account = linode.getAccount();
 ```
 
 {{% /example %}}

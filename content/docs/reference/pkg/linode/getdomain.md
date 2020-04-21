@@ -22,12 +22,12 @@ The following example shows how one might use this data source to access informa
 import * as pulumi from "@pulumi/pulumi";
 import * as linode from "@pulumi/linode";
 
-const foo = pulumi.output(linode.getDomain({
+const foo = linode.getDomain({
     id: "1234567",
-}, { async: true }));
-const bar = pulumi.output(linode.getDomain({
+});
+const bar = linode.getDomain({
     domain: "bar.example.com",
-}, { async: true }));
+});
 ```
 
 {{% /example %}}
@@ -55,7 +55,7 @@ The Linode Domain resource exports the following attributes:
 * `ttl_sec` - 'Time to Live'-the amount of time in seconds that this Domain's records may be cached by resolvers or other domain servers.
 
 * `retry_sec` - The interval, in seconds, at which a failed refresh should be retried.
-*
+
 * `expire_sec` - The amount of time in seconds that may pass before this Domain is no longer authoritative.
 
 * `refresh_sec` - The amount of time in seconds before this Domain should be refreshed.

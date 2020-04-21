@@ -22,9 +22,9 @@ The following example shows how one might use this data source to access informa
 import * as pulumi from "@pulumi/pulumi";
 import * as linode from "@pulumi/linode";
 
-const k8Master = pulumi.output(linode.getImage({
+const k8Master = linode.getImage({
     id: "linode/debian8",
-}, { async: true }));
+});
 ```
 
 {{% /example %}}
@@ -49,7 +49,7 @@ The Linode Image resource exports the following attributes:
 
 * `type` - How the Image was created. Manual Images can be created at any time. image"Automatic" Images are created automatically from a deleted Linode.
 
-* `vendor` - The upstream distribution vendor. `None` for private Images. 
+* `vendor` - The upstream distribution vendor. `None` for private Images.
 
 
 
