@@ -1,7 +1,8 @@
 
 ---
 title: "Vault"
-block_external_search_index: true
+title_tag: "Resource Vault | Module glacier | Package AWS"
+meta_desc: "Explore the Vault resource of the glacier module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Glacier Vault Resource. You can refer to the [Glacier Developer Guide](https://docs.aws.amazon.com/amazonglacier/latest/dev/working-with-vaults.html) for a full explanation of the Glacier Vault functionality"
 ---
 
 
@@ -1064,8 +1065,7 @@ The heredoc syntax or `file` function is helpful here. Use the [Glacier Develope
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
-	
 </dl>
 

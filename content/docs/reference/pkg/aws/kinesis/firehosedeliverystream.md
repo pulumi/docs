@@ -1,7 +1,8 @@
 
 ---
 title: "FirehoseDeliveryStream"
-block_external_search_index: true
+title_tag: "Resource FirehoseDeliveryStream | Module kinesis | Package AWS"
+meta_desc: "Explore the FirehoseDeliveryStream resource of the kinesis module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Kinesis Firehose Delivery Stream resource. Amazon Kinesis Firehose is a fully managed, elastic service to easily deliver real-time data streams to destinations such as Amazon S3 and Amazon Redshift."
 ---
 
 
@@ -8784,8 +8785,7 @@ be used.
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
-	
 </dl>
 

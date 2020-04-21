@@ -1,7 +1,8 @@
 
 ---
 title: "Provider"
-block_external_search_index: true
+title_tag: "Resource Provider | Package AliCloud"
+meta_desc: "Explore the Provider resource of the AliCloud package, including examples, input properties, output properties, lookup functions, and supporting types. The provider type for the alicloud package. By default, resources use package-wide configuration"
 ---
 
 
@@ -2477,8 +2478,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 	<dd><a href="https://github.com/pulumi/pulumi-alicloud">https://github.com/pulumi/pulumi-alicloud</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
-	
 </dl>
 

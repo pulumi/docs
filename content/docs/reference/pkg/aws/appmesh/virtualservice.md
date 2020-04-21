@@ -1,7 +1,8 @@
 
 ---
 title: "VirtualService"
-block_external_search_index: true
+title_tag: "Resource VirtualService | Module appmesh | Package AWS"
+meta_desc: "Explore the VirtualService resource of the appmesh module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an AWS App Mesh virtual service resource."
 ---
 
 
@@ -1362,8 +1363,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
-	
 </dl>
 

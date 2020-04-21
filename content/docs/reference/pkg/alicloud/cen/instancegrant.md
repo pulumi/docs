@@ -1,7 +1,8 @@
 
 ---
 title: "InstanceGrant"
-block_external_search_index: true
+title_tag: "Resource InstanceGrant | Module cen | Package AliCloud"
+meta_desc: "Explore the InstanceGrant resource of the cen module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a CEN child instance grant resource, which allow you to authorize a VPC or VBR to a CEN of a different account."
 ---
 
 
@@ -35,21 +36,21 @@ const account2 = new alicloud.Provider("account2", {
     accessKey: "access456",
     secretKey: "secret456",
 });
-const cen = new alicloud.cen.Instance("cen", {}, {provider: account2});
+const cen = new alicloud.cen.Instance("cen", {}, { provider: account2 });
 const vpc = new alicloud.vpc.Network("vpc", {
     cidrBlock: "192.168.0.0/16",
-}, {provider: account1});
+}, { provider: account1 });
 const fooInstanceGrant = new alicloud.cen.InstanceGrant("foo", {
     cenId: cen.id,
     cenOwnerId: "uid2",
     childInstanceId: vpc.id,
-}, {provider: account1});
+}, { provider: account1 });
 const fooInstanceAttachment = new alicloud.cen.InstanceAttachment("foo", {
     childInstanceId: vpc.id,
     childInstanceOwnerId: "uid1",
     childInstanceRegionId: "cn-qingdao",
     instanceId: cen.id,
-}, {provider: account2,dependsOn: [fooInstanceGrant]});
+}, { provider: account2, dependsOn: [fooInstanceGrant] });
 ```
 {{% /example %}}
 {{% /examples %}}
@@ -718,8 +719,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-alicloud">https://github.com/pulumi/pulumi-alicloud</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
-	
 </dl>
 

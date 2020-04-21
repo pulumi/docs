@@ -1,6 +1,7 @@
 ---
-title: "docker"
-block_external_search_index: true
+title: "Docker"
+title_tag: "Module Docker | Package Docker"
+meta_desc: "A Pulumi package for interacting with Docker in Pulumi programs"
 menu:
     reference:
         parent: API Reference
@@ -35,7 +36,7 @@ A Pulumi package for interacting with Docker in Pulumi programs
 	<dd><a href="https://github.com/pulumi/pulumi-docker">https://github.com/pulumi/pulumi-docker</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`docker` Terraform Provider](https://github.com/terraform-providers/terraform-provider-docker).</dd>
 	<dt>Version</dt>
 	<dd>2.0.0</dd>

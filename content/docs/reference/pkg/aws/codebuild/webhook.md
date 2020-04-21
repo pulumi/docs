@@ -1,7 +1,8 @@
 
 ---
 title: "Webhook"
-block_external_search_index: true
+title_tag: "Resource Webhook | Module codebuild | Package AWS"
+meta_desc: "Explore the Webhook resource of the codebuild module, including examples, input properties, output properties, lookup functions, and supporting types. Manages a CodeBuild webhook, which is an endpoint accepted by the CodeBuild service to trigger builds from source code repositories. Depending on the source type of the CodeBuild project, the CodeBuild service may also automatically create and delete the actual repository webhook as well."
 ---
 
 
@@ -1163,8 +1164,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
-	
 </dl>
 

@@ -1,7 +1,8 @@
 
 ---
 title: "ComputeClusterVmAntiAffinityRule"
-block_external_search_index: true
+title_tag: "Resource ComputeClusterVmAntiAffinityRule | Package vSphere"
+meta_desc: "Explore the ComputeClusterVmAntiAffinityRule resource of the vSphere package, including examples, input properties, output properties, lookup functions, and supporting types. The `vsphere..ComputeClusterVmAntiAffinityRule` resource can be used to"
 ---
 
 
@@ -54,21 +55,21 @@ they will run on different hosts whenever possible.
 import * as pulumi from "@pulumi/pulumi";
 import * as vsphere from "@pulumi/vsphere";
 
-const dc = vsphere.getDatacenter({
+const dc = pulumi.output(vsphere.getDatacenter({
     name: "dc1",
-});
-const datastore = vsphere.getDatastore({
+}, { async: true }));
+const datastore = dc.apply(dc => vsphere.getDatastore({
     datacenterId: dc.id,
     name: "datastore1",
-});
-const cluster = vsphere.getComputeCluster({
+}, { async: true }));
+const cluster = dc.apply(dc => vsphere.getComputeCluster({
     datacenterId: dc.id,
     name: "cluster1",
-});
-const network = vsphere.getNetwork({
+}, { async: true }));
+const network = dc.apply(dc => vsphere.getNetwork({
     datacenterId: dc.id,
     name: "network1",
-});
+}, { async: true }));
 const vm: vsphere.VirtualMachine[] = [];
 for (let i = 0; i < 2; i++) {
     vm.push(new vsphere.VirtualMachine(`vm-${i}`, {
@@ -935,8 +936,7 @@ on hosts different from each other.
 	<dd><a href="https://github.com/pulumi/pulumi-vsphere">https://github.com/pulumi/pulumi-vsphere</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`vsphere` Terraform Provider](https://github.com/terraform-providers/terraform-provider-vsphere).</dd>
-	
 </dl>
 

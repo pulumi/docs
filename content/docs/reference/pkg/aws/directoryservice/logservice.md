@@ -1,7 +1,8 @@
 
 ---
 title: "LogService"
-block_external_search_index: true
+title_tag: "Resource LogService | Module directoryservice | Package AWS"
+meta_desc: "Explore the LogService resource of the directoryservice module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Log subscription for AWS Directory Service that pushes logs to cloudwatch."
 ---
 
 
@@ -35,7 +36,7 @@ const ad_log_policyPolicyDocument = exampleLogGroup.arn.apply(arn => aws.iam.get
         }],
         resources: [arn],
     }],
-}));
+}, { async: true }));
 const ad_log_policyLogResourcePolicy = new aws.cloudwatch.LogResourcePolicy("ad-log-policy", {
     policyDocument: ad_log_policyPolicyDocument.json,
     policyName: "ad-log-policy",
@@ -641,8 +642,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
-	
 </dl>
 

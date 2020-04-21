@@ -1,7 +1,8 @@
 
 ---
 title: "ClusterTemplate"
-block_external_search_index: true
+title_tag: "Resource ClusterTemplate | Package Rancher 2"
+meta_desc: "Explore the ClusterTemplate resource of the Rancher 2 package, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 
 
@@ -12,7 +13,7 @@ block_external_search_index: true
 
 
 
-## Create a ClusterTemplate Resource
+## Create a ClusterTemplate Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -102,7 +103,7 @@ block_external_search_index: true
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -179,7 +180,7 @@ block_external_search_index: true
 
 {{% /choosable %}}
 
-## ClusterTemplate Resource Properties
+## ClusterTemplate Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
@@ -440,9 +441,7 @@ The ClusterTemplate resource accepts the following [input]({{< relref "/docs/int
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. Additionally, the ClusterTemplate resource produces the following computed outputs.
-
-The following output properties are available:
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the ClusterTemplate resource produces the following output properties:
 
 
 
@@ -458,6 +457,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}(Computed) Default cluster template revision ID (string)
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -475,6 +482,14 @@ The following output properties are available:
     <dd>{{% md %}}(Computed) Default cluster template revision ID (string)
 {{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -490,6 +505,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}(Computed) Default cluster template revision ID (string)
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -507,6 +530,14 @@ The following output properties are available:
     <dd>{{% md %}}(Computed) Default cluster template revision ID (string)
 {{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -516,8 +547,7 @@ The following output properties are available:
 
 
 
-
-## Look up an Existing ClusterTemplate Resource
+## Look up an Existing ClusterTemplate Resource {#look-up}
 
 Get an existing ClusterTemplate resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -928,7 +958,8 @@ The following state arguments are supported:
 
 ## Supporting Types
 
-<h4>Cluster<wbr>Template<wbr>Member</h4>
+
+<h4 id="clustertemplatemember">Cluster<wbr>Template<wbr>Member</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterTemplateMember">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterTemplateMember">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1079,7 +1110,7 @@ The following state arguments are supported:
 
 
 
-<h4>Cluster<wbr>Template<wbr>Template<wbr>Revision</h4>
+<h4 id="clustertemplatetemplaterevision">Cluster<wbr>Template<wbr>Template<wbr>Revision</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterTemplateTemplateRevision">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterTemplateTemplateRevision">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1446,7 +1477,7 @@ The following state arguments are supported:
 
 
 
-<h4>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config</h4>
+<h4 id="clustertemplatetemplaterevisionclusterconfig">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterTemplateTemplateRevisionClusterConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterTemplateTemplateRevisionClusterConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1921,7 +1952,7 @@ The following state arguments are supported:
 
 
 
-<h4>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Cluster<wbr>Auth<wbr>Endpoint</h4>
+<h4 id="clustertemplatetemplaterevisionclusterconfigclusterauthendpoint">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Cluster<wbr>Auth<wbr>Endpoint</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterTemplateTemplateRevisionClusterConfigClusterAuthEndpoint">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterTemplateTemplateRevisionClusterConfigClusterAuthEndpoint">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2064,7 +2095,7 @@ The following state arguments are supported:
 
 
 
-<h4>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config</h4>
+<h4 id="clustertemplatetemplaterevisionclusterconfigrkeconfig">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterTemplateTemplateRevisionClusterConfigRkeConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterTemplateTemplateRevisionClusterConfigRkeConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2779,7 +2810,7 @@ The following state arguments are supported:
 
 
 
-<h4>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Authentication</h4>
+<h4 id="clustertemplatetemplaterevisionclusterconfigrkeconfigauthentication">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Authentication</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigAuthentication">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigAuthentication">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2886,7 +2917,7 @@ The following state arguments are supported:
 
 
 
-<h4>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Authorization</h4>
+<h4 id="clustertemplatetemplaterevisionclusterconfigrkeconfigauthorization">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Authorization</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigAuthorization">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigAuthorization">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2993,7 +3024,7 @@ The following state arguments are supported:
 
 
 
-<h4>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Bastion<wbr>Host</h4>
+<h4 id="clustertemplatetemplaterevisionclusterconfigrkeconfigbastionhost">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Bastion<wbr>Host</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigBastionHost">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigBastionHost">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3228,7 +3259,7 @@ The following state arguments are supported:
 
 
 
-<h4>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider</h4>
+<h4 id="clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovider">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProvider">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProvider">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3467,7 +3498,7 @@ The following state arguments are supported:
 
 
 
-<h4>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Aws<wbr>Cloud<wbr>Provider</h4>
+<h4 id="clustertemplatetemplaterevisionclusterconfigrkeconfigcloudproviderawscloudprovider">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Aws<wbr>Cloud<wbr>Provider</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderAwsCloudProvider">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderAwsCloudProvider">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3574,7 +3605,7 @@ The following state arguments are supported:
 
 
 
-<h4>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Aws<wbr>Cloud<wbr>Provider<wbr>Global</h4>
+<h4 id="clustertemplatetemplaterevisionclusterconfigrkeconfigcloudproviderawscloudproviderglobal">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Aws<wbr>Cloud<wbr>Provider<wbr>Global</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderAwsCloudProviderGlobal">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderAwsCloudProviderGlobal">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3937,7 +3968,7 @@ The following state arguments are supported:
 
 
 
-<h4>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Aws<wbr>Cloud<wbr>Provider<wbr>Service<wbr>Override</h4>
+<h4 id="clustertemplatetemplaterevisionclusterconfigrkeconfigcloudproviderawscloudproviderserviceoverride">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Aws<wbr>Cloud<wbr>Provider<wbr>Service<wbr>Override</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderAwsCloudProviderServiceOverride">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderAwsCloudProviderServiceOverride">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4172,7 +4203,7 @@ The following state arguments are supported:
 
 
 
-<h4>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Azure<wbr>Cloud<wbr>Provider</h4>
+<h4 id="clustertemplatetemplaterevisionclusterconfigrkeconfigcloudproviderazurecloudprovider">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Azure<wbr>Cloud<wbr>Provider</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderAzureCloudProvider">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderAzureCloudProvider">output</a> API doc for this type.
 {{% /choosable %}}
@@ -5111,7 +5142,7 @@ The following state arguments are supported:
 
 
 
-<h4>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Openstack<wbr>Cloud<wbr>Provider</h4>
+<h4 id="clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovideropenstackcloudprovider">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Openstack<wbr>Cloud<wbr>Provider</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderOpenstackCloudProvider">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderOpenstackCloudProvider">output</a> API doc for this type.
 {{% /choosable %}}
@@ -5314,7 +5345,7 @@ The following state arguments are supported:
 
 
 
-<h4>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Openstack<wbr>Cloud<wbr>Provider<wbr>Block<wbr>Storage</h4>
+<h4 id="clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovideropenstackcloudproviderblockstorage">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Openstack<wbr>Cloud<wbr>Provider<wbr>Block<wbr>Storage</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderOpenstackCloudProviderBlockStorage">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderOpenstackCloudProviderBlockStorage">output</a> API doc for this type.
 {{% /choosable %}}
@@ -5453,7 +5484,7 @@ The following state arguments are supported:
 
 
 
-<h4>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Openstack<wbr>Cloud<wbr>Provider<wbr>Global</h4>
+<h4 id="clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovideropenstackcloudproviderglobal">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Openstack<wbr>Cloud<wbr>Provider<wbr>Global</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderOpenstackCloudProviderGlobal">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderOpenstackCloudProviderGlobal">output</a> API doc for this type.
 {{% /choosable %}}
@@ -5787,7 +5818,7 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>tenant_<wbr>id</span>
+        <span>tenant<wbr>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -5795,7 +5826,7 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>tenant<wbr>Name</span>
+        <span>tenant_<wbr>id</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -5816,7 +5847,7 @@ The following state arguments are supported:
 
 
 
-<h4>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Openstack<wbr>Cloud<wbr>Provider<wbr>Load<wbr>Balancer</h4>
+<h4 id="clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovideropenstackcloudproviderloadbalancer">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Openstack<wbr>Cloud<wbr>Provider<wbr>Load<wbr>Balancer</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderOpenstackCloudProviderLoadBalancer">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderOpenstackCloudProviderLoadBalancer">output</a> API doc for this type.
 {{% /choosable %}}
@@ -6211,7 +6242,7 @@ The following state arguments are supported:
 
 
 
-<h4>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Openstack<wbr>Cloud<wbr>Provider<wbr>Metadata</h4>
+<h4 id="clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovideropenstackcloudprovidermetadata">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Openstack<wbr>Cloud<wbr>Provider<wbr>Metadata</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderOpenstackCloudProviderMetadata">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderOpenstackCloudProviderMetadata">output</a> API doc for this type.
 {{% /choosable %}}
@@ -6318,7 +6349,7 @@ The following state arguments are supported:
 
 
 
-<h4>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Openstack<wbr>Cloud<wbr>Provider<wbr>Route</h4>
+<h4 id="clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovideropenstackcloudproviderroute">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Openstack<wbr>Cloud<wbr>Provider<wbr>Route</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderOpenstackCloudProviderRoute">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderOpenstackCloudProviderRoute">output</a> API doc for this type.
 {{% /choosable %}}
@@ -6393,7 +6424,7 @@ The following state arguments are supported:
 
 
 
-<h4>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider</h4>
+<h4 id="clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovidervspherecloudprovider">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderVsphereCloudProvider">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderVsphereCloudProvider">output</a> API doc for this type.
 {{% /choosable %}}
@@ -6596,7 +6627,7 @@ The following state arguments are supported:
 
 
 
-<h4>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider<wbr>Disk</h4>
+<h4 id="clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovidervspherecloudproviderdisk">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider<wbr>Disk</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderVsphereCloudProviderDisk">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderVsphereCloudProviderDisk">output</a> API doc for this type.
 {{% /choosable %}}
@@ -6671,7 +6702,7 @@ The following state arguments are supported:
 
 
 
-<h4>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider<wbr>Global</h4>
+<h4 id="clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovidervspherecloudproviderglobal">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider<wbr>Global</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderVsphereCloudProviderGlobal">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderVsphereCloudProviderGlobal">output</a> API doc for this type.
 {{% /choosable %}}
@@ -6906,7 +6937,7 @@ The following state arguments are supported:
 
 
 
-<h4>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider<wbr>Network</h4>
+<h4 id="clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovidervspherecloudprovidernetwork">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider<wbr>Network</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderVsphereCloudProviderNetwork">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderVsphereCloudProviderNetwork">output</a> API doc for this type.
 {{% /choosable %}}
@@ -6981,7 +7012,7 @@ The following state arguments are supported:
 
 
 
-<h4>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider<wbr>Virtual<wbr>Center</h4>
+<h4 id="clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovidervspherecloudprovidervirtualcenter">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider<wbr>Virtual<wbr>Center</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderVsphereCloudProviderVirtualCenter">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderVsphereCloudProviderVirtualCenter">output</a> API doc for this type.
 {{% /choosable %}}
@@ -7220,7 +7251,7 @@ The following state arguments are supported:
 
 
 
-<h4>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider<wbr>Workspace</h4>
+<h4 id="clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovidervspherecloudproviderworkspace">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider<wbr>Workspace</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderVsphereCloudProviderWorkspace">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderVsphereCloudProviderWorkspace">output</a> API doc for this type.
 {{% /choosable %}}
@@ -7423,7 +7454,7 @@ The following state arguments are supported:
 
 
 
-<h4>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Dns</h4>
+<h4 id="clustertemplatetemplaterevisionclusterconfigrkeconfigdns">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Dns</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigDns">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigDns">output</a> API doc for this type.
 {{% /choosable %}}
@@ -7594,7 +7625,7 @@ The following state arguments are supported:
 
 
 
-<h4>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Ingress</h4>
+<h4 id="clustertemplatetemplaterevisionclusterconfigrkeconfigingress">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Ingress</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigIngress">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigIngress">output</a> API doc for this type.
 {{% /choosable %}}
@@ -7797,7 +7828,7 @@ The following state arguments are supported:
 
 
 
-<h4>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Monitoring</h4>
+<h4 id="clustertemplatetemplaterevisionclusterconfigrkeconfigmonitoring">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Monitoring</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigMonitoring">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigMonitoring">output</a> API doc for this type.
 {{% /choosable %}}
@@ -7904,7 +7935,7 @@ The following state arguments are supported:
 
 
 
-<h4>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Network</h4>
+<h4 id="clustertemplatetemplaterevisionclusterconfigrkeconfignetwork">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Network</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigNetwork">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigNetwork">output</a> API doc for this type.
 {{% /choosable %}}
@@ -8171,7 +8202,7 @@ The following state arguments are supported:
 
 
 
-<h4>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Network<wbr>Calico<wbr>Network<wbr>Provider</h4>
+<h4 id="clustertemplatetemplaterevisionclusterconfigrkeconfignetworkcaliconetworkprovider">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Network<wbr>Calico<wbr>Network<wbr>Provider</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigNetworkCalicoNetworkProvider">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigNetworkCalicoNetworkProvider">output</a> API doc for this type.
 {{% /choosable %}}
@@ -8246,7 +8277,7 @@ The following state arguments are supported:
 
 
 
-<h4>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Network<wbr>Canal<wbr>Network<wbr>Provider</h4>
+<h4 id="clustertemplatetemplaterevisionclusterconfigrkeconfignetworkcanalnetworkprovider">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Network<wbr>Canal<wbr>Network<wbr>Provider</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigNetworkCanalNetworkProvider">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigNetworkCanalNetworkProvider">output</a> API doc for this type.
 {{% /choosable %}}
@@ -8321,7 +8352,7 @@ The following state arguments are supported:
 
 
 
-<h4>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Network<wbr>Flannel<wbr>Network<wbr>Provider</h4>
+<h4 id="clustertemplatetemplaterevisionclusterconfigrkeconfignetworkflannelnetworkprovider">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Network<wbr>Flannel<wbr>Network<wbr>Provider</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigNetworkFlannelNetworkProvider">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigNetworkFlannelNetworkProvider">output</a> API doc for this type.
 {{% /choosable %}}
@@ -8396,7 +8427,7 @@ The following state arguments are supported:
 
 
 
-<h4>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Network<wbr>Weave<wbr>Network<wbr>Provider</h4>
+<h4 id="clustertemplatetemplaterevisionclusterconfigrkeconfignetworkweavenetworkprovider">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Network<wbr>Weave<wbr>Network<wbr>Provider</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigNetworkWeaveNetworkProvider">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigNetworkWeaveNetworkProvider">output</a> API doc for this type.
 {{% /choosable %}}
@@ -8471,7 +8502,7 @@ The following state arguments are supported:
 
 
 
-<h4>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Node</h4>
+<h4 id="clustertemplatetemplaterevisionclusterconfigrkeconfignode">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Node</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigNode">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigNode">output</a> API doc for this type.
 {{% /choosable %}}
@@ -8902,7 +8933,7 @@ The following state arguments are supported:
 
 
 
-<h4>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Private<wbr>Registry</h4>
+<h4 id="clustertemplatetemplaterevisionclusterconfigrkeconfigprivateregistry">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Private<wbr>Registry</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigPrivateRegistry">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigPrivateRegistry">output</a> API doc for this type.
 {{% /choosable %}}
@@ -9073,7 +9104,7 @@ The following state arguments are supported:
 
 
 
-<h4>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services</h4>
+<h4 id="clustertemplatetemplaterevisionclusterconfigrkeconfigservices">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigServices">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigServices">output</a> API doc for this type.
 {{% /choosable %}}
@@ -9308,7 +9339,7 @@ The following state arguments are supported:
 
 
 
-<h4>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Etcd</h4>
+<h4 id="clustertemplatetemplaterevisionclusterconfigrkeconfigservicesetcd">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Etcd</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigServicesEtcd">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigServicesEtcd">output</a> API doc for this type.
 {{% /choosable %}}
@@ -9831,7 +9862,7 @@ The following state arguments are supported:
 
 
 
-<h4>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Etcd<wbr>Backup<wbr>Config</h4>
+<h4 id="clustertemplatetemplaterevisionclusterconfigrkeconfigservicesetcdbackupconfig">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Etcd<wbr>Backup<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigServicesEtcdBackupConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigServicesEtcdBackupConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -10038,7 +10069,7 @@ The following state arguments are supported:
 
 
 
-<h4>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Etcd<wbr>Backup<wbr>Config<wbr>S3Backup<wbr>Config</h4>
+<h4 id="clustertemplatetemplaterevisionclusterconfigrkeconfigservicesetcdbackupconfigs3backupconfig">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Etcd<wbr>Backup<wbr>Config<wbr>S3Backup<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigServicesEtcdBackupConfigS3BackupConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigServicesEtcdBackupConfigS3BackupConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -10305,7 +10336,7 @@ The following state arguments are supported:
 
 
 
-<h4>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Api</h4>
+<h4 id="clustertemplatetemplaterevisionclusterconfigrkeconfigserviceskubeapi">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Api</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigServicesKubeApi">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigServicesKubeApi">output</a> API doc for this type.
 {{% /choosable %}}
@@ -10732,7 +10763,7 @@ The following state arguments are supported:
 
 
 
-<h4>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Api<wbr>Audit<wbr>Log</h4>
+<h4 id="clustertemplatetemplaterevisionclusterconfigrkeconfigserviceskubeapiauditlog">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Api<wbr>Audit<wbr>Log</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigServicesKubeApiAuditLog">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigServicesKubeApiAuditLog">output</a> API doc for this type.
 {{% /choosable %}}
@@ -10843,7 +10874,7 @@ The following state arguments are supported:
 
 
 
-<h4>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Api<wbr>Audit<wbr>Log<wbr>Configuration</h4>
+<h4 id="clustertemplatetemplaterevisionclusterconfigrkeconfigserviceskubeapiauditlogconfiguration">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Api<wbr>Audit<wbr>Log<wbr>Configuration</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigServicesKubeApiAuditLogConfiguration">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigServicesKubeApiAuditLogConfiguration">output</a> API doc for this type.
 {{% /choosable %}}
@@ -11078,7 +11109,7 @@ The following state arguments are supported:
 
 
 
-<h4>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Api<wbr>Event<wbr>Rate<wbr>Limit</h4>
+<h4 id="clustertemplatetemplaterevisionclusterconfigrkeconfigserviceskubeapieventratelimit">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Api<wbr>Event<wbr>Rate<wbr>Limit</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigServicesKubeApiEventRateLimit">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigServicesKubeApiEventRateLimit">output</a> API doc for this type.
 {{% /choosable %}}
@@ -11189,7 +11220,7 @@ The following state arguments are supported:
 
 
 
-<h4>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Api<wbr>Secrets<wbr>Encryption<wbr>Config</h4>
+<h4 id="clustertemplatetemplaterevisionclusterconfigrkeconfigserviceskubeapisecretsencryptionconfig">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Api<wbr>Secrets<wbr>Encryption<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigServicesKubeApiSecretsEncryptionConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigServicesKubeApiSecretsEncryptionConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -11300,7 +11331,7 @@ The following state arguments are supported:
 
 
 
-<h4>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Controller</h4>
+<h4 id="clustertemplatetemplaterevisionclusterconfigrkeconfigserviceskubecontroller">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Controller</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigServicesKubeController">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigServicesKubeController">output</a> API doc for this type.
 {{% /choosable %}}
@@ -11535,7 +11566,7 @@ The following state arguments are supported:
 
 
 
-<h4>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kubelet</h4>
+<h4 id="clustertemplatetemplaterevisionclusterconfigrkeconfigserviceskubelet">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kubelet</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigServicesKubelet">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigServicesKubelet">output</a> API doc for this type.
 {{% /choosable %}}
@@ -11866,7 +11897,7 @@ The following state arguments are supported:
 
 
 
-<h4>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kubeproxy</h4>
+<h4 id="clustertemplatetemplaterevisionclusterconfigrkeconfigserviceskubeproxy">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kubeproxy</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigServicesKubeproxy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigServicesKubeproxy">output</a> API doc for this type.
 {{% /choosable %}}
@@ -12037,7 +12068,7 @@ The following state arguments are supported:
 
 
 
-<h4>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Scheduler</h4>
+<h4 id="clustertemplatetemplaterevisionclusterconfigrkeconfigservicesscheduler">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Scheduler</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigServicesScheduler">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigServicesScheduler">output</a> API doc for this type.
 {{% /choosable %}}
@@ -12208,7 +12239,7 @@ The following state arguments are supported:
 
 
 
-<h4>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Upgrade<wbr>Strategy</h4>
+<h4 id="clustertemplatetemplaterevisionclusterconfigrkeconfigupgradestrategy">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Upgrade<wbr>Strategy</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigUpgradeStrategy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigUpgradeStrategy">output</a> API doc for this type.
 {{% /choosable %}}
@@ -12379,7 +12410,7 @@ The following state arguments are supported:
 
 
 
-<h4>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Upgrade<wbr>Strategy<wbr>Drain<wbr>Input</h4>
+<h4 id="clustertemplatetemplaterevisionclusterconfigrkeconfigupgradestrategydraininput">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Upgrade<wbr>Strategy<wbr>Drain<wbr>Input</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigUpgradeStrategyDrainInput">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigUpgradeStrategyDrainInput">output</a> API doc for this type.
 {{% /choosable %}}
@@ -12582,7 +12613,7 @@ The following state arguments are supported:
 
 
 
-<h4>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Scheduled<wbr>Cluster<wbr>Scan</h4>
+<h4 id="clustertemplatetemplaterevisionclusterconfigscheduledclusterscan">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Scheduled<wbr>Cluster<wbr>Scan</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterTemplateTemplateRevisionClusterConfigScheduledClusterScan">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterTemplateTemplateRevisionClusterConfigScheduledClusterScan">output</a> API doc for this type.
 {{% /choosable %}}
@@ -12725,7 +12756,7 @@ The following state arguments are supported:
 
 
 
-<h4>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Scheduled<wbr>Cluster<wbr>Scan<wbr>Scan<wbr>Config</h4>
+<h4 id="clustertemplatetemplaterevisionclusterconfigscheduledclusterscanscanconfig">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Scheduled<wbr>Cluster<wbr>Scan<wbr>Scan<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterTemplateTemplateRevisionClusterConfigScheduledClusterScanScanConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterTemplateTemplateRevisionClusterConfigScheduledClusterScanScanConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -12800,7 +12831,7 @@ The following state arguments are supported:
 
 
 
-<h4>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Scheduled<wbr>Cluster<wbr>Scan<wbr>Scan<wbr>Config<wbr>Cis<wbr>Scan<wbr>Config</h4>
+<h4 id="clustertemplatetemplaterevisionclusterconfigscheduledclusterscanscanconfigcisscanconfig">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Scheduled<wbr>Cluster<wbr>Scan<wbr>Scan<wbr>Config<wbr>Cis<wbr>Scan<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterTemplateTemplateRevisionClusterConfigScheduledClusterScanScanConfigCisScanConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterTemplateTemplateRevisionClusterConfigScheduledClusterScanScanConfigCisScanConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -13003,7 +13034,7 @@ The following state arguments are supported:
 
 
 
-<h4>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Scheduled<wbr>Cluster<wbr>Scan<wbr>Schedule<wbr>Config</h4>
+<h4 id="clustertemplatetemplaterevisionclusterconfigscheduledclusterscanscheduleconfig">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Scheduled<wbr>Cluster<wbr>Scan<wbr>Schedule<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterTemplateTemplateRevisionClusterConfigScheduledClusterScanScheduleConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterTemplateTemplateRevisionClusterConfigScheduledClusterScanScheduleConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -13110,7 +13141,7 @@ The following state arguments are supported:
 
 
 
-<h4>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Question</h4>
+<h4 id="clustertemplatetemplaterevisionquestion">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Question</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterTemplateTemplateRevisionQuestion">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterTemplateTemplateRevisionQuestion">output</a> API doc for this type.
 {{% /choosable %}}
@@ -13301,14 +13332,13 @@ The following state arguments are supported:
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-rancher2">https://github.com/pulumi/pulumi-rancher2</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`rancher2` Terraform Provider](https://github.com/terraform-providers/terraform-provider-rancher2).</dd>
-	
 </dl>
 

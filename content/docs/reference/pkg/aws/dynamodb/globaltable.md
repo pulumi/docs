@@ -1,7 +1,8 @@
 
 ---
 title: "GlobalTable"
-block_external_search_index: true
+title_tag: "Resource GlobalTable | Module dynamodb | Package AWS"
+meta_desc: "Explore the GlobalTable resource of the dynamodb module, including examples, input properties, output properties, lookup functions, and supporting types. Manages [DynamoDB Global Tables V1 (version 2017.11.29)](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.V1.html). These are layered on top of existing DynamoDB Tables."
 ---
 
 
@@ -39,7 +40,7 @@ const us_east_1Table = new aws.dynamodb.Table("us-east-1", {
     streamEnabled: true,
     streamViewType: "NEW_AND_OLD_IMAGES",
     writeCapacity: 1,
-}, {provider: us_east_1});
+}, { provider: us_east_1 });
 const us_west_2Table = new aws.dynamodb.Table("us-west-2", {
     attributes: [{
         name: "myAttribute",
@@ -50,7 +51,7 @@ const us_west_2Table = new aws.dynamodb.Table("us-west-2", {
     streamEnabled: true,
     streamViewType: "NEW_AND_OLD_IMAGES",
     writeCapacity: 1,
-}, {provider: us_west_2});
+}, { provider: us_west_2 });
 const myTable = new aws.dynamodb.GlobalTable("myTable", {
     replicas: [
         {
@@ -60,7 +61,7 @@ const myTable = new aws.dynamodb.GlobalTable("myTable", {
             regionName: "us-west-2",
         },
     ],
-}, {provider: us_east_1,dependsOn: [us_east_1Table, us_west_2Table]});
+}, { provider: us_east_1, dependsOn: [us_east_1Table, us_west_2Table] });
 ```
 
 {{% /example %}}
@@ -815,8 +816,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
-	
 </dl>
 

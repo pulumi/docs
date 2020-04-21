@@ -1,7 +1,8 @@
 
 ---
 title: "SecurityGroup"
-block_external_search_index: true
+title_tag: "Resource SecurityGroup | Module redshift | Package AWS"
+meta_desc: "Explore the SecurityGroup resource of the redshift module, including examples, input properties, output properties, lookup functions, and supporting types. Creates a new Amazon Redshift security group. You use security groups to control access to non-VPC clusters"
 ---
 
 
@@ -854,8 +855,7 @@ by `security_group_name`.
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
-	
 </dl>
 

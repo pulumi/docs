@@ -1,7 +1,8 @@
 
 ---
 title: "SecurityConfiguration"
-block_external_search_index: true
+title_tag: "Resource SecurityConfiguration | Module emr | Package AWS"
+meta_desc: "Explore the SecurityConfiguration resource of the emr module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a resource to manage AWS EMR Security Configurations"
 ---
 
 
@@ -786,8 +787,7 @@ prefix. Conflicts with `name`.
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
-	
 </dl>
 

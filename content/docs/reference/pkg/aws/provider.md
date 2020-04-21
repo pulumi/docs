@@ -1,7 +1,8 @@
 
 ---
 title: "Provider"
-block_external_search_index: true
+title_tag: "Resource Provider | Package AWS"
+meta_desc: "Explore the Provider resource of the AWS package, including examples, input properties, output properties, lookup functions, and supporting types. The provider type for the aws package. By default, resources use package-wide configuration"
 ---
 
 
@@ -5636,8 +5637,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
-	
 </dl>
 

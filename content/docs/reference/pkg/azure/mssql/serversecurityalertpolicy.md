@@ -1,7 +1,8 @@
 
 ---
 title: "ServerSecurityAlertPolicy"
-block_external_search_index: true
+title_tag: "Resource ServerSecurityAlertPolicy | Module mssql | Package Azure"
+meta_desc: "Explore the ServerSecurityAlertPolicy resource of the mssql module, including examples, input properties, output properties, lookup functions, and supporting types. Manages a Security Alert Policy for a MSSQL Server."
 ---
 
 
@@ -1112,8 +1113,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-azure">https://github.com/pulumi/pulumi-azure</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
-	
 </dl>
 

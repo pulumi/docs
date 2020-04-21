@@ -1,7 +1,8 @@
 
 ---
 title: "DdosCooInstance"
-block_external_search_index: true
+title_tag: "Resource DdosCooInstance | Module dns | Package AliCloud"
+meta_desc: "Explore the DdosCooInstance resource of the dns module, including examples, input properties, output properties, lookup functions, and supporting types. BGP-Line Anti-DDoS instance resource. &#34;Ddoscoo&#34; is the short term of this product. See [What is Anti-DDoS Pro](https://www.alibabacloud.com/help/doc-detail/69319.htm)."
 ---
 
 
@@ -991,8 +992,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-alicloud">https://github.com/pulumi/pulumi-alicloud</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
-	
 </dl>
 

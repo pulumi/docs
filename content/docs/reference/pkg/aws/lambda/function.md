@@ -1,7 +1,8 @@
 
 ---
 title: "Function"
-block_external_search_index: true
+title_tag: "Resource Function | Module lambda | Package AWS"
+meta_desc: "Explore the Function resource of the lambda module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Lambda Function resource. Lambda allows you to trigger execution of code in response to events in AWS, enabling serverless backend solutions. The Lambda Function itself includes source code and runtime configuration."
 ---
 
 
@@ -110,7 +111,7 @@ const lambdaLogs = new aws.iam.RolePolicyAttachment("lambda_logs", {
     policyArn: lambdaLogging.arn,
     role: aws_iam_role_iam_for_lambda.name,
 });
-const testLambda = new aws.lambda.Function("test_lambda", {}, {dependsOn: [example, lambdaLogs]});
+const testLambda = new aws.lambda.Function("test_lambda", {}, { dependsOn: [example, lambdaLogs] });
 ```
 
 ## Specifying the Deployment Package
@@ -2936,8 +2937,7 @@ X-Ray for a tracing decision.
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
-	
 </dl>
 

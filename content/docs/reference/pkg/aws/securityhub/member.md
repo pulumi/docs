@@ -1,7 +1,8 @@
 
 ---
 title: "Member"
-block_external_search_index: true
+title_tag: "Resource Member | Module securityhub | Package AWS"
+meta_desc: "Explore the Member resource of the securityhub module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Security Hub member resource."
 ---
 
 
@@ -24,7 +25,7 @@ const exampleMember = new aws.securityhub.Member("example", {
     accountId: "123456789012",
     email: "example@example.com",
     invite: true,
-}, {dependsOn: [exampleAccount]});
+}, { dependsOn: [exampleAccount] });
 ```
 
 {{% /example %}}
@@ -838,8 +839,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
-	
 </dl>
 

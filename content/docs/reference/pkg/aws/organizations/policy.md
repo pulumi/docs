@@ -1,7 +1,8 @@
 
 ---
 title: "Policy"
-block_external_search_index: true
+title_tag: "Resource Policy | Module organizations | Package AWS"
+meta_desc: "Explore the Policy resource of the organizations module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a resource to manage an [AWS Organizations policy](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies.html)."
 ---
 
 
@@ -843,8 +844,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
-	
 </dl>
 

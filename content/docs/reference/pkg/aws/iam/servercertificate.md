@@ -1,7 +1,8 @@
 
 ---
 title: "ServerCertificate"
-block_external_search_index: true
+title_tag: "Resource ServerCertificate | Module iam | Package AWS"
+meta_desc: "Explore the ServerCertificate resource of the iam module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an IAM Server Certificate resource to upload Server Certificates."
 ---
 
 
@@ -1109,8 +1110,7 @@ See [IAM Identifiers][1] for more details on IAM Paths.
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
-	
 </dl>
 

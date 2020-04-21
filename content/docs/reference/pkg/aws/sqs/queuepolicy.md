@@ -1,7 +1,8 @@
 
 ---
 title: "QueuePolicy"
-block_external_search_index: true
+title_tag: "Resource QueuePolicy | Module sqs | Package AWS"
+meta_desc: "Explore the QueuePolicy resource of the sqs module, including examples, input properties, output properties, lookup functions, and supporting types. Allows you to set a policy of an SQS Queue"
 ---
 
 
@@ -640,8 +641,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
-	
 </dl>
 

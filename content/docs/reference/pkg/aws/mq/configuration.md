@@ -1,7 +1,8 @@
 
 ---
 title: "Configuration"
-block_external_search_index: true
+title_tag: "Resource Configuration | Module mq | Package AWS"
+meta_desc: "Explore the Configuration resource of the mq module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an MQ Configuration Resource. "
 ---
 
 
@@ -1080,8 +1081,7 @@ for supported parameters and format of the XML.
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
-	
 </dl>
 

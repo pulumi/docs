@@ -1,7 +1,8 @@
 
 ---
 title: "ClientUser"
-block_external_search_index: true
+title_tag: "Resource ClientUser | Module rocketmq | Package AliCloud"
+meta_desc: "Explore the ClientUser resource of the rocketmq module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Sag ClientUser resource. This topic describes how to manage accounts as an administrator. After you configure the network, you can create multiple accounts and distribute them to end users so that clients can access Alibaba Cloud."
 ---
 
 
@@ -1047,8 +1048,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-alicloud">https://github.com/pulumi/pulumi-alicloud</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
-	
 </dl>
 

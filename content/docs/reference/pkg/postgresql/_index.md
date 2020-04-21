@@ -1,6 +1,7 @@
 ---
 title: "PostgreSQL"
-block_external_search_index: true
+title_tag: "Module PostgreSQL | Package PostgreSQL"
+meta_desc: "A Pulumi package for creating and managing postgresql cloud resources."
 menu:
     reference:
         parent: API Reference
@@ -11,7 +12,7 @@ menu:
 
 A Pulumi package for creating and managing postgresql cloud resources.
 
-<h3>Resources</h3>
+<h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="database" title="Database"><span class="symbol resource"></span>Database</a></li>
     <li><a href="defaultprivileg" title="DefaultPrivileg"><span class="symbol resource"></span>DefaultPrivileg</a></li>
@@ -23,13 +24,13 @@ A Pulumi package for creating and managing postgresql cloud resources.
     <li><a href="schema" title="Schema"><span class="symbol resource"></span>Schema</a></li>
 </ul>
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-postgresql">https://github.com/pulumi/pulumi-postgresql</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`postgresql` Terraform Provider](https://github.com/terraform-providers/terraform-provider-postgresql).</dd>
 	<dt>Version</dt>
 	<dd>2.0.0</dd>

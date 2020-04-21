@@ -1,7 +1,8 @@
 
 ---
 title: "BandwidthPackage"
-block_external_search_index: true
+title_tag: "Resource BandwidthPackage | Module cen | Package AliCloud"
+meta_desc: "Explore the BandwidthPackage resource of the cen module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a CEN bandwidth package resource. The CEN bandwidth package is an abstracted object that includes an interconnection bandwidth and interconnection areas. To buy a bandwidth package, you must specify the areas to connect. An area consists of one or more Alibaba Cloud regions. The areas in CEN include Mainland China, Asia Pacific, North America, and Europe."
 ---
 
 
@@ -1058,8 +1059,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-alicloud">https://github.com/pulumi/pulumi-alicloud</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
-	
 </dl>
 

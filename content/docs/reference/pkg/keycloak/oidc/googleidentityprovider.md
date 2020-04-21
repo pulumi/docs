@@ -1,7 +1,8 @@
 
 ---
 title: "GoogleIdentityProvider"
-block_external_search_index: true
+title_tag: "Resource GoogleIdentityProvider | Module oidc | Package Keycloak"
+meta_desc: "Explore the GoogleIdentityProvider resource of the oidc module, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 
 
@@ -2210,8 +2211,7 @@ Google is throttling access to the User Info service.
 	<dd><a href="https://github.com/pulumi/pulumi-keycloak">https://github.com/pulumi/pulumi-keycloak</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`keycloak` Terraform Provider](https://github.com/mrparkers/terraform-provider-keycloak).</dd>
-	
 </dl>
 

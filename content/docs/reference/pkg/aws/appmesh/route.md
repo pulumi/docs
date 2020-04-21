@@ -1,7 +1,8 @@
 
 ---
 title: "Route"
-block_external_search_index: true
+title_tag: "Resource Route | Module appmesh | Package AWS"
+meta_desc: "Explore the Route resource of the appmesh module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an AWS App Mesh route resource."
 ---
 
 
@@ -2571,8 +2572,7 @@ You can specify one or more targets and their relative weights with which to dis
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
-	
 </dl>
 

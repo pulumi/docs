@@ -1,7 +1,8 @@
 
 ---
 title: "Userv1"
-block_external_search_index: true
+title_tag: "Resource Userv1 | Package Fastly"
+meta_desc: "Explore the Userv1 resource of the Fastly package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Fastly User, representing the configuration for a user account for interacting with Fastly."
 ---
 
 
@@ -695,8 +696,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/GrubhubProd/pulumi-fastly">https://github.com/GrubhubProd/pulumi-fastly</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`fastly` Terraform Provider](https://github.com/terraform-providers/terraform-provider-fastly).</dd>
-	
 </dl>
 

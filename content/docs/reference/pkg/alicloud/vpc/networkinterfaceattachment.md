@@ -1,7 +1,8 @@
 
 ---
 title: "NetworkInterfaceAttachment"
-block_external_search_index: true
+title_tag: "Resource NetworkInterfaceAttachment | Module vpc | Package AliCloud"
+meta_desc: "Explore the NetworkInterfaceAttachment resource of the vpc module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an Alicloud ECS Elastic Network Interface Attachment as a resource to attach ENI to or detach ENI from ECS Instances."
 ---
 
 
@@ -30,9 +31,9 @@ const number = config.get("number") || "2";
 const vpc = new alicloud.vpc.Network("vpc", {
     cidrBlock: "192.168.0.0/24",
 });
-const defaultZones = alicloud.getZones({
+const defaultZones = pulumi.output(alicloud.getZones({
     availableResourceCreation: "VSwitch",
-});
+}, { async: true }));
 const vswitch = new alicloud.vpc.Switch("vswitch", {
     availabilityZone: defaultZones.zones[0].id,
     cidrBlock: "192.168.0.0/24",
@@ -41,15 +42,15 @@ const vswitch = new alicloud.vpc.Switch("vswitch", {
 const group = new alicloud.ecs.SecurityGroup("group", {
     vpcId: vpc.id,
 });
-const instanceType = alicloud.ecs.getInstanceTypes({
+const instanceType = defaultZones.apply(defaultZones => alicloud.ecs.getInstanceTypes({
     availabilityZone: defaultZones.zones[0].id,
     eniAmount: 2,
-});
-const defaultImages = alicloud.ecs.getImages({
+}, { async: true }));
+const defaultImages = pulumi.output(alicloud.ecs.getImages({
     mostRecent: true,
     nameRegex: "^ubuntu_18.*64",
     owners: "system",
-});
+}, { async: true }));
 const instance: alicloud.ecs.Instance[] = [];
 for (let i = 0; i < number; i++) {
     instance.push(new alicloud.ecs.Instance(`instance-${i}`, {
@@ -674,8 +675,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-alicloud">https://github.com/pulumi/pulumi-alicloud</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
-	
 </dl>
 

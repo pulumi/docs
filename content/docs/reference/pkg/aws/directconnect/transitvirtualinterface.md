@@ -1,7 +1,8 @@
 
 ---
 title: "TransitVirtualInterface"
-block_external_search_index: true
+title_tag: "Resource TransitVirtualInterface | Module directconnect | Package AWS"
+meta_desc: "Explore the TransitVirtualInterface resource of the directconnect module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Direct Connect transit virtual interface resource."
 ---
 
 
@@ -1563,8 +1564,7 @@ The MTU of a virtual transit interface can be either `1500` or `8500` (jumbo fra
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
-	
 </dl>
 

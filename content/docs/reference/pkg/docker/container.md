@@ -1,7 +1,8 @@
 
 ---
 title: "Container"
-block_external_search_index: true
+title_tag: "Resource Container | Package Docker"
+meta_desc: "Explore the Container resource of the Docker package, including examples, input properties, output properties, lookup functions, and supporting types. Manages the lifecycle of a Docker container."
 ---
 
 
@@ -124,7 +125,7 @@ const ubuntuContainer = new docker.Container("ubuntu", {
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -2142,9 +2143,7 @@ by name.
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. Additionally, the Container resource produces the following computed outputs.
-
-The following output properties are available:
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the Container resource produces the following output properties:
 
 
 
@@ -2188,6 +2187,14 @@ The following output properties are available:
     <dd>{{% md %}}*Deprecated:* Use `network_data` instead. The network gateway of the container as read from its
 NetworkSettings.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use gateway from ip_adresses_data instead. This field exposes the data of the container&#39;s first network.{{% /md %}}</p></dd>
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property- property-deprecated"
             title=", Deprecated">
@@ -2262,6 +2269,14 @@ network. Key are the network names, values are the IP addresses.
 NetworkSettings.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use gateway from ip_adresses_data instead. This field exposes the data of the container&#39;s first network.{{% /md %}}</p></dd>
 
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
     <dt class="property- property-deprecated"
             title=", Deprecated">
         <span>Ip<wbr>Address</span>
@@ -2334,6 +2349,14 @@ network. Key are the network names, values are the IP addresses.
     <dd>{{% md %}}*Deprecated:* Use `network_data` instead. The network gateway of the container as read from its
 NetworkSettings.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use gateway from ip_adresses_data instead. This field exposes the data of the container&#39;s first network.{{% /md %}}</p></dd>
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property- property-deprecated"
             title=", Deprecated">
@@ -2408,6 +2431,14 @@ network. Key are the network names, values are the IP addresses.
 NetworkSettings.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use gateway from ip_adresses_data instead. This field exposes the data of the container&#39;s first network.{{% /md %}}</p></dd>
 
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
     <dt class="property- property-deprecated"
             title=", Deprecated">
         <span>ip_<wbr>address</span>
@@ -2439,7 +2470,6 @@ network. Key are the network names, values are the IP addresses.
 
 </dl>
 {{% /choosable %}}
-
 
 
 
@@ -7521,8 +7551,7 @@ should be mounted.
 	<dd><a href="https://github.com/pulumi/pulumi-docker">https://github.com/pulumi/pulumi-docker</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`docker` Terraform Provider](https://github.com/terraform-providers/terraform-provider-docker).</dd>
-	
 </dl>
 

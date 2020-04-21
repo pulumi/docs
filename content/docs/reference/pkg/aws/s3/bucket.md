@@ -1,7 +1,8 @@
 
 ---
 title: "Bucket"
-block_external_search_index: true
+title_tag: "Resource Bucket | Module s3 | Package AWS"
+meta_desc: "Explore the Bucket resource of the s3 module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a S3 bucket resource."
 ---
 
 
@@ -236,7 +237,7 @@ const bucket = new aws.s3.Bucket("bucket", {
     versioning: {
         enabled: true,
     },
-}, {provider: central});
+}, { provider: central });
 const replicationPolicy = new aws.iam.Policy("replication", {
     policy: pulumi.interpolate`{
   "Version": "2012-10-17",
@@ -311,7 +312,7 @@ const mybucket = new aws.s3.Bucket("mybucket", {
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const currentUser = aws.getCanonicalUserId();
+const currentUser = pulumi.output(aws.getCanonicalUserId({ async: true }));
 const bucket = new aws.s3.Bucket("bucket", {
     grants: [
         {
@@ -2792,7 +2793,7 @@ developer guide for more information.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Canonical user id to grant for. Used only when `type` is `CanonicalUser`.
+    <dd>{{% md %}}Canonical user id to grant for. Used only when `type` is `CanonicalUser`.  
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2835,7 +2836,7 @@ developer guide for more information.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Canonical user id to grant for. Used only when `type` is `CanonicalUser`.
+    <dd>{{% md %}}Canonical user id to grant for. Used only when `type` is `CanonicalUser`.  
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2878,7 +2879,7 @@ developer guide for more information.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Canonical user id to grant for. Used only when `type` is `CanonicalUser`.
+    <dd>{{% md %}}Canonical user id to grant for. Used only when `type` is `CanonicalUser`.  
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2921,7 +2922,7 @@ developer guide for more information.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Canonical user id to grant for. Used only when `type` is `CanonicalUser`.
+    <dd>{{% md %}}Canonical user id to grant for. Used only when `type` is `CanonicalUser`.  
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5849,7 +5850,7 @@ describing redirect behavior and when redirects are applied.
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
-	
 </dl>
+

@@ -1,7 +1,8 @@
 
 ---
 title: "Protection"
-block_external_search_index: true
+title_tag: "Resource Protection | Module shield | Package AWS"
+meta_desc: "Explore the Protection resource of the shield module, including examples, input properties, output properties, lookup functions, and supporting types. Enables AWS Shield Advanced for a specific AWS resource."
 ---
 
 
@@ -22,9 +23,9 @@ The resource can be an Amazon CloudFront distribution, Elastic Load Balancing lo
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const available = aws.getAvailabilityZones();
-const currentRegion = aws.getRegion();
-const currentCallerIdentity = aws.getCallerIdentity();
+const available = pulumi.output(aws.getAvailabilityZones({ async: true }));
+const currentRegion = pulumi.output(aws.getRegion({ async: true }));
+const currentCallerIdentity = pulumi.output(aws.getCallerIdentity({ async: true }));
 const fooEip = new aws.ec2.Eip("foo", {
     vpc: true,
 });
@@ -628,8 +629,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
-	
 </dl>
 

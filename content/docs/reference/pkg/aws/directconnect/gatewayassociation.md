@@ -1,7 +1,8 @@
 
 ---
 title: "GatewayAssociation"
-block_external_search_index: true
+title_tag: "Resource GatewayAssociation | Module directconnect | Package AWS"
+meta_desc: "Explore the GatewayAssociation resource of the directconnect module, including examples, input properties, output properties, lookup functions, and supporting types. Associates a Direct Connect Gateway with a VGW or transit gateway."
 ---
 
 
@@ -1222,8 +1223,7 @@ Used for single account Direct Connect gateway associations.
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
-	
 </dl>
 

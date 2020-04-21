@@ -1,7 +1,8 @@
 
 ---
 title: "NetworkInterface"
-block_external_search_index: true
+title_tag: "Resource NetworkInterface | Module vpc | Package AliCloud"
+meta_desc: "Explore the NetworkInterface resource of the vpc module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an ECS Elastic Network Interface resource."
 ---
 
 
@@ -29,9 +30,9 @@ const name = config.get("name") || "networkInterfaceName";
 const vpc = new alicloud.vpc.Network("vpc", {
     cidrBlock: "192.168.0.0/24",
 });
-const defaultZones = alicloud.getZones({
+const defaultZones = pulumi.output(alicloud.getZones({
     availableResourceCreation: "VSwitch",
-});
+}, { async: true }));
 const vswitch = new alicloud.vpc.Switch("vswitch", {
     availabilityZone: defaultZones.zones[0].id,
     cidrBlock: "192.168.0.0/24",
@@ -1219,8 +1220,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-alicloud">https://github.com/pulumi/pulumi-alicloud</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
-	
 </dl>
 

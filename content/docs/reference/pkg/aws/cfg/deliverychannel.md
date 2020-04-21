@@ -1,7 +1,8 @@
 
 ---
 title: "DeliveryChannel"
-block_external_search_index: true
+title_tag: "Resource DeliveryChannel | Module cfg | Package AWS"
+meta_desc: "Explore the DeliveryChannel resource of the cfg module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an AWS Config Delivery Channel."
 ---
 
 
@@ -45,7 +46,7 @@ const fooRecorder = new aws.cfg.Recorder("foo", {
 });
 const fooDeliveryChannel = new aws.cfg.DeliveryChannel("foo", {
     s3BucketName: bucket.bucket,
-}, {dependsOn: [fooRecorder]});
+}, { dependsOn: [fooRecorder] });
 const rolePolicy = new aws.iam.RolePolicy("p", {
     policy: pulumi.interpolate`{
   "Version": "2012-10-17",
@@ -971,8 +972,7 @@ Valid values are listed [here](https://docs.aws.amazon.com/config/latest/APIRefe
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
-	
 </dl>
 

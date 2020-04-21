@@ -1,7 +1,8 @@
 
 ---
 title: "LaunchConfiguration"
-block_external_search_index: true
+title_tag: "Resource LaunchConfiguration | Module ec2 | Package AWS"
+meta_desc: "Explore the LaunchConfiguration resource of the ec2 module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a resource to create a new launch configuration, used for autoscaling groups."
 ---
 
 
@@ -19,7 +20,7 @@ Provides a resource to create a new launch configuration, used for autoscaling g
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const ubuntu = aws.getAmi({
+const ubuntu = pulumi.output(aws.getAmi({
     filters: [
         {
             name: "name",
@@ -32,7 +33,7 @@ const ubuntu = aws.getAmi({
     ],
     mostRecent: true,
     owners: ["099720109477"], // Canonical
-});
+}, { async: true }));
 const asConf = new aws.ec2.LaunchConfiguration("as_conf", {
     imageId: ubuntu.id,
     instanceType: "t2.micro",
@@ -55,7 +56,7 @@ with `name_prefix`.  Example:
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const ubuntu = aws.getAmi({
+const ubuntu = pulumi.output(aws.getAmi({
     filters: [
         {
             name: "name",
@@ -68,7 +69,7 @@ const ubuntu = aws.getAmi({
     ],
     mostRecent: true,
     owners: ["099720109477"], // Canonical
-});
+}, { async: true }));
 const asConf = new aws.ec2.LaunchConfiguration("as_conf", {
     imageId: ubuntu.id,
     instanceType: "t2.micro",
@@ -98,7 +99,7 @@ for more information or how to launch [Spot Instances][3] with this provider.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const ubuntu = aws.getAmi({
+const ubuntu = pulumi.output(aws.getAmi({
     filters: [
         {
             name: "name",
@@ -111,7 +112,7 @@ const ubuntu = aws.getAmi({
     ],
     mostRecent: true,
     owners: ["099720109477"], // Canonical
-});
+}, { async: true }));
 const asConf = new aws.ec2.LaunchConfiguration("as_conf", {
     imageId: ubuntu.id,
     instanceType: "m4.large",
@@ -2745,8 +2746,7 @@ device of the instance. See Block Devices below for details.
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
-	
 </dl>
 

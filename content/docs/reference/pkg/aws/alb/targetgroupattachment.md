@@ -1,7 +1,8 @@
 
 ---
 title: "TargetGroupAttachment"
-block_external_search_index: true
+title_tag: "Resource TargetGroupAttachment | Module alb | Package AWS"
+meta_desc: "Explore the TargetGroupAttachment resource of the alb module, including examples, input properties, output properties, lookup functions, and supporting types. Provides the ability to register instances and containers with an Application Load Balancer (ALB) or Network Load Balancer (NLB) target group. For attaching resources with Elastic Load Balancer (ELB), see the [`aws.elb.Attachment` resource](https://www.terraform.io/docs/providers/aws/r/elb_attachment.html)."
 ---
 
 
@@ -51,7 +52,7 @@ const withLb = new aws.lambda.Permission("with_lb", {
 const testTargetGroupAttachment = new aws.lb.TargetGroupAttachment("test", {
     targetGroupArn: testTargetGroup.arn,
     targetId: testFunction.arn,
-}, {dependsOn: [withLb]});
+}, { dependsOn: [withLb] });
 ```
 
 
@@ -790,8 +791,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
-	
 </dl>
 

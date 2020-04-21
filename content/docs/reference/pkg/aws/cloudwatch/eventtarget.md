@@ -1,7 +1,8 @@
 
 ---
 title: "EventTarget"
-block_external_search_index: true
+title_tag: "Resource EventTarget | Module cloudwatch | Package AWS"
+meta_desc: "Explore the EventTarget resource of the cloudwatch module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a CloudWatch Event Target resource."
 ---
 
 
@@ -61,7 +62,7 @@ const yada = new aws.cloudwatch.EventTarget("yada", {
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const ssmLifecycleTrust = aws.iam.getPolicyDocument({
+const ssmLifecycleTrust = pulumi.output(aws.iam.getPolicyDocument({
     statements: [{
         actions: ["sts:AssumeRole"],
         principals: [{
@@ -69,7 +70,7 @@ const ssmLifecycleTrust = aws.iam.getPolicyDocument({
             type: "Service",
         }],
     }],
-});
+}, { async: true }));
 const stopInstance = new aws.ssm.Document("stop_instance", {
     content: `  {
     "schemaVersion": "1.2",
@@ -109,7 +110,7 @@ const ssmLifecyclePolicyDocument = stopInstance.arn.apply(arn => aws.iam.getPoli
             resources: [arn],
         },
     ],
-}));
+}, { async: true }));
 const ssmLifecycleRole = new aws.iam.Role("ssm_lifecycle", {
     assumeRolePolicy: ssmLifecycleTrust.json,
 });
@@ -2525,8 +2526,7 @@ that is used for extracting part of the matched event when passing it to the tar
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
-	
 </dl>
 

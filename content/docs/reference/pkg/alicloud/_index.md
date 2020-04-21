@@ -1,6 +1,7 @@
 ---
 title: "AliCloud"
-block_external_search_index: true
+title_tag: "Package AliCloud"
+meta_desc: "A Pulumi package for creating and managing AliCloud resources."
 menu:
     reference:
         parent: API Reference
@@ -77,7 +78,7 @@ A Pulumi package for creating and managing AliCloud resources.
 	<dd><a href="https://github.com/pulumi/pulumi-alicloud">https://github.com/pulumi/pulumi-alicloud</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
 	<dt>Version</dt>
 	<dd>2.1.0</dd>

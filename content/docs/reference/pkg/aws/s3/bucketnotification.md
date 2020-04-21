@@ -1,7 +1,8 @@
 
 ---
 title: "BucketNotification"
-block_external_search_index: true
+title_tag: "Resource BucketNotification | Module s3 | Package AWS"
+meta_desc: "Explore the BucketNotification resource of the s3 module, including examples, input properties, output properties, lookup functions, and supporting types. Manages a S3 Bucket Notification Configuration. For additional information, see the [Configuring S3 Event Notifications section in the Amazon S3 Developer Guide](https://docs.aws.amazon.com/AmazonS3/latest/dev/NotificationHowTo.html)."
 ---
 
 
@@ -1544,8 +1545,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
-	
 </dl>
 

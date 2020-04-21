@@ -1,7 +1,8 @@
 
 ---
 title: "HostPortGroup"
-block_external_search_index: true
+title_tag: "Resource HostPortGroup | Package vSphere"
+meta_desc: "Explore the HostPortGroup resource of the vSphere package, including examples, input properties, output properties, lookup functions, and supporting types. The `vsphere..HostPortGroup` resource can be used to manage vSphere standard"
 ---
 
 
@@ -27,13 +28,13 @@ For an overview on vSphere networking concepts, see [this page][ref-vsphere-net-
 import * as pulumi from "@pulumi/pulumi";
 import * as vsphere from "@pulumi/vsphere";
 
-const datacenter = vsphere.getDatacenter({
+const datacenter = pulumi.output(vsphere.getDatacenter({
     name: "dc1",
-});
-const esxiHost = vsphere.getHost({
+}, { async: true }));
+const esxiHost = datacenter.apply(datacenter => vsphere.getHost({
     datacenterId: datacenter.id,
     name: "esxi1",
-});
+}, { async: true }));
 const switchHostVirtualSwitch = new vsphere.HostVirtualSwitch("switch", {
     activeNics: ["vmnic0"],
     hostSystemId: esxiHost.id,
@@ -61,13 +62,13 @@ the implicit default of `false` set on the virtual switch.
 import * as pulumi from "@pulumi/pulumi";
 import * as vsphere from "@pulumi/vsphere";
 
-const datacenter = vsphere.getDatacenter({
+const datacenter = pulumi.output(vsphere.getDatacenter({
     name: "dc1",
-});
-const esxiHost = vsphere.getHost({
+}, { async: true }));
+const esxiHost = datacenter.apply(datacenter => vsphere.getHost({
     datacenterId: datacenter.id,
     name: "esxi1",
-});
+}, { async: true }));
 const switchHostVirtualSwitch = new vsphere.HostVirtualSwitch("switch", {
     activeNics: ["vmnic0"],
     hostSystemId: esxiHost.id,
@@ -2210,8 +2211,7 @@ tagging. Default: `0`.
 	<dd><a href="https://github.com/pulumi/pulumi-vsphere">https://github.com/pulumi/pulumi-vsphere</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`vsphere` Terraform Provider](https://github.com/terraform-providers/terraform-provider-vsphere).</dd>
-	
 </dl>
 

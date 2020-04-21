@@ -1,7 +1,8 @@
 
 ---
 title: "Provider"
-block_external_search_index: true
+title_tag: "Resource Provider | Package Keycloak"
+meta_desc: "Explore the Provider resource of the Keycloak package, including examples, input properties, output properties, lookup functions, and supporting types. The provider type for the keycloak package. By default, resources use package-wide configuration"
 ---
 
 
@@ -653,8 +654,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 	<dd><a href="https://github.com/pulumi/pulumi-keycloak">https://github.com/pulumi/pulumi-keycloak</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`keycloak` Terraform Provider](https://github.com/mrparkers/terraform-provider-keycloak).</dd>
-	
 </dl>
 

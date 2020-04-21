@@ -1,7 +1,8 @@
 
 ---
 title: "Policy"
-block_external_search_index: true
+title_tag: "Resource Policy | Module appautoscaling | Package AWS"
+meta_desc: "Explore the Policy resource of the appautoscaling module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an Application AutoScaling Policy resource."
 ---
 
 
@@ -88,7 +89,7 @@ const ecsService = new aws.ecs.Service("ecs_service", {
     cluster: "clusterName",
     desiredCount: 2,
     taskDefinition: "taskDefinitionFamily:1",
-}, {ignoreChanges: ["desiredCount"]});
+}, { ignoreChanges: ["desiredCount"] });
 ```
 
 {{% /example %}}
@@ -2176,8 +2177,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
-	
 </dl>
 

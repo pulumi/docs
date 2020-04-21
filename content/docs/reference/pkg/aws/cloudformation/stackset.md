@@ -1,7 +1,8 @@
 
 ---
 title: "StackSet"
-block_external_search_index: true
+title_tag: "Resource StackSet | Module cloudformation | Package AWS"
+meta_desc: "Explore the StackSet resource of the cloudformation module, including examples, input properties, output properties, lookup functions, and supporting types. Manages a CloudFormation StackSet. StackSets allow CloudFormation templates to be easily deployed across multiple accounts and regions via StackSet Instances ([`aws.cloudformation.StackSetInstance` resource](https://www.terraform.io/docs/providers/aws/r/cloudformation_stack_set_instance.html)). Additional information about StackSets can be found in the [AWS CloudFormation User Guide](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/what-is-cfnstacksets.html)."
 ---
 
 
@@ -23,7 +24,7 @@ Manages a CloudFormation StackSet. StackSets allow CloudFormation templates to b
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const aWSCloudFormationStackSetAdministrationRoleAssumeRolePolicy = aws.iam.getPolicyDocument({
+const aWSCloudFormationStackSetAdministrationRoleAssumeRolePolicy = pulumi.output(aws.iam.getPolicyDocument({
     statements: [{
         actions: ["sts:AssumeRole"],
         effect: "Allow",
@@ -32,7 +33,7 @@ const aWSCloudFormationStackSetAdministrationRoleAssumeRolePolicy = aws.iam.getP
             type: "Service",
         }],
     }],
-});
+}, { async: true }));
 const aWSCloudFormationStackSetAdministrationRole = new aws.iam.Role("AWSCloudFormationStackSetAdministrationRole", {
     assumeRolePolicy: aWSCloudFormationStackSetAdministrationRoleAssumeRolePolicy.json,
 });
@@ -69,7 +70,7 @@ const aWSCloudFormationStackSetAdministrationRoleExecutionPolicyPolicyDocument =
         effect: "Allow",
         resources: [`arn:aws:iam::*:role/${executionRoleName}`],
     }],
-}));
+}, { async: true }));
 const aWSCloudFormationStackSetAdministrationRoleExecutionPolicyRolePolicy = new aws.iam.RolePolicy("AWSCloudFormationStackSetAdministrationRole_ExecutionPolicy", {
     policy: aWSCloudFormationStackSetAdministrationRoleExecutionPolicyPolicyDocument.json,
     role: aWSCloudFormationStackSetAdministrationRole.name,
@@ -1319,8 +1320,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
-	
 </dl>
 

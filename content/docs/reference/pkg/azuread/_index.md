@@ -1,6 +1,7 @@
 ---
 title: "Azure AD"
-block_external_search_index: true
+title_tag: "Module Azure AD | Package Azure AD"
+meta_desc: "A Pulumi package for creating and managing azuread cloud resources."
 menu:
     reference:
         parent: API Reference
@@ -11,7 +12,7 @@ menu:
 
 A Pulumi package for creating and managing azuread cloud resources.
 
-<h3>Resources</h3>
+<h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="application" title="Application"><span class="symbol resource"></span>Application</a></li>
     <li><a href="applicationpassword" title="ApplicationPassword"><span class="symbol resource"></span>ApplicationPassword</a></li>
@@ -23,7 +24,7 @@ A Pulumi package for creating and managing azuread cloud resources.
     <li><a href="user" title="User"><span class="symbol resource"></span>User</a></li>
 </ul>
 
-<h3>Functions</h3>
+<h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getapplication" title="GetApplication"><span class="symbol function"></span>GetApplication</a></li>
     <li><a href="getclientconfig" title="GetClientConfig"><span class="symbol function"></span>GetClientConfig</a></li>
@@ -35,13 +36,15 @@ A Pulumi package for creating and managing azuread cloud resources.
     <li><a href="getusers" title="GetUsers"><span class="symbol function"></span>GetUsers</a></li>
 </ul>
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-azuread">https://github.com/pulumi/pulumi-azuread</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azuread` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azuread).</dd>
+	<dt>Version</dt>
+	<dd>2.0.1</dd>
 </dl>
 

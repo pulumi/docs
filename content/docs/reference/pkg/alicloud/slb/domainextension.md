@@ -1,7 +1,8 @@
 
 ---
 title: "DomainExtension"
-block_external_search_index: true
+title_tag: "Resource DomainExtension | Module slb | Package AliCloud"
+meta_desc: "Explore the DomainExtension resource of the slb module, including examples, input properties, output properties, lookup functions, and supporting types. HTTPS listeners of guaranteed-performance SLB support configuring multiple certificates, allowing you to forward requests with different domain names to different backend servers."
 ---
 
 
@@ -916,8 +917,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-alicloud">https://github.com/pulumi/pulumi-alicloud</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
-	
 </dl>
 

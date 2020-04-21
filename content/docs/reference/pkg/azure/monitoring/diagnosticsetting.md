@@ -1,7 +1,8 @@
 
 ---
 title: "DiagnosticSetting"
-block_external_search_index: true
+title_tag: "Resource DiagnosticSetting | Module monitoring | Package Azure"
+meta_desc: "Explore the DiagnosticSetting resource of the monitoring module, including examples, input properties, output properties, lookup functions, and supporting types. Manages a Diagnostic Setting for an existing Resource."
 ---
 
 
@@ -25,11 +26,11 @@ const exampleResourceGroup = new azure.core.ResourceGroup("example", {
 const exampleAccount = exampleResourceGroup.name.apply(name => azure.storage.getAccount({
     name: "examplestoracc",
     resourceGroupName: name,
-}));
+}, { async: true }));
 const exampleKeyVault = exampleResourceGroup.name.apply(name => azure.keyvault.getKeyVault({
     name: "example-vault",
     resourceGroupName: name,
-}));
+}, { async: true }));
 const exampleDiagnosticSetting = new azure.monitoring.DiagnosticSetting("example", {
     logs: [{
         category: "AuditEvent",
@@ -1686,8 +1687,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-azure">https://github.com/pulumi/pulumi-azure</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
-	
 </dl>
 

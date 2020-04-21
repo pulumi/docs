@@ -1,7 +1,8 @@
 
 ---
 title: "StorageDrsVmOverride"
-block_external_search_index: true
+title_tag: "Resource StorageDrsVmOverride | Package vSphere"
+meta_desc: "Explore the StorageDrsVmOverride resource of the vSphere package, including examples, input properties, output properties, lookup functions, and supporting types. The `vsphere..StorageDrsVmOverride` resource can be used to add a Storage DRS"
 ---
 
 
@@ -44,25 +45,25 @@ the datastore.
 import * as pulumi from "@pulumi/pulumi";
 import * as vsphere from "@pulumi/vsphere";
 
-const dc = vsphere.getDatacenter({
+const dc = pulumi.output(vsphere.getDatacenter({
     name: "dc1",
-});
-const datastoreCluster = vsphere.getDatastoreCluster({
+}, { async: true }));
+const datastoreCluster = dc.apply(dc => vsphere.getDatastoreCluster({
     datacenterId: dc.id,
     name: "datastore-cluster1",
-});
-const memberDatastore = vsphere.getDatastore({
+}, { async: true }));
+const memberDatastore = dc.apply(dc => vsphere.getDatastore({
     datacenterId: dc.id,
     name: "datastore-cluster1-member1",
-});
-const pool = vsphere.getResourcePool({
+}, { async: true }));
+const pool = dc.apply(dc => vsphere.getResourcePool({
     datacenterId: dc.id,
     name: "cluster1/Resources",
-});
-const network = vsphere.getNetwork({
+}, { async: true }));
+const network = dc.apply(dc => vsphere.getNetwork({
     datacenterId: dc.id,
     name: "public",
-});
+}, { async: true }));
 const vm = new vsphere.VirtualMachine("vm", {
     datastoreId: memberDatastore.id,
     disks: [{
@@ -991,8 +992,7 @@ the override for.  Forces a new resource if changed.
 	<dd><a href="https://github.com/pulumi/pulumi-vsphere">https://github.com/pulumi/pulumi-vsphere</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`vsphere` Terraform Provider](https://github.com/terraform-providers/terraform-provider-vsphere).</dd>
-	
 </dl>
 

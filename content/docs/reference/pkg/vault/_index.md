@@ -1,6 +1,7 @@
 ---
 title: "Vault"
-block_external_search_index: true
+title_tag: "Package Vault"
+meta_desc: "A Pulumi package for creating and managing vault cloud resources."
 menu:
     reference:
         parent: API Reference
@@ -11,7 +12,7 @@ menu:
 
 A Pulumi package for creating and managing vault cloud resources.
 
-<h3>Modules</h3>
+<h2 id="modules">Modules</h2>
 <ul class="api">
     <li><a href="alicloud/" title="alicloud"><span class="symbol module"></span>alicloud</a></li>
     <li><a href="approle/" title="appRole"><span class="symbol module"></span>appRole</a></li>
@@ -34,7 +35,7 @@ A Pulumi package for creating and managing vault cloud resources.
     <li><a href="transit/" title="transit"><span class="symbol module"></span>transit</a></li>
 </ul>
 
-<h3>Resources</h3>
+<h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="audit" title="Audit"><span class="symbol resource"></span>Audit</a></li>
     <li><a href="authbackend" title="AuthBackend"><span class="symbol resource"></span>AuthBackend</a></li>
@@ -49,19 +50,21 @@ A Pulumi package for creating and managing vault cloud resources.
     <li><a href="token" title="Token"><span class="symbol resource"></span>Token</a></li>
 </ul>
 
-<h3>Functions</h3>
+<h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getauthbackend" title="GetAuthBackend"><span class="symbol function"></span>GetAuthBackend</a></li>
     <li><a href="getpolicydocument" title="GetPolicyDocument"><span class="symbol function"></span>GetPolicyDocument</a></li>
 </ul>
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-vault">https://github.com/pulumi/pulumi-vault</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`vault` Terraform Provider](https://github.com/terraform-providers/terraform-provider-vault).</dd>
+	<dt>Version</dt>
+	<dd>2.0.0</dd>
 </dl>
 

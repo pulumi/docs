@@ -1,7 +1,8 @@
 
 ---
 title: "Activation"
-block_external_search_index: true
+title_tag: "Resource Activation | Module ssm | Package AWS"
+meta_desc: "Explore the Activation resource of the ssm module, including examples, input properties, output properties, lookup functions, and supporting types. Registers an on-premises server or virtual machine with Amazon EC2 so that it can be managed using Run Command."
 ---
 
 
@@ -38,7 +39,7 @@ const foo = new aws.ssm.Activation("foo", {
     description: "Test",
     iamRole: testRole.id,
     registrationLimit: 5,
-}, {dependsOn: [testAttach]});
+}, { dependsOn: [testAttach] });
 ```
 
 {{% /example %}}
@@ -1140,8 +1141,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
-	
 </dl>
 

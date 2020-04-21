@@ -1,7 +1,8 @@
 
 ---
 title: "VaultLock"
-block_external_search_index: true
+title_tag: "Resource VaultLock | Module glacier | Package AWS"
+meta_desc: "Explore the VaultLock resource of the glacier module, including examples, input properties, output properties, lookup functions, and supporting types. Manages a Glacier Vault Lock. You can refer to the [Glacier Developer Guide](https://docs.aws.amazon.com/amazonglacier/latest/dev/vault-lock.html) for a full explanation of the Glacier Vault Lock functionality."
 ---
 
 
@@ -37,7 +38,7 @@ const examplePolicyDocument = exampleVault.arn.apply(arn => aws.iam.getPolicyDoc
         effect: "Deny",
         resources: [arn],
     }],
-}));
+}, { async: true }));
 const exampleVaultLock = new aws.glacier.VaultLock("example", {
     completeLock: false,
     policy: examplePolicyDocument.json,
@@ -799,8 +800,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
-	
 </dl>
 

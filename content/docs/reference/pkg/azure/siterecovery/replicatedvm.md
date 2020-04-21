@@ -1,7 +1,8 @@
 
 ---
 title: "ReplicatedVM"
-block_external_search_index: true
+title_tag: "Resource ReplicatedVM | Module siterecovery | Package Azure"
+meta_desc: "Explore the ReplicatedVM resource of the siterecovery module, including examples, input properties, output properties, lookup functions, and supporting types. Manages a VM replicated using Azure Site Recovery (Azure to Azure only). A replicated VM keeps a copiously updated image of the VM in another region in order to be able to start the VM in that region in case of a disaster."
 ---
 
 
@@ -1547,8 +1548,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-azure">https://github.com/pulumi/pulumi-azure</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
-	
 </dl>
 

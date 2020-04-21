@@ -1,6 +1,7 @@
 ---
 title: "RabbitMQ"
-block_external_search_index: true
+title_tag: "Module RabbitMQ | Package RabbitMQ"
+meta_desc: "A Pulumi package for creating and managing RabbitMQ resources."
 menu:
     reference:
         parent: API Reference
@@ -11,7 +12,7 @@ menu:
 
 A Pulumi package for creating and managing RabbitMQ resources.
 
-<h3>Resources</h3>
+<h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="binding" title="Binding"><span class="symbol resource"></span>Binding</a></li>
     <li><a href="exchange" title="Exchange"><span class="symbol resource"></span>Exchange</a></li>
@@ -24,13 +25,13 @@ A Pulumi package for creating and managing RabbitMQ resources.
     <li><a href="vhost" title="VHost"><span class="symbol resource"></span>VHost</a></li>
 </ul>
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-rabbitmq">https://github.com/pulumi/pulumi-rabbitmq</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`rabbitmq` Terraform Provider](https://github.com/terraform-providers/terraform-provider-rabbitmq).</dd>
 	<dt>Version</dt>
 	<dd>2.0.0</dd>

@@ -1,7 +1,8 @@
 
 ---
 title: "VpcAttachmentAccepter"
-block_external_search_index: true
+title_tag: "Resource VpcAttachmentAccepter | Module ec2transitgateway | Package AWS"
+meta_desc: "Explore the VpcAttachmentAccepter resource of the ec2transitgateway module, including examples, input properties, output properties, lookup functions, and supporting types. Manages the accepter&#39;s side of an EC2 Transit Gateway VPC Attachment."
 ---
 
 
@@ -1206,8 +1207,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
-	
 </dl>
 

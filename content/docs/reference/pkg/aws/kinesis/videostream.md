@@ -1,7 +1,8 @@
 
 ---
 title: "VideoStream"
-block_external_search_index: true
+title_tag: "Resource VideoStream | Module kinesis | Package AWS"
+meta_desc: "Explore the VideoStream resource of the kinesis module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Kinesis Video Stream resource. Amazon Kinesis Video Streams makes it easy to securely stream video from connected devices to AWS for analytics, machine learning (ML), playback, and other processing."
 ---
 
 
@@ -1138,8 +1139,7 @@ AWS account and region the Stream is created in.
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
-	
 </dl>
 

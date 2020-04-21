@@ -1,7 +1,8 @@
 
 ---
 title: "VpcEndpointConnectionNotification"
-block_external_search_index: true
+title_tag: "Resource VpcEndpointConnectionNotification | Module ec2 | Package AWS"
+meta_desc: "Explore the VpcEndpointConnectionNotification resource of the ec2 module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a VPC Endpoint connection notification resource."
 ---
 
 
@@ -931,8 +932,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
-	
 </dl>
 

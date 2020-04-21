@@ -1,7 +1,8 @@
 
 ---
 title: "ContainerStorageAccount"
-block_external_search_index: true
+title_tag: "Resource ContainerStorageAccount | Module backup | Package Azure"
+meta_desc: "Explore the ContainerStorageAccount resource of the backup module, including examples, input properties, output properties, lookup functions, and supporting types. Manages registration of a storage account with Azure Backup. Storage accounts must be registered with an Azure Recovery Vault in order to backup file shares within the storage account. Registering a storage account with a vault creates what is known as a protection container within Azure Recovery Services. Once the container is created, Azure file shares within the storage account can be backed up using the `azure.backup.ProtectedFileShare` resource."
 ---
 
 
@@ -680,8 +681,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-azure">https://github.com/pulumi/pulumi-azure</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
-	
 </dl>
 

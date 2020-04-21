@@ -1,7 +1,8 @@
 
 ---
 title: "OriginAccessIdentity"
-block_external_search_index: true
+title_tag: "Resource OriginAccessIdentity | Module cloudfront | Package AWS"
+meta_desc: "Explore the OriginAccessIdentity resource of the cloudfront module, including examples, input properties, output properties, lookup functions, and supporting types. Creates an Amazon CloudFront origin access identity."
 ---
 
 
@@ -75,7 +76,7 @@ const s3Policy = pulumi.all([aws_cloudfront_origin_access_identity_origin_access
             resources: [aws_s3_bucket_exampleArn1],
         },
     ],
-}));
+}, { async: true }));
 const example = new aws.s3.BucketPolicy("example", {
     bucket: aws_s3_bucket_example.id,
     policy: s3Policy.json,
@@ -1023,8 +1024,7 @@ permission to an object in Amazon S3.
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
-	
 </dl>
 

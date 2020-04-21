@@ -1,6 +1,7 @@
 ---
-title: "random"
-block_external_search_index: true
+title: "Random"
+title_tag: "Module Random | Package Random"
+meta_desc: "A Pulumi package to safely use randomness in Pulumi programs."
 menu:
     reference:
         parent: API Reference
@@ -11,7 +12,7 @@ menu:
 
 A Pulumi package to safely use randomness in Pulumi programs.
 
-<h3>Resources</h3>
+<h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="provider" title="Provider"><span class="symbol resource"></span>Provider</a></li>
     <li><a href="randomid" title="RandomId"><span class="symbol resource"></span>RandomId</a></li>
@@ -23,13 +24,15 @@ A Pulumi package to safely use randomness in Pulumi programs.
     <li><a href="randomuuid" title="RandomUuid"><span class="symbol resource"></span>RandomUuid</a></li>
 </ul>
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-random">https://github.com/pulumi/pulumi-random</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`random` Terraform Provider](https://github.com/terraform-providers/terraform-provider-random).</dd>
+	<dt>Version</dt>
+	<dd>2.0.0</dd>
 </dl>
 

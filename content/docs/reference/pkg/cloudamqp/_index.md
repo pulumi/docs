@@ -1,6 +1,7 @@
 ---
 title: "CloudAMQP"
-block_external_search_index: true
+title_tag: "Module CloudAMQP | Package CloudAMQP"
+meta_desc: "A Pulumi package for creating and managing CloudAMQP resources."
 menu:
     reference:
         parent: API Reference
@@ -11,7 +12,7 @@ menu:
 
 A Pulumi package for creating and managing CloudAMQP resources.
 
-<h3>Resources</h3>
+<h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="alarm" title="Alarm"><span class="symbol resource"></span>Alarm</a></li>
     <li><a href="instance" title="Instance"><span class="symbol resource"></span>Instance</a></li>
@@ -23,7 +24,7 @@ A Pulumi package for creating and managing CloudAMQP resources.
     <li><a href="vpcpeering" title="VpcPeering"><span class="symbol resource"></span>VpcPeering</a></li>
 </ul>
 
-<h3>Functions</h3>
+<h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getcredentials" title="GetCredentials"><span class="symbol function"></span>GetCredentials</a></li>
     <li><a href="getinstance" title="GetInstance"><span class="symbol function"></span>GetInstance</a></li>
@@ -32,13 +33,13 @@ A Pulumi package for creating and managing CloudAMQP resources.
     <li><a href="getvpcinfo" title="GetVpcInfo"><span class="symbol function"></span>GetVpcInfo</a></li>
 </ul>
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-cloudamqp">https://github.com/pulumi/pulumi-cloudamqp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`cloudamqp` Terraform Provider](https://github.com/cloudamqp/terraform-provider-cloudamqp).</dd>
 	<dt>Version</dt>
 	<dd>2.0.0</dd>

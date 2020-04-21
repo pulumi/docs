@@ -1,7 +1,8 @@
 
 ---
 title: "CertificateValidation"
-block_external_search_index: true
+title_tag: "Resource CertificateValidation | Module acm | Package AWS"
+meta_desc: "Explore the CertificateValidation resource of the acm module, including examples, input properties, output properties, lookup functions, and supporting types. This resource represents a successful validation of an ACM certificate in concert"
 ---
 
 
@@ -33,10 +34,10 @@ const certCertificate = new aws.acm.Certificate("cert", {
     domainName: "example.com",
     validationMethod: "DNS",
 });
-const zone = aws.route53.getZone({
+const zone = pulumi.output(aws.route53.getZone({
     name: "example.com.",
     privateZone: false,
-});
+}, { async: true }));
 const certValidation = new aws.route53.Record("cert_validation", {
     name: certCertificate.domainValidationOptions[0].resourceRecordName,
     records: [certCertificate.domainValidationOptions[0].resourceRecordValue],
@@ -70,14 +71,14 @@ const certCertificate = new aws.acm.Certificate("cert", {
     ],
     validationMethod: "DNS",
 });
-const zone = aws.route53.getZone({
+const zone = pulumi.output(aws.route53.getZone({
     name: "example.com.",
     privateZone: false,
-});
-const zoneAlt = aws.route53.getZone({
+}, { async: true }));
+const zoneAlt = pulumi.output(aws.route53.getZone({
     name: "example.org.",
     privateZone: false,
-});
+}, { async: true }));
 const certValidation = new aws.route53.Record("cert_validation", {
     name: certCertificate.domainValidationOptions[0].resourceRecordName,
     records: [certCertificate.domainValidationOptions[0].resourceRecordValue],
@@ -727,8 +728,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
-	
 </dl>
 

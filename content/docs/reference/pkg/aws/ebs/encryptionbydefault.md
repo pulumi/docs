@@ -1,7 +1,8 @@
 
 ---
 title: "EncryptionByDefault"
-block_external_search_index: true
+title_tag: "Resource EncryptionByDefault | Module ebs | Package AWS"
+meta_desc: "Explore the EncryptionByDefault resource of the ebs module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a resource to manage whether default EBS encryption is enabled for your AWS account in the current AWS region. To manage the default KMS key for the region, see the [`aws.ebs.DefaultKmsKey` resource](https://www.terraform.io/docs/providers/aws/r/ebs_default_kms_key.html)."
 ---
 
 
@@ -549,8 +550,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
-	
 </dl>
 

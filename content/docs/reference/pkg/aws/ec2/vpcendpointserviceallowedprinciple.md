@@ -1,7 +1,8 @@
 
 ---
 title: "VpcEndpointServiceAllowedPrinciple"
-block_external_search_index: true
+title_tag: "Resource VpcEndpointServiceAllowedPrinciple | Module ec2 | Package AWS"
+meta_desc: "Explore the VpcEndpointServiceAllowedPrinciple resource of the ec2 module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a resource to allow a principal to discover a VPC endpoint service."
 ---
 
 
@@ -27,7 +28,7 @@ Basic usage:
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const current = aws.getCallerIdentity();
+const current = pulumi.output(aws.getCallerIdentity({ async: true }));
 const allowMeToFoo = new aws.ec2.VpcEndpointServiceAllowedPrinciple("allow_me_to_foo", {
     principalArn: current.arn,
     vpcEndpointServiceId: aws_vpc_endpoint_service_foo.id,
@@ -629,8 +630,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
-	
 </dl>
 

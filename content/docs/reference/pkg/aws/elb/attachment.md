@@ -1,7 +1,8 @@
 
 ---
 title: "Attachment"
-block_external_search_index: true
+title_tag: "Resource Attachment | Module elb | Package AWS"
+meta_desc: "Explore the Attachment resource of the elb module, including examples, input properties, output properties, lookup functions, and supporting types. Attaches an EC2 instance to an Elastic Load Balancer (ELB). For attaching resources with Application Load Balancer (ALB) or Network Load Balancer (NLB), see the [`aws.lb.TargetGroupAttachment` resource](https://www.terraform.io/docs/providers/aws/r/lb_target_group_attachment.html)."
 ---
 
 
@@ -628,8 +629,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
-	
 </dl>
 

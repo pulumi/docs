@@ -1,7 +1,8 @@
 
 ---
 title: "CustomerGateway"
-block_external_search_index: true
+title_tag: "Resource CustomerGateway | Module ec2 | Package AWS"
+meta_desc: "Explore the CustomerGateway resource of the ec2 module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a customer gateway inside a VPC. These objects can be connected to VPN gateways via VPN connections, and allow you to establish tunnels between your network and the VPC."
 ---
 
 
@@ -776,8 +777,7 @@ supports at this time is "ipsec.1".
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
-	
 </dl>
 

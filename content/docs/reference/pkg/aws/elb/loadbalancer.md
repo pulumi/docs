@@ -1,7 +1,8 @@
 
 ---
 title: "LoadBalancer"
-block_external_search_index: true
+title_tag: "Resource LoadBalancer | Module elb | Package AWS"
+meta_desc: "Explore the LoadBalancer resource of the elb module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an Elastic Load Balancer resource, also known as a &#34;Classic"
 ---
 
 
@@ -2682,8 +2683,7 @@ uploaded to AWS IAM. **Note ECDSA-specific restrictions below.  Only valid when 
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
-	
 </dl>
 

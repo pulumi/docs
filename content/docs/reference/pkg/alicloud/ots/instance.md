@@ -1,7 +1,8 @@
 
 ---
 title: "Instance"
-block_external_search_index: true
+title_tag: "Resource Instance | Module ots | Package AliCloud"
+meta_desc: "Explore the Instance resource of the ots module, including examples, input properties, output properties, lookup functions, and supporting types. This resource will help you to manager a [Table Store](https://www.alibabacloud.com/help/doc-detail/27280.htm) Instance."
 ---
 
 
@@ -842,8 +843,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-alicloud">https://github.com/pulumi/pulumi-alicloud</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
-	
 </dl>
 

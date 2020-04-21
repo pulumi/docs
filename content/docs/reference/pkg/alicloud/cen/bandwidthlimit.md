@@ -1,7 +1,8 @@
 
 ---
 title: "BandwidthLimit"
-block_external_search_index: true
+title_tag: "Resource BandwidthLimit | Module cen | Package AliCloud"
+meta_desc: "Explore the BandwidthLimit resource of the cen module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a CEN cross-regional interconnection bandwidth resource. To connect networks in different regions, you must set cross-region interconnection bandwidth after buying a bandwidth package. The total bandwidth set for all the interconnected regions of a bandwidth package cannot exceed the bandwidth of the bandwidth package. By default, 1 Kbps bandwidth is provided for connectivity test. To run normal business, you must buy a bandwidth package and set a proper interconnection bandwidth."
 ---
 
 
@@ -36,10 +37,10 @@ const sh = new alicloud.Provider("sh", {
 });
 const vpc1 = new alicloud.vpc.Network("vpc1", {
     cidrBlock: "192.168.0.0/16",
-}, {provider: fra});
+}, { provider: fra });
 const vpc2 = new alicloud.vpc.Network("vpc2", {
     cidrBlock: "172.16.0.0/12",
-}, {provider: sh});
+}, { provider: sh });
 const cen = new alicloud.cen.Instance("cen", {
     description: "tf-testAccCenBandwidthLimitConfigDescription",
 });
@@ -71,7 +72,7 @@ const foo = new alicloud.cen.BandwidthLimit("foo", {
         "eu-central-1",
         "cn-shanghai",
     ],
-}, {dependsOn: [bwpAttach, vpcAttach1, vpcAttach2]});
+}, { dependsOn: [bwpAttach, vpcAttach1, vpcAttach2] });
 ```
 {{% /example %}}
 {{% /examples %}}
@@ -740,8 +741,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-alicloud">https://github.com/pulumi/pulumi-alicloud</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
-	
 </dl>
 

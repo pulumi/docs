@@ -1,7 +1,8 @@
 
 ---
 title: "Cluster"
-block_external_search_index: true
+title_tag: "Resource Cluster | Module eks | Package AWS"
+meta_desc: "Explore the Cluster resource of the eks module, including examples, input properties, output properties, lookup functions, and supporting types. Manages an EKS Cluster."
 ---
 
 
@@ -69,7 +70,7 @@ const exampleCluster = new aws.eks.Cluster("example", {
         "api",
         "audit",
     ],
-}, {dependsOn: [exampleLogGroup]});
+}, { dependsOn: [exampleLogGroup] });
 ```
 
 {{% /example %}}
@@ -88,7 +89,7 @@ const exampleOpenIdConnectProvider = new aws.iam.OpenIdConnectProvider("example"
     thumbprintLists: [],
     url: exampleCluster.identities[0].oidcs[0].issuer,
 });
-const current = aws.getCallerIdentity();
+const current = pulumi.output(aws.getCallerIdentity({ async: true }));
 const exampleAssumeRolePolicy = pulumi.all([exampleOpenIdConnectProvider.url, exampleOpenIdConnectProvider.arn]).apply(([url, arn]) => aws.iam.getPolicyDocument({
     statements: [{
         actions: ["sts:AssumeRoleWithWebIdentity"],
@@ -103,7 +104,7 @@ const exampleAssumeRolePolicy = pulumi.all([exampleOpenIdConnectProvider.url, ex
             type: "Federated",
         }],
     }],
-}));
+}, { async: true }));
 const exampleRole = new aws.iam.Role("example", {
     assumeRolePolicy: exampleAssumeRolePolicy.json,
 });
@@ -2294,8 +2295,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
-	
 </dl>
 

@@ -1,7 +1,8 @@
 
 ---
 title: "NetworkAttachment"
-block_external_search_index: true
+title_tag: "Resource NetworkAttachment | Module cloudconnect | Package AliCloud"
+meta_desc: "Explore the NetworkAttachment resource of the cloudconnect module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Cloud Connect Network Attachment resource. This topic describes how to associate a Smart Access Gateway (SAG) instance with a network instance. You must associate an SAG instance with a network instance if you want to connect the SAG to Alibaba Cloud. You can connect an SAG to Alibaba Cloud through a leased line, the Internet, or the active and standby links."
 ---
 
 
@@ -33,7 +34,7 @@ const ccn = new alicloud.cloudconnect.Network("ccn", {
 const defaultNetworkAttachment = new alicloud.cloudconnect.NetworkAttachment("default", {
     ccnId: ccn.id,
     sagId: "sag-xxxxx",
-}, {dependsOn: [ccn]});
+}, { dependsOn: [ccn] });
 ```
 {{% /example %}}
 {{% /examples %}}
@@ -630,8 +631,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-alicloud">https://github.com/pulumi/pulumi-alicloud</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
-	
 </dl>
 

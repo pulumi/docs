@@ -1,7 +1,8 @@
 
 ---
 title: "ImageSharePermission"
-block_external_search_index: true
+title_tag: "Resource ImageSharePermission | Module ecs | Package AliCloud"
+meta_desc: "Explore the ImageSharePermission resource of the ecs module, including examples, input properties, output properties, lookup functions, and supporting types. Manage image sharing permissions. You can share your custom image to other Alibaba Cloud users. The user can use the shared custom image to create ECS instances or replace the system disk of the instance."
 ---
 
 
@@ -628,8 +629,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-alicloud">https://github.com/pulumi/pulumi-alicloud</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
-	
 </dl>
 

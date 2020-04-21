@@ -1,7 +1,8 @@
 
 ---
 title: "SingleValueChart"
-block_external_search_index: true
+title_tag: "Resource SingleValueChart | Package SignalFx"
+meta_desc: "Explore the SingleValueChart resource of the SignalFx package, including examples, input properties, output properties, lookup functions, and supporting types. This chart type displays a single number in a large font, representing the current value of a single metric on a plot line."
 ---
 
 
@@ -1977,8 +1978,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-signalfx">https://github.com/pulumi/pulumi-signalfx</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`signalfx` Terraform Provider](https://github.com/terraform-providers/terraform-provider-signalfx).</dd>
-	
 </dl>
 

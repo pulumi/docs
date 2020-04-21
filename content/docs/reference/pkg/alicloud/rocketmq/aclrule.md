@@ -1,7 +1,8 @@
 
 ---
 title: "AclRule"
-block_external_search_index: true
+title_tag: "Resource AclRule | Module rocketmq | Package AliCloud"
+meta_desc: "Explore the AclRule resource of the rocketmq module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Sag Acl Rule resource. This topic describes how to configure an access control list (ACL) rule for a target Smart Access Gateway instance to permit or deny access to or from specified IP addresses in the ACL rule."
 ---
 
 
@@ -1214,8 +1215,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-alicloud">https://github.com/pulumi/pulumi-alicloud</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
-	
 </dl>
 

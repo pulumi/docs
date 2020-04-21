@@ -1,7 +1,8 @@
 
 ---
 title: "StackSetInstance"
-block_external_search_index: true
+title_tag: "Resource StackSetInstance | Module cloudformation | Package AWS"
+meta_desc: "Explore the StackSetInstance resource of the cloudformation module, including examples, input properties, output properties, lookup functions, and supporting types. Manages a CloudFormation StackSet Instance. Instances are managed in the account and region of the StackSet after the target account permissions have been configured. Additional information about StackSets can be found in the [AWS CloudFormation User Guide](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/what-is-cfnstacksets.html)."
 ---
 
 
@@ -47,13 +48,13 @@ const aWSCloudFormationStackSetExecutionRoleAssumeRolePolicy = aws_iam_role_AWSC
             type: "AWS",
         }],
     }],
-}));
+}, { async: true }));
 const aWSCloudFormationStackSetExecutionRole = new aws.iam.Role("AWSCloudFormationStackSetExecutionRole", {
     assumeRolePolicy: aWSCloudFormationStackSetExecutionRoleAssumeRolePolicy.json,
 });
 // Documentation: https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-prereqs.html
 // Additional IAM permissions necessary depend on the resources defined in the StackSet template
-const aWSCloudFormationStackSetExecutionRoleMinimumExecutionPolicyPolicyDocument = aws.iam.getPolicyDocument({
+const aWSCloudFormationStackSetExecutionRoleMinimumExecutionPolicyPolicyDocument = pulumi.output(aws.iam.getPolicyDocument({
     statements: [{
         actions: [
             "cloudformation:*",
@@ -63,7 +64,7 @@ const aWSCloudFormationStackSetExecutionRoleMinimumExecutionPolicyPolicyDocument
         effect: "Allow",
         resources: ["*"],
     }],
-});
+}, { async: true }));
 const aWSCloudFormationStackSetExecutionRoleMinimumExecutionPolicyRolePolicy = new aws.iam.RolePolicy("AWSCloudFormationStackSetExecutionRole_MinimumExecutionPolicy", {
     policy: aWSCloudFormationStackSetExecutionRoleMinimumExecutionPolicyPolicyDocument.json,
     role: aWSCloudFormationStackSetExecutionRole.name,
@@ -953,8 +954,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
-	
 </dl>
 

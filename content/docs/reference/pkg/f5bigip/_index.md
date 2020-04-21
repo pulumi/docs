@@ -1,6 +1,7 @@
 ---
 title: "f5 BIG-IP"
-block_external_search_index: true
+title_tag: "Package f5 BIG-IP"
+meta_desc: "A Pulumi package for creating and managing F5 BigIP resources."
 menu:
     reference:
         parent: API Reference
@@ -11,7 +12,7 @@ menu:
 
 A Pulumi package for creating and managing F5 BigIP resources.
 
-<h3>Modules</h3>
+<h2 id="modules">Modules</h2>
 <ul class="api">
     <li><a href="cm/" title="cm"><span class="symbol module"></span>cm</a></li>
     <li><a href="ltm/" title="ltm"><span class="symbol module"></span>ltm</a></li>
@@ -20,20 +21,22 @@ A Pulumi package for creating and managing F5 BigIP resources.
     <li><a href="sys/" title="sys"><span class="symbol module"></span>sys</a></li>
 </ul>
 
-<h3>Resources</h3>
+<h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="as3" title="As3"><span class="symbol resource"></span>As3</a></li>
     <li><a href="do" title="Do"><span class="symbol resource"></span>Do</a></li>
     <li><a href="provider" title="Provider"><span class="symbol resource"></span>Provider</a></li>
 </ul>
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-f5bigip">https://github.com/pulumi/pulumi-f5bigip</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`bigip` Terraform Provider](https://github.com/terraform-providers/terraform-provider-bigip).</dd>
+	<dt>Version</dt>
+	<dd>2.0.0</dd>
 </dl>
 

@@ -1,7 +1,8 @@
 
 ---
 title: "Association"
-block_external_search_index: true
+title_tag: "Resource Association | Module licensemanager | Package AWS"
+meta_desc: "Explore the Association resource of the licensemanager module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a License Manager association."
 ---
 
 
@@ -21,14 +22,14 @@ Provides a License Manager association.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const exampleAmi = aws.getAmi({
+const exampleAmi = pulumi.output(aws.getAmi({
     filters: [{
         name: "name",
         values: ["amzn-ami-vpc-nat*"],
     }],
     mostRecent: true,
     owners: ["amazon"],
-});
+}, { async: true }));
 const exampleInstance = new aws.ec2.Instance("example", {
     ami: exampleAmi.id,
     instanceType: "t2.micro",
@@ -637,8 +638,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
-	
 </dl>
 

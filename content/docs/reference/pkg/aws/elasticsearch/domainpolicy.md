@@ -1,7 +1,8 @@
 
 ---
 title: "DomainPolicy"
-block_external_search_index: true
+title_tag: "Resource DomainPolicy | Module elasticsearch | Package AWS"
+meta_desc: "Explore the DomainPolicy resource of the elasticsearch module, including examples, input properties, output properties, lookup functions, and supporting types. Allows setting policy to an Elasticsearch domain while referencing domain attributes (e.g. ARN)"
 ---
 
 
@@ -637,8 +638,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
-	
 </dl>
 

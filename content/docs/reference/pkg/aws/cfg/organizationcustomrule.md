@@ -1,7 +1,8 @@
 
 ---
 title: "OrganizationCustomRule"
-block_external_search_index: true
+title_tag: "Resource OrganizationCustomRule | Module cfg | Package AWS"
+meta_desc: "Explore the OrganizationCustomRule resource of the cfg module, including examples, input properties, output properties, lookup functions, and supporting types. Manages a Config Organization Custom Rule. More information about these rules can be found in the [Enabling AWS Config Rules Across all Accounts in Your Organization](https://docs.aws.amazon.com/config/latest/developerguide/config-rule-multi-account-deployment.html) and [AWS Config Managed Rules](https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config_use-managed-rules.html) documentation. For working with Organization Managed Rules (those invoking an AWS managed rule), see the [`aws_config_organization_managed__rule` resource](https://www.terraform.io/docs/providers/aws/r/config_organization_managed_rule.html)."
 ---
 
 
@@ -35,7 +36,7 @@ const exampleOrganization = new aws.organizations.Organization("example", {
 const exampleOrganizationCustomRule = new aws.cfg.OrganizationCustomRule("example", {
     lambdaFunctionArn: aws_lambda_function_example.arn,
     triggerTypes: ["ConfigurationItemChangeNotification"],
-}, {dependsOn: [examplePermission, exampleOrganization]});
+}, { dependsOn: [examplePermission, exampleOrganization] });
 ```
 
 {{% /example %}}
@@ -1353,8 +1354,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
-	
 </dl>
 

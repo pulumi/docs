@@ -1,7 +1,8 @@
 
 ---
 title: "KubernetesNodePool"
-block_external_search_index: true
+title_tag: "Resource KubernetesNodePool | Package Digital Ocean"
+meta_desc: "Explore the KubernetesNodePool resource of the Digital Ocean package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a DigitalOcean Kubernetes node pool resource. While the default node pool must be defined in the `digitalocean..KubernetesCluster` resource, this resource can be used to add additional ones to a cluster."
 ---
 
 
@@ -1551,8 +1552,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-digitalocean">https://github.com/pulumi/pulumi-digitalocean</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`digitalocean` Terraform Provider](https://github.com/terraform-providers/terraform-provider-digitalocean).</dd>
-	
 </dl>
 

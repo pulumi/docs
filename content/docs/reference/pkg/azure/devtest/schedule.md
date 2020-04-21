@@ -1,7 +1,8 @@
 
 ---
 title: "Schedule"
-block_external_search_index: true
+title_tag: "Resource Schedule | Module devtest | Package Azure"
+meta_desc: "Explore the Schedule resource of the devtest module, including examples, input properties, output properties, lookup functions, and supporting types. Manages automated startup and shutdown schedules for Azure Dev Test Lab."
 ---
 
 
@@ -1721,8 +1722,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-azure">https://github.com/pulumi/pulumi-azure</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
-	
 </dl>
 

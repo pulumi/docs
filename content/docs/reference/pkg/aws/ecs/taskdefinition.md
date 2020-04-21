@@ -1,7 +1,8 @@
 
 ---
 title: "TaskDefinition"
-block_external_search_index: true
+title_tag: "Resource TaskDefinition | Module ecs | Package AWS"
+meta_desc: "Explore the TaskDefinition resource of the ecs module, including examples, input properties, output properties, lookup functions, and supporting types. Manages a revision of an ECS task definition to be used in `aws.ecs.Service`."
 ---
 
 
@@ -2654,8 +2655,7 @@ parameter of container definition in the `mountPoints` section.
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
-	
 </dl>
 

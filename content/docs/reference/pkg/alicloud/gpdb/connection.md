@@ -1,7 +1,8 @@
 
 ---
 title: "Connection"
-block_external_search_index: true
+title_tag: "Resource Connection | Module gpdb | Package AliCloud"
+meta_desc: "Explore the Connection resource of the gpdb module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a connection resource to allocate an Internet connection string for instance."
 ---
 
 
@@ -28,9 +29,9 @@ const config = new pulumi.Config();
 const creation = config.get("creation") || "Gpdb";
 const name = config.get("name") || "gpdbConnectionBasic";
 
-const defaultZones = alicloud.getZones({
+const defaultZones = pulumi.output(alicloud.getZones({
     availableResourceCreation: creation,
-});
+}, { async: true }));
 const defaultNetwork = new alicloud.vpc.Network("default", {
     cidrBlock: "172.16.0.0/16",
 });
@@ -864,8 +865,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-alicloud">https://github.com/pulumi/pulumi-alicloud</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
-	
 </dl>
 

@@ -1,7 +1,8 @@
 
 ---
 title: "CertificateAuthority"
-block_external_search_index: true
+title_tag: "Resource CertificateAuthority | Module acmpca | Package AWS"
+meta_desc: "Explore the CertificateAuthority resource of the acmpca module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a resource to manage AWS Certificate Manager Private Certificate Authorities (ACM PCA Certificate Authorities)."
 ---
 
 
@@ -61,7 +62,7 @@ const acmpcaBucketAccess = pulumi.all([exampleBucket.arn, exampleBucket.arn]).ap
             `${exampleBucketArn1}/*`,
         ],
     }],
-}));
+}, { async: true }));
 const exampleBucketPolicy = new aws.s3.BucketPolicy("example", {
     bucket: exampleBucket.id,
     policy: acmpcaBucketAccess.json,
@@ -82,7 +83,7 @@ const exampleCertificateAuthority = new aws.acmpca.CertificateAuthority("example
             s3BucketName: exampleBucket.id,
         },
     },
-}, {dependsOn: [exampleBucketPolicy]});
+}, { dependsOn: [exampleBucketPolicy] });
 ```
 
 {{% /example %}}
@@ -2478,8 +2479,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
-	
 </dl>
 

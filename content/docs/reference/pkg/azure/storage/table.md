@@ -1,7 +1,8 @@
 
 ---
 title: "Table"
-block_external_search_index: true
+title_tag: "Resource Table | Module storage | Package Azure"
+meta_desc: "Explore the Table resource of the storage module, including examples, input properties, output properties, lookup functions, and supporting types. Manages a Table within an Azure Storage Account."
 ---
 
 
@@ -958,8 +959,7 @@ Changing this forces a new resource to be created.
 	<dd><a href="https://github.com/pulumi/pulumi-azure">https://github.com/pulumi/pulumi-azure</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
-	
 </dl>
 

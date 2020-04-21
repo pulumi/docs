@@ -1,7 +1,8 @@
 
 ---
 title: "StandardsSubscription"
-block_external_search_index: true
+title_tag: "Resource StandardsSubscription | Module securityhub | Package AWS"
+meta_desc: "Explore the StandardsSubscription resource of the securityhub module, including examples, input properties, output properties, lookup functions, and supporting types. Subscribes to a Security Hub standard."
 ---
 
 
@@ -22,10 +23,10 @@ import * as aws from "@pulumi/aws";
 const example = new aws.securityhub.Account("example", {});
 const cis = new aws.securityhub.StandardsSubscription("cis", {
     standardsArn: "arn:aws:securityhub:::ruleset/cis-aws-foundations-benchmark/v/1.2.0",
-}, {dependsOn: [example]});
+}, { dependsOn: [example] });
 const pci321 = new aws.securityhub.StandardsSubscription("pci_321", {
     standardsArn: "arn:aws:securityhub:us-east-1::standards/pci-dss/v/3.2.1",
-}, {dependsOn: [example]});
+}, { dependsOn: [example] });
 ```
 
 {{% /example %}}
@@ -551,8 +552,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
-	
 </dl>
 

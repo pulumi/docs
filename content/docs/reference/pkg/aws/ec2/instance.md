@@ -1,7 +1,8 @@
 
 ---
 title: "Instance"
-block_external_search_index: true
+title_tag: "Resource Instance | Module ec2 | Package AWS"
+meta_desc: "Explore the Instance resource of the ec2 module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an EC2 instance resource. This allows instances to be created, updated,"
 ---
 
 
@@ -20,7 +21,7 @@ and deleted. Instances also support [provisioning](https://www.terraform.io/docs
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const ubuntu = aws.getAmi({
+const ubuntu = pulumi.output(aws.getAmi({
     filters: [
         {
             name: "name",
@@ -33,7 +34,7 @@ const ubuntu = aws.getAmi({
     ],
     mostRecent: true,
     owners: ["099720109477"], // Canonical
-});
+}, { async: true }));
 const web = new aws.ec2.Instance("web", {
     ami: ubuntu.id,
     instanceType: "t2.micro",
@@ -4906,8 +4907,7 @@ using that type
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
-	
 </dl>
 

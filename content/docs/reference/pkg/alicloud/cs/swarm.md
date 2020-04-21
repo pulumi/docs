@@ -1,7 +1,8 @@
 
 ---
 title: "Swarm"
-block_external_search_index: true
+title_tag: "Resource Swarm | Module cs | Package AliCloud"
+meta_desc: "Explore the Swarm resource of the cs module, including examples, input properties, output properties, lookup functions, and supporting types. &gt; **DEPRECATED:** This resource manages swarm cluster, which is being deprecated and will be replaced by Kubernetes cluster."
 ---
 
 
@@ -2108,8 +2109,7 @@ Valid value:
 	<dd><a href="https://github.com/pulumi/pulumi-alicloud">https://github.com/pulumi/pulumi-alicloud</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
-	
 </dl>
 

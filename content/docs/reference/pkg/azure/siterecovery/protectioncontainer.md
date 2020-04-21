@@ -1,7 +1,8 @@
 
 ---
 title: "ProtectionContainer"
-block_external_search_index: true
+title_tag: "Resource ProtectionContainer | Module siterecovery | Package Azure"
+meta_desc: "Explore the ProtectionContainer resource of the siterecovery module, including examples, input properties, output properties, lookup functions, and supporting types. Manages a Azure Site Recovery protection container. Protection containers serve as containers for replicated VMs and belong to a single region / recovery fabric. Protection containers can contain more than one replicated VM. To replicate a VM, a container must exist in both the source and target Azure regions."
 ---
 
 
@@ -750,8 +751,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-azure">https://github.com/pulumi/pulumi-azure</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
-	
 </dl>
 

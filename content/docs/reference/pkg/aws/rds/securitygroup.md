@@ -1,7 +1,8 @@
 
 ---
 title: "SecurityGroup"
-block_external_search_index: true
+title_tag: "Resource SecurityGroup | Module rds | Package AWS"
+meta_desc: "Explore the SecurityGroup resource of the rds module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an RDS security group resource. This is only for DB instances in the"
 ---
 
 
@@ -1037,8 +1038,7 @@ by `security_group_name`.
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
-	
 </dl>
 

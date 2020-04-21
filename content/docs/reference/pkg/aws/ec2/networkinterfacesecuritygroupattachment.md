@@ -1,7 +1,8 @@
 
 ---
 title: "NetworkInterfaceSecurityGroupAttachment"
-block_external_search_index: true
+title_tag: "Resource NetworkInterfaceSecurityGroupAttachment | Module ec2 | Package AWS"
+meta_desc: "Explore the NetworkInterfaceSecurityGroupAttachment resource of the ec2 module, including examples, input properties, output properties, lookup functions, and supporting types. This resource attaches a security group to an Elastic Network Interface (ENI)."
 ---
 
 
@@ -37,14 +38,14 @@ named `sg_attachment`:
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const ami = aws.getAmi({
+const ami = pulumi.output(aws.getAmi({
     filters: [{
         name: "name",
         values: ["amzn-ami-hvm-*"],
     }],
     mostRecent: true,
     owners: ["amazon"],
-});
+}, { async: true }));
 const instance = new aws.ec2.Instance("instance", {
     ami: ami.id,
     instanceType: "t2.micro",
@@ -71,9 +72,9 @@ fetching an external instance, possibly not managed by this provider.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const instance = aws.ec2.getInstance({
+const instance = pulumi.output(aws.ec2.getInstance({
     instanceId: "i-1234567890abcdef0",
-});
+}, { async: true }));
 const sg = new aws.ec2.SecurityGroup("sg", {
     tags: {
         type: "test-security-group",
@@ -683,8 +684,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
-	
 </dl>
 

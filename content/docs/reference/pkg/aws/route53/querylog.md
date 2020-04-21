@@ -1,7 +1,8 @@
 
 ---
 title: "QueryLog"
-block_external_search_index: true
+title_tag: "Resource QueryLog | Module route53 | Package AWS"
+meta_desc: "Explore the QueryLog resource of the route53 module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Route53 query logging configuration resource."
 ---
 
 
@@ -31,8 +32,8 @@ const us_east_1 = new aws.Provider("us-east-1", {
 const exampleComZone = new aws.route53.Zone("example_com", {});
 const awsRoute53ExampleCom = new aws.cloudwatch.LogGroup("aws_route53_example_com", {
     retentionInDays: 30,
-}, {provider: us_east_1});
-const route53_query_logging_policyPolicyDocument = aws.iam.getPolicyDocument({
+}, { provider: us_east_1 });
+const route53_query_logging_policyPolicyDocument = pulumi.output(aws.iam.getPolicyDocument({
     statements: [{
         actions: [
             "logs:CreateLogStream",
@@ -44,15 +45,15 @@ const route53_query_logging_policyPolicyDocument = aws.iam.getPolicyDocument({
         }],
         resources: ["arn:aws:logs:*:*:log-group:/aws/route53/*"],
     }],
-});
+}, { async: true }));
 const route53_query_logging_policyLogResourcePolicy = new aws.cloudwatch.LogResourcePolicy("route53-query-logging-policy", {
     policyDocument: route53_query_logging_policyPolicyDocument.json,
     policyName: "route53-query-logging-policy",
-}, {provider: us_east_1});
+}, { provider: us_east_1 });
 const exampleComQueryLog = new aws.route53.QueryLog("example_com", {
     cloudwatchLogGroupArn: awsRoute53ExampleCom.arn,
     zoneId: exampleComZone.zoneId,
-}, {dependsOn: [route53_query_logging_policyLogResourcePolicy]});
+}, { dependsOn: [route53_query_logging_policyLogResourcePolicy] });
 ```
 
 {{% /example %}}
@@ -650,8 +651,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
-	
 </dl>
 
