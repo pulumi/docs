@@ -1,7 +1,8 @@
 
 ---
 title: "StoreFile"
-block_external_search_index: true
+title_tag: "Resource StoreFile | Module datalake | Package Azure"
+meta_desc: "Explore the StoreFile resource of the datalake module, including examples, input properties, output properties, lookup functions, and supporting types. Manages a Azure Data Lake Store File."
 ---
 
 
@@ -703,8 +704,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-azure">https://github.com/pulumi/pulumi-azure</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
-	
 </dl>
 

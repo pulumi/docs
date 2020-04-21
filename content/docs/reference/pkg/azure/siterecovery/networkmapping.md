@@ -1,7 +1,8 @@
 
 ---
 title: "NetworkMapping"
-block_external_search_index: true
+title_tag: "Resource NetworkMapping | Module siterecovery | Package Azure"
+meta_desc: "Explore the NetworkMapping resource of the siterecovery module, including examples, input properties, output properties, lookup functions, and supporting types. Manages a site recovery network mapping on Azure. A network mapping decides how to translate connected netwroks when a VM is migrated from one region to another."
 ---
 
 
@@ -966,8 +967,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-azure">https://github.com/pulumi/pulumi-azure</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
-	
 </dl>
 

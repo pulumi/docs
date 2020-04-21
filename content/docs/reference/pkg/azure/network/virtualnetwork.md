@@ -1,7 +1,8 @@
 
 ---
 title: "VirtualNetwork"
-block_external_search_index: true
+title_tag: "Resource VirtualNetwork | Module network | Package Azure"
+meta_desc: "Explore the VirtualNetwork resource of the network module, including examples, input properties, output properties, lookup functions, and supporting types. Manages a virtual network including any configured subnets. Each subnet can"
 ---
 
 
@@ -1479,8 +1480,7 @@ the subnet. (Referenced by `id`, ie. `azurerm_network_security_group.example.id`
 	<dd><a href="https://github.com/pulumi/pulumi-azure">https://github.com/pulumi/pulumi-azure</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
-	
 </dl>
 

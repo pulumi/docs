@@ -1,7 +1,8 @@
 
 ---
 title: "Fabric"
-block_external_search_index: true
+title_tag: "Resource Fabric | Module siterecovery | Package Azure"
+meta_desc: "Explore the Fabric resource of the siterecovery module, including examples, input properties, output properties, lookup functions, and supporting types. Manages a Azure Site Recovery Replication Fabric within a Recovery Services vault. Only Azure fabrics are supported at this time. Replication Fabrics serve as a container within an Azure region for other Site Recovery resources such as protection containers, protected items, network mappings."
 ---
 
 
@@ -750,8 +751,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-azure">https://github.com/pulumi/pulumi-azure</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
-	
 </dl>
 

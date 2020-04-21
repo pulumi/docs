@@ -1,7 +1,8 @@
 
 ---
 title: "ZoneVirtualNetworkLink"
-block_external_search_index: true
+title_tag: "Resource ZoneVirtualNetworkLink | Module privatedns | Package Azure"
+meta_desc: "Explore the ZoneVirtualNetworkLink resource of the privatedns module, including examples, input properties, output properties, lookup functions, and supporting types. Enables you to manage Private DNS zone Virtual Network Links. These Links enable DNS resolution and registration inside Azure Virtual Networks using Azure Private DNS."
 ---
 
 
@@ -894,8 +895,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-azure">https://github.com/pulumi/pulumi-azure</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
-	
 </dl>
 

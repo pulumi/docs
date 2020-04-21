@@ -1,7 +1,8 @@
 
 ---
 title: "Server"
-block_external_search_index: true
+title_tag: "Resource Server | Module analysisservices | Package Azure"
+meta_desc: "Explore the Server resource of the analysisservices module, including examples, input properties, output properties, lookup functions, and supporting types. Manages an Analysis Services Server."
 ---
 
 
@@ -1403,8 +1404,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-azure">https://github.com/pulumi/pulumi-azure</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
-	
 </dl>
 

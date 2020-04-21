@@ -1,6 +1,7 @@
 ---
 title: "Azure"
-block_external_search_index: true
+title_tag: "Package Azure"
+meta_desc: "A Pulumi package for creating and managing Microsoft Azure cloud resources."
 menu:
     reference:
         parent: API Reference
@@ -104,7 +105,7 @@ A Pulumi package for creating and managing Microsoft Azure cloud resources.
 	<dd><a href="https://github.com/pulumi/pulumi-azure">https://github.com/pulumi/pulumi-azure</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
 	<dt>Version</dt>
 	<dd>3.1.0</dd>

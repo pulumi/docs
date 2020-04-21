@@ -1,7 +1,8 @@
 
 ---
 title: "Zone"
-block_external_search_index: true
+title_tag: "Resource Zone | Module dns | Package Azure"
+meta_desc: "Explore the Zone resource of the dns module, including examples, input properties, output properties, lookup functions, and supporting types. Enables you to manage DNS zones within Azure DNS. These zones are hosted on Azure&#39;s name servers to which you can delegate the zone from the parent domain."
 ---
 
 
@@ -894,8 +895,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-azure">https://github.com/pulumi/pulumi-azure</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
-	
 </dl>
 

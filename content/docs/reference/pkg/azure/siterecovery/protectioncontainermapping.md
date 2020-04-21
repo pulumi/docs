@@ -1,7 +1,8 @@
 
 ---
 title: "ProtectionContainerMapping"
-block_external_search_index: true
+title_tag: "Resource ProtectionContainerMapping | Module siterecovery | Package Azure"
+meta_desc: "Explore the ProtectionContainerMapping resource of the siterecovery module, including examples, input properties, output properties, lookup functions, and supporting types. Manages a Azure recovery vault protection container mapping. A protection container mapping decides how to translate the protection container when a VM is migrated from one region to another."
 ---
 
 
@@ -966,8 +967,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-azure">https://github.com/pulumi/pulumi-azure</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
-	
 </dl>
 

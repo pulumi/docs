@@ -1,7 +1,8 @@
 
 ---
 title: "LogProfile"
-block_external_search_index: true
+title_tag: "Resource LogProfile | Module monitoring | Package Azure"
+meta_desc: "Explore the LogProfile resource of the monitoring module, including examples, input properties, output properties, lookup functions, and supporting types. Manages a [Log Profile](https://docs.microsoft.com/en-us/azure/monitoring-and-diagnostics/monitoring-overview-activity-logs#export-the-activity-log-with-a-log-profile). A Log Profile configures how Activity Logs are exported."
 ---
 
 
@@ -1025,8 +1026,7 @@ new resource to be created.
 	<dd><a href="https://github.com/pulumi/pulumi-azure">https://github.com/pulumi/pulumi-azure</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
-	
 </dl>
 

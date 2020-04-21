@@ -1,7 +1,8 @@
 
 ---
 title: "DataDiskAttachment"
-block_external_search_index: true
+title_tag: "Resource DataDiskAttachment | Module compute | Package Azure"
+meta_desc: "Explore the DataDiskAttachment resource of the compute module, including examples, input properties, output properties, lookup functions, and supporting types. Manages attaching a Disk to a Virtual Machine."
 ---
 
 
@@ -898,8 +899,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-azure">https://github.com/pulumi/pulumi-azure</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
-	
 </dl>
 
