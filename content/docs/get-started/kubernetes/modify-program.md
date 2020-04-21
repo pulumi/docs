@@ -16,7 +16,7 @@ Now that we have an instance of our Pulumi program deployed, let's update it to 
 
 Replace the entire contents of {{< langfile >}} with the following:
 
-{{< chooser language "javascript,typescript,python,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language javascript %}}
 
@@ -160,7 +160,6 @@ pulumi.export("ip", result)
 
 {{% /choosable %}}
 {{% choosable language go %}}
-
 ```go
 package main
 
@@ -249,7 +248,6 @@ func main() {
     })
 }
 ```
-
 {{% /choosable %}}
 {{% choosable language csharp %}}
 

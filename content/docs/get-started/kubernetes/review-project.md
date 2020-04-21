@@ -25,7 +25,7 @@ Let's review some of the generated project files:
 
 - {{< langfile >}} is the Pulumi program that defines our stack resources. Let's examine it.
 
-{{< chooser language "javascript,typescript,python,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language javascript %}}
 
@@ -69,7 +69,6 @@ export const name = deployment.metadata.name;
 
 {{% /choosable %}}
 {{% choosable language python %}}
-
 ```python
 """
 Creating a Kubernetes Deployment
@@ -142,7 +141,6 @@ func main() {
     })
 }
 ```
-
 {{% /choosable %}}
 {{% choosable language csharp %}}
 
