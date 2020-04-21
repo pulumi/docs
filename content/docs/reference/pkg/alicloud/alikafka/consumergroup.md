@@ -1,7 +1,8 @@
 
 ---
 title: "ConsumerGroup"
-block_external_search_index: true
+title_tag: "Resource ConsumerGroup | Module alikafka | Package AliCloud"
+meta_desc: "Explore the ConsumerGroup resource of the alikafka module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an ALIKAFKA consumer group resource."
 ---
 
 
@@ -29,9 +30,9 @@ import * as alicloud from "@pulumi/alicloud";
 const config = new pulumi.Config();
 const consumerId = config.get("consumerId") || "CID-alikafkaGroupDatasourceName";
 
-const defaultZones = alicloud.getZones({
+const defaultZones = pulumi.output(alicloud.getZones({
     availableResourceCreation: "VSwitch",
-});
+}, { async: true }));
 const defaultNetwork = new alicloud.vpc.Network("default", {
     cidrBlock: "172.16.0.0/12",
 });
@@ -721,8 +722,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-alicloud">https://github.com/pulumi/pulumi-alicloud</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
-	
 </dl>
 

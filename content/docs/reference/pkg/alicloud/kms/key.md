@@ -1,7 +1,8 @@
 
 ---
 title: "Key"
-block_external_search_index: true
+title_tag: "Resource Key | Module kms | Package AliCloud"
+meta_desc: "Explore the Key resource of the kms module, including examples, input properties, output properties, lookup functions, and supporting types. A kms key can help user to protect data security in the transmission process."
 ---
 
 
@@ -846,8 +847,7 @@ after destruction of the resource, must be between 7 and 30 days. Defaults to 30
 	<dd><a href="https://github.com/pulumi/pulumi-alicloud">https://github.com/pulumi/pulumi-alicloud</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
-	
 </dl>
 

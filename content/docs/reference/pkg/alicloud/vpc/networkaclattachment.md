@@ -1,7 +1,8 @@
 
 ---
 title: "NetworkAclAttachment"
-block_external_search_index: true
+title_tag: "Resource NetworkAclAttachment | Module vpc | Package AliCloud"
+meta_desc: "Explore the NetworkAclAttachment resource of the vpc module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a network acl attachment resource to associate network acls to vswitches."
 ---
 
 
@@ -26,9 +27,9 @@ import * as alicloud from "@pulumi/alicloud";
 const config = new pulumi.Config();
 const name = config.get("name") || "NatGatewayConfigSpec";
 
-const defaultZones = alicloud.getZones({
+const defaultZones = pulumi.output(alicloud.getZones({
     availableResourceCreation: "VSwitch",
-});
+}, { async: true }));
 const defaultNetwork = new alicloud.vpc.Network("default", {
     cidrBlock: "172.16.0.0/12",
 });
@@ -765,8 +766,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-alicloud">https://github.com/pulumi/pulumi-alicloud</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
-	
 </dl>
 

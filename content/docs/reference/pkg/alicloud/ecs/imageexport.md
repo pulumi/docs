@@ -1,7 +1,8 @@
 
 ---
 title: "ImageExport"
-block_external_search_index: true
+title_tag: "Resource ImageExport | Module ecs | Package AliCloud"
+meta_desc: "Explore the ImageExport resource of the ecs module, including examples, input properties, output properties, lookup functions, and supporting types. Export a custom image to the OSS bucket in the same region as the custom image."
 ---
 
 
@@ -701,8 +702,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-alicloud">https://github.com/pulumi/pulumi-alicloud</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
-	
 </dl>
 

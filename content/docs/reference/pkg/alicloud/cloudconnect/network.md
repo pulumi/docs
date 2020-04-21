@@ -1,7 +1,8 @@
 
 ---
 title: "Network"
-block_external_search_index: true
+title_tag: "Resource Network | Module cloudconnect | Package AliCloud"
+meta_desc: "Explore the Network resource of the cloudconnect module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a cloud connect network resource. Cloud Connect Network (CCN) is another important component of Smart Access Gateway. It is a device access matrix composed of Alibaba Cloud distributed access gateways. You can add multiple Smart Access Gateway (SAG) devices to a CCN instance and then attach the CCN instance to a Cloud Enterprise Network (CEN) instance to connect the local branches to the Alibaba Cloud."
 ---
 
 
@@ -772,8 +773,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-alicloud">https://github.com/pulumi/pulumi-alicloud</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
-	
 </dl>
 

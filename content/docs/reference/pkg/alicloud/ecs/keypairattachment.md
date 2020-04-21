@@ -1,7 +1,8 @@
 
 ---
 title: "KeyPairAttachment"
-block_external_search_index: true
+title_tag: "Resource KeyPairAttachment | Module ecs | Package AliCloud"
+meta_desc: "Explore the KeyPairAttachment resource of the ecs module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a key pair attachment resource to bind key pair for several ECS instances."
 ---
 
 
@@ -26,20 +27,20 @@ import * as alicloud from "@pulumi/alicloud";
 const config = new pulumi.Config();
 const name = config.get("name") || "keyPairAttachmentName";
 
-const defaultZones = alicloud.getZones({
+const defaultZones = pulumi.output(alicloud.getZones({
     availableDiskCategory: "cloud_ssd",
     availableResourceCreation: "VSwitch",
-});
-const type = alicloud.ecs.getInstanceTypes({
+}, { async: true }));
+const type = defaultZones.apply(defaultZones => alicloud.ecs.getInstanceTypes({
     availabilityZone: defaultZones.zones[0].id,
     cpuCoreCount: 1,
     memorySize: 2,
-});
-const images = alicloud.ecs.getImages({
+}, { async: true }));
+const images = pulumi.output(alicloud.ecs.getImages({
     mostRecent: true,
     nameRegex: "^ubuntu_18.*64",
     owners: "system",
-});
+}, { async: true }));
 const vpc = new alicloud.vpc.Network("vpc", {
     cidrBlock: "10.1.0.0/21",
 });
@@ -742,8 +743,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-alicloud">https://github.com/pulumi/pulumi-alicloud</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
-	
 </dl>
 

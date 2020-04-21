@@ -1,7 +1,8 @@
 
 ---
 title: "NetworkGrant"
-block_external_search_index: true
+title_tag: "Resource NetworkGrant | Module cloudconnect | Package AliCloud"
+meta_desc: "Explore the NetworkGrant resource of the cloudconnect module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Cloud Connect Network Grant resource. If the CEN instance to be attached belongs to another account, authorization by the CEN instance is required."
 ---
 
 
@@ -33,15 +34,15 @@ const cenAccount = new alicloud.Provider("cen_account", {
     region: "cn-hangzhou",
     secretKey: "xxxxxx",
 });
-const cen = new alicloud.cen.Instance("cen", {}, {provider: cenAccount});
+const cen = new alicloud.cen.Instance("cen", {}, { provider: cenAccount });
 const ccn = new alicloud.cloudconnect.Network("ccn", {
     isDefault: true,
-}, {provider: ccnAccount});
+}, { provider: ccnAccount });
 const defaultNetworkGrant = new alicloud.cloudconnect.NetworkGrant("default", {
     ccnId: ccn.id,
     cenId: cen.id,
     cenUid: "xxxxxx",
-}, {dependsOn: [cen, ccn]});
+}, { dependsOn: [cen, ccn] });
 ```
 {{% /example %}}
 {{% /examples %}}
@@ -710,8 +711,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-alicloud">https://github.com/pulumi/pulumi-alicloud</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
-	
 </dl>
 

@@ -1,7 +1,8 @@
 
 ---
 title: "BucketObject"
-block_external_search_index: true
+title_tag: "Resource BucketObject | Module oss | Package AliCloud"
+meta_desc: "Explore the BucketObject resource of the oss module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a resource to put a object(content or file) to a oss bucket."
 ---
 
 
@@ -1650,8 +1651,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-alicloud">https://github.com/pulumi/pulumi-alicloud</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
-	
 </dl>
 

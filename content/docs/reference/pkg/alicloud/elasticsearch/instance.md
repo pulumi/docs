@@ -1,7 +1,8 @@
 
 ---
 title: "Instance"
-block_external_search_index: true
+title_tag: "Resource Instance | Module elasticsearch | Package AliCloud"
+meta_desc: "Explore the Instance resource of the elasticsearch module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Elasticsearch instance resource. It contains data nodes, dedicated master node(optional) and etc. It can be associated with private IP whitelists and kibana IP whitelist."
 ---
 
 
@@ -2146,8 +2147,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-alicloud">https://github.com/pulumi/pulumi-alicloud</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
-	
 </dl>
 

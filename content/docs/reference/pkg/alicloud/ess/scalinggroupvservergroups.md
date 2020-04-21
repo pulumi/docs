@@ -1,7 +1,8 @@
 
 ---
 title: "ScalingGroupVServerGroups"
-block_external_search_index: true
+title_tag: "Resource ScalingGroupVServerGroups | Module ess | Package AliCloud"
+meta_desc: "Explore the ScalingGroupVServerGroups resource of the ess module, including examples, input properties, output properties, lookup functions, and supporting types. Attaches/Detaches vserver groups to a specified scaling group."
 ---
 
 
@@ -40,10 +41,10 @@ import * as alicloud from "@pulumi/alicloud";
 const config = new pulumi.Config();
 const name = config.get("name") || "testAccEssVserverGroupsAttachment";
 
-const defaultZones = alicloud.getZones({
+const defaultZones = pulumi.output(alicloud.getZones({
     availableDiskCategory: "cloud_efficiency",
     availableResourceCreation: "VSwitch",
-});
+}, { async: true }));
 const defaultNetwork = new alicloud.vpc.Network("default", {
     cidrBlock: "172.16.0.0/16",
 });
@@ -74,7 +75,7 @@ const defaultScalingGroup = new alicloud.ess.ScalingGroup("default", {
     minSize: 2,
     scalingGroupName: name,
     vswitchIds: [defaultSwitch.id],
-}, {dependsOn: [...defaultListener]});
+}, { dependsOn: [...defaultListener] });
 const defaultScalingGroupVServerGroups = new alicloud.ess.ScalingGroupVServerGroups("default", {
     scalingGroupId: defaultScalingGroup.id,
     vserverGroups: [{
@@ -1019,8 +1020,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-alicloud">https://github.com/pulumi/pulumi-alicloud</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
-	
 </dl>
 

@@ -1,7 +1,8 @@
 
 ---
 title: "Project"
-block_external_search_index: true
+title_tag: "Resource Project | Module maxcompute | Package AliCloud"
+meta_desc: "Explore the Project resource of the maxcompute module, including examples, input properties, output properties, lookup functions, and supporting types. The project is the basic unit of operation in maxcompute. It is similar to the concept of Database or Schema in traditional databases, and sets the boundary for maxcompute multi-user isolation and access control. [Refer to details](https://www.alibabacloud.com/help/doc-detail/27818.html)."
 ---
 
 
@@ -695,8 +696,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-alicloud">https://github.com/pulumi/pulumi-alicloud</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
-	
 </dl>
 

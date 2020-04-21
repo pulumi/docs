@@ -1,7 +1,8 @@
 
 ---
 title: "LaunchTemplate"
-block_external_search_index: true
+title_tag: "Resource LaunchTemplate | Module ecs | Package AliCloud"
+meta_desc: "Explore the LaunchTemplate resource of the ecs module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an ECS Launch Template resource."
 ---
 
 
@@ -21,10 +22,10 @@ For information about Launch Template and how to use it, see [Launch Template](h
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const images = alicloud.ecs.getImages({
+const images = pulumi.output(alicloud.ecs.getImages({
     owners: "system",
-});
-const instances = alicloud.ecs.getInstances();
+}, { async: true }));
+const instances = pulumi.output(alicloud.ecs.getInstances({ async: true }));
 const template = new alicloud.ecs.LaunchTemplate("template", {
     dataDisks: [
         {
@@ -3487,8 +3488,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-alicloud">https://github.com/pulumi/pulumi-alicloud</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
-	
 </dl>
 

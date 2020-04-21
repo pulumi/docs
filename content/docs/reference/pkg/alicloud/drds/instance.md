@@ -1,7 +1,8 @@
 
 ---
 title: "Instance"
-block_external_search_index: true
+title_tag: "Resource Instance | Module drds | Package AliCloud"
+meta_desc: "Explore the Instance resource of the drds module, including examples, input properties, output properties, lookup functions, and supporting types. Distributed Relational Database Service (DRDS) is a lightweight (stateless), flexible, stable, and efficient middleware product independently developed by Alibaba Group to resolve scalability issues with single-host relational databases."
 ---
 
 
@@ -1016,8 +1017,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-alicloud">https://github.com/pulumi/pulumi-alicloud</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
-	
 </dl>
 
