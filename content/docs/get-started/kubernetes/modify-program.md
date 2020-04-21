@@ -90,7 +90,7 @@ const deployment = new k8s.apps.v1.Deployment(appName, {
 const frontend = new k8s.core.v1.Service(appName, {
     metadata: { labels: deployment.spec.template.metadata.labels },
     spec: {
-        type: isMinikube ? "" : "LoadBalancer",
+        type: isMinikube ? "ClusterIP" : "LoadBalancer",
         ports: [{ port: 80, targetPort: 80, protocol: "TCP" }],
         selector: appLabels
     }
@@ -160,6 +160,7 @@ pulumi.export("ip", result)
 
 {{% /choosable %}}
 {{% choosable language go %}}
+
 ```go
 package main
 
@@ -248,6 +249,7 @@ func main() {
     })
 }
 ```
+
 {{% /choosable %}}
 {{% choosable language csharp %}}
 

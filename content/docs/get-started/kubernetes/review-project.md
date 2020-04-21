@@ -69,6 +69,7 @@ export const name = deployment.metadata.name;
 
 {{% /choosable %}}
 {{% choosable language python %}}
+
 ```python
 """
 Creating a Kubernetes Deployment
@@ -141,6 +142,7 @@ func main() {
     })
 }
 ```
+
 {{% /choosable %}}
 {{% choosable language csharp %}}
 
