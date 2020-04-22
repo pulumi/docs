@@ -1,5 +1,5 @@
 ---
-title: Deploy Kubernetes Apps
+title: Kubernetes App Deployment
 meta_desc: This page gives you an overview on how to deploy Kubernetes applications to different cloud providers.
 menu:
   userguides:
@@ -8,7 +8,7 @@ menu:
     weight: 9
 ---
 
-The following are examples of how to create and use various types of Kubernetes
+The following are examples of Kubernetes deployment with Pulumi — how to create and use various types of Kubernetes
 resources, and typical apps and workloads.
 
 {{< chooser cloud "aws,azure,gcp" / >}}
@@ -666,7 +666,7 @@ const nginxDeployment = new kx.Deployment(appName, {
 
 ## Perform a ConfigMap Rollout on a Deployment
 
-For a complete example, check out the [Graceful App Rollout][tutorial-app-rollout]
+For a complete example, check out our Kubernetes [Graceful App Rollout][tutorial-app-rollout]
 tutorial for more details on how to update a Deployment automatically
 when it's ConfigMap changes.
 
@@ -1017,7 +1017,7 @@ Coming soon.
 
 ## Learn More
 
-To learn more about how to work with Kubernetes and Pulumi, check out the
+To learn more about Kubernetes deployment and how to work with Kubernetes and Pulumi, check out the
 [Kubernetes Tutorials][k8s-tutorials] for details.
 
 [k8s-tutorials]: {{< relref "/docs/tutorials/kubernetes" >}}
