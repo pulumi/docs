@@ -4,7 +4,7 @@
         "kubernetes:helm/v2:FetchOpts": {
             "type": "object",
             "description": "Additional options to customize the fetching of the Helm chart.",
-            "inputProperties": {
+            "properties": {
                 "caFile": {
                     "type": "string",
                     "description": "Verify certificates of HTTPS-enabled servers using this CA bundle."
@@ -70,7 +70,7 @@
         "kubernetes:helm/v3:FetchOpts": {
             "type": "object",
             "description": "Additional options to customize the fetching of the Helm chart.",
-            "inputProperties": {
+            "properties": {
                 "caFile": {
                     "type": "string",
                     "description": "Verify certificates of HTTPS-enabled servers using this CA bundle."
