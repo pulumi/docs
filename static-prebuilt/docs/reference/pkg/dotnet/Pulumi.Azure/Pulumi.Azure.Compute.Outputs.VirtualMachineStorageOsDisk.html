@@ -78,47 +78,24 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">VirtualMachineStorageOsDisk</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Azure.Compute.Outputs.html">Pulumi.Azure.Compute.Outputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Azure.dll</h6>
   <h5 id="Pulumi_Azure_Compute_Outputs_VirtualMachineStorageOsDisk_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class VirtualMachineStorageOsDisk</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class VirtualMachineStorageOsDisk : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/VirtualMachine.cs/#L1488">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/Outputs/VirtualMachineStorageOsDisk.cs/#L19">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Compute_Outputs_VirtualMachineStorageOsDisk_Caching" data-uid="Pulumi.Azure.Compute.Outputs.VirtualMachineStorageOsDisk.Caching">Caching</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Specifies the caching requirements for the OS Disk. Possible values include <code>None</code>, <code>ReadOnly</code> and <code>ReadWrite</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string Caching</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? Caching</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -130,16 +107,17 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/VirtualMachine.cs/#L1489">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/Outputs/VirtualMachineStorageOsDisk.cs/#L23">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Compute_Outputs_VirtualMachineStorageOsDisk_CreateOption" data-uid="Pulumi.Azure.Compute.Outputs.VirtualMachineStorageOsDisk.CreateOption">CreateOption</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Specifies how the OS Disk should be created. Possible values are <code>Attach</code> (managed disks only) and <code>FromImage</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -161,14 +139,15 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/VirtualMachine.cs/#L1490">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/Outputs/VirtualMachineStorageOsDisk.cs/#L27">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Compute_Outputs_VirtualMachineStorageOsDisk_DiskSizeGb" data-uid="Pulumi.Azure.Compute.Outputs.VirtualMachineStorageOsDisk.DiskSizeGb">DiskSizeGb</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Specifies the size of the OS Disk in gigabytes.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly int DiskSizeGb</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly int? DiskSizeGb</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -180,20 +159,21 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Int32</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/VirtualMachine.cs/#L1491">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/Outputs/VirtualMachineStorageOsDisk.cs/#L31">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Compute_Outputs_VirtualMachineStorageOsDisk_ImageUri" data-uid="Pulumi.Azure.Compute.Outputs.VirtualMachineStorageOsDisk.ImageUri">ImageUri</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Specifies the Image URI in the format <code>publisherName:offer:skus:version</code>. This field can also specify the <a href="https://azure.microsoft.com/en-us/documentation/articles/virtual-machines-linux-cli-deploy-templates/#create-a-custom-vm-image">VHD uri</a> of a custom VM image to clone. When cloning a Custom (Unmanaged) Disk Image the <code>os_type</code> field must be set.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string ImageUri</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? ImageUri</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -205,20 +185,21 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/VirtualMachine.cs/#L1492">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/Outputs/VirtualMachineStorageOsDisk.cs/#L35">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Compute_Outputs_VirtualMachineStorageOsDisk_ManagedDiskId" data-uid="Pulumi.Azure.Compute.Outputs.VirtualMachineStorageOsDisk.ManagedDiskId">ManagedDiskId</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Specifies the ID of an existing Managed Disk which should be attached as the OS Disk of this Virtual Machine. If this is set then the <code>create_option</code> must be set to <code>Attach</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string ManagedDiskId</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? ManagedDiskId</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -230,20 +211,21 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/VirtualMachine.cs/#L1493">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/Outputs/VirtualMachineStorageOsDisk.cs/#L39">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Compute_Outputs_VirtualMachineStorageOsDisk_ManagedDiskType" data-uid="Pulumi.Azure.Compute.Outputs.VirtualMachineStorageOsDisk.ManagedDiskType">ManagedDiskType</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Specifies the type of Managed Disk which should be created. Possible values are <code>Standard_LRS</code>, <code>StandardSSD_LRS</code> or <code>Premium_LRS</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string ManagedDiskType</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? ManagedDiskType</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -255,16 +237,16 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/VirtualMachine.cs/#L1497">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/Outputs/VirtualMachineStorageOsDisk.cs/#L43">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Compute_Outputs_VirtualMachineStorageOsDisk_Name" data-uid="Pulumi.Azure.Compute.Outputs.VirtualMachineStorageOsDisk.Name">Name</h4>
-  <div class="markdown level1 summary"><p>Specifies the name of the Virtual Machine. Changing this forces a new resource to be created.</p>
+  <div class="markdown level1 summary"><p>Specifies the name of the OS Disk.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -287,14 +269,15 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/VirtualMachine.cs/#L1498">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/Outputs/VirtualMachineStorageOsDisk.cs/#L47">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Compute_Outputs_VirtualMachineStorageOsDisk_OsType" data-uid="Pulumi.Azure.Compute.Outputs.VirtualMachineStorageOsDisk.OsType">OsType</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Specifies the Operating System on the OS Disk. Possible values are <code>Linux</code> and <code>Windows</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string OsType</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? OsType</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -306,20 +289,21 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/VirtualMachine.cs/#L1499">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/Outputs/VirtualMachineStorageOsDisk.cs/#L51">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Compute_Outputs_VirtualMachineStorageOsDisk_VhdUri" data-uid="Pulumi.Azure.Compute.Outputs.VirtualMachineStorageOsDisk.VhdUri">VhdUri</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Specifies the URI of the VHD file backing this Unmanaged OS Disk. Changing this forces a new resource to be created.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string VhdUri</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? VhdUri</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -331,16 +315,17 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/VirtualMachine.cs/#L1500">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/Outputs/VirtualMachineStorageOsDisk.cs/#L55">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Compute_Outputs_VirtualMachineStorageOsDisk_WriteAcceleratorEnabled" data-uid="Pulumi.Azure.Compute.Outputs.VirtualMachineStorageOsDisk.WriteAcceleratorEnabled">WriteAcceleratorEnabled</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Specifies if Write Accelerator is enabled on the disk. This can only be enabled on <code>Premium_LRS</code> managed disks with no caching and <a href="https://docs.microsoft.com/en-us/azure/virtual-machines/workloads/sap/how-to-enable-write-accelerator">M-Series VMs</a>. Defaults to <code>false</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -368,7 +353,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/VirtualMachine.cs/#L1485" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/Outputs/VirtualMachineStorageOsDisk.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

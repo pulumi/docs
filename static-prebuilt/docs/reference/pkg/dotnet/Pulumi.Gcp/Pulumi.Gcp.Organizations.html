@@ -83,52 +83,62 @@ and
 <a href="https://cloud.google.com/resource-manager/reference/rest/v2/folders">API</a>.</p>
 <p>A folder can contain projects, other folders, or a combination of both. You can use folders to group projects under an organization in a hierarchy. For example, your organization might contain multiple departments, each with its own set of Cloud Platform resources. Folders allows you to group these resources on a per-department basis. Folders are used to group resources that share common IAM policies.</p>
 <p>Folders created live inside an Organization. See the <a href="https://cloud.google.com/resource-manager/docs/quickstarts">Organization documentation</a> for more details.</p>
-<p>The service account used to run this provider when creating a <code>gcp.organizations.Folder</code>
+<p>The service account used to run the provider when creating a <code>gcp.organizations.Folder</code>
 resource must have <code>roles/resourcemanager.folderCreator</code>. See the
 <a href="https://cloud.google.com/resource-manager/docs/access-control-folders">Access Control for Folders Using IAM</a>
 doc for more information.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/google_folder.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/google_folder.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Organizations.FolderArgs.html">FolderArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Organizations.FolderState.html">FolderState</a></h4>
       <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.Organizations.GetActiveFolder.html">GetActiveFolder</a></h4>
+      <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Organizations.GetActiveFolderArgs.html">GetActiveFolderArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Organizations.GetActiveFolderResult.html">GetActiveFolderResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.Organizations.GetBillingAccount.html">GetBillingAccount</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Organizations.GetBillingAccountArgs.html">GetBillingAccountArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Organizations.GetBillingAccountResult.html">GetBillingAccountResult</a></h4>
       <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.Organizations.GetClientConfig.html">GetClientConfig</a></h4>
+      <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Organizations.GetClientConfigResult.html">GetClientConfigResult</a></h4>
       <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.Organizations.GetClientOpenIdUserInfo.html">GetClientOpenIdUserInfo</a></h4>
+      <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Organizations.GetClientOpenIdUserInfoResult.html">GetClientOpenIdUserInfoResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.Organizations.GetFolder.html">GetFolder</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Organizations.GetFolderArgs.html">GetFolderArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Organizations.GetFolderResult.html">GetFolderResult</a></h4>
       <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.Organizations.GetIAMPolicy.html">GetIAMPolicy</a></h4>
+      <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Organizations.GetIAMPolicyArgs.html">GetIAMPolicyArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Organizations.GetIAMPolicyResult.html">GetIAMPolicyResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.Organizations.GetOrganization.html">GetOrganization</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Organizations.GetOrganizationArgs.html">GetOrganizationArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Organizations.GetOrganizationResult.html">GetOrganizationResult</a></h4>
       <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.Organizations.GetProject.html">GetProject</a></h4>
+      <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Organizations.GetProjectArgs.html">GetProjectArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Organizations.GetProjectResult.html">GetProjectResult</a></h4>
       <section></section>
-      <h4><a class="xref" href="Pulumi.Gcp.Organizations.GetProjectServicesArgs.html">GetProjectServicesArgs</a></h4>
-      <section></section>
-      <h4><a class="xref" href="Pulumi.Gcp.Organizations.GetProjectServicesResult.html">GetProjectServicesResult</a></h4>
-      <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Organizations.IamAuditConfig.html">IamAuditConfig</a></h4>
-      <section></section>
+      <section><p>Allows management of audit logging config for a given service for a Google Cloud Platform Organization.</p>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.Organizations.IamAuditConfigArgs.html">IamAuditConfigArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Organizations.IamAuditConfigState.html">IamAuditConfigState</a></h4>
@@ -143,11 +153,8 @@ what your policy should be.</p>
 </blockquote>
 <blockquote>
 <p><strong>Note:</strong> On create, this resource will overwrite members of any existing roles.
-Use <code>import</code> and inspect the preview output to ensure
+Use <code>pulumi import</code> and inspect the `output to ensure
 your existing members are preserved.</p>
-</blockquote>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/google_organization_iam_binding.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/google_organization_iam_binding.html.markdown</a>.</p>
 </blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Organizations.IAMBindingArgs.html">IAMBindingArgs</a></h4>
@@ -165,10 +172,7 @@ from this and how roles are propagated. 1) creating a role may involve undeletin
 same name, possibly causing confusing behavior between undelete and update. 2) A deleted role is permanently deleted
 after 7 days, but it can take up to 30 more days (i.e. between 7 and 37 days after deletion) before the role name is
 made available again. This means a deleted role that has been deleted for more than 7 days cannot be changed at all
-by this provider, and new roles cannot share that name.</p>
-</blockquote>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/google_organization_iam_custom_role.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/google_organization_iam_custom_role.html.markdown</a>.</p>
+by the provider, and new roles cannot share that name.</p>
 </blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Organizations.IAMCustomRoleArgs.html">IAMCustomRoleArgs</a></h4>
@@ -182,9 +186,6 @@ the IAM policy for an existing Google Cloud Platform Organization.</p>
 <p><strong>Note:</strong> This resource <strong>must not</strong> be used in conjunction with
 <code>gcp.organizations.IAMBinding</code> for the <strong>same role</strong> or they will fight over
 what your policy should be.</p>
-</blockquote>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/google_organization_iam_member.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/google_organization_iam_member.html.markdown</a>.</p>
 </blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Organizations.IAMMemberArgs.html">IAMMemberArgs</a></h4>
@@ -206,24 +207,16 @@ by importing your existing policy, and examining the diff very closely.</p>
 <code>gcp.organizations.IAMMember</code> or <code>gcp.organizations.IAMBinding</code>
 or they will fight over what your policy should be.</p>
 </blockquote>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/google_organization_iam_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/google_organization_iam_policy.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Organizations.IAMPolicyArgs.html">IAMPolicyArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Organizations.IAMPolicyState.html">IAMPolicyState</a></h4>
-      <section></section>
-      <h4><a class="xref" href="Pulumi.Gcp.Organizations.Invokes.html">Invokes</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Organizations.Policy.html">Policy</a></h4>
       <section><p>Allows management of Organization policies for a Google Organization. For more information see
 <a href="https://cloud.google.com/resource-manager/docs/organization-policy/overview">the official
 documentation</a> and
 <a href="https://cloud.google.com/resource-manager/reference/rest/v1/organizations/setOrgPolicy">API</a>.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/google_organization_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/google_organization_policy.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Organizations.PolicyArgs.html">PolicyArgs</a></h4>
       <section></section>
@@ -237,28 +230,6 @@ See the <a href="https://cloud.google.com/resource-manager/docs/quickstarts">Org
 resource must have <code>roles/resourcemanager.projectCreator</code>. See the
 <a href="https://cloud.google.com/resource-manager/docs/access-control-org">Access Control for Organizations Using IAM</a>
 doc for more information.</p>
-<p>Note that prior to 0.8.5, <code>gcp.organizations.Project</code> functioned like a data source,
-meaning any project referenced by it had to be created and managed outside
-this provider. As of 0.8.5, <code>gcp.organizations.Project</code> functions like any other
-resource, with this provider creating and managing the project. To replicate the old
-behavior, either:</p>
-<ul>
-<li>Use the project ID directly in whatever is referencing the project, using the
-<a href="https://www.terraform.io/docs/providers/google/r/google_project_iam.html">gcp.projects.IAMPolicy</a>
-to replace the old <code>policy_data</code> property.</li>
-<li>Use the <a href="https://www.terraform.io/docs/import/usage.html">import</a> functionality
-to import your pre-existing project into this provider, where it can be referenced and
-used just like always, keeping in mind that this provider will attempt to undo any changes
-made outside this provider.</li>
-</ul>
-<blockquote>
-<p>It's important to note that any project resources that were added to your config
-prior to 0.8.5 will continue to function as they always have, and will not be managed by
-this provider. Only newly added projects are affected.</p>
-</blockquote>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/google_project.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/google_project.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Organizations.ProjectArgs.html">ProjectArgs</a></h4>
       <section></section>

@@ -73,9 +73,6 @@
   </h1>
   <div class="markdown level0 summary"><p>Starting with Consul 1.5.0, the consul..AclAuthMethod resource can be used to
 managed Consul ACL auth methods.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-consul/blob/master/website/docs/r/acl_auth_method.html.markdown">https://github.com/terraform-providers/terraform-provider-consul/blob/master/website/docs/r/acl_auth_method.html.markdown</a>.</p>
-</blockquote>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -92,7 +89,7 @@ managed Consul ACL auth methods.</p>
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/AclAuthMethod.cs/#L51">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/AclAuthMethod.cs/#L56">View Source</a>
   </span>
   <a id="Pulumi_Consul_AclAuthMethod__ctor_" data-uid="Pulumi.Consul.AclAuthMethod.#ctor*"></a>
   <h4 id="Pulumi_Consul_AclAuthMethod__ctor_System_String_Pulumi_Consul_AclAuthMethodArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Consul.AclAuthMethod.#ctor(System.String,Pulumi.Consul.AclAuthMethodArgs,System.Nullable{CustomResourceOptions})">AclAuthMethod(String, AclAuthMethodArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
@@ -136,7 +133,7 @@ managed Consul ACL auth methods.</p>
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/AclAuthMethod.cs/#L22">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/AclAuthMethod.cs/#L21">View Source</a>
   </span>
   <a id="Pulumi_Consul_AclAuthMethod_Config_" data-uid="Pulumi.Consul.AclAuthMethod.Config*"></a>
   <h4 id="Pulumi_Consul_AclAuthMethod_Config" data-uid="Pulumi.Consul.AclAuthMethod.Config">Config</h4>
@@ -145,7 +142,7 @@ managed Consul ACL auth methods.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;&gt; Config { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;&gt; Config { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -157,13 +154,13 @@ managed Consul ACL auth methods.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/AclAuthMethod.cs/#L28">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/AclAuthMethod.cs/#L27">View Source</a>
   </span>
   <a id="Pulumi_Consul_AclAuthMethod_Description_" data-uid="Pulumi.Consul.AclAuthMethod.Description*"></a>
   <h4 id="Pulumi_Consul_AclAuthMethod_Description" data-uid="Pulumi.Consul.AclAuthMethod.Description">Description</h4>
@@ -190,7 +187,7 @@ managed Consul ACL auth methods.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/AclAuthMethod.cs/#L34">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/AclAuthMethod.cs/#L33">View Source</a>
   </span>
   <a id="Pulumi_Consul_AclAuthMethod_Name_" data-uid="Pulumi.Consul.AclAuthMethod.Name*"></a>
   <h4 id="Pulumi_Consul_AclAuthMethod_Name" data-uid="Pulumi.Consul.AclAuthMethod.Name">Name</h4>
@@ -217,7 +214,34 @@ managed Consul ACL auth methods.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/AclAuthMethod.cs/#L40">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/AclAuthMethod.cs/#L39">View Source</a>
+  </span>
+  <a id="Pulumi_Consul_AclAuthMethod_Namespace_" data-uid="Pulumi.Consul.AclAuthMethod.Namespace*"></a>
+  <h4 id="Pulumi_Consul_AclAuthMethod_Namespace" data-uid="Pulumi.Consul.AclAuthMethod.Namespace">Namespace</h4>
+  <div class="markdown level1 summary"><p>The namespace to create the policy within.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Namespace { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/AclAuthMethod.cs/#L45">View Source</a>
   </span>
   <a id="Pulumi_Consul_AclAuthMethod_Type_" data-uid="Pulumi.Consul.AclAuthMethod.Type*"></a>
   <h4 id="Pulumi_Consul_AclAuthMethod_Type" data-uid="Pulumi.Consul.AclAuthMethod.Type">Type</h4>
@@ -246,7 +270,7 @@ managed Consul ACL auth methods.</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/AclAuthMethod.cs/#L81">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/AclAuthMethod.cs/#L86">View Source</a>
   </span>
   <a id="Pulumi_Consul_AclAuthMethod_Get_" data-uid="Pulumi.Consul.AclAuthMethod.Get*"></a>
   <h4 id="Pulumi_Consul_AclAuthMethod_Get_System_String_Input_System_String__Pulumi_Consul_AclAuthMethodState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Consul.AclAuthMethod.Get(System.String,Input{System.String},Pulumi.Consul.AclAuthMethodState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, AclAuthMethodState, Nullable&lt;CustomResourceOptions&gt;)</h4>
@@ -316,7 +340,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/AclAuthMethod.cs/#L17" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/AclAuthMethod.cs/#L16" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

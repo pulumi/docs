@@ -76,36 +76,7 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
-    <div class="level3"><span class="xref">EndpointState</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">EndpointState</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Azure.Cdn.html">Pulumi.Azure.Cdn</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Azure.dll</h6>
@@ -116,7 +87,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Cdn/Endpoint.cs/#L414">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Cdn/Endpoint.cs/#L466">View Source</a>
   </span>
   <a id="Pulumi_Azure_Cdn_EndpointState__ctor_" data-uid="Pulumi.Azure.Cdn.EndpointState.#ctor*"></a>
   <h4 id="Pulumi_Azure_Cdn_EndpointState__ctor" data-uid="Pulumi.Azure.Cdn.EndpointState.#ctor">EndpointState()</h4>
@@ -129,7 +100,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Cdn/Endpoint.cs/#L297">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Cdn/Endpoint.cs/#L328">View Source</a>
   </span>
   <a id="Pulumi_Azure_Cdn_EndpointState_ContentTypesToCompresses_" data-uid="Pulumi.Azure.Cdn.EndpointState.ContentTypesToCompresses*"></a>
   <h4 id="Pulumi_Azure_Cdn_EndpointState_ContentTypesToCompresses" data-uid="Pulumi.Azure.Cdn.EndpointState.ContentTypesToCompresses">ContentTypesToCompresses</h4>
@@ -150,13 +121,40 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Cdn/Endpoint.cs/#L309">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Cdn/Endpoint.cs/#L340">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_Cdn_EndpointState_DeliveryRules_" data-uid="Pulumi.Azure.Cdn.EndpointState.DeliveryRules*"></a>
+  <h4 id="Pulumi_Azure_Cdn_EndpointState_DeliveryRules" data-uid="Pulumi.Azure.Cdn.EndpointState.DeliveryRules">DeliveryRules</h4>
+  <div class="markdown level1 summary"><p>Rules for the rules engine. An endpoint can contain up until 4 of those rules that consist of conditions and actions. A <code>delivery_rule</code> blocks as defined below.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InputList&lt;EndpointDeliveryRuleGetArgs&gt; DeliveryRules { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">InputList</span>&lt;<a class="xref" href="Pulumi.Azure.Cdn.Inputs.EndpointDeliveryRuleGetArgs.html">EndpointDeliveryRuleGetArgs</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Cdn/Endpoint.cs/#L352">View Source</a>
   </span>
   <a id="Pulumi_Azure_Cdn_EndpointState_GeoFilters_" data-uid="Pulumi.Azure.Cdn.EndpointState.GeoFilters*"></a>
   <h4 id="Pulumi_Azure_Cdn_EndpointState_GeoFilters" data-uid="Pulumi.Azure.Cdn.EndpointState.GeoFilters">GeoFilters</h4>
@@ -165,7 +163,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public InputList&lt;EndpointGeoFiltersGetArgs&gt; GeoFilters { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public InputList&lt;EndpointGeoFilterGetArgs&gt; GeoFilters { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -177,21 +175,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<a class="xref" href="Pulumi.Azure.Cdn.Inputs.EndpointGeoFiltersGetArgs.html">EndpointGeoFiltersGetArgs</a>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<a class="xref" href="Pulumi.Azure.Cdn.Inputs.EndpointGeoFilterGetArgs.html">EndpointGeoFilterGetArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Cdn/Endpoint.cs/#L315">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Cdn/Endpoint.cs/#L361">View Source</a>
   </span>
-  <a id="Pulumi_Azure_Cdn_EndpointState_HostName_" data-uid="Pulumi.Azure.Cdn.EndpointState.HostName*"></a>
-  <h4 id="Pulumi_Azure_Cdn_EndpointState_HostName" data-uid="Pulumi.Azure.Cdn.EndpointState.HostName">HostName</h4>
-  <div class="markdown level1 summary"></div>
+  <a id="Pulumi_Azure_Cdn_EndpointState_GlobalDeliveryRule_" data-uid="Pulumi.Azure.Cdn.EndpointState.GlobalDeliveryRule*"></a>
+  <h4 id="Pulumi_Azure_Cdn_EndpointState_GlobalDeliveryRule" data-uid="Pulumi.Azure.Cdn.EndpointState.GlobalDeliveryRule">GlobalDeliveryRule</h4>
+  <div class="markdown level1 summary"><p>Actions that are valid for all resources regardless of any conditions. A <code>global_delivery_rule</code> block as defined below.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; HostName { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;EndpointGlobalDeliveryRuleGetArgs&gt;? GlobalDeliveryRule { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -203,13 +202,40 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Azure.Cdn.Inputs.EndpointGlobalDeliveryRuleGetArgs.html">EndpointGlobalDeliveryRuleGetArgs</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Cdn/Endpoint.cs/#L321">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Cdn/Endpoint.cs/#L367">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_Cdn_EndpointState_HostName_" data-uid="Pulumi.Azure.Cdn.EndpointState.HostName*"></a>
+  <h4 id="Pulumi_Azure_Cdn_EndpointState_HostName" data-uid="Pulumi.Azure.Cdn.EndpointState.HostName">HostName</h4>
+  <div class="markdown level1 summary"><p>A string that determines the hostname/IP address of the origin server. This string can be a domain name, Storage Account endpoint, Web App endpoint, IPv4 address or IPv6 address. Changing this forces a new resource to be created.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? HostName { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Cdn/Endpoint.cs/#L373">View Source</a>
   </span>
   <a id="Pulumi_Azure_Cdn_EndpointState_IsCompressionEnabled_" data-uid="Pulumi.Azure.Cdn.EndpointState.IsCompressionEnabled*"></a>
   <h4 id="Pulumi_Azure_Cdn_EndpointState_IsCompressionEnabled" data-uid="Pulumi.Azure.Cdn.EndpointState.IsCompressionEnabled">IsCompressionEnabled</h4>
@@ -218,7 +244,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; IsCompressionEnabled { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? IsCompressionEnabled { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -230,13 +256,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Cdn/Endpoint.cs/#L327">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Cdn/Endpoint.cs/#L379">View Source</a>
   </span>
   <a id="Pulumi_Azure_Cdn_EndpointState_IsHttpAllowed_" data-uid="Pulumi.Azure.Cdn.EndpointState.IsHttpAllowed*"></a>
   <h4 id="Pulumi_Azure_Cdn_EndpointState_IsHttpAllowed" data-uid="Pulumi.Azure.Cdn.EndpointState.IsHttpAllowed">IsHttpAllowed</h4>
@@ -245,7 +271,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; IsHttpAllowed { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? IsHttpAllowed { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -257,13 +283,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Cdn/Endpoint.cs/#L333">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Cdn/Endpoint.cs/#L385">View Source</a>
   </span>
   <a id="Pulumi_Azure_Cdn_EndpointState_IsHttpsAllowed_" data-uid="Pulumi.Azure.Cdn.EndpointState.IsHttpsAllowed*"></a>
   <h4 id="Pulumi_Azure_Cdn_EndpointState_IsHttpsAllowed" data-uid="Pulumi.Azure.Cdn.EndpointState.IsHttpsAllowed">IsHttpsAllowed</h4>
@@ -272,7 +298,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; IsHttpsAllowed { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? IsHttpsAllowed { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -284,13 +310,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Cdn/Endpoint.cs/#L339">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Cdn/Endpoint.cs/#L391">View Source</a>
   </span>
   <a id="Pulumi_Azure_Cdn_EndpointState_Location_" data-uid="Pulumi.Azure.Cdn.EndpointState.Location*"></a>
   <h4 id="Pulumi_Azure_Cdn_EndpointState_Location" data-uid="Pulumi.Azure.Cdn.EndpointState.Location">Location</h4>
@@ -299,7 +325,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Location { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Location { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -311,22 +337,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Cdn/Endpoint.cs/#L345">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Cdn/Endpoint.cs/#L397">View Source</a>
   </span>
   <a id="Pulumi_Azure_Cdn_EndpointState_Name_" data-uid="Pulumi.Azure.Cdn.EndpointState.Name*"></a>
   <h4 id="Pulumi_Azure_Cdn_EndpointState_Name" data-uid="Pulumi.Azure.Cdn.EndpointState.Name">Name</h4>
-  <div class="markdown level1 summary"><p>Specifies the name of the CDN Endpoint. Changing this forces a new resource to be created.</p>
+  <div class="markdown level1 summary"><p>The name of the origin. This is an arbitrary value. However, this value needs to be unique under the endpoint. Changing this forces a new resource to be created.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Name { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Name { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -338,13 +364,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Cdn/Endpoint.cs/#L351">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Cdn/Endpoint.cs/#L403">View Source</a>
   </span>
   <a id="Pulumi_Azure_Cdn_EndpointState_OptimizationType_" data-uid="Pulumi.Azure.Cdn.EndpointState.OptimizationType*"></a>
   <h4 id="Pulumi_Azure_Cdn_EndpointState_OptimizationType" data-uid="Pulumi.Azure.Cdn.EndpointState.OptimizationType">OptimizationType</h4>
@@ -353,7 +379,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; OptimizationType { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? OptimizationType { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -365,13 +391,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Cdn/Endpoint.cs/#L369">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Cdn/Endpoint.cs/#L409">View Source</a>
   </span>
   <a id="Pulumi_Azure_Cdn_EndpointState_OriginHostHeader_" data-uid="Pulumi.Azure.Cdn.EndpointState.OriginHostHeader*"></a>
   <h4 id="Pulumi_Azure_Cdn_EndpointState_OriginHostHeader" data-uid="Pulumi.Azure.Cdn.EndpointState.OriginHostHeader">OriginHostHeader</h4>
@@ -380,7 +406,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; OriginHostHeader { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? OriginHostHeader { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -392,13 +418,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Cdn/Endpoint.cs/#L375">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Cdn/Endpoint.cs/#L415">View Source</a>
   </span>
   <a id="Pulumi_Azure_Cdn_EndpointState_OriginPath_" data-uid="Pulumi.Azure.Cdn.EndpointState.OriginPath*"></a>
   <h4 id="Pulumi_Azure_Cdn_EndpointState_OriginPath" data-uid="Pulumi.Azure.Cdn.EndpointState.OriginPath">OriginPath</h4>
@@ -407,7 +433,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; OriginPath { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? OriginPath { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -419,13 +445,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Cdn/Endpoint.cs/#L360">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Cdn/Endpoint.cs/#L424">View Source</a>
   </span>
   <a id="Pulumi_Azure_Cdn_EndpointState_Origins_" data-uid="Pulumi.Azure.Cdn.EndpointState.Origins*"></a>
   <h4 id="Pulumi_Azure_Cdn_EndpointState_Origins" data-uid="Pulumi.Azure.Cdn.EndpointState.Origins">Origins</h4>
@@ -434,7 +460,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public InputList&lt;EndpointOriginsGetArgs&gt; Origins { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public InputList&lt;EndpointOriginGetArgs&gt; Origins { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -446,13 +472,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<a class="xref" href="Pulumi.Azure.Cdn.Inputs.EndpointOriginsGetArgs.html">EndpointOriginsGetArgs</a>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<a class="xref" href="Pulumi.Azure.Cdn.Inputs.EndpointOriginGetArgs.html">EndpointOriginGetArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Cdn/Endpoint.cs/#L381">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Cdn/Endpoint.cs/#L433">View Source</a>
   </span>
   <a id="Pulumi_Azure_Cdn_EndpointState_ProbePath_" data-uid="Pulumi.Azure.Cdn.EndpointState.ProbePath*"></a>
   <h4 id="Pulumi_Azure_Cdn_EndpointState_ProbePath" data-uid="Pulumi.Azure.Cdn.EndpointState.ProbePath">ProbePath</h4>
@@ -461,7 +487,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; ProbePath { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? ProbePath { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -473,13 +499,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Cdn/Endpoint.cs/#L387">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Cdn/Endpoint.cs/#L439">View Source</a>
   </span>
   <a id="Pulumi_Azure_Cdn_EndpointState_ProfileName_" data-uid="Pulumi.Azure.Cdn.EndpointState.ProfileName*"></a>
   <h4 id="Pulumi_Azure_Cdn_EndpointState_ProfileName" data-uid="Pulumi.Azure.Cdn.EndpointState.ProfileName">ProfileName</h4>
@@ -488,7 +514,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; ProfileName { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? ProfileName { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -500,13 +526,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Cdn/Endpoint.cs/#L393">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Cdn/Endpoint.cs/#L445">View Source</a>
   </span>
   <a id="Pulumi_Azure_Cdn_EndpointState_QuerystringCachingBehaviour_" data-uid="Pulumi.Azure.Cdn.EndpointState.QuerystringCachingBehaviour*"></a>
   <h4 id="Pulumi_Azure_Cdn_EndpointState_QuerystringCachingBehaviour" data-uid="Pulumi.Azure.Cdn.EndpointState.QuerystringCachingBehaviour">QuerystringCachingBehaviour</h4>
@@ -515,7 +541,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; QuerystringCachingBehaviour { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? QuerystringCachingBehaviour { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -527,13 +553,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Cdn/Endpoint.cs/#L399">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Cdn/Endpoint.cs/#L451">View Source</a>
   </span>
   <a id="Pulumi_Azure_Cdn_EndpointState_ResourceGroupName_" data-uid="Pulumi.Azure.Cdn.EndpointState.ResourceGroupName*"></a>
   <h4 id="Pulumi_Azure_Cdn_EndpointState_ResourceGroupName" data-uid="Pulumi.Azure.Cdn.EndpointState.ResourceGroupName">ResourceGroupName</h4>
@@ -542,7 +568,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; ResourceGroupName { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? ResourceGroupName { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -554,13 +580,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Cdn/Endpoint.cs/#L408">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Cdn/Endpoint.cs/#L460">View Source</a>
   </span>
   <a id="Pulumi_Azure_Cdn_EndpointState_Tags_" data-uid="Pulumi.Azure.Cdn.EndpointState.Tags*"></a>
   <h4 id="Pulumi_Azure_Cdn_EndpointState_Tags" data-uid="Pulumi.Azure.Cdn.EndpointState.Tags">Tags</h4>
@@ -581,7 +607,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputMap-1.html">InputMap</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">InputMap</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -593,7 +619,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Cdn/Endpoint.cs/#L289" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Cdn/Endpoint.cs/#L320" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

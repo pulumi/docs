@@ -110,9 +110,6 @@ is set to <code>true</code>.</li>
 <ul>
 <li><code>service_account_user_id</code> - When service accounts are enabled for this client, this attribute is the unique ID for the Keycloak user that represents this service account.</li>
 </ul>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/openid_client.html.markdown">https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/openid_client.html.markdown</a>.</p>
-</blockquote>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -129,7 +126,7 @@ is set to <code>true</code>.</li>
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Openid/Client.cs/#L137">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/OpenId/Client.cs/#L142">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_OpenId_Client__ctor_" data-uid="Pulumi.Keycloak.OpenId.Client.#ctor*"></a>
   <h4 id="Pulumi_Keycloak_OpenId_Client__ctor_System_String_Pulumi_Keycloak_OpenId_ClientArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Keycloak.OpenId.Client.#ctor(System.String,Pulumi.Keycloak.OpenId.ClientArgs,System.Nullable{CustomResourceOptions})">Client(String, ClientArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
@@ -173,7 +170,7 @@ is set to <code>true</code>.</li>
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Openid/Client.cs/#L60">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/OpenId/Client.cs/#L59">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_OpenId_Client_AccessTokenLifespan_" data-uid="Pulumi.Keycloak.OpenId.Client.AccessTokenLifespan*"></a>
   <h4 id="Pulumi_Keycloak_OpenId_Client_AccessTokenLifespan" data-uid="Pulumi.Keycloak.OpenId.Client.AccessTokenLifespan">AccessTokenLifespan</h4>
@@ -199,7 +196,7 @@ is set to <code>true</code>.</li>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Openid/Client.cs/#L63">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/OpenId/Client.cs/#L62">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_OpenId_Client_AccessType_" data-uid="Pulumi.Keycloak.OpenId.Client.AccessType*"></a>
   <h4 id="Pulumi_Keycloak_OpenId_Client_AccessType" data-uid="Pulumi.Keycloak.OpenId.Client.AccessType">AccessType</h4>
@@ -225,7 +222,7 @@ is set to <code>true</code>.</li>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Openid/Client.cs/#L66">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/OpenId/Client.cs/#L65">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_OpenId_Client_AdminUrl_" data-uid="Pulumi.Keycloak.OpenId.Client.AdminUrl*"></a>
   <h4 id="Pulumi_Keycloak_OpenId_Client_AdminUrl" data-uid="Pulumi.Keycloak.OpenId.Client.AdminUrl">AdminUrl</h4>
@@ -251,7 +248,33 @@ is set to <code>true</code>.</li>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Openid/Client.cs/#L69">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/OpenId/Client.cs/#L68">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_OpenId_Client_AuthenticationFlowBindingOverrides_" data-uid="Pulumi.Keycloak.OpenId.Client.AuthenticationFlowBindingOverrides*"></a>
+  <h4 id="Pulumi_Keycloak_OpenId_Client_AuthenticationFlowBindingOverrides" data-uid="Pulumi.Keycloak.OpenId.Client.AuthenticationFlowBindingOverrides">AuthenticationFlowBindingOverrides</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ClientAuthenticationFlowBindingOverrides&gt; AuthenticationFlowBindingOverrides { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Keycloak.OpenId.Outputs.ClientAuthenticationFlowBindingOverrides.html">ClientAuthenticationFlowBindingOverrides</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/OpenId/Client.cs/#L71">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_OpenId_Client_Authorization_" data-uid="Pulumi.Keycloak.OpenId.Client.Authorization*"></a>
   <h4 id="Pulumi_Keycloak_OpenId_Client_Authorization" data-uid="Pulumi.Keycloak.OpenId.Client.Authorization">Authorization</h4>
@@ -277,7 +300,7 @@ is set to <code>true</code>.</li>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Openid/Client.cs/#L72">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/OpenId/Client.cs/#L74">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_OpenId_Client_BaseUrl_" data-uid="Pulumi.Keycloak.OpenId.Client.BaseUrl*"></a>
   <h4 id="Pulumi_Keycloak_OpenId_Client_BaseUrl" data-uid="Pulumi.Keycloak.OpenId.Client.BaseUrl">BaseUrl</h4>
@@ -303,7 +326,7 @@ is set to <code>true</code>.</li>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Openid/Client.cs/#L75">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/OpenId/Client.cs/#L77">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_OpenId_Client_ClientId_" data-uid="Pulumi.Keycloak.OpenId.Client.ClientId*"></a>
   <h4 id="Pulumi_Keycloak_OpenId_Client_ClientId" data-uid="Pulumi.Keycloak.OpenId.Client.ClientId">ClientId</h4>
@@ -329,7 +352,7 @@ is set to <code>true</code>.</li>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Openid/Client.cs/#L78">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/OpenId/Client.cs/#L80">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_OpenId_Client_ClientSecret_" data-uid="Pulumi.Keycloak.OpenId.Client.ClientSecret*"></a>
   <h4 id="Pulumi_Keycloak_OpenId_Client_ClientSecret" data-uid="Pulumi.Keycloak.OpenId.Client.ClientSecret">ClientSecret</h4>
@@ -355,7 +378,7 @@ is set to <code>true</code>.</li>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Openid/Client.cs/#L81">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/OpenId/Client.cs/#L83">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_OpenId_Client_ConsentRequired_" data-uid="Pulumi.Keycloak.OpenId.Client.ConsentRequired*"></a>
   <h4 id="Pulumi_Keycloak_OpenId_Client_ConsentRequired" data-uid="Pulumi.Keycloak.OpenId.Client.ConsentRequired">ConsentRequired</h4>
@@ -381,7 +404,7 @@ is set to <code>true</code>.</li>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Openid/Client.cs/#L84">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/OpenId/Client.cs/#L86">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_OpenId_Client_Description_" data-uid="Pulumi.Keycloak.OpenId.Client.Description*"></a>
   <h4 id="Pulumi_Keycloak_OpenId_Client_Description" data-uid="Pulumi.Keycloak.OpenId.Client.Description">Description</h4>
@@ -407,7 +430,7 @@ is set to <code>true</code>.</li>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Openid/Client.cs/#L87">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/OpenId/Client.cs/#L89">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_OpenId_Client_DirectAccessGrantsEnabled_" data-uid="Pulumi.Keycloak.OpenId.Client.DirectAccessGrantsEnabled*"></a>
   <h4 id="Pulumi_Keycloak_OpenId_Client_DirectAccessGrantsEnabled" data-uid="Pulumi.Keycloak.OpenId.Client.DirectAccessGrantsEnabled">DirectAccessGrantsEnabled</h4>
@@ -433,7 +456,7 @@ is set to <code>true</code>.</li>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Openid/Client.cs/#L90">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/OpenId/Client.cs/#L92">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_OpenId_Client_Enabled_" data-uid="Pulumi.Keycloak.OpenId.Client.Enabled*"></a>
   <h4 id="Pulumi_Keycloak_OpenId_Client_Enabled" data-uid="Pulumi.Keycloak.OpenId.Client.Enabled">Enabled</h4>
@@ -459,7 +482,7 @@ is set to <code>true</code>.</li>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Openid/Client.cs/#L93">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/OpenId/Client.cs/#L95">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_OpenId_Client_ExcludeSessionStateFromAuthResponse_" data-uid="Pulumi.Keycloak.OpenId.Client.ExcludeSessionStateFromAuthResponse*"></a>
   <h4 id="Pulumi_Keycloak_OpenId_Client_ExcludeSessionStateFromAuthResponse" data-uid="Pulumi.Keycloak.OpenId.Client.ExcludeSessionStateFromAuthResponse">ExcludeSessionStateFromAuthResponse</h4>
@@ -485,7 +508,7 @@ is set to <code>true</code>.</li>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Openid/Client.cs/#L96">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/OpenId/Client.cs/#L98">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_OpenId_Client_FullScopeAllowed_" data-uid="Pulumi.Keycloak.OpenId.Client.FullScopeAllowed*"></a>
   <h4 id="Pulumi_Keycloak_OpenId_Client_FullScopeAllowed" data-uid="Pulumi.Keycloak.OpenId.Client.FullScopeAllowed">FullScopeAllowed</h4>
@@ -511,7 +534,7 @@ is set to <code>true</code>.</li>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Openid/Client.cs/#L99">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/OpenId/Client.cs/#L101">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_OpenId_Client_ImplicitFlowEnabled_" data-uid="Pulumi.Keycloak.OpenId.Client.ImplicitFlowEnabled*"></a>
   <h4 id="Pulumi_Keycloak_OpenId_Client_ImplicitFlowEnabled" data-uid="Pulumi.Keycloak.OpenId.Client.ImplicitFlowEnabled">ImplicitFlowEnabled</h4>
@@ -537,7 +560,7 @@ is set to <code>true</code>.</li>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Openid/Client.cs/#L102">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/OpenId/Client.cs/#L104">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_OpenId_Client_Name_" data-uid="Pulumi.Keycloak.OpenId.Client.Name*"></a>
   <h4 id="Pulumi_Keycloak_OpenId_Client_Name" data-uid="Pulumi.Keycloak.OpenId.Client.Name">Name</h4>
@@ -563,7 +586,7 @@ is set to <code>true</code>.</li>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Openid/Client.cs/#L105">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/OpenId/Client.cs/#L107">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_OpenId_Client_PkceCodeChallengeMethod_" data-uid="Pulumi.Keycloak.OpenId.Client.PkceCodeChallengeMethod*"></a>
   <h4 id="Pulumi_Keycloak_OpenId_Client_PkceCodeChallengeMethod" data-uid="Pulumi.Keycloak.OpenId.Client.PkceCodeChallengeMethod">PkceCodeChallengeMethod</h4>
@@ -589,7 +612,7 @@ is set to <code>true</code>.</li>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Openid/Client.cs/#L108">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/OpenId/Client.cs/#L110">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_OpenId_Client_RealmId_" data-uid="Pulumi.Keycloak.OpenId.Client.RealmId*"></a>
   <h4 id="Pulumi_Keycloak_OpenId_Client_RealmId" data-uid="Pulumi.Keycloak.OpenId.Client.RealmId">RealmId</h4>
@@ -615,7 +638,7 @@ is set to <code>true</code>.</li>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Openid/Client.cs/#L111">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/OpenId/Client.cs/#L113">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_OpenId_Client_ResourceServerId_" data-uid="Pulumi.Keycloak.OpenId.Client.ResourceServerId*"></a>
   <h4 id="Pulumi_Keycloak_OpenId_Client_ResourceServerId" data-uid="Pulumi.Keycloak.OpenId.Client.ResourceServerId">ResourceServerId</h4>
@@ -641,7 +664,33 @@ is set to <code>true</code>.</li>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Openid/Client.cs/#L117">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/OpenId/Client.cs/#L116">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_OpenId_Client_RootUrl_" data-uid="Pulumi.Keycloak.OpenId.Client.RootUrl*"></a>
+  <h4 id="Pulumi_Keycloak_OpenId_Client_RootUrl" data-uid="Pulumi.Keycloak.OpenId.Client.RootUrl">RootUrl</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; RootUrl { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/OpenId/Client.cs/#L122">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_OpenId_Client_ServiceAccountsEnabled_" data-uid="Pulumi.Keycloak.OpenId.Client.ServiceAccountsEnabled*"></a>
   <h4 id="Pulumi_Keycloak_OpenId_Client_ServiceAccountsEnabled" data-uid="Pulumi.Keycloak.OpenId.Client.ServiceAccountsEnabled">ServiceAccountsEnabled</h4>
@@ -667,7 +716,7 @@ is set to <code>true</code>.</li>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Openid/Client.cs/#L114">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/OpenId/Client.cs/#L119">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_OpenId_Client_ServiceAccountUserId_" data-uid="Pulumi.Keycloak.OpenId.Client.ServiceAccountUserId*"></a>
   <h4 id="Pulumi_Keycloak_OpenId_Client_ServiceAccountUserId" data-uid="Pulumi.Keycloak.OpenId.Client.ServiceAccountUserId">ServiceAccountUserId</h4>
@@ -693,7 +742,7 @@ is set to <code>true</code>.</li>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Openid/Client.cs/#L120">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/OpenId/Client.cs/#L125">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_OpenId_Client_StandardFlowEnabled_" data-uid="Pulumi.Keycloak.OpenId.Client.StandardFlowEnabled*"></a>
   <h4 id="Pulumi_Keycloak_OpenId_Client_StandardFlowEnabled" data-uid="Pulumi.Keycloak.OpenId.Client.StandardFlowEnabled">StandardFlowEnabled</h4>
@@ -719,7 +768,7 @@ is set to <code>true</code>.</li>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Openid/Client.cs/#L123">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/OpenId/Client.cs/#L128">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_OpenId_Client_ValidRedirectUris_" data-uid="Pulumi.Keycloak.OpenId.Client.ValidRedirectUris*"></a>
   <h4 id="Pulumi_Keycloak_OpenId_Client_ValidRedirectUris" data-uid="Pulumi.Keycloak.OpenId.Client.ValidRedirectUris">ValidRedirectUris</h4>
@@ -745,7 +794,7 @@ is set to <code>true</code>.</li>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Openid/Client.cs/#L126">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/OpenId/Client.cs/#L131">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_OpenId_Client_WebOrigins_" data-uid="Pulumi.Keycloak.OpenId.Client.WebOrigins*"></a>
   <h4 id="Pulumi_Keycloak_OpenId_Client_WebOrigins" data-uid="Pulumi.Keycloak.OpenId.Client.WebOrigins">WebOrigins</h4>
@@ -773,7 +822,7 @@ is set to <code>true</code>.</li>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Openid/Client.cs/#L167">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/OpenId/Client.cs/#L172">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_OpenId_Client_Get_" data-uid="Pulumi.Keycloak.OpenId.Client.Get*"></a>
   <h4 id="Pulumi_Keycloak_OpenId_Client_Get_System_String_Input_System_String__Pulumi_Keycloak_OpenId_ClientState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Keycloak.OpenId.Client.Get(System.String,Input{System.String},Pulumi.Keycloak.OpenId.ClientState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, ClientState, Nullable&lt;CustomResourceOptions&gt;)</h4>
@@ -843,7 +892,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Openid/Client.cs/#L58" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/OpenId/Client.cs/#L57" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

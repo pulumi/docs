@@ -78,40 +78,16 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">RuleSource</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.Cfg.Outputs.html">Pulumi.Aws.Cfg.Outputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
   <h5 id="Pulumi_Aws_Cfg_Outputs_RuleSource_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class RuleSource</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class RuleSource : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Cfg/Rule.cs/#L496">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Cfg/Outputs/RuleSource.cs/#L19">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Cfg_Outputs_RuleSource_Owner" data-uid="Pulumi.Aws.Cfg.Outputs.RuleSource.Owner">Owner</h4>
   <div class="markdown level1 summary"><p>Indicates whether AWS or the customer owns and manages the AWS Config rule. Valid values are <code>AWS</code> or <code>CUSTOM_LAMBDA</code>. For more information about managed rules, see the <a href="https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config_use-managed-rules.html">AWS Config Managed Rules documentation</a>. For more information about custom rules, see the <a href="https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config_develop-rules.html">AWS Config Custom Rules documentation</a>. Custom Lambda Functions require permissions to allow the AWS Config service to invoke them, e.g. via the <a href="https://www.terraform.io/docs/providers/aws/r/lambda_permission.html"><code>aws.lambda.Permission</code> resource</a>.</p>
@@ -137,7 +113,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Cfg/Rule.cs/#L500">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Cfg/Outputs/RuleSource.cs/#L23">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Cfg_Outputs_RuleSource_SourceDetails" data-uid="Pulumi.Aws.Cfg.Outputs.RuleSource.SourceDetails">SourceDetails</h4>
   <div class="markdown level1 summary"><p>Provides the source and type of the event that causes AWS Config to evaluate your AWS resources. Only valid if <code>owner</code> is <code>CUSTOM_LAMBDA</code>.</p>
@@ -145,7 +121,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;RuleSourceSourceDetails&gt; SourceDetails</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;RuleSourceSourceDetail&gt; SourceDetails</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -157,13 +133,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.Cfg.Outputs.RuleSourceSourceDetails.html">RuleSourceSourceDetails</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.Cfg.Outputs.RuleSourceSourceDetail.html">RuleSourceSourceDetail</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Cfg/Rule.cs/#L504">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Cfg/Outputs/RuleSource.cs/#L27">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Cfg_Outputs_RuleSource_SourceIdentifier" data-uid="Pulumi.Aws.Cfg.Outputs.RuleSource.SourceIdentifier">SourceIdentifier</h4>
   <div class="markdown level1 summary"><p>For AWS Config managed rules, a predefined identifier, e.g <code>IAM_PASSWORD_POLICY</code>. For custom Lambda rules, the identifier is the ARN of the Lambda Function, such as <code>arn:aws:lambda:us-east-1:123456789012:function:custom_rule_name</code> or the <a href="https://www.terraform.io/docs/providers/aws/r/lambda_function.html#arn"><code>arn</code> attribute of the <code>aws.lambda.Function</code> resource</a>.</p>
@@ -195,7 +171,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Cfg/Rule.cs/#L490" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Cfg/Outputs/RuleSource.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

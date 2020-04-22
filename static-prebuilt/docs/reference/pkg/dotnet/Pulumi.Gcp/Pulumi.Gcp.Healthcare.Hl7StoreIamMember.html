@@ -71,50 +71,24 @@
   
   <h1 id="Pulumi_Gcp_Healthcare_Hl7StoreIamMember" data-uid="Pulumi.Gcp.Healthcare.Hl7StoreIamMember" class="text-break">Class Hl7StoreIamMember
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Three different resources help you manage your IAM policy for Healthcare HL7v2 store. Each of these resources serves a different use case:</p>
+<ul>
+<li><code>gcp.healthcare.Hl7StoreIamPolicy</code>: Authoritative. Sets the IAM policy for the HL7v2 store and replaces any existing policy already attached.</li>
+<li><code>gcp.healthcare.Hl7StoreIamBinding</code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the HL7v2 store are preserved.</li>
+<li><code>gcp.healthcare.Hl7StoreIamMember</code>: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the HL7v2 store are preserved.</li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.healthcare.Hl7StoreIamPolicy</code> <strong>cannot</strong> be used in conjunction with <code>gcp.healthcare.Hl7StoreIamBinding</code> and <code>gcp.healthcare.Hl7StoreIamMember</code> or they will fight over what your policy should be.</p>
+</blockquote>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.healthcare.Hl7StoreIamBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.healthcare.Hl7StoreIamMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
+</blockquote>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
-    <div class="level3"><span class="xref">Hl7StoreIamMember</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">Hl7StoreIamMember</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.Healthcare.html">Pulumi.Gcp.Healthcare</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
@@ -125,16 +99,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Healthcare/Hl7StoreIamMember.cs/#L51">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Healthcare/Hl7StoreIamMember.cs/#L62">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Healthcare_Hl7StoreIamMember__ctor_" data-uid="Pulumi.Gcp.Healthcare.Hl7StoreIamMember.#ctor*"></a>
-  <h4 id="Pulumi_Gcp_Healthcare_Hl7StoreIamMember__ctor_System_String_Pulumi_Gcp_Healthcare_Hl7StoreIamMemberArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Gcp.Healthcare.Hl7StoreIamMember.#ctor(System.String,Pulumi.Gcp.Healthcare.Hl7StoreIamMemberArgs,Pulumi.CustomResourceOptions)">Hl7StoreIamMember(String, Hl7StoreIamMemberArgs, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Gcp_Healthcare_Hl7StoreIamMember__ctor_System_String_Pulumi_Gcp_Healthcare_Hl7StoreIamMemberArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Gcp.Healthcare.Hl7StoreIamMember.#ctor(System.String,Pulumi.Gcp.Healthcare.Hl7StoreIamMemberArgs,System.Nullable{CustomResourceOptions})">Hl7StoreIamMember(String, Hl7StoreIamMemberArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Create a Hl7StoreIamMember resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Hl7StoreIamMember(string name, Hl7StoreIamMemberArgs args, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Hl7StoreIamMember(string name, Hl7StoreIamMemberArgs args, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -159,7 +133,7 @@
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -169,7 +143,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Healthcare/Hl7StoreIamMember.cs/#L14">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Healthcare/Hl7StoreIamMember.cs/#L25">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Healthcare_Hl7StoreIamMember_Condition_" data-uid="Pulumi.Gcp.Healthcare.Hl7StoreIamMember.Condition*"></a>
   <h4 id="Pulumi_Gcp_Healthcare_Hl7StoreIamMember_Condition" data-uid="Pulumi.Gcp.Healthcare.Hl7StoreIamMember.Condition">Condition</h4>
@@ -189,13 +163,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Gcp.Healthcare.Outputs.Hl7StoreIamMemberCondition.html">Hl7StoreIamMemberCondition</a>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Gcp.Healthcare.Outputs.Hl7StoreIamMemberCondition.html">Hl7StoreIamMemberCondition</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Healthcare/Hl7StoreIamMember.cs/#L20">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Healthcare/Hl7StoreIamMember.cs/#L31">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Healthcare_Hl7StoreIamMember_Etag_" data-uid="Pulumi.Gcp.Healthcare.Hl7StoreIamMember.Etag*"></a>
   <h4 id="Pulumi_Gcp_Healthcare_Hl7StoreIamMember_Etag" data-uid="Pulumi.Gcp.Healthcare.Hl7StoreIamMember.Etag">Etag</h4>
@@ -216,13 +190,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Healthcare/Hl7StoreIamMember.cs/#L29">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Healthcare/Hl7StoreIamMember.cs/#L40">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Healthcare_Hl7StoreIamMember_Hl7V2StoreId_" data-uid="Pulumi.Gcp.Healthcare.Hl7StoreIamMember.Hl7V2StoreId*"></a>
   <h4 id="Pulumi_Gcp_Healthcare_Hl7StoreIamMember_Hl7V2StoreId" data-uid="Pulumi.Gcp.Healthcare.Hl7StoreIamMember.Hl7V2StoreId">Hl7V2StoreId</h4>
@@ -246,13 +220,13 @@ project setting will be used as a fallback.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Healthcare/Hl7StoreIamMember.cs/#L32">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Healthcare/Hl7StoreIamMember.cs/#L43">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Healthcare_Hl7StoreIamMember_Member_" data-uid="Pulumi.Gcp.Healthcare.Hl7StoreIamMember.Member*"></a>
   <h4 id="Pulumi_Gcp_Healthcare_Hl7StoreIamMember_Member" data-uid="Pulumi.Gcp.Healthcare.Hl7StoreIamMember.Member">Member</h4>
@@ -272,13 +246,13 @@ project setting will be used as a fallback.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Healthcare/Hl7StoreIamMember.cs/#L40">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Healthcare/Hl7StoreIamMember.cs/#L51">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Healthcare_Hl7StoreIamMember_Role_" data-uid="Pulumi.Gcp.Healthcare.Hl7StoreIamMember.Role*"></a>
   <h4 id="Pulumi_Gcp_Healthcare_Hl7StoreIamMember_Role" data-uid="Pulumi.Gcp.Healthcare.Hl7StoreIamMember.Role">Role</h4>
@@ -301,7 +275,7 @@ project setting will be used as a fallback.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -309,17 +283,17 @@ project setting will be used as a fallback.</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Healthcare/Hl7StoreIamMember.cs/#L81">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Healthcare/Hl7StoreIamMember.cs/#L92">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Healthcare_Hl7StoreIamMember_Get_" data-uid="Pulumi.Gcp.Healthcare.Hl7StoreIamMember.Get*"></a>
-  <h4 id="Pulumi_Gcp_Healthcare_Hl7StoreIamMember_Get_System_String_Pulumi_Input_System_String__Pulumi_Gcp_Healthcare_Hl7StoreIamMemberState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Gcp.Healthcare.Hl7StoreIamMember.Get(System.String,Pulumi.Input{System.String},Pulumi.Gcp.Healthcare.Hl7StoreIamMemberState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, Hl7StoreIamMemberState, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Gcp_Healthcare_Hl7StoreIamMember_Get_System_String_Input_System_String__Pulumi_Gcp_Healthcare_Hl7StoreIamMemberState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Gcp.Healthcare.Hl7StoreIamMember.Get(System.String,Input{System.String},Pulumi.Gcp.Healthcare.Hl7StoreIamMemberState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, Hl7StoreIamMemberState, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Get an existing Hl7StoreIamMember resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Hl7StoreIamMember Get(string name, Input&lt;string&gt; id, Hl7StoreIamMemberState state = null, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Hl7StoreIamMember Get(string name, Input&lt;string&gt; id, Hl7StoreIamMemberState state = null, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -338,7 +312,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -350,7 +324,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -379,7 +353,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Healthcare/Hl7StoreIamMember.cs/#L12" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Healthcare/Hl7StoreIamMember.cs/#L23" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

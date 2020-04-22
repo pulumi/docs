@@ -80,36 +80,7 @@ read-only many times. GCE PDs support ownership management and SELinux relabelin
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
-    <div class="level3"><span class="xref">GCEPersistentDiskVolumeSourceArgs</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">GCEPersistentDiskVolumeSourceArgs</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Kubernetes.Types.Inputs.Core.V1.html">Pulumi.Kubernetes.Types.Inputs.Core.V1</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Kubernetes.dll</h6>
@@ -120,7 +91,7 @@ read-only many times. GCE PDs support ownership management and SELinux relabelin
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Input.cs/#L14152">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Input.cs/#L14292">View Source</a>
   </span>
   <a id="Pulumi_Kubernetes_Types_Inputs_Core_V1_GCEPersistentDiskVolumeSourceArgs_FsType_" data-uid="Pulumi.Kubernetes.Types.Inputs.Core.V1.GCEPersistentDiskVolumeSourceArgs.FsType*"></a>
   <h4 id="Pulumi_Kubernetes_Types_Inputs_Core_V1_GCEPersistentDiskVolumeSourceArgs_FsType" data-uid="Pulumi.Kubernetes.Types.Inputs.Core.V1.GCEPersistentDiskVolumeSourceArgs.FsType">FsType</h4>
@@ -132,7 +103,7 @@ Implicitly inferred to be &quot;ext4&quot; if unspecified. More info:
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; FsType { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? FsType { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -144,13 +115,13 @@ Implicitly inferred to be &quot;ext4&quot; if unspecified. More info:
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Input.cs/#L14161">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Input.cs/#L14301">View Source</a>
   </span>
   <a id="Pulumi_Kubernetes_Types_Inputs_Core_V1_GCEPersistentDiskVolumeSourceArgs_Partition_" data-uid="Pulumi.Kubernetes.Types.Inputs.Core.V1.GCEPersistentDiskVolumeSourceArgs.Partition*"></a>
   <h4 id="Pulumi_Kubernetes_Types_Inputs_Core_V1_GCEPersistentDiskVolumeSourceArgs_Partition" data-uid="Pulumi.Kubernetes.Types.Inputs.Core.V1.GCEPersistentDiskVolumeSourceArgs.Partition">Partition</h4>
@@ -162,7 +133,7 @@ empty). More info: <a href="https://kubernetes.io/docs/concepts/storage/volumes#
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; Partition { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? Partition { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -174,13 +145,13 @@ empty). More info: <a href="https://kubernetes.io/docs/concepts/storage/volumes#
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Input.cs/#L14143">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Input.cs/#L14283">View Source</a>
   </span>
   <a id="Pulumi_Kubernetes_Types_Inputs_Core_V1_GCEPersistentDiskVolumeSourceArgs_PdName_" data-uid="Pulumi.Kubernetes.Types.Inputs.Core.V1.GCEPersistentDiskVolumeSourceArgs.PdName*"></a>
   <h4 id="Pulumi_Kubernetes_Types_Inputs_Core_V1_GCEPersistentDiskVolumeSourceArgs_PdName" data-uid="Pulumi.Kubernetes.Types.Inputs.Core.V1.GCEPersistentDiskVolumeSourceArgs.PdName">PdName</h4>
@@ -202,13 +173,13 @@ empty). More info: <a href="https://kubernetes.io/docs/concepts/storage/volumes#
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Input.cs/#L14168">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Input.cs/#L14308">View Source</a>
   </span>
   <a id="Pulumi_Kubernetes_Types_Inputs_Core_V1_GCEPersistentDiskVolumeSourceArgs_ReadOnly_" data-uid="Pulumi.Kubernetes.Types.Inputs.Core.V1.GCEPersistentDiskVolumeSourceArgs.ReadOnly*"></a>
   <h4 id="Pulumi_Kubernetes_Types_Inputs_Core_V1_GCEPersistentDiskVolumeSourceArgs_ReadOnly" data-uid="Pulumi.Kubernetes.Types.Inputs.Core.V1.GCEPersistentDiskVolumeSourceArgs.ReadOnly">ReadOnly</h4>
@@ -218,7 +189,7 @@ info: <a href="https://kubernetes.io/docs/concepts/storage/volumes#gcepersistent
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; ReadOnly { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? ReadOnly { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -230,7 +201,7 @@ info: <a href="https://kubernetes.io/docs/concepts/storage/volumes#gcepersistent
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -242,7 +213,7 @@ info: <a href="https://kubernetes.io/docs/concepts/storage/volumes#gcepersistent
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Input.cs/#L14137" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Input.cs/#L14277" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

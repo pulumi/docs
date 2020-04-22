@@ -76,36 +76,7 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
-    <div class="level3"><span class="xref">NodePoolState</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">NodePoolState</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.Container.html">Pulumi.Gcp.Container</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
@@ -116,7 +87,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/NodePool.cs/#L413">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/NodePool.cs/#L426">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Container_NodePoolState__ctor_" data-uid="Pulumi.Gcp.Container.NodePoolState.#ctor*"></a>
   <h4 id="Pulumi_Gcp_Container_NodePoolState__ctor" data-uid="Pulumi.Gcp.Container.NodePoolState.#ctor">NodePoolState()</h4>
@@ -129,7 +100,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/NodePool.cs/#L296">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/NodePool.cs/#L304">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Container_NodePoolState_Autoscaling_" data-uid="Pulumi.Gcp.Container.NodePoolState.Autoscaling*"></a>
   <h4 id="Pulumi_Gcp_Container_NodePoolState_Autoscaling" data-uid="Pulumi.Gcp.Container.NodePoolState.Autoscaling">Autoscaling</h4>
@@ -139,7 +110,7 @@ the size of the node pool to the current cluster usage. Structure is documented 
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;NodePoolAutoscalingGetArgs&gt; Autoscaling { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;NodePoolAutoscalingGetArgs&gt;? Autoscaling { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -151,13 +122,13 @@ the size of the node pool to the current cluster usage. Structure is documented 
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Gcp.Container.Inputs.NodePoolAutoscalingGetArgs.html">NodePoolAutoscalingGetArgs</a>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Gcp.Container.Inputs.NodePoolAutoscalingGetArgs.html">NodePoolAutoscalingGetArgs</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/NodePool.cs/#L302">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/NodePool.cs/#L310">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Container_NodePoolState_Cluster_" data-uid="Pulumi.Gcp.Container.NodePoolState.Cluster*"></a>
   <h4 id="Pulumi_Gcp_Container_NodePoolState_Cluster" data-uid="Pulumi.Gcp.Container.NodePoolState.Cluster">Cluster</h4>
@@ -166,7 +137,7 @@ the size of the node pool to the current cluster usage. Structure is documented 
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Cluster { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Cluster { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -178,13 +149,13 @@ the size of the node pool to the current cluster usage. Structure is documented 
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/NodePool.cs/#L310">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/NodePool.cs/#L318">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Container_NodePoolState_InitialNodeCount_" data-uid="Pulumi.Gcp.Container.NodePoolState.InitialNodeCount*"></a>
   <h4 id="Pulumi_Gcp_Container_NodePoolState_InitialNodeCount" data-uid="Pulumi.Gcp.Container.NodePoolState.InitialNodeCount">InitialNodeCount</h4>
@@ -195,7 +166,7 @@ this will force recreation of the resource.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; InitialNodeCount { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? InitialNodeCount { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -207,13 +178,13 @@ this will force recreation of the resource.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/NodePool.cs/#L319">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/NodePool.cs/#L327">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Container_NodePoolState_InstanceGroupUrls_" data-uid="Pulumi.Gcp.Container.NodePoolState.InstanceGroupUrls*"></a>
   <h4 id="Pulumi_Gcp_Container_NodePoolState_InstanceGroupUrls" data-uid="Pulumi.Gcp.Container.NodePoolState.InstanceGroupUrls">InstanceGroupUrls</h4>
@@ -234,13 +205,13 @@ this will force recreation of the resource.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/NodePool.cs/#L328">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/NodePool.cs/#L336">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Container_NodePoolState_Location_" data-uid="Pulumi.Gcp.Container.NodePoolState.Location*"></a>
   <h4 id="Pulumi_Gcp_Container_NodePoolState_Location" data-uid="Pulumi.Gcp.Container.NodePoolState.Location">Location</h4>
@@ -249,7 +220,7 @@ this will force recreation of the resource.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Location { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Location { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -261,13 +232,13 @@ this will force recreation of the resource.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/NodePool.cs/#L335">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/NodePool.cs/#L343">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Container_NodePoolState_Management_" data-uid="Pulumi.Gcp.Container.NodePoolState.Management*"></a>
   <h4 id="Pulumi_Gcp_Container_NodePoolState_Management" data-uid="Pulumi.Gcp.Container.NodePoolState.Management">Management</h4>
@@ -277,7 +248,7 @@ auto-upgrade is configured. Structure is documented below.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;NodePoolManagementGetArgs&gt; Management { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;NodePoolManagementGetArgs&gt;? Management { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -289,13 +260,13 @@ auto-upgrade is configured. Structure is documented below.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Gcp.Container.Inputs.NodePoolManagementGetArgs.html">NodePoolManagementGetArgs</a>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Gcp.Container.Inputs.NodePoolManagementGetArgs.html">NodePoolManagementGetArgs</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/NodePool.cs/#L345">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/NodePool.cs/#L353">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Container_NodePoolState_MaxPodsPerNode_" data-uid="Pulumi.Gcp.Container.NodePoolState.MaxPodsPerNode*"></a>
   <h4 id="Pulumi_Gcp_Container_NodePoolState_MaxPodsPerNode" data-uid="Pulumi.Gcp.Container.NodePoolState.MaxPodsPerNode">MaxPodsPerNode</h4>
@@ -308,7 +279,7 @@ for more information.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; MaxPodsPerNode { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? MaxPodsPerNode { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -320,23 +291,23 @@ for more information.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/NodePool.cs/#L352">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/NodePool.cs/#L360">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Container_NodePoolState_Name_" data-uid="Pulumi.Gcp.Container.NodePoolState.Name*"></a>
   <h4 id="Pulumi_Gcp_Container_NodePoolState_Name" data-uid="Pulumi.Gcp.Container.NodePoolState.Name">Name</h4>
-  <div class="markdown level1 summary"><p>The name of the node pool. If left blank, this provider will
+  <div class="markdown level1 summary"><p>The name of the node pool. If left blank, the provider will
 auto-generate a unique name.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Name { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Name { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -348,13 +319,13 @@ auto-generate a unique name.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/NodePool.cs/#L359">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/NodePool.cs/#L367">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Container_NodePoolState_NamePrefix_" data-uid="Pulumi.Gcp.Container.NodePoolState.NamePrefix*"></a>
   <h4 id="Pulumi_Gcp_Container_NodePoolState_NamePrefix" data-uid="Pulumi.Gcp.Container.NodePoolState.NamePrefix">NamePrefix</h4>
@@ -364,7 +335,7 @@ with the specified prefix. Conflicts with <code>name</code>.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; NamePrefix { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? NamePrefix { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -376,13 +347,13 @@ with the specified prefix. Conflicts with <code>name</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/NodePool.cs/#L366">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/NodePool.cs/#L374">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Container_NodePoolState_NodeConfig_" data-uid="Pulumi.Gcp.Container.NodePoolState.NodeConfig*"></a>
   <h4 id="Pulumi_Gcp_Container_NodePoolState_NodeConfig" data-uid="Pulumi.Gcp.Container.NodePoolState.NodeConfig">NodeConfig</h4>
@@ -392,7 +363,7 @@ gcp.container.Cluster for schema.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;NodePoolNodeConfigGetArgs&gt; NodeConfig { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;NodePoolNodeConfigGetArgs&gt;? NodeConfig { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -404,13 +375,13 @@ gcp.container.Cluster for schema.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Gcp.Container.Inputs.NodePoolNodeConfigGetArgs.html">NodePoolNodeConfigGetArgs</a>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Gcp.Container.Inputs.NodePoolNodeConfigGetArgs.html">NodePoolNodeConfigGetArgs</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/NodePool.cs/#L373">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/NodePool.cs/#L381">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Container_NodePoolState_NodeCount_" data-uid="Pulumi.Gcp.Container.NodePoolState.NodeCount*"></a>
   <h4 id="Pulumi_Gcp_Container_NodePoolState_NodeCount" data-uid="Pulumi.Gcp.Container.NodePoolState.NodeCount">NodeCount</h4>
@@ -420,7 +391,7 @@ update the number of nodes per instance group but should not be used alongside <
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; NodeCount { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? NodeCount { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -432,18 +403,17 @@ update the number of nodes per instance group but should not be used alongside <
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/NodePool.cs/#L386">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/NodePool.cs/#L394">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Container_NodePoolState_NodeLocations_" data-uid="Pulumi.Gcp.Container.NodePoolState.NodeLocations*"></a>
   <h4 id="Pulumi_Gcp_Container_NodePoolState_NodeLocations" data-uid="Pulumi.Gcp.Container.NodePoolState.NodeLocations">NodeLocations</h4>
-  <div class="markdown level1 summary"><p>)
-The list of zones in which the node pool's nodes should be located. Nodes must
+  <div class="markdown level1 summary"><p>The list of zones in which the node pool's nodes should be located. Nodes must
 be in the region of their regional cluster or in the same region as their
 cluster's zone for zonal clusters. If unspecified, the cluster-level
 <code>node_locations</code> will be used.</p>
@@ -463,13 +433,13 @@ cluster's zone for zonal clusters. If unspecified, the cluster-level
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/NodePool.cs/#L396">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/NodePool.cs/#L404">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Container_NodePoolState_Project_" data-uid="Pulumi.Gcp.Container.NodePoolState.Project*"></a>
   <h4 id="Pulumi_Gcp_Container_NodePoolState_Project" data-uid="Pulumi.Gcp.Container.NodePoolState.Project">Project</h4>
@@ -479,7 +449,7 @@ the provider-configured project will be used.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Project { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Project { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -491,21 +461,24 @@ the provider-configured project will be used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/NodePool.cs/#L399">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/NodePool.cs/#L412">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Container_NodePoolState_UpgradeSettings_" data-uid="Pulumi.Gcp.Container.NodePoolState.UpgradeSettings*"></a>
   <h4 id="Pulumi_Gcp_Container_NodePoolState_UpgradeSettings" data-uid="Pulumi.Gcp.Container.NodePoolState.UpgradeSettings">UpgradeSettings</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Specify node upgrade settings to change how many nodes GKE attempts to
+upgrade at once. The number of nodes upgraded simultaneously is the sum of <code>max_surge</code> and <code>max_unavailable</code>.
+The maximum number of nodes upgraded simultaneously is limited to 20.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;NodePoolUpgradeSettingsGetArgs&gt; UpgradeSettings { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;NodePoolUpgradeSettingsGetArgs&gt;? UpgradeSettings { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -517,27 +490,27 @@ the provider-configured project will be used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Gcp.Container.Inputs.NodePoolUpgradeSettingsGetArgs.html">NodePoolUpgradeSettingsGetArgs</a>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Gcp.Container.Inputs.NodePoolUpgradeSettingsGetArgs.html">NodePoolUpgradeSettingsGetArgs</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/NodePool.cs/#L410">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/NodePool.cs/#L423">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Container_NodePoolState_Version_" data-uid="Pulumi.Gcp.Container.NodePoolState.Version*"></a>
   <h4 id="Pulumi_Gcp_Container_NodePoolState_Version" data-uid="Pulumi.Gcp.Container.NodePoolState.Version">Version</h4>
   <div class="markdown level1 summary"><p>The Kubernetes version for the nodes in this pool. Note that if this field
 and <code>auto_upgrade</code> are both specified, they will fight each other for what the node version should
 be, so setting both is highly discouraged. While a fuzzy version can be specified, it's
-recommended that you specify explicit versions as this provider will see spurious diffs
+recommended that you specify explicit versions as the provider will see spurious diffs
 when fuzzy versions are used. See the <code>gcp.container.getEngineVersions</code> data source's
-<code>version_prefix</code> field to approximate fuzzy versions.</p>
+<code>version_prefix</code> field to approximate fuzzy versions in a provider-compatible way.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Version { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Version { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -549,7 +522,7 @@ when fuzzy versions are used. See the <code>gcp.container.getEngineVersions</cod
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -561,7 +534,7 @@ when fuzzy versions are used. See the <code>gcp.container.getEngineVersions</cod
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/NodePool.cs/#L290" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/NodePool.cs/#L298" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

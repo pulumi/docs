@@ -80,40 +80,16 @@ ownership management and SELinux relabeling.</p>
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">RBDVolumeSource</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Core.V1.html">Pulumi.Kubernetes.Types.Outputs.Core.V1</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Kubernetes.dll</h6>
   <h5 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_RBDVolumeSource_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class RBDVolumeSource</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class RBDVolumeSource : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L20250">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L20424">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_RBDVolumeSource_FsType" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.RBDVolumeSource.FsType">FsType</h4>
   <div class="markdown level1 summary"><p>Filesystem type of the volume that you want to mount. Tip: Ensure that the filesystem
@@ -142,7 +118,7 @@ Implicitly inferred to be &quot;ext4&quot; if unspecified. More info:
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L20256">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L20430">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_RBDVolumeSource_Image" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.RBDVolumeSource.Image">Image</h4>
   <div class="markdown level1 summary"><p>The rados image name. More info:
@@ -169,7 +145,7 @@ Implicitly inferred to be &quot;ext4&quot; if unspecified. More info:
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L20262">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L20436">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_RBDVolumeSource_Keyring" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.RBDVolumeSource.Keyring">Keyring</h4>
   <div class="markdown level1 summary"><p>Keyring is the path to key ring for RBDUser. Default is /etc/ceph/keyring. More info:
@@ -196,7 +172,7 @@ Implicitly inferred to be &quot;ext4&quot; if unspecified. More info:
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L20268">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L20442">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_RBDVolumeSource_Monitors" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.RBDVolumeSource.Monitors">Monitors</h4>
   <div class="markdown level1 summary"><p>A collection of Ceph monitors. More info:
@@ -217,13 +193,13 @@ Implicitly inferred to be &quot;ext4&quot; if unspecified. More info:
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L20274">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L20448">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_RBDVolumeSource_Pool" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.RBDVolumeSource.Pool">Pool</h4>
   <div class="markdown level1 summary"><p>The rados pool name. Default is rbd. More info:
@@ -250,7 +226,7 @@ Implicitly inferred to be &quot;ext4&quot; if unspecified. More info:
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L20280">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L20454">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_RBDVolumeSource_ReadOnly" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.RBDVolumeSource.ReadOnly">ReadOnly</h4>
   <div class="markdown level1 summary"><p>ReadOnly here will force the ReadOnly setting in VolumeMounts. Defaults to false. More
@@ -277,7 +253,7 @@ info: <a href="https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it">http
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L20287">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L20461">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_RBDVolumeSource_SecretRef" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.RBDVolumeSource.SecretRef">SecretRef</h4>
   <div class="markdown level1 summary"><p>SecretRef is name of the authentication secret for RBDUser. If provided overrides
@@ -305,7 +281,7 @@ keyring. Default is nil. More info:
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L20293">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L20467">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_RBDVolumeSource_User" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.RBDVolumeSource.User">User</h4>
   <div class="markdown level1 summary"><p>The rados user name. Default is admin. More info:
@@ -338,7 +314,7 @@ keyring. Default is nil. More info:
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L20241" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L20415" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

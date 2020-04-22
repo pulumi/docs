@@ -71,7 +71,7 @@
   
   <h1 id="Pulumi_Kubernetes_Types_Outputs_Networking_V1Beta1_HTTPIngressPath" data-uid="Pulumi.Kubernetes.Types.Outputs.Networking.V1Beta1.HTTPIngressPath" class="text-break">Class HTTPIngressPath
   </h1>
-  <div class="markdown level0 summary"><p>HTTPIngressPath associates a path regex with a backend. Incoming urls matching the path are
+  <div class="markdown level0 summary"><p>HTTPIngressPath associates a path with a backend. Incoming urls matching the path are
 forwarded to the backend.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
@@ -80,40 +80,16 @@ forwarded to the backend.</p>
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">HTTPIngressPath</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Networking.V1Beta1.html">Pulumi.Kubernetes.Types.Outputs.Networking.V1Beta1</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Kubernetes.dll</h6>
   <h5 id="Pulumi_Kubernetes_Types_Outputs_Networking_V1Beta1_HTTPIngressPath_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class HTTPIngressPath</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class HTTPIngressPath : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L28230">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L28475">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Networking_V1Beta1_HTTPIngressPath_Backend" data-uid="Pulumi.Kubernetes.Types.Outputs.Networking.V1Beta1.HTTPIngressPath.Backend">Backend</h4>
   <div class="markdown level1 summary"><p>Backend defines the referenced service endpoint to which the traffic will be forwarded
@@ -140,19 +116,59 @@ to.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L28239">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L28483">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Networking_V1Beta1_HTTPIngressPath_Path" data-uid="Pulumi.Kubernetes.Types.Outputs.Networking.V1Beta1.HTTPIngressPath.Path">Path</h4>
-  <div class="markdown level1 summary"><p>Path is an extended POSIX regex as defined by IEEE Std 1003.1, (i.e this follows the
-egrep/unix syntax, not the perl syntax) matched against the path of an incoming request.
-Currently it can contain characters disallowed from the conventional &quot;path&quot; part of a
-URL as defined by RFC 3986. Paths must begin with a '/'. If unspecified, the path
-defaults to a catch all sending traffic to the backend.</p>
+  <div class="markdown level1 summary"><p>Path is matched against the path of an incoming request. Currently it can contain
+characters disallowed from the conventional &quot;path&quot; part of a URL as defined by RFC 3986.
+Paths must begin with a '/'. When unspecified, all paths from incoming requests are
+matched.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public readonly string Path</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L28501">View Source</a>
+  </span>
+  <h4 id="Pulumi_Kubernetes_Types_Outputs_Networking_V1Beta1_HTTPIngressPath_PathType" data-uid="Pulumi.Kubernetes.Types.Outputs.Networking.V1Beta1.HTTPIngressPath.PathType">PathType</h4>
+  <div class="markdown level1 summary"><p>PathType determines the interpretation of the Path matching. PathType can be one of the
+following values: * Exact: Matches the URL path exactly. * Prefix: Matches based on a
+URL path prefix split by '/'. Matching is
+done on a path element by element basis. A path element refers is the
+list of labels in the path split by the '/' separator. A request is a
+match for path p if every p is an element-wise prefix of p of the
+request path. Note that if the last element of the path is a substring
+of the last element in request path, it is not a match (e.g. /foo/bar
+matches /foo/bar/baz, but does not match /foo/barbaz).</p>
+<ul>
+<li>ImplementationSpecific: Interpretation of the Path matching is up to
+the IngressClass. Implementations can treat this as a separate PathType
+or treat it identically to Prefix or Exact path types.
+Implementations are required to support all path types. Defaults to
+ImplementationSpecific.</li>
+</ul>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly string PathType</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -176,7 +192,7 @@ defaults to a catch all sending traffic to the backend.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L28223" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L28468" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -76,36 +76,7 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
-    <div class="level3"><span class="xref">DomainDomainEndpointOptionsArgs</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">DomainDomainEndpointOptionsArgs</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.ElasticSearch.Inputs.html">Pulumi.Aws.ElasticSearch.Inputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
@@ -116,7 +87,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Elasticsearch/Domain.cs/#L617">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ElasticSearch/Inputs/DomainDomainEndpointOptionsArgs.cs/#L27">View Source</a>
   </span>
   <a id="Pulumi_Aws_ElasticSearch_Inputs_DomainDomainEndpointOptionsArgs__ctor_" data-uid="Pulumi.Aws.ElasticSearch.Inputs.DomainDomainEndpointOptionsArgs.#ctor*"></a>
   <h4 id="Pulumi_Aws_ElasticSearch_Inputs_DomainDomainEndpointOptionsArgs__ctor" data-uid="Pulumi.Aws.ElasticSearch.Inputs.DomainDomainEndpointOptionsArgs.#ctor">DomainDomainEndpointOptionsArgs()</h4>
@@ -129,7 +100,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Elasticsearch/Domain.cs/#L611">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ElasticSearch/Inputs/DomainDomainEndpointOptionsArgs.cs/#L18">View Source</a>
   </span>
   <a id="Pulumi_Aws_ElasticSearch_Inputs_DomainDomainEndpointOptionsArgs_EnforceHttps_" data-uid="Pulumi.Aws.ElasticSearch.Inputs.DomainDomainEndpointOptionsArgs.EnforceHttps*"></a>
   <h4 id="Pulumi_Aws_ElasticSearch_Inputs_DomainDomainEndpointOptionsArgs_EnforceHttps" data-uid="Pulumi.Aws.ElasticSearch.Inputs.DomainDomainEndpointOptionsArgs.EnforceHttps">EnforceHttps</h4>
@@ -150,21 +121,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Elasticsearch/Domain.cs/#L614">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ElasticSearch/Inputs/DomainDomainEndpointOptionsArgs.cs/#L24">View Source</a>
   </span>
   <a id="Pulumi_Aws_ElasticSearch_Inputs_DomainDomainEndpointOptionsArgs_TlsSecurityPolicy_" data-uid="Pulumi.Aws.ElasticSearch.Inputs.DomainDomainEndpointOptionsArgs.TlsSecurityPolicy*"></a>
   <h4 id="Pulumi_Aws_ElasticSearch_Inputs_DomainDomainEndpointOptionsArgs_TlsSecurityPolicy" data-uid="Pulumi.Aws.ElasticSearch.Inputs.DomainDomainEndpointOptionsArgs.TlsSecurityPolicy">TlsSecurityPolicy</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The name of the TLS security policy that needs to be applied to the HTTPS endpoint. Valid values:  <code>Policy-Min-TLS-1-0-2019-07</code> and <code>Policy-Min-TLS-1-2-2019-07</code>. This provider will only perform drift detection if a configuration value is provided.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; TlsSecurityPolicy { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? TlsSecurityPolicy { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -176,7 +148,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -188,7 +160,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Elasticsearch/Domain.cs/#L606" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ElasticSearch/Inputs/DomainDomainEndpointOptionsArgs.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

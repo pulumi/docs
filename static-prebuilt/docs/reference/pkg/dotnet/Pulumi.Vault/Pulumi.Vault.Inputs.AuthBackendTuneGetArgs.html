@@ -87,7 +87,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/AuthBackend.cs/#L324">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Inputs/AuthBackendTuneGetArgs.cs/#L97">View Source</a>
   </span>
   <a id="Pulumi_Vault_Inputs_AuthBackendTuneGetArgs__ctor_" data-uid="Pulumi.Vault.Inputs.AuthBackendTuneGetArgs.#ctor*"></a>
   <h4 id="Pulumi_Vault_Inputs_AuthBackendTuneGetArgs__ctor" data-uid="Pulumi.Vault.Inputs.AuthBackendTuneGetArgs.#ctor">AuthBackendTuneGetArgs()</h4>
@@ -100,11 +100,13 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/AuthBackend.cs/#L279">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Inputs/AuthBackendTuneGetArgs.cs/#L22">View Source</a>
   </span>
   <a id="Pulumi_Vault_Inputs_AuthBackendTuneGetArgs_AllowedResponseHeaders_" data-uid="Pulumi.Vault.Inputs.AuthBackendTuneGetArgs.AllowedResponseHeaders*"></a>
   <h4 id="Pulumi_Vault_Inputs_AuthBackendTuneGetArgs_AllowedResponseHeaders" data-uid="Pulumi.Vault.Inputs.AuthBackendTuneGetArgs.AllowedResponseHeaders">AllowedResponseHeaders</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>List of headers to whitelist and allowing
+a plugin to include them in the response.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -126,11 +128,13 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/AuthBackend.cs/#L287">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Inputs/AuthBackendTuneGetArgs.cs/#L35">View Source</a>
   </span>
   <a id="Pulumi_Vault_Inputs_AuthBackendTuneGetArgs_AuditNonHmacRequestKeys_" data-uid="Pulumi.Vault.Inputs.AuthBackendTuneGetArgs.AuditNonHmacRequestKeys*"></a>
   <h4 id="Pulumi_Vault_Inputs_AuthBackendTuneGetArgs_AuditNonHmacRequestKeys" data-uid="Pulumi.Vault.Inputs.AuthBackendTuneGetArgs.AuditNonHmacRequestKeys">AuditNonHmacRequestKeys</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Specifies the list of keys that will
+not be HMAC'd by audit devices in the request data object.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -152,11 +156,13 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/AuthBackend.cs/#L295">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Inputs/AuthBackendTuneGetArgs.cs/#L48">View Source</a>
   </span>
   <a id="Pulumi_Vault_Inputs_AuthBackendTuneGetArgs_AuditNonHmacResponseKeys_" data-uid="Pulumi.Vault.Inputs.AuthBackendTuneGetArgs.AuditNonHmacResponseKeys*"></a>
   <h4 id="Pulumi_Vault_Inputs_AuthBackendTuneGetArgs_AuditNonHmacResponseKeys" data-uid="Pulumi.Vault.Inputs.AuthBackendTuneGetArgs.AuditNonHmacResponseKeys">AuditNonHmacResponseKeys</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Specifies the list of keys that will
+not be HMAC'd by audit devices in the response data object.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -178,11 +184,14 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/AuthBackend.cs/#L301">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Inputs/AuthBackendTuneGetArgs.cs/#L59">View Source</a>
   </span>
   <a id="Pulumi_Vault_Inputs_AuthBackendTuneGetArgs_DefaultLeaseTtl_" data-uid="Pulumi.Vault.Inputs.AuthBackendTuneGetArgs.DefaultLeaseTtl*"></a>
   <h4 id="Pulumi_Vault_Inputs_AuthBackendTuneGetArgs_DefaultLeaseTtl" data-uid="Pulumi.Vault.Inputs.AuthBackendTuneGetArgs.DefaultLeaseTtl">DefaultLeaseTtl</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Specifies the default time-to-live.
+If set, this overrides the global default.
+Must be a valid <a href="https://golang.org/pkg/time/#ParseDuration">duration string</a></p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -204,11 +213,12 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/AuthBackend.cs/#L307">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Inputs/AuthBackendTuneGetArgs.cs/#L66">View Source</a>
   </span>
   <a id="Pulumi_Vault_Inputs_AuthBackendTuneGetArgs_ListingVisibility_" data-uid="Pulumi.Vault.Inputs.AuthBackendTuneGetArgs.ListingVisibility*"></a>
   <h4 id="Pulumi_Vault_Inputs_AuthBackendTuneGetArgs_ListingVisibility" data-uid="Pulumi.Vault.Inputs.AuthBackendTuneGetArgs.ListingVisibility">ListingVisibility</h4>
-  <div class="markdown level1 summary"><p>Speficies whether to show this mount in the UI-specific listing endpoint.</p>
+  <div class="markdown level1 summary"><p>Specifies whether to show this mount in
+the UI-specific listing endpoint. Valid values are &quot;unauth&quot; or &quot;hidden&quot;.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -231,11 +241,14 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/AuthBackend.cs/#L310">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Inputs/AuthBackendTuneGetArgs.cs/#L74">View Source</a>
   </span>
   <a id="Pulumi_Vault_Inputs_AuthBackendTuneGetArgs_MaxLeaseTtl_" data-uid="Pulumi.Vault.Inputs.AuthBackendTuneGetArgs.MaxLeaseTtl*"></a>
   <h4 id="Pulumi_Vault_Inputs_AuthBackendTuneGetArgs_MaxLeaseTtl" data-uid="Pulumi.Vault.Inputs.AuthBackendTuneGetArgs.MaxLeaseTtl">MaxLeaseTtl</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Specifies the maximum time-to-live.
+If set, this overrides the global default.
+Must be a valid <a href="https://golang.org/pkg/time/#ParseDuration">duration string</a></p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -257,11 +270,13 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/AuthBackend.cs/#L315">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Inputs/AuthBackendTuneGetArgs.cs/#L84">View Source</a>
   </span>
   <a id="Pulumi_Vault_Inputs_AuthBackendTuneGetArgs_PassthroughRequestHeaders_" data-uid="Pulumi.Vault.Inputs.AuthBackendTuneGetArgs.PassthroughRequestHeaders*"></a>
   <h4 id="Pulumi_Vault_Inputs_AuthBackendTuneGetArgs_PassthroughRequestHeaders" data-uid="Pulumi.Vault.Inputs.AuthBackendTuneGetArgs.PassthroughRequestHeaders">PassthroughRequestHeaders</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>List of headers to whitelist and
+pass from the request to the backend.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -283,11 +298,13 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/AuthBackend.cs/#L321">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Inputs/AuthBackendTuneGetArgs.cs/#L94">View Source</a>
   </span>
   <a id="Pulumi_Vault_Inputs_AuthBackendTuneGetArgs_TokenType_" data-uid="Pulumi.Vault.Inputs.AuthBackendTuneGetArgs.TokenType*"></a>
   <h4 id="Pulumi_Vault_Inputs_AuthBackendTuneGetArgs_TokenType" data-uid="Pulumi.Vault.Inputs.AuthBackendTuneGetArgs.TokenType">TokenType</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Specifies the type of tokens that should be returned by
+the mount. Valid values are &quot;default-service&quot;, &quot;default-batch&quot;, &quot;service&quot;, &quot;batch&quot;.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -315,7 +332,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-vault/blob/master/sdk/dotnet/AuthBackend.cs/#L275" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-vault/blob/04f5ece2daeecb4c0529cef57e622c59fb2d17c4/sdk/dotnet/Inputs/AuthBackendTuneGetArgs.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

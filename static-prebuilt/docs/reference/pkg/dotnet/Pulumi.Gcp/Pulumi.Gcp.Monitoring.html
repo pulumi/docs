@@ -77,35 +77,88 @@
     <h3 id="classes">Classes
   </h3>
       <h4><a class="xref" href="Pulumi.Gcp.Monitoring.AlertPolicy.html">AlertPolicy</a></h4>
-      <section></section>
+      <section><p>A description of the conditions under which some aspect of your system is
+considered to be &quot;unhealthy&quot; and the ways to notify people or services
+about this state.</p>
+<p>To get more information about AlertPolicy, see:</p>
+<ul>
+<li><a href="https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.alertPolicies">API documentation</a></li>
+<li>How-to Guides</li>
+<li><a href="https://cloud.google.com/monitoring/alerts/">Official Documentation</a></li>
+</ul>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.Monitoring.AlertPolicyArgs.html">AlertPolicyArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Monitoring.AlertPolicyState.html">AlertPolicyState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.Monitoring.GetNotificationChannel.html">GetNotificationChannel</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Monitoring.GetNotificationChannelArgs.html">GetNotificationChannelArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Monitoring.GetNotificationChannelResult.html">GetNotificationChannelResult</a></h4>
       <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.Monitoring.GetSecretVersion.html">GetSecretVersion</a></h4>
+      <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Monitoring.GetSecretVersionArgs.html">GetSecretVersionArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Monitoring.GetSecretVersionResult.html">GetSecretVersionResult</a></h4>
       <section></section>
-      <h4><a class="xref" href="Pulumi.Gcp.Monitoring.Group.html">Group</a></h4>
+      <h4><a class="xref" href="Pulumi.Gcp.Monitoring.GetUptimeCheckIPs.html">GetUptimeCheckIPs</a></h4>
       <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.Monitoring.GetUptimeCheckIPsResult.html">GetUptimeCheckIPsResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.Monitoring.Group.html">Group</a></h4>
+      <section><p>The description of a dynamic collection of monitored resources. Each group
+has a filter that is matched against monitored resources and their
+associated metadata. If a group's filter matches an available monitored
+resource, then that resource is a member of that group.</p>
+<p>To get more information about Group, see:</p>
+<ul>
+<li><a href="https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.groups">API documentation</a></li>
+<li>How-to Guides</li>
+<li><a href="https://cloud.google.com/monitoring/groups/">Official Documentation</a></li>
+</ul>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.Monitoring.GroupArgs.html">GroupArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Monitoring.GroupState.html">GroupState</a></h4>
       <section></section>
-      <h4><a class="xref" href="Pulumi.Gcp.Monitoring.Invokes.html">Invokes</a></h4>
-      <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Monitoring.NotificationChannel.html">NotificationChannel</a></h4>
-      <section></section>
+      <section><p>A NotificationChannel is a medium through which an alert is delivered
+when a policy violation is detected. Examples of channels include email, SMS,
+and third-party messaging applications. Fields containing sensitive information
+like authentication tokens or contact info are only partially populated on retrieval.</p>
+<p>Notification Channels are designed to be flexible and are made up of a supported <code>type</code>
+and labels to configure that channel. Each <code>type</code> has specific labels that need to be
+present for that channel to be correctly configured. The labels that are required to be
+present for one channel <code>type</code> are often different than those required for another.
+Due to these loose constraints it's often best to set up a channel through the UI
+and import it to the provider when setting up a brand new channel type to determine which
+labels are required.</p>
+<p>A list of supported channels per project the <code>list</code> endpoint can be
+accessed programmatically or through the api explorer at  <a href="https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.notificationChannelDescriptors/list">https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.notificationChannelDescriptors/list</a> .
+This provides the channel type and all of the required labels that must be passed.</p>
+<p>To get more information about NotificationChannel, see:</p>
+<ul>
+<li><a href="https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.notificationChannels">API documentation</a></li>
+<li>How-to Guides</li>
+<li><a href="https://cloud.google.com/monitoring/support/notification-options">Notification Options</a></li>
+<li><a href="https://cloud.google.com/monitoring/api/v3/">Monitoring API Documentation</a></li>
+</ul>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.Monitoring.NotificationChannelArgs.html">NotificationChannelArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Monitoring.NotificationChannelState.html">NotificationChannelState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Monitoring.UptimeCheckConfig.html">UptimeCheckConfig</a></h4>
-      <section></section>
+      <section><p>This message configures which resources and services to monitor for availability.</p>
+<p>To get more information about UptimeCheckConfig, see:</p>
+<ul>
+<li><a href="https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.uptimeCheckConfigs">API documentation</a></li>
+<li>How-to Guides</li>
+<li><a href="https://cloud.google.com/monitoring/uptime-checks/">Official Documentation</a></li>
+</ul>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.Monitoring.UptimeCheckConfigArgs.html">UptimeCheckConfigArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Monitoring.UptimeCheckConfigState.html">UptimeCheckConfigState</a></h4>

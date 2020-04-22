@@ -78,43 +78,20 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">ApiImport</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Azure.ApiManagement.Outputs.html">Pulumi.Azure.ApiManagement.Outputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Azure.dll</h6>
   <h5 id="Pulumi_Azure_ApiManagement_Outputs_ApiImport_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class ApiImport</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class ApiImport : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Apimanagement/Api.cs/#L459">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/ApiManagement/Outputs/ApiImport.cs/#L19">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_ApiManagement_Outputs_ApiImport_ContentFormat" data-uid="Pulumi.Azure.ApiManagement.Outputs.ApiImport.ContentFormat">ContentFormat</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The format of the content from which the API Definition should be imported. Possible values are: <code>swagger-json</code>, <code>swagger-link-json</code>, <code>wadl-link-json</code>, <code>wadl-xml</code>, <code>wsdl</code> and <code>wsdl-link</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -136,10 +113,11 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Apimanagement/Api.cs/#L460">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/ApiManagement/Outputs/ApiImport.cs/#L23">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_ApiManagement_Outputs_ApiImport_ContentValue" data-uid="Pulumi.Azure.ApiManagement.Outputs.ApiImport.ContentValue">ContentValue</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The Content from which the API Definition should be imported. When a <code>content_format</code> of <code>*-link-*</code> is specified this must be a URL, otherwise this must be defined inline.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -161,10 +139,11 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Apimanagement/Api.cs/#L461">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/ApiManagement/Outputs/ApiImport.cs/#L27">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_ApiManagement_Outputs_ApiImport_WsdlSelector" data-uid="Pulumi.Azure.ApiManagement.Outputs.ApiImport.WsdlSelector">WsdlSelector</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A <code>wsdl_selector</code> block as defined below, which allows you to limit the import of a WSDL to only a subset of the document. This can only be specified when <code>content_format</code> is <code>wsdl</code> or <code>wsdl-link</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -192,7 +171,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Apimanagement/Api.cs/#L456" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/ApiManagement/Outputs/ApiImport.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

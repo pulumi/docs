@@ -72,53 +72,12 @@
   <h1 id="Pulumi_Azure_Storage_Account" data-uid="Pulumi.Azure.Storage.Account" class="text-break">Class Account
   </h1>
   <div class="markdown level0 summary"><p>Manages an Azure Storage Account.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/storage_account.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/storage_account.html.markdown</a>.</p>
-</blockquote>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
-    <div class="level3"><span class="xref">Account</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">Account</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Azure.Storage.html">Pulumi.Azure.Storage</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Azure.dll</h6>
@@ -129,16 +88,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Storage/Account.cs/#L316">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Storage/Account.cs/#L314">View Source</a>
   </span>
   <a id="Pulumi_Azure_Storage_Account__ctor_" data-uid="Pulumi.Azure.Storage.Account.#ctor*"></a>
-  <h4 id="Pulumi_Azure_Storage_Account__ctor_System_String_Pulumi_Azure_Storage_AccountArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Azure.Storage.Account.#ctor(System.String,Pulumi.Azure.Storage.AccountArgs,Pulumi.CustomResourceOptions)">Account(String, AccountArgs, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Azure_Storage_Account__ctor_System_String_Pulumi_Azure_Storage_AccountArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Azure.Storage.Account.#ctor(System.String,Pulumi.Azure.Storage.AccountArgs,System.Nullable{CustomResourceOptions})">Account(String, AccountArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Create a Account resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Account(string name, AccountArgs args, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Account(string name, AccountArgs args, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -163,7 +122,7 @@
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -173,7 +132,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Storage/Account.cs/#L22">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Storage/Account.cs/#L20">View Source</a>
   </span>
   <a id="Pulumi_Azure_Storage_Account_AccessTier_" data-uid="Pulumi.Azure.Storage.Account.AccessTier*"></a>
   <h4 id="Pulumi_Azure_Storage_Account_AccessTier" data-uid="Pulumi.Azure.Storage.Account.AccessTier">AccessTier</h4>
@@ -194,13 +153,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Storage/Account.cs/#L28">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Storage/Account.cs/#L26">View Source</a>
   </span>
   <a id="Pulumi_Azure_Storage_Account_AccountKind_" data-uid="Pulumi.Azure.Storage.Account.AccountKind*"></a>
   <h4 id="Pulumi_Azure_Storage_Account_AccountKind" data-uid="Pulumi.Azure.Storage.Account.AccountKind">AccountKind</h4>
@@ -209,7 +168,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; AccountKind { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; AccountKind { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -221,13 +180,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Storage/Account.cs/#L34">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Storage/Account.cs/#L32">View Source</a>
   </span>
   <a id="Pulumi_Azure_Storage_Account_AccountReplicationType_" data-uid="Pulumi.Azure.Storage.Account.AccountReplicationType*"></a>
   <h4 id="Pulumi_Azure_Storage_Account_AccountReplicationType" data-uid="Pulumi.Azure.Storage.Account.AccountReplicationType">AccountReplicationType</h4>
@@ -248,13 +207,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Storage/Account.cs/#L40">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Storage/Account.cs/#L38">View Source</a>
   </span>
   <a id="Pulumi_Azure_Storage_Account_AccountTier_" data-uid="Pulumi.Azure.Storage.Account.AccountTier*"></a>
   <h4 id="Pulumi_Azure_Storage_Account_AccountTier" data-uid="Pulumi.Azure.Storage.Account.AccountTier">AccountTier</h4>
@@ -275,13 +234,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Storage/Account.cs/#L46">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Storage/Account.cs/#L44">View Source</a>
   </span>
   <a id="Pulumi_Azure_Storage_Account_BlobProperties_" data-uid="Pulumi.Azure.Storage.Account.BlobProperties*"></a>
   <h4 id="Pulumi_Azure_Storage_Account_BlobProperties" data-uid="Pulumi.Azure.Storage.Account.BlobProperties">BlobProperties</h4>
@@ -302,13 +261,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Azure.Storage.Outputs.AccountBlobProperties.html">AccountBlobProperties</a>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Azure.Storage.Outputs.AccountBlobProperties.html">AccountBlobProperties</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Storage/Account.cs/#L52">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Storage/Account.cs/#L50">View Source</a>
   </span>
   <a id="Pulumi_Azure_Storage_Account_CustomDomain_" data-uid="Pulumi.Azure.Storage.Account.CustomDomain*"></a>
   <h4 id="Pulumi_Azure_Storage_Account_CustomDomain" data-uid="Pulumi.Azure.Storage.Account.CustomDomain">CustomDomain</h4>
@@ -329,13 +288,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Azure.Storage.Outputs.AccountCustomDomain.html">AccountCustomDomain</a>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Azure.Storage.Outputs.AccountCustomDomain.html">AccountCustomDomain</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Storage/Account.cs/#L59">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Storage/Account.cs/#L57">View Source</a>
   </span>
   <a id="Pulumi_Azure_Storage_Account_EnableHttpsTrafficOnly_" data-uid="Pulumi.Azure.Storage.Account.EnableHttpsTrafficOnly*"></a>
   <h4 id="Pulumi_Azure_Storage_Account_EnableHttpsTrafficOnly" data-uid="Pulumi.Azure.Storage.Account.EnableHttpsTrafficOnly">EnableHttpsTrafficOnly</h4>
@@ -357,13 +316,13 @@ for more information. Defaults to <code>true</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Storage/Account.cs/#L65">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Storage/Account.cs/#L63">View Source</a>
   </span>
   <a id="Pulumi_Azure_Storage_Account_Identity_" data-uid="Pulumi.Azure.Storage.Account.Identity*"></a>
   <h4 id="Pulumi_Azure_Storage_Account_Identity" data-uid="Pulumi.Azure.Storage.Account.Identity">Identity</h4>
@@ -384,13 +343,13 @@ for more information. Defaults to <code>true</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Azure.Storage.Outputs.AccountIdentity.html">AccountIdentity</a>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Azure.Storage.Outputs.AccountIdentity.html">AccountIdentity</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Storage/Account.cs/#L71">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Storage/Account.cs/#L69">View Source</a>
   </span>
   <a id="Pulumi_Azure_Storage_Account_IsHnsEnabled_" data-uid="Pulumi.Azure.Storage.Account.IsHnsEnabled*"></a>
   <h4 id="Pulumi_Azure_Storage_Account_IsHnsEnabled" data-uid="Pulumi.Azure.Storage.Account.IsHnsEnabled">IsHnsEnabled</h4>
@@ -411,13 +370,13 @@ for more information. Defaults to <code>true</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Storage/Account.cs/#L77">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Storage/Account.cs/#L75">View Source</a>
   </span>
   <a id="Pulumi_Azure_Storage_Account_Location_" data-uid="Pulumi.Azure.Storage.Account.Location*"></a>
   <h4 id="Pulumi_Azure_Storage_Account_Location" data-uid="Pulumi.Azure.Storage.Account.Location">Location</h4>
@@ -438,13 +397,13 @@ for more information. Defaults to <code>true</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Storage/Account.cs/#L83">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Storage/Account.cs/#L81">View Source</a>
   </span>
   <a id="Pulumi_Azure_Storage_Account_Name_" data-uid="Pulumi.Azure.Storage.Account.Name*"></a>
   <h4 id="Pulumi_Azure_Storage_Account_Name" data-uid="Pulumi.Azure.Storage.Account.Name">Name</h4>
@@ -465,13 +424,13 @@ for more information. Defaults to <code>true</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Storage/Account.cs/#L89">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Storage/Account.cs/#L87">View Source</a>
   </span>
   <a id="Pulumi_Azure_Storage_Account_NetworkRules_" data-uid="Pulumi.Azure.Storage.Account.NetworkRules*"></a>
   <h4 id="Pulumi_Azure_Storage_Account_NetworkRules" data-uid="Pulumi.Azure.Storage.Account.NetworkRules">NetworkRules</h4>
@@ -492,13 +451,13 @@ for more information. Defaults to <code>true</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Azure.Storage.Outputs.AccountNetworkRules.html">AccountNetworkRules</a>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Azure.Storage.Outputs.AccountNetworkRules.html">AccountNetworkRules</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Storage/Account.cs/#L95">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Storage/Account.cs/#L93">View Source</a>
   </span>
   <a id="Pulumi_Azure_Storage_Account_PrimaryAccessKey_" data-uid="Pulumi.Azure.Storage.Account.PrimaryAccessKey*"></a>
   <h4 id="Pulumi_Azure_Storage_Account_PrimaryAccessKey" data-uid="Pulumi.Azure.Storage.Account.PrimaryAccessKey">PrimaryAccessKey</h4>
@@ -519,13 +478,13 @@ for more information. Defaults to <code>true</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Storage/Account.cs/#L101">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Storage/Account.cs/#L99">View Source</a>
   </span>
   <a id="Pulumi_Azure_Storage_Account_PrimaryBlobConnectionString_" data-uid="Pulumi.Azure.Storage.Account.PrimaryBlobConnectionString*"></a>
   <h4 id="Pulumi_Azure_Storage_Account_PrimaryBlobConnectionString" data-uid="Pulumi.Azure.Storage.Account.PrimaryBlobConnectionString">PrimaryBlobConnectionString</h4>
@@ -546,13 +505,13 @@ for more information. Defaults to <code>true</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Storage/Account.cs/#L107">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Storage/Account.cs/#L105">View Source</a>
   </span>
   <a id="Pulumi_Azure_Storage_Account_PrimaryBlobEndpoint_" data-uid="Pulumi.Azure.Storage.Account.PrimaryBlobEndpoint*"></a>
   <h4 id="Pulumi_Azure_Storage_Account_PrimaryBlobEndpoint" data-uid="Pulumi.Azure.Storage.Account.PrimaryBlobEndpoint">PrimaryBlobEndpoint</h4>
@@ -573,13 +532,13 @@ for more information. Defaults to <code>true</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Storage/Account.cs/#L113">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Storage/Account.cs/#L111">View Source</a>
   </span>
   <a id="Pulumi_Azure_Storage_Account_PrimaryBlobHost_" data-uid="Pulumi.Azure.Storage.Account.PrimaryBlobHost*"></a>
   <h4 id="Pulumi_Azure_Storage_Account_PrimaryBlobHost" data-uid="Pulumi.Azure.Storage.Account.PrimaryBlobHost">PrimaryBlobHost</h4>
@@ -600,13 +559,13 @@ for more information. Defaults to <code>true</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Storage/Account.cs/#L119">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Storage/Account.cs/#L117">View Source</a>
   </span>
   <a id="Pulumi_Azure_Storage_Account_PrimaryConnectionString_" data-uid="Pulumi.Azure.Storage.Account.PrimaryConnectionString*"></a>
   <h4 id="Pulumi_Azure_Storage_Account_PrimaryConnectionString" data-uid="Pulumi.Azure.Storage.Account.PrimaryConnectionString">PrimaryConnectionString</h4>
@@ -627,13 +586,13 @@ for more information. Defaults to <code>true</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Storage/Account.cs/#L125">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Storage/Account.cs/#L123">View Source</a>
   </span>
   <a id="Pulumi_Azure_Storage_Account_PrimaryDfsEndpoint_" data-uid="Pulumi.Azure.Storage.Account.PrimaryDfsEndpoint*"></a>
   <h4 id="Pulumi_Azure_Storage_Account_PrimaryDfsEndpoint" data-uid="Pulumi.Azure.Storage.Account.PrimaryDfsEndpoint">PrimaryDfsEndpoint</h4>
@@ -654,13 +613,13 @@ for more information. Defaults to <code>true</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Storage/Account.cs/#L131">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Storage/Account.cs/#L129">View Source</a>
   </span>
   <a id="Pulumi_Azure_Storage_Account_PrimaryDfsHost_" data-uid="Pulumi.Azure.Storage.Account.PrimaryDfsHost*"></a>
   <h4 id="Pulumi_Azure_Storage_Account_PrimaryDfsHost" data-uid="Pulumi.Azure.Storage.Account.PrimaryDfsHost">PrimaryDfsHost</h4>
@@ -681,13 +640,13 @@ for more information. Defaults to <code>true</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Storage/Account.cs/#L137">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Storage/Account.cs/#L135">View Source</a>
   </span>
   <a id="Pulumi_Azure_Storage_Account_PrimaryFileEndpoint_" data-uid="Pulumi.Azure.Storage.Account.PrimaryFileEndpoint*"></a>
   <h4 id="Pulumi_Azure_Storage_Account_PrimaryFileEndpoint" data-uid="Pulumi.Azure.Storage.Account.PrimaryFileEndpoint">PrimaryFileEndpoint</h4>
@@ -708,13 +667,13 @@ for more information. Defaults to <code>true</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Storage/Account.cs/#L143">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Storage/Account.cs/#L141">View Source</a>
   </span>
   <a id="Pulumi_Azure_Storage_Account_PrimaryFileHost_" data-uid="Pulumi.Azure.Storage.Account.PrimaryFileHost*"></a>
   <h4 id="Pulumi_Azure_Storage_Account_PrimaryFileHost" data-uid="Pulumi.Azure.Storage.Account.PrimaryFileHost">PrimaryFileHost</h4>
@@ -735,13 +694,13 @@ for more information. Defaults to <code>true</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Storage/Account.cs/#L149">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Storage/Account.cs/#L147">View Source</a>
   </span>
   <a id="Pulumi_Azure_Storage_Account_PrimaryLocation_" data-uid="Pulumi.Azure.Storage.Account.PrimaryLocation*"></a>
   <h4 id="Pulumi_Azure_Storage_Account_PrimaryLocation" data-uid="Pulumi.Azure.Storage.Account.PrimaryLocation">PrimaryLocation</h4>
@@ -762,13 +721,13 @@ for more information. Defaults to <code>true</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Storage/Account.cs/#L155">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Storage/Account.cs/#L153">View Source</a>
   </span>
   <a id="Pulumi_Azure_Storage_Account_PrimaryQueueEndpoint_" data-uid="Pulumi.Azure.Storage.Account.PrimaryQueueEndpoint*"></a>
   <h4 id="Pulumi_Azure_Storage_Account_PrimaryQueueEndpoint" data-uid="Pulumi.Azure.Storage.Account.PrimaryQueueEndpoint">PrimaryQueueEndpoint</h4>
@@ -789,13 +748,13 @@ for more information. Defaults to <code>true</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Storage/Account.cs/#L161">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Storage/Account.cs/#L159">View Source</a>
   </span>
   <a id="Pulumi_Azure_Storage_Account_PrimaryQueueHost_" data-uid="Pulumi.Azure.Storage.Account.PrimaryQueueHost*"></a>
   <h4 id="Pulumi_Azure_Storage_Account_PrimaryQueueHost" data-uid="Pulumi.Azure.Storage.Account.PrimaryQueueHost">PrimaryQueueHost</h4>
@@ -816,13 +775,13 @@ for more information. Defaults to <code>true</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Storage/Account.cs/#L167">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Storage/Account.cs/#L165">View Source</a>
   </span>
   <a id="Pulumi_Azure_Storage_Account_PrimaryTableEndpoint_" data-uid="Pulumi.Azure.Storage.Account.PrimaryTableEndpoint*"></a>
   <h4 id="Pulumi_Azure_Storage_Account_PrimaryTableEndpoint" data-uid="Pulumi.Azure.Storage.Account.PrimaryTableEndpoint">PrimaryTableEndpoint</h4>
@@ -843,13 +802,13 @@ for more information. Defaults to <code>true</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Storage/Account.cs/#L173">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Storage/Account.cs/#L171">View Source</a>
   </span>
   <a id="Pulumi_Azure_Storage_Account_PrimaryTableHost_" data-uid="Pulumi.Azure.Storage.Account.PrimaryTableHost*"></a>
   <h4 id="Pulumi_Azure_Storage_Account_PrimaryTableHost" data-uid="Pulumi.Azure.Storage.Account.PrimaryTableHost">PrimaryTableHost</h4>
@@ -870,13 +829,13 @@ for more information. Defaults to <code>true</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Storage/Account.cs/#L179">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Storage/Account.cs/#L177">View Source</a>
   </span>
   <a id="Pulumi_Azure_Storage_Account_PrimaryWebEndpoint_" data-uid="Pulumi.Azure.Storage.Account.PrimaryWebEndpoint*"></a>
   <h4 id="Pulumi_Azure_Storage_Account_PrimaryWebEndpoint" data-uid="Pulumi.Azure.Storage.Account.PrimaryWebEndpoint">PrimaryWebEndpoint</h4>
@@ -897,13 +856,13 @@ for more information. Defaults to <code>true</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Storage/Account.cs/#L185">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Storage/Account.cs/#L183">View Source</a>
   </span>
   <a id="Pulumi_Azure_Storage_Account_PrimaryWebHost_" data-uid="Pulumi.Azure.Storage.Account.PrimaryWebHost*"></a>
   <h4 id="Pulumi_Azure_Storage_Account_PrimaryWebHost" data-uid="Pulumi.Azure.Storage.Account.PrimaryWebHost">PrimaryWebHost</h4>
@@ -924,13 +883,13 @@ for more information. Defaults to <code>true</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Storage/Account.cs/#L191">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Storage/Account.cs/#L189">View Source</a>
   </span>
   <a id="Pulumi_Azure_Storage_Account_QueueProperties_" data-uid="Pulumi.Azure.Storage.Account.QueueProperties*"></a>
   <h4 id="Pulumi_Azure_Storage_Account_QueueProperties" data-uid="Pulumi.Azure.Storage.Account.QueueProperties">QueueProperties</h4>
@@ -951,13 +910,13 @@ for more information. Defaults to <code>true</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Azure.Storage.Outputs.AccountQueueProperties.html">AccountQueueProperties</a>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Azure.Storage.Outputs.AccountQueueProperties.html">AccountQueueProperties</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Storage/Account.cs/#L197">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Storage/Account.cs/#L195">View Source</a>
   </span>
   <a id="Pulumi_Azure_Storage_Account_ResourceGroupName_" data-uid="Pulumi.Azure.Storage.Account.ResourceGroupName*"></a>
   <h4 id="Pulumi_Azure_Storage_Account_ResourceGroupName" data-uid="Pulumi.Azure.Storage.Account.ResourceGroupName">ResourceGroupName</h4>
@@ -978,13 +937,13 @@ for more information. Defaults to <code>true</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Storage/Account.cs/#L203">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Storage/Account.cs/#L201">View Source</a>
   </span>
   <a id="Pulumi_Azure_Storage_Account_SecondaryAccessKey_" data-uid="Pulumi.Azure.Storage.Account.SecondaryAccessKey*"></a>
   <h4 id="Pulumi_Azure_Storage_Account_SecondaryAccessKey" data-uid="Pulumi.Azure.Storage.Account.SecondaryAccessKey">SecondaryAccessKey</h4>
@@ -1005,13 +964,13 @@ for more information. Defaults to <code>true</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Storage/Account.cs/#L209">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Storage/Account.cs/#L207">View Source</a>
   </span>
   <a id="Pulumi_Azure_Storage_Account_SecondaryBlobConnectionString_" data-uid="Pulumi.Azure.Storage.Account.SecondaryBlobConnectionString*"></a>
   <h4 id="Pulumi_Azure_Storage_Account_SecondaryBlobConnectionString" data-uid="Pulumi.Azure.Storage.Account.SecondaryBlobConnectionString">SecondaryBlobConnectionString</h4>
@@ -1032,13 +991,13 @@ for more information. Defaults to <code>true</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Storage/Account.cs/#L215">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Storage/Account.cs/#L213">View Source</a>
   </span>
   <a id="Pulumi_Azure_Storage_Account_SecondaryBlobEndpoint_" data-uid="Pulumi.Azure.Storage.Account.SecondaryBlobEndpoint*"></a>
   <h4 id="Pulumi_Azure_Storage_Account_SecondaryBlobEndpoint" data-uid="Pulumi.Azure.Storage.Account.SecondaryBlobEndpoint">SecondaryBlobEndpoint</h4>
@@ -1059,13 +1018,13 @@ for more information. Defaults to <code>true</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Storage/Account.cs/#L221">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Storage/Account.cs/#L219">View Source</a>
   </span>
   <a id="Pulumi_Azure_Storage_Account_SecondaryBlobHost_" data-uid="Pulumi.Azure.Storage.Account.SecondaryBlobHost*"></a>
   <h4 id="Pulumi_Azure_Storage_Account_SecondaryBlobHost" data-uid="Pulumi.Azure.Storage.Account.SecondaryBlobHost">SecondaryBlobHost</h4>
@@ -1086,13 +1045,13 @@ for more information. Defaults to <code>true</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Storage/Account.cs/#L227">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Storage/Account.cs/#L225">View Source</a>
   </span>
   <a id="Pulumi_Azure_Storage_Account_SecondaryConnectionString_" data-uid="Pulumi.Azure.Storage.Account.SecondaryConnectionString*"></a>
   <h4 id="Pulumi_Azure_Storage_Account_SecondaryConnectionString" data-uid="Pulumi.Azure.Storage.Account.SecondaryConnectionString">SecondaryConnectionString</h4>
@@ -1113,13 +1072,13 @@ for more information. Defaults to <code>true</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Storage/Account.cs/#L233">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Storage/Account.cs/#L231">View Source</a>
   </span>
   <a id="Pulumi_Azure_Storage_Account_SecondaryDfsEndpoint_" data-uid="Pulumi.Azure.Storage.Account.SecondaryDfsEndpoint*"></a>
   <h4 id="Pulumi_Azure_Storage_Account_SecondaryDfsEndpoint" data-uid="Pulumi.Azure.Storage.Account.SecondaryDfsEndpoint">SecondaryDfsEndpoint</h4>
@@ -1140,13 +1099,13 @@ for more information. Defaults to <code>true</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Storage/Account.cs/#L239">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Storage/Account.cs/#L237">View Source</a>
   </span>
   <a id="Pulumi_Azure_Storage_Account_SecondaryDfsHost_" data-uid="Pulumi.Azure.Storage.Account.SecondaryDfsHost*"></a>
   <h4 id="Pulumi_Azure_Storage_Account_SecondaryDfsHost" data-uid="Pulumi.Azure.Storage.Account.SecondaryDfsHost">SecondaryDfsHost</h4>
@@ -1167,13 +1126,13 @@ for more information. Defaults to <code>true</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Storage/Account.cs/#L245">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Storage/Account.cs/#L243">View Source</a>
   </span>
   <a id="Pulumi_Azure_Storage_Account_SecondaryFileEndpoint_" data-uid="Pulumi.Azure.Storage.Account.SecondaryFileEndpoint*"></a>
   <h4 id="Pulumi_Azure_Storage_Account_SecondaryFileEndpoint" data-uid="Pulumi.Azure.Storage.Account.SecondaryFileEndpoint">SecondaryFileEndpoint</h4>
@@ -1194,13 +1153,13 @@ for more information. Defaults to <code>true</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Storage/Account.cs/#L251">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Storage/Account.cs/#L249">View Source</a>
   </span>
   <a id="Pulumi_Azure_Storage_Account_SecondaryFileHost_" data-uid="Pulumi.Azure.Storage.Account.SecondaryFileHost*"></a>
   <h4 id="Pulumi_Azure_Storage_Account_SecondaryFileHost" data-uid="Pulumi.Azure.Storage.Account.SecondaryFileHost">SecondaryFileHost</h4>
@@ -1221,13 +1180,13 @@ for more information. Defaults to <code>true</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Storage/Account.cs/#L257">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Storage/Account.cs/#L255">View Source</a>
   </span>
   <a id="Pulumi_Azure_Storage_Account_SecondaryLocation_" data-uid="Pulumi.Azure.Storage.Account.SecondaryLocation*"></a>
   <h4 id="Pulumi_Azure_Storage_Account_SecondaryLocation" data-uid="Pulumi.Azure.Storage.Account.SecondaryLocation">SecondaryLocation</h4>
@@ -1248,13 +1207,13 @@ for more information. Defaults to <code>true</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Storage/Account.cs/#L263">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Storage/Account.cs/#L261">View Source</a>
   </span>
   <a id="Pulumi_Azure_Storage_Account_SecondaryQueueEndpoint_" data-uid="Pulumi.Azure.Storage.Account.SecondaryQueueEndpoint*"></a>
   <h4 id="Pulumi_Azure_Storage_Account_SecondaryQueueEndpoint" data-uid="Pulumi.Azure.Storage.Account.SecondaryQueueEndpoint">SecondaryQueueEndpoint</h4>
@@ -1275,13 +1234,13 @@ for more information. Defaults to <code>true</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Storage/Account.cs/#L269">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Storage/Account.cs/#L267">View Source</a>
   </span>
   <a id="Pulumi_Azure_Storage_Account_SecondaryQueueHost_" data-uid="Pulumi.Azure.Storage.Account.SecondaryQueueHost*"></a>
   <h4 id="Pulumi_Azure_Storage_Account_SecondaryQueueHost" data-uid="Pulumi.Azure.Storage.Account.SecondaryQueueHost">SecondaryQueueHost</h4>
@@ -1302,13 +1261,13 @@ for more information. Defaults to <code>true</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Storage/Account.cs/#L275">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Storage/Account.cs/#L273">View Source</a>
   </span>
   <a id="Pulumi_Azure_Storage_Account_SecondaryTableEndpoint_" data-uid="Pulumi.Azure.Storage.Account.SecondaryTableEndpoint*"></a>
   <h4 id="Pulumi_Azure_Storage_Account_SecondaryTableEndpoint" data-uid="Pulumi.Azure.Storage.Account.SecondaryTableEndpoint">SecondaryTableEndpoint</h4>
@@ -1329,13 +1288,13 @@ for more information. Defaults to <code>true</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Storage/Account.cs/#L281">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Storage/Account.cs/#L279">View Source</a>
   </span>
   <a id="Pulumi_Azure_Storage_Account_SecondaryTableHost_" data-uid="Pulumi.Azure.Storage.Account.SecondaryTableHost*"></a>
   <h4 id="Pulumi_Azure_Storage_Account_SecondaryTableHost" data-uid="Pulumi.Azure.Storage.Account.SecondaryTableHost">SecondaryTableHost</h4>
@@ -1356,13 +1315,13 @@ for more information. Defaults to <code>true</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Storage/Account.cs/#L287">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Storage/Account.cs/#L285">View Source</a>
   </span>
   <a id="Pulumi_Azure_Storage_Account_SecondaryWebEndpoint_" data-uid="Pulumi.Azure.Storage.Account.SecondaryWebEndpoint*"></a>
   <h4 id="Pulumi_Azure_Storage_Account_SecondaryWebEndpoint" data-uid="Pulumi.Azure.Storage.Account.SecondaryWebEndpoint">SecondaryWebEndpoint</h4>
@@ -1383,13 +1342,13 @@ for more information. Defaults to <code>true</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Storage/Account.cs/#L293">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Storage/Account.cs/#L291">View Source</a>
   </span>
   <a id="Pulumi_Azure_Storage_Account_SecondaryWebHost_" data-uid="Pulumi.Azure.Storage.Account.SecondaryWebHost*"></a>
   <h4 id="Pulumi_Azure_Storage_Account_SecondaryWebHost" data-uid="Pulumi.Azure.Storage.Account.SecondaryWebHost">SecondaryWebHost</h4>
@@ -1410,13 +1369,13 @@ for more information. Defaults to <code>true</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Storage/Account.cs/#L299">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Storage/Account.cs/#L297">View Source</a>
   </span>
   <a id="Pulumi_Azure_Storage_Account_StaticWebsite_" data-uid="Pulumi.Azure.Storage.Account.StaticWebsite*"></a>
   <h4 id="Pulumi_Azure_Storage_Account_StaticWebsite" data-uid="Pulumi.Azure.Storage.Account.StaticWebsite">StaticWebsite</h4>
@@ -1437,13 +1396,13 @@ for more information. Defaults to <code>true</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Azure.Storage.Outputs.AccountStaticWebsite.html">AccountStaticWebsite</a>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Azure.Storage.Outputs.AccountStaticWebsite.html">AccountStaticWebsite</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Storage/Account.cs/#L305">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Storage/Account.cs/#L303">View Source</a>
   </span>
   <a id="Pulumi_Azure_Storage_Account_Tags_" data-uid="Pulumi.Azure.Storage.Account.Tags*"></a>
   <h4 id="Pulumi_Azure_Storage_Account_Tags" data-uid="Pulumi.Azure.Storage.Account.Tags">Tags</h4>
@@ -1452,7 +1411,7 @@ for more information. Defaults to <code>true</code>.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;&gt; Tags { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;?&gt; Tags { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1464,7 +1423,7 @@ for more information. Defaults to <code>true</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -1472,17 +1431,17 @@ for more information. Defaults to <code>true</code>.</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Storage/Account.cs/#L346">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Storage/Account.cs/#L344">View Source</a>
   </span>
   <a id="Pulumi_Azure_Storage_Account_Get_" data-uid="Pulumi.Azure.Storage.Account.Get*"></a>
-  <h4 id="Pulumi_Azure_Storage_Account_Get_System_String_Pulumi_Input_System_String__Pulumi_Azure_Storage_AccountState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Azure.Storage.Account.Get(System.String,Pulumi.Input{System.String},Pulumi.Azure.Storage.AccountState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, AccountState, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Azure_Storage_Account_Get_System_String_Input_System_String__Pulumi_Azure_Storage_AccountState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Azure.Storage.Account.Get(System.String,Input{System.String},Pulumi.Azure.Storage.AccountState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, AccountState, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Get an existing Account resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Account Get(string name, Input&lt;string&gt; id, AccountState state = null, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Account Get(string name, Input&lt;string&gt; id, AccountState state = null, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1501,7 +1460,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -1513,7 +1472,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -1542,7 +1501,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Storage/Account.cs/#L17" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Storage/Account.cs/#L15" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

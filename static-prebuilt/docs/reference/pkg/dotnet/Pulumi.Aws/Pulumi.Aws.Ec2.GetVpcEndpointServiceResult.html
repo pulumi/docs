@@ -78,40 +78,16 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">GetVpcEndpointServiceResult</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.Ec2.html">Pulumi.Aws.Ec2</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
   <h5 id="Pulumi_Aws_Ec2_GetVpcEndpointServiceResult_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class GetVpcEndpointServiceResult</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class GetVpcEndpointServiceResult : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/GetVpcEndpointService.cs/#L57">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/GetVpcEndpointService.cs/#L76">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Ec2_GetVpcEndpointServiceResult_AcceptanceRequired" data-uid="Pulumi.Aws.Ec2.GetVpcEndpointServiceResult.AcceptanceRequired">AcceptanceRequired</h4>
   <div class="markdown level1 summary"><p>Whether or not VPC endpoint connection requests to the service must be accepted by the service owner - <code>true</code> or <code>false</code>.</p>
@@ -137,7 +113,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/GetVpcEndpointService.cs/#L61">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/GetVpcEndpointService.cs/#L80">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Ec2_GetVpcEndpointServiceResult_AvailabilityZones" data-uid="Pulumi.Aws.Ec2.GetVpcEndpointServiceResult.AvailabilityZones">AvailabilityZones</h4>
   <div class="markdown level1 summary"><p>The Availability Zones in which the service is available.</p>
@@ -157,13 +133,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/GetVpcEndpointService.cs/#L65">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/GetVpcEndpointService.cs/#L84">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Ec2_GetVpcEndpointServiceResult_BaseEndpointDnsNames" data-uid="Pulumi.Aws.Ec2.GetVpcEndpointServiceResult.BaseEndpointDnsNames">BaseEndpointDnsNames</h4>
   <div class="markdown level1 summary"><p>The DNS names for the service.</p>
@@ -183,13 +159,38 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/GetVpcEndpointService.cs/#L99">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/GetVpcEndpointService.cs/#L85">View Source</a>
+  </span>
+  <h4 id="Pulumi_Aws_Ec2_GetVpcEndpointServiceResult_Filters" data-uid="Pulumi.Aws.Ec2.GetVpcEndpointServiceResult.Filters">Filters</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetVpcEndpointServiceFilterResult&gt; Filters</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.Ec2.Outputs.GetVpcEndpointServiceFilterResult.html">GetVpcEndpointServiceFilterResult</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/GetVpcEndpointService.cs/#L89">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Ec2_GetVpcEndpointServiceResult_Id" data-uid="Pulumi.Aws.Ec2.GetVpcEndpointServiceResult.Id">Id</h4>
   <div class="markdown level1 summary"><p>id is the provider-assigned unique ID for this managed resource.</p>
@@ -215,7 +216,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/GetVpcEndpointService.cs/#L69">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/GetVpcEndpointService.cs/#L93">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Ec2_GetVpcEndpointServiceResult_ManagesVpcEndpoints" data-uid="Pulumi.Aws.Ec2.GetVpcEndpointServiceResult.ManagesVpcEndpoints">ManagesVpcEndpoints</h4>
   <div class="markdown level1 summary"><p>Whether or not the service manages its VPC endpoints - <code>true</code> or <code>false</code>.</p>
@@ -241,7 +242,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/GetVpcEndpointService.cs/#L73">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/GetVpcEndpointService.cs/#L97">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Ec2_GetVpcEndpointServiceResult_Owner" data-uid="Pulumi.Aws.Ec2.GetVpcEndpointServiceResult.Owner">Owner</h4>
   <div class="markdown level1 summary"><p>The AWS account ID of the service owner or <code>amazon</code>.</p>
@@ -267,7 +268,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/GetVpcEndpointService.cs/#L77">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/GetVpcEndpointService.cs/#L101">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Ec2_GetVpcEndpointServiceResult_PrivateDnsName" data-uid="Pulumi.Aws.Ec2.GetVpcEndpointServiceResult.PrivateDnsName">PrivateDnsName</h4>
   <div class="markdown level1 summary"><p>The private DNS name for the service.</p>
@@ -293,14 +294,14 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/GetVpcEndpointService.cs/#L78">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/GetVpcEndpointService.cs/#L102">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Ec2_GetVpcEndpointServiceResult_Service" data-uid="Pulumi.Aws.Ec2.GetVpcEndpointServiceResult.Service">Service</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string Service</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? Service</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -312,13 +313,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/GetVpcEndpointService.cs/#L82">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/GetVpcEndpointService.cs/#L106">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Ec2_GetVpcEndpointServiceResult_ServiceId" data-uid="Pulumi.Aws.Ec2.GetVpcEndpointServiceResult.ServiceId">ServiceId</h4>
   <div class="markdown level1 summary"><p>The ID of the endpoint service.</p>
@@ -344,7 +345,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/GetVpcEndpointService.cs/#L83">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/GetVpcEndpointService.cs/#L107">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Ec2_GetVpcEndpointServiceResult_ServiceName" data-uid="Pulumi.Aws.Ec2.GetVpcEndpointServiceResult.ServiceName">ServiceName</h4>
   <div class="markdown level1 summary"></div>
@@ -369,7 +370,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/GetVpcEndpointService.cs/#L87">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/GetVpcEndpointService.cs/#L111">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Ec2_GetVpcEndpointServiceResult_ServiceType" data-uid="Pulumi.Aws.Ec2.GetVpcEndpointServiceResult.ServiceType">ServiceType</h4>
   <div class="markdown level1 summary"><p>The service type, <code>Gateway</code> or <code>Interface</code>.</p>
@@ -395,7 +396,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/GetVpcEndpointService.cs/#L91">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/GetVpcEndpointService.cs/#L115">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Ec2_GetVpcEndpointServiceResult_Tags" data-uid="Pulumi.Aws.Ec2.GetVpcEndpointServiceResult.Tags">Tags</h4>
   <div class="markdown level1 summary"><p>A mapping of tags assigned to the resource.</p>
@@ -415,13 +416,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;</td>
+        <td><span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/GetVpcEndpointService.cs/#L95">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/GetVpcEndpointService.cs/#L119">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Ec2_GetVpcEndpointServiceResult_VpcEndpointPolicySupported" data-uid="Pulumi.Aws.Ec2.GetVpcEndpointServiceResult.VpcEndpointPolicySupported">VpcEndpointPolicySupported</h4>
   <div class="markdown level1 summary"><p>Whether or not the service supports endpoint policies - <code>true</code> or <code>false</code>.</p>
@@ -453,7 +454,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/GetVpcEndpointService.cs/#L51" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/GetVpcEndpointService.cs/#L70" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

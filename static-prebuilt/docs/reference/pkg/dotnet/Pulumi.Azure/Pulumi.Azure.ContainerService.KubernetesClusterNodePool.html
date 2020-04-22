@@ -75,53 +75,12 @@
 <blockquote>
 <p><strong>NOTE:</strong> Multiple Node Pools are only supported when the Kubernetes Cluster is using Virtual Machine Scale Sets.</p>
 </blockquote>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/kubernetes_cluster_node_pool.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/kubernetes_cluster_node_pool.html.markdown</a>.</p>
-</blockquote>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
-    <div class="level3"><span class="xref">KubernetesClusterNodePool</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">KubernetesClusterNodePool</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Azure.ContainerService.html">Pulumi.Azure.ContainerService</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Azure.dll</h6>
@@ -132,16 +91,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Containerservice/KubernetesClusterNodePool.cs/#L125">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/ContainerService/KubernetesClusterNodePool.cs/#L123">View Source</a>
   </span>
   <a id="Pulumi_Azure_ContainerService_KubernetesClusterNodePool__ctor_" data-uid="Pulumi.Azure.ContainerService.KubernetesClusterNodePool.#ctor*"></a>
-  <h4 id="Pulumi_Azure_ContainerService_KubernetesClusterNodePool__ctor_System_String_Pulumi_Azure_ContainerService_KubernetesClusterNodePoolArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Azure.ContainerService.KubernetesClusterNodePool.#ctor(System.String,Pulumi.Azure.ContainerService.KubernetesClusterNodePoolArgs,Pulumi.CustomResourceOptions)">KubernetesClusterNodePool(String, KubernetesClusterNodePoolArgs, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Azure_ContainerService_KubernetesClusterNodePool__ctor_System_String_Pulumi_Azure_ContainerService_KubernetesClusterNodePoolArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Azure.ContainerService.KubernetesClusterNodePool.#ctor(System.String,Pulumi.Azure.ContainerService.KubernetesClusterNodePoolArgs,System.Nullable{CustomResourceOptions})">KubernetesClusterNodePool(String, KubernetesClusterNodePoolArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Create a KubernetesClusterNodePool resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public KubernetesClusterNodePool(string name, KubernetesClusterNodePoolArgs args, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public KubernetesClusterNodePool(string name, KubernetesClusterNodePoolArgs args, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -166,7 +125,7 @@
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -176,7 +135,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Containerservice/KubernetesClusterNodePool.cs/#L24">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/ContainerService/KubernetesClusterNodePool.cs/#L22">View Source</a>
   </span>
   <a id="Pulumi_Azure_ContainerService_KubernetesClusterNodePool_AvailabilityZones_" data-uid="Pulumi.Azure.ContainerService.KubernetesClusterNodePool.AvailabilityZones*"></a>
   <h4 id="Pulumi_Azure_ContainerService_KubernetesClusterNodePool_AvailabilityZones" data-uid="Pulumi.Azure.ContainerService.KubernetesClusterNodePool.AvailabilityZones">AvailabilityZones</h4>
@@ -197,13 +156,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Containerservice/KubernetesClusterNodePool.cs/#L30">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/ContainerService/KubernetesClusterNodePool.cs/#L28">View Source</a>
   </span>
   <a id="Pulumi_Azure_ContainerService_KubernetesClusterNodePool_EnableAutoScaling_" data-uid="Pulumi.Azure.ContainerService.KubernetesClusterNodePool.EnableAutoScaling*"></a>
   <h4 id="Pulumi_Azure_ContainerService_KubernetesClusterNodePool_EnableAutoScaling" data-uid="Pulumi.Azure.ContainerService.KubernetesClusterNodePool.EnableAutoScaling">EnableAutoScaling</h4>
@@ -224,13 +183,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Containerservice/KubernetesClusterNodePool.cs/#L36">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/ContainerService/KubernetesClusterNodePool.cs/#L34">View Source</a>
   </span>
   <a id="Pulumi_Azure_ContainerService_KubernetesClusterNodePool_EnableNodePublicIp_" data-uid="Pulumi.Azure.ContainerService.KubernetesClusterNodePool.EnableNodePublicIp*"></a>
   <h4 id="Pulumi_Azure_ContainerService_KubernetesClusterNodePool_EnableNodePublicIp" data-uid="Pulumi.Azure.ContainerService.KubernetesClusterNodePool.EnableNodePublicIp">EnableNodePublicIp</h4>
@@ -251,13 +210,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Containerservice/KubernetesClusterNodePool.cs/#L42">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/ContainerService/KubernetesClusterNodePool.cs/#L40">View Source</a>
   </span>
   <a id="Pulumi_Azure_ContainerService_KubernetesClusterNodePool_KubernetesClusterId_" data-uid="Pulumi.Azure.ContainerService.KubernetesClusterNodePool.KubernetesClusterId*"></a>
   <h4 id="Pulumi_Azure_ContainerService_KubernetesClusterNodePool_KubernetesClusterId" data-uid="Pulumi.Azure.ContainerService.KubernetesClusterNodePool.KubernetesClusterId">KubernetesClusterId</h4>
@@ -278,13 +237,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Containerservice/KubernetesClusterNodePool.cs/#L48">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/ContainerService/KubernetesClusterNodePool.cs/#L46">View Source</a>
   </span>
   <a id="Pulumi_Azure_ContainerService_KubernetesClusterNodePool_MaxCount_" data-uid="Pulumi.Azure.ContainerService.KubernetesClusterNodePool.MaxCount*"></a>
   <h4 id="Pulumi_Azure_ContainerService_KubernetesClusterNodePool_MaxCount" data-uid="Pulumi.Azure.ContainerService.KubernetesClusterNodePool.MaxCount">MaxCount</h4>
@@ -305,13 +264,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Containerservice/KubernetesClusterNodePool.cs/#L54">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/ContainerService/KubernetesClusterNodePool.cs/#L52">View Source</a>
   </span>
   <a id="Pulumi_Azure_ContainerService_KubernetesClusterNodePool_MaxPods_" data-uid="Pulumi.Azure.ContainerService.KubernetesClusterNodePool.MaxPods*"></a>
   <h4 id="Pulumi_Azure_ContainerService_KubernetesClusterNodePool_MaxPods" data-uid="Pulumi.Azure.ContainerService.KubernetesClusterNodePool.MaxPods">MaxPods</h4>
@@ -332,13 +291,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Containerservice/KubernetesClusterNodePool.cs/#L60">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/ContainerService/KubernetesClusterNodePool.cs/#L58">View Source</a>
   </span>
   <a id="Pulumi_Azure_ContainerService_KubernetesClusterNodePool_MinCount_" data-uid="Pulumi.Azure.ContainerService.KubernetesClusterNodePool.MinCount*"></a>
   <h4 id="Pulumi_Azure_ContainerService_KubernetesClusterNodePool_MinCount" data-uid="Pulumi.Azure.ContainerService.KubernetesClusterNodePool.MinCount">MinCount</h4>
@@ -359,13 +318,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Containerservice/KubernetesClusterNodePool.cs/#L66">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/ContainerService/KubernetesClusterNodePool.cs/#L64">View Source</a>
   </span>
   <a id="Pulumi_Azure_ContainerService_KubernetesClusterNodePool_Name_" data-uid="Pulumi.Azure.ContainerService.KubernetesClusterNodePool.Name*"></a>
   <h4 id="Pulumi_Azure_ContainerService_KubernetesClusterNodePool_Name" data-uid="Pulumi.Azure.ContainerService.KubernetesClusterNodePool.Name">Name</h4>
@@ -386,17 +345,17 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Containerservice/KubernetesClusterNodePool.cs/#L72">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/ContainerService/KubernetesClusterNodePool.cs/#L70">View Source</a>
   </span>
   <a id="Pulumi_Azure_ContainerService_KubernetesClusterNodePool_NodeCount_" data-uid="Pulumi.Azure.ContainerService.KubernetesClusterNodePool.NodeCount*"></a>
   <h4 id="Pulumi_Azure_ContainerService_KubernetesClusterNodePool_NodeCount" data-uid="Pulumi.Azure.ContainerService.KubernetesClusterNodePool.NodeCount">NodeCount</h4>
-  <div class="markdown level1 summary"><p>The number of nodes which should exist within this Node Pool. Valid values are between <code>1</code> and <code>100</code>.</p>
+  <div class="markdown level1 summary"><p>The initial number of nodes which should exist within this Node Pool. Valid values are between <code>1</code> and <code>100</code> and must be a value in the range <code>min_count</code> - <code>max_count</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -413,13 +372,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Containerservice/KubernetesClusterNodePool.cs/#L78">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/ContainerService/KubernetesClusterNodePool.cs/#L76">View Source</a>
   </span>
   <a id="Pulumi_Azure_ContainerService_KubernetesClusterNodePool_NodeLabels_" data-uid="Pulumi.Azure.ContainerService.KubernetesClusterNodePool.NodeLabels*"></a>
   <h4 id="Pulumi_Azure_ContainerService_KubernetesClusterNodePool_NodeLabels" data-uid="Pulumi.Azure.ContainerService.KubernetesClusterNodePool.NodeLabels">NodeLabels</h4>
@@ -428,7 +387,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;&gt; NodeLabels { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;?&gt; NodeLabels { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -440,13 +399,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Containerservice/KubernetesClusterNodePool.cs/#L84">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/ContainerService/KubernetesClusterNodePool.cs/#L82">View Source</a>
   </span>
   <a id="Pulumi_Azure_ContainerService_KubernetesClusterNodePool_NodeTaints_" data-uid="Pulumi.Azure.ContainerService.KubernetesClusterNodePool.NodeTaints*"></a>
   <h4 id="Pulumi_Azure_ContainerService_KubernetesClusterNodePool_NodeTaints" data-uid="Pulumi.Azure.ContainerService.KubernetesClusterNodePool.NodeTaints">NodeTaints</h4>
@@ -467,13 +426,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Containerservice/KubernetesClusterNodePool.cs/#L90">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/ContainerService/KubernetesClusterNodePool.cs/#L88">View Source</a>
   </span>
   <a id="Pulumi_Azure_ContainerService_KubernetesClusterNodePool_OsDiskSizeGb_" data-uid="Pulumi.Azure.ContainerService.KubernetesClusterNodePool.OsDiskSizeGb*"></a>
   <h4 id="Pulumi_Azure_ContainerService_KubernetesClusterNodePool_OsDiskSizeGb" data-uid="Pulumi.Azure.ContainerService.KubernetesClusterNodePool.OsDiskSizeGb">OsDiskSizeGb</h4>
@@ -494,13 +453,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Containerservice/KubernetesClusterNodePool.cs/#L96">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/ContainerService/KubernetesClusterNodePool.cs/#L94">View Source</a>
   </span>
   <a id="Pulumi_Azure_ContainerService_KubernetesClusterNodePool_OsType_" data-uid="Pulumi.Azure.ContainerService.KubernetesClusterNodePool.OsType*"></a>
   <h4 id="Pulumi_Azure_ContainerService_KubernetesClusterNodePool_OsType" data-uid="Pulumi.Azure.ContainerService.KubernetesClusterNodePool.OsType">OsType</h4>
@@ -509,7 +468,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; OsType { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; OsType { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -521,13 +480,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Containerservice/KubernetesClusterNodePool.cs/#L102">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/ContainerService/KubernetesClusterNodePool.cs/#L100">View Source</a>
   </span>
   <a id="Pulumi_Azure_ContainerService_KubernetesClusterNodePool_Tags_" data-uid="Pulumi.Azure.ContainerService.KubernetesClusterNodePool.Tags*"></a>
   <h4 id="Pulumi_Azure_ContainerService_KubernetesClusterNodePool_Tags" data-uid="Pulumi.Azure.ContainerService.KubernetesClusterNodePool.Tags">Tags</h4>
@@ -536,7 +495,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;&gt; Tags { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;?&gt; Tags { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -548,13 +507,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Containerservice/KubernetesClusterNodePool.cs/#L108">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/ContainerService/KubernetesClusterNodePool.cs/#L106">View Source</a>
   </span>
   <a id="Pulumi_Azure_ContainerService_KubernetesClusterNodePool_VmSize_" data-uid="Pulumi.Azure.ContainerService.KubernetesClusterNodePool.VmSize*"></a>
   <h4 id="Pulumi_Azure_ContainerService_KubernetesClusterNodePool_VmSize" data-uid="Pulumi.Azure.ContainerService.KubernetesClusterNodePool.VmSize">VmSize</h4>
@@ -575,13 +534,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Containerservice/KubernetesClusterNodePool.cs/#L114">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/ContainerService/KubernetesClusterNodePool.cs/#L112">View Source</a>
   </span>
   <a id="Pulumi_Azure_ContainerService_KubernetesClusterNodePool_VnetSubnetId_" data-uid="Pulumi.Azure.ContainerService.KubernetesClusterNodePool.VnetSubnetId*"></a>
   <h4 id="Pulumi_Azure_ContainerService_KubernetesClusterNodePool_VnetSubnetId" data-uid="Pulumi.Azure.ContainerService.KubernetesClusterNodePool.VnetSubnetId">VnetSubnetId</h4>
@@ -590,7 +549,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; VnetSubnetId { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; VnetSubnetId { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -602,7 +561,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -610,17 +569,17 @@
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Containerservice/KubernetesClusterNodePool.cs/#L155">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/ContainerService/KubernetesClusterNodePool.cs/#L153">View Source</a>
   </span>
   <a id="Pulumi_Azure_ContainerService_KubernetesClusterNodePool_Get_" data-uid="Pulumi.Azure.ContainerService.KubernetesClusterNodePool.Get*"></a>
-  <h4 id="Pulumi_Azure_ContainerService_KubernetesClusterNodePool_Get_System_String_Pulumi_Input_System_String__Pulumi_Azure_ContainerService_KubernetesClusterNodePoolState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Azure.ContainerService.KubernetesClusterNodePool.Get(System.String,Pulumi.Input{System.String},Pulumi.Azure.ContainerService.KubernetesClusterNodePoolState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, KubernetesClusterNodePoolState, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Azure_ContainerService_KubernetesClusterNodePool_Get_System_String_Input_System_String__Pulumi_Azure_ContainerService_KubernetesClusterNodePoolState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Azure.ContainerService.KubernetesClusterNodePool.Get(System.String,Input{System.String},Pulumi.Azure.ContainerService.KubernetesClusterNodePoolState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, KubernetesClusterNodePoolState, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Get an existing KubernetesClusterNodePool resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static KubernetesClusterNodePool Get(string name, Input&lt;string&gt; id, KubernetesClusterNodePoolState state = null, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static KubernetesClusterNodePool Get(string name, Input&lt;string&gt; id, KubernetesClusterNodePoolState state = null, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -639,7 +598,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -651,7 +610,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -680,7 +639,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Containerservice/KubernetesClusterNodePool.cs/#L19" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/ContainerService/KubernetesClusterNodePool.cs/#L17" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

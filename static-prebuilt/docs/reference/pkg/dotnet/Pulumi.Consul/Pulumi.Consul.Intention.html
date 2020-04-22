@@ -77,9 +77,6 @@ rules for which services may connect to one another when using <a href="https://
 that will be created in the future when creating intentions. This resource can be used
 in conjunction with the <code>consul..Service</code> datasource when referencing services
 registered on nodes that have a running Consul agent.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-consul/blob/master/website/docs/r/intention.html.markdown">https://github.com/terraform-providers/terraform-provider-consul/blob/master/website/docs/r/intention.html.markdown</a>.</p>
-</blockquote>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -96,7 +93,7 @@ registered on nodes that have a running Consul agent.</p>
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/Intention.cs/#L66">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/Intention.cs/#L79">View Source</a>
   </span>
   <a id="Pulumi_Consul_Intention__ctor_" data-uid="Pulumi.Consul.Intention.#ctor*"></a>
   <h4 id="Pulumi_Consul_Intention__ctor_System_String_Pulumi_Consul_IntentionArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Consul.Intention.#ctor(System.String,Pulumi.Consul.IntentionArgs,System.Nullable{CustomResourceOptions})">Intention(String, IntentionArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
@@ -140,7 +137,7 @@ registered on nodes that have a running Consul agent.</p>
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/Intention.cs/#L27">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/Intention.cs/#L26">View Source</a>
   </span>
   <a id="Pulumi_Consul_Intention_Action_" data-uid="Pulumi.Consul.Intention.Action*"></a>
   <h4 id="Pulumi_Consul_Intention_Action" data-uid="Pulumi.Consul.Intention.Action">Action</h4>
@@ -167,7 +164,7 @@ registered on nodes that have a running Consul agent.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/Intention.cs/#L34">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/Intention.cs/#L33">View Source</a>
   </span>
   <a id="Pulumi_Consul_Intention_Description_" data-uid="Pulumi.Consul.Intention.Description*"></a>
   <h4 id="Pulumi_Consul_Intention_Description" data-uid="Pulumi.Consul.Intention.Description">Description</h4>
@@ -195,7 +192,7 @@ tooling, but is not used internally.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/Intention.cs/#L41">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/Intention.cs/#L40">View Source</a>
   </span>
   <a id="Pulumi_Consul_Intention_DestinationName_" data-uid="Pulumi.Consul.Intention.DestinationName*"></a>
   <h4 id="Pulumi_Consul_Intention_DestinationName" data-uid="Pulumi.Consul.Intention.DestinationName">DestinationName</h4>
@@ -223,7 +220,35 @@ service does not have to exist.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/Intention.cs/#L48">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/Intention.cs/#L47">View Source</a>
+  </span>
+  <a id="Pulumi_Consul_Intention_DestinationNamespace_" data-uid="Pulumi.Consul.Intention.DestinationNamespace*"></a>
+  <h4 id="Pulumi_Consul_Intention_DestinationNamespace" data-uid="Pulumi.Consul.Intention.DestinationNamespace">DestinationNamespace</h4>
+  <div class="markdown level1 summary"><p>The destination
+namespace of the intention.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; DestinationNamespace { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/Intention.cs/#L54">View Source</a>
   </span>
   <a id="Pulumi_Consul_Intention_Meta_" data-uid="Pulumi.Consul.Intention.Meta*"></a>
   <h4 id="Pulumi_Consul_Intention_Meta" data-uid="Pulumi.Consul.Intention.Meta">Meta</h4>
@@ -251,7 +276,7 @@ with the intention.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/Intention.cs/#L55">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/Intention.cs/#L61">View Source</a>
   </span>
   <a id="Pulumi_Consul_Intention_SourceName_" data-uid="Pulumi.Consul.Intention.SourceName*"></a>
   <h4 id="Pulumi_Consul_Intention_SourceName" data-uid="Pulumi.Consul.Intention.SourceName">SourceName</h4>
@@ -278,10 +303,38 @@ service does not have to exist.</p>
       </tr>
     </tbody>
   </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/Intention.cs/#L68">View Source</a>
+  </span>
+  <a id="Pulumi_Consul_Intention_SourceNamespace_" data-uid="Pulumi.Consul.Intention.SourceNamespace*"></a>
+  <h4 id="Pulumi_Consul_Intention_SourceNamespace" data-uid="Pulumi.Consul.Intention.SourceNamespace">SourceNamespace</h4>
+  <div class="markdown level1 summary"><p>The source namespace of the
+intention.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; SourceNamespace { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/Intention.cs/#L96">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/Intention.cs/#L109">View Source</a>
   </span>
   <a id="Pulumi_Consul_Intention_Get_" data-uid="Pulumi.Consul.Intention.Get*"></a>
   <h4 id="Pulumi_Consul_Intention_Get_System_String_Input_System_String__Pulumi_Consul_IntentionState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Consul.Intention.Get(System.String,Input{System.String},Pulumi.Consul.IntentionState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, IntentionState, Nullable&lt;CustomResourceOptions&gt;)</h4>
@@ -351,7 +404,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/Intention.cs/#L22" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/Intention.cs/#L21" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

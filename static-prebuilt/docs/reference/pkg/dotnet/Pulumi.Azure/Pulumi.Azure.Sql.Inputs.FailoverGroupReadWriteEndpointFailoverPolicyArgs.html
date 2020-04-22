@@ -76,36 +76,7 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
-    <div class="level3"><span class="xref">FailoverGroupReadWriteEndpointFailoverPolicyArgs</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">FailoverGroupReadWriteEndpointFailoverPolicyArgs</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Azure.Sql.Inputs.html">Pulumi.Azure.Sql.Inputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Azure.dll</h6>
@@ -116,7 +87,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Sql/FailoverGroup.cs/#L348">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Sql/Inputs/FailoverGroupReadWriteEndpointFailoverPolicyArgs.cs/#L27">View Source</a>
   </span>
   <a id="Pulumi_Azure_Sql_Inputs_FailoverGroupReadWriteEndpointFailoverPolicyArgs__ctor_" data-uid="Pulumi.Azure.Sql.Inputs.FailoverGroupReadWriteEndpointFailoverPolicyArgs.#ctor*"></a>
   <h4 id="Pulumi_Azure_Sql_Inputs_FailoverGroupReadWriteEndpointFailoverPolicyArgs__ctor" data-uid="Pulumi.Azure.Sql.Inputs.FailoverGroupReadWriteEndpointFailoverPolicyArgs.#ctor">FailoverGroupReadWriteEndpointFailoverPolicyArgs()</h4>
@@ -129,7 +100,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Sql/FailoverGroup.cs/#L339">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Sql/Inputs/FailoverGroupReadWriteEndpointFailoverPolicyArgs.cs/#L18">View Source</a>
   </span>
   <a id="Pulumi_Azure_Sql_Inputs_FailoverGroupReadWriteEndpointFailoverPolicyArgs_GraceMinutes_" data-uid="Pulumi.Azure.Sql.Inputs.FailoverGroupReadWriteEndpointFailoverPolicyArgs.GraceMinutes*"></a>
   <h4 id="Pulumi_Azure_Sql_Inputs_FailoverGroupReadWriteEndpointFailoverPolicyArgs_GraceMinutes" data-uid="Pulumi.Azure.Sql.Inputs.FailoverGroupReadWriteEndpointFailoverPolicyArgs.GraceMinutes">GraceMinutes</h4>
@@ -138,7 +109,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; GraceMinutes { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? GraceMinutes { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -150,17 +121,17 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Sql/FailoverGroup.cs/#L345">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Sql/Inputs/FailoverGroupReadWriteEndpointFailoverPolicyArgs.cs/#L24">View Source</a>
   </span>
   <a id="Pulumi_Azure_Sql_Inputs_FailoverGroupReadWriteEndpointFailoverPolicyArgs_Mode_" data-uid="Pulumi.Azure.Sql.Inputs.FailoverGroupReadWriteEndpointFailoverPolicyArgs.Mode*"></a>
   <h4 id="Pulumi_Azure_Sql_Inputs_FailoverGroupReadWriteEndpointFailoverPolicyArgs_Mode" data-uid="Pulumi.Azure.Sql.Inputs.FailoverGroupReadWriteEndpointFailoverPolicyArgs.Mode">Mode</h4>
-  <div class="markdown level1 summary"><p>Failover policy for the read-only endpoint. Possible values are <code>Enabled</code>, and <code>Disabled</code></p>
+  <div class="markdown level1 summary"><p>the failover mode. Possible values are <code>Manual</code>, <code>Automatic</code></p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -177,7 +148,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -189,7 +160,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Sql/FailoverGroup.cs/#L334" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Sql/Inputs/FailoverGroupReadWriteEndpointFailoverPolicyArgs.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

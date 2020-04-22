@@ -76,36 +76,7 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
-    <div class="level3"><span class="xref">TableEncryptionConfigurationArgs</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">TableEncryptionConfigurationArgs</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.BigQuery.Inputs.html">Pulumi.Gcp.BigQuery.Inputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
@@ -116,7 +87,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Bigquery/Table.cs/#L549">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/BigQuery/Inputs/TableEncryptionConfigurationArgs.cs/#L25">View Source</a>
   </span>
   <a id="Pulumi_Gcp_BigQuery_Inputs_TableEncryptionConfigurationArgs__ctor_" data-uid="Pulumi.Gcp.BigQuery.Inputs.TableEncryptionConfigurationArgs.#ctor*"></a>
   <h4 id="Pulumi_Gcp_BigQuery_Inputs_TableEncryptionConfigurationArgs__ctor" data-uid="Pulumi.Gcp.BigQuery.Inputs.TableEncryptionConfigurationArgs.#ctor">TableEncryptionConfigurationArgs()</h4>
@@ -129,11 +100,16 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Bigquery/Table.cs/#L546">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/BigQuery/Inputs/TableEncryptionConfigurationArgs.cs/#L22">View Source</a>
   </span>
   <a id="Pulumi_Gcp_BigQuery_Inputs_TableEncryptionConfigurationArgs_KmsKeyName_" data-uid="Pulumi.Gcp.BigQuery.Inputs.TableEncryptionConfigurationArgs.KmsKeyName*"></a>
   <h4 id="Pulumi_Gcp_BigQuery_Inputs_TableEncryptionConfigurationArgs_KmsKeyName" data-uid="Pulumi.Gcp.BigQuery.Inputs.TableEncryptionConfigurationArgs.KmsKeyName">KmsKeyName</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The self link or full name of a key which should be used to
+encrypt this table.  Note that the default bigquery service account will need to have
+encrypt/decrypt permissions on this key - you may want to see the
+<code>gcp.bigquery.getDefaultServiceAccount</code> datasource and the
+<code>gcp.kms.CryptoKeyIAMBinding</code> resource.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -149,7 +125,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -161,7 +137,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Bigquery/Table.cs/#L544" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/BigQuery/Inputs/TableEncryptionConfigurationArgs.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

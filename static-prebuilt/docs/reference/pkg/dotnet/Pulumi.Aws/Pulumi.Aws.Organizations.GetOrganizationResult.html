@@ -78,40 +78,16 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">GetOrganizationResult</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.Organizations.html">Pulumi.Aws.Organizations</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
   <h5 id="Pulumi_Aws_Organizations_GetOrganizationResult_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class GetOrganizationResult</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class GetOrganizationResult : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Organizations/GetOrganization.cs/#L29">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Organizations/GetOrganization.cs/#L31">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Organizations_GetOrganizationResult_Accounts" data-uid="Pulumi.Aws.Organizations.GetOrganizationResult.Accounts">Accounts</h4>
   <div class="markdown level1 summary"><p>List of organization accounts including the master account. For a list excluding the master account, see the <code>non_master_accounts</code> attribute. All elements have these attributes:</p>
@@ -119,7 +95,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetOrganizationAccountsResult&gt; Accounts</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetOrganizationAccountResult&gt; Accounts</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -131,13 +107,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.Organizations.Outputs.GetOrganizationAccountsResult.html">GetOrganizationAccountsResult</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.Organizations.Outputs.GetOrganizationAccountResult.html">GetOrganizationAccountResult</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Organizations/GetOrganization.cs/#L33">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Organizations/GetOrganization.cs/#L35">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Organizations_GetOrganizationResult_Arn" data-uid="Pulumi.Aws.Organizations.GetOrganizationResult.Arn">Arn</h4>
   <div class="markdown level1 summary"><p>ARN of the root</p>
@@ -163,7 +139,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Organizations/GetOrganization.cs/#L37">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Organizations/GetOrganization.cs/#L39">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Organizations_GetOrganizationResult_AwsServiceAccessPrincipals" data-uid="Pulumi.Aws.Organizations.GetOrganizationResult.AwsServiceAccessPrincipals">AwsServiceAccessPrincipals</h4>
   <div class="markdown level1 summary"><p>A list of AWS service principal names that have integration enabled with your organization. Organization must have <code>feature_set</code> set to <code>ALL</code>. For additional information, see the <a href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_integrate_services.html">AWS Organizations User Guide</a>.</p>
@@ -183,13 +159,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Organizations/GetOrganization.cs/#L41">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Organizations/GetOrganization.cs/#L43">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Organizations_GetOrganizationResult_EnabledPolicyTypes" data-uid="Pulumi.Aws.Organizations.GetOrganizationResult.EnabledPolicyTypes">EnabledPolicyTypes</h4>
   <div class="markdown level1 summary"><p>A list of Organizations policy types that are enabled in the Organization Root. Organization must have <code>feature_set</code> set to <code>ALL</code>. For additional information about valid policy types (e.g. <code>SERVICE_CONTROL_POLICY</code>), see the <a href="https://docs.aws.amazon.com/organizations/latest/APIReference/API_EnablePolicyType.html">AWS Organizations API Reference</a>.</p>
@@ -209,13 +185,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Organizations/GetOrganization.cs/#L45">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Organizations/GetOrganization.cs/#L47">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Organizations_GetOrganizationResult_FeatureSet" data-uid="Pulumi.Aws.Organizations.GetOrganizationResult.FeatureSet">FeatureSet</h4>
   <div class="markdown level1 summary"><p>The FeatureSet of the organization.</p>
@@ -241,7 +217,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Organizations/GetOrganization.cs/#L69">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Organizations/GetOrganization.cs/#L51">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Organizations_GetOrganizationResult_Id" data-uid="Pulumi.Aws.Organizations.GetOrganizationResult.Id">Id</h4>
   <div class="markdown level1 summary"><p>id is the provider-assigned unique ID for this managed resource.</p>
@@ -267,7 +243,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Organizations/GetOrganization.cs/#L49">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Organizations/GetOrganization.cs/#L55">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Organizations_GetOrganizationResult_MasterAccountArn" data-uid="Pulumi.Aws.Organizations.GetOrganizationResult.MasterAccountArn">MasterAccountArn</h4>
   <div class="markdown level1 summary"><p>The Amazon Resource Name (ARN) of the account that is designated as the master account for the organization.</p>
@@ -293,7 +269,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Organizations/GetOrganization.cs/#L53">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Organizations/GetOrganization.cs/#L59">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Organizations_GetOrganizationResult_MasterAccountEmail" data-uid="Pulumi.Aws.Organizations.GetOrganizationResult.MasterAccountEmail">MasterAccountEmail</h4>
   <div class="markdown level1 summary"><p>The email address that is associated with the AWS account that is designated as the master account for the organization.</p>
@@ -319,7 +295,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Organizations/GetOrganization.cs/#L57">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Organizations/GetOrganization.cs/#L63">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Organizations_GetOrganizationResult_MasterAccountId" data-uid="Pulumi.Aws.Organizations.GetOrganizationResult.MasterAccountId">MasterAccountId</h4>
   <div class="markdown level1 summary"><p>The unique identifier (ID) of the master account of an organization.</p>
@@ -345,7 +321,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Organizations/GetOrganization.cs/#L61">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Organizations/GetOrganization.cs/#L67">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Organizations_GetOrganizationResult_NonMasterAccounts" data-uid="Pulumi.Aws.Organizations.GetOrganizationResult.NonMasterAccounts">NonMasterAccounts</h4>
   <div class="markdown level1 summary"><p>List of organization accounts excluding the master account. For a list including the master account, see the <code>accounts</code> attribute. All elements have these attributes:</p>
@@ -353,7 +329,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetOrganizationNonMasterAccountsResult&gt; NonMasterAccounts</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetOrganizationNonMasterAccountResult&gt; NonMasterAccounts</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -365,13 +341,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.Organizations.Outputs.GetOrganizationNonMasterAccountsResult.html">GetOrganizationNonMasterAccountsResult</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.Organizations.Outputs.GetOrganizationNonMasterAccountResult.html">GetOrganizationNonMasterAccountResult</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Organizations/GetOrganization.cs/#L65">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Organizations/GetOrganization.cs/#L71">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Organizations_GetOrganizationResult_Roots" data-uid="Pulumi.Aws.Organizations.GetOrganizationResult.Roots">Roots</h4>
   <div class="markdown level1 summary"><p>List of organization roots. All elements have these attributes:</p>
@@ -379,7 +355,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetOrganizationRootsResult&gt; Roots</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetOrganizationRootResult&gt; Roots</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -391,7 +367,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.Organizations.Outputs.GetOrganizationRootsResult.html">GetOrganizationRootsResult</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.Organizations.Outputs.GetOrganizationRootResult.html">GetOrganizationRootResult</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -403,7 +379,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Organizations/GetOrganization.cs/#L23" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Organizations/GetOrganization.cs/#L25" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

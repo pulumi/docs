@@ -78,43 +78,20 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">AccountActiveDirectory</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Azure.NetApp.Outputs.html">Pulumi.Azure.NetApp.Outputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Azure.dll</h6>
   <h5 id="Pulumi_Azure_NetApp_Outputs_AccountActiveDirectory_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class AccountActiveDirectory</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class AccountActiveDirectory : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Netapp/Account.cs/#L251">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/NetApp/Outputs/AccountActiveDirectory.cs/#L19">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_NetApp_Outputs_AccountActiveDirectory_DnsServers" data-uid="Pulumi.Azure.NetApp.Outputs.AccountActiveDirectory.DnsServers">DnsServers</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A list of DNS server IP addresses for the Active Directory domain. Only allows <code>IPv4</code> address.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -130,16 +107,17 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Netapp/Account.cs/#L252">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/NetApp/Outputs/AccountActiveDirectory.cs/#L23">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_NetApp_Outputs_AccountActiveDirectory_Domain" data-uid="Pulumi.Azure.NetApp.Outputs.AccountActiveDirectory.Domain">Domain</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The name of the Active Directory domain.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -161,14 +139,15 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Netapp/Account.cs/#L253">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/NetApp/Outputs/AccountActiveDirectory.cs/#L27">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_NetApp_Outputs_AccountActiveDirectory_OrganizationalUnit" data-uid="Pulumi.Azure.NetApp.Outputs.AccountActiveDirectory.OrganizationalUnit">OrganizationalUnit</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The Organizational Unit (OU) within the Active Directory Domain.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string OrganizationalUnit</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? OrganizationalUnit</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -180,16 +159,17 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Netapp/Account.cs/#L254">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/NetApp/Outputs/AccountActiveDirectory.cs/#L31">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_NetApp_Outputs_AccountActiveDirectory_Password" data-uid="Pulumi.Azure.NetApp.Outputs.AccountActiveDirectory.Password">Password</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The password associated with the <code>username</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -211,10 +191,11 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Netapp/Account.cs/#L255">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/NetApp/Outputs/AccountActiveDirectory.cs/#L35">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_NetApp_Outputs_AccountActiveDirectory_SmbServerName" data-uid="Pulumi.Azure.NetApp.Outputs.AccountActiveDirectory.SmbServerName">SmbServerName</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The NetBIOS name which should be used for the NetApp SMB Server, which will be registered as a computer account in the AD and used to mount volumes.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -236,10 +217,11 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Netapp/Account.cs/#L256">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/NetApp/Outputs/AccountActiveDirectory.cs/#L39">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_NetApp_Outputs_AccountActiveDirectory_Username" data-uid="Pulumi.Azure.NetApp.Outputs.AccountActiveDirectory.Username">Username</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The Username of Active Directory Domain Administrator.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -267,7 +249,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Netapp/Account.cs/#L248" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/NetApp/Outputs/AccountActiveDirectory.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

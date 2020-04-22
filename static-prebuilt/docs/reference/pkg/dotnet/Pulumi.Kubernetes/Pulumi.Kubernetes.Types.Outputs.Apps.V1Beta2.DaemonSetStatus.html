@@ -79,40 +79,16 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">DaemonSetStatus</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Apps.V1Beta2.html">Pulumi.Kubernetes.Types.Outputs.Apps.V1Beta2</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Kubernetes.dll</h6>
   <h5 id="Pulumi_Kubernetes_Types_Outputs_Apps_V1Beta2_DaemonSetStatus_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class DaemonSetStatus</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class DaemonSetStatus : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L6969">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L6975">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Apps_V1Beta2_DaemonSetStatus_CollisionCount" data-uid="Pulumi.Kubernetes.Types.Outputs.Apps.V1Beta2.DaemonSetStatus.CollisionCount">CollisionCount</h4>
   <div class="markdown level1 summary"><p>Count of hash collisions for the DaemonSet. The DaemonSet controller uses this field as
@@ -140,7 +116,7 @@ ControllerRevision.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L6974">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L6980">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Apps_V1Beta2_DaemonSetStatus_Conditions" data-uid="Pulumi.Kubernetes.Types.Outputs.Apps.V1Beta2.DaemonSetStatus.Conditions">Conditions</h4>
   <div class="markdown level1 summary"><p>Represents the latest available observations of a DaemonSet's current state.</p>
@@ -160,13 +136,13 @@ ControllerRevision.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Apps.V1Beta2.DaemonSetCondition.html">DaemonSetCondition</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Apps.V1Beta2.DaemonSetCondition.html">DaemonSetCondition</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L6981">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L6987">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Apps_V1Beta2_DaemonSetStatus_CurrentNumberScheduled" data-uid="Pulumi.Kubernetes.Types.Outputs.Apps.V1Beta2.DaemonSetStatus.CurrentNumberScheduled">CurrentNumberScheduled</h4>
   <div class="markdown level1 summary"><p>The number of nodes that are running at least 1 daemon pod and are supposed to run the
@@ -194,7 +170,7 @@ daemon pod. More info:
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L6988">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L6994">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Apps_V1Beta2_DaemonSetStatus_DesiredNumberScheduled" data-uid="Pulumi.Kubernetes.Types.Outputs.Apps.V1Beta2.DaemonSetStatus.DesiredNumberScheduled">DesiredNumberScheduled</h4>
   <div class="markdown level1 summary"><p>The total number of nodes that should be running the daemon pod (including nodes
@@ -222,7 +198,7 @@ correctly running the daemon pod). More info:
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L6994">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L7000">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Apps_V1Beta2_DaemonSetStatus_NumberAvailable" data-uid="Pulumi.Kubernetes.Types.Outputs.Apps.V1Beta2.DaemonSetStatus.NumberAvailable">NumberAvailable</h4>
   <div class="markdown level1 summary"><p>The number of nodes that should be running the daemon pod and have one or more of the
@@ -249,7 +225,7 @@ daemon pod running and available (ready for at least spec.minReadySeconds)</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L7001">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L7007">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Apps_V1Beta2_DaemonSetStatus_NumberMisscheduled" data-uid="Pulumi.Kubernetes.Types.Outputs.Apps.V1Beta2.DaemonSetStatus.NumberMisscheduled">NumberMisscheduled</h4>
   <div class="markdown level1 summary"><p>The number of nodes that are running the daemon pod, but are not supposed to run the
@@ -277,7 +253,7 @@ daemon pod. More info:
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L7007">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L7013">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Apps_V1Beta2_DaemonSetStatus_NumberReady" data-uid="Pulumi.Kubernetes.Types.Outputs.Apps.V1Beta2.DaemonSetStatus.NumberReady">NumberReady</h4>
   <div class="markdown level1 summary"><p>The number of nodes that should be running the daemon pod and have one or more of the
@@ -304,7 +280,7 @@ daemon pod running and ready.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L7013">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L7019">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Apps_V1Beta2_DaemonSetStatus_NumberUnavailable" data-uid="Pulumi.Kubernetes.Types.Outputs.Apps.V1Beta2.DaemonSetStatus.NumberUnavailable">NumberUnavailable</h4>
   <div class="markdown level1 summary"><p>The number of nodes that should be running the daemon pod and have none of the daemon
@@ -331,7 +307,7 @@ pod running and available (ready for at least spec.minReadySeconds)</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L7018">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L7024">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Apps_V1Beta2_DaemonSetStatus_ObservedGeneration" data-uid="Pulumi.Kubernetes.Types.Outputs.Apps.V1Beta2.DaemonSetStatus.ObservedGeneration">ObservedGeneration</h4>
   <div class="markdown level1 summary"><p>The most recent generation observed by the daemon set controller.</p>
@@ -357,7 +333,7 @@ pod running and available (ready for at least spec.minReadySeconds)</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L7023">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L7029">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Apps_V1Beta2_DaemonSetStatus_UpdatedNumberScheduled" data-uid="Pulumi.Kubernetes.Types.Outputs.Apps.V1Beta2.DaemonSetStatus.UpdatedNumberScheduled">UpdatedNumberScheduled</h4>
   <div class="markdown level1 summary"><p>The total number of nodes that are running updated daemon pod</p>
@@ -389,7 +365,7 @@ pod running and available (ready for at least spec.minReadySeconds)</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L6961" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L6967" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

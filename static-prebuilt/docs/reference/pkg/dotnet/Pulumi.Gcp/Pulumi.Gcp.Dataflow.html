@@ -81,12 +81,9 @@
 the official documentation for
 <a href="https://beam.apache.org">Beam</a> and <a href="https://cloud.google.com/dataflow/">Dataflow</a>.</p>
 <h2 id="note-on-destroy--apply">Note on &quot;destroy&quot; / &quot;apply&quot;</h2>
-<p>There are many types of Dataflow jobs.  Some Dataflow jobs run constantly, getting new data from (e.g.) a GCS bucket, and outputting data continuously.  Some jobs process a set amount of data then terminate.  All jobs can fail while running due to programming errors or other issues.  In this way, Dataflow jobs are different from most other resources.</p>
+<p>There are many types of Dataflow jobs.  Some Dataflow jobs run constantly, getting new data from (e.g.) a GCS bucket, and outputting data continuously.  Some jobs process a set amount of data then terminate.  All jobs can fail while running due to programming errors or other issues.  In this way, Dataflow jobs are different from most other Google resources.</p>
 <p>The Dataflow resource is considered 'existing' while it is in a nonterminal state.  If it reaches a terminal state (e.g. 'FAILED', 'COMPLETE', 'CANCELLED'), it will be recreated on the next 'apply'.  This is as expected for jobs which run continuously, but may surprise users who use this resource for other kinds of Dataflow jobs.</p>
-<p>A Dataflow job which is 'destroyed' may be &quot;cancelled&quot; or &quot;drained&quot;.  If &quot;cancelled&quot;, the job terminates - any data written remains where it is, but no new data will be processed.  If &quot;drained&quot;, no new data will enter the pipeline, but any data currently in the pipeline will finish being processed.  The default is &quot;cancelled&quot;, but if a user sets <code>on_delete</code> to <code>&amp;quot;drain&amp;quot;</code> in the configuration, you may experience a long wait for your destroy to complete.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/dataflow_job.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/dataflow_job.html.markdown</a>.</p>
-</blockquote>
+<p>A Dataflow job which is 'destroyed' may be &quot;cancelled&quot; or &quot;drained&quot;.  If &quot;cancelled&quot;, the job terminates - any data written remains where it is, but no new data will be processed.  If &quot;drained&quot;, no new data will enter the pipeline, but any data currently in the pipeline will finish being processed.  The default is &quot;cancelled&quot;, but if a user sets <code>on_delete</code> to <code>&amp;quot;drain&amp;quot;</code> in the configuration, you may experience a long wait for your <code>pulumi destroy</code> to complete.</p>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Dataflow.JobArgs.html">JobArgs</a></h4>
       <section></section>

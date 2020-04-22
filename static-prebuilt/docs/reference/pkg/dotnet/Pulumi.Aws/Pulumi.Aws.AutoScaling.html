@@ -86,13 +86,12 @@ an ELB), and an AutoScaling Group resource with
 load balancers in conjunction with an ASG Attachment resource. Doing so will cause a
 conflict and will overwrite attachments.</p>
 </blockquote>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/autoscaling_attachment.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/autoscaling_attachment.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.AutoScaling.AttachmentArgs.html">AttachmentArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.AutoScaling.AttachmentState.html">AttachmentState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.AutoScaling.GetGroup.html">GetGroup</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.AutoScaling.GetGroupArgs.html">GetGroupArgs</a></h4>
       <section></section>
@@ -146,15 +145,10 @@ for the proper number of instances to be healthy.</p>
 number of configuration problems. See the <a href="https://docs.aws.amazon.com/ElasticLoadBalancing/latest/DeveloperGuide/elb-troubleshooting.html">AWS Docs on Load Balancer
 Troubleshooting</a>
 for more information.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/autoscaling_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/autoscaling_group.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.AutoScaling.GroupArgs.html">GroupArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.AutoScaling.GroupState.html">GroupState</a></h4>
-      <section></section>
-      <h4><a class="xref" href="Pulumi.Aws.AutoScaling.Invokes.html">Invokes</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.AutoScaling.LifecycleHook.html">LifecycleHook</a></h4>
       <section><p>Provides an AutoScaling Lifecycle Hook resource.</p>
@@ -171,9 +165,6 @@ behavior. If you need hooks to run on all instances, add them with
 <a href="https://www.terraform.io/docs/providers/aws/r/autoscaling_group.html"><code>aws.autoscaling.Group</code></a>,
 but take care to not duplicate those hooks with this resource.</p>
 </blockquote>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/autoscaling_lifecycle_hook.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/autoscaling_lifecycle_hook.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.AutoScaling.LifecycleHookArgs.html">LifecycleHookArgs</a></h4>
       <section></section>
@@ -183,9 +174,6 @@ but take care to not duplicate those hooks with this resource.</p>
       <section><p>Provides an AutoScaling Group with Notification support, via SNS Topics. Each of
 the <code>notifications</code> map to a [Notification Configuration][2] inside Amazon Web
 Services, and are applied to each AutoScaling Group you supply.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/autoscaling_notification.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/autoscaling_notification.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.AutoScaling.NotificationArgs.html">NotificationArgs</a></h4>
       <section></section>
@@ -200,9 +188,6 @@ when using autoscaling policies. It's good practice to pick either
 or <a href="https://docs.aws.amazon.com/AutoScaling/latest/DeveloperGuide/as-scale-based-on-demand.html">dynamic</a>
 (policy-based) scaling.</p>
 </blockquote>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/autoscaling_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/autoscaling_policy.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.AutoScaling.PolicyArgs.html">PolicyArgs</a></h4>
       <section></section>
@@ -210,9 +195,6 @@ or <a href="https://docs.aws.amazon.com/AutoScaling/latest/DeveloperGuide/as-sca
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.AutoScaling.Schedule.html">Schedule</a></h4>
       <section><p>Provides an AutoScaling Schedule resource.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/autoscaling_schedule.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/autoscaling_schedule.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.AutoScaling.ScheduleArgs.html">ScheduleArgs</a></h4>
       <section></section>

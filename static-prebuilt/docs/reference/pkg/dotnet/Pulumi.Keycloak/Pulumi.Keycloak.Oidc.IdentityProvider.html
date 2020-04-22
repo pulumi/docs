@@ -87,7 +87,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Oidc/IdentityProvider.cs/#L182">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/Oidc/IdentityProvider.cs/#L194">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_Oidc_IdentityProvider__ctor_" data-uid="Pulumi.Keycloak.Oidc.IdentityProvider.#ctor*"></a>
   <h4 id="Pulumi_Keycloak_Oidc_IdentityProvider__ctor_System_String_Pulumi_Keycloak_Oidc_IdentityProviderArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Keycloak.Oidc.IdentityProvider.#ctor(System.String,Pulumi.Keycloak.Oidc.IdentityProviderArgs,System.Nullable{CustomResourceOptions})">IdentityProvider(String, IdentityProviderArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
@@ -131,7 +131,36 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Oidc/IdentityProvider.cs/#L16">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/Oidc/IdentityProvider.cs/#L19">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Oidc_IdentityProvider_AcceptsPromptNoneForwardFromClient_" data-uid="Pulumi.Keycloak.Oidc.IdentityProvider.AcceptsPromptNoneForwardFromClient*"></a>
+  <h4 id="Pulumi_Keycloak_Oidc_IdentityProvider_AcceptsPromptNoneForwardFromClient" data-uid="Pulumi.Keycloak.Oidc.IdentityProvider.AcceptsPromptNoneForwardFromClient">AcceptsPromptNoneForwardFromClient</h4>
+  <div class="markdown level1 summary"><p>This is just used together with Identity Provider Authenticator or when kc_idp_hint points to this identity provider. In
+case that client sends a request with prompt=none and user is not yet authenticated, the error will not be directly
+returned to client, but the request with prompt=none will be forwarded to this identity provider.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; AcceptsPromptNoneForwardFromClient { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/Oidc/IdentityProvider.cs/#L25">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_Oidc_IdentityProvider_AddReadTokenRoleOnCreate_" data-uid="Pulumi.Keycloak.Oidc.IdentityProvider.AddReadTokenRoleOnCreate*"></a>
   <h4 id="Pulumi_Keycloak_Oidc_IdentityProvider_AddReadTokenRoleOnCreate" data-uid="Pulumi.Keycloak.Oidc.IdentityProvider.AddReadTokenRoleOnCreate">AddReadTokenRoleOnCreate</h4>
@@ -158,7 +187,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Oidc/IdentityProvider.cs/#L22">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/Oidc/IdentityProvider.cs/#L31">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_Oidc_IdentityProvider_Alias_" data-uid="Pulumi.Keycloak.Oidc.IdentityProvider.Alias*"></a>
   <h4 id="Pulumi_Keycloak_Oidc_IdentityProvider_Alias" data-uid="Pulumi.Keycloak.Oidc.IdentityProvider.Alias">Alias</h4>
@@ -185,7 +214,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Oidc/IdentityProvider.cs/#L28">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/Oidc/IdentityProvider.cs/#L37">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_Oidc_IdentityProvider_AuthenticateByDefault_" data-uid="Pulumi.Keycloak.Oidc.IdentityProvider.AuthenticateByDefault*"></a>
   <h4 id="Pulumi_Keycloak_Oidc_IdentityProvider_AuthenticateByDefault" data-uid="Pulumi.Keycloak.Oidc.IdentityProvider.AuthenticateByDefault">AuthenticateByDefault</h4>
@@ -212,7 +241,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Oidc/IdentityProvider.cs/#L34">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/Oidc/IdentityProvider.cs/#L43">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_Oidc_IdentityProvider_AuthorizationUrl_" data-uid="Pulumi.Keycloak.Oidc.IdentityProvider.AuthorizationUrl*"></a>
   <h4 id="Pulumi_Keycloak_Oidc_IdentityProvider_AuthorizationUrl" data-uid="Pulumi.Keycloak.Oidc.IdentityProvider.AuthorizationUrl">AuthorizationUrl</h4>
@@ -239,7 +268,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Oidc/IdentityProvider.cs/#L40">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/Oidc/IdentityProvider.cs/#L49">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_Oidc_IdentityProvider_BackchannelSupported_" data-uid="Pulumi.Keycloak.Oidc.IdentityProvider.BackchannelSupported*"></a>
   <h4 id="Pulumi_Keycloak_Oidc_IdentityProvider_BackchannelSupported" data-uid="Pulumi.Keycloak.Oidc.IdentityProvider.BackchannelSupported">BackchannelSupported</h4>
@@ -266,7 +295,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Oidc/IdentityProvider.cs/#L46">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/Oidc/IdentityProvider.cs/#L55">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_Oidc_IdentityProvider_ClientId_" data-uid="Pulumi.Keycloak.Oidc.IdentityProvider.ClientId*"></a>
   <h4 id="Pulumi_Keycloak_Oidc_IdentityProvider_ClientId" data-uid="Pulumi.Keycloak.Oidc.IdentityProvider.ClientId">ClientId</h4>
@@ -293,7 +322,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Oidc/IdentityProvider.cs/#L52">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/Oidc/IdentityProvider.cs/#L61">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_Oidc_IdentityProvider_ClientSecret_" data-uid="Pulumi.Keycloak.Oidc.IdentityProvider.ClientSecret*"></a>
   <h4 id="Pulumi_Keycloak_Oidc_IdentityProvider_ClientSecret" data-uid="Pulumi.Keycloak.Oidc.IdentityProvider.ClientSecret">ClientSecret</h4>
@@ -320,7 +349,34 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Oidc/IdentityProvider.cs/#L58">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/Oidc/IdentityProvider.cs/#L67">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Oidc_IdentityProvider_DefaultScopes_" data-uid="Pulumi.Keycloak.Oidc.IdentityProvider.DefaultScopes*"></a>
+  <h4 id="Pulumi_Keycloak_Oidc_IdentityProvider_DefaultScopes" data-uid="Pulumi.Keycloak.Oidc.IdentityProvider.DefaultScopes">DefaultScopes</h4>
+  <div class="markdown level1 summary"><p>The scopes to be sent when asking for authorization. It can be a space-separated list of scopes. Defaults to 'openid'.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; DefaultScopes { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/Oidc/IdentityProvider.cs/#L73">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_Oidc_IdentityProvider_DisplayName_" data-uid="Pulumi.Keycloak.Oidc.IdentityProvider.DisplayName*"></a>
   <h4 id="Pulumi_Keycloak_Oidc_IdentityProvider_DisplayName" data-uid="Pulumi.Keycloak.Oidc.IdentityProvider.DisplayName">DisplayName</h4>
@@ -347,7 +403,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Oidc/IdentityProvider.cs/#L64">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/Oidc/IdentityProvider.cs/#L79">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_Oidc_IdentityProvider_Enabled_" data-uid="Pulumi.Keycloak.Oidc.IdentityProvider.Enabled*"></a>
   <h4 id="Pulumi_Keycloak_Oidc_IdentityProvider_Enabled" data-uid="Pulumi.Keycloak.Oidc.IdentityProvider.Enabled">Enabled</h4>
@@ -374,7 +430,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Oidc/IdentityProvider.cs/#L67">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/Oidc/IdentityProvider.cs/#L82">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_Oidc_IdentityProvider_ExtraConfig_" data-uid="Pulumi.Keycloak.Oidc.IdentityProvider.ExtraConfig*"></a>
   <h4 id="Pulumi_Keycloak_Oidc_IdentityProvider_ExtraConfig" data-uid="Pulumi.Keycloak.Oidc.IdentityProvider.ExtraConfig">ExtraConfig</h4>
@@ -400,13 +456,12 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Oidc/IdentityProvider.cs/#L75">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/Oidc/IdentityProvider.cs/#L89">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_Oidc_IdentityProvider_FirstBrokerLoginFlowAlias_" data-uid="Pulumi.Keycloak.Oidc.IdentityProvider.FirstBrokerLoginFlowAlias*"></a>
   <h4 id="Pulumi_Keycloak_Oidc_IdentityProvider_FirstBrokerLoginFlowAlias" data-uid="Pulumi.Keycloak.Oidc.IdentityProvider.FirstBrokerLoginFlowAlias">FirstBrokerLoginFlowAlias</h4>
-  <div class="markdown level1 summary"><p>Alias of authentication flow, which is triggered after first login with this identity provider. Term 'First
-Login' means that there is not yet existing Keycloak account linked with the authenticated identity provider
-account.</p>
+  <div class="markdown level1 summary"><p>Alias of authentication flow, which is triggered after first login with this identity provider. Term 'First Login' means
+that there is not yet existing Keycloak account linked with the authenticated identity provider account.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -429,7 +484,7 @@ account.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Oidc/IdentityProvider.cs/#L81">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/Oidc/IdentityProvider.cs/#L95">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_Oidc_IdentityProvider_HideOnLoginPage_" data-uid="Pulumi.Keycloak.Oidc.IdentityProvider.HideOnLoginPage*"></a>
   <h4 id="Pulumi_Keycloak_Oidc_IdentityProvider_HideOnLoginPage" data-uid="Pulumi.Keycloak.Oidc.IdentityProvider.HideOnLoginPage">HideOnLoginPage</h4>
@@ -456,7 +511,7 @@ account.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Oidc/IdentityProvider.cs/#L87">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/Oidc/IdentityProvider.cs/#L101">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_Oidc_IdentityProvider_InternalId_" data-uid="Pulumi.Keycloak.Oidc.IdentityProvider.InternalId*"></a>
   <h4 id="Pulumi_Keycloak_Oidc_IdentityProvider_InternalId" data-uid="Pulumi.Keycloak.Oidc.IdentityProvider.InternalId">InternalId</h4>
@@ -483,7 +538,7 @@ account.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Oidc/IdentityProvider.cs/#L93">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/Oidc/IdentityProvider.cs/#L107">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_Oidc_IdentityProvider_JwksUrl_" data-uid="Pulumi.Keycloak.Oidc.IdentityProvider.JwksUrl*"></a>
   <h4 id="Pulumi_Keycloak_Oidc_IdentityProvider_JwksUrl" data-uid="Pulumi.Keycloak.Oidc.IdentityProvider.JwksUrl">JwksUrl</h4>
@@ -510,12 +565,12 @@ account.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Oidc/IdentityProvider.cs/#L100">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/Oidc/IdentityProvider.cs/#L114">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_Oidc_IdentityProvider_LinkOnly_" data-uid="Pulumi.Keycloak.Oidc.IdentityProvider.LinkOnly*"></a>
   <h4 id="Pulumi_Keycloak_Oidc_IdentityProvider_LinkOnly" data-uid="Pulumi.Keycloak.Oidc.IdentityProvider.LinkOnly">LinkOnly</h4>
-  <div class="markdown level1 summary"><p>If true, users cannot log in through this provider. They can only link to this provider. This is useful if
-you don't want to allow login from the provider, but want to integrate with a provider</p>
+  <div class="markdown level1 summary"><p>If true, users cannot log in through this provider. They can only link to this provider. This is useful if you don't
+want to allow login from the provider, but want to integrate with a provider</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -538,7 +593,7 @@ you don't want to allow login from the provider, but want to integrate with a pr
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Oidc/IdentityProvider.cs/#L106">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/Oidc/IdentityProvider.cs/#L120">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_Oidc_IdentityProvider_LoginHint_" data-uid="Pulumi.Keycloak.Oidc.IdentityProvider.LoginHint*"></a>
   <h4 id="Pulumi_Keycloak_Oidc_IdentityProvider_LoginHint" data-uid="Pulumi.Keycloak.Oidc.IdentityProvider.LoginHint">LoginHint</h4>
@@ -565,7 +620,7 @@ you don't want to allow login from the provider, but want to integrate with a pr
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Oidc/IdentityProvider.cs/#L112">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/Oidc/IdentityProvider.cs/#L126">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_Oidc_IdentityProvider_LogoutUrl_" data-uid="Pulumi.Keycloak.Oidc.IdentityProvider.LogoutUrl*"></a>
   <h4 id="Pulumi_Keycloak_Oidc_IdentityProvider_LogoutUrl" data-uid="Pulumi.Keycloak.Oidc.IdentityProvider.LogoutUrl">LogoutUrl</h4>
@@ -592,15 +647,14 @@ you don't want to allow login from the provider, but want to integrate with a pr
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Oidc/IdentityProvider.cs/#L122">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/Oidc/IdentityProvider.cs/#L135">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_Oidc_IdentityProvider_PostBrokerLoginFlowAlias_" data-uid="Pulumi.Keycloak.Oidc.IdentityProvider.PostBrokerLoginFlowAlias*"></a>
   <h4 id="Pulumi_Keycloak_Oidc_IdentityProvider_PostBrokerLoginFlowAlias" data-uid="Pulumi.Keycloak.Oidc.IdentityProvider.PostBrokerLoginFlowAlias">PostBrokerLoginFlowAlias</h4>
-  <div class="markdown level1 summary"><p>Alias of authentication flow, which is triggered after each login with this identity provider. Useful if you
-want additional verification of each user authenticated with this identity provider (for example OTP). Leave
-this empty if you don't want any additional authenticators to be triggered after login with this identity
-provider. Also note, that authenticator implementations must assume that user is already set in
-ClientSession as identity provider already set it.</p>
+  <div class="markdown level1 summary"><p>Alias of authentication flow, which is triggered after each login with this identity provider. Useful if you want
+additional verification of each user authenticated with this identity provider (for example OTP). Leave this empty if
+you don't want any additional authenticators to be triggered after login with this identity provider. Also note, that
+authenticator implementations must assume that user is already set in ClientSession as identity provider already set it.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -623,7 +677,7 @@ ClientSession as identity provider already set it.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Oidc/IdentityProvider.cs/#L128">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/Oidc/IdentityProvider.cs/#L141">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_Oidc_IdentityProvider_ProviderId_" data-uid="Pulumi.Keycloak.Oidc.IdentityProvider.ProviderId*"></a>
   <h4 id="Pulumi_Keycloak_Oidc_IdentityProvider_ProviderId" data-uid="Pulumi.Keycloak.Oidc.IdentityProvider.ProviderId">ProviderId</h4>
@@ -650,7 +704,7 @@ ClientSession as identity provider already set it.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Oidc/IdentityProvider.cs/#L134">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/Oidc/IdentityProvider.cs/#L147">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_Oidc_IdentityProvider_Realm_" data-uid="Pulumi.Keycloak.Oidc.IdentityProvider.Realm*"></a>
   <h4 id="Pulumi_Keycloak_Oidc_IdentityProvider_Realm" data-uid="Pulumi.Keycloak.Oidc.IdentityProvider.Realm">Realm</h4>
@@ -677,7 +731,7 @@ ClientSession as identity provider already set it.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Oidc/IdentityProvider.cs/#L140">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/Oidc/IdentityProvider.cs/#L153">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_Oidc_IdentityProvider_StoreToken_" data-uid="Pulumi.Keycloak.Oidc.IdentityProvider.StoreToken*"></a>
   <h4 id="Pulumi_Keycloak_Oidc_IdentityProvider_StoreToken" data-uid="Pulumi.Keycloak.Oidc.IdentityProvider.StoreToken">StoreToken</h4>
@@ -704,7 +758,7 @@ ClientSession as identity provider already set it.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Oidc/IdentityProvider.cs/#L146">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/Oidc/IdentityProvider.cs/#L159">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_Oidc_IdentityProvider_TokenUrl_" data-uid="Pulumi.Keycloak.Oidc.IdentityProvider.TokenUrl*"></a>
   <h4 id="Pulumi_Keycloak_Oidc_IdentityProvider_TokenUrl" data-uid="Pulumi.Keycloak.Oidc.IdentityProvider.TokenUrl">TokenUrl</h4>
@@ -731,12 +785,11 @@ ClientSession as identity provider already set it.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Oidc/IdentityProvider.cs/#L153">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/Oidc/IdentityProvider.cs/#L165">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_Oidc_IdentityProvider_TrustEmail_" data-uid="Pulumi.Keycloak.Oidc.IdentityProvider.TrustEmail*"></a>
   <h4 id="Pulumi_Keycloak_Oidc_IdentityProvider_TrustEmail" data-uid="Pulumi.Keycloak.Oidc.IdentityProvider.TrustEmail">TrustEmail</h4>
-  <div class="markdown level1 summary"><p>If enabled then email provided by this provider is not verified even if verification is enabled for the
-realm.</p>
+  <div class="markdown level1 summary"><p>If enabled then email provided by this provider is not verified even if verification is enabled for the realm.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -759,7 +812,7 @@ realm.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Oidc/IdentityProvider.cs/#L159">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/Oidc/IdentityProvider.cs/#L171">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_Oidc_IdentityProvider_UiLocales_" data-uid="Pulumi.Keycloak.Oidc.IdentityProvider.UiLocales*"></a>
   <h4 id="Pulumi_Keycloak_Oidc_IdentityProvider_UiLocales" data-uid="Pulumi.Keycloak.Oidc.IdentityProvider.UiLocales">UiLocales</h4>
@@ -786,7 +839,7 @@ realm.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Oidc/IdentityProvider.cs/#L165">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/Oidc/IdentityProvider.cs/#L177">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_Oidc_IdentityProvider_UserInfoUrl_" data-uid="Pulumi.Keycloak.Oidc.IdentityProvider.UserInfoUrl*"></a>
   <h4 id="Pulumi_Keycloak_Oidc_IdentityProvider_UserInfoUrl" data-uid="Pulumi.Keycloak.Oidc.IdentityProvider.UserInfoUrl">UserInfoUrl</h4>
@@ -813,7 +866,7 @@ realm.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Oidc/IdentityProvider.cs/#L171">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/Oidc/IdentityProvider.cs/#L183">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_Oidc_IdentityProvider_ValidateSignature_" data-uid="Pulumi.Keycloak.Oidc.IdentityProvider.ValidateSignature*"></a>
   <h4 id="Pulumi_Keycloak_Oidc_IdentityProvider_ValidateSignature" data-uid="Pulumi.Keycloak.Oidc.IdentityProvider.ValidateSignature">ValidateSignature</h4>
@@ -842,7 +895,7 @@ realm.</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Oidc/IdentityProvider.cs/#L212">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/Oidc/IdentityProvider.cs/#L224">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_Oidc_IdentityProvider_Get_" data-uid="Pulumi.Keycloak.Oidc.IdentityProvider.Get*"></a>
   <h4 id="Pulumi_Keycloak_Oidc_IdentityProvider_Get_System_String_Input_System_String__Pulumi_Keycloak_Oidc_IdentityProviderState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Keycloak.Oidc.IdentityProvider.Get(System.String,Input{System.String},Pulumi.Keycloak.Oidc.IdentityProviderState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, IdentityProviderState, Nullable&lt;CustomResourceOptions&gt;)</h4>
@@ -912,7 +965,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Oidc/IdentityProvider.cs/#L11" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/Oidc/IdentityProvider.cs/#L12" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

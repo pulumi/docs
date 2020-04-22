@@ -78,53 +78,12 @@
 <blockquote>
 <p><strong>Note:</strong> Do not use <code>network_interface</code> to associate the EIP to <code>aws.lb.LoadBalancer</code> or <code>aws.ec2.NatGateway</code> resources. Instead use the <code>allocation_id</code> available in those resources to allow AWS to manage the association, otherwise you will see <code>AuthFailure</code> errors.</p>
 </blockquote>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/eip.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/eip.html.markdown</a>.</p>
-</blockquote>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
-    <div class="level3"><span class="xref">Eip</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">Eip</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.Ec2.html">Pulumi.Aws.Ec2</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
@@ -135,16 +94,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/Eip.cs/#L102">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/Eip.cs/#L100">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_Eip__ctor_" data-uid="Pulumi.Aws.Ec2.Eip.#ctor*"></a>
-  <h4 id="Pulumi_Aws_Ec2_Eip__ctor_System_String_Pulumi_Aws_Ec2_EipArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.Ec2.Eip.#ctor(System.String,Pulumi.Aws.Ec2.EipArgs,Pulumi.CustomResourceOptions)">Eip(String, EipArgs, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Aws_Ec2_Eip__ctor_System_String_Pulumi_Aws_Ec2_EipArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.Ec2.Eip.#ctor(System.String,Pulumi.Aws.Ec2.EipArgs,System.Nullable{CustomResourceOptions})">Eip(String, EipArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Create a Eip resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Eip(string name, EipArgs args = null, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Eip(string name, EipArgs args = null, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -169,7 +128,7 @@
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -179,7 +138,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/Eip.cs/#L23">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/Eip.cs/#L21">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_Eip_AllocationId_" data-uid="Pulumi.Aws.Ec2.Eip.AllocationId*"></a>
   <h4 id="Pulumi_Aws_Ec2_Eip_AllocationId" data-uid="Pulumi.Aws.Ec2.Eip.AllocationId">AllocationId</h4>
@@ -199,13 +158,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/Eip.cs/#L31">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/Eip.cs/#L29">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_Eip_AssociateWithPrivateIp_" data-uid="Pulumi.Aws.Ec2.Eip.AssociateWithPrivateIp*"></a>
   <h4 id="Pulumi_Aws_Ec2_Eip_AssociateWithPrivateIp" data-uid="Pulumi.Aws.Ec2.Eip.AssociateWithPrivateIp">AssociateWithPrivateIp</h4>
@@ -216,7 +175,7 @@ the Elastic IP address is associated with the primary private IP address.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; AssociateWithPrivateIp { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; AssociateWithPrivateIp { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -228,13 +187,13 @@ the Elastic IP address is associated with the primary private IP address.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/Eip.cs/#L34">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/Eip.cs/#L32">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_Eip_AssociationId_" data-uid="Pulumi.Aws.Ec2.Eip.AssociationId*"></a>
   <h4 id="Pulumi_Aws_Ec2_Eip_AssociationId" data-uid="Pulumi.Aws.Ec2.Eip.AssociationId">AssociationId</h4>
@@ -254,13 +213,13 @@ the Elastic IP address is associated with the primary private IP address.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/Eip.cs/#L37">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/Eip.cs/#L35">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_Eip_Domain_" data-uid="Pulumi.Aws.Ec2.Eip.Domain*"></a>
   <h4 id="Pulumi_Aws_Ec2_Eip_Domain" data-uid="Pulumi.Aws.Ec2.Eip.Domain">Domain</h4>
@@ -280,13 +239,13 @@ the Elastic IP address is associated with the primary private IP address.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/Eip.cs/#L43">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/Eip.cs/#L41">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_Eip_Instance_" data-uid="Pulumi.Aws.Ec2.Eip.Instance*"></a>
   <h4 id="Pulumi_Aws_Ec2_Eip_Instance" data-uid="Pulumi.Aws.Ec2.Eip.Instance">Instance</h4>
@@ -307,13 +266,13 @@ the Elastic IP address is associated with the primary private IP address.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/Eip.cs/#L49">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/Eip.cs/#L47">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_Eip_NetworkInterface_" data-uid="Pulumi.Aws.Ec2.Eip.NetworkInterface*"></a>
   <h4 id="Pulumi_Aws_Ec2_Eip_NetworkInterface" data-uid="Pulumi.Aws.Ec2.Eip.NetworkInterface">NetworkInterface</h4>
@@ -334,13 +293,13 @@ the Elastic IP address is associated with the primary private IP address.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/Eip.cs/#L55">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/Eip.cs/#L53">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_Eip_PrivateDns_" data-uid="Pulumi.Aws.Ec2.Eip.PrivateDns*"></a>
   <h4 id="Pulumi_Aws_Ec2_Eip_PrivateDns" data-uid="Pulumi.Aws.Ec2.Eip.PrivateDns">PrivateDns</h4>
@@ -361,13 +320,13 @@ the Elastic IP address is associated with the primary private IP address.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/Eip.cs/#L61">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/Eip.cs/#L59">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_Eip_PrivateIp_" data-uid="Pulumi.Aws.Ec2.Eip.PrivateIp*"></a>
   <h4 id="Pulumi_Aws_Ec2_Eip_PrivateIp" data-uid="Pulumi.Aws.Ec2.Eip.PrivateIp">PrivateIp</h4>
@@ -388,13 +347,13 @@ the Elastic IP address is associated with the primary private IP address.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/Eip.cs/#L67">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/Eip.cs/#L65">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_Eip_PublicDns_" data-uid="Pulumi.Aws.Ec2.Eip.PublicDns*"></a>
   <h4 id="Pulumi_Aws_Ec2_Eip_PublicDns" data-uid="Pulumi.Aws.Ec2.Eip.PublicDns">PublicDns</h4>
@@ -415,13 +374,13 @@ the Elastic IP address is associated with the primary private IP address.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/Eip.cs/#L73">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/Eip.cs/#L71">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_Eip_PublicIp_" data-uid="Pulumi.Aws.Ec2.Eip.PublicIp*"></a>
   <h4 id="Pulumi_Aws_Ec2_Eip_PublicIp" data-uid="Pulumi.Aws.Ec2.Eip.PublicIp">PublicIp</h4>
@@ -442,13 +401,13 @@ the Elastic IP address is associated with the primary private IP address.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/Eip.cs/#L79">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/Eip.cs/#L77">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_Eip_PublicIpv4Pool_" data-uid="Pulumi.Aws.Ec2.Eip.PublicIpv4Pool*"></a>
   <h4 id="Pulumi_Aws_Ec2_Eip_PublicIpv4Pool" data-uid="Pulumi.Aws.Ec2.Eip.PublicIpv4Pool">PublicIpv4Pool</h4>
@@ -469,13 +428,13 @@ the Elastic IP address is associated with the primary private IP address.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/Eip.cs/#L85">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/Eip.cs/#L83">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_Eip_Tags_" data-uid="Pulumi.Aws.Ec2.Eip.Tags*"></a>
   <h4 id="Pulumi_Aws_Ec2_Eip_Tags" data-uid="Pulumi.Aws.Ec2.Eip.Tags">Tags</h4>
@@ -484,7 +443,7 @@ the Elastic IP address is associated with the primary private IP address.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;&gt; Tags { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;?&gt; Tags { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -496,13 +455,13 @@ the Elastic IP address is associated with the primary private IP address.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/Eip.cs/#L91">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/Eip.cs/#L89">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_Eip_Vpc_" data-uid="Pulumi.Aws.Ec2.Eip.Vpc*"></a>
   <h4 id="Pulumi_Aws_Ec2_Eip_Vpc" data-uid="Pulumi.Aws.Ec2.Eip.Vpc">Vpc</h4>
@@ -523,7 +482,7 @@ the Elastic IP address is associated with the primary private IP address.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -531,17 +490,17 @@ the Elastic IP address is associated with the primary private IP address.</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/Eip.cs/#L132">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/Eip.cs/#L130">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_Eip_Get_" data-uid="Pulumi.Aws.Ec2.Eip.Get*"></a>
-  <h4 id="Pulumi_Aws_Ec2_Eip_Get_System_String_Pulumi_Input_System_String__Pulumi_Aws_Ec2_EipState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.Ec2.Eip.Get(System.String,Pulumi.Input{System.String},Pulumi.Aws.Ec2.EipState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, EipState, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Aws_Ec2_Eip_Get_System_String_Input_System_String__Pulumi_Aws_Ec2_EipState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.Ec2.Eip.Get(System.String,Input{System.String},Pulumi.Aws.Ec2.EipState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, EipState, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Get an existing Eip resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Eip Get(string name, Input&lt;string&gt; id, EipState state = null, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Eip Get(string name, Input&lt;string&gt; id, EipState state = null, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -560,7 +519,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -572,7 +531,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -601,7 +560,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/Eip.cs/#L21" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/Eip.cs/#L19" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -74,53 +74,12 @@
   <div class="markdown level0 summary"><p>Provides an SNS topic resource</p>
 <h2 id="message-delivery-status-arguments">Message Delivery Status Arguments</h2>
 <p>The <code>&amp;lt;endpoint&gt;_success_feedback_role_arn</code> and <code>&amp;lt;endpoint&gt;_failure_feedback_role_arn</code> arguments are used to give Amazon SNS write access to use CloudWatch Logs on your behalf. The <code>&amp;lt;endpoint&gt;_success_feedback_sample_rate</code> argument is for specifying the sample rate percentage (0-100) of successfully delivered messages. After you configure the  <code>&amp;lt;endpoint&gt;_failure_feedback_role_arn</code> argument, then all failed message deliveries generate CloudWatch Logs.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/sns_topic.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/sns_topic.html.markdown</a>.</p>
-</blockquote>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
-    <div class="level3"><span class="xref">Topic</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">Topic</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.Sns.html">Pulumi.Aws.Sns</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
@@ -131,16 +90,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Sns/Topic.cs/#L148">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Sns/Topic.cs/#L150">View Source</a>
   </span>
   <a id="Pulumi_Aws_Sns_Topic__ctor_" data-uid="Pulumi.Aws.Sns.Topic.#ctor*"></a>
-  <h4 id="Pulumi_Aws_Sns_Topic__ctor_System_String_Pulumi_Aws_Sns_TopicArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.Sns.Topic.#ctor(System.String,Pulumi.Aws.Sns.TopicArgs,Pulumi.CustomResourceOptions)">Topic(String, TopicArgs, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Aws_Sns_Topic__ctor_System_String_Pulumi_Aws_Sns_TopicArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.Sns.Topic.#ctor(System.String,Pulumi.Aws.Sns.TopicArgs,System.Nullable{CustomResourceOptions})">Topic(String, TopicArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Create a Topic resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Topic(string name, TopicArgs args = null, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Topic(string name, TopicArgs args = null, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -165,7 +124,7 @@
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -175,7 +134,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Sns/Topic.cs/#L26">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Sns/Topic.cs/#L25">View Source</a>
   </span>
   <a id="Pulumi_Aws_Sns_Topic_ApplicationFailureFeedbackRoleArn_" data-uid="Pulumi.Aws.Sns.Topic.ApplicationFailureFeedbackRoleArn*"></a>
   <h4 id="Pulumi_Aws_Sns_Topic_ApplicationFailureFeedbackRoleArn" data-uid="Pulumi.Aws.Sns.Topic.ApplicationFailureFeedbackRoleArn">ApplicationFailureFeedbackRoleArn</h4>
@@ -184,7 +143,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ApplicationFailureFeedbackRoleArn { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; ApplicationFailureFeedbackRoleArn { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -196,13 +155,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Sns/Topic.cs/#L32">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Sns/Topic.cs/#L31">View Source</a>
   </span>
   <a id="Pulumi_Aws_Sns_Topic_ApplicationSuccessFeedbackRoleArn_" data-uid="Pulumi.Aws.Sns.Topic.ApplicationSuccessFeedbackRoleArn*"></a>
   <h4 id="Pulumi_Aws_Sns_Topic_ApplicationSuccessFeedbackRoleArn" data-uid="Pulumi.Aws.Sns.Topic.ApplicationSuccessFeedbackRoleArn">ApplicationSuccessFeedbackRoleArn</h4>
@@ -211,7 +170,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ApplicationSuccessFeedbackRoleArn { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; ApplicationSuccessFeedbackRoleArn { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -223,13 +182,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Sns/Topic.cs/#L38">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Sns/Topic.cs/#L37">View Source</a>
   </span>
   <a id="Pulumi_Aws_Sns_Topic_ApplicationSuccessFeedbackSampleRate_" data-uid="Pulumi.Aws.Sns.Topic.ApplicationSuccessFeedbackSampleRate*"></a>
   <h4 id="Pulumi_Aws_Sns_Topic_ApplicationSuccessFeedbackSampleRate" data-uid="Pulumi.Aws.Sns.Topic.ApplicationSuccessFeedbackSampleRate">ApplicationSuccessFeedbackSampleRate</h4>
@@ -250,13 +209,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Sns/Topic.cs/#L44">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Sns/Topic.cs/#L43">View Source</a>
   </span>
   <a id="Pulumi_Aws_Sns_Topic_Arn_" data-uid="Pulumi.Aws.Sns.Topic.Arn*"></a>
   <h4 id="Pulumi_Aws_Sns_Topic_Arn" data-uid="Pulumi.Aws.Sns.Topic.Arn">Arn</h4>
@@ -277,13 +236,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Sns/Topic.cs/#L50">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Sns/Topic.cs/#L49">View Source</a>
   </span>
   <a id="Pulumi_Aws_Sns_Topic_DeliveryPolicy_" data-uid="Pulumi.Aws.Sns.Topic.DeliveryPolicy*"></a>
   <h4 id="Pulumi_Aws_Sns_Topic_DeliveryPolicy" data-uid="Pulumi.Aws.Sns.Topic.DeliveryPolicy">DeliveryPolicy</h4>
@@ -292,7 +251,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; DeliveryPolicy { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; DeliveryPolicy { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -304,13 +263,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Sns/Topic.cs/#L56">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Sns/Topic.cs/#L55">View Source</a>
   </span>
   <a id="Pulumi_Aws_Sns_Topic_DisplayName_" data-uid="Pulumi.Aws.Sns.Topic.DisplayName*"></a>
   <h4 id="Pulumi_Aws_Sns_Topic_DisplayName" data-uid="Pulumi.Aws.Sns.Topic.DisplayName">DisplayName</h4>
@@ -319,7 +278,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; DisplayName { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; DisplayName { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -331,13 +290,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Sns/Topic.cs/#L62">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Sns/Topic.cs/#L61">View Source</a>
   </span>
   <a id="Pulumi_Aws_Sns_Topic_HttpFailureFeedbackRoleArn_" data-uid="Pulumi.Aws.Sns.Topic.HttpFailureFeedbackRoleArn*"></a>
   <h4 id="Pulumi_Aws_Sns_Topic_HttpFailureFeedbackRoleArn" data-uid="Pulumi.Aws.Sns.Topic.HttpFailureFeedbackRoleArn">HttpFailureFeedbackRoleArn</h4>
@@ -346,7 +305,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; HttpFailureFeedbackRoleArn { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; HttpFailureFeedbackRoleArn { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -358,13 +317,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Sns/Topic.cs/#L68">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Sns/Topic.cs/#L67">View Source</a>
   </span>
   <a id="Pulumi_Aws_Sns_Topic_HttpSuccessFeedbackRoleArn_" data-uid="Pulumi.Aws.Sns.Topic.HttpSuccessFeedbackRoleArn*"></a>
   <h4 id="Pulumi_Aws_Sns_Topic_HttpSuccessFeedbackRoleArn" data-uid="Pulumi.Aws.Sns.Topic.HttpSuccessFeedbackRoleArn">HttpSuccessFeedbackRoleArn</h4>
@@ -373,7 +332,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; HttpSuccessFeedbackRoleArn { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; HttpSuccessFeedbackRoleArn { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -385,13 +344,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Sns/Topic.cs/#L74">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Sns/Topic.cs/#L73">View Source</a>
   </span>
   <a id="Pulumi_Aws_Sns_Topic_HttpSuccessFeedbackSampleRate_" data-uid="Pulumi.Aws.Sns.Topic.HttpSuccessFeedbackSampleRate*"></a>
   <h4 id="Pulumi_Aws_Sns_Topic_HttpSuccessFeedbackSampleRate" data-uid="Pulumi.Aws.Sns.Topic.HttpSuccessFeedbackSampleRate">HttpSuccessFeedbackSampleRate</h4>
@@ -412,13 +371,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Sns/Topic.cs/#L80">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Sns/Topic.cs/#L79">View Source</a>
   </span>
   <a id="Pulumi_Aws_Sns_Topic_KmsMasterKeyId_" data-uid="Pulumi.Aws.Sns.Topic.KmsMasterKeyId*"></a>
   <h4 id="Pulumi_Aws_Sns_Topic_KmsMasterKeyId" data-uid="Pulumi.Aws.Sns.Topic.KmsMasterKeyId">KmsMasterKeyId</h4>
@@ -427,7 +386,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; KmsMasterKeyId { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; KmsMasterKeyId { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -439,13 +398,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Sns/Topic.cs/#L86">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Sns/Topic.cs/#L85">View Source</a>
   </span>
   <a id="Pulumi_Aws_Sns_Topic_LambdaFailureFeedbackRoleArn_" data-uid="Pulumi.Aws.Sns.Topic.LambdaFailureFeedbackRoleArn*"></a>
   <h4 id="Pulumi_Aws_Sns_Topic_LambdaFailureFeedbackRoleArn" data-uid="Pulumi.Aws.Sns.Topic.LambdaFailureFeedbackRoleArn">LambdaFailureFeedbackRoleArn</h4>
@@ -454,7 +413,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; LambdaFailureFeedbackRoleArn { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; LambdaFailureFeedbackRoleArn { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -466,13 +425,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Sns/Topic.cs/#L92">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Sns/Topic.cs/#L91">View Source</a>
   </span>
   <a id="Pulumi_Aws_Sns_Topic_LambdaSuccessFeedbackRoleArn_" data-uid="Pulumi.Aws.Sns.Topic.LambdaSuccessFeedbackRoleArn*"></a>
   <h4 id="Pulumi_Aws_Sns_Topic_LambdaSuccessFeedbackRoleArn" data-uid="Pulumi.Aws.Sns.Topic.LambdaSuccessFeedbackRoleArn">LambdaSuccessFeedbackRoleArn</h4>
@@ -481,7 +440,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; LambdaSuccessFeedbackRoleArn { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; LambdaSuccessFeedbackRoleArn { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -493,13 +452,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Sns/Topic.cs/#L98">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Sns/Topic.cs/#L97">View Source</a>
   </span>
   <a id="Pulumi_Aws_Sns_Topic_LambdaSuccessFeedbackSampleRate_" data-uid="Pulumi.Aws.Sns.Topic.LambdaSuccessFeedbackSampleRate*"></a>
   <h4 id="Pulumi_Aws_Sns_Topic_LambdaSuccessFeedbackSampleRate" data-uid="Pulumi.Aws.Sns.Topic.LambdaSuccessFeedbackSampleRate">LambdaSuccessFeedbackSampleRate</h4>
@@ -520,13 +479,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Sns/Topic.cs/#L104">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Sns/Topic.cs/#L103">View Source</a>
   </span>
   <a id="Pulumi_Aws_Sns_Topic_Name_" data-uid="Pulumi.Aws.Sns.Topic.Name*"></a>
   <h4 id="Pulumi_Aws_Sns_Topic_Name" data-uid="Pulumi.Aws.Sns.Topic.Name">Name</h4>
@@ -547,13 +506,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Sns/Topic.cs/#L110">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Sns/Topic.cs/#L109">View Source</a>
   </span>
   <a id="Pulumi_Aws_Sns_Topic_NamePrefix_" data-uid="Pulumi.Aws.Sns.Topic.NamePrefix*"></a>
   <h4 id="Pulumi_Aws_Sns_Topic_NamePrefix" data-uid="Pulumi.Aws.Sns.Topic.NamePrefix">NamePrefix</h4>
@@ -562,7 +521,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; NamePrefix { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; NamePrefix { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -574,17 +533,18 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Sns/Topic.cs/#L113">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Sns/Topic.cs/#L115">View Source</a>
   </span>
   <a id="Pulumi_Aws_Sns_Topic_Policy_" data-uid="Pulumi.Aws.Sns.Topic.Policy*"></a>
   <h4 id="Pulumi_Aws_Sns_Topic_Policy" data-uid="Pulumi.Aws.Sns.Topic.Policy">Policy</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The fully-formed AWS policy as JSON.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -600,13 +560,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Sns/Topic.cs/#L119">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Sns/Topic.cs/#L121">View Source</a>
   </span>
   <a id="Pulumi_Aws_Sns_Topic_SqsFailureFeedbackRoleArn_" data-uid="Pulumi.Aws.Sns.Topic.SqsFailureFeedbackRoleArn*"></a>
   <h4 id="Pulumi_Aws_Sns_Topic_SqsFailureFeedbackRoleArn" data-uid="Pulumi.Aws.Sns.Topic.SqsFailureFeedbackRoleArn">SqsFailureFeedbackRoleArn</h4>
@@ -615,7 +575,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; SqsFailureFeedbackRoleArn { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; SqsFailureFeedbackRoleArn { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -627,13 +587,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Sns/Topic.cs/#L125">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Sns/Topic.cs/#L127">View Source</a>
   </span>
   <a id="Pulumi_Aws_Sns_Topic_SqsSuccessFeedbackRoleArn_" data-uid="Pulumi.Aws.Sns.Topic.SqsSuccessFeedbackRoleArn*"></a>
   <h4 id="Pulumi_Aws_Sns_Topic_SqsSuccessFeedbackRoleArn" data-uid="Pulumi.Aws.Sns.Topic.SqsSuccessFeedbackRoleArn">SqsSuccessFeedbackRoleArn</h4>
@@ -642,7 +602,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; SqsSuccessFeedbackRoleArn { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; SqsSuccessFeedbackRoleArn { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -654,13 +614,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Sns/Topic.cs/#L131">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Sns/Topic.cs/#L133">View Source</a>
   </span>
   <a id="Pulumi_Aws_Sns_Topic_SqsSuccessFeedbackSampleRate_" data-uid="Pulumi.Aws.Sns.Topic.SqsSuccessFeedbackSampleRate*"></a>
   <h4 id="Pulumi_Aws_Sns_Topic_SqsSuccessFeedbackSampleRate" data-uid="Pulumi.Aws.Sns.Topic.SqsSuccessFeedbackSampleRate">SqsSuccessFeedbackSampleRate</h4>
@@ -681,13 +641,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Sns/Topic.cs/#L137">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Sns/Topic.cs/#L139">View Source</a>
   </span>
   <a id="Pulumi_Aws_Sns_Topic_Tags_" data-uid="Pulumi.Aws.Sns.Topic.Tags*"></a>
   <h4 id="Pulumi_Aws_Sns_Topic_Tags" data-uid="Pulumi.Aws.Sns.Topic.Tags">Tags</h4>
@@ -696,7 +656,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;&gt; Tags { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;?&gt; Tags { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -708,7 +668,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -716,17 +676,17 @@
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Sns/Topic.cs/#L178">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Sns/Topic.cs/#L180">View Source</a>
   </span>
   <a id="Pulumi_Aws_Sns_Topic_Get_" data-uid="Pulumi.Aws.Sns.Topic.Get*"></a>
-  <h4 id="Pulumi_Aws_Sns_Topic_Get_System_String_Pulumi_Input_System_String__Pulumi_Aws_Sns_TopicState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.Sns.Topic.Get(System.String,Pulumi.Input{System.String},Pulumi.Aws.Sns.TopicState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, TopicState, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Aws_Sns_Topic_Get_System_String_Input_System_String__Pulumi_Aws_Sns_TopicState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.Sns.Topic.Get(System.String,Input{System.String},Pulumi.Aws.Sns.TopicState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, TopicState, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Get an existing Topic resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Topic Get(string name, Input&lt;string&gt; id, TopicState state = null, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Topic Get(string name, Input&lt;string&gt; id, TopicState state = null, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -745,7 +705,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -757,7 +717,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -786,7 +746,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Sns/Topic.cs/#L21" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Sns/Topic.cs/#L20" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

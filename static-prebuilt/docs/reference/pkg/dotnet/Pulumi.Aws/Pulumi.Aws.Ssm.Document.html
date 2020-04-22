@@ -93,53 +93,12 @@ publicly, you must specify All as the account ID.</p>
 <li><code>type</code> - The permission type for the document. The permission type can be <code>Share</code>.</li>
 <li><code>account_ids</code> - The AWS user accounts that should have access to the document. The account IDs can either be a group of account IDs or <code>All</code>.</li>
 </ul>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ssm_document.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ssm_document.html.markdown</a>.</p>
-</blockquote>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
-    <div class="level3"><span class="xref">Document</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">Document</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.Ssm.html">Pulumi.Aws.Ssm</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
@@ -150,16 +109,16 @@ publicly, you must specify All as the account ID.</p>
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ssm/Document.cs/#L167">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ssm/Document.cs/#L166">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ssm_Document__ctor_" data-uid="Pulumi.Aws.Ssm.Document.#ctor*"></a>
-  <h4 id="Pulumi_Aws_Ssm_Document__ctor_System_String_Pulumi_Aws_Ssm_DocumentArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.Ssm.Document.#ctor(System.String,Pulumi.Aws.Ssm.DocumentArgs,Pulumi.CustomResourceOptions)">Document(String, DocumentArgs, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Aws_Ssm_Document__ctor_System_String_Pulumi_Aws_Ssm_DocumentArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.Ssm.Document.#ctor(System.String,Pulumi.Aws.Ssm.DocumentArgs,System.Nullable{CustomResourceOptions})">Document(String, DocumentArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Create a Document resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Document(string name, DocumentArgs args, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Document(string name, DocumentArgs args, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -184,7 +143,7 @@ publicly, you must specify All as the account ID.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -194,7 +153,7 @@ publicly, you must specify All as the account ID.</p>
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ssm/Document.cs/#L42">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ssm/Document.cs/#L41">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ssm_Document_Arn_" data-uid="Pulumi.Aws.Ssm.Document.Arn*"></a>
   <h4 id="Pulumi_Aws_Ssm_Document_Arn" data-uid="Pulumi.Aws.Ssm.Document.Arn">Arn</h4>
@@ -214,13 +173,13 @@ publicly, you must specify All as the account ID.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ssm/Document.cs/#L48">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ssm/Document.cs/#L47">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ssm_Document_AttachmentsSources_" data-uid="Pulumi.Aws.Ssm.Document.AttachmentsSources*"></a>
   <h4 id="Pulumi_Aws_Ssm_Document_AttachmentsSources" data-uid="Pulumi.Aws.Ssm.Document.AttachmentsSources">AttachmentsSources</h4>
@@ -229,7 +188,7 @@ publicly, you must specify All as the account ID.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;DocumentAttachmentsSources&gt;&gt; AttachmentsSources { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;DocumentAttachmentsSource&gt;&gt; AttachmentsSources { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -241,13 +200,13 @@ publicly, you must specify All as the account ID.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.Ssm.Outputs.DocumentAttachmentsSources.html">DocumentAttachmentsSources</a>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.Ssm.Outputs.DocumentAttachmentsSource.html">DocumentAttachmentsSource</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ssm/Document.cs/#L54">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ssm/Document.cs/#L53">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ssm_Document_Content_" data-uid="Pulumi.Aws.Ssm.Document.Content*"></a>
   <h4 id="Pulumi_Aws_Ssm_Document_Content" data-uid="Pulumi.Aws.Ssm.Document.Content">Content</h4>
@@ -268,13 +227,13 @@ publicly, you must specify All as the account ID.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ssm/Document.cs/#L60">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ssm/Document.cs/#L59">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ssm_Document_CreatedDate_" data-uid="Pulumi.Aws.Ssm.Document.CreatedDate*"></a>
   <h4 id="Pulumi_Aws_Ssm_Document_CreatedDate" data-uid="Pulumi.Aws.Ssm.Document.CreatedDate">CreatedDate</h4>
@@ -295,13 +254,13 @@ publicly, you must specify All as the account ID.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ssm/Document.cs/#L66">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ssm/Document.cs/#L65">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ssm_Document_DefaultVersion_" data-uid="Pulumi.Aws.Ssm.Document.DefaultVersion*"></a>
   <h4 id="Pulumi_Aws_Ssm_Document_DefaultVersion" data-uid="Pulumi.Aws.Ssm.Document.DefaultVersion">DefaultVersion</h4>
@@ -322,13 +281,13 @@ publicly, you must specify All as the account ID.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ssm/Document.cs/#L72">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ssm/Document.cs/#L71">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ssm_Document_Description_" data-uid="Pulumi.Aws.Ssm.Document.Description*"></a>
   <h4 id="Pulumi_Aws_Ssm_Document_Description" data-uid="Pulumi.Aws.Ssm.Document.Description">Description</h4>
@@ -349,13 +308,13 @@ publicly, you must specify All as the account ID.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ssm/Document.cs/#L78">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ssm/Document.cs/#L77">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ssm_Document_DocumentFormat_" data-uid="Pulumi.Aws.Ssm.Document.DocumentFormat*"></a>
   <h4 id="Pulumi_Aws_Ssm_Document_DocumentFormat" data-uid="Pulumi.Aws.Ssm.Document.DocumentFormat">DocumentFormat</h4>
@@ -364,7 +323,7 @@ publicly, you must specify All as the account ID.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; DocumentFormat { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; DocumentFormat { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -376,13 +335,13 @@ publicly, you must specify All as the account ID.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ssm/Document.cs/#L84">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ssm/Document.cs/#L83">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ssm_Document_DocumentType_" data-uid="Pulumi.Aws.Ssm.Document.DocumentType*"></a>
   <h4 id="Pulumi_Aws_Ssm_Document_DocumentType" data-uid="Pulumi.Aws.Ssm.Document.DocumentType">DocumentType</h4>
@@ -403,13 +362,13 @@ publicly, you must specify All as the account ID.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ssm/Document.cs/#L90">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ssm/Document.cs/#L89">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ssm_Document_Hash_" data-uid="Pulumi.Aws.Ssm.Document.Hash*"></a>
   <h4 id="Pulumi_Aws_Ssm_Document_Hash" data-uid="Pulumi.Aws.Ssm.Document.Hash">Hash</h4>
@@ -430,13 +389,13 @@ publicly, you must specify All as the account ID.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ssm/Document.cs/#L96">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ssm/Document.cs/#L95">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ssm_Document_HashType_" data-uid="Pulumi.Aws.Ssm.Document.HashType*"></a>
   <h4 id="Pulumi_Aws_Ssm_Document_HashType" data-uid="Pulumi.Aws.Ssm.Document.HashType">HashType</h4>
@@ -457,13 +416,13 @@ publicly, you must specify All as the account ID.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ssm/Document.cs/#L102">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ssm/Document.cs/#L101">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ssm_Document_LatestVersion_" data-uid="Pulumi.Aws.Ssm.Document.LatestVersion*"></a>
   <h4 id="Pulumi_Aws_Ssm_Document_LatestVersion" data-uid="Pulumi.Aws.Ssm.Document.LatestVersion">LatestVersion</h4>
@@ -484,13 +443,13 @@ publicly, you must specify All as the account ID.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ssm/Document.cs/#L108">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ssm/Document.cs/#L107">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ssm_Document_Name_" data-uid="Pulumi.Aws.Ssm.Document.Name*"></a>
   <h4 id="Pulumi_Aws_Ssm_Document_Name" data-uid="Pulumi.Aws.Ssm.Document.Name">Name</h4>
@@ -511,13 +470,13 @@ publicly, you must specify All as the account ID.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ssm/Document.cs/#L114">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ssm/Document.cs/#L113">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ssm_Document_Owner_" data-uid="Pulumi.Aws.Ssm.Document.Owner*"></a>
   <h4 id="Pulumi_Aws_Ssm_Document_Owner" data-uid="Pulumi.Aws.Ssm.Document.Owner">Owner</h4>
@@ -538,13 +497,13 @@ publicly, you must specify All as the account ID.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ssm/Document.cs/#L120">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ssm/Document.cs/#L119">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ssm_Document_Parameters_" data-uid="Pulumi.Aws.Ssm.Document.Parameters*"></a>
   <h4 id="Pulumi_Aws_Ssm_Document_Parameters" data-uid="Pulumi.Aws.Ssm.Document.Parameters">Parameters</h4>
@@ -553,7 +512,7 @@ publicly, you must specify All as the account ID.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;DocumentParameters&gt;&gt; Parameters { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;DocumentParameter&gt;&gt; Parameters { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -565,13 +524,13 @@ publicly, you must specify All as the account ID.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.Ssm.Outputs.DocumentParameters.html">DocumentParameters</a>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.Ssm.Outputs.DocumentParameter.html">DocumentParameter</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ssm/Document.cs/#L126">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ssm/Document.cs/#L125">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ssm_Document_Permissions_" data-uid="Pulumi.Aws.Ssm.Document.Permissions*"></a>
   <h4 id="Pulumi_Aws_Ssm_Document_Permissions" data-uid="Pulumi.Aws.Ssm.Document.Permissions">Permissions</h4>
@@ -592,13 +551,13 @@ publicly, you must specify All as the account ID.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Aws.Ssm.Outputs.DocumentPermissions.html">DocumentPermissions</a>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Aws.Ssm.Outputs.DocumentPermissions.html">DocumentPermissions</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ssm/Document.cs/#L132">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ssm/Document.cs/#L131">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ssm_Document_PlatformTypes_" data-uid="Pulumi.Aws.Ssm.Document.PlatformTypes*"></a>
   <h4 id="Pulumi_Aws_Ssm_Document_PlatformTypes" data-uid="Pulumi.Aws.Ssm.Document.PlatformTypes">PlatformTypes</h4>
@@ -619,13 +578,13 @@ publicly, you must specify All as the account ID.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ssm/Document.cs/#L138">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ssm/Document.cs/#L137">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ssm_Document_SchemaVersion_" data-uid="Pulumi.Aws.Ssm.Document.SchemaVersion*"></a>
   <h4 id="Pulumi_Aws_Ssm_Document_SchemaVersion" data-uid="Pulumi.Aws.Ssm.Document.SchemaVersion">SchemaVersion</h4>
@@ -646,13 +605,13 @@ publicly, you must specify All as the account ID.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ssm/Document.cs/#L144">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ssm/Document.cs/#L143">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ssm_Document_Status_" data-uid="Pulumi.Aws.Ssm.Document.Status*"></a>
   <h4 id="Pulumi_Aws_Ssm_Document_Status" data-uid="Pulumi.Aws.Ssm.Document.Status">Status</h4>
@@ -673,13 +632,13 @@ publicly, you must specify All as the account ID.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ssm/Document.cs/#L150">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ssm/Document.cs/#L149">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ssm_Document_Tags_" data-uid="Pulumi.Aws.Ssm.Document.Tags*"></a>
   <h4 id="Pulumi_Aws_Ssm_Document_Tags" data-uid="Pulumi.Aws.Ssm.Document.Tags">Tags</h4>
@@ -688,7 +647,7 @@ publicly, you must specify All as the account ID.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;&gt; Tags { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;?&gt; Tags { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -700,13 +659,13 @@ publicly, you must specify All as the account ID.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ssm/Document.cs/#L156">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ssm/Document.cs/#L155">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ssm_Document_TargetType_" data-uid="Pulumi.Aws.Ssm.Document.TargetType*"></a>
   <h4 id="Pulumi_Aws_Ssm_Document_TargetType" data-uid="Pulumi.Aws.Ssm.Document.TargetType">TargetType</h4>
@@ -715,7 +674,7 @@ publicly, you must specify All as the account ID.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; TargetType { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; TargetType { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -727,7 +686,7 @@ publicly, you must specify All as the account ID.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -735,17 +694,17 @@ publicly, you must specify All as the account ID.</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ssm/Document.cs/#L197">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ssm/Document.cs/#L196">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ssm_Document_Get_" data-uid="Pulumi.Aws.Ssm.Document.Get*"></a>
-  <h4 id="Pulumi_Aws_Ssm_Document_Get_System_String_Pulumi_Input_System_String__Pulumi_Aws_Ssm_DocumentState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.Ssm.Document.Get(System.String,Pulumi.Input{System.String},Pulumi.Aws.Ssm.DocumentState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, DocumentState, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Aws_Ssm_Document_Get_System_String_Input_System_String__Pulumi_Aws_Ssm_DocumentState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.Ssm.Document.Get(System.String,Input{System.String},Pulumi.Aws.Ssm.DocumentState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, DocumentState, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Get an existing Document resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Document Get(string name, Input&lt;string&gt; id, DocumentState state = null, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Document Get(string name, Input&lt;string&gt; id, DocumentState state = null, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -764,7 +723,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -776,7 +735,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -805,7 +764,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ssm/Document.cs/#L40" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ssm/Document.cs/#L39" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

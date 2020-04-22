@@ -76,36 +76,7 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
-    <div class="level3"><span class="xref">ClusterClusterConfigGceClusterConfigArgs</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">ClusterClusterConfigGceClusterConfigArgs</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.Dataproc.Inputs.html">Pulumi.Gcp.Dataproc.Inputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
@@ -116,7 +87,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Dataproc/Cluster.cs/#L335">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Dataproc/Inputs/ClusterClusterConfigGceClusterConfigArgs.cs/#L101">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Dataproc_Inputs_ClusterClusterConfigGceClusterConfigArgs__ctor_" data-uid="Pulumi.Gcp.Dataproc.Inputs.ClusterClusterConfigGceClusterConfigArgs.#ctor*"></a>
   <h4 id="Pulumi_Gcp_Dataproc_Inputs_ClusterClusterConfigGceClusterConfigArgs__ctor" data-uid="Pulumi.Gcp.Dataproc.Inputs.ClusterClusterConfigGceClusterConfigArgs.#ctor">ClusterClusterConfigGceClusterConfigArgs()</h4>
@@ -129,15 +100,20 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Dataproc/Cluster.cs/#L296">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Dataproc/Inputs/ClusterClusterConfigGceClusterConfigArgs.cs/#L22">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Dataproc_Inputs_ClusterClusterConfigGceClusterConfigArgs_InternalIpOnly_" data-uid="Pulumi.Gcp.Dataproc.Inputs.ClusterClusterConfigGceClusterConfigArgs.InternalIpOnly*"></a>
   <h4 id="Pulumi_Gcp_Dataproc_Inputs_ClusterClusterConfigGceClusterConfigArgs_InternalIpOnly" data-uid="Pulumi.Gcp.Dataproc.Inputs.ClusterClusterConfigGceClusterConfigArgs.InternalIpOnly">InternalIpOnly</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>By default, clusters are not restricted to internal IP addresses,
+and will have ephemeral external IP addresses assigned to each instance. If set to true, all
+instances in the cluster will only have internal IP addresses. Note: Private Google Access
+(also known as <code>privateIpGoogleAccess</code>) must be enabled on the subnetwork that the cluster
+will be launched in.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; InternalIpOnly { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? InternalIpOnly { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -149,17 +125,19 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Dataproc/Cluster.cs/#L301">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Dataproc/Inputs/ClusterClusterConfigGceClusterConfigArgs.cs/#L32">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Dataproc_Inputs_ClusterClusterConfigGceClusterConfigArgs_Metadata_" data-uid="Pulumi.Gcp.Dataproc.Inputs.ClusterClusterConfigGceClusterConfigArgs.Metadata*"></a>
   <h4 id="Pulumi_Gcp_Dataproc_Inputs_ClusterClusterConfigGceClusterConfigArgs_Metadata" data-uid="Pulumi.Gcp.Dataproc.Inputs.ClusterClusterConfigGceClusterConfigArgs.Metadata">Metadata</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A map of the Compute Engine metadata entries to add to all instances
+(see <a href="https://cloud.google.com/compute/docs/storing-retrieving-metadata#project_and_instance_metadata">Project and instance metadata</a>).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -175,21 +153,24 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputMap-1.html">InputMap</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">InputMap</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Dataproc/Cluster.cs/#L307">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Dataproc/Inputs/ClusterClusterConfigGceClusterConfigArgs.cs/#L43">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Dataproc_Inputs_ClusterClusterConfigGceClusterConfigArgs_Network_" data-uid="Pulumi.Gcp.Dataproc.Inputs.ClusterClusterConfigGceClusterConfigArgs.Network*"></a>
   <h4 id="Pulumi_Gcp_Dataproc_Inputs_ClusterClusterConfigGceClusterConfigArgs_Network" data-uid="Pulumi.Gcp.Dataproc.Inputs.ClusterClusterConfigGceClusterConfigArgs.Network">Network</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The name or self_link of the Google Compute Engine
+network to the cluster will be part of. Conflicts with <code>subnetwork</code>.
+If neither is specified, this defaults to the &quot;default&quot; network.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Network { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Network { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -201,21 +182,23 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Dataproc/Cluster.cs/#L310">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Dataproc/Inputs/ClusterClusterConfigGceClusterConfigArgs.cs/#L50">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Dataproc_Inputs_ClusterClusterConfigGceClusterConfigArgs_ServiceAccount_" data-uid="Pulumi.Gcp.Dataproc.Inputs.ClusterClusterConfigGceClusterConfigArgs.ServiceAccount*"></a>
   <h4 id="Pulumi_Gcp_Dataproc_Inputs_ClusterClusterConfigGceClusterConfigArgs_ServiceAccount" data-uid="Pulumi.Gcp.Dataproc.Inputs.ClusterClusterConfigGceClusterConfigArgs.ServiceAccount">ServiceAccount</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The service account to be used by the Node VMs.
+If not specified, the &quot;default&quot; service account is used.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; ServiceAccount { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? ServiceAccount { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -227,17 +210,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Dataproc/Cluster.cs/#L315">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Dataproc/Inputs/ClusterClusterConfigGceClusterConfigArgs.cs/#L63">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Dataproc_Inputs_ClusterClusterConfigGceClusterConfigArgs_ServiceAccountScopes_" data-uid="Pulumi.Gcp.Dataproc.Inputs.ClusterClusterConfigGceClusterConfigArgs.ServiceAccountScopes*"></a>
   <h4 id="Pulumi_Gcp_Dataproc_Inputs_ClusterClusterConfigGceClusterConfigArgs_ServiceAccountScopes" data-uid="Pulumi.Gcp.Dataproc.Inputs.ClusterClusterConfigGceClusterConfigArgs.ServiceAccountScopes">ServiceAccountScopes</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The set of Google API scopes
+to be made available on all of the node VMs under the <code>service_account</code>
+specified. These can be	either FQDNs, or scope aliases. The following scopes
+must be set if any other scopes are set. They're necessary to ensure the
+correct functioning ofthe cluster, and are set automatically by the API:</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -253,21 +241,23 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Dataproc/Cluster.cs/#L321">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Dataproc/Inputs/ClusterClusterConfigGceClusterConfigArgs.cs/#L73">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Dataproc_Inputs_ClusterClusterConfigGceClusterConfigArgs_Subnetwork_" data-uid="Pulumi.Gcp.Dataproc.Inputs.ClusterClusterConfigGceClusterConfigArgs.Subnetwork*"></a>
   <h4 id="Pulumi_Gcp_Dataproc_Inputs_ClusterClusterConfigGceClusterConfigArgs_Subnetwork" data-uid="Pulumi.Gcp.Dataproc.Inputs.ClusterClusterConfigGceClusterConfigArgs.Subnetwork">Subnetwork</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The name or self_link of the Google Compute Engine
+subnetwork the cluster will be part of. Conflicts with <code>network</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Subnetwork { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Subnetwork { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -279,17 +269,19 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Dataproc/Cluster.cs/#L326">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Dataproc/Inputs/ClusterClusterConfigGceClusterConfigArgs.cs/#L83">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Dataproc_Inputs_ClusterClusterConfigGceClusterConfigArgs_Tags_" data-uid="Pulumi.Gcp.Dataproc.Inputs.ClusterClusterConfigGceClusterConfigArgs.Tags*"></a>
   <h4 id="Pulumi_Gcp_Dataproc_Inputs_ClusterClusterConfigGceClusterConfigArgs_Tags" data-uid="Pulumi.Gcp.Dataproc.Inputs.ClusterClusterConfigGceClusterConfigArgs.Tags">Tags</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The list of instance tags applied to instances in the cluster.
+Tags are used to identify valid sources or targets for network firewalls.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -305,21 +297,28 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Dataproc/Cluster.cs/#L332">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Dataproc/Inputs/ClusterClusterConfigGceClusterConfigArgs.cs/#L98">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Dataproc_Inputs_ClusterClusterConfigGceClusterConfigArgs_Zone_" data-uid="Pulumi.Gcp.Dataproc.Inputs.ClusterClusterConfigGceClusterConfigArgs.Zone*"></a>
   <h4 id="Pulumi_Gcp_Dataproc_Inputs_ClusterClusterConfigGceClusterConfigArgs_Zone" data-uid="Pulumi.Gcp.Dataproc.Inputs.ClusterClusterConfigGceClusterConfigArgs.Zone">Zone</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The GCP zone where your data is stored and used (i.e. where
+the master and the worker nodes will be created in). If <code>region</code> is set to 'global' (default)
+then <code>zone</code> is mandatory, otherwise GCP is able to make use of <a href="https://cloud.google.com/dataproc/docs/concepts/auto-zone">Auto Zone Placement</a>
+to determine this automatically for you.
+Note: This setting additionally determines and restricts
+which computing resources are available for use with other configs such as
+<code>cluster_config.master_config.machine_type</code> and <code>cluster_config.worker_config.machine_type</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Zone { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Zone { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -331,7 +330,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -343,7 +342,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Dataproc/Cluster.cs/#L294" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Dataproc/Inputs/ClusterClusterConfigGceClusterConfigArgs.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

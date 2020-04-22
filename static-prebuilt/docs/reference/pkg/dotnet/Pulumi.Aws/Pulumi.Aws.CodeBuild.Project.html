@@ -72,53 +72,12 @@
   <h1 id="Pulumi_Aws_CodeBuild_Project" data-uid="Pulumi.Aws.CodeBuild.Project" class="text-break">Class Project
   </h1>
   <div class="markdown level0 summary"><p>Provides a CodeBuild Project resource. See also the <a href="https://www.terraform.io/docs/providers/aws/r/codebuild_webhook.html"><code>aws.codebuild.Webhook</code> resource</a>, which manages the webhook to the source (e.g. the &quot;rebuild every time a code change is pushed&quot; option in the CodeBuild web console).</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/codebuild_project.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/codebuild_project.html.markdown</a>.</p>
-</blockquote>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
-    <div class="level3"><span class="xref">Project</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">Project</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.CodeBuild.html">Pulumi.Aws.CodeBuild</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
@@ -129,16 +88,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Codebuild/Project.cs/#L141">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CodeBuild/Project.cs/#L139">View Source</a>
   </span>
   <a id="Pulumi_Aws_CodeBuild_Project__ctor_" data-uid="Pulumi.Aws.CodeBuild.Project.#ctor*"></a>
-  <h4 id="Pulumi_Aws_CodeBuild_Project__ctor_System_String_Pulumi_Aws_CodeBuild_ProjectArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.CodeBuild.Project.#ctor(System.String,Pulumi.Aws.CodeBuild.ProjectArgs,Pulumi.CustomResourceOptions)">Project(String, ProjectArgs, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Aws_CodeBuild_Project__ctor_System_String_Pulumi_Aws_CodeBuild_ProjectArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.CodeBuild.Project.#ctor(System.String,Pulumi.Aws.CodeBuild.ProjectArgs,System.Nullable{CustomResourceOptions})">Project(String, ProjectArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Create a Project resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Project(string name, ProjectArgs args, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Project(string name, ProjectArgs args, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -163,7 +122,7 @@
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -173,7 +132,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Codebuild/Project.cs/#L22">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CodeBuild/Project.cs/#L20">View Source</a>
   </span>
   <a id="Pulumi_Aws_CodeBuild_Project_Arn_" data-uid="Pulumi.Aws.CodeBuild.Project.Arn*"></a>
   <h4 id="Pulumi_Aws_CodeBuild_Project_Arn" data-uid="Pulumi.Aws.CodeBuild.Project.Arn">Arn</h4>
@@ -194,13 +153,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Codebuild/Project.cs/#L28">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CodeBuild/Project.cs/#L26">View Source</a>
   </span>
   <a id="Pulumi_Aws_CodeBuild_Project_Artifacts_" data-uid="Pulumi.Aws.CodeBuild.Project.Artifacts*"></a>
   <h4 id="Pulumi_Aws_CodeBuild_Project_Artifacts" data-uid="Pulumi.Aws.CodeBuild.Project.Artifacts">Artifacts</h4>
@@ -221,13 +180,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Aws.CodeBuild.Outputs.ProjectArtifacts.html">ProjectArtifacts</a>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Aws.CodeBuild.Outputs.ProjectArtifacts.html">ProjectArtifacts</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Codebuild/Project.cs/#L34">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CodeBuild/Project.cs/#L32">View Source</a>
   </span>
   <a id="Pulumi_Aws_CodeBuild_Project_BadgeEnabled_" data-uid="Pulumi.Aws.CodeBuild.Project.BadgeEnabled*"></a>
   <h4 id="Pulumi_Aws_CodeBuild_Project_BadgeEnabled" data-uid="Pulumi.Aws.CodeBuild.Project.BadgeEnabled">BadgeEnabled</h4>
@@ -248,13 +207,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Codebuild/Project.cs/#L40">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CodeBuild/Project.cs/#L38">View Source</a>
   </span>
   <a id="Pulumi_Aws_CodeBuild_Project_BadgeUrl_" data-uid="Pulumi.Aws.CodeBuild.Project.BadgeUrl*"></a>
   <h4 id="Pulumi_Aws_CodeBuild_Project_BadgeUrl" data-uid="Pulumi.Aws.CodeBuild.Project.BadgeUrl">BadgeUrl</h4>
@@ -275,13 +234,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Codebuild/Project.cs/#L46">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CodeBuild/Project.cs/#L44">View Source</a>
   </span>
   <a id="Pulumi_Aws_CodeBuild_Project_BuildTimeout_" data-uid="Pulumi.Aws.CodeBuild.Project.BuildTimeout*"></a>
   <h4 id="Pulumi_Aws_CodeBuild_Project_BuildTimeout" data-uid="Pulumi.Aws.CodeBuild.Project.BuildTimeout">BuildTimeout</h4>
@@ -302,13 +261,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Codebuild/Project.cs/#L52">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CodeBuild/Project.cs/#L50">View Source</a>
   </span>
   <a id="Pulumi_Aws_CodeBuild_Project_Cache_" data-uid="Pulumi.Aws.CodeBuild.Project.Cache*"></a>
   <h4 id="Pulumi_Aws_CodeBuild_Project_Cache" data-uid="Pulumi.Aws.CodeBuild.Project.Cache">Cache</h4>
@@ -329,13 +288,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Aws.CodeBuild.Outputs.ProjectCache.html">ProjectCache</a>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Aws.CodeBuild.Outputs.ProjectCache.html">ProjectCache</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Codebuild/Project.cs/#L58">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CodeBuild/Project.cs/#L56">View Source</a>
   </span>
   <a id="Pulumi_Aws_CodeBuild_Project_Description_" data-uid="Pulumi.Aws.CodeBuild.Project.Description*"></a>
   <h4 id="Pulumi_Aws_CodeBuild_Project_Description" data-uid="Pulumi.Aws.CodeBuild.Project.Description">Description</h4>
@@ -356,13 +315,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Codebuild/Project.cs/#L64">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CodeBuild/Project.cs/#L62">View Source</a>
   </span>
   <a id="Pulumi_Aws_CodeBuild_Project_EncryptionKey_" data-uid="Pulumi.Aws.CodeBuild.Project.EncryptionKey*"></a>
   <h4 id="Pulumi_Aws_CodeBuild_Project_EncryptionKey" data-uid="Pulumi.Aws.CodeBuild.Project.EncryptionKey">EncryptionKey</h4>
@@ -383,13 +342,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Codebuild/Project.cs/#L70">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CodeBuild/Project.cs/#L68">View Source</a>
   </span>
   <a id="Pulumi_Aws_CodeBuild_Project_Environment_" data-uid="Pulumi.Aws.CodeBuild.Project.Environment*"></a>
   <h4 id="Pulumi_Aws_CodeBuild_Project_Environment" data-uid="Pulumi.Aws.CodeBuild.Project.Environment">Environment</h4>
@@ -410,13 +369,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Aws.CodeBuild.Outputs.ProjectEnvironment.html">ProjectEnvironment</a>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Aws.CodeBuild.Outputs.ProjectEnvironment.html">ProjectEnvironment</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Codebuild/Project.cs/#L76">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CodeBuild/Project.cs/#L74">View Source</a>
   </span>
   <a id="Pulumi_Aws_CodeBuild_Project_LogsConfig_" data-uid="Pulumi.Aws.CodeBuild.Project.LogsConfig*"></a>
   <h4 id="Pulumi_Aws_CodeBuild_Project_LogsConfig" data-uid="Pulumi.Aws.CodeBuild.Project.LogsConfig">LogsConfig</h4>
@@ -437,17 +396,17 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Aws.CodeBuild.Outputs.ProjectLogsConfig.html">ProjectLogsConfig</a>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Aws.CodeBuild.Outputs.ProjectLogsConfig.html">ProjectLogsConfig</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Codebuild/Project.cs/#L82">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CodeBuild/Project.cs/#L80">View Source</a>
   </span>
   <a id="Pulumi_Aws_CodeBuild_Project_Name_" data-uid="Pulumi.Aws.CodeBuild.Project.Name*"></a>
   <h4 id="Pulumi_Aws_CodeBuild_Project_Name" data-uid="Pulumi.Aws.CodeBuild.Project.Name">Name</h4>
-  <div class="markdown level1 summary"><p>The name of the project. If <code>type</code> is set to <code>S3</code>, this is the name of the output artifact object</p>
+  <div class="markdown level1 summary"><p>The projects name.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -464,13 +423,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Codebuild/Project.cs/#L88">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CodeBuild/Project.cs/#L86">View Source</a>
   </span>
   <a id="Pulumi_Aws_CodeBuild_Project_QueuedTimeout_" data-uid="Pulumi.Aws.CodeBuild.Project.QueuedTimeout*"></a>
   <h4 id="Pulumi_Aws_CodeBuild_Project_QueuedTimeout" data-uid="Pulumi.Aws.CodeBuild.Project.QueuedTimeout">QueuedTimeout</h4>
@@ -491,13 +450,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Codebuild/Project.cs/#L94">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CodeBuild/Project.cs/#L92">View Source</a>
   </span>
   <a id="Pulumi_Aws_CodeBuild_Project_SecondaryArtifacts_" data-uid="Pulumi.Aws.CodeBuild.Project.SecondaryArtifacts*"></a>
   <h4 id="Pulumi_Aws_CodeBuild_Project_SecondaryArtifacts" data-uid="Pulumi.Aws.CodeBuild.Project.SecondaryArtifacts">SecondaryArtifacts</h4>
@@ -506,7 +465,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;ProjectSecondaryArtifacts&gt;&gt; SecondaryArtifacts { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;ProjectSecondaryArtifact&gt;&gt; SecondaryArtifacts { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -518,13 +477,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.CodeBuild.Outputs.ProjectSecondaryArtifacts.html">ProjectSecondaryArtifacts</a>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.CodeBuild.Outputs.ProjectSecondaryArtifact.html">ProjectSecondaryArtifact</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Codebuild/Project.cs/#L100">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CodeBuild/Project.cs/#L98">View Source</a>
   </span>
   <a id="Pulumi_Aws_CodeBuild_Project_SecondarySources_" data-uid="Pulumi.Aws.CodeBuild.Project.SecondarySources*"></a>
   <h4 id="Pulumi_Aws_CodeBuild_Project_SecondarySources" data-uid="Pulumi.Aws.CodeBuild.Project.SecondarySources">SecondarySources</h4>
@@ -533,7 +492,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;ProjectSecondarySources&gt;&gt; SecondarySources { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;ProjectSecondarySource&gt;&gt; SecondarySources { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -545,13 +504,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.CodeBuild.Outputs.ProjectSecondarySources.html">ProjectSecondarySources</a>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.CodeBuild.Outputs.ProjectSecondarySource.html">ProjectSecondarySource</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Codebuild/Project.cs/#L106">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CodeBuild/Project.cs/#L104">View Source</a>
   </span>
   <a id="Pulumi_Aws_CodeBuild_Project_ServiceRole_" data-uid="Pulumi.Aws.CodeBuild.Project.ServiceRole*"></a>
   <h4 id="Pulumi_Aws_CodeBuild_Project_ServiceRole" data-uid="Pulumi.Aws.CodeBuild.Project.ServiceRole">ServiceRole</h4>
@@ -572,13 +531,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Codebuild/Project.cs/#L112">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CodeBuild/Project.cs/#L110">View Source</a>
   </span>
   <a id="Pulumi_Aws_CodeBuild_Project_Source_" data-uid="Pulumi.Aws.CodeBuild.Project.Source*"></a>
   <h4 id="Pulumi_Aws_CodeBuild_Project_Source" data-uid="Pulumi.Aws.CodeBuild.Project.Source">Source</h4>
@@ -599,13 +558,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Aws.CodeBuild.Outputs.ProjectSource.html">ProjectSource</a>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Aws.CodeBuild.Outputs.ProjectSource.html">ProjectSource</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Codebuild/Project.cs/#L118">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CodeBuild/Project.cs/#L116">View Source</a>
   </span>
   <a id="Pulumi_Aws_CodeBuild_Project_SourceVersion_" data-uid="Pulumi.Aws.CodeBuild.Project.SourceVersion*"></a>
   <h4 id="Pulumi_Aws_CodeBuild_Project_SourceVersion" data-uid="Pulumi.Aws.CodeBuild.Project.SourceVersion">SourceVersion</h4>
@@ -614,7 +573,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; SourceVersion { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; SourceVersion { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -626,13 +585,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Codebuild/Project.cs/#L124">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CodeBuild/Project.cs/#L122">View Source</a>
   </span>
   <a id="Pulumi_Aws_CodeBuild_Project_Tags_" data-uid="Pulumi.Aws.CodeBuild.Project.Tags*"></a>
   <h4 id="Pulumi_Aws_CodeBuild_Project_Tags" data-uid="Pulumi.Aws.CodeBuild.Project.Tags">Tags</h4>
@@ -641,7 +600,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;&gt; Tags { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;?&gt; Tags { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -653,13 +612,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Codebuild/Project.cs/#L130">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CodeBuild/Project.cs/#L128">View Source</a>
   </span>
   <a id="Pulumi_Aws_CodeBuild_Project_VpcConfig_" data-uid="Pulumi.Aws.CodeBuild.Project.VpcConfig*"></a>
   <h4 id="Pulumi_Aws_CodeBuild_Project_VpcConfig" data-uid="Pulumi.Aws.CodeBuild.Project.VpcConfig">VpcConfig</h4>
@@ -680,7 +639,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Aws.CodeBuild.Outputs.ProjectVpcConfig.html">ProjectVpcConfig</a>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Aws.CodeBuild.Outputs.ProjectVpcConfig.html">ProjectVpcConfig</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -688,17 +647,17 @@
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Codebuild/Project.cs/#L171">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CodeBuild/Project.cs/#L169">View Source</a>
   </span>
   <a id="Pulumi_Aws_CodeBuild_Project_Get_" data-uid="Pulumi.Aws.CodeBuild.Project.Get*"></a>
-  <h4 id="Pulumi_Aws_CodeBuild_Project_Get_System_String_Pulumi_Input_System_String__Pulumi_Aws_CodeBuild_ProjectState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.CodeBuild.Project.Get(System.String,Pulumi.Input{System.String},Pulumi.Aws.CodeBuild.ProjectState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, ProjectState, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Aws_CodeBuild_Project_Get_System_String_Input_System_String__Pulumi_Aws_CodeBuild_ProjectState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.CodeBuild.Project.Get(System.String,Input{System.String},Pulumi.Aws.CodeBuild.ProjectState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, ProjectState, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Get an existing Project resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Project Get(string name, Input&lt;string&gt; id, ProjectState state = null, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Project Get(string name, Input&lt;string&gt; id, ProjectState state = null, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -717,7 +676,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -729,7 +688,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -758,7 +717,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Codebuild/Project.cs/#L17" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CodeBuild/Project.cs/#L15" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -79,40 +79,16 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">DeleteOptions</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Meta.V1.html">Pulumi.Kubernetes.Types.Outputs.Meta.V1</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Kubernetes.dll</h6>
   <h5 id="Pulumi_Kubernetes_Types_Outputs_Meta_V1_DeleteOptions_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class DeleteOptions</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class DeleteOptions : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L27049">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L27292">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Meta_V1_DeleteOptions_ApiVersion" data-uid="Pulumi.Kubernetes.Types.Outputs.Meta.V1.DeleteOptions.ApiVersion">ApiVersion</h4>
   <div class="markdown level1 summary"><p>APIVersion defines the versioned schema of this representation of an object. Servers
@@ -141,7 +117,7 @@ unrecognized values. More info:
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L27056">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L27299">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Meta_V1_DeleteOptions_DryRun" data-uid="Pulumi.Kubernetes.Types.Outputs.Meta.V1.DeleteOptions.DryRun">DryRun</h4>
   <div class="markdown level1 summary"><p>When present, indicates that modifications should not be persisted. An invalid or
@@ -163,13 +139,13 @@ of the request. Valid values are: - All: all dry run stages will be processed</p
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L27064">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L27307">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Meta_V1_DeleteOptions_GracePeriodSeconds" data-uid="Pulumi.Kubernetes.Types.Outputs.Meta.V1.DeleteOptions.GracePeriodSeconds">GracePeriodSeconds</h4>
   <div class="markdown level1 summary"><p>The duration in seconds before the object should be deleted. Value must be non-negative
@@ -198,7 +174,7 @@ specified. zero means delete immediately.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L27072">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L27315">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Meta_V1_DeleteOptions_Kind" data-uid="Pulumi.Kubernetes.Types.Outputs.Meta.V1.DeleteOptions.Kind">Kind</h4>
   <div class="markdown level1 summary"><p>Kind is a string value representing the REST resource this object represents. Servers
@@ -227,7 +203,7 @@ CamelCase. More info:
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L27080">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L27323">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Meta_V1_DeleteOptions_OrphanDependents" data-uid="Pulumi.Kubernetes.Types.Outputs.Meta.V1.DeleteOptions.OrphanDependents">OrphanDependents</h4>
   <div class="markdown level1 summary"><p>Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7.
@@ -256,7 +232,7 @@ PropagationPolicy may be set, but not both.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L27086">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L27329">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Meta_V1_DeleteOptions_Preconditions" data-uid="Pulumi.Kubernetes.Types.Outputs.Meta.V1.DeleteOptions.Preconditions">Preconditions</h4>
   <div class="markdown level1 summary"><p>Must be fulfilled before a deletion is carried out. If not possible, a 409 Conflict
@@ -283,7 +259,7 @@ status will be returned.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L27096">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L27339">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Meta_V1_DeleteOptions_PropagationPolicy" data-uid="Pulumi.Kubernetes.Types.Outputs.Meta.V1.DeleteOptions.PropagationPolicy">PropagationPolicy</h4>
   <div class="markdown level1 summary"><p>Whether and how garbage collection will be performed. Either this field or
@@ -320,7 +296,7 @@ policy that deletes all dependents in the foreground.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L27040" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L27283" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

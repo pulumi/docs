@@ -72,9 +72,6 @@
   <h1 id="Pulumi_OpenStack_SharedFileSystem_Share" data-uid="Pulumi.OpenStack.SharedFileSystem.Share" class="text-break">Class Share
   </h1>
   <div class="markdown level0 summary"><p>Use this resource to configure a share.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/sharedfilesystem_share_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/sharedfilesystem_share_v2.html.markdown</a>.</p>
-</blockquote>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -91,7 +88,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Sharedfilesystem/Share.cs/#L150">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/SharedFileSystem/Share.cs/#L149">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_SharedFileSystem_Share__ctor_" data-uid="Pulumi.OpenStack.SharedFileSystem.Share.#ctor*"></a>
   <h4 id="Pulumi_OpenStack_SharedFileSystem_Share__ctor_System_String_Pulumi_OpenStack_SharedFileSystem_ShareArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.OpenStack.SharedFileSystem.Share.#ctor(System.String,Pulumi.OpenStack.SharedFileSystem.ShareArgs,System.Nullable{CustomResourceOptions})">Share(String, ShareArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
@@ -135,7 +132,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Sharedfilesystem/Share.cs/#L22">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/SharedFileSystem/Share.cs/#L21">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_SharedFileSystem_Share_AllMetadata_" data-uid="Pulumi.OpenStack.SharedFileSystem.Share.AllMetadata*"></a>
   <h4 id="Pulumi_OpenStack_SharedFileSystem_Share_AllMetadata" data-uid="Pulumi.OpenStack.SharedFileSystem.Share.AllMetadata">AllMetadata</h4>
@@ -163,7 +160,7 @@ explicitly and implicitly added.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Sharedfilesystem/Share.cs/#L29">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/SharedFileSystem/Share.cs/#L28">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_SharedFileSystem_Share_AvailabilityZone_" data-uid="Pulumi.OpenStack.SharedFileSystem.Share.AvailabilityZone*"></a>
   <h4 id="Pulumi_OpenStack_SharedFileSystem_Share_AvailabilityZone" data-uid="Pulumi.OpenStack.SharedFileSystem.Share.AvailabilityZone">AvailabilityZone</h4>
@@ -191,7 +188,7 @@ new share.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Sharedfilesystem/Share.cs/#L36">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/SharedFileSystem/Share.cs/#L35">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_SharedFileSystem_Share_Description_" data-uid="Pulumi.OpenStack.SharedFileSystem.Share.Description*"></a>
   <h4 id="Pulumi_OpenStack_SharedFileSystem_Share_Description" data-uid="Pulumi.OpenStack.SharedFileSystem.Share.Description">Description</h4>
@@ -219,7 +216,7 @@ Changing this updates the description of the existing share.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Sharedfilesystem/Share.cs/#L43">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/SharedFileSystem/Share.cs/#L42">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_SharedFileSystem_Share_ExportLocations_" data-uid="Pulumi.OpenStack.SharedFileSystem.Share.ExportLocations*"></a>
   <h4 id="Pulumi_OpenStack_SharedFileSystem_Share_ExportLocations" data-uid="Pulumi.OpenStack.SharedFileSystem.Share.ExportLocations">ExportLocations</h4>
@@ -229,7 +226,7 @@ has more than one network interface, it can have multiple export locations.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;ShareExportLocations&gt;&gt; ExportLocations { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;ShareExportLocation&gt;&gt; ExportLocations { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -241,13 +238,13 @@ has more than one network interface, it can have multiple export locations.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.OpenStack.SharedFileSystem.Outputs.ShareExportLocations.html">ShareExportLocations</a>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.OpenStack.SharedFileSystem.Outputs.ShareExportLocation.html">ShareExportLocation</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Sharedfilesystem/Share.cs/#L49">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/SharedFileSystem/Share.cs/#L48">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_SharedFileSystem_Share_HasReplicas_" data-uid="Pulumi.OpenStack.SharedFileSystem.Share.HasReplicas*"></a>
   <h4 id="Pulumi_OpenStack_SharedFileSystem_Share_HasReplicas" data-uid="Pulumi.OpenStack.SharedFileSystem.Share.HasReplicas">HasReplicas</h4>
@@ -274,7 +271,7 @@ has more than one network interface, it can have multiple export locations.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Sharedfilesystem/Share.cs/#L55">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/SharedFileSystem/Share.cs/#L54">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_SharedFileSystem_Share_Host_" data-uid="Pulumi.OpenStack.SharedFileSystem.Share.Host*"></a>
   <h4 id="Pulumi_OpenStack_SharedFileSystem_Share_Host" data-uid="Pulumi.OpenStack.SharedFileSystem.Share.Host">Host</h4>
@@ -301,7 +298,7 @@ has more than one network interface, it can have multiple export locations.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Sharedfilesystem/Share.cs/#L63">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/SharedFileSystem/Share.cs/#L62">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_SharedFileSystem_Share_IsPublic_" data-uid="Pulumi.OpenStack.SharedFileSystem.Share.IsPublic*"></a>
   <h4 id="Pulumi_OpenStack_SharedFileSystem_Share_IsPublic" data-uid="Pulumi.OpenStack.SharedFileSystem.Share.IsPublic">IsPublic</h4>
@@ -330,7 +327,7 @@ updates the existing share.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Sharedfilesystem/Share.cs/#L70">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/SharedFileSystem/Share.cs/#L69">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_SharedFileSystem_Share_Metadata_" data-uid="Pulumi.OpenStack.SharedFileSystem.Share.Metadata*"></a>
   <h4 id="Pulumi_OpenStack_SharedFileSystem_Share_Metadata" data-uid="Pulumi.OpenStack.SharedFileSystem.Share.Metadata">Metadata</h4>
@@ -358,7 +355,7 @@ strings.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Sharedfilesystem/Share.cs/#L77">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/SharedFileSystem/Share.cs/#L76">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_SharedFileSystem_Share_Name_" data-uid="Pulumi.OpenStack.SharedFileSystem.Share.Name*"></a>
   <h4 id="Pulumi_OpenStack_SharedFileSystem_Share_Name" data-uid="Pulumi.OpenStack.SharedFileSystem.Share.Name">Name</h4>
@@ -386,7 +383,7 @@ of the existing share.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Sharedfilesystem/Share.cs/#L83">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/SharedFileSystem/Share.cs/#L82">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_SharedFileSystem_Share_ProjectId_" data-uid="Pulumi.OpenStack.SharedFileSystem.Share.ProjectId*"></a>
   <h4 id="Pulumi_OpenStack_SharedFileSystem_Share_ProjectId" data-uid="Pulumi.OpenStack.SharedFileSystem.Share.ProjectId">ProjectId</h4>
@@ -413,7 +410,7 @@ of the existing share.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Sharedfilesystem/Share.cs/#L91">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/SharedFileSystem/Share.cs/#L90">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_SharedFileSystem_Share_Region_" data-uid="Pulumi.OpenStack.SharedFileSystem.Share.Region*"></a>
   <h4 id="Pulumi_OpenStack_SharedFileSystem_Share_Region" data-uid="Pulumi.OpenStack.SharedFileSystem.Share.Region">Region</h4>
@@ -442,7 +439,7 @@ creates a new share.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Sharedfilesystem/Share.cs/#L97">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/SharedFileSystem/Share.cs/#L96">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_SharedFileSystem_Share_ReplicationType_" data-uid="Pulumi.OpenStack.SharedFileSystem.Share.ReplicationType*"></a>
   <h4 id="Pulumi_OpenStack_SharedFileSystem_Share_ReplicationType" data-uid="Pulumi.OpenStack.SharedFileSystem.Share.ReplicationType">ReplicationType</h4>
@@ -469,7 +466,7 @@ creates a new share.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Sharedfilesystem/Share.cs/#L105">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/SharedFileSystem/Share.cs/#L104">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_SharedFileSystem_Share_ShareNetworkId_" data-uid="Pulumi.OpenStack.SharedFileSystem.Share.ShareNetworkId*"></a>
   <h4 id="Pulumi_OpenStack_SharedFileSystem_Share_ShareNetworkId" data-uid="Pulumi.OpenStack.SharedFileSystem.Share.ShareNetworkId">ShareNetworkId</h4>
@@ -498,7 +495,7 @@ the share_network_id value from the snapshot is used. Changing this creates a ne
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Sharedfilesystem/Share.cs/#L112">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/SharedFileSystem/Share.cs/#L111">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_SharedFileSystem_Share_ShareProto_" data-uid="Pulumi.OpenStack.SharedFileSystem.Share.ShareProto*"></a>
   <h4 id="Pulumi_OpenStack_SharedFileSystem_Share_ShareProto" data-uid="Pulumi.OpenStack.SharedFileSystem.Share.ShareProto">ShareProto</h4>
@@ -526,7 +523,7 @@ CEPHFS, GLUSTERFS, HDFS or MAPRFS. Changing this creates a new share.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Sharedfilesystem/Share.cs/#L118">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/SharedFileSystem/Share.cs/#L117">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_SharedFileSystem_Share_ShareServerId_" data-uid="Pulumi.OpenStack.SharedFileSystem.Share.ShareServerId*"></a>
   <h4 id="Pulumi_OpenStack_SharedFileSystem_Share_ShareServerId" data-uid="Pulumi.OpenStack.SharedFileSystem.Share.ShareServerId">ShareServerId</h4>
@@ -553,7 +550,7 @@ CEPHFS, GLUSTERFS, HDFS or MAPRFS. Changing this creates a new share.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Sharedfilesystem/Share.cs/#L125">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/SharedFileSystem/Share.cs/#L124">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_SharedFileSystem_Share_ShareType_" data-uid="Pulumi.OpenStack.SharedFileSystem.Share.ShareType*"></a>
   <h4 id="Pulumi_OpenStack_SharedFileSystem_Share_ShareType" data-uid="Pulumi.OpenStack.SharedFileSystem.Share.ShareType">ShareType</h4>
@@ -581,7 +578,7 @@ share type is used.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Sharedfilesystem/Share.cs/#L132">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/SharedFileSystem/Share.cs/#L131">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_SharedFileSystem_Share_Size_" data-uid="Pulumi.OpenStack.SharedFileSystem.Share.Size*"></a>
   <h4 id="Pulumi_OpenStack_SharedFileSystem_Share_Size" data-uid="Pulumi.OpenStack.SharedFileSystem.Share.Size">Size</h4>
@@ -609,7 +606,7 @@ than the allowed GB quota. Changing this resizes the existing share.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Sharedfilesystem/Share.cs/#L139">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/SharedFileSystem/Share.cs/#L138">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_SharedFileSystem_Share_SnapshotId_" data-uid="Pulumi.OpenStack.SharedFileSystem.Share.SnapshotId*"></a>
   <h4 id="Pulumi_OpenStack_SharedFileSystem_Share_SnapshotId" data-uid="Pulumi.OpenStack.SharedFileSystem.Share.SnapshotId">SnapshotId</h4>
@@ -639,7 +636,7 @@ a new share.</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Sharedfilesystem/Share.cs/#L180">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/SharedFileSystem/Share.cs/#L179">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_SharedFileSystem_Share_Get_" data-uid="Pulumi.OpenStack.SharedFileSystem.Share.Get*"></a>
   <h4 id="Pulumi_OpenStack_SharedFileSystem_Share_Get_System_String_Input_System_String__Pulumi_OpenStack_SharedFileSystem_ShareState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.OpenStack.SharedFileSystem.Share.Get(System.String,Input{System.String},Pulumi.OpenStack.SharedFileSystem.ShareState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, ShareState, Nullable&lt;CustomResourceOptions&gt;)</h4>
@@ -709,7 +706,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Sharedfilesystem/Share.cs/#L16" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/SharedFileSystem/Share.cs/#L15" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

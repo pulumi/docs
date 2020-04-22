@@ -76,36 +76,7 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
-    <div class="level3"><span class="xref">ScalingGroupArgs</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">ScalingGroupArgs</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.AliCloud.Ess.html">Pulumi.AliCloud.Ess</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.AliCloud.dll</h6>
@@ -116,7 +87,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Ess/ScalingGroup.cs/#L274">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Ess/ScalingGroup.cs/#L286">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Ess_ScalingGroupArgs__ctor_" data-uid="Pulumi.AliCloud.Ess.ScalingGroupArgs.#ctor*"></a>
   <h4 id="Pulumi_AliCloud_Ess_ScalingGroupArgs__ctor" data-uid="Pulumi.AliCloud.Ess.ScalingGroupArgs.#ctor">ScalingGroupArgs()</h4>
@@ -129,7 +100,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Ess/ScalingGroup.cs/#L163">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Ess/ScalingGroup.cs/#L169">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Ess_ScalingGroupArgs_DbInstanceIds_" data-uid="Pulumi.AliCloud.Ess.ScalingGroupArgs.DbInstanceIds*"></a>
   <h4 id="Pulumi_AliCloud_Ess_ScalingGroupArgs_DbInstanceIds" data-uid="Pulumi.AliCloud.Ess.ScalingGroupArgs.DbInstanceIds">DbInstanceIds</h4>
@@ -154,13 +125,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Ess/ScalingGroup.cs/#L172">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Ess/ScalingGroup.cs/#L178">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Ess_ScalingGroupArgs_DefaultCooldown_" data-uid="Pulumi.AliCloud.Ess.ScalingGroupArgs.DefaultCooldown*"></a>
   <h4 id="Pulumi_AliCloud_Ess_ScalingGroupArgs_DefaultCooldown" data-uid="Pulumi.AliCloud.Ess.ScalingGroupArgs.DefaultCooldown">DefaultCooldown</h4>
@@ -169,7 +140,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; DefaultCooldown { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? DefaultCooldown { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -181,13 +152,40 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Ess/ScalingGroup.cs/#L186">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Ess/ScalingGroup.cs/#L184">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Ess_ScalingGroupArgs_DesiredCapacity_" data-uid="Pulumi.AliCloud.Ess.ScalingGroupArgs.DesiredCapacity*"></a>
+  <h4 id="Pulumi_AliCloud_Ess_ScalingGroupArgs_DesiredCapacity" data-uid="Pulumi.AliCloud.Ess.ScalingGroupArgs.DesiredCapacity">DesiredCapacity</h4>
+  <div class="markdown level1 summary"><p>Expected number of ECS instances in the scaling group. Value range: [min_size, max_size].</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? DesiredCapacity { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Ess/ScalingGroup.cs/#L198">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Ess_ScalingGroupArgs_LoadbalancerIds_" data-uid="Pulumi.AliCloud.Ess.ScalingGroupArgs.LoadbalancerIds*"></a>
   <h4 id="Pulumi_AliCloud_Ess_ScalingGroupArgs_LoadbalancerIds" data-uid="Pulumi.AliCloud.Ess.ScalingGroupArgs.LoadbalancerIds">LoadbalancerIds</h4>
@@ -215,13 +213,13 @@ targeting your <code>alicloud.slb.Listener</code> in order to make sure the list
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Ess/ScalingGroup.cs/#L195">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Ess/ScalingGroup.cs/#L207">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Ess_ScalingGroupArgs_MaxSize_" data-uid="Pulumi.AliCloud.Ess.ScalingGroupArgs.MaxSize*"></a>
   <h4 id="Pulumi_AliCloud_Ess_ScalingGroupArgs_MaxSize" data-uid="Pulumi.AliCloud.Ess.ScalingGroupArgs.MaxSize">MaxSize</h4>
@@ -242,13 +240,13 @@ targeting your <code>alicloud.slb.Listener</code> in order to make sure the list
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Ess/ScalingGroup.cs/#L201">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Ess/ScalingGroup.cs/#L213">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Ess_ScalingGroupArgs_MinSize_" data-uid="Pulumi.AliCloud.Ess.ScalingGroupArgs.MinSize*"></a>
   <h4 id="Pulumi_AliCloud_Ess_ScalingGroupArgs_MinSize" data-uid="Pulumi.AliCloud.Ess.ScalingGroupArgs.MinSize">MinSize</h4>
@@ -269,13 +267,13 @@ targeting your <code>alicloud.slb.Listener</code> in order to make sure the list
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Ess/ScalingGroup.cs/#L207">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Ess/ScalingGroup.cs/#L219">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Ess_ScalingGroupArgs_MultiAzPolicy_" data-uid="Pulumi.AliCloud.Ess.ScalingGroupArgs.MultiAzPolicy*"></a>
   <h4 id="Pulumi_AliCloud_Ess_ScalingGroupArgs_MultiAzPolicy" data-uid="Pulumi.AliCloud.Ess.ScalingGroupArgs.MultiAzPolicy">MultiAzPolicy</h4>
@@ -284,7 +282,7 @@ targeting your <code>alicloud.slb.Listener</code> in order to make sure the list
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; MultiAzPolicy { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? MultiAzPolicy { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -296,13 +294,13 @@ targeting your <code>alicloud.slb.Listener</code> in order to make sure the list
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Ess/ScalingGroup.cs/#L213">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Ess/ScalingGroup.cs/#L225">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Ess_ScalingGroupArgs_OnDemandBaseCapacity_" data-uid="Pulumi.AliCloud.Ess.ScalingGroupArgs.OnDemandBaseCapacity*"></a>
   <h4 id="Pulumi_AliCloud_Ess_ScalingGroupArgs_OnDemandBaseCapacity" data-uid="Pulumi.AliCloud.Ess.ScalingGroupArgs.OnDemandBaseCapacity">OnDemandBaseCapacity</h4>
@@ -311,7 +309,7 @@ targeting your <code>alicloud.slb.Listener</code> in order to make sure the list
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; OnDemandBaseCapacity { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? OnDemandBaseCapacity { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -323,13 +321,13 @@ targeting your <code>alicloud.slb.Listener</code> in order to make sure the list
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Ess/ScalingGroup.cs/#L219">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Ess/ScalingGroup.cs/#L231">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Ess_ScalingGroupArgs_OnDemandPercentageAboveBaseCapacity_" data-uid="Pulumi.AliCloud.Ess.ScalingGroupArgs.OnDemandPercentageAboveBaseCapacity*"></a>
   <h4 id="Pulumi_AliCloud_Ess_ScalingGroupArgs_OnDemandPercentageAboveBaseCapacity" data-uid="Pulumi.AliCloud.Ess.ScalingGroupArgs.OnDemandPercentageAboveBaseCapacity">OnDemandPercentageAboveBaseCapacity</h4>
@@ -338,7 +336,7 @@ targeting your <code>alicloud.slb.Listener</code> in order to make sure the list
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; OnDemandPercentageAboveBaseCapacity { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? OnDemandPercentageAboveBaseCapacity { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -350,13 +348,13 @@ targeting your <code>alicloud.slb.Listener</code> in order to make sure the list
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Ess/ScalingGroup.cs/#L232">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Ess/ScalingGroup.cs/#L244">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Ess_ScalingGroupArgs_RemovalPolicies_" data-uid="Pulumi.AliCloud.Ess.ScalingGroupArgs.RemovalPolicies*"></a>
   <h4 id="Pulumi_AliCloud_Ess_ScalingGroupArgs_RemovalPolicies" data-uid="Pulumi.AliCloud.Ess.ScalingGroupArgs.RemovalPolicies">RemovalPolicies</h4>
@@ -383,13 +381,13 @@ targeting your <code>alicloud.slb.Listener</code> in order to make sure the list
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Ess/ScalingGroup.cs/#L241">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Ess/ScalingGroup.cs/#L253">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Ess_ScalingGroupArgs_ScalingGroupName_" data-uid="Pulumi.AliCloud.Ess.ScalingGroupArgs.ScalingGroupName*"></a>
   <h4 id="Pulumi_AliCloud_Ess_ScalingGroupArgs_ScalingGroupName" data-uid="Pulumi.AliCloud.Ess.ScalingGroupArgs.ScalingGroupName">ScalingGroupName</h4>
@@ -398,7 +396,7 @@ targeting your <code>alicloud.slb.Listener</code> in order to make sure the list
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; ScalingGroupName { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? ScalingGroupName { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -410,13 +408,13 @@ targeting your <code>alicloud.slb.Listener</code> in order to make sure the list
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Ess/ScalingGroup.cs/#L247">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Ess/ScalingGroup.cs/#L259">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Ess_ScalingGroupArgs_SpotInstancePools_" data-uid="Pulumi.AliCloud.Ess.ScalingGroupArgs.SpotInstancePools*"></a>
   <h4 id="Pulumi_AliCloud_Ess_ScalingGroupArgs_SpotInstancePools" data-uid="Pulumi.AliCloud.Ess.ScalingGroupArgs.SpotInstancePools">SpotInstancePools</h4>
@@ -425,7 +423,7 @@ targeting your <code>alicloud.slb.Listener</code> in order to make sure the list
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; SpotInstancePools { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? SpotInstancePools { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -437,13 +435,13 @@ targeting your <code>alicloud.slb.Listener</code> in order to make sure the list
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Ess/ScalingGroup.cs/#L253">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Ess/ScalingGroup.cs/#L265">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Ess_ScalingGroupArgs_SpotInstanceRemedy_" data-uid="Pulumi.AliCloud.Ess.ScalingGroupArgs.SpotInstanceRemedy*"></a>
   <h4 id="Pulumi_AliCloud_Ess_ScalingGroupArgs_SpotInstanceRemedy" data-uid="Pulumi.AliCloud.Ess.ScalingGroupArgs.SpotInstanceRemedy">SpotInstanceRemedy</h4>
@@ -452,7 +450,7 @@ targeting your <code>alicloud.slb.Listener</code> in order to make sure the list
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; SpotInstanceRemedy { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? SpotInstanceRemedy { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -464,13 +462,13 @@ targeting your <code>alicloud.slb.Listener</code> in order to make sure the list
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Ess/ScalingGroup.cs/#L259">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Ess/ScalingGroup.cs/#L271">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Ess_ScalingGroupArgs_VswitchId_" data-uid="Pulumi.AliCloud.Ess.ScalingGroupArgs.VswitchId*"></a>
   <h4 id="Pulumi_AliCloud_Ess_ScalingGroupArgs_VswitchId" data-uid="Pulumi.AliCloud.Ess.ScalingGroupArgs.VswitchId">VswitchId</h4>
@@ -479,7 +477,7 @@ targeting your <code>alicloud.slb.Listener</code> in order to make sure the list
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; VswitchId { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? VswitchId { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -491,13 +489,13 @@ targeting your <code>alicloud.slb.Listener</code> in order to make sure the list
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Ess/ScalingGroup.cs/#L268">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Ess/ScalingGroup.cs/#L280">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Ess_ScalingGroupArgs_VswitchIds_" data-uid="Pulumi.AliCloud.Ess.ScalingGroupArgs.VswitchIds*"></a>
   <h4 id="Pulumi_AliCloud_Ess_ScalingGroupArgs_VswitchIds" data-uid="Pulumi.AliCloud.Ess.ScalingGroupArgs.VswitchIds">VswitchIds</h4>
@@ -518,7 +516,7 @@ targeting your <code>alicloud.slb.Listener</code> in order to make sure the list
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -530,7 +528,7 @@ targeting your <code>alicloud.slb.Listener</code> in order to make sure the list
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Ess/ScalingGroup.cs/#L153" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Ess/ScalingGroup.cs/#L159" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

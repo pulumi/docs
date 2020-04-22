@@ -76,36 +76,7 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
-    <div class="level3"><span class="xref">DataTransferConfigArgs</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">DataTransferConfigArgs</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.BigQuery.html">Pulumi.Gcp.BigQuery</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
@@ -116,7 +87,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Bigquery/DataTransferConfig.cs/#L200">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/BigQuery/DataTransferConfig.cs/#L209">View Source</a>
   </span>
   <a id="Pulumi_Gcp_BigQuery_DataTransferConfigArgs__ctor_" data-uid="Pulumi.Gcp.BigQuery.DataTransferConfigArgs.#ctor*"></a>
   <h4 id="Pulumi_Gcp_BigQuery_DataTransferConfigArgs__ctor" data-uid="Pulumi.Gcp.BigQuery.DataTransferConfigArgs.#ctor">DataTransferConfigArgs()</h4>
@@ -129,18 +100,18 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Bigquery/DataTransferConfig.cs/#L136">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/BigQuery/DataTransferConfig.cs/#L146">View Source</a>
   </span>
   <a id="Pulumi_Gcp_BigQuery_DataTransferConfigArgs_DataRefreshWindowDays_" data-uid="Pulumi.Gcp.BigQuery.DataTransferConfigArgs.DataRefreshWindowDays*"></a>
   <h4 id="Pulumi_Gcp_BigQuery_DataTransferConfigArgs_DataRefreshWindowDays" data-uid="Pulumi.Gcp.BigQuery.DataTransferConfigArgs.DataRefreshWindowDays">DataRefreshWindowDays</h4>
-  <div class="markdown level1 summary"><p>The number of days to look back to automatically refresh the data. For example, if dataRefreshWindowDays =
-10, then every day BigQuery reingests data for [today-10, today-1], rather than ingesting data for just
-[today-1]. Only valid if the data source supports the feature. Set the value to 0 to use the default value.</p>
+  <div class="markdown level1 summary"><p>The number of days to look back to automatically refresh the data. For example, if dataRefreshWindowDays = 10, then
+every day BigQuery reingests data for [today-10, today-1], rather than ingesting data for just [today-1]. Only valid if
+the data source supports the feature. Set the value to 0 to use the default value.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; DataRefreshWindowDays { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? DataRefreshWindowDays { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -152,13 +123,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Bigquery/DataTransferConfig.cs/#L142">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/BigQuery/DataTransferConfig.cs/#L152">View Source</a>
   </span>
   <a id="Pulumi_Gcp_BigQuery_DataTransferConfigArgs_DataSourceId_" data-uid="Pulumi.Gcp.BigQuery.DataTransferConfigArgs.DataSourceId*"></a>
   <h4 id="Pulumi_Gcp_BigQuery_DataTransferConfigArgs_DataSourceId" data-uid="Pulumi.Gcp.BigQuery.DataTransferConfigArgs.DataSourceId">DataSourceId</h4>
@@ -179,13 +150,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Bigquery/DataTransferConfig.cs/#L148">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/BigQuery/DataTransferConfig.cs/#L158">View Source</a>
   </span>
   <a id="Pulumi_Gcp_BigQuery_DataTransferConfigArgs_DestinationDatasetId_" data-uid="Pulumi.Gcp.BigQuery.DataTransferConfigArgs.DestinationDatasetId*"></a>
   <h4 id="Pulumi_Gcp_BigQuery_DataTransferConfigArgs_DestinationDatasetId" data-uid="Pulumi.Gcp.BigQuery.DataTransferConfigArgs.DestinationDatasetId">DestinationDatasetId</h4>
@@ -206,13 +177,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Bigquery/DataTransferConfig.cs/#L154">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/BigQuery/DataTransferConfig.cs/#L164">View Source</a>
   </span>
   <a id="Pulumi_Gcp_BigQuery_DataTransferConfigArgs_Disabled_" data-uid="Pulumi.Gcp.BigQuery.DataTransferConfigArgs.Disabled*"></a>
   <h4 id="Pulumi_Gcp_BigQuery_DataTransferConfigArgs_Disabled" data-uid="Pulumi.Gcp.BigQuery.DataTransferConfigArgs.Disabled">Disabled</h4>
@@ -221,7 +192,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; Disabled { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? Disabled { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -233,13 +204,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Bigquery/DataTransferConfig.cs/#L160">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/BigQuery/DataTransferConfig.cs/#L170">View Source</a>
   </span>
   <a id="Pulumi_Gcp_BigQuery_DataTransferConfigArgs_DisplayName_" data-uid="Pulumi.Gcp.BigQuery.DataTransferConfigArgs.DisplayName*"></a>
   <h4 id="Pulumi_Gcp_BigQuery_DataTransferConfigArgs_DisplayName" data-uid="Pulumi.Gcp.BigQuery.DataTransferConfigArgs.DisplayName">DisplayName</h4>
@@ -260,23 +231,23 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Bigquery/DataTransferConfig.cs/#L167">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/BigQuery/DataTransferConfig.cs/#L177">View Source</a>
   </span>
   <a id="Pulumi_Gcp_BigQuery_DataTransferConfigArgs_Location_" data-uid="Pulumi.Gcp.BigQuery.DataTransferConfigArgs.Location*"></a>
   <h4 id="Pulumi_Gcp_BigQuery_DataTransferConfigArgs_Location" data-uid="Pulumi.Gcp.BigQuery.DataTransferConfigArgs.Location">Location</h4>
-  <div class="markdown level1 summary"><p>The geographic location where the transfer config should reside. Examples: US, EU, asia-northeast1. The
-default value is US.</p>
+  <div class="markdown level1 summary"><p>The geographic location where the transfer config should reside. Examples: US, EU, asia-northeast1. The default value is
+US.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Location { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Location { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -288,13 +259,13 @@ default value is US.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Bigquery/DataTransferConfig.cs/#L176">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/BigQuery/DataTransferConfig.cs/#L186">View Source</a>
   </span>
   <a id="Pulumi_Gcp_BigQuery_DataTransferConfigArgs_Params_" data-uid="Pulumi.Gcp.BigQuery.DataTransferConfigArgs.Params*"></a>
   <h4 id="Pulumi_Gcp_BigQuery_DataTransferConfigArgs_Params" data-uid="Pulumi.Gcp.BigQuery.DataTransferConfigArgs.Params">Params</h4>
@@ -315,13 +286,13 @@ default value is US.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputMap-1.html">InputMap</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">InputMap</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Bigquery/DataTransferConfig.cs/#L186">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/BigQuery/DataTransferConfig.cs/#L196">View Source</a>
   </span>
   <a id="Pulumi_Gcp_BigQuery_DataTransferConfigArgs_Project_" data-uid="Pulumi.Gcp.BigQuery.DataTransferConfigArgs.Project*"></a>
   <h4 id="Pulumi_Gcp_BigQuery_DataTransferConfigArgs_Project" data-uid="Pulumi.Gcp.BigQuery.DataTransferConfigArgs.Project">Project</h4>
@@ -331,7 +302,7 @@ If it is not provided, the provider project is used.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Project { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Project { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -343,27 +314,26 @@ If it is not provided, the provider project is used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Bigquery/DataTransferConfig.cs/#L197">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/BigQuery/DataTransferConfig.cs/#L206">View Source</a>
   </span>
   <a id="Pulumi_Gcp_BigQuery_DataTransferConfigArgs_Schedule_" data-uid="Pulumi.Gcp.BigQuery.DataTransferConfigArgs.Schedule*"></a>
   <h4 id="Pulumi_Gcp_BigQuery_DataTransferConfigArgs_Schedule" data-uid="Pulumi.Gcp.BigQuery.DataTransferConfigArgs.Schedule">Schedule</h4>
-  <div class="markdown level1 summary"><p>Data transfer schedule. If the data source does not support a custom schedule, this should be empty. If it
-is empty, the default value for the data source will be used. The specified times are in UTC. Examples of
-valid format: 1st,3rd monday of month 15:30, every wed,fri of jan, jun 13:15, and first sunday of quarter
-00:00. See more explanation about the format here:
-<a href="https://cloud.google.com/appengine/docs/flexible/python/scheduling-jobs-with-cron-yaml#the_schedule_format">https://cloud.google.com/appengine/docs/flexible/python/scheduling-jobs-with-cron-yaml#the_schedule_format</a>
+  <div class="markdown level1 summary"><p>Data transfer schedule. If the data source does not support a custom schedule, this should be empty. If it is empty, the
+default value for the data source will be used. The specified times are in UTC. Examples of valid format: 1st,3rd monday
+of month 15:30, every wed,fri of jan, jun 13:15, and first sunday of quarter 00:00. See more explanation about the
+format here: <a href="https://cloud.google.com/appengine/docs/flexible/python/scheduling-jobs-with-cron-yaml#the_schedule_format">https://cloud.google.com/appengine/docs/flexible/python/scheduling-jobs-with-cron-yaml#the_schedule_format</a>
 NOTE: the granularity should be at least 8 hours, or less frequent.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Schedule { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Schedule { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -375,7 +345,7 @@ NOTE: the granularity should be at least 8 hours, or less frequent.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -387,7 +357,7 @@ NOTE: the granularity should be at least 8 hours, or less frequent.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Bigquery/DataTransferConfig.cs/#L129" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/BigQuery/DataTransferConfig.cs/#L139" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

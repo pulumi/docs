@@ -76,36 +76,7 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
-    <div class="level3"><span class="xref">ServiceSecurityArgs</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">ServiceSecurityArgs</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Azure.ApiManagement.Inputs.html">Pulumi.Azure.ApiManagement.Inputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Azure.dll</h6>
@@ -116,7 +87,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Apimanagement/Service.cs/#L991">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/ApiManagement/Inputs/ServiceSecurityArgs.cs/#L57">View Source</a>
   </span>
   <a id="Pulumi_Azure_ApiManagement_Inputs_ServiceSecurityArgs__ctor_" data-uid="Pulumi.Azure.ApiManagement.Inputs.ServiceSecurityArgs.#ctor*"></a>
   <h4 id="Pulumi_Azure_ApiManagement_Inputs_ServiceSecurityArgs__ctor" data-uid="Pulumi.Azure.ApiManagement.Inputs.ServiceSecurityArgs.#ctor">ServiceSecurityArgs()</h4>
@@ -129,15 +100,16 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Apimanagement/Service.cs/#L970">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/ApiManagement/Inputs/ServiceSecurityArgs.cs/#L18">View Source</a>
   </span>
   <a id="Pulumi_Azure_ApiManagement_Inputs_ServiceSecurityArgs_EnableBackendSsl30_" data-uid="Pulumi.Azure.ApiManagement.Inputs.ServiceSecurityArgs.EnableBackendSsl30*"></a>
   <h4 id="Pulumi_Azure_ApiManagement_Inputs_ServiceSecurityArgs_EnableBackendSsl30" data-uid="Pulumi.Azure.ApiManagement.Inputs.ServiceSecurityArgs.EnableBackendSsl30">EnableBackendSsl30</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Should SSL 3.0 be enabled on the backend of the gateway? Defaults to <code>false</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; EnableBackendSsl30 { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? EnableBackendSsl30 { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -149,21 +121,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Apimanagement/Service.cs/#L973">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/ApiManagement/Inputs/ServiceSecurityArgs.cs/#L24">View Source</a>
   </span>
   <a id="Pulumi_Azure_ApiManagement_Inputs_ServiceSecurityArgs_EnableBackendTls10_" data-uid="Pulumi.Azure.ApiManagement.Inputs.ServiceSecurityArgs.EnableBackendTls10*"></a>
   <h4 id="Pulumi_Azure_ApiManagement_Inputs_ServiceSecurityArgs_EnableBackendTls10" data-uid="Pulumi.Azure.ApiManagement.Inputs.ServiceSecurityArgs.EnableBackendTls10">EnableBackendTls10</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Should TLS 1.0 be enabled on the backend of the gateway? Defaults to <code>false</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; EnableBackendTls10 { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? EnableBackendTls10 { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -175,21 +148,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Apimanagement/Service.cs/#L976">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/ApiManagement/Inputs/ServiceSecurityArgs.cs/#L30">View Source</a>
   </span>
   <a id="Pulumi_Azure_ApiManagement_Inputs_ServiceSecurityArgs_EnableBackendTls11_" data-uid="Pulumi.Azure.ApiManagement.Inputs.ServiceSecurityArgs.EnableBackendTls11*"></a>
   <h4 id="Pulumi_Azure_ApiManagement_Inputs_ServiceSecurityArgs_EnableBackendTls11" data-uid="Pulumi.Azure.ApiManagement.Inputs.ServiceSecurityArgs.EnableBackendTls11">EnableBackendTls11</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Should TLS 1.1 be enabled on the backend of the gateway? Defaults to <code>false</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; EnableBackendTls11 { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? EnableBackendTls11 { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -201,21 +175,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Apimanagement/Service.cs/#L979">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/ApiManagement/Inputs/ServiceSecurityArgs.cs/#L36">View Source</a>
   </span>
   <a id="Pulumi_Azure_ApiManagement_Inputs_ServiceSecurityArgs_EnableFrontendSsl30_" data-uid="Pulumi.Azure.ApiManagement.Inputs.ServiceSecurityArgs.EnableFrontendSsl30*"></a>
   <h4 id="Pulumi_Azure_ApiManagement_Inputs_ServiceSecurityArgs_EnableFrontendSsl30" data-uid="Pulumi.Azure.ApiManagement.Inputs.ServiceSecurityArgs.EnableFrontendSsl30">EnableFrontendSsl30</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Should SSL 3.0 be enabled on the frontend of the gateway? Defaults to <code>false</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; EnableFrontendSsl30 { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? EnableFrontendSsl30 { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -227,21 +202,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Apimanagement/Service.cs/#L982">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/ApiManagement/Inputs/ServiceSecurityArgs.cs/#L42">View Source</a>
   </span>
   <a id="Pulumi_Azure_ApiManagement_Inputs_ServiceSecurityArgs_EnableFrontendTls10_" data-uid="Pulumi.Azure.ApiManagement.Inputs.ServiceSecurityArgs.EnableFrontendTls10*"></a>
   <h4 id="Pulumi_Azure_ApiManagement_Inputs_ServiceSecurityArgs_EnableFrontendTls10" data-uid="Pulumi.Azure.ApiManagement.Inputs.ServiceSecurityArgs.EnableFrontendTls10">EnableFrontendTls10</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Should TLS 1.0 be enabled on the frontend of the gateway? Defaults to <code>false</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; EnableFrontendTls10 { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? EnableFrontendTls10 { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -253,21 +229,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Apimanagement/Service.cs/#L985">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/ApiManagement/Inputs/ServiceSecurityArgs.cs/#L48">View Source</a>
   </span>
   <a id="Pulumi_Azure_ApiManagement_Inputs_ServiceSecurityArgs_EnableFrontendTls11_" data-uid="Pulumi.Azure.ApiManagement.Inputs.ServiceSecurityArgs.EnableFrontendTls11*"></a>
   <h4 id="Pulumi_Azure_ApiManagement_Inputs_ServiceSecurityArgs_EnableFrontendTls11" data-uid="Pulumi.Azure.ApiManagement.Inputs.ServiceSecurityArgs.EnableFrontendTls11">EnableFrontendTls11</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Should TLS 1.1 be enabled on the frontend of the gateway? Defaults to <code>false</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; EnableFrontendTls11 { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? EnableFrontendTls11 { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -279,21 +256,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Apimanagement/Service.cs/#L988">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/ApiManagement/Inputs/ServiceSecurityArgs.cs/#L54">View Source</a>
   </span>
   <a id="Pulumi_Azure_ApiManagement_Inputs_ServiceSecurityArgs_EnableTripleDesCiphers_" data-uid="Pulumi.Azure.ApiManagement.Inputs.ServiceSecurityArgs.EnableTripleDesCiphers*"></a>
   <h4 id="Pulumi_Azure_ApiManagement_Inputs_ServiceSecurityArgs_EnableTripleDesCiphers" data-uid="Pulumi.Azure.ApiManagement.Inputs.ServiceSecurityArgs.EnableTripleDesCiphers">EnableTripleDesCiphers</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Should the <code>TLS_RSA_WITH_3DES_EDE_CBC_SHA</code> cipher be enabled for alL TLS versions (1.0, 1.1 and 1.2)? Defaults to <code>false</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; EnableTripleDesCiphers { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? EnableTripleDesCiphers { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -305,7 +283,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -317,7 +295,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Apimanagement/Service.cs/#L968" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/ApiManagement/Inputs/ServiceSecurityArgs.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

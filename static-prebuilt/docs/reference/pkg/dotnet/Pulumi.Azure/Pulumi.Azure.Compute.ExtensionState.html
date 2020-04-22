@@ -76,36 +76,7 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
-    <div class="level3"><span class="xref">ExtensionState</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">ExtensionState</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Azure.Compute.html">Pulumi.Azure.Compute</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Azure.dll</h6>
@@ -116,7 +87,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/Extension.cs/#L272">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/Extension.cs/#L270">View Source</a>
   </span>
   <a id="Pulumi_Azure_Compute_ExtensionState__ctor_" data-uid="Pulumi.Azure.Compute.ExtensionState.#ctor*"></a>
   <h4 id="Pulumi_Azure_Compute_ExtensionState__ctor" data-uid="Pulumi.Azure.Compute.ExtensionState.#ctor">ExtensionState()</h4>
@@ -129,7 +100,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/Extension.cs/#L209">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/Extension.cs/#L207">View Source</a>
   </span>
   <a id="Pulumi_Azure_Compute_ExtensionState_AutoUpgradeMinorVersion_" data-uid="Pulumi.Azure.Compute.ExtensionState.AutoUpgradeMinorVersion*"></a>
   <h4 id="Pulumi_Azure_Compute_ExtensionState_AutoUpgradeMinorVersion" data-uid="Pulumi.Azure.Compute.ExtensionState.AutoUpgradeMinorVersion">AutoUpgradeMinorVersion</h4>
@@ -139,7 +110,7 @@ the latest minor version update to the <code>type_handler_version</code> specifi
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; AutoUpgradeMinorVersion { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? AutoUpgradeMinorVersion { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -151,13 +122,13 @@ the latest minor version update to the <code>type_handler_version</code> specifi
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/Extension.cs/#L216">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/Extension.cs/#L214">View Source</a>
   </span>
   <a id="Pulumi_Azure_Compute_ExtensionState_Name_" data-uid="Pulumi.Azure.Compute.ExtensionState.Name*"></a>
   <h4 id="Pulumi_Azure_Compute_ExtensionState_Name" data-uid="Pulumi.Azure.Compute.ExtensionState.Name">Name</h4>
@@ -167,7 +138,7 @@ this forces a new resource to be created.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Name { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Name { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -179,13 +150,13 @@ this forces a new resource to be created.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/Extension.cs/#L223">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/Extension.cs/#L221">View Source</a>
   </span>
   <a id="Pulumi_Azure_Compute_ExtensionState_ProtectedSettings_" data-uid="Pulumi.Azure.Compute.ExtensionState.ProtectedSettings*"></a>
   <h4 id="Pulumi_Azure_Compute_ExtensionState_ProtectedSettings" data-uid="Pulumi.Azure.Compute.ExtensionState.ProtectedSettings">ProtectedSettings</h4>
@@ -195,7 +166,7 @@ extension, like settings, these are specified as a JSON object in a string.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; ProtectedSettings { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? ProtectedSettings { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -207,13 +178,13 @@ extension, like settings, these are specified as a JSON object in a string.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/Extension.cs/#L230">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/Extension.cs/#L228">View Source</a>
   </span>
   <a id="Pulumi_Azure_Compute_ExtensionState_Publisher_" data-uid="Pulumi.Azure.Compute.ExtensionState.Publisher*"></a>
   <h4 id="Pulumi_Azure_Compute_ExtensionState_Publisher" data-uid="Pulumi.Azure.Compute.ExtensionState.Publisher">Publisher</h4>
@@ -223,7 +194,7 @@ can be found by using the Azure CLI.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Publisher { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Publisher { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -235,13 +206,13 @@ can be found by using the Azure CLI.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/Extension.cs/#L237">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/Extension.cs/#L235">View Source</a>
   </span>
   <a id="Pulumi_Azure_Compute_ExtensionState_Settings_" data-uid="Pulumi.Azure.Compute.ExtensionState.Settings*"></a>
   <h4 id="Pulumi_Azure_Compute_ExtensionState_Settings" data-uid="Pulumi.Azure.Compute.ExtensionState.Settings">Settings</h4>
@@ -251,7 +222,7 @@ specified as a JSON object in a string.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Settings { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Settings { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -263,13 +234,13 @@ specified as a JSON object in a string.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/Extension.cs/#L246">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/Extension.cs/#L244">View Source</a>
   </span>
   <a id="Pulumi_Azure_Compute_ExtensionState_Tags_" data-uid="Pulumi.Azure.Compute.ExtensionState.Tags*"></a>
   <h4 id="Pulumi_Azure_Compute_ExtensionState_Tags" data-uid="Pulumi.Azure.Compute.ExtensionState.Tags">Tags</h4>
@@ -290,13 +261,13 @@ specified as a JSON object in a string.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputMap-1.html">InputMap</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">InputMap</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/Extension.cs/#L256">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/Extension.cs/#L254">View Source</a>
   </span>
   <a id="Pulumi_Azure_Compute_ExtensionState_Type_" data-uid="Pulumi.Azure.Compute.ExtensionState.Type*"></a>
   <h4 id="Pulumi_Azure_Compute_ExtensionState_Type" data-uid="Pulumi.Azure.Compute.ExtensionState.Type">Type</h4>
@@ -306,7 +277,7 @@ be found using the Azure CLI.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Type { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Type { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -318,13 +289,13 @@ be found using the Azure CLI.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/Extension.cs/#L263">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/Extension.cs/#L261">View Source</a>
   </span>
   <a id="Pulumi_Azure_Compute_ExtensionState_TypeHandlerVersion_" data-uid="Pulumi.Azure.Compute.ExtensionState.TypeHandlerVersion*"></a>
   <h4 id="Pulumi_Azure_Compute_ExtensionState_TypeHandlerVersion" data-uid="Pulumi.Azure.Compute.ExtensionState.TypeHandlerVersion">TypeHandlerVersion</h4>
@@ -334,7 +305,7 @@ use, available versions can be found using the Azure CLI.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; TypeHandlerVersion { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? TypeHandlerVersion { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -346,13 +317,13 @@ use, available versions can be found using the Azure CLI.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/Extension.cs/#L269">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/Extension.cs/#L267">View Source</a>
   </span>
   <a id="Pulumi_Azure_Compute_ExtensionState_VirtualMachineId_" data-uid="Pulumi.Azure.Compute.ExtensionState.VirtualMachineId*"></a>
   <h4 id="Pulumi_Azure_Compute_ExtensionState_VirtualMachineId" data-uid="Pulumi.Azure.Compute.ExtensionState.VirtualMachineId">VirtualMachineId</h4>
@@ -361,7 +332,7 @@ use, available versions can be found using the Azure CLI.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; VirtualMachineId { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? VirtualMachineId { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -373,7 +344,7 @@ use, available versions can be found using the Azure CLI.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -385,7 +356,7 @@ use, available versions can be found using the Azure CLI.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/Extension.cs/#L203" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/Extension.cs/#L201" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

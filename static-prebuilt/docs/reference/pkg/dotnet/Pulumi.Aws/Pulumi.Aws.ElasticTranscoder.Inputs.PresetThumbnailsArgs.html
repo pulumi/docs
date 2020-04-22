@@ -76,36 +76,7 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
-    <div class="level3"><span class="xref">PresetThumbnailsArgs</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">PresetThumbnailsArgs</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.ElasticTranscoder.Inputs.html">Pulumi.Aws.ElasticTranscoder.Inputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
@@ -116,7 +87,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Elastictranscoder/Preset.cs/#L459">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ElasticTranscoder/Inputs/PresetThumbnailsArgs.cs/#L63">View Source</a>
   </span>
   <a id="Pulumi_Aws_ElasticTranscoder_Inputs_PresetThumbnailsArgs__ctor_" data-uid="Pulumi.Aws.ElasticTranscoder.Inputs.PresetThumbnailsArgs.#ctor*"></a>
   <h4 id="Pulumi_Aws_ElasticTranscoder_Inputs_PresetThumbnailsArgs__ctor" data-uid="Pulumi.Aws.ElasticTranscoder.Inputs.PresetThumbnailsArgs.#ctor">PresetThumbnailsArgs()</h4>
@@ -129,16 +100,16 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Elastictranscoder/Preset.cs/#L414">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ElasticTranscoder/Inputs/PresetThumbnailsArgs.cs/#L18">View Source</a>
   </span>
   <a id="Pulumi_Aws_ElasticTranscoder_Inputs_PresetThumbnailsArgs_AspectRatio_" data-uid="Pulumi.Aws.ElasticTranscoder.Inputs.PresetThumbnailsArgs.AspectRatio*"></a>
   <h4 id="Pulumi_Aws_ElasticTranscoder_Inputs_PresetThumbnailsArgs_AspectRatio" data-uid="Pulumi.Aws.ElasticTranscoder.Inputs.PresetThumbnailsArgs.AspectRatio">AspectRatio</h4>
-  <div class="markdown level1 summary"><p>The display aspect ratio of the video in the output file. Valid values are: <code>auto</code>, <code>1:1</code>, <code>4:3</code>, <code>3:2</code>, <code>16:9</code>. (Note; to better control resolution and aspect ratio of output videos, we recommend that you use the values <code>max_width</code>, <code>max_height</code>, <code>sizing_policy</code>, <code>padding_policy</code>, and <code>display_aspect_ratio</code> instead of <code>resolution</code> and <code>aspect_ratio</code>.)</p>
+  <div class="markdown level1 summary"><p>The aspect ratio of thumbnails. The following values are valid: auto, 1:1, 4:3, 3:2, 16:9</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; AspectRatio { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? AspectRatio { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -150,13 +121,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Elastictranscoder/Preset.cs/#L420">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ElasticTranscoder/Inputs/PresetThumbnailsArgs.cs/#L24">View Source</a>
   </span>
   <a id="Pulumi_Aws_ElasticTranscoder_Inputs_PresetThumbnailsArgs_Format_" data-uid="Pulumi.Aws.ElasticTranscoder.Inputs.PresetThumbnailsArgs.Format*"></a>
   <h4 id="Pulumi_Aws_ElasticTranscoder_Inputs_PresetThumbnailsArgs_Format" data-uid="Pulumi.Aws.ElasticTranscoder.Inputs.PresetThumbnailsArgs.Format">Format</h4>
@@ -165,7 +136,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Format { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Format { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -177,13 +148,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Elastictranscoder/Preset.cs/#L426">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ElasticTranscoder/Inputs/PresetThumbnailsArgs.cs/#L30">View Source</a>
   </span>
   <a id="Pulumi_Aws_ElasticTranscoder_Inputs_PresetThumbnailsArgs_Interval_" data-uid="Pulumi.Aws.ElasticTranscoder.Inputs.PresetThumbnailsArgs.Interval*"></a>
   <h4 id="Pulumi_Aws_ElasticTranscoder_Inputs_PresetThumbnailsArgs_Interval" data-uid="Pulumi.Aws.ElasticTranscoder.Inputs.PresetThumbnailsArgs.Interval">Interval</h4>
@@ -192,7 +163,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Interval { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Interval { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -204,22 +175,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Elastictranscoder/Preset.cs/#L432">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ElasticTranscoder/Inputs/PresetThumbnailsArgs.cs/#L36">View Source</a>
   </span>
   <a id="Pulumi_Aws_ElasticTranscoder_Inputs_PresetThumbnailsArgs_MaxHeight_" data-uid="Pulumi.Aws.ElasticTranscoder.Inputs.PresetThumbnailsArgs.MaxHeight*"></a>
   <h4 id="Pulumi_Aws_ElasticTranscoder_Inputs_PresetThumbnailsArgs_MaxHeight" data-uid="Pulumi.Aws.ElasticTranscoder.Inputs.PresetThumbnailsArgs.MaxHeight">MaxHeight</h4>
-  <div class="markdown level1 summary"><p>The maximum height of the watermark.</p>
+  <div class="markdown level1 summary"><p>The maximum height of thumbnails, in pixels. If you specify auto, Elastic Transcoder uses 1080 (Full HD) as the default value. If you specify a numeric value, enter an even integer between 32 and 3072, inclusive.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; MaxHeight { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? MaxHeight { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -231,22 +202,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Elastictranscoder/Preset.cs/#L438">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ElasticTranscoder/Inputs/PresetThumbnailsArgs.cs/#L42">View Source</a>
   </span>
   <a id="Pulumi_Aws_ElasticTranscoder_Inputs_PresetThumbnailsArgs_MaxWidth_" data-uid="Pulumi.Aws.ElasticTranscoder.Inputs.PresetThumbnailsArgs.MaxWidth*"></a>
   <h4 id="Pulumi_Aws_ElasticTranscoder_Inputs_PresetThumbnailsArgs_MaxWidth" data-uid="Pulumi.Aws.ElasticTranscoder.Inputs.PresetThumbnailsArgs.MaxWidth">MaxWidth</h4>
-  <div class="markdown level1 summary"><p>The maximum width of the watermark.</p>
+  <div class="markdown level1 summary"><p>The maximum width of thumbnails, in pixels. If you specify auto, Elastic Transcoder uses 1920 (Full HD) as the default value. If you specify a numeric value, enter an even integer between 32 and 4096, inclusive.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; MaxWidth { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? MaxWidth { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -258,22 +229,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Elastictranscoder/Preset.cs/#L444">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ElasticTranscoder/Inputs/PresetThumbnailsArgs.cs/#L48">View Source</a>
   </span>
   <a id="Pulumi_Aws_ElasticTranscoder_Inputs_PresetThumbnailsArgs_PaddingPolicy_" data-uid="Pulumi.Aws.ElasticTranscoder.Inputs.PresetThumbnailsArgs.PaddingPolicy*"></a>
   <h4 id="Pulumi_Aws_ElasticTranscoder_Inputs_PresetThumbnailsArgs_PaddingPolicy" data-uid="Pulumi.Aws.ElasticTranscoder.Inputs.PresetThumbnailsArgs.PaddingPolicy">PaddingPolicy</h4>
-  <div class="markdown level1 summary"><p>When you set PaddingPolicy to Pad, Elastic Transcoder might add black bars to the top and bottom and/or left and right sides of the output video to make the total size of the output video match the values that you specified for <code>max_width</code> and <code>max_height</code>.</p>
+  <div class="markdown level1 summary"><p>When you set PaddingPolicy to Pad, Elastic Transcoder might add black bars to the top and bottom and/or left and right sides of thumbnails to make the total size of the thumbnails match the values that you specified for thumbnail MaxWidth and MaxHeight settings.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; PaddingPolicy { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? PaddingPolicy { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -285,22 +256,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Elastictranscoder/Preset.cs/#L450">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ElasticTranscoder/Inputs/PresetThumbnailsArgs.cs/#L54">View Source</a>
   </span>
   <a id="Pulumi_Aws_ElasticTranscoder_Inputs_PresetThumbnailsArgs_Resolution_" data-uid="Pulumi.Aws.ElasticTranscoder.Inputs.PresetThumbnailsArgs.Resolution*"></a>
   <h4 id="Pulumi_Aws_ElasticTranscoder_Inputs_PresetThumbnailsArgs_Resolution" data-uid="Pulumi.Aws.ElasticTranscoder.Inputs.PresetThumbnailsArgs.Resolution">Resolution</h4>
-  <div class="markdown level1 summary"><p>The width and height of the video in the output file, in pixels. Valid values are <code>auto</code> and <code>widthxheight</code>. (see note for <code>aspect_ratio</code>)</p>
+  <div class="markdown level1 summary"><p>The width and height of thumbnail files in pixels, in the format WidthxHeight, where both values are even integers. The values cannot exceed the width and height that you specified in the Video:Resolution object. (To better control resolution and aspect ratio of thumbnails, we recommend that you use the thumbnail values <code>max_width</code>, <code>max_height</code>, <code>sizing_policy</code>, and <code>padding_policy</code> instead of <code>resolution</code> and <code>aspect_ratio</code>. The two groups of settings are mutually exclusive. Do not use them together)</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Resolution { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Resolution { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -312,22 +283,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Elastictranscoder/Preset.cs/#L456">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ElasticTranscoder/Inputs/PresetThumbnailsArgs.cs/#L60">View Source</a>
   </span>
   <a id="Pulumi_Aws_ElasticTranscoder_Inputs_PresetThumbnailsArgs_SizingPolicy_" data-uid="Pulumi.Aws.ElasticTranscoder.Inputs.PresetThumbnailsArgs.SizingPolicy*"></a>
   <h4 id="Pulumi_Aws_ElasticTranscoder_Inputs_PresetThumbnailsArgs_SizingPolicy" data-uid="Pulumi.Aws.ElasticTranscoder.Inputs.PresetThumbnailsArgs.SizingPolicy">SizingPolicy</h4>
-  <div class="markdown level1 summary"><p>A value that controls scaling of the watermark. Valid values are: <code>Fit</code>, <code>Stretch</code>, <code>ShrinkToFit</code></p>
+  <div class="markdown level1 summary"><p>A value that controls scaling of thumbnails. Valid values are: <code>Fit</code>, <code>Fill</code>, <code>Stretch</code>, <code>Keep</code>, <code>ShrinkToFit</code>, and <code>ShrinkToFill</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; SizingPolicy { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? SizingPolicy { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -339,7 +310,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -351,7 +322,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Elastictranscoder/Preset.cs/#L409" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ElasticTranscoder/Inputs/PresetThumbnailsArgs.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

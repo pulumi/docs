@@ -92,9 +92,6 @@ to the first and last name attributes of a Keycloak user.</p>
 <li><code>read_only</code> - (Optional) When <code>true</code>, updates to a user within Keycloak will not be written back to LDAP. Defaults to <code>false</code>.</li>
 <li><code>write_only</code> - (Optional) When <code>true</code>, this mapper will only be used to write updates to LDAP. Defaults to <code>false</code>.</li>
 </ul>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/ldap_full_name_mapper.html.markdown">https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/ldap_full_name_mapper.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Keycloak.Ldap.FullNameMapperArgs.html">FullNameMapperArgs</a></h4>
       <section></section>
@@ -128,13 +125,16 @@ if they do not already exist.</p>
 <li><code>mapped_group_attributes</code> - (Optional) Array of strings representing attributes on the LDAP group which will be mapped to attributes on the Keycloak group.</li>
 <li><code>drop_non_existing_groups_during_sync</code> - (Optional) When <code>true</code>, groups that no longer exist within LDAP will be dropped in Keycloak during sync. Defaults to <code>false</code>.</li>
 </ul>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/ldap_group_mapper.html.markdown">https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/ldap_group_mapper.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Keycloak.Ldap.GroupMapperArgs.html">GroupMapperArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Keycloak.Ldap.GroupMapperState.html">GroupMapperState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Keycloak.Ldap.HardcodedGroupMapper.html">HardcodedGroupMapper</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Keycloak.Ldap.HardcodedGroupMapperArgs.html">HardcodedGroupMapperArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Keycloak.Ldap.HardcodedGroupMapperState.html">HardcodedGroupMapperState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Keycloak.Ldap.HardcodedRoleMapper.html">HardcodedRoleMapper</a></h4>
       <section><h2 id="-keycloakldaphardcodedrolemapper"># keycloak.ldap.HardcodedRoleMapper</h2>
@@ -147,9 +147,6 @@ if they do not already exist.</p>
 <li><code>name</code> - (Required) Display name of this mapper when displayed in the console.</li>
 <li><code>role</code> - (Required) The role which should be assigned to the users.</li>
 </ul>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/ldap_hardcoded_role_mapper.html.markdown">https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/ldap_hardcoded_role_mapper.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Keycloak.Ldap.HardcodedRoleMapperArgs.html">HardcodedRoleMapperArgs</a></h4>
       <section></section>
@@ -177,13 +174,16 @@ or disabled accounts.</p>
 <li><code>name</code> - (Required) Display name of this mapper when displayed in the console.</li>
 <li><code>ldap_password_policy_hints_enabled</code> - (Optional) When <code>true</code>, advanced password policies, such as password hints and previous password history will be used when writing new passwords to AD. Defaults to <code>false</code>.</li>
 </ul>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/ldap_msad_user_account_control_mapper.html.markdown">https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/ldap_msad_user_account_control_mapper.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Keycloak.Ldap.MsadUserAccountControlMapperArgs.html">MsadUserAccountControlMapperArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Keycloak.Ldap.MsadUserAccountControlMapperState.html">MsadUserAccountControlMapperState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Keycloak.Ldap.RoleMapper.html">RoleMapper</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Keycloak.Ldap.RoleMapperArgs.html">RoleMapperArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Keycloak.Ldap.RoleMapperState.html">RoleMapperState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Keycloak.Ldap.UserAttributeMapper.html">UserAttributeMapper</a></h4>
       <section><h2 id="-keycloakldapuserattributemapper"># keycloak.ldap.UserAttributeMapper</h2>
@@ -203,9 +203,6 @@ to an attribute on the Keycloak user model.</p>
 <li><code>always_read_value_from_ldap</code> - (Optional) When <code>true</code>, the value fetched from LDAP will override the value stored in Keycloak. Defaults to <code>false</code>.</li>
 <li><code>is_mandatory_in_ldap</code> - (Optional) When <code>true</code>, this attribute must exist in LDAP. Defaults to <code>false</code>.</li>
 </ul>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/ldap_user_attribute_mapper.html.markdown">https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/ldap_user_attribute_mapper.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Keycloak.Ldap.UserAttributeMapperArgs.html">UserAttributeMapperArgs</a></h4>
       <section></section>
@@ -254,9 +251,6 @@ users can have their attributes defined using mappers.</p>
 <li><code>changed_sync_period</code> - (Optional) How frequently Keycloak should sync changed LDAP users, in seconds. Omit this property to disable periodic changed users sync.</li>
 <li><code>cache_policy</code> - (Optional) Can be one of <code>DEFAULT</code>, <code>EVICT_DAILY</code>, <code>EVICT_WEEKLY</code>, <code>MAX_LIFESPAN</code>, or <code>NO_CACHE</code>. Defaults to <code>DEFAULT</code>.</li>
 </ul>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/ldap_user_federation.html.markdown">https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/ldap_user_federation.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Keycloak.Ldap.UserFederationArgs.html">UserFederationArgs</a></h4>
       <section></section>

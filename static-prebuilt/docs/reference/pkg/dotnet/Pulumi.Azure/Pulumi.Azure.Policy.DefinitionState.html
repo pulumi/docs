@@ -76,36 +76,7 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
-    <div class="level3"><span class="xref">DefinitionState</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">DefinitionState</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Azure.Policy.html">Pulumi.Azure.Policy</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Azure.dll</h6>
@@ -116,7 +87,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Policy/Definition.cs/#L266">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Policy/Definition.cs/#L270">View Source</a>
   </span>
   <a id="Pulumi_Azure_Policy_DefinitionState__ctor_" data-uid="Pulumi.Azure.Policy.DefinitionState.#ctor*"></a>
   <h4 id="Pulumi_Azure_Policy_DefinitionState__ctor" data-uid="Pulumi.Azure.Policy.DefinitionState.#ctor">DefinitionState()</h4>
@@ -129,7 +100,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Policy/Definition.cs/#L205">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Policy/Definition.cs/#L207">View Source</a>
   </span>
   <a id="Pulumi_Azure_Policy_DefinitionState_Description_" data-uid="Pulumi.Azure.Policy.DefinitionState.Description*"></a>
   <h4 id="Pulumi_Azure_Policy_DefinitionState_Description" data-uid="Pulumi.Azure.Policy.DefinitionState.Description">Description</h4>
@@ -138,7 +109,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Description { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Description { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -150,13 +121,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Policy/Definition.cs/#L211">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Policy/Definition.cs/#L213">View Source</a>
   </span>
   <a id="Pulumi_Azure_Policy_DefinitionState_DisplayName_" data-uid="Pulumi.Azure.Policy.DefinitionState.DisplayName*"></a>
   <h4 id="Pulumi_Azure_Policy_DefinitionState_DisplayName" data-uid="Pulumi.Azure.Policy.DefinitionState.DisplayName">DisplayName</h4>
@@ -165,7 +136,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; DisplayName { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? DisplayName { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -177,22 +148,48 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Policy/Definition.cs/#L217">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Policy/Definition.cs/#L216">View Source</a>
   </span>
   <a id="Pulumi_Azure_Policy_DefinitionState_ManagementGroupId_" data-uid="Pulumi.Azure.Policy.DefinitionState.ManagementGroupId*"></a>
   <h4 id="Pulumi_Azure_Policy_DefinitionState_ManagementGroupId" data-uid="Pulumi.Azure.Policy.DefinitionState.ManagementGroupId">ManagementGroupId</h4>
-  <div class="markdown level1 summary"><p>The ID of the Management Group where this policy should be defined. Changing this forces a new resource to be created.</p>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? ManagementGroupId { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Policy/Definition.cs/#L222">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_Policy_DefinitionState_ManagementGroupName_" data-uid="Pulumi.Azure.Policy.DefinitionState.ManagementGroupName*"></a>
+  <h4 id="Pulumi_Azure_Policy_DefinitionState_ManagementGroupName" data-uid="Pulumi.Azure.Policy.DefinitionState.ManagementGroupName">ManagementGroupName</h4>
+  <div class="markdown level1 summary"><p>The name of the Management Group where this policy should be defined. Changing this forces a new resource to be created.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; ManagementGroupId { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? ManagementGroupName { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -204,13 +201,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Policy/Definition.cs/#L225">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Policy/Definition.cs/#L230">View Source</a>
   </span>
   <a id="Pulumi_Azure_Policy_DefinitionState_Metadata_" data-uid="Pulumi.Azure.Policy.DefinitionState.Metadata*"></a>
   <h4 id="Pulumi_Azure_Policy_DefinitionState_Metadata" data-uid="Pulumi.Azure.Policy.DefinitionState.Metadata">Metadata</h4>
@@ -221,7 +218,7 @@ with the policy definition.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Metadata { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Metadata { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -233,13 +230,13 @@ with the policy definition.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Policy/Definition.cs/#L234">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Policy/Definition.cs/#L239">View Source</a>
   </span>
   <a id="Pulumi_Azure_Policy_DefinitionState_Mode_" data-uid="Pulumi.Azure.Policy.DefinitionState.Mode*"></a>
   <h4 id="Pulumi_Azure_Policy_DefinitionState_Mode" data-uid="Pulumi.Azure.Policy.DefinitionState.Mode">Mode</h4>
@@ -251,7 +248,7 @@ created.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Mode { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Mode { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -263,13 +260,13 @@ created.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Policy/Definition.cs/#L241">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Policy/Definition.cs/#L246">View Source</a>
   </span>
   <a id="Pulumi_Azure_Policy_DefinitionState_Name_" data-uid="Pulumi.Azure.Policy.DefinitionState.Name*"></a>
   <h4 id="Pulumi_Azure_Policy_DefinitionState_Name" data-uid="Pulumi.Azure.Policy.DefinitionState.Name">Name</h4>
@@ -279,7 +276,7 @@ new resource to be created.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Name { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Name { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -291,13 +288,13 @@ new resource to be created.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Policy/Definition.cs/#L248">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Policy/Definition.cs/#L253">View Source</a>
   </span>
   <a id="Pulumi_Azure_Policy_DefinitionState_Parameters_" data-uid="Pulumi.Azure.Policy.DefinitionState.Parameters*"></a>
   <h4 id="Pulumi_Azure_Policy_DefinitionState_Parameters" data-uid="Pulumi.Azure.Policy.DefinitionState.Parameters">Parameters</h4>
@@ -307,7 +304,7 @@ is a json object that allows you to parameterize your policy definition.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Parameters { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Parameters { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -319,13 +316,13 @@ is a json object that allows you to parameterize your policy definition.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Policy/Definition.cs/#L256">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Policy/Definition.cs/#L261">View Source</a>
   </span>
   <a id="Pulumi_Azure_Policy_DefinitionState_PolicyRule_" data-uid="Pulumi.Azure.Policy.DefinitionState.PolicyRule*"></a>
   <h4 id="Pulumi_Azure_Policy_DefinitionState_PolicyRule" data-uid="Pulumi.Azure.Policy.DefinitionState.PolicyRule">PolicyRule</h4>
@@ -336,7 +333,7 @@ a then block.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; PolicyRule { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? PolicyRule { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -348,23 +345,22 @@ a then block.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Policy/Definition.cs/#L263">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Policy/Definition.cs/#L267">View Source</a>
   </span>
   <a id="Pulumi_Azure_Policy_DefinitionState_PolicyType_" data-uid="Pulumi.Azure.Policy.DefinitionState.PolicyType*"></a>
   <h4 id="Pulumi_Azure_Policy_DefinitionState_PolicyType" data-uid="Pulumi.Azure.Policy.DefinitionState.PolicyType">PolicyType</h4>
-  <div class="markdown level1 summary"><p>The policy type.  The value can be &quot;BuiltIn&quot;, &quot;Custom&quot;
-or &quot;NotSpecified&quot;. Changing this forces a new resource to be created.</p>
+  <div class="markdown level1 summary"><p>The policy type. Possible values are <code>BuiltIn</code>, <code>Custom</code> and <code>NotSpecified</code>. Changing this forces a new resource to be created.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; PolicyType { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? PolicyType { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -376,7 +372,7 @@ or &quot;NotSpecified&quot;. Changing this forces a new resource to be created.<
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -388,7 +384,7 @@ or &quot;NotSpecified&quot;. Changing this forces a new resource to be created.<
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Policy/Definition.cs/#L200" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Policy/Definition.cs/#L202" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

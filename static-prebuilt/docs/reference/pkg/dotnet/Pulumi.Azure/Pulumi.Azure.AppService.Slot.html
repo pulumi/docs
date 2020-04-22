@@ -75,53 +75,12 @@
 <blockquote>
 <p><strong>Note:</strong> When using Slots - the <code>app_settings</code>, <code>connection_string</code> and <code>site_config</code> blocks on the <code>azure.appservice.AppService</code> resource will be overwritten when promoting a Slot using the <code>azure.appservice.ActiveSlot</code> resource.</p>
 </blockquote>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/app_service_slot.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/app_service_slot.html.markdown</a>.</p>
-</blockquote>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
-    <div class="level3"><span class="xref">Slot</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">Slot</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Azure.AppService.html">Pulumi.Azure.AppService</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Azure.dll</h6>
@@ -132,16 +91,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Appservice/Slot.cs/#L128">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/Slot.cs/#L126">View Source</a>
   </span>
   <a id="Pulumi_Azure_AppService_Slot__ctor_" data-uid="Pulumi.Azure.AppService.Slot.#ctor*"></a>
-  <h4 id="Pulumi_Azure_AppService_Slot__ctor_System_String_Pulumi_Azure_AppService_SlotArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Azure.AppService.Slot.#ctor(System.String,Pulumi.Azure.AppService.SlotArgs,Pulumi.CustomResourceOptions)">Slot(String, SlotArgs, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Azure_AppService_Slot__ctor_System_String_Pulumi_Azure_AppService_SlotArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Azure.AppService.Slot.#ctor(System.String,Pulumi.Azure.AppService.SlotArgs,System.Nullable{CustomResourceOptions})">Slot(String, SlotArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Create a Slot resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Slot(string name, SlotArgs args, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Slot(string name, SlotArgs args, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -166,7 +125,7 @@
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -176,7 +135,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Appservice/Slot.cs/#L24">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/Slot.cs/#L22">View Source</a>
   </span>
   <a id="Pulumi_Azure_AppService_Slot_AppServiceName_" data-uid="Pulumi.Azure.AppService.Slot.AppServiceName*"></a>
   <h4 id="Pulumi_Azure_AppService_Slot_AppServiceName" data-uid="Pulumi.Azure.AppService.Slot.AppServiceName">AppServiceName</h4>
@@ -197,13 +156,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Appservice/Slot.cs/#L30">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/Slot.cs/#L28">View Source</a>
   </span>
   <a id="Pulumi_Azure_AppService_Slot_AppServicePlanId_" data-uid="Pulumi.Azure.AppService.Slot.AppServicePlanId*"></a>
   <h4 id="Pulumi_Azure_AppService_Slot_AppServicePlanId" data-uid="Pulumi.Azure.AppService.Slot.AppServicePlanId">AppServicePlanId</h4>
@@ -224,13 +183,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Appservice/Slot.cs/#L36">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/Slot.cs/#L34">View Source</a>
   </span>
   <a id="Pulumi_Azure_AppService_Slot_AppSettings_" data-uid="Pulumi.Azure.AppService.Slot.AppSettings*"></a>
   <h4 id="Pulumi_Azure_AppService_Slot_AppSettings" data-uid="Pulumi.Azure.AppService.Slot.AppSettings">AppSettings</h4>
@@ -251,13 +210,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Appservice/Slot.cs/#L42">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/Slot.cs/#L40">View Source</a>
   </span>
   <a id="Pulumi_Azure_AppService_Slot_AuthSettings_" data-uid="Pulumi.Azure.AppService.Slot.AuthSettings*"></a>
   <h4 id="Pulumi_Azure_AppService_Slot_AuthSettings" data-uid="Pulumi.Azure.AppService.Slot.AuthSettings">AuthSettings</h4>
@@ -278,13 +237,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Azure.AppService.Outputs.SlotAuthSettings.html">SlotAuthSettings</a>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Azure.AppService.Outputs.SlotAuthSettings.html">SlotAuthSettings</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Appservice/Slot.cs/#L48">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/Slot.cs/#L46">View Source</a>
   </span>
   <a id="Pulumi_Azure_AppService_Slot_ClientAffinityEnabled_" data-uid="Pulumi.Azure.AppService.Slot.ClientAffinityEnabled*"></a>
   <h4 id="Pulumi_Azure_AppService_Slot_ClientAffinityEnabled" data-uid="Pulumi.Azure.AppService.Slot.ClientAffinityEnabled">ClientAffinityEnabled</h4>
@@ -305,13 +264,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Appservice/Slot.cs/#L54">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/Slot.cs/#L52">View Source</a>
   </span>
   <a id="Pulumi_Azure_AppService_Slot_ConnectionStrings_" data-uid="Pulumi.Azure.AppService.Slot.ConnectionStrings*"></a>
   <h4 id="Pulumi_Azure_AppService_Slot_ConnectionStrings" data-uid="Pulumi.Azure.AppService.Slot.ConnectionStrings">ConnectionStrings</h4>
@@ -320,7 +279,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;SlotConnectionStrings&gt;&gt; ConnectionStrings { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;SlotConnectionString&gt;&gt; ConnectionStrings { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -332,13 +291,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Azure.AppService.Outputs.SlotConnectionStrings.html">SlotConnectionStrings</a>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Azure.AppService.Outputs.SlotConnectionString.html">SlotConnectionString</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Appservice/Slot.cs/#L60">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/Slot.cs/#L58">View Source</a>
   </span>
   <a id="Pulumi_Azure_AppService_Slot_DefaultSiteHostname_" data-uid="Pulumi.Azure.AppService.Slot.DefaultSiteHostname*"></a>
   <h4 id="Pulumi_Azure_AppService_Slot_DefaultSiteHostname" data-uid="Pulumi.Azure.AppService.Slot.DefaultSiteHostname">DefaultSiteHostname</h4>
@@ -359,13 +318,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Appservice/Slot.cs/#L66">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/Slot.cs/#L64">View Source</a>
   </span>
   <a id="Pulumi_Azure_AppService_Slot_Enabled_" data-uid="Pulumi.Azure.AppService.Slot.Enabled*"></a>
   <h4 id="Pulumi_Azure_AppService_Slot_Enabled" data-uid="Pulumi.Azure.AppService.Slot.Enabled">Enabled</h4>
@@ -386,13 +345,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Appservice/Slot.cs/#L72">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/Slot.cs/#L70">View Source</a>
   </span>
   <a id="Pulumi_Azure_AppService_Slot_HttpsOnly_" data-uid="Pulumi.Azure.AppService.Slot.HttpsOnly*"></a>
   <h4 id="Pulumi_Azure_AppService_Slot_HttpsOnly" data-uid="Pulumi.Azure.AppService.Slot.HttpsOnly">HttpsOnly</h4>
@@ -413,13 +372,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Appservice/Slot.cs/#L78">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/Slot.cs/#L76">View Source</a>
   </span>
   <a id="Pulumi_Azure_AppService_Slot_Identity_" data-uid="Pulumi.Azure.AppService.Slot.Identity*"></a>
   <h4 id="Pulumi_Azure_AppService_Slot_Identity" data-uid="Pulumi.Azure.AppService.Slot.Identity">Identity</h4>
@@ -440,13 +399,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Azure.AppService.Outputs.SlotIdentity.html">SlotIdentity</a>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Azure.AppService.Outputs.SlotIdentity.html">SlotIdentity</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Appservice/Slot.cs/#L84">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/Slot.cs/#L82">View Source</a>
   </span>
   <a id="Pulumi_Azure_AppService_Slot_Location_" data-uid="Pulumi.Azure.AppService.Slot.Location*"></a>
   <h4 id="Pulumi_Azure_AppService_Slot_Location" data-uid="Pulumi.Azure.AppService.Slot.Location">Location</h4>
@@ -467,13 +426,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Appservice/Slot.cs/#L87">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/Slot.cs/#L85">View Source</a>
   </span>
   <a id="Pulumi_Azure_AppService_Slot_Logs_" data-uid="Pulumi.Azure.AppService.Slot.Logs*"></a>
   <h4 id="Pulumi_Azure_AppService_Slot_Logs" data-uid="Pulumi.Azure.AppService.Slot.Logs">Logs</h4>
@@ -493,17 +452,17 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Azure.AppService.Outputs.SlotLogs.html">SlotLogs</a>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Azure.AppService.Outputs.SlotLogs.html">SlotLogs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Appservice/Slot.cs/#L93">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/Slot.cs/#L91">View Source</a>
   </span>
   <a id="Pulumi_Azure_AppService_Slot_Name_" data-uid="Pulumi.Azure.AppService.Slot.Name*"></a>
   <h4 id="Pulumi_Azure_AppService_Slot_Name" data-uid="Pulumi.Azure.AppService.Slot.Name">Name</h4>
-  <div class="markdown level1 summary"><p>The name of the Connection String.</p>
+  <div class="markdown level1 summary"><p>Specifies the name of the App Service Slot component. Changing this forces a new resource to be created.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -520,13 +479,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Appservice/Slot.cs/#L99">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/Slot.cs/#L97">View Source</a>
   </span>
   <a id="Pulumi_Azure_AppService_Slot_ResourceGroupName_" data-uid="Pulumi.Azure.AppService.Slot.ResourceGroupName*"></a>
   <h4 id="Pulumi_Azure_AppService_Slot_ResourceGroupName" data-uid="Pulumi.Azure.AppService.Slot.ResourceGroupName">ResourceGroupName</h4>
@@ -547,13 +506,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Appservice/Slot.cs/#L105">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/Slot.cs/#L103">View Source</a>
   </span>
   <a id="Pulumi_Azure_AppService_Slot_SiteConfig_" data-uid="Pulumi.Azure.AppService.Slot.SiteConfig*"></a>
   <h4 id="Pulumi_Azure_AppService_Slot_SiteConfig" data-uid="Pulumi.Azure.AppService.Slot.SiteConfig">SiteConfig</h4>
@@ -574,13 +533,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Azure.AppService.Outputs.SlotSiteConfig.html">SlotSiteConfig</a>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Azure.AppService.Outputs.SlotSiteConfig.html">SlotSiteConfig</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Appservice/Slot.cs/#L111">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/Slot.cs/#L109">View Source</a>
   </span>
   <a id="Pulumi_Azure_AppService_Slot_SiteCredentials_" data-uid="Pulumi.Azure.AppService.Slot.SiteCredentials*"></a>
   <h4 id="Pulumi_Azure_AppService_Slot_SiteCredentials" data-uid="Pulumi.Azure.AppService.Slot.SiteCredentials">SiteCredentials</h4>
@@ -589,7 +548,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;SlotSiteCredentials&gt;&gt; SiteCredentials { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;SlotSiteCredential&gt;&gt; SiteCredentials { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -601,13 +560,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Azure.AppService.Outputs.SlotSiteCredentials.html">SlotSiteCredentials</a>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Azure.AppService.Outputs.SlotSiteCredential.html">SlotSiteCredential</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Appservice/Slot.cs/#L117">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/Slot.cs/#L115">View Source</a>
   </span>
   <a id="Pulumi_Azure_AppService_Slot_Tags_" data-uid="Pulumi.Azure.AppService.Slot.Tags*"></a>
   <h4 id="Pulumi_Azure_AppService_Slot_Tags" data-uid="Pulumi.Azure.AppService.Slot.Tags">Tags</h4>
@@ -616,7 +575,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;&gt; Tags { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;?&gt; Tags { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -628,7 +587,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -636,17 +595,17 @@
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Appservice/Slot.cs/#L158">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/Slot.cs/#L156">View Source</a>
   </span>
   <a id="Pulumi_Azure_AppService_Slot_Get_" data-uid="Pulumi.Azure.AppService.Slot.Get*"></a>
-  <h4 id="Pulumi_Azure_AppService_Slot_Get_System_String_Pulumi_Input_System_String__Pulumi_Azure_AppService_SlotState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Azure.AppService.Slot.Get(System.String,Pulumi.Input{System.String},Pulumi.Azure.AppService.SlotState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, SlotState, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Azure_AppService_Slot_Get_System_String_Input_System_String__Pulumi_Azure_AppService_SlotState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Azure.AppService.Slot.Get(System.String,Input{System.String},Pulumi.Azure.AppService.SlotState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, SlotState, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Get an existing Slot resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Slot Get(string name, Input&lt;string&gt; id, SlotState state = null, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Slot Get(string name, Input&lt;string&gt; id, SlotState state = null, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -665,7 +624,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -677,7 +636,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -706,7 +665,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Appservice/Slot.cs/#L19" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/Slot.cs/#L17" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -78,40 +78,16 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">UserPoolVerificationMessageTemplate</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.Cognito.Outputs.html">Pulumi.Aws.Cognito.Outputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
   <h5 id="Pulumi_Aws_Cognito_Outputs_UserPoolVerificationMessageTemplate_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class UserPoolVerificationMessageTemplate</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class UserPoolVerificationMessageTemplate : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Cognito/UserPool.cs/#L1627">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Cognito/Outputs/UserPoolVerificationMessageTemplate.cs/#L19">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Cognito_Outputs_UserPoolVerificationMessageTemplate_DefaultEmailOption" data-uid="Pulumi.Aws.Cognito.Outputs.UserPoolVerificationMessageTemplate.DefaultEmailOption">DefaultEmailOption</h4>
   <div class="markdown level1 summary"><p>The default email option. Must be either <code>CONFIRM_WITH_CODE</code> or <code>CONFIRM_WITH_LINK</code>. Defaults to <code>CONFIRM_WITH_CODE</code>.</p>
@@ -119,7 +95,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string DefaultEmailOption</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? DefaultEmailOption</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -131,13 +107,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Cognito/UserPool.cs/#L1631">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Cognito/Outputs/UserPoolVerificationMessageTemplate.cs/#L23">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Cognito_Outputs_UserPoolVerificationMessageTemplate_EmailMessage" data-uid="Pulumi.Aws.Cognito.Outputs.UserPoolVerificationMessageTemplate.EmailMessage">EmailMessage</h4>
   <div class="markdown level1 summary"><p>The email message template. Must contain the <code>{####}</code> placeholder. Conflicts with <code>email_verification_message</code> argument.</p>
@@ -145,7 +121,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string EmailMessage</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? EmailMessage</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -157,13 +133,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Cognito/UserPool.cs/#L1635">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Cognito/Outputs/UserPoolVerificationMessageTemplate.cs/#L27">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Cognito_Outputs_UserPoolVerificationMessageTemplate_EmailMessageByLink" data-uid="Pulumi.Aws.Cognito.Outputs.UserPoolVerificationMessageTemplate.EmailMessageByLink">EmailMessageByLink</h4>
   <div class="markdown level1 summary"><p>The email message template for sending a confirmation link to the user, it must contain the <code>{##Click Here##}</code> placeholder.</p>
@@ -171,7 +147,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string EmailMessageByLink</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? EmailMessageByLink</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -183,13 +159,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Cognito/UserPool.cs/#L1639">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Cognito/Outputs/UserPoolVerificationMessageTemplate.cs/#L31">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Cognito_Outputs_UserPoolVerificationMessageTemplate_EmailSubject" data-uid="Pulumi.Aws.Cognito.Outputs.UserPoolVerificationMessageTemplate.EmailSubject">EmailSubject</h4>
   <div class="markdown level1 summary"><p>The subject line for the email message template. Conflicts with <code>email_verification_subject</code> argument.</p>
@@ -197,7 +173,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string EmailSubject</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? EmailSubject</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -209,13 +185,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Cognito/UserPool.cs/#L1643">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Cognito/Outputs/UserPoolVerificationMessageTemplate.cs/#L35">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Cognito_Outputs_UserPoolVerificationMessageTemplate_EmailSubjectByLink" data-uid="Pulumi.Aws.Cognito.Outputs.UserPoolVerificationMessageTemplate.EmailSubjectByLink">EmailSubjectByLink</h4>
   <div class="markdown level1 summary"><p>The subject line for the email message template for sending a confirmation link to the user.</p>
@@ -223,7 +199,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string EmailSubjectByLink</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? EmailSubjectByLink</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -235,13 +211,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Cognito/UserPool.cs/#L1647">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Cognito/Outputs/UserPoolVerificationMessageTemplate.cs/#L39">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Cognito_Outputs_UserPoolVerificationMessageTemplate_SmsMessage" data-uid="Pulumi.Aws.Cognito.Outputs.UserPoolVerificationMessageTemplate.SmsMessage">SmsMessage</h4>
   <div class="markdown level1 summary"><p>The SMS message template. Must contain the <code>{####}</code> placeholder. Conflicts with <code>sms_verification_message</code> argument.</p>
@@ -249,7 +225,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string SmsMessage</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? SmsMessage</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -261,7 +237,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -273,7 +249,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Cognito/UserPool.cs/#L1621" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Cognito/Outputs/UserPoolVerificationMessageTemplate.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

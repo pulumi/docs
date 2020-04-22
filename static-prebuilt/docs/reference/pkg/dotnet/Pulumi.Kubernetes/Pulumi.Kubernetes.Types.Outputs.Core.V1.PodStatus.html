@@ -81,40 +81,16 @@ plane.</p>
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">PodStatus</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Core.V1.html">Pulumi.Kubernetes.Types.Outputs.Core.V1</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Kubernetes.dll</h6>
   <h5 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_PodStatus_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class PodStatus</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class PodStatus : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L19679">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L19853">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_PodStatus_Conditions" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.PodStatus.Conditions">Conditions</h4>
   <div class="markdown level1 summary"><p>Current service state of pod. More info:
@@ -135,13 +111,13 @@ plane.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Core.V1.PodCondition.html">PodCondition</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Core.V1.PodCondition.html">PodCondition</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L19686">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L19860">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_PodStatus_ContainerStatuses" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.PodStatus.ContainerStatuses">ContainerStatuses</h4>
   <div class="markdown level1 summary"><p>The list has one entry per container in the manifest. Each entry is currently the output
@@ -163,13 +139,13 @@ of <code>docker inspect</code>. More info:
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Core.V1.ContainerStatus.html">ContainerStatus</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Core.V1.ContainerStatus.html">ContainerStatus</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L19692">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L19866">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_PodStatus_EphemeralContainerStatuses" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.PodStatus.EphemeralContainerStatuses">EphemeralContainerStatuses</h4>
   <div class="markdown level1 summary"><p>Status for any ephemeral containers that have run in this pod. This field is alpha-level
@@ -190,13 +166,13 @@ and is only populated by servers that enable the EphemeralContainers feature.</p
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Core.V1.ContainerStatus.html">ContainerStatus</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Core.V1.ContainerStatus.html">ContainerStatus</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L19697">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L19871">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_PodStatus_HostIP" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.PodStatus.HostIP">HostIP</h4>
   <div class="markdown level1 summary"><p>IP address of the host to which the pod is assigned. Empty if not yet scheduled.</p>
@@ -222,7 +198,7 @@ and is only populated by servers that enable the EphemeralContainers feature.</p
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L19705">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L19879">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_PodStatus_InitContainerStatuses" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.PodStatus.InitContainerStatuses">InitContainerStatuses</h4>
   <div class="markdown level1 summary"><p>The list has one entry per init container in the manifest. The most recent successful
@@ -245,13 +221,13 @@ startTime set. More info:
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Core.V1.ContainerStatus.html">ContainerStatus</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Core.V1.ContainerStatus.html">ContainerStatus</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L19710">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L19884">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_PodStatus_Message" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.PodStatus.Message">Message</h4>
   <div class="markdown level1 summary"><p>A human readable message indicating details about why the pod is in this condition.</p>
@@ -277,7 +253,7 @@ startTime set. More info:
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L19721">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L19895">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_PodStatus_NominatedNodeName" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.PodStatus.NominatedNodeName">NominatedNodeName</h4>
   <div class="markdown level1 summary"><p>nominatedNodeName is set only when this pod preempts other pods on the node, but it
@@ -309,7 +285,7 @@ PodSpec.nodeName when the pod is scheduled.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L19741">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L19915">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_PodStatus_Phase" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.PodStatus.Phase">Phase</h4>
   <div class="markdown level1 summary"><p>The phase of a Pod is a simple, high-level summary of where the Pod is in its lifecycle.
@@ -348,7 +324,7 @@ obtained, typically due to an error in communicating with the host of the pod.</
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L19747">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L19921">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_PodStatus_PodIP" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.PodStatus.PodIP">PodIP</h4>
   <div class="markdown level1 summary"><p>IP address allocated to the pod. Routable at least within the cluster. Empty if not yet
@@ -375,7 +351,7 @@ allocated.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L19754">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L19928">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_PodStatus_PodIPs" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.PodStatus.PodIPs">PodIPs</h4>
   <div class="markdown level1 summary"><p>podIPs holds the IP addresses allocated to the pod. If this field is specified, the 0th
@@ -397,13 +373,13 @@ and IPv6. This list is empty if no IPs have been allocated yet.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Core.V1.PodIP.html">PodIP</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Core.V1.PodIP.html">PodIP</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L19761">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L19935">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_PodStatus_QosClass" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.PodStatus.QosClass">QosClass</h4>
   <div class="markdown level1 summary"><p>The Quality of Service (QOS) classification assigned to the pod based on resource
@@ -431,7 +407,7 @@ requirements See PodQOSClass type for available QOS classes More info:
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L19767">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L19941">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_PodStatus_Reason" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.PodStatus.Reason">Reason</h4>
   <div class="markdown level1 summary"><p>A brief CamelCase message indicating details about why the pod is in this state. e.g.
@@ -458,7 +434,7 @@ requirements See PodQOSClass type for available QOS classes More info:
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L19773">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L19947">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_PodStatus_StartTime" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.PodStatus.StartTime">StartTime</h4>
   <div class="markdown level1 summary"><p>RFC 3339 date and time at which the object was acknowledged by the Kubelet. This is
@@ -491,7 +467,7 @@ before the Kubelet pulled the container image(s) for the pod.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L19672" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L19846" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

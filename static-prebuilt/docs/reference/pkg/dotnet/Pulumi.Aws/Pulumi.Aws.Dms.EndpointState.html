@@ -76,36 +76,7 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
-    <div class="level3"><span class="xref">EndpointState</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">EndpointState</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.Dms.html">Pulumi.Aws.Dms</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
@@ -116,7 +87,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Dms/Endpoint.cs/#L387">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Dms/Endpoint.cs/#L421">View Source</a>
   </span>
   <a id="Pulumi_Aws_Dms_EndpointState__ctor_" data-uid="Pulumi.Aws.Dms.EndpointState.#ctor*"></a>
   <h4 id="Pulumi_Aws_Dms_EndpointState__ctor" data-uid="Pulumi.Aws.Dms.EndpointState.#ctor">EndpointState()</h4>
@@ -129,7 +100,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Dms/Endpoint.cs/#L282">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Dms/Endpoint.cs/#L304">View Source</a>
   </span>
   <a id="Pulumi_Aws_Dms_EndpointState_CertificateArn_" data-uid="Pulumi.Aws.Dms.EndpointState.CertificateArn*"></a>
   <h4 id="Pulumi_Aws_Dms_EndpointState_CertificateArn" data-uid="Pulumi.Aws.Dms.EndpointState.CertificateArn">CertificateArn</h4>
@@ -138,7 +109,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; CertificateArn { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? CertificateArn { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -150,13 +121,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Dms/Endpoint.cs/#L288">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Dms/Endpoint.cs/#L310">View Source</a>
   </span>
   <a id="Pulumi_Aws_Dms_EndpointState_DatabaseName_" data-uid="Pulumi.Aws.Dms.EndpointState.DatabaseName*"></a>
   <h4 id="Pulumi_Aws_Dms_EndpointState_DatabaseName" data-uid="Pulumi.Aws.Dms.EndpointState.DatabaseName">DatabaseName</h4>
@@ -165,7 +136,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; DatabaseName { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? DatabaseName { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -177,13 +148,40 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Dms/Endpoint.cs/#L294">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Dms/Endpoint.cs/#L316">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Dms_EndpointState_ElasticsearchSettings_" data-uid="Pulumi.Aws.Dms.EndpointState.ElasticsearchSettings*"></a>
+  <h4 id="Pulumi_Aws_Dms_EndpointState_ElasticsearchSettings" data-uid="Pulumi.Aws.Dms.EndpointState.ElasticsearchSettings">ElasticsearchSettings</h4>
+  <div class="markdown level1 summary"><p>Settings for the target Elasticsearch. Available settings are <code>service_access_role_arn</code>, <code>endpoint_uri</code>, <code>error_retry_duration</code> (default: <code>300</code>) and <code>full_load_error_percentage</code> (default: <code>10</code>). For more details, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.Elasticsearch.html">Using an Amazon Elasticsearch Service Cluster as a Target for AWS Database Migration Service</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;EndpointElasticsearchSettingsGetArgs&gt;? ElasticsearchSettings { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Aws.Dms.Inputs.EndpointElasticsearchSettingsGetArgs.html">EndpointElasticsearchSettingsGetArgs</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Dms/Endpoint.cs/#L322">View Source</a>
   </span>
   <a id="Pulumi_Aws_Dms_EndpointState_EndpointArn_" data-uid="Pulumi.Aws.Dms.EndpointState.EndpointArn*"></a>
   <h4 id="Pulumi_Aws_Dms_EndpointState_EndpointArn" data-uid="Pulumi.Aws.Dms.EndpointState.EndpointArn">EndpointArn</h4>
@@ -192,7 +190,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; EndpointArn { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? EndpointArn { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -204,13 +202,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Dms/Endpoint.cs/#L300">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Dms/Endpoint.cs/#L328">View Source</a>
   </span>
   <a id="Pulumi_Aws_Dms_EndpointState_EndpointId_" data-uid="Pulumi.Aws.Dms.EndpointState.EndpointId*"></a>
   <h4 id="Pulumi_Aws_Dms_EndpointState_EndpointId" data-uid="Pulumi.Aws.Dms.EndpointState.EndpointId">EndpointId</h4>
@@ -219,7 +217,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; EndpointId { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? EndpointId { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -231,13 +229,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Dms/Endpoint.cs/#L306">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Dms/Endpoint.cs/#L334">View Source</a>
   </span>
   <a id="Pulumi_Aws_Dms_EndpointState_EndpointType_" data-uid="Pulumi.Aws.Dms.EndpointState.EndpointType*"></a>
   <h4 id="Pulumi_Aws_Dms_EndpointState_EndpointType" data-uid="Pulumi.Aws.Dms.EndpointState.EndpointType">EndpointType</h4>
@@ -246,7 +244,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; EndpointType { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? EndpointType { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -258,22 +256,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Dms/Endpoint.cs/#L312">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Dms/Endpoint.cs/#L340">View Source</a>
   </span>
   <a id="Pulumi_Aws_Dms_EndpointState_EngineName_" data-uid="Pulumi.Aws.Dms.EndpointState.EngineName*"></a>
   <h4 id="Pulumi_Aws_Dms_EndpointState_EngineName" data-uid="Pulumi.Aws.Dms.EndpointState.EngineName">EngineName</h4>
-  <div class="markdown level1 summary"><p>The type of engine for the endpoint. Can be one of <code>aurora | azuredb | db2 | docdb | dynamodb | mariadb | mongodb | mysql | oracle | postgres | redshift | s3 | sqlserver | sybase</code>.</p>
+  <div class="markdown level1 summary"><p>The type of engine for the endpoint. Can be one of <code>aurora | azuredb | db2 | docdb | dynamodb | elasticsearch | kinesis | mariadb | mongodb | mysql | oracle | postgres | redshift | s3 | sqlserver | sybase</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; EngineName { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? EngineName { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -285,13 +283,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Dms/Endpoint.cs/#L318">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Dms/Endpoint.cs/#L346">View Source</a>
   </span>
   <a id="Pulumi_Aws_Dms_EndpointState_ExtraConnectionAttributes_" data-uid="Pulumi.Aws.Dms.EndpointState.ExtraConnectionAttributes*"></a>
   <h4 id="Pulumi_Aws_Dms_EndpointState_ExtraConnectionAttributes" data-uid="Pulumi.Aws.Dms.EndpointState.ExtraConnectionAttributes">ExtraConnectionAttributes</h4>
@@ -300,7 +298,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; ExtraConnectionAttributes { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? ExtraConnectionAttributes { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -312,13 +310,40 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Dms/Endpoint.cs/#L324">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Dms/Endpoint.cs/#L352">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Dms_EndpointState_KinesisSettings_" data-uid="Pulumi.Aws.Dms.EndpointState.KinesisSettings*"></a>
+  <h4 id="Pulumi_Aws_Dms_EndpointState_KinesisSettings" data-uid="Pulumi.Aws.Dms.EndpointState.KinesisSettings">KinesisSettings</h4>
+  <div class="markdown level1 summary"><p>Settings for the target Kinesis endpoint. Available settings are <code>message_format</code>, <code>service_access_role_arn</code>, and <code>stream_arn</code>. For more details, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.Kinesis.html">Using Amazon Kinesis Data Streams as a Target for AWS Database Migration Service</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;EndpointKinesisSettingsGetArgs&gt;? KinesisSettings { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Aws.Dms.Inputs.EndpointKinesisSettingsGetArgs.html">EndpointKinesisSettingsGetArgs</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Dms/Endpoint.cs/#L358">View Source</a>
   </span>
   <a id="Pulumi_Aws_Dms_EndpointState_KmsKeyArn_" data-uid="Pulumi.Aws.Dms.EndpointState.KmsKeyArn*"></a>
   <h4 id="Pulumi_Aws_Dms_EndpointState_KmsKeyArn" data-uid="Pulumi.Aws.Dms.EndpointState.KmsKeyArn">KmsKeyArn</h4>
@@ -327,7 +352,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; KmsKeyArn { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? KmsKeyArn { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -339,13 +364,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Dms/Endpoint.cs/#L330">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Dms/Endpoint.cs/#L364">View Source</a>
   </span>
   <a id="Pulumi_Aws_Dms_EndpointState_MongodbSettings_" data-uid="Pulumi.Aws.Dms.EndpointState.MongodbSettings*"></a>
   <h4 id="Pulumi_Aws_Dms_EndpointState_MongodbSettings" data-uid="Pulumi.Aws.Dms.EndpointState.MongodbSettings">MongodbSettings</h4>
@@ -354,7 +379,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;EndpointMongodbSettingsGetArgs&gt; MongodbSettings { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;EndpointMongodbSettingsGetArgs&gt;? MongodbSettings { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -366,13 +391,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Aws.Dms.Inputs.EndpointMongodbSettingsGetArgs.html">EndpointMongodbSettingsGetArgs</a>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Aws.Dms.Inputs.EndpointMongodbSettingsGetArgs.html">EndpointMongodbSettingsGetArgs</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Dms/Endpoint.cs/#L336">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Dms/Endpoint.cs/#L370">View Source</a>
   </span>
   <a id="Pulumi_Aws_Dms_EndpointState_Password_" data-uid="Pulumi.Aws.Dms.EndpointState.Password*"></a>
   <h4 id="Pulumi_Aws_Dms_EndpointState_Password" data-uid="Pulumi.Aws.Dms.EndpointState.Password">Password</h4>
@@ -381,7 +406,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Password { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Password { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -393,13 +418,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Dms/Endpoint.cs/#L342">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Dms/Endpoint.cs/#L376">View Source</a>
   </span>
   <a id="Pulumi_Aws_Dms_EndpointState_Port_" data-uid="Pulumi.Aws.Dms.EndpointState.Port*"></a>
   <h4 id="Pulumi_Aws_Dms_EndpointState_Port" data-uid="Pulumi.Aws.Dms.EndpointState.Port">Port</h4>
@@ -408,7 +433,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; Port { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? Port { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -420,13 +445,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Dms/Endpoint.cs/#L348">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Dms/Endpoint.cs/#L382">View Source</a>
   </span>
   <a id="Pulumi_Aws_Dms_EndpointState_S3Settings_" data-uid="Pulumi.Aws.Dms.EndpointState.S3Settings*"></a>
   <h4 id="Pulumi_Aws_Dms_EndpointState_S3Settings" data-uid="Pulumi.Aws.Dms.EndpointState.S3Settings">S3Settings</h4>
@@ -435,7 +460,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;EndpointS3SettingsGetArgs&gt; S3Settings { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;EndpointS3SettingsGetArgs&gt;? S3Settings { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -447,13 +472,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Aws.Dms.Inputs.EndpointS3SettingsGetArgs.html">EndpointS3SettingsGetArgs</a>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Aws.Dms.Inputs.EndpointS3SettingsGetArgs.html">EndpointS3SettingsGetArgs</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Dms/Endpoint.cs/#L354">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Dms/Endpoint.cs/#L388">View Source</a>
   </span>
   <a id="Pulumi_Aws_Dms_EndpointState_ServerName_" data-uid="Pulumi.Aws.Dms.EndpointState.ServerName*"></a>
   <h4 id="Pulumi_Aws_Dms_EndpointState_ServerName" data-uid="Pulumi.Aws.Dms.EndpointState.ServerName">ServerName</h4>
@@ -462,7 +487,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; ServerName { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? ServerName { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -474,13 +499,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Dms/Endpoint.cs/#L360">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Dms/Endpoint.cs/#L394">View Source</a>
   </span>
   <a id="Pulumi_Aws_Dms_EndpointState_ServiceAccessRole_" data-uid="Pulumi.Aws.Dms.EndpointState.ServiceAccessRole*"></a>
   <h4 id="Pulumi_Aws_Dms_EndpointState_ServiceAccessRole" data-uid="Pulumi.Aws.Dms.EndpointState.ServiceAccessRole">ServiceAccessRole</h4>
@@ -489,7 +514,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; ServiceAccessRole { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? ServiceAccessRole { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -501,13 +526,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Dms/Endpoint.cs/#L366">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Dms/Endpoint.cs/#L400">View Source</a>
   </span>
   <a id="Pulumi_Aws_Dms_EndpointState_SslMode_" data-uid="Pulumi.Aws.Dms.EndpointState.SslMode*"></a>
   <h4 id="Pulumi_Aws_Dms_EndpointState_SslMode" data-uid="Pulumi.Aws.Dms.EndpointState.SslMode">SslMode</h4>
@@ -516,7 +541,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; SslMode { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? SslMode { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -528,13 +553,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Dms/Endpoint.cs/#L375">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Dms/Endpoint.cs/#L409">View Source</a>
   </span>
   <a id="Pulumi_Aws_Dms_EndpointState_Tags_" data-uid="Pulumi.Aws.Dms.EndpointState.Tags*"></a>
   <h4 id="Pulumi_Aws_Dms_EndpointState_Tags" data-uid="Pulumi.Aws.Dms.EndpointState.Tags">Tags</h4>
@@ -555,13 +580,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputMap-1.html">InputMap</a>&lt;<span class="xref">System.Object</span>&gt;</td>
+        <td><span class="xref">InputMap</span>&lt;<span class="xref">System.Object</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Dms/Endpoint.cs/#L384">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Dms/Endpoint.cs/#L418">View Source</a>
   </span>
   <a id="Pulumi_Aws_Dms_EndpointState_Username_" data-uid="Pulumi.Aws.Dms.EndpointState.Username*"></a>
   <h4 id="Pulumi_Aws_Dms_EndpointState_Username" data-uid="Pulumi.Aws.Dms.EndpointState.Username">Username</h4>
@@ -570,7 +595,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Username { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Username { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -582,7 +607,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -594,7 +619,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Dms/Endpoint.cs/#L277" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Dms/Endpoint.cs/#L299" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

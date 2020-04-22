@@ -74,53 +74,12 @@
   <div class="markdown level0 summary"><p>Creates a table resource in a dataset for Google BigQuery. For more information see
 <a href="https://cloud.google.com/bigquery/docs/">the official documentation</a> and
 <a href="https://cloud.google.com/bigquery/docs/reference/rest/v2/tables">API</a>.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/bigquery_table.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/bigquery_table.html.markdown</a>.</p>
-</blockquote>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
-    <div class="level3"><span class="xref">Table</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">Table</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.BigQuery.html">Pulumi.Gcp.BigQuery</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
@@ -131,16 +90,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Bigquery/Table.cs/#L193">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/BigQuery/Table.cs/#L192">View Source</a>
   </span>
   <a id="Pulumi_Gcp_BigQuery_Table__ctor_" data-uid="Pulumi.Gcp.BigQuery.Table.#ctor*"></a>
-  <h4 id="Pulumi_Gcp_BigQuery_Table__ctor_System_String_Pulumi_Gcp_BigQuery_TableArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Gcp.BigQuery.Table.#ctor(System.String,Pulumi.Gcp.BigQuery.TableArgs,Pulumi.CustomResourceOptions)">Table(String, TableArgs, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Gcp_BigQuery_Table__ctor_System_String_Pulumi_Gcp_BigQuery_TableArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Gcp.BigQuery.Table.#ctor(System.String,Pulumi.Gcp.BigQuery.TableArgs,System.Nullable{CustomResourceOptions})">Table(String, TableArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Create a Table resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Table(string name, TableArgs args, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Table(string name, TableArgs args, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -165,7 +124,7 @@
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -175,7 +134,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Bigquery/Table.cs/#L26">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/BigQuery/Table.cs/#L24">View Source</a>
   </span>
   <a id="Pulumi_Gcp_BigQuery_Table_Clusterings_" data-uid="Pulumi.Gcp.BigQuery.Table.Clusterings*"></a>
   <h4 id="Pulumi_Gcp_BigQuery_Table_Clusterings" data-uid="Pulumi.Gcp.BigQuery.Table.Clusterings">Clusterings</h4>
@@ -198,13 +157,13 @@ descending priority order.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Bigquery/Table.cs/#L32">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/BigQuery/Table.cs/#L30">View Source</a>
   </span>
   <a id="Pulumi_Gcp_BigQuery_Table_CreationTime_" data-uid="Pulumi.Gcp.BigQuery.Table.CreationTime*"></a>
   <h4 id="Pulumi_Gcp_BigQuery_Table_CreationTime" data-uid="Pulumi.Gcp.BigQuery.Table.CreationTime">CreationTime</h4>
@@ -225,13 +184,13 @@ descending priority order.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Bigquery/Table.cs/#L39">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/BigQuery/Table.cs/#L37">View Source</a>
   </span>
   <a id="Pulumi_Gcp_BigQuery_Table_DatasetId_" data-uid="Pulumi.Gcp.BigQuery.Table.DatasetId*"></a>
   <h4 id="Pulumi_Gcp_BigQuery_Table_DatasetId" data-uid="Pulumi.Gcp.BigQuery.Table.DatasetId">DatasetId</h4>
@@ -253,13 +212,13 @@ Changing this forces a new resource to be created.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Bigquery/Table.cs/#L45">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/BigQuery/Table.cs/#L43">View Source</a>
   </span>
   <a id="Pulumi_Gcp_BigQuery_Table_Description_" data-uid="Pulumi.Gcp.BigQuery.Table.Description*"></a>
   <h4 id="Pulumi_Gcp_BigQuery_Table_Description" data-uid="Pulumi.Gcp.BigQuery.Table.Description">Description</h4>
@@ -268,7 +227,7 @@ Changing this forces a new resource to be created.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Description { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Description { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -280,13 +239,13 @@ Changing this forces a new resource to be created.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Bigquery/Table.cs/#L53">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/BigQuery/Table.cs/#L51">View Source</a>
   </span>
   <a id="Pulumi_Gcp_BigQuery_Table_EncryptionConfiguration_" data-uid="Pulumi.Gcp.BigQuery.Table.EncryptionConfiguration*"></a>
   <h4 id="Pulumi_Gcp_BigQuery_Table_EncryptionConfiguration" data-uid="Pulumi.Gcp.BigQuery.Table.EncryptionConfiguration">EncryptionConfiguration</h4>
@@ -309,13 +268,13 @@ is transparent to the user.  Structure is documented below.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Gcp.BigQuery.Outputs.TableEncryptionConfiguration.html">TableEncryptionConfiguration</a>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Gcp.BigQuery.Outputs.TableEncryptionConfiguration.html">TableEncryptionConfiguration</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Bigquery/Table.cs/#L59">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/BigQuery/Table.cs/#L57">View Source</a>
   </span>
   <a id="Pulumi_Gcp_BigQuery_Table_Etag_" data-uid="Pulumi.Gcp.BigQuery.Table.Etag*"></a>
   <h4 id="Pulumi_Gcp_BigQuery_Table_Etag" data-uid="Pulumi.Gcp.BigQuery.Table.Etag">Etag</h4>
@@ -336,13 +295,13 @@ is transparent to the user.  Structure is documented below.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Bigquery/Table.cs/#L68">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/BigQuery/Table.cs/#L66">View Source</a>
   </span>
   <a id="Pulumi_Gcp_BigQuery_Table_ExpirationTime_" data-uid="Pulumi.Gcp.BigQuery.Table.ExpirationTime*"></a>
   <h4 id="Pulumi_Gcp_BigQuery_Table_ExpirationTime" data-uid="Pulumi.Gcp.BigQuery.Table.ExpirationTime">ExpirationTime</h4>
@@ -366,13 +325,13 @@ reclaimed.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Bigquery/Table.cs/#L77">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/BigQuery/Table.cs/#L75">View Source</a>
   </span>
   <a id="Pulumi_Gcp_BigQuery_Table_ExternalDataConfiguration_" data-uid="Pulumi.Gcp.BigQuery.Table.ExternalDataConfiguration*"></a>
   <h4 id="Pulumi_Gcp_BigQuery_Table_ExternalDataConfiguration" data-uid="Pulumi.Gcp.BigQuery.Table.ExternalDataConfiguration">ExternalDataConfiguration</h4>
@@ -396,13 +355,13 @@ if it were a standard BigQuery table. Structure is documented below.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Gcp.BigQuery.Outputs.TableExternalDataConfiguration.html">TableExternalDataConfiguration</a>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Gcp.BigQuery.Outputs.TableExternalDataConfiguration.html">TableExternalDataConfiguration</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Bigquery/Table.cs/#L83">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/BigQuery/Table.cs/#L81">View Source</a>
   </span>
   <a id="Pulumi_Gcp_BigQuery_Table_FriendlyName_" data-uid="Pulumi.Gcp.BigQuery.Table.FriendlyName*"></a>
   <h4 id="Pulumi_Gcp_BigQuery_Table_FriendlyName" data-uid="Pulumi.Gcp.BigQuery.Table.FriendlyName">FriendlyName</h4>
@@ -411,7 +370,7 @@ if it were a standard BigQuery table. Structure is documented below.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; FriendlyName { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; FriendlyName { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -423,13 +382,13 @@ if it were a standard BigQuery table. Structure is documented below.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Bigquery/Table.cs/#L89">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/BigQuery/Table.cs/#L87">View Source</a>
   </span>
   <a id="Pulumi_Gcp_BigQuery_Table_Labels_" data-uid="Pulumi.Gcp.BigQuery.Table.Labels*"></a>
   <h4 id="Pulumi_Gcp_BigQuery_Table_Labels" data-uid="Pulumi.Gcp.BigQuery.Table.Labels">Labels</h4>
@@ -438,7 +397,7 @@ if it were a standard BigQuery table. Structure is documented below.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;&gt; Labels { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;?&gt; Labels { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -450,13 +409,13 @@ if it were a standard BigQuery table. Structure is documented below.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Bigquery/Table.cs/#L95">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/BigQuery/Table.cs/#L93">View Source</a>
   </span>
   <a id="Pulumi_Gcp_BigQuery_Table_LastModifiedTime_" data-uid="Pulumi.Gcp.BigQuery.Table.LastModifiedTime*"></a>
   <h4 id="Pulumi_Gcp_BigQuery_Table_LastModifiedTime" data-uid="Pulumi.Gcp.BigQuery.Table.LastModifiedTime">LastModifiedTime</h4>
@@ -477,13 +436,13 @@ if it were a standard BigQuery table. Structure is documented below.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Bigquery/Table.cs/#L101">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/BigQuery/Table.cs/#L99">View Source</a>
   </span>
   <a id="Pulumi_Gcp_BigQuery_Table_Location_" data-uid="Pulumi.Gcp.BigQuery.Table.Location*"></a>
   <h4 id="Pulumi_Gcp_BigQuery_Table_Location" data-uid="Pulumi.Gcp.BigQuery.Table.Location">Location</h4>
@@ -504,13 +463,13 @@ if it were a standard BigQuery table. Structure is documented below.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Bigquery/Table.cs/#L107">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/BigQuery/Table.cs/#L105">View Source</a>
   </span>
   <a id="Pulumi_Gcp_BigQuery_Table_NumBytes_" data-uid="Pulumi.Gcp.BigQuery.Table.NumBytes*"></a>
   <h4 id="Pulumi_Gcp_BigQuery_Table_NumBytes" data-uid="Pulumi.Gcp.BigQuery.Table.NumBytes">NumBytes</h4>
@@ -531,13 +490,13 @@ if it were a standard BigQuery table. Structure is documented below.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Bigquery/Table.cs/#L113">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/BigQuery/Table.cs/#L111">View Source</a>
   </span>
   <a id="Pulumi_Gcp_BigQuery_Table_NumLongTermBytes_" data-uid="Pulumi.Gcp.BigQuery.Table.NumLongTermBytes*"></a>
   <h4 id="Pulumi_Gcp_BigQuery_Table_NumLongTermBytes" data-uid="Pulumi.Gcp.BigQuery.Table.NumLongTermBytes">NumLongTermBytes</h4>
@@ -558,13 +517,13 @@ if it were a standard BigQuery table. Structure is documented below.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Bigquery/Table.cs/#L119">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/BigQuery/Table.cs/#L117">View Source</a>
   </span>
   <a id="Pulumi_Gcp_BigQuery_Table_NumRows_" data-uid="Pulumi.Gcp.BigQuery.Table.NumRows*"></a>
   <h4 id="Pulumi_Gcp_BigQuery_Table_NumRows" data-uid="Pulumi.Gcp.BigQuery.Table.NumRows">NumRows</h4>
@@ -585,13 +544,13 @@ if it were a standard BigQuery table. Structure is documented below.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Bigquery/Table.cs/#L126">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/BigQuery/Table.cs/#L124">View Source</a>
   </span>
   <a id="Pulumi_Gcp_BigQuery_Table_Project_" data-uid="Pulumi.Gcp.BigQuery.Table.Project*"></a>
   <h4 id="Pulumi_Gcp_BigQuery_Table_Project" data-uid="Pulumi.Gcp.BigQuery.Table.Project">Project</h4>
@@ -613,13 +572,13 @@ is not provided, the provider project is used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Bigquery/Table.cs/#L133">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/BigQuery/Table.cs/#L131">View Source</a>
   </span>
   <a id="Pulumi_Gcp_BigQuery_Table_RangePartitioning_" data-uid="Pulumi.Gcp.BigQuery.Table.RangePartitioning*"></a>
   <h4 id="Pulumi_Gcp_BigQuery_Table_RangePartitioning" data-uid="Pulumi.Gcp.BigQuery.Table.RangePartitioning">RangePartitioning</h4>
@@ -641,13 +600,13 @@ partitioning for this table. Structure is documented below.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Gcp.BigQuery.Outputs.TableRangePartitioning.html">TableRangePartitioning</a>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Gcp.BigQuery.Outputs.TableRangePartitioning.html">TableRangePartitioning</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Bigquery/Table.cs/#L149">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/BigQuery/Table.cs/#L147">View Source</a>
   </span>
   <a id="Pulumi_Gcp_BigQuery_Table_Schema_" data-uid="Pulumi.Gcp.BigQuery.Table.Schema*"></a>
   <h4 id="Pulumi_Gcp_BigQuery_Table_Schema" data-uid="Pulumi.Gcp.BigQuery.Table.Schema">Schema</h4>
@@ -678,13 +637,13 @@ As a workaround, we recommend using the schema as returned by the API.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Bigquery/Table.cs/#L155">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/BigQuery/Table.cs/#L153">View Source</a>
   </span>
   <a id="Pulumi_Gcp_BigQuery_Table_SelfLink_" data-uid="Pulumi.Gcp.BigQuery.Table.SelfLink*"></a>
   <h4 id="Pulumi_Gcp_BigQuery_Table_SelfLink" data-uid="Pulumi.Gcp.BigQuery.Table.SelfLink">SelfLink</h4>
@@ -705,13 +664,13 @@ As a workaround, we recommend using the schema as returned by the API.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Bigquery/Table.cs/#L162">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/BigQuery/Table.cs/#L160">View Source</a>
   </span>
   <a id="Pulumi_Gcp_BigQuery_Table_TableId_" data-uid="Pulumi.Gcp.BigQuery.Table.TableId*"></a>
   <h4 id="Pulumi_Gcp_BigQuery_Table_TableId" data-uid="Pulumi.Gcp.BigQuery.Table.TableId">TableId</h4>
@@ -733,13 +692,13 @@ Changing this forces a new resource to be created.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Bigquery/Table.cs/#L169">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/BigQuery/Table.cs/#L167">View Source</a>
   </span>
   <a id="Pulumi_Gcp_BigQuery_Table_TimePartitioning_" data-uid="Pulumi.Gcp.BigQuery.Table.TimePartitioning*"></a>
   <h4 id="Pulumi_Gcp_BigQuery_Table_TimePartitioning" data-uid="Pulumi.Gcp.BigQuery.Table.TimePartitioning">TimePartitioning</h4>
@@ -761,17 +720,18 @@ partitioning for this table. Structure is documented below.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Gcp.BigQuery.Outputs.TableTimePartitioning.html">TableTimePartitioning</a>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Gcp.BigQuery.Outputs.TableTimePartitioning.html">TableTimePartitioning</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Bigquery/Table.cs/#L175">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/BigQuery/Table.cs/#L174">View Source</a>
   </span>
   <a id="Pulumi_Gcp_BigQuery_Table_Type_" data-uid="Pulumi.Gcp.BigQuery.Table.Type*"></a>
   <h4 id="Pulumi_Gcp_BigQuery_Table_Type" data-uid="Pulumi.Gcp.BigQuery.Table.Type">Type</h4>
-  <div class="markdown level1 summary"><p>Describes the table type.</p>
+  <div class="markdown level1 summary"><p>The only type supported is DAY, which will generate
+one partition per day based on data loading time.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -788,13 +748,13 @@ partitioning for this table. Structure is documented below.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Bigquery/Table.cs/#L182">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/BigQuery/Table.cs/#L181">View Source</a>
   </span>
   <a id="Pulumi_Gcp_BigQuery_Table_View_" data-uid="Pulumi.Gcp.BigQuery.Table.View*"></a>
   <h4 id="Pulumi_Gcp_BigQuery_Table_View" data-uid="Pulumi.Gcp.BigQuery.Table.View">View</h4>
@@ -816,7 +776,7 @@ Structure is documented below.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Gcp.BigQuery.Outputs.TableView.html">TableView</a>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Gcp.BigQuery.Outputs.TableView.html">TableView</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -824,17 +784,17 @@ Structure is documented below.</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Bigquery/Table.cs/#L223">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/BigQuery/Table.cs/#L222">View Source</a>
   </span>
   <a id="Pulumi_Gcp_BigQuery_Table_Get_" data-uid="Pulumi.Gcp.BigQuery.Table.Get*"></a>
-  <h4 id="Pulumi_Gcp_BigQuery_Table_Get_System_String_Pulumi_Input_System_String__Pulumi_Gcp_BigQuery_TableState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Gcp.BigQuery.Table.Get(System.String,Pulumi.Input{System.String},Pulumi.Gcp.BigQuery.TableState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, TableState, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Gcp_BigQuery_Table_Get_System_String_Input_System_String__Pulumi_Gcp_BigQuery_TableState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Gcp.BigQuery.Table.Get(System.String,Input{System.String},Pulumi.Gcp.BigQuery.TableState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, TableState, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Get an existing Table resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Table Get(string name, Input&lt;string&gt; id, TableState state = null, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Table Get(string name, Input&lt;string&gt; id, TableState state = null, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -853,7 +813,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -865,7 +825,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -894,7 +854,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Bigquery/Table.cs/#L19" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/BigQuery/Table.cs/#L17" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

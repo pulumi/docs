@@ -78,40 +78,16 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">AnalyticsApplicationInputs</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.Kinesis.Outputs.html">Pulumi.Aws.Kinesis.Outputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
   <h5 id="Pulumi_Aws_Kinesis_Outputs_AnalyticsApplicationInputs_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class AnalyticsApplicationInputs</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class AnalyticsApplicationInputs : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Kinesis/AnalyticsApplication.cs/#L1211">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Kinesis/Outputs/AnalyticsApplicationInputs.cs/#L19">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Kinesis_Outputs_AnalyticsApplicationInputs_Id" data-uid="Pulumi.Aws.Kinesis.Outputs.AnalyticsApplicationInputs.Id">Id</h4>
   <div class="markdown level1 summary"><p>The ARN of the Kinesis Analytics Application.</p>
@@ -119,7 +95,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string Id</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? Id</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -131,16 +107,18 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Kinesis/AnalyticsApplication.cs/#L1212">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Kinesis/Outputs/AnalyticsApplicationInputs.cs/#L24">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Kinesis_Outputs_AnalyticsApplicationInputs_KinesisFirehose" data-uid="Pulumi.Aws.Kinesis.Outputs.AnalyticsApplicationInputs.KinesisFirehose">KinesisFirehose</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The Kinesis Firehose configuration for the streaming source. Conflicts with <code>kinesis_stream</code>.
+See Kinesis Firehose below for more details.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -162,10 +140,12 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Kinesis/AnalyticsApplication.cs/#L1213">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Kinesis/Outputs/AnalyticsApplicationInputs.cs/#L29">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Kinesis_Outputs_AnalyticsApplicationInputs_KinesisStream" data-uid="Pulumi.Aws.Kinesis.Outputs.AnalyticsApplicationInputs.KinesisStream">KinesisStream</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The Kinesis Stream configuration for the streaming source. Conflicts with <code>kinesis_firehose</code>.
+See Kinesis Stream below for more details.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -187,10 +167,11 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Kinesis/AnalyticsApplication.cs/#L1214">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Kinesis/Outputs/AnalyticsApplicationInputs.cs/#L33">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Kinesis_Outputs_AnalyticsApplicationInputs_NamePrefix" data-uid="Pulumi.Aws.Kinesis.Outputs.AnalyticsApplicationInputs.NamePrefix">NamePrefix</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The Name Prefix to use when creating an in-application stream.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -212,10 +193,12 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Kinesis/AnalyticsApplication.cs/#L1215">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Kinesis/Outputs/AnalyticsApplicationInputs.cs/#L38">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Kinesis_Outputs_AnalyticsApplicationInputs_Parallelism" data-uid="Pulumi.Aws.Kinesis.Outputs.AnalyticsApplicationInputs.Parallelism">Parallelism</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The number of Parallel in-application streams to create.
+See Parallelism below for more details.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -237,10 +220,12 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Kinesis/AnalyticsApplication.cs/#L1216">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Kinesis/Outputs/AnalyticsApplicationInputs.cs/#L43">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Kinesis_Outputs_AnalyticsApplicationInputs_ProcessingConfiguration" data-uid="Pulumi.Aws.Kinesis.Outputs.AnalyticsApplicationInputs.ProcessingConfiguration">ProcessingConfiguration</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The Processing Configuration to transform records as they are received from the stream.
+See Processing Configuration below for more details.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -262,10 +247,11 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Kinesis/AnalyticsApplication.cs/#L1217">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Kinesis/Outputs/AnalyticsApplicationInputs.cs/#L47">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Kinesis_Outputs_AnalyticsApplicationInputs_Schema" data-uid="Pulumi.Aws.Kinesis.Outputs.AnalyticsApplicationInputs.Schema">Schema</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The Schema format of the data in the streaming source. See Source Schema below for more details.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -287,14 +273,14 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Kinesis/AnalyticsApplication.cs/#L1218">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Kinesis/Outputs/AnalyticsApplicationInputs.cs/#L48">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Kinesis_Outputs_AnalyticsApplicationInputs_StartingPositionConfigurations" data-uid="Pulumi.Aws.Kinesis.Outputs.AnalyticsApplicationInputs.StartingPositionConfigurations">StartingPositionConfigurations</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;AnalyticsApplicationInputsStartingPositionConfigurations&gt; StartingPositionConfigurations</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;AnalyticsApplicationInputsStartingPositionConfiguration&gt; StartingPositionConfigurations</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -306,13 +292,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.Kinesis.Outputs.AnalyticsApplicationInputsStartingPositionConfigurations.html">AnalyticsApplicationInputsStartingPositionConfigurations</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.Kinesis.Outputs.AnalyticsApplicationInputsStartingPositionConfiguration.html">AnalyticsApplicationInputsStartingPositionConfiguration</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Kinesis/AnalyticsApplication.cs/#L1219">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Kinesis/Outputs/AnalyticsApplicationInputs.cs/#L49">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Kinesis_Outputs_AnalyticsApplicationInputs_StreamNames" data-uid="Pulumi.Aws.Kinesis.Outputs.AnalyticsApplicationInputs.StreamNames">StreamNames</h4>
   <div class="markdown level1 summary"></div>
@@ -331,7 +317,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -343,7 +329,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Kinesis/AnalyticsApplication.cs/#L1205" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Kinesis/Outputs/AnalyticsApplicationInputs.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

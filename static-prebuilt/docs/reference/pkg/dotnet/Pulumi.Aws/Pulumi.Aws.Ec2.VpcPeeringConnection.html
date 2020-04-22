@@ -90,53 +90,12 @@ connection and use the <code>aws.ec2.VpcPeeringConnectionAccepter</code> resourc
 <p>If both VPCs are not in the same AWS account do not enable the <code>auto_accept</code> attribute.
 The accepter can manage its side of the connection using the <code>aws.ec2.VpcPeeringConnectionAccepter</code> resource
 or accept the connection manually using the AWS Management Console, AWS CLI, through SDKs, etc.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_peering_connection.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_peering_connection.html.markdown</a>.</p>
-</blockquote>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
-    <div class="level3"><span class="xref">VpcPeeringConnection</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">VpcPeeringConnection</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.Ec2.html">Pulumi.Aws.Ec2</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
@@ -147,16 +106,16 @@ or accept the connection manually using the AWS Management Console, AWS CLI, thr
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/VpcPeeringConnection.cs/#L105">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/VpcPeeringConnection.cs/#L104">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_VpcPeeringConnection__ctor_" data-uid="Pulumi.Aws.Ec2.VpcPeeringConnection.#ctor*"></a>
-  <h4 id="Pulumi_Aws_Ec2_VpcPeeringConnection__ctor_System_String_Pulumi_Aws_Ec2_VpcPeeringConnectionArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.Ec2.VpcPeeringConnection.#ctor(System.String,Pulumi.Aws.Ec2.VpcPeeringConnectionArgs,Pulumi.CustomResourceOptions)">VpcPeeringConnection(String, VpcPeeringConnectionArgs, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Aws_Ec2_VpcPeeringConnection__ctor_System_String_Pulumi_Aws_Ec2_VpcPeeringConnectionArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.Ec2.VpcPeeringConnection.#ctor(System.String,Pulumi.Aws.Ec2.VpcPeeringConnectionArgs,System.Nullable{CustomResourceOptions})">VpcPeeringConnection(String, VpcPeeringConnectionArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Create a VpcPeeringConnection resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public VpcPeeringConnection(string name, VpcPeeringConnectionArgs args, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public VpcPeeringConnection(string name, VpcPeeringConnectionArgs args, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -181,7 +140,7 @@ or accept the connection manually using the AWS Management Console, AWS CLI, thr
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -191,7 +150,7 @@ or accept the connection manually using the AWS Management Console, AWS CLI, thr
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/VpcPeeringConnection.cs/#L48">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/VpcPeeringConnection.cs/#L47">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_VpcPeeringConnection_Accepter_" data-uid="Pulumi.Aws.Ec2.VpcPeeringConnection.Accepter*"></a>
   <h4 id="Pulumi_Aws_Ec2_VpcPeeringConnection_Accepter" data-uid="Pulumi.Aws.Ec2.VpcPeeringConnection.Accepter">Accepter</h4>
@@ -214,13 +173,13 @@ the peering connection (a maximum of one).</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Aws.Ec2.Outputs.VpcPeeringConnectionAccepter.html">VpcPeeringConnectionAccepter</a>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Aws.Ec2.Outputs.VpcPeeringConnectionAccepter.html">VpcPeeringConnectionAccepter</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/VpcPeeringConnection.cs/#L40">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/VpcPeeringConnection.cs/#L39">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_VpcPeeringConnection_AcceptStatus_" data-uid="Pulumi.Aws.Ec2.VpcPeeringConnection.AcceptStatus*"></a>
   <h4 id="Pulumi_Aws_Ec2_VpcPeeringConnection_AcceptStatus" data-uid="Pulumi.Aws.Ec2.VpcPeeringConnection.AcceptStatus">AcceptStatus</h4>
@@ -241,13 +200,13 @@ the peering connection (a maximum of one).</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/VpcPeeringConnection.cs/#L54">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/VpcPeeringConnection.cs/#L53">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_VpcPeeringConnection_AutoAccept_" data-uid="Pulumi.Aws.Ec2.VpcPeeringConnection.AutoAccept*"></a>
   <h4 id="Pulumi_Aws_Ec2_VpcPeeringConnection_AutoAccept" data-uid="Pulumi.Aws.Ec2.VpcPeeringConnection.AutoAccept">AutoAccept</h4>
@@ -268,13 +227,13 @@ the peering connection (a maximum of one).</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/VpcPeeringConnection.cs/#L61">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/VpcPeeringConnection.cs/#L60">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_VpcPeeringConnection_PeerOwnerId_" data-uid="Pulumi.Aws.Ec2.VpcPeeringConnection.PeerOwnerId*"></a>
   <h4 id="Pulumi_Aws_Ec2_VpcPeeringConnection_PeerOwnerId" data-uid="Pulumi.Aws.Ec2.VpcPeeringConnection.PeerOwnerId">PeerOwnerId</h4>
@@ -296,13 +255,13 @@ Defaults to the account ID the [AWS provider][1] is currently connected to.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/VpcPeeringConnection.cs/#L68">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/VpcPeeringConnection.cs/#L67">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_VpcPeeringConnection_PeerRegion_" data-uid="Pulumi.Aws.Ec2.VpcPeeringConnection.PeerRegion*"></a>
   <h4 id="Pulumi_Aws_Ec2_VpcPeeringConnection_PeerRegion" data-uid="Pulumi.Aws.Ec2.VpcPeeringConnection.PeerRegion">PeerRegion</h4>
@@ -324,13 +283,13 @@ and use the <code>aws.ec2.VpcPeeringConnectionAccepter</code> to manage the acce
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/VpcPeeringConnection.cs/#L74">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/VpcPeeringConnection.cs/#L73">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_VpcPeeringConnection_PeerVpcId_" data-uid="Pulumi.Aws.Ec2.VpcPeeringConnection.PeerVpcId*"></a>
   <h4 id="Pulumi_Aws_Ec2_VpcPeeringConnection_PeerVpcId" data-uid="Pulumi.Aws.Ec2.VpcPeeringConnection.PeerVpcId">PeerVpcId</h4>
@@ -351,13 +310,13 @@ and use the <code>aws.ec2.VpcPeeringConnectionAccepter</code> to manage the acce
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/VpcPeeringConnection.cs/#L82">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/VpcPeeringConnection.cs/#L81">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_VpcPeeringConnection_Requester_" data-uid="Pulumi.Aws.Ec2.VpcPeeringConnection.Requester*"></a>
   <h4 id="Pulumi_Aws_Ec2_VpcPeeringConnection_Requester" data-uid="Pulumi.Aws.Ec2.VpcPeeringConnection.Requester">Requester</h4>
@@ -380,13 +339,13 @@ the peering connection (a maximum of one).</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Aws.Ec2.Outputs.VpcPeeringConnectionRequester.html">VpcPeeringConnectionRequester</a>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Aws.Ec2.Outputs.VpcPeeringConnectionRequester.html">VpcPeeringConnectionRequester</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/VpcPeeringConnection.cs/#L88">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/VpcPeeringConnection.cs/#L87">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_VpcPeeringConnection_Tags_" data-uid="Pulumi.Aws.Ec2.VpcPeeringConnection.Tags*"></a>
   <h4 id="Pulumi_Aws_Ec2_VpcPeeringConnection_Tags" data-uid="Pulumi.Aws.Ec2.VpcPeeringConnection.Tags">Tags</h4>
@@ -395,7 +354,7 @@ the peering connection (a maximum of one).</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;&gt; Tags { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;?&gt; Tags { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -407,13 +366,13 @@ the peering connection (a maximum of one).</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/VpcPeeringConnection.cs/#L94">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/VpcPeeringConnection.cs/#L93">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_VpcPeeringConnection_VpcId_" data-uid="Pulumi.Aws.Ec2.VpcPeeringConnection.VpcId*"></a>
   <h4 id="Pulumi_Aws_Ec2_VpcPeeringConnection_VpcId" data-uid="Pulumi.Aws.Ec2.VpcPeeringConnection.VpcId">VpcId</h4>
@@ -434,7 +393,7 @@ the peering connection (a maximum of one).</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -442,17 +401,17 @@ the peering connection (a maximum of one).</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/VpcPeeringConnection.cs/#L135">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/VpcPeeringConnection.cs/#L134">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_VpcPeeringConnection_Get_" data-uid="Pulumi.Aws.Ec2.VpcPeeringConnection.Get*"></a>
-  <h4 id="Pulumi_Aws_Ec2_VpcPeeringConnection_Get_System_String_Pulumi_Input_System_String__Pulumi_Aws_Ec2_VpcPeeringConnectionState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.Ec2.VpcPeeringConnection.Get(System.String,Pulumi.Input{System.String},Pulumi.Aws.Ec2.VpcPeeringConnectionState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, VpcPeeringConnectionState, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Aws_Ec2_VpcPeeringConnection_Get_System_String_Input_System_String__Pulumi_Aws_Ec2_VpcPeeringConnectionState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.Ec2.VpcPeeringConnection.Get(System.String,Input{System.String},Pulumi.Aws.Ec2.VpcPeeringConnectionState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, VpcPeeringConnectionState, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Get an existing VpcPeeringConnection resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static VpcPeeringConnection Get(string name, Input&lt;string&gt; id, VpcPeeringConnectionState state = null, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static VpcPeeringConnection Get(string name, Input&lt;string&gt; id, VpcPeeringConnectionState state = null, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -471,7 +430,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -483,7 +442,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -512,7 +471,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/VpcPeeringConnection.cs/#L35" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/VpcPeeringConnection.cs/#L34" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

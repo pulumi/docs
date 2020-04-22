@@ -76,36 +76,7 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.InvokeArgs.html">InvokeArgs</a></div>
-    <div class="level3"><span class="xref">GetImageArgs</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.InvokeArgs.html#Pulumi_InvokeArgs_Empty">InvokeArgs.Empty</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">GetImageArgs</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.DigitalOcean.html">Pulumi.DigitalOcean</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.DigitalOcean.dll</h6>
@@ -116,7 +87,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/master/sdk/dotnet/GetImage.cs/#L32">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/GetImage.cs/#L49">View Source</a>
   </span>
   <a id="Pulumi_DigitalOcean_GetImageArgs__ctor_" data-uid="Pulumi.DigitalOcean.GetImageArgs.#ctor*"></a>
   <h4 id="Pulumi_DigitalOcean_GetImageArgs__ctor" data-uid="Pulumi.DigitalOcean.GetImageArgs.#ctor">GetImageArgs()</h4>
@@ -129,16 +100,16 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/master/sdk/dotnet/GetImage.cs/#L23">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/GetImage.cs/#L24">View Source</a>
   </span>
-  <a id="Pulumi_DigitalOcean_GetImageArgs_Name_" data-uid="Pulumi.DigitalOcean.GetImageArgs.Name*"></a>
-  <h4 id="Pulumi_DigitalOcean_GetImageArgs_Name" data-uid="Pulumi.DigitalOcean.GetImageArgs.Name">Name</h4>
-  <div class="markdown level1 summary"><p>The name of the private image.</p>
+  <a id="Pulumi_DigitalOcean_GetImageArgs_Id_" data-uid="Pulumi.DigitalOcean.GetImageArgs.Id*"></a>
+  <h4 id="Pulumi_DigitalOcean_GetImageArgs_Id" data-uid="Pulumi.DigitalOcean.GetImageArgs.Id">Id</h4>
+  <div class="markdown level1 summary"><p>The id of the image</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Name { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public int? Id { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -150,13 +121,40 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/master/sdk/dotnet/GetImage.cs/#L29">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/GetImage.cs/#L30">View Source</a>
+  </span>
+  <a id="Pulumi_DigitalOcean_GetImageArgs_Name_" data-uid="Pulumi.DigitalOcean.GetImageArgs.Name*"></a>
+  <h4 id="Pulumi_DigitalOcean_GetImageArgs_Name" data-uid="Pulumi.DigitalOcean.GetImageArgs.Name">Name</h4>
+  <div class="markdown level1 summary"><p>The name of the image.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? Name { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/GetImage.cs/#L36">View Source</a>
   </span>
   <a id="Pulumi_DigitalOcean_GetImageArgs_Slug_" data-uid="Pulumi.DigitalOcean.GetImageArgs.Slug*"></a>
   <h4 id="Pulumi_DigitalOcean_GetImageArgs_Slug" data-uid="Pulumi.DigitalOcean.GetImageArgs.Slug">Slug</h4>
@@ -165,7 +163,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Slug { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string? Slug { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -177,7 +175,40 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/GetImage.cs/#L46">View Source</a>
+  </span>
+  <a id="Pulumi_DigitalOcean_GetImageArgs_Source_" data-uid="Pulumi.DigitalOcean.GetImageArgs.Source*"></a>
+  <h4 id="Pulumi_DigitalOcean_GetImageArgs_Source" data-uid="Pulumi.DigitalOcean.GetImageArgs.Source">Source</h4>
+  <div class="markdown level1 summary"><p>Restrict the search to one of the following categories of images:</p>
+<ul>
+<li><code>all</code> - All images (whether public or private)</li>
+<li><code>applications</code> - One-click applications</li>
+<li><code>distributions</code> - Distributions</li>
+<li><code>user</code> - (Default) User (private) images</li>
+</ul>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? Source { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -189,7 +220,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/master/sdk/dotnet/GetImage.cs/#L18" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/GetImage.cs/#L19" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

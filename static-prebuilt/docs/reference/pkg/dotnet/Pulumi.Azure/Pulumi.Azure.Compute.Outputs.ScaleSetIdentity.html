@@ -78,40 +78,16 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">ScaleSetIdentity</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Azure.Compute.Outputs.html">Pulumi.Azure.Compute.Outputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Azure.dll</h6>
   <h5 id="Pulumi_Azure_Compute_Outputs_ScaleSetIdentity_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class ScaleSetIdentity</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class ScaleSetIdentity : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/ScaleSet.cs/#L2135">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/Outputs/ScaleSetIdentity.cs/#L19">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Compute_Outputs_ScaleSetIdentity_IdentityIds" data-uid="Pulumi.Azure.Compute.Outputs.ScaleSetIdentity.IdentityIds">IdentityIds</h4>
   <div class="markdown level1 summary"><p>Specifies a list of user managed identity ids to be assigned to the VMSS. Required if <code>type</code> is <code>UserAssigned</code>.</p>
@@ -131,20 +107,20 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/ScaleSet.cs/#L2136">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/Outputs/ScaleSetIdentity.cs/#L20">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Compute_Outputs_ScaleSetIdentity_PrincipalId" data-uid="Pulumi.Azure.Compute.Outputs.ScaleSetIdentity.PrincipalId">PrincipalId</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string PrincipalId</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? PrincipalId</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -156,16 +132,16 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/ScaleSet.cs/#L2140">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/Outputs/ScaleSetIdentity.cs/#L24">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Compute_Outputs_ScaleSetIdentity_Type" data-uid="Pulumi.Azure.Compute.Outputs.ScaleSetIdentity.Type">Type</h4>
-  <div class="markdown level1 summary"><p>The type of extension, available types for a publisher can be found using the Azure CLI.</p>
+  <div class="markdown level1 summary"><p>Specifies the identity type to be assigned to the scale set. Allowable values are <code>SystemAssigned</code> and <code>UserAssigned</code>. For the <code>SystemAssigned</code> identity the scale set's Service Principal ID (SPN) can be retrieved after the scale set has been created. See <a href="https://docs.microsoft.com/en-us/azure/active-directory/managed-service-identity/overview">documentation</a> for more information.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -194,7 +170,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/ScaleSet.cs/#L2129" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/Outputs/ScaleSetIdentity.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

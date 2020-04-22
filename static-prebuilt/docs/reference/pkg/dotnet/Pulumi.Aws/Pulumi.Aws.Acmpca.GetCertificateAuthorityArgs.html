@@ -76,36 +76,7 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.InvokeArgs.html">InvokeArgs</a></div>
-    <div class="level3"><span class="xref">GetCertificateAuthorityArgs</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.InvokeArgs.html#Pulumi_InvokeArgs_Empty">InvokeArgs.Empty</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">GetCertificateAuthorityArgs</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.Acmpca.html">Pulumi.Aws.Acmpca</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
@@ -116,7 +87,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Acmpca/GetCertificateAuthority.cs/#L47">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Acmpca/GetCertificateAuthority.cs/#L62">View Source</a>
   </span>
   <a id="Pulumi_Aws_Acmpca_GetCertificateAuthorityArgs__ctor_" data-uid="Pulumi.Aws.Acmpca.GetCertificateAuthorityArgs.#ctor*"></a>
   <h4 id="Pulumi_Aws_Acmpca_GetCertificateAuthorityArgs__ctor" data-uid="Pulumi.Aws.Acmpca.GetCertificateAuthorityArgs.#ctor">GetCertificateAuthorityArgs()</h4>
@@ -129,7 +100,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Acmpca/GetCertificateAuthority.cs/#L28">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Acmpca/GetCertificateAuthority.cs/#L30">View Source</a>
   </span>
   <a id="Pulumi_Aws_Acmpca_GetCertificateAuthorityArgs_Arn_" data-uid="Pulumi.Aws.Acmpca.GetCertificateAuthorityArgs.Arn*"></a>
   <h4 id="Pulumi_Aws_Acmpca_GetCertificateAuthorityArgs_Arn" data-uid="Pulumi.Aws.Acmpca.GetCertificateAuthorityArgs.Arn">Arn</h4>
@@ -156,15 +127,23 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Acmpca/GetCertificateAuthority.cs/#L33">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Acmpca/GetCertificateAuthority.cs/#L44">View Source</a>
   </span>
   <a id="Pulumi_Aws_Acmpca_GetCertificateAuthorityArgs_RevocationConfigurations_" data-uid="Pulumi.Aws.Acmpca.GetCertificateAuthorityArgs.RevocationConfigurations*"></a>
   <h4 id="Pulumi_Aws_Acmpca_GetCertificateAuthorityArgs_RevocationConfigurations" data-uid="Pulumi.Aws.Acmpca.GetCertificateAuthorityArgs.RevocationConfigurations">RevocationConfigurations</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Nested attribute containing revocation configuration.</p>
+<ul>
+<li><code>revocation_configuration.0.crl_configuration</code> - Nested attribute containing configuration of the certificate revocation list (CRL), if any, maintained by the certificate authority.</li>
+<li><code>revocation_configuration.0.crl_configuration.0.custom_cname</code> - Name inserted into the certificate CRL Distribution Points extension that enables the use of an alias for the CRL distribution point.</li>
+<li><code>revocation_configuration.0.crl_configuration.0.enabled</code> - Boolean value that specifies whether certificate revocation lists (CRLs) are enabled.</li>
+<li><code>revocation_configuration.0.crl_configuration.0.expiration_in_days</code> - Number of days until a certificate expires.</li>
+<li><code>revocation_configuration.0.crl_configuration.0.s3_bucket_name</code> - Name of the S3 bucket that contains the CRL.</li>
+</ul>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public List&lt;GetCertificateAuthorityRevocationConfigurationsArgs&gt; RevocationConfigurations { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public List&lt;GetCertificateAuthorityRevocationConfigurationArgs&gt; RevocationConfigurations { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -176,17 +155,18 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="Pulumi.Aws.Acmpca.Inputs.GetCertificateAuthorityRevocationConfigurationsArgs.html">GetCertificateAuthorityRevocationConfigurationsArgs</a>&gt;</td>
+        <td><span class="xref">List</span>&lt;<a class="xref" href="Pulumi.Aws.Acmpca.Inputs.GetCertificateAuthorityRevocationConfigurationArgs.html">GetCertificateAuthorityRevocationConfigurationArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Acmpca/GetCertificateAuthority.cs/#L41">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Acmpca/GetCertificateAuthority.cs/#L56">View Source</a>
   </span>
   <a id="Pulumi_Aws_Acmpca_GetCertificateAuthorityArgs_Tags_" data-uid="Pulumi.Aws.Acmpca.GetCertificateAuthorityArgs.Tags*"></a>
   <h4 id="Pulumi_Aws_Acmpca_GetCertificateAuthorityArgs_Tags" data-uid="Pulumi.Aws.Acmpca.GetCertificateAuthorityArgs.Tags">Tags</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Specifies a key-value map of user-defined tags that are attached to the certificate authority.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -202,7 +182,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.Dictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;</td>
+        <td><span class="xref">Dictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -214,7 +194,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Acmpca/GetCertificateAuthority.cs/#L23" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Acmpca/GetCertificateAuthority.cs/#L25" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

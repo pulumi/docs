@@ -76,36 +76,7 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
-    <div class="level3"><span class="xref">DiskArgs</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">DiskArgs</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.Compute.html">Pulumi.Gcp.Compute</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
@@ -116,7 +87,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/Disk.cs/#L348">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Disk.cs/#L364">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_DiskArgs__ctor_" data-uid="Pulumi.Gcp.Compute.DiskArgs.#ctor*"></a>
   <h4 id="Pulumi_Gcp_Compute_DiskArgs__ctor" data-uid="Pulumi.Gcp.Compute.DiskArgs.#ctor">DiskArgs()</h4>
@@ -129,7 +100,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/Disk.cs/#L228">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Disk.cs/#L249">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_DiskArgs_Description_" data-uid="Pulumi.Gcp.Compute.DiskArgs.Description*"></a>
   <h4 id="Pulumi_Gcp_Compute_DiskArgs_Description" data-uid="Pulumi.Gcp.Compute.DiskArgs.Description">Description</h4>
@@ -138,7 +109,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Description { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Description { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -150,27 +121,26 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/Disk.cs/#L239">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Disk.cs/#L259">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_DiskArgs_DiskEncryptionKey_" data-uid="Pulumi.Gcp.Compute.DiskArgs.DiskEncryptionKey*"></a>
   <h4 id="Pulumi_Gcp_Compute_DiskArgs_DiskEncryptionKey" data-uid="Pulumi.Gcp.Compute.DiskArgs.DiskEncryptionKey">DiskEncryptionKey</h4>
-  <div class="markdown level1 summary"><p>Encrypts the disk using a customer-supplied encryption key. After you encrypt a disk with a
-customer-supplied key, you must provide the same key if you use the disk later (e.g. to create a disk
-snapshot or an image, or to attach the disk to a virtual machine). Customer-supplied encryption keys do not
-protect access to metadata of the disk. If you do not provide an encryption key when creating the disk, then
-the disk will be encrypted using an automatically generated key and you do not need to provide a key to use
-the disk later.</p>
+  <div class="markdown level1 summary"><p>Encrypts the disk using a customer-supplied encryption key. After you encrypt a disk with a customer-supplied key, you
+must provide the same key if you use the disk later (e.g. to create a disk snapshot or an image, or to attach the disk
+to a virtual machine). Customer-supplied encryption keys do not protect access to metadata of the disk. If you do not
+provide an encryption key when creating the disk, then the disk will be encrypted using an automatically generated key
+and you do not need to provide a key to use the disk later.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;DiskDiskEncryptionKeyArgs&gt; DiskEncryptionKey { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;DiskDiskEncryptionKeyArgs&gt;? DiskEncryptionKey { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -182,28 +152,27 @@ the disk later.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Inputs.DiskDiskEncryptionKeyArgs.html">DiskDiskEncryptionKeyArgs</a>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Inputs.DiskDiskEncryptionKeyArgs.html">DiskDiskEncryptionKeyArgs</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/Disk.cs/#L251">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Disk.cs/#L270">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_DiskArgs_Image_" data-uid="Pulumi.Gcp.Compute.DiskArgs.Image*"></a>
   <h4 id="Pulumi_Gcp_Compute_DiskArgs_Image" data-uid="Pulumi.Gcp.Compute.DiskArgs.Image">Image</h4>
   <div class="markdown level1 summary"><p>The image from which to initialize this disk. This can be one of: the image's 'self_link',
-'projects/{project}/global/images/{image}', 'projects/{project}/global/images/family/{family}',
-'global/images/{image}', 'global/images/family/{family}', 'family/{family}', '{project}/{family}',
-'{project}/{image}', '{family}', or '{image}'. If referred by family, the images names must include the
-family name. If they don't, use the <a href="/docs/providers/google/d/datasource_compute_image.html">google_compute_image data
-source</a>. For instance, the image
-'centos-6-v20180104' includes its family name 'centos-6'. These images can be referred by family name here.</p>
+'projects/{project}/global/images/{image}', 'projects/{project}/global/images/family/{family}', 'global/images/{image}',
+'global/images/family/{family}', 'family/{family}', '{project}/{family}', '{project}/{image}', '{family}', or '{image}'.
+If referred by family, the images names must include the family name. If they don't, use the <a href="/docs/providers/google/d/datasource_compute_image.html">google_compute_image data
+source</a>. For instance, the image 'centos-6-v20180104' includes
+its family name 'centos-6'. These images can be referred by family name here.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Image { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Image { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -215,13 +184,13 @@ source</a>. For instance, the image
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/Disk.cs/#L260">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Disk.cs/#L279">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_DiskArgs_Labels_" data-uid="Pulumi.Gcp.Compute.DiskArgs.Labels*"></a>
   <h4 id="Pulumi_Gcp_Compute_DiskArgs_Labels" data-uid="Pulumi.Gcp.Compute.DiskArgs.Labels">Labels</h4>
@@ -242,26 +211,25 @@ source</a>. For instance, the image
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputMap-1.html">InputMap</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">InputMap</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/Disk.cs/#L273">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Disk.cs/#L291">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_DiskArgs_Name_" data-uid="Pulumi.Gcp.Compute.DiskArgs.Name*"></a>
   <h4 id="Pulumi_Gcp_Compute_DiskArgs_Name" data-uid="Pulumi.Gcp.Compute.DiskArgs.Name">Name</h4>
-  <div class="markdown level1 summary"><p>Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters
-long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular
-expression '<a href="%5B-a-z0-9%5D*%5Ba-z0-9%5D">a-z</a>?' which means the first character must be a lowercase letter, and all
-following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be
-a dash.</p>
+  <div class="markdown level1 summary"><p>Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
+comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
+'<a href="%5B-a-z0-9%5D*%5Ba-z0-9%5D">a-z</a>?' which means the first character must be a lowercase letter, and all following characters
+must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Name { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Name { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -273,24 +241,24 @@ a dash.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/Disk.cs/#L281">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Disk.cs/#L299">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_DiskArgs_PhysicalBlockSizeBytes_" data-uid="Pulumi.Gcp.Compute.DiskArgs.PhysicalBlockSizeBytes*"></a>
   <h4 id="Pulumi_Gcp_Compute_DiskArgs_PhysicalBlockSizeBytes" data-uid="Pulumi.Gcp.Compute.DiskArgs.PhysicalBlockSizeBytes">PhysicalBlockSizeBytes</h4>
-  <div class="markdown level1 summary"><p>Physical block size of the persistent disk, in bytes. If not present in a request, a default value is used.
-Currently supported sizes are 4096 and 16384, other sizes may be added in the future. If an unsupported
-value is requested, the error message will list the supported values for the caller's project.</p>
+  <div class="markdown level1 summary"><p>Physical block size of the persistent disk, in bytes. If not present in a request, a default value is used. Currently
+supported sizes are 4096 and 16384, other sizes may be added in the future. If an unsupported value is requested, the
+error message will list the supported values for the caller's project.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; PhysicalBlockSizeBytes { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? PhysicalBlockSizeBytes { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -302,13 +270,13 @@ value is requested, the error message will list the supported values for the cal
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/Disk.cs/#L288">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Disk.cs/#L306">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_DiskArgs_Project_" data-uid="Pulumi.Gcp.Compute.DiskArgs.Project*"></a>
   <h4 id="Pulumi_Gcp_Compute_DiskArgs_Project" data-uid="Pulumi.Gcp.Compute.DiskArgs.Project">Project</h4>
@@ -318,7 +286,7 @@ If it is not provided, the provider project is used.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Project { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Project { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -330,13 +298,13 @@ If it is not provided, the provider project is used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/Disk.cs/#L297">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Disk.cs/#L315">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_DiskArgs_ResourcePolicies_" data-uid="Pulumi.Gcp.Compute.DiskArgs.ResourcePolicies*"></a>
   <h4 id="Pulumi_Gcp_Compute_DiskArgs_ResourcePolicies" data-uid="Pulumi.Gcp.Compute.DiskArgs.ResourcePolicies">ResourcePolicies</h4>
@@ -357,25 +325,24 @@ If it is not provided, the provider project is used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/Disk.cs/#L309">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Disk.cs/#L326">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_DiskArgs_Size_" data-uid="Pulumi.Gcp.Compute.DiskArgs.Size*"></a>
   <h4 id="Pulumi_Gcp_Compute_DiskArgs_Size" data-uid="Pulumi.Gcp.Compute.DiskArgs.Size">Size</h4>
-  <div class="markdown level1 summary"><p>Size of the persistent disk, specified in GB. You can specify this field when creating a persistent disk
-using the 'image' or 'snapshot' parameter, or specify it alone to create an empty persistent disk. If you
-specify this field along with 'image' or 'snapshot', the value must not be less than the size of the image
-or the size of the snapshot.</p>
+  <div class="markdown level1 summary"><p>Size of the persistent disk, specified in GB. You can specify this field when creating a persistent disk using the
+'image' or 'snapshot' parameter, or specify it alone to create an empty persistent disk. If you specify this field along
+with 'image' or 'snapshot', the value must not be less than the size of the image or the size of the snapshot.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; Size { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? Size { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -387,25 +354,27 @@ or the size of the snapshot.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/Disk.cs/#L318">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Disk.cs/#L335">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_DiskArgs_Snapshot_" data-uid="Pulumi.Gcp.Compute.DiskArgs.Snapshot*"></a>
   <h4 id="Pulumi_Gcp_Compute_DiskArgs_Snapshot" data-uid="Pulumi.Gcp.Compute.DiskArgs.Snapshot">Snapshot</h4>
-  <div class="markdown level1 summary"><p>The source snapshot used to create this disk. You can provide this as a partial or full URL to the resource.
-If the snapshot is in another project than this disk, you must supply a full URL. For example, the following
-are valid values: * 'https://www.googleapis.com/compute/v1/projects/project/global/snapshots/snapshot' *
-'projects/project/global/snapshots/snapshot' * 'global/snapshots/snapshot' * 'snapshot'</p>
+  <div class="markdown level1 summary"><p>The source snapshot used to create this disk. You can provide this as a partial or full URL to the resource. If the
+snapshot is in another project than this disk, you must supply a full URL. For example, the following are valid values:</p>
+<ul>
+<li>'https://www.googleapis.com/compute/v1/projects/project/global/snapshots/snapshot' *
+'projects/project/global/snapshots/snapshot' * 'global/snapshots/snapshot' * 'snapshot'</li>
+</ul>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Snapshot { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Snapshot { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -417,13 +386,13 @@ are valid values: * 'https://www.googleapis.com/compute/v1/projects/project/glob
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/Disk.cs/#L325">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Disk.cs/#L342">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_DiskArgs_SourceImageEncryptionKey_" data-uid="Pulumi.Gcp.Compute.DiskArgs.SourceImageEncryptionKey*"></a>
   <h4 id="Pulumi_Gcp_Compute_DiskArgs_SourceImageEncryptionKey" data-uid="Pulumi.Gcp.Compute.DiskArgs.SourceImageEncryptionKey">SourceImageEncryptionKey</h4>
@@ -433,7 +402,7 @@ customer-supplied encryption key.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;DiskSourceImageEncryptionKeyArgs&gt; SourceImageEncryptionKey { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;DiskSourceImageEncryptionKeyArgs&gt;? SourceImageEncryptionKey { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -445,23 +414,23 @@ customer-supplied encryption key.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Inputs.DiskSourceImageEncryptionKeyArgs.html">DiskSourceImageEncryptionKeyArgs</a>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Inputs.DiskSourceImageEncryptionKeyArgs.html">DiskSourceImageEncryptionKeyArgs</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/Disk.cs/#L332">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Disk.cs/#L349">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_DiskArgs_SourceSnapshotEncryptionKey_" data-uid="Pulumi.Gcp.Compute.DiskArgs.SourceSnapshotEncryptionKey*"></a>
   <h4 id="Pulumi_Gcp_Compute_DiskArgs_SourceSnapshotEncryptionKey" data-uid="Pulumi.Gcp.Compute.DiskArgs.SourceSnapshotEncryptionKey">SourceSnapshotEncryptionKey</h4>
-  <div class="markdown level1 summary"><p>The customer-supplied encryption key of the source snapshot. Required if the source snapshot is protected by
-a customer-supplied encryption key.</p>
+  <div class="markdown level1 summary"><p>The customer-supplied encryption key of the source snapshot. Required if the source snapshot is protected by a
+customer-supplied encryption key.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;DiskSourceSnapshotEncryptionKeyArgs&gt; SourceSnapshotEncryptionKey { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;DiskSourceSnapshotEncryptionKeyArgs&gt;? SourceSnapshotEncryptionKey { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -473,23 +442,22 @@ a customer-supplied encryption key.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Inputs.DiskSourceSnapshotEncryptionKeyArgs.html">DiskSourceSnapshotEncryptionKeyArgs</a>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Inputs.DiskSourceSnapshotEncryptionKeyArgs.html">DiskSourceSnapshotEncryptionKeyArgs</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/Disk.cs/#L339">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Disk.cs/#L355">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_DiskArgs_Type_" data-uid="Pulumi.Gcp.Compute.DiskArgs.Type*"></a>
   <h4 id="Pulumi_Gcp_Compute_DiskArgs_Type" data-uid="Pulumi.Gcp.Compute.DiskArgs.Type">Type</h4>
-  <div class="markdown level1 summary"><p>URL of the disk type resource describing which disk type to use to create the disk. Provide this when
-creating the disk.</p>
+  <div class="markdown level1 summary"><p>URL of the disk type resource describing which disk type to use to create the disk. Provide this when creating the disk.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Type { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Type { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -501,13 +469,13 @@ creating the disk.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/Disk.cs/#L345">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Disk.cs/#L361">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_DiskArgs_Zone_" data-uid="Pulumi.Gcp.Compute.DiskArgs.Zone*"></a>
   <h4 id="Pulumi_Gcp_Compute_DiskArgs_Zone" data-uid="Pulumi.Gcp.Compute.DiskArgs.Zone">Zone</h4>
@@ -516,7 +484,7 @@ creating the disk.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Zone { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Zone { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -528,7 +496,7 @@ creating the disk.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -540,7 +508,7 @@ creating the disk.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/Disk.cs/#L223" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Disk.cs/#L244" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

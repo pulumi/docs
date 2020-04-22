@@ -78,40 +78,16 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">GetBucketResult</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.S3.html">Pulumi.Aws.S3</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
   <h5 id="Pulumi_Aws_S3_GetBucketResult_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class GetBucketResult</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class GetBucketResult : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/S3/GetBucket.cs/#L45">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/S3/GetBucket.cs/#L48">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_S3_GetBucketResult_Arn" data-uid="Pulumi.Aws.S3.GetBucketResult.Arn">Arn</h4>
   <div class="markdown level1 summary"><p>The ARN of the bucket. Will be of format <code>arn:aws:s3:::bucketname</code>.</p>
@@ -137,7 +113,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/S3/GetBucket.cs/#L46">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/S3/GetBucket.cs/#L49">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_S3_GetBucketResult_Bucket" data-uid="Pulumi.Aws.S3.GetBucketResult.Bucket">Bucket</h4>
   <div class="markdown level1 summary"></div>
@@ -162,7 +138,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/S3/GetBucket.cs/#L50">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/S3/GetBucket.cs/#L53">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_S3_GetBucketResult_BucketDomainName" data-uid="Pulumi.Aws.S3.GetBucketResult.BucketDomainName">BucketDomainName</h4>
   <div class="markdown level1 summary"><p>The bucket domain name. Will be of format <code>bucketname.s3.amazonaws.com</code>.</p>
@@ -188,7 +164,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/S3/GetBucket.cs/#L54">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/S3/GetBucket.cs/#L57">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_S3_GetBucketResult_BucketRegionalDomainName" data-uid="Pulumi.Aws.S3.GetBucketResult.BucketRegionalDomainName">BucketRegionalDomainName</h4>
   <div class="markdown level1 summary"><p>The bucket region-specific domain name. The bucket domain name including the region name, please refer <a href="https://docs.aws.amazon.com/general/latest/gr/rande.html#s3_region">here</a> for format. Note: The AWS CloudFront allows specifying S3 region-specific endpoint when creating S3 origin, it will prevent <a href="https://forums.aws.amazon.com/thread.jspa?threadID=216814">redirect issues</a> from CloudFront to S3 Origin URL.</p>
@@ -214,7 +190,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/S3/GetBucket.cs/#L58">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/S3/GetBucket.cs/#L61">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_S3_GetBucketResult_HostedZoneId" data-uid="Pulumi.Aws.S3.GetBucketResult.HostedZoneId">HostedZoneId</h4>
   <div class="markdown level1 summary"><p>The <a href="https://docs.aws.amazon.com/general/latest/gr/rande.html#s3_website_region_endpoints">Route 53 Hosted Zone ID</a> for this bucket's region.</p>
@@ -240,7 +216,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/S3/GetBucket.cs/#L74">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/S3/GetBucket.cs/#L65">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_S3_GetBucketResult_Id" data-uid="Pulumi.Aws.S3.GetBucketResult.Id">Id</h4>
   <div class="markdown level1 summary"><p>id is the provider-assigned unique ID for this managed resource.</p>
@@ -266,7 +242,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/S3/GetBucket.cs/#L62">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/S3/GetBucket.cs/#L69">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_S3_GetBucketResult_Region" data-uid="Pulumi.Aws.S3.GetBucketResult.Region">Region</h4>
   <div class="markdown level1 summary"><p>The AWS region this bucket resides in.</p>
@@ -292,7 +268,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/S3/GetBucket.cs/#L66">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/S3/GetBucket.cs/#L73">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_S3_GetBucketResult_WebsiteDomain" data-uid="Pulumi.Aws.S3.GetBucketResult.WebsiteDomain">WebsiteDomain</h4>
   <div class="markdown level1 summary"><p>The domain of the website endpoint, if the bucket is configured with a website. If not, this will be an empty string. This is used to create Route 53 alias records.</p>
@@ -318,7 +294,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/S3/GetBucket.cs/#L70">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/S3/GetBucket.cs/#L77">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_S3_GetBucketResult_WebsiteEndpoint" data-uid="Pulumi.Aws.S3.GetBucketResult.WebsiteEndpoint">WebsiteEndpoint</h4>
   <div class="markdown level1 summary"><p>The website endpoint, if the bucket is configured with a website. If not, this will be an empty string.</p>
@@ -350,7 +326,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/S3/GetBucket.cs/#L39" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/S3/GetBucket.cs/#L42" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

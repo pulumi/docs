@@ -76,36 +76,7 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
-    <div class="level3"><span class="xref">NodejsAppLayerState</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">NodejsAppLayerState</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.OpsWorks.html">Pulumi.Aws.OpsWorks</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
@@ -116,7 +87,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Opsworks/NodejsAppLayer.cs/#L491">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/NodejsAppLayer.cs/#L531">View Source</a>
   </span>
   <a id="Pulumi_Aws_OpsWorks_NodejsAppLayerState__ctor_" data-uid="Pulumi.Aws.OpsWorks.NodejsAppLayerState.#ctor*"></a>
   <h4 id="Pulumi_Aws_OpsWorks_NodejsAppLayerState__ctor" data-uid="Pulumi.Aws.OpsWorks.NodejsAppLayerState.#ctor">NodejsAppLayerState()</h4>
@@ -129,7 +100,34 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Opsworks/NodejsAppLayer.cs/#L340">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/NodejsAppLayer.cs/#L362">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_OpsWorks_NodejsAppLayerState_Arn_" data-uid="Pulumi.Aws.OpsWorks.NodejsAppLayerState.Arn*"></a>
+  <h4 id="Pulumi_Aws_OpsWorks_NodejsAppLayerState_Arn" data-uid="Pulumi.Aws.OpsWorks.NodejsAppLayerState.Arn">Arn</h4>
+  <div class="markdown level1 summary"><p>The Amazon Resource Name(ARN) of the layer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Arn { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/NodejsAppLayer.cs/#L368">View Source</a>
   </span>
   <a id="Pulumi_Aws_OpsWorks_NodejsAppLayerState_AutoAssignElasticIps_" data-uid="Pulumi.Aws.OpsWorks.NodejsAppLayerState.AutoAssignElasticIps*"></a>
   <h4 id="Pulumi_Aws_OpsWorks_NodejsAppLayerState_AutoAssignElasticIps" data-uid="Pulumi.Aws.OpsWorks.NodejsAppLayerState.AutoAssignElasticIps">AutoAssignElasticIps</h4>
@@ -138,7 +136,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; AutoAssignElasticIps { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? AutoAssignElasticIps { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -150,13 +148,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Opsworks/NodejsAppLayer.cs/#L346">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/NodejsAppLayer.cs/#L374">View Source</a>
   </span>
   <a id="Pulumi_Aws_OpsWorks_NodejsAppLayerState_AutoAssignPublicIps_" data-uid="Pulumi.Aws.OpsWorks.NodejsAppLayerState.AutoAssignPublicIps*"></a>
   <h4 id="Pulumi_Aws_OpsWorks_NodejsAppLayerState_AutoAssignPublicIps" data-uid="Pulumi.Aws.OpsWorks.NodejsAppLayerState.AutoAssignPublicIps">AutoAssignPublicIps</h4>
@@ -165,7 +163,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; AutoAssignPublicIps { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? AutoAssignPublicIps { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -177,13 +175,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Opsworks/NodejsAppLayer.cs/#L352">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/NodejsAppLayer.cs/#L380">View Source</a>
   </span>
   <a id="Pulumi_Aws_OpsWorks_NodejsAppLayerState_AutoHealing_" data-uid="Pulumi.Aws.OpsWorks.NodejsAppLayerState.AutoHealing*"></a>
   <h4 id="Pulumi_Aws_OpsWorks_NodejsAppLayerState_AutoHealing" data-uid="Pulumi.Aws.OpsWorks.NodejsAppLayerState.AutoHealing">AutoHealing</h4>
@@ -192,7 +190,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; AutoHealing { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? AutoHealing { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -204,13 +202,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Opsworks/NodejsAppLayer.cs/#L357">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/NodejsAppLayer.cs/#L385">View Source</a>
   </span>
   <a id="Pulumi_Aws_OpsWorks_NodejsAppLayerState_CustomConfigureRecipes_" data-uid="Pulumi.Aws.OpsWorks.NodejsAppLayerState.CustomConfigureRecipes*"></a>
   <h4 id="Pulumi_Aws_OpsWorks_NodejsAppLayerState_CustomConfigureRecipes" data-uid="Pulumi.Aws.OpsWorks.NodejsAppLayerState.CustomConfigureRecipes">CustomConfigureRecipes</h4>
@@ -230,13 +228,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Opsworks/NodejsAppLayer.cs/#L365">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/NodejsAppLayer.cs/#L393">View Source</a>
   </span>
   <a id="Pulumi_Aws_OpsWorks_NodejsAppLayerState_CustomDeployRecipes_" data-uid="Pulumi.Aws.OpsWorks.NodejsAppLayerState.CustomDeployRecipes*"></a>
   <h4 id="Pulumi_Aws_OpsWorks_NodejsAppLayerState_CustomDeployRecipes" data-uid="Pulumi.Aws.OpsWorks.NodejsAppLayerState.CustomDeployRecipes">CustomDeployRecipes</h4>
@@ -256,13 +254,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Opsworks/NodejsAppLayer.cs/#L374">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/NodejsAppLayer.cs/#L402">View Source</a>
   </span>
   <a id="Pulumi_Aws_OpsWorks_NodejsAppLayerState_CustomInstanceProfileArn_" data-uid="Pulumi.Aws.OpsWorks.NodejsAppLayerState.CustomInstanceProfileArn*"></a>
   <h4 id="Pulumi_Aws_OpsWorks_NodejsAppLayerState_CustomInstanceProfileArn" data-uid="Pulumi.Aws.OpsWorks.NodejsAppLayerState.CustomInstanceProfileArn">CustomInstanceProfileArn</h4>
@@ -271,7 +269,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; CustomInstanceProfileArn { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? CustomInstanceProfileArn { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -283,13 +281,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Opsworks/NodejsAppLayer.cs/#L380">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/NodejsAppLayer.cs/#L408">View Source</a>
   </span>
   <a id="Pulumi_Aws_OpsWorks_NodejsAppLayerState_CustomJson_" data-uid="Pulumi.Aws.OpsWorks.NodejsAppLayerState.CustomJson*"></a>
   <h4 id="Pulumi_Aws_OpsWorks_NodejsAppLayerState_CustomJson" data-uid="Pulumi.Aws.OpsWorks.NodejsAppLayerState.CustomJson">CustomJson</h4>
@@ -298,7 +296,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; CustomJson { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? CustomJson { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -310,13 +308,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Opsworks/NodejsAppLayer.cs/#L389">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/NodejsAppLayer.cs/#L417">View Source</a>
   </span>
   <a id="Pulumi_Aws_OpsWorks_NodejsAppLayerState_CustomSecurityGroupIds_" data-uid="Pulumi.Aws.OpsWorks.NodejsAppLayerState.CustomSecurityGroupIds*"></a>
   <h4 id="Pulumi_Aws_OpsWorks_NodejsAppLayerState_CustomSecurityGroupIds" data-uid="Pulumi.Aws.OpsWorks.NodejsAppLayerState.CustomSecurityGroupIds">CustomSecurityGroupIds</h4>
@@ -337,13 +335,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Opsworks/NodejsAppLayer.cs/#L397">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/NodejsAppLayer.cs/#L425">View Source</a>
   </span>
   <a id="Pulumi_Aws_OpsWorks_NodejsAppLayerState_CustomSetupRecipes_" data-uid="Pulumi.Aws.OpsWorks.NodejsAppLayerState.CustomSetupRecipes*"></a>
   <h4 id="Pulumi_Aws_OpsWorks_NodejsAppLayerState_CustomSetupRecipes" data-uid="Pulumi.Aws.OpsWorks.NodejsAppLayerState.CustomSetupRecipes">CustomSetupRecipes</h4>
@@ -363,13 +361,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Opsworks/NodejsAppLayer.cs/#L405">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/NodejsAppLayer.cs/#L433">View Source</a>
   </span>
   <a id="Pulumi_Aws_OpsWorks_NodejsAppLayerState_CustomShutdownRecipes_" data-uid="Pulumi.Aws.OpsWorks.NodejsAppLayerState.CustomShutdownRecipes*"></a>
   <h4 id="Pulumi_Aws_OpsWorks_NodejsAppLayerState_CustomShutdownRecipes" data-uid="Pulumi.Aws.OpsWorks.NodejsAppLayerState.CustomShutdownRecipes">CustomShutdownRecipes</h4>
@@ -389,13 +387,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Opsworks/NodejsAppLayer.cs/#L413">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/NodejsAppLayer.cs/#L441">View Source</a>
   </span>
   <a id="Pulumi_Aws_OpsWorks_NodejsAppLayerState_CustomUndeployRecipes_" data-uid="Pulumi.Aws.OpsWorks.NodejsAppLayerState.CustomUndeployRecipes*"></a>
   <h4 id="Pulumi_Aws_OpsWorks_NodejsAppLayerState_CustomUndeployRecipes" data-uid="Pulumi.Aws.OpsWorks.NodejsAppLayerState.CustomUndeployRecipes">CustomUndeployRecipes</h4>
@@ -415,13 +413,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Opsworks/NodejsAppLayer.cs/#L422">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/NodejsAppLayer.cs/#L450">View Source</a>
   </span>
   <a id="Pulumi_Aws_OpsWorks_NodejsAppLayerState_DrainElbOnShutdown_" data-uid="Pulumi.Aws.OpsWorks.NodejsAppLayerState.DrainElbOnShutdown*"></a>
   <h4 id="Pulumi_Aws_OpsWorks_NodejsAppLayerState_DrainElbOnShutdown" data-uid="Pulumi.Aws.OpsWorks.NodejsAppLayerState.DrainElbOnShutdown">DrainElbOnShutdown</h4>
@@ -430,7 +428,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; DrainElbOnShutdown { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? DrainElbOnShutdown { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -442,13 +440,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Opsworks/NodejsAppLayer.cs/#L431">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/NodejsAppLayer.cs/#L459">View Source</a>
   </span>
   <a id="Pulumi_Aws_OpsWorks_NodejsAppLayerState_EbsVolumes_" data-uid="Pulumi.Aws.OpsWorks.NodejsAppLayerState.EbsVolumes*"></a>
   <h4 id="Pulumi_Aws_OpsWorks_NodejsAppLayerState_EbsVolumes" data-uid="Pulumi.Aws.OpsWorks.NodejsAppLayerState.EbsVolumes">EbsVolumes</h4>
@@ -457,7 +455,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public InputList&lt;NodejsAppLayerEbsVolumesGetArgs&gt; EbsVolumes { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public InputList&lt;NodejsAppLayerEbsVolumeGetArgs&gt; EbsVolumes { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -469,13 +467,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<a class="xref" href="Pulumi.Aws.OpsWorks.Inputs.NodejsAppLayerEbsVolumesGetArgs.html">NodejsAppLayerEbsVolumesGetArgs</a>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<a class="xref" href="Pulumi.Aws.OpsWorks.Inputs.NodejsAppLayerEbsVolumeGetArgs.html">NodejsAppLayerEbsVolumeGetArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Opsworks/NodejsAppLayer.cs/#L440">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/NodejsAppLayer.cs/#L468">View Source</a>
   </span>
   <a id="Pulumi_Aws_OpsWorks_NodejsAppLayerState_ElasticLoadBalancer_" data-uid="Pulumi.Aws.OpsWorks.NodejsAppLayerState.ElasticLoadBalancer*"></a>
   <h4 id="Pulumi_Aws_OpsWorks_NodejsAppLayerState_ElasticLoadBalancer" data-uid="Pulumi.Aws.OpsWorks.NodejsAppLayerState.ElasticLoadBalancer">ElasticLoadBalancer</h4>
@@ -484,7 +482,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; ElasticLoadBalancer { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? ElasticLoadBalancer { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -496,13 +494,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Opsworks/NodejsAppLayer.cs/#L446">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/NodejsAppLayer.cs/#L474">View Source</a>
   </span>
   <a id="Pulumi_Aws_OpsWorks_NodejsAppLayerState_InstallUpdatesOnBoot_" data-uid="Pulumi.Aws.OpsWorks.NodejsAppLayerState.InstallUpdatesOnBoot*"></a>
   <h4 id="Pulumi_Aws_OpsWorks_NodejsAppLayerState_InstallUpdatesOnBoot" data-uid="Pulumi.Aws.OpsWorks.NodejsAppLayerState.InstallUpdatesOnBoot">InstallUpdatesOnBoot</h4>
@@ -511,7 +509,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; InstallUpdatesOnBoot { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? InstallUpdatesOnBoot { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -523,13 +521,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Opsworks/NodejsAppLayer.cs/#L452">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/NodejsAppLayer.cs/#L480">View Source</a>
   </span>
   <a id="Pulumi_Aws_OpsWorks_NodejsAppLayerState_InstanceShutdownTimeout_" data-uid="Pulumi.Aws.OpsWorks.NodejsAppLayerState.InstanceShutdownTimeout*"></a>
   <h4 id="Pulumi_Aws_OpsWorks_NodejsAppLayerState_InstanceShutdownTimeout" data-uid="Pulumi.Aws.OpsWorks.NodejsAppLayerState.InstanceShutdownTimeout">InstanceShutdownTimeout</h4>
@@ -538,7 +536,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; InstanceShutdownTimeout { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? InstanceShutdownTimeout { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -550,13 +548,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Opsworks/NodejsAppLayer.cs/#L458">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/NodejsAppLayer.cs/#L486">View Source</a>
   </span>
   <a id="Pulumi_Aws_OpsWorks_NodejsAppLayerState_Name_" data-uid="Pulumi.Aws.OpsWorks.NodejsAppLayerState.Name*"></a>
   <h4 id="Pulumi_Aws_OpsWorks_NodejsAppLayerState_Name" data-uid="Pulumi.Aws.OpsWorks.NodejsAppLayerState.Name">Name</h4>
@@ -565,7 +563,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Name { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Name { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -577,13 +575,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Opsworks/NodejsAppLayer.cs/#L464">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/NodejsAppLayer.cs/#L492">View Source</a>
   </span>
   <a id="Pulumi_Aws_OpsWorks_NodejsAppLayerState_NodejsVersion_" data-uid="Pulumi.Aws.OpsWorks.NodejsAppLayerState.NodejsVersion*"></a>
   <h4 id="Pulumi_Aws_OpsWorks_NodejsAppLayerState_NodejsVersion" data-uid="Pulumi.Aws.OpsWorks.NodejsAppLayerState.NodejsVersion">NodejsVersion</h4>
@@ -592,7 +590,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; NodejsVersion { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? NodejsVersion { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -604,13 +602,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Opsworks/NodejsAppLayer.cs/#L470">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/NodejsAppLayer.cs/#L498">View Source</a>
   </span>
   <a id="Pulumi_Aws_OpsWorks_NodejsAppLayerState_StackId_" data-uid="Pulumi.Aws.OpsWorks.NodejsAppLayerState.StackId*"></a>
   <h4 id="Pulumi_Aws_OpsWorks_NodejsAppLayerState_StackId" data-uid="Pulumi.Aws.OpsWorks.NodejsAppLayerState.StackId">StackId</h4>
@@ -619,7 +617,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; StackId { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? StackId { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -631,13 +629,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Opsworks/NodejsAppLayer.cs/#L479">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/NodejsAppLayer.cs/#L507">View Source</a>
   </span>
   <a id="Pulumi_Aws_OpsWorks_NodejsAppLayerState_SystemPackages_" data-uid="Pulumi.Aws.OpsWorks.NodejsAppLayerState.SystemPackages*"></a>
   <h4 id="Pulumi_Aws_OpsWorks_NodejsAppLayerState_SystemPackages" data-uid="Pulumi.Aws.OpsWorks.NodejsAppLayerState.SystemPackages">SystemPackages</h4>
@@ -658,22 +656,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Opsworks/NodejsAppLayer.cs/#L488">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/NodejsAppLayer.cs/#L519">View Source</a>
   </span>
-  <a id="Pulumi_Aws_OpsWorks_NodejsAppLayerState_UseEbsOptimizedInstances_" data-uid="Pulumi.Aws.OpsWorks.NodejsAppLayerState.UseEbsOptimizedInstances*"></a>
-  <h4 id="Pulumi_Aws_OpsWorks_NodejsAppLayerState_UseEbsOptimizedInstances" data-uid="Pulumi.Aws.OpsWorks.NodejsAppLayerState.UseEbsOptimizedInstances">UseEbsOptimizedInstances</h4>
-  <div class="markdown level1 summary"><p>Whether to use EBS-optimized instances.</p>
+  <a id="Pulumi_Aws_OpsWorks_NodejsAppLayerState_Tags_" data-uid="Pulumi.Aws.OpsWorks.NodejsAppLayerState.Tags*"></a>
+  <h4 id="Pulumi_Aws_OpsWorks_NodejsAppLayerState_Tags" data-uid="Pulumi.Aws.OpsWorks.NodejsAppLayerState.Tags">Tags</h4>
+  <div class="markdown level1 summary"><p>A mapping of tags to assign to the resource.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; UseEbsOptimizedInstances { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public InputMap&lt;object&gt; Tags { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -685,7 +683,34 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">InputMap</span>&lt;<span class="xref">System.Object</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/NodejsAppLayer.cs/#L528">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_OpsWorks_NodejsAppLayerState_UseEbsOptimizedInstances_" data-uid="Pulumi.Aws.OpsWorks.NodejsAppLayerState.UseEbsOptimizedInstances*"></a>
+  <h4 id="Pulumi_Aws_OpsWorks_NodejsAppLayerState_UseEbsOptimizedInstances" data-uid="Pulumi.Aws.OpsWorks.NodejsAppLayerState.UseEbsOptimizedInstances">UseEbsOptimizedInstances</h4>
+  <div class="markdown level1 summary"><p>Whether to use EBS-optimized instances.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? UseEbsOptimizedInstances { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -697,7 +722,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Opsworks/NodejsAppLayer.cs/#L335" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/NodejsAppLayer.cs/#L357" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

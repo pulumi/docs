@@ -84,23 +84,22 @@ For information about compute environment, see [Compute Environments][2] .</p>
 <p><strong>Note:</strong> To prevent a race condition during environment deletion, make sure to set <code>depends_on</code> to the related <code>aws.iam.RolePolicyAttachment</code>;
 otherwise, the policy may be destroyed too soon and the compute environment will then get stuck in the <code>DELETING</code> state, see [Troubleshooting AWS Batch][3] .</p>
 </blockquote>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/batch_compute_environment.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/batch_compute_environment.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Batch.ComputeEnvironmentArgs.html">ComputeEnvironmentArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Batch.ComputeEnvironmentState.html">ComputeEnvironmentState</a></h4>
       <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Batch.GetComputeEnvironment.html">GetComputeEnvironment</a></h4>
+      <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Batch.GetComputeEnvironmentArgs.html">GetComputeEnvironmentArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Batch.GetComputeEnvironmentResult.html">GetComputeEnvironmentResult</a></h4>
       <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Batch.GetJobQueue.html">GetJobQueue</a></h4>
+      <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Batch.GetJobQueueArgs.html">GetJobQueueArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Batch.GetJobQueueResult.html">GetJobQueueResult</a></h4>
-      <section></section>
-      <h4><a class="xref" href="Pulumi.Aws.Batch.Invokes.html">Invokes</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Batch.JobDefinition.html">JobDefinition</a></h4>
       <section><p>Provides a Batch Job Definition resource.</p>
@@ -114,9 +113,6 @@ otherwise, the policy may be destroyed too soon and the compute environment will
 <ul>
 <li><code>attempt_duration_seconds</code> - (Optional) The time duration in seconds after which AWS Batch terminates your jobs if they have not finished. The minimum value for the timeout is <code>60</code> seconds.</li>
 </ul>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/batch_job_definition.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/batch_job_definition.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Batch.JobDefinitionArgs.html">JobDefinitionArgs</a></h4>
       <section></section>
@@ -124,9 +120,6 @@ otherwise, the policy may be destroyed too soon and the compute environment will
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Batch.JobQueue.html">JobQueue</a></h4>
       <section><p>Provides a Batch Job Queue resource.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/batch_job_queue.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/batch_job_queue.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Batch.JobQueueArgs.html">JobQueueArgs</a></h4>
       <section></section>

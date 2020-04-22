@@ -78,43 +78,22 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">DatabaseInstanceSettingsBackupConfiguration</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.Sql.Outputs.html">Pulumi.Gcp.Sql.Outputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
   <h5 id="Pulumi_Gcp_Sql_Outputs_DatabaseInstanceSettingsBackupConfiguration_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class DatabaseInstanceSettingsBackupConfiguration</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class DatabaseInstanceSettingsBackupConfiguration : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Sql/DatabaseInstance.cs/#L1020">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Sql/Outputs/DatabaseInstanceSettingsBackupConfiguration.cs/#L21">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Sql_Outputs_DatabaseInstanceSettingsBackupConfiguration_BinaryLogEnabled" data-uid="Pulumi.Gcp.Sql.Outputs.DatabaseInstanceSettingsBackupConfiguration.BinaryLogEnabled">BinaryLogEnabled</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>True if binary logging is enabled. If
+<code>settings.backup_configuration.enabled</code> is false, this must be as well.
+Cannot be used with Postgres.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -136,10 +115,11 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Sql/DatabaseInstance.cs/#L1021">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Sql/Outputs/DatabaseInstanceSettingsBackupConfiguration.cs/#L25">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Sql_Outputs_DatabaseInstanceSettingsBackupConfiguration_Enabled" data-uid="Pulumi.Gcp.Sql.Outputs.DatabaseInstanceSettingsBackupConfiguration.Enabled">Enabled</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>True if backup configuration is enabled.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -161,14 +141,14 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Sql/DatabaseInstance.cs/#L1022">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Sql/Outputs/DatabaseInstanceSettingsBackupConfiguration.cs/#L26">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Sql_Outputs_DatabaseInstanceSettingsBackupConfiguration_Location" data-uid="Pulumi.Gcp.Sql.Outputs.DatabaseInstanceSettingsBackupConfiguration.Location">Location</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string Location</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? Location</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -180,20 +160,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Sql/DatabaseInstance.cs/#L1023">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Sql/Outputs/DatabaseInstanceSettingsBackupConfiguration.cs/#L31">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Sql_Outputs_DatabaseInstanceSettingsBackupConfiguration_StartTime" data-uid="Pulumi.Gcp.Sql.Outputs.DatabaseInstanceSettingsBackupConfiguration.StartTime">StartTime</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p><code>HH:MM</code> format time indicating when backup
+configuration starts.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string StartTime</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? StartTime</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -205,7 +187,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -217,7 +199,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Sql/DatabaseInstance.cs/#L1017" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Sql/Outputs/DatabaseInstanceSettingsBackupConfiguration.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

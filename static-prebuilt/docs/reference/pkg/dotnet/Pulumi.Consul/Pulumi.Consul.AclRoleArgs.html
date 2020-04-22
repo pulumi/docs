@@ -87,7 +87,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/AclRole.cs/#L126">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/AclRole.cs/#L137">View Source</a>
   </span>
   <a id="Pulumi_Consul_AclRoleArgs__ctor_" data-uid="Pulumi.Consul.AclRoleArgs.#ctor*"></a>
   <h4 id="Pulumi_Consul_AclRoleArgs__ctor" data-uid="Pulumi.Consul.AclRoleArgs.#ctor">AclRoleArgs()</h4>
@@ -100,7 +100,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/AclRole.cs/#L92">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/AclRole.cs/#L97">View Source</a>
   </span>
   <a id="Pulumi_Consul_AclRoleArgs_Description_" data-uid="Pulumi.Consul.AclRoleArgs.Description*"></a>
   <h4 id="Pulumi_Consul_AclRoleArgs_Description" data-uid="Pulumi.Consul.AclRoleArgs.Description">Description</h4>
@@ -127,7 +127,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/AclRole.cs/#L98">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/AclRole.cs/#L103">View Source</a>
   </span>
   <a id="Pulumi_Consul_AclRoleArgs_Name_" data-uid="Pulumi.Consul.AclRoleArgs.Name*"></a>
   <h4 id="Pulumi_Consul_AclRoleArgs_Name" data-uid="Pulumi.Consul.AclRoleArgs.Name">Name</h4>
@@ -154,7 +154,34 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/AclRole.cs/#L107">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/AclRole.cs/#L109">View Source</a>
+  </span>
+  <a id="Pulumi_Consul_AclRoleArgs_Namespace_" data-uid="Pulumi.Consul.AclRoleArgs.Namespace*"></a>
+  <h4 id="Pulumi_Consul_AclRoleArgs_Namespace" data-uid="Pulumi.Consul.AclRoleArgs.Namespace">Namespace</h4>
+  <div class="markdown level1 summary"><p>The namespace to create the role within.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Namespace { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/AclRole.cs/#L118">View Source</a>
   </span>
   <a id="Pulumi_Consul_AclRoleArgs_Policies_" data-uid="Pulumi.Consul.AclRoleArgs.Policies*"></a>
   <h4 id="Pulumi_Consul_AclRoleArgs_Policies" data-uid="Pulumi.Consul.AclRoleArgs.Policies">Policies</h4>
@@ -181,7 +208,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/AclRole.cs/#L120">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/AclRole.cs/#L131">View Source</a>
   </span>
   <a id="Pulumi_Consul_AclRoleArgs_ServiceIdentities_" data-uid="Pulumi.Consul.AclRoleArgs.ServiceIdentities*"></a>
   <h4 id="Pulumi_Consul_AclRoleArgs_ServiceIdentities" data-uid="Pulumi.Consul.AclRoleArgs.ServiceIdentities">ServiceIdentities</h4>
@@ -191,7 +218,7 @@ be applied to the role.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public InputList&lt;AclRoleServiceIdentitiesArgs&gt; ServiceIdentities { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public InputList&lt;AclRoleServiceIdentityArgs&gt; ServiceIdentities { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -203,7 +230,7 @@ be applied to the role.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">InputList</span>&lt;<a class="xref" href="Pulumi.Consul.Inputs.AclRoleServiceIdentitiesArgs.html">AclRoleServiceIdentitiesArgs</a>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<a class="xref" href="Pulumi.Consul.Inputs.AclRoleServiceIdentityArgs.html">AclRoleServiceIdentityArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -215,7 +242,7 @@ be applied to the role.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/AclRole.cs/#L87" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/AclRole.cs/#L92" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -71,50 +71,19 @@
   
   <h1 id="Pulumi_Gcp_Storage_BucketACL" data-uid="Pulumi.Gcp.Storage.BucketACL" class="text-break">Class BucketACL
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Authoritatively manages a bucket's ACLs in Google cloud storage service (GCS). For more information see
+<a href="https://cloud.google.com/storage/docs/access-control/lists">the official documentation</a>
+and
+<a href="https://cloud.google.com/storage/docs/json_api/v1/bucketAccessControls">API</a>.</p>
+<p>Bucket ACLs can be managed non authoritatively using the <code>storage_bucket_access_control</code> resource. Do not use these two resources in conjunction to manage the same bucket.</p>
+<p>Permissions can be granted either by ACLs or Cloud IAM policies. In general, permissions granted by Cloud IAM policies do not appear in ACLs, and permissions granted by ACLs do not appear in Cloud IAM policies. The only exception is for ACLs applied directly on a bucket and certain bucket-level Cloud IAM policies, as described in <a href="https://cloud.google.com/storage/docs/access-control/iam#acls">Cloud IAM relation to ACLs</a>.</p>
+<p><strong>NOTE</strong> This resource will not remove the <code>project-owners-&amp;lt;project_id&gt;</code> entity from the <code>OWNER</code> role.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
-    <div class="level3"><span class="xref">BucketACL</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">BucketACL</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.Storage.html">Pulumi.Gcp.Storage</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
@@ -125,16 +94,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Storage/BucketACL.cs/#L46">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Storage/BucketACL.cs/#L58">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Storage_BucketACL__ctor_" data-uid="Pulumi.Gcp.Storage.BucketACL.#ctor*"></a>
-  <h4 id="Pulumi_Gcp_Storage_BucketACL__ctor_System_String_Pulumi_Gcp_Storage_BucketACLArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Gcp.Storage.BucketACL.#ctor(System.String,Pulumi.Gcp.Storage.BucketACLArgs,Pulumi.CustomResourceOptions)">BucketACL(String, BucketACLArgs, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Gcp_Storage_BucketACL__ctor_System_String_Pulumi_Gcp_Storage_BucketACLArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Gcp.Storage.BucketACL.#ctor(System.String,Pulumi.Gcp.Storage.BucketACLArgs,System.Nullable{CustomResourceOptions})">BucketACL(String, BucketACLArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Create a BucketACL resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public BucketACL(string name, BucketACLArgs args, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public BucketACL(string name, BucketACLArgs args, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -159,7 +128,7 @@
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -169,7 +138,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Storage/BucketACL.cs/#L17">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Storage/BucketACL.cs/#L29">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Storage_BucketACL_Bucket_" data-uid="Pulumi.Gcp.Storage.BucketACL.Bucket*"></a>
   <h4 id="Pulumi_Gcp_Storage_BucketACL_Bucket" data-uid="Pulumi.Gcp.Storage.BucketACL.Bucket">Bucket</h4>
@@ -190,13 +159,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Storage/BucketACL.cs/#L23">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Storage/BucketACL.cs/#L35">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Storage_BucketACL_DefaultAcl_" data-uid="Pulumi.Gcp.Storage.BucketACL.DefaultAcl*"></a>
   <h4 id="Pulumi_Gcp_Storage_BucketACL_DefaultAcl" data-uid="Pulumi.Gcp.Storage.BucketACL.DefaultAcl">DefaultAcl</h4>
@@ -205,7 +174,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; DefaultAcl { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; DefaultAcl { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -217,13 +186,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Storage/BucketACL.cs/#L29">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Storage/BucketACL.cs/#L41">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Storage_BucketACL_PredefinedAcl_" data-uid="Pulumi.Gcp.Storage.BucketACL.PredefinedAcl*"></a>
   <h4 id="Pulumi_Gcp_Storage_BucketACL_PredefinedAcl" data-uid="Pulumi.Gcp.Storage.BucketACL.PredefinedAcl">PredefinedAcl</h4>
@@ -232,7 +201,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; PredefinedAcl { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; PredefinedAcl { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -244,13 +213,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Storage/BucketACL.cs/#L35">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Storage/BucketACL.cs/#L47">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Storage_BucketACL_RoleEntities_" data-uid="Pulumi.Gcp.Storage.BucketACL.RoleEntities*"></a>
   <h4 id="Pulumi_Gcp_Storage_BucketACL_RoleEntities" data-uid="Pulumi.Gcp.Storage.BucketACL.RoleEntities">RoleEntities</h4>
@@ -271,7 +240,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -279,17 +248,17 @@
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Storage/BucketACL.cs/#L76">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Storage/BucketACL.cs/#L88">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Storage_BucketACL_Get_" data-uid="Pulumi.Gcp.Storage.BucketACL.Get*"></a>
-  <h4 id="Pulumi_Gcp_Storage_BucketACL_Get_System_String_Pulumi_Input_System_String__Pulumi_Gcp_Storage_BucketACLState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Gcp.Storage.BucketACL.Get(System.String,Pulumi.Input{System.String},Pulumi.Gcp.Storage.BucketACLState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, BucketACLState, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Gcp_Storage_BucketACL_Get_System_String_Input_System_String__Pulumi_Gcp_Storage_BucketACLState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Gcp.Storage.BucketACL.Get(System.String,Input{System.String},Pulumi.Gcp.Storage.BucketACLState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, BucketACLState, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Get an existing BucketACL resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static BucketACL Get(string name, Input&lt;string&gt; id, BucketACLState state = null, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static BucketACL Get(string name, Input&lt;string&gt; id, BucketACLState state = null, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -308,7 +277,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -320,7 +289,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -349,7 +318,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Storage/BucketACL.cs/#L12" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Storage/BucketACL.cs/#L24" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

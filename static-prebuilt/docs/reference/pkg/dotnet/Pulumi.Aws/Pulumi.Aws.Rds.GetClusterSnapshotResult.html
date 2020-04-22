@@ -78,40 +78,16 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">GetClusterSnapshotResult</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.Rds.html">Pulumi.Aws.Rds</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
   <h5 id="Pulumi_Aws_Rds_GetClusterSnapshotResult_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class GetClusterSnapshotResult</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class GetClusterSnapshotResult : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Rds/GetClusterSnapshot.cs/#L88">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/GetClusterSnapshot.cs/#L95">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Rds_GetClusterSnapshotResult_AllocatedStorage" data-uid="Pulumi.Aws.Rds.GetClusterSnapshotResult.AllocatedStorage">AllocatedStorage</h4>
   <div class="markdown level1 summary"><p>Specifies the allocated storage size in gigabytes (GB).</p>
@@ -137,7 +113,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Rds/GetClusterSnapshot.cs/#L92">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/GetClusterSnapshot.cs/#L99">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Rds_GetClusterSnapshotResult_AvailabilityZones" data-uid="Pulumi.Aws.Rds.GetClusterSnapshotResult.AvailabilityZones">AvailabilityZones</h4>
   <div class="markdown level1 summary"><p>List of EC2 Availability Zones that instances in the DB cluster snapshot can be restored in.</p>
@@ -157,13 +133,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Rds/GetClusterSnapshot.cs/#L96">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/GetClusterSnapshot.cs/#L103">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Rds_GetClusterSnapshotResult_DbClusterIdentifier" data-uid="Pulumi.Aws.Rds.GetClusterSnapshotResult.DbClusterIdentifier">DbClusterIdentifier</h4>
   <div class="markdown level1 summary"><p>Specifies the DB cluster identifier of the DB cluster that this DB cluster snapshot was created from.</p>
@@ -171,7 +147,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string DbClusterIdentifier</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? DbClusterIdentifier</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -183,13 +159,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Rds/GetClusterSnapshot.cs/#L100">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/GetClusterSnapshot.cs/#L107">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Rds_GetClusterSnapshotResult_DbClusterSnapshotArn" data-uid="Pulumi.Aws.Rds.GetClusterSnapshotResult.DbClusterSnapshotArn">DbClusterSnapshotArn</h4>
   <div class="markdown level1 summary"><p>The Amazon Resource Name (ARN) for the DB Cluster Snapshot.</p>
@@ -215,14 +191,14 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Rds/GetClusterSnapshot.cs/#L101">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/GetClusterSnapshot.cs/#L108">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Rds_GetClusterSnapshotResult_DbClusterSnapshotIdentifier" data-uid="Pulumi.Aws.Rds.GetClusterSnapshotResult.DbClusterSnapshotIdentifier">DbClusterSnapshotIdentifier</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string DbClusterSnapshotIdentifier</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? DbClusterSnapshotIdentifier</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -234,13 +210,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Rds/GetClusterSnapshot.cs/#L105">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/GetClusterSnapshot.cs/#L112">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Rds_GetClusterSnapshotResult_Engine" data-uid="Pulumi.Aws.Rds.GetClusterSnapshotResult.Engine">Engine</h4>
   <div class="markdown level1 summary"><p>Specifies the name of the database engine.</p>
@@ -266,7 +242,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Rds/GetClusterSnapshot.cs/#L109">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/GetClusterSnapshot.cs/#L116">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Rds_GetClusterSnapshotResult_EngineVersion" data-uid="Pulumi.Aws.Rds.GetClusterSnapshotResult.EngineVersion">EngineVersion</h4>
   <div class="markdown level1 summary"><p>Version of the database engine for this DB cluster snapshot.</p>
@@ -292,7 +268,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Rds/GetClusterSnapshot.cs/#L150">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/GetClusterSnapshot.cs/#L120">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Rds_GetClusterSnapshotResult_Id" data-uid="Pulumi.Aws.Rds.GetClusterSnapshotResult.Id">Id</h4>
   <div class="markdown level1 summary"><p>id is the provider-assigned unique ID for this managed resource.</p>
@@ -318,7 +294,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Rds/GetClusterSnapshot.cs/#L110">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/GetClusterSnapshot.cs/#L121">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Rds_GetClusterSnapshotResult_IncludePublic" data-uid="Pulumi.Aws.Rds.GetClusterSnapshotResult.IncludePublic">IncludePublic</h4>
   <div class="markdown level1 summary"></div>
@@ -343,7 +319,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Rds/GetClusterSnapshot.cs/#L111">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/GetClusterSnapshot.cs/#L122">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Rds_GetClusterSnapshotResult_IncludeShared" data-uid="Pulumi.Aws.Rds.GetClusterSnapshotResult.IncludeShared">IncludeShared</h4>
   <div class="markdown level1 summary"></div>
@@ -368,7 +344,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Rds/GetClusterSnapshot.cs/#L115">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/GetClusterSnapshot.cs/#L126">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Rds_GetClusterSnapshotResult_KmsKeyId" data-uid="Pulumi.Aws.Rds.GetClusterSnapshotResult.KmsKeyId">KmsKeyId</h4>
   <div class="markdown level1 summary"><p>If storage_encrypted is true, the AWS KMS key identifier for the encrypted DB cluster snapshot.</p>
@@ -394,7 +370,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Rds/GetClusterSnapshot.cs/#L119">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/GetClusterSnapshot.cs/#L130">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Rds_GetClusterSnapshotResult_LicenseModel" data-uid="Pulumi.Aws.Rds.GetClusterSnapshotResult.LicenseModel">LicenseModel</h4>
   <div class="markdown level1 summary"><p>License model information for the restored DB cluster.</p>
@@ -420,7 +396,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Rds/GetClusterSnapshot.cs/#L120">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/GetClusterSnapshot.cs/#L131">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Rds_GetClusterSnapshotResult_MostRecent" data-uid="Pulumi.Aws.Rds.GetClusterSnapshotResult.MostRecent">MostRecent</h4>
   <div class="markdown level1 summary"></div>
@@ -445,7 +421,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Rds/GetClusterSnapshot.cs/#L124">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/GetClusterSnapshot.cs/#L135">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Rds_GetClusterSnapshotResult_Port" data-uid="Pulumi.Aws.Rds.GetClusterSnapshotResult.Port">Port</h4>
   <div class="markdown level1 summary"><p>Port that the DB cluster was listening on at the time of the snapshot.</p>
@@ -471,7 +447,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Rds/GetClusterSnapshot.cs/#L128">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/GetClusterSnapshot.cs/#L139">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Rds_GetClusterSnapshotResult_SnapshotCreateTime" data-uid="Pulumi.Aws.Rds.GetClusterSnapshotResult.SnapshotCreateTime">SnapshotCreateTime</h4>
   <div class="markdown level1 summary"><p>Time when the snapshot was taken, in Universal Coordinated Time (UTC).</p>
@@ -497,14 +473,14 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Rds/GetClusterSnapshot.cs/#L129">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/GetClusterSnapshot.cs/#L140">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Rds_GetClusterSnapshotResult_SnapshotType" data-uid="Pulumi.Aws.Rds.GetClusterSnapshotResult.SnapshotType">SnapshotType</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string SnapshotType</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? SnapshotType</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -516,13 +492,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Rds/GetClusterSnapshot.cs/#L130">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/GetClusterSnapshot.cs/#L141">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Rds_GetClusterSnapshotResult_SourceDbClusterSnapshotArn" data-uid="Pulumi.Aws.Rds.GetClusterSnapshotResult.SourceDbClusterSnapshotArn">SourceDbClusterSnapshotArn</h4>
   <div class="markdown level1 summary"></div>
@@ -547,7 +523,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Rds/GetClusterSnapshot.cs/#L134">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/GetClusterSnapshot.cs/#L145">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Rds_GetClusterSnapshotResult_Status" data-uid="Pulumi.Aws.Rds.GetClusterSnapshotResult.Status">Status</h4>
   <div class="markdown level1 summary"><p>The status of this DB Cluster Snapshot.</p>
@@ -573,7 +549,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Rds/GetClusterSnapshot.cs/#L138">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/GetClusterSnapshot.cs/#L149">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Rds_GetClusterSnapshotResult_StorageEncrypted" data-uid="Pulumi.Aws.Rds.GetClusterSnapshotResult.StorageEncrypted">StorageEncrypted</h4>
   <div class="markdown level1 summary"><p>Specifies whether the DB cluster snapshot is encrypted.</p>
@@ -599,7 +575,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Rds/GetClusterSnapshot.cs/#L142">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/GetClusterSnapshot.cs/#L153">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Rds_GetClusterSnapshotResult_Tags" data-uid="Pulumi.Aws.Rds.GetClusterSnapshotResult.Tags">Tags</h4>
   <div class="markdown level1 summary"><p>A mapping of tags for the resource.</p>
@@ -619,13 +595,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;</td>
+        <td><span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Rds/GetClusterSnapshot.cs/#L146">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/GetClusterSnapshot.cs/#L157">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Rds_GetClusterSnapshotResult_VpcId" data-uid="Pulumi.Aws.Rds.GetClusterSnapshotResult.VpcId">VpcId</h4>
   <div class="markdown level1 summary"><p>The VPC ID associated with the DB cluster snapshot.</p>
@@ -657,7 +633,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Rds/GetClusterSnapshot.cs/#L82" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Rds/GetClusterSnapshot.cs/#L89" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

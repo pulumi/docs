@@ -78,40 +78,16 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">GetSwitchesResult</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.AliCloud.Vpc.html">Pulumi.AliCloud.Vpc</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.AliCloud.dll</h6>
   <h5 id="Pulumi_AliCloud_Vpc_GetSwitchesResult_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class GetSwitchesResult</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class GetSwitchesResult : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Vpc/GetSwitches.cs/#L99">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Vpc/GetSwitches.cs/#L102">View Source</a>
   </span>
   <h4 id="Pulumi_AliCloud_Vpc_GetSwitchesResult_CidrBlock" data-uid="Pulumi.AliCloud.Vpc.GetSwitchesResult.CidrBlock">CidrBlock</h4>
   <div class="markdown level1 summary"><p>CIDR block of the VSwitch.</p>
@@ -119,7 +95,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string CidrBlock</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? CidrBlock</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -131,13 +107,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Vpc/GetSwitches.cs/#L131">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Vpc/GetSwitches.cs/#L106">View Source</a>
   </span>
   <h4 id="Pulumi_AliCloud_Vpc_GetSwitchesResult_Id" data-uid="Pulumi.AliCloud.Vpc.GetSwitchesResult.Id">Id</h4>
   <div class="markdown level1 summary"><p>id is the provider-assigned unique ID for this managed resource.</p>
@@ -163,7 +139,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Vpc/GetSwitches.cs/#L103">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Vpc/GetSwitches.cs/#L110">View Source</a>
   </span>
   <h4 id="Pulumi_AliCloud_Vpc_GetSwitchesResult_Ids" data-uid="Pulumi.AliCloud.Vpc.GetSwitchesResult.Ids">Ids</h4>
   <div class="markdown level1 summary"><p>A list of VSwitch IDs.</p>
@@ -183,13 +159,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Vpc/GetSwitches.cs/#L107">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Vpc/GetSwitches.cs/#L114">View Source</a>
   </span>
   <h4 id="Pulumi_AliCloud_Vpc_GetSwitchesResult_IsDefault" data-uid="Pulumi.AliCloud.Vpc.GetSwitchesResult.IsDefault">IsDefault</h4>
   <div class="markdown level1 summary"><p>Whether the VSwitch is the default one in the region.</p>
@@ -215,14 +191,14 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Vpc/GetSwitches.cs/#L108">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Vpc/GetSwitches.cs/#L115">View Source</a>
   </span>
   <h4 id="Pulumi_AliCloud_Vpc_GetSwitchesResult_NameRegex" data-uid="Pulumi.AliCloud.Vpc.GetSwitchesResult.NameRegex">NameRegex</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string NameRegex</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? NameRegex</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -234,13 +210,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Vpc/GetSwitches.cs/#L112">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Vpc/GetSwitches.cs/#L119">View Source</a>
   </span>
   <h4 id="Pulumi_AliCloud_Vpc_GetSwitchesResult_Names" data-uid="Pulumi.AliCloud.Vpc.GetSwitchesResult.Names">Names</h4>
   <div class="markdown level1 summary"><p>A list of VSwitch names.</p>
@@ -260,20 +236,20 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Vpc/GetSwitches.cs/#L113">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Vpc/GetSwitches.cs/#L120">View Source</a>
   </span>
   <h4 id="Pulumi_AliCloud_Vpc_GetSwitchesResult_OutputFile" data-uid="Pulumi.AliCloud.Vpc.GetSwitchesResult.OutputFile">OutputFile</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string OutputFile</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? OutputFile</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -285,20 +261,20 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Vpc/GetSwitches.cs/#L114">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Vpc/GetSwitches.cs/#L121">View Source</a>
   </span>
   <h4 id="Pulumi_AliCloud_Vpc_GetSwitchesResult_ResourceGroupId" data-uid="Pulumi.AliCloud.Vpc.GetSwitchesResult.ResourceGroupId">ResourceGroupId</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string ResourceGroupId</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? ResourceGroupId</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -310,20 +286,20 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Vpc/GetSwitches.cs/#L115">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Vpc/GetSwitches.cs/#L122">View Source</a>
   </span>
   <h4 id="Pulumi_AliCloud_Vpc_GetSwitchesResult_Tags" data-uid="Pulumi.AliCloud.Vpc.GetSwitchesResult.Tags">Tags</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly ImmutableDictionary&lt;string, object&gt; Tags</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly ImmutableDictionary&lt;string, object&gt;? Tags</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -335,13 +311,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Vpc/GetSwitches.cs/#L119">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Vpc/GetSwitches.cs/#L126">View Source</a>
   </span>
   <h4 id="Pulumi_AliCloud_Vpc_GetSwitchesResult_VpcId" data-uid="Pulumi.AliCloud.Vpc.GetSwitchesResult.VpcId">VpcId</h4>
   <div class="markdown level1 summary"><p>ID of the VPC that owns the VSwitch.</p>
@@ -349,7 +325,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string VpcId</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? VpcId</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -361,13 +337,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Vpc/GetSwitches.cs/#L123">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Vpc/GetSwitches.cs/#L130">View Source</a>
   </span>
   <h4 id="Pulumi_AliCloud_Vpc_GetSwitchesResult_Vswitches" data-uid="Pulumi.AliCloud.Vpc.GetSwitchesResult.Vswitches">Vswitches</h4>
   <div class="markdown level1 summary"><p>A list of VSwitches. Each element contains the following attributes:</p>
@@ -375,7 +351,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetSwitchesVswitchesResult&gt; Vswitches</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetSwitchesVswitchResult&gt; Vswitches</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -387,13 +363,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.AliCloud.Vpc.Outputs.GetSwitchesVswitchesResult.html">GetSwitchesVswitchesResult</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.AliCloud.Vpc.Outputs.GetSwitchesVswitchResult.html">GetSwitchesVswitchResult</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Vpc/GetSwitches.cs/#L127">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Vpc/GetSwitches.cs/#L134">View Source</a>
   </span>
   <h4 id="Pulumi_AliCloud_Vpc_GetSwitchesResult_ZoneId" data-uid="Pulumi.AliCloud.Vpc.GetSwitchesResult.ZoneId">ZoneId</h4>
   <div class="markdown level1 summary"><p>ID of the availability zone where the VSwitch is located.</p>
@@ -401,7 +377,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string ZoneId</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? ZoneId</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -413,7 +389,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -425,7 +401,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Vpc/GetSwitches.cs/#L93" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Vpc/GetSwitches.cs/#L96" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -78,43 +78,24 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">TableEncryptionConfiguration</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.BigQuery.Outputs.html">Pulumi.Gcp.BigQuery.Outputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
   <h5 id="Pulumi_Gcp_BigQuery_Outputs_TableEncryptionConfiguration_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class TableEncryptionConfiguration</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class TableEncryptionConfiguration : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Bigquery/Table.cs/#L847">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/BigQuery/Outputs/TableEncryptionConfiguration.cs/#L23">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_BigQuery_Outputs_TableEncryptionConfiguration_KmsKeyName" data-uid="Pulumi.Gcp.BigQuery.Outputs.TableEncryptionConfiguration.KmsKeyName">KmsKeyName</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The self link or full name of a key which should be used to
+encrypt this table.  Note that the default bigquery service account will need to have
+encrypt/decrypt permissions on this key - you may want to see the
+<code>gcp.bigquery.getDefaultServiceAccount</code> datasource and the
+<code>gcp.kms.CryptoKeyIAMBinding</code> resource.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -142,7 +123,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Bigquery/Table.cs/#L844" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/BigQuery/Outputs/TableEncryptionConfiguration.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

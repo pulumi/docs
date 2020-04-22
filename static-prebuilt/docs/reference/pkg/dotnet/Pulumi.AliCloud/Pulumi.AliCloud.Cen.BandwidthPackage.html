@@ -73,53 +73,12 @@
   </h1>
   <div class="markdown level0 summary"><p>Provides a CEN bandwidth package resource. The CEN bandwidth package is an abstracted object that includes an interconnection bandwidth and interconnection areas. To buy a bandwidth package, you must specify the areas to connect. An area consists of one or more Alibaba Cloud regions. The areas in CEN include Mainland China, Asia Pacific, North America, and Europe.</p>
 <p>For information about CEN and how to use it, see <a href="https://www.alibabacloud.com/help/doc-detail/65982.htm">Manage bandwidth packages</a>.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/cen_bandwidth_package.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/cen_bandwidth_package.html.markdown</a>.</p>
-</blockquote>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
-    <div class="level3"><span class="xref">BandwidthPackage</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">BandwidthPackage</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.AliCloud.Cen.html">Pulumi.AliCloud.Cen</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.AliCloud.dll</h6>
@@ -130,16 +89,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Cen/BandwidthPackage.cs/#L77">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Cen/BandwidthPackage.cs/#L75">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Cen_BandwidthPackage__ctor_" data-uid="Pulumi.AliCloud.Cen.BandwidthPackage.#ctor*"></a>
-  <h4 id="Pulumi_AliCloud_Cen_BandwidthPackage__ctor_System_String_Pulumi_AliCloud_Cen_BandwidthPackageArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.AliCloud.Cen.BandwidthPackage.#ctor(System.String,Pulumi.AliCloud.Cen.BandwidthPackageArgs,Pulumi.CustomResourceOptions)">BandwidthPackage(String, BandwidthPackageArgs, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_AliCloud_Cen_BandwidthPackage__ctor_System_String_Pulumi_AliCloud_Cen_BandwidthPackageArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.AliCloud.Cen.BandwidthPackage.#ctor(System.String,Pulumi.AliCloud.Cen.BandwidthPackageArgs,System.Nullable{CustomResourceOptions})">BandwidthPackage(String, BandwidthPackageArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Create a BandwidthPackage resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public BandwidthPackage(string name, BandwidthPackageArgs args, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public BandwidthPackage(string name, BandwidthPackageArgs args, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -164,7 +123,7 @@
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -174,7 +133,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Cen/BandwidthPackage.cs/#L24">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Cen/BandwidthPackage.cs/#L22">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Cen_BandwidthPackage_Bandwidth_" data-uid="Pulumi.AliCloud.Cen.BandwidthPackage.Bandwidth*"></a>
   <h4 id="Pulumi_AliCloud_Cen_BandwidthPackage_Bandwidth" data-uid="Pulumi.AliCloud.Cen.BandwidthPackage.Bandwidth">Bandwidth</h4>
@@ -195,13 +154,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Cen/BandwidthPackage.cs/#L30">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Cen/BandwidthPackage.cs/#L28">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Cen_BandwidthPackage_ChargeType_" data-uid="Pulumi.AliCloud.Cen.BandwidthPackage.ChargeType*"></a>
   <h4 id="Pulumi_AliCloud_Cen_BandwidthPackage_ChargeType" data-uid="Pulumi.AliCloud.Cen.BandwidthPackage.ChargeType">ChargeType</h4>
@@ -210,7 +169,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ChargeType { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; ChargeType { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -222,13 +181,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Cen/BandwidthPackage.cs/#L36">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Cen/BandwidthPackage.cs/#L34">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Cen_BandwidthPackage_Description_" data-uid="Pulumi.AliCloud.Cen.BandwidthPackage.Description*"></a>
   <h4 id="Pulumi_AliCloud_Cen_BandwidthPackage_Description" data-uid="Pulumi.AliCloud.Cen.BandwidthPackage.Description">Description</h4>
@@ -237,7 +196,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Description { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Description { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -249,13 +208,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Cen/BandwidthPackage.cs/#L42">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Cen/BandwidthPackage.cs/#L40">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Cen_BandwidthPackage_ExpiredTime_" data-uid="Pulumi.AliCloud.Cen.BandwidthPackage.ExpiredTime*"></a>
   <h4 id="Pulumi_AliCloud_Cen_BandwidthPackage_ExpiredTime" data-uid="Pulumi.AliCloud.Cen.BandwidthPackage.ExpiredTime">ExpiredTime</h4>
@@ -276,13 +235,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Cen/BandwidthPackage.cs/#L48">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Cen/BandwidthPackage.cs/#L46">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Cen_BandwidthPackage_GeographicRegionIds_" data-uid="Pulumi.AliCloud.Cen.BandwidthPackage.GeographicRegionIds*"></a>
   <h4 id="Pulumi_AliCloud_Cen_BandwidthPackage_GeographicRegionIds" data-uid="Pulumi.AliCloud.Cen.BandwidthPackage.GeographicRegionIds">GeographicRegionIds</h4>
@@ -303,13 +262,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Cen/BandwidthPackage.cs/#L54">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Cen/BandwidthPackage.cs/#L52">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Cen_BandwidthPackage_Name_" data-uid="Pulumi.AliCloud.Cen.BandwidthPackage.Name*"></a>
   <h4 id="Pulumi_AliCloud_Cen_BandwidthPackage_Name" data-uid="Pulumi.AliCloud.Cen.BandwidthPackage.Name">Name</h4>
@@ -330,13 +289,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Cen/BandwidthPackage.cs/#L60">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Cen/BandwidthPackage.cs/#L58">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Cen_BandwidthPackage_Period_" data-uid="Pulumi.AliCloud.Cen.BandwidthPackage.Period*"></a>
   <h4 id="Pulumi_AliCloud_Cen_BandwidthPackage_Period" data-uid="Pulumi.AliCloud.Cen.BandwidthPackage.Period">Period</h4>
@@ -357,13 +316,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Cen/BandwidthPackage.cs/#L66">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Cen/BandwidthPackage.cs/#L64">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Cen_BandwidthPackage_Status_" data-uid="Pulumi.AliCloud.Cen.BandwidthPackage.Status*"></a>
   <h4 id="Pulumi_AliCloud_Cen_BandwidthPackage_Status" data-uid="Pulumi.AliCloud.Cen.BandwidthPackage.Status">Status</h4>
@@ -384,7 +343,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -392,17 +351,17 @@
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Cen/BandwidthPackage.cs/#L107">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Cen/BandwidthPackage.cs/#L105">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Cen_BandwidthPackage_Get_" data-uid="Pulumi.AliCloud.Cen.BandwidthPackage.Get*"></a>
-  <h4 id="Pulumi_AliCloud_Cen_BandwidthPackage_Get_System_String_Pulumi_Input_System_String__Pulumi_AliCloud_Cen_BandwidthPackageState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.AliCloud.Cen.BandwidthPackage.Get(System.String,Pulumi.Input{System.String},Pulumi.AliCloud.Cen.BandwidthPackageState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, BandwidthPackageState, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_AliCloud_Cen_BandwidthPackage_Get_System_String_Input_System_String__Pulumi_AliCloud_Cen_BandwidthPackageState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.AliCloud.Cen.BandwidthPackage.Get(System.String,Input{System.String},Pulumi.AliCloud.Cen.BandwidthPackageState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, BandwidthPackageState, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Get an existing BandwidthPackage resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static BandwidthPackage Get(string name, Input&lt;string&gt; id, BandwidthPackageState state = null, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static BandwidthPackage Get(string name, Input&lt;string&gt; id, BandwidthPackageState state = null, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -421,7 +380,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -433,7 +392,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -462,7 +421,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Cen/BandwidthPackage.cs/#L19" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Cen/BandwidthPackage.cs/#L17" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

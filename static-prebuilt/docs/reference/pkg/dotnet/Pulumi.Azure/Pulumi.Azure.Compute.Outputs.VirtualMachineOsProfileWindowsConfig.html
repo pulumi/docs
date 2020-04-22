@@ -78,47 +78,24 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">VirtualMachineOsProfileWindowsConfig</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Azure.Compute.Outputs.html">Pulumi.Azure.Compute.Outputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Azure.dll</h6>
   <h5 id="Pulumi_Azure_Compute_Outputs_VirtualMachineOsProfileWindowsConfig_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class VirtualMachineOsProfileWindowsConfig</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class VirtualMachineOsProfileWindowsConfig : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/VirtualMachine.cs/#L1335">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/Outputs/VirtualMachineOsProfileWindowsConfig.cs/#L19">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Compute_Outputs_VirtualMachineOsProfileWindowsConfig_AdditionalUnattendConfigs" data-uid="Pulumi.Azure.Compute.Outputs.VirtualMachineOsProfileWindowsConfig.AdditionalUnattendConfigs">AdditionalUnattendConfigs</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A <code>additional_unattend_config</code> block.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;VirtualMachineOsProfileWindowsConfigAdditionalUnattendConfigs&gt; AdditionalUnattendConfigs</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;VirtualMachineOsProfileWindowsConfigAdditionalUnattendConfig&gt; AdditionalUnattendConfigs</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -130,16 +107,17 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Azure.Compute.Outputs.VirtualMachineOsProfileWindowsConfigAdditionalUnattendConfigs.html">VirtualMachineOsProfileWindowsConfigAdditionalUnattendConfigs</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Azure.Compute.Outputs.VirtualMachineOsProfileWindowsConfigAdditionalUnattendConfig.html">VirtualMachineOsProfileWindowsConfigAdditionalUnattendConfig</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/VirtualMachine.cs/#L1336">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/Outputs/VirtualMachineOsProfileWindowsConfig.cs/#L23">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Compute_Outputs_VirtualMachineOsProfileWindowsConfig_EnableAutomaticUpgrades" data-uid="Pulumi.Azure.Compute.Outputs.VirtualMachineOsProfileWindowsConfig.EnableAutomaticUpgrades">EnableAutomaticUpgrades</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Are automatic updates enabled on this Virtual Machine? Defaults to <code>false.</code></p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -161,10 +139,11 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/VirtualMachine.cs/#L1337">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/Outputs/VirtualMachineOsProfileWindowsConfig.cs/#L27">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Compute_Outputs_VirtualMachineOsProfileWindowsConfig_ProvisionVmAgent" data-uid="Pulumi.Azure.Compute.Outputs.VirtualMachineOsProfileWindowsConfig.ProvisionVmAgent">ProvisionVmAgent</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Should the Azure Virtual Machine Guest Agent be installed on this Virtual Machine? Defaults to <code>false</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -186,14 +165,15 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/VirtualMachine.cs/#L1338">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/Outputs/VirtualMachineOsProfileWindowsConfig.cs/#L31">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Compute_Outputs_VirtualMachineOsProfileWindowsConfig_Timezone" data-uid="Pulumi.Azure.Compute.Outputs.VirtualMachineOsProfileWindowsConfig.Timezone">Timezone</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Specifies the time zone of the virtual machine, <a href="http://jackstromberg.com/2017/01/list-of-time-zones-consumed-by-azure/">the possible values are defined here</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string Timezone</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? Timezone</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -205,20 +185,21 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/VirtualMachine.cs/#L1339">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/Outputs/VirtualMachineOsProfileWindowsConfig.cs/#L35">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Compute_Outputs_VirtualMachineOsProfileWindowsConfig_Winrms" data-uid="Pulumi.Azure.Compute.Outputs.VirtualMachineOsProfileWindowsConfig.Winrms">Winrms</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>One or more <code>winrm</code> block.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;VirtualMachineOsProfileWindowsConfigWinrms&gt; Winrms</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;VirtualMachineOsProfileWindowsConfigWinrm&gt; Winrms</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -230,7 +211,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Azure.Compute.Outputs.VirtualMachineOsProfileWindowsConfigWinrms.html">VirtualMachineOsProfileWindowsConfigWinrms</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Azure.Compute.Outputs.VirtualMachineOsProfileWindowsConfigWinrm.html">VirtualMachineOsProfileWindowsConfigWinrm</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -242,7 +223,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/VirtualMachine.cs/#L1332" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/Outputs/VirtualMachineOsProfileWindowsConfig.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

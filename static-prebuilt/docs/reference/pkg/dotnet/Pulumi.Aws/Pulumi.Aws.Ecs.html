@@ -77,7 +77,26 @@
     <h3 id="classes">Classes
   </h3>
       <h4><a class="xref" href="Pulumi.Aws.Ecs.CapacityProvider.html">CapacityProvider</a></h4>
-      <section></section>
+      <section><p>Provides an ECS cluster capacity provider. More information can be found on the <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-capacity-providers.html">ECS Developer Guide</a>.</p>
+<blockquote>
+<p><strong>NOTE:</strong> The AWS API does not currently support deleting ECS cluster capacity providers. Removing this resource will only remove the state for it.</p>
+</blockquote>
+<h2 id="auto_scaling_group_provider">auto_scaling_group_provider</h2>
+<p>The <code>auto_scaling_group_provider</code> block supports the following:</p>
+<ul>
+<li><code>auto_scaling_group_arn</code> - (Required) - The Amazon Resource Name (ARN) of the associated auto scaling group.</li>
+<li><code>managed_scaling</code> - (Optional) - Nested argument defining the parameters of the auto scaling. Defined below.</li>
+<li><code>managed_termination_protection</code> - (Optional) - Enables or disables container-aware termination of instances in the auto scaling group when scale-in happens. Valid values are <code>ENABLED</code> and <code>DISABLED</code>.</li>
+</ul>
+<h2 id="managed_scaling">managed_scaling</h2>
+<p>The <code>managed_scaling</code> block supports the following:</p>
+<ul>
+<li><code>maximum_scaling_step_size</code> - (Optional) The maximum step adjustment size. A number between 1 and 10,000.</li>
+<li><code>minimum_scaling_step_size</code> - (Optional) The minimum step adjustment size. A number between 1 and 10,000.</li>
+<li><code>status</code> - (Optional) Whether auto scaling is managed by ECS. Valid values are <code>ENABLED</code> and <code>DISABLED</code>.</li>
+<li><code>target_capacity</code> - (Optional) The target utilization for the capacity provider. A number between 1 and 100.</li>
+</ul>
+</section>
       <h4><a class="xref" href="Pulumi.Aws.Ecs.CapacityProviderArgs.html">CapacityProviderArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Ecs.CapacityProviderState.html">CapacityProviderState</a></h4>
@@ -97,31 +116,34 @@
 <li><code>weight</code> - (Optional) The relative percentage of the total number of launched tasks that should use the specified capacity provider.</li>
 <li><code>base</code> - (Optional) The number of tasks, at a minimum, to run on the specified capacity provider. Only one capacity provider in a capacity provider strategy can have a base defined.</li>
 </ul>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ecs_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ecs_cluster.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Ecs.ClusterArgs.html">ClusterArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Ecs.ClusterState.html">ClusterState</a></h4>
       <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ecs.GetCluster.html">GetCluster</a></h4>
+      <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Ecs.GetClusterArgs.html">GetClusterArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Ecs.GetClusterResult.html">GetClusterResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ecs.GetContainerDefinition.html">GetContainerDefinition</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Ecs.GetContainerDefinitionArgs.html">GetContainerDefinitionArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Ecs.GetContainerDefinitionResult.html">GetContainerDefinitionResult</a></h4>
       <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ecs.GetService.html">GetService</a></h4>
+      <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Ecs.GetServiceArgs.html">GetServiceArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Ecs.GetServiceResult.html">GetServiceResult</a></h4>
       <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ecs.GetTaskDefinition.html">GetTaskDefinition</a></h4>
+      <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Ecs.GetTaskDefinitionArgs.html">GetTaskDefinitionArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Ecs.GetTaskDefinitionResult.html">GetTaskDefinitionResult</a></h4>
-      <section></section>
-      <h4><a class="xref" href="Pulumi.Aws.Ecs.Invokes.html">Invokes</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Ecs.Service.html">Service</a></h4>
       <section><blockquote>
@@ -190,9 +212,6 @@ Guide</a>.</li>
 <li><code>container_port</code> - (Optional) The port value, already specified in the task definition, to be used for your service discovery service.</li>
 <li><code>container_name</code> - (Optional) The container name value, already specified in the task definition, to be used for your service discovery service.</li>
 </ul>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ecs_service.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ecs_service.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Ecs.ServiceArgs.html">ServiceArgs</a></h4>
       <section></section>
@@ -200,9 +219,6 @@ Guide</a>.</li>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Ecs.TaskDefinition.html">TaskDefinition</a></h4>
       <section><p>Manages a revision of an ECS task definition to be used in <code>aws.ecs.Service</code>.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ecs_task_definition.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ecs_task_definition.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Ecs.TaskDefinitionArgs.html">TaskDefinitionArgs</a></h4>
       <section></section>

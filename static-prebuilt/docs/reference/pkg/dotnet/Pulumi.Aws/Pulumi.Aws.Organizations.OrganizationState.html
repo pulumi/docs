@@ -76,36 +76,7 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
-    <div class="level3"><span class="xref">OrganizationState</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">OrganizationState</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.Organizations.html">Pulumi.Aws.Organizations</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
@@ -116,7 +87,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Organizations/Organization.cs/#L252">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Organizations/Organization.cs/#L250">View Source</a>
   </span>
   <a id="Pulumi_Aws_Organizations_OrganizationState__ctor_" data-uid="Pulumi.Aws.Organizations.OrganizationState.#ctor*"></a>
   <h4 id="Pulumi_Aws_Organizations_OrganizationState__ctor" data-uid="Pulumi.Aws.Organizations.OrganizationState.#ctor">OrganizationState()</h4>
@@ -129,7 +100,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Organizations/Organization.cs/#L168">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Organizations/Organization.cs/#L166">View Source</a>
   </span>
   <a id="Pulumi_Aws_Organizations_OrganizationState_Accounts_" data-uid="Pulumi.Aws.Organizations.OrganizationState.Accounts*"></a>
   <h4 id="Pulumi_Aws_Organizations_OrganizationState_Accounts" data-uid="Pulumi.Aws.Organizations.OrganizationState.Accounts">Accounts</h4>
@@ -138,7 +109,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public InputList&lt;OrganizationAccountsGetArgs&gt; Accounts { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public InputList&lt;OrganizationAccountGetArgs&gt; Accounts { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -150,13 +121,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<a class="xref" href="Pulumi.Aws.Organizations.Inputs.OrganizationAccountsGetArgs.html">OrganizationAccountsGetArgs</a>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<a class="xref" href="Pulumi.Aws.Organizations.Inputs.OrganizationAccountGetArgs.html">OrganizationAccountGetArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Organizations/Organization.cs/#L177">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Organizations/Organization.cs/#L175">View Source</a>
   </span>
   <a id="Pulumi_Aws_Organizations_OrganizationState_Arn_" data-uid="Pulumi.Aws.Organizations.OrganizationState.Arn*"></a>
   <h4 id="Pulumi_Aws_Organizations_OrganizationState_Arn" data-uid="Pulumi.Aws.Organizations.OrganizationState.Arn">Arn</h4>
@@ -165,7 +136,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Arn { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Arn { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -177,13 +148,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Organizations/Organization.cs/#L186">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Organizations/Organization.cs/#L184">View Source</a>
   </span>
   <a id="Pulumi_Aws_Organizations_OrganizationState_AwsServiceAccessPrincipals_" data-uid="Pulumi.Aws.Organizations.OrganizationState.AwsServiceAccessPrincipals*"></a>
   <h4 id="Pulumi_Aws_Organizations_OrganizationState_AwsServiceAccessPrincipals" data-uid="Pulumi.Aws.Organizations.OrganizationState.AwsServiceAccessPrincipals">AwsServiceAccessPrincipals</h4>
@@ -204,13 +175,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Organizations/Organization.cs/#L198">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Organizations/Organization.cs/#L196">View Source</a>
   </span>
   <a id="Pulumi_Aws_Organizations_OrganizationState_EnabledPolicyTypes_" data-uid="Pulumi.Aws.Organizations.OrganizationState.EnabledPolicyTypes*"></a>
   <h4 id="Pulumi_Aws_Organizations_OrganizationState_EnabledPolicyTypes" data-uid="Pulumi.Aws.Organizations.OrganizationState.EnabledPolicyTypes">EnabledPolicyTypes</h4>
@@ -231,13 +202,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Organizations/Organization.cs/#L207">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Organizations/Organization.cs/#L205">View Source</a>
   </span>
   <a id="Pulumi_Aws_Organizations_OrganizationState_FeatureSet_" data-uid="Pulumi.Aws.Organizations.OrganizationState.FeatureSet*"></a>
   <h4 id="Pulumi_Aws_Organizations_OrganizationState_FeatureSet" data-uid="Pulumi.Aws.Organizations.OrganizationState.FeatureSet">FeatureSet</h4>
@@ -246,7 +217,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; FeatureSet { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? FeatureSet { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -258,13 +229,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Organizations/Organization.cs/#L213">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Organizations/Organization.cs/#L211">View Source</a>
   </span>
   <a id="Pulumi_Aws_Organizations_OrganizationState_MasterAccountArn_" data-uid="Pulumi.Aws.Organizations.OrganizationState.MasterAccountArn*"></a>
   <h4 id="Pulumi_Aws_Organizations_OrganizationState_MasterAccountArn" data-uid="Pulumi.Aws.Organizations.OrganizationState.MasterAccountArn">MasterAccountArn</h4>
@@ -273,7 +244,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; MasterAccountArn { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? MasterAccountArn { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -285,13 +256,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Organizations/Organization.cs/#L219">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Organizations/Organization.cs/#L217">View Source</a>
   </span>
   <a id="Pulumi_Aws_Organizations_OrganizationState_MasterAccountEmail_" data-uid="Pulumi.Aws.Organizations.OrganizationState.MasterAccountEmail*"></a>
   <h4 id="Pulumi_Aws_Organizations_OrganizationState_MasterAccountEmail" data-uid="Pulumi.Aws.Organizations.OrganizationState.MasterAccountEmail">MasterAccountEmail</h4>
@@ -300,7 +271,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; MasterAccountEmail { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? MasterAccountEmail { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -312,13 +283,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Organizations/Organization.cs/#L225">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Organizations/Organization.cs/#L223">View Source</a>
   </span>
   <a id="Pulumi_Aws_Organizations_OrganizationState_MasterAccountId_" data-uid="Pulumi.Aws.Organizations.OrganizationState.MasterAccountId*"></a>
   <h4 id="Pulumi_Aws_Organizations_OrganizationState_MasterAccountId" data-uid="Pulumi.Aws.Organizations.OrganizationState.MasterAccountId">MasterAccountId</h4>
@@ -327,7 +298,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; MasterAccountId { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? MasterAccountId { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -339,13 +310,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Organizations/Organization.cs/#L234">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Organizations/Organization.cs/#L232">View Source</a>
   </span>
   <a id="Pulumi_Aws_Organizations_OrganizationState_NonMasterAccounts_" data-uid="Pulumi.Aws.Organizations.OrganizationState.NonMasterAccounts*"></a>
   <h4 id="Pulumi_Aws_Organizations_OrganizationState_NonMasterAccounts" data-uid="Pulumi.Aws.Organizations.OrganizationState.NonMasterAccounts">NonMasterAccounts</h4>
@@ -354,7 +325,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public InputList&lt;OrganizationNonMasterAccountsGetArgs&gt; NonMasterAccounts { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public InputList&lt;OrganizationNonMasterAccountGetArgs&gt; NonMasterAccounts { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -366,13 +337,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<a class="xref" href="Pulumi.Aws.Organizations.Inputs.OrganizationNonMasterAccountsGetArgs.html">OrganizationNonMasterAccountsGetArgs</a>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<a class="xref" href="Pulumi.Aws.Organizations.Inputs.OrganizationNonMasterAccountGetArgs.html">OrganizationNonMasterAccountGetArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Organizations/Organization.cs/#L246">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Organizations/Organization.cs/#L244">View Source</a>
   </span>
   <a id="Pulumi_Aws_Organizations_OrganizationState_Roots_" data-uid="Pulumi.Aws.Organizations.OrganizationState.Roots*"></a>
   <h4 id="Pulumi_Aws_Organizations_OrganizationState_Roots" data-uid="Pulumi.Aws.Organizations.OrganizationState.Roots">Roots</h4>
@@ -381,7 +352,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public InputList&lt;OrganizationRootsGetArgs&gt; Roots { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public InputList&lt;OrganizationRootGetArgs&gt; Roots { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -393,7 +364,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<a class="xref" href="Pulumi.Aws.Organizations.Inputs.OrganizationRootsGetArgs.html">OrganizationRootsGetArgs</a>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<a class="xref" href="Pulumi.Aws.Organizations.Inputs.OrganizationRootGetArgs.html">OrganizationRootGetArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -405,7 +376,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Organizations/Organization.cs/#L160" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Organizations/Organization.cs/#L158" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

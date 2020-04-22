@@ -73,53 +73,12 @@
   </h1>
   <div class="markdown level0 summary"><p>Provides a VPC/Subnet/ENI Flow Log to capture IP traffic for a specific network
 interface, subnet, or VPC. Logs are sent to a CloudWatch Log Group or a S3 Bucket.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/flow_log.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/flow_log.html.markdown</a>.</p>
-</blockquote>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
-    <div class="level3"><span class="xref">FlowLog</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">FlowLog</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.Ec2.html">Pulumi.Aws.Ec2</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
@@ -130,16 +89,16 @@ interface, subnet, or VPC. Logs are sent to a CloudWatch Log Group or a S3 Bucke
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/FlowLog.cs/#L82">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/FlowLog.cs/#L95">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_FlowLog__ctor_" data-uid="Pulumi.Aws.Ec2.FlowLog.#ctor*"></a>
-  <h4 id="Pulumi_Aws_Ec2_FlowLog__ctor_System_String_Pulumi_Aws_Ec2_FlowLogArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.Ec2.FlowLog.#ctor(System.String,Pulumi.Aws.Ec2.FlowLogArgs,Pulumi.CustomResourceOptions)">FlowLog(String, FlowLogArgs, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Aws_Ec2_FlowLog__ctor_System_String_Pulumi_Aws_Ec2_FlowLogArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.Ec2.FlowLog.#ctor(System.String,Pulumi.Aws.Ec2.FlowLogArgs,System.Nullable{CustomResourceOptions})">FlowLog(String, FlowLogArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Create a FlowLog resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public FlowLog(string name, FlowLogArgs args, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public FlowLog(string name, FlowLogArgs args, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -164,7 +123,7 @@ interface, subnet, or VPC. Logs are sent to a CloudWatch Log Group or a S3 Bucke
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -174,7 +133,7 @@ interface, subnet, or VPC. Logs are sent to a CloudWatch Log Group or a S3 Bucke
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/FlowLog.cs/#L23">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/FlowLog.cs/#L21">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_FlowLog_EniId_" data-uid="Pulumi.Aws.Ec2.FlowLog.EniId*"></a>
   <h4 id="Pulumi_Aws_Ec2_FlowLog_EniId" data-uid="Pulumi.Aws.Ec2.FlowLog.EniId">EniId</h4>
@@ -183,7 +142,7 @@ interface, subnet, or VPC. Logs are sent to a CloudWatch Log Group or a S3 Bucke
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; EniId { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; EniId { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -195,13 +154,13 @@ interface, subnet, or VPC. Logs are sent to a CloudWatch Log Group or a S3 Bucke
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/FlowLog.cs/#L29">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/FlowLog.cs/#L27">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_FlowLog_IamRoleArn_" data-uid="Pulumi.Aws.Ec2.FlowLog.IamRoleArn*"></a>
   <h4 id="Pulumi_Aws_Ec2_FlowLog_IamRoleArn" data-uid="Pulumi.Aws.Ec2.FlowLog.IamRoleArn">IamRoleArn</h4>
@@ -210,7 +169,7 @@ interface, subnet, or VPC. Logs are sent to a CloudWatch Log Group or a S3 Bucke
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; IamRoleArn { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; IamRoleArn { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -222,13 +181,13 @@ interface, subnet, or VPC. Logs are sent to a CloudWatch Log Group or a S3 Bucke
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/FlowLog.cs/#L35">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/FlowLog.cs/#L33">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_FlowLog_LogDestination_" data-uid="Pulumi.Aws.Ec2.FlowLog.LogDestination*"></a>
   <h4 id="Pulumi_Aws_Ec2_FlowLog_LogDestination" data-uid="Pulumi.Aws.Ec2.FlowLog.LogDestination">LogDestination</h4>
@@ -249,13 +208,13 @@ interface, subnet, or VPC. Logs are sent to a CloudWatch Log Group or a S3 Bucke
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/FlowLog.cs/#L41">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/FlowLog.cs/#L39">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_FlowLog_LogDestinationType_" data-uid="Pulumi.Aws.Ec2.FlowLog.LogDestinationType*"></a>
   <h4 id="Pulumi_Aws_Ec2_FlowLog_LogDestinationType" data-uid="Pulumi.Aws.Ec2.FlowLog.LogDestinationType">LogDestinationType</h4>
@@ -264,7 +223,7 @@ interface, subnet, or VPC. Logs are sent to a CloudWatch Log Group or a S3 Bucke
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; LogDestinationType { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; LogDestinationType { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -276,13 +235,13 @@ interface, subnet, or VPC. Logs are sent to a CloudWatch Log Group or a S3 Bucke
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/FlowLog.cs/#L47">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/FlowLog.cs/#L45">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_FlowLog_LogFormat_" data-uid="Pulumi.Aws.Ec2.FlowLog.LogFormat*"></a>
   <h4 id="Pulumi_Aws_Ec2_FlowLog_LogFormat" data-uid="Pulumi.Aws.Ec2.FlowLog.LogFormat">LogFormat</h4>
@@ -303,13 +262,13 @@ interface, subnet, or VPC. Logs are sent to a CloudWatch Log Group or a S3 Bucke
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/FlowLog.cs/#L53">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/FlowLog.cs/#L51">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_FlowLog_LogGroupName_" data-uid="Pulumi.Aws.Ec2.FlowLog.LogGroupName*"></a>
   <h4 id="Pulumi_Aws_Ec2_FlowLog_LogGroupName" data-uid="Pulumi.Aws.Ec2.FlowLog.LogGroupName">LogGroupName</h4>
@@ -330,22 +289,25 @@ interface, subnet, or VPC. Logs are sent to a CloudWatch Log Group or a S3 Bucke
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/FlowLog.cs/#L59">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/FlowLog.cs/#L60">View Source</a>
   </span>
-  <a id="Pulumi_Aws_Ec2_FlowLog_SubnetId_" data-uid="Pulumi.Aws.Ec2.FlowLog.SubnetId*"></a>
-  <h4 id="Pulumi_Aws_Ec2_FlowLog_SubnetId" data-uid="Pulumi.Aws.Ec2.FlowLog.SubnetId">SubnetId</h4>
-  <div class="markdown level1 summary"><p>Subnet ID to attach to</p>
+  <a id="Pulumi_Aws_Ec2_FlowLog_MaxAggregationInterval_" data-uid="Pulumi.Aws.Ec2.FlowLog.MaxAggregationInterval*"></a>
+  <h4 id="Pulumi_Aws_Ec2_FlowLog_MaxAggregationInterval" data-uid="Pulumi.Aws.Ec2.FlowLog.MaxAggregationInterval">MaxAggregationInterval</h4>
+  <div class="markdown level1 summary"><p>The maximum interval of time
+during which a flow of packets is captured and aggregated into a flow
+log record. Valid Values: <code>60</code> seconds (1 minute) or <code>600</code> seconds (10
+minutes). Default: <code>600</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; SubnetId { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;int?&gt; MaxAggregationInterval { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -357,13 +319,67 @@ interface, subnet, or VPC. Logs are sent to a CloudWatch Log Group or a S3 Bucke
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/FlowLog.cs/#L65">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/FlowLog.cs/#L66">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Ec2_FlowLog_SubnetId_" data-uid="Pulumi.Aws.Ec2.FlowLog.SubnetId*"></a>
+  <h4 id="Pulumi_Aws_Ec2_FlowLog_SubnetId" data-uid="Pulumi.Aws.Ec2.FlowLog.SubnetId">SubnetId</h4>
+  <div class="markdown level1 summary"><p>Subnet ID to attach to</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; SubnetId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/FlowLog.cs/#L72">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Ec2_FlowLog_Tags_" data-uid="Pulumi.Aws.Ec2.FlowLog.Tags*"></a>
+  <h4 id="Pulumi_Aws_Ec2_FlowLog_Tags" data-uid="Pulumi.Aws.Ec2.FlowLog.Tags">Tags</h4>
+  <div class="markdown level1 summary"><p>Key-value mapping of resource tags</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;?&gt; Tags { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/FlowLog.cs/#L78">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_FlowLog_TrafficType_" data-uid="Pulumi.Aws.Ec2.FlowLog.TrafficType*"></a>
   <h4 id="Pulumi_Aws_Ec2_FlowLog_TrafficType" data-uid="Pulumi.Aws.Ec2.FlowLog.TrafficType">TrafficType</h4>
@@ -384,13 +400,13 @@ interface, subnet, or VPC. Logs are sent to a CloudWatch Log Group or a S3 Bucke
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/FlowLog.cs/#L71">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/FlowLog.cs/#L84">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_FlowLog_VpcId_" data-uid="Pulumi.Aws.Ec2.FlowLog.VpcId*"></a>
   <h4 id="Pulumi_Aws_Ec2_FlowLog_VpcId" data-uid="Pulumi.Aws.Ec2.FlowLog.VpcId">VpcId</h4>
@@ -399,7 +415,7 @@ interface, subnet, or VPC. Logs are sent to a CloudWatch Log Group or a S3 Bucke
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; VpcId { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; VpcId { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -411,7 +427,7 @@ interface, subnet, or VPC. Logs are sent to a CloudWatch Log Group or a S3 Bucke
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -419,17 +435,17 @@ interface, subnet, or VPC. Logs are sent to a CloudWatch Log Group or a S3 Bucke
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/FlowLog.cs/#L112">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/FlowLog.cs/#L125">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_FlowLog_Get_" data-uid="Pulumi.Aws.Ec2.FlowLog.Get*"></a>
-  <h4 id="Pulumi_Aws_Ec2_FlowLog_Get_System_String_Pulumi_Input_System_String__Pulumi_Aws_Ec2_FlowLogState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.Ec2.FlowLog.Get(System.String,Pulumi.Input{System.String},Pulumi.Aws.Ec2.FlowLogState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, FlowLogState, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Aws_Ec2_FlowLog_Get_System_String_Input_System_String__Pulumi_Aws_Ec2_FlowLogState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.Ec2.FlowLog.Get(System.String,Input{System.String},Pulumi.Aws.Ec2.FlowLogState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, FlowLogState, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Get an existing FlowLog resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static FlowLog Get(string name, Input&lt;string&gt; id, FlowLogState state = null, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static FlowLog Get(string name, Input&lt;string&gt; id, FlowLogState state = null, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -448,7 +464,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -460,7 +476,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -489,7 +505,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/FlowLog.cs/#L18" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/FlowLog.cs/#L16" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

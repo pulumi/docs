@@ -80,40 +80,16 @@ is supported, though you are able to disable certificate verification.</p>
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">APIServiceSpec</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Kubernetes.Types.Outputs.ApiRegistration.V1.html">Pulumi.Kubernetes.Types.Outputs.ApiRegistration.V1</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Kubernetes.dll</h6>
   <h5 id="Pulumi_Kubernetes_Types_Outputs_ApiRegistration_V1_APIServiceSpec_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class APIServiceSpec</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class APIServiceSpec : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L3697">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L3703">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_ApiRegistration_V1_APIServiceSpec_CaBundle" data-uid="Pulumi.Kubernetes.Types.Outputs.ApiRegistration.V1.APIServiceSpec.CaBundle">CaBundle</h4>
   <div class="markdown level1 summary"><p>CABundle is a PEM encoded CA bundle which will be used to validate an API server's
@@ -140,7 +116,7 @@ serving certificate. If unspecified, system trust roots on the apiserver are use
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L3702">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L3708">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_ApiRegistration_V1_APIServiceSpec_Group" data-uid="Pulumi.Kubernetes.Types.Outputs.ApiRegistration.V1.APIServiceSpec.Group">Group</h4>
   <div class="markdown level1 summary"><p>Group is the API group name this server hosts</p>
@@ -166,7 +142,7 @@ serving certificate. If unspecified, system trust roots on the apiserver are use
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L3714">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L3720">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_ApiRegistration_V1_APIServiceSpec_GroupPriorityMinimum" data-uid="Pulumi.Kubernetes.Types.Outputs.ApiRegistration.V1.APIServiceSpec.GroupPriorityMinimum">GroupPriorityMinimum</h4>
   <div class="markdown level1 summary"><p>GroupPriorityMininum is the priority this group should have at least. Higher priority
@@ -199,7 +175,7 @@ v1.foo) We'd recommend something like: *.k8s.io (except extensions) at 18000 and
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L3720">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L3726">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_ApiRegistration_V1_APIServiceSpec_InsecureSkipTLSVerify" data-uid="Pulumi.Kubernetes.Types.Outputs.ApiRegistration.V1.APIServiceSpec.InsecureSkipTLSVerify">InsecureSkipTLSVerify</h4>
   <div class="markdown level1 summary"><p>InsecureSkipTLSVerify disables TLS certificate verification when communicating with this
@@ -226,7 +202,7 @@ server. This is strongly discouraged.  You should use the CABundle instead.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L3728">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L3734">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_ApiRegistration_V1_APIServiceSpec_Service" data-uid="Pulumi.Kubernetes.Types.Outputs.ApiRegistration.V1.APIServiceSpec.Service">Service</h4>
   <div class="markdown level1 summary"><p>Service is a reference to the service for this API server.  It must communicate on port
@@ -255,7 +231,7 @@ fulfilled.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L3733">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L3739">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_ApiRegistration_V1_APIServiceSpec_Version" data-uid="Pulumi.Kubernetes.Types.Outputs.ApiRegistration.V1.APIServiceSpec.Version">Version</h4>
   <div class="markdown level1 summary"><p>Version is the API version this server hosts.  For example, &quot;v1&quot;</p>
@@ -281,7 +257,7 @@ fulfilled.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L3749">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L3755">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_ApiRegistration_V1_APIServiceSpec_VersionPriority" data-uid="Pulumi.Kubernetes.Types.Outputs.ApiRegistration.V1.APIServiceSpec.VersionPriority">VersionPriority</h4>
   <div class="markdown level1 summary"><p>VersionPriority controls the ordering of this API version inside of its group.  Must be
@@ -324,7 +300,7 @@ v11alpha2, foo1, foo10.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L3690" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L3696" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

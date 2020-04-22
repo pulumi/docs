@@ -78,36 +78,7 @@ networking/v1/NetworkPolicyPort.</p>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
-    <div class="level3"><span class="xref">NetworkPolicyPortArgs</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">NetworkPolicyPortArgs</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Kubernetes.Types.Inputs.Extensions.V1Beta1.html">Pulumi.Kubernetes.Types.Inputs.Extensions.V1Beta1</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Kubernetes.dll</h6>
@@ -118,7 +89,7 @@ networking/v1/NetworkPolicyPort.</p>
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Input.cs/#L21797">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Input.cs/#L22013">View Source</a>
   </span>
   <a id="Pulumi_Kubernetes_Types_Inputs_Extensions_V1Beta1_NetworkPolicyPortArgs_Port_" data-uid="Pulumi.Kubernetes.Types.Inputs.Extensions.V1Beta1.NetworkPolicyPortArgs.Port*"></a>
   <h4 id="Pulumi_Kubernetes_Types_Inputs_Extensions_V1Beta1_NetworkPolicyPortArgs_Port" data-uid="Pulumi.Kubernetes.Types.Inputs.Extensions.V1Beta1.NetworkPolicyPortArgs.Port">Port</h4>
@@ -129,7 +100,7 @@ If present, only traffic on the specified protocol AND port will be matched.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public InputUnion&lt;int, string&gt; Port { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public InputUnion&lt;int, string&gt;? Port { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -141,13 +112,13 @@ If present, only traffic on the specified protocol AND port will be matched.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputUnion-2.html">InputUnion</a>&lt;<span class="xref">System.Int32</span>, <span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">InputUnion</span>&lt;<span class="xref">System.Int32</span>, <span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Input.cs/#L21804">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Input.cs/#L22020">View Source</a>
   </span>
   <a id="Pulumi_Kubernetes_Types_Inputs_Extensions_V1Beta1_NetworkPolicyPortArgs_Protocol_" data-uid="Pulumi.Kubernetes.Types.Inputs.Extensions.V1Beta1.NetworkPolicyPortArgs.Protocol*"></a>
   <h4 id="Pulumi_Kubernetes_Types_Inputs_Extensions_V1Beta1_NetworkPolicyPortArgs_Protocol" data-uid="Pulumi.Kubernetes.Types.Inputs.Extensions.V1Beta1.NetworkPolicyPortArgs.Protocol">Protocol</h4>
@@ -157,7 +128,7 @@ this field defaults to TCP.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Protocol { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Protocol { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -169,7 +140,7 @@ this field defaults to TCP.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -181,7 +152,7 @@ this field defaults to TCP.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Input.cs/#L21790" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Input.cs/#L22006" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

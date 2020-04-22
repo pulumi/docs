@@ -78,40 +78,16 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">DistributionViewerCertificate</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.CloudFront.Outputs.html">Pulumi.Aws.CloudFront.Outputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
   <h5 id="Pulumi_Aws_CloudFront_Outputs_DistributionViewerCertificate_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class DistributionViewerCertificate</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class DistributionViewerCertificate : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Cloudfront/Distribution.cs/#L3129">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudFront/Outputs/DistributionViewerCertificate.cs/#L22">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_CloudFront_Outputs_DistributionViewerCertificate_AcmCertificateArn" data-uid="Pulumi.Aws.CloudFront.Outputs.DistributionViewerCertificate.AcmCertificateArn">AcmCertificateArn</h4>
   <div class="markdown level1 summary"><p>The ARN of the [AWS Certificate Manager][6]
@@ -122,7 +98,7 @@ certificate must be in  US-EAST-1.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string AcmCertificateArn</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? AcmCertificateArn</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -134,13 +110,13 @@ certificate must be in  US-EAST-1.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Cloudfront/Distribution.cs/#L3135">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudFront/Outputs/DistributionViewerCertificate.cs/#L28">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_CloudFront_Outputs_DistributionViewerCertificate_CloudfrontDefaultCertificate" data-uid="Pulumi.Aws.CloudFront.Outputs.DistributionViewerCertificate.CloudfrontDefaultCertificate">CloudfrontDefaultCertificate</h4>
   <div class="markdown level1 summary"><p><code>true</code> if you want viewers to use HTTPS
@@ -168,7 +144,7 @@ distribution. Specify this, <code>acm_certificate_arn</code>, or <code>iam_certi
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Cloudfront/Distribution.cs/#L3141">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudFront/Outputs/DistributionViewerCertificate.cs/#L34">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_CloudFront_Outputs_DistributionViewerCertificate_IamCertificateId" data-uid="Pulumi.Aws.CloudFront.Outputs.DistributionViewerCertificate.IamCertificateId">IamCertificateId</h4>
   <div class="markdown level1 summary"><p>The IAM certificate identifier of the custom viewer
@@ -178,7 +154,7 @@ this, <code>acm_certificate_arn</code>, or <code>cloudfront_default_certificate<
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string IamCertificateId</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? IamCertificateId</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -190,13 +166,13 @@ this, <code>acm_certificate_arn</code>, or <code>cloudfront_default_certificate<
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Cloudfront/Distribution.cs/#L3154">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudFront/Outputs/DistributionViewerCertificate.cs/#L47">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_CloudFront_Outputs_DistributionViewerCertificate_MinimumProtocolVersion" data-uid="Pulumi.Aws.CloudFront.Outputs.DistributionViewerCertificate.MinimumProtocolVersion">MinimumProtocolVersion</h4>
   <div class="markdown level1 summary"><p>The minimum version of the SSL protocol that
@@ -213,7 +189,7 @@ must be specified.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string MinimumProtocolVersion</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? MinimumProtocolVersion</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -225,20 +201,20 @@ must be specified.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Cloudfront/Distribution.cs/#L3155">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudFront/Outputs/DistributionViewerCertificate.cs/#L48">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_CloudFront_Outputs_DistributionViewerCertificate_SslSupportMethod" data-uid="Pulumi.Aws.CloudFront.Outputs.DistributionViewerCertificate.SslSupportMethod">SslSupportMethod</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string SslSupportMethod</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? SslSupportMethod</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -250,7 +226,7 @@ must be specified.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -262,7 +238,7 @@ must be specified.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Cloudfront/Distribution.cs/#L3120" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudFront/Outputs/DistributionViewerCertificate.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

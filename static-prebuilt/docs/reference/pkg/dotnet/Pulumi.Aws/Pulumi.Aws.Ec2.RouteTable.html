@@ -94,53 +94,12 @@ this resource will delete any propagating gateways not explicitly listed in
 <code>propagating_vgws</code>. Omit this argument when defining route propagation using
 the separate resource.</p>
 </blockquote>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route_table.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route_table.html.markdown</a>.</p>
-</blockquote>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
-    <div class="level3"><span class="xref">RouteTable</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">RouteTable</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.Ec2.html">Pulumi.Aws.Ec2</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
@@ -151,16 +110,16 @@ the separate resource.</p>
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/RouteTable.cs/#L76">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/RouteTable.cs/#L74">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_RouteTable__ctor_" data-uid="Pulumi.Aws.Ec2.RouteTable.#ctor*"></a>
-  <h4 id="Pulumi_Aws_Ec2_RouteTable__ctor_System_String_Pulumi_Aws_Ec2_RouteTableArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.Ec2.RouteTable.#ctor(System.String,Pulumi.Aws.Ec2.RouteTableArgs,Pulumi.CustomResourceOptions)">RouteTable(String, RouteTableArgs, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Aws_Ec2_RouteTable__ctor_System_String_Pulumi_Aws_Ec2_RouteTableArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.Ec2.RouteTable.#ctor(System.String,Pulumi.Aws.Ec2.RouteTableArgs,System.Nullable{CustomResourceOptions})">RouteTable(String, RouteTableArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Create a RouteTable resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public RouteTable(string name, RouteTableArgs args, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public RouteTable(string name, RouteTableArgs args, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -185,7 +144,7 @@ the separate resource.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -195,7 +154,7 @@ the separate resource.</p>
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/RouteTable.cs/#L41">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/RouteTable.cs/#L39">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_RouteTable_OwnerId_" data-uid="Pulumi.Aws.Ec2.RouteTable.OwnerId*"></a>
   <h4 id="Pulumi_Aws_Ec2_RouteTable_OwnerId" data-uid="Pulumi.Aws.Ec2.RouteTable.OwnerId">OwnerId</h4>
@@ -216,13 +175,13 @@ the separate resource.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/RouteTable.cs/#L47">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/RouteTable.cs/#L45">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_RouteTable_PropagatingVgws_" data-uid="Pulumi.Aws.Ec2.RouteTable.PropagatingVgws*"></a>
   <h4 id="Pulumi_Aws_Ec2_RouteTable_PropagatingVgws" data-uid="Pulumi.Aws.Ec2.RouteTable.PropagatingVgws">PropagatingVgws</h4>
@@ -243,22 +202,22 @@ the separate resource.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/RouteTable.cs/#L53">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/RouteTable.cs/#L51">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_RouteTable_Routes_" data-uid="Pulumi.Aws.Ec2.RouteTable.Routes*"></a>
   <h4 id="Pulumi_Aws_Ec2_RouteTable_Routes" data-uid="Pulumi.Aws.Ec2.RouteTable.Routes">Routes</h4>
-  <div class="markdown level1 summary"><p>A list of route objects. Their keys are documented below. This argument is processed in <a href="https://www.terraform.io/docs/configuration/attr-as-blocks.html">attribute-as-blocks mode</a>.</p>
+  <div class="markdown level1 summary"><p>A list of route objects. Their keys are documented below.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;RouteTableRoutes&gt;&gt; Routes { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;RouteTableRoute&gt;&gt; Routes { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -270,13 +229,13 @@ the separate resource.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.Ec2.Outputs.RouteTableRoutes.html">RouteTableRoutes</a>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.Ec2.Outputs.RouteTableRoute.html">RouteTableRoute</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/RouteTable.cs/#L59">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/RouteTable.cs/#L57">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_RouteTable_Tags_" data-uid="Pulumi.Aws.Ec2.RouteTable.Tags*"></a>
   <h4 id="Pulumi_Aws_Ec2_RouteTable_Tags" data-uid="Pulumi.Aws.Ec2.RouteTable.Tags">Tags</h4>
@@ -285,7 +244,7 @@ the separate resource.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;&gt; Tags { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;?&gt; Tags { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -297,13 +256,13 @@ the separate resource.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/RouteTable.cs/#L65">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/RouteTable.cs/#L63">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_RouteTable_VpcId_" data-uid="Pulumi.Aws.Ec2.RouteTable.VpcId*"></a>
   <h4 id="Pulumi_Aws_Ec2_RouteTable_VpcId" data-uid="Pulumi.Aws.Ec2.RouteTable.VpcId">VpcId</h4>
@@ -324,7 +283,7 @@ the separate resource.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -332,17 +291,17 @@ the separate resource.</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/RouteTable.cs/#L106">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/RouteTable.cs/#L104">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_RouteTable_Get_" data-uid="Pulumi.Aws.Ec2.RouteTable.Get*"></a>
-  <h4 id="Pulumi_Aws_Ec2_RouteTable_Get_System_String_Pulumi_Input_System_String__Pulumi_Aws_Ec2_RouteTableState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.Ec2.RouteTable.Get(System.String,Pulumi.Input{System.String},Pulumi.Aws.Ec2.RouteTableState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, RouteTableState, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Aws_Ec2_RouteTable_Get_System_String_Input_System_String__Pulumi_Aws_Ec2_RouteTableState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.Ec2.RouteTable.Get(System.String,Input{System.String},Pulumi.Aws.Ec2.RouteTableState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, RouteTableState, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Get an existing RouteTable resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static RouteTable Get(string name, Input&lt;string&gt; id, RouteTableState state = null, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static RouteTable Get(string name, Input&lt;string&gt; id, RouteTableState state = null, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -361,7 +320,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -373,7 +332,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -402,7 +361,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/RouteTable.cs/#L36" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/RouteTable.cs/#L34" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

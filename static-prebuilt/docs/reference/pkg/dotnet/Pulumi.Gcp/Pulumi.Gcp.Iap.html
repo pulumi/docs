@@ -77,127 +77,400 @@
     <h3 id="classes">Classes
   </h3>
       <h4><a class="xref" href="Pulumi.Gcp.Iap.AppEngineServiceIamBinding.html">AppEngineServiceIamBinding</a></h4>
-      <section></section>
+      <section><p>Three different resources help you manage your IAM policy for Identity-Aware Proxy AppEngineService. Each of these resources serves a different use case:</p>
+<ul>
+<li><code>gcp.iap.AppEngineServiceIamPolicy</code>: Authoritative. Sets the IAM policy for the appengineservice and replaces any existing policy already attached.</li>
+<li><code>gcp.iap.AppEngineServiceIamBinding</code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the appengineservice are preserved.</li>
+<li><code>gcp.iap.AppEngineServiceIamMember</code>: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the appengineservice are preserved.</li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.iap.AppEngineServiceIamPolicy</code> <strong>cannot</strong> be used in conjunction with <code>gcp.iap.AppEngineServiceIamBinding</code> and <code>gcp.iap.AppEngineServiceIamMember</code> or they will fight over what your policy should be.</p>
+</blockquote>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.iap.AppEngineServiceIamBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.iap.AppEngineServiceIamMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
+</blockquote>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.Iap.AppEngineServiceIamBindingArgs.html">AppEngineServiceIamBindingArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Iap.AppEngineServiceIamBindingState.html">AppEngineServiceIamBindingState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Iap.AppEngineServiceIamMember.html">AppEngineServiceIamMember</a></h4>
-      <section></section>
+      <section><p>Three different resources help you manage your IAM policy for Identity-Aware Proxy AppEngineService. Each of these resources serves a different use case:</p>
+<ul>
+<li><code>gcp.iap.AppEngineServiceIamPolicy</code>: Authoritative. Sets the IAM policy for the appengineservice and replaces any existing policy already attached.</li>
+<li><code>gcp.iap.AppEngineServiceIamBinding</code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the appengineservice are preserved.</li>
+<li><code>gcp.iap.AppEngineServiceIamMember</code>: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the appengineservice are preserved.</li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.iap.AppEngineServiceIamPolicy</code> <strong>cannot</strong> be used in conjunction with <code>gcp.iap.AppEngineServiceIamBinding</code> and <code>gcp.iap.AppEngineServiceIamMember</code> or they will fight over what your policy should be.</p>
+</blockquote>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.iap.AppEngineServiceIamBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.iap.AppEngineServiceIamMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
+</blockquote>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.Iap.AppEngineServiceIamMemberArgs.html">AppEngineServiceIamMemberArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Iap.AppEngineServiceIamMemberState.html">AppEngineServiceIamMemberState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Iap.AppEngineServiceIamPolicy.html">AppEngineServiceIamPolicy</a></h4>
-      <section></section>
+      <section><p>Three different resources help you manage your IAM policy for Identity-Aware Proxy AppEngineService. Each of these resources serves a different use case:</p>
+<ul>
+<li><code>gcp.iap.AppEngineServiceIamPolicy</code>: Authoritative. Sets the IAM policy for the appengineservice and replaces any existing policy already attached.</li>
+<li><code>gcp.iap.AppEngineServiceIamBinding</code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the appengineservice are preserved.</li>
+<li><code>gcp.iap.AppEngineServiceIamMember</code>: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the appengineservice are preserved.</li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.iap.AppEngineServiceIamPolicy</code> <strong>cannot</strong> be used in conjunction with <code>gcp.iap.AppEngineServiceIamBinding</code> and <code>gcp.iap.AppEngineServiceIamMember</code> or they will fight over what your policy should be.</p>
+</blockquote>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.iap.AppEngineServiceIamBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.iap.AppEngineServiceIamMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
+</blockquote>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.Iap.AppEngineServiceIamPolicyArgs.html">AppEngineServiceIamPolicyArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Iap.AppEngineServiceIamPolicyState.html">AppEngineServiceIamPolicyState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Iap.AppEngineVersionIamBinding.html">AppEngineVersionIamBinding</a></h4>
-      <section></section>
+      <section><p>Three different resources help you manage your IAM policy for Identity-Aware Proxy AppEngineVersion. Each of these resources serves a different use case:</p>
+<ul>
+<li><code>gcp.iap.AppEngineVersionIamPolicy</code>: Authoritative. Sets the IAM policy for the appengineversion and replaces any existing policy already attached.</li>
+<li><code>gcp.iap.AppEngineVersionIamBinding</code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the appengineversion are preserved.</li>
+<li><code>gcp.iap.AppEngineVersionIamMember</code>: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the appengineversion are preserved.</li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.iap.AppEngineVersionIamPolicy</code> <strong>cannot</strong> be used in conjunction with <code>gcp.iap.AppEngineVersionIamBinding</code> and <code>gcp.iap.AppEngineVersionIamMember</code> or they will fight over what your policy should be.</p>
+</blockquote>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.iap.AppEngineVersionIamBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.iap.AppEngineVersionIamMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
+</blockquote>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.Iap.AppEngineVersionIamBindingArgs.html">AppEngineVersionIamBindingArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Iap.AppEngineVersionIamBindingState.html">AppEngineVersionIamBindingState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Iap.AppEngineVersionIamMember.html">AppEngineVersionIamMember</a></h4>
-      <section></section>
+      <section><p>Three different resources help you manage your IAM policy for Identity-Aware Proxy AppEngineVersion. Each of these resources serves a different use case:</p>
+<ul>
+<li><code>gcp.iap.AppEngineVersionIamPolicy</code>: Authoritative. Sets the IAM policy for the appengineversion and replaces any existing policy already attached.</li>
+<li><code>gcp.iap.AppEngineVersionIamBinding</code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the appengineversion are preserved.</li>
+<li><code>gcp.iap.AppEngineVersionIamMember</code>: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the appengineversion are preserved.</li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.iap.AppEngineVersionIamPolicy</code> <strong>cannot</strong> be used in conjunction with <code>gcp.iap.AppEngineVersionIamBinding</code> and <code>gcp.iap.AppEngineVersionIamMember</code> or they will fight over what your policy should be.</p>
+</blockquote>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.iap.AppEngineVersionIamBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.iap.AppEngineVersionIamMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
+</blockquote>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.Iap.AppEngineVersionIamMemberArgs.html">AppEngineVersionIamMemberArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Iap.AppEngineVersionIamMemberState.html">AppEngineVersionIamMemberState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Iap.AppEngineVersionIamPolicy.html">AppEngineVersionIamPolicy</a></h4>
-      <section></section>
+      <section><p>Three different resources help you manage your IAM policy for Identity-Aware Proxy AppEngineVersion. Each of these resources serves a different use case:</p>
+<ul>
+<li><code>gcp.iap.AppEngineVersionIamPolicy</code>: Authoritative. Sets the IAM policy for the appengineversion and replaces any existing policy already attached.</li>
+<li><code>gcp.iap.AppEngineVersionIamBinding</code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the appengineversion are preserved.</li>
+<li><code>gcp.iap.AppEngineVersionIamMember</code>: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the appengineversion are preserved.</li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.iap.AppEngineVersionIamPolicy</code> <strong>cannot</strong> be used in conjunction with <code>gcp.iap.AppEngineVersionIamBinding</code> and <code>gcp.iap.AppEngineVersionIamMember</code> or they will fight over what your policy should be.</p>
+</blockquote>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.iap.AppEngineVersionIamBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.iap.AppEngineVersionIamMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
+</blockquote>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.Iap.AppEngineVersionIamPolicyArgs.html">AppEngineVersionIamPolicyArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Iap.AppEngineVersionIamPolicyState.html">AppEngineVersionIamPolicyState</a></h4>
       <section></section>
-      <h4><a class="xref" href="Pulumi.Gcp.Iap.TunnelInstanceIAMBinding.html">TunnelInstanceIAMBinding</a></h4>
+      <h4><a class="xref" href="Pulumi.Gcp.Iap.Brand.html">Brand</a></h4>
+      <section><p>OAuth brand data. Only &quot;Organization Internal&quot; brands can be created
+programatically via API. To convert it into an external brands
+please use the GCP Console.</p>
+<blockquote>
+<p><strong>Note:</strong> Brands can be created only once for a Google Cloud Platform
+project and cannot be deleted. Destroying a provider-managed Brand
+will remove it from state but <em>will not delete the resource on the server.</em></p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Gcp.Iap.BrandArgs.html">BrandArgs</a></h4>
       <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.Iap.BrandState.html">BrandState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.Iap.Client.html">Client</a></h4>
+      <section><p>Contains the data that describes an Identity Aware Proxy owned client.</p>
+</section>
+      <h4><a class="xref" href="Pulumi.Gcp.Iap.ClientArgs.html">ClientArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.Iap.ClientState.html">ClientState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.Iap.TunnelInstanceIAMBinding.html">TunnelInstanceIAMBinding</a></h4>
+      <section><p>Three different resources help you manage your IAM policy for Identity-Aware Proxy TunnelInstance. Each of these resources serves a different use case:</p>
+<ul>
+<li><code>gcp.iap.TunnelInstanceIAMPolicy</code>: Authoritative. Sets the IAM policy for the tunnelinstance and replaces any existing policy already attached.</li>
+<li><code>gcp.iap.TunnelInstanceIAMBinding</code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the tunnelinstance are preserved.</li>
+<li><code>gcp.iap.TunnelInstanceIAMMember</code>: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the tunnelinstance are preserved.</li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.iap.TunnelInstanceIAMPolicy</code> <strong>cannot</strong> be used in conjunction with <code>gcp.iap.TunnelInstanceIAMBinding</code> and <code>gcp.iap.TunnelInstanceIAMMember</code> or they will fight over what your policy should be.</p>
+</blockquote>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.iap.TunnelInstanceIAMBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.iap.TunnelInstanceIAMMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
+</blockquote>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.Iap.TunnelInstanceIAMBindingArgs.html">TunnelInstanceIAMBindingArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Iap.TunnelInstanceIAMBindingState.html">TunnelInstanceIAMBindingState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Iap.TunnelInstanceIAMMember.html">TunnelInstanceIAMMember</a></h4>
-      <section></section>
+      <section><p>Three different resources help you manage your IAM policy for Identity-Aware Proxy TunnelInstance. Each of these resources serves a different use case:</p>
+<ul>
+<li><code>gcp.iap.TunnelInstanceIAMPolicy</code>: Authoritative. Sets the IAM policy for the tunnelinstance and replaces any existing policy already attached.</li>
+<li><code>gcp.iap.TunnelInstanceIAMBinding</code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the tunnelinstance are preserved.</li>
+<li><code>gcp.iap.TunnelInstanceIAMMember</code>: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the tunnelinstance are preserved.</li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.iap.TunnelInstanceIAMPolicy</code> <strong>cannot</strong> be used in conjunction with <code>gcp.iap.TunnelInstanceIAMBinding</code> and <code>gcp.iap.TunnelInstanceIAMMember</code> or they will fight over what your policy should be.</p>
+</blockquote>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.iap.TunnelInstanceIAMBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.iap.TunnelInstanceIAMMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
+</blockquote>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.Iap.TunnelInstanceIAMMemberArgs.html">TunnelInstanceIAMMemberArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Iap.TunnelInstanceIAMMemberState.html">TunnelInstanceIAMMemberState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Iap.TunnelInstanceIAMPolicy.html">TunnelInstanceIAMPolicy</a></h4>
-      <section></section>
+      <section><p>Three different resources help you manage your IAM policy for Identity-Aware Proxy TunnelInstance. Each of these resources serves a different use case:</p>
+<ul>
+<li><code>gcp.iap.TunnelInstanceIAMPolicy</code>: Authoritative. Sets the IAM policy for the tunnelinstance and replaces any existing policy already attached.</li>
+<li><code>gcp.iap.TunnelInstanceIAMBinding</code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the tunnelinstance are preserved.</li>
+<li><code>gcp.iap.TunnelInstanceIAMMember</code>: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the tunnelinstance are preserved.</li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.iap.TunnelInstanceIAMPolicy</code> <strong>cannot</strong> be used in conjunction with <code>gcp.iap.TunnelInstanceIAMBinding</code> and <code>gcp.iap.TunnelInstanceIAMMember</code> or they will fight over what your policy should be.</p>
+</blockquote>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.iap.TunnelInstanceIAMBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.iap.TunnelInstanceIAMMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
+</blockquote>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.Iap.TunnelInstanceIAMPolicyArgs.html">TunnelInstanceIAMPolicyArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Iap.TunnelInstanceIAMPolicyState.html">TunnelInstanceIAMPolicyState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Iap.WebBackendServiceIamBinding.html">WebBackendServiceIamBinding</a></h4>
-      <section></section>
+      <section><p>Three different resources help you manage your IAM policy for Identity-Aware Proxy WebBackendService. Each of these resources serves a different use case:</p>
+<ul>
+<li><code>gcp.iap.WebBackendServiceIamPolicy</code>: Authoritative. Sets the IAM policy for the webbackendservice and replaces any existing policy already attached.</li>
+<li><code>gcp.iap.WebBackendServiceIamBinding</code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the webbackendservice are preserved.</li>
+<li><code>gcp.iap.WebBackendServiceIamMember</code>: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the webbackendservice are preserved.</li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.iap.WebBackendServiceIamPolicy</code> <strong>cannot</strong> be used in conjunction with <code>gcp.iap.WebBackendServiceIamBinding</code> and <code>gcp.iap.WebBackendServiceIamMember</code> or they will fight over what your policy should be.</p>
+</blockquote>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.iap.WebBackendServiceIamBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.iap.WebBackendServiceIamMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
+</blockquote>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.Iap.WebBackendServiceIamBindingArgs.html">WebBackendServiceIamBindingArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Iap.WebBackendServiceIamBindingState.html">WebBackendServiceIamBindingState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Iap.WebBackendServiceIamMember.html">WebBackendServiceIamMember</a></h4>
-      <section></section>
+      <section><p>Three different resources help you manage your IAM policy for Identity-Aware Proxy WebBackendService. Each of these resources serves a different use case:</p>
+<ul>
+<li><code>gcp.iap.WebBackendServiceIamPolicy</code>: Authoritative. Sets the IAM policy for the webbackendservice and replaces any existing policy already attached.</li>
+<li><code>gcp.iap.WebBackendServiceIamBinding</code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the webbackendservice are preserved.</li>
+<li><code>gcp.iap.WebBackendServiceIamMember</code>: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the webbackendservice are preserved.</li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.iap.WebBackendServiceIamPolicy</code> <strong>cannot</strong> be used in conjunction with <code>gcp.iap.WebBackendServiceIamBinding</code> and <code>gcp.iap.WebBackendServiceIamMember</code> or they will fight over what your policy should be.</p>
+</blockquote>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.iap.WebBackendServiceIamBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.iap.WebBackendServiceIamMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
+</blockquote>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.Iap.WebBackendServiceIamMemberArgs.html">WebBackendServiceIamMemberArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Iap.WebBackendServiceIamMemberState.html">WebBackendServiceIamMemberState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Iap.WebBackendServiceIamPolicy.html">WebBackendServiceIamPolicy</a></h4>
-      <section></section>
+      <section><p>Three different resources help you manage your IAM policy for Identity-Aware Proxy WebBackendService. Each of these resources serves a different use case:</p>
+<ul>
+<li><code>gcp.iap.WebBackendServiceIamPolicy</code>: Authoritative. Sets the IAM policy for the webbackendservice and replaces any existing policy already attached.</li>
+<li><code>gcp.iap.WebBackendServiceIamBinding</code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the webbackendservice are preserved.</li>
+<li><code>gcp.iap.WebBackendServiceIamMember</code>: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the webbackendservice are preserved.</li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.iap.WebBackendServiceIamPolicy</code> <strong>cannot</strong> be used in conjunction with <code>gcp.iap.WebBackendServiceIamBinding</code> and <code>gcp.iap.WebBackendServiceIamMember</code> or they will fight over what your policy should be.</p>
+</blockquote>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.iap.WebBackendServiceIamBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.iap.WebBackendServiceIamMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
+</blockquote>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.Iap.WebBackendServiceIamPolicyArgs.html">WebBackendServiceIamPolicyArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Iap.WebBackendServiceIamPolicyState.html">WebBackendServiceIamPolicyState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Iap.WebIamBinding.html">WebIamBinding</a></h4>
-      <section></section>
+      <section><p>Three different resources help you manage your IAM policy for Identity-Aware Proxy Web. Each of these resources serves a different use case:</p>
+<ul>
+<li><code>gcp.iap.WebIamPolicy</code>: Authoritative. Sets the IAM policy for the web and replaces any existing policy already attached.</li>
+<li><code>gcp.iap.WebIamBinding</code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the web are preserved.</li>
+<li><code>gcp.iap.WebIamMember</code>: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the web are preserved.</li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.iap.WebIamPolicy</code> <strong>cannot</strong> be used in conjunction with <code>gcp.iap.WebIamBinding</code> and <code>gcp.iap.WebIamMember</code> or they will fight over what your policy should be.</p>
+</blockquote>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.iap.WebIamBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.iap.WebIamMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
+</blockquote>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.Iap.WebIamBindingArgs.html">WebIamBindingArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Iap.WebIamBindingState.html">WebIamBindingState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Iap.WebIamMember.html">WebIamMember</a></h4>
-      <section></section>
+      <section><p>Three different resources help you manage your IAM policy for Identity-Aware Proxy Web. Each of these resources serves a different use case:</p>
+<ul>
+<li><code>gcp.iap.WebIamPolicy</code>: Authoritative. Sets the IAM policy for the web and replaces any existing policy already attached.</li>
+<li><code>gcp.iap.WebIamBinding</code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the web are preserved.</li>
+<li><code>gcp.iap.WebIamMember</code>: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the web are preserved.</li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.iap.WebIamPolicy</code> <strong>cannot</strong> be used in conjunction with <code>gcp.iap.WebIamBinding</code> and <code>gcp.iap.WebIamMember</code> or they will fight over what your policy should be.</p>
+</blockquote>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.iap.WebIamBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.iap.WebIamMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
+</blockquote>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.Iap.WebIamMemberArgs.html">WebIamMemberArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Iap.WebIamMemberState.html">WebIamMemberState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Iap.WebIamPolicy.html">WebIamPolicy</a></h4>
-      <section></section>
+      <section><p>Three different resources help you manage your IAM policy for Identity-Aware Proxy Web. Each of these resources serves a different use case:</p>
+<ul>
+<li><code>gcp.iap.WebIamPolicy</code>: Authoritative. Sets the IAM policy for the web and replaces any existing policy already attached.</li>
+<li><code>gcp.iap.WebIamBinding</code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the web are preserved.</li>
+<li><code>gcp.iap.WebIamMember</code>: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the web are preserved.</li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.iap.WebIamPolicy</code> <strong>cannot</strong> be used in conjunction with <code>gcp.iap.WebIamBinding</code> and <code>gcp.iap.WebIamMember</code> or they will fight over what your policy should be.</p>
+</blockquote>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.iap.WebIamBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.iap.WebIamMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
+</blockquote>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.Iap.WebIamPolicyArgs.html">WebIamPolicyArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Iap.WebIamPolicyState.html">WebIamPolicyState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Iap.WebTypeAppEngingIamBinding.html">WebTypeAppEngingIamBinding</a></h4>
-      <section></section>
+      <section><p>Three different resources help you manage your IAM policy for Identity-Aware Proxy WebTypeAppEngine. Each of these resources serves a different use case:</p>
+<ul>
+<li><code>gcp.iap.WebTypeAppEngingIamPolicy</code>: Authoritative. Sets the IAM policy for the webtypeappengine and replaces any existing policy already attached.</li>
+<li><code>gcp.iap.WebTypeAppEngingIamBinding</code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the webtypeappengine are preserved.</li>
+<li><code>gcp.iap.WebTypeAppEngingIamMember</code>: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the webtypeappengine are preserved.</li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.iap.WebTypeAppEngingIamPolicy</code> <strong>cannot</strong> be used in conjunction with <code>gcp.iap.WebTypeAppEngingIamBinding</code> and <code>gcp.iap.WebTypeAppEngingIamMember</code> or they will fight over what your policy should be.</p>
+</blockquote>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.iap.WebTypeAppEngingIamBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.iap.WebTypeAppEngingIamMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
+</blockquote>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.Iap.WebTypeAppEngingIamBindingArgs.html">WebTypeAppEngingIamBindingArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Iap.WebTypeAppEngingIamBindingState.html">WebTypeAppEngingIamBindingState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Iap.WebTypeAppEngingIamMember.html">WebTypeAppEngingIamMember</a></h4>
-      <section></section>
+      <section><p>Three different resources help you manage your IAM policy for Identity-Aware Proxy WebTypeAppEngine. Each of these resources serves a different use case:</p>
+<ul>
+<li><code>gcp.iap.WebTypeAppEngingIamPolicy</code>: Authoritative. Sets the IAM policy for the webtypeappengine and replaces any existing policy already attached.</li>
+<li><code>gcp.iap.WebTypeAppEngingIamBinding</code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the webtypeappengine are preserved.</li>
+<li><code>gcp.iap.WebTypeAppEngingIamMember</code>: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the webtypeappengine are preserved.</li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.iap.WebTypeAppEngingIamPolicy</code> <strong>cannot</strong> be used in conjunction with <code>gcp.iap.WebTypeAppEngingIamBinding</code> and <code>gcp.iap.WebTypeAppEngingIamMember</code> or they will fight over what your policy should be.</p>
+</blockquote>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.iap.WebTypeAppEngingIamBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.iap.WebTypeAppEngingIamMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
+</blockquote>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.Iap.WebTypeAppEngingIamMemberArgs.html">WebTypeAppEngingIamMemberArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Iap.WebTypeAppEngingIamMemberState.html">WebTypeAppEngingIamMemberState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Iap.WebTypeAppEngingIamPolicy.html">WebTypeAppEngingIamPolicy</a></h4>
-      <section></section>
+      <section><p>Three different resources help you manage your IAM policy for Identity-Aware Proxy WebTypeAppEngine. Each of these resources serves a different use case:</p>
+<ul>
+<li><code>gcp.iap.WebTypeAppEngingIamPolicy</code>: Authoritative. Sets the IAM policy for the webtypeappengine and replaces any existing policy already attached.</li>
+<li><code>gcp.iap.WebTypeAppEngingIamBinding</code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the webtypeappengine are preserved.</li>
+<li><code>gcp.iap.WebTypeAppEngingIamMember</code>: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the webtypeappengine are preserved.</li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.iap.WebTypeAppEngingIamPolicy</code> <strong>cannot</strong> be used in conjunction with <code>gcp.iap.WebTypeAppEngingIamBinding</code> and <code>gcp.iap.WebTypeAppEngingIamMember</code> or they will fight over what your policy should be.</p>
+</blockquote>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.iap.WebTypeAppEngingIamBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.iap.WebTypeAppEngingIamMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
+</blockquote>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.Iap.WebTypeAppEngingIamPolicyArgs.html">WebTypeAppEngingIamPolicyArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Iap.WebTypeAppEngingIamPolicyState.html">WebTypeAppEngingIamPolicyState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Iap.WebTypeComputeIamBinding.html">WebTypeComputeIamBinding</a></h4>
-      <section></section>
+      <section><p>Three different resources help you manage your IAM policy for Identity-Aware Proxy WebTypeCompute. Each of these resources serves a different use case:</p>
+<ul>
+<li><code>gcp.iap.WebTypeComputeIamPolicy</code>: Authoritative. Sets the IAM policy for the webtypecompute and replaces any existing policy already attached.</li>
+<li><code>gcp.iap.WebTypeComputeIamBinding</code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the webtypecompute are preserved.</li>
+<li><code>gcp.iap.WebTypeComputeIamMember</code>: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the webtypecompute are preserved.</li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.iap.WebTypeComputeIamPolicy</code> <strong>cannot</strong> be used in conjunction with <code>gcp.iap.WebTypeComputeIamBinding</code> and <code>gcp.iap.WebTypeComputeIamMember</code> or they will fight over what your policy should be.</p>
+</blockquote>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.iap.WebTypeComputeIamBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.iap.WebTypeComputeIamMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
+</blockquote>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.Iap.WebTypeComputeIamBindingArgs.html">WebTypeComputeIamBindingArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Iap.WebTypeComputeIamBindingState.html">WebTypeComputeIamBindingState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Iap.WebTypeComputeIamMember.html">WebTypeComputeIamMember</a></h4>
-      <section></section>
+      <section><p>Three different resources help you manage your IAM policy for Identity-Aware Proxy WebTypeCompute. Each of these resources serves a different use case:</p>
+<ul>
+<li><code>gcp.iap.WebTypeComputeIamPolicy</code>: Authoritative. Sets the IAM policy for the webtypecompute and replaces any existing policy already attached.</li>
+<li><code>gcp.iap.WebTypeComputeIamBinding</code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the webtypecompute are preserved.</li>
+<li><code>gcp.iap.WebTypeComputeIamMember</code>: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the webtypecompute are preserved.</li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.iap.WebTypeComputeIamPolicy</code> <strong>cannot</strong> be used in conjunction with <code>gcp.iap.WebTypeComputeIamBinding</code> and <code>gcp.iap.WebTypeComputeIamMember</code> or they will fight over what your policy should be.</p>
+</blockquote>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.iap.WebTypeComputeIamBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.iap.WebTypeComputeIamMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
+</blockquote>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.Iap.WebTypeComputeIamMemberArgs.html">WebTypeComputeIamMemberArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Iap.WebTypeComputeIamMemberState.html">WebTypeComputeIamMemberState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Iap.WebTypeComputeIamPolicy.html">WebTypeComputeIamPolicy</a></h4>
-      <section></section>
+      <section><p>Three different resources help you manage your IAM policy for Identity-Aware Proxy WebTypeCompute. Each of these resources serves a different use case:</p>
+<ul>
+<li><code>gcp.iap.WebTypeComputeIamPolicy</code>: Authoritative. Sets the IAM policy for the webtypecompute and replaces any existing policy already attached.</li>
+<li><code>gcp.iap.WebTypeComputeIamBinding</code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the webtypecompute are preserved.</li>
+<li><code>gcp.iap.WebTypeComputeIamMember</code>: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the webtypecompute are preserved.</li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.iap.WebTypeComputeIamPolicy</code> <strong>cannot</strong> be used in conjunction with <code>gcp.iap.WebTypeComputeIamBinding</code> and <code>gcp.iap.WebTypeComputeIamMember</code> or they will fight over what your policy should be.</p>
+</blockquote>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.iap.WebTypeComputeIamBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.iap.WebTypeComputeIamMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
+</blockquote>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.Iap.WebTypeComputeIamPolicyArgs.html">WebTypeComputeIamPolicyArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Iap.WebTypeComputeIamPolicyState.html">WebTypeComputeIamPolicyState</a></h4>

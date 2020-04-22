@@ -80,9 +80,6 @@
       <section><p>Provides a CEN cross-regional interconnection bandwidth resource. To connect networks in different regions, you must set cross-region interconnection bandwidth after buying a bandwidth package. The total bandwidth set for all the interconnected regions of a bandwidth package cannot exceed the bandwidth of the bandwidth package. By default, 1 Kbps bandwidth is provided for connectivity test. To run normal business, you must buy a bandwidth package and set a proper interconnection bandwidth.</p>
 <p>For example, a CEN instance is bound to a bandwidth package of 20 Mbps and  the interconnection areas are Mainland China and North America. You can set the cross-region interconnection bandwidth between US West 1 and China East 1, China East 2, China South 1, and so on. However, the total bandwidth set for all the interconnected regions cannot exceed 20  Mbps.</p>
 <p>For information about CEN and how to use it, see <a href="https://www.alibabacloud.com/help/doc-detail/65983.htm">Cross-region interconnection bandwidth</a></p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/cen_bandwidth_limit.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/cen_bandwidth_limit.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.AliCloud.Cen.BandwidthLimitArgs.html">BandwidthLimitArgs</a></h4>
       <section></section>
@@ -91,17 +88,11 @@
       <h4><a class="xref" href="Pulumi.AliCloud.Cen.BandwidthPackage.html">BandwidthPackage</a></h4>
       <section><p>Provides a CEN bandwidth package resource. The CEN bandwidth package is an abstracted object that includes an interconnection bandwidth and interconnection areas. To buy a bandwidth package, you must specify the areas to connect. An area consists of one or more Alibaba Cloud regions. The areas in CEN include Mainland China, Asia Pacific, North America, and Europe.</p>
 <p>For information about CEN and how to use it, see <a href="https://www.alibabacloud.com/help/doc-detail/65982.htm">Manage bandwidth packages</a>.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/cen_bandwidth_package.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/cen_bandwidth_package.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.AliCloud.Cen.BandwidthPackageArgs.html">BandwidthPackageArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.AliCloud.Cen.BandwidthPackageAttachment.html">BandwidthPackageAttachment</a></h4>
       <section><p>Provides a CEN bandwidth package attachment resource. The resource can be used to bind a bandwidth package to a specified CEN instance.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/cen_bandwidth_package_attachment.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/cen_bandwidth_package_attachment.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.AliCloud.Cen.BandwidthPackageAttachmentArgs.html">BandwidthPackageAttachmentArgs</a></h4>
       <section></section>
@@ -109,21 +100,50 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.AliCloud.Cen.BandwidthPackageState.html">BandwidthPackageState</a></h4>
       <section></section>
+      <h4><a class="xref" href="Pulumi.AliCloud.Cen.FlowLog.html">FlowLog</a></h4>
+      <section><p>This resource used to create a flow log function in Cloud Enterprise Network (CEN).
+By using the flow log function, you can capture the traffic data of the network instances in different regions of a CEN.
+You can also use the data aggregated in flow logs to analyze cross-region traffic flows, minimize traffic costs, and troubleshoot network faults.</p>
+<p>For information about CEN flow log and how to use it, see <a href="https://www.alibabacloud.com/help/doc-detail/123006.htm">Manage CEN flowlog</a>.</p>
+<blockquote>
+<p><strong>NOTE:</strong> Available in 1.73.0+</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.AliCloud.Cen.FlowLogArgs.html">FlowLogArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.AliCloud.Cen.FlowLogState.html">FlowLogState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.AliCloud.Cen.GetBandwidthLimits.html">GetBandwidthLimits</a></h4>
+      <section></section>
       <h4><a class="xref" href="Pulumi.AliCloud.Cen.GetBandwidthLimitsArgs.html">GetBandwidthLimitsArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.AliCloud.Cen.GetBandwidthLimitsResult.html">GetBandwidthLimitsResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.AliCloud.Cen.GetBandwidthPackages.html">GetBandwidthPackages</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.AliCloud.Cen.GetBandwidthPackagesArgs.html">GetBandwidthPackagesArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.AliCloud.Cen.GetBandwidthPackagesResult.html">GetBandwidthPackagesResult</a></h4>
       <section></section>
+      <h4><a class="xref" href="Pulumi.AliCloud.Cen.GetFlowlogs.html">GetFlowlogs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.AliCloud.Cen.GetFlowlogsArgs.html">GetFlowlogsArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.AliCloud.Cen.GetFlowlogsResult.html">GetFlowlogsResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.AliCloud.Cen.GetInstances.html">GetInstances</a></h4>
+      <section></section>
       <h4><a class="xref" href="Pulumi.AliCloud.Cen.GetInstancesArgs.html">GetInstancesArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.AliCloud.Cen.GetInstancesResult.html">GetInstancesResult</a></h4>
       <section></section>
+      <h4><a class="xref" href="Pulumi.AliCloud.Cen.GetRegionRouteEntries.html">GetRegionRouteEntries</a></h4>
+      <section></section>
       <h4><a class="xref" href="Pulumi.AliCloud.Cen.GetRegionRouteEntriesArgs.html">GetRegionRouteEntriesArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.AliCloud.Cen.GetRegionRouteEntriesResult.html">GetRegionRouteEntriesResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.AliCloud.Cen.GetRouteEntries.html">GetRouteEntries</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.AliCloud.Cen.GetRouteEntriesArgs.html">GetRouteEntriesArgs</a></h4>
       <section></section>
@@ -132,17 +152,11 @@
       <h4><a class="xref" href="Pulumi.AliCloud.Cen.Instance.html">Instance</a></h4>
       <section><p>Provides a CEN instance resource. Cloud Enterprise Network (CEN) is a service that allows you to create a global network for rapidly building a distributed business system with a hybrid cloud computing solution. CEN enables you to build a secure, private, and enterprise-class interconnected network between VPCs in different regions and your local data centers. CEN provides enterprise-class scalability that automatically responds to your dynamic computing requirements.</p>
 <p>For information about CEN and how to use it, see <a href="https://www.alibabacloud.com/help/doc-detail/59870.htm">What is Cloud Enterprise Network</a>.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/cen_instance.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/cen_instance.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.AliCloud.Cen.InstanceArgs.html">InstanceArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.AliCloud.Cen.InstanceAttachment.html">InstanceAttachment</a></h4>
       <section><p>Provides a CEN child instance attachment resource.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/cen_instance_attachment.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/cen_instance_attachment.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.AliCloud.Cen.InstanceAttachmentArgs.html">InstanceAttachmentArgs</a></h4>
       <section></section>
@@ -151,9 +165,6 @@
       <h4><a class="xref" href="Pulumi.AliCloud.Cen.InstanceGrant.html">InstanceGrant</a></h4>
       <section><p>Provides a CEN child instance grant resource, which allow you to authorize a VPC or VBR to a CEN of a different account.</p>
 <p>For more information about how to use it, see <a href="https://www.alibabacloud.com/help/doc-detail/73645.htm">Attach a network in a different account</a>.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/cen_instance_grant.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/cen_instance_grant.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.AliCloud.Cen.InstanceGrantArgs.html">InstanceGrantArgs</a></h4>
       <section></section>
@@ -161,14 +172,9 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.AliCloud.Cen.InstanceState.html">InstanceState</a></h4>
       <section></section>
-      <h4><a class="xref" href="Pulumi.AliCloud.Cen.Invokes.html">Invokes</a></h4>
-      <section></section>
       <h4><a class="xref" href="Pulumi.AliCloud.Cen.RouteEntry.html">RouteEntry</a></h4>
       <section><p>Provides a CEN route entry resource. Cloud Enterprise Network (CEN) supports publishing and withdrawing route entries of attached networks. You can publish a route entry of an attached VPC or VBR to a CEN instance, then other attached networks can learn the route if there is no route conflict. You can withdraw a published route entry when CEN does not need it any more.</p>
 <p>For information about CEN route entries publishment and how to use it, see <a href="https://www.alibabacloud.com/help/doc-detail/86980.htm">Manage network routes</a>.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/cen_route_entry.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/cen_route_entry.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.AliCloud.Cen.RouteEntryArgs.html">RouteEntryArgs</a></h4>
       <section></section>

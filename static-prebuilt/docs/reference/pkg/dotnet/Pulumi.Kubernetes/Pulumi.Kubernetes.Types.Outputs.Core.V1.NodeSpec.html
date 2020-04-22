@@ -79,40 +79,16 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">NodeSpec</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Core.V1.html">Pulumi.Kubernetes.Types.Outputs.Core.V1</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Kubernetes.dll</h6>
   <h5 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_NodeSpec_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class NodeSpec</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class NodeSpec : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L17789">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L17950">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_NodeSpec_ConfigSource" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.NodeSpec.ConfigSource">ConfigSource</h4>
   <div class="markdown level1 summary"><p>If specified, the source to get node configuration from The DynamicKubeletConfig feature
@@ -139,7 +115,7 @@ gate must be enabled for the Kubelet to use this field</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L17795">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L17956">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_NodeSpec_ExternalID" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.NodeSpec.ExternalID">ExternalID</h4>
   <div class="markdown level1 summary"><p>Deprecated. Not all kubelets will set this field. Remove field after 1.13. see:
@@ -166,7 +142,7 @@ gate must be enabled for the Kubelet to use this field</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L17800">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L17961">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_NodeSpec_PodCIDR" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.NodeSpec.PodCIDR">PodCIDR</h4>
   <div class="markdown level1 summary"><p>PodCIDR represents the pod IP range assigned to the node.</p>
@@ -192,7 +168,7 @@ gate must be enabled for the Kubelet to use this field</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L17807">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L17968">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_NodeSpec_PodCIDRs" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.NodeSpec.PodCIDRs">PodCIDRs</h4>
   <div class="markdown level1 summary"><p>podCIDRs represents the IP ranges assigned to the node for usage by Pods on that node.
@@ -214,13 +190,13 @@ at most 1 value for each of IPv4 and IPv6.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L17813">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L17974">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_NodeSpec_ProviderID" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.NodeSpec.ProviderID">ProviderID</h4>
   <div class="markdown level1 summary"><p>ID of the node assigned by the cloud provider in the format:
@@ -247,7 +223,7 @@ at most 1 value for each of IPv4 and IPv6.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L17818">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L17979">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_NodeSpec_Taints" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.NodeSpec.Taints">Taints</h4>
   <div class="markdown level1 summary"><p>If specified, the node's taints.</p>
@@ -267,13 +243,13 @@ at most 1 value for each of IPv4 and IPv6.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Core.V1.Taint.html">Taint</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Core.V1.Taint.html">Taint</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L17824">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L17985">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_NodeSpec_Unschedulable" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.NodeSpec.Unschedulable">Unschedulable</h4>
   <div class="markdown level1 summary"><p>Unschedulable controls node schedulability of new pods. By default, node is schedulable.
@@ -306,7 +282,7 @@ More info: <a href="https://kubernetes.io/docs/concepts/nodes/node/#manual-node-
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L17782" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L17943" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -71,50 +71,18 @@
   
   <h1 id="Pulumi_Gcp_IdentityPlatform_Tenant" data-uid="Pulumi.Gcp.IdentityPlatform.Tenant" class="text-break">Class Tenant
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Tenant configuration in a multi-tenant project.</p>
+<p>You must enable the
+<a href="https://console.cloud.google.com/marketplace/details/google-cloud-platform/customer-identity">Google Identity Platform</a> in
+the marketplace prior to using this resource.</p>
+<p>You must <a href="https://cloud.google.com/identity-platform/docs/multi-tenancy-quickstart">enable multi-tenancy</a> via
+the Cloud Console prior to creating tenants.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
-    <div class="level3"><span class="xref">Tenant</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">Tenant</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.IdentityPlatform.html">Pulumi.Gcp.IdentityPlatform</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
@@ -125,16 +93,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Identityplatform/Tenant.cs/#L60">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/IdentityPlatform/Tenant.cs/#L70">View Source</a>
   </span>
   <a id="Pulumi_Gcp_IdentityPlatform_Tenant__ctor_" data-uid="Pulumi.Gcp.IdentityPlatform.Tenant.#ctor*"></a>
-  <h4 id="Pulumi_Gcp_IdentityPlatform_Tenant__ctor_System_String_Pulumi_Gcp_IdentityPlatform_TenantArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Gcp.IdentityPlatform.Tenant.#ctor(System.String,Pulumi.Gcp.IdentityPlatform.TenantArgs,Pulumi.CustomResourceOptions)">Tenant(String, TenantArgs, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Gcp_IdentityPlatform_Tenant__ctor_System_String_Pulumi_Gcp_IdentityPlatform_TenantArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Gcp.IdentityPlatform.Tenant.#ctor(System.String,Pulumi.Gcp.IdentityPlatform.TenantArgs,System.Nullable{CustomResourceOptions})">Tenant(String, TenantArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Create a Tenant resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Tenant(string name, TenantArgs args, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Tenant(string name, TenantArgs args, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -159,7 +127,7 @@
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -169,7 +137,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Identityplatform/Tenant.cs/#L17">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/IdentityPlatform/Tenant.cs/#L27">View Source</a>
   </span>
   <a id="Pulumi_Gcp_IdentityPlatform_Tenant_AllowPasswordSignup_" data-uid="Pulumi.Gcp.IdentityPlatform.Tenant.AllowPasswordSignup*"></a>
   <h4 id="Pulumi_Gcp_IdentityPlatform_Tenant_AllowPasswordSignup" data-uid="Pulumi.Gcp.IdentityPlatform.Tenant.AllowPasswordSignup">AllowPasswordSignup</h4>
@@ -190,18 +158,18 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Identityplatform/Tenant.cs/#L24">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/IdentityPlatform/Tenant.cs/#L34">View Source</a>
   </span>
   <a id="Pulumi_Gcp_IdentityPlatform_Tenant_DisableAuth_" data-uid="Pulumi.Gcp.IdentityPlatform.Tenant.DisableAuth*"></a>
   <h4 id="Pulumi_Gcp_IdentityPlatform_Tenant_DisableAuth" data-uid="Pulumi.Gcp.IdentityPlatform.Tenant.DisableAuth">DisableAuth</h4>
-  <div class="markdown level1 summary"><p>Whether authentication is disabled for the tenant. If true, the users under the disabled tenant are not
-allowed to sign-in. Admins of the disabled tenant are not able to manage its users.</p>
+  <div class="markdown level1 summary"><p>Whether authentication is disabled for the tenant. If true, the users under the disabled tenant are not allowed to
+sign-in. Admins of the disabled tenant are not able to manage its users.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -218,13 +186,13 @@ allowed to sign-in. Admins of the disabled tenant are not able to manage its use
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Identityplatform/Tenant.cs/#L30">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/IdentityPlatform/Tenant.cs/#L40">View Source</a>
   </span>
   <a id="Pulumi_Gcp_IdentityPlatform_Tenant_DisplayName_" data-uid="Pulumi.Gcp.IdentityPlatform.Tenant.DisplayName*"></a>
   <h4 id="Pulumi_Gcp_IdentityPlatform_Tenant_DisplayName" data-uid="Pulumi.Gcp.IdentityPlatform.Tenant.DisplayName">DisplayName</h4>
@@ -245,13 +213,13 @@ allowed to sign-in. Admins of the disabled tenant are not able to manage its use
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Identityplatform/Tenant.cs/#L36">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/IdentityPlatform/Tenant.cs/#L46">View Source</a>
   </span>
   <a id="Pulumi_Gcp_IdentityPlatform_Tenant_EnableEmailLinkSignin_" data-uid="Pulumi.Gcp.IdentityPlatform.Tenant.EnableEmailLinkSignin*"></a>
   <h4 id="Pulumi_Gcp_IdentityPlatform_Tenant_EnableEmailLinkSignin" data-uid="Pulumi.Gcp.IdentityPlatform.Tenant.EnableEmailLinkSignin">EnableEmailLinkSignin</h4>
@@ -272,13 +240,13 @@ allowed to sign-in. Admins of the disabled tenant are not able to manage its use
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Identityplatform/Tenant.cs/#L42">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/IdentityPlatform/Tenant.cs/#L52">View Source</a>
   </span>
   <a id="Pulumi_Gcp_IdentityPlatform_Tenant_Name_" data-uid="Pulumi.Gcp.IdentityPlatform.Tenant.Name*"></a>
   <h4 id="Pulumi_Gcp_IdentityPlatform_Tenant_Name" data-uid="Pulumi.Gcp.IdentityPlatform.Tenant.Name">Name</h4>
@@ -299,13 +267,13 @@ allowed to sign-in. Admins of the disabled tenant are not able to manage its use
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Identityplatform/Tenant.cs/#L49">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/IdentityPlatform/Tenant.cs/#L59">View Source</a>
   </span>
   <a id="Pulumi_Gcp_IdentityPlatform_Tenant_Project_" data-uid="Pulumi.Gcp.IdentityPlatform.Tenant.Project*"></a>
   <h4 id="Pulumi_Gcp_IdentityPlatform_Tenant_Project" data-uid="Pulumi.Gcp.IdentityPlatform.Tenant.Project">Project</h4>
@@ -327,7 +295,7 @@ If it is not provided, the provider project is used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -335,17 +303,17 @@ If it is not provided, the provider project is used.</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Identityplatform/Tenant.cs/#L90">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/IdentityPlatform/Tenant.cs/#L100">View Source</a>
   </span>
   <a id="Pulumi_Gcp_IdentityPlatform_Tenant_Get_" data-uid="Pulumi.Gcp.IdentityPlatform.Tenant.Get*"></a>
-  <h4 id="Pulumi_Gcp_IdentityPlatform_Tenant_Get_System_String_Pulumi_Input_System_String__Pulumi_Gcp_IdentityPlatform_TenantState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Gcp.IdentityPlatform.Tenant.Get(System.String,Pulumi.Input{System.String},Pulumi.Gcp.IdentityPlatform.TenantState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, TenantState, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Gcp_IdentityPlatform_Tenant_Get_System_String_Input_System_String__Pulumi_Gcp_IdentityPlatform_TenantState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Gcp.IdentityPlatform.Tenant.Get(System.String,Input{System.String},Pulumi.Gcp.IdentityPlatform.TenantState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, TenantState, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Get an existing Tenant resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Tenant Get(string name, Input&lt;string&gt; id, TenantState state = null, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Tenant Get(string name, Input&lt;string&gt; id, TenantState state = null, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -364,7 +332,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -376,7 +344,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -405,7 +373,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Identityplatform/Tenant.cs/#L12" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/IdentityPlatform/Tenant.cs/#L22" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

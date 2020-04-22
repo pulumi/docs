@@ -71,15 +71,50 @@
   
   <h1 id="Pulumi_Linode_Instance" data-uid="Pulumi.Linode.Instance" class="text-break">Class Instance
   </h1>
-  <div class="markdown level0 summary"><blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/r/instance.html.markdown">https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/r/instance.html.markdown</a>.</p>
-</blockquote>
-</div>
+  <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">Instance</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">Instance</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Linode.html">Pulumi.Linode</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Linode.dll</h6>
@@ -90,16 +125,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Instance.cs/#L181">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Instance.cs/#L178">View Source</a>
   </span>
   <a id="Pulumi_Linode_Instance__ctor_" data-uid="Pulumi.Linode.Instance.#ctor*"></a>
-  <h4 id="Pulumi_Linode_Instance__ctor_System_String_Pulumi_Linode_InstanceArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Linode.Instance.#ctor(System.String,Pulumi.Linode.InstanceArgs,System.Nullable{CustomResourceOptions})">Instance(String, InstanceArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Linode_Instance__ctor_System_String_Pulumi_Linode_InstanceArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Linode.Instance.#ctor(System.String,Pulumi.Linode.InstanceArgs,Pulumi.CustomResourceOptions)">Instance(String, InstanceArgs, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Create a Instance resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Instance(string name, InstanceArgs args, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Instance(string name, InstanceArgs args, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -124,7 +159,7 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -134,7 +169,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Instance.cs/#L16">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Instance.cs/#L14">View Source</a>
   </span>
   <a id="Pulumi_Linode_Instance_Alerts_" data-uid="Pulumi.Linode.Instance.Alerts*"></a>
   <h4 id="Pulumi_Linode_Instance_Alerts" data-uid="Pulumi.Linode.Instance.Alerts">Alerts</h4>
@@ -154,13 +189,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Linode.Outputs.InstanceAlerts.html">InstanceAlerts</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Linode.Outputs.InstanceAlerts.html">InstanceAlerts</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Instance.cs/#L22">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Instance.cs/#L20">View Source</a>
   </span>
   <a id="Pulumi_Linode_Instance_AuthorizedKeys_" data-uid="Pulumi.Linode.Instance.AuthorizedKeys*"></a>
   <h4 id="Pulumi_Linode_Instance_AuthorizedKeys" data-uid="Pulumi.Linode.Instance.AuthorizedKeys">AuthorizedKeys</h4>
@@ -181,13 +216,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Instance.cs/#L28">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Instance.cs/#L26">View Source</a>
   </span>
   <a id="Pulumi_Linode_Instance_AuthorizedUsers_" data-uid="Pulumi.Linode.Instance.AuthorizedUsers*"></a>
   <h4 id="Pulumi_Linode_Instance_AuthorizedUsers" data-uid="Pulumi.Linode.Instance.AuthorizedUsers">AuthorizedUsers</h4>
@@ -208,13 +243,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Instance.cs/#L34">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Instance.cs/#L32">View Source</a>
   </span>
   <a id="Pulumi_Linode_Instance_BackupId_" data-uid="Pulumi.Linode.Instance.BackupId*"></a>
   <h4 id="Pulumi_Linode_Instance_BackupId" data-uid="Pulumi.Linode.Instance.BackupId">BackupId</h4>
@@ -235,13 +270,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Instance.cs/#L40">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Instance.cs/#L38">View Source</a>
   </span>
   <a id="Pulumi_Linode_Instance_Backups_" data-uid="Pulumi.Linode.Instance.Backups*"></a>
   <h4 id="Pulumi_Linode_Instance_Backups" data-uid="Pulumi.Linode.Instance.Backups">Backups</h4>
@@ -262,13 +297,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Linode.Outputs.InstanceBackups.html">InstanceBackups</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Linode.Outputs.InstanceBackups.html">InstanceBackups</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Instance.cs/#L46">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Instance.cs/#L44">View Source</a>
   </span>
   <a id="Pulumi_Linode_Instance_BackupsEnabled_" data-uid="Pulumi.Linode.Instance.BackupsEnabled*"></a>
   <h4 id="Pulumi_Linode_Instance_BackupsEnabled" data-uid="Pulumi.Linode.Instance.BackupsEnabled">BackupsEnabled</h4>
@@ -289,13 +324,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Instance.cs/#L52">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Instance.cs/#L50">View Source</a>
   </span>
   <a id="Pulumi_Linode_Instance_BootConfigLabel_" data-uid="Pulumi.Linode.Instance.BootConfigLabel*"></a>
   <h4 id="Pulumi_Linode_Instance_BootConfigLabel" data-uid="Pulumi.Linode.Instance.BootConfigLabel">BootConfigLabel</h4>
@@ -316,13 +351,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Instance.cs/#L58">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Instance.cs/#L56">View Source</a>
   </span>
   <a id="Pulumi_Linode_Instance_Configs_" data-uid="Pulumi.Linode.Instance.Configs*"></a>
   <h4 id="Pulumi_Linode_Instance_Configs" data-uid="Pulumi.Linode.Instance.Configs">Configs</h4>
@@ -331,7 +366,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;InstanceConfigs&gt;&gt; Configs { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;InstanceConfig&gt;&gt; Configs { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -343,13 +378,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Linode.Outputs.InstanceConfigs.html">InstanceConfigs</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Linode.Outputs.InstanceConfig.html">InstanceConfig</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Instance.cs/#L61">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Instance.cs/#L59">View Source</a>
   </span>
   <a id="Pulumi_Linode_Instance_Disks_" data-uid="Pulumi.Linode.Instance.Disks*"></a>
   <h4 id="Pulumi_Linode_Instance_Disks" data-uid="Pulumi.Linode.Instance.Disks">Disks</h4>
@@ -357,7 +392,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;InstanceDisks&gt;&gt; Disks { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;InstanceDisk&gt;&gt; Disks { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -369,13 +404,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Linode.Outputs.InstanceDisks.html">InstanceDisks</a>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Linode.Outputs.InstanceDisk.html">InstanceDisk</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Instance.cs/#L67">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Instance.cs/#L65">View Source</a>
   </span>
   <a id="Pulumi_Linode_Instance_Group_" data-uid="Pulumi.Linode.Instance.Group*"></a>
   <h4 id="Pulumi_Linode_Instance_Group" data-uid="Pulumi.Linode.Instance.Group">Group</h4>
@@ -384,7 +419,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Group { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Group { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -396,13 +431,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Instance.cs/#L73">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Instance.cs/#L71">View Source</a>
   </span>
   <a id="Pulumi_Linode_Instance_Image_" data-uid="Pulumi.Linode.Instance.Image*"></a>
   <h4 id="Pulumi_Linode_Instance_Image" data-uid="Pulumi.Linode.Instance.Image">Image</h4>
@@ -411,7 +446,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Image { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Image { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -423,18 +458,18 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Instance.cs/#L80">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Instance.cs/#L78">View Source</a>
   </span>
   <a id="Pulumi_Linode_Instance_IpAddress_" data-uid="Pulumi.Linode.Instance.IpAddress*"></a>
   <h4 id="Pulumi_Linode_Instance_IpAddress" data-uid="Pulumi.Linode.Instance.IpAddress">IpAddress</h4>
-  <div class="markdown level1 summary"><p>This Linode's Public IPv4 Address. If there are multiple public IPv4 addresses on this Instance, an
-arbitrary address will be used for this field.</p>
+  <div class="markdown level1 summary"><p>This Linode's Public IPv4 Address. If there are multiple public IPv4 addresses on this Instance, an arbitrary address
+will be used for this field.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -451,19 +486,18 @@ arbitrary address will be used for this field.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Instance.cs/#L88">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Instance.cs/#L85">View Source</a>
   </span>
   <a id="Pulumi_Linode_Instance_Ipv4s_" data-uid="Pulumi.Linode.Instance.Ipv4s*"></a>
   <h4 id="Pulumi_Linode_Instance_Ipv4s" data-uid="Pulumi.Linode.Instance.Ipv4s">Ipv4s</h4>
-  <div class="markdown level1 summary"><p>This Linode's IPv4 Addresses. Each Linode is assigned a single public IPv4 address upon creation, and may
-get a single private IPv4 address if needed. You may need to open a support ticket to get additional IPv4
-addresses.</p>
+  <div class="markdown level1 summary"><p>This Linode's IPv4 Addresses. Each Linode is assigned a single public IPv4 address upon creation, and may get a single
+private IPv4 address if needed. You may need to open a support ticket to get additional IPv4 addresses.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -480,13 +514,13 @@ addresses.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Instance.cs/#L94">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Instance.cs/#L91">View Source</a>
   </span>
   <a id="Pulumi_Linode_Instance_Ipv6_" data-uid="Pulumi.Linode.Instance.Ipv6*"></a>
   <h4 id="Pulumi_Linode_Instance_Ipv6" data-uid="Pulumi.Linode.Instance.Ipv6">Ipv6</h4>
@@ -507,13 +541,13 @@ addresses.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Instance.cs/#L100">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Instance.cs/#L97">View Source</a>
   </span>
   <a id="Pulumi_Linode_Instance_Label_" data-uid="Pulumi.Linode.Instance.Label*"></a>
   <h4 id="Pulumi_Linode_Instance_Label" data-uid="Pulumi.Linode.Instance.Label">Label</h4>
@@ -534,13 +568,13 @@ addresses.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Instance.cs/#L106">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Instance.cs/#L103">View Source</a>
   </span>
   <a id="Pulumi_Linode_Instance_PrivateIp_" data-uid="Pulumi.Linode.Instance.PrivateIp*"></a>
   <h4 id="Pulumi_Linode_Instance_PrivateIp" data-uid="Pulumi.Linode.Instance.PrivateIp">PrivateIp</h4>
@@ -561,18 +595,18 @@ addresses.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Instance.cs/#L113">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Instance.cs/#L110">View Source</a>
   </span>
   <a id="Pulumi_Linode_Instance_PrivateIpAddress_" data-uid="Pulumi.Linode.Instance.PrivateIpAddress*"></a>
   <h4 id="Pulumi_Linode_Instance_PrivateIpAddress" data-uid="Pulumi.Linode.Instance.PrivateIpAddress">PrivateIpAddress</h4>
-  <div class="markdown level1 summary"><p>This Linode's Private IPv4 Address. The regional private IP address range is 192.168.128/17 address shared
-by all Linode Instances in a region.</p>
+  <div class="markdown level1 summary"><p>This Linode's Private IPv4 Address. The regional private IP address range is 192.168.128/17 address shared by all Linode
+Instances in a region.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -589,13 +623,13 @@ by all Linode Instances in a region.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Instance.cs/#L119">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Instance.cs/#L116">View Source</a>
   </span>
   <a id="Pulumi_Linode_Instance_Region_" data-uid="Pulumi.Linode.Instance.Region*"></a>
   <h4 id="Pulumi_Linode_Instance_Region" data-uid="Pulumi.Linode.Instance.Region">Region</h4>
@@ -616,13 +650,13 @@ by all Linode Instances in a region.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Instance.cs/#L125">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Instance.cs/#L122">View Source</a>
   </span>
   <a id="Pulumi_Linode_Instance_RootPass_" data-uid="Pulumi.Linode.Instance.RootPass*"></a>
   <h4 id="Pulumi_Linode_Instance_RootPass" data-uid="Pulumi.Linode.Instance.RootPass">RootPass</h4>
@@ -631,7 +665,7 @@ by all Linode Instances in a region.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; RootPass { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; RootPass { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -643,13 +677,13 @@ by all Linode Instances in a region.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Instance.cs/#L128">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Instance.cs/#L125">View Source</a>
   </span>
   <a id="Pulumi_Linode_Instance_Specs_" data-uid="Pulumi.Linode.Instance.Specs*"></a>
   <h4 id="Pulumi_Linode_Instance_Specs" data-uid="Pulumi.Linode.Instance.Specs">Specs</h4>
@@ -669,13 +703,13 @@ by all Linode Instances in a region.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Linode.Outputs.InstanceSpecs.html">InstanceSpecs</a>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Linode.Outputs.InstanceSpecs.html">InstanceSpecs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Instance.cs/#L134">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Instance.cs/#L131">View Source</a>
   </span>
   <a id="Pulumi_Linode_Instance_StackscriptData_" data-uid="Pulumi.Linode.Instance.StackscriptData*"></a>
   <h4 id="Pulumi_Linode_Instance_StackscriptData" data-uid="Pulumi.Linode.Instance.StackscriptData">StackscriptData</h4>
@@ -684,7 +718,7 @@ by all Linode Instances in a region.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;?&gt; StackscriptData { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;&gt; StackscriptData { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -696,13 +730,13 @@ by all Linode Instances in a region.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Instance.cs/#L140">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Instance.cs/#L137">View Source</a>
   </span>
   <a id="Pulumi_Linode_Instance_StackscriptId_" data-uid="Pulumi.Linode.Instance.StackscriptId*"></a>
   <h4 id="Pulumi_Linode_Instance_StackscriptId" data-uid="Pulumi.Linode.Instance.StackscriptId">StackscriptId</h4>
@@ -723,13 +757,13 @@ by all Linode Instances in a region.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Instance.cs/#L146">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Instance.cs/#L143">View Source</a>
   </span>
   <a id="Pulumi_Linode_Instance_Status_" data-uid="Pulumi.Linode.Instance.Status*"></a>
   <h4 id="Pulumi_Linode_Instance_Status" data-uid="Pulumi.Linode.Instance.Status">Status</h4>
@@ -750,13 +784,13 @@ by all Linode Instances in a region.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Instance.cs/#L152">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Instance.cs/#L149">View Source</a>
   </span>
   <a id="Pulumi_Linode_Instance_SwapSize_" data-uid="Pulumi.Linode.Instance.SwapSize*"></a>
   <h4 id="Pulumi_Linode_Instance_SwapSize" data-uid="Pulumi.Linode.Instance.SwapSize">SwapSize</h4>
@@ -777,13 +811,13 @@ by all Linode Instances in a region.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Instance.cs/#L158">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Instance.cs/#L155">View Source</a>
   </span>
   <a id="Pulumi_Linode_Instance_Tags_" data-uid="Pulumi.Linode.Instance.Tags*"></a>
   <h4 id="Pulumi_Linode_Instance_Tags" data-uid="Pulumi.Linode.Instance.Tags">Tags</h4>
@@ -804,13 +838,13 @@ by all Linode Instances in a region.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Instance.cs/#L164">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Instance.cs/#L161">View Source</a>
   </span>
   <a id="Pulumi_Linode_Instance_Type_" data-uid="Pulumi.Linode.Instance.Type*"></a>
   <h4 id="Pulumi_Linode_Instance_Type" data-uid="Pulumi.Linode.Instance.Type">Type</h4>
@@ -819,7 +853,7 @@ by all Linode Instances in a region.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Type { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Type { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -831,13 +865,13 @@ by all Linode Instances in a region.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Instance.cs/#L170">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Instance.cs/#L167">View Source</a>
   </span>
   <a id="Pulumi_Linode_Instance_WatchdogEnabled_" data-uid="Pulumi.Linode.Instance.WatchdogEnabled*"></a>
   <h4 id="Pulumi_Linode_Instance_WatchdogEnabled" data-uid="Pulumi.Linode.Instance.WatchdogEnabled">WatchdogEnabled</h4>
@@ -858,7 +892,7 @@ by all Linode Instances in a region.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -866,17 +900,17 @@ by all Linode Instances in a region.</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Instance.cs/#L211">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Instance.cs/#L208">View Source</a>
   </span>
   <a id="Pulumi_Linode_Instance_Get_" data-uid="Pulumi.Linode.Instance.Get*"></a>
-  <h4 id="Pulumi_Linode_Instance_Get_System_String_Input_System_String__Pulumi_Linode_InstanceState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Linode.Instance.Get(System.String,Input{System.String},Pulumi.Linode.InstanceState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, InstanceState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Linode_Instance_Get_System_String_Pulumi_Input_System_String__Pulumi_Linode_InstanceState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Linode.Instance.Get(System.String,Pulumi.Input{System.String},Pulumi.Linode.InstanceState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, InstanceState, CustomResourceOptions)</h4>
   <div class="markdown level1 summary"><p>Get an existing Instance resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Instance Get(string name, Input&lt;string&gt; id, InstanceState state = null, CustomResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Instance Get(string name, Input&lt;string&gt; id, InstanceState state = null, CustomResourceOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -895,7 +929,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -907,7 +941,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -936,7 +970,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Instance.cs/#L14" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/Instance.cs/#L12" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -71,43 +71,14 @@
   
   <h1 id="Pulumi_Kubernetes_Types_Inputs_Networking_V1Beta1_HTTPIngressPathArgs" data-uid="Pulumi.Kubernetes.Types.Inputs.Networking.V1Beta1.HTTPIngressPathArgs" class="text-break">Class HTTPIngressPathArgs
   </h1>
-  <div class="markdown level0 summary"><p>HTTPIngressPath associates a path regex with a backend. Incoming urls matching the path are
+  <div class="markdown level0 summary"><p>HTTPIngressPath associates a path with a backend. Incoming urls matching the path are
 forwarded to the backend.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
-    <div class="level3"><span class="xref">HTTPIngressPathArgs</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">HTTPIngressPathArgs</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Kubernetes.Types.Inputs.Networking.V1Beta1.html">Pulumi.Kubernetes.Types.Inputs.Networking.V1Beta1</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Kubernetes.dll</h6>
@@ -118,7 +89,7 @@ forwarded to the backend.</p>
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Input.cs/#L24854">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Input.cs/#L25072">View Source</a>
   </span>
   <a id="Pulumi_Kubernetes_Types_Inputs_Networking_V1Beta1_HTTPIngressPathArgs_Backend_" data-uid="Pulumi.Kubernetes.Types.Inputs.Networking.V1Beta1.HTTPIngressPathArgs.Backend*"></a>
   <h4 id="Pulumi_Kubernetes_Types_Inputs_Networking_V1Beta1_HTTPIngressPathArgs_Backend" data-uid="Pulumi.Kubernetes.Types.Inputs.Networking.V1Beta1.HTTPIngressPathArgs.Backend">Backend</h4>
@@ -140,26 +111,25 @@ to.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Inputs.Networking.V1Beta1.IngressBackendArgs.html">IngressBackendArgs</a>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Inputs.Networking.V1Beta1.IngressBackendArgs.html">IngressBackendArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Input.cs/#L24864">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Input.cs/#L25081">View Source</a>
   </span>
   <a id="Pulumi_Kubernetes_Types_Inputs_Networking_V1Beta1_HTTPIngressPathArgs_Path_" data-uid="Pulumi.Kubernetes.Types.Inputs.Networking.V1Beta1.HTTPIngressPathArgs.Path*"></a>
   <h4 id="Pulumi_Kubernetes_Types_Inputs_Networking_V1Beta1_HTTPIngressPathArgs_Path" data-uid="Pulumi.Kubernetes.Types.Inputs.Networking.V1Beta1.HTTPIngressPathArgs.Path">Path</h4>
-  <div class="markdown level1 summary"><p>Path is an extended POSIX regex as defined by IEEE Std 1003.1, (i.e this follows the
-egrep/unix syntax, not the perl syntax) matched against the path of an incoming request.
-Currently it can contain characters disallowed from the conventional &quot;path&quot; part of a
-URL as defined by RFC 3986. Paths must begin with a '/'. If unspecified, the path
-defaults to a catch all sending traffic to the backend.</p>
+  <div class="markdown level1 summary"><p>Path is matched against the path of an incoming request. Currently it can contain
+characters disallowed from the conventional &quot;path&quot; part of a URL as defined by RFC 3986.
+Paths must begin with a '/'. When unspecified, all paths from incoming requests are
+matched.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Path { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Path { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -171,7 +141,49 @@ defaults to a catch all sending traffic to the backend.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Input.cs/#L25100">View Source</a>
+  </span>
+  <a id="Pulumi_Kubernetes_Types_Inputs_Networking_V1Beta1_HTTPIngressPathArgs_PathType_" data-uid="Pulumi.Kubernetes.Types.Inputs.Networking.V1Beta1.HTTPIngressPathArgs.PathType*"></a>
+  <h4 id="Pulumi_Kubernetes_Types_Inputs_Networking_V1Beta1_HTTPIngressPathArgs_PathType" data-uid="Pulumi.Kubernetes.Types.Inputs.Networking.V1Beta1.HTTPIngressPathArgs.PathType">PathType</h4>
+  <div class="markdown level1 summary"><p>PathType determines the interpretation of the Path matching. PathType can be one of the
+following values: * Exact: Matches the URL path exactly. * Prefix: Matches based on a
+URL path prefix split by '/'. Matching is
+done on a path element by element basis. A path element refers is the
+list of labels in the path split by the '/' separator. A request is a
+match for path p if every p is an element-wise prefix of p of the
+request path. Note that if the last element of the path is a substring
+of the last element in request path, it is not a match (e.g. /foo/bar
+matches /foo/bar/baz, but does not match /foo/barbaz).</p>
+<ul>
+<li>ImplementationSpecific: Interpretation of the Path matching is up to
+the IngressClass. Implementations can treat this as a separate PathType
+or treat it identically to Prefix or Exact path types.
+Implementations are required to support all path types. Defaults to
+ImplementationSpecific.</li>
+</ul>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? PathType { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -183,7 +195,7 @@ defaults to a catch all sending traffic to the backend.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Input.cs/#L24848" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Input.cs/#L25066" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

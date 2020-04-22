@@ -81,40 +81,16 @@ values in SecurityContext take precedence.</p>
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">SecurityContext</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Core.V1.html">Pulumi.Kubernetes.Types.Outputs.Core.V1</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Kubernetes.dll</h6>
   <h5 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_SecurityContext_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class SecurityContext</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class SecurityContext : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L21401">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L21585">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_SecurityContext_AllowPrivilegeEscalation" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.SecurityContext.AllowPrivilegeEscalation">AllowPrivilegeEscalation</h4>
   <div class="markdown level1 summary"><p>AllowPrivilegeEscalation controls whether a process can gain more privileges than its
@@ -143,7 +119,7 @@ as Privileged 2) has CAP_SYS_ADMIN</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L21407">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L21591">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_SecurityContext_Capabilities" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.SecurityContext.Capabilities">Capabilities</h4>
   <div class="markdown level1 summary"><p>The capabilities to add/drop when running containers. Defaults to the default set of
@@ -170,7 +146,7 @@ capabilities granted by the container runtime.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L21413">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L21597">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_SecurityContext_Privileged" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.SecurityContext.Privileged">Privileged</h4>
   <div class="markdown level1 summary"><p>Run container in privileged mode. Processes in privileged containers are essentially
@@ -197,7 +173,7 @@ equivalent to root on the host. Defaults to false.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L21420">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L21604">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_SecurityContext_ProcMount" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.SecurityContext.ProcMount">ProcMount</h4>
   <div class="markdown level1 summary"><p>procMount denotes the type of proc mount to use for the containers. The default is
@@ -225,7 +201,7 @@ paths. This requires the ProcMountType feature flag to be enabled.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L21425">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L21609">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_SecurityContext_ReadOnlyRootFilesystem" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.SecurityContext.ReadOnlyRootFilesystem">ReadOnlyRootFilesystem</h4>
   <div class="markdown level1 summary"><p>Whether this container has a read-only root filesystem. Default is false.</p>
@@ -251,7 +227,7 @@ paths. This requires the ProcMountType feature flag to be enabled.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L21432">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L21616">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_SecurityContext_RunAsGroup" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.SecurityContext.RunAsGroup">RunAsGroup</h4>
   <div class="markdown level1 summary"><p>The GID to run the entrypoint of the container process. Uses runtime default if unset.
@@ -279,7 +255,7 @@ PodSecurityContext, the value specified in SecurityContext takes precedence.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L21441">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L21625">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_SecurityContext_RunAsNonRoot" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.SecurityContext.RunAsNonRoot">RunAsNonRoot</h4>
   <div class="markdown level1 summary"><p>Indicates that the container must run as a non-root user. If true, the Kubelet will
@@ -309,7 +285,7 @@ PodSecurityContext, the value specified in SecurityContext takes precedence.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L21449">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L21633">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_SecurityContext_RunAsUser" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.SecurityContext.RunAsUser">RunAsUser</h4>
   <div class="markdown level1 summary"><p>The UID to run the entrypoint of the container process. Defaults to user specified in
@@ -338,7 +314,7 @@ precedence.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L21457">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L21641">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_SecurityContext_SeLinuxOptions" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.SecurityContext.SeLinuxOptions">SeLinuxOptions</h4>
   <div class="markdown level1 summary"><p>The SELinux context to be applied to the container. If unspecified, the container
@@ -367,7 +343,7 @@ specified in SecurityContext takes precedence.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L21464">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L21648">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_SecurityContext_WindowsOptions" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.SecurityContext.WindowsOptions">WindowsOptions</h4>
   <div class="markdown level1 summary"><p>The Windows specific settings applied to all containers. If unspecified, the options
@@ -401,7 +377,7 @@ PodSecurityContext, the value specified in SecurityContext takes precedence.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L21392" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L21576" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

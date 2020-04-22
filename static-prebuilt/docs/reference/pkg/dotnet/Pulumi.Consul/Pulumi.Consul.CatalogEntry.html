@@ -72,13 +72,10 @@
   <h1 id="Pulumi_Consul_CatalogEntry" data-uid="Pulumi.Consul.CatalogEntry" class="text-break">Class CatalogEntry
   </h1>
   <div class="markdown level0 summary"><p>!&gt; The <code>consul..CatalogEntry</code> resource has been deprecated in version 2.0.0 of the provider
-and will be removed in a future release. Please read the <a href="https://www.terraform.io/docs/providers/consul/upgrading.html#deprecation-of-consul_catalog_entry">upgrade guide</a>
+and will be removed in a future release. Please read the <a href="https://www.terraform.io/docs/providers/consul/guides/upgrading.html#deprecation-of-consul_catalog_entry">upgrade guide</a>
 for more information.</p>
 <p>Registers a node or service with the <a href="https://www.consul.io/docs/agent/http/catalog.html#catalog_register">Consul Catalog</a>.
 Currently, defining health checks is not supported.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-consul/blob/master/website/docs/r/catalog_entry.html.markdown">https://github.com/terraform-providers/terraform-provider-consul/blob/master/website/docs/r/catalog_entry.html.markdown</a>.</p>
-</blockquote>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -95,7 +92,7 @@ Currently, defining health checks is not supported.</p>
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/CatalogEntry.cs/#L65">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/CatalogEntry.cs/#L64">View Source</a>
   </span>
   <a id="Pulumi_Consul_CatalogEntry__ctor_" data-uid="Pulumi.Consul.CatalogEntry.#ctor*"></a>
   <h4 id="Pulumi_Consul_CatalogEntry__ctor_System_String_Pulumi_Consul_CatalogEntryArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Consul.CatalogEntry.#ctor(System.String,Pulumi.Consul.CatalogEntryArgs,System.Nullable{CustomResourceOptions})">CatalogEntry(String, CatalogEntryArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
@@ -139,7 +136,7 @@ Currently, defining health checks is not supported.</p>
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/CatalogEntry.cs/#L27">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/CatalogEntry.cs/#L26">View Source</a>
   </span>
   <a id="Pulumi_Consul_CatalogEntry_Address_" data-uid="Pulumi.Consul.CatalogEntry.Address*"></a>
   <h4 id="Pulumi_Consul_CatalogEntry_Address" data-uid="Pulumi.Consul.CatalogEntry.Address">Address</h4>
@@ -167,7 +164,7 @@ or referenced in the catalog.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/CatalogEntry.cs/#L34">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/CatalogEntry.cs/#L33">View Source</a>
   </span>
   <a id="Pulumi_Consul_CatalogEntry_Datacenter_" data-uid="Pulumi.Consul.CatalogEntry.Datacenter*"></a>
   <h4 id="Pulumi_Consul_CatalogEntry_Datacenter" data-uid="Pulumi.Consul.CatalogEntry.Datacenter">Datacenter</h4>
@@ -195,7 +192,7 @@ agent's default datacenter and the datacenter in the provider setup.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/CatalogEntry.cs/#L41">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/CatalogEntry.cs/#L40">View Source</a>
   </span>
   <a id="Pulumi_Consul_CatalogEntry_Node_" data-uid="Pulumi.Consul.CatalogEntry.Node*"></a>
   <h4 id="Pulumi_Consul_CatalogEntry_Node" data-uid="Pulumi.Consul.CatalogEntry.Node">Node</h4>
@@ -223,7 +220,7 @@ referenced in the catalog.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/CatalogEntry.cs/#L48">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/CatalogEntry.cs/#L47">View Source</a>
   </span>
   <a id="Pulumi_Consul_CatalogEntry_Services_" data-uid="Pulumi.Consul.CatalogEntry.Services*"></a>
   <h4 id="Pulumi_Consul_CatalogEntry_Services" data-uid="Pulumi.Consul.CatalogEntry.Services">Services</h4>
@@ -233,7 +230,7 @@ the node. Supported values are documented below.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;CatalogEntryServices&gt;&gt; Services { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;CatalogEntryService&gt;&gt; Services { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -245,13 +242,13 @@ the node. Supported values are documented below.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Consul.Outputs.CatalogEntryServices.html">CatalogEntryServices</a>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Consul.Outputs.CatalogEntryService.html">CatalogEntryService</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/CatalogEntry.cs/#L54">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/CatalogEntry.cs/#L53">View Source</a>
   </span>
   <a id="Pulumi_Consul_CatalogEntry_Token_" data-uid="Pulumi.Consul.CatalogEntry.Token*"></a>
   <h4 id="Pulumi_Consul_CatalogEntry_Token" data-uid="Pulumi.Consul.CatalogEntry.Token">Token</h4>
@@ -280,7 +277,7 @@ the node. Supported values are documented below.</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/CatalogEntry.cs/#L95">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/CatalogEntry.cs/#L94">View Source</a>
   </span>
   <a id="Pulumi_Consul_CatalogEntry_Get_" data-uid="Pulumi.Consul.CatalogEntry.Get*"></a>
   <h4 id="Pulumi_Consul_CatalogEntry_Get_System_String_Input_System_String__Pulumi_Consul_CatalogEntryState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Consul.CatalogEntry.Get(System.String,Input{System.String},Pulumi.Consul.CatalogEntryState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, CatalogEntryState, Nullable&lt;CustomResourceOptions&gt;)</h4>
@@ -350,7 +347,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/CatalogEntry.cs/#L21" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/CatalogEntry.cs/#L20" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

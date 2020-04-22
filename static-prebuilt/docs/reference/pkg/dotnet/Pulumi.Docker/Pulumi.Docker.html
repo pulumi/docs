@@ -82,11 +82,12 @@ The final image is always implicitly included.</p>
 </section>
       <h4><a class="xref" href="Pulumi.Docker.Config.html">Config</a></h4>
       <section></section>
+      <h4><a class="xref" href="Pulumi.Docker.Config.Types.html">Config.Types</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Docker.Config.Types.RegistryAuth.html">Config.Types.RegistryAuth</a></h4>
+      <section></section>
       <h4><a class="xref" href="Pulumi.Docker.Container.html">Container</a></h4>
       <section><p>Manages the lifecycle of a Docker container.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-docker/blob/master/website/docs/r/container.html.markdown">https://github.com/terraform-providers/terraform-provider-docker/blob/master/website/docs/r/container.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Docker.ContainerArgs.html">ContainerArgs</a></h4>
       <section></section>
@@ -95,9 +96,13 @@ The final image is always implicitly included.</p>
       <h4><a class="xref" href="Pulumi.Docker.DockerBuild.html">DockerBuild</a></h4>
       <section><p><a class="xref" href="Pulumi.Docker.DockerBuild.html">DockerBuild</a> may be used to specify detailed instructions about how to build a container.</p>
 </section>
+      <h4><a class="xref" href="Pulumi.Docker.GetNetwork.html">GetNetwork</a></h4>
+      <section></section>
       <h4><a class="xref" href="Pulumi.Docker.GetNetworkArgs.html">GetNetworkArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Docker.GetNetworkResult.html">GetNetworkResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Docker.GetRegistryImage.html">GetRegistryImage</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Docker.GetRegistryImageArgs.html">GetRegistryImageArgs</a></h4>
       <section></section>
@@ -116,15 +121,10 @@ Azure Container Instances.</p>
 </section>
       <h4><a class="xref" href="Pulumi.Docker.ImageRegistry.html">ImageRegistry</a></h4>
       <section></section>
-      <h4><a class="xref" href="Pulumi.Docker.Invokes.html">Invokes</a></h4>
-      <section></section>
       <h4><a class="xref" href="Pulumi.Docker.Network.html">Network</a></h4>
       <section><p>Manages a Docker Network. This can be used alongside
 <a href="https://www.terraform.io/docs/providers/docker/r/container.html">docker_container</a>
 to create virtual networks within the docker environment.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-docker/blob/master/website/docs/r/network.html.markdown">https://github.com/terraform-providers/terraform-provider-docker/blob/master/website/docs/r/network.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Docker.NetworkArgs.html">NetworkArgs</a></h4>
       <section></section>
@@ -135,9 +135,6 @@ to create virtual networks within the docker environment.</p>
 settings, however an explicit <code>Provider</code> instance may be created and passed during resource
 construction to achieve fine-grained programmatic control over provider settings. See the
 <a href="https://www.pulumi.com/docs/reference/programming-model/#providers">documentation</a> for more information.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-docker/blob/master/website/docs/index.html.markdown">https://github.com/terraform-providers/terraform-provider-docker/blob/master/website/docs/index.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Docker.ProviderArgs.html">ProviderArgs</a></h4>
       <section></section>
@@ -146,9 +143,6 @@ construction to achieve fine-grained programmatic control over provider settings
 <p>This resource will <em>not</em> pull new layers of the image automatically unless used in
 conjunction with <a href="https://www.terraform.io/docs/providers/docker/d/registry_image.html"><code>docker..getRegistryImage</code></a>
 data source to update the <code>pull_triggers</code> field.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-docker/blob/master/website/docs/r/image.html.markdown">https://github.com/terraform-providers/terraform-provider-docker/blob/master/website/docs/r/image.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Docker.RemoteImageArgs.html">RemoteImageArgs</a></h4>
       <section></section>
@@ -156,9 +150,6 @@ data source to update the <code>pull_triggers</code> field.</p>
       <section></section>
       <h4><a class="xref" href="Pulumi.Docker.Secret.html">Secret</a></h4>
       <section><p>Manages the secrets of a Docker service in a swarm.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-docker/blob/master/website/docs/r/secret.html.markdown">https://github.com/terraform-providers/terraform-provider-docker/blob/master/website/docs/r/secret.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Docker.SecretArgs.html">SecretArgs</a></h4>
       <section></section>
@@ -170,9 +161,6 @@ data source to update the <code>pull_triggers</code> field.</p>
       <section></section>
       <h4><a class="xref" href="Pulumi.Docker.ServiceConfig.html">ServiceConfig</a></h4>
       <section><p>Manages the configuration of a Docker service in a swarm.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-docker/blob/master/website/docs/r/config.html.markdown">https://github.com/terraform-providers/terraform-provider-docker/blob/master/website/docs/r/config.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Docker.ServiceConfigArgs.html">ServiceConfigArgs</a></h4>
       <section></section>
@@ -184,9 +172,6 @@ data source to update the <code>pull_triggers</code> field.</p>
       <section><p>Creates and destroys a volume in Docker. This can be used alongside
 <a href="https://www.terraform.io/docs/providers/docker/r/container.html">docker_container</a>
 to prepare volumes that can be shared across containers.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-docker/blob/master/website/docs/r/volume.html.markdown">https://github.com/terraform-providers/terraform-provider-docker/blob/master/website/docs/r/volume.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Docker.VolumeArgs.html">VolumeArgs</a></h4>
       <section></section>

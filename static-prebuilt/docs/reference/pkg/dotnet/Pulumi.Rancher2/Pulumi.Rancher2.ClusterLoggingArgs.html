@@ -87,7 +87,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/ClusterLogging.cs/#L238">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/ClusterLogging.cs/#L261">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_ClusterLoggingArgs__ctor_" data-uid="Pulumi.Rancher2.ClusterLoggingArgs.#ctor*"></a>
   <h4 id="Pulumi_Rancher2_ClusterLoggingArgs__ctor" data-uid="Pulumi.Rancher2.ClusterLoggingArgs.#ctor">ClusterLoggingArgs()</h4>
@@ -100,7 +100,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/ClusterLogging.cs/#L148">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/ClusterLogging.cs/#L159">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_ClusterLoggingArgs_Annotations_" data-uid="Pulumi.Rancher2.ClusterLoggingArgs.Annotations*"></a>
   <h4 id="Pulumi_Rancher2_ClusterLoggingArgs_Annotations" data-uid="Pulumi.Rancher2.ClusterLoggingArgs.Annotations">Annotations</h4>
@@ -127,7 +127,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/ClusterLogging.cs/#L157">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/ClusterLogging.cs/#L168">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_ClusterLoggingArgs_ClusterId_" data-uid="Pulumi.Rancher2.ClusterLoggingArgs.ClusterId*"></a>
   <h4 id="Pulumi_Rancher2_ClusterLoggingArgs_ClusterId" data-uid="Pulumi.Rancher2.ClusterLoggingArgs.ClusterId">ClusterId</h4>
@@ -154,11 +154,38 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/ClusterLogging.cs/#L163">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/ClusterLogging.cs/#L174">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_ClusterLoggingArgs_CustomTargetConfig_" data-uid="Pulumi.Rancher2.ClusterLoggingArgs.CustomTargetConfig*"></a>
+  <h4 id="Pulumi_Rancher2_ClusterLoggingArgs_CustomTargetConfig" data-uid="Pulumi.Rancher2.ClusterLoggingArgs.CustomTargetConfig">CustomTargetConfig</h4>
+  <div class="markdown level1 summary"><p>The custom target config for Cluster Logging. For <code>kind = custom</code>. Conflicts with <code>elasticsearch_config</code>, <code>fluentd_config</code>, <code>kafka_config</code>, <code>splunk_config</code> and <code>syslog_config</code> (list maxitems:1)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;ClusterLoggingCustomTargetConfigArgs&gt;? CustomTargetConfig { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Rancher2.Inputs.ClusterLoggingCustomTargetConfigArgs.html">ClusterLoggingCustomTargetConfigArgs</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/ClusterLogging.cs/#L180">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_ClusterLoggingArgs_ElasticsearchConfig_" data-uid="Pulumi.Rancher2.ClusterLoggingArgs.ElasticsearchConfig*"></a>
   <h4 id="Pulumi_Rancher2_ClusterLoggingArgs_ElasticsearchConfig" data-uid="Pulumi.Rancher2.ClusterLoggingArgs.ElasticsearchConfig">ElasticsearchConfig</h4>
-  <div class="markdown level1 summary"><p>The elasticsearch config for Cluster Logging. For <code>kind = elasticsearch</code>. Conflicts with <code>fluentd_config</code>, <code>kafka_config</code>, <code>splunk_config</code> and <code>syslog_config</code> (list maxitems:1)</p>
+  <div class="markdown level1 summary"><p>The elasticsearch config for Cluster Logging. For <code>kind = elasticsearch</code>. Conflicts with <code>custom_target_config</code>, <code>fluentd_config</code>, <code>kafka_config</code>, <code>splunk_config</code> and <code>syslog_config</code> (list maxitems:1)</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -181,11 +208,38 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/ClusterLogging.cs/#L169">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/ClusterLogging.cs/#L186">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_ClusterLoggingArgs_EnableJsonParsing_" data-uid="Pulumi.Rancher2.ClusterLoggingArgs.EnableJsonParsing*"></a>
+  <h4 id="Pulumi_Rancher2_ClusterLoggingArgs_EnableJsonParsing" data-uid="Pulumi.Rancher2.ClusterLoggingArgs.EnableJsonParsing">EnableJsonParsing</h4>
+  <div class="markdown level1 summary"><p>Enable json log parsing. Default: <code>false</code> (bool)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? EnableJsonParsing { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/ClusterLogging.cs/#L192">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_ClusterLoggingArgs_FluentdConfig_" data-uid="Pulumi.Rancher2.ClusterLoggingArgs.FluentdConfig*"></a>
   <h4 id="Pulumi_Rancher2_ClusterLoggingArgs_FluentdConfig" data-uid="Pulumi.Rancher2.ClusterLoggingArgs.FluentdConfig">FluentdConfig</h4>
-  <div class="markdown level1 summary"><p>The fluentd config for Cluster Logging. For <code>kind = fluentd</code>. Conflicts with <code>elasticsearch_config</code>, <code>kafka_config</code>, <code>splunk_config</code> and <code>syslog_config</code> (list maxitems:1)</p>
+  <div class="markdown level1 summary"><p>The fluentd config for Cluster Logging. For <code>kind = fluentd</code>. Conflicts with <code>custom_target_config</code>, <code>elasticsearch_config</code>, <code>kafka_config</code>, <code>splunk_config</code> and <code>syslog_config</code> (list maxitems:1)</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -208,11 +262,11 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/ClusterLogging.cs/#L175">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/ClusterLogging.cs/#L198">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_ClusterLoggingArgs_KafkaConfig_" data-uid="Pulumi.Rancher2.ClusterLoggingArgs.KafkaConfig*"></a>
   <h4 id="Pulumi_Rancher2_ClusterLoggingArgs_KafkaConfig" data-uid="Pulumi.Rancher2.ClusterLoggingArgs.KafkaConfig">KafkaConfig</h4>
-  <div class="markdown level1 summary"><p>The kafka config for Cluster Logging. For <code>kind = kafka</code>. Conflicts with <code>elasticsearch_config</code>, <code>fluentd_config</code>, <code>splunk_config</code> and <code>syslog_config</code> (list maxitems:1)</p>
+  <div class="markdown level1 summary"><p>The kafka config for Cluster Logging. For <code>kind = kafka</code>. Conflicts with <code>custom_target_config</code>, <code>elasticsearch_config</code>, <code>fluentd_config</code>, <code>splunk_config</code> and <code>syslog_config</code> (list maxitems:1)</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -235,7 +289,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/ClusterLogging.cs/#L181">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/ClusterLogging.cs/#L204">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_ClusterLoggingArgs_Kind_" data-uid="Pulumi.Rancher2.ClusterLoggingArgs.Kind*"></a>
   <h4 id="Pulumi_Rancher2_ClusterLoggingArgs_Kind" data-uid="Pulumi.Rancher2.ClusterLoggingArgs.Kind">Kind</h4>
@@ -262,7 +316,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/ClusterLogging.cs/#L190">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/ClusterLogging.cs/#L213">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_ClusterLoggingArgs_Labels_" data-uid="Pulumi.Rancher2.ClusterLoggingArgs.Labels*"></a>
   <h4 id="Pulumi_Rancher2_ClusterLoggingArgs_Labels" data-uid="Pulumi.Rancher2.ClusterLoggingArgs.Labels">Labels</h4>
@@ -289,7 +343,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/ClusterLogging.cs/#L199">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/ClusterLogging.cs/#L222">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_ClusterLoggingArgs_Name_" data-uid="Pulumi.Rancher2.ClusterLoggingArgs.Name*"></a>
   <h4 id="Pulumi_Rancher2_ClusterLoggingArgs_Name" data-uid="Pulumi.Rancher2.ClusterLoggingArgs.Name">Name</h4>
@@ -316,7 +370,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/ClusterLogging.cs/#L205">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/ClusterLogging.cs/#L228">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_ClusterLoggingArgs_NamespaceId_" data-uid="Pulumi.Rancher2.ClusterLoggingArgs.NamespaceId*"></a>
   <h4 id="Pulumi_Rancher2_ClusterLoggingArgs_NamespaceId" data-uid="Pulumi.Rancher2.ClusterLoggingArgs.NamespaceId">NamespaceId</h4>
@@ -343,7 +397,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/ClusterLogging.cs/#L211">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/ClusterLogging.cs/#L234">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_ClusterLoggingArgs_OutputFlushInterval_" data-uid="Pulumi.Rancher2.ClusterLoggingArgs.OutputFlushInterval*"></a>
   <h4 id="Pulumi_Rancher2_ClusterLoggingArgs_OutputFlushInterval" data-uid="Pulumi.Rancher2.ClusterLoggingArgs.OutputFlushInterval">OutputFlushInterval</h4>
@@ -370,7 +424,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/ClusterLogging.cs/#L220">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/ClusterLogging.cs/#L243">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_ClusterLoggingArgs_OutputTags_" data-uid="Pulumi.Rancher2.ClusterLoggingArgs.OutputTags*"></a>
   <h4 id="Pulumi_Rancher2_ClusterLoggingArgs_OutputTags" data-uid="Pulumi.Rancher2.ClusterLoggingArgs.OutputTags">OutputTags</h4>
@@ -397,11 +451,11 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/ClusterLogging.cs/#L229">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/ClusterLogging.cs/#L252">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_ClusterLoggingArgs_SplunkConfig_" data-uid="Pulumi.Rancher2.ClusterLoggingArgs.SplunkConfig*"></a>
   <h4 id="Pulumi_Rancher2_ClusterLoggingArgs_SplunkConfig" data-uid="Pulumi.Rancher2.ClusterLoggingArgs.SplunkConfig">SplunkConfig</h4>
-  <div class="markdown level1 summary"><p>The splunk config for Cluster Logging. For <code>kind = splunk</code>. Conflicts with <code>elasticsearch_config</code>, <code>fluentd_config</code>, <code>kafka_config</code>, and <code>syslog_config</code> (list maxitems:1)</p>
+  <div class="markdown level1 summary"><p>The splunk config for Cluster Logging. For <code>kind = splunk</code>. Conflicts with <code>custom_target_config</code>, <code>elasticsearch_config</code>, <code>fluentd_config</code>, <code>kafka_config</code>, and <code>syslog_config</code> (list maxitems:1)</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -424,11 +478,11 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/ClusterLogging.cs/#L235">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/ClusterLogging.cs/#L258">View Source</a>
   </span>
   <a id="Pulumi_Rancher2_ClusterLoggingArgs_SyslogConfig_" data-uid="Pulumi.Rancher2.ClusterLoggingArgs.SyslogConfig*"></a>
   <h4 id="Pulumi_Rancher2_ClusterLoggingArgs_SyslogConfig" data-uid="Pulumi.Rancher2.ClusterLoggingArgs.SyslogConfig">SyslogConfig</h4>
-  <div class="markdown level1 summary"><p>The syslog config for Cluster Logging. For <code>kind = syslog</code>. Conflicts with <code>elasticsearch_config</code>, <code>fluentd_config</code>, <code>kafka_config</code>, and <code>splunk_config</code> (list maxitems:1)</p>
+  <div class="markdown level1 summary"><p>The syslog config for Cluster Logging. For <code>kind = syslog</code>. Conflicts with <code>custom_target_config</code>, <code>elasticsearch_config</code>, <code>fluentd_config</code>, <code>kafka_config</code>, and <code>splunk_config</code> (list maxitems:1)</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -457,7 +511,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/ClusterLogging.cs/#L140" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/ClusterLogging.cs/#L151" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

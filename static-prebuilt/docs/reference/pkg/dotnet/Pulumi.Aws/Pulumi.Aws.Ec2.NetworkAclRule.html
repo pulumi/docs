@@ -79,53 +79,12 @@ defined in-line. At this time you cannot use a Network ACL with in-line rules
 in conjunction with any Network ACL Rule resources. Doing so will cause
 a conflict of rule settings and will overwrite rules.</p>
 </blockquote>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/network_acl_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/network_acl_rule.html.markdown</a>.</p>
-</blockquote>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
-    <div class="level3"><span class="xref">NetworkAclRule</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">NetworkAclRule</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.Ec2.html">Pulumi.Aws.Ec2</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
@@ -136,16 +95,16 @@ a conflict of rule settings and will overwrite rules.</p>
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/NetworkAclRule.cs/#L99">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/NetworkAclRule.cs/#L97">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_NetworkAclRule__ctor_" data-uid="Pulumi.Aws.Ec2.NetworkAclRule.#ctor*"></a>
-  <h4 id="Pulumi_Aws_Ec2_NetworkAclRule__ctor_System_String_Pulumi_Aws_Ec2_NetworkAclRuleArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.Ec2.NetworkAclRule.#ctor(System.String,Pulumi.Aws.Ec2.NetworkAclRuleArgs,Pulumi.CustomResourceOptions)">NetworkAclRule(String, NetworkAclRuleArgs, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Aws_Ec2_NetworkAclRule__ctor_System_String_Pulumi_Aws_Ec2_NetworkAclRuleArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.Ec2.NetworkAclRule.#ctor(System.String,Pulumi.Aws.Ec2.NetworkAclRuleArgs,System.Nullable{CustomResourceOptions})">NetworkAclRule(String, NetworkAclRuleArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Create a NetworkAclRule resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public NetworkAclRule(string name, NetworkAclRuleArgs args, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public NetworkAclRule(string name, NetworkAclRuleArgs args, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -170,7 +129,7 @@ a conflict of rule settings and will overwrite rules.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -180,7 +139,7 @@ a conflict of rule settings and will overwrite rules.</p>
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/NetworkAclRule.cs/#L28">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/NetworkAclRule.cs/#L26">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_NetworkAclRule_CidrBlock_" data-uid="Pulumi.Aws.Ec2.NetworkAclRule.CidrBlock*"></a>
   <h4 id="Pulumi_Aws_Ec2_NetworkAclRule_CidrBlock" data-uid="Pulumi.Aws.Ec2.NetworkAclRule.CidrBlock">CidrBlock</h4>
@@ -189,7 +148,7 @@ a conflict of rule settings and will overwrite rules.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; CidrBlock { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; CidrBlock { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -201,13 +160,13 @@ a conflict of rule settings and will overwrite rules.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/NetworkAclRule.cs/#L34">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/NetworkAclRule.cs/#L32">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_NetworkAclRule_Egress_" data-uid="Pulumi.Aws.Ec2.NetworkAclRule.Egress*"></a>
   <h4 id="Pulumi_Aws_Ec2_NetworkAclRule_Egress" data-uid="Pulumi.Aws.Ec2.NetworkAclRule.Egress">Egress</h4>
@@ -228,13 +187,13 @@ a conflict of rule settings and will overwrite rules.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/NetworkAclRule.cs/#L40">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/NetworkAclRule.cs/#L38">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_NetworkAclRule_FromPort_" data-uid="Pulumi.Aws.Ec2.NetworkAclRule.FromPort*"></a>
   <h4 id="Pulumi_Aws_Ec2_NetworkAclRule_FromPort" data-uid="Pulumi.Aws.Ec2.NetworkAclRule.FromPort">FromPort</h4>
@@ -255,13 +214,13 @@ a conflict of rule settings and will overwrite rules.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/NetworkAclRule.cs/#L46">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/NetworkAclRule.cs/#L44">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_NetworkAclRule_IcmpCode_" data-uid="Pulumi.Aws.Ec2.NetworkAclRule.IcmpCode*"></a>
   <h4 id="Pulumi_Aws_Ec2_NetworkAclRule_IcmpCode" data-uid="Pulumi.Aws.Ec2.NetworkAclRule.IcmpCode">IcmpCode</h4>
@@ -270,7 +229,7 @@ a conflict of rule settings and will overwrite rules.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; IcmpCode { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; IcmpCode { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -282,13 +241,13 @@ a conflict of rule settings and will overwrite rules.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/NetworkAclRule.cs/#L52">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/NetworkAclRule.cs/#L50">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_NetworkAclRule_IcmpType_" data-uid="Pulumi.Aws.Ec2.NetworkAclRule.IcmpType*"></a>
   <h4 id="Pulumi_Aws_Ec2_NetworkAclRule_IcmpType" data-uid="Pulumi.Aws.Ec2.NetworkAclRule.IcmpType">IcmpType</h4>
@@ -297,7 +256,7 @@ a conflict of rule settings and will overwrite rules.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; IcmpType { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; IcmpType { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -309,13 +268,13 @@ a conflict of rule settings and will overwrite rules.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/NetworkAclRule.cs/#L58">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/NetworkAclRule.cs/#L56">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_NetworkAclRule_Ipv6CidrBlock_" data-uid="Pulumi.Aws.Ec2.NetworkAclRule.Ipv6CidrBlock*"></a>
   <h4 id="Pulumi_Aws_Ec2_NetworkAclRule_Ipv6CidrBlock" data-uid="Pulumi.Aws.Ec2.NetworkAclRule.Ipv6CidrBlock">Ipv6CidrBlock</h4>
@@ -324,7 +283,7 @@ a conflict of rule settings and will overwrite rules.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Ipv6CidrBlock { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Ipv6CidrBlock { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -336,13 +295,13 @@ a conflict of rule settings and will overwrite rules.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/NetworkAclRule.cs/#L64">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/NetworkAclRule.cs/#L62">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_NetworkAclRule_NetworkAclId_" data-uid="Pulumi.Aws.Ec2.NetworkAclRule.NetworkAclId*"></a>
   <h4 id="Pulumi_Aws_Ec2_NetworkAclRule_NetworkAclId" data-uid="Pulumi.Aws.Ec2.NetworkAclRule.NetworkAclId">NetworkAclId</h4>
@@ -363,13 +322,13 @@ a conflict of rule settings and will overwrite rules.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/NetworkAclRule.cs/#L70">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/NetworkAclRule.cs/#L68">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_NetworkAclRule_Protocol_" data-uid="Pulumi.Aws.Ec2.NetworkAclRule.Protocol*"></a>
   <h4 id="Pulumi_Aws_Ec2_NetworkAclRule_Protocol" data-uid="Pulumi.Aws.Ec2.NetworkAclRule.Protocol">Protocol</h4>
@@ -390,13 +349,13 @@ a conflict of rule settings and will overwrite rules.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/NetworkAclRule.cs/#L76">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/NetworkAclRule.cs/#L74">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_NetworkAclRule_RuleAction_" data-uid="Pulumi.Aws.Ec2.NetworkAclRule.RuleAction*"></a>
   <h4 id="Pulumi_Aws_Ec2_NetworkAclRule_RuleAction" data-uid="Pulumi.Aws.Ec2.NetworkAclRule.RuleAction">RuleAction</h4>
@@ -417,13 +376,13 @@ a conflict of rule settings and will overwrite rules.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/NetworkAclRule.cs/#L82">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/NetworkAclRule.cs/#L80">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_NetworkAclRule_RuleNumber_" data-uid="Pulumi.Aws.Ec2.NetworkAclRule.RuleNumber*"></a>
   <h4 id="Pulumi_Aws_Ec2_NetworkAclRule_RuleNumber" data-uid="Pulumi.Aws.Ec2.NetworkAclRule.RuleNumber">RuleNumber</h4>
@@ -444,13 +403,13 @@ a conflict of rule settings and will overwrite rules.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/NetworkAclRule.cs/#L88">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/NetworkAclRule.cs/#L86">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_NetworkAclRule_ToPort_" data-uid="Pulumi.Aws.Ec2.NetworkAclRule.ToPort*"></a>
   <h4 id="Pulumi_Aws_Ec2_NetworkAclRule_ToPort" data-uid="Pulumi.Aws.Ec2.NetworkAclRule.ToPort">ToPort</h4>
@@ -471,7 +430,7 @@ a conflict of rule settings and will overwrite rules.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -479,17 +438,17 @@ a conflict of rule settings and will overwrite rules.</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/NetworkAclRule.cs/#L129">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/NetworkAclRule.cs/#L127">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_NetworkAclRule_Get_" data-uid="Pulumi.Aws.Ec2.NetworkAclRule.Get*"></a>
-  <h4 id="Pulumi_Aws_Ec2_NetworkAclRule_Get_System_String_Pulumi_Input_System_String__Pulumi_Aws_Ec2_NetworkAclRuleState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.Ec2.NetworkAclRule.Get(System.String,Pulumi.Input{System.String},Pulumi.Aws.Ec2.NetworkAclRuleState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, NetworkAclRuleState, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Aws_Ec2_NetworkAclRule_Get_System_String_Input_System_String__Pulumi_Aws_Ec2_NetworkAclRuleState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.Ec2.NetworkAclRule.Get(System.String,Input{System.String},Pulumi.Aws.Ec2.NetworkAclRuleState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, NetworkAclRuleState, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Get an existing NetworkAclRule resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static NetworkAclRule Get(string name, Input&lt;string&gt; id, NetworkAclRuleState state = null, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static NetworkAclRule Get(string name, Input&lt;string&gt; id, NetworkAclRuleState state = null, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -508,7 +467,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -520,7 +479,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -549,7 +508,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/NetworkAclRule.cs/#L23" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/NetworkAclRule.cs/#L21" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

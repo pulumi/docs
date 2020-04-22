@@ -78,40 +78,16 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">GetRouteTableResult</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Azure.Network.html">Pulumi.Azure.Network</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Azure.dll</h6>
   <h5 id="Pulumi_Azure_Network_GetRouteTableResult_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class GetRouteTableResult</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class GetRouteTableResult : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/GetRouteTable.cs/#L69">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/GetRouteTable.cs/#L51">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Network_GetRouteTableResult_Id" data-uid="Pulumi.Azure.Network.GetRouteTableResult.Id">Id</h4>
   <div class="markdown level1 summary"><p>id is the provider-assigned unique ID for this managed resource.</p>
@@ -137,7 +113,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/GetRouteTable.cs/#L48">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/GetRouteTable.cs/#L55">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Network_GetRouteTableResult_Location" data-uid="Pulumi.Azure.Network.GetRouteTableResult.Location">Location</h4>
   <div class="markdown level1 summary"><p>The Azure Region in which the Route Table exists.</p>
@@ -163,7 +139,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/GetRouteTable.cs/#L52">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/GetRouteTable.cs/#L59">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Network_GetRouteTableResult_Name" data-uid="Pulumi.Azure.Network.GetRouteTableResult.Name">Name</h4>
   <div class="markdown level1 summary"><p>The name of the Route.</p>
@@ -189,7 +165,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/GetRouteTable.cs/#L53">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/GetRouteTable.cs/#L60">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Network_GetRouteTableResult_ResourceGroupName" data-uid="Pulumi.Azure.Network.GetRouteTableResult.ResourceGroupName">ResourceGroupName</h4>
   <div class="markdown level1 summary"></div>
@@ -214,7 +190,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/GetRouteTable.cs/#L57">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/GetRouteTable.cs/#L64">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Network_GetRouteTableResult_Routes" data-uid="Pulumi.Azure.Network.GetRouteTableResult.Routes">Routes</h4>
   <div class="markdown level1 summary"><p>One or more <code>route</code> blocks as documented below.</p>
@@ -222,7 +198,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetRouteTableRoutesResult&gt; Routes</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetRouteTableRouteResult&gt; Routes</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -234,13 +210,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Azure.Network.Outputs.GetRouteTableRoutesResult.html">GetRouteTableRoutesResult</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Azure.Network.Outputs.GetRouteTableRouteResult.html">GetRouteTableRouteResult</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/GetRouteTable.cs/#L61">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/GetRouteTable.cs/#L68">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Network_GetRouteTableResult_Subnets" data-uid="Pulumi.Azure.Network.GetRouteTableResult.Subnets">Subnets</h4>
   <div class="markdown level1 summary"><p>The collection of Subnets associated with this route table.</p>
@@ -260,13 +236,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/GetRouteTable.cs/#L65">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/GetRouteTable.cs/#L72">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Network_GetRouteTableResult_Tags" data-uid="Pulumi.Azure.Network.GetRouteTableResult.Tags">Tags</h4>
   <div class="markdown level1 summary"><p>A mapping of tags assigned to the Route Table.</p>
@@ -286,7 +262,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -298,7 +274,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/GetRouteTable.cs/#L42" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/GetRouteTable.cs/#L45" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

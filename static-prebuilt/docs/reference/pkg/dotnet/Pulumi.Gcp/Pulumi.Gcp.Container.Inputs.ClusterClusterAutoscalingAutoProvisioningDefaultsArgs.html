@@ -76,36 +76,7 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
-    <div class="level3"><span class="xref">ClusterClusterAutoscalingAutoProvisioningDefaultsArgs</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">ClusterClusterAutoscalingAutoProvisioningDefaultsArgs</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.Container.Inputs.html">Pulumi.Gcp.Container.Inputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
@@ -116,7 +87,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/Cluster.cs/#L1424">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Inputs/ClusterClusterAutoscalingAutoProvisioningDefaultsArgs.cs/#L40">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Container_Inputs_ClusterClusterAutoscalingAutoProvisioningDefaultsArgs__ctor_" data-uid="Pulumi.Gcp.Container.Inputs.ClusterClusterAutoscalingAutoProvisioningDefaultsArgs.#ctor*"></a>
   <h4 id="Pulumi_Gcp_Container_Inputs_ClusterClusterAutoscalingAutoProvisioningDefaultsArgs__ctor" data-uid="Pulumi.Gcp.Container.Inputs.ClusterClusterAutoscalingAutoProvisioningDefaultsArgs.#ctor">ClusterClusterAutoscalingAutoProvisioningDefaultsArgs()</h4>
@@ -129,11 +100,15 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/Cluster.cs/#L1415">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Inputs/ClusterClusterAutoscalingAutoProvisioningDefaultsArgs.cs/#L24">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Container_Inputs_ClusterClusterAutoscalingAutoProvisioningDefaultsArgs_OauthScopes_" data-uid="Pulumi.Gcp.Container.Inputs.ClusterClusterAutoscalingAutoProvisioningDefaultsArgs.OauthScopes*"></a>
   <h4 id="Pulumi_Gcp_Container_Inputs_ClusterClusterAutoscalingAutoProvisioningDefaultsArgs_OauthScopes" data-uid="Pulumi.Gcp.Container.Inputs.ClusterClusterAutoscalingAutoProvisioningDefaultsArgs.OauthScopes">OauthScopes</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The set of Google API scopes to be made available
+on all of the node VMs under the &quot;default&quot; service account. These can be
+either FQDNs, or scope aliases. The following scopes are necessary to ensure
+the correct functioning of the cluster:</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -149,21 +124,26 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/Cluster.cs/#L1421">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Inputs/ClusterClusterAutoscalingAutoProvisioningDefaultsArgs.cs/#L37">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Container_Inputs_ClusterClusterAutoscalingAutoProvisioningDefaultsArgs_ServiceAccount_" data-uid="Pulumi.Gcp.Container.Inputs.ClusterClusterAutoscalingAutoProvisioningDefaultsArgs.ServiceAccount*"></a>
   <h4 id="Pulumi_Gcp_Container_Inputs_ClusterClusterAutoscalingAutoProvisioningDefaultsArgs_ServiceAccount" data-uid="Pulumi.Gcp.Container.Inputs.ClusterClusterAutoscalingAutoProvisioningDefaultsArgs.ServiceAccount">ServiceAccount</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The service account to be used by the Node VMs.
+If not specified, the &quot;default&quot; service account is used.
+In order to use the configured <code>oauth_scopes</code> for logging and monitoring, the service account being used needs the
+<a href="https://cloud.google.com/iam/docs/understanding-roles#stackdriver_logging_roles">roles/logging.logWriter</a> and
+<a href="https://cloud.google.com/iam/docs/understanding-roles#stackdriver_monitoring_roles">roles/monitoring.metricWriter</a> roles.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; ServiceAccount { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? ServiceAccount { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -175,7 +155,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -187,7 +167,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/Cluster.cs/#L1411" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Inputs/ClusterClusterAutoscalingAutoProvisioningDefaultsArgs.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

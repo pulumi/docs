@@ -82,40 +82,16 @@ ObjectMeta.Name.</p>
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">StorageClass</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Storage.V1Beta1.html">Pulumi.Kubernetes.Types.Outputs.Storage.V1Beta1</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Kubernetes.dll</h6>
   <h5 id="Pulumi_Kubernetes_Types_Outputs_Storage_V1Beta1_StorageClass_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class StorageClass</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class StorageClass : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L33308">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L33899">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Storage_V1Beta1_StorageClass_AllowedTopologies" data-uid="Pulumi.Kubernetes.Types.Outputs.Storage.V1Beta1.StorageClass.AllowedTopologies">AllowedTopologies</h4>
   <div class="markdown level1 summary"><p>Restrict the node topologies where volumes can be dynamically provisioned. Each volume
@@ -138,13 +114,13 @@ enable the VolumeScheduling feature.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Core.V1.TopologySelectorTerm.html">TopologySelectorTerm</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Core.V1.TopologySelectorTerm.html">TopologySelectorTerm</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L33300">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L33891">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Storage_V1Beta1_StorageClass_AllowVolumeExpansion" data-uid="Pulumi.Kubernetes.Types.Outputs.Storage.V1Beta1.StorageClass.AllowVolumeExpansion">AllowVolumeExpansion</h4>
   <div class="markdown level1 summary"><p>AllowVolumeExpansion shows whether the storage class allow volume expand</p>
@@ -170,7 +146,7 @@ enable the VolumeScheduling feature.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L33316">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L33907">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Storage_V1Beta1_StorageClass_ApiVersion" data-uid="Pulumi.Kubernetes.Types.Outputs.Storage.V1Beta1.StorageClass.ApiVersion">ApiVersion</h4>
   <div class="markdown level1 summary"><p>APIVersion defines the versioned schema of this representation of an object. Servers
@@ -199,7 +175,7 @@ unrecognized values. More info:
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L33324">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L33915">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Storage_V1Beta1_StorageClass_Kind" data-uid="Pulumi.Kubernetes.Types.Outputs.Storage.V1Beta1.StorageClass.Kind">Kind</h4>
   <div class="markdown level1 summary"><p>Kind is a string value representing the REST resource this object represents. Servers
@@ -228,7 +204,7 @@ CamelCase. More info:
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L33330">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L33921">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Storage_V1Beta1_StorageClass_Metadata" data-uid="Pulumi.Kubernetes.Types.Outputs.Storage.V1Beta1.StorageClass.Metadata">Metadata</h4>
   <div class="markdown level1 summary"><p>Standard object's metadata. More info:
@@ -255,7 +231,7 @@ CamelCase. More info:
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L33337">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L33928">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Storage_V1Beta1_StorageClass_MountOptions" data-uid="Pulumi.Kubernetes.Types.Outputs.Storage.V1Beta1.StorageClass.MountOptions">MountOptions</h4>
   <div class="markdown level1 summary"><p>Dynamically provisioned PersistentVolumes of this storage class are created with these
@@ -277,13 +253,13 @@ one is invalid.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L33343">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L33934">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Storage_V1Beta1_StorageClass_Parameters" data-uid="Pulumi.Kubernetes.Types.Outputs.Storage.V1Beta1.StorageClass.Parameters">Parameters</h4>
   <div class="markdown level1 summary"><p>Parameters holds the parameters for the provisioner that should create volumes of this
@@ -304,13 +280,13 @@ storage class.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L33348">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L33939">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Storage_V1Beta1_StorageClass_Provisioner" data-uid="Pulumi.Kubernetes.Types.Outputs.Storage.V1Beta1.StorageClass.Provisioner">Provisioner</h4>
   <div class="markdown level1 summary"><p>Provisioner indicates the type of the provisioner.</p>
@@ -336,7 +312,7 @@ storage class.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L33354">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L33945">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Storage_V1Beta1_StorageClass_ReclaimPolicy" data-uid="Pulumi.Kubernetes.Types.Outputs.Storage.V1Beta1.StorageClass.ReclaimPolicy">ReclaimPolicy</h4>
   <div class="markdown level1 summary"><p>Dynamically provisioned PersistentVolumes of this storage class are created with this
@@ -363,7 +339,7 @@ reclaimPolicy. Defaults to Delete.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L33361">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L33952">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Storage_V1Beta1_StorageClass_VolumeBindingMode" data-uid="Pulumi.Kubernetes.Types.Outputs.Storage.V1Beta1.StorageClass.VolumeBindingMode">VolumeBindingMode</h4>
   <div class="markdown level1 summary"><p>VolumeBindingMode indicates how PersistentVolumeClaims should be provisioned and bound.
@@ -397,7 +373,7 @@ enable the VolumeScheduling feature.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L33294" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L33885" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

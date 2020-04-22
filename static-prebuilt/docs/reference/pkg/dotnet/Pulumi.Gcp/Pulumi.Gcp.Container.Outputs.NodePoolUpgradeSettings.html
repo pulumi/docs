@@ -78,43 +78,22 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">NodePoolUpgradeSettings</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.Container.Outputs.html">Pulumi.Gcp.Container.Outputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
   <h5 id="Pulumi_Gcp_Container_Outputs_NodePoolUpgradeSettings_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class NodePoolUpgradeSettings</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class NodePoolUpgradeSettings : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/NodePool.cs/#L983">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Outputs/NodePoolUpgradeSettings.cs/#L21">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Container_Outputs_NodePoolUpgradeSettings_MaxSurge" data-uid="Pulumi.Gcp.Container.Outputs.NodePoolUpgradeSettings.MaxSurge">MaxSurge</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The number of additional nodes that can be added to the node pool during
+an upgrade. Increasing <code>max_surge</code> raises the number of nodes that can be upgraded simultaneously.
+Can be set to 0 or greater.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -136,10 +115,13 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/NodePool.cs/#L984">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Outputs/NodePoolUpgradeSettings.cs/#L27">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Container_Outputs_NodePoolUpgradeSettings_MaxUnavailable" data-uid="Pulumi.Gcp.Container.Outputs.NodePoolUpgradeSettings.MaxUnavailable">MaxUnavailable</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The number of nodes that can be simultaneously unavailable during
+an upgrade. Increasing <code>max_unavailable</code> raises the number of nodes that can be upgraded in
+parallel. Can be set to 0 or greater.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -167,7 +149,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/NodePool.cs/#L980" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Outputs/NodePoolUpgradeSettings.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

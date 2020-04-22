@@ -76,36 +76,7 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
-    <div class="level3"><span class="xref">AgentArgs</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">AgentArgs</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.Diagflow.html">Pulumi.Gcp.Diagflow</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
@@ -116,7 +87,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Diagflow/Agent.cs/#L257">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Diagflow/Agent.cs/#L262">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Diagflow_AgentArgs__ctor_" data-uid="Pulumi.Gcp.Diagflow.AgentArgs.#ctor*"></a>
   <h4 id="Pulumi_Gcp_Diagflow_AgentArgs__ctor" data-uid="Pulumi.Gcp.Diagflow.AgentArgs.#ctor">AgentArgs()</h4>
@@ -129,19 +100,18 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Diagflow/Agent.cs/#L165">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Diagflow/Agent.cs/#L173">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Diagflow_AgentArgs_ApiVersion_" data-uid="Pulumi.Gcp.Diagflow.AgentArgs.ApiVersion*"></a>
   <h4 id="Pulumi_Gcp_Diagflow_AgentArgs_ApiVersion" data-uid="Pulumi.Gcp.Diagflow.AgentArgs.ApiVersion">ApiVersion</h4>
-  <div class="markdown level1 summary"><p>API version displayed in Dialogflow console. If not specified, V2 API is assumed. Clients are free to query
-different service endpoints for different API versions. However, bots connectors and webhook calls will
-follow the specified API version. * API_VERSION_V1: Legacy V1 API. * API_VERSION_V2: V2 API. *
-API_VERSION_V2_BETA_1: V2beta1 API.</p>
+  <div class="markdown level1 summary"><p>API version displayed in Dialogflow console. If not specified, V2 API is assumed. Clients are free to query different
+service endpoints for different API versions. However, bots connectors and webhook calls will follow the specified API
+version. * API_VERSION_V1: Legacy V1 API. * API_VERSION_V2: V2 API. * API_VERSION_V2_BETA_1: V2beta1 API.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; ApiVersion { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? ApiVersion { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -153,24 +123,24 @@ API_VERSION_V2_BETA_1: V2beta1 API.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Diagflow/Agent.cs/#L173">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Diagflow/Agent.cs/#L181">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Diagflow_AgentArgs_AvatarUri_" data-uid="Pulumi.Gcp.Diagflow.AgentArgs.AvatarUri*"></a>
   <h4 id="Pulumi_Gcp_Diagflow_AgentArgs_AvatarUri" data-uid="Pulumi.Gcp.Diagflow.AgentArgs.AvatarUri">AvatarUri</h4>
-  <div class="markdown level1 summary"><p>The URI of the agent's avatar, which are used throughout the Dialogflow console. When an image URL is
-entered into this field, the Dialogflow will save the image in the backend. The address of the backend image
-returned from the API will be shown in the [avatarUriBackend] field.</p>
+  <div class="markdown level1 summary"><p>The URI of the agent's avatar, which are used throughout the Dialogflow console. When an image URL is entered into this
+field, the Dialogflow will save the image in the backend. The address of the backend image returned from the API will be
+shown in the [avatarUriBackend] field.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; AvatarUri { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? AvatarUri { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -182,26 +152,25 @@ returned from the API will be shown in the [avatarUriBackend] field.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Diagflow/Agent.cs/#L183">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Diagflow/Agent.cs/#L190">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Diagflow_AgentArgs_ClassificationThreshold_" data-uid="Pulumi.Gcp.Diagflow.AgentArgs.ClassificationThreshold*"></a>
   <h4 id="Pulumi_Gcp_Diagflow_AgentArgs_ClassificationThreshold" data-uid="Pulumi.Gcp.Diagflow.AgentArgs.ClassificationThreshold">ClassificationThreshold</h4>
-  <div class="markdown level1 summary"><p>To filter out false positive results and still get variety in matched natural language inputs for your
-agent, you can tune the machine learning classification threshold. If the returned score value is less than
-the threshold value, then a fallback intent will be triggered or, if there are no fallback intents defined,
-no intent will be triggered. The score values range from 0.0 (completely uncertain) to 1.0 (completely
-certain). If set to 0.0, the default of 0.3 is used.</p>
+  <div class="markdown level1 summary"><p>To filter out false positive results and still get variety in matched natural language inputs for your agent, you can
+tune the machine learning classification threshold. If the returned score value is less than the threshold value, then a
+fallback intent will be triggered or, if there are no fallback intents defined, no intent will be triggered. The score
+values range from 0.0 (completely uncertain) to 1.0 (completely certain). If set to 0.0, the default of 0.3 is used.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;double&gt; ClassificationThreshold { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;double&gt;? ClassificationThreshold { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -213,19 +182,19 @@ certain). If set to 0.0, the default of 0.3 is used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Double</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Double</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Diagflow/Agent.cs/#L191">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Diagflow/Agent.cs/#L198">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Diagflow_AgentArgs_DefaultLanguageCode_" data-uid="Pulumi.Gcp.Diagflow.AgentArgs.DefaultLanguageCode*"></a>
   <h4 id="Pulumi_Gcp_Diagflow_AgentArgs_DefaultLanguageCode" data-uid="Pulumi.Gcp.Diagflow.AgentArgs.DefaultLanguageCode">DefaultLanguageCode</h4>
   <div class="markdown level1 summary"><p>The default language of the agent as a language tag. <a href="https://cloud.google.com/dialogflow/docs/reference/language">See Language
-Support</a> for a list of the currently supported
-language codes. This field cannot be updated after creation.</p>
+Support</a> for a list of the currently supported language
+codes. This field cannot be updated after creation.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -242,13 +211,13 @@ language codes. This field cannot be updated after creation.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Diagflow/Agent.cs/#L197">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Diagflow/Agent.cs/#L204">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Diagflow_AgentArgs_Description_" data-uid="Pulumi.Gcp.Diagflow.AgentArgs.Description*"></a>
   <h4 id="Pulumi_Gcp_Diagflow_AgentArgs_Description" data-uid="Pulumi.Gcp.Diagflow.AgentArgs.Description">Description</h4>
@@ -257,7 +226,7 @@ language codes. This field cannot be updated after creation.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Description { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Description { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -269,13 +238,13 @@ language codes. This field cannot be updated after creation.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Diagflow/Agent.cs/#L203">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Diagflow/Agent.cs/#L210">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Diagflow_AgentArgs_DisplayName_" data-uid="Pulumi.Gcp.Diagflow.AgentArgs.DisplayName*"></a>
   <h4 id="Pulumi_Gcp_Diagflow_AgentArgs_DisplayName" data-uid="Pulumi.Gcp.Diagflow.AgentArgs.DisplayName">DisplayName</h4>
@@ -296,13 +265,13 @@ language codes. This field cannot be updated after creation.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Diagflow/Agent.cs/#L209">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Diagflow/Agent.cs/#L216">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Diagflow_AgentArgs_EnableLogging_" data-uid="Pulumi.Gcp.Diagflow.AgentArgs.EnableLogging*"></a>
   <h4 id="Pulumi_Gcp_Diagflow_AgentArgs_EnableLogging" data-uid="Pulumi.Gcp.Diagflow.AgentArgs.EnableLogging">EnableLogging</h4>
@@ -311,7 +280,7 @@ language codes. This field cannot be updated after creation.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; EnableLogging { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? EnableLogging { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -323,25 +292,24 @@ language codes. This field cannot be updated after creation.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Diagflow/Agent.cs/#L218">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Diagflow/Agent.cs/#L224">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Diagflow_AgentArgs_MatchMode_" data-uid="Pulumi.Gcp.Diagflow.AgentArgs.MatchMode*"></a>
   <h4 id="Pulumi_Gcp_Diagflow_AgentArgs_MatchMode" data-uid="Pulumi.Gcp.Diagflow.AgentArgs.MatchMode">MatchMode</h4>
-  <div class="markdown level1 summary"><p>Determines how intents are detected from user queries. * MATCH_MODE_HYBRID: Best for agents with a small
-number of examples in intents and/or wide use of templates syntax and composite entities. *
-MATCH_MODE_ML_ONLY: Can be used for agents with a large number of examples in intents, especially the ones
-using @sys.any or very large developer entities.</p>
+  <div class="markdown level1 summary"><p>Determines how intents are detected from user queries. * MATCH_MODE_HYBRID: Best for agents with a small number of
+examples in intents and/or wide use of templates syntax and composite entities. * MATCH_MODE_ML_ONLY: Can be used for
+agents with a large number of examples in intents, especially the ones using @sys.any or very large developer entities.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; MatchMode { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? MatchMode { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -353,13 +321,13 @@ using @sys.any or very large developer entities.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Diagflow/Agent.cs/#L225">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Diagflow/Agent.cs/#L231">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Diagflow_AgentArgs_Project_" data-uid="Pulumi.Gcp.Diagflow.AgentArgs.Project*"></a>
   <h4 id="Pulumi_Gcp_Diagflow_AgentArgs_Project" data-uid="Pulumi.Gcp.Diagflow.AgentArgs.Project">Project</h4>
@@ -369,7 +337,7 @@ If it is not provided, the provider project is used.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Project { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Project { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -381,13 +349,13 @@ If it is not provided, the provider project is used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Diagflow/Agent.cs/#L234">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Diagflow/Agent.cs/#L240">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Diagflow_AgentArgs_SupportedLanguageCodes_" data-uid="Pulumi.Gcp.Diagflow.AgentArgs.SupportedLanguageCodes*"></a>
   <h4 id="Pulumi_Gcp_Diagflow_AgentArgs_SupportedLanguageCodes" data-uid="Pulumi.Gcp.Diagflow.AgentArgs.SupportedLanguageCodes">SupportedLanguageCodes</h4>
@@ -408,26 +376,25 @@ If it is not provided, the provider project is used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Diagflow/Agent.cs/#L247">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Diagflow/Agent.cs/#L252">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Diagflow_AgentArgs_Tier_" data-uid="Pulumi.Gcp.Diagflow.AgentArgs.Tier*"></a>
   <h4 id="Pulumi_Gcp_Diagflow_AgentArgs_Tier" data-uid="Pulumi.Gcp.Diagflow.AgentArgs.Tier">Tier</h4>
-  <div class="markdown level1 summary"><p>The agent tier. If not specified, TIER_STANDARD is assumed. * TIER_STANDARD: Standard tier. *
-TIER_ENTERPRISE: Enterprise tier (Essentials). * TIER_ENTERPRISE_PLUS: Enterprise tier (Plus). NOTE: This
-field seems to have eventual consistency in the API. Updating this field to a new value, or even creating a
-new agent with a tier that is different from a previous agent in the same project will take some time to
-propagate. The provider will wait for the API to show consistency, which can lead to longer apply times.</p>
+  <div class="markdown level1 summary"><p>The agent tier. If not specified, TIER_STANDARD is assumed. * TIER_STANDARD: Standard tier. * TIER_ENTERPRISE:
+Enterprise tier (Essentials). * TIER_ENTERPRISE_PLUS: Enterprise tier (Plus). NOTE: Due to consistency issues, the
+provider will not read this field from the API. Drift is possible between the Terraform state and Dialogflow if the
+agent tier is changed outside of Terraform.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Tier { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Tier { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -439,18 +406,18 @@ propagate. The provider will wait for the API to show consistency, which can lea
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Diagflow/Agent.cs/#L254">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Diagflow/Agent.cs/#L259">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Diagflow_AgentArgs_TimeZone_" data-uid="Pulumi.Gcp.Diagflow.AgentArgs.TimeZone*"></a>
   <h4 id="Pulumi_Gcp_Diagflow_AgentArgs_TimeZone" data-uid="Pulumi.Gcp.Diagflow.AgentArgs.TimeZone">TimeZone</h4>
-  <div class="markdown level1 summary"><p>The time zone of this agent from the <a href="https://www.iana.org/time-zones">time zone database</a>, e.g.,
-America/New_York, Europe/Paris.</p>
+  <div class="markdown level1 summary"><p>The time zone of this agent from the <a href="https://www.iana.org/time-zones">time zone database</a>, e.g., America/New_York,
+Europe/Paris.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -467,7 +434,7 @@ America/New_York, Europe/Paris.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -479,7 +446,7 @@ America/New_York, Europe/Paris.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Diagflow/Agent.cs/#L157" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Diagflow/Agent.cs/#L166" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

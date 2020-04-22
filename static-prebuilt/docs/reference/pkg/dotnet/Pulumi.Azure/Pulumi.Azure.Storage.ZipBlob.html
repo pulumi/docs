@@ -71,50 +71,13 @@
   
   <h1 id="Pulumi_Azure_Storage_ZipBlob" data-uid="Pulumi.Azure.Storage.ZipBlob" class="text-break">Class ZipBlob
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Deprecated: ZipBlob resource is deprecated in the 2.0 version of the provider. Use Blob resource instead.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
-    <div class="level3"><span class="xref">ZipBlob</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">ZipBlob</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Azure.Storage.html">Pulumi.Azure.Storage</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Azure.dll</h6>
@@ -125,16 +88,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Storage/ZipBlob.cs/#L61">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Storage/ZipBlob.cs/#L65">View Source</a>
   </span>
   <a id="Pulumi_Azure_Storage_ZipBlob__ctor_" data-uid="Pulumi.Azure.Storage.ZipBlob.#ctor*"></a>
-  <h4 id="Pulumi_Azure_Storage_ZipBlob__ctor_System_String_Pulumi_Azure_Storage_ZipBlobArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Azure.Storage.ZipBlob.#ctor(System.String,Pulumi.Azure.Storage.ZipBlobArgs,Pulumi.CustomResourceOptions)">ZipBlob(String, ZipBlobArgs, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Azure_Storage_ZipBlob__ctor_System_String_Pulumi_Azure_Storage_ZipBlobArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Azure.Storage.ZipBlob.#ctor(System.String,Pulumi.Azure.Storage.ZipBlobArgs,System.Nullable{CustomResourceOptions})">ZipBlob(String, ZipBlobArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Create a ZipBlob resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ZipBlob(string name, ZipBlobArgs args, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public ZipBlob(string name, ZipBlobArgs args, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -159,7 +122,7 @@
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -169,7 +132,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Storage/ZipBlob.cs/#L14">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Storage/ZipBlob.cs/#L18">View Source</a>
   </span>
   <a id="Pulumi_Azure_Storage_ZipBlob_AccessTier_" data-uid="Pulumi.Azure.Storage.ZipBlob.AccessTier*"></a>
   <h4 id="Pulumi_Azure_Storage_ZipBlob_AccessTier" data-uid="Pulumi.Azure.Storage.ZipBlob.AccessTier">AccessTier</h4>
@@ -189,13 +152,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Storage/ZipBlob.cs/#L32">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Storage/ZipBlob.cs/#L21">View Source</a>
   </span>
   <a id="Pulumi_Azure_Storage_ZipBlob_Content_" data-uid="Pulumi.Azure.Storage.ZipBlob.Content*"></a>
   <h4 id="Pulumi_Azure_Storage_ZipBlob_Content" data-uid="Pulumi.Azure.Storage.ZipBlob.Content">Content</h4>
@@ -203,7 +166,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;Archive&gt; Content { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;Archive?&gt; Content { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -215,13 +178,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="../Pulumi/Pulumi.Archive.html">Archive</a>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">Archive</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Storage/ZipBlob.cs/#L17">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Storage/ZipBlob.cs/#L24">View Source</a>
   </span>
   <a id="Pulumi_Azure_Storage_ZipBlob_ContentType_" data-uid="Pulumi.Azure.Storage.ZipBlob.ContentType*"></a>
   <h4 id="Pulumi_Azure_Storage_ZipBlob_ContentType" data-uid="Pulumi.Azure.Storage.ZipBlob.ContentType">ContentType</h4>
@@ -229,7 +192,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ContentType { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; ContentType { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -241,13 +204,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Storage/ZipBlob.cs/#L20">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Storage/ZipBlob.cs/#L27">View Source</a>
   </span>
   <a id="Pulumi_Azure_Storage_ZipBlob_Metadata_" data-uid="Pulumi.Azure.Storage.ZipBlob.Metadata*"></a>
   <h4 id="Pulumi_Azure_Storage_ZipBlob_Metadata" data-uid="Pulumi.Azure.Storage.ZipBlob.Metadata">Metadata</h4>
@@ -267,13 +230,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Storage/ZipBlob.cs/#L23">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Storage/ZipBlob.cs/#L30">View Source</a>
   </span>
   <a id="Pulumi_Azure_Storage_ZipBlob_Name_" data-uid="Pulumi.Azure.Storage.ZipBlob.Name*"></a>
   <h4 id="Pulumi_Azure_Storage_ZipBlob_Name" data-uid="Pulumi.Azure.Storage.ZipBlob.Name">Name</h4>
@@ -293,13 +256,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Storage/ZipBlob.cs/#L26">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Storage/ZipBlob.cs/#L33">View Source</a>
   </span>
   <a id="Pulumi_Azure_Storage_ZipBlob_Parallelism_" data-uid="Pulumi.Azure.Storage.ZipBlob.Parallelism*"></a>
   <h4 id="Pulumi_Azure_Storage_ZipBlob_Parallelism" data-uid="Pulumi.Azure.Storage.ZipBlob.Parallelism">Parallelism</h4>
@@ -319,13 +282,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Storage/ZipBlob.cs/#L29">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Storage/ZipBlob.cs/#L36">View Source</a>
   </span>
   <a id="Pulumi_Azure_Storage_ZipBlob_Size_" data-uid="Pulumi.Azure.Storage.ZipBlob.Size*"></a>
   <h4 id="Pulumi_Azure_Storage_ZipBlob_Size" data-uid="Pulumi.Azure.Storage.ZipBlob.Size">Size</h4>
@@ -345,13 +308,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Storage/ZipBlob.cs/#L35">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Storage/ZipBlob.cs/#L39">View Source</a>
   </span>
   <a id="Pulumi_Azure_Storage_ZipBlob_SourceContent_" data-uid="Pulumi.Azure.Storage.ZipBlob.SourceContent*"></a>
   <h4 id="Pulumi_Azure_Storage_ZipBlob_SourceContent" data-uid="Pulumi.Azure.Storage.ZipBlob.SourceContent">SourceContent</h4>
@@ -359,7 +322,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; SourceContent { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; SourceContent { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -371,13 +334,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Storage/ZipBlob.cs/#L38">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Storage/ZipBlob.cs/#L42">View Source</a>
   </span>
   <a id="Pulumi_Azure_Storage_ZipBlob_SourceUri_" data-uid="Pulumi.Azure.Storage.ZipBlob.SourceUri*"></a>
   <h4 id="Pulumi_Azure_Storage_ZipBlob_SourceUri" data-uid="Pulumi.Azure.Storage.ZipBlob.SourceUri">SourceUri</h4>
@@ -385,7 +348,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; SourceUri { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; SourceUri { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -397,13 +360,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Storage/ZipBlob.cs/#L41">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Storage/ZipBlob.cs/#L45">View Source</a>
   </span>
   <a id="Pulumi_Azure_Storage_ZipBlob_StorageAccountName_" data-uid="Pulumi.Azure.Storage.ZipBlob.StorageAccountName*"></a>
   <h4 id="Pulumi_Azure_Storage_ZipBlob_StorageAccountName" data-uid="Pulumi.Azure.Storage.ZipBlob.StorageAccountName">StorageAccountName</h4>
@@ -423,13 +386,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Storage/ZipBlob.cs/#L44">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Storage/ZipBlob.cs/#L48">View Source</a>
   </span>
   <a id="Pulumi_Azure_Storage_ZipBlob_StorageContainerName_" data-uid="Pulumi.Azure.Storage.ZipBlob.StorageContainerName*"></a>
   <h4 id="Pulumi_Azure_Storage_ZipBlob_StorageContainerName" data-uid="Pulumi.Azure.Storage.ZipBlob.StorageContainerName">StorageContainerName</h4>
@@ -449,13 +412,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Storage/ZipBlob.cs/#L47">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Storage/ZipBlob.cs/#L51">View Source</a>
   </span>
   <a id="Pulumi_Azure_Storage_ZipBlob_Type_" data-uid="Pulumi.Azure.Storage.ZipBlob.Type*"></a>
   <h4 id="Pulumi_Azure_Storage_ZipBlob_Type" data-uid="Pulumi.Azure.Storage.ZipBlob.Type">Type</h4>
@@ -475,13 +438,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Storage/ZipBlob.cs/#L50">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Storage/ZipBlob.cs/#L54">View Source</a>
   </span>
   <a id="Pulumi_Azure_Storage_ZipBlob_Url_" data-uid="Pulumi.Azure.Storage.ZipBlob.Url*"></a>
   <h4 id="Pulumi_Azure_Storage_ZipBlob_Url" data-uid="Pulumi.Azure.Storage.ZipBlob.Url">Url</h4>
@@ -501,7 +464,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -509,17 +472,17 @@
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Storage/ZipBlob.cs/#L91">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Storage/ZipBlob.cs/#L95">View Source</a>
   </span>
   <a id="Pulumi_Azure_Storage_ZipBlob_Get_" data-uid="Pulumi.Azure.Storage.ZipBlob.Get*"></a>
-  <h4 id="Pulumi_Azure_Storage_ZipBlob_Get_System_String_Pulumi_Input_System_String__Pulumi_Azure_Storage_ZipBlobState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Azure.Storage.ZipBlob.Get(System.String,Pulumi.Input{System.String},Pulumi.Azure.Storage.ZipBlobState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, ZipBlobState, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Azure_Storage_ZipBlob_Get_System_String_Input_System_String__Pulumi_Azure_Storage_ZipBlobState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Azure.Storage.ZipBlob.Get(System.String,Input{System.String},Pulumi.Azure.Storage.ZipBlobState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, ZipBlobState, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Get an existing ZipBlob resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static ZipBlob Get(string name, Input&lt;string&gt; id, ZipBlobState state = null, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static ZipBlob Get(string name, Input&lt;string&gt; id, ZipBlobState state = null, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -538,7 +501,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -550,7 +513,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -579,7 +542,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Storage/ZipBlob.cs/#L12" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Storage/ZipBlob.cs/#L16" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

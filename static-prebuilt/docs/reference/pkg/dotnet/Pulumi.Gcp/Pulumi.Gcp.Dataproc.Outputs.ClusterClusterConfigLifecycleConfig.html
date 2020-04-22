@@ -78,47 +78,26 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">ClusterClusterConfigLifecycleConfig</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.Dataproc.Outputs.html">Pulumi.Gcp.Dataproc.Outputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
   <h5 id="Pulumi_Gcp_Dataproc_Outputs_ClusterClusterConfigLifecycleConfig_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class ClusterClusterConfigLifecycleConfig</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class ClusterClusterConfigLifecycleConfig : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Dataproc/Cluster.cs/#L1153">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Dataproc/Outputs/ClusterClusterConfigLifecycleConfig.cs/#L21">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Dataproc_Outputs_ClusterClusterConfigLifecycleConfig_AutoDeleteTime" data-uid="Pulumi.Gcp.Dataproc.Outputs.ClusterClusterConfigLifecycleConfig.AutoDeleteTime">AutoDeleteTime</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The time when cluster will be auto-deleted.
+A timestamp in RFC3339 UTC &quot;Zulu&quot; format, accurate to nanoseconds.
+Example: &quot;2014-10-02T15:01:23.045123456Z&quot;.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string AutoDeleteTime</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? AutoDeleteTime</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -130,20 +109,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Dataproc/Cluster.cs/#L1154">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Dataproc/Outputs/ClusterClusterConfigLifecycleConfig.cs/#L26">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Dataproc_Outputs_ClusterClusterConfigLifecycleConfig_IdleDeleteTtl" data-uid="Pulumi.Gcp.Dataproc.Outputs.ClusterClusterConfigLifecycleConfig.IdleDeleteTtl">IdleDeleteTtl</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The duration to keep the cluster alive while idling
+(no jobs running). After this TTL, the cluster will be deleted. Valid range: [10m, 14d].</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string IdleDeleteTtl</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? IdleDeleteTtl</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -155,20 +136,20 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Dataproc/Cluster.cs/#L1155">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Dataproc/Outputs/ClusterClusterConfigLifecycleConfig.cs/#L27">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Dataproc_Outputs_ClusterClusterConfigLifecycleConfig_IdleStartTime" data-uid="Pulumi.Gcp.Dataproc.Outputs.ClusterClusterConfigLifecycleConfig.IdleStartTime">IdleStartTime</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string IdleStartTime</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? IdleStartTime</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -180,7 +161,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -192,7 +173,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Dataproc/Cluster.cs/#L1150" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Dataproc/Outputs/ClusterClusterConfigLifecycleConfig.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

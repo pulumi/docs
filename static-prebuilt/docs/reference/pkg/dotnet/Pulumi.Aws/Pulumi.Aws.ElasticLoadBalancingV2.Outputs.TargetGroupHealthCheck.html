@@ -78,43 +78,19 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">TargetGroupHealthCheck</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.ElasticLoadBalancingV2.Outputs.html">Pulumi.Aws.ElasticLoadBalancingV2.Outputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
   <h5 id="Pulumi_Aws_ElasticLoadBalancingV2_Outputs_TargetGroupHealthCheck_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class TargetGroupHealthCheck</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class TargetGroupHealthCheck : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Elasticloadbalancingv2/TargetGroup.cs/#L563">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ElasticLoadBalancingV2/Outputs/TargetGroupHealthCheck.cs/#L19">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_ElasticLoadBalancingV2_Outputs_TargetGroupHealthCheck_Enabled" data-uid="Pulumi.Aws.ElasticLoadBalancingV2.Outputs.TargetGroupHealthCheck.Enabled">Enabled</h4>
-  <div class="markdown level1 summary"><p>Indicates whether  health checks are enabled. Defaults to true.</p>
+  <div class="markdown level1 summary"><p>Boolean to enable / disable <code>stickiness</code>. Default is <code>true</code></p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -137,7 +113,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Elasticloadbalancingv2/TargetGroup.cs/#L567">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ElasticLoadBalancingV2/Outputs/TargetGroupHealthCheck.cs/#L23">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_ElasticLoadBalancingV2_Outputs_TargetGroupHealthCheck_HealthyThreshold" data-uid="Pulumi.Aws.ElasticLoadBalancingV2.Outputs.TargetGroupHealthCheck.HealthyThreshold">HealthyThreshold</h4>
   <div class="markdown level1 summary"><p>The number of consecutive health checks successes required before considering an unhealthy target healthy. Defaults to 3.</p>
@@ -163,7 +139,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Elasticloadbalancingv2/TargetGroup.cs/#L571">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ElasticLoadBalancingV2/Outputs/TargetGroupHealthCheck.cs/#L27">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_ElasticLoadBalancingV2_Outputs_TargetGroupHealthCheck_Interval" data-uid="Pulumi.Aws.ElasticLoadBalancingV2.Outputs.TargetGroupHealthCheck.Interval">Interval</h4>
   <div class="markdown level1 summary"><p>The approximate amount of time, in seconds, between health checks of an individual target. Minimum value 5 seconds, Maximum value 300 seconds. For <code>lambda</code> target groups, it needs to be greater as the <code>timeout</code> of the underlying <code>lambda</code>. Default 30 seconds.</p>
@@ -189,14 +165,14 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Elasticloadbalancingv2/TargetGroup.cs/#L572">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ElasticLoadBalancingV2/Outputs/TargetGroupHealthCheck.cs/#L28">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_ElasticLoadBalancingV2_Outputs_TargetGroupHealthCheck_Matcher" data-uid="Pulumi.Aws.ElasticLoadBalancingV2.Outputs.TargetGroupHealthCheck.Matcher">Matcher</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string Matcher</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? Matcher</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -208,13 +184,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Elasticloadbalancingv2/TargetGroup.cs/#L576">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ElasticLoadBalancingV2/Outputs/TargetGroupHealthCheck.cs/#L32">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_ElasticLoadBalancingV2_Outputs_TargetGroupHealthCheck_Path" data-uid="Pulumi.Aws.ElasticLoadBalancingV2.Outputs.TargetGroupHealthCheck.Path">Path</h4>
   <div class="markdown level1 summary"><p>The destination for the health check request. Applies to Application Load Balancers only (HTTP/HTTPS), not Network Load Balancers (TCP).</p>
@@ -222,7 +198,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string Path</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? Path</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -234,21 +210,21 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Elasticloadbalancingv2/TargetGroup.cs/#L580">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ElasticLoadBalancingV2/Outputs/TargetGroupHealthCheck.cs/#L36">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_ElasticLoadBalancingV2_Outputs_TargetGroupHealthCheck_Port" data-uid="Pulumi.Aws.ElasticLoadBalancingV2.Outputs.TargetGroupHealthCheck.Port">Port</h4>
-  <div class="markdown level1 summary"><p>The port to use to connect with the target. Valid values are either ports 1-65535, or <code>traffic-port</code>. Defaults to <code>traffic-port</code>.</p>
+  <div class="markdown level1 summary"><p>The port on which targets receive traffic, unless overridden when registering a specific target. Required when <code>target_type</code> is <code>instance</code> or <code>ip</code>. Does not apply when <code>target_type</code> is <code>lambda</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string Port</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? Port</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -260,21 +236,21 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Elasticloadbalancingv2/TargetGroup.cs/#L584">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ElasticLoadBalancingV2/Outputs/TargetGroupHealthCheck.cs/#L40">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_ElasticLoadBalancingV2_Outputs_TargetGroupHealthCheck_Protocol" data-uid="Pulumi.Aws.ElasticLoadBalancingV2.Outputs.TargetGroupHealthCheck.Protocol">Protocol</h4>
-  <div class="markdown level1 summary"><p>The protocol to use to connect with the target. Defaults to <code>HTTP</code>. Not applicable when <code>target_type</code> is <code>lambda</code>.</p>
+  <div class="markdown level1 summary"><p>The protocol to use for routing traffic to the targets. Should be one of &quot;TCP&quot;, &quot;TLS&quot;, &quot;UDP&quot;, &quot;TCP_UDP&quot;, &quot;HTTP&quot; or &quot;HTTPS&quot;. Required when <code>target_type</code> is <code>instance</code> or <code>ip</code>. Does not apply when <code>target_type</code> is <code>lambda</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string Protocol</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? Protocol</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -286,13 +262,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Elasticloadbalancingv2/TargetGroup.cs/#L588">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ElasticLoadBalancingV2/Outputs/TargetGroupHealthCheck.cs/#L44">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_ElasticLoadBalancingV2_Outputs_TargetGroupHealthCheck_Timeout" data-uid="Pulumi.Aws.ElasticLoadBalancingV2.Outputs.TargetGroupHealthCheck.Timeout">Timeout</h4>
   <div class="markdown level1 summary"><p>The amount of time, in seconds, during which no response means a failed health check. For Application Load Balancers, the range is 2 to 120 seconds, and the default is 5 seconds for the <code>instance</code> target type and 30 seconds for the <code>lambda</code> target type. For Network Load Balancers, you cannot set a custom value, and the default is 10 seconds for TCP and HTTPS health checks and 6 seconds for HTTP health checks.</p>
@@ -300,7 +276,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly int Timeout</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly int? Timeout</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -312,13 +288,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Int32</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Elasticloadbalancingv2/TargetGroup.cs/#L593">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ElasticLoadBalancingV2/Outputs/TargetGroupHealthCheck.cs/#L49">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_ElasticLoadBalancingV2_Outputs_TargetGroupHealthCheck_UnhealthyThreshold" data-uid="Pulumi.Aws.ElasticLoadBalancingV2.Outputs.TargetGroupHealthCheck.UnhealthyThreshold">UnhealthyThreshold</h4>
   <div class="markdown level1 summary"><p>The number of consecutive health check failures required before considering the target unhealthy . For Network Load Balancers, this value must be the same as the <code>healthy_threshold</code>. Defaults to 3.</p>
@@ -353,7 +329,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Elasticloadbalancingv2/TargetGroup.cs/#L557" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ElasticLoadBalancingV2/Outputs/TargetGroupHealthCheck.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

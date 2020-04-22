@@ -88,37 +88,70 @@ to be invoked. See below examples for how to set up the appropriate permissions,
 or view the <a href="https://www.terraform.io/docs/providers/google/r/cloudfunctions_cloud_function_iam.html">Cloud Functions IAM resources</a>
 for Cloud Functions.</p>
 </blockquote>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/cloudfunctions_function.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/cloudfunctions_function.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.CloudFunctions.FunctionArgs.html">FunctionArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.CloudFunctions.FunctionIamBinding.html">FunctionIamBinding</a></h4>
-      <section></section>
+      <section><p>Three different resources help you manage your IAM policy for Cloud Functions CloudFunction. Each of these resources serves a different use case:</p>
+<ul>
+<li><code>gcp.cloudfunctions.FunctionIamPolicy</code>: Authoritative. Sets the IAM policy for the cloudfunction and replaces any existing policy already attached.</li>
+<li><code>gcp.cloudfunctions.FunctionIamBinding</code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the cloudfunction are preserved.</li>
+<li><code>gcp.cloudfunctions.FunctionIamMember</code>: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the cloudfunction are preserved.</li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.cloudfunctions.FunctionIamPolicy</code> <strong>cannot</strong> be used in conjunction with <code>gcp.cloudfunctions.FunctionIamBinding</code> and <code>gcp.cloudfunctions.FunctionIamMember</code> or they will fight over what your policy should be.</p>
+</blockquote>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.cloudfunctions.FunctionIamBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.cloudfunctions.FunctionIamMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
+</blockquote>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.CloudFunctions.FunctionIamBindingArgs.html">FunctionIamBindingArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.CloudFunctions.FunctionIamBindingState.html">FunctionIamBindingState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.CloudFunctions.FunctionIamMember.html">FunctionIamMember</a></h4>
-      <section></section>
+      <section><p>Three different resources help you manage your IAM policy for Cloud Functions CloudFunction. Each of these resources serves a different use case:</p>
+<ul>
+<li><code>gcp.cloudfunctions.FunctionIamPolicy</code>: Authoritative. Sets the IAM policy for the cloudfunction and replaces any existing policy already attached.</li>
+<li><code>gcp.cloudfunctions.FunctionIamBinding</code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the cloudfunction are preserved.</li>
+<li><code>gcp.cloudfunctions.FunctionIamMember</code>: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the cloudfunction are preserved.</li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.cloudfunctions.FunctionIamPolicy</code> <strong>cannot</strong> be used in conjunction with <code>gcp.cloudfunctions.FunctionIamBinding</code> and <code>gcp.cloudfunctions.FunctionIamMember</code> or they will fight over what your policy should be.</p>
+</blockquote>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.cloudfunctions.FunctionIamBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.cloudfunctions.FunctionIamMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
+</blockquote>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.CloudFunctions.FunctionIamMemberArgs.html">FunctionIamMemberArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.CloudFunctions.FunctionIamMemberState.html">FunctionIamMemberState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.CloudFunctions.FunctionIamPolicy.html">FunctionIamPolicy</a></h4>
-      <section></section>
+      <section><p>Three different resources help you manage your IAM policy for Cloud Functions CloudFunction. Each of these resources serves a different use case:</p>
+<ul>
+<li><code>gcp.cloudfunctions.FunctionIamPolicy</code>: Authoritative. Sets the IAM policy for the cloudfunction and replaces any existing policy already attached.</li>
+<li><code>gcp.cloudfunctions.FunctionIamBinding</code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the cloudfunction are preserved.</li>
+<li><code>gcp.cloudfunctions.FunctionIamMember</code>: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the cloudfunction are preserved.</li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.cloudfunctions.FunctionIamPolicy</code> <strong>cannot</strong> be used in conjunction with <code>gcp.cloudfunctions.FunctionIamBinding</code> and <code>gcp.cloudfunctions.FunctionIamMember</code> or they will fight over what your policy should be.</p>
+</blockquote>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.cloudfunctions.FunctionIamBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.cloudfunctions.FunctionIamMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
+</blockquote>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.CloudFunctions.FunctionIamPolicyArgs.html">FunctionIamPolicyArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.CloudFunctions.FunctionIamPolicyState.html">FunctionIamPolicyState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.CloudFunctions.FunctionState.html">FunctionState</a></h4>
       <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.CloudFunctions.GetFunction.html">GetFunction</a></h4>
+      <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.CloudFunctions.GetFunctionArgs.html">GetFunctionArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.CloudFunctions.GetFunctionResult.html">GetFunctionResult</a></h4>
-      <section></section>
-      <h4><a class="xref" href="Pulumi.Gcp.CloudFunctions.Invokes.html">Invokes</a></h4>
       <section></section>
 </article>
           </div>

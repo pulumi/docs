@@ -76,36 +76,7 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
-    <div class="level3"><span class="xref">ClusterPrivateClusterConfigGetArgs</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">ClusterPrivateClusterConfigGetArgs</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.Container.Inputs.html">Pulumi.Gcp.Container.Inputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
@@ -116,7 +87,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/Cluster.cs/#L2726">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Inputs/ClusterPrivateClusterConfigGetArgs.cs/#L63">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Container_Inputs_ClusterPrivateClusterConfigGetArgs__ctor_" data-uid="Pulumi.Gcp.Container.Inputs.ClusterPrivateClusterConfigGetArgs.#ctor*"></a>
   <h4 id="Pulumi_Gcp_Container_Inputs_ClusterPrivateClusterConfigGetArgs__ctor" data-uid="Pulumi.Gcp.Container.Inputs.ClusterPrivateClusterConfigGetArgs.#ctor">ClusterPrivateClusterConfigGetArgs()</h4>
@@ -129,11 +100,15 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/Cluster.cs/#L2708">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Inputs/ClusterPrivateClusterConfigGetArgs.cs/#L21">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Container_Inputs_ClusterPrivateClusterConfigGetArgs_EnablePrivateEndpoint_" data-uid="Pulumi.Gcp.Container.Inputs.ClusterPrivateClusterConfigGetArgs.EnablePrivateEndpoint*"></a>
   <h4 id="Pulumi_Gcp_Container_Inputs_ClusterPrivateClusterConfigGetArgs_EnablePrivateEndpoint" data-uid="Pulumi.Gcp.Container.Inputs.ClusterPrivateClusterConfigGetArgs.EnablePrivateEndpoint">EnablePrivateEndpoint</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>When <code>true</code>, the cluster's private
+endpoint is used as the cluster endpoint and access through the public endpoint
+is disabled. When <code>false</code>, either endpoint can be used. This field only applies
+to private clusters, when <code>enable_private_nodes</code> is <code>true</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -149,21 +124,25 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/Cluster.cs/#L2711">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Inputs/ClusterPrivateClusterConfigGetArgs.cs/#L30">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Container_Inputs_ClusterPrivateClusterConfigGetArgs_EnablePrivateNodes_" data-uid="Pulumi.Gcp.Container.Inputs.ClusterPrivateClusterConfigGetArgs.EnablePrivateNodes*"></a>
   <h4 id="Pulumi_Gcp_Container_Inputs_ClusterPrivateClusterConfigGetArgs_EnablePrivateNodes" data-uid="Pulumi.Gcp.Container.Inputs.ClusterPrivateClusterConfigGetArgs.EnablePrivateNodes">EnablePrivateNodes</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Enables the private cluster feature,
+creating a private endpoint on the cluster. In a private cluster, nodes only
+have RFC 1918 private addresses and communicate with the master's private
+endpoint via private networking.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; EnablePrivateNodes { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? EnablePrivateNodes { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -175,21 +154,28 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/Cluster.cs/#L2714">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Inputs/ClusterPrivateClusterConfigGetArgs.cs/#L42">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Container_Inputs_ClusterPrivateClusterConfigGetArgs_MasterIpv4CidrBlock_" data-uid="Pulumi.Gcp.Container.Inputs.ClusterPrivateClusterConfigGetArgs.MasterIpv4CidrBlock*"></a>
   <h4 id="Pulumi_Gcp_Container_Inputs_ClusterPrivateClusterConfigGetArgs_MasterIpv4CidrBlock" data-uid="Pulumi.Gcp.Container.Inputs.ClusterPrivateClusterConfigGetArgs.MasterIpv4CidrBlock">MasterIpv4CidrBlock</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The IP range in CIDR notation to use for
+the hosted master network. This range will be used for assigning private IP
+addresses to the cluster master(s) and the ILB VIP. This range must not overlap
+with any other ranges in use within the cluster's network, and it must be a /28
+subnet. See <a href="https://cloud.google.com/kubernetes-engine/docs/how-to/private-clusters#limitations">Private Cluster Limitations</a>
+for more details. This field only applies to private clusters, when
+<code>enable_private_nodes</code> is <code>true</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; MasterIpv4CidrBlock { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? MasterIpv4CidrBlock { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -201,21 +187,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/Cluster.cs/#L2717">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Inputs/ClusterPrivateClusterConfigGetArgs.cs/#L48">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Container_Inputs_ClusterPrivateClusterConfigGetArgs_PeeringName_" data-uid="Pulumi.Gcp.Container.Inputs.ClusterPrivateClusterConfigGetArgs.PeeringName*"></a>
   <h4 id="Pulumi_Gcp_Container_Inputs_ClusterPrivateClusterConfigGetArgs_PeeringName" data-uid="Pulumi.Gcp.Container.Inputs.ClusterPrivateClusterConfigGetArgs.PeeringName">PeeringName</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The name of the peering between this cluster and the Google owned VPC.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; PeeringName { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? PeeringName { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -227,21 +214,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/Cluster.cs/#L2720">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Inputs/ClusterPrivateClusterConfigGetArgs.cs/#L54">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Container_Inputs_ClusterPrivateClusterConfigGetArgs_PrivateEndpoint_" data-uid="Pulumi.Gcp.Container.Inputs.ClusterPrivateClusterConfigGetArgs.PrivateEndpoint*"></a>
   <h4 id="Pulumi_Gcp_Container_Inputs_ClusterPrivateClusterConfigGetArgs_PrivateEndpoint" data-uid="Pulumi.Gcp.Container.Inputs.ClusterPrivateClusterConfigGetArgs.PrivateEndpoint">PrivateEndpoint</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The internal IP address of this cluster's master endpoint.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; PrivateEndpoint { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? PrivateEndpoint { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -253,21 +241,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/Cluster.cs/#L2723">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Inputs/ClusterPrivateClusterConfigGetArgs.cs/#L60">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Container_Inputs_ClusterPrivateClusterConfigGetArgs_PublicEndpoint_" data-uid="Pulumi.Gcp.Container.Inputs.ClusterPrivateClusterConfigGetArgs.PublicEndpoint*"></a>
   <h4 id="Pulumi_Gcp_Container_Inputs_ClusterPrivateClusterConfigGetArgs_PublicEndpoint" data-uid="Pulumi.Gcp.Container.Inputs.ClusterPrivateClusterConfigGetArgs.PublicEndpoint">PublicEndpoint</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The external IP address of this cluster's master endpoint.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; PublicEndpoint { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? PublicEndpoint { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -279,7 +268,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -291,7 +280,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/Cluster.cs/#L2706" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Inputs/ClusterPrivateClusterConfigGetArgs.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

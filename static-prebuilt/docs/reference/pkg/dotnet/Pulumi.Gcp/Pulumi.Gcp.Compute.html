@@ -77,29 +77,104 @@
     <h3 id="classes">Classes
   </h3>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.Address.html">Address</a></h4>
-      <section></section>
+      <section><p>Represents an Address resource.</p>
+<p>Each virtual machine instance has an ephemeral internal IP address and,
+optionally, an external IP address. To communicate between instances on
+the same network, you can use an instance's internal IP address. To
+communicate with the Internet and instances outside of the same network,
+you must specify the instance's external IP address.</p>
+<p>Internal IP addresses are ephemeral and only belong to an instance for
+the lifetime of the instance; if the instance is deleted and recreated,
+the instance is assigned a new internal IP address, either by Compute
+Engine or by you. External IP addresses can be either ephemeral or
+static.</p>
+<p>To get more information about Address, see:</p>
+<ul>
+<li><a href="https://cloud.google.com/compute/docs/reference/beta/addresses">API documentation</a></li>
+<li>How-to Guides</li>
+<li><a href="https://cloud.google.com/compute/docs/instances-and-network">Reserving a Static External IP Address</a></li>
+<li><a href="https://cloud.google.com/compute/docs/ip-addresses/reserve-static-internal-ip-address">Reserving a Static Internal IP Address</a></li>
+</ul>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.AddressArgs.html">AddressArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.AddressState.html">AddressState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.AttachedDisk.html">AttachedDisk</a></h4>
-      <section></section>
+      <section><p>Persistent disks can be attached to a compute instance using the <code>attached_disk</code>
+section within the compute instance configuration.
+However there may be situations where managing the attached disks via the compute
+instance config isn't preferable or possible, such as attaching dynamic
+numbers of disks using the <code>count</code> variable.</p>
+<p>To get more information about attaching disks, see:</p>
+<ul>
+<li><a href="https://cloud.google.com/compute/docs/reference/rest/v1/instances/attachDisk">API documentation</a></li>
+<li>How-to Guides</li>
+<li><a href="https://cloud.google.com/compute/docs/disks/add-persistent-disk">Adding a persistent disk</a></li>
+</ul>
+<p><strong>Note:</strong> When using <code>gcp.compute.AttachedDisk</code> you <strong>must</strong> use <code>lifecycle.ignore_changes = [&amp;quot;attached_disk&amp;quot;]</code> on the <code>gcp.compute.Instance</code> resource that has the disks attached. Otherwise the two resources will fight for control of the attached disk block.</p>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.AttachedDiskArgs.html">AttachedDiskArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.AttachedDiskState.html">AttachedDiskState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.Autoscalar.html">Autoscalar</a></h4>
-      <section></section>
+      <section><p>Represents an Autoscaler resource.</p>
+<p>Autoscalers allow you to automatically scale virtual machine instances in
+managed instance groups according to an autoscaling policy that you
+define.</p>
+<p>To get more information about Autoscaler, see:</p>
+<ul>
+<li><a href="https://cloud.google.com/compute/docs/reference/rest/v1/autoscalers">API documentation</a></li>
+<li>How-to Guides</li>
+<li><a href="https://cloud.google.com/compute/docs/autoscaler/">Autoscaling Groups of Instances</a></li>
+</ul>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.AutoscalarArgs.html">AutoscalarArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.AutoscalarState.html">AutoscalarState</a></h4>
       <section></section>
-      <h4><a class="xref" href="Pulumi.Gcp.Compute.BackendBucket.html">BackendBucket</a></h4>
+      <h4><a class="xref" href="Pulumi.Gcp.Compute.Autoscaler.html">Autoscaler</a></h4>
+      <section><p>Represents an Autoscaler resource.</p>
+<p>Autoscalers allow you to automatically scale virtual machine instances in
+managed instance groups according to an autoscaling policy that you
+define.</p>
+<p>To get more information about Autoscaler, see:</p>
+<ul>
+<li><a href="https://cloud.google.com/compute/docs/reference/rest/v1/autoscalers">API documentation</a></li>
+<li>How-to Guides</li>
+<li><a href="https://cloud.google.com/compute/docs/autoscaler/">Autoscaling Groups of Instances</a></li>
+</ul>
+</section>
+      <h4><a class="xref" href="Pulumi.Gcp.Compute.AutoscalerArgs.html">AutoscalerArgs</a></h4>
       <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.Compute.AutoscalerState.html">AutoscalerState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.Compute.BackendBucket.html">BackendBucket</a></h4>
+      <section><p>Backend buckets allow you to use Google Cloud Storage buckets with HTTP(S)
+load balancing.</p>
+<p>An HTTP(S) load balancer can direct traffic to specified URLs to a
+backend bucket rather than a backend service. It can send requests for
+static content to a Cloud Storage bucket and requests for dynamic content
+to a virtual machine instance.</p>
+<p>To get more information about BackendBucket, see:</p>
+<ul>
+<li><a href="https://cloud.google.com/compute/docs/reference/v1/backendBuckets">API documentation</a></li>
+<li>How-to Guides</li>
+<li><a href="https://cloud.google.com/compute/docs/load-balancing/http/backend-bucket">Using a Cloud Storage bucket as a load balancer backend</a></li>
+</ul>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.BackendBucketArgs.html">BackendBucketArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.BackendBucketSignedUrlKey.html">BackendBucketSignedUrlKey</a></h4>
-      <section></section>
+      <section><p>A key for signing Cloud CDN signed URLs for BackendBuckets.</p>
+<p>To get more information about BackendBucketSignedUrlKey, see:</p>
+<ul>
+<li><a href="https://cloud.google.com/compute/docs/reference/rest/v1/backendBuckets">API documentation</a></li>
+<li>How-to Guides</li>
+<li><a href="https://cloud.google.com/cdn/docs/using-signed-urls/">Using Signed URLs</a></li>
+</ul>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.BackendBucketSignedUrlKeyArgs.html">BackendBucketSignedUrlKeyArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.BackendBucketSignedUrlKeyState.html">BackendBucketSignedUrlKeyState</a></h4>
@@ -107,11 +182,29 @@
       <h4><a class="xref" href="Pulumi.Gcp.Compute.BackendBucketState.html">BackendBucketState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.BackendService.html">BackendService</a></h4>
-      <section></section>
+      <section><p>A Backend Service defines a group of virtual machines that will serve
+traffic for load balancing. This resource is a global backend service,
+appropriate for external load balancing or self-managed internal load balancing.
+For managed internal load balancing, use a regional backend service instead.</p>
+<p>Currently self-managed internal load balancing is only available in beta.</p>
+<p>To get more information about BackendService, see:</p>
+<ul>
+<li><a href="https://cloud.google.com/compute/docs/reference/v1/backendServices">API documentation</a></li>
+<li>How-to Guides</li>
+<li><a href="https://cloud.google.com/compute/docs/load-balancing/http/backend-service">Official Documentation</a></li>
+</ul>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.BackendServiceArgs.html">BackendServiceArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.BackendServiceSignedUrlKey.html">BackendServiceSignedUrlKey</a></h4>
-      <section></section>
+      <section><p>A key for signing Cloud CDN signed URLs for Backend Services.</p>
+<p>To get more information about BackendServiceSignedUrlKey, see:</p>
+<ul>
+<li><a href="https://cloud.google.com/compute/docs/reference/rest/v1/backendServices">API documentation</a></li>
+<li>How-to Guides</li>
+<li><a href="https://cloud.google.com/cdn/docs/using-signed-urls/">Using Signed URLs</a></li>
+</ul>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.BackendServiceSignedUrlKeyArgs.html">BackendServiceSignedUrlKeyArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.BackendServiceSignedUrlKeyState.html">BackendServiceSignedUrlKeyState</a></h4>
@@ -119,11 +212,40 @@
       <h4><a class="xref" href="Pulumi.Gcp.Compute.BackendServiceState.html">BackendServiceState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.Disk.html">Disk</a></h4>
-      <section></section>
+      <section><p>Persistent disks are durable storage devices that function similarly to
+the physical disks in a desktop or a server. Compute Engine manages the
+hardware behind these devices to ensure data redundancy and optimize
+performance for you. Persistent disks are available as either standard
+hard disk drives (HDD) or solid-state drives (SSD).</p>
+<p>Persistent disks are located independently from your virtual machine
+instances, so you can detach or move persistent disks to keep your data
+even after you delete your instances. Persistent disk performance scales
+automatically with size, so you can resize your existing persistent disks
+or add more persistent disks to an instance to meet your performance and
+storage space requirements.</p>
+<p>Add a persistent disk to your instance when you need reliable and
+affordable storage with consistent performance characteristics.</p>
+<p>To get more information about Disk, see:</p>
+<ul>
+<li><a href="https://cloud.google.com/compute/docs/reference/v1/disks">API documentation</a></li>
+<li>How-to Guides</li>
+<li><a href="https://cloud.google.com/compute/docs/disks/add-persistent-disk">Adding a persistent disk</a></li>
+</ul>
+<blockquote>
+<p><strong>Warning:</strong> All arguments including the disk encryption key will be stored in the raw
+state as plain-text.
+<a href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
+</blockquote>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.DiskArgs.html">DiskArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.DiskResourcePolicyAttachment.html">DiskResourcePolicyAttachment</a></h4>
-      <section></section>
+      <section><p>Adds existing resource policies to a disk. You can only add one policy
+which will be applied to this disk for scheduling snapshot creation.</p>
+<blockquote>
+<p><strong>Note:</strong> This resource does not support regional disks (<code>gcp.compute.RegionDisk</code>).</p>
+</blockquote>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.DiskResourcePolicyAttachmentArgs.html">DiskResourcePolicyAttachmentArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.DiskResourcePolicyAttachmentState.html">DiskResourcePolicyAttachmentState</a></h4>
@@ -131,56 +253,106 @@
       <h4><a class="xref" href="Pulumi.Gcp.Compute.DiskState.html">DiskState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.ExternalVpnGateway.html">ExternalVpnGateway</a></h4>
-      <section></section>
+      <section><p>Represents a VPN gateway managed outside of GCP.</p>
+<p>To get more information about ExternalVpnGateway, see:</p>
+<ul>
+<li><a href="https://cloud.google.com/compute/docs/reference/rest/beta/externalVpnGateways">API documentation</a></li>
+</ul>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.ExternalVpnGatewayArgs.html">ExternalVpnGatewayArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.ExternalVpnGatewayState.html">ExternalVpnGatewayState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.Firewall.html">Firewall</a></h4>
-      <section></section>
+      <section><p>Each network has its own firewall controlling access to and from the
+instances.</p>
+<p>All traffic to instances, even from other instances, is blocked by the
+firewall unless firewall rules are created to allow it.</p>
+<p>The default network has automatically created firewall rules that are
+shown in default firewall rules. No manually created network has
+automatically created firewall rules except for a default &quot;allow&quot; rule for
+outgoing traffic and a default &quot;deny&quot; for incoming traffic. For all
+networks except the default network, you must create any firewall rules
+you need.</p>
+<p>To get more information about Firewall, see:</p>
+<ul>
+<li><a href="https://cloud.google.com/compute/docs/reference/v1/firewalls">API documentation</a></li>
+<li>How-to Guides</li>
+<li><a href="https://cloud.google.com/vpc/docs/firewalls">Official Documentation</a></li>
+</ul>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.FirewallArgs.html">FirewallArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.FirewallState.html">FirewallState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.ForwardingRule.html">ForwardingRule</a></h4>
-      <section></section>
+      <section><p>A ForwardingRule resource. A ForwardingRule resource specifies which pool
+of target virtual machines to forward a packet to if it matches the given
+[IPAddress, IPProtocol, portRange] tuple.</p>
+<p>To get more information about ForwardingRule, see:</p>
+<ul>
+<li><a href="https://cloud.google.com/compute/docs/reference/v1/forwardingRules">API documentation</a></li>
+<li>How-to Guides</li>
+<li><a href="https://cloud.google.com/compute/docs/load-balancing/network/forwarding-rules">Official Documentation</a></li>
+</ul>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.ForwardingRuleArgs.html">ForwardingRuleArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.ForwardingRuleState.html">ForwardingRuleState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.Compute.GetAddress.html">GetAddress</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.GetAddressArgs.html">GetAddressArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.GetAddressResult.html">GetAddressResult</a></h4>
       <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.Compute.GetBackendBucket.html">GetBackendBucket</a></h4>
+      <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.GetBackendBucketArgs.html">GetBackendBucketArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.GetBackendBucketResult.html">GetBackendBucketResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.Compute.GetBackendService.html">GetBackendService</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.GetBackendServiceArgs.html">GetBackendServiceArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.GetBackendServiceResult.html">GetBackendServiceResult</a></h4>
       <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.Compute.GetCertificate.html">GetCertificate</a></h4>
+      <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.GetCertificateArgs.html">GetCertificateArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.GetCertificateResult.html">GetCertificateResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.Compute.GetDefaultServiceAccount.html">GetDefaultServiceAccount</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.GetDefaultServiceAccountArgs.html">GetDefaultServiceAccountArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.GetDefaultServiceAccountResult.html">GetDefaultServiceAccountResult</a></h4>
       <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.Compute.GetForwardingRule.html">GetForwardingRule</a></h4>
+      <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.GetForwardingRuleArgs.html">GetForwardingRuleArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.GetForwardingRuleResult.html">GetForwardingRuleResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.Compute.GetGlobalAddress.html">GetGlobalAddress</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.GetGlobalAddressArgs.html">GetGlobalAddressArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.GetGlobalAddressResult.html">GetGlobalAddressResult</a></h4>
       <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.Compute.GetImage.html">GetImage</a></h4>
+      <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.GetImageArgs.html">GetImageArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.GetImageResult.html">GetImageResult</a></h4>
       <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.Compute.GetInstance.html">GetInstance</a></h4>
+      <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.GetInstanceArgs.html">GetInstanceArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.Compute.GetInstanceGroup.html">GetInstanceGroup</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.GetInstanceGroupArgs.html">GetInstanceGroupArgs</a></h4>
       <section></section>
@@ -188,13 +360,27 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.GetInstanceResult.html">GetInstanceResult</a></h4>
       <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.Compute.GetInstanceSerialPort.html">GetInstanceSerialPort</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.Compute.GetInstanceSerialPortArgs.html">GetInstanceSerialPortArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.Compute.GetInstanceSerialPortResult.html">GetInstanceSerialPortResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.Compute.GetLBIPRanges.html">GetLBIPRanges</a></h4>
+      <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.GetLBIPRangesResult.html">GetLBIPRangesResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.Compute.GetNetblockIPRanges.html">GetNetblockIPRanges</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.GetNetblockIPRangesArgs.html">GetNetblockIPRangesArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.GetNetblockIPRangesResult.html">GetNetblockIPRangesResult</a></h4>
       <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.Compute.GetNetwork.html">GetNetwork</a></h4>
+      <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.GetNetworkArgs.html">GetNetworkArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.Compute.GetNetworkEndpointGroup.html">GetNetworkEndpointGroup</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.GetNetworkEndpointGroupArgs.html">GetNetworkEndpointGroupArgs</a></h4>
       <section></section>
@@ -202,80 +388,187 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.GetNetworkResult.html">GetNetworkResult</a></h4>
       <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.Compute.GetNodeTypes.html">GetNodeTypes</a></h4>
+      <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.GetNodeTypesArgs.html">GetNodeTypesArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.GetNodeTypesResult.html">GetNodeTypesResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.Compute.GetRegionInstanceGroup.html">GetRegionInstanceGroup</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.GetRegionInstanceGroupArgs.html">GetRegionInstanceGroupArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.GetRegionInstanceGroupResult.html">GetRegionInstanceGroupResult</a></h4>
       <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.Compute.GetRegions.html">GetRegions</a></h4>
+      <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.GetRegionsArgs.html">GetRegionsArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.GetRegionsResult.html">GetRegionsResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.Compute.GetResourcePolicy.html">GetResourcePolicy</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.GetResourcePolicyArgs.html">GetResourcePolicyArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.GetResourcePolicyResult.html">GetResourcePolicyResult</a></h4>
       <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.Compute.GetRouter.html">GetRouter</a></h4>
+      <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.GetRouterArgs.html">GetRouterArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.GetRouterResult.html">GetRouterResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.Compute.GetSSLPolicy.html">GetSSLPolicy</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.GetSSLPolicyArgs.html">GetSSLPolicyArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.GetSSLPolicyResult.html">GetSSLPolicyResult</a></h4>
       <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.Compute.GetSubnetwork.html">GetSubnetwork</a></h4>
+      <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.GetSubnetworkArgs.html">GetSubnetworkArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.GetSubnetworkResult.html">GetSubnetworkResult</a></h4>
       <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.Compute.GetVPNGateway.html">GetVPNGateway</a></h4>
+      <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.GetVPNGatewayArgs.html">GetVPNGatewayArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.GetVPNGatewayResult.html">GetVPNGatewayResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.Compute.GetZones.html">GetZones</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.GetZonesArgs.html">GetZonesArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.GetZonesResult.html">GetZonesResult</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.GlobalAddress.html">GlobalAddress</a></h4>
-      <section></section>
+      <section><p>Represents a Global Address resource. Global addresses are used for
+HTTP(S) load balancing.</p>
+<p>To get more information about GlobalAddress, see:</p>
+<ul>
+<li><a href="https://cloud.google.com/compute/docs/reference/v1/globalAddresses">API documentation</a></li>
+<li>How-to Guides</li>
+<li><a href="https://cloud.google.com/compute/docs/ip-addresses/reserve-static-external-ip-address">Reserving a Static External IP Address</a></li>
+</ul>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.GlobalAddressArgs.html">GlobalAddressArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.GlobalAddressState.html">GlobalAddressState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.GlobalForwardingRule.html">GlobalForwardingRule</a></h4>
-      <section></section>
+      <section><p>Represents a GlobalForwardingRule resource. Global forwarding rules are
+used to forward traffic to the correct load balancer for HTTP load
+balancing. Global forwarding rules can only be used for HTTP load
+balancing.</p>
+<p>For more information, see
+<a href="https://cloud.google.com/compute/docs/load-balancing/http/">https://cloud.google.com/compute/docs/load-balancing/http/</a></p>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.GlobalForwardingRuleArgs.html">GlobalForwardingRuleArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.GlobalForwardingRuleState.html">GlobalForwardingRuleState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.HaVpnGateway.html">HaVpnGateway</a></h4>
-      <section></section>
+      <section><p>Represents a VPN gateway running in GCP. This virtual device is managed
+by Google, but used only by you. This type of VPN Gateway allows for the creation
+of VPN solutions with higher availability than classic Target VPN Gateways.</p>
+<p>To get more information about HaVpnGateway, see:</p>
+<ul>
+<li><a href="https://cloud.google.com/compute/docs/reference/rest/beta/vpnGateways">API documentation</a></li>
+<li>How-to Guides</li>
+<li><a href="https://cloud.google.com/vpn/docs/how-to/choosing-a-vpn">Choosing a VPN</a></li>
+<li><a href="https://cloud.google.com/vpn/docs/concepts/overview">Cloud VPN Overview</a></li>
+</ul>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.HaVpnGatewayArgs.html">HaVpnGatewayArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.HaVpnGatewayState.html">HaVpnGatewayState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.HealthCheck.html">HealthCheck</a></h4>
-      <section></section>
+      <section><p>Health Checks determine whether instances are responsive and able to do work.
+They are an important part of a comprehensive load balancing configuration,
+as they enable monitoring instances behind load balancers.</p>
+<p>Health Checks poll instances at a specified interval. Instances that
+do not respond successfully to some number of probes in a row are marked
+as unhealthy. No new connections are sent to unhealthy instances,
+though existing connections will continue. The health check will
+continue to poll unhealthy instances. If an instance later responds
+successfully to some number of consecutive probes, it is marked
+healthy again and can receive new connections.</p>
+<p>To get more information about HealthCheck, see:</p>
+<ul>
+<li><a href="https://cloud.google.com/compute/docs/reference/rest/v1/healthChecks">API documentation</a></li>
+<li>How-to Guides</li>
+<li><a href="https://cloud.google.com/load-balancing/docs/health-checks">Official Documentation</a></li>
+</ul>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.HealthCheckArgs.html">HealthCheckArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.HealthCheckState.html">HealthCheckState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.HttpHealthCheck.html">HttpHealthCheck</a></h4>
-      <section></section>
+      <section><p>An HttpHealthCheck resource. This resource defines a template for how
+individual VMs should be checked for health, via HTTP.</p>
+<blockquote>
+<p><strong>Note:</strong> gcp.compute.HttpHealthCheck is a legacy health check.
+The newer <a href="https://www.terraform.io/docs/providers/google/r/compute_health_check.html">gcp.compute.HealthCheck</a>
+should be preferred for all uses except
+<a href="https://cloud.google.com/compute/docs/load-balancing/network/">Network Load Balancers</a>
+which still require the legacy version.</p>
+</blockquote>
+<p>To get more information about HttpHealthCheck, see:</p>
+<ul>
+<li><a href="https://cloud.google.com/compute/docs/reference/v1/httpHealthChecks">API documentation</a></li>
+<li>How-to Guides</li>
+<li><a href="https://cloud.google.com/compute/docs/load-balancing/health-checks#legacy_health_checks">Adding Health Checks</a></li>
+</ul>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.HttpHealthCheckArgs.html">HttpHealthCheckArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.HttpHealthCheckState.html">HttpHealthCheckState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.HttpsHealthCheck.html">HttpsHealthCheck</a></h4>
-      <section></section>
+      <section><p>An HttpsHealthCheck resource. This resource defines a template for how
+individual VMs should be checked for health, via HTTPS.</p>
+<blockquote>
+<p><strong>Note:</strong> gcp.compute.HttpsHealthCheck is a legacy health check.
+The newer <a href="https://www.terraform.io/docs/providers/google/r/compute_health_check.html">gcp.compute.HealthCheck</a>
+should be preferred for all uses except
+<a href="https://cloud.google.com/compute/docs/load-balancing/network/">Network Load Balancers</a>
+which still require the legacy version.</p>
+</blockquote>
+<p>To get more information about HttpsHealthCheck, see:</p>
+<ul>
+<li><a href="https://cloud.google.com/compute/docs/reference/v1/httpsHealthChecks">API documentation</a></li>
+<li>How-to Guides</li>
+<li><a href="https://cloud.google.com/compute/docs/load-balancing/health-checks#legacy_health_checks">Adding Health Checks</a></li>
+</ul>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.HttpsHealthCheckArgs.html">HttpsHealthCheckArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.HttpsHealthCheckState.html">HttpsHealthCheckState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.Image.html">Image</a></h4>
-      <section></section>
+      <section><p>Represents an Image resource.</p>
+<p>Google Compute Engine uses operating system images to create the root
+persistent disks for your instances. You specify an image when you create
+an instance. Images contain a boot loader, an operating system, and a
+root file system. Linux operating system images are also capable of
+running containers on Compute Engine.</p>
+<p>Images can be either public or custom.</p>
+<p>Public images are provided and maintained by Google, open-source
+communities, and third-party vendors. By default, all projects have
+access to these images and can use them to create instances.  Custom
+images are available only to your project. You can create a custom image
+from root persistent disks and other images. Then, use the custom image
+to create an instance.</p>
+<p>To get more information about Image, see:</p>
+<ul>
+<li><a href="https://cloud.google.com/compute/docs/reference/v1/images">API documentation</a></li>
+<li>How-to Guides</li>
+<li><a href="https://cloud.google.com/compute/docs/images">Official Documentation</a></li>
+</ul>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.ImageArgs.html">ImageArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.ImageState.html">ImageState</a></h4>
@@ -285,9 +578,6 @@
 <a href="https://cloud.google.com/compute/docs/instances">the official documentation</a>
 and
 <a href="https://cloud.google.com/compute/docs/reference/latest/instances">API</a>.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_instance.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_instance.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.InstanceArgs.html">InstanceArgs</a></h4>
       <section></section>
@@ -299,9 +589,6 @@ and
 <p>This resource is specifically to create a compute instance from a given
 <code>source_instance_template</code>. To create an instance without a template, use the
 <code>gcp.compute.Instance</code> resource.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_instance_from_template.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_instance_from_template.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.InstanceFromTemplateArgs.html">InstanceFromTemplateArgs</a></h4>
       <section></section>
@@ -311,13 +598,6 @@ and
       <section><p>Creates a group of dissimilar Compute Engine virtual machine instances.
 For more information, see <a href="https://cloud.google.com/compute/docs/instance-groups/#unmanaged_instance_groups">the official documentation</a>
 and <a href="https://cloud.google.com/compute/docs/reference/latest/instanceGroups">API</a></p>
-<blockquote>
-<p>Recreating an instance group that's in use by another resource will give a
-<code>resourceInUseByAnotherResource</code> error.</p>
-</blockquote>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_instance_group.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_instance_group.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.InstanceGroupArgs.html">InstanceGroupArgs</a></h4>
       <section></section>
@@ -329,30 +609,79 @@ and <a href="https://cloud.google.com/compute/docs/reference/latest/instanceGrou
 <blockquote>
 <p><strong>Note:</strong> Use <a href="https://www.terraform.io/docs/providers/google/r/compute_region_instance_group_manager.html">gcp.compute.RegionInstanceGroupManager</a> to create a regional (multi-zone) instance group manager.</p>
 </blockquote>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_instance_group_manager.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_instance_group_manager.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.InstanceGroupManagerArgs.html">InstanceGroupManagerArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.InstanceGroupManagerState.html">InstanceGroupManagerState</a></h4>
       <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.Compute.InstanceGroupNamedPort.html">InstanceGroupNamedPort</a></h4>
+      <section><p>Mange the named ports setting for a managed instance group without
+managing the group as whole. This resource is primarily intended for use
+with GKE-generated groups that shouldn't otherwise be managed by other
+tools.</p>
+<p>To get more information about InstanceGroupNamedPort, see:</p>
+<ul>
+<li><a href="https://cloud.google.com/compute/docs/reference/rest/v1/instanceGroup">API documentation</a></li>
+<li>How-to Guides</li>
+<li><a href="https://cloud.google.com/compute/docs/instance-groups/">Official Documentation</a></li>
+</ul>
+</section>
+      <h4><a class="xref" href="Pulumi.Gcp.Compute.InstanceGroupNamedPortArgs.html">InstanceGroupNamedPortArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.Compute.InstanceGroupNamedPortState.html">InstanceGroupNamedPortState</a></h4>
+      <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.InstanceGroupState.html">InstanceGroupState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.InstanceIAMBinding.html">InstanceIAMBinding</a></h4>
-      <section></section>
+      <section><p>Three different resources help you manage your IAM policy for Compute Engine Instance. Each of these resources serves a different use case:</p>
+<ul>
+<li><code>gcp.compute.InstanceIAMPolicy</code>: Authoritative. Sets the IAM policy for the instance and replaces any existing policy already attached.</li>
+<li><code>gcp.compute.InstanceIAMBinding</code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the instance are preserved.</li>
+<li><code>gcp.compute.InstanceIAMMember</code>: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the instance are preserved.</li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.compute.InstanceIAMPolicy</code> <strong>cannot</strong> be used in conjunction with <code>gcp.compute.InstanceIAMBinding</code> and <code>gcp.compute.InstanceIAMMember</code> or they will fight over what your policy should be.</p>
+</blockquote>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.compute.InstanceIAMBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.compute.InstanceIAMMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
+</blockquote>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.InstanceIAMBindingArgs.html">InstanceIAMBindingArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.InstanceIAMBindingState.html">InstanceIAMBindingState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.InstanceIAMMember.html">InstanceIAMMember</a></h4>
-      <section></section>
+      <section><p>Three different resources help you manage your IAM policy for Compute Engine Instance. Each of these resources serves a different use case:</p>
+<ul>
+<li><code>gcp.compute.InstanceIAMPolicy</code>: Authoritative. Sets the IAM policy for the instance and replaces any existing policy already attached.</li>
+<li><code>gcp.compute.InstanceIAMBinding</code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the instance are preserved.</li>
+<li><code>gcp.compute.InstanceIAMMember</code>: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the instance are preserved.</li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.compute.InstanceIAMPolicy</code> <strong>cannot</strong> be used in conjunction with <code>gcp.compute.InstanceIAMBinding</code> and <code>gcp.compute.InstanceIAMMember</code> or they will fight over what your policy should be.</p>
+</blockquote>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.compute.InstanceIAMBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.compute.InstanceIAMMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
+</blockquote>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.InstanceIAMMemberArgs.html">InstanceIAMMemberArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.InstanceIAMMemberState.html">InstanceIAMMemberState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.InstanceIAMPolicy.html">InstanceIAMPolicy</a></h4>
-      <section></section>
+      <section><p>Three different resources help you manage your IAM policy for Compute Engine Instance. Each of these resources serves a different use case:</p>
+<ul>
+<li><code>gcp.compute.InstanceIAMPolicy</code>: Authoritative. Sets the IAM policy for the instance and replaces any existing policy already attached.</li>
+<li><code>gcp.compute.InstanceIAMBinding</code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the instance are preserved.</li>
+<li><code>gcp.compute.InstanceIAMMember</code>: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the instance are preserved.</li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.compute.InstanceIAMPolicy</code> <strong>cannot</strong> be used in conjunction with <code>gcp.compute.InstanceIAMBinding</code> and <code>gcp.compute.InstanceIAMMember</code> or they will fight over what your policy should be.</p>
+</blockquote>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.compute.InstanceIAMBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.compute.InstanceIAMMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
+</blockquote>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.InstanceIAMPolicyArgs.html">InstanceIAMPolicyArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.InstanceIAMPolicyState.html">InstanceIAMPolicyState</a></h4>
@@ -364,24 +693,45 @@ and <a href="https://cloud.google.com/compute/docs/reference/latest/instanceGrou
 <a href="https://cloud.google.com/compute/docs/instance-templates">the official documentation</a>
 and
 <a href="https://cloud.google.com/compute/docs/reference/latest/instanceTemplates">API</a>.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_instance_template.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_instance_template.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.InstanceTemplateArgs.html">InstanceTemplateArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.InstanceTemplateState.html">InstanceTemplateState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.InterconnectAttachment.html">InterconnectAttachment</a></h4>
-      <section></section>
+      <section><p>Represents an InterconnectAttachment (VLAN attachment) resource. For more
+information, see Creating VLAN Attachments.</p>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.InterconnectAttachmentArgs.html">InterconnectAttachmentArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.InterconnectAttachmentState.html">InterconnectAttachmentState</a></h4>
       <section></section>
-      <h4><a class="xref" href="Pulumi.Gcp.Compute.Invokes.html">Invokes</a></h4>
-      <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.ManagedSslCertificate.html">ManagedSslCertificate</a></h4>
-      <section></section>
+      <section><p>An SslCertificate resource, used for HTTPS load balancing.  This resource
+represents a certificate for which the certificate secrets are created and
+managed by Google.</p>
+<p>For a resource where you provide the key, see the
+SSL Certificate resource.</p>
+<p>To get more information about ManagedSslCertificate, see:</p>
+<ul>
+<li><a href="https://cloud.google.com/compute/docs/reference/rest/v1/sslCertificates">API documentation</a></li>
+<li>How-to Guides</li>
+<li><a href="https://cloud.google.com/load-balancing/docs/ssl-certificates">Official Documentation</a></li>
+</ul>
+<blockquote>
+<p><strong>Warning:</strong> This resource should be used with extreme caution!  Provisioning an SSL
+certificate is complex.  Ensure that you understand the lifecycle of a
+certificate before attempting complex tasks like cert rotation automatically.
+This resource will &quot;return&quot; as soon as the certificate object is created,
+but post-creation the certificate object will go through a &quot;provisioning&quot;
+process.  The provisioning process can complete only when the domain name
+for which the certificate is created points to a target pool which, itself,
+points at the certificate.  Depending on your DNS provider, this may take
+some time, and migrating from self-managed certificates to Google-managed
+certificates may entail some downtime while the certificate provisions.</p>
+</blockquote>
+<p>In conclusion: Be extremely cautious.</p>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.ManagedSslCertificateArgs.html">ManagedSslCertificateArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.ManagedSslCertificateState.html">ManagedSslCertificateState</a></h4>
@@ -393,15 +743,48 @@ and
       <h4><a class="xref" href="Pulumi.Gcp.Compute.MangedSslCertificateState.html">MangedSslCertificateState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.Network.html">Network</a></h4>
-      <section></section>
+      <section><p>Manages a VPC network or legacy network resource on GCP.</p>
+<p>To get more information about Network, see:</p>
+<ul>
+<li><a href="https://cloud.google.com/compute/docs/reference/rest/v1/networks">API documentation</a></li>
+<li>How-to Guides</li>
+<li><a href="https://cloud.google.com/vpc/docs/vpc">Official Documentation</a></li>
+</ul>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.NetworkArgs.html">NetworkArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.NetworkEndpoint.html">NetworkEndpoint</a></h4>
-      <section></section>
+      <section><p>A Network endpoint represents a IP address and port combination that is
+part of a specific network endpoint group (NEG). NEGs are zonals
+collection of these endpoints for GCP resources within a
+single subnet. <strong>NOTE</strong>: Network endpoints cannot be created outside of a
+network endpoint group.</p>
+<p>To get more information about NetworkEndpoint, see:</p>
+<ul>
+<li><a href="https://cloud.google.com/compute/docs/reference/rest/beta/networkEndpointGroups">API documentation</a></li>
+<li>How-to Guides</li>
+<li><a href="https://cloud.google.com/load-balancing/docs/negs/">Official Documentation</a></li>
+</ul>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.NetworkEndpointArgs.html">NetworkEndpointArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.NetworkEndpointGroup.html">NetworkEndpointGroup</a></h4>
-      <section></section>
+      <section><p>Network endpoint groups (NEGs) are zonal resources that represent
+collections of IP address and port combinations for GCP resources within a
+single subnet. Each IP address and port combination is called a network
+endpoint.</p>
+<p>Network endpoint groups can be used as backends in backend services for
+HTTP(S), TCP proxy, and SSL proxy load balancers. You cannot use NEGs as a
+backend with internal load balancers. Because NEG backends allow you to
+specify IP addresses and ports, you can distribute traffic in a granular
+fashion among applications or containers running within VM instances.</p>
+<p>To get more information about NetworkEndpointGroup, see:</p>
+<ul>
+<li><a href="https://cloud.google.com/compute/docs/reference/rest/beta/networkEndpointGroups">API documentation</a></li>
+<li>How-to Guides</li>
+<li><a href="https://cloud.google.com/load-balancing/docs/negs/">Official Documentation</a></li>
+</ul>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.NetworkEndpointGroupArgs.html">NetworkEndpointGroupArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.NetworkEndpointGroupState.html">NetworkEndpointGroupState</a></h4>
@@ -420,14 +803,21 @@ to be functional.</p>
 <blockquote>
 <p>Subnets IP ranges across peered VPC networks cannot overlap.</p>
 </blockquote>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_network_peering.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_network_peering.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.NetworkPeeringArgs.html">NetworkPeeringArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.NetworkPeeringRoutesConfig.html">NetworkPeeringRoutesConfig</a></h4>
-      <section></section>
+      <section><p>Manage a network peering's route settings without managing the peering as
+a whole. This resource is primarily intended for use with GCP-generated
+peerings that shouldn't otherwise be managed by other tools. Deleting this
+resource is a no-op and the peering will not be modified.</p>
+<p>To get more information about NetworkPeeringRoutesConfig, see:</p>
+<ul>
+<li><a href="https://cloud.google.com/compute/docs/reference/rest/v1/networks/updatePeering">API documentation</a></li>
+<li>How-to Guides</li>
+<li><a href="https://cloud.google.com/vpc/docs/vpc-peering">Official Documentation</a></li>
+</ul>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.NetworkPeeringRoutesConfigArgs.html">NetworkPeeringRoutesConfigArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.NetworkPeeringRoutesConfigState.html">NetworkPeeringRoutesConfigState</a></h4>
@@ -437,19 +827,50 @@ to be functional.</p>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.NetworkState.html">NetworkState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.NodeGroup.html">NodeGroup</a></h4>
-      <section></section>
+      <section><p>Represents a NodeGroup resource to manage a group of sole-tenant nodes.</p>
+<p>To get more information about NodeGroup, see:</p>
+<ul>
+<li><a href="https://cloud.google.com/compute/docs/reference/rest/v1/nodeGroups">API documentation</a></li>
+<li>How-to Guides</li>
+<li><a href="https://cloud.google.com/compute/docs/nodes/">Sole-Tenant Nodes</a></li>
+</ul>
+<blockquote>
+<p><strong>Warning:</strong> Due to limitations of the API, this provider cannot update the
+number of nodes in a node group and changes to node group size either
+through provider config or through external changes will cause
+the provider to delete and recreate the node group.</p>
+</blockquote>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.NodeGroupArgs.html">NodeGroupArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.NodeGroupState.html">NodeGroupState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.NodeTemplate.html">NodeTemplate</a></h4>
-      <section></section>
+      <section><p>Represents a NodeTemplate resource. Node templates specify properties
+for creating sole-tenant nodes, such as node type, vCPU and memory
+requirements, node affinity labels, and region.</p>
+<p>To get more information about NodeTemplate, see:</p>
+<ul>
+<li><a href="https://cloud.google.com/compute/docs/reference/rest/v1/nodeTemplates">API documentation</a></li>
+<li>How-to Guides</li>
+<li><a href="https://cloud.google.com/compute/docs/nodes/">Sole-Tenant Nodes</a></li>
+</ul>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.NodeTemplateArgs.html">NodeTemplateArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.NodeTemplateState.html">NodeTemplateState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.PacketMirroring.html">PacketMirroring</a></h4>
-      <section></section>
+      <section><p>Packet Mirroring mirrors traffic to and from particular VM instances.
+You can use the collected traffic to help you detect security threats
+and monitor application performance.</p>
+<p>To get more information about PacketMirroring, see:</p>
+<ul>
+<li><a href="https://cloud.google.com/compute/docs/reference/rest/v1/packetMirroring">API documentation</a></li>
+<li>How-to Guides</li>
+<li><a href="https://cloud.google.com/vpc/docs/using-packet-mirroring#creating">Using Packet Mirroring</a></li>
+</ul>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.PacketMirroringArgs.html">PacketMirroringArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.PacketMirroringState.html">PacketMirroringState</a></h4>
@@ -460,9 +881,6 @@ to be functional.</p>
 for a project.</p>
 <p>For more information, see,
 <a href="https://cloud.google.com/compute/docs/reference/rest/v1/projects/setDefaultNetworkTier">the Project API documentation</a>.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_project_default_network_tier.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_project_default_network_tier.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.ProjectDefaultNetworkTierArgs.html">ProjectDefaultNetworkTierArgs</a></h4>
       <section></section>
@@ -479,20 +897,14 @@ Keys unset in config but set on the server will be removed. If you want to manag
 key/value pairs within the project metadata rather than the entire set, then use
 google_compute_project_metadata_item.</p>
 </blockquote>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_project_metadata.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_project_metadata.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.ProjectMetadataArgs.html">ProjectMetadataArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.ProjectMetadataItem.html">ProjectMetadataItem</a></h4>
       <section><p>Manages a single key/value pair on metadata common to all instances for
 a project in GCE. Using <code>gcp.compute.ProjectMetadataItem</code> lets you
-manage a single key/value setting with this provider rather than the entire
+manage a single key/value setting in the provider rather than the entire
 project metadata map.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_project_metadata_item.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_project_metadata_item.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.ProjectMetadataItemArgs.html">ProjectMetadataItemArgs</a></h4>
       <section></section>
@@ -501,25 +913,94 @@ project metadata map.</p>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.ProjectMetadataState.html">ProjectMetadataState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.RegionAutoscaler.html">RegionAutoscaler</a></h4>
-      <section></section>
+      <section><p>Represents an Autoscaler resource.</p>
+<p>Autoscalers allow you to automatically scale virtual machine instances in
+managed instance groups according to an autoscaling policy that you
+define.</p>
+<p>To get more information about RegionAutoscaler, see:</p>
+<ul>
+<li><a href="https://cloud.google.com/compute/docs/reference/rest/v1/regionAutoscalers">API documentation</a></li>
+<li>How-to Guides</li>
+<li><a href="https://cloud.google.com/compute/docs/autoscaler/">Autoscaling Groups of Instances</a></li>
+</ul>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.RegionAutoscalerArgs.html">RegionAutoscalerArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.RegionAutoscalerState.html">RegionAutoscalerState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.RegionBackendService.html">RegionBackendService</a></h4>
-      <section></section>
+      <section><p>A Region Backend Service defines a regionally-scoped group of virtual
+machines that will serve traffic for load balancing.</p>
+<p>To get more information about RegionBackendService, see:</p>
+<ul>
+<li><a href="https://cloud.google.com/compute/docs/reference/latest/regionBackendServices">API documentation</a></li>
+<li>How-to Guides</li>
+<li><a href="https://cloud.google.com/compute/docs/load-balancing/internal/">Internal TCP/UDP Load Balancing</a></li>
+</ul>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.RegionBackendServiceArgs.html">RegionBackendServiceArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.RegionBackendServiceState.html">RegionBackendServiceState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.RegionDisk.html">RegionDisk</a></h4>
-      <section></section>
+      <section><p>Persistent disks are durable storage devices that function similarly to
+the physical disks in a desktop or a server. Compute Engine manages the
+hardware behind these devices to ensure data redundancy and optimize
+performance for you. Persistent disks are available as either standard
+hard disk drives (HDD) or solid-state drives (SSD).</p>
+<p>Persistent disks are located independently from your virtual machine
+instances, so you can detach or move persistent disks to keep your data
+even after you delete your instances. Persistent disk performance scales
+automatically with size, so you can resize your existing persistent disks
+or add more persistent disks to an instance to meet your performance and
+storage space requirements.</p>
+<p>Add a persistent disk to your instance when you need reliable and
+affordable storage with consistent performance characteristics.</p>
+<p>To get more information about RegionDisk, see:</p>
+<ul>
+<li><a href="https://cloud.google.com/compute/docs/reference/rest/beta/regionDisks">API documentation</a></li>
+<li>How-to Guides</li>
+<li><a href="https://cloud.google.com/compute/docs/disks/regional-persistent-disk">Adding or Resizing Regional Persistent Disks</a></li>
+</ul>
+<blockquote>
+<p><strong>Warning:</strong> All arguments including the disk encryption key will be stored in the raw
+state as plain-text.
+<a href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
+</blockquote>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.RegionDiskArgs.html">RegionDiskArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.Compute.RegionDiskResourcePolicyAttachment.html">RegionDiskResourcePolicyAttachment</a></h4>
+      <section><p>Adds existing resource policies to a disk. You can only add one policy
+which will be applied to this disk for scheduling snapshot creation.</p>
+<blockquote>
+<p><strong>Note:</strong> This resource does not support zonal disks (<code>gcp.compute.Disk</code>).</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Gcp.Compute.RegionDiskResourcePolicyAttachmentArgs.html">RegionDiskResourcePolicyAttachmentArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.Compute.RegionDiskResourcePolicyAttachmentState.html">RegionDiskResourcePolicyAttachmentState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.RegionDiskState.html">RegionDiskState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.RegionHealthCheck.html">RegionHealthCheck</a></h4>
-      <section></section>
+      <section><p>Health Checks determine whether instances are responsive and able to do work.
+They are an important part of a comprehensive load balancing configuration,
+as they enable monitoring instances behind load balancers.</p>
+<p>Health Checks poll instances at a specified interval. Instances that
+do not respond successfully to some number of probes in a row are marked
+as unhealthy. No new connections are sent to unhealthy instances,
+though existing connections will continue. The health check will
+continue to poll unhealthy instances. If an instance later responds
+successfully to some number of consecutive probes, it is marked
+healthy again and can receive new connections.</p>
+<p>To get more information about RegionHealthCheck, see:</p>
+<ul>
+<li><a href="https://cloud.google.com/compute/docs/reference/rest/beta/regionHealthChecks">API documentation</a></li>
+<li>How-to Guides</li>
+<li><a href="https://cloud.google.com/load-balancing/docs/health-checks">Official Documentation</a></li>
+</ul>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.RegionHealthCheckArgs.html">RegionHealthCheckArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.RegionHealthCheckState.html">RegionHealthCheckState</a></h4>
@@ -532,56 +1013,126 @@ and <a href="https://cloud.google.com/compute/docs/reference/latest/regionInstan
 <blockquote>
 <p><strong>Note:</strong> Use <a href="https://www.terraform.io/docs/providers/google/r/compute_instance_group_manager.html">gcp.compute.InstanceGroupManager</a> to create a single-zone instance group manager.</p>
 </blockquote>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_region_instance_group_manager.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_region_instance_group_manager.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.RegionInstanceGroupManagerArgs.html">RegionInstanceGroupManagerArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.RegionInstanceGroupManagerState.html">RegionInstanceGroupManagerState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.RegionSslCertificate.html">RegionSslCertificate</a></h4>
-      <section></section>
+      <section><p>A RegionSslCertificate resource, used for HTTPS load balancing. This resource
+provides a mechanism to upload an SSL key and certificate to
+the load balancer to serve secure connections from the user.</p>
+<p>To get more information about RegionSslCertificate, see:</p>
+<ul>
+<li><a href="https://cloud.google.com/compute/docs/reference/rest/v1/regionSslCertificates">API documentation</a></li>
+<li>How-to Guides</li>
+<li><a href="https://cloud.google.com/load-balancing/docs/ssl-certificates">Official Documentation</a></li>
+</ul>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.RegionSslCertificateArgs.html">RegionSslCertificateArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.RegionSslCertificateState.html">RegionSslCertificateState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.RegionTargetHttpProxy.html">RegionTargetHttpProxy</a></h4>
-      <section></section>
+      <section><p>Represents a RegionTargetHttpProxy resource, which is used by one or more
+forwarding rules to route incoming HTTP requests to a URL map.</p>
+<p>To get more information about RegionTargetHttpProxy, see:</p>
+<ul>
+<li><a href="https://cloud.google.com/compute/docs/reference/rest/beta/regionTargetHttpProxies">API documentation</a></li>
+<li>How-to Guides</li>
+<li><a href="https://cloud.google.com/compute/docs/load-balancing/http/target-proxies">Official Documentation</a></li>
+</ul>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.RegionTargetHttpProxyArgs.html">RegionTargetHttpProxyArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.RegionTargetHttpProxyState.html">RegionTargetHttpProxyState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.RegionTargetHttpsProxy.html">RegionTargetHttpsProxy</a></h4>
-      <section></section>
+      <section><p>Represents a RegionTargetHttpsProxy resource, which is used by one or more
+forwarding rules to route incoming HTTPS requests to a URL map.</p>
+<p>To get more information about RegionTargetHttpsProxy, see:</p>
+<ul>
+<li><a href="https://cloud.google.com/compute/docs/reference/rest/beta/regionTargetHttpsProxies">API documentation</a></li>
+<li>How-to Guides</li>
+<li><a href="https://cloud.google.com/compute/docs/load-balancing/http/target-proxies">Official Documentation</a></li>
+</ul>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.RegionTargetHttpsProxyArgs.html">RegionTargetHttpsProxyArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.RegionTargetHttpsProxyState.html">RegionTargetHttpsProxyState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.RegionUrlMap.html">RegionUrlMap</a></h4>
-      <section></section>
+      <section><p>UrlMaps are used to route requests to a backend service based on rules
+that you define for the host and path of an incoming URL.</p>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.RegionUrlMapArgs.html">RegionUrlMapArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.RegionUrlMapState.html">RegionUrlMapState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.Reservation.html">Reservation</a></h4>
-      <section></section>
+      <section><p>Represents a reservation resource. A reservation ensures that capacity is
+held in a specific zone even if the reserved VMs are not running.</p>
+<p>Reservations apply only to Compute Engine, Cloud Dataproc, and Google
+Kubernetes Engine VM usage.Reservations do not apply to <code>f1-micro</code> or
+<code>g1-small</code> machine types, preemptible VMs, sole tenant nodes, or other
+services not listed above
+like Cloud SQL and Dataflow.</p>
+<p>To get more information about Reservation, see:</p>
+<ul>
+<li><a href="https://cloud.google.com/compute/docs/reference/rest/v1/reservations">API documentation</a></li>
+<li>How-to Guides</li>
+<li><a href="https://cloud.google.com/compute/docs/instances/reserving-zonal-resources">Reserving zonal resources</a></li>
+</ul>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.ReservationArgs.html">ReservationArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.ReservationState.html">ReservationState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.ResourcePolicy.html">ResourcePolicy</a></h4>
-      <section></section>
+      <section><p>A policy that can be attached to a resource to specify or schedule actions on that resource.</p>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.ResourcePolicyArgs.html">ResourcePolicyArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.ResourcePolicyState.html">ResourcePolicyState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.Route.html">Route</a></h4>
-      <section></section>
+      <section><p>Represents a Route resource.</p>
+<p>A route is a rule that specifies how certain packets should be handled by
+the virtual network. Routes are associated with virtual machines by tag,
+and the set of routes for a particular virtual machine is called its
+routing table. For each packet leaving a virtual machine, the system
+searches that virtual machine's routing table for a single best matching
+route.</p>
+<p>Routes match packets by destination IP address, preferring smaller or more
+specific ranges over larger ones. If there is a tie, the system selects
+the route with the smallest priority value. If there is still a tie, it
+uses the layer three and four packet headers to select just one of the
+remaining matching routes. The packet is then forwarded as specified by
+the next_hop field of the winning route -- either to another virtual
+machine destination, a virtual machine gateway or a Compute
+Engine-operated gateway. Packets that do not match any route in the
+sending virtual machine's routing table will be dropped.</p>
+<p>A Route resource must have exactly one specification of either
+nextHopGateway, nextHopInstance, nextHopIp, nextHopVpnTunnel, or
+nextHopIlb.</p>
+<p>To get more information about Route, see:</p>
+<ul>
+<li><a href="https://cloud.google.com/compute/docs/reference/rest/v1/routes">API documentation</a></li>
+<li>How-to Guides</li>
+<li><a href="https://cloud.google.com/vpc/docs/using-routes">Using Routes</a></li>
+</ul>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.RouteArgs.html">RouteArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.Router.html">Router</a></h4>
-      <section></section>
+      <section><p>Represents a Router resource.</p>
+<p>To get more information about Router, see:</p>
+<ul>
+<li><a href="https://cloud.google.com/compute/docs/reference/rest/v1/routers">API documentation</a></li>
+<li>How-to Guides</li>
+<li><a href="https://cloud.google.com/router/docs/">Google Cloud Router</a></li>
+</ul>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.RouterArgs.html">RouterArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.RouterInterface.html">RouterInterface</a></h4>
@@ -589,22 +1140,36 @@ and <a href="https://cloud.google.com/compute/docs/reference/latest/regionInstan
 <a href="https://cloud.google.com/compute/docs/cloudrouter">the official documentation</a>
 and
 <a href="https://cloud.google.com/compute/docs/reference/latest/routers">API</a>.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_router_interface.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_router_interface.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.RouterInterfaceArgs.html">RouterInterfaceArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.RouterInterfaceState.html">RouterInterfaceState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.RouterNat.html">RouterNat</a></h4>
-      <section></section>
+      <section><p>A NAT service created in a router.</p>
+<p>To get more information about RouterNat, see:</p>
+<ul>
+<li><a href="https://cloud.google.com/compute/docs/reference/rest/v1/routers">API documentation</a></li>
+<li>How-to Guides</li>
+<li><a href="https://cloud.google.com/router/docs/">Google Cloud Router</a></li>
+</ul>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.RouterNatArgs.html">RouterNatArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.RouterNatState.html">RouterNatState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.RouterPeer.html">RouterPeer</a></h4>
-      <section></section>
+      <section><p>BGP information that must be configured into the routing stack to
+establish BGP peering. This information must specify the peer ASN
+and either the interface name, IP address, or peer IP address.
+Please refer to RFC4273.</p>
+<p>To get more information about RouterBgpPeer, see:</p>
+<ul>
+<li><a href="https://cloud.google.com/compute/docs/reference/rest/v1/routers">API documentation</a></li>
+<li>How-to Guides</li>
+<li><a href="https://cloud.google.com/router/docs/">Google Cloud Router</a></li>
+</ul>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.RouterPeerArgs.html">RouterPeerArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.RouterPeerState.html">RouterPeerState</a></h4>
@@ -614,13 +1179,23 @@ and
       <h4><a class="xref" href="Pulumi.Gcp.Compute.RouteState.html">RouteState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.SecurityPolicy.html">SecurityPolicy</a></h4>
-      <section></section>
+      <section><p>A Security Policy defines an IP blacklist or whitelist that protects load balanced Google Cloud services by denying or permitting traffic from specified IP ranges. For more information
+see the <a href="https://cloud.google.com/armor/docs/configure-security-policies">official documentation</a>
+and the <a href="https://cloud.google.com/compute/docs/reference/rest/beta/securityPolicies">API</a>.</p>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.SecurityPolicyArgs.html">SecurityPolicyArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.SecurityPolicyState.html">SecurityPolicyState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.SecurityScanConfig.html">SecurityScanConfig</a></h4>
-      <section></section>
+      <section><p>A ScanConfig resource contains the configurations to launch a scan.</p>
+<p>To get more information about ScanConfig, see:</p>
+<ul>
+<li><a href="https://cloud.google.com/security-scanner/docs/reference/rest/v1beta/projects.scanConfigs">API documentation</a></li>
+<li>How-to Guides</li>
+<li><a href="https://cloud.google.com/security-scanner/docs/scanning">Using Cloud Security Scanner</a></li>
+</ul>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.SecurityScanConfigArgs.html">SecurityScanConfigArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.SecurityScanConfigState.html">SecurityScanConfigState</a></h4>
@@ -632,9 +1207,6 @@ feature for a project, assigning it as a Shared VPC host project.</p>
 <p>For more information, see,
 <a href="https://cloud.google.com/compute/docs/reference/latest/projects">the Project API documentation</a>,
 where the Shared VPC feature is referred to by its former name &quot;XPN&quot;.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_shared_vpc_host_project.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_shared_vpc_host_project.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.SharedVPCHostProjectArgs.html">SharedVPCHostProjectArgs</a></h4>
       <section></section>
@@ -648,50 +1220,142 @@ with a given host project.</p>
 <p>For more information, see,
 <a href="https://cloud.google.com/compute/docs/reference/latest/projects">the Project API documentation</a>,
 where the Shared VPC feature is referred to by its former name &quot;XPN&quot;.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_shared_vpc_service_project.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_shared_vpc_service_project.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.SharedVPCServiceProjectArgs.html">SharedVPCServiceProjectArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.SharedVPCServiceProjectState.html">SharedVPCServiceProjectState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.Snapshot.html">Snapshot</a></h4>
-      <section></section>
+      <section><p>Represents a Persistent Disk Snapshot resource.</p>
+<p>Use snapshots to back up data from your persistent disks. Snapshots are
+different from public images and custom images, which are used primarily
+to create instances or configure instance templates. Snapshots are useful
+for periodic backup of the data on your persistent disks. You can create
+snapshots from persistent disks even while they are attached to running
+instances.</p>
+<p>Snapshots are incremental, so you can create regular snapshots on a
+persistent disk faster and at a much lower cost than if you regularly
+created a full image of the disk.</p>
+<p>To get more information about Snapshot, see:</p>
+<ul>
+<li><a href="https://cloud.google.com/compute/docs/reference/rest/v1/snapshots">API documentation</a></li>
+<li>How-to Guides</li>
+<li><a href="https://cloud.google.com/compute/docs/disks/create-snapshots">Official Documentation</a></li>
+</ul>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.SnapshotArgs.html">SnapshotArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.SnapshotState.html">SnapshotState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.SSLCertificate.html">SSLCertificate</a></h4>
-      <section></section>
+      <section><p>An SslCertificate resource, used for HTTPS load balancing. This resource
+provides a mechanism to upload an SSL key and certificate to
+the load balancer to serve secure connections from the user.</p>
+<p>To get more information about SslCertificate, see:</p>
+<ul>
+<li><a href="https://cloud.google.com/compute/docs/reference/rest/v1/sslCertificates">API documentation</a></li>
+<li>How-to Guides</li>
+<li><a href="https://cloud.google.com/load-balancing/docs/ssl-certificates">Official Documentation</a></li>
+</ul>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.SSLCertificateArgs.html">SSLCertificateArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.SSLCertificateState.html">SSLCertificateState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.SSLPolicy.html">SSLPolicy</a></h4>
-      <section></section>
+      <section><p>Represents a SSL policy. SSL policies give you the ability to control the
+features of SSL that your SSL proxy or HTTPS load balancer negotiates.</p>
+<p>To get more information about SslPolicy, see:</p>
+<ul>
+<li><a href="https://cloud.google.com/compute/docs/reference/rest/v1/sslPolicies">API documentation</a></li>
+<li>How-to Guides</li>
+<li><a href="https://cloud.google.com/compute/docs/load-balancing/ssl-policies">Using SSL Policies</a></li>
+</ul>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.SSLPolicyArgs.html">SSLPolicyArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.SSLPolicyState.html">SSLPolicyState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.Subnetwork.html">Subnetwork</a></h4>
-      <section></section>
+      <section><p>A VPC network is a virtual version of the traditional physical networks
+that exist within and between physical data centers. A VPC network
+provides connectivity for your Compute Engine virtual machine (VM)
+instances, Container Engine containers, App Engine Flex services, and
+other network-related resources.</p>
+<p>Each GCP project contains one or more VPC networks. Each VPC network is a
+global entity spanning all GCP regions. This global VPC network allows VM
+instances and other resources to communicate with each other via internal,
+private IP addresses.</p>
+<p>Each VPC network is subdivided into subnets, and each subnet is contained
+within a single region. You can have more than one subnet in a region for
+a given VPC network. Each subnet has a contiguous private RFC1918 IP
+space. You create instances, containers, and the like in these subnets.
+When you create an instance, you must create it in a subnet, and the
+instance draws its internal IP address from that subnet.</p>
+<p>Virtual machine (VM) instances in a VPC network can communicate with
+instances in all other subnets of the same VPC network, regardless of
+region, using their RFC1918 private IP addresses. You can isolate portions
+of the network, even entire subnets, using firewall rules.</p>
+<p>To get more information about Subnetwork, see:</p>
+<ul>
+<li><a href="https://cloud.google.com/compute/docs/reference/rest/beta/subnetworks">API documentation</a></li>
+<li>How-to Guides</li>
+<li><a href="https://cloud.google.com/vpc/docs/configure-private-google-access">Private Google Access</a></li>
+<li><a href="https://cloud.google.com/vpc/docs/using-vpc">Cloud Networking</a></li>
+</ul>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.SubnetworkArgs.html">SubnetworkArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.SubnetworkIAMBinding.html">SubnetworkIAMBinding</a></h4>
-      <section></section>
+      <section><p>Three different resources help you manage your IAM policy for Compute Engine Subnetwork. Each of these resources serves a different use case:</p>
+<ul>
+<li><code>gcp.compute.SubnetworkIAMPolicy</code>: Authoritative. Sets the IAM policy for the subnetwork and replaces any existing policy already attached.</li>
+<li><code>gcp.compute.SubnetworkIAMBinding</code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the subnetwork are preserved.</li>
+<li><code>gcp.compute.SubnetworkIAMMember</code>: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the subnetwork are preserved.</li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.compute.SubnetworkIAMPolicy</code> <strong>cannot</strong> be used in conjunction with <code>gcp.compute.SubnetworkIAMBinding</code> and <code>gcp.compute.SubnetworkIAMMember</code> or they will fight over what your policy should be.</p>
+</blockquote>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.compute.SubnetworkIAMBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.compute.SubnetworkIAMMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
+</blockquote>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.SubnetworkIAMBindingArgs.html">SubnetworkIAMBindingArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.SubnetworkIAMBindingState.html">SubnetworkIAMBindingState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.SubnetworkIAMMember.html">SubnetworkIAMMember</a></h4>
-      <section></section>
+      <section><p>Three different resources help you manage your IAM policy for Compute Engine Subnetwork. Each of these resources serves a different use case:</p>
+<ul>
+<li><code>gcp.compute.SubnetworkIAMPolicy</code>: Authoritative. Sets the IAM policy for the subnetwork and replaces any existing policy already attached.</li>
+<li><code>gcp.compute.SubnetworkIAMBinding</code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the subnetwork are preserved.</li>
+<li><code>gcp.compute.SubnetworkIAMMember</code>: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the subnetwork are preserved.</li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.compute.SubnetworkIAMPolicy</code> <strong>cannot</strong> be used in conjunction with <code>gcp.compute.SubnetworkIAMBinding</code> and <code>gcp.compute.SubnetworkIAMMember</code> or they will fight over what your policy should be.</p>
+</blockquote>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.compute.SubnetworkIAMBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.compute.SubnetworkIAMMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
+</blockquote>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.SubnetworkIAMMemberArgs.html">SubnetworkIAMMemberArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.SubnetworkIAMMemberState.html">SubnetworkIAMMemberState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.SubnetworkIAMPolicy.html">SubnetworkIAMPolicy</a></h4>
-      <section></section>
+      <section><p>Three different resources help you manage your IAM policy for Compute Engine Subnetwork. Each of these resources serves a different use case:</p>
+<ul>
+<li><code>gcp.compute.SubnetworkIAMPolicy</code>: Authoritative. Sets the IAM policy for the subnetwork and replaces any existing policy already attached.</li>
+<li><code>gcp.compute.SubnetworkIAMBinding</code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the subnetwork are preserved.</li>
+<li><code>gcp.compute.SubnetworkIAMMember</code>: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the subnetwork are preserved.</li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.compute.SubnetworkIAMPolicy</code> <strong>cannot</strong> be used in conjunction with <code>gcp.compute.SubnetworkIAMBinding</code> and <code>gcp.compute.SubnetworkIAMMember</code> or they will fight over what your policy should be.</p>
+</blockquote>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.compute.SubnetworkIAMBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.compute.SubnetworkIAMMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
+</blockquote>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.SubnetworkIAMPolicyArgs.html">SubnetworkIAMPolicyArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.SubnetworkIAMPolicyState.html">SubnetworkIAMPolicyState</a></h4>
@@ -699,19 +1363,47 @@ where the Shared VPC feature is referred to by its former name &quot;XPN&quot;.<
       <h4><a class="xref" href="Pulumi.Gcp.Compute.SubnetworkState.html">SubnetworkState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.TargetHttpProxy.html">TargetHttpProxy</a></h4>
-      <section></section>
+      <section><p>Represents a TargetHttpProxy resource, which is used by one or more global
+forwarding rule to route incoming HTTP requests to a URL map.</p>
+<p>To get more information about TargetHttpProxy, see:</p>
+<ul>
+<li><a href="https://cloud.google.com/compute/docs/reference/v1/targetHttpProxies">API documentation</a></li>
+<li>How-to Guides</li>
+<li><a href="https://cloud.google.com/compute/docs/load-balancing/http/target-proxies">Official Documentation</a></li>
+</ul>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.TargetHttpProxyArgs.html">TargetHttpProxyArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.TargetHttpProxyState.html">TargetHttpProxyState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.TargetHttpsProxy.html">TargetHttpsProxy</a></h4>
-      <section></section>
+      <section><p>Represents a TargetHttpsProxy resource, which is used by one or more
+global forwarding rule to route incoming HTTPS requests to a URL map.</p>
+<p>To get more information about TargetHttpsProxy, see:</p>
+<ul>
+<li><a href="https://cloud.google.com/compute/docs/reference/v1/targetHttpsProxies">API documentation</a></li>
+<li>How-to Guides</li>
+<li><a href="https://cloud.google.com/compute/docs/load-balancing/http/target-proxies">Official Documentation</a></li>
+</ul>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.TargetHttpsProxyArgs.html">TargetHttpsProxyArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.TargetHttpsProxyState.html">TargetHttpsProxyState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.TargetInstance.html">TargetInstance</a></h4>
-      <section></section>
+      <section><p>Represents a TargetInstance resource which defines an endpoint instance
+that terminates traffic of certain protocols. In particular, they are used
+in Protocol Forwarding, where forwarding rules can send packets to a
+non-NAT'ed target instance. Each target instance contains a single
+virtual machine instance that receives and handles traffic from the
+corresponding forwarding rules.</p>
+<p>To get more information about TargetInstance, see:</p>
+<ul>
+<li><a href="https://cloud.google.com/compute/docs/reference/v1/targetInstances">API documentation</a></li>
+<li>How-to Guides</li>
+<li><a href="https://cloud.google.com/compute/docs/protocol-forwarding">Using Protocol Forwarding</a></li>
+</ul>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.TargetInstanceArgs.html">TargetInstanceArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.TargetInstanceState.html">TargetInstanceState</a></h4>
@@ -722,40 +1414,75 @@ target of a network load balancer (Forwarding Rule). For more information see
 <a href="https://cloud.google.com/compute/docs/load-balancing/network/target-pools">the official
 documentation</a>
 and <a href="https://cloud.google.com/compute/docs/reference/latest/targetPools">API</a>.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_target_pool.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_target_pool.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.TargetPoolArgs.html">TargetPoolArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.TargetPoolState.html">TargetPoolState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.TargetSSLProxy.html">TargetSSLProxy</a></h4>
-      <section></section>
+      <section><p>Represents a TargetSslProxy resource, which is used by one or more
+global forwarding rule to route incoming SSL requests to a backend
+service.</p>
+<p>To get more information about TargetSslProxy, see:</p>
+<ul>
+<li><a href="https://cloud.google.com/compute/docs/reference/v1/targetSslProxies">API documentation</a></li>
+<li>How-to Guides</li>
+<li><a href="https://cloud.google.com/compute/docs/load-balancing/tcp-ssl/">Setting Up SSL proxy for Google Cloud Load Balancing</a></li>
+</ul>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.TargetSSLProxyArgs.html">TargetSSLProxyArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.TargetSSLProxyState.html">TargetSSLProxyState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.TargetTCPProxy.html">TargetTCPProxy</a></h4>
-      <section></section>
+      <section><p>Represents a TargetTcpProxy resource, which is used by one or more
+global forwarding rule to route incoming TCP requests to a Backend
+service.</p>
+<p>To get more information about TargetTcpProxy, see:</p>
+<ul>
+<li><a href="https://cloud.google.com/compute/docs/reference/v1/targetTcpProxies">API documentation</a></li>
+<li>How-to Guides</li>
+<li><a href="https://cloud.google.com/compute/docs/load-balancing/tcp-ssl/tcp-proxy">Setting Up TCP proxy for Google Cloud Load Balancing</a></li>
+</ul>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.TargetTCPProxyArgs.html">TargetTCPProxyArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.TargetTCPProxyState.html">TargetTCPProxyState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.URLMap.html">URLMap</a></h4>
-      <section></section>
+      <section><p>UrlMaps are used to route requests to a backend service based on rules
+that you define for the host and path of an incoming URL.</p>
+<p>To get more information about UrlMap, see:</p>
+<ul>
+<li><a href="https://cloud.google.com/compute/docs/reference/rest/v1/urlMaps">API documentation</a></li>
+</ul>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.URLMapArgs.html">URLMapArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.URLMapState.html">URLMapState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.VPNGateway.html">VPNGateway</a></h4>
-      <section></section>
+      <section><p>Represents a VPN gateway running in GCP. This virtual device is managed
+by Google, but used only by you.</p>
+<p>To get more information about VpnGateway, see:</p>
+<ul>
+<li><a href="https://cloud.google.com/compute/docs/reference/rest/v1/targetVpnGateways">API documentation</a></li>
+</ul>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.VPNGatewayArgs.html">VPNGatewayArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.VPNGatewayState.html">VPNGatewayState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.VPNTunnel.html">VPNTunnel</a></h4>
-      <section></section>
+      <section><p>VPN tunnel resource.</p>
+<p>To get more information about VpnTunnel, see:</p>
+<ul>
+<li><a href="https://cloud.google.com/compute/docs/reference/rest/v1/vpnTunnels">API documentation</a></li>
+<li>How-to Guides</li>
+<li><a href="https://cloud.google.com/vpn/docs/concepts/overview">Cloud VPN Overview</a></li>
+<li><a href="https://cloud.google.com/vpn/docs/concepts/choosing-networks-routing">Networks and Tunnel Routing</a></li>
+</ul>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.VPNTunnelArgs.html">VPNTunnelArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Compute.VPNTunnelState.html">VPNTunnelState</a></h4>

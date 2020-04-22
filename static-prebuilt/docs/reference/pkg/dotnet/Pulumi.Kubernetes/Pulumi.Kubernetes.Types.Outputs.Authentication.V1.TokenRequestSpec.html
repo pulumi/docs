@@ -79,40 +79,16 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">TokenRequestSpec</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Authentication.V1.html">Pulumi.Kubernetes.Types.Outputs.Authentication.V1</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Kubernetes.dll</h6>
   <h5 id="Pulumi_Kubernetes_Types_Outputs_Authentication_V1_TokenRequestSpec_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class TokenRequestSpec</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class TokenRequestSpec : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L8638">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L8644">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Authentication_V1_TokenRequestSpec_Audiences" data-uid="Pulumi.Kubernetes.Types.Outputs.Authentication.V1.TokenRequestSpec.Audiences">Audiences</h4>
   <div class="markdown level1 summary"><p>Audiences are the intendend audiences of the token. A recipient of a token must
@@ -136,13 +112,13 @@ between the target audiences.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L8646">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L8652">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Authentication_V1_TokenRequestSpec_BoundObjectRef" data-uid="Pulumi.Kubernetes.Types.Outputs.Authentication.V1.TokenRequestSpec.BoundObjectRef">BoundObjectRef</h4>
   <div class="markdown level1 summary"><p>BoundObjectRef is a reference to an object that the token will be bound to. The token
@@ -171,7 +147,7 @@ ExpirationSeconds small if you want prompt revocation.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L8653">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L8659">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Authentication_V1_TokenRequestSpec_ExpirationSeconds" data-uid="Pulumi.Kubernetes.Types.Outputs.Authentication.V1.TokenRequestSpec.ExpirationSeconds">ExpirationSeconds</h4>
   <div class="markdown level1 summary"><p>ExpirationSeconds is the requested duration of validity of the request. The token issuer
@@ -205,7 +181,7 @@ may return a token with a different validity duration so a client needs to check
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L8628" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L8634" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

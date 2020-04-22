@@ -71,60 +71,27 @@
   
   <h1 id="Pulumi_Gcp_Kms_CryptoKeyIAMBinding" data-uid="Pulumi.Gcp.Kms.CryptoKeyIAMBinding" class="text-break">Class CryptoKeyIAMBinding
   </h1>
-  <div class="markdown level0 summary"><p>Allows creation and management of a single binding within IAM policy for
-an existing Google Cloud KMS crypto key.</p>
+  <div class="markdown level0 summary"><p>Three different resources help you manage your IAM policy for KMS crypto key. Each of these resources serves a different use case:</p>
+<ul>
+<li><code>gcp.kms.CryptoKeyIAMPolicy</code>: Authoritative. Sets the IAM policy for the crypto key and replaces any existing policy already attached.</li>
+<li><code>gcp.kms.CryptoKeyIAMBinding</code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the crypto key are preserved.</li>
+<li><code>gcp.kms.CryptoKeyIAMMember</code>: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the crypto key are preserved.</li>
+</ul>
 <blockquote>
-<p><strong>Note:</strong> On create, this resource will overwrite members of any existing roles.
-Use <code>import</code> and inspect the preview output to ensure
-your existing members are preserved.</p>
+<p><strong>Note:</strong> <code>gcp.kms.CryptoKeyIAMPolicy</code> <strong>cannot</strong> be used in conjunction with <code>gcp.kms.CryptoKeyIAMBinding</code> and <code>gcp.kms.CryptoKeyIAMMember</code> or they will fight over what your policy should be.</p>
 </blockquote>
 <blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/google_kms_crypto_key_iam_binding.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/google_kms_crypto_key_iam_binding.html.markdown</a>.</p>
+<p><strong>Note:</strong> <code>gcp.kms.CryptoKeyIAMBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.kms.CryptoKeyIAMMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
 </blockquote>
+<p>With IAM Conditions:</p>
+<p>With IAM Conditions:</p>
+<p>With IAM Conditions:</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
-    <div class="level3"><span class="xref">CryptoKeyIAMBinding</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">CryptoKeyIAMBinding</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.Kms.html">Pulumi.Gcp.Kms</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
@@ -135,16 +102,16 @@ your existing members are preserved.</p>
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Kms/CryptoKeyIAMBinding.cs/#L64">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Kms/CryptoKeyIAMBinding.cs/#L73">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Kms_CryptoKeyIAMBinding__ctor_" data-uid="Pulumi.Gcp.Kms.CryptoKeyIAMBinding.#ctor*"></a>
-  <h4 id="Pulumi_Gcp_Kms_CryptoKeyIAMBinding__ctor_System_String_Pulumi_Gcp_Kms_CryptoKeyIAMBindingArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Gcp.Kms.CryptoKeyIAMBinding.#ctor(System.String,Pulumi.Gcp.Kms.CryptoKeyIAMBindingArgs,Pulumi.CustomResourceOptions)">CryptoKeyIAMBinding(String, CryptoKeyIAMBindingArgs, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Gcp_Kms_CryptoKeyIAMBinding__ctor_System_String_Pulumi_Gcp_Kms_CryptoKeyIAMBindingArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Gcp.Kms.CryptoKeyIAMBinding.#ctor(System.String,Pulumi.Gcp.Kms.CryptoKeyIAMBindingArgs,System.Nullable{CustomResourceOptions})">CryptoKeyIAMBinding(String, CryptoKeyIAMBindingArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Create a CryptoKeyIAMBinding resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public CryptoKeyIAMBinding(string name, CryptoKeyIAMBindingArgs args, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public CryptoKeyIAMBinding(string name, CryptoKeyIAMBindingArgs args, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -169,7 +136,7 @@ your existing members are preserved.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -179,11 +146,13 @@ your existing members are preserved.</p>
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Kms/CryptoKeyIAMBinding.cs/#L24">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Kms/CryptoKeyIAMBinding.cs/#L37">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Kms_CryptoKeyIAMBinding_Condition_" data-uid="Pulumi.Gcp.Kms.CryptoKeyIAMBinding.Condition*"></a>
   <h4 id="Pulumi_Gcp_Kms_CryptoKeyIAMBinding_Condition" data-uid="Pulumi.Gcp.Kms.CryptoKeyIAMBinding.Condition">Condition</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>An <a href="https://cloud.google.com/iam/docs/conditions-overview">IAM Condition</a> for a given binding.
+Structure is documented below.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -199,20 +168,20 @@ your existing members are preserved.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Gcp.Kms.Outputs.CryptoKeyIAMBindingCondition.html">CryptoKeyIAMBindingCondition</a>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Gcp.Kms.Outputs.CryptoKeyIAMBindingCondition.html">CryptoKeyIAMBindingCondition</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Kms/CryptoKeyIAMBinding.cs/#L33">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Kms/CryptoKeyIAMBinding.cs/#L46">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Kms_CryptoKeyIAMBinding_CryptoKeyId_" data-uid="Pulumi.Gcp.Kms.CryptoKeyIAMBinding.CryptoKeyId*"></a>
   <h4 id="Pulumi_Gcp_Kms_CryptoKeyIAMBinding_CryptoKeyId" data-uid="Pulumi.Gcp.Kms.CryptoKeyIAMBinding.CryptoKeyId">CryptoKeyId</h4>
   <div class="markdown level1 summary"><p>The crypto key ID, in the form
 <code>{project_id}/{location_name}/{key_ring_name}/{crypto_key_name}</code> or
-<code>{location_name}/{key_ring_name}/{crypto_key_name}</code>.
-In the second form, the provider's project setting will be used as a fallback.</p>
+<code>{location_name}/{key_ring_name}/{crypto_key_name}</code>. In the second form,
+the provider's project setting will be used as a fallback.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -229,17 +198,17 @@ In the second form, the provider's project setting will be used as a fallback.</
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Kms/CryptoKeyIAMBinding.cs/#L39">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Kms/CryptoKeyIAMBinding.cs/#L52">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Kms_CryptoKeyIAMBinding_Etag_" data-uid="Pulumi.Gcp.Kms.CryptoKeyIAMBinding.Etag*"></a>
   <h4 id="Pulumi_Gcp_Kms_CryptoKeyIAMBinding_Etag" data-uid="Pulumi.Gcp.Kms.CryptoKeyIAMBinding.Etag">Etag</h4>
-  <div class="markdown level1 summary"><p>(Computed) The etag of the crypto key's IAM policy.</p>
+  <div class="markdown level1 summary"><p>(Computed) The etag of the project's IAM policy.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -256,18 +225,17 @@ In the second form, the provider's project setting will be used as a fallback.</
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Kms/CryptoKeyIAMBinding.cs/#L45">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Kms/CryptoKeyIAMBinding.cs/#L55">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Kms_CryptoKeyIAMBinding_Members_" data-uid="Pulumi.Gcp.Kms.CryptoKeyIAMBinding.Members*"></a>
   <h4 id="Pulumi_Gcp_Kms_CryptoKeyIAMBinding_Members" data-uid="Pulumi.Gcp.Kms.CryptoKeyIAMBinding.Members">Members</h4>
-  <div class="markdown level1 summary"><p>A list of users that the role should apply to. For more details on format and restrictions see <a href="https://cloud.google.com/billing/reference/rest/v1/Policy#Binding">https://cloud.google.com/billing/reference/rest/v1/Policy#Binding</a></p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -283,18 +251,17 @@ In the second form, the provider's project setting will be used as a fallback.</
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Kms/CryptoKeyIAMBinding.cs/#L53">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Kms/CryptoKeyIAMBinding.cs/#L62">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Kms_CryptoKeyIAMBinding_Role_" data-uid="Pulumi.Gcp.Kms.CryptoKeyIAMBinding.Role*"></a>
   <h4 id="Pulumi_Gcp_Kms_CryptoKeyIAMBinding_Role" data-uid="Pulumi.Gcp.Kms.CryptoKeyIAMBinding.Role">Role</h4>
-  <div class="markdown level1 summary"><p>The role that should be applied. Only one
-<code>gcp.kms.CryptoKeyIAMBinding</code> can be used per role. Note that custom roles must be of the format
+  <div class="markdown level1 summary"><p>The role that should be applied. Note that custom roles must be of the format
 <code>[projects|organizations]/{parent-name}/roles/{role-name}</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -312,7 +279,7 @@ In the second form, the provider's project setting will be used as a fallback.</
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -320,17 +287,17 @@ In the second form, the provider's project setting will be used as a fallback.</
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Kms/CryptoKeyIAMBinding.cs/#L94">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Kms/CryptoKeyIAMBinding.cs/#L103">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Kms_CryptoKeyIAMBinding_Get_" data-uid="Pulumi.Gcp.Kms.CryptoKeyIAMBinding.Get*"></a>
-  <h4 id="Pulumi_Gcp_Kms_CryptoKeyIAMBinding_Get_System_String_Pulumi_Input_System_String__Pulumi_Gcp_Kms_CryptoKeyIAMBindingState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Gcp.Kms.CryptoKeyIAMBinding.Get(System.String,Pulumi.Input{System.String},Pulumi.Gcp.Kms.CryptoKeyIAMBindingState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, CryptoKeyIAMBindingState, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Gcp_Kms_CryptoKeyIAMBinding_Get_System_String_Input_System_String__Pulumi_Gcp_Kms_CryptoKeyIAMBindingState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Gcp.Kms.CryptoKeyIAMBinding.Get(System.String,Input{System.String},Pulumi.Gcp.Kms.CryptoKeyIAMBindingState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, CryptoKeyIAMBindingState, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Get an existing CryptoKeyIAMBinding resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static CryptoKeyIAMBinding Get(string name, Input&lt;string&gt; id, CryptoKeyIAMBindingState state = null, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static CryptoKeyIAMBinding Get(string name, Input&lt;string&gt; id, CryptoKeyIAMBindingState state = null, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -349,7 +316,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -361,7 +328,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -390,7 +357,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Kms/CryptoKeyIAMBinding.cs/#L22" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Kms/CryptoKeyIAMBinding.cs/#L31" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

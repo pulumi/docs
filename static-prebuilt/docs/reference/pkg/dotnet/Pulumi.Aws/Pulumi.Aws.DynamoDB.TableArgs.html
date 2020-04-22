@@ -76,36 +76,7 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
-    <div class="level3"><span class="xref">TableArgs</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">TableArgs</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.DynamoDB.html">Pulumi.Aws.DynamoDB</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
@@ -116,7 +87,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Dynamodb/Table.cs/#L302">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/DynamoDB/Table.cs/#L318">View Source</a>
   </span>
   <a id="Pulumi_Aws_DynamoDB_TableArgs__ctor_" data-uid="Pulumi.Aws.DynamoDB.TableArgs.#ctor*"></a>
   <h4 id="Pulumi_Aws_DynamoDB_TableArgs__ctor" data-uid="Pulumi.Aws.DynamoDB.TableArgs.#ctor">TableArgs()</h4>
@@ -129,7 +100,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Dynamodb/Table.cs/#L189">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/DynamoDB/Table.cs/#L193">View Source</a>
   </span>
   <a id="Pulumi_Aws_DynamoDB_TableArgs_Attributes_" data-uid="Pulumi.Aws.DynamoDB.TableArgs.Attributes*"></a>
   <h4 id="Pulumi_Aws_DynamoDB_TableArgs_Attributes" data-uid="Pulumi.Aws.DynamoDB.TableArgs.Attributes">Attributes</h4>
@@ -138,7 +109,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public InputList&lt;TableAttributesArgs&gt; Attributes { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public InputList&lt;TableAttributeArgs&gt; Attributes { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -150,13 +121,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<a class="xref" href="Pulumi.Aws.DynamoDB.Inputs.TableAttributesArgs.html">TableAttributesArgs</a>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<a class="xref" href="Pulumi.Aws.DynamoDB.Inputs.TableAttributeArgs.html">TableAttributeArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Dynamodb/Table.cs/#L198">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/DynamoDB/Table.cs/#L202">View Source</a>
   </span>
   <a id="Pulumi_Aws_DynamoDB_TableArgs_BillingMode_" data-uid="Pulumi.Aws.DynamoDB.TableArgs.BillingMode*"></a>
   <h4 id="Pulumi_Aws_DynamoDB_TableArgs_BillingMode" data-uid="Pulumi.Aws.DynamoDB.TableArgs.BillingMode">BillingMode</h4>
@@ -165,7 +136,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; BillingMode { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? BillingMode { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -177,13 +148,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Dynamodb/Table.cs/#L209">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/DynamoDB/Table.cs/#L213">View Source</a>
   </span>
   <a id="Pulumi_Aws_DynamoDB_TableArgs_GlobalSecondaryIndexes_" data-uid="Pulumi.Aws.DynamoDB.TableArgs.GlobalSecondaryIndexes*"></a>
   <h4 id="Pulumi_Aws_DynamoDB_TableArgs_GlobalSecondaryIndexes" data-uid="Pulumi.Aws.DynamoDB.TableArgs.GlobalSecondaryIndexes">GlobalSecondaryIndexes</h4>
@@ -194,7 +165,7 @@ attributes, etc.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public InputList&lt;TableGlobalSecondaryIndexesArgs&gt; GlobalSecondaryIndexes { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public InputList&lt;TableGlobalSecondaryIndexArgs&gt; GlobalSecondaryIndexes { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -206,13 +177,13 @@ attributes, etc.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<a class="xref" href="Pulumi.Aws.DynamoDB.Inputs.TableGlobalSecondaryIndexesArgs.html">TableGlobalSecondaryIndexesArgs</a>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<a class="xref" href="Pulumi.Aws.DynamoDB.Inputs.TableGlobalSecondaryIndexArgs.html">TableGlobalSecondaryIndexArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Dynamodb/Table.cs/#L219">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/DynamoDB/Table.cs/#L223">View Source</a>
   </span>
   <a id="Pulumi_Aws_DynamoDB_TableArgs_HashKey_" data-uid="Pulumi.Aws.DynamoDB.TableArgs.HashKey*"></a>
   <h4 id="Pulumi_Aws_DynamoDB_TableArgs_HashKey" data-uid="Pulumi.Aws.DynamoDB.TableArgs.HashKey">HashKey</h4>
@@ -234,13 +205,13 @@ defined as an attribute in the resource.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Dynamodb/Table.cs/#L230">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/DynamoDB/Table.cs/#L234">View Source</a>
   </span>
   <a id="Pulumi_Aws_DynamoDB_TableArgs_LocalSecondaryIndexes_" data-uid="Pulumi.Aws.DynamoDB.TableArgs.LocalSecondaryIndexes*"></a>
   <h4 id="Pulumi_Aws_DynamoDB_TableArgs_LocalSecondaryIndexes" data-uid="Pulumi.Aws.DynamoDB.TableArgs.LocalSecondaryIndexes">LocalSecondaryIndexes</h4>
@@ -251,7 +222,7 @@ definition after you have created the resource.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public InputList&lt;TableLocalSecondaryIndexesArgs&gt; LocalSecondaryIndexes { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public InputList&lt;TableLocalSecondaryIndexArgs&gt; LocalSecondaryIndexes { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -263,13 +234,13 @@ definition after you have created the resource.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<a class="xref" href="Pulumi.Aws.DynamoDB.Inputs.TableLocalSecondaryIndexesArgs.html">TableLocalSecondaryIndexesArgs</a>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<a class="xref" href="Pulumi.Aws.DynamoDB.Inputs.TableLocalSecondaryIndexArgs.html">TableLocalSecondaryIndexArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Dynamodb/Table.cs/#L239">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/DynamoDB/Table.cs/#L243">View Source</a>
   </span>
   <a id="Pulumi_Aws_DynamoDB_TableArgs_Name_" data-uid="Pulumi.Aws.DynamoDB.TableArgs.Name*"></a>
   <h4 id="Pulumi_Aws_DynamoDB_TableArgs_Name" data-uid="Pulumi.Aws.DynamoDB.TableArgs.Name">Name</h4>
@@ -278,7 +249,7 @@ definition after you have created the resource.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Name { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Name { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -290,13 +261,13 @@ definition after you have created the resource.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Dynamodb/Table.cs/#L245">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/DynamoDB/Table.cs/#L249">View Source</a>
   </span>
   <a id="Pulumi_Aws_DynamoDB_TableArgs_PointInTimeRecovery_" data-uid="Pulumi.Aws.DynamoDB.TableArgs.PointInTimeRecovery*"></a>
   <h4 id="Pulumi_Aws_DynamoDB_TableArgs_PointInTimeRecovery" data-uid="Pulumi.Aws.DynamoDB.TableArgs.PointInTimeRecovery">PointInTimeRecovery</h4>
@@ -305,7 +276,7 @@ definition after you have created the resource.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;TablePointInTimeRecoveryArgs&gt; PointInTimeRecovery { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;TablePointInTimeRecoveryArgs&gt;? PointInTimeRecovery { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -317,13 +288,13 @@ definition after you have created the resource.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Aws.DynamoDB.Inputs.TablePointInTimeRecoveryArgs.html">TablePointInTimeRecoveryArgs</a>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Aws.DynamoDB.Inputs.TablePointInTimeRecoveryArgs.html">TablePointInTimeRecoveryArgs</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Dynamodb/Table.cs/#L251">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/DynamoDB/Table.cs/#L255">View Source</a>
   </span>
   <a id="Pulumi_Aws_DynamoDB_TableArgs_RangeKey_" data-uid="Pulumi.Aws.DynamoDB.TableArgs.RangeKey*"></a>
   <h4 id="Pulumi_Aws_DynamoDB_TableArgs_RangeKey" data-uid="Pulumi.Aws.DynamoDB.TableArgs.RangeKey">RangeKey</h4>
@@ -332,7 +303,7 @@ definition after you have created the resource.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; RangeKey { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? RangeKey { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -344,13 +315,13 @@ definition after you have created the resource.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Dynamodb/Table.cs/#L257">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/DynamoDB/Table.cs/#L261">View Source</a>
   </span>
   <a id="Pulumi_Aws_DynamoDB_TableArgs_ReadCapacity_" data-uid="Pulumi.Aws.DynamoDB.TableArgs.ReadCapacity*"></a>
   <h4 id="Pulumi_Aws_DynamoDB_TableArgs_ReadCapacity" data-uid="Pulumi.Aws.DynamoDB.TableArgs.ReadCapacity">ReadCapacity</h4>
@@ -359,7 +330,7 @@ definition after you have created the resource.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; ReadCapacity { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? ReadCapacity { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -371,13 +342,40 @@ definition after you have created the resource.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Dynamodb/Table.cs/#L263">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/DynamoDB/Table.cs/#L270">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_DynamoDB_TableArgs_Replicas_" data-uid="Pulumi.Aws.DynamoDB.TableArgs.Replicas*"></a>
+  <h4 id="Pulumi_Aws_DynamoDB_TableArgs_Replicas" data-uid="Pulumi.Aws.DynamoDB.TableArgs.Replicas">Replicas</h4>
+  <div class="markdown level1 summary"><p>Configuration block(s) with <a href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.V2.html">DynamoDB Global Tables V2 (version 2019.11.21)</a> replication configurations. Detailed below.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InputList&lt;TableReplicaArgs&gt; Replicas { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">InputList</span>&lt;<a class="xref" href="Pulumi.Aws.DynamoDB.Inputs.TableReplicaArgs.html">TableReplicaArgs</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/DynamoDB/Table.cs/#L279">View Source</a>
   </span>
   <a id="Pulumi_Aws_DynamoDB_TableArgs_ServerSideEncryption_" data-uid="Pulumi.Aws.DynamoDB.TableArgs.ServerSideEncryption*"></a>
   <h4 id="Pulumi_Aws_DynamoDB_TableArgs_ServerSideEncryption" data-uid="Pulumi.Aws.DynamoDB.TableArgs.ServerSideEncryption">ServerSideEncryption</h4>
@@ -386,7 +384,7 @@ definition after you have created the resource.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;TableServerSideEncryptionArgs&gt; ServerSideEncryption { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;TableServerSideEncryptionArgs&gt;? ServerSideEncryption { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -398,13 +396,13 @@ definition after you have created the resource.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Aws.DynamoDB.Inputs.TableServerSideEncryptionArgs.html">TableServerSideEncryptionArgs</a>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Aws.DynamoDB.Inputs.TableServerSideEncryptionArgs.html">TableServerSideEncryptionArgs</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Dynamodb/Table.cs/#L269">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/DynamoDB/Table.cs/#L285">View Source</a>
   </span>
   <a id="Pulumi_Aws_DynamoDB_TableArgs_StreamEnabled_" data-uid="Pulumi.Aws.DynamoDB.TableArgs.StreamEnabled*"></a>
   <h4 id="Pulumi_Aws_DynamoDB_TableArgs_StreamEnabled" data-uid="Pulumi.Aws.DynamoDB.TableArgs.StreamEnabled">StreamEnabled</h4>
@@ -413,7 +411,7 @@ definition after you have created the resource.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; StreamEnabled { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? StreamEnabled { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -425,13 +423,13 @@ definition after you have created the resource.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Dynamodb/Table.cs/#L275">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/DynamoDB/Table.cs/#L291">View Source</a>
   </span>
   <a id="Pulumi_Aws_DynamoDB_TableArgs_StreamViewType_" data-uid="Pulumi.Aws.DynamoDB.TableArgs.StreamViewType*"></a>
   <h4 id="Pulumi_Aws_DynamoDB_TableArgs_StreamViewType" data-uid="Pulumi.Aws.DynamoDB.TableArgs.StreamViewType">StreamViewType</h4>
@@ -440,7 +438,7 @@ definition after you have created the resource.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; StreamViewType { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? StreamViewType { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -452,13 +450,13 @@ definition after you have created the resource.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Dynamodb/Table.cs/#L284">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/DynamoDB/Table.cs/#L300">View Source</a>
   </span>
   <a id="Pulumi_Aws_DynamoDB_TableArgs_Tags_" data-uid="Pulumi.Aws.DynamoDB.TableArgs.Tags*"></a>
   <h4 id="Pulumi_Aws_DynamoDB_TableArgs_Tags" data-uid="Pulumi.Aws.DynamoDB.TableArgs.Tags">Tags</h4>
@@ -479,13 +477,13 @@ definition after you have created the resource.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputMap-1.html">InputMap</a>&lt;<span class="xref">System.Object</span>&gt;</td>
+        <td><span class="xref">InputMap</span>&lt;<span class="xref">System.Object</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Dynamodb/Table.cs/#L293">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/DynamoDB/Table.cs/#L309">View Source</a>
   </span>
   <a id="Pulumi_Aws_DynamoDB_TableArgs_Ttl_" data-uid="Pulumi.Aws.DynamoDB.TableArgs.Ttl*"></a>
   <h4 id="Pulumi_Aws_DynamoDB_TableArgs_Ttl" data-uid="Pulumi.Aws.DynamoDB.TableArgs.Ttl">Ttl</h4>
@@ -494,7 +492,7 @@ definition after you have created the resource.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;TableTtlArgs&gt; Ttl { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;TableTtlArgs&gt;? Ttl { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -506,13 +504,13 @@ definition after you have created the resource.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Aws.DynamoDB.Inputs.TableTtlArgs.html">TableTtlArgs</a>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Aws.DynamoDB.Inputs.TableTtlArgs.html">TableTtlArgs</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Dynamodb/Table.cs/#L299">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/DynamoDB/Table.cs/#L315">View Source</a>
   </span>
   <a id="Pulumi_Aws_DynamoDB_TableArgs_WriteCapacity_" data-uid="Pulumi.Aws.DynamoDB.TableArgs.WriteCapacity*"></a>
   <h4 id="Pulumi_Aws_DynamoDB_TableArgs_WriteCapacity" data-uid="Pulumi.Aws.DynamoDB.TableArgs.WriteCapacity">WriteCapacity</h4>
@@ -521,7 +519,7 @@ definition after you have created the resource.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; WriteCapacity { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? WriteCapacity { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -533,7 +531,7 @@ definition after you have created the resource.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -545,7 +543,7 @@ definition after you have created the resource.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Dynamodb/Table.cs/#L181" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/DynamoDB/Table.cs/#L185" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

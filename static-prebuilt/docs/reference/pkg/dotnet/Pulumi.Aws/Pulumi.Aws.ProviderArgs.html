@@ -76,36 +76,7 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
-    <div class="level3"><span class="xref">ProviderArgs</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">ProviderArgs</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.html">Pulumi.Aws</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
@@ -116,7 +87,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Provider.cs/#L190">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Provider.cs/#L165">View Source</a>
   </span>
   <a id="Pulumi_Aws_ProviderArgs__ctor_" data-uid="Pulumi.Aws.ProviderArgs.#ctor*"></a>
   <h4 id="Pulumi_Aws_ProviderArgs__ctor" data-uid="Pulumi.Aws.ProviderArgs.#ctor">ProviderArgs()</h4>
@@ -129,17 +100,16 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Provider.cs/#L53">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Provider.cs/#L50">View Source</a>
   </span>
   <a id="Pulumi_Aws_ProviderArgs_AccessKey_" data-uid="Pulumi.Aws.ProviderArgs.AccessKey*"></a>
   <h4 id="Pulumi_Aws_ProviderArgs_AccessKey" data-uid="Pulumi.Aws.ProviderArgs.AccessKey">AccessKey</h4>
-  <div class="markdown level1 summary"><p>The access key for API operations. You can retrieve this from the 'Security &amp; Credentials' section of
-the AWS console.</p>
+  <div class="markdown level1 summary"><p>The access key for API operations. You can retrieve this from the 'Security &amp; Credentials' section of the AWS console.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; AccessKey { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? AccessKey { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -151,13 +121,13 @@ the AWS console.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Provider.cs/#L58">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Provider.cs/#L55">View Source</a>
   </span>
   <a id="Pulumi_Aws_ProviderArgs_AllowedAccountIds_" data-uid="Pulumi.Aws.ProviderArgs.AllowedAccountIds*"></a>
   <h4 id="Pulumi_Aws_ProviderArgs_AllowedAccountIds" data-uid="Pulumi.Aws.ProviderArgs.AllowedAccountIds">AllowedAccountIds</h4>
@@ -177,13 +147,13 @@ the AWS console.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Provider.cs/#L64">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Provider.cs/#L61">View Source</a>
   </span>
   <a id="Pulumi_Aws_ProviderArgs_AssumeRole_" data-uid="Pulumi.Aws.ProviderArgs.AssumeRole*"></a>
   <h4 id="Pulumi_Aws_ProviderArgs_AssumeRole" data-uid="Pulumi.Aws.ProviderArgs.AssumeRole">AssumeRole</h4>
@@ -191,7 +161,7 @@ the AWS console.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;ProviderAssumeRoleArgs&gt; AssumeRole { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;ProviderAssumeRoleArgs&gt;? AssumeRole { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -203,13 +173,13 @@ the AWS console.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Aws.Inputs.ProviderAssumeRoleArgs.html">ProviderAssumeRoleArgs</a>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Aws.Inputs.ProviderAssumeRoleArgs.html">ProviderAssumeRoleArgs</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Provider.cs/#L69">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Provider.cs/#L66">View Source</a>
   </span>
   <a id="Pulumi_Aws_ProviderArgs_Endpoints_" data-uid="Pulumi.Aws.ProviderArgs.Endpoints*"></a>
   <h4 id="Pulumi_Aws_ProviderArgs_Endpoints" data-uid="Pulumi.Aws.ProviderArgs.Endpoints">Endpoints</h4>
@@ -217,7 +187,7 @@ the AWS console.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public InputList&lt;ProviderEndpointsArgs&gt; Endpoints { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public InputList&lt;ProviderEndpointArgs&gt; Endpoints { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -229,13 +199,13 @@ the AWS console.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<a class="xref" href="Pulumi.Aws.Inputs.ProviderEndpointsArgs.html">ProviderEndpointsArgs</a>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<a class="xref" href="Pulumi.Aws.Inputs.ProviderEndpointArgs.html">ProviderEndpointArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Provider.cs/#L77">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Provider.cs/#L74">View Source</a>
   </span>
   <a id="Pulumi_Aws_ProviderArgs_ForbiddenAccountIds_" data-uid="Pulumi.Aws.ProviderArgs.ForbiddenAccountIds*"></a>
   <h4 id="Pulumi_Aws_ProviderArgs_ForbiddenAccountIds" data-uid="Pulumi.Aws.ProviderArgs.ForbiddenAccountIds">ForbiddenAccountIds</h4>
@@ -255,49 +225,22 @@ the AWS console.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Provider.cs/#L89">View Source</a>
-  </span>
-  <a id="Pulumi_Aws_ProviderArgs_IgnoreTagPrefixes_" data-uid="Pulumi.Aws.ProviderArgs.IgnoreTagPrefixes*"></a>
-  <h4 id="Pulumi_Aws_ProviderArgs_IgnoreTagPrefixes" data-uid="Pulumi.Aws.ProviderArgs.IgnoreTagPrefixes">IgnoreTagPrefixes</h4>
-  <div class="markdown level1 summary"><p>Resource tag key prefixes to ignore across all resources.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public InputList&lt;string&gt; IgnoreTagPrefixes { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Provider.cs/#L101">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Provider.cs/#L83">View Source</a>
   </span>
   <a id="Pulumi_Aws_ProviderArgs_IgnoreTags_" data-uid="Pulumi.Aws.ProviderArgs.IgnoreTags*"></a>
   <h4 id="Pulumi_Aws_ProviderArgs_IgnoreTags" data-uid="Pulumi.Aws.ProviderArgs.IgnoreTags">IgnoreTags</h4>
-  <div class="markdown level1 summary"><p>Resource tag keys to ignore across all resources.</p>
+  <div class="markdown level1 summary"><p>Configuration block with settings to ignore resource tags across all resources.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public InputList&lt;string&gt; IgnoreTags { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;ProviderIgnoreTagsArgs&gt;? IgnoreTags { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -309,13 +252,13 @@ the AWS console.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Aws.Inputs.ProviderIgnoreTagsArgs.html">ProviderIgnoreTagsArgs</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Provider.cs/#L110">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Provider.cs/#L89">View Source</a>
   </span>
   <a id="Pulumi_Aws_ProviderArgs_Insecure_" data-uid="Pulumi.Aws.ProviderArgs.Insecure*"></a>
   <h4 id="Pulumi_Aws_ProviderArgs_Insecure" data-uid="Pulumi.Aws.ProviderArgs.Insecure">Insecure</h4>
@@ -324,7 +267,7 @@ the AWS console.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; Insecure { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? Insecure { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -336,23 +279,22 @@ the AWS console.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Provider.cs/#L117">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Provider.cs/#L95">View Source</a>
   </span>
   <a id="Pulumi_Aws_ProviderArgs_MaxRetries_" data-uid="Pulumi.Aws.ProviderArgs.MaxRetries*"></a>
   <h4 id="Pulumi_Aws_ProviderArgs_MaxRetries" data-uid="Pulumi.Aws.ProviderArgs.MaxRetries">MaxRetries</h4>
-  <div class="markdown level1 summary"><p>The maximum number of times an AWS API request is being executed. If the API request still fails, an error
-is thrown.</p>
+  <div class="markdown level1 summary"><p>The maximum number of times an AWS API request is being executed. If the API request still fails, an error is thrown.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; MaxRetries { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? MaxRetries { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -364,13 +306,13 @@ is thrown.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Provider.cs/#L123">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Provider.cs/#L101">View Source</a>
   </span>
   <a id="Pulumi_Aws_ProviderArgs_Profile_" data-uid="Pulumi.Aws.ProviderArgs.Profile*"></a>
   <h4 id="Pulumi_Aws_ProviderArgs_Profile" data-uid="Pulumi.Aws.ProviderArgs.Profile">Profile</h4>
@@ -379,7 +321,7 @@ is thrown.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Profile { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Profile { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -391,13 +333,13 @@ is thrown.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Provider.cs/#L129">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Provider.cs/#L107">View Source</a>
   </span>
   <a id="Pulumi_Aws_ProviderArgs_Region_" data-uid="Pulumi.Aws.ProviderArgs.Region*"></a>
   <h4 id="Pulumi_Aws_ProviderArgs_Region" data-uid="Pulumi.Aws.ProviderArgs.Region">Region</h4>
@@ -406,7 +348,7 @@ is thrown.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Region { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Region { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -418,24 +360,24 @@ is thrown.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Provider.cs/#L137">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Provider.cs/#L115">View Source</a>
   </span>
   <a id="Pulumi_Aws_ProviderArgs_S3ForcePathStyle_" data-uid="Pulumi.Aws.ProviderArgs.S3ForcePathStyle*"></a>
   <h4 id="Pulumi_Aws_ProviderArgs_S3ForcePathStyle" data-uid="Pulumi.Aws.ProviderArgs.S3ForcePathStyle">S3ForcePathStyle</h4>
-  <div class="markdown level1 summary"><p>Set this to true to force the request to use path-style addressing, i.e.,
-<a href="http://s3.amazonaws.com/BUCKET/KEY">http://s3.amazonaws.com/BUCKET/KEY</a>. By default, the S3 client will use virtual hosted bucket addressing when
-possible (<a href="http://BUCKET.s3.amazonaws.com/KEY">http://BUCKET.s3.amazonaws.com/KEY</a>). Specific to the Amazon S3 service.</p>
+  <div class="markdown level1 summary"><p>Set this to true to force the request to use path-style addressing, i.e., <a href="http://s3.amazonaws.com/BUCKET/KEY">http://s3.amazonaws.com/BUCKET/KEY</a>. By
+default, the S3 client will use virtual hosted bucket addressing when possible (<a href="http://BUCKET.s3.amazonaws.com/KEY">http://BUCKET.s3.amazonaws.com/KEY</a>).
+Specific to the Amazon S3 service.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; S3ForcePathStyle { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? S3ForcePathStyle { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -447,23 +389,22 @@ possible (<a href="http://BUCKET.s3.amazonaws.com/KEY">http://BUCKET.s3.amazonaw
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Provider.cs/#L144">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Provider.cs/#L121">View Source</a>
   </span>
   <a id="Pulumi_Aws_ProviderArgs_SecretKey_" data-uid="Pulumi.Aws.ProviderArgs.SecretKey*"></a>
   <h4 id="Pulumi_Aws_ProviderArgs_SecretKey" data-uid="Pulumi.Aws.ProviderArgs.SecretKey">SecretKey</h4>
-  <div class="markdown level1 summary"><p>The secret key for API operations. You can retrieve this from the 'Security &amp; Credentials' section of
-the AWS console.</p>
+  <div class="markdown level1 summary"><p>The secret key for API operations. You can retrieve this from the 'Security &amp; Credentials' section of the AWS console.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; SecretKey { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? SecretKey { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -475,13 +416,13 @@ the AWS console.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Provider.cs/#L150">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Provider.cs/#L127">View Source</a>
   </span>
   <a id="Pulumi_Aws_ProviderArgs_SharedCredentialsFile_" data-uid="Pulumi.Aws.ProviderArgs.SharedCredentialsFile*"></a>
   <h4 id="Pulumi_Aws_ProviderArgs_SharedCredentialsFile" data-uid="Pulumi.Aws.ProviderArgs.SharedCredentialsFile">SharedCredentialsFile</h4>
@@ -490,7 +431,7 @@ the AWS console.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; SharedCredentialsFile { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? SharedCredentialsFile { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -502,13 +443,13 @@ the AWS console.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Provider.cs/#L157">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Provider.cs/#L134">View Source</a>
   </span>
   <a id="Pulumi_Aws_ProviderArgs_SkipCredentialsValidation_" data-uid="Pulumi.Aws.ProviderArgs.SkipCredentialsValidation*"></a>
   <h4 id="Pulumi_Aws_ProviderArgs_SkipCredentialsValidation" data-uid="Pulumi.Aws.ProviderArgs.SkipCredentialsValidation">SkipCredentialsValidation</h4>
@@ -518,7 +459,7 @@ available/implemented.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; SkipCredentialsValidation { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? SkipCredentialsValidation { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -530,23 +471,22 @@ available/implemented.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Provider.cs/#L164">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Provider.cs/#L140">View Source</a>
   </span>
   <a id="Pulumi_Aws_ProviderArgs_SkipGetEc2Platforms_" data-uid="Pulumi.Aws.ProviderArgs.SkipGetEc2Platforms*"></a>
   <h4 id="Pulumi_Aws_ProviderArgs_SkipGetEc2Platforms" data-uid="Pulumi.Aws.ProviderArgs.SkipGetEc2Platforms">SkipGetEc2Platforms</h4>
-  <div class="markdown level1 summary"><p>Skip getting the supported EC2 platforms. Used by users that don't have ec2:DescribeAccountAttributes
-permissions.</p>
+  <div class="markdown level1 summary"><p>Skip getting the supported EC2 platforms. Used by users that don't have ec2:DescribeAccountAttributes permissions.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; SkipGetEc2Platforms { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? SkipGetEc2Platforms { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -558,13 +498,13 @@ permissions.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Provider.cs/#L167">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Provider.cs/#L143">View Source</a>
   </span>
   <a id="Pulumi_Aws_ProviderArgs_SkipMetadataApiCheck_" data-uid="Pulumi.Aws.ProviderArgs.SkipMetadataApiCheck*"></a>
   <h4 id="Pulumi_Aws_ProviderArgs_SkipMetadataApiCheck" data-uid="Pulumi.Aws.ProviderArgs.SkipMetadataApiCheck">SkipMetadataApiCheck</h4>
@@ -572,7 +512,7 @@ permissions.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; SkipMetadataApiCheck { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? SkipMetadataApiCheck { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -584,23 +524,23 @@ permissions.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Provider.cs/#L174">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Provider.cs/#L150">View Source</a>
   </span>
   <a id="Pulumi_Aws_ProviderArgs_SkipRegionValidation_" data-uid="Pulumi.Aws.ProviderArgs.SkipRegionValidation*"></a>
   <h4 id="Pulumi_Aws_ProviderArgs_SkipRegionValidation" data-uid="Pulumi.Aws.ProviderArgs.SkipRegionValidation">SkipRegionValidation</h4>
-  <div class="markdown level1 summary"><p>Skip static validation of region name. Used by users of alternative AWS-like APIs or users w/ access to
-regions that are not public (yet).</p>
+  <div class="markdown level1 summary"><p>Skip static validation of region name. Used by users of alternative AWS-like APIs or users w/ access to regions that are
+not public (yet).</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; SkipRegionValidation { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? SkipRegionValidation { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -612,23 +552,22 @@ regions that are not public (yet).</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Provider.cs/#L181">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Provider.cs/#L156">View Source</a>
   </span>
   <a id="Pulumi_Aws_ProviderArgs_SkipRequestingAccountId_" data-uid="Pulumi.Aws.ProviderArgs.SkipRequestingAccountId*"></a>
   <h4 id="Pulumi_Aws_ProviderArgs_SkipRequestingAccountId" data-uid="Pulumi.Aws.ProviderArgs.SkipRequestingAccountId">SkipRequestingAccountId</h4>
-  <div class="markdown level1 summary"><p>Skip requesting the account ID. Used for AWS API implementations that do not have IAM/STS API and/or
-metadata API.</p>
+  <div class="markdown level1 summary"><p>Skip requesting the account ID. Used for AWS API implementations that do not have IAM/STS API and/or metadata API.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; SkipRequestingAccountId { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? SkipRequestingAccountId { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -640,13 +579,13 @@ metadata API.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Provider.cs/#L187">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Provider.cs/#L162">View Source</a>
   </span>
   <a id="Pulumi_Aws_ProviderArgs_Token_" data-uid="Pulumi.Aws.ProviderArgs.Token*"></a>
   <h4 id="Pulumi_Aws_ProviderArgs_Token" data-uid="Pulumi.Aws.ProviderArgs.Token">Token</h4>
@@ -655,7 +594,7 @@ metadata API.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Token { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Token { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -667,7 +606,7 @@ metadata API.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -679,7 +618,7 @@ metadata API.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Provider.cs/#L47" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Provider.cs/#L45" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

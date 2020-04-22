@@ -76,36 +76,7 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
-    <div class="level3"><span class="xref">DomainState</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">DomainState</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.AliCloud.Cdn.html">Pulumi.AliCloud.Cdn</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.AliCloud.dll</h6>
@@ -116,7 +87,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Cdn/Domain.cs/#L427">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Cdn/Domain.cs/#L427">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Cdn_DomainState__ctor_" data-uid="Pulumi.AliCloud.Cdn.DomainState.#ctor*"></a>
   <h4 id="Pulumi_AliCloud_Cdn_DomainState__ctor" data-uid="Pulumi.AliCloud.Cdn.DomainState.#ctor">DomainState()</h4>
@@ -129,7 +100,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Cdn/Domain.cs/#L301">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Cdn/Domain.cs/#L301">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Cdn_DomainState_AuthConfig_" data-uid="Pulumi.AliCloud.Cdn.DomainState.AuthConfig*"></a>
   <h4 id="Pulumi_AliCloud_Cdn_DomainState_AuthConfig" data-uid="Pulumi.AliCloud.Cdn.DomainState.AuthConfig">AuthConfig</h4>
@@ -138,7 +109,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;DomainAuthConfigGetArgs&gt; AuthConfig { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;DomainAuthConfigGetArgs&gt;? AuthConfig { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -150,13 +121,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.AliCloud.Cdn.Inputs.DomainAuthConfigGetArgs.html">DomainAuthConfigGetArgs</a>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.AliCloud.Cdn.Inputs.DomainAuthConfigGetArgs.html">DomainAuthConfigGetArgs</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Cdn/Domain.cs/#L306">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Cdn/Domain.cs/#L306">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Cdn_DomainState_BlockIps_" data-uid="Pulumi.AliCloud.Cdn.DomainState.BlockIps*"></a>
   <h4 id="Pulumi_AliCloud_Cdn_DomainState_BlockIps" data-uid="Pulumi.AliCloud.Cdn.DomainState.BlockIps">BlockIps</h4>
@@ -164,8 +135,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Use `alicloud_cdn_domain_config` configuration `function_name` and `function_args` arguments instead.&quot;)]
-public InputList&lt;string&gt; BlockIps { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public InputList&lt;string&gt; BlockIps { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -177,13 +147,13 @@ public InputList&lt;string&gt; BlockIps { get; set; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Cdn/Domain.cs/#L319">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Cdn/Domain.cs/#L319">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Cdn_DomainState_CacheConfigs_" data-uid="Pulumi.AliCloud.Cdn.DomainState.CacheConfigs*"></a>
   <h4 id="Pulumi_AliCloud_Cdn_DomainState_CacheConfigs" data-uid="Pulumi.AliCloud.Cdn.DomainState.CacheConfigs">CacheConfigs</h4>
@@ -192,8 +162,7 @@ public InputList&lt;string&gt; BlockIps { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Use `alicloud_cdn_domain_config` configuration `function_name` and `function_args` arguments instead.&quot;)]
-public InputList&lt;DomainCacheConfigsGetArgs&gt; CacheConfigs { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public InputList&lt;DomainCacheConfigGetArgs&gt; CacheConfigs { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -205,13 +174,13 @@ public InputList&lt;DomainCacheConfigsGetArgs&gt; CacheConfigs { get; set; }</co
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<a class="xref" href="Pulumi.AliCloud.Cdn.Inputs.DomainCacheConfigsGetArgs.html">DomainCacheConfigsGetArgs</a>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<a class="xref" href="Pulumi.AliCloud.Cdn.Inputs.DomainCacheConfigGetArgs.html">DomainCacheConfigGetArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Cdn/Domain.cs/#L329">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Cdn/Domain.cs/#L329">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Cdn_DomainState_CdnType_" data-uid="Pulumi.AliCloud.Cdn.DomainState.CdnType*"></a>
   <h4 id="Pulumi_AliCloud_Cdn_DomainState_CdnType" data-uid="Pulumi.AliCloud.Cdn.DomainState.CdnType">CdnType</h4>
@@ -220,7 +189,7 @@ public InputList&lt;DomainCacheConfigsGetArgs&gt; CacheConfigs { get; set; }</co
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; CdnType { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? CdnType { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -232,13 +201,13 @@ public InputList&lt;DomainCacheConfigsGetArgs&gt; CacheConfigs { get; set; }</co
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Cdn/Domain.cs/#L332">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Cdn/Domain.cs/#L332">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Cdn_DomainState_CertificateConfig_" data-uid="Pulumi.AliCloud.Cdn.DomainState.CertificateConfig*"></a>
   <h4 id="Pulumi_AliCloud_Cdn_DomainState_CertificateConfig" data-uid="Pulumi.AliCloud.Cdn.DomainState.CertificateConfig">CertificateConfig</h4>
@@ -246,7 +215,7 @@ public InputList&lt;DomainCacheConfigsGetArgs&gt; CacheConfigs { get; set; }</co
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;DomainCertificateConfigGetArgs&gt; CertificateConfig { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;DomainCertificateConfigGetArgs&gt;? CertificateConfig { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -258,13 +227,13 @@ public InputList&lt;DomainCacheConfigsGetArgs&gt; CacheConfigs { get; set; }</co
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.AliCloud.Cdn.Inputs.DomainCertificateConfigGetArgs.html">DomainCertificateConfigGetArgs</a>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.AliCloud.Cdn.Inputs.DomainCertificateConfigGetArgs.html">DomainCertificateConfigGetArgs</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Cdn/Domain.cs/#L338">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Cdn/Domain.cs/#L338">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Cdn_DomainState_DomainName_" data-uid="Pulumi.AliCloud.Cdn.DomainState.DomainName*"></a>
   <h4 id="Pulumi_AliCloud_Cdn_DomainState_DomainName" data-uid="Pulumi.AliCloud.Cdn.DomainState.DomainName">DomainName</h4>
@@ -273,7 +242,7 @@ public InputList&lt;DomainCacheConfigsGetArgs&gt; CacheConfigs { get; set; }</co
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; DomainName { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? DomainName { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -285,13 +254,13 @@ public InputList&lt;DomainCacheConfigsGetArgs&gt; CacheConfigs { get; set; }</co
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Cdn/Domain.cs/#L347">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Cdn/Domain.cs/#L347">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Cdn_DomainState_HttpHeaderConfigs_" data-uid="Pulumi.AliCloud.Cdn.DomainState.HttpHeaderConfigs*"></a>
   <h4 id="Pulumi_AliCloud_Cdn_DomainState_HttpHeaderConfigs" data-uid="Pulumi.AliCloud.Cdn.DomainState.HttpHeaderConfigs">HttpHeaderConfigs</h4>
@@ -300,8 +269,7 @@ public InputList&lt;DomainCacheConfigsGetArgs&gt; CacheConfigs { get; set; }</co
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Use `alicloud_cdn_domain_config` configuration `function_name` and `function_args` arguments instead.&quot;)]
-public InputList&lt;DomainHttpHeaderConfigsGetArgs&gt; HttpHeaderConfigs { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public InputList&lt;DomainHttpHeaderConfigGetArgs&gt; HttpHeaderConfigs { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -313,13 +281,13 @@ public InputList&lt;DomainHttpHeaderConfigsGetArgs&gt; HttpHeaderConfigs { get; 
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<a class="xref" href="Pulumi.AliCloud.Cdn.Inputs.DomainHttpHeaderConfigsGetArgs.html">DomainHttpHeaderConfigsGetArgs</a>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<a class="xref" href="Pulumi.AliCloud.Cdn.Inputs.DomainHttpHeaderConfigGetArgs.html">DomainHttpHeaderConfigGetArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Cdn/Domain.cs/#L357">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Cdn/Domain.cs/#L357">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Cdn_DomainState_OptimizeEnable_" data-uid="Pulumi.AliCloud.Cdn.DomainState.OptimizeEnable*"></a>
   <h4 id="Pulumi_AliCloud_Cdn_DomainState_OptimizeEnable" data-uid="Pulumi.AliCloud.Cdn.DomainState.OptimizeEnable">OptimizeEnable</h4>
@@ -328,7 +296,7 @@ public InputList&lt;DomainHttpHeaderConfigsGetArgs&gt; HttpHeaderConfigs { get; 
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; OptimizeEnable { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? OptimizeEnable { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -340,13 +308,13 @@ public InputList&lt;DomainHttpHeaderConfigsGetArgs&gt; HttpHeaderConfigs { get; 
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Cdn/Domain.cs/#L363">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Cdn/Domain.cs/#L363">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Cdn_DomainState_Page404Config_" data-uid="Pulumi.AliCloud.Cdn.DomainState.Page404Config*"></a>
   <h4 id="Pulumi_AliCloud_Cdn_DomainState_Page404Config" data-uid="Pulumi.AliCloud.Cdn.DomainState.Page404Config">Page404Config</h4>
@@ -355,7 +323,7 @@ public InputList&lt;DomainHttpHeaderConfigsGetArgs&gt; HttpHeaderConfigs { get; 
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;DomainPage404ConfigGetArgs&gt; Page404Config { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;DomainPage404ConfigGetArgs&gt;? Page404Config { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -367,13 +335,13 @@ public InputList&lt;DomainHttpHeaderConfigsGetArgs&gt; HttpHeaderConfigs { get; 
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.AliCloud.Cdn.Inputs.DomainPage404ConfigGetArgs.html">DomainPage404ConfigGetArgs</a>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.AliCloud.Cdn.Inputs.DomainPage404ConfigGetArgs.html">DomainPage404ConfigGetArgs</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Cdn/Domain.cs/#L369">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Cdn/Domain.cs/#L369">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Cdn_DomainState_PageCompressEnable_" data-uid="Pulumi.AliCloud.Cdn.DomainState.PageCompressEnable*"></a>
   <h4 id="Pulumi_AliCloud_Cdn_DomainState_PageCompressEnable" data-uid="Pulumi.AliCloud.Cdn.DomainState.PageCompressEnable">PageCompressEnable</h4>
@@ -382,7 +350,7 @@ public InputList&lt;DomainHttpHeaderConfigsGetArgs&gt; HttpHeaderConfigs { get; 
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; PageCompressEnable { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? PageCompressEnable { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -394,13 +362,13 @@ public InputList&lt;DomainHttpHeaderConfigsGetArgs&gt; HttpHeaderConfigs { get; 
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Cdn/Domain.cs/#L375">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Cdn/Domain.cs/#L375">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Cdn_DomainState_ParameterFilterConfig_" data-uid="Pulumi.AliCloud.Cdn.DomainState.ParameterFilterConfig*"></a>
   <h4 id="Pulumi_AliCloud_Cdn_DomainState_ParameterFilterConfig" data-uid="Pulumi.AliCloud.Cdn.DomainState.ParameterFilterConfig">ParameterFilterConfig</h4>
@@ -409,7 +377,7 @@ public InputList&lt;DomainHttpHeaderConfigsGetArgs&gt; HttpHeaderConfigs { get; 
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;DomainParameterFilterConfigGetArgs&gt; ParameterFilterConfig { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;DomainParameterFilterConfigGetArgs&gt;? ParameterFilterConfig { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -421,13 +389,13 @@ public InputList&lt;DomainHttpHeaderConfigsGetArgs&gt; HttpHeaderConfigs { get; 
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.AliCloud.Cdn.Inputs.DomainParameterFilterConfigGetArgs.html">DomainParameterFilterConfigGetArgs</a>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.AliCloud.Cdn.Inputs.DomainParameterFilterConfigGetArgs.html">DomainParameterFilterConfigGetArgs</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Cdn/Domain.cs/#L381">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Cdn/Domain.cs/#L381">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Cdn_DomainState_RangeEnable_" data-uid="Pulumi.AliCloud.Cdn.DomainState.RangeEnable*"></a>
   <h4 id="Pulumi_AliCloud_Cdn_DomainState_RangeEnable" data-uid="Pulumi.AliCloud.Cdn.DomainState.RangeEnable">RangeEnable</h4>
@@ -436,7 +404,7 @@ public InputList&lt;DomainHttpHeaderConfigsGetArgs&gt; HttpHeaderConfigs { get; 
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; RangeEnable { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? RangeEnable { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -448,13 +416,13 @@ public InputList&lt;DomainHttpHeaderConfigsGetArgs&gt; HttpHeaderConfigs { get; 
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Cdn/Domain.cs/#L387">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Cdn/Domain.cs/#L387">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Cdn_DomainState_ReferConfig_" data-uid="Pulumi.AliCloud.Cdn.DomainState.ReferConfig*"></a>
   <h4 id="Pulumi_AliCloud_Cdn_DomainState_ReferConfig" data-uid="Pulumi.AliCloud.Cdn.DomainState.ReferConfig">ReferConfig</h4>
@@ -463,7 +431,7 @@ public InputList&lt;DomainHttpHeaderConfigsGetArgs&gt; HttpHeaderConfigs { get; 
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;DomainReferConfigGetArgs&gt; ReferConfig { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;DomainReferConfigGetArgs&gt;? ReferConfig { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -475,13 +443,13 @@ public InputList&lt;DomainHttpHeaderConfigsGetArgs&gt; HttpHeaderConfigs { get; 
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.AliCloud.Cdn.Inputs.DomainReferConfigGetArgs.html">DomainReferConfigGetArgs</a>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.AliCloud.Cdn.Inputs.DomainReferConfigGetArgs.html">DomainReferConfigGetArgs</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Cdn/Domain.cs/#L393">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Cdn/Domain.cs/#L393">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Cdn_DomainState_Scope_" data-uid="Pulumi.AliCloud.Cdn.DomainState.Scope*"></a>
   <h4 id="Pulumi_AliCloud_Cdn_DomainState_Scope" data-uid="Pulumi.AliCloud.Cdn.DomainState.Scope">Scope</h4>
@@ -490,7 +458,7 @@ public InputList&lt;DomainHttpHeaderConfigsGetArgs&gt; HttpHeaderConfigs { get; 
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Scope { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Scope { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -502,13 +470,13 @@ public InputList&lt;DomainHttpHeaderConfigsGetArgs&gt; HttpHeaderConfigs { get; 
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Cdn/Domain.cs/#L399">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Cdn/Domain.cs/#L399">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Cdn_DomainState_SourcePort_" data-uid="Pulumi.AliCloud.Cdn.DomainState.SourcePort*"></a>
   <h4 id="Pulumi_AliCloud_Cdn_DomainState_SourcePort" data-uid="Pulumi.AliCloud.Cdn.DomainState.SourcePort">SourcePort</h4>
@@ -517,7 +485,7 @@ public InputList&lt;DomainHttpHeaderConfigsGetArgs&gt; HttpHeaderConfigs { get; 
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; SourcePort { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? SourcePort { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -529,13 +497,13 @@ public InputList&lt;DomainHttpHeaderConfigsGetArgs&gt; HttpHeaderConfigs { get; 
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Cdn/Domain.cs/#L414">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Cdn/Domain.cs/#L414">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Cdn_DomainState_Sources_" data-uid="Pulumi.AliCloud.Cdn.DomainState.Sources*"></a>
   <h4 id="Pulumi_AliCloud_Cdn_DomainState_Sources" data-uid="Pulumi.AliCloud.Cdn.DomainState.Sources">Sources</h4>
@@ -544,8 +512,7 @@ public InputList&lt;DomainHttpHeaderConfigsGetArgs&gt; HttpHeaderConfigs { get; 
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Use `alicloud_cdn_domain_new` configuration `sources` argument instead.&quot;)]
-public InputList&lt;string&gt; Sources { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public InputList&lt;string&gt; Sources { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -557,13 +524,13 @@ public InputList&lt;string&gt; Sources { get; set; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Cdn/Domain.cs/#L405">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Cdn/Domain.cs/#L405">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Cdn_DomainState_SourceType_" data-uid="Pulumi.AliCloud.Cdn.DomainState.SourceType*"></a>
   <h4 id="Pulumi_AliCloud_Cdn_DomainState_SourceType" data-uid="Pulumi.AliCloud.Cdn.DomainState.SourceType">SourceType</h4>
@@ -572,7 +539,7 @@ public InputList&lt;string&gt; Sources { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; SourceType { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? SourceType { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -584,13 +551,13 @@ public InputList&lt;string&gt; Sources { get; set; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Cdn/Domain.cs/#L424">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Cdn/Domain.cs/#L424">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Cdn_DomainState_VideoSeekEnable_" data-uid="Pulumi.AliCloud.Cdn.DomainState.VideoSeekEnable*"></a>
   <h4 id="Pulumi_AliCloud_Cdn_DomainState_VideoSeekEnable" data-uid="Pulumi.AliCloud.Cdn.DomainState.VideoSeekEnable">VideoSeekEnable</h4>
@@ -599,7 +566,7 @@ public InputList&lt;string&gt; Sources { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; VideoSeekEnable { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? VideoSeekEnable { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -611,7 +578,7 @@ public InputList&lt;string&gt; Sources { get; set; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -623,7 +590,7 @@ public InputList&lt;string&gt; Sources { get; set; }</code></pre>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Cdn/Domain.cs/#L296" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Cdn/Domain.cs/#L296" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

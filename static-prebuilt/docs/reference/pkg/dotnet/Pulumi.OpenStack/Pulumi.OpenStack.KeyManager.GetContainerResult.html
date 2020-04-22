@@ -87,16 +87,16 @@
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Keymanager/GetContainer.cs/#L50">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/KeyManager/GetContainer.cs/#L54">View Source</a>
   </span>
-  <h4 id="Pulumi_OpenStack_KeyManager_GetContainerResult_Consumers" data-uid="Pulumi.OpenStack.KeyManager.GetContainerResult.Consumers">Consumers</h4>
-  <div class="markdown level1 summary"><p>The list of the container consumers. The structure is described
-below.</p>
+  <h4 id="Pulumi_OpenStack_KeyManager_GetContainerResult_Acls" data-uid="Pulumi.OpenStack.KeyManager.GetContainerResult.Acls">Acls</h4>
+  <div class="markdown level1 summary"><p>The list of ACLs assigned to a container. The <code>read</code> structure is
+described below.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetContainerConsumersResult&gt; Consumers</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetContainerAclResult&gt; Acls</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -108,13 +108,40 @@ below.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.OpenStack.KeyManager.Outputs.GetContainerConsumersResult.html">GetContainerConsumersResult</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.OpenStack.KeyManager.Outputs.GetContainerAclResult.html">GetContainerAclResult</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Keymanager/GetContainer.cs/#L54">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/KeyManager/GetContainer.cs/#L59">View Source</a>
+  </span>
+  <h4 id="Pulumi_OpenStack_KeyManager_GetContainerResult_Consumers" data-uid="Pulumi.OpenStack.KeyManager.GetContainerResult.Consumers">Consumers</h4>
+  <div class="markdown level1 summary"><p>The list of the container consumers. The structure is described
+below.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetContainerConsumerResult&gt; Consumers</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.OpenStack.KeyManager.Outputs.GetContainerConsumerResult.html">GetContainerConsumerResult</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/KeyManager/GetContainer.cs/#L63">View Source</a>
   </span>
   <h4 id="Pulumi_OpenStack_KeyManager_GetContainerResult_ContainerRef" data-uid="Pulumi.OpenStack.KeyManager.GetContainerResult.ContainerRef">ContainerRef</h4>
   <div class="markdown level1 summary"><p>The container reference / where to find the container.</p>
@@ -140,10 +167,10 @@ below.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Keymanager/GetContainer.cs/#L58">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/KeyManager/GetContainer.cs/#L67">View Source</a>
   </span>
   <h4 id="Pulumi_OpenStack_KeyManager_GetContainerResult_CreatedAt" data-uid="Pulumi.OpenStack.KeyManager.GetContainerResult.CreatedAt">CreatedAt</h4>
-  <div class="markdown level1 summary"><p>The date the container was created.</p>
+  <div class="markdown level1 summary"><p>The date the container ACL was created.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -166,7 +193,7 @@ below.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Keymanager/GetContainer.cs/#L62">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/KeyManager/GetContainer.cs/#L71">View Source</a>
   </span>
   <h4 id="Pulumi_OpenStack_KeyManager_GetContainerResult_CreatorId" data-uid="Pulumi.OpenStack.KeyManager.GetContainerResult.CreatorId">CreatorId</h4>
   <div class="markdown level1 summary"><p>The creator of the container.</p>
@@ -192,7 +219,7 @@ below.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Keymanager/GetContainer.cs/#L91">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/KeyManager/GetContainer.cs/#L75">View Source</a>
   </span>
   <h4 id="Pulumi_OpenStack_KeyManager_GetContainerResult_Id" data-uid="Pulumi.OpenStack.KeyManager.GetContainerResult.Id">Id</h4>
   <div class="markdown level1 summary"><p>id is the provider-assigned unique ID for this managed resource.</p>
@@ -218,7 +245,7 @@ below.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Keymanager/GetContainer.cs/#L66">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/KeyManager/GetContainer.cs/#L79">View Source</a>
   </span>
   <h4 id="Pulumi_OpenStack_KeyManager_GetContainerResult_Name" data-uid="Pulumi.OpenStack.KeyManager.GetContainerResult.Name">Name</h4>
   <div class="markdown level1 summary"><p>The name of the consumer.</p>
@@ -244,7 +271,7 @@ below.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Keymanager/GetContainer.cs/#L70">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/KeyManager/GetContainer.cs/#L83">View Source</a>
   </span>
   <h4 id="Pulumi_OpenStack_KeyManager_GetContainerResult_Region" data-uid="Pulumi.OpenStack.KeyManager.GetContainerResult.Region">Region</h4>
   <div class="markdown level1 summary"><p>See Argument Reference above.</p>
@@ -270,7 +297,7 @@ below.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Keymanager/GetContainer.cs/#L75">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/KeyManager/GetContainer.cs/#L88">View Source</a>
   </span>
   <h4 id="Pulumi_OpenStack_KeyManager_GetContainerResult_SecretRefs" data-uid="Pulumi.OpenStack.KeyManager.GetContainerResult.SecretRefs">SecretRefs</h4>
   <div class="markdown level1 summary"><p>A set of dictionaries containing references to secrets. The
@@ -279,7 +306,7 @@ structure is described below.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetContainerSecretRefsResult&gt; SecretRefs</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetContainerSecretRefResult&gt; SecretRefs</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -291,13 +318,13 @@ structure is described below.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.OpenStack.KeyManager.Outputs.GetContainerSecretRefsResult.html">GetContainerSecretRefsResult</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.OpenStack.KeyManager.Outputs.GetContainerSecretRefResult.html">GetContainerSecretRefResult</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Keymanager/GetContainer.cs/#L79">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/KeyManager/GetContainer.cs/#L92">View Source</a>
   </span>
   <h4 id="Pulumi_OpenStack_KeyManager_GetContainerResult_Status" data-uid="Pulumi.OpenStack.KeyManager.GetContainerResult.Status">Status</h4>
   <div class="markdown level1 summary"><p>The status of the container.</p>
@@ -323,7 +350,7 @@ structure is described below.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Keymanager/GetContainer.cs/#L83">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/KeyManager/GetContainer.cs/#L96">View Source</a>
   </span>
   <h4 id="Pulumi_OpenStack_KeyManager_GetContainerResult_Type" data-uid="Pulumi.OpenStack.KeyManager.GetContainerResult.Type">Type</h4>
   <div class="markdown level1 summary"><p>The container type.</p>
@@ -349,10 +376,10 @@ structure is described below.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Keymanager/GetContainer.cs/#L87">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/KeyManager/GetContainer.cs/#L100">View Source</a>
   </span>
   <h4 id="Pulumi_OpenStack_KeyManager_GetContainerResult_UpdatedAt" data-uid="Pulumi.OpenStack.KeyManager.GetContainerResult.UpdatedAt">UpdatedAt</h4>
-  <div class="markdown level1 summary"><p>The date the container was last updated.</p>
+  <div class="markdown level1 summary"><p>The date the container ACL was last updated.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -381,7 +408,7 @@ structure is described below.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Keymanager/GetContainer.cs/#L43" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/KeyManager/GetContainer.cs/#L47" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

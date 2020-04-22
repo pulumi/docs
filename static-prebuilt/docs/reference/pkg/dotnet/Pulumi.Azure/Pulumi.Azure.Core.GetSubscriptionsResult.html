@@ -78,47 +78,23 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">GetSubscriptionsResult</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Azure.Core.html">Pulumi.Azure.Core</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Azure.dll</h6>
   <h5 id="Pulumi_Azure_Core_GetSubscriptionsResult_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class GetSubscriptionsResult</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class GetSubscriptionsResult : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Core/GetSubscriptions.cs/#L45">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Core/GetSubscriptions.cs/#L48">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Core_GetSubscriptionsResult_DisplayNameContains" data-uid="Pulumi.Azure.Core.GetSubscriptionsResult.DisplayNameContains">DisplayNameContains</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string DisplayNameContains</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? DisplayNameContains</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -130,20 +106,20 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Core/GetSubscriptions.cs/#L46">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Core/GetSubscriptions.cs/#L49">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Core_GetSubscriptionsResult_DisplayNamePrefix" data-uid="Pulumi.Azure.Core.GetSubscriptionsResult.DisplayNamePrefix">DisplayNamePrefix</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string DisplayNamePrefix</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? DisplayNamePrefix</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -155,13 +131,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Core/GetSubscriptions.cs/#L54">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Core/GetSubscriptions.cs/#L53">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Core_GetSubscriptionsResult_Id" data-uid="Pulumi.Azure.Core.GetSubscriptionsResult.Id">Id</h4>
   <div class="markdown level1 summary"><p>id is the provider-assigned unique ID for this managed resource.</p>
@@ -187,7 +163,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Core/GetSubscriptions.cs/#L50">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Core/GetSubscriptions.cs/#L57">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Core_GetSubscriptionsResult_Subscriptions" data-uid="Pulumi.Azure.Core.GetSubscriptionsResult.Subscriptions">Subscriptions</h4>
   <div class="markdown level1 summary"><p>One or more <code>subscription</code> blocks as defined below.</p>
@@ -195,7 +171,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetSubscriptionsSubscriptionsResult&gt; Subscriptions</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetSubscriptionsSubscriptionResult&gt; Subscriptions</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -207,7 +183,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Azure.Core.Outputs.GetSubscriptionsSubscriptionsResult.html">GetSubscriptionsSubscriptionsResult</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Azure.Core.Outputs.GetSubscriptionsSubscriptionResult.html">GetSubscriptionsSubscriptionResult</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -219,7 +195,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Core/GetSubscriptions.cs/#L42" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Core/GetSubscriptions.cs/#L45" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

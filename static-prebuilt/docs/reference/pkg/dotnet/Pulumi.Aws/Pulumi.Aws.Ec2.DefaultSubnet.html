@@ -76,53 +76,12 @@ in the current region.</p>
 <p>The <code>aws.ec2.DefaultSubnet</code> behaves differently from normal resources, in that
 this provider does not <em>create</em> this resource, but instead &quot;adopts&quot; it
 into management.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/default_subnet.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/default_subnet.html.markdown</a>.</p>
-</blockquote>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
-    <div class="level3"><span class="xref">DefaultSubnet</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">DefaultSubnet</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.Ec2.html">Pulumi.Aws.Ec2</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
@@ -133,16 +92,16 @@ into management.</p>
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/DefaultSubnet.cs/#L85">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/DefaultSubnet.cs/#L83">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_DefaultSubnet__ctor_" data-uid="Pulumi.Aws.Ec2.DefaultSubnet.#ctor*"></a>
-  <h4 id="Pulumi_Aws_Ec2_DefaultSubnet__ctor_System_String_Pulumi_Aws_Ec2_DefaultSubnetArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.Ec2.DefaultSubnet.#ctor(System.String,Pulumi.Aws.Ec2.DefaultSubnetArgs,Pulumi.CustomResourceOptions)">DefaultSubnet(String, DefaultSubnetArgs, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Aws_Ec2_DefaultSubnet__ctor_System_String_Pulumi_Aws_Ec2_DefaultSubnetArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.Ec2.DefaultSubnet.#ctor(System.String,Pulumi.Aws.Ec2.DefaultSubnetArgs,System.Nullable{CustomResourceOptions})">DefaultSubnet(String, DefaultSubnetArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Create a DefaultSubnet resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public DefaultSubnet(string name, DefaultSubnetArgs args, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public DefaultSubnet(string name, DefaultSubnetArgs args, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -167,7 +126,7 @@ into management.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -177,7 +136,7 @@ into management.</p>
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/DefaultSubnet.cs/#L24">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/DefaultSubnet.cs/#L22">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_DefaultSubnet_Arn_" data-uid="Pulumi.Aws.Ec2.DefaultSubnet.Arn*"></a>
   <h4 id="Pulumi_Aws_Ec2_DefaultSubnet_Arn" data-uid="Pulumi.Aws.Ec2.DefaultSubnet.Arn">Arn</h4>
@@ -197,13 +156,13 @@ into management.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/DefaultSubnet.cs/#L27">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/DefaultSubnet.cs/#L25">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_DefaultSubnet_AssignIpv6AddressOnCreation_" data-uid="Pulumi.Aws.Ec2.DefaultSubnet.AssignIpv6AddressOnCreation*"></a>
   <h4 id="Pulumi_Aws_Ec2_DefaultSubnet_AssignIpv6AddressOnCreation" data-uid="Pulumi.Aws.Ec2.DefaultSubnet.AssignIpv6AddressOnCreation">AssignIpv6AddressOnCreation</h4>
@@ -223,13 +182,13 @@ into management.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/DefaultSubnet.cs/#L30">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/DefaultSubnet.cs/#L28">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_DefaultSubnet_AvailabilityZone_" data-uid="Pulumi.Aws.Ec2.DefaultSubnet.AvailabilityZone*"></a>
   <h4 id="Pulumi_Aws_Ec2_DefaultSubnet_AvailabilityZone" data-uid="Pulumi.Aws.Ec2.DefaultSubnet.AvailabilityZone">AvailabilityZone</h4>
@@ -249,13 +208,13 @@ into management.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/DefaultSubnet.cs/#L33">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/DefaultSubnet.cs/#L31">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_DefaultSubnet_AvailabilityZoneId_" data-uid="Pulumi.Aws.Ec2.DefaultSubnet.AvailabilityZoneId*"></a>
   <h4 id="Pulumi_Aws_Ec2_DefaultSubnet_AvailabilityZoneId" data-uid="Pulumi.Aws.Ec2.DefaultSubnet.AvailabilityZoneId">AvailabilityZoneId</h4>
@@ -275,13 +234,13 @@ into management.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/DefaultSubnet.cs/#L39">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/DefaultSubnet.cs/#L37">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_DefaultSubnet_CidrBlock_" data-uid="Pulumi.Aws.Ec2.DefaultSubnet.CidrBlock*"></a>
   <h4 id="Pulumi_Aws_Ec2_DefaultSubnet_CidrBlock" data-uid="Pulumi.Aws.Ec2.DefaultSubnet.CidrBlock">CidrBlock</h4>
@@ -302,13 +261,13 @@ into management.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/DefaultSubnet.cs/#L45">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/DefaultSubnet.cs/#L43">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_DefaultSubnet_Ipv6CidrBlock_" data-uid="Pulumi.Aws.Ec2.DefaultSubnet.Ipv6CidrBlock*"></a>
   <h4 id="Pulumi_Aws_Ec2_DefaultSubnet_Ipv6CidrBlock" data-uid="Pulumi.Aws.Ec2.DefaultSubnet.Ipv6CidrBlock">Ipv6CidrBlock</h4>
@@ -329,13 +288,13 @@ into management.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/DefaultSubnet.cs/#L48">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/DefaultSubnet.cs/#L46">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_DefaultSubnet_Ipv6CidrBlockAssociationId_" data-uid="Pulumi.Aws.Ec2.DefaultSubnet.Ipv6CidrBlockAssociationId*"></a>
   <h4 id="Pulumi_Aws_Ec2_DefaultSubnet_Ipv6CidrBlockAssociationId" data-uid="Pulumi.Aws.Ec2.DefaultSubnet.Ipv6CidrBlockAssociationId">Ipv6CidrBlockAssociationId</h4>
@@ -355,13 +314,13 @@ into management.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/DefaultSubnet.cs/#L56">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/DefaultSubnet.cs/#L54">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_DefaultSubnet_MapPublicIpOnLaunch_" data-uid="Pulumi.Aws.Ec2.DefaultSubnet.MapPublicIpOnLaunch*"></a>
   <h4 id="Pulumi_Aws_Ec2_DefaultSubnet_MapPublicIpOnLaunch" data-uid="Pulumi.Aws.Ec2.DefaultSubnet.MapPublicIpOnLaunch">MapPublicIpOnLaunch</h4>
@@ -384,13 +343,13 @@ a public IP address.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/DefaultSubnet.cs/#L62">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/DefaultSubnet.cs/#L60">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_DefaultSubnet_OwnerId_" data-uid="Pulumi.Aws.Ec2.DefaultSubnet.OwnerId*"></a>
   <h4 id="Pulumi_Aws_Ec2_DefaultSubnet_OwnerId" data-uid="Pulumi.Aws.Ec2.DefaultSubnet.OwnerId">OwnerId</h4>
@@ -411,13 +370,13 @@ a public IP address.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/DefaultSubnet.cs/#L68">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/DefaultSubnet.cs/#L66">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_DefaultSubnet_Tags_" data-uid="Pulumi.Aws.Ec2.DefaultSubnet.Tags*"></a>
   <h4 id="Pulumi_Aws_Ec2_DefaultSubnet_Tags" data-uid="Pulumi.Aws.Ec2.DefaultSubnet.Tags">Tags</h4>
@@ -426,7 +385,7 @@ a public IP address.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;&gt; Tags { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;?&gt; Tags { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -438,13 +397,13 @@ a public IP address.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/DefaultSubnet.cs/#L74">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/DefaultSubnet.cs/#L72">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_DefaultSubnet_VpcId_" data-uid="Pulumi.Aws.Ec2.DefaultSubnet.VpcId*"></a>
   <h4 id="Pulumi_Aws_Ec2_DefaultSubnet_VpcId" data-uid="Pulumi.Aws.Ec2.DefaultSubnet.VpcId">VpcId</h4>
@@ -465,7 +424,7 @@ a public IP address.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -473,17 +432,17 @@ a public IP address.</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/DefaultSubnet.cs/#L115">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/DefaultSubnet.cs/#L113">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_DefaultSubnet_Get_" data-uid="Pulumi.Aws.Ec2.DefaultSubnet.Get*"></a>
-  <h4 id="Pulumi_Aws_Ec2_DefaultSubnet_Get_System_String_Pulumi_Input_System_String__Pulumi_Aws_Ec2_DefaultSubnetState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.Ec2.DefaultSubnet.Get(System.String,Pulumi.Input{System.String},Pulumi.Aws.Ec2.DefaultSubnetState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, DefaultSubnetState, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Aws_Ec2_DefaultSubnet_Get_System_String_Input_System_String__Pulumi_Aws_Ec2_DefaultSubnetState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.Ec2.DefaultSubnet.Get(System.String,Input{System.String},Pulumi.Aws.Ec2.DefaultSubnetState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, DefaultSubnetState, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Get an existing DefaultSubnet resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static DefaultSubnet Get(string name, Input&lt;string&gt; id, DefaultSubnetState state = null, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static DefaultSubnet Get(string name, Input&lt;string&gt; id, DefaultSubnetState state = null, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -502,7 +461,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -514,7 +473,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -543,7 +502,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/DefaultSubnet.cs/#L22" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/DefaultSubnet.cs/#L20" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

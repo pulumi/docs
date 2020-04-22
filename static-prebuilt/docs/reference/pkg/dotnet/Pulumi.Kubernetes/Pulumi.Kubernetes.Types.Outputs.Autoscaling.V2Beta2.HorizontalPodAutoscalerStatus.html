@@ -79,40 +79,16 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">HorizontalPodAutoscalerStatus</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Autoscaling.V2Beta2.html">Pulumi.Kubernetes.Types.Outputs.Autoscaling.V2Beta2</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Kubernetes.dll</h6>
   <h5 id="Pulumi_Kubernetes_Types_Outputs_Autoscaling_V2Beta2_HorizontalPodAutoscalerStatus_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class HorizontalPodAutoscalerStatus</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class HorizontalPodAutoscalerStatus : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L11634">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L11761">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Autoscaling_V2Beta2_HorizontalPodAutoscalerStatus_Conditions" data-uid="Pulumi.Kubernetes.Types.Outputs.Autoscaling.V2Beta2.HorizontalPodAutoscalerStatus.Conditions">Conditions</h4>
   <div class="markdown level1 summary"><p>conditions is the set of conditions required for this autoscaler to scale its target,
@@ -133,13 +109,13 @@ and indicates whether or not those conditions are met.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Autoscaling.V2Beta2.HorizontalPodAutoscalerCondition.html">HorizontalPodAutoscalerCondition</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Autoscaling.V2Beta2.HorizontalPodAutoscalerCondition.html">HorizontalPodAutoscalerCondition</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L11639">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L11766">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Autoscaling_V2Beta2_HorizontalPodAutoscalerStatus_CurrentMetrics" data-uid="Pulumi.Kubernetes.Types.Outputs.Autoscaling.V2Beta2.HorizontalPodAutoscalerStatus.CurrentMetrics">CurrentMetrics</h4>
   <div class="markdown level1 summary"><p>currentMetrics is the last read state of the metrics used by this autoscaler.</p>
@@ -159,13 +135,13 @@ and indicates whether or not those conditions are met.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Autoscaling.V2Beta2.MetricStatus.html">MetricStatus</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Autoscaling.V2Beta2.MetricStatus.html">MetricStatus</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L11645">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L11772">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Autoscaling_V2Beta2_HorizontalPodAutoscalerStatus_CurrentReplicas" data-uid="Pulumi.Kubernetes.Types.Outputs.Autoscaling.V2Beta2.HorizontalPodAutoscalerStatus.CurrentReplicas">CurrentReplicas</h4>
   <div class="markdown level1 summary"><p>currentReplicas is current number of replicas of pods managed by this autoscaler, as
@@ -192,7 +168,7 @@ last seen by the autoscaler.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L11651">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L11778">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Autoscaling_V2Beta2_HorizontalPodAutoscalerStatus_DesiredReplicas" data-uid="Pulumi.Kubernetes.Types.Outputs.Autoscaling.V2Beta2.HorizontalPodAutoscalerStatus.DesiredReplicas">DesiredReplicas</h4>
   <div class="markdown level1 summary"><p>desiredReplicas is the desired number of replicas of pods managed by this autoscaler, as
@@ -219,7 +195,7 @@ last calculated by the autoscaler.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L11657">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L11784">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Autoscaling_V2Beta2_HorizontalPodAutoscalerStatus_LastScaleTime" data-uid="Pulumi.Kubernetes.Types.Outputs.Autoscaling.V2Beta2.HorizontalPodAutoscalerStatus.LastScaleTime">LastScaleTime</h4>
   <div class="markdown level1 summary"><p>lastScaleTime is the last time the HorizontalPodAutoscaler scaled the number of pods,
@@ -246,7 +222,7 @@ used by the autoscaler to control how often the number of pods is changed.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L11662">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L11789">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Autoscaling_V2Beta2_HorizontalPodAutoscalerStatus_ObservedGeneration" data-uid="Pulumi.Kubernetes.Types.Outputs.Autoscaling.V2Beta2.HorizontalPodAutoscalerStatus.ObservedGeneration">ObservedGeneration</h4>
   <div class="markdown level1 summary"><p>observedGeneration is the most recent generation observed by this autoscaler.</p>
@@ -278,7 +254,7 @@ used by the autoscaler to control how often the number of pods is changed.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L11627" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L11754" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

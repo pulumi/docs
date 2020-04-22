@@ -87,7 +87,33 @@
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Cluster.cs/#L8553">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/Outputs/ClusterRkeConfigServicesKubeApi.cs/#L19">View Source</a>
+  </span>
+  <h4 id="Pulumi_Rancher2_Outputs_ClusterRkeConfigServicesKubeApi_AdmissionConfiguration" data-uid="Pulumi.Rancher2.Outputs.ClusterRkeConfigServicesKubeApi.AdmissionConfiguration">AdmissionConfiguration</h4>
+  <div class="markdown level1 summary"><p>Admission configuration (map)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly ImmutableDictionary&lt;string, object&gt;? AdmissionConfiguration</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/Outputs/ClusterRkeConfigServicesKubeApi.cs/#L23">View Source</a>
   </span>
   <h4 id="Pulumi_Rancher2_Outputs_ClusterRkeConfigServicesKubeApi_AlwaysPullImages" data-uid="Pulumi.Rancher2.Outputs.ClusterRkeConfigServicesKubeApi.AlwaysPullImages">AlwaysPullImages</h4>
   <div class="markdown level1 summary"><p>Enable <a href="https://kubernetes.io/docs/reference/access-authn-authz/admission-controllers/#alwayspullimages">AlwaysPullImages</a> Admission controller plugin. <a href="https://rancher.com/docs/rke/latest/en/config-options/services/#kubernetes-api-server-options">Rancher docs</a> Default: <code>false</code> (bool)</p>
@@ -113,15 +139,15 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Cluster.cs/#L8557">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/Outputs/ClusterRkeConfigServicesKubeApi.cs/#L27">View Source</a>
   </span>
-  <h4 id="Pulumi_Rancher2_Outputs_ClusterRkeConfigServicesKubeApi_ExtraArgs" data-uid="Pulumi.Rancher2.Outputs.ClusterRkeConfigServicesKubeApi.ExtraArgs">ExtraArgs</h4>
-  <div class="markdown level1 summary"><p>Extra arguments for scheduler service (map)</p>
+  <h4 id="Pulumi_Rancher2_Outputs_ClusterRkeConfigServicesKubeApi_AuditLog" data-uid="Pulumi.Rancher2.Outputs.ClusterRkeConfigServicesKubeApi.AuditLog">AuditLog</h4>
+  <div class="markdown level1 summary"><p>K8s audit log configuration. (list maxitems: 1)</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly ImmutableDictionary&lt;string, object&gt; ExtraArgs</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly ClusterRkeConfigServicesKubeApiAuditLog AuditLog</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -133,13 +159,65 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;</td>
+        <td><a class="xref" href="Pulumi.Rancher2.Outputs.ClusterRkeConfigServicesKubeApiAuditLog.html">ClusterRkeConfigServicesKubeApiAuditLog</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Cluster.cs/#L8561">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/Outputs/ClusterRkeConfigServicesKubeApi.cs/#L31">View Source</a>
+  </span>
+  <h4 id="Pulumi_Rancher2_Outputs_ClusterRkeConfigServicesKubeApi_EventRateLimit" data-uid="Pulumi.Rancher2.Outputs.ClusterRkeConfigServicesKubeApi.EventRateLimit">EventRateLimit</h4>
+  <div class="markdown level1 summary"><p>K8s event rate limit configuration. (list maxitems: 1)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly ClusterRkeConfigServicesKubeApiEventRateLimit EventRateLimit</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.Rancher2.Outputs.ClusterRkeConfigServicesKubeApiEventRateLimit.html">ClusterRkeConfigServicesKubeApiEventRateLimit</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/Outputs/ClusterRkeConfigServicesKubeApi.cs/#L35">View Source</a>
+  </span>
+  <h4 id="Pulumi_Rancher2_Outputs_ClusterRkeConfigServicesKubeApi_ExtraArgs" data-uid="Pulumi.Rancher2.Outputs.ClusterRkeConfigServicesKubeApi.ExtraArgs">ExtraArgs</h4>
+  <div class="markdown level1 summary"><p>Extra arguments for scheduler service (map)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly ImmutableDictionary&lt;string, object&gt;? ExtraArgs</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/Outputs/ClusterRkeConfigServicesKubeApi.cs/#L39">View Source</a>
   </span>
   <h4 id="Pulumi_Rancher2_Outputs_ClusterRkeConfigServicesKubeApi_ExtraBinds" data-uid="Pulumi.Rancher2.Outputs.ClusterRkeConfigServicesKubeApi.ExtraBinds">ExtraBinds</h4>
   <div class="markdown level1 summary"><p>Extra binds for scheduler service (list)</p>
@@ -165,7 +243,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Cluster.cs/#L8565">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/Outputs/ClusterRkeConfigServicesKubeApi.cs/#L43">View Source</a>
   </span>
   <h4 id="Pulumi_Rancher2_Outputs_ClusterRkeConfigServicesKubeApi_ExtraEnvs" data-uid="Pulumi.Rancher2.Outputs.ClusterRkeConfigServicesKubeApi.ExtraEnvs">ExtraEnvs</h4>
   <div class="markdown level1 summary"><p>Extra environment for scheduler service (list)</p>
@@ -191,7 +269,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Cluster.cs/#L8569">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/Outputs/ClusterRkeConfigServicesKubeApi.cs/#L47">View Source</a>
   </span>
   <h4 id="Pulumi_Rancher2_Outputs_ClusterRkeConfigServicesKubeApi_Image" data-uid="Pulumi.Rancher2.Outputs.ClusterRkeConfigServicesKubeApi.Image">Image</h4>
   <div class="markdown level1 summary"><p>Docker image for scheduler service (string)</p>
@@ -199,7 +277,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string Image</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? Image</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -211,13 +289,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Cluster.cs/#L8573">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/Outputs/ClusterRkeConfigServicesKubeApi.cs/#L51">View Source</a>
   </span>
   <h4 id="Pulumi_Rancher2_Outputs_ClusterRkeConfigServicesKubeApi_PodSecurityPolicy" data-uid="Pulumi.Rancher2.Outputs.ClusterRkeConfigServicesKubeApi.PodSecurityPolicy">PodSecurityPolicy</h4>
   <div class="markdown level1 summary"><p>Pod Security Policy option for kube API service. Default <code>false</code> (bool)</p>
@@ -243,7 +321,33 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Cluster.cs/#L8577">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/Outputs/ClusterRkeConfigServicesKubeApi.cs/#L55">View Source</a>
+  </span>
+  <h4 id="Pulumi_Rancher2_Outputs_ClusterRkeConfigServicesKubeApi_SecretsEncryptionConfig" data-uid="Pulumi.Rancher2.Outputs.ClusterRkeConfigServicesKubeApi.SecretsEncryptionConfig">SecretsEncryptionConfig</h4>
+  <div class="markdown level1 summary"><p><a href="https://rancher.com/docs/rke/latest/en/config-options/secrets-encryption/">Encrypt k8s secret data configration</a>. (list maxitem: 1)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly ClusterRkeConfigServicesKubeApiSecretsEncryptionConfig SecretsEncryptionConfig</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.Rancher2.Outputs.ClusterRkeConfigServicesKubeApiSecretsEncryptionConfig.html">ClusterRkeConfigServicesKubeApiSecretsEncryptionConfig</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/Outputs/ClusterRkeConfigServicesKubeApi.cs/#L59">View Source</a>
   </span>
   <h4 id="Pulumi_Rancher2_Outputs_ClusterRkeConfigServicesKubeApi_ServiceClusterIpRange" data-uid="Pulumi.Rancher2.Outputs.ClusterRkeConfigServicesKubeApi.ServiceClusterIpRange">ServiceClusterIpRange</h4>
   <div class="markdown level1 summary"><p>Service Cluster ip Range option for kube controller service (string)</p>
@@ -251,7 +355,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string ServiceClusterIpRange</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? ServiceClusterIpRange</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -263,13 +367,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Cluster.cs/#L8581">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/Outputs/ClusterRkeConfigServicesKubeApi.cs/#L63">View Source</a>
   </span>
   <h4 id="Pulumi_Rancher2_Outputs_ClusterRkeConfigServicesKubeApi_ServiceNodePortRange" data-uid="Pulumi.Rancher2.Outputs.ClusterRkeConfigServicesKubeApi.ServiceNodePortRange">ServiceNodePortRange</h4>
   <div class="markdown level1 summary"><p>Service Node Port Range option for kube API service (string)</p>
@@ -277,7 +381,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string ServiceNodePortRange</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? ServiceNodePortRange</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -289,7 +393,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -301,7 +405,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Cluster.cs/#L8547" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/Outputs/ClusterRkeConfigServicesKubeApi.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

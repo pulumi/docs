@@ -79,40 +79,16 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">PodSpec</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Core.V1.html">Pulumi.Kubernetes.Types.Outputs.Core.V1</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Kubernetes.dll</h6>
   <h5 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_PodSpec_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class PodSpec</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class PodSpec : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L19343">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L19517">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_PodSpec_ActiveDeadlineSeconds" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.PodSpec.ActiveDeadlineSeconds">ActiveDeadlineSeconds</h4>
   <div class="markdown level1 summary"><p>Optional duration in seconds the pod may be active on the node relative to StartTime
@@ -140,7 +116,7 @@ Value must be a positive integer.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L19348">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L19522">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_PodSpec_Affinity" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.PodSpec.Affinity">Affinity</h4>
   <div class="markdown level1 summary"><p>If specified, the pod's scheduling constraints</p>
@@ -166,7 +142,7 @@ Value must be a positive integer.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L19354">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L19528">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_PodSpec_AutomountServiceAccountToken" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.PodSpec.AutomountServiceAccountToken">AutomountServiceAccountToken</h4>
   <div class="markdown level1 summary"><p>AutomountServiceAccountToken indicates whether a service account token should be
@@ -193,7 +169,7 @@ automatically mounted.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L19360">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L19534">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_PodSpec_Containers" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.PodSpec.Containers">Containers</h4>
   <div class="markdown level1 summary"><p>List of containers belonging to the pod. Containers cannot currently be added or
@@ -214,13 +190,13 @@ removed. There must be at least one container in a Pod. Cannot be updated.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Core.V1.Container.html">Container</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Core.V1.Container.html">Container</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L19366">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L19540">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_PodSpec_DnsConfig" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.PodSpec.DnsConfig">DnsConfig</h4>
   <div class="markdown level1 summary"><p>Specifies the DNS parameters of a pod. Parameters specified here will be merged to the
@@ -247,7 +223,7 @@ generated DNS configuration based on DNSPolicy.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L19375">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L19549">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_PodSpec_DnsPolicy" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.PodSpec.DnsPolicy">DnsPolicy</h4>
   <div class="markdown level1 summary"><p>Set DNS policy for the pod. Defaults to &quot;ClusterFirst&quot;. Valid values are
@@ -277,7 +253,7 @@ set along with hostNetwork, you have to specify DNS policy explicitly to
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L19382">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L19556">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_PodSpec_EnableServiceLinks" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.PodSpec.EnableServiceLinks">EnableServiceLinks</h4>
   <div class="markdown level1 summary"><p>EnableServiceLinks indicates whether information about services should be injected into
@@ -305,7 +281,7 @@ true.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L19392">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L19566">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_PodSpec_EphemeralContainers" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.PodSpec.EphemeralContainers">EphemeralContainers</h4>
   <div class="markdown level1 summary"><p>List of ephemeral containers run in this pod. Ephemeral containers may be run in an
@@ -330,13 +306,13 @@ servers that enable the EphemeralContainers feature.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Core.V1.EphemeralContainer.html">EphemeralContainer</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Core.V1.EphemeralContainer.html">EphemeralContainer</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L19398">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L19572">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_PodSpec_HostAliases" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.PodSpec.HostAliases">HostAliases</h4>
   <div class="markdown level1 summary"><p>HostAliases is an optional list of hosts and IPs that will be injected into the pod's
@@ -357,13 +333,13 @@ hosts file if specified. This is only valid for non-hostNetwork pods.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Core.V1.HostAlias.html">HostAlias</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Core.V1.HostAlias.html">HostAlias</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L19403">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L19577">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_PodSpec_HostIPC" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.PodSpec.HostIPC">HostIPC</h4>
   <div class="markdown level1 summary"><p>Use the host's ipc namespace. Optional: Default to false.</p>
@@ -389,7 +365,7 @@ hosts file if specified. This is only valid for non-hostNetwork pods.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L19420">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L19594">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_PodSpec_Hostname" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.PodSpec.Hostname">Hostname</h4>
   <div class="markdown level1 summary"><p>Specifies the hostname of the Pod If not specified, the pod's hostname will be set to a
@@ -416,7 +392,7 @@ system-defined value.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L19409">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L19583">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_PodSpec_HostNetwork" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.PodSpec.HostNetwork">HostNetwork</h4>
   <div class="markdown level1 summary"><p>Host networking requested for this pod. Use the host's network namespace. If this option
@@ -443,7 +419,7 @@ is set, the ports that will be used must be specified. Default to false.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L19414">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L19588">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_PodSpec_HostPID" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.PodSpec.HostPID">HostPID</h4>
   <div class="markdown level1 summary"><p>Use the host's pid namespace. Optional: Default to false.</p>
@@ -469,7 +445,7 @@ is set, the ports that will be used must be specified. Default to false.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L19429">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L19603">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_PodSpec_ImagePullSecrets" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.PodSpec.ImagePullSecrets">ImagePullSecrets</h4>
   <div class="markdown level1 summary"><p>ImagePullSecrets is an optional list of references to secrets in the same namespace to
@@ -493,13 +469,13 @@ of docker, only DockerConfig type secrets are honored. More info:
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Core.V1.LocalObjectReference.html">LocalObjectReference</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Core.V1.LocalObjectReference.html">LocalObjectReference</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L19443">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L19617">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_PodSpec_InitContainers" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.PodSpec.InitContainers">InitContainers</h4>
   <div class="markdown level1 summary"><p>List of initialization containers belonging to the pod. Init containers are executed in
@@ -528,13 +504,13 @@ updated. More info: <a href="https://kubernetes.io/docs/concepts/workloads/pods/
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Core.V1.Container.html">Container</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Core.V1.Container.html">Container</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L19450">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L19624">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_PodSpec_NodeName" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.PodSpec.NodeName">NodeName</h4>
   <div class="markdown level1 summary"><p>NodeName is a request to schedule this pod onto a specific node. If it is non-empty, the
@@ -562,7 +538,7 @@ requirements.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L19457">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L19631">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_PodSpec_NodeSelector" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.PodSpec.NodeSelector">NodeSelector</h4>
   <div class="markdown level1 summary"><p>NodeSelector is a selector which must be true for the pod to fit on a node. Selector
@@ -584,13 +560,13 @@ which must match a node's labels for the pod to be scheduled on that node. More 
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L19471">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L19645">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_PodSpec_Overhead" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.PodSpec.Overhead">Overhead</h4>
   <div class="markdown level1 summary"><p>Overhead represents the resource overhead associated with running a pod for a given
@@ -619,13 +595,13 @@ PodOverhead feature.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L19479">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L19653">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_PodSpec_PreemptionPolicy" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.PodSpec.PreemptionPolicy">PreemptionPolicy</h4>
   <div class="markdown level1 summary"><p>PreemptionPolicy is the Policy for preempting pods with lower priority. One of Never,
@@ -654,7 +630,7 @@ feature.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L19487">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L19661">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_PodSpec_Priority" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.PodSpec.Priority">Priority</h4>
   <div class="markdown level1 summary"><p>The priority value. Various system components use this field to find the priority of the
@@ -683,7 +659,7 @@ the value, the higher the priority.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L19496">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L19670">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_PodSpec_PriorityClassName" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.PodSpec.PriorityClassName">PriorityClassName</h4>
   <div class="markdown level1 summary"><p>If specified, indicates the pod's priority. &quot;system-node-critical&quot; and
@@ -713,7 +689,7 @@ or zero if there is no default.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L19504">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L19678">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_PodSpec_ReadinessGates" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.PodSpec.ReadinessGates">ReadinessGates</h4>
   <div class="markdown level1 summary"><p>If specified, all readiness gates will be evaluated for pod readiness. A pod is ready
@@ -736,13 +712,13 @@ have status equal to &quot;True&quot; More info:
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Core.V1.PodReadinessGate.html">PodReadinessGate</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Core.V1.PodReadinessGate.html">PodReadinessGate</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L19511">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L19685">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_PodSpec_RestartPolicy" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.PodSpec.RestartPolicy">RestartPolicy</h4>
   <div class="markdown level1 summary"><p>Restart policy for all containers within the pod. One of Always, OnFailure, Never.
@@ -770,7 +746,7 @@ Default to Always. More info:
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L19521">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L19695">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_PodSpec_RuntimeClassName" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.PodSpec.RuntimeClassName">RuntimeClassName</h4>
   <div class="markdown level1 summary"><p>RuntimeClassName refers to a RuntimeClass object in the node.k8s.io group, which should
@@ -801,7 +777,7 @@ feature as of Kubernetes v1.14.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L19527">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L19701">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_PodSpec_SchedulerName" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.PodSpec.SchedulerName">SchedulerName</h4>
   <div class="markdown level1 summary"><p>If specified, the pod will be dispatched by specified scheduler. If not specified, the
@@ -828,7 +804,7 @@ pod will be dispatched by default scheduler.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L19533">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L19707">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_PodSpec_SecurityContext" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.PodSpec.SecurityContext">SecurityContext</h4>
   <div class="markdown level1 summary"><p>SecurityContext holds pod-level security attributes and common container settings.
@@ -855,7 +831,7 @@ Optional: Defaults to empty.  See type description for default values of each fi
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L19539">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L19713">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_PodSpec_ServiceAccount" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.PodSpec.ServiceAccount">ServiceAccount</h4>
   <div class="markdown level1 summary"><p>DeprecatedServiceAccount is a depreciated alias for ServiceAccountName. Deprecated: Use
@@ -882,7 +858,7 @@ serviceAccountName instead.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L19545">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L19719">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_PodSpec_ServiceAccountName" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.PodSpec.ServiceAccountName">ServiceAccountName</h4>
   <div class="markdown level1 summary"><p>ServiceAccountName is the name of the ServiceAccount to use to run this pod. More info:
@@ -909,7 +885,7 @@ serviceAccountName instead.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L19553">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L19727">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_PodSpec_ShareProcessNamespace" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.PodSpec.ShareProcessNamespace">ShareProcessNamespace</h4>
   <div class="markdown level1 summary"><p>Share a single process namespace between all of the containers in a pod. When this is
@@ -938,7 +914,7 @@ and ShareProcessNamespace cannot both be set. Optional: Default to false.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L19561">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L19735">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_PodSpec_Subdomain" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.PodSpec.Subdomain">Subdomain</h4>
   <div class="markdown level1 summary"><p>If specified, the fully qualified Pod hostname will be
@@ -967,7 +943,7 @@ not have a domainname at all.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L19572">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L19746">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_PodSpec_TerminationGracePeriodSeconds" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.PodSpec.TerminationGracePeriodSeconds">TerminationGracePeriodSeconds</h4>
   <div class="markdown level1 summary"><p>Optional duration in seconds the pod needs to terminate gracefully. May be decreased in
@@ -999,7 +975,7 @@ to 30 seconds.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L19577">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L19751">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_PodSpec_Tolerations" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.PodSpec.Tolerations">Tolerations</h4>
   <div class="markdown level1 summary"><p>If specified, the pod's tolerations.</p>
@@ -1019,19 +995,19 @@ to 30 seconds.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Core.V1.Toleration.html">Toleration</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Core.V1.Toleration.html">Toleration</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L19585">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L19759">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_PodSpec_TopologySpreadConstraints" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.PodSpec.TopologySpreadConstraints">TopologySpreadConstraints</h4>
   <div class="markdown level1 summary"><p>TopologySpreadConstraints describes how a group of pods ought to spread across topology
 domains. Scheduler will schedule pods in a way which abides by the constraints. This
-field is alpha-level and is only honored by clusters that enables the EvenPodsSpread
-feature. All topologySpreadConstraints are ANDed.</p>
+field is only honored by clusters that enable the EvenPodsSpread feature. All
+topologySpreadConstraints are ANDed.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -1048,13 +1024,13 @@ feature. All topologySpreadConstraints are ANDed.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Core.V1.TopologySpreadConstraint.html">TopologySpreadConstraint</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Core.V1.TopologySpreadConstraint.html">TopologySpreadConstraint</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L19591">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L19765">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_PodSpec_Volumes" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.PodSpec.Volumes">Volumes</h4>
   <div class="markdown level1 summary"><p>List of volumes that can be mounted by containers belonging to the pod. More info:
@@ -1075,7 +1051,7 @@ feature. All topologySpreadConstraints are ANDed.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Core.V1.Volume.html">Volume</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Core.V1.Volume.html">Volume</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -1087,7 +1063,7 @@ feature. All topologySpreadConstraints are ANDed.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L19335" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L19509" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

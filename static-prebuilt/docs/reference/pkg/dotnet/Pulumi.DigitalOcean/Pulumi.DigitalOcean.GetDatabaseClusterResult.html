@@ -78,40 +78,16 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">GetDatabaseClusterResult</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.DigitalOcean.html">Pulumi.DigitalOcean</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.DigitalOcean.dll</h6>
   <h5 id="Pulumi_DigitalOcean_GetDatabaseClusterResult_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class GetDatabaseClusterResult</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class GetDatabaseClusterResult : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/master/sdk/dotnet/GetDatabaseCluster.cs/#L50">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/GetDatabaseCluster.cs/#L53">View Source</a>
   </span>
   <h4 id="Pulumi_DigitalOcean_GetDatabaseClusterResult_Database" data-uid="Pulumi.DigitalOcean.GetDatabaseClusterResult.Database">Database</h4>
   <div class="markdown level1 summary"><p>Name of the cluster's default database.</p>
@@ -137,7 +113,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/master/sdk/dotnet/GetDatabaseCluster.cs/#L54">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/GetDatabaseCluster.cs/#L57">View Source</a>
   </span>
   <h4 id="Pulumi_DigitalOcean_GetDatabaseClusterResult_Engine" data-uid="Pulumi.DigitalOcean.GetDatabaseClusterResult.Engine">Engine</h4>
   <div class="markdown level1 summary"><p>Database engine used by the cluster (ex. <code>pg</code> for PostreSQL).</p>
@@ -163,7 +139,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/master/sdk/dotnet/GetDatabaseCluster.cs/#L58">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/GetDatabaseCluster.cs/#L61">View Source</a>
   </span>
   <h4 id="Pulumi_DigitalOcean_GetDatabaseClusterResult_Host" data-uid="Pulumi.DigitalOcean.GetDatabaseClusterResult.Host">Host</h4>
   <div class="markdown level1 summary"><p>Database cluster's hostname.</p>
@@ -189,7 +165,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/master/sdk/dotnet/GetDatabaseCluster.cs/#L112">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/GetDatabaseCluster.cs/#L65">View Source</a>
   </span>
   <h4 id="Pulumi_DigitalOcean_GetDatabaseClusterResult_Id" data-uid="Pulumi.DigitalOcean.GetDatabaseClusterResult.Id">Id</h4>
   <div class="markdown level1 summary"><p>id is the provider-assigned unique ID for this managed resource.</p>
@@ -215,7 +191,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/master/sdk/dotnet/GetDatabaseCluster.cs/#L62">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/GetDatabaseCluster.cs/#L69">View Source</a>
   </span>
   <h4 id="Pulumi_DigitalOcean_GetDatabaseClusterResult_MaintenanceWindows" data-uid="Pulumi.DigitalOcean.GetDatabaseClusterResult.MaintenanceWindows">MaintenanceWindows</h4>
   <div class="markdown level1 summary"><p>Defines when the automatic maintenance should be performed for the database cluster.</p>
@@ -223,7 +199,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetDatabaseClusterMaintenanceWindowsResult&gt; MaintenanceWindows</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetDatabaseClusterMaintenanceWindowResult&gt; MaintenanceWindows</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -235,13 +211,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.DigitalOcean.Outputs.GetDatabaseClusterMaintenanceWindowsResult.html">GetDatabaseClusterMaintenanceWindowsResult</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.DigitalOcean.Outputs.GetDatabaseClusterMaintenanceWindowResult.html">GetDatabaseClusterMaintenanceWindowResult</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/master/sdk/dotnet/GetDatabaseCluster.cs/#L63">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/GetDatabaseCluster.cs/#L70">View Source</a>
   </span>
   <h4 id="Pulumi_DigitalOcean_GetDatabaseClusterResult_Name" data-uid="Pulumi.DigitalOcean.GetDatabaseClusterResult.Name">Name</h4>
   <div class="markdown level1 summary"></div>
@@ -266,7 +242,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/master/sdk/dotnet/GetDatabaseCluster.cs/#L67">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/GetDatabaseCluster.cs/#L74">View Source</a>
   </span>
   <h4 id="Pulumi_DigitalOcean_GetDatabaseClusterResult_NodeCount" data-uid="Pulumi.DigitalOcean.GetDatabaseClusterResult.NodeCount">NodeCount</h4>
   <div class="markdown level1 summary"><p>Number of nodes that will be included in the cluster.</p>
@@ -292,7 +268,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/master/sdk/dotnet/GetDatabaseCluster.cs/#L71">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/GetDatabaseCluster.cs/#L78">View Source</a>
   </span>
   <h4 id="Pulumi_DigitalOcean_GetDatabaseClusterResult_Password" data-uid="Pulumi.DigitalOcean.GetDatabaseClusterResult.Password">Password</h4>
   <div class="markdown level1 summary"><p>Password for the cluster's default user.</p>
@@ -318,7 +294,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/master/sdk/dotnet/GetDatabaseCluster.cs/#L75">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/GetDatabaseCluster.cs/#L82">View Source</a>
   </span>
   <h4 id="Pulumi_DigitalOcean_GetDatabaseClusterResult_Port" data-uid="Pulumi.DigitalOcean.GetDatabaseClusterResult.Port">Port</h4>
   <div class="markdown level1 summary"><p>Network port that the database cluster is listening on.</p>
@@ -344,7 +320,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/master/sdk/dotnet/GetDatabaseCluster.cs/#L79">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/GetDatabaseCluster.cs/#L86">View Source</a>
   </span>
   <h4 id="Pulumi_DigitalOcean_GetDatabaseClusterResult_PrivateHost" data-uid="Pulumi.DigitalOcean.GetDatabaseClusterResult.PrivateHost">PrivateHost</h4>
   <div class="markdown level1 summary"><p>Same as <code>host</code>, but only accessible from resources within the account and in the same region.</p>
@@ -370,7 +346,33 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/master/sdk/dotnet/GetDatabaseCluster.cs/#L83">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/GetDatabaseCluster.cs/#L90">View Source</a>
+  </span>
+  <h4 id="Pulumi_DigitalOcean_GetDatabaseClusterResult_PrivateNetworkUuid" data-uid="Pulumi.DigitalOcean.GetDatabaseClusterResult.PrivateNetworkUuid">PrivateNetworkUuid</h4>
+  <div class="markdown level1 summary"><p>The ID of the VPC where the database cluster is located.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly string PrivateNetworkUuid</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/GetDatabaseCluster.cs/#L94">View Source</a>
   </span>
   <h4 id="Pulumi_DigitalOcean_GetDatabaseClusterResult_PrivateUri" data-uid="Pulumi.DigitalOcean.GetDatabaseClusterResult.PrivateUri">PrivateUri</h4>
   <div class="markdown level1 summary"><p>Same as <code>uri</code>, but only accessible from resources within the account and in the same region.</p>
@@ -396,7 +398,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/master/sdk/dotnet/GetDatabaseCluster.cs/#L87">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/GetDatabaseCluster.cs/#L98">View Source</a>
   </span>
   <h4 id="Pulumi_DigitalOcean_GetDatabaseClusterResult_Region" data-uid="Pulumi.DigitalOcean.GetDatabaseClusterResult.Region">Region</h4>
   <div class="markdown level1 summary"><p>DigitalOcean region where the cluster will reside.</p>
@@ -422,7 +424,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/master/sdk/dotnet/GetDatabaseCluster.cs/#L91">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/GetDatabaseCluster.cs/#L102">View Source</a>
   </span>
   <h4 id="Pulumi_DigitalOcean_GetDatabaseClusterResult_Size" data-uid="Pulumi.DigitalOcean.GetDatabaseClusterResult.Size">Size</h4>
   <div class="markdown level1 summary"><p>Database droplet size associated with the cluster (ex. <code>db-s-1vcpu-1gb</code>).</p>
@@ -448,7 +450,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/master/sdk/dotnet/GetDatabaseCluster.cs/#L92">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/GetDatabaseCluster.cs/#L103">View Source</a>
   </span>
   <h4 id="Pulumi_DigitalOcean_GetDatabaseClusterResult_Tags" data-uid="Pulumi.DigitalOcean.GetDatabaseClusterResult.Tags">Tags</h4>
   <div class="markdown level1 summary"></div>
@@ -467,13 +469,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/master/sdk/dotnet/GetDatabaseCluster.cs/#L96">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/GetDatabaseCluster.cs/#L107">View Source</a>
   </span>
   <h4 id="Pulumi_DigitalOcean_GetDatabaseClusterResult_Uri" data-uid="Pulumi.DigitalOcean.GetDatabaseClusterResult.Uri">Uri</h4>
   <div class="markdown level1 summary"><p>The full URI for connecting to the database cluster.</p>
@@ -499,7 +501,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/master/sdk/dotnet/GetDatabaseCluster.cs/#L100">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/GetDatabaseCluster.cs/#L111">View Source</a>
   </span>
   <h4 id="Pulumi_DigitalOcean_GetDatabaseClusterResult_Urn" data-uid="Pulumi.DigitalOcean.GetDatabaseClusterResult.Urn">Urn</h4>
   <div class="markdown level1 summary"><p>The uniform resource name of the database cluster.</p>
@@ -525,7 +527,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/master/sdk/dotnet/GetDatabaseCluster.cs/#L104">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/GetDatabaseCluster.cs/#L115">View Source</a>
   </span>
   <h4 id="Pulumi_DigitalOcean_GetDatabaseClusterResult_User" data-uid="Pulumi.DigitalOcean.GetDatabaseClusterResult.User">User</h4>
   <div class="markdown level1 summary"><p>Username for the cluster's default user.</p>
@@ -551,7 +553,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/master/sdk/dotnet/GetDatabaseCluster.cs/#L108">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/GetDatabaseCluster.cs/#L119">View Source</a>
   </span>
   <h4 id="Pulumi_DigitalOcean_GetDatabaseClusterResult_Version" data-uid="Pulumi.DigitalOcean.GetDatabaseClusterResult.Version">Version</h4>
   <div class="markdown level1 summary"><p>Engine version used by the cluster (ex. <code>11</code> for PostgreSQL 11).</p>
@@ -583,7 +585,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/master/sdk/dotnet/GetDatabaseCluster.cs/#L44" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/GetDatabaseCluster.cs/#L47" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

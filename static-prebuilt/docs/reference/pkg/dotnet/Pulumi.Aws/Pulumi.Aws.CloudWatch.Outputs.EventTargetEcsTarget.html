@@ -78,40 +78,16 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">EventTargetEcsTarget</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.CloudWatch.Outputs.html">Pulumi.Aws.CloudWatch.Outputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
   <h5 id="Pulumi_Aws_CloudWatch_Outputs_EventTargetEcsTarget_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class EventTargetEcsTarget</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class EventTargetEcsTarget : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Cloudwatch/EventTarget.cs/#L729">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudWatch/Outputs/EventTargetEcsTarget.cs/#L19">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_CloudWatch_Outputs_EventTargetEcsTarget_Group" data-uid="Pulumi.Aws.CloudWatch.Outputs.EventTargetEcsTarget.Group">Group</h4>
   <div class="markdown level1 summary"><p>Specifies an ECS task group for the task. The maximum length is 255 characters.</p>
@@ -119,7 +95,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string Group</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? Group</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -131,13 +107,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Cloudwatch/EventTarget.cs/#L733">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudWatch/Outputs/EventTargetEcsTarget.cs/#L23">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_CloudWatch_Outputs_EventTargetEcsTarget_LaunchType" data-uid="Pulumi.Aws.CloudWatch.Outputs.EventTargetEcsTarget.LaunchType">LaunchType</h4>
   <div class="markdown level1 summary"><p>Specifies the launch type on which your task is running. The launch type that you specify here must match one of the launch type (compatibilities) of the target task. Valid values are EC2 or FARGATE.</p>
@@ -145,7 +121,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string LaunchType</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? LaunchType</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -157,13 +133,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Cloudwatch/EventTarget.cs/#L737">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudWatch/Outputs/EventTargetEcsTarget.cs/#L27">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_CloudWatch_Outputs_EventTargetEcsTarget_NetworkConfiguration" data-uid="Pulumi.Aws.CloudWatch.Outputs.EventTargetEcsTarget.NetworkConfiguration">NetworkConfiguration</h4>
   <div class="markdown level1 summary"><p>Use this if the ECS task uses the awsvpc network mode. This specifies the VPC subnets and security groups associated with the task, and whether a public IP address is to be used. Required if launch_type is FARGATE because the awsvpc mode is required for Fargate tasks.</p>
@@ -189,7 +165,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Cloudwatch/EventTarget.cs/#L741">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudWatch/Outputs/EventTargetEcsTarget.cs/#L31">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_CloudWatch_Outputs_EventTargetEcsTarget_PlatformVersion" data-uid="Pulumi.Aws.CloudWatch.Outputs.EventTargetEcsTarget.PlatformVersion">PlatformVersion</h4>
   <div class="markdown level1 summary"><p>Specifies the platform version for the task. Specify only the numeric portion of the platform version, such as 1.1.0. This is used only if LaunchType is FARGATE. For more information about valid platform versions, see <a href="http://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html">AWS Fargate Platform Versions</a>.</p>
@@ -197,7 +173,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string PlatformVersion</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? PlatformVersion</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -209,13 +185,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Cloudwatch/EventTarget.cs/#L745">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudWatch/Outputs/EventTargetEcsTarget.cs/#L35">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_CloudWatch_Outputs_EventTargetEcsTarget_TaskCount" data-uid="Pulumi.Aws.CloudWatch.Outputs.EventTargetEcsTarget.TaskCount">TaskCount</h4>
   <div class="markdown level1 summary"><p>The number of tasks to create based on the TaskDefinition. The default is 1.</p>
@@ -241,7 +217,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Cloudwatch/EventTarget.cs/#L749">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudWatch/Outputs/EventTargetEcsTarget.cs/#L39">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_CloudWatch_Outputs_EventTargetEcsTarget_TaskDefinitionArn" data-uid="Pulumi.Aws.CloudWatch.Outputs.EventTargetEcsTarget.TaskDefinitionArn">TaskDefinitionArn</h4>
   <div class="markdown level1 summary"><p>The ARN of the task definition to use if the event target is an Amazon ECS cluster.</p>
@@ -273,7 +249,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Cloudwatch/EventTarget.cs/#L723" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudWatch/Outputs/EventTargetEcsTarget.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

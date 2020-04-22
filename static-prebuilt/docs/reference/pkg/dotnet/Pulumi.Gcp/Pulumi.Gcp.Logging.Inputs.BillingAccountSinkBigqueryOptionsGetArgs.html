@@ -76,36 +76,7 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
-    <div class="level3"><span class="xref">BillingAccountSinkBigqueryOptionsGetArgs</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">BillingAccountSinkBigqueryOptionsGetArgs</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.Logging.Inputs.html">Pulumi.Gcp.Logging.Inputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
@@ -116,7 +87,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Logging/BillingAccountSink.cs/#L218">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Logging/Inputs/BillingAccountSinkBigqueryOptionsGetArgs.cs/#L24">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Logging_Inputs_BillingAccountSinkBigqueryOptionsGetArgs__ctor_" data-uid="Pulumi.Gcp.Logging.Inputs.BillingAccountSinkBigqueryOptionsGetArgs.#ctor*"></a>
   <h4 id="Pulumi_Gcp_Logging_Inputs_BillingAccountSinkBigqueryOptionsGetArgs__ctor" data-uid="Pulumi.Gcp.Logging.Inputs.BillingAccountSinkBigqueryOptionsGetArgs.#ctor">BillingAccountSinkBigqueryOptionsGetArgs()</h4>
@@ -129,11 +100,15 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Logging/BillingAccountSink.cs/#L215">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Logging/Inputs/BillingAccountSinkBigqueryOptionsGetArgs.cs/#L21">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Logging_Inputs_BillingAccountSinkBigqueryOptionsGetArgs_UsePartitionedTables_" data-uid="Pulumi.Gcp.Logging.Inputs.BillingAccountSinkBigqueryOptionsGetArgs.UsePartitionedTables*"></a>
   <h4 id="Pulumi_Gcp_Logging_Inputs_BillingAccountSinkBigqueryOptionsGetArgs_UsePartitionedTables" data-uid="Pulumi.Gcp.Logging.Inputs.BillingAccountSinkBigqueryOptionsGetArgs.UsePartitionedTables">UsePartitionedTables</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Whether to use <a href="https://cloud.google.com/bigquery/docs/partitioned-tables">BigQuery's partition tables</a>.
+By default, Logging creates dated tables based on the log entries' timestamps, e.g. syslog_20170523. With partitioned
+tables the date suffix is no longer present and <a href="https://cloud.google.com/bigquery/docs/querying-partitioned-tables">special query syntax</a>
+has to be used instead. In both cases, tables are sharded based on UTC timezone.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -149,7 +124,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -161,7 +136,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Logging/BillingAccountSink.cs/#L213" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Logging/Inputs/BillingAccountSinkBigqueryOptionsGetArgs.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -86,11 +86,8 @@ what your policy should be.</p>
 </blockquote>
 <blockquote>
 <p><strong>Note:</strong> On create, this resource will overwrite members of any existing roles.
-Use <code>import</code> and inspect the preview output to ensure
+Use <code>pulumi import</code> and inspect the output to ensure
 your existing members are preserved.</p>
-</blockquote>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/google_billing_account_iam_binding.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/google_billing_account_iam_binding.html.markdown</a>.</p>
 </blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Billing.AccountIamBindingArgs.html">AccountIamBindingArgs</a></h4>
@@ -104,9 +101,6 @@ the IAM policy for an existing Google Cloud Platform Billing Account.</p>
 <p><strong>Note:</strong> This resource <strong>must not</strong> be used in conjunction with
 <code>gcp.billing.AccountIamBinding</code> for the <strong>same role</strong> or they will fight over
 what your policy should be.</p>
-</blockquote>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/google_billing_account_iam_member.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/google_billing_account_iam_member.html.markdown</a>.</p>
 </blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Billing.AccountIamMemberArgs.html">AccountIamMemberArgs</a></h4>
@@ -127,16 +121,20 @@ and examining the diff very closely.</p>
 <code>gcp.billing.AccountIamMember</code> or <code>gcp.billing.AccountIamBinding</code>
 or they will fight over what your policy should be.</p>
 </blockquote>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/google_billing_account_iam_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/google_billing_account_iam_policy.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Billing.AccountIamPolicyArgs.html">AccountIamPolicyArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Billing.AccountIamPolicyState.html">AccountIamPolicyState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Billing.Budget.html">Budget</a></h4>
-      <section></section>
+      <section><p>Budget configuration for a billing account.</p>
+<p>To get more information about Budget, see:</p>
+<ul>
+<li><a href="https://cloud.google.com/billing/docs/reference/budget/rest/v1beta1/billingAccounts.budgets">API documentation</a></li>
+<li>How-to Guides</li>
+<li><a href="https://cloud.google.com/billing/docs/how-to/budgets">Creating a budget</a></li>
+</ul>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.Billing.BudgetArgs.html">BudgetArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Billing.BudgetState.html">BudgetState</a></h4>

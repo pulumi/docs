@@ -72,53 +72,12 @@
   <h1 id="Pulumi_Aws_Budgets_Budget" data-uid="Pulumi.Aws.Budgets.Budget" class="text-break">Class Budget
   </h1>
   <div class="markdown level0 summary"><p>Provides a budgets budget resource. Budgets use the cost visualisation provided by Cost Explorer to show you the status of your budgets, to provide forecasts of your estimated costs, and to track your AWS usage, including your free tier usage.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/budgets_budget.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/budgets_budget.html.markdown</a>.</p>
-</blockquote>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
-    <div class="level3"><span class="xref">Budget</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">Budget</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.Budgets.html">Pulumi.Aws.Budgets</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
@@ -129,16 +88,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Budgets/Budget.cs/#L99">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Budgets/Budget.cs/#L97">View Source</a>
   </span>
   <a id="Pulumi_Aws_Budgets_Budget__ctor_" data-uid="Pulumi.Aws.Budgets.Budget.#ctor*"></a>
-  <h4 id="Pulumi_Aws_Budgets_Budget__ctor_System_String_Pulumi_Aws_Budgets_BudgetArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.Budgets.Budget.#ctor(System.String,Pulumi.Aws.Budgets.BudgetArgs,Pulumi.CustomResourceOptions)">Budget(String, BudgetArgs, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Aws_Budgets_Budget__ctor_System_String_Pulumi_Aws_Budgets_BudgetArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.Budgets.Budget.#ctor(System.String,Pulumi.Aws.Budgets.BudgetArgs,System.Nullable{CustomResourceOptions})">Budget(String, BudgetArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Create a Budget resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Budget(string name, BudgetArgs args, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Budget(string name, BudgetArgs args, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -163,7 +122,7 @@
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -173,7 +132,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Budgets/Budget.cs/#L22">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Budgets/Budget.cs/#L20">View Source</a>
   </span>
   <a id="Pulumi_Aws_Budgets_Budget_AccountId_" data-uid="Pulumi.Aws.Budgets.Budget.AccountId*"></a>
   <h4 id="Pulumi_Aws_Budgets_Budget_AccountId" data-uid="Pulumi.Aws.Budgets.Budget.AccountId">AccountId</h4>
@@ -194,13 +153,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Budgets/Budget.cs/#L28">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Budgets/Budget.cs/#L26">View Source</a>
   </span>
   <a id="Pulumi_Aws_Budgets_Budget_BudgetType_" data-uid="Pulumi.Aws.Budgets.Budget.BudgetType*"></a>
   <h4 id="Pulumi_Aws_Budgets_Budget_BudgetType" data-uid="Pulumi.Aws.Budgets.Budget.BudgetType">BudgetType</h4>
@@ -221,13 +180,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Budgets/Budget.cs/#L34">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Budgets/Budget.cs/#L32">View Source</a>
   </span>
   <a id="Pulumi_Aws_Budgets_Budget_CostFilters_" data-uid="Pulumi.Aws.Budgets.Budget.CostFilters*"></a>
   <h4 id="Pulumi_Aws_Budgets_Budget_CostFilters" data-uid="Pulumi.Aws.Budgets.Budget.CostFilters">CostFilters</h4>
@@ -248,13 +207,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Budgets/Budget.cs/#L40">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Budgets/Budget.cs/#L38">View Source</a>
   </span>
   <a id="Pulumi_Aws_Budgets_Budget_CostTypes_" data-uid="Pulumi.Aws.Budgets.Budget.CostTypes*"></a>
   <h4 id="Pulumi_Aws_Budgets_Budget_CostTypes" data-uid="Pulumi.Aws.Budgets.Budget.CostTypes">CostTypes</h4>
@@ -275,13 +234,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Aws.Budgets.Outputs.BudgetCostTypes.html">BudgetCostTypes</a>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Aws.Budgets.Outputs.BudgetCostTypes.html">BudgetCostTypes</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Budgets/Budget.cs/#L46">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Budgets/Budget.cs/#L44">View Source</a>
   </span>
   <a id="Pulumi_Aws_Budgets_Budget_LimitAmount_" data-uid="Pulumi.Aws.Budgets.Budget.LimitAmount*"></a>
   <h4 id="Pulumi_Aws_Budgets_Budget_LimitAmount" data-uid="Pulumi.Aws.Budgets.Budget.LimitAmount">LimitAmount</h4>
@@ -302,13 +261,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Budgets/Budget.cs/#L52">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Budgets/Budget.cs/#L50">View Source</a>
   </span>
   <a id="Pulumi_Aws_Budgets_Budget_LimitUnit_" data-uid="Pulumi.Aws.Budgets.Budget.LimitUnit*"></a>
   <h4 id="Pulumi_Aws_Budgets_Budget_LimitUnit" data-uid="Pulumi.Aws.Budgets.Budget.LimitUnit">LimitUnit</h4>
@@ -329,13 +288,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Budgets/Budget.cs/#L58">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Budgets/Budget.cs/#L56">View Source</a>
   </span>
   <a id="Pulumi_Aws_Budgets_Budget_Name_" data-uid="Pulumi.Aws.Budgets.Budget.Name*"></a>
   <h4 id="Pulumi_Aws_Budgets_Budget_Name" data-uid="Pulumi.Aws.Budgets.Budget.Name">Name</h4>
@@ -356,13 +315,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Budgets/Budget.cs/#L64">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Budgets/Budget.cs/#L62">View Source</a>
   </span>
   <a id="Pulumi_Aws_Budgets_Budget_NamePrefix_" data-uid="Pulumi.Aws.Budgets.Budget.NamePrefix*"></a>
   <h4 id="Pulumi_Aws_Budgets_Budget_NamePrefix" data-uid="Pulumi.Aws.Budgets.Budget.NamePrefix">NamePrefix</h4>
@@ -383,13 +342,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Budgets/Budget.cs/#L70">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Budgets/Budget.cs/#L68">View Source</a>
   </span>
   <a id="Pulumi_Aws_Budgets_Budget_Notifications_" data-uid="Pulumi.Aws.Budgets.Budget.Notifications*"></a>
   <h4 id="Pulumi_Aws_Budgets_Budget_Notifications" data-uid="Pulumi.Aws.Budgets.Budget.Notifications">Notifications</h4>
@@ -398,7 +357,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;BudgetNotifications&gt;&gt; Notifications { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;BudgetNotification&gt;&gt; Notifications { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -410,13 +369,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.Budgets.Outputs.BudgetNotifications.html">BudgetNotifications</a>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.Budgets.Outputs.BudgetNotification.html">BudgetNotification</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Budgets/Budget.cs/#L76">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Budgets/Budget.cs/#L74">View Source</a>
   </span>
   <a id="Pulumi_Aws_Budgets_Budget_TimePeriodEnd_" data-uid="Pulumi.Aws.Budgets.Budget.TimePeriodEnd*"></a>
   <h4 id="Pulumi_Aws_Budgets_Budget_TimePeriodEnd" data-uid="Pulumi.Aws.Budgets.Budget.TimePeriodEnd">TimePeriodEnd</h4>
@@ -425,7 +384,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; TimePeriodEnd { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; TimePeriodEnd { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -437,13 +396,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Budgets/Budget.cs/#L82">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Budgets/Budget.cs/#L80">View Source</a>
   </span>
   <a id="Pulumi_Aws_Budgets_Budget_TimePeriodStart_" data-uid="Pulumi.Aws.Budgets.Budget.TimePeriodStart*"></a>
   <h4 id="Pulumi_Aws_Budgets_Budget_TimePeriodStart" data-uid="Pulumi.Aws.Budgets.Budget.TimePeriodStart">TimePeriodStart</h4>
@@ -464,13 +423,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Budgets/Budget.cs/#L88">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Budgets/Budget.cs/#L86">View Source</a>
   </span>
   <a id="Pulumi_Aws_Budgets_Budget_TimeUnit_" data-uid="Pulumi.Aws.Budgets.Budget.TimeUnit*"></a>
   <h4 id="Pulumi_Aws_Budgets_Budget_TimeUnit" data-uid="Pulumi.Aws.Budgets.Budget.TimeUnit">TimeUnit</h4>
@@ -491,7 +450,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -499,17 +458,17 @@
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Budgets/Budget.cs/#L129">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Budgets/Budget.cs/#L127">View Source</a>
   </span>
   <a id="Pulumi_Aws_Budgets_Budget_Get_" data-uid="Pulumi.Aws.Budgets.Budget.Get*"></a>
-  <h4 id="Pulumi_Aws_Budgets_Budget_Get_System_String_Pulumi_Input_System_String__Pulumi_Aws_Budgets_BudgetState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.Budgets.Budget.Get(System.String,Pulumi.Input{System.String},Pulumi.Aws.Budgets.BudgetState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, BudgetState, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Aws_Budgets_Budget_Get_System_String_Input_System_String__Pulumi_Aws_Budgets_BudgetState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.Budgets.Budget.Get(System.String,Input{System.String},Pulumi.Aws.Budgets.BudgetState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, BudgetState, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Get an existing Budget resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Budget Get(string name, Input&lt;string&gt; id, BudgetState state = null, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Budget Get(string name, Input&lt;string&gt; id, BudgetState state = null, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -528,7 +487,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -540,7 +499,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -569,7 +528,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Budgets/Budget.cs/#L17" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Budgets/Budget.cs/#L15" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

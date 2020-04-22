@@ -78,47 +78,24 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">ServiceUpdateConfig</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Docker.Outputs.html">Pulumi.Docker.Outputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Docker.dll</h6>
   <h5 id="Pulumi_Docker_Outputs_ServiceUpdateConfig_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class ServiceUpdateConfig</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class ServiceUpdateConfig : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/Service.cs/#L2675">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/Outputs/ServiceUpdateConfig.cs/#L19">View Source</a>
   </span>
   <h4 id="Pulumi_Docker_Outputs_ServiceUpdateConfig_Delay" data-uid="Pulumi.Docker.Outputs.ServiceUpdateConfig.Delay">Delay</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Delay between updates <code>(ns|us|ms|s|m|h)</code>, e.g. <code>5s</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string Delay</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? Delay</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -130,20 +107,21 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/Service.cs/#L2676">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/Outputs/ServiceUpdateConfig.cs/#L23">View Source</a>
   </span>
   <h4 id="Pulumi_Docker_Outputs_ServiceUpdateConfig_FailureAction" data-uid="Pulumi.Docker.Outputs.ServiceUpdateConfig.FailureAction">FailureAction</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Action on update failure: <code>pause|continue|rollback</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string FailureAction</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? FailureAction</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -155,20 +133,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/Service.cs/#L2677">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/Outputs/ServiceUpdateConfig.cs/#L28">View Source</a>
   </span>
   <h4 id="Pulumi_Docker_Outputs_ServiceUpdateConfig_MaxFailureRatio" data-uid="Pulumi.Docker.Outputs.ServiceUpdateConfig.MaxFailureRatio">MaxFailureRatio</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The failure rate to tolerate during an update as <code>float</code>. <strong>Important:</strong> the <code>float</code>need to be wrapped in a <code>string</code> to avoid internal
+casting and precision errors.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string MaxFailureRatio</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? MaxFailureRatio</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -180,20 +160,21 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/Service.cs/#L2678">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/Outputs/ServiceUpdateConfig.cs/#L32">View Source</a>
   </span>
   <h4 id="Pulumi_Docker_Outputs_ServiceUpdateConfig_Monitor" data-uid="Pulumi.Docker.Outputs.ServiceUpdateConfig.Monitor">Monitor</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Duration after each task update to monitor for failure <code>(ns|us|ms|s|m|h)</code></p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string Monitor</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? Monitor</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -205,20 +186,21 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/Service.cs/#L2679">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/Outputs/ServiceUpdateConfig.cs/#L36">View Source</a>
   </span>
   <h4 id="Pulumi_Docker_Outputs_ServiceUpdateConfig_Order" data-uid="Pulumi.Docker.Outputs.ServiceUpdateConfig.Order">Order</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Update order either 'stop-first' or 'start-first'.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string Order</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? Order</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -230,16 +212,17 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/Service.cs/#L2680">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/Outputs/ServiceUpdateConfig.cs/#L40">View Source</a>
   </span>
   <h4 id="Pulumi_Docker_Outputs_ServiceUpdateConfig_Parallelism" data-uid="Pulumi.Docker.Outputs.ServiceUpdateConfig.Parallelism">Parallelism</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The maximum number of tasks to be updated in one iteration simultaneously (0 to update all at once).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -267,7 +250,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/Service.cs/#L2672" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/Outputs/ServiceUpdateConfig.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

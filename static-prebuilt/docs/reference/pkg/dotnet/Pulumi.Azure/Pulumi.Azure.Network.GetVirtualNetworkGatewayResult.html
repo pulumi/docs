@@ -78,40 +78,16 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">GetVirtualNetworkGatewayResult</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Azure.Network.html">Pulumi.Azure.Network</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Azure.dll</h6>
   <h5 id="Pulumi_Azure_Network_GetVirtualNetworkGatewayResult_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class GetVirtualNetworkGatewayResult</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class GetVirtualNetworkGatewayResult : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/GetVirtualNetworkGateway.cs/#L48">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/GetVirtualNetworkGateway.cs/#L51">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Network_GetVirtualNetworkGatewayResult_ActiveActive" data-uid="Pulumi.Azure.Network.GetVirtualNetworkGatewayResult.ActiveActive">ActiveActive</h4>
   <div class="markdown level1 summary"><p>Is this an Active-Active Gateway?</p>
@@ -137,14 +113,14 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/GetVirtualNetworkGateway.cs/#L49">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/GetVirtualNetworkGateway.cs/#L52">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Network_GetVirtualNetworkGatewayResult_BgpSettings" data-uid="Pulumi.Azure.Network.GetVirtualNetworkGatewayResult.BgpSettings">BgpSettings</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetVirtualNetworkGatewayBgpSettingsResult&gt; BgpSettings</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetVirtualNetworkGatewayBgpSettingResult&gt; BgpSettings</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -156,13 +132,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Azure.Network.Outputs.GetVirtualNetworkGatewayBgpSettingsResult.html">GetVirtualNetworkGatewayBgpSettingsResult</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Azure.Network.Outputs.GetVirtualNetworkGatewayBgpSettingResult.html">GetVirtualNetworkGatewayBgpSettingResult</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/GetVirtualNetworkGateway.cs/#L56">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/GetVirtualNetworkGateway.cs/#L59">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Network_GetVirtualNetworkGatewayResult_DefaultLocalNetworkGatewayId" data-uid="Pulumi.Azure.Network.GetVirtualNetworkGatewayResult.DefaultLocalNetworkGatewayId">DefaultLocalNetworkGatewayId</h4>
   <div class="markdown level1 summary"><p>The ID of the local network gateway
@@ -191,7 +167,7 @@ gateway is created will be routed (<em>forced tunneling</em>). Refer to the
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/GetVirtualNetworkGateway.cs/#L61">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/GetVirtualNetworkGateway.cs/#L64">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Network_GetVirtualNetworkGatewayResult_EnableBgp" data-uid="Pulumi.Azure.Network.GetVirtualNetworkGatewayResult.EnableBgp">EnableBgp</h4>
   <div class="markdown level1 summary"><p>Will BGP (Border Gateway Protocol) will be enabled
@@ -218,7 +194,7 @@ for this Virtual Network Gateway.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/GetVirtualNetworkGateway.cs/#L65">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/GetVirtualNetworkGateway.cs/#L68">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Network_GetVirtualNetworkGatewayResult_Generation" data-uid="Pulumi.Azure.Network.GetVirtualNetworkGatewayResult.Generation">Generation</h4>
   <div class="markdown level1 summary"><p>The Generation of the Virtual Network Gateway.</p>
@@ -244,7 +220,7 @@ for this Virtual Network Gateway.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/GetVirtualNetworkGateway.cs/#L102">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/GetVirtualNetworkGateway.cs/#L72">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Network_GetVirtualNetworkGatewayResult_Id" data-uid="Pulumi.Azure.Network.GetVirtualNetworkGatewayResult.Id">Id</h4>
   <div class="markdown level1 summary"><p>id is the provider-assigned unique ID for this managed resource.</p>
@@ -270,7 +246,7 @@ for this Virtual Network Gateway.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/GetVirtualNetworkGateway.cs/#L69">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/GetVirtualNetworkGateway.cs/#L76">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Network_GetVirtualNetworkGatewayResult_IpConfigurations" data-uid="Pulumi.Azure.Network.GetVirtualNetworkGatewayResult.IpConfigurations">IpConfigurations</h4>
   <div class="markdown level1 summary"><p>One or two <code>ip_configuration</code> blocks documented below.</p>
@@ -278,7 +254,7 @@ for this Virtual Network Gateway.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetVirtualNetworkGatewayIpConfigurationsResult&gt; IpConfigurations</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetVirtualNetworkGatewayIpConfigurationResult&gt; IpConfigurations</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -290,13 +266,13 @@ for this Virtual Network Gateway.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Azure.Network.Outputs.GetVirtualNetworkGatewayIpConfigurationsResult.html">GetVirtualNetworkGatewayIpConfigurationsResult</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Azure.Network.Outputs.GetVirtualNetworkGatewayIpConfigurationResult.html">GetVirtualNetworkGatewayIpConfigurationResult</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/GetVirtualNetworkGateway.cs/#L73">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/GetVirtualNetworkGateway.cs/#L80">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Network_GetVirtualNetworkGatewayResult_Location" data-uid="Pulumi.Azure.Network.GetVirtualNetworkGatewayResult.Location">Location</h4>
   <div class="markdown level1 summary"><p>The location/region where the Virtual Network Gateway is located.</p>
@@ -322,7 +298,7 @@ for this Virtual Network Gateway.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/GetVirtualNetworkGateway.cs/#L77">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/GetVirtualNetworkGateway.cs/#L84">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Network_GetVirtualNetworkGatewayResult_Name" data-uid="Pulumi.Azure.Network.GetVirtualNetworkGatewayResult.Name">Name</h4>
   <div class="markdown level1 summary"><p>The user-defined name of the revoked certificate.</p>
@@ -348,7 +324,7 @@ for this Virtual Network Gateway.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/GetVirtualNetworkGateway.cs/#L78">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/GetVirtualNetworkGateway.cs/#L85">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Network_GetVirtualNetworkGatewayResult_ResourceGroupName" data-uid="Pulumi.Azure.Network.GetVirtualNetworkGatewayResult.ResourceGroupName">ResourceGroupName</h4>
   <div class="markdown level1 summary"></div>
@@ -373,7 +349,7 @@ for this Virtual Network Gateway.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/GetVirtualNetworkGateway.cs/#L82">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/GetVirtualNetworkGateway.cs/#L89">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Network_GetVirtualNetworkGatewayResult_Sku" data-uid="Pulumi.Azure.Network.GetVirtualNetworkGatewayResult.Sku">Sku</h4>
   <div class="markdown level1 summary"><p>Configuration of the size and capacity of the Virtual Network Gateway.</p>
@@ -399,7 +375,7 @@ for this Virtual Network Gateway.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/GetVirtualNetworkGateway.cs/#L86">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/GetVirtualNetworkGateway.cs/#L93">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Network_GetVirtualNetworkGatewayResult_Tags" data-uid="Pulumi.Azure.Network.GetVirtualNetworkGatewayResult.Tags">Tags</h4>
   <div class="markdown level1 summary"><p>A mapping of tags assigned to the resource.</p>
@@ -419,13 +395,13 @@ for this Virtual Network Gateway.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/GetVirtualNetworkGateway.cs/#L90">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/GetVirtualNetworkGateway.cs/#L97">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Network_GetVirtualNetworkGatewayResult_Type" data-uid="Pulumi.Azure.Network.GetVirtualNetworkGatewayResult.Type">Type</h4>
   <div class="markdown level1 summary"><p>The type of the Virtual Network Gateway.</p>
@@ -451,7 +427,7 @@ for this Virtual Network Gateway.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/GetVirtualNetworkGateway.cs/#L94">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/GetVirtualNetworkGateway.cs/#L101">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Network_GetVirtualNetworkGatewayResult_VpnClientConfigurations" data-uid="Pulumi.Azure.Network.GetVirtualNetworkGatewayResult.VpnClientConfigurations">VpnClientConfigurations</h4>
   <div class="markdown level1 summary"><p>A <code>vpn_client_configuration</code> block which is documented below.</p>
@@ -459,7 +435,7 @@ for this Virtual Network Gateway.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetVirtualNetworkGatewayVpnClientConfigurationsResult&gt; VpnClientConfigurations</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetVirtualNetworkGatewayVpnClientConfigurationResult&gt; VpnClientConfigurations</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -471,13 +447,13 @@ for this Virtual Network Gateway.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Azure.Network.Outputs.GetVirtualNetworkGatewayVpnClientConfigurationsResult.html">GetVirtualNetworkGatewayVpnClientConfigurationsResult</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Azure.Network.Outputs.GetVirtualNetworkGatewayVpnClientConfigurationResult.html">GetVirtualNetworkGatewayVpnClientConfigurationResult</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/GetVirtualNetworkGateway.cs/#L98">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/GetVirtualNetworkGateway.cs/#L105">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Network_GetVirtualNetworkGatewayResult_VpnType" data-uid="Pulumi.Azure.Network.GetVirtualNetworkGatewayResult.VpnType">VpnType</h4>
   <div class="markdown level1 summary"><p>The routing type of the Virtual Network Gateway.</p>
@@ -509,7 +485,7 @@ for this Virtual Network Gateway.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/GetVirtualNetworkGateway.cs/#L42" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/GetVirtualNetworkGateway.cs/#L45" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

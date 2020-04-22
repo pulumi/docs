@@ -71,50 +71,19 @@
   
   <h1 id="Pulumi_Gcp_CloudBuild_Trigger" data-uid="Pulumi.Gcp.CloudBuild.Trigger" class="text-break">Class Trigger
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Configuration for an automated build in response to source repository changes.</p>
+<p>To get more information about Trigger, see:</p>
+<ul>
+<li><a href="https://cloud.google.com/cloud-build/docs/api/reference/rest/">API documentation</a></li>
+<li>How-to Guides</li>
+<li><a href="https://cloud.google.com/cloud-build/docs/running-builds/automate-builds">Automating builds using build triggers</a></li>
+</ul>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
-    <div class="level3"><span class="xref">Trigger</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">Trigger</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.CloudBuild.html">Pulumi.Gcp.CloudBuild</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
@@ -125,16 +94,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Cloudbuild/Trigger.cs/#L113">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/CloudBuild/Trigger.cs/#L122">View Source</a>
   </span>
   <a id="Pulumi_Gcp_CloudBuild_Trigger__ctor_" data-uid="Pulumi.Gcp.CloudBuild.Trigger.#ctor*"></a>
-  <h4 id="Pulumi_Gcp_CloudBuild_Trigger__ctor_System_String_Pulumi_Gcp_CloudBuild_TriggerArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Gcp.CloudBuild.Trigger.#ctor(System.String,Pulumi.Gcp.CloudBuild.TriggerArgs,Pulumi.CustomResourceOptions)">Trigger(String, TriggerArgs, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Gcp_CloudBuild_Trigger__ctor_System_String_Pulumi_Gcp_CloudBuild_TriggerArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Gcp.CloudBuild.Trigger.#ctor(System.String,Pulumi.Gcp.CloudBuild.TriggerArgs,System.Nullable{CustomResourceOptions})">Trigger(String, TriggerArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Create a Trigger resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Trigger(string name, TriggerArgs args = null, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Trigger(string name, TriggerArgs args = null, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -159,7 +128,7 @@
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -169,7 +138,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Cloudbuild/Trigger.cs/#L17">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/CloudBuild/Trigger.cs/#L27">View Source</a>
   </span>
   <a id="Pulumi_Gcp_CloudBuild_Trigger_Build_" data-uid="Pulumi.Gcp.CloudBuild.Trigger.Build*"></a>
   <h4 id="Pulumi_Gcp_CloudBuild_Trigger_Build" data-uid="Pulumi.Gcp.CloudBuild.Trigger.Build">Build</h4>
@@ -190,13 +159,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Gcp.CloudBuild.Outputs.TriggerBuild.html">TriggerBuild</a>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Gcp.CloudBuild.Outputs.TriggerBuild.html">TriggerBuild</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Cloudbuild/Trigger.cs/#L23">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/CloudBuild/Trigger.cs/#L33">View Source</a>
   </span>
   <a id="Pulumi_Gcp_CloudBuild_Trigger_CreateTime_" data-uid="Pulumi.Gcp.CloudBuild.Trigger.CreateTime*"></a>
   <h4 id="Pulumi_Gcp_CloudBuild_Trigger_CreateTime" data-uid="Pulumi.Gcp.CloudBuild.Trigger.CreateTime">CreateTime</h4>
@@ -217,13 +186,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Cloudbuild/Trigger.cs/#L29">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/CloudBuild/Trigger.cs/#L39">View Source</a>
   </span>
   <a id="Pulumi_Gcp_CloudBuild_Trigger_Description_" data-uid="Pulumi.Gcp.CloudBuild.Trigger.Description*"></a>
   <h4 id="Pulumi_Gcp_CloudBuild_Trigger_Description" data-uid="Pulumi.Gcp.CloudBuild.Trigger.Description">Description</h4>
@@ -232,7 +201,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Description { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Description { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -244,13 +213,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Cloudbuild/Trigger.cs/#L35">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/CloudBuild/Trigger.cs/#L45">View Source</a>
   </span>
   <a id="Pulumi_Gcp_CloudBuild_Trigger_Disabled_" data-uid="Pulumi.Gcp.CloudBuild.Trigger.Disabled*"></a>
   <h4 id="Pulumi_Gcp_CloudBuild_Trigger_Disabled" data-uid="Pulumi.Gcp.CloudBuild.Trigger.Disabled">Disabled</h4>
@@ -271,23 +240,23 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Cloudbuild/Trigger.cs/#L42">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/CloudBuild/Trigger.cs/#L52">View Source</a>
   </span>
   <a id="Pulumi_Gcp_CloudBuild_Trigger_Filename_" data-uid="Pulumi.Gcp.CloudBuild.Trigger.Filename*"></a>
   <h4 id="Pulumi_Gcp_CloudBuild_Trigger_Filename" data-uid="Pulumi.Gcp.CloudBuild.Trigger.Filename">Filename</h4>
-  <div class="markdown level1 summary"><p>Path, from the source root, to a file whose contents is used for the template. Either a filename or build
-template must be provided.</p>
+  <div class="markdown level1 summary"><p>Path, from the source root, to a file whose contents is used for the template. Either a filename or build template must
+be provided.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Filename { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Filename { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -299,13 +268,13 @@ template must be provided.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Cloudbuild/Trigger.cs/#L49">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/CloudBuild/Trigger.cs/#L59">View Source</a>
   </span>
   <a id="Pulumi_Gcp_CloudBuild_Trigger_Github_" data-uid="Pulumi.Gcp.CloudBuild.Trigger.Github*"></a>
   <h4 id="Pulumi_Gcp_CloudBuild_Trigger_Github" data-uid="Pulumi.Gcp.CloudBuild.Trigger.Github">Github</h4>
@@ -327,21 +296,20 @@ template must be provided.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Gcp.CloudBuild.Outputs.TriggerGithub.html">TriggerGithub</a>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Gcp.CloudBuild.Outputs.TriggerGithub.html">TriggerGithub</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Cloudbuild/Trigger.cs/#L59">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/CloudBuild/Trigger.cs/#L68">View Source</a>
   </span>
   <a id="Pulumi_Gcp_CloudBuild_Trigger_IgnoredFiles_" data-uid="Pulumi.Gcp.CloudBuild.Trigger.IgnoredFiles*"></a>
   <h4 id="Pulumi_Gcp_CloudBuild_Trigger_IgnoredFiles" data-uid="Pulumi.Gcp.CloudBuild.Trigger.IgnoredFiles">IgnoredFiles</h4>
-  <div class="markdown level1 summary"><p>ignoredFiles and includedFiles are file glob matches using <a href="https://golang.org/pkg/path/filepath/#Match">https://golang.org/pkg/path/filepath/#Match</a>
-extended with support for '**'. If ignoredFiles and changed files are both empty, then they are not used to
-determine whether or not to trigger a build. If ignoredFiles is not empty, then we ignore any files that
-match any of the ignored_file globs. If the change has no files that are outside of the ignoredFiles globs,
-then we do not trigger a build.</p>
+  <div class="markdown level1 summary"><p>ignoredFiles and includedFiles are file glob matches using <a href="https://golang.org/pkg/path/filepath/#Match">https://golang.org/pkg/path/filepath/#Match</a> extended with
+support for '**'. If ignoredFiles and changed files are both empty, then they are not used to determine whether or not
+to trigger a build. If ignoredFiles is not empty, then we ignore any files that match any of the ignored_file globs. If
+the change has no files that are outside of the ignoredFiles globs, then we do not trigger a build.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -358,21 +326,21 @@ then we do not trigger a build.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Cloudbuild/Trigger.cs/#L69">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/CloudBuild/Trigger.cs/#L78">View Source</a>
   </span>
   <a id="Pulumi_Gcp_CloudBuild_Trigger_IncludedFiles_" data-uid="Pulumi.Gcp.CloudBuild.Trigger.IncludedFiles*"></a>
   <h4 id="Pulumi_Gcp_CloudBuild_Trigger_IncludedFiles" data-uid="Pulumi.Gcp.CloudBuild.Trigger.IncludedFiles">IncludedFiles</h4>
-  <div class="markdown level1 summary"><p>ignoredFiles and includedFiles are file glob matches using http://godoc/pkg/path/filepath#Match extended
-with support for '**'. If any of the files altered in the commit pass the ignoredFiles filter and
-includedFiles is empty, then as far as this filter is concerned, we should trigger the build. If any of the
-files altered in the commit pass the ignoredFiles filter and includedFiles is not empty, then we make sure
-that at least one of those files matches a includedFiles glob. If not, then we do not trigger a build.</p>
+  <div class="markdown level1 summary"><p>ignoredFiles and includedFiles are file glob matches using <a href="https://golang.org/pkg/path/filepath/#Match">https://golang.org/pkg/path/filepath/#Match</a> extended with
+support for '**'. If any of the files altered in the commit pass the ignoredFiles filter and includedFiles is empty,
+then as far as this filter is concerned, we should trigger the build. If any of the files altered in the commit pass the
+ignoredFiles filter and includedFiles is not empty, then we make sure that at least one of those files matches a
+includedFiles glob. If not, then we do not trigger a build.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -389,13 +357,13 @@ that at least one of those files matches a includedFiles glob. If not, then we d
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Cloudbuild/Trigger.cs/#L75">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/CloudBuild/Trigger.cs/#L84">View Source</a>
   </span>
   <a id="Pulumi_Gcp_CloudBuild_Trigger_Name_" data-uid="Pulumi.Gcp.CloudBuild.Trigger.Name*"></a>
   <h4 id="Pulumi_Gcp_CloudBuild_Trigger_Name" data-uid="Pulumi.Gcp.CloudBuild.Trigger.Name">Name</h4>
@@ -416,13 +384,13 @@ that at least one of those files matches a includedFiles glob. If not, then we d
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Cloudbuild/Trigger.cs/#L82">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/CloudBuild/Trigger.cs/#L91">View Source</a>
   </span>
   <a id="Pulumi_Gcp_CloudBuild_Trigger_Project_" data-uid="Pulumi.Gcp.CloudBuild.Trigger.Project*"></a>
   <h4 id="Pulumi_Gcp_CloudBuild_Trigger_Project" data-uid="Pulumi.Gcp.CloudBuild.Trigger.Project">Project</h4>
@@ -444,13 +412,13 @@ If it is not provided, the provider project is used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Cloudbuild/Trigger.cs/#L88">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/CloudBuild/Trigger.cs/#L97">View Source</a>
   </span>
   <a id="Pulumi_Gcp_CloudBuild_Trigger_Substitutions_" data-uid="Pulumi.Gcp.CloudBuild.Trigger.Substitutions*"></a>
   <h4 id="Pulumi_Gcp_CloudBuild_Trigger_Substitutions" data-uid="Pulumi.Gcp.CloudBuild.Trigger.Substitutions">Substitutions</h4>
@@ -459,7 +427,7 @@ If it is not provided, the provider project is used.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;&gt; Substitutions { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;?&gt; Substitutions { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -471,13 +439,13 @@ If it is not provided, the provider project is used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Cloudbuild/Trigger.cs/#L94">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/CloudBuild/Trigger.cs/#L103">View Source</a>
   </span>
   <a id="Pulumi_Gcp_CloudBuild_Trigger_TriggerId_" data-uid="Pulumi.Gcp.CloudBuild.Trigger.TriggerId*"></a>
   <h4 id="Pulumi_Gcp_CloudBuild_Trigger_TriggerId" data-uid="Pulumi.Gcp.CloudBuild.Trigger.TriggerId">TriggerId</h4>
@@ -498,19 +466,19 @@ If it is not provided, the provider project is used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Cloudbuild/Trigger.cs/#L102">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/CloudBuild/Trigger.cs/#L111">View Source</a>
   </span>
   <a id="Pulumi_Gcp_CloudBuild_Trigger_TriggerTemplate_" data-uid="Pulumi.Gcp.CloudBuild.Trigger.TriggerTemplate*"></a>
   <h4 id="Pulumi_Gcp_CloudBuild_Trigger_TriggerTemplate" data-uid="Pulumi.Gcp.CloudBuild.Trigger.TriggerTemplate">TriggerTemplate</h4>
-  <div class="markdown level1 summary"><p>Template describing the types of source changes to trigger a build. Branch and tag names in trigger
-templates are interpreted as regular expressions. Any branch or tag change that matches that regular
-expression will trigger a build. One of 'trigger_template' or 'github' must be provided.</p>
+  <div class="markdown level1 summary"><p>Template describing the types of source changes to trigger a build. Branch and tag names in trigger templates are
+interpreted as regular expressions. Any branch or tag change that matches that regular expression will trigger a build.
+One of 'trigger_template' or 'github' must be provided.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -527,7 +495,7 @@ expression will trigger a build. One of 'trigger_template' or 'github' must be p
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Gcp.CloudBuild.Outputs.TriggerTriggerTemplate.html">TriggerTriggerTemplate</a>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Gcp.CloudBuild.Outputs.TriggerTriggerTemplate.html">TriggerTriggerTemplate</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -535,17 +503,17 @@ expression will trigger a build. One of 'trigger_template' or 'github' must be p
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Cloudbuild/Trigger.cs/#L143">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/CloudBuild/Trigger.cs/#L152">View Source</a>
   </span>
   <a id="Pulumi_Gcp_CloudBuild_Trigger_Get_" data-uid="Pulumi.Gcp.CloudBuild.Trigger.Get*"></a>
-  <h4 id="Pulumi_Gcp_CloudBuild_Trigger_Get_System_String_Pulumi_Input_System_String__Pulumi_Gcp_CloudBuild_TriggerState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Gcp.CloudBuild.Trigger.Get(System.String,Pulumi.Input{System.String},Pulumi.Gcp.CloudBuild.TriggerState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, TriggerState, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Gcp_CloudBuild_Trigger_Get_System_String_Input_System_String__Pulumi_Gcp_CloudBuild_TriggerState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Gcp.CloudBuild.Trigger.Get(System.String,Input{System.String},Pulumi.Gcp.CloudBuild.TriggerState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, TriggerState, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Get an existing Trigger resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Trigger Get(string name, Input&lt;string&gt; id, TriggerState state = null, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Trigger Get(string name, Input&lt;string&gt; id, TriggerState state = null, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -564,7 +532,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -576,7 +544,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -605,7 +573,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Cloudbuild/Trigger.cs/#L12" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/CloudBuild/Trigger.cs/#L22" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

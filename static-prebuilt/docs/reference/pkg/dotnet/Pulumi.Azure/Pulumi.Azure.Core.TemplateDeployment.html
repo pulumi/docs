@@ -79,53 +79,12 @@ One workaround for this is to use a unique Resource Group for each ARM Template 
 </blockquote>
 <h2 id="note">Note</h2>
 <p>This provider does not know about the individual resources created by Azure using a deployment template and therefore cannot delete these resources during a destroy. Destroying a template deployment removes the associated deployment operations, but will not delete the Azure resources created by the deployment. In order to delete these resources, the containing resource group must also be destroyed. <a href="https://docs.microsoft.com/en-us/rest/api/resources/deployments#Deployments_Delete">More information</a>.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/template_deployment.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/template_deployment.html.markdown</a>.</p>
-</blockquote>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
-    <div class="level3"><span class="xref">TemplateDeployment</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">TemplateDeployment</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Azure.Core.html">Pulumi.Azure.Core</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Azure.dll</h6>
@@ -136,16 +95,16 @@ One workaround for this is to use a unique Resource Group for each ARM Template 
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Core/TemplateDeployment.cs/#L81">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Core/TemplateDeployment.cs/#L80">View Source</a>
   </span>
   <a id="Pulumi_Azure_Core_TemplateDeployment__ctor_" data-uid="Pulumi.Azure.Core.TemplateDeployment.#ctor*"></a>
-  <h4 id="Pulumi_Azure_Core_TemplateDeployment__ctor_System_String_Pulumi_Azure_Core_TemplateDeploymentArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Azure.Core.TemplateDeployment.#ctor(System.String,Pulumi.Azure.Core.TemplateDeploymentArgs,Pulumi.CustomResourceOptions)">TemplateDeployment(String, TemplateDeploymentArgs, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Azure_Core_TemplateDeployment__ctor_System_String_Pulumi_Azure_Core_TemplateDeploymentArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Azure.Core.TemplateDeployment.#ctor(System.String,Pulumi.Azure.Core.TemplateDeploymentArgs,System.Nullable{CustomResourceOptions})">TemplateDeployment(String, TemplateDeploymentArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Create a TemplateDeployment resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public TemplateDeployment(string name, TemplateDeploymentArgs args, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public TemplateDeployment(string name, TemplateDeploymentArgs args, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -170,7 +129,7 @@ One workaround for this is to use a unique Resource Group for each ARM Template 
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -180,7 +139,7 @@ One workaround for this is to use a unique Resource Group for each ARM Template 
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Core/TemplateDeployment.cs/#L32">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Core/TemplateDeployment.cs/#L31">View Source</a>
   </span>
   <a id="Pulumi_Azure_Core_TemplateDeployment_DeploymentMode_" data-uid="Pulumi.Azure.Core.TemplateDeployment.DeploymentMode*"></a>
   <h4 id="Pulumi_Azure_Core_TemplateDeployment_DeploymentMode" data-uid="Pulumi.Azure.Core.TemplateDeployment.DeploymentMode">DeploymentMode</h4>
@@ -203,13 +162,13 @@ specified within the template, and this provider will not be aware of this.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Core/TemplateDeployment.cs/#L39">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Core/TemplateDeployment.cs/#L38">View Source</a>
   </span>
   <a id="Pulumi_Azure_Core_TemplateDeployment_Name_" data-uid="Pulumi.Azure.Core.TemplateDeployment.Name*"></a>
   <h4 id="Pulumi_Azure_Core_TemplateDeployment_Name" data-uid="Pulumi.Azure.Core.TemplateDeployment.Name">Name</h4>
@@ -231,13 +190,13 @@ new resource to be created.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Core/TemplateDeployment.cs/#L45">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Core/TemplateDeployment.cs/#L44">View Source</a>
   </span>
   <a id="Pulumi_Azure_Core_TemplateDeployment_Outputs_" data-uid="Pulumi.Azure.Core.TemplateDeployment.Outputs*"></a>
   <h4 id="Pulumi_Azure_Core_TemplateDeployment_Outputs" data-uid="Pulumi.Azure.Core.TemplateDeployment.Outputs">Outputs</h4>
@@ -258,13 +217,13 @@ new resource to be created.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Core/TemplateDeployment.cs/#L51">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Core/TemplateDeployment.cs/#L50">View Source</a>
   </span>
   <a id="Pulumi_Azure_Core_TemplateDeployment_Parameters_" data-uid="Pulumi.Azure.Core.TemplateDeployment.Parameters*"></a>
   <h4 id="Pulumi_Azure_Core_TemplateDeployment_Parameters" data-uid="Pulumi.Azure.Core.TemplateDeployment.Parameters">Parameters</h4>
@@ -273,7 +232,7 @@ new resource to be created.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;&gt; Parameters { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;?&gt; Parameters { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -285,13 +244,13 @@ new resource to be created.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Core/TemplateDeployment.cs/#L57">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Core/TemplateDeployment.cs/#L56">View Source</a>
   </span>
   <a id="Pulumi_Azure_Core_TemplateDeployment_ParametersBody_" data-uid="Pulumi.Azure.Core.TemplateDeployment.ParametersBody*"></a>
   <h4 id="Pulumi_Azure_Core_TemplateDeployment_ParametersBody" data-uid="Pulumi.Azure.Core.TemplateDeployment.ParametersBody">ParametersBody</h4>
@@ -300,7 +259,7 @@ new resource to be created.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ParametersBody { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; ParametersBody { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -312,13 +271,13 @@ new resource to be created.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Core/TemplateDeployment.cs/#L64">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Core/TemplateDeployment.cs/#L63">View Source</a>
   </span>
   <a id="Pulumi_Azure_Core_TemplateDeployment_ResourceGroupName_" data-uid="Pulumi.Azure.Core.TemplateDeployment.ResourceGroupName*"></a>
   <h4 id="Pulumi_Azure_Core_TemplateDeployment_ResourceGroupName" data-uid="Pulumi.Azure.Core.TemplateDeployment.ResourceGroupName">ResourceGroupName</h4>
@@ -340,13 +299,13 @@ create the template deployment.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Core/TemplateDeployment.cs/#L70">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Core/TemplateDeployment.cs/#L69">View Source</a>
   </span>
   <a id="Pulumi_Azure_Core_TemplateDeployment_TemplateBody_" data-uid="Pulumi.Azure.Core.TemplateDeployment.TemplateBody*"></a>
   <h4 id="Pulumi_Azure_Core_TemplateDeployment_TemplateBody" data-uid="Pulumi.Azure.Core.TemplateDeployment.TemplateBody">TemplateBody</h4>
@@ -367,7 +326,7 @@ create the template deployment.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -375,17 +334,17 @@ create the template deployment.</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Core/TemplateDeployment.cs/#L111">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Core/TemplateDeployment.cs/#L110">View Source</a>
   </span>
   <a id="Pulumi_Azure_Core_TemplateDeployment_Get_" data-uid="Pulumi.Azure.Core.TemplateDeployment.Get*"></a>
-  <h4 id="Pulumi_Azure_Core_TemplateDeployment_Get_System_String_Pulumi_Input_System_String__Pulumi_Azure_Core_TemplateDeploymentState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Azure.Core.TemplateDeployment.Get(System.String,Pulumi.Input{System.String},Pulumi.Azure.Core.TemplateDeploymentState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, TemplateDeploymentState, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Azure_Core_TemplateDeployment_Get_System_String_Input_System_String__Pulumi_Azure_Core_TemplateDeploymentState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Azure.Core.TemplateDeployment.Get(System.String,Input{System.String},Pulumi.Azure.Core.TemplateDeploymentState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, TemplateDeploymentState, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Get an existing TemplateDeployment resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static TemplateDeployment Get(string name, Input&lt;string&gt; id, TemplateDeploymentState state = null, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static TemplateDeployment Get(string name, Input&lt;string&gt; id, TemplateDeploymentState state = null, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -404,7 +363,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -416,7 +375,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -445,7 +404,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Core/TemplateDeployment.cs/#L25" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Core/TemplateDeployment.cs/#L24" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

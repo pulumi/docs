@@ -81,13 +81,12 @@
 <blockquote>
 <p><strong>NOTE:</strong> Deleting this resource is equivalent to &quot;disabling&quot; GuardDuty for an AWS region, which removes all existing findings. You can set the <code>enable</code> attribute to <code>false</code> to instead &quot;suspend&quot; monitoring and feedback reporting while keeping existing data. See the <a href="https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_suspend-disable.html">Suspending or Disabling Amazon GuardDuty documentation</a> for more information.</p>
 </blockquote>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/guardduty_detector.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/guardduty_detector.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.GuardDuty.DetectorArgs.html">DetectorArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.GuardDuty.DetectorState.html">DetectorState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.GuardDuty.GetDetector.html">GetDetector</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.GuardDuty.GetDetectorArgs.html">GetDetectorArgs</a></h4>
       <section></section>
@@ -95,23 +94,15 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.GuardDuty.InviteAccepter.html">InviteAccepter</a></h4>
       <section><p>Provides a resource to accept a pending GuardDuty invite on creation, ensure the detector has the correct master account on read, and disassociate with the master account upon removal.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/guardduty_invite_accepter.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/guardduty_invite_accepter.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.GuardDuty.InviteAccepterArgs.html">InviteAccepterArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.GuardDuty.InviteAccepterState.html">InviteAccepterState</a></h4>
       <section></section>
-      <h4><a class="xref" href="Pulumi.Aws.GuardDuty.Invokes.html">Invokes</a></h4>
-      <section></section>
       <h4><a class="xref" href="Pulumi.Aws.GuardDuty.IPSet.html">IPSet</a></h4>
       <section><p>Provides a resource to manage a GuardDuty IPSet.</p>
 <blockquote>
 <p><strong>Note:</strong> Currently in GuardDuty, users from member accounts cannot upload and further manage IPSets. IPSets that are uploaded by the master account are imposed on GuardDuty functionality in its member accounts. See the <a href="https://docs.aws.amazon.com/guardduty/latest/ug/create-ip-set.html">GuardDuty API Documentation</a></p>
-</blockquote>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/guardduty_ipset.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/guardduty_ipset.html.markdown</a>.</p>
 </blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.GuardDuty.IPSetArgs.html">IPSetArgs</a></h4>
@@ -120,9 +111,6 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.GuardDuty.Member.html">Member</a></h4>
       <section><p>Provides a resource to manage a GuardDuty member. To accept invitations in member accounts, see the <a href="https://www.terraform.io/docs/providers/aws/r/guardduty_invite_accepter.html"><code>aws.guardduty.InviteAccepter</code> resource</a>.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/guardduty_member.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/guardduty_member.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.GuardDuty.MemberArgs.html">MemberArgs</a></h4>
       <section></section>
@@ -132,9 +120,6 @@
       <section><p>Provides a resource to manage a GuardDuty ThreatIntelSet.</p>
 <blockquote>
 <p><strong>Note:</strong> Currently in GuardDuty, users from member accounts cannot upload and further manage ThreatIntelSets. ThreatIntelSets that are uploaded by the master account are imposed on GuardDuty functionality in its member accounts. See the <a href="https://docs.aws.amazon.com/guardduty/latest/ug/create-threat-intel-set.html">GuardDuty API Documentation</a></p>
-</blockquote>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/guardduty_threatintelset.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/guardduty_threatintelset.html.markdown</a>.</p>
 </blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.GuardDuty.ThreatIntelSetArgs.html">ThreatIntelSetArgs</a></h4>

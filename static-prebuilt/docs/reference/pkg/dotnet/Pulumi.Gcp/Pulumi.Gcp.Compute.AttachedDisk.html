@@ -71,50 +71,24 @@
   
   <h1 id="Pulumi_Gcp_Compute_AttachedDisk" data-uid="Pulumi.Gcp.Compute.AttachedDisk" class="text-break">Class AttachedDisk
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Persistent disks can be attached to a compute instance using the <code>attached_disk</code>
+section within the compute instance configuration.
+However there may be situations where managing the attached disks via the compute
+instance config isn't preferable or possible, such as attaching dynamic
+numbers of disks using the <code>count</code> variable.</p>
+<p>To get more information about attaching disks, see:</p>
+<ul>
+<li><a href="https://cloud.google.com/compute/docs/reference/rest/v1/instances/attachDisk">API documentation</a></li>
+<li>How-to Guides</li>
+<li><a href="https://cloud.google.com/compute/docs/disks/add-persistent-disk">Adding a persistent disk</a></li>
+</ul>
+<p><strong>Note:</strong> When using <code>gcp.compute.AttachedDisk</code> you <strong>must</strong> use <code>lifecycle.ignore_changes = [&amp;quot;attached_disk&amp;quot;]</code> on the <code>gcp.compute.Instance</code> resource that has the disks attached. Otherwise the two resources will fight for control of the attached disk block.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
-    <div class="level3"><span class="xref">AttachedDisk</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">AttachedDisk</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.Compute.html">Pulumi.Gcp.Compute</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
@@ -125,16 +99,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/AttachedDisk.cs/#L40">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/AttachedDisk.cs/#L56">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_AttachedDisk__ctor_" data-uid="Pulumi.Gcp.Compute.AttachedDisk.#ctor*"></a>
-  <h4 id="Pulumi_Gcp_Compute_AttachedDisk__ctor_System_String_Pulumi_Gcp_Compute_AttachedDiskArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Gcp.Compute.AttachedDisk.#ctor(System.String,Pulumi.Gcp.Compute.AttachedDiskArgs,Pulumi.CustomResourceOptions)">AttachedDisk(String, AttachedDiskArgs, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Gcp_Compute_AttachedDisk__ctor_System_String_Pulumi_Gcp_Compute_AttachedDiskArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Gcp.Compute.AttachedDisk.#ctor(System.String,Pulumi.Gcp.Compute.AttachedDiskArgs,System.Nullable{CustomResourceOptions})">AttachedDisk(String, AttachedDiskArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Create a AttachedDisk resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public AttachedDisk(string name, AttachedDiskArgs args, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public AttachedDisk(string name, AttachedDiskArgs args, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -159,7 +133,7 @@
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -169,7 +143,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/AttachedDisk.cs/#L14">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/AttachedDisk.cs/#L30">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_AttachedDisk_DeviceName_" data-uid="Pulumi.Gcp.Compute.AttachedDisk.DeviceName*"></a>
   <h4 id="Pulumi_Gcp_Compute_AttachedDisk_DeviceName" data-uid="Pulumi.Gcp.Compute.AttachedDisk.DeviceName">DeviceName</h4>
@@ -189,13 +163,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/AttachedDisk.cs/#L17">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/AttachedDisk.cs/#L33">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_AttachedDisk_Disk_" data-uid="Pulumi.Gcp.Compute.AttachedDisk.Disk*"></a>
   <h4 id="Pulumi_Gcp_Compute_AttachedDisk_Disk" data-uid="Pulumi.Gcp.Compute.AttachedDisk.Disk">Disk</h4>
@@ -215,13 +189,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/AttachedDisk.cs/#L20">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/AttachedDisk.cs/#L36">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_AttachedDisk_Instance_" data-uid="Pulumi.Gcp.Compute.AttachedDisk.Instance*"></a>
   <h4 id="Pulumi_Gcp_Compute_AttachedDisk_Instance" data-uid="Pulumi.Gcp.Compute.AttachedDisk.Instance">Instance</h4>
@@ -241,13 +215,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/AttachedDisk.cs/#L23">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/AttachedDisk.cs/#L39">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_AttachedDisk_Mode_" data-uid="Pulumi.Gcp.Compute.AttachedDisk.Mode*"></a>
   <h4 id="Pulumi_Gcp_Compute_AttachedDisk_Mode" data-uid="Pulumi.Gcp.Compute.AttachedDisk.Mode">Mode</h4>
@@ -255,7 +229,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Mode { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Mode { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -267,13 +241,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/AttachedDisk.cs/#L26">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/AttachedDisk.cs/#L42">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_AttachedDisk_Project_" data-uid="Pulumi.Gcp.Compute.AttachedDisk.Project*"></a>
   <h4 id="Pulumi_Gcp_Compute_AttachedDisk_Project" data-uid="Pulumi.Gcp.Compute.AttachedDisk.Project">Project</h4>
@@ -293,13 +267,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/AttachedDisk.cs/#L29">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/AttachedDisk.cs/#L45">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_AttachedDisk_Zone_" data-uid="Pulumi.Gcp.Compute.AttachedDisk.Zone*"></a>
   <h4 id="Pulumi_Gcp_Compute_AttachedDisk_Zone" data-uid="Pulumi.Gcp.Compute.AttachedDisk.Zone">Zone</h4>
@@ -319,7 +293,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -327,17 +301,17 @@
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/AttachedDisk.cs/#L70">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/AttachedDisk.cs/#L86">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_AttachedDisk_Get_" data-uid="Pulumi.Gcp.Compute.AttachedDisk.Get*"></a>
-  <h4 id="Pulumi_Gcp_Compute_AttachedDisk_Get_System_String_Pulumi_Input_System_String__Pulumi_Gcp_Compute_AttachedDiskState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Gcp.Compute.AttachedDisk.Get(System.String,Pulumi.Input{System.String},Pulumi.Gcp.Compute.AttachedDiskState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, AttachedDiskState, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Gcp_Compute_AttachedDisk_Get_System_String_Input_System_String__Pulumi_Gcp_Compute_AttachedDiskState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Gcp.Compute.AttachedDisk.Get(System.String,Input{System.String},Pulumi.Gcp.Compute.AttachedDiskState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, AttachedDiskState, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Get an existing AttachedDisk resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static AttachedDisk Get(string name, Input&lt;string&gt; id, AttachedDiskState state = null, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static AttachedDisk Get(string name, Input&lt;string&gt; id, AttachedDiskState state = null, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -356,7 +330,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -368,7 +342,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -397,7 +371,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/AttachedDisk.cs/#L12" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/AttachedDisk.cs/#L28" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

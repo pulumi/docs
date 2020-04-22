@@ -77,32 +77,71 @@
     <h3 id="classes">Classes
   </h3>
       <h4><a class="xref" href="Pulumi.Gcp.Sql.Database.html">Database</a></h4>
-      <section></section>
+      <section><p>Represents a SQL database inside the Cloud SQL instance, hosted in
+Google's cloud.</p>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.Sql.DatabaseArgs.html">DatabaseArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Sql.DatabaseInstance.html">DatabaseInstance</a></h4>
-      <section></section>
+      <section><p>Creates a new Google SQL Database Instance. For more information, see the <a href="https://cloud.google.com/sql/">official documentation</a>,
+or the <a href="https://cloud.google.com/sql/docs/admin-api/v1beta4/instances">JSON API</a>.</p>
+<blockquote>
+<p><strong>NOTE on <code>gcp.sql.DatabaseInstance</code>:</strong> - First-generation instances have been
+deprecated and should no longer be created, see <a href="https://cloud.google.com/sql/docs/mysql/upgrade-2nd-gen">upgrade docs</a>
+for more details.
+To upgrade your First-generation instance, update your config that the instance has</p>
+</blockquote>
+<ul>
+<li><code>settings.ip_configuration.ipv4_enabled=true</code></li>
+<li><code>settings.backup_configuration.enabled=true</code></li>
+<li><code>settings.backup_configuration.binary_log_enabled=true</code>.<br>
+Apply the config, then upgrade the instance in the console as described in the documentation.
+Once upgraded, update the following attributes in your config to the correct value according to
+the above documentation:</li>
+<li><code>region</code></li>
+<li><code>database_version</code> (if applicable)</li>
+<li><code>tier</code><br>
+Remove any fields that are not applicable to Second-generation instances:</li>
+<li><code>settings.crash_safe_replication</code></li>
+<li><code>settings.replication_type</code></li>
+<li><code>settings.authorized_gae_applications</code>
+And change values to appropriate values for Second-generation instances for:</li>
+<li><code>activation_policy</code> (&quot;ON_DEMAND&quot; is no longer an option)</li>
+<li><code>pricing_plan</code> (&quot;PER_USE&quot; is now the only valid option)
+Change <code>settings.backup_configuration.enabled</code> attribute back to its desired value and apply as necessary.</li>
+</ul>
+<blockquote>
+<p><strong>NOTE on <code>gcp.sql.DatabaseInstance</code>:</strong> - Second-generation instances include a
+default 'root'@'%' user with no password. This user will be deleted by the provider on
+instance creation. You should use <code>gcp.sql.User</code> to define a custom user with
+a restricted host and strong password.</p>
+</blockquote>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.Sql.DatabaseInstanceArgs.html">DatabaseInstanceArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Sql.DatabaseInstanceState.html">DatabaseInstanceState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Sql.DatabaseState.html">DatabaseState</a></h4>
       <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.Sql.GetCaCerts.html">GetCaCerts</a></h4>
+      <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Sql.GetCaCertsArgs.html">GetCaCertsArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Sql.GetCaCertsResult.html">GetCaCertsResult</a></h4>
       <section></section>
-      <h4><a class="xref" href="Pulumi.Gcp.Sql.Invokes.html">Invokes</a></h4>
+      <h4><a class="xref" href="Pulumi.Gcp.Sql.SourceRepresentationInstance.html">SourceRepresentationInstance</a></h4>
+      <section><p>A source representation instance is a Cloud SQL instance that represents
+the source database server to the Cloud SQL replica. It is visible in the
+Cloud Console and appears the same as a regular Cloud SQL instance, but it
+contains no data, requires no configuration or maintenance, and does not
+affect billing. You cannot update the source representation instance.</p>
+</section>
+      <h4><a class="xref" href="Pulumi.Gcp.Sql.SourceRepresentationInstanceArgs.html">SourceRepresentationInstanceArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.Sql.SourceRepresentationInstanceState.html">SourceRepresentationInstanceState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Sql.SslCert.html">SslCert</a></h4>
       <section><p>Creates a new Google SQL SSL Cert on a Google SQL Instance. For more information, see the <a href="https://cloud.google.com/sql/">official documentation</a>, or the <a href="https://cloud.google.com/sql/docs/mysql/admin-api/v1beta4/sslCerts">JSON API</a>.</p>
-<blockquote>
-<p><strong>Note:</strong> All arguments including the private key will be stored in the raw state as plain-text.
-<a href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
-</blockquote>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/sql_ssl_cert.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/sql_ssl_cert.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Sql.SslCertArgs.html">SslCertArgs</a></h4>
       <section></section>
@@ -110,13 +149,6 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Sql.User.html">User</a></h4>
       <section><p>Creates a new Google SQL User on a Google SQL User Instance. For more information, see the <a href="https://cloud.google.com/sql/">official documentation</a>, or the <a href="https://cloud.google.com/sql/docs/admin-api/v1beta4/users">JSON API</a>.</p>
-<blockquote>
-<p><strong>Note:</strong> All arguments including the username and password will be stored in the raw state as plain-text.
-<a href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>. Passwords will not be retrieved when running import.</p>
-</blockquote>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/sql_user.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/sql_user.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Sql.UserArgs.html">UserArgs</a></h4>
       <section></section>

@@ -1,0 +1,733 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class VirtualMachineDiskArgs
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class VirtualMachineDiskArgs
+   ">
+    <meta name="generator" content="docfx 2.49.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.VSphere.Inputs.VirtualMachineDiskArgs">
+  
+  <h1 id="Pulumi_VSphere_Inputs_VirtualMachineDiskArgs" data-uid="Pulumi.VSphere.Inputs.VirtualMachineDiskArgs" class="text-break">Class VirtualMachineDiskArgs
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">VirtualMachineDiskArgs</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.VSphere.Inputs.html">Pulumi.VSphere.Inputs</a></h6>
+  <h6><strong>Assembly</strong>: Pulumi.VSphere.dll</h6>
+  <h5 id="Pulumi_VSphere_Inputs_VirtualMachineDiskArgs_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class VirtualMachineDiskArgs : ResourceArgs</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/Inputs/VirtualMachineDiskArgs.cs/#L166">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_Inputs_VirtualMachineDiskArgs__ctor_" data-uid="Pulumi.VSphere.Inputs.VirtualMachineDiskArgs.#ctor*"></a>
+  <h4 id="Pulumi_VSphere_Inputs_VirtualMachineDiskArgs__ctor" data-uid="Pulumi.VSphere.Inputs.VirtualMachineDiskArgs.#ctor">VirtualMachineDiskArgs()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public VirtualMachineDiskArgs()</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/Inputs/VirtualMachineDiskArgs.cs/#L20">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_Inputs_VirtualMachineDiskArgs_Attach_" data-uid="Pulumi.VSphere.Inputs.VirtualMachineDiskArgs.Attach*"></a>
+  <h4 id="Pulumi_VSphere_Inputs_VirtualMachineDiskArgs_Attach" data-uid="Pulumi.VSphere.Inputs.VirtualMachineDiskArgs.Attach">Attach</h4>
+  <div class="markdown level1 summary"><p>Attach an external disk instead of creating a new one.
+Implies and conflicts with <code>keep_on_remove</code>. If set, you cannot set <code>size</code>,
+<code>eagerly_scrub</code>, or <code>thin_provisioned</code>. Must set <code>path</code> if used.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? Attach { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/Inputs/VirtualMachineDiskArgs.cs/#L27">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_Inputs_VirtualMachineDiskArgs_DatastoreId_" data-uid="Pulumi.VSphere.Inputs.VirtualMachineDiskArgs.DatastoreId*"></a>
+  <h4 id="Pulumi_VSphere_Inputs_VirtualMachineDiskArgs_DatastoreId" data-uid="Pulumi.VSphere.Inputs.VirtualMachineDiskArgs.DatastoreId">DatastoreId</h4>
+  <div class="markdown level1 summary"><p>The datastore ID that the ISO is located in.
+Requried for using a datastore ISO. Conflicts with <code>client_device</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? DatastoreId { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/Inputs/VirtualMachineDiskArgs.cs/#L30">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_Inputs_VirtualMachineDiskArgs_DeviceAddress_" data-uid="Pulumi.VSphere.Inputs.VirtualMachineDiskArgs.DeviceAddress*"></a>
+  <h4 id="Pulumi_VSphere_Inputs_VirtualMachineDiskArgs_DeviceAddress" data-uid="Pulumi.VSphere.Inputs.VirtualMachineDiskArgs.DeviceAddress">DeviceAddress</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? DeviceAddress { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/Inputs/VirtualMachineDiskArgs.cs/#L40">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_Inputs_VirtualMachineDiskArgs_DiskMode_" data-uid="Pulumi.VSphere.Inputs.VirtualMachineDiskArgs.DiskMode*"></a>
+  <h4 id="Pulumi_VSphere_Inputs_VirtualMachineDiskArgs_DiskMode" data-uid="Pulumi.VSphere.Inputs.VirtualMachineDiskArgs.DiskMode">DiskMode</h4>
+  <div class="markdown level1 summary"><p>The mode of this this virtual disk for purposes of
+writes and snapshotting. Can be one of <code>append</code>, <code>independent_nonpersistent</code>,
+<code>independent_persistent</code>, <code>nonpersistent</code>, <code>persistent</code>, or <code>undoable</code>.
+Default: <code>persistent</code>. For an explanation of options, click
+[here][vmware-docs-disk-mode].</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? DiskMode { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/Inputs/VirtualMachineDiskArgs.cs/#L47">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_Inputs_VirtualMachineDiskArgs_DiskSharing_" data-uid="Pulumi.VSphere.Inputs.VirtualMachineDiskArgs.DiskSharing*"></a>
+  <h4 id="Pulumi_VSphere_Inputs_VirtualMachineDiskArgs_DiskSharing" data-uid="Pulumi.VSphere.Inputs.VirtualMachineDiskArgs.DiskSharing">DiskSharing</h4>
+  <div class="markdown level1 summary"><p>The sharing mode of this virtual disk. Can be one
+of <code>sharingMultiWriter</code> or <code>sharingNone</code>. Default: <code>sharingNone</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? DiskSharing { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/Inputs/VirtualMachineDiskArgs.cs/#L56">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_Inputs_VirtualMachineDiskArgs_EagerlyScrub_" data-uid="Pulumi.VSphere.Inputs.VirtualMachineDiskArgs.EagerlyScrub*"></a>
+  <h4 id="Pulumi_VSphere_Inputs_VirtualMachineDiskArgs_EagerlyScrub" data-uid="Pulumi.VSphere.Inputs.VirtualMachineDiskArgs.EagerlyScrub">EagerlyScrub</h4>
+  <div class="markdown level1 summary"><p>If set to <code>true</code>, the disk space is zeroed out
+on VM creation. This will delay the creation of the disk or virtual machine.
+Cannot be set to <code>true</code> when <code>thin_provisioned</code> is <code>true</code>.  See the section
+on picking a disk type.  Default: <code>false</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? EagerlyScrub { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/Inputs/VirtualMachineDiskArgs.cs/#L63">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_Inputs_VirtualMachineDiskArgs_IoLimit_" data-uid="Pulumi.VSphere.Inputs.VirtualMachineDiskArgs.IoLimit*"></a>
+  <h4 id="Pulumi_VSphere_Inputs_VirtualMachineDiskArgs_IoLimit" data-uid="Pulumi.VSphere.Inputs.VirtualMachineDiskArgs.IoLimit">IoLimit</h4>
+  <div class="markdown level1 summary"><p>The upper limit of IOPS that this disk can use. The
+default is no limit.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? IoLimit { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/Inputs/VirtualMachineDiskArgs.cs/#L70">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_Inputs_VirtualMachineDiskArgs_IoReservation_" data-uid="Pulumi.VSphere.Inputs.VirtualMachineDiskArgs.IoReservation*"></a>
+  <h4 id="Pulumi_VSphere_Inputs_VirtualMachineDiskArgs_IoReservation" data-uid="Pulumi.VSphere.Inputs.VirtualMachineDiskArgs.IoReservation">IoReservation</h4>
+  <div class="markdown level1 summary"><p>The I/O reservation (guarantee) that this disk
+has, in IOPS.  The default is no reservation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? IoReservation { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/Inputs/VirtualMachineDiskArgs.cs/#L77">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_Inputs_VirtualMachineDiskArgs_IoShareCount_" data-uid="Pulumi.VSphere.Inputs.VirtualMachineDiskArgs.IoShareCount*"></a>
+  <h4 id="Pulumi_VSphere_Inputs_VirtualMachineDiskArgs_IoShareCount" data-uid="Pulumi.VSphere.Inputs.VirtualMachineDiskArgs.IoShareCount">IoShareCount</h4>
+  <div class="markdown level1 summary"><p>The share count for this disk when the share
+level is <code>custom</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? IoShareCount { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/Inputs/VirtualMachineDiskArgs.cs/#L84">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_Inputs_VirtualMachineDiskArgs_IoShareLevel_" data-uid="Pulumi.VSphere.Inputs.VirtualMachineDiskArgs.IoShareLevel*"></a>
+  <h4 id="Pulumi_VSphere_Inputs_VirtualMachineDiskArgs_IoShareLevel" data-uid="Pulumi.VSphere.Inputs.VirtualMachineDiskArgs.IoShareLevel">IoShareLevel</h4>
+  <div class="markdown level1 summary"><p>The share allocation level for this disk. Can
+be one of <code>low</code>, <code>normal</code>, <code>high</code>, or <code>custom</code>. Default: <code>normal</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? IoShareLevel { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/Inputs/VirtualMachineDiskArgs.cs/#L91">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_Inputs_VirtualMachineDiskArgs_KeepOnRemove_" data-uid="Pulumi.VSphere.Inputs.VirtualMachineDiskArgs.KeepOnRemove*"></a>
+  <h4 id="Pulumi_VSphere_Inputs_VirtualMachineDiskArgs_KeepOnRemove" data-uid="Pulumi.VSphere.Inputs.VirtualMachineDiskArgs.KeepOnRemove">KeepOnRemove</h4>
+  <div class="markdown level1 summary"><p>Keep this disk when removing the device or
+destroying the virtual machine. Default: <code>false</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? KeepOnRemove { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/Inputs/VirtualMachineDiskArgs.cs/#L97">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_Inputs_VirtualMachineDiskArgs_Key_" data-uid="Pulumi.VSphere.Inputs.VirtualMachineDiskArgs.Key*"></a>
+  <h4 id="Pulumi_VSphere_Inputs_VirtualMachineDiskArgs_Key" data-uid="Pulumi.VSphere.Inputs.VirtualMachineDiskArgs.Key">Key</h4>
+  <div class="markdown level1 summary"><p>The ID of the device within the virtual machine.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? Key { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/Inputs/VirtualMachineDiskArgs.cs/#L103">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_Inputs_VirtualMachineDiskArgs_Label_" data-uid="Pulumi.VSphere.Inputs.VirtualMachineDiskArgs.Label*"></a>
+  <h4 id="Pulumi_VSphere_Inputs_VirtualMachineDiskArgs_Label" data-uid="Pulumi.VSphere.Inputs.VirtualMachineDiskArgs.Label">Label</h4>
+  <div class="markdown level1 summary"><p>A label for the disk. Forces a new disk if changed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Label { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/Inputs/VirtualMachineDiskArgs.cs/#L110">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_Inputs_VirtualMachineDiskArgs_Name_" data-uid="Pulumi.VSphere.Inputs.VirtualMachineDiskArgs.Name*"></a>
+  <h4 id="Pulumi_VSphere_Inputs_VirtualMachineDiskArgs_Name" data-uid="Pulumi.VSphere.Inputs.VirtualMachineDiskArgs.Name">Name</h4>
+  <div class="markdown level1 summary"><p>An alias for both <code>label</code> and <code>path</code>, the latter when
+using <code>attach</code>. Required if not using <code>label</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Name { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/Inputs/VirtualMachineDiskArgs.cs/#L117">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_Inputs_VirtualMachineDiskArgs_Path_" data-uid="Pulumi.VSphere.Inputs.VirtualMachineDiskArgs.Path*"></a>
+  <h4 id="Pulumi_VSphere_Inputs_VirtualMachineDiskArgs_Path" data-uid="Pulumi.VSphere.Inputs.VirtualMachineDiskArgs.Path">Path</h4>
+  <div class="markdown level1 summary"><p>The path to the ISO file. Required for using a datastore
+ISO. Conflicts with <code>client_device</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Path { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/Inputs/VirtualMachineDiskArgs.cs/#L123">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_Inputs_VirtualMachineDiskArgs_Size_" data-uid="Pulumi.VSphere.Inputs.VirtualMachineDiskArgs.Size*"></a>
+  <h4 id="Pulumi_VSphere_Inputs_VirtualMachineDiskArgs_Size" data-uid="Pulumi.VSphere.Inputs.VirtualMachineDiskArgs.Size">Size</h4>
+  <div class="markdown level1 summary"><p>The size of the disk, in GB.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? Size { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/Inputs/VirtualMachineDiskArgs.cs/#L129">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_Inputs_VirtualMachineDiskArgs_StoragePolicyId_" data-uid="Pulumi.VSphere.Inputs.VirtualMachineDiskArgs.StoragePolicyId*"></a>
+  <h4 id="Pulumi_VSphere_Inputs_VirtualMachineDiskArgs_StoragePolicyId" data-uid="Pulumi.VSphere.Inputs.VirtualMachineDiskArgs.StoragePolicyId">StoragePolicyId</h4>
+  <div class="markdown level1 summary"><p>The UUID of the storage policy to assign to this disk.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? StoragePolicyId { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/Inputs/VirtualMachineDiskArgs.cs/#L138">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_Inputs_VirtualMachineDiskArgs_ThinProvisioned_" data-uid="Pulumi.VSphere.Inputs.VirtualMachineDiskArgs.ThinProvisioned*"></a>
+  <h4 id="Pulumi_VSphere_Inputs_VirtualMachineDiskArgs_ThinProvisioned" data-uid="Pulumi.VSphere.Inputs.VirtualMachineDiskArgs.ThinProvisioned">ThinProvisioned</h4>
+  <div class="markdown level1 summary"><p>If <code>true</code>, this disk is thin provisioned,
+with space for the file being allocated on an as-needed basis. Cannot be set
+to <code>true</code> when <code>eagerly_scrub</code> is <code>true</code>. See the section on picking a disk
+type. Default: <code>true</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? ThinProvisioned { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/Inputs/VirtualMachineDiskArgs.cs/#L148">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_Inputs_VirtualMachineDiskArgs_UnitNumber_" data-uid="Pulumi.VSphere.Inputs.VirtualMachineDiskArgs.UnitNumber*"></a>
+  <h4 id="Pulumi_VSphere_Inputs_VirtualMachineDiskArgs_UnitNumber" data-uid="Pulumi.VSphere.Inputs.VirtualMachineDiskArgs.UnitNumber">UnitNumber</h4>
+  <div class="markdown level1 summary"><p>The disk number on the SCSI bus. The maximum value
+for this setting is the value of
+<code>scsi_controller_count</code> times 15, minus 1 (so <code>14</code>,
+<code>29</code>, <code>44</code>, and <code>59</code>, for 1-4 controllers respectively). The default is <code>0</code>,
+for which one disk must be set to. Duplicate unit numbers are not allowed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? UnitNumber { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/Inputs/VirtualMachineDiskArgs.cs/#L155">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_Inputs_VirtualMachineDiskArgs_Uuid_" data-uid="Pulumi.VSphere.Inputs.VirtualMachineDiskArgs.Uuid*"></a>
+  <h4 id="Pulumi_VSphere_Inputs_VirtualMachineDiskArgs_Uuid" data-uid="Pulumi.VSphere.Inputs.VirtualMachineDiskArgs.Uuid">Uuid</h4>
+  <div class="markdown level1 summary"><p>The UUID of the virtual disk's VMDK file. This is used to track the
+virtual disk on the virtual machine.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Uuid { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/Inputs/VirtualMachineDiskArgs.cs/#L163">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_Inputs_VirtualMachineDiskArgs_WriteThrough_" data-uid="Pulumi.VSphere.Inputs.VirtualMachineDiskArgs.WriteThrough*"></a>
+  <h4 id="Pulumi_VSphere_Inputs_VirtualMachineDiskArgs_WriteThrough" data-uid="Pulumi.VSphere.Inputs.VirtualMachineDiskArgs.WriteThrough">WriteThrough</h4>
+  <div class="markdown level1 summary"><p>If <code>true</code>, writes for this disk are sent
+directly to the filesystem immediately instead of being buffered. Default:
+<code>false</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? WriteThrough { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/pulumi/pulumi-vsphere/blob/a09c85bd7571cdb8236932ac73716bdaab1dce06/sdk/dotnet/Inputs/VirtualMachineDiskArgs.cs/#L13" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

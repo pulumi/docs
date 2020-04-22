@@ -96,25 +96,32 @@ for more information.</p>
 <p><strong>Note:</strong> All arguments including the username and password will be stored in the raw state as plain-text.
 <a href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
 </blockquote>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/rds_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/rds_cluster.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Rds.ClusterArgs.html">ClusterArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Rds.ClusterEndpoint.html">ClusterEndpoint</a></h4>
       <section><p>Manages a RDS Aurora Cluster Endpoint.
 You can refer to the [User Guide][1].</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/rds_cluster_endpoint.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/rds_cluster_endpoint.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Rds.ClusterEndpointArgs.html">ClusterEndpointArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Rds.ClusterEndpointState.html">ClusterEndpointState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Rds.ClusterInstance.html">ClusterInstance</a></h4>
-      <section></section>
+      <section><p>Provides an RDS Cluster Instance Resource. A Cluster Instance Resource defines
+attributes that are specific to a single instance in a [RDS Cluster][3],
+specifically running Amazon Aurora.</p>
+<p>Unlike other RDS resources that support replication, with Amazon Aurora you do
+not designate a primary and subsequent replicas. Instead, you simply add RDS
+Instances and Aurora manages the replication. You can use the [count][5]
+meta-parameter to make multiple instances and join them all to the same RDS
+Cluster, or you may specify different Cluster Instance resources with various
+<code>instance_class</code> sizes.</p>
+<p>For more information on Amazon Aurora, see [Aurora on Amazon RDS][2] in the Amazon RDS User Guide.</p>
+<blockquote>
+<p><strong>NOTE:</strong> Deletion Protection from the RDS service can only be enabled at the cluster level, not for individual cluster instances. You can still add the <a href="https://www.pulumi.com/docs/intro/concepts/programming-model/#protect"><code>protect</code> CustomResourceOption</a> to this resource configuration if you desire protection from accidental deletion.</p>
+</blockquote>
+</section>
       <h4><a class="xref" href="Pulumi.Aws.Rds.ClusterInstanceArgs.html">ClusterInstanceArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Rds.ClusterInstanceState.html">ClusterInstanceState</a></h4>
@@ -125,9 +132,6 @@ You can refer to the [User Guide][1].</p>
 <li><a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/AuroraMySQL.Reference.html">Aurora MySQL Parameters</a></li>
 <li><a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/AuroraPostgreSQL.Reference.html">Aurora PostgreSQL Parameters</a></li>
 </ul>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/rds_cluster_parameter_group.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/rds_cluster_parameter_group.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Rds.ClusterParameterGroupArgs.html">ClusterParameterGroupArgs</a></h4>
       <section></section>
@@ -135,9 +139,6 @@ You can refer to the [User Guide][1].</p>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Rds.ClusterSnapshot.html">ClusterSnapshot</a></h4>
       <section><p>Manages a RDS database cluster snapshot for Aurora clusters. For managing RDS database instance snapshots, see the <a href="https://www.terraform.io/docs/providers/aws/r/db_snapshot.html"><code>aws.rds.Snapshot</code> resource</a>.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/db_cluster_snapshot.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/db_cluster_snapshot.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Rds.ClusterSnapshotArgs.html">ClusterSnapshotArgs</a></h4>
       <section></section>
@@ -154,29 +155,36 @@ You can refer to the [User Guide][1].</p>
 <li><code>arn</code> - The Amazon Resource Name of the RDS event notification subscription</li>
 <li><code>customer_aws_id</code> - The AWS customer account associated with the RDS event notification subscription</li>
 </ul>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/db_event_subscription.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/db_event_subscription.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Rds.EventSubscriptionArgs.html">EventSubscriptionArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Rds.EventSubscriptionState.html">EventSubscriptionState</a></h4>
       <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Rds.GetCluster.html">GetCluster</a></h4>
+      <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Rds.GetClusterArgs.html">GetClusterArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Rds.GetClusterResult.html">GetClusterResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Rds.GetClusterSnapshot.html">GetClusterSnapshot</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Rds.GetClusterSnapshotArgs.html">GetClusterSnapshotArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Rds.GetClusterSnapshotResult.html">GetClusterSnapshotResult</a></h4>
       <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Rds.GetEventCategories.html">GetEventCategories</a></h4>
+      <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Rds.GetEventCategoriesArgs.html">GetEventCategoriesArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Rds.GetEventCategoriesResult.html">GetEventCategoriesResult</a></h4>
       <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Rds.GetInstance.html">GetInstance</a></h4>
+      <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Rds.GetInstanceArgs.html">GetInstanceArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Rds.GetInstanceResult.html">GetInstanceResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Rds.GetSnapshot.html">GetSnapshot</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Rds.GetSnapshotArgs.html">GetSnapshotArgs</a></h4>
       <section></section>
@@ -185,9 +193,6 @@ You can refer to the [User Guide][1].</p>
       <h4><a class="xref" href="Pulumi.Aws.Rds.GlobalCluster.html">GlobalCluster</a></h4>
       <section><p>Manages a RDS Global Cluster, which is an Aurora global database spread across multiple regions. The global database contains a single primary cluster with read-write capability, and a read-only secondary cluster that receives data from the primary cluster through high-speed replication performed by the Aurora storage subsystem.</p>
 <p>More information about Aurora global databases can be found in the <a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-global-database.html#aurora-global-database-creating">Aurora User Guide</a>.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/rds_global_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/rds_global_cluster.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Rds.GlobalClusterArgs.html">GlobalClusterArgs</a></h4>
       <section></section>
@@ -218,15 +223,10 @@ state</a>.</p>
 <p>Amazon RDS supports three types of instance classes: Standard, Memory Optimized,
 and Burstable Performance. For more information please read the AWS RDS documentation
 about <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html">DB Instance Class Types</a></p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/db_instance.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/db_instance.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Rds.InstanceArgs.html">InstanceArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Rds.InstanceState.html">InstanceState</a></h4>
-      <section></section>
-      <h4><a class="xref" href="Pulumi.Aws.Rds.Invokes.html">Invokes</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Rds.OptionGroup.html">OptionGroup</a></h4>
       <section><p>Provides an RDS DB option group resource. Documentation of the available options for various RDS engines can be found at:</p>
@@ -236,9 +236,6 @@ about <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.D
 <li><a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Appendix.MySQL.Options.html">MySQL Options</a></li>
 <li><a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Appendix.Oracle.Options.html">Oracle Options</a></li>
 </ul>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/db_option_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/db_option_group.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Rds.OptionGroupArgs.html">OptionGroupArgs</a></h4>
       <section></section>
@@ -253,9 +250,6 @@ about <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.D
 <li><a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_ModifyInstance.Oracle.html#USER_ModifyInstance.Oracle.sqlnet">Oracle Parameters</a></li>
 <li><a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Appendix.PostgreSQL.CommonDBATasks.html#Appendix.PostgreSQL.CommonDBATasks.Parameters">PostgreSQL Parameters</a></li>
 </ul>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/db_parameter_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/db_parameter_group.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Rds.ParameterGroupArgs.html">ParameterGroupArgs</a></h4>
       <section></section>
@@ -270,9 +264,6 @@ about <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.D
 <blockquote>
 <p>To manage the RDS DB Instance IAM Role for <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Monitoring.OS.html">Enhanced Monitoring</a>, see the <code>aws.rds.Instance</code> resource <code>monitoring_role_arn</code> argument instead.</p>
 </blockquote>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/db_instance_role_association.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/db_instance_role_association.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Rds.RoleAssociationArgs.html">RoleAssociationArgs</a></h4>
       <section></section>
@@ -283,9 +274,6 @@ about <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.D
 EC2-Classic Platform. For instances inside a VPC, use the
 <a href="https://www.terraform.io/docs/providers/aws/r/db_instance.html#vpc_security_group_ids"><code>aws_db_instance.vpc_security_group_ids</code></a>
 attribute instead.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/db_security_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/db_security_group.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Rds.SecurityGroupArgs.html">SecurityGroupArgs</a></h4>
       <section></section>
@@ -293,9 +281,6 @@ attribute instead.</p>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Rds.Snapshot.html">Snapshot</a></h4>
       <section><p>Manages a RDS database instance snapshot. For managing RDS database cluster snapshots, see the <a href="https://www.terraform.io/docs/providers/aws/r/db_cluster_snapshot.html"><code>aws.rds.ClusterSnapshot</code> resource</a>.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/db_snapshot.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/db_snapshot.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Rds.SnapshotArgs.html">SnapshotArgs</a></h4>
       <section></section>
@@ -303,9 +288,6 @@ attribute instead.</p>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Rds.SubnetGroup.html">SubnetGroup</a></h4>
       <section><p>Provides an RDS DB subnet group resource.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/db_subnet_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/db_subnet_group.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Rds.SubnetGroupArgs.html">SubnetGroupArgs</a></h4>
       <section></section>

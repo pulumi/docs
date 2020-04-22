@@ -80,40 +80,16 @@ volumes support ownership management and SELinux relabeling.</p>
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">ISCSIVolumeSource</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Core.V1.html">Pulumi.Kubernetes.Types.Outputs.Core.V1</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Kubernetes.dll</h6>
   <h5 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_ISCSIVolumeSource_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class ISCSIVolumeSource</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class ISCSIVolumeSource : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L16701">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L16862">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_ISCSIVolumeSource_ChapAuthDiscovery" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.ISCSIVolumeSource.ChapAuthDiscovery">ChapAuthDiscovery</h4>
   <div class="markdown level1 summary"><p>whether support iSCSI Discovery CHAP authentication</p>
@@ -139,7 +115,7 @@ volumes support ownership management and SELinux relabeling.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L16706">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L16867">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_ISCSIVolumeSource_ChapAuthSession" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.ISCSIVolumeSource.ChapAuthSession">ChapAuthSession</h4>
   <div class="markdown level1 summary"><p>whether support iSCSI Session CHAP authentication</p>
@@ -165,7 +141,7 @@ volumes support ownership management and SELinux relabeling.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L16714">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L16875">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_ISCSIVolumeSource_FsType" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.ISCSIVolumeSource.FsType">FsType</h4>
   <div class="markdown level1 summary"><p>Filesystem type of the volume that you want to mount. Tip: Ensure that the filesystem
@@ -194,7 +170,7 @@ Implicitly inferred to be &quot;ext4&quot; if unspecified. More info:
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L16721">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L16882">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_ISCSIVolumeSource_InitiatorName" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.ISCSIVolumeSource.InitiatorName">InitiatorName</h4>
   <div class="markdown level1 summary"><p>Custom iSCSI Initiator Name. If initiatorName is specified with iscsiInterface
@@ -222,7 +198,7 @@ name&amp;gt; will be created for the connection.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L16726">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L16887">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_ISCSIVolumeSource_Iqn" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.ISCSIVolumeSource.Iqn">Iqn</h4>
   <div class="markdown level1 summary"><p>Target iSCSI Qualified Name.</p>
@@ -248,7 +224,7 @@ name&amp;gt; will be created for the connection.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L16731">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L16892">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_ISCSIVolumeSource_IscsiInterface" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.ISCSIVolumeSource.IscsiInterface">IscsiInterface</h4>
   <div class="markdown level1 summary"><p>iSCSI Interface Name that uses an iSCSI transport. Defaults to 'default' (tcp).</p>
@@ -274,7 +250,7 @@ name&amp;gt; will be created for the connection.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L16736">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L16897">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_ISCSIVolumeSource_Lun" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.ISCSIVolumeSource.Lun">Lun</h4>
   <div class="markdown level1 summary"><p>iSCSI Target Lun number.</p>
@@ -300,7 +276,7 @@ name&amp;gt; will be created for the connection.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L16742">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L16903">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_ISCSIVolumeSource_Portals" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.ISCSIVolumeSource.Portals">Portals</h4>
   <div class="markdown level1 summary"><p>iSCSI Target Portal List. The portal is either an IP or ip_addr:port if the port is
@@ -321,13 +297,13 @@ other than default (typically TCP ports 860 and 3260).</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L16747">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L16908">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_ISCSIVolumeSource_ReadOnly" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.ISCSIVolumeSource.ReadOnly">ReadOnly</h4>
   <div class="markdown level1 summary"><p>ReadOnly here will force the ReadOnly setting in VolumeMounts. Defaults to false.</p>
@@ -353,7 +329,7 @@ other than default (typically TCP ports 860 and 3260).</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L16752">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L16913">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_ISCSIVolumeSource_SecretRef" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.ISCSIVolumeSource.SecretRef">SecretRef</h4>
   <div class="markdown level1 summary"><p>CHAP Secret for iSCSI target and initiator authentication</p>
@@ -379,7 +355,7 @@ other than default (typically TCP ports 860 and 3260).</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L16758">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L16919">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_ISCSIVolumeSource_TargetPortal" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.ISCSIVolumeSource.TargetPortal">TargetPortal</h4>
   <div class="markdown level1 summary"><p>iSCSI Target Portal. The Portal is either an IP or ip_addr:port if the port is other
@@ -412,7 +388,7 @@ than default (typically TCP ports 860 and 3260).</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L16695" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L16856" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

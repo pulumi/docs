@@ -76,36 +76,7 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
-    <div class="level3"><span class="xref">ProjectSourceArgs</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">ProjectSourceArgs</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.CodeBuild.Inputs.html">Pulumi.Aws.CodeBuild.Inputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
@@ -116,7 +87,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Codebuild/Project.cs/#L1354">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CodeBuild/Inputs/ProjectSourceArgs.cs/#L69">View Source</a>
   </span>
   <a id="Pulumi_Aws_CodeBuild_Inputs_ProjectSourceArgs__ctor_" data-uid="Pulumi.Aws.CodeBuild.Inputs.ProjectSourceArgs.#ctor*"></a>
   <h4 id="Pulumi_Aws_CodeBuild_Inputs_ProjectSourceArgs__ctor" data-uid="Pulumi.Aws.CodeBuild.Inputs.ProjectSourceArgs.#ctor">ProjectSourceArgs()</h4>
@@ -129,7 +100,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Codebuild/Project.cs/#L1306">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CodeBuild/Inputs/ProjectSourceArgs.cs/#L21">View Source</a>
   </span>
   <a id="Pulumi_Aws_CodeBuild_Inputs_ProjectSourceArgs_Auths_" data-uid="Pulumi.Aws.CodeBuild.Inputs.ProjectSourceArgs.Auths*"></a>
   <h4 id="Pulumi_Aws_CodeBuild_Inputs_ProjectSourceArgs_Auths" data-uid="Pulumi.Aws.CodeBuild.Inputs.ProjectSourceArgs.Auths">Auths</h4>
@@ -138,7 +109,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public InputList&lt;ProjectSourceAuthsArgs&gt; Auths { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public InputList&lt;ProjectSourceAuthArgs&gt; Auths { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -150,22 +121,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<a class="xref" href="Pulumi.Aws.CodeBuild.Inputs.ProjectSourceAuthsArgs.html">ProjectSourceAuthsArgs</a>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<a class="xref" href="Pulumi.Aws.CodeBuild.Inputs.ProjectSourceAuthArgs.html">ProjectSourceAuthArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Codebuild/Project.cs/#L1315">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CodeBuild/Inputs/ProjectSourceArgs.cs/#L30">View Source</a>
   </span>
   <a id="Pulumi_Aws_CodeBuild_Inputs_ProjectSourceArgs_Buildspec_" data-uid="Pulumi.Aws.CodeBuild.Inputs.ProjectSourceArgs.Buildspec*"></a>
   <h4 id="Pulumi_Aws_CodeBuild_Inputs_ProjectSourceArgs_Buildspec" data-uid="Pulumi.Aws.CodeBuild.Inputs.ProjectSourceArgs.Buildspec">Buildspec</h4>
-  <div class="markdown level1 summary"><p>The build spec declaration to use for this build project's related builds.</p>
+  <div class="markdown level1 summary"><p>The build spec declaration to use for this build project's related builds. This must be set when <code>type</code> is <code>NO_SOURCE</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Buildspec { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Buildspec { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -177,13 +148,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Codebuild/Project.cs/#L1321">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CodeBuild/Inputs/ProjectSourceArgs.cs/#L36">View Source</a>
   </span>
   <a id="Pulumi_Aws_CodeBuild_Inputs_ProjectSourceArgs_GitCloneDepth_" data-uid="Pulumi.Aws.CodeBuild.Inputs.ProjectSourceArgs.GitCloneDepth*"></a>
   <h4 id="Pulumi_Aws_CodeBuild_Inputs_ProjectSourceArgs_GitCloneDepth" data-uid="Pulumi.Aws.CodeBuild.Inputs.ProjectSourceArgs.GitCloneDepth">GitCloneDepth</h4>
@@ -192,7 +163,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; GitCloneDepth { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? GitCloneDepth { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -204,13 +175,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Codebuild/Project.cs/#L1327">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CodeBuild/Inputs/ProjectSourceArgs.cs/#L42">View Source</a>
   </span>
   <a id="Pulumi_Aws_CodeBuild_Inputs_ProjectSourceArgs_GitSubmodulesConfig_" data-uid="Pulumi.Aws.CodeBuild.Inputs.ProjectSourceArgs.GitSubmodulesConfig*"></a>
   <h4 id="Pulumi_Aws_CodeBuild_Inputs_ProjectSourceArgs_GitSubmodulesConfig" data-uid="Pulumi.Aws.CodeBuild.Inputs.ProjectSourceArgs.GitSubmodulesConfig">GitSubmodulesConfig</h4>
@@ -219,7 +190,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;ProjectSourceGitSubmodulesConfigArgs&gt; GitSubmodulesConfig { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;ProjectSourceGitSubmodulesConfigArgs&gt;? GitSubmodulesConfig { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -231,13 +202,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Aws.CodeBuild.Inputs.ProjectSourceGitSubmodulesConfigArgs.html">ProjectSourceGitSubmodulesConfigArgs</a>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Aws.CodeBuild.Inputs.ProjectSourceGitSubmodulesConfigArgs.html">ProjectSourceGitSubmodulesConfigArgs</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Codebuild/Project.cs/#L1333">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CodeBuild/Inputs/ProjectSourceArgs.cs/#L48">View Source</a>
   </span>
   <a id="Pulumi_Aws_CodeBuild_Inputs_ProjectSourceArgs_InsecureSsl_" data-uid="Pulumi.Aws.CodeBuild.Inputs.ProjectSourceArgs.InsecureSsl*"></a>
   <h4 id="Pulumi_Aws_CodeBuild_Inputs_ProjectSourceArgs_InsecureSsl" data-uid="Pulumi.Aws.CodeBuild.Inputs.ProjectSourceArgs.InsecureSsl">InsecureSsl</h4>
@@ -246,7 +217,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; InsecureSsl { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? InsecureSsl { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -258,13 +229,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Codebuild/Project.cs/#L1339">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CodeBuild/Inputs/ProjectSourceArgs.cs/#L54">View Source</a>
   </span>
   <a id="Pulumi_Aws_CodeBuild_Inputs_ProjectSourceArgs_Location_" data-uid="Pulumi.Aws.CodeBuild.Inputs.ProjectSourceArgs.Location*"></a>
   <h4 id="Pulumi_Aws_CodeBuild_Inputs_ProjectSourceArgs_Location" data-uid="Pulumi.Aws.CodeBuild.Inputs.ProjectSourceArgs.Location">Location</h4>
@@ -273,7 +244,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Location { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Location { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -285,22 +256,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Codebuild/Project.cs/#L1345">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CodeBuild/Inputs/ProjectSourceArgs.cs/#L60">View Source</a>
   </span>
   <a id="Pulumi_Aws_CodeBuild_Inputs_ProjectSourceArgs_ReportBuildStatus_" data-uid="Pulumi.Aws.CodeBuild.Inputs.ProjectSourceArgs.ReportBuildStatus*"></a>
   <h4 id="Pulumi_Aws_CodeBuild_Inputs_ProjectSourceArgs_ReportBuildStatus" data-uid="Pulumi.Aws.CodeBuild.Inputs.ProjectSourceArgs.ReportBuildStatus">ReportBuildStatus</h4>
-  <div class="markdown level1 summary"><p>Set to <code>true</code> to report the status of a build's start and finish to your source provider. This option is only valid when your source provider is <code>GITHUB</code>, <code>BITBUCKET</code>, or <code>GITHUB_ENTERPRISE</code>.</p>
+  <div class="markdown level1 summary"><p>Set to <code>true</code> to report the status of a build's start and finish to your source provider. This option is only valid when the <code>type</code> is <code>BITBUCKET</code> or <code>GITHUB</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; ReportBuildStatus { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? ReportBuildStatus { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -312,17 +283,17 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Codebuild/Project.cs/#L1351">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CodeBuild/Inputs/ProjectSourceArgs.cs/#L66">View Source</a>
   </span>
   <a id="Pulumi_Aws_CodeBuild_Inputs_ProjectSourceArgs_Type_" data-uid="Pulumi.Aws.CodeBuild.Inputs.ProjectSourceArgs.Type*"></a>
   <h4 id="Pulumi_Aws_CodeBuild_Inputs_ProjectSourceArgs_Type" data-uid="Pulumi.Aws.CodeBuild.Inputs.ProjectSourceArgs.Type">Type</h4>
-  <div class="markdown level1 summary"><p>The type of repository that contains the source code to be built. Valid values for this parameter are: <code>CODECOMMIT</code>, <code>CODEPIPELINE</code>, <code>GITHUB</code>, <code>GITHUB_ENTERPRISE</code>, <code>BITBUCKET</code> or <code>S3</code>.</p>
+  <div class="markdown level1 summary"><p>The type of repository that contains the source code to be built. Valid values for this parameter are: <code>CODECOMMIT</code>, <code>CODEPIPELINE</code>, <code>GITHUB</code>, <code>GITHUB_ENTERPRISE</code>, <code>BITBUCKET</code>, <code>S3</code> or <code>NO_SOURCE</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -339,7 +310,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -351,7 +322,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Codebuild/Project.cs/#L1298" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CodeBuild/Inputs/ProjectSourceArgs.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

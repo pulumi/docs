@@ -76,36 +76,7 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
-    <div class="level3"><span class="xref">FirewallArgs</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">FirewallArgs</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.Compute.html">Pulumi.Gcp.Compute</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
@@ -116,7 +87,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/Firewall.cs/#L386">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Firewall.cs/#L399">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_FirewallArgs__ctor_" data-uid="Pulumi.Gcp.Compute.FirewallArgs.#ctor*"></a>
   <h4 id="Pulumi_Gcp_Compute_FirewallArgs__ctor" data-uid="Pulumi.Gcp.Compute.FirewallArgs.#ctor">FirewallArgs()</h4>
@@ -129,17 +100,17 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/Firewall.cs/#L212">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Firewall.cs/#L229">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_FirewallArgs_Allows_" data-uid="Pulumi.Gcp.Compute.FirewallArgs.Allows*"></a>
   <h4 id="Pulumi_Gcp_Compute_FirewallArgs_Allows" data-uid="Pulumi.Gcp.Compute.FirewallArgs.Allows">Allows</h4>
-  <div class="markdown level1 summary"><p>The list of ALLOW rules specified by this firewall. Each rule specifies a protocol and port-range tuple that
-describes a permitted connection.</p>
+  <div class="markdown level1 summary"><p>The list of ALLOW rules specified by this firewall. Each rule specifies a protocol and port-range tuple that describes a
+permitted connection.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public InputList&lt;FirewallAllowsArgs&gt; Allows { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public InputList&lt;FirewallAllowArgs&gt; Allows { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -151,23 +122,23 @@ describes a permitted connection.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Inputs.FirewallAllowsArgs.html">FirewallAllowsArgs</a>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Inputs.FirewallAllowArgs.html">FirewallAllowArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/Firewall.cs/#L225">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Firewall.cs/#L242">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_FirewallArgs_Denies_" data-uid="Pulumi.Gcp.Compute.FirewallArgs.Denies*"></a>
   <h4 id="Pulumi_Gcp_Compute_FirewallArgs_Denies" data-uid="Pulumi.Gcp.Compute.FirewallArgs.Denies">Denies</h4>
-  <div class="markdown level1 summary"><p>The list of DENY rules specified by this firewall. Each rule specifies a protocol and port-range tuple that
-describes a denied connection.</p>
+  <div class="markdown level1 summary"><p>The list of DENY rules specified by this firewall. Each rule specifies a protocol and port-range tuple that describes a
+denied connection.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public InputList&lt;FirewallDeniesArgs&gt; Denies { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public InputList&lt;FirewallDenyArgs&gt; Denies { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -179,13 +150,13 @@ describes a denied connection.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Inputs.FirewallDeniesArgs.html">FirewallDeniesArgs</a>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Inputs.FirewallDenyArgs.html">FirewallDenyArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/Firewall.cs/#L234">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Firewall.cs/#L251">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_FirewallArgs_Description_" data-uid="Pulumi.Gcp.Compute.FirewallArgs.Description*"></a>
   <h4 id="Pulumi_Gcp_Compute_FirewallArgs_Description" data-uid="Pulumi.Gcp.Compute.FirewallArgs.Description">Description</h4>
@@ -194,7 +165,7 @@ describes a denied connection.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Description { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Description { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -206,18 +177,18 @@ describes a denied connection.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/Firewall.cs/#L244">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Firewall.cs/#L261">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_FirewallArgs_DestinationRanges_" data-uid="Pulumi.Gcp.Compute.FirewallArgs.DestinationRanges*"></a>
   <h4 id="Pulumi_Gcp_Compute_FirewallArgs_DestinationRanges" data-uid="Pulumi.Gcp.Compute.FirewallArgs.DestinationRanges">DestinationRanges</h4>
-  <div class="markdown level1 summary"><p>If destination ranges are specified, the firewall will apply only to traffic that has destination IP address
-in these ranges. These ranges must be expressed in CIDR format. Only IPv4 is supported.</p>
+  <div class="markdown level1 summary"><p>If destination ranges are specified, the firewall will apply only to traffic that has destination IP address in these
+ranges. These ranges must be expressed in CIDR format. Only IPv4 is supported.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -234,24 +205,23 @@ in these ranges. These ranges must be expressed in CIDR format. Only IPv4 is sup
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/Firewall.cs/#L255">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Firewall.cs/#L271">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_FirewallArgs_Direction_" data-uid="Pulumi.Gcp.Compute.FirewallArgs.Direction*"></a>
   <h4 id="Pulumi_Gcp_Compute_FirewallArgs_Direction" data-uid="Pulumi.Gcp.Compute.FirewallArgs.Direction">Direction</h4>
-  <div class="markdown level1 summary"><p>Direction of traffic to which this firewall applies; default is INGRESS. Note: For INGRESS traffic, it is
-NOT supported to specify destinationRanges; For EGRESS traffic, it is NOT supported to specify sourceRanges
-OR sourceTags.</p>
+  <div class="markdown level1 summary"><p>Direction of traffic to which this firewall applies; default is INGRESS. Note: For INGRESS traffic, it is NOT supported
+to specify destinationRanges; For EGRESS traffic, it is NOT supported to specify sourceRanges OR sourceTags.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Direction { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Direction { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -263,24 +233,24 @@ OR sourceTags.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/Firewall.cs/#L263">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Firewall.cs/#L279">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_FirewallArgs_Disabled_" data-uid="Pulumi.Gcp.Compute.FirewallArgs.Disabled*"></a>
   <h4 id="Pulumi_Gcp_Compute_FirewallArgs_Disabled" data-uid="Pulumi.Gcp.Compute.FirewallArgs.Disabled">Disabled</h4>
-  <div class="markdown level1 summary"><p>Denotes whether the firewall rule is disabled, i.e not applied to the network it is associated with. When
-set to true, the firewall rule is not enforced and the network behaves as if it did not exist. If this is
-unspecified, the firewall rule will be enabled.</p>
+  <div class="markdown level1 summary"><p>Denotes whether the firewall rule is disabled, i.e not applied to the network it is associated with. When set to true,
+the firewall rule is not enforced and the network behaves as if it did not exist. If this is unspecified, the firewall
+rule will be enabled.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; Disabled { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? Disabled { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -292,23 +262,23 @@ unspecified, the firewall rule will be enabled.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/Firewall.cs/#L270">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Firewall.cs/#L286">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_FirewallArgs_EnableLogging_" data-uid="Pulumi.Gcp.Compute.FirewallArgs.EnableLogging*"></a>
   <h4 id="Pulumi_Gcp_Compute_FirewallArgs_EnableLogging" data-uid="Pulumi.Gcp.Compute.FirewallArgs.EnableLogging">EnableLogging</h4>
-  <div class="markdown level1 summary"><p>This field denotes whether to enable logging for a particular firewall rule. If logging is enabled, logs
-will be exported to Stackdriver.</p>
+  <div class="markdown level1 summary"><p>This field denotes whether to enable logging for a particular firewall rule. If logging is enabled, logs will be
+exported to Stackdriver.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; EnableLogging { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? EnableLogging { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -320,26 +290,25 @@ will be exported to Stackdriver.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/Firewall.cs/#L280">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Firewall.cs/#L295">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_FirewallArgs_Name_" data-uid="Pulumi.Gcp.Compute.FirewallArgs.Name*"></a>
   <h4 id="Pulumi_Gcp_Compute_FirewallArgs_Name" data-uid="Pulumi.Gcp.Compute.FirewallArgs.Name">Name</h4>
-  <div class="markdown level1 summary"><p>Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters
-long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular
-expression '<a href="%5B-a-z0-9%5D*%5Ba-z0-9%5D">a-z</a>?' which means the first character must be a lowercase letter, and all
-following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be
-a dash.</p>
+  <div class="markdown level1 summary"><p>Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
+comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
+'<a href="%5B-a-z0-9%5D*%5Ba-z0-9%5D">a-z</a>?' which means the first character must be a lowercase letter, and all following characters
+must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Name { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Name { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -351,13 +320,13 @@ a dash.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/Firewall.cs/#L286">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Firewall.cs/#L301">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_FirewallArgs_Network_" data-uid="Pulumi.Gcp.Compute.FirewallArgs.Network*"></a>
   <h4 id="Pulumi_Gcp_Compute_FirewallArgs_Network" data-uid="Pulumi.Gcp.Compute.FirewallArgs.Network">Network</h4>
@@ -378,25 +347,25 @@ a dash.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/Firewall.cs/#L295">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Firewall.cs/#L310">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_FirewallArgs_Priority_" data-uid="Pulumi.Gcp.Compute.FirewallArgs.Priority*"></a>
   <h4 id="Pulumi_Gcp_Compute_FirewallArgs_Priority" data-uid="Pulumi.Gcp.Compute.FirewallArgs.Priority">Priority</h4>
-  <div class="markdown level1 summary"><p>Priority for this rule. This is an integer between 0 and 65535, both inclusive. When not specified, the
-value assumed is 1000. Relative priorities determine precedence of conflicting rules. Lower value of
-priority implies higher precedence (eg, a rule with priority 0 has higher precedence than a rule with
-priority 1). DENY rules take precedence over ALLOW rules having equal priority.</p>
+  <div class="markdown level1 summary"><p>Priority for this rule. This is an integer between 0 and 65535, both inclusive. When not specified, the value assumed is
+1000. Relative priorities determine precedence of conflicting rules. Lower value of priority implies higher precedence
+(eg, a rule with priority 0 has higher precedence than a rule with priority 1). DENY rules take precedence over ALLOW
+rules having equal priority.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; Priority { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? Priority { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -408,13 +377,13 @@ priority 1). DENY rules take precedence over ALLOW rules having equal priority.<
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/Firewall.cs/#L302">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Firewall.cs/#L317">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_FirewallArgs_Project_" data-uid="Pulumi.Gcp.Compute.FirewallArgs.Project*"></a>
   <h4 id="Pulumi_Gcp_Compute_FirewallArgs_Project" data-uid="Pulumi.Gcp.Compute.FirewallArgs.Project">Project</h4>
@@ -424,7 +393,7 @@ If it is not provided, the provider project is used.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Project { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Project { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -436,21 +405,21 @@ If it is not provided, the provider project is used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/Firewall.cs/#L315">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Firewall.cs/#L330">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_FirewallArgs_SourceRanges_" data-uid="Pulumi.Gcp.Compute.FirewallArgs.SourceRanges*"></a>
   <h4 id="Pulumi_Gcp_Compute_FirewallArgs_SourceRanges" data-uid="Pulumi.Gcp.Compute.FirewallArgs.SourceRanges">SourceRanges</h4>
-  <div class="markdown level1 summary"><p>If source ranges are specified, the firewall will apply only to traffic that has source IP address in these
-ranges. These ranges must be expressed in CIDR format. One or both of sourceRanges and sourceTags may be
-set. If both properties are set, the firewall will apply to traffic that has source IP address within
-sourceRanges OR the source IP that belongs to a tag listed in the sourceTags property. The connection does
-not need to match both properties for the firewall to apply. Only IPv4 is supported.</p>
+  <div class="markdown level1 summary"><p>If source ranges are specified, the firewall will apply only to traffic that has source IP address in these ranges.
+These ranges must be expressed in CIDR format. One or both of sourceRanges and sourceTags may be set. If both properties
+are set, the firewall will apply to traffic that has source IP address within sourceRanges OR the source IP that belongs
+to a tag listed in the sourceTags property. The connection does not need to match both properties for the firewall to
+apply. Only IPv4 is supported.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -467,24 +436,23 @@ not need to match both properties for the firewall to apply. Only IPv4 is suppor
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/Firewall.cs/#L334">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Firewall.cs/#L348">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_FirewallArgs_SourceServiceAccounts_" data-uid="Pulumi.Gcp.Compute.FirewallArgs.SourceServiceAccounts*"></a>
   <h4 id="Pulumi_Gcp_Compute_FirewallArgs_SourceServiceAccounts" data-uid="Pulumi.Gcp.Compute.FirewallArgs.SourceServiceAccounts">SourceServiceAccounts</h4>
-  <div class="markdown level1 summary"><p>If source service accounts are specified, the firewall will apply only to traffic originating from an
-instance with a service account in this list. Source service accounts cannot be used to control traffic to
-an instance's external IP address because service accounts are associated with an instance, not an IP
-address. sourceRanges can be set at the same time as sourceServiceAccounts. If both are set, the firewall
-will apply to traffic that has source IP address within sourceRanges OR the source IP belongs to an instance
-with service account listed in sourceServiceAccount. The connection does not need to match both properties
-for the firewall to apply. sourceServiceAccounts cannot be used at the same time as sourceTags or
-targetTags.</p>
+  <div class="markdown level1 summary"><p>If source service accounts are specified, the firewall will apply only to traffic originating from an instance with a
+service account in this list. Source service accounts cannot be used to control traffic to an instance's external IP
+address because service accounts are associated with an instance, not an IP address. sourceRanges can be set at the same
+time as sourceServiceAccounts. If both are set, the firewall will apply to traffic that has source IP address within
+sourceRanges OR the source IP belongs to an instance with service account listed in sourceServiceAccount. The connection
+does not need to match both properties for the firewall to apply. sourceServiceAccounts cannot be used at the same time
+as sourceTags or targetTags.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -501,22 +469,22 @@ targetTags.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/Firewall.cs/#L351">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Firewall.cs/#L365">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_FirewallArgs_SourceTags_" data-uid="Pulumi.Gcp.Compute.FirewallArgs.SourceTags*"></a>
   <h4 id="Pulumi_Gcp_Compute_FirewallArgs_SourceTags" data-uid="Pulumi.Gcp.Compute.FirewallArgs.SourceTags">SourceTags</h4>
-  <div class="markdown level1 summary"><p>If source tags are specified, the firewall will apply only to traffic with source IP that belongs to a tag
-listed in source tags. Source tags cannot be used to control traffic to an instance's external IP address.
-Because tags are associated with an instance, not an IP address. One or both of sourceRanges and sourceTags
-may be set. If both properties are set, the firewall will apply to traffic that has source IP address within
-sourceRanges OR the source IP that belongs to a tag listed in the sourceTags property. The connection does
-not need to match both properties for the firewall to apply.</p>
+  <div class="markdown level1 summary"><p>If source tags are specified, the firewall will apply only to traffic with source IP that belongs to a tag listed in
+source tags. Source tags cannot be used to control traffic to an instance's external IP address. Because tags are
+associated with an instance, not an IP address. One or both of sourceRanges and sourceTags may be set. If both
+properties are set, the firewall will apply to traffic that has source IP address within sourceRanges OR the source IP
+that belongs to a tag listed in the sourceTags property. The connection does not need to match both properties for the
+firewall to apply.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -533,20 +501,19 @@ not need to match both properties for the firewall to apply.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/Firewall.cs/#L366">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Firewall.cs/#L379">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_FirewallArgs_TargetServiceAccounts_" data-uid="Pulumi.Gcp.Compute.FirewallArgs.TargetServiceAccounts*"></a>
   <h4 id="Pulumi_Gcp_Compute_FirewallArgs_TargetServiceAccounts" data-uid="Pulumi.Gcp.Compute.FirewallArgs.TargetServiceAccounts">TargetServiceAccounts</h4>
-  <div class="markdown level1 summary"><p>A list of service accounts indicating sets of instances located in the network that may make network
-connections as specified in allowed[]. targetServiceAccounts cannot be used at the same time as targetTags
-or sourceTags. If neither targetServiceAccounts nor targetTags are specified, the firewall rule applies to
-all instances on the specified network.</p>
+  <div class="markdown level1 summary"><p>A list of service accounts indicating sets of instances located in the network that may make network connections as
+specified in allowed[]. targetServiceAccounts cannot be used at the same time as targetTags or sourceTags. If neither
+targetServiceAccounts nor targetTags are specified, the firewall rule applies to all instances on the specified network.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -563,19 +530,19 @@ all instances on the specified network.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/Firewall.cs/#L380">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Firewall.cs/#L393">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_FirewallArgs_TargetTags_" data-uid="Pulumi.Gcp.Compute.FirewallArgs.TargetTags*"></a>
   <h4 id="Pulumi_Gcp_Compute_FirewallArgs_TargetTags" data-uid="Pulumi.Gcp.Compute.FirewallArgs.TargetTags">TargetTags</h4>
-  <div class="markdown level1 summary"><p>A list of instance tags indicating sets of instances located in the network that may make network
-connections as specified in allowed[]. If no targetTags are specified, the firewall rule applies to all
-instances on the specified network.</p>
+  <div class="markdown level1 summary"><p>A list of instance tags indicating sets of instances located in the network that may make network connections as
+specified in allowed[]. If no targetTags are specified, the firewall rule applies to all instances on the specified
+network.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -592,7 +559,7 @@ instances on the specified network.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -604,7 +571,7 @@ instances on the specified network.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/Firewall.cs/#L203" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Firewall.cs/#L220" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

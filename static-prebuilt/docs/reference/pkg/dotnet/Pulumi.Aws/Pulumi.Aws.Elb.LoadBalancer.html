@@ -88,53 +88,12 @@ certificate that was signed by an ECDSA key, note that ELB only supports the
 P256 and P384 curves.  Using a certificate signed by a key using a different
 curve could produce the error <code>ERR_SSL_VERSION_OR_CIPHER_MISMATCH</code> in your
 browser.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elb.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elb.html.markdown</a>.</p>
-</blockquote>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
-    <div class="level3"><span class="xref">LoadBalancer</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">LoadBalancer</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.Elb.html">Pulumi.Aws.Elb</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
@@ -145,16 +104,16 @@ browser.</p>
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Elb/LoadBalancer.cs/#L170">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Elb/LoadBalancer.cs/#L169">View Source</a>
   </span>
   <a id="Pulumi_Aws_Elb_LoadBalancer__ctor_" data-uid="Pulumi.Aws.Elb.LoadBalancer.#ctor*"></a>
-  <h4 id="Pulumi_Aws_Elb_LoadBalancer__ctor_System_String_Pulumi_Aws_Elb_LoadBalancerArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.Elb.LoadBalancer.#ctor(System.String,Pulumi.Aws.Elb.LoadBalancerArgs,Pulumi.CustomResourceOptions)">LoadBalancer(String, LoadBalancerArgs, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Aws_Elb_LoadBalancer__ctor_System_String_Pulumi_Aws_Elb_LoadBalancerArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.Elb.LoadBalancer.#ctor(System.String,Pulumi.Aws.Elb.LoadBalancerArgs,System.Nullable{CustomResourceOptions})">LoadBalancer(String, LoadBalancerArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Create a LoadBalancer resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public LoadBalancer(string name, LoadBalancerArgs args, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public LoadBalancer(string name, LoadBalancerArgs args, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -179,7 +138,7 @@ browser.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -189,7 +148,7 @@ browser.</p>
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Elb/LoadBalancer.cs/#L39">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Elb/LoadBalancer.cs/#L38">View Source</a>
   </span>
   <a id="Pulumi_Aws_Elb_LoadBalancer_AccessLogs_" data-uid="Pulumi.Aws.Elb.LoadBalancer.AccessLogs*"></a>
   <h4 id="Pulumi_Aws_Elb_LoadBalancer_AccessLogs" data-uid="Pulumi.Aws.Elb.LoadBalancer.AccessLogs">AccessLogs</h4>
@@ -210,13 +169,13 @@ browser.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Aws.Elb.Outputs.LoadBalancerAccessLogs.html">LoadBalancerAccessLogs</a>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Aws.Elb.Outputs.LoadBalancerAccessLogs.html">LoadBalancerAccessLogs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Elb/LoadBalancer.cs/#L45">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Elb/LoadBalancer.cs/#L44">View Source</a>
   </span>
   <a id="Pulumi_Aws_Elb_LoadBalancer_Arn_" data-uid="Pulumi.Aws.Elb.LoadBalancer.Arn*"></a>
   <h4 id="Pulumi_Aws_Elb_LoadBalancer_Arn" data-uid="Pulumi.Aws.Elb.LoadBalancer.Arn">Arn</h4>
@@ -237,13 +196,13 @@ browser.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Elb/LoadBalancer.cs/#L51">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Elb/LoadBalancer.cs/#L50">View Source</a>
   </span>
   <a id="Pulumi_Aws_Elb_LoadBalancer_AvailabilityZones_" data-uid="Pulumi.Aws.Elb.LoadBalancer.AvailabilityZones*"></a>
   <h4 id="Pulumi_Aws_Elb_LoadBalancer_AvailabilityZones" data-uid="Pulumi.Aws.Elb.LoadBalancer.AvailabilityZones">AvailabilityZones</h4>
@@ -264,13 +223,13 @@ browser.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Elb/LoadBalancer.cs/#L57">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Elb/LoadBalancer.cs/#L56">View Source</a>
   </span>
   <a id="Pulumi_Aws_Elb_LoadBalancer_ConnectionDraining_" data-uid="Pulumi.Aws.Elb.LoadBalancer.ConnectionDraining*"></a>
   <h4 id="Pulumi_Aws_Elb_LoadBalancer_ConnectionDraining" data-uid="Pulumi.Aws.Elb.LoadBalancer.ConnectionDraining">ConnectionDraining</h4>
@@ -291,13 +250,13 @@ browser.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Elb/LoadBalancer.cs/#L63">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Elb/LoadBalancer.cs/#L62">View Source</a>
   </span>
   <a id="Pulumi_Aws_Elb_LoadBalancer_ConnectionDrainingTimeout_" data-uid="Pulumi.Aws.Elb.LoadBalancer.ConnectionDrainingTimeout*"></a>
   <h4 id="Pulumi_Aws_Elb_LoadBalancer_ConnectionDrainingTimeout" data-uid="Pulumi.Aws.Elb.LoadBalancer.ConnectionDrainingTimeout">ConnectionDrainingTimeout</h4>
@@ -318,13 +277,13 @@ browser.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Elb/LoadBalancer.cs/#L69">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Elb/LoadBalancer.cs/#L68">View Source</a>
   </span>
   <a id="Pulumi_Aws_Elb_LoadBalancer_CrossZoneLoadBalancing_" data-uid="Pulumi.Aws.Elb.LoadBalancer.CrossZoneLoadBalancing*"></a>
   <h4 id="Pulumi_Aws_Elb_LoadBalancer_CrossZoneLoadBalancing" data-uid="Pulumi.Aws.Elb.LoadBalancer.CrossZoneLoadBalancing">CrossZoneLoadBalancing</h4>
@@ -345,13 +304,13 @@ browser.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Elb/LoadBalancer.cs/#L75">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Elb/LoadBalancer.cs/#L74">View Source</a>
   </span>
   <a id="Pulumi_Aws_Elb_LoadBalancer_DnsName_" data-uid="Pulumi.Aws.Elb.LoadBalancer.DnsName*"></a>
   <h4 id="Pulumi_Aws_Elb_LoadBalancer_DnsName" data-uid="Pulumi.Aws.Elb.LoadBalancer.DnsName">DnsName</h4>
@@ -372,13 +331,13 @@ browser.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Elb/LoadBalancer.cs/#L81">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Elb/LoadBalancer.cs/#L80">View Source</a>
   </span>
   <a id="Pulumi_Aws_Elb_LoadBalancer_HealthCheck_" data-uid="Pulumi.Aws.Elb.LoadBalancer.HealthCheck*"></a>
   <h4 id="Pulumi_Aws_Elb_LoadBalancer_HealthCheck" data-uid="Pulumi.Aws.Elb.LoadBalancer.HealthCheck">HealthCheck</h4>
@@ -399,13 +358,13 @@ browser.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Aws.Elb.Outputs.LoadBalancerHealthCheck.html">LoadBalancerHealthCheck</a>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Aws.Elb.Outputs.LoadBalancerHealthCheck.html">LoadBalancerHealthCheck</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Elb/LoadBalancer.cs/#L87">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Elb/LoadBalancer.cs/#L86">View Source</a>
   </span>
   <a id="Pulumi_Aws_Elb_LoadBalancer_IdleTimeout_" data-uid="Pulumi.Aws.Elb.LoadBalancer.IdleTimeout*"></a>
   <h4 id="Pulumi_Aws_Elb_LoadBalancer_IdleTimeout" data-uid="Pulumi.Aws.Elb.LoadBalancer.IdleTimeout">IdleTimeout</h4>
@@ -426,13 +385,13 @@ browser.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Elb/LoadBalancer.cs/#L93">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Elb/LoadBalancer.cs/#L92">View Source</a>
   </span>
   <a id="Pulumi_Aws_Elb_LoadBalancer_Instances_" data-uid="Pulumi.Aws.Elb.LoadBalancer.Instances*"></a>
   <h4 id="Pulumi_Aws_Elb_LoadBalancer_Instances" data-uid="Pulumi.Aws.Elb.LoadBalancer.Instances">Instances</h4>
@@ -453,13 +412,13 @@ browser.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Elb/LoadBalancer.cs/#L99">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Elb/LoadBalancer.cs/#L98">View Source</a>
   </span>
   <a id="Pulumi_Aws_Elb_LoadBalancer_Internal_" data-uid="Pulumi.Aws.Elb.LoadBalancer.Internal*"></a>
   <h4 id="Pulumi_Aws_Elb_LoadBalancer_Internal" data-uid="Pulumi.Aws.Elb.LoadBalancer.Internal">Internal</h4>
@@ -480,13 +439,13 @@ browser.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Elb/LoadBalancer.cs/#L105">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Elb/LoadBalancer.cs/#L104">View Source</a>
   </span>
   <a id="Pulumi_Aws_Elb_LoadBalancer_Listeners_" data-uid="Pulumi.Aws.Elb.LoadBalancer.Listeners*"></a>
   <h4 id="Pulumi_Aws_Elb_LoadBalancer_Listeners" data-uid="Pulumi.Aws.Elb.LoadBalancer.Listeners">Listeners</h4>
@@ -495,7 +454,7 @@ browser.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;LoadBalancerListeners&gt;&gt; Listeners { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;LoadBalancerListener&gt;&gt; Listeners { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -507,13 +466,13 @@ browser.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.Elb.Outputs.LoadBalancerListeners.html">LoadBalancerListeners</a>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.Elb.Outputs.LoadBalancerListener.html">LoadBalancerListener</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Elb/LoadBalancer.cs/#L111">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Elb/LoadBalancer.cs/#L110">View Source</a>
   </span>
   <a id="Pulumi_Aws_Elb_LoadBalancer_Name_" data-uid="Pulumi.Aws.Elb.LoadBalancer.Name*"></a>
   <h4 id="Pulumi_Aws_Elb_LoadBalancer_Name" data-uid="Pulumi.Aws.Elb.LoadBalancer.Name">Name</h4>
@@ -534,13 +493,13 @@ browser.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Elb/LoadBalancer.cs/#L118">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Elb/LoadBalancer.cs/#L117">View Source</a>
   </span>
   <a id="Pulumi_Aws_Elb_LoadBalancer_NamePrefix_" data-uid="Pulumi.Aws.Elb.LoadBalancer.NamePrefix*"></a>
   <h4 id="Pulumi_Aws_Elb_LoadBalancer_NamePrefix" data-uid="Pulumi.Aws.Elb.LoadBalancer.NamePrefix">NamePrefix</h4>
@@ -550,7 +509,7 @@ prefix. Conflicts with <code>name</code>.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; NamePrefix { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; NamePrefix { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -562,13 +521,13 @@ prefix. Conflicts with <code>name</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Elb/LoadBalancer.cs/#L125">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Elb/LoadBalancer.cs/#L124">View Source</a>
   </span>
   <a id="Pulumi_Aws_Elb_LoadBalancer_SecurityGroups_" data-uid="Pulumi.Aws.Elb.LoadBalancer.SecurityGroups*"></a>
   <h4 id="Pulumi_Aws_Elb_LoadBalancer_SecurityGroups" data-uid="Pulumi.Aws.Elb.LoadBalancer.SecurityGroups">SecurityGroups</h4>
@@ -590,13 +549,13 @@ Only valid if creating an ELB within a VPC</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Elb/LoadBalancer.cs/#L133">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Elb/LoadBalancer.cs/#L132">View Source</a>
   </span>
   <a id="Pulumi_Aws_Elb_LoadBalancer_SourceSecurityGroup_" data-uid="Pulumi.Aws.Elb.LoadBalancer.SourceSecurityGroup*"></a>
   <h4 id="Pulumi_Aws_Elb_LoadBalancer_SourceSecurityGroup" data-uid="Pulumi.Aws.Elb.LoadBalancer.SourceSecurityGroup">SourceSecurityGroup</h4>
@@ -619,13 +578,13 @@ instances. Use this for Classic or Default VPC only.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Elb/LoadBalancer.cs/#L141">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Elb/LoadBalancer.cs/#L140">View Source</a>
   </span>
   <a id="Pulumi_Aws_Elb_LoadBalancer_SourceSecurityGroupId_" data-uid="Pulumi.Aws.Elb.LoadBalancer.SourceSecurityGroupId*"></a>
   <h4 id="Pulumi_Aws_Elb_LoadBalancer_SourceSecurityGroupId" data-uid="Pulumi.Aws.Elb.LoadBalancer.SourceSecurityGroupId">SourceSecurityGroupId</h4>
@@ -648,13 +607,13 @@ instances. Only available on ELBs launched in a VPC.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Elb/LoadBalancer.cs/#L147">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Elb/LoadBalancer.cs/#L146">View Source</a>
   </span>
   <a id="Pulumi_Aws_Elb_LoadBalancer_Subnets_" data-uid="Pulumi.Aws.Elb.LoadBalancer.Subnets*"></a>
   <h4 id="Pulumi_Aws_Elb_LoadBalancer_Subnets" data-uid="Pulumi.Aws.Elb.LoadBalancer.Subnets">Subnets</h4>
@@ -675,13 +634,13 @@ instances. Only available on ELBs launched in a VPC.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Elb/LoadBalancer.cs/#L153">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Elb/LoadBalancer.cs/#L152">View Source</a>
   </span>
   <a id="Pulumi_Aws_Elb_LoadBalancer_Tags_" data-uid="Pulumi.Aws.Elb.LoadBalancer.Tags*"></a>
   <h4 id="Pulumi_Aws_Elb_LoadBalancer_Tags" data-uid="Pulumi.Aws.Elb.LoadBalancer.Tags">Tags</h4>
@@ -690,7 +649,7 @@ instances. Only available on ELBs launched in a VPC.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;&gt; Tags { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;?&gt; Tags { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -702,13 +661,13 @@ instances. Only available on ELBs launched in a VPC.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Elb/LoadBalancer.cs/#L159">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Elb/LoadBalancer.cs/#L158">View Source</a>
   </span>
   <a id="Pulumi_Aws_Elb_LoadBalancer_ZoneId_" data-uid="Pulumi.Aws.Elb.LoadBalancer.ZoneId*"></a>
   <h4 id="Pulumi_Aws_Elb_LoadBalancer_ZoneId" data-uid="Pulumi.Aws.Elb.LoadBalancer.ZoneId">ZoneId</h4>
@@ -729,7 +688,7 @@ instances. Only available on ELBs launched in a VPC.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -737,17 +696,17 @@ instances. Only available on ELBs launched in a VPC.</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Elb/LoadBalancer.cs/#L200">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Elb/LoadBalancer.cs/#L199">View Source</a>
   </span>
   <a id="Pulumi_Aws_Elb_LoadBalancer_Get_" data-uid="Pulumi.Aws.Elb.LoadBalancer.Get*"></a>
-  <h4 id="Pulumi_Aws_Elb_LoadBalancer_Get_System_String_Pulumi_Input_System_String__Pulumi_Aws_Elb_LoadBalancerState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.Elb.LoadBalancer.Get(System.String,Pulumi.Input{System.String},Pulumi.Aws.Elb.LoadBalancerState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, LoadBalancerState, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Aws_Elb_LoadBalancer_Get_System_String_Input_System_String__Pulumi_Aws_Elb_LoadBalancerState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.Elb.LoadBalancer.Get(System.String,Input{System.String},Pulumi.Aws.Elb.LoadBalancerState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, LoadBalancerState, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Get an existing LoadBalancer resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static LoadBalancer Get(string name, Input&lt;string&gt; id, LoadBalancerState state = null, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static LoadBalancer Get(string name, Input&lt;string&gt; id, LoadBalancerState state = null, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -766,7 +725,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -778,7 +737,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -807,7 +766,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Elb/LoadBalancer.cs/#L34" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Elb/LoadBalancer.cs/#L33" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -79,40 +79,16 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">CronJobSpec</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Batch.V2Alpha1.html">Pulumi.Kubernetes.Types.Outputs.Batch.V2Alpha1</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Kubernetes.dll</h6>
   <h5 id="Pulumi_Kubernetes_Types_Outputs_Batch_V2Alpha1_CronJobSpec_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class CronJobSpec</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class CronJobSpec : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L12750">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L12877">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Batch_V2Alpha1_CronJobSpec_ConcurrencyPolicy" data-uid="Pulumi.Kubernetes.Types.Outputs.Batch.V2Alpha1.CronJobSpec.ConcurrencyPolicy">ConcurrencyPolicy</h4>
   <div class="markdown level1 summary"><p>Specifies how to treat concurrent executions of a Job. Valid values are: - &quot;Allow&quot;
@@ -141,7 +117,7 @@ running job and replaces it with a new one</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L12756">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L12883">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Batch_V2Alpha1_CronJobSpec_FailedJobsHistoryLimit" data-uid="Pulumi.Kubernetes.Types.Outputs.Batch.V2Alpha1.CronJobSpec.FailedJobsHistoryLimit">FailedJobsHistoryLimit</h4>
   <div class="markdown level1 summary"><p>The number of failed finished jobs to retain. This is a pointer to distinguish between
@@ -168,7 +144,7 @@ explicit zero and not specified.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L12761">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L12888">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Batch_V2Alpha1_CronJobSpec_JobTemplate" data-uid="Pulumi.Kubernetes.Types.Outputs.Batch.V2Alpha1.CronJobSpec.JobTemplate">JobTemplate</h4>
   <div class="markdown level1 summary"><p>Specifies the job that will be created when executing a CronJob.</p>
@@ -194,7 +170,7 @@ explicit zero and not specified.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L12766">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L12893">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Batch_V2Alpha1_CronJobSpec_Schedule" data-uid="Pulumi.Kubernetes.Types.Outputs.Batch.V2Alpha1.CronJobSpec.Schedule">Schedule</h4>
   <div class="markdown level1 summary"><p>The schedule in Cron format, see <a href="https://en.wikipedia.org/wiki/Cron">https://en.wikipedia.org/wiki/Cron</a>.</p>
@@ -220,7 +196,7 @@ explicit zero and not specified.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L12772">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L12899">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Batch_V2Alpha1_CronJobSpec_StartingDeadlineSeconds" data-uid="Pulumi.Kubernetes.Types.Outputs.Batch.V2Alpha1.CronJobSpec.StartingDeadlineSeconds">StartingDeadlineSeconds</h4>
   <div class="markdown level1 summary"><p>Optional deadline in seconds for starting the job if it misses scheduled time for any
@@ -247,7 +223,7 @@ reason.  Missed jobs executions will be counted as failed ones.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L12778">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L12905">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Batch_V2Alpha1_CronJobSpec_SuccessfulJobsHistoryLimit" data-uid="Pulumi.Kubernetes.Types.Outputs.Batch.V2Alpha1.CronJobSpec.SuccessfulJobsHistoryLimit">SuccessfulJobsHistoryLimit</h4>
   <div class="markdown level1 summary"><p>The number of successful finished jobs to retain. This is a pointer to distinguish
@@ -274,7 +250,7 @@ between explicit zero and not specified.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L12784">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L12911">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Batch_V2Alpha1_CronJobSpec_Suspend" data-uid="Pulumi.Kubernetes.Types.Outputs.Batch.V2Alpha1.CronJobSpec.Suspend">Suspend</h4>
   <div class="markdown level1 summary"><p>This flag tells the controller to suspend subsequent executions, it does not apply to
@@ -307,7 +283,7 @@ already started executions.  Defaults to false.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L12741" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L12868" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -81,53 +81,12 @@ and
 <a href="https://cloud.google.com/storage/docs/json_api/v1/buckets">API</a>.</p>
 <p><strong>Note</strong>: If the project id is not set on the resource or in the provider block it will be dynamically
 determined which will require enabling the compute api.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/storage_bucket.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/storage_bucket.html.markdown</a>.</p>
-</blockquote>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
-    <div class="level3"><span class="xref">Bucket</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">Bucket</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.Storage.html">Pulumi.Gcp.Storage</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
@@ -138,16 +97,16 @@ determined which will require enabling the compute api.</p>
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Storage/Bucket.cs/#L146">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Storage/Bucket.cs/#L144">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Storage_Bucket__ctor_" data-uid="Pulumi.Gcp.Storage.Bucket.#ctor*"></a>
-  <h4 id="Pulumi_Gcp_Storage_Bucket__ctor_System_String_Pulumi_Gcp_Storage_BucketArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Gcp.Storage.Bucket.#ctor(System.String,Pulumi.Gcp.Storage.BucketArgs,Pulumi.CustomResourceOptions)">Bucket(String, BucketArgs, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Gcp_Storage_Bucket__ctor_System_String_Pulumi_Gcp_Storage_BucketArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Gcp.Storage.Bucket.#ctor(System.String,Pulumi.Gcp.Storage.BucketArgs,System.Nullable{CustomResourceOptions})">Bucket(String, BucketArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Create a Bucket resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Bucket(string name, BucketArgs args = null, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Bucket(string name, BucketArgs args = null, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -172,7 +131,7 @@ determined which will require enabling the compute api.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -182,7 +141,7 @@ determined which will require enabling the compute api.</p>
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Storage/Bucket.cs/#L33">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Storage/Bucket.cs/#L31">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Storage_Bucket_BucketPolicyOnly_" data-uid="Pulumi.Gcp.Storage.Bucket.BucketPolicyOnly*"></a>
   <h4 id="Pulumi_Gcp_Storage_Bucket_BucketPolicyOnly" data-uid="Pulumi.Gcp.Storage.Bucket.BucketPolicyOnly">BucketPolicyOnly</h4>
@@ -203,13 +162,13 @@ determined which will require enabling the compute api.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Storage/Bucket.cs/#L39">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Storage/Bucket.cs/#L37">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Storage_Bucket_Cors_" data-uid="Pulumi.Gcp.Storage.Bucket.Cors*"></a>
   <h4 id="Pulumi_Gcp_Storage_Bucket_Cors" data-uid="Pulumi.Gcp.Storage.Bucket.Cors">Cors</h4>
@@ -218,7 +177,7 @@ determined which will require enabling the compute api.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;BucketCors&gt;&gt; Cors { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;BucketCor&gt;&gt; Cors { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -230,13 +189,13 @@ determined which will require enabling the compute api.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Gcp.Storage.Outputs.BucketCors.html">BucketCors</a>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Gcp.Storage.Outputs.BucketCor.html">BucketCor</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Storage/Bucket.cs/#L42">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Storage/Bucket.cs/#L40">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Storage_Bucket_DefaultEventBasedHold_" data-uid="Pulumi.Gcp.Storage.Bucket.DefaultEventBasedHold*"></a>
   <h4 id="Pulumi_Gcp_Storage_Bucket_DefaultEventBasedHold" data-uid="Pulumi.Gcp.Storage.Bucket.DefaultEventBasedHold">DefaultEventBasedHold</h4>
@@ -256,13 +215,13 @@ determined which will require enabling the compute api.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Storage/Bucket.cs/#L48">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Storage/Bucket.cs/#L46">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Storage_Bucket_Encryption_" data-uid="Pulumi.Gcp.Storage.Bucket.Encryption*"></a>
   <h4 id="Pulumi_Gcp_Storage_Bucket_Encryption" data-uid="Pulumi.Gcp.Storage.Bucket.Encryption">Encryption</h4>
@@ -283,19 +242,19 @@ determined which will require enabling the compute api.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Gcp.Storage.Outputs.BucketEncryption.html">BucketEncryption</a>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Gcp.Storage.Outputs.BucketEncryption.html">BucketEncryption</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Storage/Bucket.cs/#L56">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Storage/Bucket.cs/#L54">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Storage_Bucket_ForceDestroy_" data-uid="Pulumi.Gcp.Storage.Bucket.ForceDestroy*"></a>
   <h4 id="Pulumi_Gcp_Storage_Bucket_ForceDestroy" data-uid="Pulumi.Gcp.Storage.Bucket.ForceDestroy">ForceDestroy</h4>
   <div class="markdown level1 summary"><p>When deleting a bucket, this
 boolean option will delete all contained objects. If you try to delete a
-bucket that contains objects, this provider will fail that run.</p>
+bucket that contains objects, the provider will fail that run.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -312,13 +271,13 @@ bucket that contains objects, this provider will fail that run.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Storage/Bucket.cs/#L62">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Storage/Bucket.cs/#L60">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Storage_Bucket_Labels_" data-uid="Pulumi.Gcp.Storage.Bucket.Labels*"></a>
   <h4 id="Pulumi_Gcp_Storage_Bucket_Labels" data-uid="Pulumi.Gcp.Storage.Bucket.Labels">Labels</h4>
@@ -327,7 +286,7 @@ bucket that contains objects, this provider will fail that run.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;&gt; Labels { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;?&gt; Labels { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -339,13 +298,13 @@ bucket that contains objects, this provider will fail that run.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Storage/Bucket.cs/#L68">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Storage/Bucket.cs/#L66">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Storage_Bucket_LifecycleRules_" data-uid="Pulumi.Gcp.Storage.Bucket.LifecycleRules*"></a>
   <h4 id="Pulumi_Gcp_Storage_Bucket_LifecycleRules" data-uid="Pulumi.Gcp.Storage.Bucket.LifecycleRules">LifecycleRules</h4>
@@ -354,7 +313,7 @@ bucket that contains objects, this provider will fail that run.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;BucketLifecycleRules&gt;&gt; LifecycleRules { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;BucketLifecycleRule&gt;&gt; LifecycleRules { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -366,13 +325,13 @@ bucket that contains objects, this provider will fail that run.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Gcp.Storage.Outputs.BucketLifecycleRules.html">BucketLifecycleRules</a>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Gcp.Storage.Outputs.BucketLifecycleRule.html">BucketLifecycleRule</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Storage/Bucket.cs/#L74">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Storage/Bucket.cs/#L72">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Storage_Bucket_Location_" data-uid="Pulumi.Gcp.Storage.Bucket.Location*"></a>
   <h4 id="Pulumi_Gcp_Storage_Bucket_Location" data-uid="Pulumi.Gcp.Storage.Bucket.Location">Location</h4>
@@ -381,7 +340,7 @@ bucket that contains objects, this provider will fail that run.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Location { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Location { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -393,13 +352,13 @@ bucket that contains objects, this provider will fail that run.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Storage/Bucket.cs/#L80">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Storage/Bucket.cs/#L78">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Storage_Bucket_Logging_" data-uid="Pulumi.Gcp.Storage.Bucket.Logging*"></a>
   <h4 id="Pulumi_Gcp_Storage_Bucket_Logging" data-uid="Pulumi.Gcp.Storage.Bucket.Logging">Logging</h4>
@@ -420,13 +379,13 @@ bucket that contains objects, this provider will fail that run.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Gcp.Storage.Outputs.BucketLogging.html">BucketLogging</a>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Gcp.Storage.Outputs.BucketLogging.html">BucketLogging</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Storage/Bucket.cs/#L86">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Storage/Bucket.cs/#L84">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Storage_Bucket_Name_" data-uid="Pulumi.Gcp.Storage.Bucket.Name*"></a>
   <h4 id="Pulumi_Gcp_Storage_Bucket_Name" data-uid="Pulumi.Gcp.Storage.Bucket.Name">Name</h4>
@@ -447,13 +406,13 @@ bucket that contains objects, this provider will fail that run.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Storage/Bucket.cs/#L93">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Storage/Bucket.cs/#L91">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Storage_Bucket_Project_" data-uid="Pulumi.Gcp.Storage.Bucket.Project*"></a>
   <h4 id="Pulumi_Gcp_Storage_Bucket_Project" data-uid="Pulumi.Gcp.Storage.Bucket.Project">Project</h4>
@@ -475,13 +434,13 @@ is not provided, the provider project is used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Storage/Bucket.cs/#L99">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Storage/Bucket.cs/#L97">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Storage_Bucket_RequesterPays_" data-uid="Pulumi.Gcp.Storage.Bucket.RequesterPays*"></a>
   <h4 id="Pulumi_Gcp_Storage_Bucket_RequesterPays" data-uid="Pulumi.Gcp.Storage.Bucket.RequesterPays">RequesterPays</h4>
@@ -502,13 +461,13 @@ is not provided, the provider project is used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Storage/Bucket.cs/#L105">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Storage/Bucket.cs/#L103">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Storage_Bucket_RetentionPolicy_" data-uid="Pulumi.Gcp.Storage.Bucket.RetentionPolicy*"></a>
   <h4 id="Pulumi_Gcp_Storage_Bucket_RetentionPolicy" data-uid="Pulumi.Gcp.Storage.Bucket.RetentionPolicy">RetentionPolicy</h4>
@@ -529,13 +488,13 @@ is not provided, the provider project is used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Gcp.Storage.Outputs.BucketRetentionPolicy.html">BucketRetentionPolicy</a>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Gcp.Storage.Outputs.BucketRetentionPolicy.html">BucketRetentionPolicy</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Storage/Bucket.cs/#L111">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Storage/Bucket.cs/#L109">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Storage_Bucket_SelfLink_" data-uid="Pulumi.Gcp.Storage.Bucket.SelfLink*"></a>
   <h4 id="Pulumi_Gcp_Storage_Bucket_SelfLink" data-uid="Pulumi.Gcp.Storage.Bucket.SelfLink">SelfLink</h4>
@@ -556,22 +515,22 @@ is not provided, the provider project is used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Storage/Bucket.cs/#L117">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Storage/Bucket.cs/#L115">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Storage_Bucket_StorageClass_" data-uid="Pulumi.Gcp.Storage.Bucket.StorageClass*"></a>
   <h4 id="Pulumi_Gcp_Storage_Bucket_StorageClass" data-uid="Pulumi.Gcp.Storage.Bucket.StorageClass">StorageClass</h4>
-  <div class="markdown level1 summary"><p>The <a href="https://cloud.google.com/storage/docs/storage-classes">Storage Class</a> of the new bucket. Supported values include: <code>STANDARD</code>, <code>MULTI_REGIONAL</code>, <code>REGIONAL</code>, <code>NEARLINE</code>, <code>COLDLINE</code>.</p>
+  <div class="markdown level1 summary"><p>The target <a href="https://cloud.google.com/storage/docs/storage-classes">Storage Class</a> of objects affected by this Lifecycle Rule. Supported values include: <code>MULTI_REGIONAL</code>, <code>REGIONAL</code>, <code>NEARLINE</code>, <code>COLDLINE</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; StorageClass { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; StorageClass { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -583,13 +542,13 @@ is not provided, the provider project is used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Storage/Bucket.cs/#L123">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Storage/Bucket.cs/#L121">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Storage_Bucket_Url_" data-uid="Pulumi.Gcp.Storage.Bucket.Url*"></a>
   <h4 id="Pulumi_Gcp_Storage_Bucket_Url" data-uid="Pulumi.Gcp.Storage.Bucket.Url">Url</h4>
@@ -610,13 +569,13 @@ is not provided, the provider project is used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Storage/Bucket.cs/#L129">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Storage/Bucket.cs/#L127">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Storage_Bucket_Versioning_" data-uid="Pulumi.Gcp.Storage.Bucket.Versioning*"></a>
   <h4 id="Pulumi_Gcp_Storage_Bucket_Versioning" data-uid="Pulumi.Gcp.Storage.Bucket.Versioning">Versioning</h4>
@@ -637,13 +596,13 @@ is not provided, the provider project is used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Gcp.Storage.Outputs.BucketVersioning.html">BucketVersioning</a>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Gcp.Storage.Outputs.BucketVersioning.html">BucketVersioning</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Storage/Bucket.cs/#L135">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Storage/Bucket.cs/#L133">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Storage_Bucket_Website_" data-uid="Pulumi.Gcp.Storage.Bucket.Website*"></a>
   <h4 id="Pulumi_Gcp_Storage_Bucket_Website" data-uid="Pulumi.Gcp.Storage.Bucket.Website">Website</h4>
@@ -664,7 +623,7 @@ is not provided, the provider project is used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Gcp.Storage.Outputs.BucketWebsite.html">BucketWebsite</a>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Gcp.Storage.Outputs.BucketWebsite.html">BucketWebsite</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -672,17 +631,17 @@ is not provided, the provider project is used.</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Storage/Bucket.cs/#L176">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Storage/Bucket.cs/#L174">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Storage_Bucket_Get_" data-uid="Pulumi.Gcp.Storage.Bucket.Get*"></a>
-  <h4 id="Pulumi_Gcp_Storage_Bucket_Get_System_String_Pulumi_Input_System_String__Pulumi_Gcp_Storage_BucketState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Gcp.Storage.Bucket.Get(System.String,Pulumi.Input{System.String},Pulumi.Gcp.Storage.BucketState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, BucketState, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Gcp_Storage_Bucket_Get_System_String_Input_System_String__Pulumi_Gcp_Storage_BucketState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Gcp.Storage.Bucket.Get(System.String,Input{System.String},Pulumi.Gcp.Storage.BucketState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, BucketState, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Get an existing Bucket resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Bucket Get(string name, Input&lt;string&gt; id, BucketState state = null, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Bucket Get(string name, Input&lt;string&gt; id, BucketState state = null, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -701,7 +660,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -713,7 +672,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -742,7 +701,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Storage/Bucket.cs/#L28" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Storage/Bucket.cs/#L26" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

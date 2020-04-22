@@ -78,43 +78,22 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">InstanceTemplateScheduling</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.Compute.Outputs.html">Pulumi.Gcp.Compute.Outputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
   <h5 id="Pulumi_Gcp_Compute_Outputs_InstanceTemplateScheduling_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class InstanceTemplateScheduling</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class InstanceTemplateScheduling : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/InstanceTemplate.cs/#L1236">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Outputs/InstanceTemplateScheduling.cs/#L21">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_Outputs_InstanceTemplateScheduling_AutomaticRestart" data-uid="Pulumi.Gcp.Compute.Outputs.InstanceTemplateScheduling.AutomaticRestart">AutomaticRestart</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Specifies whether the instance should be
+automatically restarted if it is terminated by Compute Engine (not
+terminated by a user). This defaults to true.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -136,14 +115,19 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/InstanceTemplate.cs/#L1237">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Outputs/InstanceTemplateScheduling.cs/#L29">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_Outputs_InstanceTemplateScheduling_NodeAffinities" data-uid="Pulumi.Gcp.Compute.Outputs.InstanceTemplateScheduling.NodeAffinities">NodeAffinities</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Specifies node affinities or anti-affinities
+to determine which sole-tenant nodes your instances and managed instance
+groups will use as host systems. Read more on sole-tenant node creation
+<a href="https://cloud.google.com/compute/docs/nodes/create-nodes">here</a>.
+Structure documented below.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;InstanceTemplateSchedulingNodeAffinities&gt; NodeAffinities</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;InstanceTemplateSchedulingNodeAffinity&gt; NodeAffinities</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -155,20 +139,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Outputs.InstanceTemplateSchedulingNodeAffinities.html">InstanceTemplateSchedulingNodeAffinities</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Outputs.InstanceTemplateSchedulingNodeAffinity.html">InstanceTemplateSchedulingNodeAffinity</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/InstanceTemplate.cs/#L1238">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Outputs/InstanceTemplateScheduling.cs/#L34">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_Outputs_InstanceTemplateScheduling_OnHostMaintenance" data-uid="Pulumi.Gcp.Compute.Outputs.InstanceTemplateScheduling.OnHostMaintenance">OnHostMaintenance</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Defines the maintenance behavior for this
+instance.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string OnHostMaintenance</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? OnHostMaintenance</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -180,16 +166,19 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/InstanceTemplate.cs/#L1239">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Outputs/InstanceTemplateScheduling.cs/#L40">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_Outputs_InstanceTemplateScheduling_Preemptible" data-uid="Pulumi.Gcp.Compute.Outputs.InstanceTemplateScheduling.Preemptible">Preemptible</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Allows instance to be preempted. This defaults to
+false. Read more on this
+<a href="https://cloud.google.com/compute/docs/instances/preemptible">here</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -217,7 +206,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/InstanceTemplate.cs/#L1233" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Outputs/InstanceTemplateScheduling.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

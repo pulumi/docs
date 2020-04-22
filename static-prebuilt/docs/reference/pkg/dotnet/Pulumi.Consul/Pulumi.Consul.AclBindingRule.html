@@ -73,9 +73,6 @@
   </h1>
   <div class="markdown level0 summary"><p>Starting with Consul 1.5.0, the consul..AclBindingRule resource can be used to
 managed Consul ACL binding rules.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-consul/blob/master/website/docs/r/acl_binding_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-consul/blob/master/website/docs/r/acl_binding_rule.html.markdown</a>.</p>
-</blockquote>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -92,7 +89,7 @@ managed Consul ACL binding rules.</p>
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/AclBindingRule.cs/#L60">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/AclBindingRule.cs/#L66">View Source</a>
   </span>
   <a id="Pulumi_Consul_AclBindingRule__ctor_" data-uid="Pulumi.Consul.AclBindingRule.#ctor*"></a>
   <h4 id="Pulumi_Consul_AclBindingRule__ctor_System_String_Pulumi_Consul_AclBindingRuleArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Consul.AclBindingRule.#ctor(System.String,Pulumi.Consul.AclBindingRuleArgs,System.Nullable{CustomResourceOptions})">AclBindingRule(String, AclBindingRuleArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
@@ -136,7 +133,7 @@ managed Consul ACL binding rules.</p>
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/AclBindingRule.cs/#L22">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/AclBindingRule.cs/#L21">View Source</a>
   </span>
   <a id="Pulumi_Consul_AclBindingRule_AuthMethod_" data-uid="Pulumi.Consul.AclBindingRule.AuthMethod*"></a>
   <h4 id="Pulumi_Consul_AclBindingRule_AuthMethod" data-uid="Pulumi.Consul.AclBindingRule.AuthMethod">AuthMethod</h4>
@@ -163,7 +160,7 @@ managed Consul ACL binding rules.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/AclBindingRule.cs/#L28">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/AclBindingRule.cs/#L27">View Source</a>
   </span>
   <a id="Pulumi_Consul_AclBindingRule_BindName_" data-uid="Pulumi.Consul.AclBindingRule.BindName*"></a>
   <h4 id="Pulumi_Consul_AclBindingRule_BindName" data-uid="Pulumi.Consul.AclBindingRule.BindName">BindName</h4>
@@ -190,7 +187,7 @@ managed Consul ACL binding rules.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/AclBindingRule.cs/#L35">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/AclBindingRule.cs/#L34">View Source</a>
   </span>
   <a id="Pulumi_Consul_AclBindingRule_BindType_" data-uid="Pulumi.Consul.AclBindingRule.BindType*"></a>
   <h4 id="Pulumi_Consul_AclBindingRule_BindType" data-uid="Pulumi.Consul.AclBindingRule.BindType">BindType</h4>
@@ -218,7 +215,7 @@ created at login.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/AclBindingRule.cs/#L42">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/AclBindingRule.cs/#L41">View Source</a>
   </span>
   <a id="Pulumi_Consul_AclBindingRule_Description_" data-uid="Pulumi.Consul.AclBindingRule.Description*"></a>
   <h4 id="Pulumi_Consul_AclBindingRule_Description" data-uid="Pulumi.Consul.AclBindingRule.Description">Description</h4>
@@ -246,7 +243,35 @@ binding rule.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/AclBindingRule.cs/#L49">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/AclBindingRule.cs/#L48">View Source</a>
+  </span>
+  <a id="Pulumi_Consul_AclBindingRule_Namespace_" data-uid="Pulumi.Consul.AclBindingRule.Namespace*"></a>
+  <h4 id="Pulumi_Consul_AclBindingRule_Namespace" data-uid="Pulumi.Consul.AclBindingRule.Namespace">Namespace</h4>
+  <div class="markdown level1 summary"><p>The namespace to create the binding
+rule within.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Namespace { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/AclBindingRule.cs/#L55">View Source</a>
   </span>
   <a id="Pulumi_Consul_AclBindingRule_Selector_" data-uid="Pulumi.Consul.AclBindingRule.Selector*"></a>
   <h4 id="Pulumi_Consul_AclBindingRule_Selector" data-uid="Pulumi.Consul.AclBindingRule.Selector">Selector</h4>
@@ -276,7 +301,7 @@ identities returned from an auth method validation.</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/AclBindingRule.cs/#L90">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/AclBindingRule.cs/#L96">View Source</a>
   </span>
   <a id="Pulumi_Consul_AclBindingRule_Get_" data-uid="Pulumi.Consul.AclBindingRule.Get*"></a>
   <h4 id="Pulumi_Consul_AclBindingRule_Get_System_String_Input_System_String__Pulumi_Consul_AclBindingRuleState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Consul.AclBindingRule.Get(System.String,Input{System.String},Pulumi.Consul.AclBindingRuleState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, AclBindingRuleState, Nullable&lt;CustomResourceOptions&gt;)</h4>
@@ -346,7 +371,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/AclBindingRule.cs/#L17" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/AclBindingRule.cs/#L16" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

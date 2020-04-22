@@ -78,40 +78,16 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">GetVolumeSnapshotResult</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.DigitalOcean.html">Pulumi.DigitalOcean</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.DigitalOcean.dll</h6>
   <h5 id="Pulumi_DigitalOcean_GetVolumeSnapshotResult_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class GetVolumeSnapshotResult</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class GetVolumeSnapshotResult : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/master/sdk/dotnet/GetVolumeSnapshot.cs/#L62">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/GetVolumeSnapshot.cs/#L65">View Source</a>
   </span>
   <h4 id="Pulumi_DigitalOcean_GetVolumeSnapshotResult_CreatedAt" data-uid="Pulumi.DigitalOcean.GetVolumeSnapshotResult.CreatedAt">CreatedAt</h4>
   <div class="markdown level1 summary"><p>The date and time the volume snapshot was created.</p>
@@ -137,7 +113,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/master/sdk/dotnet/GetVolumeSnapshot.cs/#L90">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/GetVolumeSnapshot.cs/#L69">View Source</a>
   </span>
   <h4 id="Pulumi_DigitalOcean_GetVolumeSnapshotResult_Id" data-uid="Pulumi.DigitalOcean.GetVolumeSnapshotResult.Id">Id</h4>
   <div class="markdown level1 summary"><p>id is the provider-assigned unique ID for this managed resource.</p>
@@ -163,7 +139,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/master/sdk/dotnet/GetVolumeSnapshot.cs/#L66">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/GetVolumeSnapshot.cs/#L73">View Source</a>
   </span>
   <h4 id="Pulumi_DigitalOcean_GetVolumeSnapshotResult_MinDiskSize" data-uid="Pulumi.DigitalOcean.GetVolumeSnapshotResult.MinDiskSize">MinDiskSize</h4>
   <div class="markdown level1 summary"><p>The minimum size in gigabytes required for a volume to be created based on this volume snapshot.</p>
@@ -189,7 +165,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/master/sdk/dotnet/GetVolumeSnapshot.cs/#L67">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/GetVolumeSnapshot.cs/#L74">View Source</a>
   </span>
   <h4 id="Pulumi_DigitalOcean_GetVolumeSnapshotResult_MostRecent" data-uid="Pulumi.DigitalOcean.GetVolumeSnapshotResult.MostRecent">MostRecent</h4>
   <div class="markdown level1 summary"></div>
@@ -214,14 +190,14 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/master/sdk/dotnet/GetVolumeSnapshot.cs/#L68">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/GetVolumeSnapshot.cs/#L75">View Source</a>
   </span>
   <h4 id="Pulumi_DigitalOcean_GetVolumeSnapshotResult_Name" data-uid="Pulumi.DigitalOcean.GetVolumeSnapshotResult.Name">Name</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string Name</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? Name</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -233,20 +209,20 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/master/sdk/dotnet/GetVolumeSnapshot.cs/#L69">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/GetVolumeSnapshot.cs/#L76">View Source</a>
   </span>
   <h4 id="Pulumi_DigitalOcean_GetVolumeSnapshotResult_NameRegex" data-uid="Pulumi.DigitalOcean.GetVolumeSnapshotResult.NameRegex">NameRegex</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string NameRegex</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? NameRegex</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -258,20 +234,20 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/master/sdk/dotnet/GetVolumeSnapshot.cs/#L70">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/GetVolumeSnapshot.cs/#L77">View Source</a>
   </span>
   <h4 id="Pulumi_DigitalOcean_GetVolumeSnapshotResult_Region" data-uid="Pulumi.DigitalOcean.GetVolumeSnapshotResult.Region">Region</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string Region</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? Region</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -283,13 +259,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/master/sdk/dotnet/GetVolumeSnapshot.cs/#L74">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/GetVolumeSnapshot.cs/#L81">View Source</a>
   </span>
   <h4 id="Pulumi_DigitalOcean_GetVolumeSnapshotResult_Regions" data-uid="Pulumi.DigitalOcean.GetVolumeSnapshotResult.Regions">Regions</h4>
   <div class="markdown level1 summary"><p>A list of DigitalOcean region &quot;slugs&quot; indicating where the volume snapshot is available.</p>
@@ -309,13 +285,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/master/sdk/dotnet/GetVolumeSnapshot.cs/#L78">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/GetVolumeSnapshot.cs/#L85">View Source</a>
   </span>
   <h4 id="Pulumi_DigitalOcean_GetVolumeSnapshotResult_Size" data-uid="Pulumi.DigitalOcean.GetVolumeSnapshotResult.Size">Size</h4>
   <div class="markdown level1 summary"><p>The billable size of the volume snapshot in gigabytes.</p>
@@ -341,7 +317,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/master/sdk/dotnet/GetVolumeSnapshot.cs/#L82">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/GetVolumeSnapshot.cs/#L89">View Source</a>
   </span>
   <h4 id="Pulumi_DigitalOcean_GetVolumeSnapshotResult_Tags" data-uid="Pulumi.DigitalOcean.GetVolumeSnapshotResult.Tags">Tags</h4>
   <div class="markdown level1 summary"><p>A list of the tags associated to the volume snapshot.</p>
@@ -361,13 +337,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/master/sdk/dotnet/GetVolumeSnapshot.cs/#L86">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/GetVolumeSnapshot.cs/#L93">View Source</a>
   </span>
   <h4 id="Pulumi_DigitalOcean_GetVolumeSnapshotResult_VolumeId" data-uid="Pulumi.DigitalOcean.GetVolumeSnapshotResult.VolumeId">VolumeId</h4>
   <div class="markdown level1 summary"><p>The ID of the volume from which the volume snapshot originated.</p>
@@ -399,7 +375,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/master/sdk/dotnet/GetVolumeSnapshot.cs/#L56" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/GetVolumeSnapshot.cs/#L59" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

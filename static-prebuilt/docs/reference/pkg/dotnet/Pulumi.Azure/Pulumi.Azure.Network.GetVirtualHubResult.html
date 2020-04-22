@@ -78,40 +78,16 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">GetVirtualHubResult</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Azure.Network.html">Pulumi.Azure.Network</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Azure.dll</h6>
   <h5 id="Pulumi_Azure_Network_GetVirtualHubResult_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class GetVirtualHubResult</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class GetVirtualHubResult : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/GetVirtualHub.cs/#L48">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/GetVirtualHub.cs/#L48">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Network_GetVirtualHubResult_AddressPrefix" data-uid="Pulumi.Azure.Network.GetVirtualHubResult.AddressPrefix">AddressPrefix</h4>
   <div class="markdown level1 summary"><p>The Address Prefix used for this Virtual Hub.</p>
@@ -137,7 +113,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/GetVirtualHub.cs/#L66">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/GetVirtualHub.cs/#L52">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Network_GetVirtualHubResult_Id" data-uid="Pulumi.Azure.Network.GetVirtualHubResult.Id">Id</h4>
   <div class="markdown level1 summary"><p>id is the provider-assigned unique ID for this managed resource.</p>
@@ -163,7 +139,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/GetVirtualHub.cs/#L52">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/GetVirtualHub.cs/#L56">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Network_GetVirtualHubResult_Location" data-uid="Pulumi.Azure.Network.GetVirtualHubResult.Location">Location</h4>
   <div class="markdown level1 summary"><p>The Azure Region where the Virtual Hub exists.</p>
@@ -189,7 +165,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/GetVirtualHub.cs/#L53">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/GetVirtualHub.cs/#L57">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Network_GetVirtualHubResult_Name" data-uid="Pulumi.Azure.Network.GetVirtualHubResult.Name">Name</h4>
   <div class="markdown level1 summary"></div>
@@ -214,7 +190,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/GetVirtualHub.cs/#L54">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/GetVirtualHub.cs/#L58">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Network_GetVirtualHubResult_ResourceGroupName" data-uid="Pulumi.Azure.Network.GetVirtualHubResult.ResourceGroupName">ResourceGroupName</h4>
   <div class="markdown level1 summary"></div>
@@ -239,7 +215,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/GetVirtualHub.cs/#L58">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/GetVirtualHub.cs/#L62">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Network_GetVirtualHubResult_Tags" data-uid="Pulumi.Azure.Network.GetVirtualHubResult.Tags">Tags</h4>
   <div class="markdown level1 summary"><p>A mapping of tags assigned to the Virtual Hub.</p>
@@ -259,13 +235,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/GetVirtualHub.cs/#L62">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/GetVirtualHub.cs/#L66">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Network_GetVirtualHubResult_VirtualWanId" data-uid="Pulumi.Azure.Network.GetVirtualHubResult.VirtualWanId">VirtualWanId</h4>
   <div class="markdown level1 summary"><p>The ID of the Virtual WAN within which the Virtual Hub exists.</p>
@@ -297,7 +273,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/GetVirtualHub.cs/#L42" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/GetVirtualHub.cs/#L42" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

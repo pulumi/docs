@@ -76,36 +76,7 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
-    <div class="level3"><span class="xref">OrganizationSinkState</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">OrganizationSinkState</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.Logging.html">Pulumi.Gcp.Logging</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
@@ -116,7 +87,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Logging/OrganizationSink.cs/#L204">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Logging/OrganizationSink.cs/#L212">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Logging_OrganizationSinkState__ctor_" data-uid="Pulumi.Gcp.Logging.OrganizationSinkState.#ctor*"></a>
   <h4 id="Pulumi_Gcp_Logging_OrganizationSinkState__ctor" data-uid="Pulumi.Gcp.Logging.OrganizationSinkState.#ctor">OrganizationSinkState()</h4>
@@ -129,7 +100,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Logging/OrganizationSink.cs/#L159">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Logging/OrganizationSink.cs/#L167">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Logging_OrganizationSinkState_BigqueryOptions_" data-uid="Pulumi.Gcp.Logging.OrganizationSinkState.BigqueryOptions*"></a>
   <h4 id="Pulumi_Gcp_Logging_OrganizationSinkState_BigqueryOptions" data-uid="Pulumi.Gcp.Logging.OrganizationSinkState.BigqueryOptions">BigqueryOptions</h4>
@@ -138,7 +109,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;OrganizationSinkBigqueryOptionsGetArgs&gt; BigqueryOptions { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;OrganizationSinkBigqueryOptionsGetArgs&gt;? BigqueryOptions { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -150,13 +121,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Gcp.Logging.Inputs.OrganizationSinkBigqueryOptionsGetArgs.html">OrganizationSinkBigqueryOptionsGetArgs</a>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Gcp.Logging.Inputs.OrganizationSinkBigqueryOptionsGetArgs.html">OrganizationSinkBigqueryOptionsGetArgs</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Logging/OrganizationSink.cs/#L167">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Logging/OrganizationSink.cs/#L175">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Logging_OrganizationSinkState_Destination_" data-uid="Pulumi.Gcp.Logging.OrganizationSinkState.Destination*"></a>
   <h4 id="Pulumi_Gcp_Logging_OrganizationSinkState_Destination" data-uid="Pulumi.Gcp.Logging.OrganizationSinkState.Destination">Destination</h4>
@@ -167,7 +138,7 @@ The writer associated with the sink must have access to write to the above resou
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Destination { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Destination { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -179,13 +150,13 @@ The writer associated with the sink must have access to write to the above resou
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Logging/OrganizationSink.cs/#L175">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Logging/OrganizationSink.cs/#L183">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Logging_OrganizationSinkState_Filter_" data-uid="Pulumi.Gcp.Logging.OrganizationSinkState.Filter*"></a>
   <h4 id="Pulumi_Gcp_Logging_OrganizationSinkState_Filter" data-uid="Pulumi.Gcp.Logging.OrganizationSinkState.Filter">Filter</h4>
@@ -196,7 +167,7 @@ write a filter.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Filter { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Filter { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -208,13 +179,13 @@ write a filter.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Logging/OrganizationSink.cs/#L182">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Logging/OrganizationSink.cs/#L190">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Logging_OrganizationSinkState_IncludeChildren_" data-uid="Pulumi.Gcp.Logging.OrganizationSinkState.IncludeChildren*"></a>
   <h4 id="Pulumi_Gcp_Logging_OrganizationSinkState_IncludeChildren" data-uid="Pulumi.Gcp.Logging.OrganizationSinkState.IncludeChildren">IncludeChildren</h4>
@@ -224,7 +195,7 @@ associated with child projects are also exported; otherwise only logs relating t
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; IncludeChildren { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? IncludeChildren { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -236,13 +207,13 @@ associated with child projects are also exported; otherwise only logs relating t
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Logging/OrganizationSink.cs/#L188">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Logging/OrganizationSink.cs/#L196">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Logging_OrganizationSinkState_Name_" data-uid="Pulumi.Gcp.Logging.OrganizationSinkState.Name*"></a>
   <h4 id="Pulumi_Gcp_Logging_OrganizationSinkState_Name" data-uid="Pulumi.Gcp.Logging.OrganizationSinkState.Name">Name</h4>
@@ -251,7 +222,7 @@ associated with child projects are also exported; otherwise only logs relating t
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Name { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Name { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -263,13 +234,13 @@ associated with child projects are also exported; otherwise only logs relating t
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Logging/OrganizationSink.cs/#L194">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Logging/OrganizationSink.cs/#L202">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Logging_OrganizationSinkState_OrgId_" data-uid="Pulumi.Gcp.Logging.OrganizationSinkState.OrgId*"></a>
   <h4 id="Pulumi_Gcp_Logging_OrganizationSinkState_OrgId" data-uid="Pulumi.Gcp.Logging.OrganizationSinkState.OrgId">OrgId</h4>
@@ -278,7 +249,7 @@ associated with child projects are also exported; otherwise only logs relating t
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; OrgId { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? OrgId { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -290,13 +261,13 @@ associated with child projects are also exported; otherwise only logs relating t
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Logging/OrganizationSink.cs/#L201">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Logging/OrganizationSink.cs/#L209">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Logging_OrganizationSinkState_WriterIdentity_" data-uid="Pulumi.Gcp.Logging.OrganizationSinkState.WriterIdentity*"></a>
   <h4 id="Pulumi_Gcp_Logging_OrganizationSinkState_WriterIdentity" data-uid="Pulumi.Gcp.Logging.OrganizationSinkState.WriterIdentity">WriterIdentity</h4>
@@ -306,7 +277,7 @@ configured <code>destination</code>.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; WriterIdentity { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? WriterIdentity { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -318,7 +289,7 @@ configured <code>destination</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -330,7 +301,7 @@ configured <code>destination</code>.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Logging/OrganizationSink.cs/#L154" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Logging/OrganizationSink.cs/#L162" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

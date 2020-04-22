@@ -73,52 +73,14 @@
   </h1>
   <div class="markdown level0 summary"><p>Provides an API Gateway REST API.</p>
 <blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_rest_api.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_rest_api.html.markdown</a>.</p>
+<p><strong>Note:</strong> Amazon API Gateway Version 1 resources are used for creating and deploying REST APIs. To create and deploy WebSocket and HTTP APIs, use Amazon API Gateway Version 2.</p>
 </blockquote>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
-    <div class="level3"><span class="xref">RestApi</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">RestApi</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.ApiGateway.html">Pulumi.Aws.ApiGateway</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
@@ -129,16 +91,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Apigateway/RestApi.cs/#L104">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ApiGateway/RestApi.cs/#L107">View Source</a>
   </span>
   <a id="Pulumi_Aws_ApiGateway_RestApi__ctor_" data-uid="Pulumi.Aws.ApiGateway.RestApi.#ctor*"></a>
-  <h4 id="Pulumi_Aws_ApiGateway_RestApi__ctor_System_String_Pulumi_Aws_ApiGateway_RestApiArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.ApiGateway.RestApi.#ctor(System.String,Pulumi.Aws.ApiGateway.RestApiArgs,Pulumi.CustomResourceOptions)">RestApi(String, RestApiArgs, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Aws_ApiGateway_RestApi__ctor_System_String_Pulumi_Aws_ApiGateway_RestApiArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.ApiGateway.RestApi.#ctor(System.String,Pulumi.Aws.ApiGateway.RestApiArgs,System.Nullable{CustomResourceOptions})">RestApi(String, RestApiArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Create a RestApi resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public RestApi(string name, RestApiArgs args = null, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public RestApi(string name, RestApiArgs args = null, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -163,7 +125,7 @@
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -173,7 +135,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Apigateway/RestApi.cs/#L22">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ApiGateway/RestApi.cs/#L22">View Source</a>
   </span>
   <a id="Pulumi_Aws_ApiGateway_RestApi_ApiKeySource_" data-uid="Pulumi.Aws.ApiGateway.RestApi.ApiKeySource*"></a>
   <h4 id="Pulumi_Aws_ApiGateway_RestApi_ApiKeySource" data-uid="Pulumi.Aws.ApiGateway.RestApi.ApiKeySource">ApiKeySource</h4>
@@ -182,7 +144,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ApiKeySource { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; ApiKeySource { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -194,13 +156,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Apigateway/RestApi.cs/#L28">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ApiGateway/RestApi.cs/#L28">View Source</a>
   </span>
   <a id="Pulumi_Aws_ApiGateway_RestApi_Arn_" data-uid="Pulumi.Aws.ApiGateway.RestApi.Arn*"></a>
   <h4 id="Pulumi_Aws_ApiGateway_RestApi_Arn" data-uid="Pulumi.Aws.ApiGateway.RestApi.Arn">Arn</h4>
@@ -221,13 +183,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Apigateway/RestApi.cs/#L34">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ApiGateway/RestApi.cs/#L34">View Source</a>
   </span>
   <a id="Pulumi_Aws_ApiGateway_RestApi_BinaryMediaTypes_" data-uid="Pulumi.Aws.ApiGateway.RestApi.BinaryMediaTypes*"></a>
   <h4 id="Pulumi_Aws_ApiGateway_RestApi_BinaryMediaTypes" data-uid="Pulumi.Aws.ApiGateway.RestApi.BinaryMediaTypes">BinaryMediaTypes</h4>
@@ -248,13 +210,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Apigateway/RestApi.cs/#L40">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ApiGateway/RestApi.cs/#L40">View Source</a>
   </span>
   <a id="Pulumi_Aws_ApiGateway_RestApi_Body_" data-uid="Pulumi.Aws.ApiGateway.RestApi.Body*"></a>
   <h4 id="Pulumi_Aws_ApiGateway_RestApi_Body" data-uid="Pulumi.Aws.ApiGateway.RestApi.Body">Body</h4>
@@ -263,7 +225,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Body { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Body { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -275,13 +237,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Apigateway/RestApi.cs/#L46">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ApiGateway/RestApi.cs/#L46">View Source</a>
   </span>
   <a id="Pulumi_Aws_ApiGateway_RestApi_CreatedDate_" data-uid="Pulumi.Aws.ApiGateway.RestApi.CreatedDate*"></a>
   <h4 id="Pulumi_Aws_ApiGateway_RestApi_CreatedDate" data-uid="Pulumi.Aws.ApiGateway.RestApi.CreatedDate">CreatedDate</h4>
@@ -302,13 +264,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Apigateway/RestApi.cs/#L52">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ApiGateway/RestApi.cs/#L52">View Source</a>
   </span>
   <a id="Pulumi_Aws_ApiGateway_RestApi_Description_" data-uid="Pulumi.Aws.ApiGateway.RestApi.Description*"></a>
   <h4 id="Pulumi_Aws_ApiGateway_RestApi_Description" data-uid="Pulumi.Aws.ApiGateway.RestApi.Description">Description</h4>
@@ -317,7 +279,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Description { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Description { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -329,13 +291,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Apigateway/RestApi.cs/#L58">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ApiGateway/RestApi.cs/#L58">View Source</a>
   </span>
   <a id="Pulumi_Aws_ApiGateway_RestApi_EndpointConfiguration_" data-uid="Pulumi.Aws.ApiGateway.RestApi.EndpointConfiguration*"></a>
   <h4 id="Pulumi_Aws_ApiGateway_RestApi_EndpointConfiguration" data-uid="Pulumi.Aws.ApiGateway.RestApi.EndpointConfiguration">EndpointConfiguration</h4>
@@ -356,13 +318,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Aws.ApiGateway.Outputs.RestApiEndpointConfiguration.html">RestApiEndpointConfiguration</a>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Aws.ApiGateway.Outputs.RestApiEndpointConfiguration.html">RestApiEndpointConfiguration</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Apigateway/RestApi.cs/#L66">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ApiGateway/RestApi.cs/#L66">View Source</a>
   </span>
   <a id="Pulumi_Aws_ApiGateway_RestApi_ExecutionArn_" data-uid="Pulumi.Aws.ApiGateway.RestApi.ExecutionArn*"></a>
   <h4 id="Pulumi_Aws_ApiGateway_RestApi_ExecutionArn" data-uid="Pulumi.Aws.ApiGateway.RestApi.ExecutionArn">ExecutionArn</h4>
@@ -385,13 +347,13 @@ e.g. <code>arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j</code>, which c
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Apigateway/RestApi.cs/#L72">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ApiGateway/RestApi.cs/#L72">View Source</a>
   </span>
   <a id="Pulumi_Aws_ApiGateway_RestApi_MinimumCompressionSize_" data-uid="Pulumi.Aws.ApiGateway.RestApi.MinimumCompressionSize*"></a>
   <h4 id="Pulumi_Aws_ApiGateway_RestApi_MinimumCompressionSize" data-uid="Pulumi.Aws.ApiGateway.RestApi.MinimumCompressionSize">MinimumCompressionSize</h4>
@@ -412,13 +374,13 @@ e.g. <code>arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j</code>, which c
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Apigateway/RestApi.cs/#L78">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ApiGateway/RestApi.cs/#L78">View Source</a>
   </span>
   <a id="Pulumi_Aws_ApiGateway_RestApi_Name_" data-uid="Pulumi.Aws.ApiGateway.RestApi.Name*"></a>
   <h4 id="Pulumi_Aws_ApiGateway_RestApi_Name" data-uid="Pulumi.Aws.ApiGateway.RestApi.Name">Name</h4>
@@ -439,21 +401,22 @@ e.g. <code>arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j</code>, which c
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Apigateway/RestApi.cs/#L81">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ApiGateway/RestApi.cs/#L84">View Source</a>
   </span>
   <a id="Pulumi_Aws_ApiGateway_RestApi_Policy_" data-uid="Pulumi.Aws.ApiGateway.RestApi.Policy*"></a>
   <h4 id="Pulumi_Aws_ApiGateway_RestApi_Policy" data-uid="Pulumi.Aws.ApiGateway.RestApi.Policy">Policy</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>JSON formatted policy document that controls access to the API Gateway.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Policy { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Policy { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -465,13 +428,13 @@ e.g. <code>arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j</code>, which c
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Apigateway/RestApi.cs/#L87">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ApiGateway/RestApi.cs/#L90">View Source</a>
   </span>
   <a id="Pulumi_Aws_ApiGateway_RestApi_RootResourceId_" data-uid="Pulumi.Aws.ApiGateway.RestApi.RootResourceId*"></a>
   <h4 id="Pulumi_Aws_ApiGateway_RestApi_RootResourceId" data-uid="Pulumi.Aws.ApiGateway.RestApi.RootResourceId">RootResourceId</h4>
@@ -492,13 +455,13 @@ e.g. <code>arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j</code>, which c
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Apigateway/RestApi.cs/#L93">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ApiGateway/RestApi.cs/#L96">View Source</a>
   </span>
   <a id="Pulumi_Aws_ApiGateway_RestApi_Tags_" data-uid="Pulumi.Aws.ApiGateway.RestApi.Tags*"></a>
   <h4 id="Pulumi_Aws_ApiGateway_RestApi_Tags" data-uid="Pulumi.Aws.ApiGateway.RestApi.Tags">Tags</h4>
@@ -507,7 +470,7 @@ e.g. <code>arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j</code>, which c
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;&gt; Tags { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;?&gt; Tags { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -519,7 +482,7 @@ e.g. <code>arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j</code>, which c
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -527,17 +490,17 @@ e.g. <code>arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j</code>, which c
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Apigateway/RestApi.cs/#L134">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ApiGateway/RestApi.cs/#L137">View Source</a>
   </span>
   <a id="Pulumi_Aws_ApiGateway_RestApi_Get_" data-uid="Pulumi.Aws.ApiGateway.RestApi.Get*"></a>
-  <h4 id="Pulumi_Aws_ApiGateway_RestApi_Get_System_String_Pulumi_Input_System_String__Pulumi_Aws_ApiGateway_RestApiState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.ApiGateway.RestApi.Get(System.String,Pulumi.Input{System.String},Pulumi.Aws.ApiGateway.RestApiState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, RestApiState, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Aws_ApiGateway_RestApi_Get_System_String_Input_System_String__Pulumi_Aws_ApiGateway_RestApiState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.ApiGateway.RestApi.Get(System.String,Input{System.String},Pulumi.Aws.ApiGateway.RestApiState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, RestApiState, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Get an existing RestApi resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static RestApi Get(string name, Input&lt;string&gt; id, RestApiState state = null, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static RestApi Get(string name, Input&lt;string&gt; id, RestApiState state = null, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -556,7 +519,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -568,7 +531,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -597,7 +560,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Apigateway/RestApi.cs/#L17" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ApiGateway/RestApi.cs/#L17" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

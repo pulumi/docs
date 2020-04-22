@@ -72,53 +72,12 @@
   <h1 id="Pulumi_Azure_Compute_Image" data-uid="Pulumi.Azure.Compute.Image" class="text-break">Class Image
   </h1>
   <div class="markdown level0 summary"><p>Manages a custom virtual machine image that can be used to create virtual machines.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/image.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/image.html.markdown</a>.</p>
-</blockquote>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
-    <div class="level3"><span class="xref">Image</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">Image</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Azure.Compute.html">Pulumi.Azure.Compute</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Azure.dll</h6>
@@ -129,16 +88,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/Image.cs/#L84">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/Image.cs/#L82">View Source</a>
   </span>
   <a id="Pulumi_Azure_Compute_Image__ctor_" data-uid="Pulumi.Azure.Compute.Image.#ctor*"></a>
-  <h4 id="Pulumi_Azure_Compute_Image__ctor_System_String_Pulumi_Azure_Compute_ImageArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Azure.Compute.Image.#ctor(System.String,Pulumi.Azure.Compute.ImageArgs,Pulumi.CustomResourceOptions)">Image(String, ImageArgs, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Azure_Compute_Image__ctor_System_String_Pulumi_Azure_Compute_ImageArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Azure.Compute.Image.#ctor(System.String,Pulumi.Azure.Compute.ImageArgs,System.Nullable{CustomResourceOptions})">Image(String, ImageArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Create a Image resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Image(string name, ImageArgs args, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Image(string name, ImageArgs args, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -163,7 +122,7 @@
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -173,7 +132,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/Image.cs/#L22">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/Image.cs/#L20">View Source</a>
   </span>
   <a id="Pulumi_Azure_Compute_Image_DataDisks_" data-uid="Pulumi.Azure.Compute.Image.DataDisks*"></a>
   <h4 id="Pulumi_Azure_Compute_Image_DataDisks" data-uid="Pulumi.Azure.Compute.Image.DataDisks">DataDisks</h4>
@@ -182,7 +141,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;ImageDataDisks&gt;&gt; DataDisks { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;ImageDataDisk&gt;&gt; DataDisks { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -194,13 +153,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Azure.Compute.Outputs.ImageDataDisks.html">ImageDataDisks</a>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Azure.Compute.Outputs.ImageDataDisk.html">ImageDataDisk</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/Image.cs/#L28">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/Image.cs/#L26">View Source</a>
   </span>
   <a id="Pulumi_Azure_Compute_Image_HyperVGeneration_" data-uid="Pulumi.Azure.Compute.Image.HyperVGeneration*"></a>
   <h4 id="Pulumi_Azure_Compute_Image_HyperVGeneration" data-uid="Pulumi.Azure.Compute.Image.HyperVGeneration">HyperVGeneration</h4>
@@ -209,7 +168,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; HyperVGeneration { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; HyperVGeneration { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -221,13 +180,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/Image.cs/#L35">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/Image.cs/#L33">View Source</a>
   </span>
   <a id="Pulumi_Azure_Compute_Image_Location_" data-uid="Pulumi.Azure.Compute.Image.Location*"></a>
   <h4 id="Pulumi_Azure_Compute_Image_Location" data-uid="Pulumi.Azure.Compute.Image.Location">Location</h4>
@@ -249,13 +208,13 @@ Changing this forces a new resource to be created.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/Image.cs/#L42">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/Image.cs/#L40">View Source</a>
   </span>
   <a id="Pulumi_Azure_Compute_Image_Name_" data-uid="Pulumi.Azure.Compute.Image.Name*"></a>
   <h4 id="Pulumi_Azure_Compute_Image_Name" data-uid="Pulumi.Azure.Compute.Image.Name">Name</h4>
@@ -277,13 +236,13 @@ new resource to be created.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/Image.cs/#L48">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/Image.cs/#L46">View Source</a>
   </span>
   <a id="Pulumi_Azure_Compute_Image_OsDisk_" data-uid="Pulumi.Azure.Compute.Image.OsDisk*"></a>
   <h4 id="Pulumi_Azure_Compute_Image_OsDisk" data-uid="Pulumi.Azure.Compute.Image.OsDisk">OsDisk</h4>
@@ -304,13 +263,13 @@ new resource to be created.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Azure.Compute.Outputs.ImageOsDisk.html">ImageOsDisk</a>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Azure.Compute.Outputs.ImageOsDisk.html">ImageOsDisk</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/Image.cs/#L55">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/Image.cs/#L53">View Source</a>
   </span>
   <a id="Pulumi_Azure_Compute_Image_ResourceGroupName_" data-uid="Pulumi.Azure.Compute.Image.ResourceGroupName*"></a>
   <h4 id="Pulumi_Azure_Compute_Image_ResourceGroupName" data-uid="Pulumi.Azure.Compute.Image.ResourceGroupName">ResourceGroupName</h4>
@@ -332,13 +291,13 @@ the image. Changing this forces a new resource to be created.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/Image.cs/#L61">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/Image.cs/#L59">View Source</a>
   </span>
   <a id="Pulumi_Azure_Compute_Image_SourceVirtualMachineId_" data-uid="Pulumi.Azure.Compute.Image.SourceVirtualMachineId*"></a>
   <h4 id="Pulumi_Azure_Compute_Image_SourceVirtualMachineId" data-uid="Pulumi.Azure.Compute.Image.SourceVirtualMachineId">SourceVirtualMachineId</h4>
@@ -347,7 +306,7 @@ the image. Changing this forces a new resource to be created.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; SourceVirtualMachineId { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; SourceVirtualMachineId { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -359,13 +318,13 @@ the image. Changing this forces a new resource to be created.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/Image.cs/#L67">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/Image.cs/#L65">View Source</a>
   </span>
   <a id="Pulumi_Azure_Compute_Image_Tags_" data-uid="Pulumi.Azure.Compute.Image.Tags*"></a>
   <h4 id="Pulumi_Azure_Compute_Image_Tags" data-uid="Pulumi.Azure.Compute.Image.Tags">Tags</h4>
@@ -374,7 +333,7 @@ the image. Changing this forces a new resource to be created.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;&gt; Tags { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;?&gt; Tags { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -386,13 +345,13 @@ the image. Changing this forces a new resource to be created.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/Image.cs/#L73">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/Image.cs/#L71">View Source</a>
   </span>
   <a id="Pulumi_Azure_Compute_Image_ZoneResilient_" data-uid="Pulumi.Azure.Compute.Image.ZoneResilient*"></a>
   <h4 id="Pulumi_Azure_Compute_Image_ZoneResilient" data-uid="Pulumi.Azure.Compute.Image.ZoneResilient">ZoneResilient</h4>
@@ -413,7 +372,7 @@ the image. Changing this forces a new resource to be created.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -421,17 +380,17 @@ the image. Changing this forces a new resource to be created.</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/Image.cs/#L114">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/Image.cs/#L112">View Source</a>
   </span>
   <a id="Pulumi_Azure_Compute_Image_Get_" data-uid="Pulumi.Azure.Compute.Image.Get*"></a>
-  <h4 id="Pulumi_Azure_Compute_Image_Get_System_String_Pulumi_Input_System_String__Pulumi_Azure_Compute_ImageState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Azure.Compute.Image.Get(System.String,Pulumi.Input{System.String},Pulumi.Azure.Compute.ImageState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, ImageState, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Azure_Compute_Image_Get_System_String_Input_System_String__Pulumi_Azure_Compute_ImageState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Azure.Compute.Image.Get(System.String,Input{System.String},Pulumi.Azure.Compute.ImageState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, ImageState, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Get an existing Image resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Image Get(string name, Input&lt;string&gt; id, ImageState state = null, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Image Get(string name, Input&lt;string&gt; id, ImageState state = null, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -450,7 +409,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -462,7 +421,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -491,7 +450,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/Image.cs/#L17" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/Image.cs/#L15" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

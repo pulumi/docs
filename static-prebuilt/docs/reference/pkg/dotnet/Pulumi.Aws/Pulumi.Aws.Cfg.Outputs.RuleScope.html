@@ -78,40 +78,16 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">RuleScope</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.Cfg.Outputs.html">Pulumi.Aws.Cfg.Outputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
   <h5 id="Pulumi_Aws_Cfg_Outputs_RuleScope_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class RuleScope</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class RuleScope : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Cfg/Rule.cs/#L459">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Cfg/Outputs/RuleScope.cs/#L20">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Cfg_Outputs_RuleScope_ComplianceResourceId" data-uid="Pulumi.Aws.Cfg.Outputs.RuleScope.ComplianceResourceId">ComplianceResourceId</h4>
   <div class="markdown level1 summary"><p>The IDs of the only AWS resource that you want to trigger an evaluation for the rule.
@@ -120,7 +96,7 @@ If you specify a resource ID, you must specify one resource type for <code>compl
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string ComplianceResourceId</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? ComplianceResourceId</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -132,13 +108,13 @@ If you specify a resource ID, you must specify one resource type for <code>compl
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Cfg/Rule.cs/#L465">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Cfg/Outputs/RuleScope.cs/#L26">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Cfg_Outputs_RuleScope_ComplianceResourceTypes" data-uid="Pulumi.Aws.Cfg.Outputs.RuleScope.ComplianceResourceTypes">ComplianceResourceTypes</h4>
   <div class="markdown level1 summary"><p>A list of resource types of only those AWS resources that you want to trigger an
@@ -160,13 +136,13 @@ a resource ID for <code>compliance_resource_id</code>. See <a href="http://docs.
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Cfg/Rule.cs/#L470">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Cfg/Outputs/RuleScope.cs/#L31">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Cfg_Outputs_RuleScope_TagKey" data-uid="Pulumi.Aws.Cfg.Outputs.RuleScope.TagKey">TagKey</h4>
   <div class="markdown level1 summary"><p>The tag key that is applied to only those AWS resources that you want you
@@ -175,7 +151,7 @@ want to trigger an evaluation for the rule.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string TagKey</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? TagKey</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -187,13 +163,13 @@ want to trigger an evaluation for the rule.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Cfg/Rule.cs/#L474">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Cfg/Outputs/RuleScope.cs/#L35">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Cfg_Outputs_RuleScope_TagValue" data-uid="Pulumi.Aws.Cfg.Outputs.RuleScope.TagValue">TagValue</h4>
   <div class="markdown level1 summary"><p>The tag value applied to only those AWS resources that you want to trigger an evaluation for the rule.</p>
@@ -201,7 +177,7 @@ want to trigger an evaluation for the rule.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string TagValue</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? TagValue</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -213,7 +189,7 @@ want to trigger an evaluation for the rule.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -225,7 +201,7 @@ want to trigger an evaluation for the rule.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Cfg/Rule.cs/#L452" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Cfg/Outputs/RuleScope.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

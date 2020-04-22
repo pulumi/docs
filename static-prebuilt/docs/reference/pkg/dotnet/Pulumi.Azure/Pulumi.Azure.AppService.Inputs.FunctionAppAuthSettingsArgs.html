@@ -76,36 +76,7 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
-    <div class="level3"><span class="xref">FunctionAppAuthSettingsArgs</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">FunctionAppAuthSettingsArgs</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Azure.AppService.Inputs.html">Pulumi.Azure.AppService.Inputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Azure.dll</h6>
@@ -116,7 +87,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Appservice/FunctionApp.cs/#L587">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/Inputs/FunctionAppAuthSettingsArgs.cs/#L111">View Source</a>
   </span>
   <a id="Pulumi_Azure_AppService_Inputs_FunctionAppAuthSettingsArgs__ctor_" data-uid="Pulumi.Azure.AppService.Inputs.FunctionAppAuthSettingsArgs.#ctor*"></a>
   <h4 id="Pulumi_Azure_AppService_Inputs_FunctionAppAuthSettingsArgs__ctor" data-uid="Pulumi.Azure.AppService.Inputs.FunctionAppAuthSettingsArgs.#ctor">FunctionAppAuthSettingsArgs()</h4>
@@ -129,15 +100,16 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Appservice/FunctionApp.cs/#L532">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/Inputs/FunctionAppAuthSettingsArgs.cs/#L18">View Source</a>
   </span>
   <a id="Pulumi_Azure_AppService_Inputs_FunctionAppAuthSettingsArgs_ActiveDirectory_" data-uid="Pulumi.Azure.AppService.Inputs.FunctionAppAuthSettingsArgs.ActiveDirectory*"></a>
   <h4 id="Pulumi_Azure_AppService_Inputs_FunctionAppAuthSettingsArgs_ActiveDirectory" data-uid="Pulumi.Azure.AppService.Inputs.FunctionAppAuthSettingsArgs.ActiveDirectory">ActiveDirectory</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A <code>active_directory</code> block as defined below.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;FunctionAppAuthSettingsActiveDirectoryArgs&gt; ActiveDirectory { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;FunctionAppAuthSettingsActiveDirectoryArgs&gt;? ActiveDirectory { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -149,17 +121,18 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Azure.AppService.Inputs.FunctionAppAuthSettingsActiveDirectoryArgs.html">FunctionAppAuthSettingsActiveDirectoryArgs</a>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Azure.AppService.Inputs.FunctionAppAuthSettingsActiveDirectoryArgs.html">FunctionAppAuthSettingsActiveDirectoryArgs</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Appservice/FunctionApp.cs/#L537">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/Inputs/FunctionAppAuthSettingsArgs.cs/#L27">View Source</a>
   </span>
   <a id="Pulumi_Azure_AppService_Inputs_FunctionAppAuthSettingsArgs_AdditionalLoginParams_" data-uid="Pulumi.Azure.AppService.Inputs.FunctionAppAuthSettingsArgs.AdditionalLoginParams*"></a>
   <h4 id="Pulumi_Azure_AppService_Inputs_FunctionAppAuthSettingsArgs_AdditionalLoginParams" data-uid="Pulumi.Azure.AppService.Inputs.FunctionAppAuthSettingsArgs.AdditionalLoginParams">AdditionalLoginParams</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Login parameters to send to the OpenID Connect authorization endpoint when a user logs in. Each parameter must be in the form &quot;key=value&quot;.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -175,17 +148,18 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputMap-1.html">InputMap</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">InputMap</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Appservice/FunctionApp.cs/#L545">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/Inputs/FunctionAppAuthSettingsArgs.cs/#L39">View Source</a>
   </span>
   <a id="Pulumi_Azure_AppService_Inputs_FunctionAppAuthSettingsArgs_AllowedExternalRedirectUrls_" data-uid="Pulumi.Azure.AppService.Inputs.FunctionAppAuthSettingsArgs.AllowedExternalRedirectUrls*"></a>
   <h4 id="Pulumi_Azure_AppService_Inputs_FunctionAppAuthSettingsArgs_AllowedExternalRedirectUrls" data-uid="Pulumi.Azure.AppService.Inputs.FunctionAppAuthSettingsArgs.AllowedExternalRedirectUrls">AllowedExternalRedirectUrls</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>External URLs that can be redirected to as part of logging in or logging out of the app.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -201,21 +175,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Appservice/FunctionApp.cs/#L551">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/Inputs/FunctionAppAuthSettingsArgs.cs/#L48">View Source</a>
   </span>
   <a id="Pulumi_Azure_AppService_Inputs_FunctionAppAuthSettingsArgs_DefaultProvider_" data-uid="Pulumi.Azure.AppService.Inputs.FunctionAppAuthSettingsArgs.DefaultProvider*"></a>
   <h4 id="Pulumi_Azure_AppService_Inputs_FunctionAppAuthSettingsArgs_DefaultProvider" data-uid="Pulumi.Azure.AppService.Inputs.FunctionAppAuthSettingsArgs.DefaultProvider">DefaultProvider</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The default provider to use when multiple providers have been set up. Possible values are <code>AzureActiveDirectory</code>, <code>Facebook</code>, <code>Google</code>, <code>MicrosoftAccount</code> and <code>Twitter</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; DefaultProvider { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? DefaultProvider { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -227,17 +202,17 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Appservice/FunctionApp.cs/#L557">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/Inputs/FunctionAppAuthSettingsArgs.cs/#L54">View Source</a>
   </span>
   <a id="Pulumi_Azure_AppService_Inputs_FunctionAppAuthSettingsArgs_Enabled_" data-uid="Pulumi.Azure.AppService.Inputs.FunctionAppAuthSettingsArgs.Enabled*"></a>
   <h4 id="Pulumi_Azure_AppService_Inputs_FunctionAppAuthSettingsArgs_Enabled" data-uid="Pulumi.Azure.AppService.Inputs.FunctionAppAuthSettingsArgs.Enabled">Enabled</h4>
-  <div class="markdown level1 summary"><p>Is the Function App enabled?</p>
+  <div class="markdown level1 summary"><p>Is Authentication enabled?</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -254,21 +229,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Appservice/FunctionApp.cs/#L560">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/Inputs/FunctionAppAuthSettingsArgs.cs/#L60">View Source</a>
   </span>
   <a id="Pulumi_Azure_AppService_Inputs_FunctionAppAuthSettingsArgs_Facebook_" data-uid="Pulumi.Azure.AppService.Inputs.FunctionAppAuthSettingsArgs.Facebook*"></a>
   <h4 id="Pulumi_Azure_AppService_Inputs_FunctionAppAuthSettingsArgs_Facebook" data-uid="Pulumi.Azure.AppService.Inputs.FunctionAppAuthSettingsArgs.Facebook">Facebook</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A <code>facebook</code> block as defined below.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;FunctionAppAuthSettingsFacebookArgs&gt; Facebook { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;FunctionAppAuthSettingsFacebookArgs&gt;? Facebook { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -280,21 +256,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Azure.AppService.Inputs.FunctionAppAuthSettingsFacebookArgs.html">FunctionAppAuthSettingsFacebookArgs</a>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Azure.AppService.Inputs.FunctionAppAuthSettingsFacebookArgs.html">FunctionAppAuthSettingsFacebookArgs</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Appservice/FunctionApp.cs/#L563">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/Inputs/FunctionAppAuthSettingsArgs.cs/#L66">View Source</a>
   </span>
   <a id="Pulumi_Azure_AppService_Inputs_FunctionAppAuthSettingsArgs_Google_" data-uid="Pulumi.Azure.AppService.Inputs.FunctionAppAuthSettingsArgs.Google*"></a>
   <h4 id="Pulumi_Azure_AppService_Inputs_FunctionAppAuthSettingsArgs_Google" data-uid="Pulumi.Azure.AppService.Inputs.FunctionAppAuthSettingsArgs.Google">Google</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A <code>google</code> block as defined below.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;FunctionAppAuthSettingsGoogleArgs&gt; Google { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;FunctionAppAuthSettingsGoogleArgs&gt;? Google { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -306,21 +283,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Azure.AppService.Inputs.FunctionAppAuthSettingsGoogleArgs.html">FunctionAppAuthSettingsGoogleArgs</a>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Azure.AppService.Inputs.FunctionAppAuthSettingsGoogleArgs.html">FunctionAppAuthSettingsGoogleArgs</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Appservice/FunctionApp.cs/#L566">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/Inputs/FunctionAppAuthSettingsArgs.cs/#L72">View Source</a>
   </span>
   <a id="Pulumi_Azure_AppService_Inputs_FunctionAppAuthSettingsArgs_Issuer_" data-uid="Pulumi.Azure.AppService.Inputs.FunctionAppAuthSettingsArgs.Issuer*"></a>
   <h4 id="Pulumi_Azure_AppService_Inputs_FunctionAppAuthSettingsArgs_Issuer" data-uid="Pulumi.Azure.AppService.Inputs.FunctionAppAuthSettingsArgs.Issuer">Issuer</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Issuer URI. When using Azure Active Directory, this value is the URI of the directory tenant, e.g. <a href="https://sts.windows.net/%7Btenant-guid%7D/">https://sts.windows.net/{tenant-guid}/</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Issuer { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Issuer { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -332,21 +310,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Appservice/FunctionApp.cs/#L569">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/Inputs/FunctionAppAuthSettingsArgs.cs/#L78">View Source</a>
   </span>
   <a id="Pulumi_Azure_AppService_Inputs_FunctionAppAuthSettingsArgs_Microsoft_" data-uid="Pulumi.Azure.AppService.Inputs.FunctionAppAuthSettingsArgs.Microsoft*"></a>
   <h4 id="Pulumi_Azure_AppService_Inputs_FunctionAppAuthSettingsArgs_Microsoft" data-uid="Pulumi.Azure.AppService.Inputs.FunctionAppAuthSettingsArgs.Microsoft">Microsoft</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A <code>microsoft</code> block as defined below.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;FunctionAppAuthSettingsMicrosoftArgs&gt; Microsoft { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;FunctionAppAuthSettingsMicrosoftArgs&gt;? Microsoft { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -358,21 +337,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Azure.AppService.Inputs.FunctionAppAuthSettingsMicrosoftArgs.html">FunctionAppAuthSettingsMicrosoftArgs</a>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Azure.AppService.Inputs.FunctionAppAuthSettingsMicrosoftArgs.html">FunctionAppAuthSettingsMicrosoftArgs</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Appservice/FunctionApp.cs/#L572">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/Inputs/FunctionAppAuthSettingsArgs.cs/#L84">View Source</a>
   </span>
   <a id="Pulumi_Azure_AppService_Inputs_FunctionAppAuthSettingsArgs_RuntimeVersion_" data-uid="Pulumi.Azure.AppService.Inputs.FunctionAppAuthSettingsArgs.RuntimeVersion*"></a>
   <h4 id="Pulumi_Azure_AppService_Inputs_FunctionAppAuthSettingsArgs_RuntimeVersion" data-uid="Pulumi.Azure.AppService.Inputs.FunctionAppAuthSettingsArgs.RuntimeVersion">RuntimeVersion</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The runtime version of the Authentication/Authorization module.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; RuntimeVersion { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? RuntimeVersion { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -384,21 +364,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Appservice/FunctionApp.cs/#L575">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/Inputs/FunctionAppAuthSettingsArgs.cs/#L90">View Source</a>
   </span>
   <a id="Pulumi_Azure_AppService_Inputs_FunctionAppAuthSettingsArgs_TokenRefreshExtensionHours_" data-uid="Pulumi.Azure.AppService.Inputs.FunctionAppAuthSettingsArgs.TokenRefreshExtensionHours*"></a>
   <h4 id="Pulumi_Azure_AppService_Inputs_FunctionAppAuthSettingsArgs_TokenRefreshExtensionHours" data-uid="Pulumi.Azure.AppService.Inputs.FunctionAppAuthSettingsArgs.TokenRefreshExtensionHours">TokenRefreshExtensionHours</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The number of hours after session token expiration that a session token can be used to call the token refresh API. Defaults to 72.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;double&gt; TokenRefreshExtensionHours { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;double&gt;? TokenRefreshExtensionHours { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -410,21 +391,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Double</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Double</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Appservice/FunctionApp.cs/#L578">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/Inputs/FunctionAppAuthSettingsArgs.cs/#L96">View Source</a>
   </span>
   <a id="Pulumi_Azure_AppService_Inputs_FunctionAppAuthSettingsArgs_TokenStoreEnabled_" data-uid="Pulumi.Azure.AppService.Inputs.FunctionAppAuthSettingsArgs.TokenStoreEnabled*"></a>
   <h4 id="Pulumi_Azure_AppService_Inputs_FunctionAppAuthSettingsArgs_TokenStoreEnabled" data-uid="Pulumi.Azure.AppService.Inputs.FunctionAppAuthSettingsArgs.TokenStoreEnabled">TokenStoreEnabled</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If enabled the module will durably store platform-specific security tokens that are obtained during login flows. Defaults to false.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; TokenStoreEnabled { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? TokenStoreEnabled { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -436,21 +418,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Appservice/FunctionApp.cs/#L581">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/Inputs/FunctionAppAuthSettingsArgs.cs/#L102">View Source</a>
   </span>
   <a id="Pulumi_Azure_AppService_Inputs_FunctionAppAuthSettingsArgs_Twitter_" data-uid="Pulumi.Azure.AppService.Inputs.FunctionAppAuthSettingsArgs.Twitter*"></a>
   <h4 id="Pulumi_Azure_AppService_Inputs_FunctionAppAuthSettingsArgs_Twitter" data-uid="Pulumi.Azure.AppService.Inputs.FunctionAppAuthSettingsArgs.Twitter">Twitter</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A <code>twitter</code> block as defined below.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;FunctionAppAuthSettingsTwitterArgs&gt; Twitter { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;FunctionAppAuthSettingsTwitterArgs&gt;? Twitter { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -462,21 +445,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Azure.AppService.Inputs.FunctionAppAuthSettingsTwitterArgs.html">FunctionAppAuthSettingsTwitterArgs</a>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Azure.AppService.Inputs.FunctionAppAuthSettingsTwitterArgs.html">FunctionAppAuthSettingsTwitterArgs</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Appservice/FunctionApp.cs/#L584">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/Inputs/FunctionAppAuthSettingsArgs.cs/#L108">View Source</a>
   </span>
   <a id="Pulumi_Azure_AppService_Inputs_FunctionAppAuthSettingsArgs_UnauthenticatedClientAction_" data-uid="Pulumi.Azure.AppService.Inputs.FunctionAppAuthSettingsArgs.UnauthenticatedClientAction*"></a>
   <h4 id="Pulumi_Azure_AppService_Inputs_FunctionAppAuthSettingsArgs_UnauthenticatedClientAction" data-uid="Pulumi.Azure.AppService.Inputs.FunctionAppAuthSettingsArgs.UnauthenticatedClientAction">UnauthenticatedClientAction</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The action to take when an unauthenticated client attempts to access the app. Possible values are <code>AllowAnonymous</code> and <code>RedirectToLoginPage</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; UnauthenticatedClientAction { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? UnauthenticatedClientAction { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -488,7 +472,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -500,7 +484,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Appservice/FunctionApp.cs/#L530" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/AppService/Inputs/FunctionAppAuthSettingsArgs.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

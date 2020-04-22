@@ -85,7 +85,7 @@
 <p><strong>Warning:</strong> We <strong>STRONGLY</strong> recommend  you read the <a href="https://cloud.google.com/composer/docs/how-to">GCP guides</a>
 as the Environment resource requires a long deployment process and involves several layers of GCP infrastructure,
 including a Kubernetes Engine cluster, Cloud Storage, and Compute networking resources. Due to limitations of the API,
-this provider will not be able to automatically find or manage many of these underlying resources. In particular:</p>
+This provider will not be able to automatically find or manage many of these underlying resources. In particular:</p>
 </blockquote>
 <ul>
 <li>It can take up to one hour to create or update an environment resource. In addition, GCP may only detect some
@@ -95,53 +95,12 @@ against GCP Cloud Composer before filing bugs against this provider.</li>
 <li><strong>Environments create Google Cloud Storage buckets that do not get cleaned up automatically</strong> on environment
 deletion. <a href="https://cloud.google.com/composer/docs/concepts/cloud-storage">More about Composer's use of Cloud Storage</a>.</li>
 </ul>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/composer_environment.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/composer_environment.html.markdown</a>.</p>
-</blockquote>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
-    <div class="level3"><span class="xref">Environment</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">Environment</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.Composer.html">Pulumi.Gcp.Composer</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
@@ -152,16 +111,16 @@ deletion. <a href="https://cloud.google.com/composer/docs/concepts/cloud-storage
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Composer/Environment.cs/#L67">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Composer/Environment.cs/#L65">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Composer_Environment__ctor_" data-uid="Pulumi.Gcp.Composer.Environment.#ctor*"></a>
-  <h4 id="Pulumi_Gcp_Composer_Environment__ctor_System_String_Pulumi_Gcp_Composer_EnvironmentArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Gcp.Composer.Environment.#ctor(System.String,Pulumi.Gcp.Composer.EnvironmentArgs,Pulumi.CustomResourceOptions)">Environment(String, EnvironmentArgs, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Gcp_Composer_Environment__ctor_System_String_Pulumi_Gcp_Composer_EnvironmentArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Gcp.Composer.Environment.#ctor(System.String,Pulumi.Gcp.Composer.EnvironmentArgs,System.Nullable{CustomResourceOptions})">Environment(String, EnvironmentArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Create a Environment resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Environment(string name, EnvironmentArgs args = null, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Environment(string name, EnvironmentArgs args = null, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -186,7 +145,7 @@ deletion. <a href="https://cloud.google.com/composer/docs/concepts/cloud-storage
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -196,7 +155,7 @@ deletion. <a href="https://cloud.google.com/composer/docs/concepts/cloud-storage
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Composer/Environment.cs/#L40">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Composer/Environment.cs/#L38">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Composer_Environment_Config_" data-uid="Pulumi.Gcp.Composer.Environment.Config*"></a>
   <h4 id="Pulumi_Gcp_Composer_Environment_Config" data-uid="Pulumi.Gcp.Composer.Environment.Config">Config</h4>
@@ -216,13 +175,13 @@ deletion. <a href="https://cloud.google.com/composer/docs/concepts/cloud-storage
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Gcp.Composer.Outputs.EnvironmentConfig.html">EnvironmentConfig</a>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Gcp.Composer.Outputs.EnvironmentConfig.html">EnvironmentConfig</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Composer/Environment.cs/#L43">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Composer/Environment.cs/#L41">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Composer_Environment_Labels_" data-uid="Pulumi.Gcp.Composer.Environment.Labels*"></a>
   <h4 id="Pulumi_Gcp_Composer_Environment_Labels" data-uid="Pulumi.Gcp.Composer.Environment.Labels">Labels</h4>
@@ -230,7 +189,7 @@ deletion. <a href="https://cloud.google.com/composer/docs/concepts/cloud-storage
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;&gt; Labels { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;?&gt; Labels { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -242,13 +201,13 @@ deletion. <a href="https://cloud.google.com/composer/docs/concepts/cloud-storage
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Composer/Environment.cs/#L46">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Composer/Environment.cs/#L44">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Composer_Environment_Name_" data-uid="Pulumi.Gcp.Composer.Environment.Name*"></a>
   <h4 id="Pulumi_Gcp_Composer_Environment_Name" data-uid="Pulumi.Gcp.Composer.Environment.Name">Name</h4>
@@ -268,13 +227,13 @@ deletion. <a href="https://cloud.google.com/composer/docs/concepts/cloud-storage
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Composer/Environment.cs/#L53">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Composer/Environment.cs/#L51">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Composer_Environment_Project_" data-uid="Pulumi.Gcp.Composer.Environment.Project*"></a>
   <h4 id="Pulumi_Gcp_Composer_Environment_Project" data-uid="Pulumi.Gcp.Composer.Environment.Project">Project</h4>
@@ -296,13 +255,13 @@ If it is not provided, the provider project is used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Composer/Environment.cs/#L56">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Composer/Environment.cs/#L54">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Composer_Environment_Region_" data-uid="Pulumi.Gcp.Composer.Environment.Region*"></a>
   <h4 id="Pulumi_Gcp_Composer_Environment_Region" data-uid="Pulumi.Gcp.Composer.Environment.Region">Region</h4>
@@ -310,7 +269,7 @@ If it is not provided, the provider project is used.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Region { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Region { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -322,7 +281,7 @@ If it is not provided, the provider project is used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -330,17 +289,17 @@ If it is not provided, the provider project is used.</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Composer/Environment.cs/#L97">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Composer/Environment.cs/#L95">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Composer_Environment_Get_" data-uid="Pulumi.Gcp.Composer.Environment.Get*"></a>
-  <h4 id="Pulumi_Gcp_Composer_Environment_Get_System_String_Pulumi_Input_System_String__Pulumi_Gcp_Composer_EnvironmentState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Gcp.Composer.Environment.Get(System.String,Pulumi.Input{System.String},Pulumi.Gcp.Composer.EnvironmentState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, EnvironmentState, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Gcp_Composer_Environment_Get_System_String_Input_System_String__Pulumi_Gcp_Composer_EnvironmentState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Gcp.Composer.Environment.Get(System.String,Input{System.String},Pulumi.Gcp.Composer.EnvironmentState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, EnvironmentState, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Get an existing Environment resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Environment Get(string name, Input&lt;string&gt; id, EnvironmentState state = null, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Environment Get(string name, Input&lt;string&gt; id, EnvironmentState state = null, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -359,7 +318,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -371,7 +330,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -400,7 +359,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Composer/Environment.cs/#L38" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Composer/Environment.cs/#L36" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

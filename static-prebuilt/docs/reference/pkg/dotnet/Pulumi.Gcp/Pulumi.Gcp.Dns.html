@@ -76,24 +76,43 @@
   <div class="markdown level0 remarks"></div>
     <h3 id="classes">Classes
   </h3>
+      <h4><a class="xref" href="Pulumi.Gcp.Dns.GetKeys.html">GetKeys</a></h4>
+      <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Dns.GetKeysArgs.html">GetKeysArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Dns.GetKeysResult.html">GetKeysResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.Dns.GetManagedZone.html">GetManagedZone</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Dns.GetManagedZoneArgs.html">GetManagedZoneArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Dns.GetManagedZoneResult.html">GetManagedZoneResult</a></h4>
       <section></section>
-      <h4><a class="xref" href="Pulumi.Gcp.Dns.Invokes.html">Invokes</a></h4>
-      <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Dns.ManagedZone.html">ManagedZone</a></h4>
-      <section></section>
+      <section><p>A zone is a subtree of the DNS namespace under one administrative
+responsibility. A ManagedZone is a resource that represents a DNS zone
+hosted by the Cloud DNS service.</p>
+<p>To get more information about ManagedZone, see:</p>
+<ul>
+<li><a href="https://cloud.google.com/dns/api/v1/managedZones">API documentation</a></li>
+<li>How-to Guides</li>
+<li><a href="https://cloud.google.com/dns/zones/">Managing Zones</a></li>
+</ul>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.Dns.ManagedZoneArgs.html">ManagedZoneArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Dns.ManagedZoneState.html">ManagedZoneState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Dns.Policy.html">Policy</a></h4>
-      <section></section>
+      <section><p>A policy is a collection of DNS rules applied to one or more Virtual
+Private Cloud resources.</p>
+<p>To get more information about Policy, see:</p>
+<ul>
+<li><a href="https://cloud.google.com/dns/docs/reference/v1beta2/policies">API documentation</a></li>
+<li>How-to Guides</li>
+<li><a href="https://cloud.google.com/dns/zones/#using-dns-server-policies">Using DNS server policies</a></li>
+</ul>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.Dns.PolicyArgs.html">PolicyArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Dns.PolicyState.html">PolicyState</a></h4>
@@ -102,10 +121,10 @@
       <section><p>Manages a set of DNS records within Google Cloud DNS. For more information see <a href="https://cloud.google.com/dns/records/">the official documentation</a> and
 <a href="https://cloud.google.com/dns/api/v1/resourceRecordSets">API</a>.</p>
 <blockquote>
-<p><strong>Note:</strong> The provider treats this resource as an authoritative record set. This means existing records (including the default records) for the given type will be overwritten when you create this resource with this provider. In addition, the Google Cloud DNS API requires NS records to be present at all times, so this provider will not actually remove NS records during destroy but will report that it did.</p>
-</blockquote>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/dns_record_set.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/dns_record_set.html.markdown</a>.</p>
+<p><strong>Note:</strong> The provider treats this resource as an authoritative record set. This means existing records (including
+the default records) for the given type will be overwritten when you create this resource in the provider.
+In addition, the Google Cloud DNS API requires NS records to be present at all times, so the provider
+will not actually remove NS records during destroy but will report that it did.</p>
 </blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Dns.RecordSetArgs.html">RecordSetArgs</a></h4>

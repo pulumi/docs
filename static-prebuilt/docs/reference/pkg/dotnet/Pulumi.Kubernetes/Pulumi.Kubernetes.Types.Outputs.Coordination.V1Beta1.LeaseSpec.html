@@ -79,40 +79,16 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">LeaseSpec</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Coordination.V1Beta1.html">Pulumi.Kubernetes.Types.Outputs.Coordination.V1Beta1</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Kubernetes.dll</h6>
   <h5 id="Pulumi_Kubernetes_Types_Outputs_Coordination_V1Beta1_LeaseSpec_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class LeaseSpec</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class LeaseSpec : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L13344">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L13486">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Coordination_V1Beta1_LeaseSpec_AcquireTime" data-uid="Pulumi.Kubernetes.Types.Outputs.Coordination.V1Beta1.LeaseSpec.AcquireTime">AcquireTime</h4>
   <div class="markdown level1 summary"><p>acquireTime is a time when the current lease was acquired.</p>
@@ -138,7 +114,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L13349">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L13491">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Coordination_V1Beta1_LeaseSpec_HolderIdentity" data-uid="Pulumi.Kubernetes.Types.Outputs.Coordination.V1Beta1.LeaseSpec.HolderIdentity">HolderIdentity</h4>
   <div class="markdown level1 summary"><p>holderIdentity contains the identity of the holder of a current lease.</p>
@@ -164,7 +140,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L13355">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L13497">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Coordination_V1Beta1_LeaseSpec_LeaseDurationSeconds" data-uid="Pulumi.Kubernetes.Types.Outputs.Coordination.V1Beta1.LeaseSpec.LeaseDurationSeconds">LeaseDurationSeconds</h4>
   <div class="markdown level1 summary"><p>leaseDurationSeconds is a duration that candidates for a lease need to wait to force
@@ -191,7 +167,7 @@ acquire it. This is measure against time of last observed RenewTime.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L13360">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L13502">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Coordination_V1Beta1_LeaseSpec_LeaseTransitions" data-uid="Pulumi.Kubernetes.Types.Outputs.Coordination.V1Beta1.LeaseSpec.LeaseTransitions">LeaseTransitions</h4>
   <div class="markdown level1 summary"><p>leaseTransitions is the number of transitions of a lease between holders.</p>
@@ -217,7 +193,7 @@ acquire it. This is measure against time of last observed RenewTime.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L13365">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L13507">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Coordination_V1Beta1_LeaseSpec_RenewTime" data-uid="Pulumi.Kubernetes.Types.Outputs.Coordination.V1Beta1.LeaseSpec.RenewTime">RenewTime</h4>
   <div class="markdown level1 summary"><p>renewTime is a time when the current holder of a lease has last updated the lease.</p>
@@ -249,7 +225,7 @@ acquire it. This is measure against time of last observed RenewTime.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L13338" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L13480" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

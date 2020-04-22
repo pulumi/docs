@@ -79,40 +79,16 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">DeploymentStatus</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Extensions.V1Beta1.html">Pulumi.Kubernetes.Types.Outputs.Extensions.V1Beta1</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Kubernetes.dll</h6>
   <h5 id="Pulumi_Kubernetes_Types_Outputs_Extensions_V1Beta1_DeploymentStatus_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class DeploymentStatus</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class DeploymentStatus : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L24148">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L24340">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Extensions_V1Beta1_DeploymentStatus_AvailableReplicas" data-uid="Pulumi.Kubernetes.Types.Outputs.Extensions.V1Beta1.DeploymentStatus.AvailableReplicas">AvailableReplicas</h4>
   <div class="markdown level1 summary"><p>Total number of available pods (ready for at least minReadySeconds) targeted by this
@@ -139,7 +115,7 @@ deployment.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L24155">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L24347">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Extensions_V1Beta1_DeploymentStatus_CollisionCount" data-uid="Pulumi.Kubernetes.Types.Outputs.Extensions.V1Beta1.DeploymentStatus.CollisionCount">CollisionCount</h4>
   <div class="markdown level1 summary"><p>Count of hash collisions for the Deployment. The Deployment controller uses this field
@@ -167,7 +143,7 @@ ReplicaSet.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L24160">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L24352">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Extensions_V1Beta1_DeploymentStatus_Conditions" data-uid="Pulumi.Kubernetes.Types.Outputs.Extensions.V1Beta1.DeploymentStatus.Conditions">Conditions</h4>
   <div class="markdown level1 summary"><p>Represents the latest available observations of a deployment's current state.</p>
@@ -187,13 +163,13 @@ ReplicaSet.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Extensions.V1Beta1.DeploymentCondition.html">DeploymentCondition</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Extensions.V1Beta1.DeploymentCondition.html">DeploymentCondition</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L24165">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L24357">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Extensions_V1Beta1_DeploymentStatus_ObservedGeneration" data-uid="Pulumi.Kubernetes.Types.Outputs.Extensions.V1Beta1.DeploymentStatus.ObservedGeneration">ObservedGeneration</h4>
   <div class="markdown level1 summary"><p>The generation observed by the deployment controller.</p>
@@ -219,7 +195,7 @@ ReplicaSet.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L24170">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L24362">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Extensions_V1Beta1_DeploymentStatus_ReadyReplicas" data-uid="Pulumi.Kubernetes.Types.Outputs.Extensions.V1Beta1.DeploymentStatus.ReadyReplicas">ReadyReplicas</h4>
   <div class="markdown level1 summary"><p>Total number of ready pods targeted by this deployment.</p>
@@ -245,7 +221,7 @@ ReplicaSet.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L24176">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L24368">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Extensions_V1Beta1_DeploymentStatus_Replicas" data-uid="Pulumi.Kubernetes.Types.Outputs.Extensions.V1Beta1.DeploymentStatus.Replicas">Replicas</h4>
   <div class="markdown level1 summary"><p>Total number of non-terminated pods targeted by this deployment (their labels match the
@@ -272,7 +248,7 @@ selector).</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L24184">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L24376">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Extensions_V1Beta1_DeploymentStatus_UnavailableReplicas" data-uid="Pulumi.Kubernetes.Types.Outputs.Extensions.V1Beta1.DeploymentStatus.UnavailableReplicas">UnavailableReplicas</h4>
   <div class="markdown level1 summary"><p>Total number of unavailable pods targeted by this deployment. This is the total number
@@ -301,7 +277,7 @@ been created.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L24190">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L24382">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Extensions_V1Beta1_DeploymentStatus_UpdatedReplicas" data-uid="Pulumi.Kubernetes.Types.Outputs.Extensions.V1Beta1.DeploymentStatus.UpdatedReplicas">UpdatedReplicas</h4>
   <div class="markdown level1 summary"><p>Total number of non-terminated pods targeted by this deployment that have the desired
@@ -334,7 +310,7 @@ template spec.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L24141" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L24333" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -1,0 +1,997 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class PodSecurityPolicyTemplate
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class PodSecurityPolicyTemplate
+   ">
+    <meta name="generator" content="docfx 2.49.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.Rancher2.PodSecurityPolicyTemplate">
+  
+  <h1 id="Pulumi_Rancher2_PodSecurityPolicyTemplate" data-uid="Pulumi.Rancher2.PodSecurityPolicyTemplate" class="text-break">Class PodSecurityPolicyTemplate
+  </h1>
+  <div class="markdown level0 summary"><p>Provides a Rancher v2 PodSecurityPolicyTemplate resource. This can be used to create PodSecurityPolicyTemplates for Rancher v2 environments and retrieve their information.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">PodSecurityPolicyTemplate</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Rancher2.html">Pulumi.Rancher2</a></h6>
+  <h6><strong>Assembly</strong>: Pulumi.Rancher2.dll</h6>
+  <h5 id="Pulumi_Rancher2_PodSecurityPolicyTemplate_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class PodSecurityPolicyTemplate : CustomResource</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/PodSecurityPolicyTemplate.cs/#L195">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_PodSecurityPolicyTemplate__ctor_" data-uid="Pulumi.Rancher2.PodSecurityPolicyTemplate.#ctor*"></a>
+  <h4 id="Pulumi_Rancher2_PodSecurityPolicyTemplate__ctor_System_String_Pulumi_Rancher2_PodSecurityPolicyTemplateArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Rancher2.PodSecurityPolicyTemplate.#ctor(System.String,Pulumi.Rancher2.PodSecurityPolicyTemplateArgs,System.Nullable{CustomResourceOptions})">PodSecurityPolicyTemplate(String, PodSecurityPolicyTemplateArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <div class="markdown level1 summary"><p>Create a PodSecurityPolicyTemplate resource with the given unique name, arguments, and options.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PodSecurityPolicyTemplate(string name, PodSecurityPolicyTemplateArgs args = null, CustomResourceOptions? options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resource</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.Rancher2.PodSecurityPolicyTemplateArgs.html">PodSecurityPolicyTemplateArgs</a></td>
+        <td><span class="parametername">args</span></td>
+        <td><p>The arguments used to populate this resource's properties</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/PodSecurityPolicyTemplate.cs/#L27">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_PodSecurityPolicyTemplate_AllowedCapabilities_" data-uid="Pulumi.Rancher2.PodSecurityPolicyTemplate.AllowedCapabilities*"></a>
+  <h4 id="Pulumi_Rancher2_PodSecurityPolicyTemplate_AllowedCapabilities" data-uid="Pulumi.Rancher2.PodSecurityPolicyTemplate.AllowedCapabilities">AllowedCapabilities</h4>
+  <div class="markdown level1 summary"><p>(list)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;string&gt;&gt; AllowedCapabilities { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/PodSecurityPolicyTemplate.cs/#L33">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_PodSecurityPolicyTemplate_AllowedCsiDrivers_" data-uid="Pulumi.Rancher2.PodSecurityPolicyTemplate.AllowedCsiDrivers*"></a>
+  <h4 id="Pulumi_Rancher2_PodSecurityPolicyTemplate_AllowedCsiDrivers" data-uid="Pulumi.Rancher2.PodSecurityPolicyTemplate.AllowedCsiDrivers">AllowedCsiDrivers</h4>
+  <div class="markdown level1 summary"><p>(list)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;PodSecurityPolicyTemplateAllowedCsiDriver&gt;&gt; AllowedCsiDrivers { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Rancher2.Outputs.PodSecurityPolicyTemplateAllowedCsiDriver.html">PodSecurityPolicyTemplateAllowedCsiDriver</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/PodSecurityPolicyTemplate.cs/#L39">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_PodSecurityPolicyTemplate_AllowedFlexVolumes_" data-uid="Pulumi.Rancher2.PodSecurityPolicyTemplate.AllowedFlexVolumes*"></a>
+  <h4 id="Pulumi_Rancher2_PodSecurityPolicyTemplate_AllowedFlexVolumes" data-uid="Pulumi.Rancher2.PodSecurityPolicyTemplate.AllowedFlexVolumes">AllowedFlexVolumes</h4>
+  <div class="markdown level1 summary"><p>(list)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;PodSecurityPolicyTemplateAllowedFlexVolume&gt;&gt; AllowedFlexVolumes { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Rancher2.Outputs.PodSecurityPolicyTemplateAllowedFlexVolume.html">PodSecurityPolicyTemplateAllowedFlexVolume</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/PodSecurityPolicyTemplate.cs/#L45">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_PodSecurityPolicyTemplate_AllowedHostPaths_" data-uid="Pulumi.Rancher2.PodSecurityPolicyTemplate.AllowedHostPaths*"></a>
+  <h4 id="Pulumi_Rancher2_PodSecurityPolicyTemplate_AllowedHostPaths" data-uid="Pulumi.Rancher2.PodSecurityPolicyTemplate.AllowedHostPaths">AllowedHostPaths</h4>
+  <div class="markdown level1 summary"><p>(list)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;PodSecurityPolicyTemplateAllowedHostPath&gt;&gt; AllowedHostPaths { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Rancher2.Outputs.PodSecurityPolicyTemplateAllowedHostPath.html">PodSecurityPolicyTemplateAllowedHostPath</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/PodSecurityPolicyTemplate.cs/#L51">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_PodSecurityPolicyTemplate_AllowedProcMountTypes_" data-uid="Pulumi.Rancher2.PodSecurityPolicyTemplate.AllowedProcMountTypes*"></a>
+  <h4 id="Pulumi_Rancher2_PodSecurityPolicyTemplate_AllowedProcMountTypes" data-uid="Pulumi.Rancher2.PodSecurityPolicyTemplate.AllowedProcMountTypes">AllowedProcMountTypes</h4>
+  <div class="markdown level1 summary"><p>(list)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;string&gt;&gt; AllowedProcMountTypes { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/PodSecurityPolicyTemplate.cs/#L57">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_PodSecurityPolicyTemplate_AllowedUnsafeSysctls_" data-uid="Pulumi.Rancher2.PodSecurityPolicyTemplate.AllowedUnsafeSysctls*"></a>
+  <h4 id="Pulumi_Rancher2_PodSecurityPolicyTemplate_AllowedUnsafeSysctls" data-uid="Pulumi.Rancher2.PodSecurityPolicyTemplate.AllowedUnsafeSysctls">AllowedUnsafeSysctls</h4>
+  <div class="markdown level1 summary"><p>(list)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;string&gt;&gt; AllowedUnsafeSysctls { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/PodSecurityPolicyTemplate.cs/#L21">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_PodSecurityPolicyTemplate_AllowPrivilegeEscalation_" data-uid="Pulumi.Rancher2.PodSecurityPolicyTemplate.AllowPrivilegeEscalation*"></a>
+  <h4 id="Pulumi_Rancher2_PodSecurityPolicyTemplate_AllowPrivilegeEscalation" data-uid="Pulumi.Rancher2.PodSecurityPolicyTemplate.AllowPrivilegeEscalation">AllowPrivilegeEscalation</h4>
+  <div class="markdown level1 summary"><p>allowPrivilegeEscalation determines if a pod can request to allow privilege escalation. If unspecified, defaults to
+true.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool&gt; AllowPrivilegeEscalation { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/PodSecurityPolicyTemplate.cs/#L63">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_PodSecurityPolicyTemplate_Annotations_" data-uid="Pulumi.Rancher2.PodSecurityPolicyTemplate.Annotations*"></a>
+  <h4 id="Pulumi_Rancher2_PodSecurityPolicyTemplate_Annotations" data-uid="Pulumi.Rancher2.PodSecurityPolicyTemplate.Annotations">Annotations</h4>
+  <div class="markdown level1 summary"><p>Annotations for PodSecurityPolicyTemplate object (map)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;&gt; Annotations { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/PodSecurityPolicyTemplate.cs/#L69">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_PodSecurityPolicyTemplate_DefaultAddCapabilities_" data-uid="Pulumi.Rancher2.PodSecurityPolicyTemplate.DefaultAddCapabilities*"></a>
+  <h4 id="Pulumi_Rancher2_PodSecurityPolicyTemplate_DefaultAddCapabilities" data-uid="Pulumi.Rancher2.PodSecurityPolicyTemplate.DefaultAddCapabilities">DefaultAddCapabilities</h4>
+  <div class="markdown level1 summary"><p>(list)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;string&gt;&gt; DefaultAddCapabilities { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/PodSecurityPolicyTemplate.cs/#L75">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_PodSecurityPolicyTemplate_DefaultAllowPrivilegeEscalation_" data-uid="Pulumi.Rancher2.PodSecurityPolicyTemplate.DefaultAllowPrivilegeEscalation*"></a>
+  <h4 id="Pulumi_Rancher2_PodSecurityPolicyTemplate_DefaultAllowPrivilegeEscalation" data-uid="Pulumi.Rancher2.PodSecurityPolicyTemplate.DefaultAllowPrivilegeEscalation">DefaultAllowPrivilegeEscalation</h4>
+  <div class="markdown level1 summary"><p>(list)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; DefaultAllowPrivilegeEscalation { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/PodSecurityPolicyTemplate.cs/#L81">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_PodSecurityPolicyTemplate_Description_" data-uid="Pulumi.Rancher2.PodSecurityPolicyTemplate.Description*"></a>
+  <h4 id="Pulumi_Rancher2_PodSecurityPolicyTemplate_Description" data-uid="Pulumi.Rancher2.PodSecurityPolicyTemplate.Description">Description</h4>
+  <div class="markdown level1 summary"><p>The PodSecurityPolicyTemplate description (string)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Description { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/PodSecurityPolicyTemplate.cs/#L87">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_PodSecurityPolicyTemplate_ForbiddenSysctls_" data-uid="Pulumi.Rancher2.PodSecurityPolicyTemplate.ForbiddenSysctls*"></a>
+  <h4 id="Pulumi_Rancher2_PodSecurityPolicyTemplate_ForbiddenSysctls" data-uid="Pulumi.Rancher2.PodSecurityPolicyTemplate.ForbiddenSysctls">ForbiddenSysctls</h4>
+  <div class="markdown level1 summary"><p>(list)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;string&gt;&gt; ForbiddenSysctls { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/PodSecurityPolicyTemplate.cs/#L93">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_PodSecurityPolicyTemplate_FsGroup_" data-uid="Pulumi.Rancher2.PodSecurityPolicyTemplate.FsGroup*"></a>
+  <h4 id="Pulumi_Rancher2_PodSecurityPolicyTemplate_FsGroup" data-uid="Pulumi.Rancher2.PodSecurityPolicyTemplate.FsGroup">FsGroup</h4>
+  <div class="markdown level1 summary"><p>(list maxitems:1)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;PodSecurityPolicyTemplateFsGroup&gt; FsGroup { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Rancher2.Outputs.PodSecurityPolicyTemplateFsGroup.html">PodSecurityPolicyTemplateFsGroup</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/PodSecurityPolicyTemplate.cs/#L99">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_PodSecurityPolicyTemplate_HostIpc_" data-uid="Pulumi.Rancher2.PodSecurityPolicyTemplate.HostIpc*"></a>
+  <h4 id="Pulumi_Rancher2_PodSecurityPolicyTemplate_HostIpc" data-uid="Pulumi.Rancher2.PodSecurityPolicyTemplate.HostIpc">HostIpc</h4>
+  <div class="markdown level1 summary"><p>(bool)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool&gt; HostIpc { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/PodSecurityPolicyTemplate.cs/#L105">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_PodSecurityPolicyTemplate_HostNetwork_" data-uid="Pulumi.Rancher2.PodSecurityPolicyTemplate.HostNetwork*"></a>
+  <h4 id="Pulumi_Rancher2_PodSecurityPolicyTemplate_HostNetwork" data-uid="Pulumi.Rancher2.PodSecurityPolicyTemplate.HostNetwork">HostNetwork</h4>
+  <div class="markdown level1 summary"><p>hostNetwork determines if the policy allows the use of HostNetwork in the pod spec.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool&gt; HostNetwork { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/PodSecurityPolicyTemplate.cs/#L111">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_PodSecurityPolicyTemplate_HostPid_" data-uid="Pulumi.Rancher2.PodSecurityPolicyTemplate.HostPid*"></a>
+  <h4 id="Pulumi_Rancher2_PodSecurityPolicyTemplate_HostPid" data-uid="Pulumi.Rancher2.PodSecurityPolicyTemplate.HostPid">HostPid</h4>
+  <div class="markdown level1 summary"><p>(bool)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool&gt; HostPid { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/PodSecurityPolicyTemplate.cs/#L117">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_PodSecurityPolicyTemplate_HostPorts_" data-uid="Pulumi.Rancher2.PodSecurityPolicyTemplate.HostPorts*"></a>
+  <h4 id="Pulumi_Rancher2_PodSecurityPolicyTemplate_HostPorts" data-uid="Pulumi.Rancher2.PodSecurityPolicyTemplate.HostPorts">HostPorts</h4>
+  <div class="markdown level1 summary"><p>(list)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;PodSecurityPolicyTemplateHostPort&gt;&gt; HostPorts { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Rancher2.Outputs.PodSecurityPolicyTemplateHostPort.html">PodSecurityPolicyTemplateHostPort</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/PodSecurityPolicyTemplate.cs/#L124">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_PodSecurityPolicyTemplate_Labels_" data-uid="Pulumi.Rancher2.PodSecurityPolicyTemplate.Labels*"></a>
+  <h4 id="Pulumi_Rancher2_PodSecurityPolicyTemplate_Labels" data-uid="Pulumi.Rancher2.PodSecurityPolicyTemplate.Labels">Labels</h4>
+  <div class="markdown level1 summary"><p>Labels for PodSecurityPolicyTemplate object (map)</p>
+<ul>
+<li><code>allow_privilege_escalation</code> = (Optional)</li>
+</ul>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;&gt; Labels { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/PodSecurityPolicyTemplate.cs/#L130">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_PodSecurityPolicyTemplate_Name_" data-uid="Pulumi.Rancher2.PodSecurityPolicyTemplate.Name*"></a>
+  <h4 id="Pulumi_Rancher2_PodSecurityPolicyTemplate_Name" data-uid="Pulumi.Rancher2.PodSecurityPolicyTemplate.Name">Name</h4>
+  <div class="markdown level1 summary"><p>The name of the PodSecurityPolicyTemplate (string)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Name { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/PodSecurityPolicyTemplate.cs/#L136">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_PodSecurityPolicyTemplate_Privileged_" data-uid="Pulumi.Rancher2.PodSecurityPolicyTemplate.Privileged*"></a>
+  <h4 id="Pulumi_Rancher2_PodSecurityPolicyTemplate_Privileged" data-uid="Pulumi.Rancher2.PodSecurityPolicyTemplate.Privileged">Privileged</h4>
+  <div class="markdown level1 summary"><p>(bool)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool&gt; Privileged { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/PodSecurityPolicyTemplate.cs/#L142">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_PodSecurityPolicyTemplate_ReadOnlyRootFilesystem_" data-uid="Pulumi.Rancher2.PodSecurityPolicyTemplate.ReadOnlyRootFilesystem*"></a>
+  <h4 id="Pulumi_Rancher2_PodSecurityPolicyTemplate_ReadOnlyRootFilesystem" data-uid="Pulumi.Rancher2.PodSecurityPolicyTemplate.ReadOnlyRootFilesystem">ReadOnlyRootFilesystem</h4>
+  <div class="markdown level1 summary"><p>(bool)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool&gt; ReadOnlyRootFilesystem { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/PodSecurityPolicyTemplate.cs/#L148">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_PodSecurityPolicyTemplate_RequiredDropCapabilities_" data-uid="Pulumi.Rancher2.PodSecurityPolicyTemplate.RequiredDropCapabilities*"></a>
+  <h4 id="Pulumi_Rancher2_PodSecurityPolicyTemplate_RequiredDropCapabilities" data-uid="Pulumi.Rancher2.PodSecurityPolicyTemplate.RequiredDropCapabilities">RequiredDropCapabilities</h4>
+  <div class="markdown level1 summary"><p>(list)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;string&gt;&gt; RequiredDropCapabilities { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/PodSecurityPolicyTemplate.cs/#L154">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_PodSecurityPolicyTemplate_RunAsGroup_" data-uid="Pulumi.Rancher2.PodSecurityPolicyTemplate.RunAsGroup*"></a>
+  <h4 id="Pulumi_Rancher2_PodSecurityPolicyTemplate_RunAsGroup" data-uid="Pulumi.Rancher2.PodSecurityPolicyTemplate.RunAsGroup">RunAsGroup</h4>
+  <div class="markdown level1 summary"><p>(list maxitems:1)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;PodSecurityPolicyTemplateRunAsGroup&gt; RunAsGroup { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Rancher2.Outputs.PodSecurityPolicyTemplateRunAsGroup.html">PodSecurityPolicyTemplateRunAsGroup</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/PodSecurityPolicyTemplate.cs/#L160">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_PodSecurityPolicyTemplate_RunAsUser_" data-uid="Pulumi.Rancher2.PodSecurityPolicyTemplate.RunAsUser*"></a>
+  <h4 id="Pulumi_Rancher2_PodSecurityPolicyTemplate_RunAsUser" data-uid="Pulumi.Rancher2.PodSecurityPolicyTemplate.RunAsUser">RunAsUser</h4>
+  <div class="markdown level1 summary"><p>(list maxitems:1)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;PodSecurityPolicyTemplateRunAsUser&gt; RunAsUser { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Rancher2.Outputs.PodSecurityPolicyTemplateRunAsUser.html">PodSecurityPolicyTemplateRunAsUser</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/PodSecurityPolicyTemplate.cs/#L166">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_PodSecurityPolicyTemplate_RuntimeClass_" data-uid="Pulumi.Rancher2.PodSecurityPolicyTemplate.RuntimeClass*"></a>
+  <h4 id="Pulumi_Rancher2_PodSecurityPolicyTemplate_RuntimeClass" data-uid="Pulumi.Rancher2.PodSecurityPolicyTemplate.RuntimeClass">RuntimeClass</h4>
+  <div class="markdown level1 summary"><p>(list maxitems:1)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;PodSecurityPolicyTemplateRuntimeClass&gt; RuntimeClass { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Rancher2.Outputs.PodSecurityPolicyTemplateRuntimeClass.html">PodSecurityPolicyTemplateRuntimeClass</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/PodSecurityPolicyTemplate.cs/#L172">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_PodSecurityPolicyTemplate_SeLinux_" data-uid="Pulumi.Rancher2.PodSecurityPolicyTemplate.SeLinux*"></a>
+  <h4 id="Pulumi_Rancher2_PodSecurityPolicyTemplate_SeLinux" data-uid="Pulumi.Rancher2.PodSecurityPolicyTemplate.SeLinux">SeLinux</h4>
+  <div class="markdown level1 summary"><p>(list maxitems:1)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;PodSecurityPolicyTemplateSeLinux&gt; SeLinux { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Rancher2.Outputs.PodSecurityPolicyTemplateSeLinux.html">PodSecurityPolicyTemplateSeLinux</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/PodSecurityPolicyTemplate.cs/#L178">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_PodSecurityPolicyTemplate_SupplementalGroup_" data-uid="Pulumi.Rancher2.PodSecurityPolicyTemplate.SupplementalGroup*"></a>
+  <h4 id="Pulumi_Rancher2_PodSecurityPolicyTemplate_SupplementalGroup" data-uid="Pulumi.Rancher2.PodSecurityPolicyTemplate.SupplementalGroup">SupplementalGroup</h4>
+  <div class="markdown level1 summary"><p>(list maxitems:1)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;PodSecurityPolicyTemplateSupplementalGroup&gt; SupplementalGroup { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Rancher2.Outputs.PodSecurityPolicyTemplateSupplementalGroup.html">PodSecurityPolicyTemplateSupplementalGroup</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/PodSecurityPolicyTemplate.cs/#L184">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_PodSecurityPolicyTemplate_Volumes_" data-uid="Pulumi.Rancher2.PodSecurityPolicyTemplate.Volumes*"></a>
+  <h4 id="Pulumi_Rancher2_PodSecurityPolicyTemplate_Volumes" data-uid="Pulumi.Rancher2.PodSecurityPolicyTemplate.Volumes">Volumes</h4>
+  <div class="markdown level1 summary"><p>(list)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;string&gt;&gt; Volumes { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/PodSecurityPolicyTemplate.cs/#L225">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_PodSecurityPolicyTemplate_Get_" data-uid="Pulumi.Rancher2.PodSecurityPolicyTemplate.Get*"></a>
+  <h4 id="Pulumi_Rancher2_PodSecurityPolicyTemplate_Get_System_String_Input_System_String__Pulumi_Rancher2_PodSecurityPolicyTemplateState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Rancher2.PodSecurityPolicyTemplate.Get(System.String,Input{System.String},Pulumi.Rancher2.PodSecurityPolicyTemplateState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, PodSecurityPolicyTemplateState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <div class="markdown level1 summary"><p>Get an existing PodSecurityPolicyTemplate resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static PodSecurityPolicyTemplate Get(string name, Input&lt;string&gt; id, PodSecurityPolicyTemplateState state = null, CustomResourceOptions? options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resulting resource.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The unique provider ID of the resource to lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.Rancher2.PodSecurityPolicyTemplateState.html">PodSecurityPolicyTemplateState</a></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>Any extra arguments used during the lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.Rancher2.PodSecurityPolicyTemplate.html">PodSecurityPolicyTemplate</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/PodSecurityPolicyTemplate.cs/#L15" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

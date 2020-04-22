@@ -78,43 +78,20 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">RServerClusterRolesWorkerNode</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Azure.HDInsight.Outputs.html">Pulumi.Azure.HDInsight.Outputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Azure.dll</h6>
   <h5 id="Pulumi_Azure_HDInsight_Outputs_RServerClusterRolesWorkerNode_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class RServerClusterRolesWorkerNode</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class RServerClusterRolesWorkerNode : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Hdinsight/RServerCluster.cs/#L778">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/HDInsight/Outputs/RServerClusterRolesWorkerNode.cs/#L19">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_HDInsight_Outputs_RServerClusterRolesWorkerNode_MinInstanceCount" data-uid="Pulumi.Azure.HDInsight.Outputs.RServerClusterRolesWorkerNode.MinInstanceCount">MinInstanceCount</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The minimum number of instances which should be run for the Worker Nodes. Changing this forces a new resource to be created.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -136,14 +113,15 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Hdinsight/RServerCluster.cs/#L779">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/HDInsight/Outputs/RServerClusterRolesWorkerNode.cs/#L23">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_HDInsight_Outputs_RServerClusterRolesWorkerNode_Password" data-uid="Pulumi.Azure.HDInsight.Outputs.RServerClusterRolesWorkerNode.Password">Password</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The Password associated with the local administrator for the Worker Nodes. Changing this forces a new resource to be created.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string Password</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? Password</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -155,16 +133,17 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Hdinsight/RServerCluster.cs/#L780">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/HDInsight/Outputs/RServerClusterRolesWorkerNode.cs/#L27">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_HDInsight_Outputs_RServerClusterRolesWorkerNode_SshKeys" data-uid="Pulumi.Azure.HDInsight.Outputs.RServerClusterRolesWorkerNode.SshKeys">SshKeys</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A list of SSH Keys which should be used for the local administrator on the Worker Nodes. Changing this forces a new resource to be created.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -180,20 +159,21 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Hdinsight/RServerCluster.cs/#L781">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/HDInsight/Outputs/RServerClusterRolesWorkerNode.cs/#L31">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_HDInsight_Outputs_RServerClusterRolesWorkerNode_SubnetId" data-uid="Pulumi.Azure.HDInsight.Outputs.RServerClusterRolesWorkerNode.SubnetId">SubnetId</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The ID of the Subnet within the Virtual Network where the Worker Nodes should be provisioned within. Changing this forces a new resource to be created.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string SubnetId</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? SubnetId</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -205,16 +185,17 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Hdinsight/RServerCluster.cs/#L782">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/HDInsight/Outputs/RServerClusterRolesWorkerNode.cs/#L35">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_HDInsight_Outputs_RServerClusterRolesWorkerNode_TargetInstanceCount" data-uid="Pulumi.Azure.HDInsight.Outputs.RServerClusterRolesWorkerNode.TargetInstanceCount">TargetInstanceCount</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The number of instances which should be run for the Worker Nodes.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -236,10 +217,11 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Hdinsight/RServerCluster.cs/#L783">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/HDInsight/Outputs/RServerClusterRolesWorkerNode.cs/#L39">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_HDInsight_Outputs_RServerClusterRolesWorkerNode_Username" data-uid="Pulumi.Azure.HDInsight.Outputs.RServerClusterRolesWorkerNode.Username">Username</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The Username of the local administrator for the Worker Nodes. Changing this forces a new resource to be created.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -261,14 +243,15 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Hdinsight/RServerCluster.cs/#L784">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/HDInsight/Outputs/RServerClusterRolesWorkerNode.cs/#L43">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_HDInsight_Outputs_RServerClusterRolesWorkerNode_VirtualNetworkId" data-uid="Pulumi.Azure.HDInsight.Outputs.RServerClusterRolesWorkerNode.VirtualNetworkId">VirtualNetworkId</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The ID of the Virtual Network where the Worker Nodes should be provisioned within. Changing this forces a new resource to be created.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string VirtualNetworkId</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? VirtualNetworkId</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -280,16 +263,17 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Hdinsight/RServerCluster.cs/#L785">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/HDInsight/Outputs/RServerClusterRolesWorkerNode.cs/#L47">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_HDInsight_Outputs_RServerClusterRolesWorkerNode_VmSize" data-uid="Pulumi.Azure.HDInsight.Outputs.RServerClusterRolesWorkerNode.VmSize">VmSize</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The Size of the Virtual Machine which should be used as the Worker Nodes. Changing this forces a new resource to be created.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -317,7 +301,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Hdinsight/RServerCluster.cs/#L775" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/HDInsight/Outputs/RServerClusterRolesWorkerNode.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

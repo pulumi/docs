@@ -78,45 +78,47 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">GetImageResult</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.DigitalOcean.html">Pulumi.DigitalOcean</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.DigitalOcean.dll</h6>
   <h5 id="Pulumi_DigitalOcean_GetImageResult_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class GetImageResult</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class GetImageResult : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/master/sdk/dotnet/GetImage.cs/#L44">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/GetImage.cs/#L58">View Source</a>
+  </span>
+  <h4 id="Pulumi_DigitalOcean_GetImageResult_Created" data-uid="Pulumi.DigitalOcean.GetImageResult.Created">Created</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly string Created</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/GetImage.cs/#L64">View Source</a>
   </span>
   <h4 id="Pulumi_DigitalOcean_GetImageResult_Distribution" data-uid="Pulumi.DigitalOcean.GetImageResult.Distribution">Distribution</h4>
   <div class="markdown level1 summary"><p>The name of the distribution of the OS of the image.</p>
 <ul>
 <li><code>min_disk_size</code>: The minimum 'disk' required for the image.</li>
+<li><code>size_gigabytes</code>: The size of the image in GB.</li>
 </ul>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -140,15 +142,14 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/master/sdk/dotnet/GetImage.cs/#L65">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/GetImage.cs/#L65">View Source</a>
   </span>
-  <h4 id="Pulumi_DigitalOcean_GetImageResult_Id" data-uid="Pulumi.DigitalOcean.GetImageResult.Id">Id</h4>
-  <div class="markdown level1 summary"><p>id is the provider-assigned unique ID for this managed resource.</p>
-</div>
+  <h4 id="Pulumi_DigitalOcean_GetImageResult_ErrorMessage" data-uid="Pulumi.DigitalOcean.GetImageResult.ErrorMessage">ErrorMessage</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string Id</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string ErrorMessage</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -166,10 +167,35 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/master/sdk/dotnet/GetImage.cs/#L48">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/GetImage.cs/#L66">View Source</a>
+  </span>
+  <h4 id="Pulumi_DigitalOcean_GetImageResult_Id" data-uid="Pulumi.DigitalOcean.GetImageResult.Id">Id</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly int Id</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/GetImage.cs/#L70">View Source</a>
   </span>
   <h4 id="Pulumi_DigitalOcean_GetImageResult_Image" data-uid="Pulumi.DigitalOcean.GetImageResult.Image">Image</h4>
-  <div class="markdown level1 summary"><p>The id of the image.</p>
+  <div class="markdown level1 summary"><p>The id of the image (legacy parameter).</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -192,7 +218,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/master/sdk/dotnet/GetImage.cs/#L49">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/GetImage.cs/#L71">View Source</a>
   </span>
   <h4 id="Pulumi_DigitalOcean_GetImageResult_MinDiskSize" data-uid="Pulumi.DigitalOcean.GetImageResult.MinDiskSize">MinDiskSize</h4>
   <div class="markdown level1 summary"></div>
@@ -217,7 +243,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/master/sdk/dotnet/GetImage.cs/#L50">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/GetImage.cs/#L72">View Source</a>
   </span>
   <h4 id="Pulumi_DigitalOcean_GetImageResult_Name" data-uid="Pulumi.DigitalOcean.GetImageResult.Name">Name</h4>
   <div class="markdown level1 summary"></div>
@@ -242,15 +268,18 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/master/sdk/dotnet/GetImage.cs/#L58">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/GetImage.cs/#L83">View Source</a>
   </span>
   <h4 id="Pulumi_DigitalOcean_GetImageResult_Private" data-uid="Pulumi.DigitalOcean.GetImageResult.Private">Private</h4>
   <div class="markdown level1 summary"><p>Is image a public image or not. Public images represent
 Linux distributions or One-Click Applications, while non-public images represent
 snapshots and backups and are only available within your account.</p>
 <ul>
-<li><code>regions</code>: The regions that the image is available in.</li>
-<li><code>type</code>: Type of the image.</li>
+<li><code>regions</code>: A set of the regions that the image is available in.</li>
+<li><code>tags</code>: A set of tags applied to the image</li>
+<li><code>created</code>: When the image was created</li>
+<li><code>status</code>: Current status of the image</li>
+<li><code>error_message</code>: Any applicable error message pertaining to the image</li>
 </ul>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -274,7 +303,7 @@ snapshots and backups and are only available within your account.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/master/sdk/dotnet/GetImage.cs/#L59">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/GetImage.cs/#L84">View Source</a>
   </span>
   <h4 id="Pulumi_DigitalOcean_GetImageResult_Regions" data-uid="Pulumi.DigitalOcean.GetImageResult.Regions">Regions</h4>
   <div class="markdown level1 summary"></div>
@@ -293,13 +322,38 @@ snapshots and backups and are only available within your account.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/master/sdk/dotnet/GetImage.cs/#L60">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/GetImage.cs/#L85">View Source</a>
+  </span>
+  <h4 id="Pulumi_DigitalOcean_GetImageResult_SizeGigabytes" data-uid="Pulumi.DigitalOcean.GetImageResult.SizeGigabytes">SizeGigabytes</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly double SizeGigabytes</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/GetImage.cs/#L86">View Source</a>
   </span>
   <h4 id="Pulumi_DigitalOcean_GetImageResult_Slug" data-uid="Pulumi.DigitalOcean.GetImageResult.Slug">Slug</h4>
   <div class="markdown level1 summary"></div>
@@ -324,7 +378,82 @@ snapshots and backups and are only available within your account.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/master/sdk/dotnet/GetImage.cs/#L61">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/GetImage.cs/#L87">View Source</a>
+  </span>
+  <h4 id="Pulumi_DigitalOcean_GetImageResult_Source" data-uid="Pulumi.DigitalOcean.GetImageResult.Source">Source</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly string? Source</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/GetImage.cs/#L88">View Source</a>
+  </span>
+  <h4 id="Pulumi_DigitalOcean_GetImageResult_Status" data-uid="Pulumi.DigitalOcean.GetImageResult.Status">Status</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly string Status</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/GetImage.cs/#L89">View Source</a>
+  </span>
+  <h4 id="Pulumi_DigitalOcean_GetImageResult_Tags" data-uid="Pulumi.DigitalOcean.GetImageResult.Tags">Tags</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;string&gt; Tags</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/GetImage.cs/#L90">View Source</a>
   </span>
   <h4 id="Pulumi_DigitalOcean_GetImageResult_Type" data-uid="Pulumi.DigitalOcean.GetImageResult.Type">Type</h4>
   <div class="markdown level1 summary"></div>
@@ -355,7 +484,7 @@ snapshots and backups and are only available within your account.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/master/sdk/dotnet/GetImage.cs/#L37" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/GetImage.cs/#L55" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

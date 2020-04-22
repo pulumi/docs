@@ -74,53 +74,12 @@
   <div class="markdown level0 summary"><p>Manages a Docker Network. This can be used alongside
 <a href="https://www.terraform.io/docs/providers/docker/r/container.html">docker_container</a>
 to create virtual networks within the docker environment.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-docker/blob/master/website/docs/r/network.html.markdown">https://github.com/terraform-providers/terraform-provider-docker/blob/master/website/docs/r/network.html.markdown</a>.</p>
-</blockquote>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
-    <div class="level3"><span class="xref">Network</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">Network</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Docker.html">Pulumi.Docker</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Docker.dll</h6>
@@ -131,16 +90,16 @@ to create virtual networks within the docker environment.</p>
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/Network.cs/#L107">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/Network.cs/#L105">View Source</a>
   </span>
   <a id="Pulumi_Docker_Network__ctor_" data-uid="Pulumi.Docker.Network.#ctor*"></a>
-  <h4 id="Pulumi_Docker_Network__ctor_System_String_Pulumi_Docker_NetworkArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Docker.Network.#ctor(System.String,Pulumi.Docker.NetworkArgs,Pulumi.CustomResourceOptions)">Network(String, NetworkArgs, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Docker_Network__ctor_System_String_Pulumi_Docker_NetworkArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Docker.Network.#ctor(System.String,Pulumi.Docker.NetworkArgs,System.Nullable{CustomResourceOptions})">Network(String, NetworkArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Create a Network resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Network(string name, NetworkArgs args = null, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Network(string name, NetworkArgs args = null, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -165,7 +124,7 @@ to create virtual networks within the docker environment.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -175,7 +134,7 @@ to create virtual networks within the docker environment.</p>
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/Network.cs/#L25">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/Network.cs/#L23">View Source</a>
   </span>
   <a id="Pulumi_Docker_Network_Attachable_" data-uid="Pulumi.Docker.Network.Attachable*"></a>
   <h4 id="Pulumi_Docker_Network_Attachable" data-uid="Pulumi.Docker.Network.Attachable">Attachable</h4>
@@ -197,13 +156,13 @@ Defaults to <code>false</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/Network.cs/#L32">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/Network.cs/#L30">View Source</a>
   </span>
   <a id="Pulumi_Docker_Network_CheckDuplicate_" data-uid="Pulumi.Docker.Network.CheckDuplicate*"></a>
   <h4 id="Pulumi_Docker_Network_CheckDuplicate" data-uid="Pulumi.Docker.Network.CheckDuplicate">CheckDuplicate</h4>
@@ -225,13 +184,13 @@ with same name.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/Network.cs/#L39">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/Network.cs/#L37">View Source</a>
   </span>
   <a id="Pulumi_Docker_Network_Driver_" data-uid="Pulumi.Docker.Network.Driver*"></a>
   <h4 id="Pulumi_Docker_Network_Driver" data-uid="Pulumi.Docker.Network.Driver">Driver</h4>
@@ -253,13 +212,13 @@ with same name.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/Network.cs/#L46">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/Network.cs/#L44">View Source</a>
   </span>
   <a id="Pulumi_Docker_Network_Ingress_" data-uid="Pulumi.Docker.Network.Ingress*"></a>
   <h4 id="Pulumi_Docker_Network_Ingress" data-uid="Pulumi.Docker.Network.Ingress">Ingress</h4>
@@ -281,13 +240,13 @@ Defaults to <code>false</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/Network.cs/#L53">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/Network.cs/#L51">View Source</a>
   </span>
   <a id="Pulumi_Docker_Network_Internal_" data-uid="Pulumi.Docker.Network.Internal*"></a>
   <h4 id="Pulumi_Docker_Network_Internal" data-uid="Pulumi.Docker.Network.Internal">Internal</h4>
@@ -309,13 +268,13 @@ Defaults to <code>false</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/Network.cs/#L60">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/Network.cs/#L58">View Source</a>
   </span>
   <a id="Pulumi_Docker_Network_IpamConfigs_" data-uid="Pulumi.Docker.Network.IpamConfigs*"></a>
   <h4 id="Pulumi_Docker_Network_IpamConfigs" data-uid="Pulumi.Docker.Network.IpamConfigs">IpamConfigs</h4>
@@ -325,7 +284,7 @@ details.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;NetworkIpamConfigs&gt;&gt; IpamConfigs { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;NetworkIpamConfig&gt;&gt; IpamConfigs { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -337,13 +296,13 @@ details.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Docker.Outputs.NetworkIpamConfigs.html">NetworkIpamConfigs</a>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Docker.Outputs.NetworkIpamConfig.html">NetworkIpamConfig</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/Network.cs/#L67">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/Network.cs/#L65">View Source</a>
   </span>
   <a id="Pulumi_Docker_Network_IpamDriver_" data-uid="Pulumi.Docker.Network.IpamDriver*"></a>
   <h4 id="Pulumi_Docker_Network_IpamDriver" data-uid="Pulumi.Docker.Network.IpamDriver">IpamDriver</h4>
@@ -353,7 +312,7 @@ network.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; IpamDriver { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; IpamDriver { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -365,13 +324,13 @@ network.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/Network.cs/#L74">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/Network.cs/#L72">View Source</a>
   </span>
   <a id="Pulumi_Docker_Network_Ipv6_" data-uid="Pulumi.Docker.Network.Ipv6*"></a>
   <h4 id="Pulumi_Docker_Network_Ipv6" data-uid="Pulumi.Docker.Network.Ipv6">Ipv6</h4>
@@ -393,13 +352,13 @@ Defaults to <code>false</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/Network.cs/#L80">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/Network.cs/#L78">View Source</a>
   </span>
   <a id="Pulumi_Docker_Network_Labels_" data-uid="Pulumi.Docker.Network.Labels*"></a>
   <h4 id="Pulumi_Docker_Network_Labels" data-uid="Pulumi.Docker.Network.Labels">Labels</h4>
@@ -408,7 +367,7 @@ Defaults to <code>false</code>.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;NetworkLabels&gt;&gt; Labels { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;NetworkLabel&gt;&gt; Labels { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -420,13 +379,13 @@ Defaults to <code>false</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Docker.Outputs.NetworkLabels.html">NetworkLabels</a>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Docker.Outputs.NetworkLabel.html">NetworkLabel</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/Network.cs/#L86">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/Network.cs/#L84">View Source</a>
   </span>
   <a id="Pulumi_Docker_Network_Name_" data-uid="Pulumi.Docker.Network.Name*"></a>
   <h4 id="Pulumi_Docker_Network_Name" data-uid="Pulumi.Docker.Network.Name">Name</h4>
@@ -447,13 +406,13 @@ Defaults to <code>false</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/Network.cs/#L93">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/Network.cs/#L91">View Source</a>
   </span>
   <a id="Pulumi_Docker_Network_Options_" data-uid="Pulumi.Docker.Network.Options*"></a>
   <h4 id="Pulumi_Docker_Network_Options" data-uid="Pulumi.Docker.Network.Options">Options</h4>
@@ -475,13 +434,13 @@ the drivers.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/Network.cs/#L96">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/Network.cs/#L94">View Source</a>
   </span>
   <a id="Pulumi_Docker_Network_Scope_" data-uid="Pulumi.Docker.Network.Scope*"></a>
   <h4 id="Pulumi_Docker_Network_Scope" data-uid="Pulumi.Docker.Network.Scope">Scope</h4>
@@ -501,7 +460,7 @@ the drivers.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -509,17 +468,17 @@ the drivers.</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/Network.cs/#L137">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/Network.cs/#L135">View Source</a>
   </span>
   <a id="Pulumi_Docker_Network_Get_" data-uid="Pulumi.Docker.Network.Get*"></a>
-  <h4 id="Pulumi_Docker_Network_Get_System_String_Pulumi_Input_System_String__Pulumi_Docker_NetworkState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Docker.Network.Get(System.String,Pulumi.Input{System.String},Pulumi.Docker.NetworkState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, NetworkState, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Docker_Network_Get_System_String_Input_System_String__Pulumi_Docker_NetworkState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Docker.Network.Get(System.String,Input{System.String},Pulumi.Docker.NetworkState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, NetworkState, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Get an existing Network resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Network Get(string name, Input&lt;string&gt; id, NetworkState state = null, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Network Get(string name, Input&lt;string&gt; id, NetworkState state = null, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -538,7 +497,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -550,7 +509,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -579,7 +538,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/Network.cs/#L19" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/Network.cs/#L17" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

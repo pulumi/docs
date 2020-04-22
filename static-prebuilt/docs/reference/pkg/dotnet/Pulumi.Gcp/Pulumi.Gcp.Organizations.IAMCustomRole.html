@@ -81,55 +81,14 @@ from this and how roles are propagated. 1) creating a role may involve undeletin
 same name, possibly causing confusing behavior between undelete and update. 2) A deleted role is permanently deleted
 after 7 days, but it can take up to 30 more days (i.e. between 7 and 37 days after deletion) before the role name is
 made available again. This means a deleted role that has been deleted for more than 7 days cannot be changed at all
-by this provider, and new roles cannot share that name.</p>
-</blockquote>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/google_organization_iam_custom_role.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/google_organization_iam_custom_role.html.markdown</a>.</p>
+by the provider, and new roles cannot share that name.</p>
 </blockquote>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
-    <div class="level3"><span class="xref">IAMCustomRole</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">IAMCustomRole</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.Organizations.html">Pulumi.Gcp.Organizations</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
@@ -140,16 +99,16 @@ by this provider, and new roles cannot share that name.</p>
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Organizations/IAMCustomRole.cs/#L81">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Organizations/IAMCustomRole.cs/#L80">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Organizations_IAMCustomRole__ctor_" data-uid="Pulumi.Gcp.Organizations.IAMCustomRole.#ctor*"></a>
-  <h4 id="Pulumi_Gcp_Organizations_IAMCustomRole__ctor_System_String_Pulumi_Gcp_Organizations_IAMCustomRoleArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Gcp.Organizations.IAMCustomRole.#ctor(System.String,Pulumi.Gcp.Organizations.IAMCustomRoleArgs,Pulumi.CustomResourceOptions)">IAMCustomRole(String, IAMCustomRoleArgs, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Gcp_Organizations_IAMCustomRole__ctor_System_String_Pulumi_Gcp_Organizations_IAMCustomRoleArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Gcp.Organizations.IAMCustomRole.#ctor(System.String,Pulumi.Gcp.Organizations.IAMCustomRoleArgs,System.Nullable{CustomResourceOptions})">IAMCustomRole(String, IAMCustomRoleArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Create a IAMCustomRole resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IAMCustomRole(string name, IAMCustomRoleArgs args, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public IAMCustomRole(string name, IAMCustomRoleArgs args, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -174,7 +133,7 @@ by this provider, and new roles cannot share that name.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -184,7 +143,7 @@ by this provider, and new roles cannot share that name.</p>
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Organizations/IAMCustomRole.cs/#L32">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Organizations/IAMCustomRole.cs/#L31">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Organizations_IAMCustomRole_Deleted_" data-uid="Pulumi.Gcp.Organizations.IAMCustomRole.Deleted*"></a>
   <h4 id="Pulumi_Gcp_Organizations_IAMCustomRole_Deleted" data-uid="Pulumi.Gcp.Organizations.IAMCustomRole.Deleted">Deleted</h4>
@@ -205,13 +164,13 @@ by this provider, and new roles cannot share that name.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Organizations/IAMCustomRole.cs/#L38">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Organizations/IAMCustomRole.cs/#L37">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Organizations_IAMCustomRole_Description_" data-uid="Pulumi.Gcp.Organizations.IAMCustomRole.Description*"></a>
   <h4 id="Pulumi_Gcp_Organizations_IAMCustomRole_Description" data-uid="Pulumi.Gcp.Organizations.IAMCustomRole.Description">Description</h4>
@@ -220,7 +179,7 @@ by this provider, and new roles cannot share that name.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Description { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Description { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -232,13 +191,13 @@ by this provider, and new roles cannot share that name.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Organizations/IAMCustomRole.cs/#L44">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Organizations/IAMCustomRole.cs/#L43">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Organizations_IAMCustomRole_OrgId_" data-uid="Pulumi.Gcp.Organizations.IAMCustomRole.OrgId*"></a>
   <h4 id="Pulumi_Gcp_Organizations_IAMCustomRole_OrgId" data-uid="Pulumi.Gcp.Organizations.IAMCustomRole.OrgId">OrgId</h4>
@@ -259,13 +218,13 @@ by this provider, and new roles cannot share that name.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Organizations/IAMCustomRole.cs/#L50">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Organizations/IAMCustomRole.cs/#L49">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Organizations_IAMCustomRole_Permissions_" data-uid="Pulumi.Gcp.Organizations.IAMCustomRole.Permissions*"></a>
   <h4 id="Pulumi_Gcp_Organizations_IAMCustomRole_Permissions" data-uid="Pulumi.Gcp.Organizations.IAMCustomRole.Permissions">Permissions</h4>
@@ -286,13 +245,13 @@ by this provider, and new roles cannot share that name.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Organizations/IAMCustomRole.cs/#L56">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Organizations/IAMCustomRole.cs/#L55">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Organizations_IAMCustomRole_RoleId_" data-uid="Pulumi.Gcp.Organizations.IAMCustomRole.RoleId*"></a>
   <h4 id="Pulumi_Gcp_Organizations_IAMCustomRole_RoleId" data-uid="Pulumi.Gcp.Organizations.IAMCustomRole.RoleId">RoleId</h4>
@@ -313,13 +272,13 @@ by this provider, and new roles cannot share that name.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Organizations/IAMCustomRole.cs/#L64">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Organizations/IAMCustomRole.cs/#L63">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Organizations_IAMCustomRole_Stage_" data-uid="Pulumi.Gcp.Organizations.IAMCustomRole.Stage*"></a>
   <h4 id="Pulumi_Gcp_Organizations_IAMCustomRole_Stage" data-uid="Pulumi.Gcp.Organizations.IAMCustomRole.Stage">Stage</h4>
@@ -330,7 +289,7 @@ List of possible stages is <a href="https://cloud.google.com/iam/reference/rest/
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Stage { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Stage { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -342,13 +301,13 @@ List of possible stages is <a href="https://cloud.google.com/iam/reference/rest/
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Organizations/IAMCustomRole.cs/#L70">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Organizations/IAMCustomRole.cs/#L69">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Organizations_IAMCustomRole_Title_" data-uid="Pulumi.Gcp.Organizations.IAMCustomRole.Title*"></a>
   <h4 id="Pulumi_Gcp_Organizations_IAMCustomRole_Title" data-uid="Pulumi.Gcp.Organizations.IAMCustomRole.Title">Title</h4>
@@ -369,7 +328,7 @@ List of possible stages is <a href="https://cloud.google.com/iam/reference/rest/
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -377,17 +336,17 @@ List of possible stages is <a href="https://cloud.google.com/iam/reference/rest/
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Organizations/IAMCustomRole.cs/#L111">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Organizations/IAMCustomRole.cs/#L110">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Organizations_IAMCustomRole_Get_" data-uid="Pulumi.Gcp.Organizations.IAMCustomRole.Get*"></a>
-  <h4 id="Pulumi_Gcp_Organizations_IAMCustomRole_Get_System_String_Pulumi_Input_System_String__Pulumi_Gcp_Organizations_IAMCustomRoleState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Gcp.Organizations.IAMCustomRole.Get(System.String,Pulumi.Input{System.String},Pulumi.Gcp.Organizations.IAMCustomRoleState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, IAMCustomRoleState, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Gcp_Organizations_IAMCustomRole_Get_System_String_Input_System_String__Pulumi_Gcp_Organizations_IAMCustomRoleState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Gcp.Organizations.IAMCustomRole.Get(System.String,Input{System.String},Pulumi.Gcp.Organizations.IAMCustomRoleState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, IAMCustomRoleState, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Get an existing IAMCustomRole resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IAMCustomRole Get(string name, Input&lt;string&gt; id, IAMCustomRoleState state = null, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static IAMCustomRole Get(string name, Input&lt;string&gt; id, IAMCustomRoleState state = null, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -406,7 +365,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -418,7 +377,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -447,7 +406,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Organizations/IAMCustomRole.cs/#L27" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Organizations/IAMCustomRole.cs/#L26" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

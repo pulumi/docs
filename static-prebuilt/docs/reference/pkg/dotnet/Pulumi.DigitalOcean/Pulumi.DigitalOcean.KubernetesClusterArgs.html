@@ -76,36 +76,7 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
-    <div class="level3"><span class="xref">KubernetesClusterArgs</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">KubernetesClusterArgs</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.DigitalOcean.html">Pulumi.DigitalOcean</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.DigitalOcean.dll</h6>
@@ -116,7 +87,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/master/sdk/dotnet/KubernetesCluster.cs/#L198">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/KubernetesCluster.cs/#L210">View Source</a>
   </span>
   <a id="Pulumi_DigitalOcean_KubernetesClusterArgs__ctor_" data-uid="Pulumi.DigitalOcean.KubernetesClusterArgs.#ctor*"></a>
   <h4 id="Pulumi_DigitalOcean_KubernetesClusterArgs__ctor" data-uid="Pulumi.DigitalOcean.KubernetesClusterArgs.#ctor">KubernetesClusterArgs()</h4>
@@ -129,7 +100,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/master/sdk/dotnet/KubernetesCluster.cs/#L158">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/KubernetesCluster.cs/#L163">View Source</a>
   </span>
   <a id="Pulumi_DigitalOcean_KubernetesClusterArgs_Name_" data-uid="Pulumi.DigitalOcean.KubernetesClusterArgs.Name*"></a>
   <h4 id="Pulumi_DigitalOcean_KubernetesClusterArgs_Name" data-uid="Pulumi.DigitalOcean.KubernetesClusterArgs.Name">Name</h4>
@@ -138,7 +109,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Name { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Name { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -150,13 +121,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/master/sdk/dotnet/KubernetesCluster.cs/#L171">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/KubernetesCluster.cs/#L177">View Source</a>
   </span>
   <a id="Pulumi_DigitalOcean_KubernetesClusterArgs_NodePool_" data-uid="Pulumi.DigitalOcean.KubernetesClusterArgs.NodePool*"></a>
   <h4 id="Pulumi_DigitalOcean_KubernetesClusterArgs_NodePool" data-uid="Pulumi.DigitalOcean.KubernetesClusterArgs.NodePool">NodePool</h4>
@@ -169,6 +140,7 @@
 <li><code>min_nodes</code> - (Optional) If auto-scaling is enabled, this represents the minimum number of nodes that the node pool can be scaled down to.</li>
 <li><code>max_nodes</code> - (Optional) If auto-scaling is enabled, this represents the maximum number of nodes that the node pool can be scaled up to.</li>
 <li><code>tags</code> - (Optional) A list of tag names to be applied to the Kubernetes cluster.</li>
+<li><code>labels</code> - (Optional) A map of key/value pairs to apply to nodes in the pool. The labels are exposed in the Kubernetes API as labels in the metadata of the corresponding <a href="https://kubernetes.io/docs/concepts/architecture/nodes/">Node resources</a>.</li>
 </ul>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -186,13 +158,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.DigitalOcean.Inputs.KubernetesClusterNodePoolArgs.html">KubernetesClusterNodePoolArgs</a>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.DigitalOcean.Inputs.KubernetesClusterNodePoolArgs.html">KubernetesClusterNodePoolArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/master/sdk/dotnet/KubernetesCluster.cs/#L177">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/KubernetesCluster.cs/#L183">View Source</a>
   </span>
   <a id="Pulumi_DigitalOcean_KubernetesClusterArgs_Region_" data-uid="Pulumi.DigitalOcean.KubernetesClusterArgs.Region*"></a>
   <h4 id="Pulumi_DigitalOcean_KubernetesClusterArgs_Region" data-uid="Pulumi.DigitalOcean.KubernetesClusterArgs.Region">Region</h4>
@@ -213,13 +185,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/master/sdk/dotnet/KubernetesCluster.cs/#L186">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/KubernetesCluster.cs/#L192">View Source</a>
   </span>
   <a id="Pulumi_DigitalOcean_KubernetesClusterArgs_Tags_" data-uid="Pulumi.DigitalOcean.KubernetesClusterArgs.Tags*"></a>
   <h4 id="Pulumi_DigitalOcean_KubernetesClusterArgs_Tags" data-uid="Pulumi.DigitalOcean.KubernetesClusterArgs.Tags">Tags</h4>
@@ -240,13 +212,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/master/sdk/dotnet/KubernetesCluster.cs/#L195">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/KubernetesCluster.cs/#L201">View Source</a>
   </span>
   <a id="Pulumi_DigitalOcean_KubernetesClusterArgs_Version_" data-uid="Pulumi.DigitalOcean.KubernetesClusterArgs.Version*"></a>
   <h4 id="Pulumi_DigitalOcean_KubernetesClusterArgs_Version" data-uid="Pulumi.DigitalOcean.KubernetesClusterArgs.Version">Version</h4>
@@ -267,7 +239,34 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/KubernetesCluster.cs/#L207">View Source</a>
+  </span>
+  <a id="Pulumi_DigitalOcean_KubernetesClusterArgs_VpcUuid_" data-uid="Pulumi.DigitalOcean.KubernetesClusterArgs.VpcUuid*"></a>
+  <h4 id="Pulumi_DigitalOcean_KubernetesClusterArgs_VpcUuid" data-uid="Pulumi.DigitalOcean.KubernetesClusterArgs.VpcUuid">VpcUuid</h4>
+  <div class="markdown level1 summary"><p>The ID of the VPC where the Kubernetes cluster will be located.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? VpcUuid { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -279,7 +278,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/master/sdk/dotnet/KubernetesCluster.cs/#L153" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/KubernetesCluster.cs/#L158" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

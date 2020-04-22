@@ -71,50 +71,24 @@
   
   <h1 id="Pulumi_Gcp_Iap_AppEngineServiceIamPolicy" data-uid="Pulumi.Gcp.Iap.AppEngineServiceIamPolicy" class="text-break">Class AppEngineServiceIamPolicy
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Three different resources help you manage your IAM policy for Identity-Aware Proxy AppEngineService. Each of these resources serves a different use case:</p>
+<ul>
+<li><code>gcp.iap.AppEngineServiceIamPolicy</code>: Authoritative. Sets the IAM policy for the appengineservice and replaces any existing policy already attached.</li>
+<li><code>gcp.iap.AppEngineServiceIamBinding</code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the appengineservice are preserved.</li>
+<li><code>gcp.iap.AppEngineServiceIamMember</code>: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the appengineservice are preserved.</li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.iap.AppEngineServiceIamPolicy</code> <strong>cannot</strong> be used in conjunction with <code>gcp.iap.AppEngineServiceIamBinding</code> and <code>gcp.iap.AppEngineServiceIamMember</code> or they will fight over what your policy should be.</p>
+</blockquote>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.iap.AppEngineServiceIamBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.iap.AppEngineServiceIamMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
+</blockquote>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
-    <div class="level3"><span class="xref">AppEngineServiceIamPolicy</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">AppEngineServiceIamPolicy</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.Iap.html">Pulumi.Gcp.Iap</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
@@ -125,16 +99,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Iap/AppEngineServiceIamPolicy.cs/#L54">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Iap/AppEngineServiceIamPolicy.cs/#L65">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Iap_AppEngineServiceIamPolicy__ctor_" data-uid="Pulumi.Gcp.Iap.AppEngineServiceIamPolicy.#ctor*"></a>
-  <h4 id="Pulumi_Gcp_Iap_AppEngineServiceIamPolicy__ctor_System_String_Pulumi_Gcp_Iap_AppEngineServiceIamPolicyArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Gcp.Iap.AppEngineServiceIamPolicy.#ctor(System.String,Pulumi.Gcp.Iap.AppEngineServiceIamPolicyArgs,Pulumi.CustomResourceOptions)">AppEngineServiceIamPolicy(String, AppEngineServiceIamPolicyArgs, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Gcp_Iap_AppEngineServiceIamPolicy__ctor_System_String_Pulumi_Gcp_Iap_AppEngineServiceIamPolicyArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Gcp.Iap.AppEngineServiceIamPolicy.#ctor(System.String,Pulumi.Gcp.Iap.AppEngineServiceIamPolicyArgs,System.Nullable{CustomResourceOptions})">AppEngineServiceIamPolicy(String, AppEngineServiceIamPolicyArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Create a AppEngineServiceIamPolicy resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public AppEngineServiceIamPolicy(string name, AppEngineServiceIamPolicyArgs args, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public AppEngineServiceIamPolicy(string name, AppEngineServiceIamPolicyArgs args, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -159,7 +133,7 @@
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -169,7 +143,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Iap/AppEngineServiceIamPolicy.cs/#L17">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Iap/AppEngineServiceIamPolicy.cs/#L28">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Iap_AppEngineServiceIamPolicy_AppId_" data-uid="Pulumi.Gcp.Iap.AppEngineServiceIamPolicy.AppId*"></a>
   <h4 id="Pulumi_Gcp_Iap_AppEngineServiceIamPolicy_AppId" data-uid="Pulumi.Gcp.Iap.AppEngineServiceIamPolicy.AppId">AppId</h4>
@@ -190,13 +164,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Iap/AppEngineServiceIamPolicy.cs/#L23">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Iap/AppEngineServiceIamPolicy.cs/#L34">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Iap_AppEngineServiceIamPolicy_Etag_" data-uid="Pulumi.Gcp.Iap.AppEngineServiceIamPolicy.Etag*"></a>
   <h4 id="Pulumi_Gcp_Iap_AppEngineServiceIamPolicy_Etag" data-uid="Pulumi.Gcp.Iap.AppEngineServiceIamPolicy.Etag">Etag</h4>
@@ -217,13 +191,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Iap/AppEngineServiceIamPolicy.cs/#L30">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Iap/AppEngineServiceIamPolicy.cs/#L41">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Iap_AppEngineServiceIamPolicy_PolicyData_" data-uid="Pulumi.Gcp.Iap.AppEngineServiceIamPolicy.PolicyData*"></a>
   <h4 id="Pulumi_Gcp_Iap_AppEngineServiceIamPolicy_PolicyData" data-uid="Pulumi.Gcp.Iap.AppEngineServiceIamPolicy.PolicyData">PolicyData</h4>
@@ -245,13 +219,13 @@ a <code>gcp.organizations.getIAMPolicy</code> data source.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Iap/AppEngineServiceIamPolicy.cs/#L37">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Iap/AppEngineServiceIamPolicy.cs/#L48">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Iap_AppEngineServiceIamPolicy_Project_" data-uid="Pulumi.Gcp.Iap.AppEngineServiceIamPolicy.Project*"></a>
   <h4 id="Pulumi_Gcp_Iap_AppEngineServiceIamPolicy_Project" data-uid="Pulumi.Gcp.Iap.AppEngineServiceIamPolicy.Project">Project</h4>
@@ -273,13 +247,13 @@ If it is not provided, the project will be parsed from the identifier of the par
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Iap/AppEngineServiceIamPolicy.cs/#L43">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Iap/AppEngineServiceIamPolicy.cs/#L54">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Iap_AppEngineServiceIamPolicy_Service_" data-uid="Pulumi.Gcp.Iap.AppEngineServiceIamPolicy.Service*"></a>
   <h4 id="Pulumi_Gcp_Iap_AppEngineServiceIamPolicy_Service" data-uid="Pulumi.Gcp.Iap.AppEngineServiceIamPolicy.Service">Service</h4>
@@ -300,7 +274,7 @@ If it is not provided, the project will be parsed from the identifier of the par
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -308,17 +282,17 @@ If it is not provided, the project will be parsed from the identifier of the par
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Iap/AppEngineServiceIamPolicy.cs/#L84">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Iap/AppEngineServiceIamPolicy.cs/#L95">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Iap_AppEngineServiceIamPolicy_Get_" data-uid="Pulumi.Gcp.Iap.AppEngineServiceIamPolicy.Get*"></a>
-  <h4 id="Pulumi_Gcp_Iap_AppEngineServiceIamPolicy_Get_System_String_Pulumi_Input_System_String__Pulumi_Gcp_Iap_AppEngineServiceIamPolicyState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Gcp.Iap.AppEngineServiceIamPolicy.Get(System.String,Pulumi.Input{System.String},Pulumi.Gcp.Iap.AppEngineServiceIamPolicyState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, AppEngineServiceIamPolicyState, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Gcp_Iap_AppEngineServiceIamPolicy_Get_System_String_Input_System_String__Pulumi_Gcp_Iap_AppEngineServiceIamPolicyState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Gcp.Iap.AppEngineServiceIamPolicy.Get(System.String,Input{System.String},Pulumi.Gcp.Iap.AppEngineServiceIamPolicyState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, AppEngineServiceIamPolicyState, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Get an existing AppEngineServiceIamPolicy resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static AppEngineServiceIamPolicy Get(string name, Input&lt;string&gt; id, AppEngineServiceIamPolicyState state = null, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static AppEngineServiceIamPolicy Get(string name, Input&lt;string&gt; id, AppEngineServiceIamPolicyState state = null, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -337,7 +311,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -349,7 +323,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -378,7 +352,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Iap/AppEngineServiceIamPolicy.cs/#L12" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Iap/AppEngineServiceIamPolicy.cs/#L23" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

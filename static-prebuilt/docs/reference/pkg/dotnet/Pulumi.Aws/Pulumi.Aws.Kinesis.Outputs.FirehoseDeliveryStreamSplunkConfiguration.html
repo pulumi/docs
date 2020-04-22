@@ -78,40 +78,16 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">FirehoseDeliveryStreamSplunkConfiguration</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.Kinesis.Outputs.html">Pulumi.Aws.Kinesis.Outputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
   <h5 id="Pulumi_Aws_Kinesis_Outputs_FirehoseDeliveryStreamSplunkConfiguration_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class FirehoseDeliveryStreamSplunkConfiguration</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class FirehoseDeliveryStreamSplunkConfiguration : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Kinesis/FirehoseDeliveryStream.cs/#L3983">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Kinesis/Outputs/FirehoseDeliveryStreamSplunkConfiguration.cs/#L19">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Kinesis_Outputs_FirehoseDeliveryStreamSplunkConfiguration_CloudwatchLoggingOptions" data-uid="Pulumi.Aws.Kinesis.Outputs.FirehoseDeliveryStreamSplunkConfiguration.CloudwatchLoggingOptions">CloudwatchLoggingOptions</h4>
   <div class="markdown level1 summary"><p>The CloudWatch Logging Options for the delivery stream. More details are given below.</p>
@@ -137,7 +113,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Kinesis/FirehoseDeliveryStream.cs/#L3987">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Kinesis/Outputs/FirehoseDeliveryStreamSplunkConfiguration.cs/#L23">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Kinesis_Outputs_FirehoseDeliveryStreamSplunkConfiguration_HecAcknowledgmentTimeout" data-uid="Pulumi.Aws.Kinesis.Outputs.FirehoseDeliveryStreamSplunkConfiguration.HecAcknowledgmentTimeout">HecAcknowledgmentTimeout</h4>
   <div class="markdown level1 summary"><p>The amount of time, in seconds between 180 and 600, that Kinesis Firehose waits to receive an acknowledgment from Splunk after it sends it data.</p>
@@ -163,7 +139,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Kinesis/FirehoseDeliveryStream.cs/#L3991">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Kinesis/Outputs/FirehoseDeliveryStreamSplunkConfiguration.cs/#L27">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Kinesis_Outputs_FirehoseDeliveryStreamSplunkConfiguration_HecEndpoint" data-uid="Pulumi.Aws.Kinesis.Outputs.FirehoseDeliveryStreamSplunkConfiguration.HecEndpoint">HecEndpoint</h4>
   <div class="markdown level1 summary"><p>The HTTP Event Collector (HEC) endpoint to which Kinesis Firehose sends your data.</p>
@@ -189,7 +165,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Kinesis/FirehoseDeliveryStream.cs/#L3995">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Kinesis/Outputs/FirehoseDeliveryStreamSplunkConfiguration.cs/#L31">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Kinesis_Outputs_FirehoseDeliveryStreamSplunkConfiguration_HecEndpointType" data-uid="Pulumi.Aws.Kinesis.Outputs.FirehoseDeliveryStreamSplunkConfiguration.HecEndpointType">HecEndpointType</h4>
   <div class="markdown level1 summary"><p>The HEC endpoint type. Valid values are <code>Raw</code> or <code>Event</code>. The default value is <code>Raw</code>.</p>
@@ -197,7 +173,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string HecEndpointType</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? HecEndpointType</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -209,13 +185,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Kinesis/FirehoseDeliveryStream.cs/#L3999">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Kinesis/Outputs/FirehoseDeliveryStreamSplunkConfiguration.cs/#L35">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Kinesis_Outputs_FirehoseDeliveryStreamSplunkConfiguration_HecToken" data-uid="Pulumi.Aws.Kinesis.Outputs.FirehoseDeliveryStreamSplunkConfiguration.HecToken">HecToken</h4>
   <div class="markdown level1 summary"><p>The GUID that you obtain from your Splunk cluster when you create a new HEC endpoint.</p>
@@ -241,7 +217,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Kinesis/FirehoseDeliveryStream.cs/#L4003">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Kinesis/Outputs/FirehoseDeliveryStreamSplunkConfiguration.cs/#L39">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Kinesis_Outputs_FirehoseDeliveryStreamSplunkConfiguration_ProcessingConfiguration" data-uid="Pulumi.Aws.Kinesis.Outputs.FirehoseDeliveryStreamSplunkConfiguration.ProcessingConfiguration">ProcessingConfiguration</h4>
   <div class="markdown level1 summary"><p>The data processing configuration.  More details are given below.</p>
@@ -267,7 +243,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Kinesis/FirehoseDeliveryStream.cs/#L4007">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Kinesis/Outputs/FirehoseDeliveryStreamSplunkConfiguration.cs/#L43">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Kinesis_Outputs_FirehoseDeliveryStreamSplunkConfiguration_RetryDuration" data-uid="Pulumi.Aws.Kinesis.Outputs.FirehoseDeliveryStreamSplunkConfiguration.RetryDuration">RetryDuration</h4>
   <div class="markdown level1 summary"><p>After an initial failure to deliver to Splunk, the total amount of time, in seconds between 0 to 7200, during which Firehose re-attempts delivery (including the first attempt).  After this time has elapsed, the failed documents are written to Amazon S3.  The default value is 300s.  There will be no retry if the value is 0.</p>
@@ -293,7 +269,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Kinesis/FirehoseDeliveryStream.cs/#L4011">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Kinesis/Outputs/FirehoseDeliveryStreamSplunkConfiguration.cs/#L47">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Kinesis_Outputs_FirehoseDeliveryStreamSplunkConfiguration_S3BackupMode" data-uid="Pulumi.Aws.Kinesis.Outputs.FirehoseDeliveryStreamSplunkConfiguration.S3BackupMode">S3BackupMode</h4>
   <div class="markdown level1 summary"><p>Defines how documents should be delivered to Amazon S3.  Valid values are <code>FailedEventsOnly</code> and <code>AllEvents</code>.  Default value is <code>FailedEventsOnly</code>.</p>
@@ -301,7 +277,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string S3BackupMode</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? S3BackupMode</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -313,7 +289,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -325,7 +301,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Kinesis/FirehoseDeliveryStream.cs/#L3977" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Kinesis/Outputs/FirehoseDeliveryStreamSplunkConfiguration.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

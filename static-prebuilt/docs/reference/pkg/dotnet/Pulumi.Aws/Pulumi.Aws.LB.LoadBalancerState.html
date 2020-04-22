@@ -76,36 +76,7 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
-    <div class="level3"><span class="xref">LoadBalancerState</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">LoadBalancerState</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.LB.html">Pulumi.Aws.LB</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
@@ -116,7 +87,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Lb/LoadBalancer.cs/#L446">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/LB/LoadBalancer.cs/#L462">View Source</a>
   </span>
   <a id="Pulumi_Aws_LB_LoadBalancerState__ctor_" data-uid="Pulumi.Aws.LB.LoadBalancerState.#ctor*"></a>
   <h4 id="Pulumi_Aws_LB_LoadBalancerState__ctor" data-uid="Pulumi.Aws.LB.LoadBalancerState.#ctor">LoadBalancerState()</h4>
@@ -129,7 +100,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Lb/LoadBalancer.cs/#L308">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/LB/LoadBalancer.cs/#L318">View Source</a>
   </span>
   <a id="Pulumi_Aws_LB_LoadBalancerState_AccessLogs_" data-uid="Pulumi.Aws.LB.LoadBalancerState.AccessLogs*"></a>
   <h4 id="Pulumi_Aws_LB_LoadBalancerState_AccessLogs" data-uid="Pulumi.Aws.LB.LoadBalancerState.AccessLogs">AccessLogs</h4>
@@ -138,7 +109,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;LoadBalancerAccessLogsGetArgs&gt; AccessLogs { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;LoadBalancerAccessLogsGetArgs&gt;? AccessLogs { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -150,13 +121,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Aws.LB.Inputs.LoadBalancerAccessLogsGetArgs.html">LoadBalancerAccessLogsGetArgs</a>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Aws.LB.Inputs.LoadBalancerAccessLogsGetArgs.html">LoadBalancerAccessLogsGetArgs</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Lb/LoadBalancer.cs/#L314">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/LB/LoadBalancer.cs/#L324">View Source</a>
   </span>
   <a id="Pulumi_Aws_LB_LoadBalancerState_Arn_" data-uid="Pulumi.Aws.LB.LoadBalancerState.Arn*"></a>
   <h4 id="Pulumi_Aws_LB_LoadBalancerState_Arn" data-uid="Pulumi.Aws.LB.LoadBalancerState.Arn">Arn</h4>
@@ -165,7 +136,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Arn { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Arn { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -177,13 +148,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Lb/LoadBalancer.cs/#L320">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/LB/LoadBalancer.cs/#L330">View Source</a>
   </span>
   <a id="Pulumi_Aws_LB_LoadBalancerState_ArnSuffix_" data-uid="Pulumi.Aws.LB.LoadBalancerState.ArnSuffix*"></a>
   <h4 id="Pulumi_Aws_LB_LoadBalancerState_ArnSuffix" data-uid="Pulumi.Aws.LB.LoadBalancerState.ArnSuffix">ArnSuffix</h4>
@@ -192,7 +163,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; ArnSuffix { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? ArnSuffix { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -204,13 +175,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Lb/LoadBalancer.cs/#L326">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/LB/LoadBalancer.cs/#L336">View Source</a>
   </span>
   <a id="Pulumi_Aws_LB_LoadBalancerState_DnsName_" data-uid="Pulumi.Aws.LB.LoadBalancerState.DnsName*"></a>
   <h4 id="Pulumi_Aws_LB_LoadBalancerState_DnsName" data-uid="Pulumi.Aws.LB.LoadBalancerState.DnsName">DnsName</h4>
@@ -219,7 +190,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; DnsName { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? DnsName { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -231,13 +202,40 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Lb/LoadBalancer.cs/#L333">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/LB/LoadBalancer.cs/#L342">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_LB_LoadBalancerState_DropInvalidHeaderFields_" data-uid="Pulumi.Aws.LB.LoadBalancerState.DropInvalidHeaderFields*"></a>
+  <h4 id="Pulumi_Aws_LB_LoadBalancerState_DropInvalidHeaderFields" data-uid="Pulumi.Aws.LB.LoadBalancerState.DropInvalidHeaderFields">DropInvalidHeaderFields</h4>
+  <div class="markdown level1 summary"><p>Indicates whether HTTP headers with header fields that are not valid are removed by the load balancer (true) or routed to targets (false). The default is false. Elastic Load Balancing requires that message header names contain only alphanumeric characters and hyphens. Only valid for Load Balancers of type <code>application</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? DropInvalidHeaderFields { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/LB/LoadBalancer.cs/#L349">View Source</a>
   </span>
   <a id="Pulumi_Aws_LB_LoadBalancerState_EnableCrossZoneLoadBalancing_" data-uid="Pulumi.Aws.LB.LoadBalancerState.EnableCrossZoneLoadBalancing*"></a>
   <h4 id="Pulumi_Aws_LB_LoadBalancerState_EnableCrossZoneLoadBalancing" data-uid="Pulumi.Aws.LB.LoadBalancerState.EnableCrossZoneLoadBalancing">EnableCrossZoneLoadBalancing</h4>
@@ -247,7 +245,7 @@ This is a <code>network</code> load balancer feature. Defaults to <code>false</c
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; EnableCrossZoneLoadBalancing { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? EnableCrossZoneLoadBalancing { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -259,13 +257,13 @@ This is a <code>network</code> load balancer feature. Defaults to <code>false</c
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Lb/LoadBalancer.cs/#L340">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/LB/LoadBalancer.cs/#L356">View Source</a>
   </span>
   <a id="Pulumi_Aws_LB_LoadBalancerState_EnableDeletionProtection_" data-uid="Pulumi.Aws.LB.LoadBalancerState.EnableDeletionProtection*"></a>
   <h4 id="Pulumi_Aws_LB_LoadBalancerState_EnableDeletionProtection" data-uid="Pulumi.Aws.LB.LoadBalancerState.EnableDeletionProtection">EnableDeletionProtection</h4>
@@ -275,7 +273,7 @@ the AWS API. This will prevent this provider from deleting the load balancer. De
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; EnableDeletionProtection { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? EnableDeletionProtection { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -287,13 +285,13 @@ the AWS API. This will prevent this provider from deleting the load balancer. De
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Lb/LoadBalancer.cs/#L346">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/LB/LoadBalancer.cs/#L362">View Source</a>
   </span>
   <a id="Pulumi_Aws_LB_LoadBalancerState_EnableHttp2_" data-uid="Pulumi.Aws.LB.LoadBalancerState.EnableHttp2*"></a>
   <h4 id="Pulumi_Aws_LB_LoadBalancerState_EnableHttp2" data-uid="Pulumi.Aws.LB.LoadBalancerState.EnableHttp2">EnableHttp2</h4>
@@ -302,7 +300,7 @@ the AWS API. This will prevent this provider from deleting the load balancer. De
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; EnableHttp2 { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? EnableHttp2 { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -314,13 +312,13 @@ the AWS API. This will prevent this provider from deleting the load balancer. De
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Lb/LoadBalancer.cs/#L352">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/LB/LoadBalancer.cs/#L368">View Source</a>
   </span>
   <a id="Pulumi_Aws_LB_LoadBalancerState_IdleTimeout_" data-uid="Pulumi.Aws.LB.LoadBalancerState.IdleTimeout*"></a>
   <h4 id="Pulumi_Aws_LB_LoadBalancerState_IdleTimeout" data-uid="Pulumi.Aws.LB.LoadBalancerState.IdleTimeout">IdleTimeout</h4>
@@ -329,7 +327,7 @@ the AWS API. This will prevent this provider from deleting the load balancer. De
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; IdleTimeout { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? IdleTimeout { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -341,13 +339,13 @@ the AWS API. This will prevent this provider from deleting the load balancer. De
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Lb/LoadBalancer.cs/#L358">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/LB/LoadBalancer.cs/#L374">View Source</a>
   </span>
   <a id="Pulumi_Aws_LB_LoadBalancerState_Internal_" data-uid="Pulumi.Aws.LB.LoadBalancerState.Internal*"></a>
   <h4 id="Pulumi_Aws_LB_LoadBalancerState_Internal" data-uid="Pulumi.Aws.LB.LoadBalancerState.Internal">Internal</h4>
@@ -356,7 +354,7 @@ the AWS API. This will prevent this provider from deleting the load balancer. De
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; Internal { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? Internal { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -368,13 +366,13 @@ the AWS API. This will prevent this provider from deleting the load balancer. De
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Lb/LoadBalancer.cs/#L364">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/LB/LoadBalancer.cs/#L380">View Source</a>
   </span>
   <a id="Pulumi_Aws_LB_LoadBalancerState_IpAddressType_" data-uid="Pulumi.Aws.LB.LoadBalancerState.IpAddressType*"></a>
   <h4 id="Pulumi_Aws_LB_LoadBalancerState_IpAddressType" data-uid="Pulumi.Aws.LB.LoadBalancerState.IpAddressType">IpAddressType</h4>
@@ -383,7 +381,7 @@ the AWS API. This will prevent this provider from deleting the load balancer. De
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; IpAddressType { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? IpAddressType { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -395,13 +393,13 @@ the AWS API. This will prevent this provider from deleting the load balancer. De
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Lb/LoadBalancer.cs/#L370">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/LB/LoadBalancer.cs/#L386">View Source</a>
   </span>
   <a id="Pulumi_Aws_LB_LoadBalancerState_LoadBalancerType_" data-uid="Pulumi.Aws.LB.LoadBalancerState.LoadBalancerType*"></a>
   <h4 id="Pulumi_Aws_LB_LoadBalancerState_LoadBalancerType" data-uid="Pulumi.Aws.LB.LoadBalancerState.LoadBalancerType">LoadBalancerType</h4>
@@ -410,7 +408,7 @@ the AWS API. This will prevent this provider from deleting the load balancer. De
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; LoadBalancerType { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? LoadBalancerType { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -422,13 +420,13 @@ the AWS API. This will prevent this provider from deleting the load balancer. De
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Lb/LoadBalancer.cs/#L378">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/LB/LoadBalancer.cs/#L394">View Source</a>
   </span>
   <a id="Pulumi_Aws_LB_LoadBalancerState_Name_" data-uid="Pulumi.Aws.LB.LoadBalancerState.Name*"></a>
   <h4 id="Pulumi_Aws_LB_LoadBalancerState_Name" data-uid="Pulumi.Aws.LB.LoadBalancerState.Name">Name</h4>
@@ -439,7 +437,7 @@ this provider will autogenerate a name beginning with <code>tf-lb</code>.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Name { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Name { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -451,13 +449,13 @@ this provider will autogenerate a name beginning with <code>tf-lb</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Lb/LoadBalancer.cs/#L384">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/LB/LoadBalancer.cs/#L400">View Source</a>
   </span>
   <a id="Pulumi_Aws_LB_LoadBalancerState_NamePrefix_" data-uid="Pulumi.Aws.LB.LoadBalancerState.NamePrefix*"></a>
   <h4 id="Pulumi_Aws_LB_LoadBalancerState_NamePrefix" data-uid="Pulumi.Aws.LB.LoadBalancerState.NamePrefix">NamePrefix</h4>
@@ -466,7 +464,7 @@ this provider will autogenerate a name beginning with <code>tf-lb</code>.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; NamePrefix { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? NamePrefix { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -478,13 +476,13 @@ this provider will autogenerate a name beginning with <code>tf-lb</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Lb/LoadBalancer.cs/#L393">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/LB/LoadBalancer.cs/#L409">View Source</a>
   </span>
   <a id="Pulumi_Aws_LB_LoadBalancerState_SecurityGroups_" data-uid="Pulumi.Aws.LB.LoadBalancerState.SecurityGroups*"></a>
   <h4 id="Pulumi_Aws_LB_LoadBalancerState_SecurityGroups" data-uid="Pulumi.Aws.LB.LoadBalancerState.SecurityGroups">SecurityGroups</h4>
@@ -505,13 +503,13 @@ this provider will autogenerate a name beginning with <code>tf-lb</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Lb/LoadBalancer.cs/#L405">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/LB/LoadBalancer.cs/#L421">View Source</a>
   </span>
   <a id="Pulumi_Aws_LB_LoadBalancerState_SubnetMappings_" data-uid="Pulumi.Aws.LB.LoadBalancerState.SubnetMappings*"></a>
   <h4 id="Pulumi_Aws_LB_LoadBalancerState_SubnetMappings" data-uid="Pulumi.Aws.LB.LoadBalancerState.SubnetMappings">SubnetMappings</h4>
@@ -520,7 +518,7 @@ this provider will autogenerate a name beginning with <code>tf-lb</code>.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public InputList&lt;LoadBalancerSubnetMappingsGetArgs&gt; SubnetMappings { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public InputList&lt;LoadBalancerSubnetMappingGetArgs&gt; SubnetMappings { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -532,13 +530,13 @@ this provider will autogenerate a name beginning with <code>tf-lb</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<a class="xref" href="Pulumi.Aws.LB.Inputs.LoadBalancerSubnetMappingsGetArgs.html">LoadBalancerSubnetMappingsGetArgs</a>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<a class="xref" href="Pulumi.Aws.LB.Inputs.LoadBalancerSubnetMappingGetArgs.html">LoadBalancerSubnetMappingGetArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Lb/LoadBalancer.cs/#L419">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/LB/LoadBalancer.cs/#L435">View Source</a>
   </span>
   <a id="Pulumi_Aws_LB_LoadBalancerState_Subnets_" data-uid="Pulumi.Aws.LB.LoadBalancerState.Subnets*"></a>
   <h4 id="Pulumi_Aws_LB_LoadBalancerState_Subnets" data-uid="Pulumi.Aws.LB.LoadBalancerState.Subnets">Subnets</h4>
@@ -561,13 +559,13 @@ for load balancers of type <code>network</code> will force a recreation of the r
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Lb/LoadBalancer.cs/#L431">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/LB/LoadBalancer.cs/#L447">View Source</a>
   </span>
   <a id="Pulumi_Aws_LB_LoadBalancerState_Tags_" data-uid="Pulumi.Aws.LB.LoadBalancerState.Tags*"></a>
   <h4 id="Pulumi_Aws_LB_LoadBalancerState_Tags" data-uid="Pulumi.Aws.LB.LoadBalancerState.Tags">Tags</h4>
@@ -588,13 +586,13 @@ for load balancers of type <code>network</code> will force a recreation of the r
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputMap-1.html">InputMap</a>&lt;<span class="xref">System.Object</span>&gt;</td>
+        <td><span class="xref">InputMap</span>&lt;<span class="xref">System.Object</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Lb/LoadBalancer.cs/#L437">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/LB/LoadBalancer.cs/#L453">View Source</a>
   </span>
   <a id="Pulumi_Aws_LB_LoadBalancerState_VpcId_" data-uid="Pulumi.Aws.LB.LoadBalancerState.VpcId*"></a>
   <h4 id="Pulumi_Aws_LB_LoadBalancerState_VpcId" data-uid="Pulumi.Aws.LB.LoadBalancerState.VpcId">VpcId</h4>
@@ -602,7 +600,7 @@ for load balancers of type <code>network</code> will force a recreation of the r
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; VpcId { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? VpcId { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -614,13 +612,13 @@ for load balancers of type <code>network</code> will force a recreation of the r
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Lb/LoadBalancer.cs/#L443">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/LB/LoadBalancer.cs/#L459">View Source</a>
   </span>
   <a id="Pulumi_Aws_LB_LoadBalancerState_ZoneId_" data-uid="Pulumi.Aws.LB.LoadBalancerState.ZoneId*"></a>
   <h4 id="Pulumi_Aws_LB_LoadBalancerState_ZoneId" data-uid="Pulumi.Aws.LB.LoadBalancerState.ZoneId">ZoneId</h4>
@@ -629,7 +627,7 @@ for load balancers of type <code>network</code> will force a recreation of the r
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; ZoneId { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? ZoneId { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -641,7 +639,7 @@ for load balancers of type <code>network</code> will force a recreation of the r
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -653,7 +651,7 @@ for load balancers of type <code>network</code> will force a recreation of the r
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Lb/LoadBalancer.cs/#L303" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/LB/LoadBalancer.cs/#L313" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

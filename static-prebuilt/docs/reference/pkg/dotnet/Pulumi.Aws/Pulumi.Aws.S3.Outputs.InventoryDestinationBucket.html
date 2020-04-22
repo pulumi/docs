@@ -78,40 +78,16 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">InventoryDestinationBucket</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.S3.Outputs.html">Pulumi.Aws.S3.Outputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
   <h5 id="Pulumi_Aws_S3_Outputs_InventoryDestinationBucket_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class InventoryDestinationBucket</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class InventoryDestinationBucket : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/S3/Inventory.cs/#L494">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/S3/Outputs/InventoryDestinationBucket.cs/#L19">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_S3_Outputs_InventoryDestinationBucket_AccountId" data-uid="Pulumi.Aws.S3.Outputs.InventoryDestinationBucket.AccountId">AccountId</h4>
   <div class="markdown level1 summary"><p>The ID of the account that owns the destination bucket. Recommended to be set to prevent problems if the destination bucket ownership changes.</p>
@@ -119,7 +95,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string AccountId</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? AccountId</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -131,13 +107,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/S3/Inventory.cs/#L498">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/S3/Outputs/InventoryDestinationBucket.cs/#L23">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_S3_Outputs_InventoryDestinationBucket_BucketArn" data-uid="Pulumi.Aws.S3.Outputs.InventoryDestinationBucket.BucketArn">BucketArn</h4>
   <div class="markdown level1 summary"><p>The Amazon S3 bucket ARN of the destination.</p>
@@ -163,7 +139,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/S3/Inventory.cs/#L502">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/S3/Outputs/InventoryDestinationBucket.cs/#L27">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_S3_Outputs_InventoryDestinationBucket_Encryption" data-uid="Pulumi.Aws.S3.Outputs.InventoryDestinationBucket.Encryption">Encryption</h4>
   <div class="markdown level1 summary"><p>Contains the type of server-side encryption to use to encrypt the inventory (documented below).</p>
@@ -189,7 +165,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/S3/Inventory.cs/#L506">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/S3/Outputs/InventoryDestinationBucket.cs/#L31">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_S3_Outputs_InventoryDestinationBucket_Format" data-uid="Pulumi.Aws.S3.Outputs.InventoryDestinationBucket.Format">Format</h4>
   <div class="markdown level1 summary"><p>Specifies the output format of the inventory results. Can be <code>CSV</code>, <a href="https://orc.apache.org/"><code>ORC</code></a> or <a href="https://parquet.apache.org/"><code>Parquet</code></a>.</p>
@@ -215,7 +191,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/S3/Inventory.cs/#L510">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/S3/Outputs/InventoryDestinationBucket.cs/#L35">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_S3_Outputs_InventoryDestinationBucket_Prefix" data-uid="Pulumi.Aws.S3.Outputs.InventoryDestinationBucket.Prefix">Prefix</h4>
   <div class="markdown level1 summary"><p>The prefix that is prepended to all inventory results.</p>
@@ -223,7 +199,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string Prefix</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? Prefix</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -235,7 +211,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -247,7 +223,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/S3/Inventory.cs/#L488" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/S3/Outputs/InventoryDestinationBucket.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -76,53 +76,12 @@ resource can be used multiple times with the same user for non-overlapping
 groups.</p>
 <p>To exclusively manage the users in a group, see the
 [<code>aws.iam.GroupMembership</code> resource][3].</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/iam_user_group_membership.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/iam_user_group_membership.html.markdown</a>.</p>
-</blockquote>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
-    <div class="level3"><span class="xref">UserGroupMembership</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">UserGroupMembership</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.Iam.html">Pulumi.Aws.Iam</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
@@ -133,16 +92,16 @@ groups.</p>
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Iam/UserGroupMembership.cs/#L44">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Iam/UserGroupMembership.cs/#L42">View Source</a>
   </span>
   <a id="Pulumi_Aws_Iam_UserGroupMembership__ctor_" data-uid="Pulumi.Aws.Iam.UserGroupMembership.#ctor*"></a>
-  <h4 id="Pulumi_Aws_Iam_UserGroupMembership__ctor_System_String_Pulumi_Aws_Iam_UserGroupMembershipArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.Iam.UserGroupMembership.#ctor(System.String,Pulumi.Aws.Iam.UserGroupMembershipArgs,Pulumi.CustomResourceOptions)">UserGroupMembership(String, UserGroupMembershipArgs, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Aws_Iam_UserGroupMembership__ctor_System_String_Pulumi_Aws_Iam_UserGroupMembershipArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.Iam.UserGroupMembership.#ctor(System.String,Pulumi.Aws.Iam.UserGroupMembershipArgs,System.Nullable{CustomResourceOptions})">UserGroupMembership(String, UserGroupMembershipArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Create a UserGroupMembership resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public UserGroupMembership(string name, UserGroupMembershipArgs args, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public UserGroupMembership(string name, UserGroupMembershipArgs args, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -167,7 +126,7 @@ groups.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -177,7 +136,7 @@ groups.</p>
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Iam/UserGroupMembership.cs/#L27">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Iam/UserGroupMembership.cs/#L25">View Source</a>
   </span>
   <a id="Pulumi_Aws_Iam_UserGroupMembership_Groups_" data-uid="Pulumi.Aws.Iam.UserGroupMembership.Groups*"></a>
   <h4 id="Pulumi_Aws_Iam_UserGroupMembership_Groups" data-uid="Pulumi.Aws.Iam.UserGroupMembership.Groups">Groups</h4>
@@ -198,13 +157,13 @@ groups.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Iam/UserGroupMembership.cs/#L33">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Iam/UserGroupMembership.cs/#L31">View Source</a>
   </span>
   <a id="Pulumi_Aws_Iam_UserGroupMembership_User_" data-uid="Pulumi.Aws.Iam.UserGroupMembership.User*"></a>
   <h4 id="Pulumi_Aws_Iam_UserGroupMembership_User" data-uid="Pulumi.Aws.Iam.UserGroupMembership.User">User</h4>
@@ -225,7 +184,7 @@ groups.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -233,17 +192,17 @@ groups.</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Iam/UserGroupMembership.cs/#L74">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Iam/UserGroupMembership.cs/#L72">View Source</a>
   </span>
   <a id="Pulumi_Aws_Iam_UserGroupMembership_Get_" data-uid="Pulumi.Aws.Iam.UserGroupMembership.Get*"></a>
-  <h4 id="Pulumi_Aws_Iam_UserGroupMembership_Get_System_String_Pulumi_Input_System_String__Pulumi_Aws_Iam_UserGroupMembershipState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.Iam.UserGroupMembership.Get(System.String,Pulumi.Input{System.String},Pulumi.Aws.Iam.UserGroupMembershipState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, UserGroupMembershipState, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Aws_Iam_UserGroupMembership_Get_System_String_Input_System_String__Pulumi_Aws_Iam_UserGroupMembershipState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.Iam.UserGroupMembership.Get(System.String,Input{System.String},Pulumi.Aws.Iam.UserGroupMembershipState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, UserGroupMembershipState, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Get an existing UserGroupMembership resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static UserGroupMembership Get(string name, Input&lt;string&gt; id, UserGroupMembershipState state = null, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static UserGroupMembership Get(string name, Input&lt;string&gt; id, UserGroupMembershipState state = null, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -262,7 +221,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -274,7 +233,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -303,7 +262,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Iam/UserGroupMembership.cs/#L22" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Iam/UserGroupMembership.cs/#L20" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

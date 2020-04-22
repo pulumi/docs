@@ -78,40 +78,16 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">GetClusterResult</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.ElastiCache.html">Pulumi.Aws.ElastiCache</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
   <h5 id="Pulumi_Aws_ElastiCache_GetClusterResult_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class GetClusterResult</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class GetClusterResult : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Elasticache/GetCluster.cs/#L47">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ElastiCache/GetCluster.cs/#L54">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_ElastiCache_GetClusterResult_Arn" data-uid="Pulumi.Aws.ElastiCache.GetClusterResult.Arn">Arn</h4>
   <div class="markdown level1 summary"></div>
@@ -136,7 +112,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Elasticache/GetCluster.cs/#L51">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ElastiCache/GetCluster.cs/#L58">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_ElastiCache_GetClusterResult_AvailabilityZone" data-uid="Pulumi.Aws.ElastiCache.GetClusterResult.AvailabilityZone">AvailabilityZone</h4>
   <div class="markdown level1 summary"><p>The Availability Zone for the cache cluster.</p>
@@ -162,7 +138,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Elasticache/GetCluster.cs/#L56">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ElastiCache/GetCluster.cs/#L63">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_ElastiCache_GetClusterResult_CacheNodes" data-uid="Pulumi.Aws.ElastiCache.GetClusterResult.CacheNodes">CacheNodes</h4>
   <div class="markdown level1 summary"><p>List of node objects including <code>id</code>, <code>address</code>, <code>port</code> and <code>availability_zone</code>.
@@ -171,7 +147,7 @@ Referenceable e.g. as <code>${data.aws_elasticache_cluster.bar.cache_nodes.0.add
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetClusterCacheNodesResult&gt; CacheNodes</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetClusterCacheNodeResult&gt; CacheNodes</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -183,13 +159,13 @@ Referenceable e.g. as <code>${data.aws_elasticache_cluster.bar.cache_nodes.0.add
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.ElastiCache.Outputs.GetClusterCacheNodesResult.html">GetClusterCacheNodesResult</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.ElastiCache.Outputs.GetClusterCacheNodeResult.html">GetClusterCacheNodeResult</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Elasticache/GetCluster.cs/#L60">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ElastiCache/GetCluster.cs/#L67">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_ElastiCache_GetClusterResult_ClusterAddress" data-uid="Pulumi.Aws.ElastiCache.GetClusterResult.ClusterAddress">ClusterAddress</h4>
   <div class="markdown level1 summary"><p>(Memcached only) The DNS name of the cache cluster without the port appended.</p>
@@ -215,7 +191,7 @@ Referenceable e.g. as <code>${data.aws_elasticache_cluster.bar.cache_nodes.0.add
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Elasticache/GetCluster.cs/#L61">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ElastiCache/GetCluster.cs/#L68">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_ElastiCache_GetClusterResult_ClusterId" data-uid="Pulumi.Aws.ElastiCache.GetClusterResult.ClusterId">ClusterId</h4>
   <div class="markdown level1 summary"></div>
@@ -240,7 +216,7 @@ Referenceable e.g. as <code>${data.aws_elasticache_cluster.bar.cache_nodes.0.add
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Elasticache/GetCluster.cs/#L65">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ElastiCache/GetCluster.cs/#L72">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_ElastiCache_GetClusterResult_ConfigurationEndpoint" data-uid="Pulumi.Aws.ElastiCache.GetClusterResult.ConfigurationEndpoint">ConfigurationEndpoint</h4>
   <div class="markdown level1 summary"><p>(Memcached only) The configuration endpoint to allow host discovery.</p>
@@ -266,7 +242,7 @@ Referenceable e.g. as <code>${data.aws_elasticache_cluster.bar.cache_nodes.0.add
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Elasticache/GetCluster.cs/#L69">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ElastiCache/GetCluster.cs/#L76">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_ElastiCache_GetClusterResult_Engine" data-uid="Pulumi.Aws.ElastiCache.GetClusterResult.Engine">Engine</h4>
   <div class="markdown level1 summary"><p>Name of the cache engine.</p>
@@ -292,7 +268,7 @@ Referenceable e.g. as <code>${data.aws_elasticache_cluster.bar.cache_nodes.0.add
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Elasticache/GetCluster.cs/#L73">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ElastiCache/GetCluster.cs/#L80">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_ElastiCache_GetClusterResult_EngineVersion" data-uid="Pulumi.Aws.ElastiCache.GetClusterResult.EngineVersion">EngineVersion</h4>
   <div class="markdown level1 summary"><p>Version number of the cache engine.</p>
@@ -318,7 +294,7 @@ Referenceable e.g. as <code>${data.aws_elasticache_cluster.bar.cache_nodes.0.add
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Elasticache/GetCluster.cs/#L134">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ElastiCache/GetCluster.cs/#L84">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_ElastiCache_GetClusterResult_Id" data-uid="Pulumi.Aws.ElastiCache.GetClusterResult.Id">Id</h4>
   <div class="markdown level1 summary"><p>id is the provider-assigned unique ID for this managed resource.</p>
@@ -344,7 +320,7 @@ Referenceable e.g. as <code>${data.aws_elasticache_cluster.bar.cache_nodes.0.add
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Elasticache/GetCluster.cs/#L78">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ElastiCache/GetCluster.cs/#L89">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_ElastiCache_GetClusterResult_MaintenanceWindow" data-uid="Pulumi.Aws.ElastiCache.GetClusterResult.MaintenanceWindow">MaintenanceWindow</h4>
   <div class="markdown level1 summary"><p>Specifies the weekly time range for when maintenance
@@ -371,7 +347,7 @@ on the cache cluster is performed.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Elasticache/GetCluster.cs/#L82">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ElastiCache/GetCluster.cs/#L93">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_ElastiCache_GetClusterResult_NodeType" data-uid="Pulumi.Aws.ElastiCache.GetClusterResult.NodeType">NodeType</h4>
   <div class="markdown level1 summary"><p>The cluster node type.</p>
@@ -397,7 +373,7 @@ on the cache cluster is performed.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Elasticache/GetCluster.cs/#L87">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ElastiCache/GetCluster.cs/#L98">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_ElastiCache_GetClusterResult_NotificationTopicArn" data-uid="Pulumi.Aws.ElastiCache.GetClusterResult.NotificationTopicArn">NotificationTopicArn</h4>
   <div class="markdown level1 summary"><p>An Amazon Resource Name (ARN) of an
@@ -424,7 +400,7 @@ SNS topic that ElastiCache notifications get sent to.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Elasticache/GetCluster.cs/#L91">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ElastiCache/GetCluster.cs/#L102">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_ElastiCache_GetClusterResult_NumCacheNodes" data-uid="Pulumi.Aws.ElastiCache.GetClusterResult.NumCacheNodes">NumCacheNodes</h4>
   <div class="markdown level1 summary"><p>The number of cache nodes that the cache cluster has.</p>
@@ -450,7 +426,7 @@ SNS topic that ElastiCache notifications get sent to.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Elasticache/GetCluster.cs/#L95">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ElastiCache/GetCluster.cs/#L106">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_ElastiCache_GetClusterResult_ParameterGroupName" data-uid="Pulumi.Aws.ElastiCache.GetClusterResult.ParameterGroupName">ParameterGroupName</h4>
   <div class="markdown level1 summary"><p>Name of the parameter group associated with this cache cluster.</p>
@@ -476,7 +452,7 @@ SNS topic that ElastiCache notifications get sent to.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Elasticache/GetCluster.cs/#L100">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ElastiCache/GetCluster.cs/#L111">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_ElastiCache_GetClusterResult_Port" data-uid="Pulumi.Aws.ElastiCache.GetClusterResult.Port">Port</h4>
   <div class="markdown level1 summary"><p>The port number on which each of the cache nodes will
@@ -503,7 +479,7 @@ accept connections.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Elasticache/GetCluster.cs/#L104">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ElastiCache/GetCluster.cs/#L115">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_ElastiCache_GetClusterResult_ReplicationGroupId" data-uid="Pulumi.Aws.ElastiCache.GetClusterResult.ReplicationGroupId">ReplicationGroupId</h4>
   <div class="markdown level1 summary"><p>The replication group to which this cache cluster belongs.</p>
@@ -529,7 +505,7 @@ accept connections.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Elasticache/GetCluster.cs/#L108">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ElastiCache/GetCluster.cs/#L119">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_ElastiCache_GetClusterResult_SecurityGroupIds" data-uid="Pulumi.Aws.ElastiCache.GetClusterResult.SecurityGroupIds">SecurityGroupIds</h4>
   <div class="markdown level1 summary"><p>List VPC security groups associated with the cache cluster.</p>
@@ -549,13 +525,13 @@ accept connections.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Elasticache/GetCluster.cs/#L112">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ElastiCache/GetCluster.cs/#L123">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_ElastiCache_GetClusterResult_SecurityGroupNames" data-uid="Pulumi.Aws.ElastiCache.GetClusterResult.SecurityGroupNames">SecurityGroupNames</h4>
   <div class="markdown level1 summary"><p>List of security group names associated with this cache cluster.</p>
@@ -575,13 +551,13 @@ accept connections.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Elasticache/GetCluster.cs/#L117">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ElastiCache/GetCluster.cs/#L128">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_ElastiCache_GetClusterResult_SnapshotRetentionLimit" data-uid="Pulumi.Aws.ElastiCache.GetClusterResult.SnapshotRetentionLimit">SnapshotRetentionLimit</h4>
   <div class="markdown level1 summary"><p>The number of days for which ElastiCache will
@@ -608,7 +584,7 @@ retain automatic cache cluster snapshots before deleting them.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Elasticache/GetCluster.cs/#L122">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ElastiCache/GetCluster.cs/#L133">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_ElastiCache_GetClusterResult_SnapshotWindow" data-uid="Pulumi.Aws.ElastiCache.GetClusterResult.SnapshotWindow">SnapshotWindow</h4>
   <div class="markdown level1 summary"><p>The daily time range (in UTC) during which ElastiCache will
@@ -635,7 +611,7 @@ begin taking a daily snapshot of the cache cluster.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Elasticache/GetCluster.cs/#L126">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ElastiCache/GetCluster.cs/#L137">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_ElastiCache_GetClusterResult_SubnetGroupName" data-uid="Pulumi.Aws.ElastiCache.GetClusterResult.SubnetGroupName">SubnetGroupName</h4>
   <div class="markdown level1 summary"><p>Name of the subnet group associated to the cache cluster.</p>
@@ -661,7 +637,7 @@ begin taking a daily snapshot of the cache cluster.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Elasticache/GetCluster.cs/#L130">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ElastiCache/GetCluster.cs/#L141">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_ElastiCache_GetClusterResult_Tags" data-uid="Pulumi.Aws.ElastiCache.GetClusterResult.Tags">Tags</h4>
   <div class="markdown level1 summary"><p>The tags assigned to the resource</p>
@@ -681,7 +657,7 @@ begin taking a daily snapshot of the cache cluster.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;</td>
+        <td><span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -693,7 +669,7 @@ begin taking a daily snapshot of the cache cluster.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Elasticache/GetCluster.cs/#L44" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/ElastiCache/GetCluster.cs/#L51" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

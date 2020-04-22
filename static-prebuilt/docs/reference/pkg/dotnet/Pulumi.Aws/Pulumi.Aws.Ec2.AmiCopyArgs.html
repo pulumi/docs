@@ -76,36 +76,7 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
-    <div class="level3"><span class="xref">AmiCopyArgs</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">AmiCopyArgs</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.Ec2.html">Pulumi.Aws.Ec2</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
@@ -116,7 +87,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/AmiCopy.cs/#L269">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/AmiCopy.cs/#L271">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_AmiCopyArgs__ctor_" data-uid="Pulumi.Aws.Ec2.AmiCopyArgs.#ctor*"></a>
   <h4 id="Pulumi_Aws_Ec2_AmiCopyArgs__ctor" data-uid="Pulumi.Aws.Ec2.AmiCopyArgs.#ctor">AmiCopyArgs()</h4>
@@ -129,7 +100,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/AmiCopy.cs/#L196">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/AmiCopy.cs/#L196">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_AmiCopyArgs_Description_" data-uid="Pulumi.Aws.Ec2.AmiCopyArgs.Description*"></a>
   <h4 id="Pulumi_Aws_Ec2_AmiCopyArgs_Description" data-uid="Pulumi.Aws.Ec2.AmiCopyArgs.Description">Description</h4>
@@ -138,7 +109,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Description { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Description { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -150,13 +121,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/AmiCopy.cs/#L206">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/AmiCopy.cs/#L206">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_AmiCopyArgs_EbsBlockDevices_" data-uid="Pulumi.Aws.Ec2.AmiCopyArgs.EbsBlockDevices*"></a>
   <h4 id="Pulumi_Aws_Ec2_AmiCopyArgs_EbsBlockDevices" data-uid="Pulumi.Aws.Ec2.AmiCopyArgs.EbsBlockDevices">EbsBlockDevices</h4>
@@ -166,7 +137,7 @@ attached to created instances. The structure of this block is described below.</
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public InputList&lt;AmiCopyEbsBlockDevicesArgs&gt; EbsBlockDevices { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public InputList&lt;AmiCopyEbsBlockDeviceArgs&gt; EbsBlockDevices { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -178,22 +149,22 @@ attached to created instances. The structure of this block is described below.</
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<a class="xref" href="Pulumi.Aws.Ec2.Inputs.AmiCopyEbsBlockDevicesArgs.html">AmiCopyEbsBlockDevicesArgs</a>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<a class="xref" href="Pulumi.Aws.Ec2.Inputs.AmiCopyEbsBlockDeviceArgs.html">AmiCopyEbsBlockDeviceArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/AmiCopy.cs/#L215">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/AmiCopy.cs/#L215">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_AmiCopyArgs_Encrypted_" data-uid="Pulumi.Aws.Ec2.AmiCopyArgs.Encrypted*"></a>
   <h4 id="Pulumi_Aws_Ec2_AmiCopyArgs_Encrypted" data-uid="Pulumi.Aws.Ec2.AmiCopyArgs.Encrypted">Encrypted</h4>
-  <div class="markdown level1 summary"><p>Specifies whether the destination snapshots of the copied image should be encrypted. Defaults to <code>false</code></p>
+  <div class="markdown level1 summary"><p>Boolean controlling whether the created EBS volumes will be encrypted. Can't be used with <code>snapshot_id</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; Encrypted { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? Encrypted { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -205,13 +176,13 @@ attached to created instances. The structure of this block is described below.</
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/AmiCopy.cs/#L225">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/AmiCopy.cs/#L225">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_AmiCopyArgs_EphemeralBlockDevices_" data-uid="Pulumi.Aws.Ec2.AmiCopyArgs.EphemeralBlockDevices*"></a>
   <h4 id="Pulumi_Aws_Ec2_AmiCopyArgs_EphemeralBlockDevices" data-uid="Pulumi.Aws.Ec2.AmiCopyArgs.EphemeralBlockDevices">EphemeralBlockDevices</h4>
@@ -221,7 +192,7 @@ should be attached to created instances. The structure of this block is describe
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public InputList&lt;AmiCopyEphemeralBlockDevicesArgs&gt; EphemeralBlockDevices { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public InputList&lt;AmiCopyEphemeralBlockDeviceArgs&gt; EphemeralBlockDevices { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -233,22 +204,24 @@ should be attached to created instances. The structure of this block is describe
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<a class="xref" href="Pulumi.Aws.Ec2.Inputs.AmiCopyEphemeralBlockDevicesArgs.html">AmiCopyEphemeralBlockDevicesArgs</a>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<a class="xref" href="Pulumi.Aws.Ec2.Inputs.AmiCopyEphemeralBlockDeviceArgs.html">AmiCopyEphemeralBlockDeviceArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/AmiCopy.cs/#L234">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/AmiCopy.cs/#L236">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_AmiCopyArgs_KmsKeyId_" data-uid="Pulumi.Aws.Ec2.AmiCopyArgs.KmsKeyId*"></a>
   <h4 id="Pulumi_Aws_Ec2_AmiCopyArgs_KmsKeyId" data-uid="Pulumi.Aws.Ec2.AmiCopyArgs.KmsKeyId">KmsKeyId</h4>
-  <div class="markdown level1 summary"><p>The full ARN of the KMS Key to use when encrypting the snapshots of an image during a copy operation. If not specified, then the default AWS KMS Key will be used</p>
+  <div class="markdown level1 summary"><p>The full ARN of the AWS Key Management Service (AWS KMS) CMK to use when encrypting the snapshots of
+an image during a copy operation. This parameter is only required if you want to use a non-default CMK;
+if this parameter is not specified, the default CMK for EBS is used</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; KmsKeyId { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? KmsKeyId { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -260,13 +233,13 @@ should be attached to created instances. The structure of this block is describe
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/AmiCopy.cs/#L240">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/AmiCopy.cs/#L242">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_AmiCopyArgs_Name_" data-uid="Pulumi.Aws.Ec2.AmiCopyArgs.Name*"></a>
   <h4 id="Pulumi_Aws_Ec2_AmiCopyArgs_Name" data-uid="Pulumi.Aws.Ec2.AmiCopyArgs.Name">Name</h4>
@@ -275,7 +248,7 @@ should be attached to created instances. The structure of this block is describe
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Name { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Name { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -287,13 +260,13 @@ should be attached to created instances. The structure of this block is describe
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/AmiCopy.cs/#L247">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/AmiCopy.cs/#L249">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_AmiCopyArgs_SourceAmiId_" data-uid="Pulumi.Aws.Ec2.AmiCopyArgs.SourceAmiId*"></a>
   <h4 id="Pulumi_Aws_Ec2_AmiCopyArgs_SourceAmiId" data-uid="Pulumi.Aws.Ec2.AmiCopyArgs.SourceAmiId">SourceAmiId</h4>
@@ -315,13 +288,13 @@ given by <code>source_ami_region</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/AmiCopy.cs/#L254">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/AmiCopy.cs/#L256">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_AmiCopyArgs_SourceAmiRegion_" data-uid="Pulumi.Aws.Ec2.AmiCopyArgs.SourceAmiRegion*"></a>
   <h4 id="Pulumi_Aws_Ec2_AmiCopyArgs_SourceAmiRegion" data-uid="Pulumi.Aws.Ec2.AmiCopyArgs.SourceAmiRegion">SourceAmiRegion</h4>
@@ -343,13 +316,13 @@ same as the AWS provider region in order to create a copy within the same region
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/AmiCopy.cs/#L263">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/AmiCopy.cs/#L265">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_AmiCopyArgs_Tags_" data-uid="Pulumi.Aws.Ec2.AmiCopyArgs.Tags*"></a>
   <h4 id="Pulumi_Aws_Ec2_AmiCopyArgs_Tags" data-uid="Pulumi.Aws.Ec2.AmiCopyArgs.Tags">Tags</h4>
@@ -370,7 +343,7 @@ same as the AWS provider region in order to create a copy within the same region
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputMap-1.html">InputMap</a>&lt;<span class="xref">System.Object</span>&gt;</td>
+        <td><span class="xref">InputMap</span>&lt;<span class="xref">System.Object</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -382,7 +355,7 @@ same as the AWS provider region in order to create a copy within the same region
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/AmiCopy.cs/#L191" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/AmiCopy.cs/#L191" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

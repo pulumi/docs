@@ -83,40 +83,16 @@ rbac.authorization.k8s.io/v1 RoleBinding, and will no longer be served in v1.20.
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">RoleBinding</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Rbac.V1Alpha1.html">Pulumi.Kubernetes.Types.Outputs.Rbac.V1Alpha1</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Kubernetes.dll</h6>
   <h5 id="Pulumi_Kubernetes_Types_Outputs_Rbac_V1Alpha1_RoleBinding_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class RoleBinding</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class RoleBinding : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L30763">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L31186">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Rbac_V1Alpha1_RoleBinding_ApiVersion" data-uid="Pulumi.Kubernetes.Types.Outputs.Rbac.V1Alpha1.RoleBinding.ApiVersion">ApiVersion</h4>
   <div class="markdown level1 summary"><p>APIVersion defines the versioned schema of this representation of an object. Servers
@@ -145,7 +121,7 @@ unrecognized values. More info:
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L30771">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L31194">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Rbac_V1Alpha1_RoleBinding_Kind" data-uid="Pulumi.Kubernetes.Types.Outputs.Rbac.V1Alpha1.RoleBinding.Kind">Kind</h4>
   <div class="markdown level1 summary"><p>Kind is a string value representing the REST resource this object represents. Servers
@@ -174,7 +150,7 @@ CamelCase. More info:
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L30776">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L31199">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Rbac_V1Alpha1_RoleBinding_Metadata" data-uid="Pulumi.Kubernetes.Types.Outputs.Rbac.V1Alpha1.RoleBinding.Metadata">Metadata</h4>
   <div class="markdown level1 summary"><p>Standard object's metadata.</p>
@@ -200,7 +176,7 @@ CamelCase. More info:
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L30782">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L31205">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Rbac_V1Alpha1_RoleBinding_RoleRef" data-uid="Pulumi.Kubernetes.Types.Outputs.Rbac.V1Alpha1.RoleBinding.RoleRef">RoleRef</h4>
   <div class="markdown level1 summary"><p>RoleRef can reference a Role in the current namespace or a ClusterRole in the global
@@ -227,7 +203,7 @@ namespace. If the RoleRef cannot be resolved, the Authorizer must return an erro
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L30787">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L31210">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Rbac_V1Alpha1_RoleBinding_Subjects" data-uid="Pulumi.Kubernetes.Types.Outputs.Rbac.V1Alpha1.RoleBinding.Subjects">Subjects</h4>
   <div class="markdown level1 summary"><p>Subjects holds references to the objects the role applies to.</p>
@@ -247,7 +223,7 @@ namespace. If the RoleRef cannot be resolved, the Authorizer must return an erro
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Rbac.V1Alpha1.Subject.html">Subject</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Rbac.V1Alpha1.Subject.html">Subject</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -259,7 +235,7 @@ namespace. If the RoleRef cannot be resolved, the Authorizer must return an erro
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L30754" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L31177" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

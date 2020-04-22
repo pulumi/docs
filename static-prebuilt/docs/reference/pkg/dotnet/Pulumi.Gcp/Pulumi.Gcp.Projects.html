@@ -76,9 +76,13 @@
   <div class="markdown level0 remarks"></div>
     <h3 id="classes">Classes
   </h3>
+      <h4><a class="xref" href="Pulumi.Gcp.Projects.GetOrganizationPolicy.html">GetOrganizationPolicy</a></h4>
+      <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Projects.GetOrganizationPolicyArgs.html">GetOrganizationPolicyArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Projects.GetOrganizationPolicyResult.html">GetOrganizationPolicyResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.Projects.GetProject.html">GetProject</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Projects.GetProjectArgs.html">GetProjectArgs</a></h4>
       <section></section>
@@ -97,9 +101,6 @@
 </blockquote>
 <blockquote>
 <p><strong>Note:</strong> <code>gcp.projects.IAMBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.projects.IAMMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
-</blockquote>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/google_project_iam.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/google_project_iam.html.markdown</a>.</p>
 </blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Projects.IAMAuditConfigArgs.html">IAMAuditConfigArgs</a></h4>
@@ -120,9 +121,6 @@
 <blockquote>
 <p><strong>Note:</strong> <code>gcp.projects.IAMBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.projects.IAMMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
 </blockquote>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/google_project_iam.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/google_project_iam.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Projects.IAMBindingArgs.html">IAMBindingArgs</a></h4>
       <section></section>
@@ -139,10 +137,7 @@ from this and how roles are propagated. 1) creating a role may involve undeletin
 same name, possibly causing confusing behavior between undelete and update. 2) A deleted role is permanently deleted
 after 7 days, but it can take up to 30 more days (i.e. between 7 and 37 days after deletion) before the role name is
 made available again. This means a deleted role that has been deleted for more than 7 days cannot be changed at all
-by this provider, and new roles cannot share that name.</p>
-</blockquote>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/google_project_iam_custom_role.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/google_project_iam_custom_role.html.markdown</a>.</p>
+by the provider, and new roles cannot share that name.</p>
 </blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Projects.IAMCustomRoleArgs.html">IAMCustomRoleArgs</a></h4>
@@ -163,9 +158,6 @@ by this provider, and new roles cannot share that name.</p>
 <blockquote>
 <p><strong>Note:</strong> <code>gcp.projects.IAMBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.projects.IAMMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
 </blockquote>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/google_project_iam.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/google_project_iam.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Projects.IAMMemberArgs.html">IAMMemberArgs</a></h4>
       <section></section>
@@ -185,24 +177,16 @@ by this provider, and new roles cannot share that name.</p>
 <blockquote>
 <p><strong>Note:</strong> <code>gcp.projects.IAMBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.projects.IAMMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
 </blockquote>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/google_project_iam.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/google_project_iam.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Projects.IAMPolicyArgs.html">IAMPolicyArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Projects.IAMPolicyState.html">IAMPolicyState</a></h4>
-      <section></section>
-      <h4><a class="xref" href="Pulumi.Gcp.Projects.Invokes.html">Invokes</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Projects.OrganizationPolicy.html">OrganizationPolicy</a></h4>
       <section><p>Allows management of Organization policies for a Google Project. For more information see
 <a href="https://cloud.google.com/resource-manager/docs/organization-policy/overview">the official
 documentation</a> and
 <a href="https://cloud.google.com/resource-manager/reference/rest/v1/projects/setOrgPolicy">API</a>.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/google_project_organization_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/google_project_organization_policy.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Projects.OrganizationPolicyArgs.html">OrganizationPolicyArgs</a></h4>
       <section></section>
@@ -212,9 +196,6 @@ documentation</a> and
       <section><p>Allows management of a single API service for an existing Google Cloud Platform project.</p>
 <p>For a list of services available, visit the
 <a href="https://console.cloud.google.com/apis/library">API library page</a> or run <code>gcloud services list</code>.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/google_project_service.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/google_project_service.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Projects.ServiceArgs.html">ServiceArgs</a></h4>
       <section></section>
@@ -228,28 +209,6 @@ See the <a href="https://cloud.google.com/resource-manager/docs/quickstarts">Org
 resource must have <code>roles/resourcemanager.projectCreator</code>. See the
 <a href="https://cloud.google.com/resource-manager/docs/access-control-org">Access Control for Organizations Using IAM</a>
 doc for more information.</p>
-<p>Note that prior to 0.8.5, <code>gcp.organizations.Project</code> functioned like a data source,
-meaning any project referenced by it had to be created and managed outside
-this provider. As of 0.8.5, <code>gcp.organizations.Project</code> functions like any other
-resource, with this provider creating and managing the project. To replicate the old
-behavior, either:</p>
-<ul>
-<li>Use the project ID directly in whatever is referencing the project, using the
-<a href="https://www.terraform.io/docs/providers/google/r/google_project_iam.html">gcp.projects.IAMPolicy</a>
-to replace the old <code>policy_data</code> property.</li>
-<li>Use the <a href="https://www.terraform.io/docs/import/usage.html">import</a> functionality
-to import your pre-existing project into this provider, where it can be referenced and
-used just like always, keeping in mind that this provider will attempt to undo any changes
-made outside this provider.</li>
-</ul>
-<blockquote>
-<p>It's important to note that any project resources that were added to your config
-prior to 0.8.5 will continue to function as they always have, and will not be managed by
-this provider. Only newly added projects are affected.</p>
-</blockquote>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/google_project.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/google_project.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Projects.UsageExportBucketArgs.html">UsageExportBucketArgs</a></h4>
       <section></section>

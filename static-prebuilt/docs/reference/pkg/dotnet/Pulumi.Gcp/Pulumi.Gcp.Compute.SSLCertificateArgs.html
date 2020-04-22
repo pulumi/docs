@@ -76,36 +76,7 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
-    <div class="level3"><span class="xref">SSLCertificateArgs</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">SSLCertificateArgs</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.Compute.html">Pulumi.Gcp.Compute</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
@@ -116,7 +87,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/SSLCertificate.cs/#L164">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/SSLCertificate.cs/#L176">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_SSLCertificateArgs__ctor_" data-uid="Pulumi.Gcp.Compute.SSLCertificateArgs.#ctor*"></a>
   <h4 id="Pulumi_Gcp_Compute_SSLCertificateArgs__ctor" data-uid="Pulumi.Gcp.Compute.SSLCertificateArgs.#ctor">SSLCertificateArgs()</h4>
@@ -129,12 +100,12 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/SSLCertificate.cs/#L125">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/SSLCertificate.cs/#L137">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_SSLCertificateArgs_Certificate_" data-uid="Pulumi.Gcp.Compute.SSLCertificateArgs.Certificate*"></a>
   <h4 id="Pulumi_Gcp_Compute_SSLCertificateArgs_Certificate" data-uid="Pulumi.Gcp.Compute.SSLCertificateArgs.Certificate">Certificate</h4>
-  <div class="markdown level1 summary"><p>The certificate in PEM format. The certificate chain must be no greater than 5 certs long. The chain must
-include at least one intermediate cert.</p>
+  <div class="markdown level1 summary"><p>The certificate in PEM format. The certificate chain must be no greater than 5 certs long. The chain must include at
+least one intermediate cert.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -151,13 +122,13 @@ include at least one intermediate cert.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/SSLCertificate.cs/#L131">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/SSLCertificate.cs/#L143">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_SSLCertificateArgs_Description_" data-uid="Pulumi.Gcp.Compute.SSLCertificateArgs.Description*"></a>
   <h4 id="Pulumi_Gcp_Compute_SSLCertificateArgs_Description" data-uid="Pulumi.Gcp.Compute.SSLCertificateArgs.Description">Description</h4>
@@ -166,7 +137,7 @@ include at least one intermediate cert.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Description { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Description { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -178,26 +149,26 @@ include at least one intermediate cert.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/SSLCertificate.cs/#L141">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/SSLCertificate.cs/#L153">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_SSLCertificateArgs_Name_" data-uid="Pulumi.Gcp.Compute.SSLCertificateArgs.Name*"></a>
   <h4 id="Pulumi_Gcp_Compute_SSLCertificateArgs_Name" data-uid="Pulumi.Gcp.Compute.SSLCertificateArgs.Name">Name</h4>
-  <div class="markdown level1 summary"><p>Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters
-long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular
-expression '<a href="%5B-a-z0-9%5D*%5Ba-z0-9%5D">a-z</a>?' which means the first character must be a lowercase letter, and all
-following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be
-a dash. These are in the same namespace as the managed SSL certificates.</p>
+  <div class="markdown level1 summary"><p>Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
+comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
+'<a href="%5B-a-z0-9%5D*%5Ba-z0-9%5D">a-z</a>?' which means the first character must be a lowercase letter, and all following characters
+must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash. These are in the same
+namespace as the managed SSL certificates.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Name { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Name { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -209,13 +180,13 @@ a dash. These are in the same namespace as the managed SSL certificates.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/SSLCertificate.cs/#L148">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/SSLCertificate.cs/#L160">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_SSLCertificateArgs_NamePrefix_" data-uid="Pulumi.Gcp.Compute.SSLCertificateArgs.NamePrefix*"></a>
   <h4 id="Pulumi_Gcp_Compute_SSLCertificateArgs_NamePrefix" data-uid="Pulumi.Gcp.Compute.SSLCertificateArgs.NamePrefix">NamePrefix</h4>
@@ -225,7 +196,7 @@ specified prefix. Conflicts with <code>name</code>.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; NamePrefix { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? NamePrefix { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -237,13 +208,13 @@ specified prefix. Conflicts with <code>name</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/SSLCertificate.cs/#L154">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/SSLCertificate.cs/#L166">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_SSLCertificateArgs_PrivateKey_" data-uid="Pulumi.Gcp.Compute.SSLCertificateArgs.PrivateKey*"></a>
   <h4 id="Pulumi_Gcp_Compute_SSLCertificateArgs_PrivateKey" data-uid="Pulumi.Gcp.Compute.SSLCertificateArgs.PrivateKey">PrivateKey</h4>
@@ -264,13 +235,13 @@ specified prefix. Conflicts with <code>name</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/SSLCertificate.cs/#L161">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/SSLCertificate.cs/#L173">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_SSLCertificateArgs_Project_" data-uid="Pulumi.Gcp.Compute.SSLCertificateArgs.Project*"></a>
   <h4 id="Pulumi_Gcp_Compute_SSLCertificateArgs_Project" data-uid="Pulumi.Gcp.Compute.SSLCertificateArgs.Project">Project</h4>
@@ -280,7 +251,7 @@ If it is not provided, the provider project is used.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Project { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Project { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -292,7 +263,7 @@ If it is not provided, the provider project is used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -304,7 +275,7 @@ If it is not provided, the provider project is used.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/SSLCertificate.cs/#L119" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/SSLCertificate.cs/#L131" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

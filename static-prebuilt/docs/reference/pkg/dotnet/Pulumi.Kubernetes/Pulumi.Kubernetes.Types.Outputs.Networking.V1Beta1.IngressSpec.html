@@ -79,40 +79,16 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">IngressSpec</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Networking.V1Beta1.html">Pulumi.Kubernetes.Types.Outputs.Networking.V1Beta1</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Kubernetes.dll</h6>
   <h5 id="Pulumi_Kubernetes_Types_Outputs_Networking_V1Beta1_IngressSpec_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class IngressSpec</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class IngressSpec : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L28450">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L28861">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Networking_V1Beta1_IngressSpec_Backend" data-uid="Pulumi.Kubernetes.Types.Outputs.Networking.V1Beta1.IngressSpec.Backend">Backend</h4>
   <div class="markdown level1 summary"><p>A default backend capable of servicing requests that don't match any rule. At least one
@@ -140,7 +116,40 @@ loadbalancer controller or defaulting logic to specify a global default.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L28456">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L28873">View Source</a>
+  </span>
+  <h4 id="Pulumi_Kubernetes_Types_Outputs_Networking_V1Beta1_IngressSpec_IngressClassName" data-uid="Pulumi.Kubernetes.Types.Outputs.Networking.V1Beta1.IngressSpec.IngressClassName">IngressClassName</h4>
+  <div class="markdown level1 summary"><p>IngressClassName is the name of the IngressClass cluster resource. The associated
+IngressClass defines which controller will implement the resource. This replaces the
+deprecated <code>kubernetes.io/ingress.class</code> annotation. For backwards compatibility, when
+that annotation is set, it must be given precedence over this field. The controller may
+emit a warning if the field and annotation have different values. Implementations of
+this API should ignore Ingresses without a class specified. An IngressClass resource may
+be marked as default, which can be used to set a default value for this field. For more
+information, refer to the IngressClass documentation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly string IngressClassName</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L28879">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Networking_V1Beta1_IngressSpec_Rules" data-uid="Pulumi.Kubernetes.Types.Outputs.Networking.V1Beta1.IngressSpec.Rules">Rules</h4>
   <div class="markdown level1 summary"><p>A list of host rules used to configure the Ingress. If unspecified, or no rule matches,
@@ -161,13 +170,13 @@ all traffic is sent to the default backend.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Networking.V1Beta1.IngressRule.html">IngressRule</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Networking.V1Beta1.IngressRule.html">IngressRule</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L28464">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L28887">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Networking_V1Beta1_IngressSpec_Tls" data-uid="Pulumi.Kubernetes.Types.Outputs.Networking.V1Beta1.IngressSpec.Tls">Tls</h4>
   <div class="markdown level1 summary"><p>TLS configuration. Currently the Ingress only supports a single TLS port, 443. If
@@ -190,7 +199,7 @@ ingress controller fulfilling the ingress supports SNI.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Networking.V1Beta1.IngressTLS.html">IngressTLS</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Networking.V1Beta1.IngressTLS.html">IngressTLS</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -202,7 +211,7 @@ ingress controller fulfilling the ingress supports SNI.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L28442" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L28853" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

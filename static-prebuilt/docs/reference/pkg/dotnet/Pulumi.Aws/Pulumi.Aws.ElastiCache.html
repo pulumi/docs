@@ -88,31 +88,27 @@ place. You can use the <code>apply_immediately</code> flag to instruct the servi
 change immediately. Using <code>apply_immediately</code> can result in a brief downtime as the server reboots.
 See the AWS Docs on [Modifying an ElastiCache Cache Cluster][2] for more information.</p>
 </blockquote>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elasticache_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elasticache_cluster.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.ElastiCache.ClusterArgs.html">ClusterArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.ElastiCache.ClusterState.html">ClusterState</a></h4>
       <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.ElastiCache.GetCluster.html">GetCluster</a></h4>
+      <section></section>
       <h4><a class="xref" href="Pulumi.Aws.ElastiCache.GetClusterArgs.html">GetClusterArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.ElastiCache.GetClusterResult.html">GetClusterResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.ElastiCache.GetReplicationGroup.html">GetReplicationGroup</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.ElastiCache.GetReplicationGroupArgs.html">GetReplicationGroupArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.ElastiCache.GetReplicationGroupResult.html">GetReplicationGroupResult</a></h4>
       <section></section>
-      <h4><a class="xref" href="Pulumi.Aws.ElastiCache.Invokes.html">Invokes</a></h4>
-      <section></section>
       <h4><a class="xref" href="Pulumi.Aws.ElastiCache.ParameterGroup.html">ParameterGroup</a></h4>
       <section><p>Provides an ElastiCache parameter group resource.</p>
 <blockquote>
 <p><strong>NOTE:</strong> Attempting to remove the <code>reserved-memory</code> parameter when <code>family</code> is set to <code>redis2.6</code> or <code>redis2.8</code> may show a perpetual difference in this provider due to an Elasticache API limitation. Leave that parameter configured with any value to workaround the issue.</p>
-</blockquote>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elasticache_parameter_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elasticache_parameter_group.html.markdown</a>.</p>
 </blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.ElastiCache.ParameterGroupArgs.html">ParameterGroupArgs</a></h4>
@@ -132,9 +128,6 @@ actual modification has not yet taken place. You can use the
 immediately. Using <code>apply_immediately</code> can result in a brief downtime as
 servers reboots.</p>
 </blockquote>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elasticache_replication_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elasticache_replication_group.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.ElastiCache.ReplicationGroupArgs.html">ReplicationGroupArgs</a></h4>
       <section></section>
@@ -148,9 +141,6 @@ clusters.</p>
 ElastiCache cluster <strong>outside</strong> of a VPC. If you are using a VPC, see the
 ElastiCache Subnet Group resource.</p>
 </blockquote>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elasticache_security_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elasticache_security_group.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.ElastiCache.SecurityGroupArgs.html">SecurityGroupArgs</a></h4>
       <section></section>
@@ -162,9 +152,6 @@ ElastiCache Subnet Group resource.</p>
 <p><strong>NOTE:</strong> ElastiCache Subnet Groups are only for use when working with an
 ElastiCache cluster <strong>inside</strong> of a VPC. If you are on EC2 Classic, see the
 ElastiCache Security Group resource.</p>
-</blockquote>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elasticache_subnet_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elasticache_subnet_group.html.markdown</a>.</p>
 </blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.ElastiCache.SubnetGroupArgs.html">SubnetGroupArgs</a></h4>
