@@ -401,6 +401,7 @@
         },
         "nodejs": {
             "moduleToPackage": {
+                "apiextensions.k8s.io": "apiextensions",
                 "helm/v2": "helm/v2",
                 "helm/v3": "helm/v3",
                 "yaml": "yaml"
@@ -408,6 +409,7 @@
         },
         "csharp": {
             "namespaces": {
+                "apiextensions": "ApiExtensions",
                 "helm/v2": "Helm.V2",
                 "helm/v3": "Helm.V3",
                 "yaml": "Yaml"
