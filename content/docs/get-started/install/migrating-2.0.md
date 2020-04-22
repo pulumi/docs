@@ -44,6 +44,8 @@ const version: Promise<string> = gcp.container.getEngineVersions().then(v => v.l
 const version: Output<string> = pulumi.output(gcp.container.getEngineVersions()).latestMasterVersion;
 ```
 
+Optionally, you can use an `async` function [entrypoint]({{< relref "/docs/intro/languages/javascript#entrypoint" >}}) to more easily write `async/await` code throughout the rest of your program.
+
 {{% /choosable %}}
 
 {{% choosable language python %}}
