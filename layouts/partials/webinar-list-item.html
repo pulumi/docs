@@ -9,7 +9,7 @@
             {{ else }}
             <a class="text-2xl" href="/webinars/{{ .Params.url_slug }}/">
             {{ end }}
-                <img class="w-full" src="{{ .Params.preview_image }}" />
+                <img class="w-full h-full" src="{{ .Params.preview_image }}" />
             </a>
         </div>
         <div class="w-full {{ cond (eq .Params.featured true) "lg:w-7/12" "lg:w-8/12" }} p-3 ml-3">
