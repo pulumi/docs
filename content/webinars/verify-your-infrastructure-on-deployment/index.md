@@ -1,7 +1,7 @@
 ---
 # Name of the webinar.
 title: "Verify Your Infrastructure on Each Deployment with Pulumi and CircleCI"
-meta_desc: "Angel Rivera and Chris Smith will walk you through best practices for app developers, DevOps, and SREs to keep configuration mistakes from reaching production."
+meta_desc: "Angel Rivera and Chris Smith walk you through best practices for app developers, DevOps, and SREs to keep configuration mistakes from reaching production."
 
 # A featured webinar will display first in the list.
 featured: false
