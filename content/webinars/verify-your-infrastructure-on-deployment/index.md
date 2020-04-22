@@ -51,12 +51,14 @@ main:
     # Duration of the webinar.
     duration: 1 hour
     # Datetime of the webinar.
-    datetime: "WED JUN 3RD, 2020 AT 11:00AM PDT"
+    datetime: "WED, JUNE 3, 2020, 11:00 AM PDT"
     # Description of the webinar.
     description: |
-        With Pulumi you can add infrastructure tests and policies to your CircleCI pipelines using your favorite programming languages.
+        With Pulumi you can add infrastructure tests and policies to your CircleCI pipelines
+        using your favorite programming languages.
 
-        Angel Rivera and Chris Smith will walk you through best practices for application developers, DevOps, and SREs to keep configuration mistakes from reaching production.
+        Angel Rivera and Chris Smith walk you through best practices for application developers,
+        DevOps, and SREs to keep configuration mistakes from reaching production.
 
     # The webinar presenters
     presenters:
