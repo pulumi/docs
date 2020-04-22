@@ -68,7 +68,7 @@ main:
     # A bullet point list containing what the user will learn during the webinar.
     learn:
         - How to write unit tests and use resource mocking with Pulumi.
-        - Defining storage and ingress policies for security and resource tagging policies for compliance.
+        - Defining storage and ingress policies for security, and resource tagging policies for compliance.
         - Infrastructure integration testing with ephemeral environments
         - Configuring CircleCI to verify infrastructure as part of each deployment
 
