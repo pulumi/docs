@@ -22,7 +22,7 @@ meta_desc: "Explore the Project resource of the Packet package, including exampl
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Project</span><span class="p">(resource_name, opts=None, </span>backend_transfer=None<span class="p">, </span>bgp_config=None<span class="p">, </span>name=None<span class="p">, </span>organization_id=None<span class="p">, </span>payment_method_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Project</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>backend_transfer=None<span class="p">, </span>bgp_config=None<span class="p">, </span>name=None<span class="p">, </span>organization_id=None<span class="p">, </span>payment_method_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

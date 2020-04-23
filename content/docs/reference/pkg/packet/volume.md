@@ -22,7 +22,7 @@ meta_desc: "Explore the Volume resource of the Packet package, including example
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Volume</span><span class="p">(resource_name, opts=None, </span>billing_cycle=None<span class="p">, </span>description=None<span class="p">, </span>facility=None<span class="p">, </span>locked=None<span class="p">, </span>plan=None<span class="p">, </span>project_id=None<span class="p">, </span>size=None<span class="p">, </span>snapshot_policies=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Volume</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>billing_cycle=None<span class="p">, </span>description=None<span class="p">, </span>facility=None<span class="p">, </span>locked=None<span class="p">, </span>plan=None<span class="p">, </span>project_id=None<span class="p">, </span>size=None<span class="p">, </span>snapshot_policies=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

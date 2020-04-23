@@ -32,7 +32,7 @@ modify, and delete devices.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Device</span><span class="p">(resource_name, opts=None, </span>always_pxe=None<span class="p">, </span>billing_cycle=None<span class="p">, </span>description=None<span class="p">, </span>facilities=None<span class="p">, </span>force_detach_volumes=None<span class="p">, </span>hardware_reservation_id=None<span class="p">, </span>hostname=None<span class="p">, </span>ip_addresses=None<span class="p">, </span>ipxe_script_url=None<span class="p">, </span>network_type=None<span class="p">, </span>operating_system=None<span class="p">, </span>plan=None<span class="p">, </span>project_id=None<span class="p">, </span>project_ssh_key_ids=None<span class="p">, </span>public_ipv4_subnet_size=None<span class="p">, </span>storage=None<span class="p">, </span>tags=None<span class="p">, </span>user_data=None<span class="p">, </span>wait_for_reservation_deprovision=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Device</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>always_pxe=None<span class="p">, </span>billing_cycle=None<span class="p">, </span>description=None<span class="p">, </span>facilities=None<span class="p">, </span>force_detach_volumes=None<span class="p">, </span>hardware_reservation_id=None<span class="p">, </span>hostname=None<span class="p">, </span>ip_addresses=None<span class="p">, </span>ipxe_script_url=None<span class="p">, </span>network_type=None<span class="p">, </span>operating_system=None<span class="p">, </span>plan=None<span class="p">, </span>project_id=None<span class="p">, </span>project_ssh_key_ids=None<span class="p">, </span>public_ipv4_subnet_size=None<span class="p">, </span>storage=None<span class="p">, </span>tags=None<span class="p">, </span>user_data=None<span class="p">, </span>wait_for_reservation_deprovision=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -351,6 +351,7 @@ information is in the
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}JSON for custom partitioning. Only usable on reserved hardware. More information in in the [Custom Partitioning and RAID](https://www.packet.com/developers/docs/servers/key-features/cpr/) doc.
+* Please note that the disks.partitions.size attribute must be a string, not an integer. It can be a number string, or size notation string, e.g. "4G" or "8M" (for gigabytes and megabytes).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -534,6 +535,7 @@ information is in the
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}JSON for custom partitioning. Only usable on reserved hardware. More information in in the [Custom Partitioning and RAID](https://www.packet.com/developers/docs/servers/key-features/cpr/) doc.
+* Please note that the disks.partitions.size attribute must be a string, not an integer. It can be a number string, or size notation string, e.g. "4G" or "8M" (for gigabytes and megabytes).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -717,6 +719,7 @@ information is in the
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}JSON for custom partitioning. Only usable on reserved hardware. More information in in the [Custom Partitioning and RAID](https://www.packet.com/developers/docs/servers/key-features/cpr/) doc.
+* Please note that the disks.partitions.size attribute must be a string, not an integer. It can be a number string, or size notation string, e.g. "4G" or "8M" (for gigabytes and megabytes).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -900,6 +903,7 @@ information is in the
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}JSON for custom partitioning. Only usable on reserved hardware. More information in in the [Custom Partitioning and RAID](https://www.packet.com/developers/docs/servers/key-features/cpr/) doc.
+* Please note that the disks.partitions.size attribute must be a string, not an integer. It can be a number string, or size notation string, e.g. "4G" or "8M" (for gigabytes and megabytes).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1836,6 +1840,7 @@ information is in the
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}JSON for custom partitioning. Only usable on reserved hardware. More information in in the [Custom Partitioning and RAID](https://www.packet.com/developers/docs/servers/key-features/cpr/) doc.
+* Please note that the disks.partitions.size attribute must be a string, not an integer. It can be a number string, or size notation string, e.g. "4G" or "8M" (for gigabytes and megabytes).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2132,6 +2137,7 @@ information is in the
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}JSON for custom partitioning. Only usable on reserved hardware. More information in in the [Custom Partitioning and RAID](https://www.packet.com/developers/docs/servers/key-features/cpr/) doc.
+* Please note that the disks.partitions.size attribute must be a string, not an integer. It can be a number string, or size notation string, e.g. "4G" or "8M" (for gigabytes and megabytes).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2428,6 +2434,7 @@ information is in the
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}JSON for custom partitioning. Only usable on reserved hardware. More information in in the [Custom Partitioning and RAID](https://www.packet.com/developers/docs/servers/key-features/cpr/) doc.
+* Please note that the disks.partitions.size attribute must be a string, not an integer. It can be a number string, or size notation string, e.g. "4G" or "8M" (for gigabytes and megabytes).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2724,6 +2731,7 @@ information is in the
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}JSON for custom partitioning. Only usable on reserved hardware. More information in in the [Custom Partitioning and RAID](https://www.packet.com/developers/docs/servers/key-features/cpr/) doc.
+* Please note that the disks.partitions.size attribute must be a string, not an integer. It can be a number string, or size notation string, e.g. "4G" or "8M" (for gigabytes and megabytes).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
