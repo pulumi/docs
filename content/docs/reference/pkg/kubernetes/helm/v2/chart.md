@@ -23,7 +23,7 @@ ConfigFile creates a set of Kubernetes resources from Kubernetes YAML file. If `
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Chart</span><span class="p">(resource_name, opts=None, </span>chart=None<span class="p">, </span>fetch_opts=None<span class="p">, </span>namespace=None<span class="p">, </span>path=None<span class="p">, </span>repo=None<span class="p">, </span>resource_prefix=None<span class="p">, </span>transformations=None<span class="p">, </span>values=None<span class="p">, </span>version=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Chart</span><span class="p">(resource_name, </span>config<span class="p">, </span>opts=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -668,6 +668,535 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+
+
+
+
+
+
+
+
+## Supporting Types
+
+
+<h4 id="fetchopts">Fetch<wbr>Opts</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#FetchOpts">input</a>   API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/helm/v2?tab=doc#FetchOptsArgs">input</a>   API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Ca<wbr>File</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Verify certificates of HTTPS-enabled servers using this CA bundle.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Cert<wbr>File</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Identify HTTPS client using this SSL certificate file.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Destination</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Location to write the chart. If this and tardir are specified, tardir is appended to this (default ".").{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Devel</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Use development versions, too. Equivalent to version '>0.0.0-0'. If –version is set, this is ignored.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Home</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Location of your Helm config. Overrides $HELM_HOME (default "/Users/abc/.helm").{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Key<wbr>File</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Identify HTTPS client using this SSL key file.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Keyring</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Keyring containing public keys (default “/Users/abc/.gnupg/pubring.gpg”).{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Password</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Chart repository password.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Prov</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Fetch the provenance file, but don’t perform verification.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Repo</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Chart repository url where to locate the requested chart.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Untar</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If set to false, will leave the chart as a tarball after downloading.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Untardir</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}If untar is specified, this flag specifies the name of the directory into which the chart is expanded (default ".").{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Username</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Chart repository username.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Verify</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Verify the package against its signature.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Version</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specific version of a chart. Without this, the latest version is fetched.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Ca<wbr>File</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Verify certificates of HTTPS-enabled servers using this CA bundle.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Cert<wbr>File</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Identify HTTPS client using this SSL certificate file.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Destination</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Location to write the chart. If this and tardir are specified, tardir is appended to this (default ".").{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Devel</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Use development versions, too. Equivalent to version '>0.0.0-0'. If –version is set, this is ignored.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Home</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Location of your Helm config. Overrides $HELM_HOME (default "/Users/abc/.helm").{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Key<wbr>File</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Identify HTTPS client using this SSL key file.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Keyring</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Keyring containing public keys (default “/Users/abc/.gnupg/pubring.gpg”).{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Password</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Chart repository password.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Prov</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Fetch the provenance file, but don’t perform verification.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Repo</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Chart repository url where to locate the requested chart.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Untar</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If set to false, will leave the chart as a tarball after downloading.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Untardir</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}If untar is specified, this flag specifies the name of the directory into which the chart is expanded (default ".").{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Username</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Chart repository username.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Verify</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Verify the package against its signature.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Version</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specific version of a chart. Without this, the latest version is fetched.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>ca<wbr>File</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Verify certificates of HTTPS-enabled servers using this CA bundle.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>cert<wbr>File</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Identify HTTPS client using this SSL certificate file.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>destination</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Location to write the chart. If this and tardir are specified, tardir is appended to this (default ".").{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>devel</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Use development versions, too. Equivalent to version '>0.0.0-0'. If –version is set, this is ignored.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>home</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Location of your Helm config. Overrides $HELM_HOME (default "/Users/abc/.helm").{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>key<wbr>File</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Identify HTTPS client using this SSL key file.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>keyring</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Keyring containing public keys (default “/Users/abc/.gnupg/pubring.gpg”).{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>password</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Chart repository password.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>prov</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Fetch the provenance file, but don’t perform verification.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>repo</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Chart repository url where to locate the requested chart.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>untar</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}If set to false, will leave the chart as a tarball after downloading.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>untardir</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}If untar is specified, this flag specifies the name of the directory into which the chart is expanded (default ".").{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>username</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Chart repository username.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>verify</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Verify the package against its signature.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>version</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specific version of a chart. Without this, the latest version is fetched.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>ca_<wbr>file</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Verify certificates of HTTPS-enabled servers using this CA bundle.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>cert_<wbr>file</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Identify HTTPS client using this SSL certificate file.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>destination</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Location to write the chart. If this and tardir are specified, tardir is appended to this (default ".").{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>devel</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Use development versions, too. Equivalent to version '>0.0.0-0'. If –version is set, this is ignored.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>home</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Location of your Helm config. Overrides $HELM_HOME (default "/Users/abc/.helm").{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>key_<wbr>file</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Identify HTTPS client using this SSL key file.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>keyring</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Keyring containing public keys (default “/Users/abc/.gnupg/pubring.gpg”).{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>password</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Chart repository password.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>prov</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Fetch the provenance file, but don’t perform verification.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>repo</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Chart repository url where to locate the requested chart.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>untar</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If set to false, will leave the chart as a tarball after downloading.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>untardir</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}If untar is specified, this flag specifies the name of the directory into which the chart is expanded (default ".").{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>username</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Chart repository username.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>verify</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Verify the package against its signature.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>version</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Specific version of a chart. Without this, the latest version is fetched.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
 

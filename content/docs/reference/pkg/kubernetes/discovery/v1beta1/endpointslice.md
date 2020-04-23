@@ -22,7 +22,7 @@ EndpointSlice represents a subset of the endpoints that implement a service. For
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">EndpointSlice</span><span class="p">(resource_name, opts=None, </span>address_type=None<span class="p">, </span>endpoints=None<span class="p">, </span>metadata=None<span class="p">, </span>ports=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">EndpointSlice</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>address_type=None<span class="p">, </span>endpoints=None<span class="p">, </span>metadata=None<span class="p">, </span>ports=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
