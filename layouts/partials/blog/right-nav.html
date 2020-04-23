@@ -1,0 +1,17 @@
+{{ with .File }}
+    <p class="text-gray-500 text-xs">Share this post</p>
+    <ul class="p-0 list-none">
+        <li>
+            <a data-track="share-twitter"
+                    href="https://twitter.com/intent/tweet?text={{ $.Page.Title }}&tw_p=tweetbutton&url={{ $.Page.Permalink }}"
+                    target="_blank">
+                <i class="fab fa-twitter text-gray-500 hover:text-blue-700 text-xl"></i>
+            </a>
+            <a data-track="share-linkedin"
+                    href="https://www.linkedin.com/sharing/share-offsite/?url={{ $.Page.Permalink }}"
+                    target="_blank">
+                <i class="fab fa-linkedin text-gray-500 hover:text-blue-700 text-xl"></i>
+            </a>
+        </li>
+    </ul>
+{{ end }}
