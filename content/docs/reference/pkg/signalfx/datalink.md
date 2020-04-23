@@ -26,7 +26,7 @@ Manage SignalFx [Data Links](https://docs.signalfx.com/en/latest/managing/data-l
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">DataLink</span><span class="p">(resource_name, opts=None, </span>context_dashboard_id=None<span class="p">, </span>property_name=None<span class="p">, </span>property_value=None<span class="p">, </span>target_external_urls=None<span class="p">, </span>target_signalfx_dashboards=None<span class="p">, </span>target_splunks=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">DataLink</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>context_dashboard_id=None<span class="p">, </span>property_name=None<span class="p">, </span>property_value=None<span class="p">, </span>target_external_urls=None<span class="p">, </span>target_signalfx_dashboards=None<span class="p">, </span>target_splunks=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
