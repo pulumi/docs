@@ -10,7 +10,7 @@ aliases:
 featured: false
 
 # If the video is pre-recorded or live.
-pre_recorded: false
+pre_recorded: true
 
 # If the video is part of the PulumiTV series. Setting this value to true will list the video in the "PulumiTV" section.
 pulumi_tv: false
@@ -23,7 +23,7 @@ unlisted: false
 
 # Gated webinars will have a registration form and the user will need
 # to fill out the form before viewing.
-gated: true
+gated: false
 
 # The layout of the landing page.
 type: webinars
@@ -47,10 +47,12 @@ hero:
 main:
     # Webinar title.
     title: "Building Self-service Clouds with Pulumi"
+    # URL for embedding a URL for ungated webinars.
+    youtube_url: "https://www.youtube.com/embed/MGA_Bba2GqQ"
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
     sortable_date: 2020-04-22T11:00:00.00-07:00
     # Duration of the webinar.
-    duration: "1 hour"
+    duration: "22 minutes"
     # Datetime of the webinar.
     datetime: "WED APR 22, 2020 AT 11:00AM PDT"
     # Description of the webinar.
@@ -71,7 +73,7 @@ main:
 form:
     # GoToWebinar webinar key. This key allows us to register people for webinars via the
     # HubSpot form.
-    gotowebinar_key: "4390193105608480523"
+    gotowebinar_key: ""
 
     # HubSpot form id.
     hubspot_form_id: "34901c4f-e3e8-4ad5-96d2-f102ab26ac07"
