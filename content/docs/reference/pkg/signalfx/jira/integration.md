@@ -52,7 +52,7 @@ const jiraMyteamXX = new signalfx.jira.Integration("jira_myteamXX", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Integration</span><span class="p">(resource_name, opts=None, </span>api_token=None<span class="p">, </span>assignee_display_name=None<span class="p">, </span>assignee_name=None<span class="p">, </span>auth_method=None<span class="p">, </span>base_url=None<span class="p">, </span>enabled=None<span class="p">, </span>issue_type=None<span class="p">, </span>name=None<span class="p">, </span>password=None<span class="p">, </span>project_key=None<span class="p">, </span>user_email=None<span class="p">, </span>username=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Integration</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>api_token=None<span class="p">, </span>assignee_display_name=None<span class="p">, </span>assignee_name=None<span class="p">, </span>auth_method=None<span class="p">, </span>base_url=None<span class="p">, </span>enabled=None<span class="p">, </span>issue_type=None<span class="p">, </span>name=None<span class="p">, </span>password=None<span class="p">, </span>project_key=None<span class="p">, </span>user_email=None<span class="p">, </span>username=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

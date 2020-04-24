@@ -28,7 +28,7 @@ In the SignalFx web UI, a [dashboard group](https://developers.signalfx.com/dash
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">DashboardGroup</span><span class="p">(resource_name, opts=None, </span>authorized_writer_teams=None<span class="p">, </span>authorized_writer_users=None<span class="p">, </span>dashboards=None<span class="p">, </span>description=None<span class="p">, </span>import_qualifiers=None<span class="p">, </span>name=None<span class="p">, </span>teams=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">DashboardGroup</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>authorized_writer_teams=None<span class="p">, </span>authorized_writer_users=None<span class="p">, </span>dashboards=None<span class="p">, </span>description=None<span class="p">, </span>import_qualifiers=None<span class="p">, </span>name=None<span class="p">, </span>teams=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
