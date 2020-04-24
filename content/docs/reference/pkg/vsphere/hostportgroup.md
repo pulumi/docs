@@ -28,13 +28,13 @@ For an overview on vSphere networking concepts, see [this page][ref-vsphere-net-
 import * as pulumi from "@pulumi/pulumi";
 import * as vsphere from "@pulumi/vsphere";
 
-const datacenter = pulumi.output(vsphere.getDatacenter({
+const datacenter = vsphere.getDatacenter({
     name: "dc1",
-}, { async: true }));
-const esxiHost = datacenter.apply(datacenter => vsphere.getHost({
+});
+const esxiHost = vsphere.getHost({
     datacenterId: datacenter.id,
     name: "esxi1",
-}, { async: true }));
+});
 const switchHostVirtualSwitch = new vsphere.HostVirtualSwitch("switch", {
     activeNics: ["vmnic0"],
     hostSystemId: esxiHost.id,
@@ -62,13 +62,13 @@ the implicit default of `false` set on the virtual switch.
 import * as pulumi from "@pulumi/pulumi";
 import * as vsphere from "@pulumi/vsphere";
 
-const datacenter = pulumi.output(vsphere.getDatacenter({
+const datacenter = vsphere.getDatacenter({
     name: "dc1",
-}, { async: true }));
-const esxiHost = datacenter.apply(datacenter => vsphere.getHost({
+});
+const esxiHost = vsphere.getHost({
     datacenterId: datacenter.id,
     name: "esxi1",
-}, { async: true }));
+});
 const switchHostVirtualSwitch = new vsphere.HostVirtualSwitch("switch", {
     activeNics: ["vmnic0"],
     hostSystemId: esxiHost.id,
@@ -97,7 +97,7 @@ const pg = new vsphere.HostPortGroup("pg", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">HostPortGroup</span><span class="p">(resource_name, opts=None, </span>active_nics=None<span class="p">, </span>allow_forged_transmits=None<span class="p">, </span>allow_mac_changes=None<span class="p">, </span>allow_promiscuous=None<span class="p">, </span>check_beacon=None<span class="p">, </span>failback=None<span class="p">, </span>host_system_id=None<span class="p">, </span>name=None<span class="p">, </span>notify_switches=None<span class="p">, </span>shaping_average_bandwidth=None<span class="p">, </span>shaping_burst_size=None<span class="p">, </span>shaping_enabled=None<span class="p">, </span>shaping_peak_bandwidth=None<span class="p">, </span>standby_nics=None<span class="p">, </span>teaming_policy=None<span class="p">, </span>virtual_switch_name=None<span class="p">, </span>vlan_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">HostPortGroup</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>active_nics=None<span class="p">, </span>allow_forged_transmits=None<span class="p">, </span>allow_mac_changes=None<span class="p">, </span>allow_promiscuous=None<span class="p">, </span>check_beacon=None<span class="p">, </span>failback=None<span class="p">, </span>host_system_id=None<span class="p">, </span>name=None<span class="p">, </span>notify_switches=None<span class="p">, </span>shaping_average_bandwidth=None<span class="p">, </span>shaping_burst_size=None<span class="p">, </span>shaping_enabled=None<span class="p">, </span>shaping_peak_bandwidth=None<span class="p">, </span>standby_nics=None<span class="p">, </span>teaming_policy=None<span class="p">, </span>virtual_switch_name=None<span class="p">, </span>vlan_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

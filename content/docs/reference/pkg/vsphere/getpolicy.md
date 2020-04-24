@@ -25,9 +25,9 @@ requires vCenter 6.0 or higher.
 import * as pulumi from "@pulumi/pulumi";
 import * as vsphere from "@pulumi/vsphere";
 
-const policy = pulumi.output(vsphere.getPolicy({
+const policy = vsphere.getPolicy({
     name: "policy1",
-}, { async: true }));
+});
 ```
 
 {{% /example %}}

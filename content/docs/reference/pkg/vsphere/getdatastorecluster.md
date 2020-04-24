@@ -30,13 +30,13 @@ virtual machines in using the
 import * as pulumi from "@pulumi/pulumi";
 import * as vsphere from "@pulumi/vsphere";
 
-const datacenter = pulumi.output(vsphere.getDatacenter({
+const datacenter = vsphere.getDatacenter({
     name: "dc1",
-}, { async: true }));
+});
 const datastoreCluster = vsphere_datacenter_dc.id.apply(id => vsphere.getDatastoreCluster({
     datacenterId: id,
     name: "datastore-cluster1",
-}, { async: true }));
+}));
 ```
 
 {{% /example %}}

@@ -26,7 +26,7 @@ construction to achieve fine-grained programmatic control over provider settings
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Provider</span><span class="p">(resource_name, opts=None, </span>allow_unverified_ssl=None<span class="p">, </span>client_debug=None<span class="p">, </span>client_debug_path=None<span class="p">, </span>client_debug_path_run=None<span class="p">, </span>password=None<span class="p">, </span>persist_session=None<span class="p">, </span>rest_session_path=None<span class="p">, </span>user=None<span class="p">, </span>vcenter_server=None<span class="p">, </span>vim_keep_alive=None<span class="p">, </span>vim_session_path=None<span class="p">, </span>vsphere_server=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Provider</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>allow_unverified_ssl=None<span class="p">, </span>client_debug=None<span class="p">, </span>client_debug_path=None<span class="p">, </span>client_debug_path_run=None<span class="p">, </span>password=None<span class="p">, </span>persist_session=None<span class="p">, </span>rest_session_path=None<span class="p">, </span>user=None<span class="p">, </span>vcenter_server=None<span class="p">, </span>vim_keep_alive=None<span class="p">, </span>vim_session_path=None<span class="p">, </span>vsphere_server=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

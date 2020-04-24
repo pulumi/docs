@@ -22,9 +22,9 @@ datacenter.
 import * as pulumi from "@pulumi/pulumi";
 import * as vsphere from "@pulumi/vsphere";
 
-const folder = pulumi.output(vsphere.getFolder({
+const folder = vsphere.getFolder({
     path: "/dc1/datastore/folder1",
-}, { async: true }));
+});
 ```
 
 {{% /example %}}

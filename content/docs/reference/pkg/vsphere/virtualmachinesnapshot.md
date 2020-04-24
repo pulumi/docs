@@ -66,7 +66,7 @@ const demo1 = new vsphere.VirtualMachineSnapshot("demo1", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">VirtualMachineSnapshot</span><span class="p">(resource_name, opts=None, </span>consolidate=None<span class="p">, </span>description=None<span class="p">, </span>memory=None<span class="p">, </span>quiesce=None<span class="p">, </span>remove_children=None<span class="p">, </span>snapshot_name=None<span class="p">, </span>virtual_machine_uuid=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">VirtualMachineSnapshot</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>consolidate=None<span class="p">, </span>description=None<span class="p">, </span>memory=None<span class="p">, </span>quiesce=None<span class="p">, </span>remove_children=None<span class="p">, </span>snapshot_name=None<span class="p">, </span>virtual_machine_uuid=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

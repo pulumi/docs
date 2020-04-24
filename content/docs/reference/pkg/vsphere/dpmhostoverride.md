@@ -53,15 +53,15 @@ const hosts = config.get("hosts") || [
     "esxi3",
 ];
 
-const dc = pulumi.output(vsphere.getDatacenter({
+const dc = vsphere.getDatacenter({
     name: datacenter,
-}, { async: true }));
-const hostsHost: pulumi.Output<vsphere.GetHostResult>[] = [];
+});
+const hostsHost: vsphere.GetHostResult[] = [];
 for (let i = 0; i < hosts.length; i++) {
-    hostsHost.push(dc.apply(dc => vsphere.getHost({
+    hostsHost.push(vsphere.getHost({
         datacenterId: dc.id,
         name: hosts[i],
-    }, { async: true })));
+    }));
 }
 const computeCluster = new vsphere.ComputeCluster("compute_cluster", {
     datacenterId: dc.id,
@@ -91,7 +91,7 @@ const dpmHostOverride = new vsphere.DpmHostOverride("dpm_host_override", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">DpmHostOverride</span><span class="p">(resource_name, opts=None, </span>compute_cluster_id=None<span class="p">, </span>dpm_automation_level=None<span class="p">, </span>dpm_enabled=None<span class="p">, </span>host_system_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">DpmHostOverride</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>compute_cluster_id=None<span class="p">, </span>dpm_automation_level=None<span class="p">, </span>dpm_enabled=None<span class="p">, </span>host_system_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

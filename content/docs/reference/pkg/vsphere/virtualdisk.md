@@ -49,7 +49,7 @@ const myDisk = new vsphere.VirtualDisk("myDisk", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">VirtualDisk</span><span class="p">(resource_name, opts=None, </span>adapter_type=None<span class="p">, </span>create_directories=None<span class="p">, </span>datacenter=None<span class="p">, </span>datastore=None<span class="p">, </span>size=None<span class="p">, </span>type=None<span class="p">, </span>vmdk_path=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">VirtualDisk</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>adapter_type=None<span class="p">, </span>create_directories=None<span class="p">, </span>datacenter=None<span class="p">, </span>datastore=None<span class="p">, </span>size=None<span class="p">, </span>type=None<span class="p">, </span>vmdk_path=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

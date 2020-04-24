@@ -34,13 +34,13 @@ const config = new pulumi.Config();
 const datacenter = config.get("datacenter") || "dc1";
 const cluster = config.get("cluster") || "cluster1";
 
-const dc = pulumi.output(vsphere.getDatacenter({
+const dc = vsphere.getDatacenter({
     name: datacenter,
-}, { async: true }));
-const computeCluster = dc.apply(dc => vsphere.getComputeCluster({
+});
+const computeCluster = vsphere.getComputeCluster({
     datacenterId: dc.id,
     name: cluster,
-}, { async: true }));
+});
 const vappContainer = new vsphere.VappContainer("vapp_container", {
     parentResourcePoolId: computeCluster.id,
 });
@@ -62,21 +62,21 @@ const config = new pulumi.Config();
 const datacenter = config.get("datacenter") || "dc1";
 const cluster = config.get("cluster") || "cluster1";
 
-const dc = pulumi.output(vsphere.getDatacenter({
+const dc = vsphere.getDatacenter({
     name: datacenter,
-}, { async: true }));
-const computeCluster = dc.apply(dc => vsphere.getComputeCluster({
+});
+const computeCluster = vsphere.getComputeCluster({
     datacenterId: dc.id,
     name: cluster,
-}, { async: true }));
-const network = dc.apply(dc => vsphere.getNetwork({
+});
+const network = vsphere.getNetwork({
     datacenterId: dc.id,
     name: "network1",
-}, { async: true }));
-const datastore = dc.apply(dc => vsphere.getDatastore({
+});
+const datastore = vsphere.getDatastore({
     datacenterId: dc.id,
     name: "datastore1",
-}, { async: true }));
+});
 const vappContainer = new vsphere.VappContainer("vapp_container", {
     parentResourcePoolId: computeCluster.id,
 });
@@ -110,7 +110,7 @@ const vm = new vsphere.VirtualMachine("vm", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">VappContainer</span><span class="p">(resource_name, opts=None, </span>cpu_expandable=None<span class="p">, </span>cpu_limit=None<span class="p">, </span>cpu_reservation=None<span class="p">, </span>cpu_share_level=None<span class="p">, </span>cpu_shares=None<span class="p">, </span>custom_attributes=None<span class="p">, </span>memory_expandable=None<span class="p">, </span>memory_limit=None<span class="p">, </span>memory_reservation=None<span class="p">, </span>memory_share_level=None<span class="p">, </span>memory_shares=None<span class="p">, </span>name=None<span class="p">, </span>parent_folder_id=None<span class="p">, </span>parent_resource_pool_id=None<span class="p">, </span>tags=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">VappContainer</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>cpu_expandable=None<span class="p">, </span>cpu_limit=None<span class="p">, </span>cpu_reservation=None<span class="p">, </span>cpu_share_level=None<span class="p">, </span>cpu_shares=None<span class="p">, </span>custom_attributes=None<span class="p">, </span>memory_expandable=None<span class="p">, </span>memory_limit=None<span class="p">, </span>memory_reservation=None<span class="p">, </span>memory_share_level=None<span class="p">, </span>memory_shares=None<span class="p">, </span>name=None<span class="p">, </span>parent_folder_id=None<span class="p">, </span>parent_resource_pool_id=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

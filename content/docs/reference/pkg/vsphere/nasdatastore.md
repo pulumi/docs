@@ -22,7 +22,7 @@ meta_desc: "Explore the NasDatastore resource of the vSphere package, including 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">NasDatastore</span><span class="p">(resource_name, opts=None, </span>access_mode=None<span class="p">, </span>custom_attributes=None<span class="p">, </span>datastore_cluster_id=None<span class="p">, </span>folder=None<span class="p">, </span>host_system_ids=None<span class="p">, </span>name=None<span class="p">, </span>remote_hosts=None<span class="p">, </span>remote_path=None<span class="p">, </span>security_type=None<span class="p">, </span>tags=None<span class="p">, </span>type=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">NasDatastore</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>access_mode=None<span class="p">, </span>custom_attributes=None<span class="p">, </span>datastore_cluster_id=None<span class="p">, </span>folder=None<span class="p">, </span>host_system_ids=None<span class="p">, </span>name=None<span class="p">, </span>remote_hosts=None<span class="p">, </span>remote_path=None<span class="p">, </span>security_type=None<span class="p">, </span>tags=None<span class="p">, </span>type=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

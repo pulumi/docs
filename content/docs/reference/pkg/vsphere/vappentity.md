@@ -22,7 +22,7 @@ meta_desc: "Explore the VappEntity resource of the vSphere package, including ex
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">VappEntity</span><span class="p">(resource_name, opts=None, </span>container_id=None<span class="p">, </span>custom_attributes=None<span class="p">, </span>start_action=None<span class="p">, </span>start_delay=None<span class="p">, </span>start_order=None<span class="p">, </span>stop_action=None<span class="p">, </span>stop_delay=None<span class="p">, </span>tags=None<span class="p">, </span>target_id=None<span class="p">, </span>wait_for_guest=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">VappEntity</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>container_id=None<span class="p">, </span>custom_attributes=None<span class="p">, </span>start_action=None<span class="p">, </span>start_delay=None<span class="p">, </span>start_order=None<span class="p">, </span>stop_action=None<span class="p">, </span>stop_delay=None<span class="p">, </span>tags=None<span class="p">, </span>target_id=None<span class="p">, </span>wait_for_guest=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

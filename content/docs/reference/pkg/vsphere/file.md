@@ -22,7 +22,7 @@ meta_desc: "Explore the File resource of the vSphere package, including examples
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">File</span><span class="p">(resource_name, opts=None, </span>create_directories=None<span class="p">, </span>datacenter=None<span class="p">, </span>datastore=None<span class="p">, </span>destination_file=None<span class="p">, </span>source_datacenter=None<span class="p">, </span>source_datastore=None<span class="p">, </span>source_file=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">File</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>create_directories=None<span class="p">, </span>datacenter=None<span class="p">, </span>datastore=None<span class="p">, </span>destination_file=None<span class="p">, </span>source_datacenter=None<span class="p">, </span>source_datastore=None<span class="p">, </span>source_file=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

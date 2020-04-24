@@ -23,9 +23,9 @@ connections.
 import * as pulumi from "@pulumi/pulumi";
 import * as vsphere from "@pulumi/vsphere";
 
-const library = pulumi.output(vsphere.getContentLibrary({
+const library = vsphere.getContentLibrary({
     name: "Content Library Test",
-}, { async: true }));
+});
 ```
 
 {{% /example %}}

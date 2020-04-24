@@ -37,7 +37,7 @@ The above would import the host with ID `host-123`.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Host</span><span class="p">(resource_name, opts=None, </span>cluster=None<span class="p">, </span>connected=None<span class="p">, </span>datacenter=None<span class="p">, </span>force=None<span class="p">, </span>hostname=None<span class="p">, </span>license=None<span class="p">, </span>lockdown=None<span class="p">, </span>maintenance=None<span class="p">, </span>password=None<span class="p">, </span>thumbprint=None<span class="p">, </span>username=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Host</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>cluster=None<span class="p">, </span>connected=None<span class="p">, </span>datacenter=None<span class="p">, </span>force=None<span class="p">, </span>hostname=None<span class="p">, </span>license=None<span class="p">, </span>lockdown=None<span class="p">, </span>maintenance=None<span class="p">, </span>password=None<span class="p">, </span>thumbprint=None<span class="p">, </span>username=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
