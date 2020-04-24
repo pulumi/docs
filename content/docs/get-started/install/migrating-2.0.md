@@ -31,7 +31,7 @@ npm install @pulumi/pulumi@^2.0.0
 
 ### Remove synchronous invokes
 
-Due to [inconsistent support between versions of NodeJS](https://github.com/pulumi/pulumi/issues/4462#issuecomment-617367272), Pulumi 2.0 no longer supports synchronous invokes. As a result, the return value of all `getSomething` operations are now `Promise<Something>` values, instead of `Something` values, and should be processed using `.then`, `async/await` or by passing the results to `pulumi.output()`. Similarly, the the `StackReference` operations `getOutputSync` and `requireOutputSync` are no longer supported and you should move to using the `Output`-based versions of `getOutput` and `requireOutput`.
+Due to [inconsistent support between versions of NodeJS](https://github.com/pulumi/pulumi/issues/4462#issuecomment-617367272), Pulumi 2.0 no longer supports synchronous invokes. As a result, the return value of all `getSomething` operations are now `Promise<Something>` values, instead of `Something` values, and should be processed using `.then`, `async/await` or by passing the results to `pulumi.output()`. Similarly, the `StackReference` operations `getOutputSync` and `requireOutputSync` are no longer supported and you should move to using the `Output`-based versions of `getOutput` and `requireOutput`.
 
 ```javascript
 //Before:
