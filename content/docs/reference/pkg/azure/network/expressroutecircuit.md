@@ -26,7 +26,7 @@ Manages an ExpressRoute circuit.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ExpressRouteCircuit</span><span class="p">(resource_name, opts=None, </span>allow_classic_operations=None<span class="p">, </span>bandwidth_in_mbps=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>peering_location=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>service_provider_name=None<span class="p">, </span>sku=None<span class="p">, </span>tags=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ExpressRouteCircuit</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>allow_classic_operations=None<span class="p">, </span>bandwidth_in_mbps=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>peering_location=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>service_provider_name=None<span class="p">, </span>sku=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

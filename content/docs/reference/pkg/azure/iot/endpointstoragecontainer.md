@@ -28,7 +28,7 @@ Manages an IotHub Storage Container Endpoint
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">EndpointStorageContainer</span><span class="p">(resource_name, opts=None, </span>batch_frequency_in_seconds=None<span class="p">, </span>connection_string=None<span class="p">, </span>container_name=None<span class="p">, </span>encoding=None<span class="p">, </span>file_name_format=None<span class="p">, </span>iothub_name=None<span class="p">, </span>max_chunk_size_in_bytes=None<span class="p">, </span>name=None<span class="p">, </span>resource_group_name=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">EndpointStorageContainer</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>batch_frequency_in_seconds=None<span class="p">, </span>connection_string=None<span class="p">, </span>container_name=None<span class="p">, </span>encoding=None<span class="p">, </span>file_name_format=None<span class="p">, </span>iothub_name=None<span class="p">, </span>max_chunk_size_in_bytes=None<span class="p">, </span>name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

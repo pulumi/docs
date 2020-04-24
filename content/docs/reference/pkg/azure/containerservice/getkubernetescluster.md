@@ -20,10 +20,10 @@ Use this data source to access information about an existing Managed Kubernetes 
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const example = pulumi.output(azure.containerservice.getKubernetesCluster({
+const example = azure.containerservice.getKubernetesCluster({
     name: "myakscluster",
     resourceGroupName: "my-example-resource-group",
-}, { async: true }));
+});
 ```
 
 {{% /example %}}
@@ -42,7 +42,7 @@ const example = pulumi.output(azure.containerservice.getKubernetesCluster({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_kubernetes_cluster(</span>name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_kubernetes_cluster(</span>name=None<span class="p">, </span>private_cluster_enabled=None<span class="p">, </span>private_link_enabled=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -84,6 +84,23 @@ The following arguments are supported:
     <dd>{{% md %}}The name of the Resource Group in which the managed Kubernetes Cluster exists.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Private<wbr>Cluster<wbr>Enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If the cluster has the Kubernetes API only exposed on internal IP addresses.                           
+{{% /md %}}</dd>
+
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span>Private<wbr>Link<wbr>Enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of `private_cluster_enabled`{{% /md %}}</p></dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -108,6 +125,23 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}The name of the Resource Group in which the managed Kubernetes Cluster exists.
 {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Private<wbr>Cluster<wbr>Enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If the cluster has the Kubernetes API only exposed on internal IP addresses.                           
+{{% /md %}}</dd>
+
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span>Private<wbr>Link<wbr>Enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of `private_cluster_enabled`{{% /md %}}</p></dd>
 
 </dl>
 {{% /choosable %}}
@@ -134,6 +168,23 @@ The following arguments are supported:
     <dd>{{% md %}}The name of the Resource Group in which the managed Kubernetes Cluster exists.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>private<wbr>Cluster<wbr>Enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}If the cluster has the Kubernetes API only exposed on internal IP addresses.                           
+{{% /md %}}</dd>
+
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span>private<wbr>Link<wbr>Enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of `private_cluster_enabled`{{% /md %}}</p></dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -158,6 +209,23 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}The name of the Resource Group in which the managed Kubernetes Cluster exists.
 {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>private_<wbr>cluster_<wbr>enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If the cluster has the Kubernetes API only exposed on internal IP addresses.                           
+{{% /md %}}</dd>
+
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span>private_<wbr>link_<wbr>enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of `private_cluster_enabled`{{% /md %}}</p></dd>
 
 </dl>
 {{% /choosable %}}
@@ -325,6 +393,15 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>Private<wbr>Cluster<wbr>Enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If the cluster has the Kubernetes API only exposed on internal IP addresses.                           
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Private<wbr>Fqdn</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
@@ -332,14 +409,13 @@ The following output properties are available:
     <dd>{{% md %}}The FQDN of this Kubernetes Cluster when private link has been enabled. This name is only resolvable inside the Virtual Network where the Azure Kubernetes Service is located                   
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
         <span>Private<wbr>Link<wbr>Enabled</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Does this Kubernetes Cluster have the Kubernetes API exposed via Private Link?                           
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of `private_cluster_enabled`{{% /md %}}</p></dd>
 
     <dt class="property-"
             title="">
@@ -538,6 +614,15 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>Private<wbr>Cluster<wbr>Enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If the cluster has the Kubernetes API only exposed on internal IP addresses.                           
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Private<wbr>Fqdn</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -545,14 +630,13 @@ The following output properties are available:
     <dd>{{% md %}}The FQDN of this Kubernetes Cluster when private link has been enabled. This name is only resolvable inside the Virtual Network where the Azure Kubernetes Service is located                   
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
         <span>Private<wbr>Link<wbr>Enabled</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Does this Kubernetes Cluster have the Kubernetes API exposed via Private Link?                           
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of `private_cluster_enabled`{{% /md %}}</p></dd>
 
     <dt class="property-"
             title="">
@@ -751,6 +835,15 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>private<wbr>Cluster<wbr>Enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}If the cluster has the Kubernetes API only exposed on internal IP addresses.                           
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>private<wbr>Fqdn</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
@@ -758,14 +851,13 @@ The following output properties are available:
     <dd>{{% md %}}The FQDN of this Kubernetes Cluster when private link has been enabled. This name is only resolvable inside the Virtual Network where the Azure Kubernetes Service is located                   
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
         <span>private<wbr>Link<wbr>Enabled</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Does this Kubernetes Cluster have the Kubernetes API exposed via Private Link?                           
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of `private_cluster_enabled`{{% /md %}}</p></dd>
 
     <dt class="property-"
             title="">
@@ -964,6 +1056,15 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>private_<wbr>cluster_<wbr>enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If the cluster has the Kubernetes API only exposed on internal IP addresses.                           
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>private_<wbr>fqdn</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -971,14 +1072,13 @@ The following output properties are available:
     <dd>{{% md %}}The FQDN of this Kubernetes Cluster when private link has been enabled. This name is only resolvable inside the Virtual Network where the Azure Kubernetes Service is located                   
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
         <span>private_<wbr>link_<wbr>enabled</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Does this Kubernetes Cluster have the Kubernetes API exposed via Private Link?                           
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of `private_cluster_enabled`{{% /md %}}</p></dd>
 
     <dt class="property-"
             title="">

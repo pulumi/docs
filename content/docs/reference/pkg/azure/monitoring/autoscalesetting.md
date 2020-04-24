@@ -105,7 +105,7 @@ const exampleAutoscaleSetting = new azure.monitoring.AutoscaleSetting("example",
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">AutoscaleSetting</span><span class="p">(resource_name, opts=None, </span>enabled=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>notification=None<span class="p">, </span>profiles=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>tags=None<span class="p">, </span>target_resource_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">AutoscaleSetting</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>enabled=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>notification=None<span class="p">, </span>profiles=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>tags=None<span class="p">, </span>target_resource_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

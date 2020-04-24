@@ -26,7 +26,7 @@ Create a failover group of databases on a collection of Azure SQL servers.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">FailoverGroup</span><span class="p">(resource_name, opts=None, </span>databases=None<span class="p">, </span>name=None<span class="p">, </span>partner_servers=None<span class="p">, </span>read_write_endpoint_failover_policy=None<span class="p">, </span>readonly_endpoint_failover_policy=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>server_name=None<span class="p">, </span>tags=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">FailoverGroup</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>databases=None<span class="p">, </span>name=None<span class="p">, </span>partner_servers=None<span class="p">, </span>read_write_endpoint_failover_policy=None<span class="p">, </span>readonly_endpoint_failover_policy=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>server_name=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

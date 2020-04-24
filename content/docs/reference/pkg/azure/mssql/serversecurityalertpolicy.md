@@ -28,7 +28,7 @@ Manages a Security Alert Policy for a MSSQL Server.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ServerSecurityAlertPolicy</span><span class="p">(resource_name, opts=None, </span>disabled_alerts=None<span class="p">, </span>email_account_admins=None<span class="p">, </span>email_addresses=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>retention_days=None<span class="p">, </span>server_name=None<span class="p">, </span>state=None<span class="p">, </span>storage_account_access_key=None<span class="p">, </span>storage_endpoint=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ServerSecurityAlertPolicy</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>disabled_alerts=None<span class="p">, </span>email_account_admins=None<span class="p">, </span>email_addresses=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>retention_days=None<span class="p">, </span>server_name=None<span class="p">, </span>state=None<span class="p">, </span>storage_account_access_key=None<span class="p">, </span>storage_endpoint=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

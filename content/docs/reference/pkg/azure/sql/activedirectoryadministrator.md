@@ -20,7 +20,7 @@ Allows you to set a user or group as the AD administrator for an Azure SQL serve
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const current = pulumi.output(azure.core.getClientConfig({ async: true }));
+const current = azure.core.getClientConfig();
 const exampleResourceGroup = new azure.core.ResourceGroup("example", {
     location: "West US",
 });
@@ -54,7 +54,7 @@ const exampleActiveDirectoryAdministrator = new azure.sql.ActiveDirectoryAdminis
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ActiveDirectoryAdministrator</span><span class="p">(resource_name, opts=None, </span>login=None<span class="p">, </span>object_id=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>server_name=None<span class="p">, </span>tenant_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ActiveDirectoryAdministrator</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>login=None<span class="p">, </span>object_id=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>server_name=None<span class="p">, </span>tenant_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

@@ -26,7 +26,7 @@ Manages a Azure Data Lake Analytics Firewall Rule.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">AnalyticsFirewallRule</span><span class="p">(resource_name, opts=None, </span>account_name=None<span class="p">, </span>end_ip_address=None<span class="p">, </span>name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>start_ip_address=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">AnalyticsFirewallRule</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>account_name=None<span class="p">, </span>end_ip_address=None<span class="p">, </span>name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>start_ip_address=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

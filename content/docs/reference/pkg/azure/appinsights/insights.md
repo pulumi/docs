@@ -26,7 +26,7 @@ Manages an Application Insights component.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Insights</span><span class="p">(resource_name, opts=None, </span>application_type=None<span class="p">, </span>daily_data_cap_in_gb=None<span class="p">, </span>daily_data_cap_notifications_disabled=None<span class="p">, </span>disable_ip_masking=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>retention_in_days=None<span class="p">, </span>sampling_percentage=None<span class="p">, </span>tags=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Insights</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>application_type=None<span class="p">, </span>daily_data_cap_in_gb=None<span class="p">, </span>daily_data_cap_notifications_disabled=None<span class="p">, </span>disable_ip_masking=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>retention_in_days=None<span class="p">, </span>sampling_percentage=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

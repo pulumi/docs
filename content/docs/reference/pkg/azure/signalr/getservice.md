@@ -20,10 +20,10 @@ Use this data source to access information about an existing Azure SignalR servi
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const example = pulumi.output(azure.signalr.getService({
+const example = azure.signalr.getService({
     name: "test-signalr",
     resourceGroupName: "signalr-resource-group",
-}, { async: true }));
+});
 ```
 
 {{% /example %}}

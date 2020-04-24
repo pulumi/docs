@@ -26,7 +26,7 @@ Manages a backend within an API Management Service.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Backend</span><span class="p">(resource_name, opts=None, </span>api_management_name=None<span class="p">, </span>credentials=None<span class="p">, </span>description=None<span class="p">, </span>name=None<span class="p">, </span>protocol=None<span class="p">, </span>proxy=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>resource_id=None<span class="p">, </span>service_fabric_cluster=None<span class="p">, </span>title=None<span class="p">, </span>tls=None<span class="p">, </span>url=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Backend</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>api_management_name=None<span class="p">, </span>credentials=None<span class="p">, </span>description=None<span class="p">, </span>name=None<span class="p">, </span>protocol=None<span class="p">, </span>proxy=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>resource_id=None<span class="p">, </span>service_fabric_cluster=None<span class="p">, </span>title=None<span class="p">, </span>tls=None<span class="p">, </span>url=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

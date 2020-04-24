@@ -20,11 +20,11 @@ Use this data source to access information about an existing Batch pool
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const example = pulumi.output(azure.batch.getPool({
+const example = azure.batch.getPool({
     accountName: "testbatchaccount",
     name: "testbatchpool",
     resourceGroupName: "test",
-}, { async: true }));
+});
 ```
 
 {{% /example %}}

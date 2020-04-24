@@ -20,10 +20,10 @@ Use this data source to access information about an existing Shared Image Galler
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const example = pulumi.output(azure.compute.getSharedImageGallery({
+const example = azure.compute.getSharedImageGallery({
     name: "my-image-gallery",
     resourceGroupName: "example-resources",
-}, { async: true }));
+});
 ```
 
 {{% /example %}}

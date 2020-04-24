@@ -23,7 +23,7 @@ Manages a Management Lock which is scoped to a Subscription, Resource Group or R
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ManangementLock</span><span class="p">(resource_name, opts=None, </span>lock_level=None<span class="p">, </span>name=None<span class="p">, </span>notes=None<span class="p">, </span>scope=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ManangementLock</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>lock_level=None<span class="p">, </span>name=None<span class="p">, </span>notes=None<span class="p">, </span>scope=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

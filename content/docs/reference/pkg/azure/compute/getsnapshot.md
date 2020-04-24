@@ -20,10 +20,10 @@ Use this data source to access information about an existing Snapshot.
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const example = pulumi.output(azure.compute.getSnapshot({
+const example = azure.compute.getSnapshot({
     name: "my-snapshot",
     resourceGroupName: "my-resource-group",
-}, { async: true }));
+});
 ```
 
 {{% /example %}}

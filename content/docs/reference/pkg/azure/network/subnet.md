@@ -30,7 +30,7 @@ At this time you cannot use a Virtual Network with in-line Subnets in conjunctio
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Subnet</span><span class="p">(resource_name, opts=None, </span>address_prefix=None<span class="p">, </span>delegations=None<span class="p">, </span>enforce_private_link_endpoint_network_policies=None<span class="p">, </span>enforce_private_link_service_network_policies=None<span class="p">, </span>name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>service_endpoints=None<span class="p">, </span>virtual_network_name=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Subnet</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>address_prefix=None<span class="p">, </span>delegations=None<span class="p">, </span>enforce_private_link_endpoint_network_policies=None<span class="p">, </span>enforce_private_link_service_network_policies=None<span class="p">, </span>name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>service_endpoints=None<span class="p">, </span>virtual_network_name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

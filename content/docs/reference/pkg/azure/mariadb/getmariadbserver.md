@@ -782,7 +782,7 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>backup<wbr>Retention<wbr>Days</span>
+        <span>backup_<wbr>retention_<wbr>days</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -800,7 +800,7 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>storage<wbr>Mb</span>
+        <span>storage_<wbr>mb</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>

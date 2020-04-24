@@ -20,10 +20,10 @@ Use this data source to access information about an existing EventGrid Topic
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const example = pulumi.output(azure.eventgrid.getTopic({
+const example = azure.eventgrid.getTopic({
     name: "my-eventgrid-topic",
     resourceGroupName: "example-resources",
-}, { async: true }));
+});
 ```
 
 {{% /example %}}

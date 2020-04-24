@@ -26,7 +26,7 @@ Manages an API Management Service.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Service</span><span class="p">(resource_name, opts=None, </span>additional_locations=None<span class="p">, </span>certificates=None<span class="p">, </span>hostname_configuration=None<span class="p">, </span>identity=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>notification_sender_email=None<span class="p">, </span>policy=None<span class="p">, </span>protocols=None<span class="p">, </span>publisher_email=None<span class="p">, </span>publisher_name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>security=None<span class="p">, </span>sign_in=None<span class="p">, </span>sign_up=None<span class="p">, </span>sku_name=None<span class="p">, </span>tags=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Service</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>additional_locations=None<span class="p">, </span>certificates=None<span class="p">, </span>hostname_configuration=None<span class="p">, </span>identity=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>notification_sender_email=None<span class="p">, </span>policy=None<span class="p">, </span>protocols=None<span class="p">, </span>publisher_email=None<span class="p">, </span>publisher_name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>security=None<span class="p">, </span>sign_in=None<span class="p">, </span>sign_up=None<span class="p">, </span>sku_name=None<span class="p">, </span>tags=None<span class="p">, </span>virtual_network_configuration=None<span class="p">, </span>virtual_network_type=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -351,6 +351,24 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}A mapping of tags assigned to the resource.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Virtual<wbr>Network<wbr>Configuration</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicevirtualnetworkconfiguration">Service<wbr>Virtual<wbr>Network<wbr>Configuration<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `virtual_network_configuration` block as defined below. Required when `virtual_network_type` is `External` or `Internal`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Virtual<wbr>Network<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of virtual network you want to use, valid values include: `None`, `External`, `Internal`.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -509,6 +527,24 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags assigned to the resource.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Virtual<wbr>Network<wbr>Configuration</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicevirtualnetworkconfiguration">Service<wbr>Virtual<wbr>Network<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}A `virtual_network_configuration` block as defined below. Required when `virtual_network_type` is `External` or `Internal`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Virtual<wbr>Network<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of virtual network you want to use, valid values include: `None`, `External`, `Internal`.
 {{% /md %}}</dd>
 
 </dl>
@@ -671,6 +707,24 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}A mapping of tags assigned to the resource.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>virtual<wbr>Network<wbr>Configuration</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicevirtualnetworkconfiguration">Service<wbr>Virtual<wbr>Network<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}A `virtual_network_configuration` block as defined below. Required when `virtual_network_type` is `External` or `Internal`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>virtual<wbr>Network<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of virtual network you want to use, valid values include: `None`, `External`, `Internal`.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -831,6 +885,24 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}A mapping of tags assigned to the resource.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>virtual_<wbr>network_<wbr>configuration</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicevirtualnetworkconfiguration">Dict[Service<wbr>Virtual<wbr>Network<wbr>Configuration]</a></span>
+    </dt>
+    <dd>{{% md %}}A `virtual_network_configuration` block as defined below. Required when `virtual_network_type` is `External` or `Internal`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>virtual_<wbr>network_<wbr>type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The type of virtual network you want to use, valid values include: `None`, `External`, `Internal`.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -892,6 +964,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The URL for the Publisher Portal associated with this API Management service.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Private<wbr>Ip<wbr>Addresses</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -964,6 +1044,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span>Private<wbr>Ip<wbr>Addresses</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Public<wbr>Ip<wbr>Addresses</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
@@ -1030,6 +1118,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The URL for the Publisher Portal associated with this API Management service.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>private<wbr>Ip<wbr>Addresses</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1102,6 +1198,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span>private_<wbr>ip_<wbr>addresses</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>public_<wbr>ip_<wbr>addresses</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -1137,7 +1241,7 @@ Get an existing Service resource's state with the given name, ID, and optional e
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>additional_locations=None<span class="p">, </span>certificates=None<span class="p">, </span>gateway_regional_url=None<span class="p">, </span>gateway_url=None<span class="p">, </span>hostname_configuration=None<span class="p">, </span>identity=None<span class="p">, </span>location=None<span class="p">, </span>management_api_url=None<span class="p">, </span>name=None<span class="p">, </span>notification_sender_email=None<span class="p">, </span>policy=None<span class="p">, </span>portal_url=None<span class="p">, </span>protocols=None<span class="p">, </span>public_ip_addresses=None<span class="p">, </span>publisher_email=None<span class="p">, </span>publisher_name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>scm_url=None<span class="p">, </span>security=None<span class="p">, </span>sign_in=None<span class="p">, </span>sign_up=None<span class="p">, </span>sku_name=None<span class="p">, </span>tags=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>additional_locations=None<span class="p">, </span>certificates=None<span class="p">, </span>gateway_regional_url=None<span class="p">, </span>gateway_url=None<span class="p">, </span>hostname_configuration=None<span class="p">, </span>identity=None<span class="p">, </span>location=None<span class="p">, </span>management_api_url=None<span class="p">, </span>name=None<span class="p">, </span>notification_sender_email=None<span class="p">, </span>policy=None<span class="p">, </span>portal_url=None<span class="p">, </span>private_ip_addresses=None<span class="p">, </span>protocols=None<span class="p">, </span>public_ip_addresses=None<span class="p">, </span>publisher_email=None<span class="p">, </span>publisher_name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>scm_url=None<span class="p">, </span>security=None<span class="p">, </span>sign_in=None<span class="p">, </span>sign_up=None<span class="p">, </span>sku_name=None<span class="p">, </span>tags=None<span class="p">, </span>virtual_network_configuration=None<span class="p">, </span>virtual_network_type=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1361,6 +1465,14 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Private<wbr>Ip<wbr>Addresses</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Protocols</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceprotocols">Service<wbr>Protocols<wbr>Args</a></span>
@@ -1456,6 +1568,24 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags assigned to the resource.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Virtual<wbr>Network<wbr>Configuration</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicevirtualnetworkconfiguration">Service<wbr>Virtual<wbr>Network<wbr>Configuration<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `virtual_network_configuration` block as defined below. Required when `virtual_network_type` is `External` or `Internal`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Virtual<wbr>Network<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of virtual network you want to use, valid values include: `None`, `External`, `Internal`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1575,6 +1705,14 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Private<wbr>Ip<wbr>Addresses</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Protocols</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceprotocols">Service<wbr>Protocols</a></span>
@@ -1670,6 +1808,24 @@ The following state arguments are supported:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags assigned to the resource.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Virtual<wbr>Network<wbr>Configuration</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicevirtualnetworkconfiguration">Service<wbr>Virtual<wbr>Network<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}A `virtual_network_configuration` block as defined below. Required when `virtual_network_type` is `External` or `Internal`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Virtual<wbr>Network<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of virtual network you want to use, valid values include: `None`, `External`, `Internal`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1789,6 +1945,14 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>private<wbr>Ip<wbr>Addresses</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>protocols</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceprotocols">Service<wbr>Protocols</a></span>
@@ -1884,6 +2048,24 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags assigned to the resource.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>virtual<wbr>Network<wbr>Configuration</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicevirtualnetworkconfiguration">Service<wbr>Virtual<wbr>Network<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}A `virtual_network_configuration` block as defined below. Required when `virtual_network_type` is `External` or `Internal`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>virtual<wbr>Network<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of virtual network you want to use, valid values include: `None`, `External`, `Internal`.
 {{% /md %}}</dd>
 
 </dl>
@@ -2003,6 +2185,14 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>private_<wbr>ip_<wbr>addresses</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>protocols</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceprotocols">Dict[Service<wbr>Protocols]</a></span>
@@ -2098,6 +2288,24 @@ The following state arguments are supported:
         <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags assigned to the resource.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>virtual_<wbr>network_<wbr>configuration</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicevirtualnetworkconfiguration">Dict[Service<wbr>Virtual<wbr>Network<wbr>Configuration]</a></span>
+    </dt>
+    <dd>{{% md %}}A `virtual_network_configuration` block as defined below. Required when `virtual_network_type` is `External` or `Internal`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>virtual_<wbr>network_<wbr>type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The type of virtual network you want to use, valid values include: `None`, `External`, `Internal`.
 {{% /md %}}</dd>
 
 </dl>
@@ -4508,6 +4716,85 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Terms of Service which users are required to agree to in order to sign up.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="servicevirtualnetworkconfiguration">Service<wbr>Virtual<wbr>Network<wbr>Configuration</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServiceVirtualNetworkConfiguration">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ServiceVirtualNetworkConfiguration">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/apimanagement?tab=doc#ServiceVirtualNetworkConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/apimanagement?tab=doc#ServiceVirtualNetworkConfigurationOutput">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Subnet<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The id of the subnet that will be used for the API Management.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Subnet<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The id of the subnet that will be used for the API Management.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>subnet<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The id of the subnet that will be used for the API Management.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>subnet_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The id of the subnet that will be used for the API Management.
 {{% /md %}}</dd>
 
 </dl>

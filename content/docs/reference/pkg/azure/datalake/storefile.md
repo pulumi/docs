@@ -51,7 +51,7 @@ const exampleStoreFile = new azure.datalake.StoreFile("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">StoreFile</span><span class="p">(resource_name, opts=None, </span>account_name=None<span class="p">, </span>local_file_path=None<span class="p">, </span>remote_file_path=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">StoreFile</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>account_name=None<span class="p">, </span>local_file_path=None<span class="p">, </span>remote_file_path=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

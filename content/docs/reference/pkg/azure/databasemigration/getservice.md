@@ -21,10 +21,10 @@ Use this data source to access information about an existing Database Migration 
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const example = pulumi.output(azure.databasemigration.getService({
+const example = azure.databasemigration.getService({
     name: "example-dms",
     resourceGroupName: "example-rg",
-}, { async: true }));
+});
 
 export const azurermDmsId = example.id;
 ```

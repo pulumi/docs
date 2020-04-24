@@ -26,7 +26,7 @@ Manages an Analysis Services Server.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Server</span><span class="p">(resource_name, opts=None, </span>admin_users=None<span class="p">, </span>backup_blob_container_uri=None<span class="p">, </span>enable_power_bi_service=None<span class="p">, </span>ipv4_firewall_rules=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>querypool_connection_mode=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>sku=None<span class="p">, </span>tags=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Server</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>admin_users=None<span class="p">, </span>backup_blob_container_uri=None<span class="p">, </span>enable_power_bi_service=None<span class="p">, </span>ipv4_firewall_rules=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>querypool_connection_mode=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>sku=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

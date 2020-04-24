@@ -23,7 +23,7 @@ Manages a custom virtual machine image that can be used to create virtual machin
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Image</span><span class="p">(resource_name, opts=None, </span>data_disks=None<span class="p">, </span>hyper_v_generation=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>os_disk=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>source_virtual_machine_id=None<span class="p">, </span>tags=None<span class="p">, </span>zone_resilient=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Image</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>data_disks=None<span class="p">, </span>hyper_v_generation=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>os_disk=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>source_virtual_machine_id=None<span class="p">, </span>tags=None<span class="p">, </span>zone_resilient=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

@@ -26,7 +26,7 @@ Manages an Entity within a Table in an Azure Storage Account.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">TableEntity</span><span class="p">(resource_name, opts=None, </span>entity=None<span class="p">, </span>partition_key=None<span class="p">, </span>row_key=None<span class="p">, </span>storage_account_name=None<span class="p">, </span>table_name=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">TableEntity</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>entity=None<span class="p">, </span>partition_key=None<span class="p">, </span>row_key=None<span class="p">, </span>storage_account_name=None<span class="p">, </span>table_name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

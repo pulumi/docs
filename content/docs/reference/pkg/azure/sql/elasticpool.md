@@ -28,7 +28,7 @@ Allows you to manage an Azure SQL Elastic Pool.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ElasticPool</span><span class="p">(resource_name, opts=None, </span>db_dtu_max=None<span class="p">, </span>db_dtu_min=None<span class="p">, </span>dtu=None<span class="p">, </span>edition=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>pool_size=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>server_name=None<span class="p">, </span>tags=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ElasticPool</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>db_dtu_max=None<span class="p">, </span>db_dtu_min=None<span class="p">, </span>dtu=None<span class="p">, </span>edition=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>pool_size=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>server_name=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

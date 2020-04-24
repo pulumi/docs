@@ -26,7 +26,7 @@ Manages a Managed Kubernetes Cluster (also known as AKS / Azure Kubernetes Servi
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">KubernetesCluster</span><span class="p">(resource_name, opts=None, </span>addon_profile=None<span class="p">, </span>api_server_authorized_ip_ranges=None<span class="p">, </span>default_node_pool=None<span class="p">, </span>dns_prefix=None<span class="p">, </span>enable_pod_security_policy=None<span class="p">, </span>identity=None<span class="p">, </span>kubernetes_version=None<span class="p">, </span>linux_profile=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>network_profile=None<span class="p">, </span>node_resource_group=None<span class="p">, </span>private_link_enabled=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>role_based_access_control=None<span class="p">, </span>service_principal=None<span class="p">, </span>tags=None<span class="p">, </span>windows_profile=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">KubernetesCluster</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>addon_profile=None<span class="p">, </span>api_server_authorized_ip_ranges=None<span class="p">, </span>default_node_pool=None<span class="p">, </span>dns_prefix=None<span class="p">, </span>enable_pod_security_policy=None<span class="p">, </span>identity=None<span class="p">, </span>kubernetes_version=None<span class="p">, </span>linux_profile=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>network_profile=None<span class="p">, </span>node_resource_group=None<span class="p">, </span>private_cluster_enabled=None<span class="p">, </span>private_link_enabled=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>role_based_access_control=None<span class="p">, </span>service_principal=None<span class="p">, </span>tags=None<span class="p">, </span>windows_profile=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -317,11 +317,19 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Private<wbr>Link<wbr>Enabled</span>
+        <span>Private<wbr>Cluster<wbr>Enabled</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span>Private<wbr>Link<wbr>Enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of `private_cluster_enabled`{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -485,11 +493,19 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Private<wbr>Link<wbr>Enabled</span>
+        <span>Private<wbr>Cluster<wbr>Enabled</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span>Private<wbr>Link<wbr>Enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of `private_cluster_enabled`{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -653,11 +669,19 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>private<wbr>Link<wbr>Enabled</span>
+        <span>private<wbr>Cluster<wbr>Enabled</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span>private<wbr>Link<wbr>Enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of `private_cluster_enabled`{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -821,11 +845,19 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>private_<wbr>link_<wbr>enabled</span>
+        <span>private_<wbr>cluster_<wbr>enabled</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span>private_<wbr>link_<wbr>enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of `private_cluster_enabled`{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1205,7 +1237,7 @@ Get an existing KubernetesCluster resource's state with the given name, ID, and 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>addon_profile=None<span class="p">, </span>api_server_authorized_ip_ranges=None<span class="p">, </span>default_node_pool=None<span class="p">, </span>dns_prefix=None<span class="p">, </span>enable_pod_security_policy=None<span class="p">, </span>fqdn=None<span class="p">, </span>identity=None<span class="p">, </span>kube_admin_config_raw=None<span class="p">, </span>kube_admin_configs=None<span class="p">, </span>kube_config_raw=None<span class="p">, </span>kube_configs=None<span class="p">, </span>kubelet_identities=None<span class="p">, </span>kubernetes_version=None<span class="p">, </span>linux_profile=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>network_profile=None<span class="p">, </span>node_resource_group=None<span class="p">, </span>private_fqdn=None<span class="p">, </span>private_link_enabled=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>role_based_access_control=None<span class="p">, </span>service_principal=None<span class="p">, </span>tags=None<span class="p">, </span>windows_profile=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>addon_profile=None<span class="p">, </span>api_server_authorized_ip_ranges=None<span class="p">, </span>default_node_pool=None<span class="p">, </span>dns_prefix=None<span class="p">, </span>enable_pod_security_policy=None<span class="p">, </span>fqdn=None<span class="p">, </span>identity=None<span class="p">, </span>kube_admin_config_raw=None<span class="p">, </span>kube_admin_configs=None<span class="p">, </span>kube_config_raw=None<span class="p">, </span>kube_configs=None<span class="p">, </span>kubelet_identities=None<span class="p">, </span>kubernetes_version=None<span class="p">, </span>linux_profile=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>network_profile=None<span class="p">, </span>node_resource_group=None<span class="p">, </span>private_cluster_enabled=None<span class="p">, </span>private_fqdn=None<span class="p">, </span>private_link_enabled=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>role_based_access_control=None<span class="p">, </span>service_principal=None<span class="p">, </span>tags=None<span class="p">, </span>windows_profile=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1483,6 +1515,14 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Private<wbr>Cluster<wbr>Enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Private<wbr>Fqdn</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
@@ -1490,13 +1530,13 @@ The following state arguments are supported:
     <dd>{{% md %}}The FQDN for the Kubernetes Cluster when private link has been enabled, which is only resolvable inside the Virtual Network used by the Kubernetes Cluster.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span>Private<wbr>Link<wbr>Enabled</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of `private_cluster_enabled`{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1714,6 +1754,14 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Private<wbr>Cluster<wbr>Enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Private<wbr>Fqdn</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -1721,13 +1769,13 @@ The following state arguments are supported:
     <dd>{{% md %}}The FQDN for the Kubernetes Cluster when private link has been enabled, which is only resolvable inside the Virtual Network used by the Kubernetes Cluster.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span>Private<wbr>Link<wbr>Enabled</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of `private_cluster_enabled`{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1945,6 +1993,14 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>private<wbr>Cluster<wbr>Enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>private<wbr>Fqdn</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
@@ -1952,13 +2008,13 @@ The following state arguments are supported:
     <dd>{{% md %}}The FQDN for the Kubernetes Cluster when private link has been enabled, which is only resolvable inside the Virtual Network used by the Kubernetes Cluster.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span>private<wbr>Link<wbr>Enabled</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of `private_cluster_enabled`{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2176,6 +2232,14 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>private_<wbr>cluster_<wbr>enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>private_<wbr>fqdn</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2183,13 +2247,13 @@ The following state arguments are supported:
     <dd>{{% md %}}The FQDN for the Kubernetes Cluster when private link has been enabled, which is only resolvable inside the Virtual Network used by the Kubernetes Cluster.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span>private_<wbr>link_<wbr>enabled</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of `private_cluster_enabled`{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
