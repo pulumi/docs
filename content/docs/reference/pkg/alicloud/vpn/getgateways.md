@@ -20,7 +20,7 @@ The VPNs data source lists a number of VPNs resource information owned by an Ali
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const vpnGateways = pulumi.output(alicloud.vpn.getGateways({
+const vpnGateways = alicloud.vpn.getGateways({
     businessStatus: "Normal",
     ids: [
         "fake-vpn-id1",
@@ -30,7 +30,7 @@ const vpnGateways = pulumi.output(alicloud.vpn.getGateways({
     outputFile: "/tmp/vpns",
     status: "active",
     vpcId: "fake-vpc-id",
-}, { async: true }));
+});
 ```
 
 {{% /example %}}

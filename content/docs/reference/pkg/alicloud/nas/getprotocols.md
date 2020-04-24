@@ -22,11 +22,11 @@ Provide  a data source to retrieve the type of protocol used to create NAS file 
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const defaultProtocols = pulumi.output(alicloud.nas.getProtocols({
+const defaultProtocols = alicloud.nas.getProtocols({
     outputFile: "protocols.txt",
     type: "Performance",
     zoneId: "cn-beijing-e",
-}, { async: true }));
+});
 
 export const nasProtocolsProtocol = defaultProtocols.protocols[0];
 ```

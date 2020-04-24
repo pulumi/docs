@@ -62,7 +62,7 @@ const object_content = new alicloud.oss.BucketObject("object-content", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">BucketObject</span><span class="p">(resource_name, opts=None, </span>acl=None<span class="p">, </span>bucket=None<span class="p">, </span>cache_control=None<span class="p">, </span>content=None<span class="p">, </span>content_disposition=None<span class="p">, </span>content_encoding=None<span class="p">, </span>content_md5=None<span class="p">, </span>content_type=None<span class="p">, </span>expires=None<span class="p">, </span>key=None<span class="p">, </span>kms_key_id=None<span class="p">, </span>server_side_encryption=None<span class="p">, </span>source=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">BucketObject</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>acl=None<span class="p">, </span>bucket=None<span class="p">, </span>cache_control=None<span class="p">, </span>content=None<span class="p">, </span>content_disposition=None<span class="p">, </span>content_encoding=None<span class="p">, </span>content_md5=None<span class="p">, </span>content_type=None<span class="p">, </span>expires=None<span class="p">, </span>key=None<span class="p">, </span>kms_key_id=None<span class="p">, </span>server_side_encryption=None<span class="p">, </span>source=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

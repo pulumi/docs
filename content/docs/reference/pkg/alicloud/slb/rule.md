@@ -34,20 +34,20 @@ import * as alicloud from "@pulumi/alicloud";
 const config = new pulumi.Config();
 const name = config.get("name") || "slbrulebasicconfig";
 
-const defaultZones = pulumi.output(alicloud.getZones({
+const defaultZones = alicloud.getZones({
     availableDiskCategory: "cloud_efficiency",
     availableResourceCreation: "VSwitch",
-}, { async: true }));
-const defaultInstanceTypes = defaultZones.apply(defaultZones => alicloud.ecs.getInstanceTypes({
+});
+const defaultInstanceTypes = alicloud.ecs.getInstanceTypes({
     availabilityZone: defaultZones.zones[0].id,
     cpuCoreCount: 1,
     memorySize: 2,
-}, { async: true }));
-const defaultImages = pulumi.output(alicloud.ecs.getImages({
+});
+const defaultImages = alicloud.ecs.getImages({
     mostRecent: true,
     nameRegex: "^ubuntu_18.*64",
     owners: "system",
-}, { async: true }));
+});
 const defaultNetwork = new alicloud.vpc.Network("default", {
     cidrBlock: "172.16.0.0/16",
 });
@@ -128,7 +128,7 @@ const defaultRule = new alicloud.slb.Rule("default", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Rule</span><span class="p">(resource_name, opts=None, </span>cookie=None<span class="p">, </span>cookie_timeout=None<span class="p">, </span>delete_protection_validation=None<span class="p">, </span>domain=None<span class="p">, </span>frontend_port=None<span class="p">, </span>health_check=None<span class="p">, </span>health_check_connect_port=None<span class="p">, </span>health_check_domain=None<span class="p">, </span>health_check_http_code=None<span class="p">, </span>health_check_interval=None<span class="p">, </span>health_check_timeout=None<span class="p">, </span>health_check_uri=None<span class="p">, </span>healthy_threshold=None<span class="p">, </span>listener_sync=None<span class="p">, </span>load_balancer_id=None<span class="p">, </span>name=None<span class="p">, </span>scheduler=None<span class="p">, </span>server_group_id=None<span class="p">, </span>sticky_session=None<span class="p">, </span>sticky_session_type=None<span class="p">, </span>unhealthy_threshold=None<span class="p">, </span>url=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Rule</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>cookie=None<span class="p">, </span>cookie_timeout=None<span class="p">, </span>delete_protection_validation=None<span class="p">, </span>domain=None<span class="p">, </span>frontend_port=None<span class="p">, </span>health_check=None<span class="p">, </span>health_check_connect_port=None<span class="p">, </span>health_check_domain=None<span class="p">, </span>health_check_http_code=None<span class="p">, </span>health_check_interval=None<span class="p">, </span>health_check_timeout=None<span class="p">, </span>health_check_uri=None<span class="p">, </span>healthy_threshold=None<span class="p">, </span>listener_sync=None<span class="p">, </span>load_balancer_id=None<span class="p">, </span>name=None<span class="p">, </span>scheduler=None<span class="p">, </span>server_group_id=None<span class="p">, </span>sticky_session=None<span class="p">, </span>sticky_session_type=None<span class="p">, </span>unhealthy_threshold=None<span class="p">, </span>url=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

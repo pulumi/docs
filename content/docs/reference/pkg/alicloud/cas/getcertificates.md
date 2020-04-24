@@ -20,10 +20,10 @@ This data source provides a list of CAS Certificates in an Alibaba Cloud account
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const certs = pulumi.output(alicloud.cas.getCertificates({
+const certs = alicloud.cas.getCertificates({
     nameRegex: "^cas",
     outputFile: `./cas_certificates.json`,
-}, { async: true }));
+});
 
 export const cert = certs.certificates[0].id;
 ```

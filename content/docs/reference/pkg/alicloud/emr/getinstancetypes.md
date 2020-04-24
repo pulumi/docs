@@ -23,7 +23,7 @@ instance types available in Alibaba Cloud account when create a emr cluster.
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const defaultInstanceTypes = pulumi.output(alicloud.emr.getInstanceTypes({
+const defaultInstanceTypes = alicloud.emr.getInstanceTypes({
     clusterType: "HADOOP",
     destinationResource: "InstanceType",
     instanceChargeType: "PostPaid",
@@ -33,7 +33,7 @@ const defaultInstanceTypes = pulumi.output(alicloud.emr.getInstanceTypes({
         "MASTER",
         "CORE",
     ],
-}, { async: true }));
+});
 
 export const firstInstanceType = defaultInstanceTypes.types[0].id;
 ```

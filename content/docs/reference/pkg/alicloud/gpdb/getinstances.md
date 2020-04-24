@@ -23,11 +23,11 @@ Filters support regular expression for the instance name or availability_zone.
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const gpdb = pulumi.output(alicloud.gpdb.getInstances({
+const gpdb = alicloud.gpdb.getInstances({
     availabilityZone: "cn-beijing-c",
     nameRegex: "gp-.+\\d+",
     outputFile: "instances.txt",
-}, { async: true }));
+});
 
 export const instanceId = gpdb.instances[0].id;
 ```

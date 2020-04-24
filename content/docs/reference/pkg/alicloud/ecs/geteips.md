@@ -20,7 +20,7 @@ This data source provides a list of EIPs (Elastic IP address) owned by an Alibab
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const eipsDs = pulumi.output(alicloud.ecs.getEips({ async: true }));
+const eipsDs = alicloud.ecs.getEips();
 
 export const firstEipId = eipsDs.eips[0].id;
 ```

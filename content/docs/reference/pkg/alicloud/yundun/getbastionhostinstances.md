@@ -22,9 +22,9 @@ This data source provides a list of cloud Bastionhost instances in an Alibaba Cl
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const instanceBastionHostInstances = pulumi.output(alicloud.yundun.getBastionHostInstances({
+const instanceBastionHostInstances = alicloud.yundun.getBastionHostInstances({
     nameRegex: "^bastionhost",
-}, { async: true }));
+});
 
 export const instance = alicloud_yundun_bastionhost_instances_instance.map(v => v.id);
 ```

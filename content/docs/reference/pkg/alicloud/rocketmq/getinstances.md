@@ -32,7 +32,7 @@ const instancesDs = pulumi.all([defaultInstance.id, defaultInstance.name]).apply
     ids: [id],
     nameRegex: name,
     outputFile: "instances.txt",
-}, { async: true }));
+}));
 
 export const firstInstanceId = instancesDs.instances[0].instanceId;
 ```

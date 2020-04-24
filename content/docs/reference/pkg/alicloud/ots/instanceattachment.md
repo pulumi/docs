@@ -29,9 +29,9 @@ const fooInstance = new alicloud.ots.Instance("foo", {
         For: "Building table",
     },
 });
-const fooZones = pulumi.output(alicloud.getZones({
+const fooZones = alicloud.getZones({
     availableResourceCreation: "VSwitch",
-}, { async: true }));
+});
 const fooNetwork = new alicloud.vpc.Network("foo", {
     cidrBlock: "172.16.0.0/16",
 });
@@ -61,7 +61,7 @@ const fooInstanceAttachment = new alicloud.ots.InstanceAttachment("foo", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">InstanceAttachment</span><span class="p">(resource_name, opts=None, </span>instance_name=None<span class="p">, </span>vpc_name=None<span class="p">, </span>vswitch_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">InstanceAttachment</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>instance_name=None<span class="p">, </span>vpc_name=None<span class="p">, </span>vswitch_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

@@ -22,7 +22,7 @@ meta_desc: "Explore the SecurityGroup resource of the ecs module, including exam
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">SecurityGroup</span><span class="p">(resource_name, opts=None, </span>description=None<span class="p">, </span>inner_access=None<span class="p">, </span>inner_access_policy=None<span class="p">, </span>name=None<span class="p">, </span>resource_group_id=None<span class="p">, </span>security_group_type=None<span class="p">, </span>tags=None<span class="p">, </span>vpc_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">SecurityGroup</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>description=None<span class="p">, </span>inner_access=None<span class="p">, </span>inner_access_policy=None<span class="p">, </span>name=None<span class="p">, </span>resource_group_id=None<span class="p">, </span>security_group_type=None<span class="p">, </span>tags=None<span class="p">, </span>vpc_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

@@ -20,12 +20,12 @@ The SSL-VPN servers data source lists lots of SSL-VPN servers resource informati
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const foo = pulumi.output(alicloud.vpc.getSslVpnServers({
+const foo = alicloud.vpc.getSslVpnServers({
     ids: ["fake-server-id"],
     nameRegex: "^foo",
     outputFile: "/tmp/sslserver",
     vpnGatewayId: "fake-vpn-id",
-}, { async: true }));
+});
 ```
 
 {{% /example %}}

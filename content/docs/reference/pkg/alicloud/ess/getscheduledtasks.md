@@ -22,10 +22,10 @@ This data source provides available scheduled task resources.
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const ds = pulumi.output(alicloud.ess.getScheduledTasks({
+const ds = alicloud.ess.getScheduledTasks({
     nameRegex: "scheduled_task_name",
     scheduledTaskId: "scheduled_task_id",
-}, { async: true }));
+});
 
 export const firstScheduledTask = ds.tasks[0].id;
 ```

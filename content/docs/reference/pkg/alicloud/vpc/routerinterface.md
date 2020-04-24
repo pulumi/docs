@@ -22,7 +22,7 @@ meta_desc: "Explore the RouterInterface resource of the vpc module, including ex
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">RouterInterface</span><span class="p">(resource_name, opts=None, </span>description=None<span class="p">, </span>health_check_source_ip=None<span class="p">, </span>health_check_target_ip=None<span class="p">, </span>instance_charge_type=None<span class="p">, </span>name=None<span class="p">, </span>opposite_access_point_id=None<span class="p">, </span>opposite_region=None<span class="p">, </span>period=None<span class="p">, </span>role=None<span class="p">, </span>router_id=None<span class="p">, </span>router_type=None<span class="p">, </span>specification=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">RouterInterface</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>description=None<span class="p">, </span>health_check_source_ip=None<span class="p">, </span>health_check_target_ip=None<span class="p">, </span>instance_charge_type=None<span class="p">, </span>name=None<span class="p">, </span>opposite_access_point_id=None<span class="p">, </span>opposite_region=None<span class="p">, </span>period=None<span class="p">, </span>role=None<span class="p">, </span>router_id=None<span class="p">, </span>router_type=None<span class="p">, </span>specification=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

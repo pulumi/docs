@@ -20,12 +20,12 @@ The VPN connections data source lists lots of VPN connections resource informati
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const foo = pulumi.output(alicloud.vpn.getConnections({
+const foo = alicloud.vpn.getConnections({
     customerGatewayId: "fake-cgw-id",
     ids: ["fake-conn-id"],
     outputFile: "/tmp/vpnconn",
     vpnGatewayId: "fake-vpn-id",
-}, { async: true }));
+});
 ```
 
 {{% /example %}}

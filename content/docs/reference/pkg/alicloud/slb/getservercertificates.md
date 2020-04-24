@@ -20,7 +20,7 @@ This data source provides the server certificate list.
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const sampleDs = pulumi.output(alicloud.slb.getServerCertificates({ async: true }));
+const sampleDs = alicloud.slb.getServerCertificates();
 
 export const firstSlbServerCertificateId = sampleDs.certificates[0].id;
 ```

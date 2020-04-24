@@ -20,10 +20,10 @@ This data source provides the Function Compute functions of the current Alibaba 
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const functionsDs = pulumi.output(alicloud.fc.getFunctions({
+const functionsDs = alicloud.fc.getFunctions({
     nameRegex: "sample_fc_function",
     serviceName: "sample_service",
-}, { async: true }));
+});
 
 export const firstFcFunctionName = functionsDs.functions[0].name;
 ```

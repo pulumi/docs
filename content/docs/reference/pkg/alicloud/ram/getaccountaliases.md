@@ -20,9 +20,9 @@ This data source provides an alias for the Alibaba Cloud account.
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const aliasDs = pulumi.output(alicloud.ram.getAccountAliases({
+const aliasDs = alicloud.ram.getAccountAliases({
     outputFile: "alias.txt",
-}, { async: true }));
+});
 
 export const accountAlias = aliasDs.accountAlias;
 ```

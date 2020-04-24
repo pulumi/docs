@@ -22,7 +22,7 @@ meta_desc: "Explore the Function resource of the fc module, including examples, 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Function</span><span class="p">(resource_name, opts=None, </span>code_checksum=None<span class="p">, </span>description=None<span class="p">, </span>environment_variables=None<span class="p">, </span>filename=None<span class="p">, </span>handler=None<span class="p">, </span>memory_size=None<span class="p">, </span>name=None<span class="p">, </span>name_prefix=None<span class="p">, </span>oss_bucket=None<span class="p">, </span>oss_key=None<span class="p">, </span>runtime=None<span class="p">, </span>service=None<span class="p">, </span>timeout=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Function</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>code_checksum=None<span class="p">, </span>description=None<span class="p">, </span>environment_variables=None<span class="p">, </span>filename=None<span class="p">, </span>handler=None<span class="p">, </span>memory_size=None<span class="p">, </span>name=None<span class="p">, </span>name_prefix=None<span class="p">, </span>oss_bucket=None<span class="p">, </span>oss_key=None<span class="p">, </span>runtime=None<span class="p">, </span>service=None<span class="p">, </span>timeout=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

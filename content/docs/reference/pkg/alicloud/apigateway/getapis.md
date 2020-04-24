@@ -20,9 +20,9 @@ This data source provides the apis of the current Alibaba Cloud user.
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const dataApigatwayApis = pulumi.output(alicloud.apigateway.getApis({
+const dataApigatwayApis = alicloud.apigateway.getApis({
     outputFile: "output_ApiGatawayApis",
-}, { async: true }));
+});
 
 export const firstApiId = alicloud_api_gateway_apis_data_apigatway.apis.0.id;
 ```

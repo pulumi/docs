@@ -22,7 +22,7 @@ meta_desc: "Explore the Subscription resource of the datahub module, including e
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Subscription</span><span class="p">(resource_name, opts=None, </span>comment=None<span class="p">, </span>project_name=None<span class="p">, </span>topic_name=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Subscription</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>comment=None<span class="p">, </span>project_name=None<span class="p">, </span>topic_name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

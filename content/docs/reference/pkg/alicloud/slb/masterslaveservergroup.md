@@ -38,19 +38,19 @@ const config = new pulumi.Config();
 const name = config.get("name") || "tf-testAccSlbMasterSlaveServerGroupVpc";
 const number = config.get("number") || "1";
 
-const defaultZones = pulumi.output(alicloud.getZones({
+const defaultZones = alicloud.getZones({
     availableDiskCategory: "cloud_efficiency",
     availableResourceCreation: "VSwitch",
-}, { async: true }));
-const defaultInstanceTypes = defaultZones.apply(defaultZones => alicloud.ecs.getInstanceTypes({
+});
+const defaultInstanceTypes = alicloud.ecs.getInstanceTypes({
     availabilityZone: defaultZones.zones[0].id,
     eniAmount: 2,
-}, { async: true }));
-const image = pulumi.output(alicloud.ecs.getImages({
+});
+const image = alicloud.ecs.getImages({
     mostRecent: true,
     nameRegex: "^ubuntu_18.*64",
     owners: "system",
-}, { async: true }));
+});
 const mainNetwork = new alicloud.vpc.Network("main", {
     cidrBlock: "172.16.0.0/16",
 });
@@ -155,7 +155,7 @@ The servers mapping supports the following:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">MasterSlaveServerGroup</span><span class="p">(resource_name, opts=None, </span>delete_protection_validation=None<span class="p">, </span>load_balancer_id=None<span class="p">, </span>name=None<span class="p">, </span>servers=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">MasterSlaveServerGroup</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>delete_protection_validation=None<span class="p">, </span>load_balancer_id=None<span class="p">, </span>name=None<span class="p">, </span>servers=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

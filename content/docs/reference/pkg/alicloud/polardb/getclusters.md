@@ -23,10 +23,10 @@ Filters support regular expression for the cluster description, searches by tags
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const polardbClustersDs = pulumi.output(alicloud.polardb.getClusters({
+const polardbClustersDs = alicloud.polardb.getClusters({
     descriptionRegex: "pc-\\w+",
     status: "Running",
-}, { async: true }));
+});
 
 export const firstPolardbClusterId = polardbClustersDs.clusters[0].id;
 ```

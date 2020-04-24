@@ -36,21 +36,21 @@ const account2 = new alicloud.Provider("account2", {
     accessKey: "access456",
     secretKey: "secret456",
 });
-const cen = new alicloud.cen.Instance("cen", {}, { provider: account2 });
+const cen = new alicloud.cen.Instance("cen", {}, {provider: account2});
 const vpc = new alicloud.vpc.Network("vpc", {
     cidrBlock: "192.168.0.0/16",
-}, { provider: account1 });
+}, {provider: account1});
 const fooInstanceGrant = new alicloud.cen.InstanceGrant("foo", {
     cenId: cen.id,
     cenOwnerId: "uid2",
     childInstanceId: vpc.id,
-}, { provider: account1 });
+}, {provider: account1});
 const fooInstanceAttachment = new alicloud.cen.InstanceAttachment("foo", {
     childInstanceId: vpc.id,
     childInstanceOwnerId: "uid1",
     childInstanceRegionId: "cn-qingdao",
     instanceId: cen.id,
-}, { provider: account2, dependsOn: [fooInstanceGrant] });
+}, {provider: account2,dependsOn: [fooInstanceGrant]});
 ```
 {{% /example %}}
 {{% /examples %}}
@@ -66,7 +66,7 @@ const fooInstanceAttachment = new alicloud.cen.InstanceAttachment("foo", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">InstanceGrant</span><span class="p">(resource_name, opts=None, </span>cen_id=None<span class="p">, </span>cen_owner_id=None<span class="p">, </span>child_instance_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">InstanceGrant</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>cen_id=None<span class="p">, </span>cen_owner_id=None<span class="p">, </span>child_instance_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

@@ -20,9 +20,9 @@ This data source provides the api groups of the current Alibaba Cloud user.
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const dataApigatway = pulumi.output(alicloud.apigateway.getGroups({
+const dataApigatway = alicloud.apigateway.getGroups({
     outputFile: "outgroups",
-}, { async: true }));
+});
 
 export const firstGroupId = dataApigatway.groups[0].id;
 ```

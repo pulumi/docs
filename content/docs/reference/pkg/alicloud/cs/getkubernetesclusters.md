@@ -23,10 +23,10 @@ import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
 // Declare the data source
-const k8sClusters = pulumi.output(alicloud.cs.getKubernetesClusters({
+const k8sClusters = alicloud.cs.getKubernetesClusters({
     nameRegex: "my-first-k8s",
     outputFile: "my-first-k8s-json",
-}, { async: true }));
+});
 
 export const output = k8sClusters.clusters;
 ```

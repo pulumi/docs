@@ -22,7 +22,7 @@ meta_desc: "Explore the Store resource of the log module, including examples, in
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Store</span><span class="p">(resource_name, opts=None, </span>append_meta=None<span class="p">, </span>auto_split=None<span class="p">, </span>enable_web_tracking=None<span class="p">, </span>max_split_shard_count=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>retention_period=None<span class="p">, </span>shard_count=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Store</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>append_meta=None<span class="p">, </span>auto_split=None<span class="p">, </span>enable_web_tracking=None<span class="p">, </span>max_split_shard_count=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>retention_period=None<span class="p">, </span>shard_count=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

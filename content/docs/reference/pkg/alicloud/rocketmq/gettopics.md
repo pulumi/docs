@@ -39,7 +39,7 @@ const topicsDs = defaultTopic.instanceId.apply(instanceId => alicloud.rocketmq.g
     instanceId: instanceId,
     nameRegex: topic,
     outputFile: "topics.txt",
-}, { async: true }));
+}));
 
 export const firstTopicName = topicsDs.topics[0].topic;
 ```

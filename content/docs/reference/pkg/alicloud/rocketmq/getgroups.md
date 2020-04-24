@@ -38,7 +38,7 @@ const groupsDs = defaultGroup.instanceId.apply(instanceId => alicloud.rocketmq.g
     groupIdRegex: groupId,
     instanceId: instanceId,
     outputFile: "groups.txt",
-}, { async: true }));
+}));
 
 export const firstGroupName = groupsDs.groups[0].groupId;
 ```

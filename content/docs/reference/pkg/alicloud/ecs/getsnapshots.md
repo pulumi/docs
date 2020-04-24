@@ -24,10 +24,10 @@ For information about snapshot and how to use it, see [Snapshot](https://www.ali
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const snapshots = pulumi.output(alicloud.ecs.getSnapshots({
+const snapshots = alicloud.ecs.getSnapshots({
     ids: ["s-123456890abcdef"],
     nameRegex: "tf-testAcc-snapshot",
-}, { async: true }));
+});
 ```
 
 {{% /example %}}

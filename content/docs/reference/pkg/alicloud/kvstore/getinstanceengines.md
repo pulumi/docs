@@ -22,16 +22,16 @@ This data source provides the KVStore instance engines resource available info o
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const resourcesZones = pulumi.output(alicloud.getZones({
+const resourcesZones = alicloud.getZones({
     availableResourceCreation: "KVStore",
-}, { async: true }));
-const resourcesInstanceEngines = resourcesZones.apply(resourcesZones => alicloud.kvstore.getInstanceEngines({
+});
+const resourcesInstanceEngines = alicloud.kvstore.getInstanceEngines({
     engine: "Redis",
     engineVersion: "5.0",
     instanceChargeType: "PrePaid",
     outputFile: "./engines.txt",
     zoneId: resourcesZones.zones[0].id,
-}, { async: true }));
+});
 
 export const firstKvstoreInstanceClass = resourcesInstanceEngines.instanceEngines[0].engine;
 ```

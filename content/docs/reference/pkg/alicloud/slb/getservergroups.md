@@ -22,7 +22,7 @@ import * as alicloud from "@pulumi/alicloud";
 
 const sampleDs = alicloud_slb_sample_slb.id.apply(id => alicloud.slb.getServerGroups({
     loadBalancerId: id,
-}, { async: true }));
+}));
 
 export const firstSlbServerGroupId = sampleDs.slbServerGroups[0].id;
 ```

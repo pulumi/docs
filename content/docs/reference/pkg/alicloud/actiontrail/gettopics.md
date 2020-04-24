@@ -22,11 +22,11 @@ This data source provides a list of ALIKAFKA Topics in an Alibaba Cloud account 
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const topicsDs = pulumi.output(alicloud.actiontrail.getTopics({
+const topicsDs = alicloud.actiontrail.getTopics({
     instanceId: "xxx",
     nameRegex: "alikafkaTopicName",
     outputFile: "topics.txt",
-}, { async: true }));
+});
 
 export const firstTopicName = topicsDs.topics[0].topic;
 ```

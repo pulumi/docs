@@ -21,10 +21,10 @@ that connect VPCs together.
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const routerInterfacesDs = pulumi.output(alicloud.vpc.getRouterInterfaces({
+const routerInterfacesDs = alicloud.vpc.getRouterInterfaces({
     nameRegex: "^testenv",
     status: "Active",
-}, { async: true }));
+});
 
 export const firstRouterInterfaceId = routerInterfacesDs.interfaces[0].id;
 ```

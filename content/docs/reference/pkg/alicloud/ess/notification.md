@@ -25,14 +25,14 @@ import * as alicloud from "@pulumi/alicloud";
 const config = new pulumi.Config();
 const name = config.get("name") || "tf-testAccEssNotification-%d";
 
-const defaultRegions = pulumi.output(alicloud.getRegions({
+const defaultRegions = alicloud.getRegions({
     current: true,
-}, { async: true }));
-const defaultAccount = pulumi.output(alicloud.getAccount({ async: true }));
-const defaultZones = pulumi.output(alicloud.getZones({
+});
+const defaultAccount = alicloud.getAccount();
+const defaultZones = alicloud.getZones({
     availableDiskCategory: "cloud_efficiency",
     availableResourceCreation: "VSwitch",
-}, { async: true }));
+});
 const defaultNetwork = new alicloud.vpc.Network("default", {
     cidrBlock: "172.16.0.0/16",
 });
@@ -76,7 +76,7 @@ const defaultNotification = new alicloud.ess.Notification("default", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Notification</span><span class="p">(resource_name, opts=None, </span>notification_arn=None<span class="p">, </span>notification_types=None<span class="p">, </span>scaling_group_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Notification</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>notification_arn=None<span class="p">, </span>notification_types=None<span class="p">, </span>scaling_group_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

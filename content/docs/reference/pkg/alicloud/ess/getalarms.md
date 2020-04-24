@@ -22,14 +22,14 @@ This data source provides available alarm resources.
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const alarmDs = pulumi.output(alicloud.EssAlarm({
+const alarmDs = alicloud.EssAlarm({
     ids: [
         "alarm_id1",
         "alarm_id2",
     ],
     nameRegex: "alarm_name",
     scalingGroupId: "scaling_group_id",
-}, { async: true }));
+});
 
 export const firstScalingRule = alicloud_alarms_alarm_ds.configurations.0.id;
 ```

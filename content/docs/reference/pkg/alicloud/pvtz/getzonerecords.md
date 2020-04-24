@@ -23,7 +23,7 @@ import * as alicloud from "@pulumi/alicloud";
 const recordsDs = pulumi.all([alicloud_pvtz_zone_record_foo.value, alicloud_pvtz_zone_basic.id]).apply(([value, id]) => alicloud.pvtz.getZoneRecords({
     keyword: value,
     zoneId: id,
-}, { async: true }));
+}));
 
 export const firstRecordId = recordsDs.records[0].id;
 ```

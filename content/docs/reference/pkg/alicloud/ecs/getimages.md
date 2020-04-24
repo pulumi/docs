@@ -21,10 +21,10 @@ other public images and the ones available on the image market.
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const imagesDs = pulumi.output(alicloud.ecs.getImages({
+const imagesDs = alicloud.ecs.getImages({
     nameRegex: "^centos_6",
     owners: "system",
-}, { async: true }));
+});
 
 export const firstImageId = imagesDs.images[0].id;
 ```

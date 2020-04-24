@@ -25,9 +25,9 @@ import * as alicloud from "@pulumi/alicloud";
 const config = new pulumi.Config();
 const name = config.get("name") || "snat-entry-example-name";
 
-const defaultZones = pulumi.output(alicloud.getZones({
+const defaultZones = alicloud.getZones({
     availableResourceCreation: "VSwitch",
-}, { async: true }));
+});
 const fooNetwork = new alicloud.vpc.Network("foo", {
     cidrBlock: "172.16.0.0/12",
 });
@@ -52,7 +52,7 @@ const fooSnatEntry = new alicloud.vpc.SnatEntry("foo", {
 });
 const fooSnatEntries = fooSnatEntry.snatTableId.apply(snatTableId => alicloud.vpc.getSnatEntries({
     snatTableId: snatTableId,
-}, { async: true }));
+}));
 ```
 
 {{% /example %}}

@@ -20,10 +20,10 @@ This data source provides the objects of an OSS bucket.
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const bucketObjectsDs = pulumi.output(alicloud.oss.getBucketObjects({
+const bucketObjectsDs = alicloud.oss.getBucketObjects({
     bucketName: "sample_bucket",
     keyRegex: "sample/sample_object.txt",
-}, { async: true }));
+});
 
 export const firstObjectKey = bucketObjectsDs.objects[0].key;
 ```

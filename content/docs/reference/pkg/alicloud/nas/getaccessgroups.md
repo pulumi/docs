@@ -22,11 +22,11 @@ This data source provides user-available access groups. Use when you can create 
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const ag = pulumi.output(alicloud.nas.getAccessGroups({
+const ag = alicloud.nas.getAccessGroups({
     description: "tf-testAccAccessGroupsdatasource",
     nameRegex: "^foo",
     type: "Classic",
-}, { async: true }));
+});
 
 export const alicloudNasAccessGroupsId = ag.groups[0].id;
 ```

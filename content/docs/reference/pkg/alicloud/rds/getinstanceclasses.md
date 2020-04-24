@@ -22,12 +22,12 @@ This data source provides the RDS instance classes resource available info of Al
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const resources = pulumi.output(alicloud.rds.getInstanceClasses({
+const resources = alicloud.rds.getInstanceClasses({
     engine: "MySQL",
     engineVersion: "5.6",
     instanceChargeType: "PostPaid",
     outputFile: "./classes.txt",
-}, { async: true }));
+});
 
 export const firstDbInstanceClass = resources.instanceClasses[0].instanceClass;
 ```

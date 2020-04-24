@@ -22,7 +22,7 @@ meta_desc: "Explore the SiteMonitor resource of the cms module, including exampl
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">SiteMonitor</span><span class="p">(resource_name, opts=None, </span>address=None<span class="p">, </span>alert_ids=None<span class="p">, </span>interval=None<span class="p">, </span>isp_cities=None<span class="p">, </span>options_json=None<span class="p">, </span>task_name=None<span class="p">, </span>task_type=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">SiteMonitor</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>address=None<span class="p">, </span>alert_ids=None<span class="p">, </span>interval=None<span class="p">, </span>isp_cities=None<span class="p">, </span>options_json=None<span class="p">, </span>task_name=None<span class="p">, </span>task_type=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

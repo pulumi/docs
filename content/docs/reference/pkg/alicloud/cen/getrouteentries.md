@@ -20,10 +20,10 @@ This data source provides CEN Route Entries available to the user.
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const entry = pulumi.output(alicloud.cen.getRouteEntries({
+const entry = alicloud.cen.getRouteEntries({
     instanceId: "cen-id1",
     routeTableId: "vtb-id1",
-}, { async: true }));
+});
 
 export const firstRouteEntriesRouteEntryCidrBlock = entry.entries[0].cidrBlock;
 ```

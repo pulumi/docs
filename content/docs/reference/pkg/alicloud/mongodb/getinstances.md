@@ -21,12 +21,12 @@ Filters support regular expression for the instance name, engine or instance typ
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const mongo = pulumi.output(alicloud.mongodb.getInstances({
+const mongo = alicloud.mongodb.getInstances({
     availabilityZone: "eu-central-1a",
     instanceClass: "dds.mongo.mid",
     instanceType: "replicate",
     nameRegex: "dds-.+\\d+",
-}, { async: true }));
+});
 ```
 
 {{% /example %}}

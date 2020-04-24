@@ -3762,7 +3762,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.apimanagement.Service">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.apimanagement.</code><code class="sig-name descname">Service</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">additional_locations=None</em>, <em class="sig-param">certificates=None</em>, <em class="sig-param">hostname_configuration=None</em>, <em class="sig-param">identity=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">notification_sender_email=None</em>, <em class="sig-param">policy=None</em>, <em class="sig-param">protocols=None</em>, <em class="sig-param">publisher_email=None</em>, <em class="sig-param">publisher_name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">security=None</em>, <em class="sig-param">sign_in=None</em>, <em class="sig-param">sign_up=None</em>, <em class="sig-param">sku_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.Service" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.apimanagement.</code><code class="sig-name descname">Service</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">additional_locations=None</em>, <em class="sig-param">certificates=None</em>, <em class="sig-param">hostname_configuration=None</em>, <em class="sig-param">identity=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">notification_sender_email=None</em>, <em class="sig-param">policy=None</em>, <em class="sig-param">protocols=None</em>, <em class="sig-param">publisher_email=None</em>, <em class="sig-param">publisher_name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">security=None</em>, <em class="sig-param">sign_in=None</em>, <em class="sig-param">sign_up=None</em>, <em class="sig-param">sku_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">virtual_network_configuration=None</em>, <em class="sig-param">virtual_network_type=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.Service" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an API Management Service.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -3786,6 +3786,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>sign_up</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">sign_up</span></code> block as defined below.</p></li>
 <li><p><strong>sku_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <code class="docutils literal notranslate"><span class="pre">sku_name</span></code> is a string consisting of two parts separated by an underscore(_). The fist part is the <code class="docutils literal notranslate"><span class="pre">name</span></code>, valid values include: <code class="docutils literal notranslate"><span class="pre">Developer</span></code>, <code class="docutils literal notranslate"><span class="pre">Basic</span></code>, <code class="docutils literal notranslate"><span class="pre">Standard</span></code> and <code class="docutils literal notranslate"><span class="pre">Premium</span></code>. The second part is the <code class="docutils literal notranslate"><span class="pre">capacity</span></code> (e.g. the number of deployed units of the <code class="docutils literal notranslate"><span class="pre">sku</span></code>), which must be a positive <code class="docutils literal notranslate"><span class="pre">integer</span></code> (e.g. <code class="docutils literal notranslate"><span class="pre">Developer_1</span></code>).</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags assigned to the resource.</p></li>
+<li><p><strong>virtual_network_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">virtual_network_configuration</span></code> block as defined below. Required when <code class="docutils literal notranslate"><span class="pre">virtual_network_type</span></code> is <code class="docutils literal notranslate"><span class="pre">External</span></code> or <code class="docutils literal notranslate"><span class="pre">Internal</span></code>.</p></li>
+<li><p><strong>virtual_network_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of virtual network you want to use, valid values include: <code class="docutils literal notranslate"><span class="pre">None</span></code>, <code class="docutils literal notranslate"><span class="pre">External</span></code>, <code class="docutils literal notranslate"><span class="pre">Internal</span></code>.</p></li>
 </ul>
 </dd>
 </dl>
@@ -3880,6 +3882,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">text</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Terms of Service which users are required to agree to in order to sign up.</p></li>
 </ul>
 </li>
+</ul>
+<p>The <strong>virtual_network_configuration</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The id of the subnet that will be used for the API Management.</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_azure.apimanagement.Service.additional_locations">
@@ -4102,9 +4108,24 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>A mapping of tags assigned to the resource.</p>
 </dd></dl>
 
+<dl class="attribute">
+<dt id="pulumi_azure.apimanagement.Service.virtual_network_configuration">
+<code class="sig-name descname">virtual_network_configuration</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.apimanagement.Service.virtual_network_configuration" title="Permalink to this definition">¶</a></dt>
+<dd><p>A <code class="docutils literal notranslate"><span class="pre">virtual_network_configuration</span></code> block as defined below. Required when <code class="docutils literal notranslate"><span class="pre">virtual_network_type</span></code> is <code class="docutils literal notranslate"><span class="pre">External</span></code> or <code class="docutils literal notranslate"><span class="pre">Internal</span></code>.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The id of the subnet that will be used for the API Management.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.apimanagement.Service.virtual_network_type">
+<code class="sig-name descname">virtual_network_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.apimanagement.Service.virtual_network_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>The type of virtual network you want to use, valid values include: <code class="docutils literal notranslate"><span class="pre">None</span></code>, <code class="docutils literal notranslate"><span class="pre">External</span></code>, <code class="docutils literal notranslate"><span class="pre">Internal</span></code>.</p>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_azure.apimanagement.Service.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">additional_locations=None</em>, <em class="sig-param">certificates=None</em>, <em class="sig-param">gateway_regional_url=None</em>, <em class="sig-param">gateway_url=None</em>, <em class="sig-param">hostname_configuration=None</em>, <em class="sig-param">identity=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">management_api_url=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">notification_sender_email=None</em>, <em class="sig-param">policy=None</em>, <em class="sig-param">portal_url=None</em>, <em class="sig-param">protocols=None</em>, <em class="sig-param">public_ip_addresses=None</em>, <em class="sig-param">publisher_email=None</em>, <em class="sig-param">publisher_name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">scm_url=None</em>, <em class="sig-param">security=None</em>, <em class="sig-param">sign_in=None</em>, <em class="sig-param">sign_up=None</em>, <em class="sig-param">sku_name=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.Service.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">additional_locations=None</em>, <em class="sig-param">certificates=None</em>, <em class="sig-param">gateway_regional_url=None</em>, <em class="sig-param">gateway_url=None</em>, <em class="sig-param">hostname_configuration=None</em>, <em class="sig-param">identity=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">management_api_url=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">notification_sender_email=None</em>, <em class="sig-param">policy=None</em>, <em class="sig-param">portal_url=None</em>, <em class="sig-param">private_ip_addresses=None</em>, <em class="sig-param">protocols=None</em>, <em class="sig-param">public_ip_addresses=None</em>, <em class="sig-param">publisher_email=None</em>, <em class="sig-param">publisher_name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">scm_url=None</em>, <em class="sig-param">security=None</em>, <em class="sig-param">sign_in=None</em>, <em class="sig-param">sign_up=None</em>, <em class="sig-param">sku_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">virtual_network_configuration=None</em>, <em class="sig-param">virtual_network_type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.Service.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Service resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -4136,6 +4157,8 @@ properties used to qualify the lookup.</p>
 <li><p><strong>sign_up</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">sign_up</span></code> block as defined below.</p></li>
 <li><p><strong>sku_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <code class="docutils literal notranslate"><span class="pre">sku_name</span></code> is a string consisting of two parts separated by an underscore(_). The fist part is the <code class="docutils literal notranslate"><span class="pre">name</span></code>, valid values include: <code class="docutils literal notranslate"><span class="pre">Developer</span></code>, <code class="docutils literal notranslate"><span class="pre">Basic</span></code>, <code class="docutils literal notranslate"><span class="pre">Standard</span></code> and <code class="docutils literal notranslate"><span class="pre">Premium</span></code>. The second part is the <code class="docutils literal notranslate"><span class="pre">capacity</span></code> (e.g. the number of deployed units of the <code class="docutils literal notranslate"><span class="pre">sku</span></code>), which must be a positive <code class="docutils literal notranslate"><span class="pre">integer</span></code> (e.g. <code class="docutils literal notranslate"><span class="pre">Developer_1</span></code>).</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags assigned to the resource.</p></li>
+<li><p><strong>virtual_network_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">virtual_network_configuration</span></code> block as defined below. Required when <code class="docutils literal notranslate"><span class="pre">virtual_network_type</span></code> is <code class="docutils literal notranslate"><span class="pre">External</span></code> or <code class="docutils literal notranslate"><span class="pre">Internal</span></code>.</p></li>
+<li><p><strong>virtual_network_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of virtual network you want to use, valid values include: <code class="docutils literal notranslate"><span class="pre">None</span></code>, <code class="docutils literal notranslate"><span class="pre">External</span></code>, <code class="docutils literal notranslate"><span class="pre">Internal</span></code>.</p></li>
 </ul>
 </dd>
 </dl>
@@ -4230,6 +4253,10 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">text</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Terms of Service which users are required to agree to in order to sign up.</p></li>
 </ul>
 </li>
+</ul>
+<p>The <strong>virtual_network_configuration</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The id of the subnet that will be used for the API Management.</p></li>
 </ul>
 </dd></dl>
 

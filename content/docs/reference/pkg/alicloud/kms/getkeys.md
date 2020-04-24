@@ -21,10 +21,10 @@ import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
 // Declare the data source
-const kmsKeysDs = pulumi.output(alicloud.kms.getKeys({
+const kmsKeysDs = alicloud.kms.getKeys({
     descriptionRegex: "Hello KMS",
     outputFile: "kms_keys.json",
-}, { async: true }));
+});
 
 export const firstKeyId = kmsKeysDs.keys[0].id;
 ```

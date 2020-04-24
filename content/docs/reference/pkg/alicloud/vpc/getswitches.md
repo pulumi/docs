@@ -23,7 +23,7 @@ import * as alicloud from "@pulumi/alicloud";
 const config = new pulumi.Config();
 const name = config.get("name") || "vswitchDatasourceName";
 
-const defaultZones = pulumi.output(alicloud.getZones({ async: true }));
+const defaultZones = alicloud.getZones();
 const vpc = new alicloud.vpc.Network("vpc", {
     cidrBlock: "172.16.0.0/16",
 });
@@ -34,7 +34,7 @@ const vswitch = new alicloud.vpc.Switch("vswitch", {
 });
 const defaultSwitches = vswitch.name.apply(name => alicloud.vpc.getSwitches({
     nameRegex: name,
-}, { async: true }));
+}));
 ```
 
 {{% /example %}}

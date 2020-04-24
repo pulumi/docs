@@ -37,10 +37,10 @@ const sh = new alicloud.Provider("sh", {
 });
 const vpc1 = new alicloud.vpc.Network("vpc1", {
     cidrBlock: "192.168.0.0/16",
-}, { provider: fra });
+}, {provider: fra});
 const vpc2 = new alicloud.vpc.Network("vpc2", {
     cidrBlock: "172.16.0.0/12",
-}, { provider: sh });
+}, {provider: sh});
 const cen = new alicloud.cen.Instance("cen", {
     description: "tf-testAccCenBandwidthLimitConfigDescription",
 });
@@ -72,7 +72,7 @@ const foo = new alicloud.cen.BandwidthLimit("foo", {
         "eu-central-1",
         "cn-shanghai",
     ],
-}, { dependsOn: [bwpAttach, vpcAttach1, vpcAttach2] });
+}, {dependsOn: [bwpAttach, vpcAttach1, vpcAttach2]});
 ```
 {{% /example %}}
 {{% /examples %}}
@@ -88,7 +88,7 @@ const foo = new alicloud.cen.BandwidthLimit("foo", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">BandwidthLimit</span><span class="p">(resource_name, opts=None, </span>bandwidth_limit=None<span class="p">, </span>instance_id=None<span class="p">, </span>region_ids=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">BandwidthLimit</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>bandwidth_limit=None<span class="p">, </span>instance_id=None<span class="p">, </span>region_ids=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

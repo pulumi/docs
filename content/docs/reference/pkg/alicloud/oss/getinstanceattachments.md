@@ -20,11 +20,11 @@ This data source provides the ots instance attachments of the current Alibaba Cl
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const attachmentsDs = pulumi.output(alicloud.oss.getInstanceAttachments({
+const attachmentsDs = alicloud.oss.getInstanceAttachments({
     instanceName: "sample-instance",
     nameRegex: "testvpc",
     outputFile: "attachments.txt",
-}, { async: true }));
+});
 
 export const firstOtsAttachmentId = attachmentsDs.attachments[0].id;
 ```

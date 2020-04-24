@@ -22,7 +22,7 @@ meta_desc: "Explore the AccountPasswordPolicy resource of the ram module, includ
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">AccountPasswordPolicy</span><span class="p">(resource_name, opts=None, </span>hard_expiry=None<span class="p">, </span>max_login_attempts=None<span class="p">, </span>max_password_age=None<span class="p">, </span>minimum_password_length=None<span class="p">, </span>password_reuse_prevention=None<span class="p">, </span>require_lowercase_characters=None<span class="p">, </span>require_numbers=None<span class="p">, </span>require_symbols=None<span class="p">, </span>require_uppercase_characters=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">AccountPasswordPolicy</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>hard_expiry=None<span class="p">, </span>max_login_attempts=None<span class="p">, </span>max_password_age=None<span class="p">, </span>minimum_password_length=None<span class="p">, </span>password_reuse_prevention=None<span class="p">, </span>require_lowercase_characters=None<span class="p">, </span>require_numbers=None<span class="p">, </span>require_symbols=None<span class="p">, </span>require_uppercase_characters=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

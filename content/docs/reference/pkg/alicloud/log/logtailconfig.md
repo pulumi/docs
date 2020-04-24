@@ -22,7 +22,7 @@ meta_desc: "Explore the LogTailConfig resource of the log module, including exam
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">LogTailConfig</span><span class="p">(resource_name, opts=None, </span>input_detail=None<span class="p">, </span>input_type=None<span class="p">, </span>log_sample=None<span class="p">, </span>logstore=None<span class="p">, </span>name=None<span class="p">, </span>output_type=None<span class="p">, </span>project=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">LogTailConfig</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>input_detail=None<span class="p">, </span>input_type=None<span class="p">, </span>log_sample=None<span class="p">, </span>logstore=None<span class="p">, </span>name=None<span class="p">, </span>output_type=None<span class="p">, </span>project=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

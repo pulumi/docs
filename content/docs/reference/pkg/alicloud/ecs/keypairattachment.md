@@ -27,20 +27,20 @@ import * as alicloud from "@pulumi/alicloud";
 const config = new pulumi.Config();
 const name = config.get("name") || "keyPairAttachmentName";
 
-const defaultZones = pulumi.output(alicloud.getZones({
+const defaultZones = alicloud.getZones({
     availableDiskCategory: "cloud_ssd",
     availableResourceCreation: "VSwitch",
-}, { async: true }));
-const type = defaultZones.apply(defaultZones => alicloud.ecs.getInstanceTypes({
+});
+const type = alicloud.ecs.getInstanceTypes({
     availabilityZone: defaultZones.zones[0].id,
     cpuCoreCount: 1,
     memorySize: 2,
-}, { async: true }));
-const images = pulumi.output(alicloud.ecs.getImages({
+});
+const images = alicloud.ecs.getImages({
     mostRecent: true,
     nameRegex: "^ubuntu_18.*64",
     owners: "system",
-}, { async: true }));
+});
 const vpc = new alicloud.vpc.Network("vpc", {
     cidrBlock: "10.1.0.0/21",
 });
@@ -90,7 +90,7 @@ const attachment = new alicloud.ecs.KeyPairAttachment("attachment", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">KeyPairAttachment</span><span class="p">(resource_name, opts=None, </span>force=None<span class="p">, </span>instance_ids=None<span class="p">, </span>key_name=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">KeyPairAttachment</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>force=None<span class="p">, </span>instance_ids=None<span class="p">, </span>key_name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

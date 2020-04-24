@@ -20,9 +20,9 @@ This data source provides the server load balancers of the current Alibaba Cloud
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const slbsDs = pulumi.output(alicloud.slb.getLoadBalancers({
+const slbsDs = alicloud.slb.getLoadBalancers({
     nameRegex: "sample_slb",
-}, { async: true }));
+});
 
 export const firstSlbId = slbsDs.slbs[0].id;
 ```

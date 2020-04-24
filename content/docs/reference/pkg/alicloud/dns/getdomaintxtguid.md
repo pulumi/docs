@@ -22,10 +22,10 @@ Provides the generation of txt records to realize the retrieval and verification
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const thisDomainTxtGuid = pulumi.output(alicloud.dns.getDomainTxtGuid({
+const thisDomainTxtGuid = alicloud.dns.getDomainTxtGuid({
     domainName: "test111.abc",
     type: "ADD_SUB_DOMAIN",
-}, { async: true }));
+});
 
 export const rr = thisDomainTxtGuid.rr;
 export const value = thisDomainTxtGuid.value;

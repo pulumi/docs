@@ -20,9 +20,9 @@ This data source provides the disks of the current Alibaba Cloud user.
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const disksDs = pulumi.output(alicloud.ecs.getDisks({
+const disksDs = alicloud.ecs.getDisks({
     nameRegex: "sample_disk",
-}, { async: true }));
+});
 
 export const firstDiskId = disksDs.disks[0].id;
 ```

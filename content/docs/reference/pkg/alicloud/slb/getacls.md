@@ -20,7 +20,7 @@ This data source provides the acls in the region.
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const sampleDs = pulumi.output(alicloud.slb.getAcls({ async: true }));
+const sampleDs = alicloud.slb.getAcls();
 
 export const firstSlbAclId = sampleDs.acls[0].id;
 ```

@@ -22,7 +22,7 @@ This data source provides the identity of the current user.
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const current = pulumi.output(alicloud.getCallerIdentity({ async: true }));
+const current = alicloud.getCallerIdentity();
 
 export const currentUserArn = current.id;
 ```

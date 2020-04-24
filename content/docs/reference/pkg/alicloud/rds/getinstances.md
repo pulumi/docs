@@ -21,14 +21,14 @@ Filters support regular expression for the instance name, searches by tags, and 
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const dbInstancesDs = pulumi.output(alicloud.rds.getInstances({
+const dbInstancesDs = alicloud.rds.getInstances({
     nameRegex: "data-\\d+",
     status: "Running",
     tags: {
         size: "tiny",
         type: "database",
     },
-}, { async: true }));
+});
 
 export const firstDbInstanceId = dbInstancesDs.instances[0].id;
 ```

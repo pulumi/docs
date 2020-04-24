@@ -20,9 +20,9 @@ This data source provides the OSS buckets of the current Alibaba Cloud user.
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const ossBucketsDs = pulumi.output(alicloud.oss.getBuckets({
+const ossBucketsDs = alicloud.oss.getBuckets({
     nameRegex: "sample_oss_bucket",
-}, { async: true }));
+});
 
 export const firstOssBucketName = ossBucketsDs.buckets[0].name;
 ```

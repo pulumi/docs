@@ -22,7 +22,7 @@ meta_desc: "Explore the Schedule resource of the ess module, including examples,
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Schedule</span><span class="p">(resource_name, opts=None, </span>description=None<span class="p">, </span>launch_expiration_time=None<span class="p">, </span>launch_time=None<span class="p">, </span>recurrence_end_time=None<span class="p">, </span>recurrence_type=None<span class="p">, </span>recurrence_value=None<span class="p">, </span>scheduled_action=None<span class="p">, </span>scheduled_task_name=None<span class="p">, </span>task_enabled=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Schedule</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>description=None<span class="p">, </span>launch_expiration_time=None<span class="p">, </span>launch_time=None<span class="p">, </span>recurrence_end_time=None<span class="p">, </span>recurrence_type=None<span class="p">, </span>recurrence_value=None<span class="p">, </span>scheduled_action=None<span class="p">, </span>scheduled_task_name=None<span class="p">, </span>task_enabled=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

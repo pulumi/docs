@@ -22,7 +22,7 @@ meta_desc: "Explore the DomainNew resource of the cdn module, including examples
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">DomainNew</span><span class="p">(resource_name, opts=None, </span>cdn_type=None<span class="p">, </span>certificate_config=None<span class="p">, </span>domain_name=None<span class="p">, </span>resource_group_id=None<span class="p">, </span>scope=None<span class="p">, </span>sources=None<span class="p">, </span>tags=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">DomainNew</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>cdn_type=None<span class="p">, </span>certificate_config=None<span class="p">, </span>domain_name=None<span class="p">, </span>resource_group_id=None<span class="p">, </span>scope=None<span class="p">, </span>sources=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

@@ -20,9 +20,9 @@ This data source provides a list of action trail of the current Alibaba Cloud us
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const trails = pulumi.output(alicloud.actiontrail.getTrails({
+const trails = alicloud.actiontrail.getTrails({
     nameRegex: "tf-testacc-actiontrail",
-}, { async: true }));
+});
 
 export const firstTrailName = trails.actiontrails[0].name;
 ```

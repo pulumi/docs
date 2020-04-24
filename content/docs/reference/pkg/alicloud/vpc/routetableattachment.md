@@ -22,7 +22,7 @@ meta_desc: "Explore the RouteTableAttachment resource of the vpc module, includi
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">RouteTableAttachment</span><span class="p">(resource_name, opts=None, </span>route_table_id=None<span class="p">, </span>vswitch_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">RouteTableAttachment</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>route_table_id=None<span class="p">, </span>vswitch_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

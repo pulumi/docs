@@ -41,10 +41,10 @@ import * as alicloud from "@pulumi/alicloud";
 const config = new pulumi.Config();
 const name = config.get("name") || "testAccEssVserverGroupsAttachment";
 
-const defaultZones = pulumi.output(alicloud.getZones({
+const defaultZones = alicloud.getZones({
     availableDiskCategory: "cloud_efficiency",
     availableResourceCreation: "VSwitch",
-}, { async: true }));
+});
 const defaultNetwork = new alicloud.vpc.Network("default", {
     cidrBlock: "172.16.0.0/16",
 });
@@ -75,7 +75,7 @@ const defaultScalingGroup = new alicloud.ess.ScalingGroup("default", {
     minSize: 2,
     scalingGroupName: name,
     vswitchIds: [defaultSwitch.id],
-}, { dependsOn: [...defaultListener] });
+}, {dependsOn: [...defaultListener]});
 const defaultScalingGroupVServerGroups = new alicloud.ess.ScalingGroupVServerGroups("default", {
     scalingGroupId: defaultScalingGroup.id,
     vserverGroups: [{
@@ -115,7 +115,7 @@ the vserver_group supports the following:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ScalingGroupVServerGroups</span><span class="p">(resource_name, opts=None, </span>force=None<span class="p">, </span>scaling_group_id=None<span class="p">, </span>vserver_groups=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ScalingGroupVServerGroups</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>force=None<span class="p">, </span>scaling_group_id=None<span class="p">, </span>vserver_groups=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

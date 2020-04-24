@@ -20,12 +20,12 @@ The SSL-VPN client certificates data source lists lots of SSL-VPN client certifi
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const foo = pulumi.output(alicloud.vpc.getSslVpnClientCerts({
+const foo = alicloud.vpc.getSslVpnClientCerts({
     ids: ["fake-cert-id"],
     nameRegex: "^foo",
     outputFile: "/tmp/clientcert",
     sslVpnServerId: "fake-server-id",
-}, { async: true }));
+});
 ```
 
 {{% /example %}}

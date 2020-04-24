@@ -20,9 +20,9 @@ This data source provides CEN Bandwidth Limits available to the user.
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const bwl = pulumi.output(alicloud.cen.getBandwidthLimits({
+const bwl = alicloud.cen.getBandwidthLimits({
     instanceIds: ["cen-id1"],
-}, { async: true }));
+});
 
 export const firstCenBandwidthLimitsLocalRegionId = bwl.limits[0].localRegionId;
 ```

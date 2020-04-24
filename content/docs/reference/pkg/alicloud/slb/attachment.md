@@ -22,7 +22,7 @@ meta_desc: "Explore the Attachment resource of the slb module, including example
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Attachment</span><span class="p">(resource_name, opts=None, </span>backend_servers=None<span class="p">, </span>delete_protection_validation=None<span class="p">, </span>instance_ids=None<span class="p">, </span>load_balancer_id=None<span class="p">, </span>server_type=None<span class="p">, </span>weight=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Attachment</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>backend_servers=None<span class="p">, </span>delete_protection_validation=None<span class="p">, </span>instance_ids=None<span class="p">, </span>load_balancer_id=None<span class="p">, </span>server_type=None<span class="p">, </span>weight=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

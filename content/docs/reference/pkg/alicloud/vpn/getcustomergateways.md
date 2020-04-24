@@ -20,14 +20,14 @@ The VPN customers gateways data source lists a number of VPN customer gateways r
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const foo = pulumi.output(alicloud.vpn.getCustomerGateways({
+const foo = alicloud.vpn.getCustomerGateways({
     ids: [
         "fake-id1",
         "fake-id2",
     ],
     nameRegex: "testAcc*",
     outputFile: "/tmp/cgws",
-}, { async: true }));
+});
 ```
 
 {{% /example %}}

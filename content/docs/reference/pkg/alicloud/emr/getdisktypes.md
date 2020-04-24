@@ -23,13 +23,13 @@ system disk types available in Alibaba Cloud account when create a emr cluster.
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const defaultDiskTypes = pulumi.output(alicloud.emr.getDiskTypes({
+const defaultDiskTypes = alicloud.emr.getDiskTypes({
     clusterType: "HADOOP",
     destinationResource: "DataDisk",
     instanceChargeType: "PostPaid",
     instanceType: "ecs.g5.xlarge",
     zoneId: "cn-huhehaote-a",
-}, { async: true }));
+});
 
 export const dataDiskType = defaultDiskTypes.types[0].value;
 ```

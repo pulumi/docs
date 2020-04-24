@@ -29,7 +29,7 @@ const fooCommonBandwithPackage = new alicloud.vpc.CommonBandwithPackage("foo", {
 const fooCommonBandwidthPackages = fooCommonBandwithPackage.id.apply(id => alicloud.vpc.getCommonBandwidthPackages({
     ids: [id],
     nameRegex: "^tf-testAcc.*",
-}, { async: true }));
+}));
 ```
 
 {{% /example %}}

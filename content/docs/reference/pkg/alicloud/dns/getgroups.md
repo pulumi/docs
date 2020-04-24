@@ -20,10 +20,10 @@ This data source provides a list of DNS Domain Groups in an Alibaba Cloud accoun
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const groupsDs = pulumi.output(alicloud.dns.getGroups({
+const groupsDs = alicloud.dns.getGroups({
     nameRegex: "^y[A-Za-z]+",
     outputFile: "groups.txt",
-}, { async: true }));
+});
 
 export const firstGroupName = groupsDs.groups[0].groupName;
 ```

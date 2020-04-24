@@ -25,19 +25,19 @@ import * as alicloud from "@pulumi/alicloud";
 const config = new pulumi.Config();
 const name = config.get("name") || "tf-testAccRouteEntryConfig";
 
-const defaultZones = pulumi.output(alicloud.getZones({
+const defaultZones = alicloud.getZones({
     availableResourceCreation: "VSwitch",
-}, { async: true }));
-const defaultInstanceTypes = defaultZones.apply(defaultZones => alicloud.ecs.getInstanceTypes({
+});
+const defaultInstanceTypes = alicloud.ecs.getInstanceTypes({
     availabilityZone: defaultZones.zones[0].id,
     cpuCoreCount: 1,
     memorySize: 2,
-}, { async: true }));
-const defaultImages = pulumi.output(alicloud.ecs.getImages({
+});
+const defaultImages = alicloud.ecs.getImages({
     mostRecent: true,
     nameRegex: "^ubuntu_18.*64",
     owners: "system",
-}, { async: true }));
+});
 const fooNetwork = new alicloud.vpc.Network("foo", {
     cidrBlock: "10.1.0.0/21",
 });
@@ -82,7 +82,7 @@ const ingress = new alicloud.ecs.SecurityGroupRule("ingress", {
 });
 const fooRouteEntries = fooRouteEntry.routeTableId.apply(routeTableId => alicloud.vpc.getRouteEntries({
     routeTableId: routeTableId,
-}, { async: true }));
+}));
 ```
 
 {{% /example %}}

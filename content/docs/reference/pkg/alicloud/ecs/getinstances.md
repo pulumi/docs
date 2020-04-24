@@ -20,10 +20,10 @@ The Instances data source list ECS instance resources according to their ID, nam
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const instancesDs = pulumi.output(alicloud.ecs.getInstances({
+const instancesDs = alicloud.ecs.getInstances({
     nameRegex: "web_server",
     status: "Running",
-}, { async: true }));
+});
 
 export const firstInstanceId = instancesDs.instances[0].id;
 export const instanceIds = instancesDs.ids!;

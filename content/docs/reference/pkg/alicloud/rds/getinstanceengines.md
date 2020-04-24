@@ -22,12 +22,12 @@ This data source provides the RDS instance engines resource available info of Al
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const resources = pulumi.output(alicloud.rds.getInstanceEngines({
+const resources = alicloud.rds.getInstanceEngines({
     engine: "MySQL",
     engineVersion: "5.6",
     instanceChargeType: "PostPaid",
     outputFile: "./engines.txt",
-}, { async: true }));
+});
 
 export const firstDbCategory = resources.instanceEngines[0].category;
 ```
