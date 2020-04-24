@@ -28,7 +28,7 @@ Manages an Extension for a Virtual Machine Scale Set.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">VirtualMachineScaleSetExtension</span><span class="p">(resource_name, opts=None, </span>auto_upgrade_minor_version=None<span class="p">, </span>force_update_tag=None<span class="p">, </span>name=None<span class="p">, </span>protected_settings=None<span class="p">, </span>provision_after_extensions=None<span class="p">, </span>publisher=None<span class="p">, </span>settings=None<span class="p">, </span>type=None<span class="p">, </span>type_handler_version=None<span class="p">, </span>virtual_machine_scale_set_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">VirtualMachineScaleSetExtension</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>auto_upgrade_minor_version=None<span class="p">, </span>force_update_tag=None<span class="p">, </span>name=None<span class="p">, </span>protected_settings=None<span class="p">, </span>provision_after_extensions=None<span class="p">, </span>publisher=None<span class="p">, </span>settings=None<span class="p">, </span>type=None<span class="p">, </span>type_handler_version=None<span class="p">, </span>virtual_machine_scale_set_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

@@ -26,7 +26,7 @@ Manages a Log Analytics (formally Operational Insights) Windows Performance Coun
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">DataSourceWindowsPerformanceCounter</span><span class="p">(resource_name, opts=None, </span>counter_name=None<span class="p">, </span>instance_name=None<span class="p">, </span>interval_seconds=None<span class="p">, </span>name=None<span class="p">, </span>object_name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>workspace_name=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">DataSourceWindowsPerformanceCounter</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>counter_name=None<span class="p">, </span>instance_name=None<span class="p">, </span>interval_seconds=None<span class="p">, </span>name=None<span class="p">, </span>object_name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>workspace_name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

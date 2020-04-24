@@ -26,7 +26,7 @@ Manages an Application Insights Analytics Item component.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">AnalyticsItem</span><span class="p">(resource_name, opts=None, </span>application_insights_id=None<span class="p">, </span>content=None<span class="p">, </span>function_alias=None<span class="p">, </span>name=None<span class="p">, </span>scope=None<span class="p">, </span>type=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">AnalyticsItem</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>application_insights_id=None<span class="p">, </span>content=None<span class="p">, </span>function_alias=None<span class="p">, </span>name=None<span class="p">, </span>scope=None<span class="p">, </span>type=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

@@ -26,7 +26,7 @@ Manages an Azure Front Door Web Application Firewall Policy instance.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">FirewallPolicy</span><span class="p">(resource_name, opts=None, </span>custom_block_response_body=None<span class="p">, </span>custom_block_response_status_code=None<span class="p">, </span>custom_rules=None<span class="p">, </span>enabled=None<span class="p">, </span>managed_rules=None<span class="p">, </span>mode=None<span class="p">, </span>name=None<span class="p">, </span>redirect_url=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>tags=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">FirewallPolicy</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>custom_block_response_body=None<span class="p">, </span>custom_block_response_status_code=None<span class="p">, </span>custom_rules=None<span class="p">, </span>enabled=None<span class="p">, </span>managed_rules=None<span class="p">, </span>mode=None<span class="p">, </span>name=None<span class="p">, </span>redirect_url=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

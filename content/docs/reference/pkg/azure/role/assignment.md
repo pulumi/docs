@@ -23,7 +23,7 @@ Assigns a given Principal (User or Application) to a given Role.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Assignment</span><span class="p">(resource_name, opts=None, </span>name=None<span class="p">, </span>principal_id=None<span class="p">, </span>role_definition_id=None<span class="p">, </span>role_definition_name=None<span class="p">, </span>scope=None<span class="p">, </span>skip_service_principal_aad_check=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Assignment</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>name=None<span class="p">, </span>principal_id=None<span class="p">, </span>role_definition_id=None<span class="p">, </span>role_definition_name=None<span class="p">, </span>scope=None<span class="p">, </span>skip_service_principal_aad_check=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

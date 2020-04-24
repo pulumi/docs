@@ -28,7 +28,7 @@ Manages a Virtual Network Gateway to establish secure, cross-premises connectivi
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">VirtualNetworkGateway</span><span class="p">(resource_name, opts=None, </span>active_active=None<span class="p">, </span>bgp_settings=None<span class="p">, </span>default_local_network_gateway_id=None<span class="p">, </span>enable_bgp=None<span class="p">, </span>generation=None<span class="p">, </span>ip_configurations=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>sku=None<span class="p">, </span>tags=None<span class="p">, </span>type=None<span class="p">, </span>vpn_client_configuration=None<span class="p">, </span>vpn_type=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">VirtualNetworkGateway</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>active_active=None<span class="p">, </span>bgp_settings=None<span class="p">, </span>default_local_network_gateway_id=None<span class="p">, </span>enable_bgp=None<span class="p">, </span>generation=None<span class="p">, </span>ip_configurations=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>sku=None<span class="p">, </span>tags=None<span class="p">, </span>type=None<span class="p">, </span>vpn_client_configuration=None<span class="p">, </span>vpn_type=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1829,6 +1829,16 @@ the Virtual Network Gateway. Changing this forces a new resource to be created.
 
     <dt class="property-required"
             title="Required">
+        <span>Public<wbr>Ip<wbr>Address<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the public ip address to associate
+with the Virtual Network Gateway.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span>Subnet<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
@@ -1859,22 +1869,22 @@ of the gateways virtual interface is assigned. Valid options are `Static` or
 `Dynamic`. Defaults to `Dynamic`.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Public<wbr>Ip<wbr>Address<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}The ID of the public ip address to associate
-with the Virtual Network Gateway.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Public<wbr>Ip<wbr>Address<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the public ip address to associate
+with the Virtual Network Gateway.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1908,22 +1918,22 @@ of the gateways virtual interface is assigned. Valid options are `Static` or
 `Dynamic`. Defaults to `Dynamic`.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Public<wbr>Ip<wbr>Address<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The ID of the public ip address to associate
-with the Virtual Network Gateway.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>public<wbr>Ip<wbr>Address<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the public ip address to associate
+with the Virtual Network Gateway.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1957,22 +1967,22 @@ of the gateways virtual interface is assigned. Valid options are `Static` or
 `Dynamic`. Defaults to `Dynamic`.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>public<wbr>Ip<wbr>Address<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The ID of the public ip address to associate
-with the Virtual Network Gateway.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>public<wbr>Ip<wbr>Address<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the public ip address to associate
+with the Virtual Network Gateway.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2004,16 +2014,6 @@ network can contain at most a single Virtual Network Gateway.
     <dd>{{% md %}}Defines how the private IP address
 of the gateways virtual interface is assigned. Valid options are `Static` or
 `Dynamic`. Defaults to `Dynamic`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>public<wbr>Ip<wbr>Address<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The ID of the public ip address to associate
-with the Virtual Network Gateway.
 {{% /md %}}</dd>
 
 </dl>

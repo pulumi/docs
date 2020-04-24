@@ -26,7 +26,7 @@ Manages a Stream Analytics Output to Microsoft SQL Server Database.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">OutputMssql</span><span class="p">(resource_name, opts=None, </span>database=None<span class="p">, </span>name=None<span class="p">, </span>password=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>server=None<span class="p">, </span>stream_analytics_job_name=None<span class="p">, </span>table=None<span class="p">, </span>user=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">OutputMssql</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>database=None<span class="p">, </span>name=None<span class="p">, </span>password=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>server=None<span class="p">, </span>stream_analytics_job_name=None<span class="p">, </span>table=None<span class="p">, </span>user=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

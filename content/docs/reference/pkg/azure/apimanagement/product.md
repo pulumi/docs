@@ -26,7 +26,7 @@ Manages an API Management Product.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Product</span><span class="p">(resource_name, opts=None, </span>api_management_name=None<span class="p">, </span>approval_required=None<span class="p">, </span>description=None<span class="p">, </span>display_name=None<span class="p">, </span>product_id=None<span class="p">, </span>published=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>subscription_required=None<span class="p">, </span>subscriptions_limit=None<span class="p">, </span>terms=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Product</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>api_management_name=None<span class="p">, </span>approval_required=None<span class="p">, </span>description=None<span class="p">, </span>display_name=None<span class="p">, </span>product_id=None<span class="p">, </span>published=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>subscription_required=None<span class="p">, </span>subscriptions_limit=None<span class="p">, </span>terms=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

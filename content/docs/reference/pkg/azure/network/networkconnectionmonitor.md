@@ -26,7 +26,7 @@ Configures a Network Connection Monitor to monitor communication between a Virtu
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">NetworkConnectionMonitor</span><span class="p">(resource_name, opts=None, </span>auto_start=None<span class="p">, </span>destination=None<span class="p">, </span>interval_in_seconds=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>network_watcher_name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>source=None<span class="p">, </span>tags=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">NetworkConnectionMonitor</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>auto_start=None<span class="p">, </span>destination=None<span class="p">, </span>interval_in_seconds=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>network_watcher_name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>source=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

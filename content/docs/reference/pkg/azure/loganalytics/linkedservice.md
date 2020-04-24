@@ -26,7 +26,7 @@ Links a Log Analytics (formally Operational Insights) Workspace to another resou
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">LinkedService</span><span class="p">(resource_name, opts=None, </span>linked_service_name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>resource_id=None<span class="p">, </span>tags=None<span class="p">, </span>workspace_name=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">LinkedService</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>linked_service_name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>resource_id=None<span class="p">, </span>tags=None<span class="p">, </span>workspace_name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

@@ -24,7 +24,7 @@ Deprecated: ZipBlob resource is deprecated in the 2.0 version of the provider. U
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ZipBlob</span><span class="p">(resource_name, opts=None, </span>access_tier=None<span class="p">, </span>content=None<span class="p">, </span>content_type=None<span class="p">, </span>metadata=None<span class="p">, </span>name=None<span class="p">, </span>parallelism=None<span class="p">, </span>size=None<span class="p">, </span>source_content=None<span class="p">, </span>source_uri=None<span class="p">, </span>storage_account_name=None<span class="p">, </span>storage_container_name=None<span class="p">, </span>type=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ZipBlob</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>access_tier=None<span class="p">, </span>content=None<span class="p">, </span>content_type=None<span class="p">, </span>metadata=None<span class="p">, </span>name=None<span class="p">, </span>parallelism=None<span class="p">, </span>size=None<span class="p">, </span>source_content=None<span class="p">, </span>source_uri=None<span class="p">, </span>storage_account_name=None<span class="p">, </span>storage_container_name=None<span class="p">, </span>type=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

@@ -240,6 +240,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="class">
+<dt id="pulumi_azure.privatedns.AwaitableGetDnsZoneResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.privatedns.</code><code class="sig-name descname">AwaitableGetDnsZoneResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">max_number_of_record_sets=None</em>, <em class="sig-param">max_number_of_virtual_network_links=None</em>, <em class="sig-param">max_number_of_virtual_network_links_with_registration=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">number_of_record_sets=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.privatedns.AwaitableGetDnsZoneResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
 <dt id="pulumi_azure.privatedns.CnameRecord">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.privatedns.</code><code class="sig-name descname">CnameRecord</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">record=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">ttl=None</em>, <em class="sig-param">zone_name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.privatedns.CnameRecord" title="Permalink to this definition">¶</a></dt>
 <dd><p>Enables you to manage DNS CNAME Records within Azure Private DNS.</p>
@@ -348,6 +353,48 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd class="field-odd"><p>str</p>
 </dd>
 </dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_azure.privatedns.GetDnsZoneResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.privatedns.</code><code class="sig-name descname">GetDnsZoneResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">max_number_of_record_sets=None</em>, <em class="sig-param">max_number_of_virtual_network_links=None</em>, <em class="sig-param">max_number_of_virtual_network_links_with_registration=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">number_of_record_sets=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.privatedns.GetDnsZoneResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getDnsZone.</p>
+<dl class="attribute">
+<dt id="pulumi_azure.privatedns.GetDnsZoneResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.privatedns.GetDnsZoneResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.privatedns.GetDnsZoneResult.max_number_of_record_sets">
+<code class="sig-name descname">max_number_of_record_sets</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.privatedns.GetDnsZoneResult.max_number_of_record_sets" title="Permalink to this definition">¶</a></dt>
+<dd><p>Maximum number of recordsets that can be created in this Private Zone.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.privatedns.GetDnsZoneResult.max_number_of_virtual_network_links">
+<code class="sig-name descname">max_number_of_virtual_network_links</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.privatedns.GetDnsZoneResult.max_number_of_virtual_network_links" title="Permalink to this definition">¶</a></dt>
+<dd><p>Maximum number of Virtual Networks that can be linked to this Private Zone.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.privatedns.GetDnsZoneResult.max_number_of_virtual_network_links_with_registration">
+<code class="sig-name descname">max_number_of_virtual_network_links_with_registration</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.privatedns.GetDnsZoneResult.max_number_of_virtual_network_links_with_registration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Maximum number of Virtual Networks that can be linked to this Private Zone with registration enabled.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.privatedns.GetDnsZoneResult.number_of_record_sets">
+<code class="sig-name descname">number_of_record_sets</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.privatedns.GetDnsZoneResult.number_of_record_sets" title="Permalink to this definition">¶</a></dt>
+<dd><p>The number of recordsets currently in the zone.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.privatedns.GetDnsZoneResult.tags">
+<code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.privatedns.GetDnsZoneResult.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>A mapping of tags for the zone.</p>
 </dd></dl>
 
 </dd></dl>
@@ -1250,6 +1297,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 </dd></dl>
 
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_azure.privatedns.get_dns_zone">
+<code class="sig-prename descclassname">pulumi_azure.privatedns.</code><code class="sig-name descname">get_dns_zone</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.privatedns.get_dns_zone" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use this data source to access information about an existing Private DNS Zone.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>str</em>) – The name of the Private DNS Zone.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>str</em>) – The Name of the Resource Group where the Private DNS Zone exists.
+If the Name of the Resource Group is not provided, the first Private DNS Zone from the list of Private
+DNS Zones in your subscription that matches <code class="docutils literal notranslate"><span class="pre">name</span></code> will be returned.</p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 </div>

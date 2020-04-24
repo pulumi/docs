@@ -26,7 +26,7 @@ Manages a PostgreSQL Dataset inside a Azure Data Factory.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">DatasetPostgresql</span><span class="p">(resource_name, opts=None, </span>additional_properties=None<span class="p">, </span>annotations=None<span class="p">, </span>data_factory_name=None<span class="p">, </span>description=None<span class="p">, </span>folder=None<span class="p">, </span>linked_service_name=None<span class="p">, </span>name=None<span class="p">, </span>parameters=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>schema_columns=None<span class="p">, </span>table_name=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">DatasetPostgresql</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>additional_properties=None<span class="p">, </span>annotations=None<span class="p">, </span>data_factory_name=None<span class="p">, </span>description=None<span class="p">, </span>folder=None<span class="p">, </span>linked_service_name=None<span class="p">, </span>name=None<span class="p">, </span>parameters=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>schema_columns=None<span class="p">, </span>table_name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

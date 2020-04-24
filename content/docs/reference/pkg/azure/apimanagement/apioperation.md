@@ -26,7 +26,7 @@ Manages an API Operation within an API Management Service.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ApiOperation</span><span class="p">(resource_name, opts=None, </span>api_management_name=None<span class="p">, </span>api_name=None<span class="p">, </span>description=None<span class="p">, </span>display_name=None<span class="p">, </span>method=None<span class="p">, </span>operation_id=None<span class="p">, </span>request=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>responses=None<span class="p">, </span>template_parameters=None<span class="p">, </span>url_template=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ApiOperation</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>api_management_name=None<span class="p">, </span>api_name=None<span class="p">, </span>description=None<span class="p">, </span>display_name=None<span class="p">, </span>method=None<span class="p">, </span>operation_id=None<span class="p">, </span>request=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>responses=None<span class="p">, </span>template_parameters=None<span class="p">, </span>url_template=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

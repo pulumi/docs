@@ -26,11 +26,11 @@ const exampleResourceGroup = new azure.core.ResourceGroup("example", {
 const exampleAccount = exampleResourceGroup.name.apply(name => azure.storage.getAccount({
     name: "examplestoracc",
     resourceGroupName: name,
-}, { async: true }));
+}));
 const exampleKeyVault = exampleResourceGroup.name.apply(name => azure.keyvault.getKeyVault({
     name: "example-vault",
     resourceGroupName: name,
-}, { async: true }));
+}));
 const exampleDiagnosticSetting = new azure.monitoring.DiagnosticSetting("example", {
     logs: [{
         category: "AuditEvent",
@@ -64,7 +64,7 @@ const exampleDiagnosticSetting = new azure.monitoring.DiagnosticSetting("example
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">DiagnosticSetting</span><span class="p">(resource_name, opts=None, </span>eventhub_authorization_rule_id=None<span class="p">, </span>eventhub_name=None<span class="p">, </span>log_analytics_destination_type=None<span class="p">, </span>log_analytics_workspace_id=None<span class="p">, </span>logs=None<span class="p">, </span>metrics=None<span class="p">, </span>name=None<span class="p">, </span>storage_account_id=None<span class="p">, </span>target_resource_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">DiagnosticSetting</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>eventhub_authorization_rule_id=None<span class="p">, </span>eventhub_name=None<span class="p">, </span>log_analytics_destination_type=None<span class="p">, </span>log_analytics_workspace_id=None<span class="p">, </span>logs=None<span class="p">, </span>metrics=None<span class="p">, </span>name=None<span class="p">, </span>storage_account_id=None<span class="p">, </span>target_resource_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

@@ -26,7 +26,7 @@ Manages a Mongo Collection within a Cosmos DB Account.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">MongoCollection</span><span class="p">(resource_name, opts=None, </span>account_name=None<span class="p">, </span>database_name=None<span class="p">, </span>default_ttl_seconds=None<span class="p">, </span>name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>shard_key=None<span class="p">, </span>throughput=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">MongoCollection</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>account_name=None<span class="p">, </span>database_name=None<span class="p">, </span>default_ttl_seconds=None<span class="p">, </span>indices=None<span class="p">, </span>name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>shard_key=None<span class="p">, </span>throughput=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -235,6 +235,15 @@ The MongoCollection resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-optional"
             title="Optional">
+        <span>Indices</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#mongocollectionindex">List&lt;Mongo<wbr>Collection<wbr>Index<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `index` blocks as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
@@ -300,6 +309,15 @@ The MongoCollection resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The default Time To Live in seconds. If the value is `0` items are not automatically expired.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Indices</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#mongocollectionindex">[]Mongo<wbr>Collection<wbr>Index</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `index` blocks as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -373,6 +391,15 @@ The MongoCollection resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-optional"
             title="Optional">
+        <span>indices</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#mongocollectionindex">Mongo<wbr>Collection<wbr>Index[]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `index` blocks as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
@@ -442,6 +469,15 @@ The MongoCollection resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-optional"
             title="Optional">
+        <span>indices</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#mongocollectionindex">List[Mongo<wbr>Collection<wbr>Index]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `index` blocks as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -493,6 +529,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span>System<wbr>Indexes</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#mongocollectionsystemindex">List&lt;Mongo<wbr>Collection<wbr>System<wbr>Index&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `system_indexes` blocks as defined below.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -507,6 +552,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>System<wbr>Indexes</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#mongocollectionsystemindex">[]Mongo<wbr>Collection<wbr>System<wbr>Index</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `system_indexes` blocks as defined below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -523,6 +577,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span>system<wbr>Indexes</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#mongocollectionsystemindex">Mongo<wbr>Collection<wbr>System<wbr>Index[]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `system_indexes` blocks as defined below.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -537,6 +600,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>system_<wbr>indexes</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#mongocollectionsystemindex">List[Mongo<wbr>Collection<wbr>System<wbr>Index]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `system_indexes` blocks as defined below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -557,7 +629,7 @@ Get an existing MongoCollection resource's state with the given name, ID, and op
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>account_name=None<span class="p">, </span>database_name=None<span class="p">, </span>default_ttl_seconds=None<span class="p">, </span>name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>shard_key=None<span class="p">, </span>throughput=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>account_name=None<span class="p">, </span>database_name=None<span class="p">, </span>default_ttl_seconds=None<span class="p">, </span>indices=None<span class="p">, </span>name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>shard_key=None<span class="p">, </span>system_indexes=None<span class="p">, </span>throughput=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -699,6 +771,15 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Indices</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#mongocollectionindex">List&lt;Mongo<wbr>Collection<wbr>Index<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `index` blocks as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
@@ -722,6 +803,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the key to partition on for sharding. There must not be any other unique index keys.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>System<wbr>Indexes</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#mongocollectionsystemindex">List&lt;Mongo<wbr>Collection<wbr>System<wbr>Index<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `system_indexes` blocks as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -768,6 +858,15 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Indices</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#mongocollectionindex">[]Mongo<wbr>Collection<wbr>Index</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `index` blocks as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -791,6 +890,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the key to partition on for sharding. There must not be any other unique index keys.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>System<wbr>Indexes</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#mongocollectionsystemindex">[]Mongo<wbr>Collection<wbr>System<wbr>Index</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `system_indexes` blocks as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -837,6 +945,15 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>indices</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#mongocollectionindex">Mongo<wbr>Collection<wbr>Index[]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `index` blocks as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
@@ -860,6 +977,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the key to partition on for sharding. There must not be any other unique index keys.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>system<wbr>Indexes</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#mongocollectionsystemindex">Mongo<wbr>Collection<wbr>System<wbr>Index[]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `system_indexes` blocks as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -906,6 +1032,15 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>indices</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#mongocollectionindex">List[Mongo<wbr>Collection<wbr>Index]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `index` blocks as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -933,6 +1068,15 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>system_<wbr>indexes</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#mongocollectionsystemindex">List[Mongo<wbr>Collection<wbr>System<wbr>Index]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `system_indexes` blocks as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>throughput</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -944,6 +1088,242 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 
+
+
+
+
+
+
+
+
+## Supporting Types
+
+
+<h4 id="mongocollectionindex">Mongo<wbr>Collection<wbr>Index</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#MongoCollectionIndex">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#MongoCollectionIndex">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/cosmosdb?tab=doc#MongoCollectionIndexArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/cosmosdb?tab=doc#MongoCollectionIndexOutput">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Keys</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the list of user settable keys for each Cosmos DB Mongo Collection.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Unique</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Is the index unique or not? Defaults to `false`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Keys</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the list of user settable keys for each Cosmos DB Mongo Collection.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Unique</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Is the index unique or not? Defaults to `false`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>keys</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the list of user settable keys for each Cosmos DB Mongo Collection.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>unique</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Is the index unique or not? Defaults to `false`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>keys</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the list of user settable keys for each Cosmos DB Mongo Collection.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>unique</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Is the index unique or not? Defaults to `false`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="mongocollectionsystemindex">Mongo<wbr>Collection<wbr>System<wbr>Index</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#MongoCollectionSystemIndex">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/cosmosdb?tab=doc#MongoCollectionSystemIndexOutput">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Keys</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the list of user settable keys for each Cosmos DB Mongo Collection.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Unique</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Is the index unique or not? Defaults to `false`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Keys</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the list of user settable keys for each Cosmos DB Mongo Collection.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Unique</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Is the index unique or not? Defaults to `false`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>keys</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the list of user settable keys for each Cosmos DB Mongo Collection.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>unique</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Is the index unique or not? Defaults to `false`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>keys</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the list of user settable keys for each Cosmos DB Mongo Collection.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>unique</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Is the index unique or not? Defaults to `false`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
 

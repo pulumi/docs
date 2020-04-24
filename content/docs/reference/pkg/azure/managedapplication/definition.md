@@ -26,7 +26,7 @@ Manages a Managed Application Definition.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Definition</span><span class="p">(resource_name, opts=None, </span>authorizations=None<span class="p">, </span>create_ui_definition=None<span class="p">, </span>description=None<span class="p">, </span>display_name=None<span class="p">, </span>location=None<span class="p">, </span>lock_level=None<span class="p">, </span>main_template=None<span class="p">, </span>name=None<span class="p">, </span>package_enabled=None<span class="p">, </span>package_file_uri=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>tags=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Definition</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>authorizations=None<span class="p">, </span>create_ui_definition=None<span class="p">, </span>description=None<span class="p">, </span>display_name=None<span class="p">, </span>location=None<span class="p">, </span>lock_level=None<span class="p">, </span>main_template=None<span class="p">, </span>name=None<span class="p">, </span>package_enabled=None<span class="p">, </span>package_file_uri=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

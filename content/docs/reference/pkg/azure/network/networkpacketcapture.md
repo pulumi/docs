@@ -26,7 +26,7 @@ Configures Network Packet Capturing against a Virtual Machine using a Network Wa
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">NetworkPacketCapture</span><span class="p">(resource_name, opts=None, </span>filters=None<span class="p">, </span>maximum_bytes_per_packet=None<span class="p">, </span>maximum_bytes_per_session=None<span class="p">, </span>maximum_capture_duration=None<span class="p">, </span>name=None<span class="p">, </span>network_watcher_name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>storage_location=None<span class="p">, </span>target_resource_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">NetworkPacketCapture</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>filters=None<span class="p">, </span>maximum_bytes_per_packet=None<span class="p">, </span>maximum_bytes_per_session=None<span class="p">, </span>maximum_capture_duration=None<span class="p">, </span>name=None<span class="p">, </span>network_watcher_name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>storage_location=None<span class="p">, </span>target_resource_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

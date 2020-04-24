@@ -20,12 +20,12 @@ Use this data source to access information about an existing Version of a Shared
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const example = pulumi.output(azure.compute.getSharedImageVersion({
+const example = azure.compute.getSharedImageVersion({
     galleryName: "my-image-gallery",
     imageName: "my-image",
     name: "1.0.0",
     resourceGroupName: "example-resources",
-}, { async: true }));
+});
 ```
 
 {{% /example %}}

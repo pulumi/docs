@@ -235,6 +235,15 @@ The following output properties are available:
     <dd>{{% md %}}A `sku` block as defined below.
 {{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span>Tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tags to assign to the resource.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -310,6 +319,15 @@ The following output properties are available:
         <span class="property-type"><a href="#getnamespacesku">Get<wbr>Namespace<wbr>Sku</a></span>
     </dt>
     <dd>{{% md %}}A `sku` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -389,6 +407,15 @@ The following output properties are available:
     <dd>{{% md %}}A `sku` block as defined below.
 {{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span>tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tags to assign to the resource.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -464,6 +491,15 @@ The following output properties are available:
         <span class="property-type"><a href="#getnamespacesku">Dict[Get<wbr>Namespace<wbr>Sku]</a></span>
     </dt>
     <dd>{{% md %}}A `sku` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, str]</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
 
 </dl>

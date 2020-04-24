@@ -30,7 +30,7 @@ At this time you cannot use a Route Table with in-line Routes in conjunction wit
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Route</span><span class="p">(resource_name, opts=None, </span>address_prefix=None<span class="p">, </span>name=None<span class="p">, </span>next_hop_in_ip_address=None<span class="p">, </span>next_hop_type=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>route_table_name=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Route</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>address_prefix=None<span class="p">, </span>name=None<span class="p">, </span>next_hop_in_ip_address=None<span class="p">, </span>next_hop_type=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>route_table_name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

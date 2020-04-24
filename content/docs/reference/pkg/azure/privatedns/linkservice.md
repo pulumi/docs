@@ -28,7 +28,7 @@ Manages a Private Link Service.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">LinkService</span><span class="p">(resource_name, opts=None, </span>auto_approval_subscription_ids=None<span class="p">, </span>enable_proxy_protocol=None<span class="p">, </span>load_balancer_frontend_ip_configuration_ids=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>nat_ip_configurations=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>tags=None<span class="p">, </span>visibility_subscription_ids=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">LinkService</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>auto_approval_subscription_ids=None<span class="p">, </span>enable_proxy_protocol=None<span class="p">, </span>load_balancer_frontend_ip_configuration_ids=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>nat_ip_configurations=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>tags=None<span class="p">, </span>visibility_subscription_ids=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

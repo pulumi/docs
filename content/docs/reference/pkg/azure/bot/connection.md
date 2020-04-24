@@ -20,7 +20,7 @@ Manages a Bot Connection.
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const current = pulumi.output(azure.core.getClientConfig({ async: true }));
+const current = azure.core.getClientConfig();
 const exampleResourceGroup = new azure.core.ResourceGroup("example", {
     location: "northeurope",
 });
@@ -54,7 +54,7 @@ const exampleConnection = new azure.bot.Connection("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Connection</span><span class="p">(resource_name, opts=None, </span>bot_name=None<span class="p">, </span>client_id=None<span class="p">, </span>client_secret=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>parameters=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>scopes=None<span class="p">, </span>service_provider_name=None<span class="p">, </span>tags=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Connection</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>bot_name=None<span class="p">, </span>client_id=None<span class="p">, </span>client_secret=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>parameters=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>scopes=None<span class="p">, </span>service_provider_name=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

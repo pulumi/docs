@@ -26,7 +26,7 @@ Manages a Azure Site Recovery replication policy within a recovery vault. Replic
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ReplicationPolicy</span><span class="p">(resource_name, opts=None, </span>application_consistent_snapshot_frequency_in_minutes=None<span class="p">, </span>name=None<span class="p">, </span>recovery_point_retention_in_minutes=None<span class="p">, </span>recovery_vault_name=None<span class="p">, </span>resource_group_name=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ReplicationPolicy</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>application_consistent_snapshot_frequency_in_minutes=None<span class="p">, </span>name=None<span class="p">, </span>recovery_point_retention_in_minutes=None<span class="p">, </span>recovery_vault_name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
