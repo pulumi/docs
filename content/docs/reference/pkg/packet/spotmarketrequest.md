@@ -27,7 +27,7 @@ manage spot market requests on your account. For more detail on Spot Market, see
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">SpotMarketRequest</span><span class="p">(resource_name, opts=None, </span>devices_max=None<span class="p">, </span>devices_min=None<span class="p">, </span>facilities=None<span class="p">, </span>instance_parameters=None<span class="p">, </span>max_bid_price=None<span class="p">, </span>project_id=None<span class="p">, </span>wait_for_devices=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">SpotMarketRequest</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>devices_max=None<span class="p">, </span>devices_min=None<span class="p">, </span>facilities=None<span class="p">, </span>instance_parameters=None<span class="p">, </span>max_bid_price=None<span class="p">, </span>project_id=None<span class="p">, </span>wait_for_devices=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
