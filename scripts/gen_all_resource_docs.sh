@@ -10,7 +10,7 @@ GIT_COMMIT=${1:-}
 # Adding a new repo to this list? Ensure that the repo's `Makefile` has a target called
 # `generate_schema`.
 REPOS=(
-    # "aiven"
+    "aiven"
     "alicloud"
     "aws"
     "azure"
@@ -29,8 +29,9 @@ REPOS=(
     "kafka"
     "kubernetes"
     "keycloak"
+    "kong"
     "linode"
-    # "mailgun"
+    "mailgun"
     "mysql"
     "newrelic"
     "okta"
