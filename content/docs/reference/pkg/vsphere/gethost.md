@@ -22,13 +22,13 @@ managed object reference ID.
 import * as pulumi from "@pulumi/pulumi";
 import * as vsphere from "@pulumi/vsphere";
 
-const datacenter = pulumi.output(vsphere.getDatacenter({
+const datacenter = vsphere.getDatacenter({
     name: "dc1",
-}, { async: true }));
-const host = datacenter.apply(datacenter => vsphere.getHost({
+});
+const host = vsphere.getHost({
     datacenterId: datacenter.id,
     name: "esxi1",
-}, { async: true }));
+});
 ```
 
 {{% /example %}}

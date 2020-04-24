@@ -25,18 +25,18 @@ datastores based off a set of discovered disks.
 import * as pulumi from "@pulumi/pulumi";
 import * as vsphere from "@pulumi/vsphere";
 
-const datacenter = pulumi.output(vsphere.getDatacenter({
+const datacenter = vsphere.getDatacenter({
     name: "dc1",
-}, { async: true }));
-const host = datacenter.apply(datacenter => vsphere.getHost({
+});
+const host = vsphere.getHost({
     datacenterId: datacenter.id,
     name: "esxi1",
-}, { async: true }));
-const available = host.apply(host => vsphere.getVmfsDisks({
+});
+const available = vsphere.getVmfsDisks({
     filter: "mpx.vmhba1:C0:T[12]:L0",
     hostSystemId: host.id,
     rescan: true,
-}, { async: true }));
+});
 ```
 
 {{% /example %}}

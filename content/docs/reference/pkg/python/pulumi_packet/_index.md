@@ -196,6 +196,15 @@ doc.</p></li>
 information is in the
 <a class="reference external" href="https://www.packet.com/developers/docs/servers/key-features/custom-subnet-size/">Custom Subnet Size</a> doc.</p></li>
 <li><p><strong>storage</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – JSON for custom partitioning. Only usable on reserved hardware. More information in in the <a class="reference external" href="https://www.packet.com/developers/docs/servers/key-features/cpr/">Custom Partitioning and RAID</a> doc.</p></li>
+</ul>
+</dd>
+</dl>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">*</span> <span class="n">Please</span> <span class="n">note</span> <span class="n">that</span> <span class="n">the</span> <span class="n">disks</span><span class="o">.</span><span class="n">partitions</span><span class="o">.</span><span class="n">size</span> <span class="n">attribute</span> <span class="n">must</span> <span class="n">be</span> <span class="n">a</span> <span class="n">string</span><span class="p">,</span> <span class="ow">not</span> <span class="n">an</span> <span class="n">integer</span><span class="o">.</span> <span class="n">It</span> <span class="n">can</span> <span class="n">be</span> <span class="n">a</span> <span class="n">number</span> <span class="n">string</span><span class="p">,</span> <span class="ow">or</span> <span class="n">size</span> <span class="n">notation</span> <span class="n">string</span><span class="p">,</span> <span class="n">e</span><span class="o">.</span><span class="n">g</span><span class="o">.</span> <span class="s2">&quot;4G&quot;</span> <span class="ow">or</span> <span class="s2">&quot;8M&quot;</span> <span class="p">(</span><span class="k">for</span> <span class="n">gigabytes</span> <span class="ow">and</span> <span class="n">megabytes</span><span class="p">)</span><span class="o">.</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Tags attached to the device</p></li>
 <li><p><strong>user_data</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A string of the desired User Data for the device.</p></li>
 <li><p><strong>wait_for_reservation_deprovision</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Only used for devices in reserved hardware. If set, the deletion of this device will block until the hardware reservation is marked provisionable (about 4 minutes in August 2019).</p></li>
@@ -396,6 +405,9 @@ information is in the
 <dt id="pulumi_packet.Device.storage">
 <code class="sig-name descname">storage</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.Device.storage" title="Permalink to this definition">¶</a></dt>
 <dd><p>JSON for custom partitioning. Only usable on reserved hardware. More information in in the <a class="reference external" href="https://www.packet.com/developers/docs/servers/key-features/cpr/">Custom Partitioning and RAID</a> doc.</p>
+<ul class="simple">
+<li><p>Please note that the disks.partitions.size attribute must be a string, not an integer. It can be a number string, or size notation string, e.g. “4G” or “8M” (for gigabytes and megabytes).</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -492,6 +504,15 @@ information is in the
 <li><p><strong>state</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The status of the device</p></li>
 <li><p><strong>storage</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>JSON for custom partitioning. Only usable on reserved hardware. More information in in the <a class="reference external" href="https://www.packet.com/developers/docs/servers/key-features/cpr/">Custom Partitioning and RAID</a> doc.</p>
 </p></li>
+</ul>
+</dd>
+</dl>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">*</span> <span class="n">Please</span> <span class="n">note</span> <span class="n">that</span> <span class="n">the</span> <span class="n">disks</span><span class="o">.</span><span class="n">partitions</span><span class="o">.</span><span class="n">size</span> <span class="n">attribute</span> <span class="n">must</span> <span class="n">be</span> <span class="n">a</span> <span class="n">string</span><span class="p">,</span> <span class="ow">not</span> <span class="n">an</span> <span class="n">integer</span><span class="o">.</span> <span class="n">It</span> <span class="n">can</span> <span class="n">be</span> <span class="n">a</span> <span class="n">number</span> <span class="n">string</span><span class="p">,</span> <span class="ow">or</span> <span class="n">size</span> <span class="n">notation</span> <span class="n">string</span><span class="p">,</span> <span class="n">e</span><span class="o">.</span><span class="n">g</span><span class="o">.</span> <span class="s2">&quot;4G&quot;</span> <span class="ow">or</span> <span class="s2">&quot;8M&quot;</span> <span class="p">(</span><span class="k">for</span> <span class="n">gigabytes</span> <span class="ow">and</span> <span class="n">megabytes</span><span class="p">)</span><span class="o">.</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Tags attached to the device</p></li>
 <li><p><strong>updated</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The timestamp for the last time the device was updated</p></li>
 <li><p><strong>user_data</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A string of the desired User Data for the device.</p></li>

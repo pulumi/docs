@@ -48,21 +48,21 @@ then creates a group from these two virtual machines.
 import * as pulumi from "@pulumi/pulumi";
 import * as vsphere from "@pulumi/vsphere";
 
-const dc = pulumi.output(vsphere.getDatacenter({
+const dc = vsphere.getDatacenter({
     name: "dc1",
-}, { async: true }));
-const datastore = dc.apply(dc => vsphere.getDatastore({
+});
+const datastore = vsphere.getDatastore({
     datacenterId: dc.id,
     name: "datastore1",
-}, { async: true }));
-const cluster = dc.apply(dc => vsphere.getComputeCluster({
+});
+const cluster = vsphere.getComputeCluster({
     datacenterId: dc.id,
     name: "cluster1",
-}, { async: true }));
-const network = dc.apply(dc => vsphere.getNetwork({
+});
+const network = vsphere.getNetwork({
     datacenterId: dc.id,
     name: "network1",
-}, { async: true }));
+});
 const vm: vsphere.VirtualMachine[] = [];
 for (let i = 0; i < 2; i++) {
     vm.push(new vsphere.VirtualMachine(`vm-${i}`, {
@@ -100,7 +100,7 @@ const clusterVmGroup = new vsphere.ComputeClusterVmGroup("cluster_vm_group", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ComputeClusterVmGroup</span><span class="p">(resource_name, opts=None, </span>compute_cluster_id=None<span class="p">, </span>name=None<span class="p">, </span>virtual_machine_ids=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ComputeClusterVmGroup</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>compute_cluster_id=None<span class="p">, </span>name=None<span class="p">, </span>virtual_machine_ids=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

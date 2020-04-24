@@ -47,21 +47,21 @@ ensuring they will run on different datastores whenever possible.
 import * as pulumi from "@pulumi/pulumi";
 import * as vsphere from "@pulumi/vsphere";
 
-const dc = pulumi.output(vsphere.getDatacenter({
+const dc = vsphere.getDatacenter({
     name: "dc1",
-}, { async: true }));
-const datastoreCluster = dc.apply(dc => vsphere.getDatastoreCluster({
+});
+const datastoreCluster = vsphere.getDatastoreCluster({
     datacenterId: dc.id,
     name: "datastore-cluster1",
-}, { async: true }));
-const cluster = dc.apply(dc => vsphere.getComputeCluster({
+});
+const cluster = vsphere.getComputeCluster({
     datacenterId: dc.id,
     name: "cluster1",
-}, { async: true }));
-const network = dc.apply(dc => vsphere.getNetwork({
+});
+const network = vsphere.getNetwork({
     datacenterId: dc.id,
     name: "network1",
-}, { async: true }));
+});
 const vm: vsphere.VirtualMachine[] = [];
 for (let i = 0; i < 2; i++) {
     vm.push(new vsphere.VirtualMachine(`vm-${i}`, {
@@ -99,7 +99,7 @@ const clusterVmAntiAffinityRule = new vsphere.DatastoreClusterVmAntiAffinityRule
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">DatastoreClusterVmAntiAffinityRule</span><span class="p">(resource_name, opts=None, </span>datastore_cluster_id=None<span class="p">, </span>enabled=None<span class="p">, </span>mandatory=None<span class="p">, </span>name=None<span class="p">, </span>virtual_machine_ids=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">DatastoreClusterVmAntiAffinityRule</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>datastore_cluster_id=None<span class="p">, </span>enabled=None<span class="p">, </span>mandatory=None<span class="p">, </span>name=None<span class="p">, </span>virtual_machine_ids=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

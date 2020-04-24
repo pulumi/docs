@@ -56,15 +56,15 @@ const networkInterfaces = config.get("networkInterfaces") || [
     "vmnic3",
 ];
 
-const dc = pulumi.output(vsphere.getDatacenter({
+const dc = vsphere.getDatacenter({
     name: "dc1",
-}, { async: true }));
-const host: pulumi.Output<vsphere.GetHostResult>[] = [];
+});
+const host: vsphere.GetHostResult[] = [];
 for (let i = 0; i < esxiHosts.length; i++) {
-    host.push(dc.apply(dc => vsphere.getHost({
+    host.push(vsphere.getHost({
         datacenterId: dc.id,
         name: esxiHosts[i],
-    }, { async: true })));
+    }));
 }
 const dvs = new vsphere.DistributedVirtualSwitch("dvs", {
     activeUplinks: [
@@ -158,7 +158,7 @@ const pg = new vsphere.DistributedPortGroup("pg", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">DistributedPortGroup</span><span class="p">(resource_name, opts=None, </span>active_uplinks=None<span class="p">, </span>allow_forged_transmits=None<span class="p">, </span>allow_mac_changes=None<span class="p">, </span>allow_promiscuous=None<span class="p">, </span>auto_expand=None<span class="p">, </span>block_all_ports=None<span class="p">, </span>block_override_allowed=None<span class="p">, </span>check_beacon=None<span class="p">, </span>custom_attributes=None<span class="p">, </span>description=None<span class="p">, </span>directpath_gen2_allowed=None<span class="p">, </span>distributed_virtual_switch_uuid=None<span class="p">, </span>egress_shaping_average_bandwidth=None<span class="p">, </span>egress_shaping_burst_size=None<span class="p">, </span>egress_shaping_enabled=None<span class="p">, </span>egress_shaping_peak_bandwidth=None<span class="p">, </span>failback=None<span class="p">, </span>ingress_shaping_average_bandwidth=None<span class="p">, </span>ingress_shaping_burst_size=None<span class="p">, </span>ingress_shaping_enabled=None<span class="p">, </span>ingress_shaping_peak_bandwidth=None<span class="p">, </span>lacp_enabled=None<span class="p">, </span>lacp_mode=None<span class="p">, </span>live_port_moving_allowed=None<span class="p">, </span>name=None<span class="p">, </span>netflow_enabled=None<span class="p">, </span>netflow_override_allowed=None<span class="p">, </span>network_resource_pool_key=None<span class="p">, </span>network_resource_pool_override_allowed=None<span class="p">, </span>notify_switches=None<span class="p">, </span>number_of_ports=None<span class="p">, </span>port_config_reset_at_disconnect=None<span class="p">, </span>port_name_format=None<span class="p">, </span>port_private_secondary_vlan_id=None<span class="p">, </span>security_policy_override_allowed=None<span class="p">, </span>shaping_override_allowed=None<span class="p">, </span>standby_uplinks=None<span class="p">, </span>tags=None<span class="p">, </span>teaming_policy=None<span class="p">, </span>traffic_filter_override_allowed=None<span class="p">, </span>tx_uplink=None<span class="p">, </span>type=None<span class="p">, </span>uplink_teaming_override_allowed=None<span class="p">, </span>vlan_id=None<span class="p">, </span>vlan_override_allowed=None<span class="p">, </span>vlan_ranges=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">DistributedPortGroup</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>active_uplinks=None<span class="p">, </span>allow_forged_transmits=None<span class="p">, </span>allow_mac_changes=None<span class="p">, </span>allow_promiscuous=None<span class="p">, </span>auto_expand=None<span class="p">, </span>block_all_ports=None<span class="p">, </span>block_override_allowed=None<span class="p">, </span>check_beacon=None<span class="p">, </span>custom_attributes=None<span class="p">, </span>description=None<span class="p">, </span>directpath_gen2_allowed=None<span class="p">, </span>distributed_virtual_switch_uuid=None<span class="p">, </span>egress_shaping_average_bandwidth=None<span class="p">, </span>egress_shaping_burst_size=None<span class="p">, </span>egress_shaping_enabled=None<span class="p">, </span>egress_shaping_peak_bandwidth=None<span class="p">, </span>failback=None<span class="p">, </span>ingress_shaping_average_bandwidth=None<span class="p">, </span>ingress_shaping_burst_size=None<span class="p">, </span>ingress_shaping_enabled=None<span class="p">, </span>ingress_shaping_peak_bandwidth=None<span class="p">, </span>lacp_enabled=None<span class="p">, </span>lacp_mode=None<span class="p">, </span>live_port_moving_allowed=None<span class="p">, </span>name=None<span class="p">, </span>netflow_enabled=None<span class="p">, </span>netflow_override_allowed=None<span class="p">, </span>network_resource_pool_key=None<span class="p">, </span>network_resource_pool_override_allowed=None<span class="p">, </span>notify_switches=None<span class="p">, </span>number_of_ports=None<span class="p">, </span>port_config_reset_at_disconnect=None<span class="p">, </span>port_name_format=None<span class="p">, </span>port_private_secondary_vlan_id=None<span class="p">, </span>security_policy_override_allowed=None<span class="p">, </span>shaping_override_allowed=None<span class="p">, </span>standby_uplinks=None<span class="p">, </span>tags=None<span class="p">, </span>teaming_policy=None<span class="p">, </span>traffic_filter_override_allowed=None<span class="p">, </span>tx_uplink=None<span class="p">, </span>type=None<span class="p">, </span>uplink_teaming_override_allowed=None<span class="p">, </span>vlan_id=None<span class="p">, </span>vlan_override_allowed=None<span class="p">, </span>vlan_ranges=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
