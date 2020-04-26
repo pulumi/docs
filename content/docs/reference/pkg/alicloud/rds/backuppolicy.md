@@ -26,9 +26,9 @@ const config = new pulumi.Config();
 const creation = config.get("creation") || "Rds";
 const name = config.get("name") || "dbbackuppolicybasic";
 
-const defaultZones = pulumi.output(alicloud.getZones({
+const defaultZones = alicloud.getZones({
     availableResourceCreation: creation,
-}, { async: true }));
+});
 const defaultNetwork = new alicloud.vpc.Network("default", {
     cidrBlock: "172.16.0.0/16",
 });
@@ -64,7 +64,7 @@ const policy = new alicloud.rds.BackupPolicy("policy", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">BackupPolicy</span><span class="p">(resource_name, opts=None, </span>archive_backup_keep_count=None<span class="p">, </span>archive_backup_keep_policy=None<span class="p">, </span>archive_backup_retention_period=None<span class="p">, </span>backup_periods=None<span class="p">, </span>backup_retention_period=None<span class="p">, </span>backup_time=None<span class="p">, </span>compress_type=None<span class="p">, </span>enable_backup_log=None<span class="p">, </span>high_space_usage_protection=None<span class="p">, </span>instance_id=None<span class="p">, </span>local_log_retention_hours=None<span class="p">, </span>local_log_retention_space=None<span class="p">, </span>log_backup=None<span class="p">, </span>log_backup_frequency=None<span class="p">, </span>log_backup_retention_period=None<span class="p">, </span>log_retention_period=None<span class="p">, </span>preferred_backup_periods=None<span class="p">, </span>preferred_backup_time=None<span class="p">, </span>retention_period=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">BackupPolicy</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>archive_backup_keep_count=None<span class="p">, </span>archive_backup_keep_policy=None<span class="p">, </span>archive_backup_retention_period=None<span class="p">, </span>backup_periods=None<span class="p">, </span>backup_retention_period=None<span class="p">, </span>backup_time=None<span class="p">, </span>compress_type=None<span class="p">, </span>enable_backup_log=None<span class="p">, </span>high_space_usage_protection=None<span class="p">, </span>instance_id=None<span class="p">, </span>local_log_retention_hours=None<span class="p">, </span>local_log_retention_space=None<span class="p">, </span>log_backup=None<span class="p">, </span>log_backup_frequency=None<span class="p">, </span>log_backup_retention_period=None<span class="p">, </span>log_retention_period=None<span class="p">, </span>preferred_backup_periods=None<span class="p">, </span>preferred_backup_time=None<span class="p">, </span>retention_period=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

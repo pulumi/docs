@@ -20,10 +20,10 @@ This data source provides a list of DNS Domains in an Alibaba Cloud account acco
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const domainsDs = pulumi.output(alicloud.dns.getDomains({
+const domainsDs = alicloud.dns.getDomains({
     domainNameRegex: "^hegu",
     outputFile: "domains.txt",
-}, { async: true }));
+});
 
 export const firstDomainId = domainsDs.domains[0].domainId;
 ```

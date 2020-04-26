@@ -20,9 +20,9 @@ This data source provides a list of MNS topics in an Alibaba Cloud account accor
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const topics = pulumi.output(alicloud.mns.getTopics({
+const topics = alicloud.mns.getTopics({
     namePrefix: "tf-",
-}, { async: true }));
+});
 
 export const firstTopicId = topics.topics[0].id;
 ```

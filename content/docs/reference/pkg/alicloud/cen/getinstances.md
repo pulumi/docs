@@ -20,10 +20,10 @@ This data source provides CEN instances available to the user.
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const cenInstancesDs = pulumi.output(alicloud.cen.getInstances({
+const cenInstancesDs = alicloud.cen.getInstances({
     ids: ["cen-id1"],
     nameRegex: "^foo",
-}, { async: true }));
+});
 
 export const firstCenInstanceId = cenInstancesDs.instances[0].id;
 ```
@@ -44,7 +44,7 @@ export const firstCenInstanceId = cenInstancesDs.instances[0].id;
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_instances(</span>ids=None<span class="p">, </span>name_regex=None<span class="p">, </span>output_file=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_instances(</span>ids=None<span class="p">, </span>name_regex=None<span class="p">, </span>output_file=None<span class="p">, </span>tags=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -94,6 +94,15 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tags to assign to the resource.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -126,6 +135,15 @@ The following arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tags to assign to the resource.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -160,6 +178,15 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tags to assign to the resource.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -192,6 +219,15 @@ The following arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tags to assign to the resource.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -265,6 +301,15 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span>Tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}A map of tags assigned to the Cen Instance.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -323,6 +368,15 @@ The following output properties are available:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}A map of tags assigned to the Cen Instance.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -383,6 +437,15 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span>tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}A map of tags assigned to the Cen Instance.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -442,6 +505,15 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span>tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}A map of tags assigned to the Cen Instance.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -472,7 +544,7 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Bandwidth<wbr>Package<wbr>Ids</span>
+        <span>Cen<wbr>Bandwidth<wbr>Package<wbr>Ids</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -481,11 +553,11 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Child<wbr>Instance<wbr>Ids</span>
+        <span>Cen<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}List of child instance IDs in the specified CEN instance.
+    <dd>{{% md %}}ID of the CEN instance.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -517,11 +589,29 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span>Protection<wbr>Level</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates the allowed level of CIDR block overlapping.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span>Status</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Status of the CEN instance, including "Creating", "Active" and "Deleting".
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -533,7 +623,7 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Bandwidth<wbr>Package<wbr>Ids</span>
+        <span>Cen<wbr>Bandwidth<wbr>Package<wbr>Ids</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -542,11 +632,11 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Child<wbr>Instance<wbr>Ids</span>
+        <span>Cen<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}List of child instance IDs in the specified CEN instance.
+    <dd>{{% md %}}ID of the CEN instance.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -578,11 +668,29 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span>Protection<wbr>Level</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates the allowed level of CIDR block overlapping.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span>Status</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Status of the CEN instance, including "Creating", "Active" and "Deleting".
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -594,7 +702,7 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>bandwidth<wbr>Package<wbr>Ids</span>
+        <span>cen<wbr>Bandwidth<wbr>Package<wbr>Ids</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -603,11 +711,11 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>child<wbr>Instance<wbr>Ids</span>
+        <span>cen<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}List of child instance IDs in the specified CEN instance.
+    <dd>{{% md %}}ID of the CEN instance.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -639,11 +747,29 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span>protection<wbr>Level</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates the allowed level of CIDR block overlapping.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span>status</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Status of the CEN instance, including "Creating", "Active" and "Deleting".
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -655,7 +781,7 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>bandwidth_<wbr>package_<wbr>ids</span>
+        <span>cen<wbr>Bandwidth<wbr>Package<wbr>Ids</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -664,11 +790,11 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>child<wbr>Instance<wbr>Ids</span>
+        <span>cen_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}List of child instance IDs in the specified CEN instance.
+    <dd>{{% md %}}ID of the CEN instance.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -700,11 +826,29 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span>protection_<wbr>level</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates the allowed level of CIDR block overlapping.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span>status</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Status of the CEN instance, including "Creating", "Active" and "Deleting".
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
 
 </dl>

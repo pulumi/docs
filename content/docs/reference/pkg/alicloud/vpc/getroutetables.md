@@ -34,7 +34,7 @@ const fooRouteTable = new alicloud.vpc.RouteTable("foo", {
 });
 const fooRouteTables = fooRouteTable.id.apply(id => alicloud.vpc.getRouteTables({
     ids: [id],
-}, { async: true }));
+}));
 
 export const routeTableIds = fooRouteTables.ids!;
 ```

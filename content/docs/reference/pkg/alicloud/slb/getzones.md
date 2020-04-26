@@ -23,7 +23,7 @@ import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
 // Declare the data source
-const zonesIds = pulumi.output(alicloud.slb.getZones({ async: true }));
+const zonesIds = alicloud.slb.getZones();
 ```
 
 {{% /example %}}

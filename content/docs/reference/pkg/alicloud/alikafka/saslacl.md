@@ -31,9 +31,9 @@ const config = new pulumi.Config();
 const username = config.get("username") || "testusername";
 const password = config.get("password") || "testpassword";
 
-const defaultZones = pulumi.output(alicloud.getZones({
+const defaultZones = alicloud.getZones({
     availableResourceCreation: "VSwitch",
-}, { async: true }));
+});
 const defaultNetwork = new alicloud.vpc.Network("default", {
     cidrBlock: "172.16.0.0/12",
 });
@@ -84,7 +84,7 @@ const defaultSaslAcl = new alicloud.alikafka.SaslAcl("default", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">SaslAcl</span><span class="p">(resource_name, opts=None, </span>acl_operation_type=None<span class="p">, </span>acl_resource_name=None<span class="p">, </span>acl_resource_pattern_type=None<span class="p">, </span>acl_resource_type=None<span class="p">, </span>instance_id=None<span class="p">, </span>username=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">SaslAcl</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>acl_operation_type=None<span class="p">, </span>acl_resource_name=None<span class="p">, </span>acl_resource_pattern_type=None<span class="p">, </span>acl_resource_type=None<span class="p">, </span>instance_id=None<span class="p">, </span>username=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

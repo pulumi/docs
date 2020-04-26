@@ -22,11 +22,11 @@ This data source provides the ots tables of the current Alibaba Cloud user.
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const tablesDs = pulumi.output(alicloud.oss.getTables({
+const tablesDs = alicloud.oss.getTables({
     instanceName: "sample-instance",
     nameRegex: "sample-table",
     outputFile: "tables.txt",
-}, { async: true }));
+});
 
 export const firstTableId = tablesDs.tables[0].id;
 ```

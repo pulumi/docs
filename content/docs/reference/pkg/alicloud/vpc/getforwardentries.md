@@ -25,9 +25,9 @@ import * as alicloud from "@pulumi/alicloud";
 const config = new pulumi.Config();
 const name = config.get("name") || "forward-entry-config-example-name";
 
-const defaultZones = pulumi.output(alicloud.getZones({
+const defaultZones = alicloud.getZones({
     availableResourceCreation: "VSwitch",
-}, { async: true }));
+});
 const defaultNetwork = new alicloud.vpc.Network("default", {
     cidrBlock: "172.16.0.0/12",
 });
@@ -55,7 +55,7 @@ const defaultForwardEntry = new alicloud.vpc.ForwardEntry("default", {
 });
 const defaultForwardEntries = defaultForwardEntry.forwardTableId.apply(forwardTableId => alicloud.vpc.getForwardEntries({
     forwardTableId: forwardTableId,
-}, { async: true }));
+}));
 ```
 
 {{% /example %}}

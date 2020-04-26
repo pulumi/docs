@@ -22,7 +22,7 @@ meta_desc: "Explore the Table resource of the ots module, including examples, in
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Table</span><span class="p">(resource_name, opts=None, </span>deviation_cell_version_in_sec=None<span class="p">, </span>instance_name=None<span class="p">, </span>max_version=None<span class="p">, </span>primary_keys=None<span class="p">, </span>table_name=None<span class="p">, </span>time_to_live=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Table</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>deviation_cell_version_in_sec=None<span class="p">, </span>instance_name=None<span class="p">, </span>max_version=None<span class="p">, </span>primary_keys=None<span class="p">, </span>table_name=None<span class="p">, </span>time_to_live=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

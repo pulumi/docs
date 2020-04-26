@@ -20,10 +20,10 @@ This data source provides a list of MNS topic subscriptions in an Alibaba Cloud 
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const subscriptions = pulumi.output(alicloud.mns.getTopicSubscriptions({
+const subscriptions = alicloud.mns.getTopicSubscriptions({
     namePrefix: "tf-",
     topicName: "topic_name",
-}, { async: true }));
+});
 
 export const firstTopicSubscriptionId = subscriptions.subscriptions[0].id;
 ```

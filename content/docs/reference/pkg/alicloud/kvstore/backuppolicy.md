@@ -27,9 +27,9 @@ const creation = config.get("creation") || "KVStore";
 const multiAz = config.get("multiAz") || "false";
 const name = config.get("name") || "kvstorebackuppolicyvpc";
 
-const defaultZones = pulumi.output(alicloud.getZones({
+const defaultZones = alicloud.getZones({
     availableResourceCreation: creation,
-}, { async: true }));
+});
 const defaultNetwork = new alicloud.vpc.Network("default", {
     cidrBlock: "172.16.0.0/16",
 });
@@ -71,7 +71,7 @@ const defaultBackupPolicy = new alicloud.kvstore.BackupPolicy("default", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">BackupPolicy</span><span class="p">(resource_name, opts=None, </span>backup_periods=None<span class="p">, </span>backup_time=None<span class="p">, </span>instance_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">BackupPolicy</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>backup_periods=None<span class="p">, </span>backup_time=None<span class="p">, </span>instance_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

@@ -22,10 +22,10 @@ This data source provides a list of DNS Resolution Lines in an Alibaba Cloud acc
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const resolutionLinesDs = pulumi.output(alicloud.dns.getResolutionLines({
+const resolutionLinesDs = alicloud.dns.getResolutionLines({
     lineCodes: ["cn_unicom_shanxi"],
     outputFile: "support_lines.txt",
-}, { async: true }));
+});
 
 export const firstLineCode = resolutionLinesDs.lines[0].lineCode;
 ```

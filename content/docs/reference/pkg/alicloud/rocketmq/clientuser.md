@@ -51,7 +51,7 @@ const defaultClientUser = new alicloud.rocketmq.ClientUser("default", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ClientUser</span><span class="p">(resource_name, opts=None, </span>bandwidth=None<span class="p">, </span>client_ip=None<span class="p">, </span>kms_encrypted_password=None<span class="p">, </span>kms_encryption_context=None<span class="p">, </span>password=None<span class="p">, </span>sag_id=None<span class="p">, </span>user_mail=None<span class="p">, </span>user_name=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ClientUser</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>bandwidth=None<span class="p">, </span>client_ip=None<span class="p">, </span>kms_encrypted_password=None<span class="p">, </span>kms_encryption_context=None<span class="p">, </span>password=None<span class="p">, </span>sag_id=None<span class="p">, </span>user_mail=None<span class="p">, </span>user_name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

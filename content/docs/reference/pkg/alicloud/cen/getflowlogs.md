@@ -24,10 +24,10 @@ Basic Usage
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const defaultFlowlogs = pulumi.output(alicloud.cen.getFlowlogs({
+const defaultFlowlogs = alicloud.cen.getFlowlogs({
     ids: ["flowlog-tig1xxxxx"],
     nameRegex: "^foo",
-}, { async: true }));
+});
 
 export const firstCenFlowlogId = alicloud_cen_instances_default.flowlogs.0.id;
 ```

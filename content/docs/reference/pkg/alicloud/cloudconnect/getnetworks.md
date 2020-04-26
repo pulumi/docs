@@ -27,7 +27,7 @@ import * as alicloud from "@pulumi/alicloud";
 const defaultNetworks = alicloud_cloud_connect_networks_default.id.apply(id => alicloud.cloudconnect.getNetworks({
     ids: [id],
     nameRegex: "^tf-testAcc.*",
-}, { async: true }));
+}));
 const defaultNetwork = new alicloud.cloudconnect.Network("default", {
     cidrBlock: "192.168.0.0/24",
     description: "tf-testAccCloudConnectNetworkDescription",

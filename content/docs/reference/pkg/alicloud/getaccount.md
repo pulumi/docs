@@ -20,7 +20,7 @@ This data source provides information about the current account.
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const current = pulumi.output(alicloud.getAccount({ async: true }));
+const current = alicloud.getAccount();
 
 export const currentAccountId = current.id;
 ```

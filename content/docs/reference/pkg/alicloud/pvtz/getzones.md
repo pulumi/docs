@@ -22,7 +22,7 @@ import * as alicloud from "@pulumi/alicloud";
 
 const pvtzZonesDs = alicloud_pvtz_zone_basic.zoneName.apply(zoneName => alicloud.pvtz.getZones({
     keyword: zoneName,
-}, { async: true }));
+}));
 
 export const firstZoneId = pvtzZonesDs.zones[0].id;
 ```

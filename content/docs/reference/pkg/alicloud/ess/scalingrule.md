@@ -22,7 +22,7 @@ meta_desc: "Explore the ScalingRule resource of the ess module, including exampl
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ScalingRule</span><span class="p">(resource_name, opts=None, </span>adjustment_type=None<span class="p">, </span>adjustment_value=None<span class="p">, </span>cooldown=None<span class="p">, </span>disable_scale_in=None<span class="p">, </span>estimated_instance_warmup=None<span class="p">, </span>metric_name=None<span class="p">, </span>scaling_group_id=None<span class="p">, </span>scaling_rule_name=None<span class="p">, </span>scaling_rule_type=None<span class="p">, </span>step_adjustments=None<span class="p">, </span>target_value=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ScalingRule</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>adjustment_type=None<span class="p">, </span>adjustment_value=None<span class="p">, </span>cooldown=None<span class="p">, </span>disable_scale_in=None<span class="p">, </span>estimated_instance_warmup=None<span class="p">, </span>metric_name=None<span class="p">, </span>scaling_group_id=None<span class="p">, </span>scaling_rule_name=None<span class="p">, </span>scaling_rule_type=None<span class="p">, </span>step_adjustments=None<span class="p">, </span>target_value=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

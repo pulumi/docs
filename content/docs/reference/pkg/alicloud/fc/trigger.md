@@ -22,7 +22,7 @@ meta_desc: "Explore the Trigger resource of the fc module, including examples, i
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Trigger</span><span class="p">(resource_name, opts=None, </span>config=None<span class="p">, </span>config_mns=None<span class="p">, </span>function=None<span class="p">, </span>name=None<span class="p">, </span>name_prefix=None<span class="p">, </span>role=None<span class="p">, </span>service=None<span class="p">, </span>source_arn=None<span class="p">, </span>type=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Trigger</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>config=None<span class="p">, </span>config_mns=None<span class="p">, </span>function=None<span class="p">, </span>name=None<span class="p">, </span>name_prefix=None<span class="p">, </span>role=None<span class="p">, </span>service=None<span class="p">, </span>source_arn=None<span class="p">, </span>type=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

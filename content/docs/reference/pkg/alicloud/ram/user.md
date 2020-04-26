@@ -22,7 +22,7 @@ meta_desc: "Explore the User resource of the ram module, including examples, inp
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">User</span><span class="p">(resource_name, opts=None, </span>comments=None<span class="p">, </span>display_name=None<span class="p">, </span>email=None<span class="p">, </span>force=None<span class="p">, </span>mobile=None<span class="p">, </span>name=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">User</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>comments=None<span class="p">, </span>display_name=None<span class="p">, </span>email=None<span class="p">, </span>force=None<span class="p">, </span>mobile=None<span class="p">, </span>name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

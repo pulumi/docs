@@ -22,7 +22,7 @@ meta_desc: "Explore the Order resource of the marketplace module, including exam
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Order</span><span class="p">(resource_name, opts=None, </span>components=None<span class="p">, </span>coupon_id=None<span class="p">, </span>duration=None<span class="p">, </span>package_version=None<span class="p">, </span>pay_type=None<span class="p">, </span>pricing_cycle=None<span class="p">, </span>product_code=None<span class="p">, </span>quantity=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Order</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>components=None<span class="p">, </span>coupon_id=None<span class="p">, </span>duration=None<span class="p">, </span>package_version=None<span class="p">, </span>pay_type=None<span class="p">, </span>pricing_cycle=None<span class="p">, </span>product_code=None<span class="p">, </span>quantity=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

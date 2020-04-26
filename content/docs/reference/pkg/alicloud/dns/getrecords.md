@@ -20,13 +20,13 @@ This data source provides a list of DNS Domain Records in an Alibaba Cloud accou
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const recordsDs = pulumi.output(alicloud.dns.getRecords({
+const recordsDs = alicloud.dns.getRecords({
     domainName: "xiaozhu.top",
     hostRecordRegex: "^@",
     isLocked: false,
     outputFile: "records.txt",
     type: "A",
-}, { async: true }));
+});
 
 export const firstRecordId = recordsDs.records[0].recordId;
 ```

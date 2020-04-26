@@ -20,10 +20,10 @@ This data source provides the ots instances of the current Alibaba Cloud user.
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const instancesDs = pulumi.output(alicloud.oss.getInstances({
+const instancesDs = alicloud.oss.getInstances({
     nameRegex: "sample-instance",
     outputFile: "instances.txt",
-}, { async: true }));
+});
 
 export const firstInstanceId = instancesDs.instances[0].id;
 ```

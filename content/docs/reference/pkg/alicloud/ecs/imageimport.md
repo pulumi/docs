@@ -55,7 +55,7 @@ const thisImageImport = new alicloud.ecs.ImageImport("this", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ImageImport</span><span class="p">(resource_name, opts=None, </span>architecture=None<span class="p">, </span>description=None<span class="p">, </span>disk_device_mappings=None<span class="p">, </span>image_name=None<span class="p">, </span>license_type=None<span class="p">, </span>os_type=None<span class="p">, </span>platform=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ImageImport</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>architecture=None<span class="p">, </span>description=None<span class="p">, </span>disk_device_mappings=None<span class="p">, </span>image_name=None<span class="p">, </span>license_type=None<span class="p">, </span>os_type=None<span class="p">, </span>platform=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

@@ -53,7 +53,7 @@ const fooAccessRule = new alicloud.nas.AccessRule("foo", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">AccessRule</span><span class="p">(resource_name, opts=None, </span>access_group_name=None<span class="p">, </span>priority=None<span class="p">, </span>rw_access_type=None<span class="p">, </span>source_cidr_ip=None<span class="p">, </span>user_access_type=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">AccessRule</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>access_group_name=None<span class="p">, </span>priority=None<span class="p">, </span>rw_access_type=None<span class="p">, </span>source_cidr_ip=None<span class="p">, </span>user_access_type=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

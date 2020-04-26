@@ -26,9 +26,9 @@ const config = new pulumi.Config();
 const creation = config.get("creation") || "PolarDB";
 const name = config.get("name") || "polardbaccountmysql";
 
-const defaultZones = pulumi.output(alicloud.getZones({
+const defaultZones = alicloud.getZones({
     availableResourceCreation: creation,
-}, { async: true }));
+});
 const defaultNetwork = new alicloud.vpc.Network("default", {
     cidrBlock: "172.16.0.0/16",
 });
@@ -67,7 +67,7 @@ const account = new alicloud.rds.Account("account", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Account</span><span class="p">(resource_name, opts=None, </span>account_description=None<span class="p">, </span>account_name=None<span class="p">, </span>account_password=None<span class="p">, </span>account_type=None<span class="p">, </span>db_cluster_id=None<span class="p">, </span>kms_encrypted_password=None<span class="p">, </span>kms_encryption_context=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Account</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>account_description=None<span class="p">, </span>account_name=None<span class="p">, </span>account_password=None<span class="p">, </span>account_type=None<span class="p">, </span>db_cluster_id=None<span class="p">, </span>kms_encrypted_password=None<span class="p">, </span>kms_encryption_context=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

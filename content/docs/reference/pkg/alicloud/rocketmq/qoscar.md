@@ -56,7 +56,7 @@ const defaultQosCar = new alicloud.rocketmq.QosCar("default", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">QosCar</span><span class="p">(resource_name, opts=None, </span>description=None<span class="p">, </span>limit_type=None<span class="p">, </span>max_bandwidth_abs=None<span class="p">, </span>max_bandwidth_percent=None<span class="p">, </span>min_bandwidth_abs=None<span class="p">, </span>min_bandwidth_percent=None<span class="p">, </span>name=None<span class="p">, </span>percent_source_type=None<span class="p">, </span>priority=None<span class="p">, </span>qos_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">QosCar</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>description=None<span class="p">, </span>limit_type=None<span class="p">, </span>max_bandwidth_abs=None<span class="p">, </span>max_bandwidth_percent=None<span class="p">, </span>min_bandwidth_abs=None<span class="p">, </span>min_bandwidth_percent=None<span class="p">, </span>name=None<span class="p">, </span>percent_source_type=None<span class="p">, </span>priority=None<span class="p">, </span>qos_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

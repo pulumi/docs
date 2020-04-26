@@ -50,16 +50,16 @@ anything, please consult the source <a class="reference external" href="https://
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>acl</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/31898.htm">canned ACL</a> to apply. Defaults to “private”.</p></li>
+<li><p><strong>acl</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/31898.htm">canned ACL</a> to apply. Can be “private”, “public-read” and “public-read-write”. Defaults to “private”.</p></li>
 <li><p><strong>cors_rules</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A rule of <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/31903.htm">Cross-Origin Resource Sharing</a> (documented below). The items of core rule are no more than 10 for every OSS bucket.</p></li>
 <li><p><strong>force_destroy</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – A boolean that indicates all objects should be deleted from the bucket so that the bucket can be destroyed without error. These objects are not recoverable. Defaults to “false”.</p></li>
 <li><p><strong>lifecycle_rules</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A configuration of <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/31904.htm">object lifecycle management</a> (documented below).</p></li>
 <li><p><strong>logging</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A Settings of <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/31900.htm">bucket logging</a> (documented below).</p></li>
 <li><p><strong>logging_isenable</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – The flag of using logging enable container. Defaults true.</p></li>
-<li><p><strong>policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Json format text of bucket policy <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/100680.htm">bucket policy management</a> (documented below).</p></li>
+<li><p><strong>policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Json format text of bucket policy <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/100680.htm">bucket policy management</a>.</p></li>
 <li><p><strong>referer_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The configuration of <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/31901.htm">referer</a> (documented below).</p></li>
 <li><p><strong>server_side_encryption_rule</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A configuration of server-side encryption (documented below).</p></li>
-<li><p><strong>storage_class</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the storage class that objects that conform to the rule are converted into. The storage class of the objects in a bucket of the IA storage class can be converted into Archive but cannot be converted into Standard. Values: <code class="docutils literal notranslate"><span class="pre">IA</span></code>, <code class="docutils literal notranslate"><span class="pre">Archive</span></code>, <code class="docutils literal notranslate"><span class="pre">Standard</span></code>.</p></li>
+<li><p><strong>storage_class</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the storage class that objects that conform to the rule are converted into. The storage class of the objects in a bucket of the IA storage class can be converted into Archive but cannot be converted into Standard. Values: <code class="docutils literal notranslate"><span class="pre">IA</span></code>, <code class="docutils literal notranslate"><span class="pre">Archive</span></code>.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the bucket. The items are no more than 10 for a bucket.</p></li>
 <li><p><strong>versioning</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A state of versioning (documented below).</p></li>
 <li><p><strong>website</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A website object(documented below).</p></li>
@@ -89,7 +89,7 @@ anything, please consult the source <a class="reference external" href="https://
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">createdBeforeDate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the time before which the rules take effect. The date must conform to the ISO8601 format and always be UTC 00:00. For example: 2002-10-11T00:00:00.000Z indicates that objects updated before 2002-10-11T00:00:00.000Z are deleted or converted to another storage class, and objects updated after this time (including this time) are not deleted or converted.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">days</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Specifies the number of days after object creation when the specific rule action takes effect.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">storage_class</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the storage class that objects that conform to the rule are converted into. The storage class of the objects in a bucket of the IA storage class can be converted into Archive but cannot be converted into Standard. Values: <code class="docutils literal notranslate"><span class="pre">IA</span></code>, <code class="docutils literal notranslate"><span class="pre">Archive</span></code>, <code class="docutils literal notranslate"><span class="pre">Standard</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">storage_class</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the storage class that objects that conform to the rule are converted into. The storage class of the objects in a bucket of the IA storage class can be converted into Archive but cannot be converted into Standard. Values: <code class="docutils literal notranslate"><span class="pre">IA</span></code>, <code class="docutils literal notranslate"><span class="pre">Archive</span></code>.</p></li>
 </ul>
 </li>
 </ul>
@@ -100,7 +100,7 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 <p>The <strong>referer_config</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">allowEmpty</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Allows referer to be empty. Defaults true.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowEmpty</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Allows referer to be empty. Defaults false.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">referers</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The list of referer.</p></li>
 </ul>
 <p>The <strong>server_side_encryption_rule</strong> object supports the following:</p>
@@ -119,7 +119,7 @@ anything, please consult the source <a class="reference external" href="https://
 <dl class="attribute">
 <dt id="pulumi_alicloud.oss.Bucket.acl">
 <code class="sig-name descname">acl</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.oss.Bucket.acl" title="Permalink to this definition">¶</a></dt>
-<dd><p>The <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/31898.htm">canned ACL</a> to apply. Defaults to “private”.</p>
+<dd><p>The <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/31898.htm">canned ACL</a> to apply. Can be “private”, “public-read” and “public-read-write”. Defaults to “private”.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -177,7 +177,7 @@ anything, please consult the source <a class="reference external" href="https://
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">createdBeforeDate</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the time before which the rules take effect. The date must conform to the ISO8601 format and always be UTC 00:00. For example: 2002-10-11T00:00:00.000Z indicates that objects updated before 2002-10-11T00:00:00.000Z are deleted or converted to another storage class, and objects updated after this time (including this time) are not deleted or converted.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">days</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Specifies the number of days after object creation when the specific rule action takes effect.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">storage_class</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the storage class that objects that conform to the rule are converted into. The storage class of the objects in a bucket of the IA storage class can be converted into Archive but cannot be converted into Standard. Values: <code class="docutils literal notranslate"><span class="pre">IA</span></code>, <code class="docutils literal notranslate"><span class="pre">Archive</span></code>, <code class="docutils literal notranslate"><span class="pre">Standard</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">storage_class</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the storage class that objects that conform to the rule are converted into. The storage class of the objects in a bucket of the IA storage class can be converted into Archive but cannot be converted into Standard. Values: <code class="docutils literal notranslate"><span class="pre">IA</span></code>, <code class="docutils literal notranslate"><span class="pre">Archive</span></code>.</p></li>
 </ul>
 </li>
 </ul>
@@ -214,7 +214,7 @@ anything, please consult the source <a class="reference external" href="https://
 <dl class="attribute">
 <dt id="pulumi_alicloud.oss.Bucket.policy">
 <code class="sig-name descname">policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.oss.Bucket.policy" title="Permalink to this definition">¶</a></dt>
-<dd><p>Json format text of bucket policy <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/100680.htm">bucket policy management</a> (documented below).</p>
+<dd><p>Json format text of bucket policy <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/100680.htm">bucket policy management</a>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -222,7 +222,7 @@ anything, please consult the source <a class="reference external" href="https://
 <code class="sig-name descname">referer_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.oss.Bucket.referer_config" title="Permalink to this definition">¶</a></dt>
 <dd><p>The configuration of <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/31901.htm">referer</a> (documented below).</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">allowEmpty</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Allows referer to be empty. Defaults true.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowEmpty</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Allows referer to be empty. Defaults false.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">referers</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - The list of referer.</p></li>
 </ul>
 </dd></dl>
@@ -239,7 +239,7 @@ anything, please consult the source <a class="reference external" href="https://
 <dl class="attribute">
 <dt id="pulumi_alicloud.oss.Bucket.storage_class">
 <code class="sig-name descname">storage_class</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.oss.Bucket.storage_class" title="Permalink to this definition">¶</a></dt>
-<dd><p>Specifies the storage class that objects that conform to the rule are converted into. The storage class of the objects in a bucket of the IA storage class can be converted into Archive but cannot be converted into Standard. Values: <code class="docutils literal notranslate"><span class="pre">IA</span></code>, <code class="docutils literal notranslate"><span class="pre">Archive</span></code>, <code class="docutils literal notranslate"><span class="pre">Standard</span></code>.</p>
+<dd><p>Specifies the storage class that objects that conform to the rule are converted into. The storage class of the objects in a bucket of the IA storage class can be converted into Archive but cannot be converted into Standard. Values: <code class="docutils literal notranslate"><span class="pre">IA</span></code>, <code class="docutils literal notranslate"><span class="pre">Archive</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -278,7 +278,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>acl</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/31898.htm">canned ACL</a> to apply. Defaults to “private”.</p>
+<li><p><strong>acl</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/31898.htm">canned ACL</a> to apply. Can be “private”, “public-read” and “public-read-write”. Defaults to “private”.</p>
 </p></li>
 <li><p><strong>cors_rules</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – <p>A rule of <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/31903.htm">Cross-Origin Resource Sharing</a> (documented below). The items of core rule are no more than 10 for every OSS bucket.</p>
 </p></li>
@@ -293,12 +293,12 @@ properties used to qualify the lookup.</p>
 </p></li>
 <li><p><strong>logging_isenable</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – The flag of using logging enable container. Defaults true.</p></li>
 <li><p><strong>owner</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The bucket owner.</p></li>
-<li><p><strong>policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Json format text of bucket policy <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/100680.htm">bucket policy management</a> (documented below).</p>
+<li><p><strong>policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Json format text of bucket policy <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/100680.htm">bucket policy management</a>.</p>
 </p></li>
 <li><p><strong>referer_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>The configuration of <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/31901.htm">referer</a> (documented below).</p>
 </p></li>
 <li><p><strong>server_side_encryption_rule</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A configuration of server-side encryption (documented below).</p></li>
-<li><p><strong>storage_class</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the storage class that objects that conform to the rule are converted into. The storage class of the objects in a bucket of the IA storage class can be converted into Archive but cannot be converted into Standard. Values: <code class="docutils literal notranslate"><span class="pre">IA</span></code>, <code class="docutils literal notranslate"><span class="pre">Archive</span></code>, <code class="docutils literal notranslate"><span class="pre">Standard</span></code>.</p></li>
+<li><p><strong>storage_class</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the storage class that objects that conform to the rule are converted into. The storage class of the objects in a bucket of the IA storage class can be converted into Archive but cannot be converted into Standard. Values: <code class="docutils literal notranslate"><span class="pre">IA</span></code>, <code class="docutils literal notranslate"><span class="pre">Archive</span></code>.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the bucket. The items are no more than 10 for a bucket.</p></li>
 <li><p><strong>versioning</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A state of versioning (documented below).</p></li>
 <li><p><strong>website</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A website object(documented below).</p></li>
@@ -328,7 +328,7 @@ properties used to qualify the lookup.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">createdBeforeDate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the time before which the rules take effect. The date must conform to the ISO8601 format and always be UTC 00:00. For example: 2002-10-11T00:00:00.000Z indicates that objects updated before 2002-10-11T00:00:00.000Z are deleted or converted to another storage class, and objects updated after this time (including this time) are not deleted or converted.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">days</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Specifies the number of days after object creation when the specific rule action takes effect.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">storage_class</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the storage class that objects that conform to the rule are converted into. The storage class of the objects in a bucket of the IA storage class can be converted into Archive but cannot be converted into Standard. Values: <code class="docutils literal notranslate"><span class="pre">IA</span></code>, <code class="docutils literal notranslate"><span class="pre">Archive</span></code>, <code class="docutils literal notranslate"><span class="pre">Standard</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">storage_class</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the storage class that objects that conform to the rule are converted into. The storage class of the objects in a bucket of the IA storage class can be converted into Archive but cannot be converted into Standard. Values: <code class="docutils literal notranslate"><span class="pre">IA</span></code>, <code class="docutils literal notranslate"><span class="pre">Archive</span></code>.</p></li>
 </ul>
 </li>
 </ul>
@@ -339,7 +339,7 @@ properties used to qualify the lookup.</p>
 </ul>
 <p>The <strong>referer_config</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">allowEmpty</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Allows referer to be empty. Defaults true.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowEmpty</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Allows referer to be empty. Defaults false.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">referers</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The list of referer.</p></li>
 </ul>
 <p>The <strong>server_side_encryption_rule</strong> object supports the following:</p>

@@ -20,9 +20,9 @@ This data source provides Alibaba Cloud regions.
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const currentRegionDs = pulumi.output(alicloud.getRegions({
+const currentRegionDs = alicloud.getRegions({
     current: true,
-}, { async: true }));
+});
 
 export const currentRegionId = currentRegionDs.regions[0].id;
 ```

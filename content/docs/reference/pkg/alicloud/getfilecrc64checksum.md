@@ -22,9 +22,9 @@ This data source compute file crc64 checksum.
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const defaultFileCrc64Checksum = pulumi.output(alicloud.getFileCrc64Checksum({
+const defaultFileCrc64Checksum = alicloud.getFileCrc64Checksum({
     filename: "exampleFileName",
-}, { async: true }));
+});
 
 export const fileCrc64Checksum = alicloud_file_crc64_checksum_defualt.checksum;
 ```

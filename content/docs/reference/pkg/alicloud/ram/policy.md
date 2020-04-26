@@ -22,7 +22,7 @@ meta_desc: "Explore the Policy resource of the ram module, including examples, i
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Policy</span><span class="p">(resource_name, opts=None, </span>description=None<span class="p">, </span>document=None<span class="p">, </span>force=None<span class="p">, </span>name=None<span class="p">, </span>statements=None<span class="p">, </span>version=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Policy</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>description=None<span class="p">, </span>document=None<span class="p">, </span>force=None<span class="p">, </span>name=None<span class="p">, </span>statements=None<span class="p">, </span>version=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

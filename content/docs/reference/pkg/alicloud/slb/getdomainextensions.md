@@ -22,11 +22,11 @@ This data source provides the domain extensions associated with a server load ba
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const foo = pulumi.output(alicloud.slb.getDomainExtensions({
+const foo = alicloud.slb.getDomainExtensions({
     frontendPort: Number.parseFloat("fake-port"),
     ids: ["fake-de-id"],
     loadBalancerId: "fake-lb-id",
-}, { async: true }));
+});
 ```
 
 {{% /example %}}

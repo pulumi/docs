@@ -48,7 +48,7 @@ const profile = new alicloud.ram.LoginProfile("profile", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">LoginProfile</span><span class="p">(resource_name, opts=None, </span>mfa_bind_required=None<span class="p">, </span>password=None<span class="p">, </span>password_reset_required=None<span class="p">, </span>user_name=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">LoginProfile</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>mfa_bind_required=None<span class="p">, </span>password=None<span class="p">, </span>password_reset_required=None<span class="p">, </span>user_name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

@@ -22,10 +22,10 @@ For information about Launch Template and how to use it, see [Launch Template](h
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const images = pulumi.output(alicloud.ecs.getImages({
+const images = alicloud.ecs.getImages({
     owners: "system",
-}, { async: true }));
-const instances = pulumi.output(alicloud.ecs.getInstances({ async: true }));
+});
+const instances = alicloud.ecs.getInstances();
 const template = new alicloud.ecs.LaunchTemplate("template", {
     dataDisks: [
         {
@@ -91,7 +91,7 @@ const template = new alicloud.ecs.LaunchTemplate("template", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">LaunchTemplate</span><span class="p">(resource_name, opts=None, </span>auto_release_time=None<span class="p">, </span>data_disks=None<span class="p">, </span>description=None<span class="p">, </span>host_name=None<span class="p">, </span>image_id=None<span class="p">, </span>image_owner_alias=None<span class="p">, </span>instance_charge_type=None<span class="p">, </span>instance_name=None<span class="p">, </span>instance_type=None<span class="p">, </span>internet_charge_type=None<span class="p">, </span>internet_max_bandwidth_in=None<span class="p">, </span>internet_max_bandwidth_out=None<span class="p">, </span>io_optimized=None<span class="p">, </span>key_pair_name=None<span class="p">, </span>name=None<span class="p">, </span>network_interfaces=None<span class="p">, </span>network_type=None<span class="p">, </span>ram_role_name=None<span class="p">, </span>resource_group_id=None<span class="p">, </span>security_enhancement_strategy=None<span class="p">, </span>security_group_id=None<span class="p">, </span>spot_price_limit=None<span class="p">, </span>spot_strategy=None<span class="p">, </span>system_disk_category=None<span class="p">, </span>system_disk_description=None<span class="p">, </span>system_disk_name=None<span class="p">, </span>system_disk_size=None<span class="p">, </span>tags=None<span class="p">, </span>userdata=None<span class="p">, </span>vpc_id=None<span class="p">, </span>vswitch_id=None<span class="p">, </span>zone_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">LaunchTemplate</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>auto_release_time=None<span class="p">, </span>data_disks=None<span class="p">, </span>description=None<span class="p">, </span>host_name=None<span class="p">, </span>image_id=None<span class="p">, </span>image_owner_alias=None<span class="p">, </span>instance_charge_type=None<span class="p">, </span>instance_name=None<span class="p">, </span>instance_type=None<span class="p">, </span>internet_charge_type=None<span class="p">, </span>internet_max_bandwidth_in=None<span class="p">, </span>internet_max_bandwidth_out=None<span class="p">, </span>io_optimized=None<span class="p">, </span>key_pair_name=None<span class="p">, </span>name=None<span class="p">, </span>network_interfaces=None<span class="p">, </span>network_type=None<span class="p">, </span>ram_role_name=None<span class="p">, </span>resource_group_id=None<span class="p">, </span>security_enhancement_strategy=None<span class="p">, </span>security_group_id=None<span class="p">, </span>spot_price_limit=None<span class="p">, </span>spot_strategy=None<span class="p">, </span>system_disk_category=None<span class="p">, </span>system_disk_description=None<span class="p">, </span>system_disk_name=None<span class="p">, </span>system_disk_size=None<span class="p">, </span>tags=None<span class="p">, </span>userdata=None<span class="p">, </span>vpc_id=None<span class="p">, </span>vswitch_id=None<span class="p">, </span>zone_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

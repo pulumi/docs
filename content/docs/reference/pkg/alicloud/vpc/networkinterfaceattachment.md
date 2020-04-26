@@ -31,9 +31,9 @@ const number = config.get("number") || "2";
 const vpc = new alicloud.vpc.Network("vpc", {
     cidrBlock: "192.168.0.0/24",
 });
-const defaultZones = pulumi.output(alicloud.getZones({
+const defaultZones = alicloud.getZones({
     availableResourceCreation: "VSwitch",
-}, { async: true }));
+});
 const vswitch = new alicloud.vpc.Switch("vswitch", {
     availabilityZone: defaultZones.zones[0].id,
     cidrBlock: "192.168.0.0/24",
@@ -42,15 +42,15 @@ const vswitch = new alicloud.vpc.Switch("vswitch", {
 const group = new alicloud.ecs.SecurityGroup("group", {
     vpcId: vpc.id,
 });
-const instanceType = defaultZones.apply(defaultZones => alicloud.ecs.getInstanceTypes({
+const instanceType = alicloud.ecs.getInstanceTypes({
     availabilityZone: defaultZones.zones[0].id,
     eniAmount: 2,
-}, { async: true }));
-const defaultImages = pulumi.output(alicloud.ecs.getImages({
+});
+const defaultImages = alicloud.ecs.getImages({
     mostRecent: true,
     nameRegex: "^ubuntu_18.*64",
     owners: "system",
-}, { async: true }));
+});
 const instance: alicloud.ecs.Instance[] = [];
 for (let i = 0; i < number; i++) {
     instance.push(new alicloud.ecs.Instance(`instance-${i}`, {
@@ -94,7 +94,7 @@ for (let i = 0; i < number; i++) {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">NetworkInterfaceAttachment</span><span class="p">(resource_name, opts=None, </span>instance_id=None<span class="p">, </span>network_interface_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">NetworkInterfaceAttachment</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>instance_id=None<span class="p">, </span>network_interface_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

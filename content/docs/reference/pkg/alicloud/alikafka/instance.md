@@ -34,9 +34,9 @@ import * as alicloud from "@pulumi/alicloud";
 const config = new pulumi.Config();
 const instanceName = config.get("instanceName") || "alikafkaInstanceName";
 
-const defaultZones = pulumi.output(alicloud.getZones({
+const defaultZones = alicloud.getZones({
     availableResourceCreation: "VSwitch",
-}, { async: true }));
+});
 const defaultNetwork = new alicloud.vpc.Network("default", {
     cidrBlock: "172.16.0.0/12",
 });
@@ -69,7 +69,7 @@ const defaultInstance = new alicloud.alikafka.Instance("default", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Instance</span><span class="p">(resource_name, opts=None, </span>deploy_type=None<span class="p">, </span>disk_size=None<span class="p">, </span>disk_type=None<span class="p">, </span>eip_max=None<span class="p">, </span>io_max=None<span class="p">, </span>name=None<span class="p">, </span>paid_type=None<span class="p">, </span>spec_type=None<span class="p">, </span>tags=None<span class="p">, </span>topic_quota=None<span class="p">, </span>vswitch_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Instance</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>deploy_type=None<span class="p">, </span>disk_size=None<span class="p">, </span>disk_type=None<span class="p">, </span>eip_max=None<span class="p">, </span>io_max=None<span class="p">, </span>name=None<span class="p">, </span>paid_type=None<span class="p">, </span>spec_type=None<span class="p">, </span>tags=None<span class="p">, </span>topic_quota=None<span class="p">, </span>vswitch_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

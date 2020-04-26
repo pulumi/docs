@@ -20,7 +20,7 @@ This data source provides the CA certificate list.
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const sampleDs = pulumi.output(alicloud.slb.getCaCertificates({ async: true }));
+const sampleDs = alicloud.slb.getCaCertificates();
 
 export const firstSlbCaCertificateId = sampleDs.certificates[0].id;
 ```

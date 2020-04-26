@@ -26,7 +26,7 @@ const defaultKeyPair = new alicloud.ecs.KeyPair("default", {
 });
 const defaultKeyPairs = defaultKeyPair.keyName.apply(keyName => alicloud.ecs.getKeyPairs({
     nameRegex: keyName,
-}, { async: true }));
+}));
 ```
 
 {{% /example %}}

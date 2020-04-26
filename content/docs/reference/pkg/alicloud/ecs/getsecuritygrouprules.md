@@ -30,19 +30,20 @@ const securityGroupId = config.require("securityGroupId");
 
 // Or get it from the alicloud.ecs.getSecurityGroups data source.
 // Please note that the data source arguments must be enough to filter results to one security group.
-const groupsDs = pulumi.output(alicloud.ecs.getSecurityGroups({
+const groupsDs = alicloud.ecs.getSecurityGroups({
     nameRegex: "api",
-}, { async: true }));
+});
 // Filter the security group rule by group
-const ingressRulesDs = groupsDs.apply(groupsDs => alicloud.ecs.getSecurityGroupRules({
+const ingressRulesDs = alicloud.ecs.getSecurityGroupRules({
     direction: "ingress",
-    groupId: groupsDs.groups[0].id,
+    groupId: groupsDs.groups[0].id, // or ${var.security_group_id}
     ipProtocol: "TCP",
     nicType: "internet",
-}, { async: true }));
+});
 // Pass port_range to the backend service
 const backend = new alicloud.ecs.Instance("backend", {
-    userData: pulumi.interpolate`config_service.sh --portrange=${ingressRulesDs.rules[0].portRange}`,
+    // ...
+    userData: `config_service.sh --portrange=${ingressRulesDs.rules[0].portRange}`,
 });
 ```
 

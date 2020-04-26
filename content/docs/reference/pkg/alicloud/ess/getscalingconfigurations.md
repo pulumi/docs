@@ -20,14 +20,14 @@ This data source provides available scaling configuration resources.
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const scalingconfigurationsDs = pulumi.output(alicloud.ess.getScalingConfigurations({
+const scalingconfigurationsDs = alicloud.ess.getScalingConfigurations({
     ids: [
         "scaling_configuration_id1",
         "scaling_configuration_id2",
     ],
     nameRegex: "scaling_configuration_name",
     scalingGroupId: "scaling_group_id",
-}, { async: true }));
+});
 
 export const firstScalingRule = scalingconfigurationsDs.configurations[0].id;
 ```

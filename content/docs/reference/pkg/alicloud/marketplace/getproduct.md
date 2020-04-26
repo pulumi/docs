@@ -22,9 +22,9 @@ This data source provides the Market product item details of Alibaba Cloud.
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const defaultProduct = pulumi.output(alicloud.marketplace.getProduct({
+const defaultProduct = alicloud.marketplace.getProduct({
     productCode: "cmapi022206",
-}, { async: true }));
+});
 
 export const productName = defaultProduct.products[0].name;
 export const firstProductSkuCode = defaultProduct.products[0].skuses[0].skuCode;

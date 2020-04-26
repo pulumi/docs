@@ -22,13 +22,13 @@ This data source provides a list of ALIKAFKA Sasl acls in an Alibaba Cloud accou
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const saslAclsDs = pulumi.output(alicloud.actiontrail.getSaslAcls({
+const saslAclsDs = alicloud.actiontrail.getSaslAcls({
     aclResourceName: "testTopic",
     aclResourceType: "Topic",
     instanceId: "xxx",
     outputFile: "saslAcls.txt",
     username: "username",
-}, { async: true }));
+});
 
 export const firstSaslAclUsername = saslAclsDs.acls[0].username;
 ```

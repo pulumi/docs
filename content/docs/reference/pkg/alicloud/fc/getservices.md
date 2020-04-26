@@ -20,9 +20,9 @@ This data source provides the Function Compute services of the current Alibaba C
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const fcServicesDs = pulumi.output(alicloud.fc.getServices({
+const fcServicesDs = alicloud.fc.getServices({
     nameRegex: "sample_fc_service",
-}, { async: true }));
+});
 
 export const firstFcServiceName = fcServicesDs.services[0].name;
 ```

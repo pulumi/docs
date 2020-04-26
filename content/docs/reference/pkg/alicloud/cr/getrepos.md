@@ -23,10 +23,10 @@ import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
 // Declare the data source
-const myRepos = pulumi.output(alicloud.cr.getRepos({
+const myRepos = alicloud.cr.getRepos({
     nameRegex: "my-repos",
     outputFile: "my-repo-json",
-}, { async: true }));
+});
 
 export const output = myRepos.repos;
 ```

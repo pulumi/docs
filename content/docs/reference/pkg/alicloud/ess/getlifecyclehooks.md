@@ -22,10 +22,10 @@ This data source provides available lifecycle hook resources.
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const ds = pulumi.output(alicloud.ess.getLifecycleHooks({
+const ds = alicloud.ess.getLifecycleHooks({
     nameRegex: "lifecyclehook_name",
     scalingGroupId: "scaling_group_id",
-}, { async: true }));
+});
 
 export const firstLifecycleHook = ds.hooks[0].id;
 ```

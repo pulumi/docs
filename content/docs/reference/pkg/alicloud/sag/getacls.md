@@ -29,7 +29,7 @@ import * as alicloud from "@pulumi/alicloud";
 const defaultAcls = alicloud_sag_acls_default.id.apply(id => alicloud.sag.getAcls({
     ids: [id],
     nameRegex: "^tf-testAcc.*",
-}, { async: true }));
+}));
 const defaultAcl = new alicloud.rocketmq.Acl("default", {});
 ```
 {{% /example %}}

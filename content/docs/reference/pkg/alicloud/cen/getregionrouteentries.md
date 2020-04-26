@@ -20,10 +20,10 @@ This data source provides CEN Regional Route Entries available to the user.
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const entry = pulumi.output(alicloud.cen.getRegionRouteEntries({
+const entry = alicloud.cen.getRegionRouteEntries({
     instanceId: "cen-id1",
     regionId: "cn-beijing",
-}, { async: true }));
+});
 
 export const firstRegionRouteEntriesRouteEntryCidrBlock = entry.entries[0].cidrBlock;
 ```

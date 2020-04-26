@@ -22,7 +22,7 @@ meta_desc: "Explore the SslVpnServer resource of the vpn module, including examp
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">SslVpnServer</span><span class="p">(resource_name, opts=None, </span>cipher=None<span class="p">, </span>client_ip_pool=None<span class="p">, </span>compress=None<span class="p">, </span>local_subnet=None<span class="p">, </span>name=None<span class="p">, </span>port=None<span class="p">, </span>protocol=None<span class="p">, </span>vpn_gateway_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">SslVpnServer</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>cipher=None<span class="p">, </span>client_ip_pool=None<span class="p">, </span>compress=None<span class="p">, </span>local_subnet=None<span class="p">, </span>name=None<span class="p">, </span>port=None<span class="p">, </span>protocol=None<span class="p">, </span>vpn_gateway_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

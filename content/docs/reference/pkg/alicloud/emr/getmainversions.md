@@ -23,13 +23,13 @@ main versions available in Alibaba Cloud account when create a emr cluster.
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const defaultMainVersions = pulumi.output(alicloud.emr.getMainVersions({
+const defaultMainVersions = alicloud.emr.getMainVersions({
     clusterTypes: [
         "HADOOP",
         "ZOOKEEPER",
     ],
     emrVersion: "EMR-3.22.0",
-}, { async: true }));
+});
 
 export const firstMainVersion = defaultMainVersions.mainVersions[0].emrVersion;
 export const thisClusterTypes = defaultMainVersions.mainVersions[0].clusterTypes;

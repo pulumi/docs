@@ -22,9 +22,9 @@ This data source provides available notification resources.
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const ds = pulumi.output(alicloud.ess.getNotifications({
+const ds = alicloud.ess.getNotifications({
     scalingGroupId: "scaling_group_id",
-}, { async: true }));
+});
 
 export const firstNotification = ds.notifications[0].id;
 ```

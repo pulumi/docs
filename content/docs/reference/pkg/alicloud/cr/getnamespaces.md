@@ -23,10 +23,10 @@ import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
 // Declare the data source
-const myNamespaces = pulumi.output(alicloud.cr.getNamespaces({
+const myNamespaces = alicloud.cr.getNamespaces({
     nameRegex: "my-namespace",
     outputFile: "my-namespace-json",
-}, { async: true }));
+});
 
 export const output = myNamespaces.namespaces;
 ```

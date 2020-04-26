@@ -22,9 +22,9 @@ This data source provides a list of Anti-DDoS Advanced instances in an Alibaba C
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const instanceDdosBgpInstances = pulumi.output(alicloud.ddos.getDdosBgpInstances({
+const instanceDdosBgpInstances = alicloud.ddos.getDdosBgpInstances({
     nameRegex: "^ddosbgp",
-}, { async: true }));
+});
 
 export const instance = alicloud_ddosbgp_instances_instance.map(v => v.id);
 ```
