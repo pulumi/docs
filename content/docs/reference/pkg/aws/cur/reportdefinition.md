@@ -53,7 +53,7 @@ const exampleCurReportDefinition = new aws.cur.ReportDefinition("example_cur_rep
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ReportDefinition</span><span class="p">(resource_name, opts=None, </span>additional_artifacts=None<span class="p">, </span>additional_schema_elements=None<span class="p">, </span>compression=None<span class="p">, </span>format=None<span class="p">, </span>report_name=None<span class="p">, </span>s3_bucket=None<span class="p">, </span>s3_prefix=None<span class="p">, </span>s3_region=None<span class="p">, </span>time_unit=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ReportDefinition</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>additional_artifacts=None<span class="p">, </span>additional_schema_elements=None<span class="p">, </span>compression=None<span class="p">, </span>format=None<span class="p">, </span>report_name=None<span class="p">, </span>s3_bucket=None<span class="p">, </span>s3_prefix=None<span class="p">, </span>s3_region=None<span class="p">, </span>time_unit=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

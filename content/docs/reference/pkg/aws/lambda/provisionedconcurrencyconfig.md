@@ -26,7 +26,7 @@ Manages a Lambda Provisioned Concurrency Configuration.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ProvisionedConcurrencyConfig</span><span class="p">(resource_name, opts=None, </span>function_name=None<span class="p">, </span>provisioned_concurrent_executions=None<span class="p">, </span>qualifier=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ProvisionedConcurrencyConfig</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>function_name=None<span class="p">, </span>provisioned_concurrent_executions=None<span class="p">, </span>qualifier=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

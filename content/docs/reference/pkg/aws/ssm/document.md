@@ -79,7 +79,7 @@ The permissions mapping supports the following:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Document</span><span class="p">(resource_name, opts=None, </span>attachments_sources=None<span class="p">, </span>content=None<span class="p">, </span>document_format=None<span class="p">, </span>document_type=None<span class="p">, </span>name=None<span class="p">, </span>permissions=None<span class="p">, </span>tags=None<span class="p">, </span>target_type=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Document</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>attachments_sources=None<span class="p">, </span>content=None<span class="p">, </span>document_format=None<span class="p">, </span>document_type=None<span class="p">, </span>name=None<span class="p">, </span>permissions=None<span class="p">, </span>tags=None<span class="p">, </span>target_type=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

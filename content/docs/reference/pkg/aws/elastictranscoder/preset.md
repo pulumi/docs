@@ -90,7 +90,7 @@ const bar = new aws.elastictranscoder.Preset("bar", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Preset</span><span class="p">(resource_name, opts=None, </span>audio=None<span class="p">, </span>audio_codec_options=None<span class="p">, </span>container=None<span class="p">, </span>description=None<span class="p">, </span>name=None<span class="p">, </span>thumbnails=None<span class="p">, </span>type=None<span class="p">, </span>video=None<span class="p">, </span>video_codec_options=None<span class="p">, </span>video_watermarks=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Preset</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>audio=None<span class="p">, </span>audio_codec_options=None<span class="p">, </span>container=None<span class="p">, </span>description=None<span class="p">, </span>name=None<span class="p">, </span>thumbnails=None<span class="p">, </span>type=None<span class="p">, </span>video=None<span class="p">, </span>video_codec_options=None<span class="p">, </span>video_watermarks=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

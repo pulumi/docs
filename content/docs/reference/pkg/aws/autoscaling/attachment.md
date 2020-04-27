@@ -59,7 +59,7 @@ const asgAttachmentBar = new aws.autoscaling.Attachment("asg_attachment_bar", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Attachment</span><span class="p">(resource_name, opts=None, </span>alb_target_group_arn=None<span class="p">, </span>autoscaling_group_name=None<span class="p">, </span>elb=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Attachment</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>alb_target_group_arn=None<span class="p">, </span>autoscaling_group_name=None<span class="p">, </span>elb=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

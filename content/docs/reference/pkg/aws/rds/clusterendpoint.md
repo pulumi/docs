@@ -87,7 +87,7 @@ const static = new aws.rds.ClusterEndpoint("static", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ClusterEndpoint</span><span class="p">(resource_name, opts=None, </span>cluster_endpoint_identifier=None<span class="p">, </span>cluster_identifier=None<span class="p">, </span>custom_endpoint_type=None<span class="p">, </span>excluded_members=None<span class="p">, </span>static_members=None<span class="p">, </span>tags=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ClusterEndpoint</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>cluster_endpoint_identifier=None<span class="p">, </span>cluster_identifier=None<span class="p">, </span>custom_endpoint_type=None<span class="p">, </span>excluded_members=None<span class="p">, </span>static_members=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

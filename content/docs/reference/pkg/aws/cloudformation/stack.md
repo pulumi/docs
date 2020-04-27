@@ -62,7 +62,7 @@ const network = new aws.cloudformation.Stack("network", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Stack</span><span class="p">(resource_name, opts=None, </span>capabilities=None<span class="p">, </span>disable_rollback=None<span class="p">, </span>iam_role_arn=None<span class="p">, </span>name=None<span class="p">, </span>notification_arns=None<span class="p">, </span>on_failure=None<span class="p">, </span>parameters=None<span class="p">, </span>policy_body=None<span class="p">, </span>policy_url=None<span class="p">, </span>tags=None<span class="p">, </span>template_body=None<span class="p">, </span>template_url=None<span class="p">, </span>timeout_in_minutes=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Stack</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>capabilities=None<span class="p">, </span>disable_rollback=None<span class="p">, </span>iam_role_arn=None<span class="p">, </span>name=None<span class="p">, </span>notification_arns=None<span class="p">, </span>on_failure=None<span class="p">, </span>parameters=None<span class="p">, </span>policy_body=None<span class="p">, </span>policy_url=None<span class="p">, </span>tags=None<span class="p">, </span>template_body=None<span class="p">, </span>template_url=None<span class="p">, </span>timeout_in_minutes=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

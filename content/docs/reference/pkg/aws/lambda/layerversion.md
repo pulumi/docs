@@ -54,7 +54,7 @@ large files efficiently.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">LayerVersion</span><span class="p">(resource_name, opts=None, </span>code=None<span class="p">, </span>compatible_runtimes=None<span class="p">, </span>description=None<span class="p">, </span>layer_name=None<span class="p">, </span>license_info=None<span class="p">, </span>s3_bucket=None<span class="p">, </span>s3_key=None<span class="p">, </span>s3_object_version=None<span class="p">, </span>source_code_hash=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">LayerVersion</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>code=None<span class="p">, </span>compatible_runtimes=None<span class="p">, </span>description=None<span class="p">, </span>layer_name=None<span class="p">, </span>license_info=None<span class="p">, </span>s3_bucket=None<span class="p">, </span>s3_key=None<span class="p">, </span>s3_object_version=None<span class="p">, </span>source_code_hash=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

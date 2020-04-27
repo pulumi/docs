@@ -48,38 +48,6 @@ const cert = new aws.acm.Certificate("cert", {
 ```
 
 {{% /example %}}
-{{% example %}}
-### Importing an existing certificate
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-import * as tls from "@pulumi/tls";
-
-const examplePrivateKey = new tls.PrivateKey("example", {
-    algorithm: "RSA",
-});
-const exampleSelfSignedCert = new tls.SelfSignedCert("example", {
-    allowedUses: [
-        "key_encipherment",
-        "digital_signature",
-        "server_auth",
-    ],
-    keyAlgorithm: "RSA",
-    privateKeyPem: examplePrivateKey.privateKeyPem,
-    subjects: [{
-        commonName: "example.com",
-        organization: "ACME Examples, Inc",
-    }],
-    validityPeriodHours: 12,
-});
-const cert = new aws.acm.Certificate("cert", {
-    certificateBody: exampleSelfSignedCert.certPem,
-    privateKey: examplePrivateKey.privateKeyPem,
-});
-```
-
-{{% /example %}}
 {{% /examples %}}
 ## options Configuration Block
 
@@ -98,7 +66,7 @@ Supported nested arguments for the `options` configuration block:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Certificate</span><span class="p">(resource_name, opts=None, </span>certificate_authority_arn=None<span class="p">, </span>certificate_body=None<span class="p">, </span>certificate_chain=None<span class="p">, </span>domain_name=None<span class="p">, </span>options=None<span class="p">, </span>private_key=None<span class="p">, </span>subject_alternative_names=None<span class="p">, </span>tags=None<span class="p">, </span>validation_method=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Certificate</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>certificate_authority_arn=None<span class="p">, </span>certificate_body=None<span class="p">, </span>certificate_chain=None<span class="p">, </span>domain_name=None<span class="p">, </span>options=None<span class="p">, </span>private_key=None<span class="p">, </span>subject_alternative_names=None<span class="p">, </span>tags=None<span class="p">, </span>validation_method=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

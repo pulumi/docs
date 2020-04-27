@@ -32,7 +32,7 @@ a conflict of rule settings and will overwrite rules.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">NetworkAclRule</span><span class="p">(resource_name, opts=None, </span>cidr_block=None<span class="p">, </span>egress=None<span class="p">, </span>from_port=None<span class="p">, </span>icmp_code=None<span class="p">, </span>icmp_type=None<span class="p">, </span>ipv6_cidr_block=None<span class="p">, </span>network_acl_id=None<span class="p">, </span>protocol=None<span class="p">, </span>rule_action=None<span class="p">, </span>rule_number=None<span class="p">, </span>to_port=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">NetworkAclRule</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>cidr_block=None<span class="p">, </span>egress=None<span class="p">, </span>from_port=None<span class="p">, </span>icmp_code=None<span class="p">, </span>icmp_type=None<span class="p">, </span>ipv6_cidr_block=None<span class="p">, </span>network_acl_id=None<span class="p">, </span>protocol=None<span class="p">, </span>rule_action=None<span class="p">, </span>rule_number=None<span class="p">, </span>to_port=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

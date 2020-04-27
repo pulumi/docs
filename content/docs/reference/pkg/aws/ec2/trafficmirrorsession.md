@@ -52,7 +52,7 @@ const session = new aws.ec2.TrafficMirrorSession("session", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">TrafficMirrorSession</span><span class="p">(resource_name, opts=None, </span>description=None<span class="p">, </span>network_interface_id=None<span class="p">, </span>packet_length=None<span class="p">, </span>session_number=None<span class="p">, </span>tags=None<span class="p">, </span>traffic_mirror_filter_id=None<span class="p">, </span>traffic_mirror_target_id=None<span class="p">, </span>virtual_network_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">TrafficMirrorSession</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>description=None<span class="p">, </span>network_interface_id=None<span class="p">, </span>packet_length=None<span class="p">, </span>session_number=None<span class="p">, </span>tags=None<span class="p">, </span>traffic_mirror_filter_id=None<span class="p">, </span>traffic_mirror_target_id=None<span class="p">, </span>virtual_network_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

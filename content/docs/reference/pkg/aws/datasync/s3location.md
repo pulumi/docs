@@ -43,7 +43,7 @@ const example = new aws.datasync.S3Location("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">S3Location</span><span class="p">(resource_name, opts=None, </span>s3_bucket_arn=None<span class="p">, </span>s3_config=None<span class="p">, </span>subdirectory=None<span class="p">, </span>tags=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">S3Location</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>s3_bucket_arn=None<span class="p">, </span>s3_config=None<span class="p">, </span>subdirectory=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

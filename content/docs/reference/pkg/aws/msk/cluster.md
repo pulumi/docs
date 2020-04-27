@@ -26,7 +26,7 @@ Manages AWS Managed Streaming for Kafka cluster
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Cluster</span><span class="p">(resource_name, opts=None, </span>broker_node_group_info=None<span class="p">, </span>client_authentication=None<span class="p">, </span>cluster_name=None<span class="p">, </span>configuration_info=None<span class="p">, </span>encryption_info=None<span class="p">, </span>enhanced_monitoring=None<span class="p">, </span>kafka_version=None<span class="p">, </span>logging_info=None<span class="p">, </span>number_of_broker_nodes=None<span class="p">, </span>open_monitoring=None<span class="p">, </span>tags=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Cluster</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>broker_node_group_info=None<span class="p">, </span>client_authentication=None<span class="p">, </span>cluster_name=None<span class="p">, </span>configuration_info=None<span class="p">, </span>encryption_info=None<span class="p">, </span>enhanced_monitoring=None<span class="p">, </span>kafka_version=None<span class="p">, </span>logging_info=None<span class="p">, </span>number_of_broker_nodes=None<span class="p">, </span>open_monitoring=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

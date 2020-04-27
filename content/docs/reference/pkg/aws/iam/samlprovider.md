@@ -40,7 +40,7 @@ const defaultSamlProvider = new aws.iam.SamlProvider("default", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">SamlProvider</span><span class="p">(resource_name, opts=None, </span>name=None<span class="p">, </span>saml_metadata_document=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">SamlProvider</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>name=None<span class="p">, </span>saml_metadata_document=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
