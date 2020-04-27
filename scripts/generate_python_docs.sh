@@ -20,6 +20,7 @@ PACKAGES=(
   "pulumi_fastly"
   "pulumi_f5bigip"
   "pulumi_gcp"
+  "pulumi_github"
   "pulumi_gitlab"
   "pulumi_kafka"
   "pulumi_keycloak"

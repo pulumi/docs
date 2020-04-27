@@ -25,6 +25,7 @@ TOOLS_REPOS=(
     "pulumi-fastly"
     "pulumi-f5bigip"
     "pulumi-gcp"
+    "pulumi-github"
     "pulumi-gitlab"
     "pulumi-kafka"
     "pulumi-keycloak"

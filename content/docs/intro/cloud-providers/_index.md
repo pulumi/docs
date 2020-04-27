@@ -62,6 +62,7 @@ aliases: ["/docs/reference/clouds/"]
 
 ## VCS Providers
 
+* [GitHub]({{< relref "./github" >}})
 * [GitLab]({{< relref "./gitlab" >}})
 
 ## Misc. Providers

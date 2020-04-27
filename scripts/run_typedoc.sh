@@ -93,6 +93,7 @@ REPOS=(
     "fastly,pulumi-fastly,sdk/nodejs"
     "f5bigip,pulumi-f5bigip,sdk/nodejs"
     "gcp,pulumi-gcp,sdk/nodejs"
+    "github,pulumi-github,sdk/nodejs"
     "gitlab,pulumi-gitlab,sdk/nodejs"
     "kafka,pulumi-kafka,sdk/nodejs"
     "keycloak,pulumi-keycloak,sdk/nodejs"
