@@ -92,6 +92,12 @@
       "terraform_provider_name": "google"
     },
     {
+      "name": "Pulumi GitHub",
+      "package_name": "pulumi_github",
+      "pulumi_provider_name": "github",
+      "terraform_provider_name": "github"
+    },
+    {
       "name": "Pulumi GitLab",
       "package_name": "pulumi_gitlab",
       "pulumi_provider_name": "gitlab",
@@ -138,6 +144,12 @@
       "package_name": "pulumi_mailgun",
       "pulumi_provider_name": "mailgun",
       "terraform_provider_name": "mailgun"
+    },
+    {
+      "name": "Pulumi MongoDB Atlas",
+      "package_name": "pulumi_mongodbatlas",
+      "pulumi_provider_name": "mongodbatlas",
+      "terraform_provider_name": "mongodbatlas"
     },
     {
       "name": "Pulumi MySQL",
