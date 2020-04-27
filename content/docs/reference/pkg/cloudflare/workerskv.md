@@ -26,7 +26,7 @@ Provides a Workers KV Pair.  *NOTE:*  This resource uses the Cloudflare account 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">WorkersKv</span><span class="p">(resource_name, opts=None, </span>key=None<span class="p">, </span>namespace_id=None<span class="p">, </span>value=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">WorkersKv</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>key=None<span class="p">, </span>namespace_id=None<span class="p">, </span>value=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

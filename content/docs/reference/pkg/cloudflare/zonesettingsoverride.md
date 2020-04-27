@@ -26,7 +26,7 @@ Provides a resource which customizes Cloudflare zone settings. Note that after d
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ZoneSettingsOverride</span><span class="p">(resource_name, opts=None, </span>settings=None<span class="p">, </span>zone_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ZoneSettingsOverride</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>settings=None<span class="p">, </span>zone_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1052,14 +1052,6 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Edge<wbr>Cache<wbr>Ttl</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span>Email<wbr>Obfuscation</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
@@ -1308,6 +1300,14 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Universal<wbr>Ssl</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Waf</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
@@ -1422,14 +1422,6 @@ The following state arguments are supported:
         <span>Development<wbr>Mode</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Edge<wbr>Cache<wbr>Ttl</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1683,6 +1675,14 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Universal<wbr>Ssl</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Waf</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -1797,14 +1797,6 @@ The following state arguments are supported:
         <span>development<wbr>Mode</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>edge<wbr>Cache<wbr>Ttl</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2058,6 +2050,14 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>universal<wbr>Ssl</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>waf</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
@@ -2172,14 +2172,6 @@ The following state arguments are supported:
         <span>development<wbr>Mode</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>edge<wbr>Cache<wbr>Ttl</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2426,6 +2418,14 @@ The following state arguments are supported:
     <dt class="property-optional"
             title="Optional">
         <span>true<wbr>Client<wbr>Ip<wbr>Header</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>universal<wbr>Ssl</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3092,14 +3092,6 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Edge<wbr>Cache<wbr>Ttl</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span>Email<wbr>Obfuscation</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
@@ -3348,6 +3340,14 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Universal<wbr>Ssl</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Waf</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
@@ -3462,14 +3462,6 @@ The following state arguments are supported:
         <span>Development<wbr>Mode</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Edge<wbr>Cache<wbr>Ttl</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3723,6 +3715,14 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Universal<wbr>Ssl</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Waf</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -3837,14 +3837,6 @@ The following state arguments are supported:
         <span>development<wbr>Mode</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>edge<wbr>Cache<wbr>Ttl</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4098,6 +4090,14 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>universal<wbr>Ssl</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>waf</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
@@ -4212,14 +4212,6 @@ The following state arguments are supported:
         <span>development<wbr>Mode</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>edge<wbr>Cache<wbr>Ttl</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4466,6 +4458,14 @@ The following state arguments are supported:
     <dt class="property-optional"
             title="Optional">
         <span>true<wbr>Client<wbr>Ip<wbr>Header</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>universal<wbr>Ssl</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

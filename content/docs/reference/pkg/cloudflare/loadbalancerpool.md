@@ -55,7 +55,7 @@ const foo = new cloudflare.LoadBalancerPool("foo", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">LoadBalancerPool</span><span class="p">(resource_name, opts=None, </span>check_regions=None<span class="p">, </span>description=None<span class="p">, </span>enabled=None<span class="p">, </span>minimum_origins=None<span class="p">, </span>monitor=None<span class="p">, </span>name=None<span class="p">, </span>notification_email=None<span class="p">, </span>origins=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">LoadBalancerPool</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>check_regions=None<span class="p">, </span>description=None<span class="p">, </span>enabled=None<span class="p">, </span>minimum_origins=None<span class="p">, </span>monitor=None<span class="p">, </span>name=None<span class="p">, </span>notification_email=None<span class="p">, </span>origins=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
