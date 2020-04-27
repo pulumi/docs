@@ -45,7 +45,7 @@ const configUrls = new vault.pkiSecret.SecretBackendConfigUrls("config_urls", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">SecretBackendConfigUrls</span><span class="p">(resource_name, opts=None, </span>backend=None<span class="p">, </span>crl_distribution_points=None<span class="p">, </span>issuing_certificates=None<span class="p">, </span>ocsp_servers=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">SecretBackendConfigUrls</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>backend=None<span class="p">, </span>crl_distribution_points=None<span class="p">, </span>issuing_certificates=None<span class="p">, </span>ocsp_servers=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

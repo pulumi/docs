@@ -22,7 +22,7 @@ meta_desc: "Explore the AuthBackendClient resource of the aws module, including 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">AuthBackendClient</span><span class="p">(resource_name, opts=None, </span>access_key=None<span class="p">, </span>backend=None<span class="p">, </span>ec2_endpoint=None<span class="p">, </span>iam_endpoint=None<span class="p">, </span>iam_server_id_header_value=None<span class="p">, </span>secret_key=None<span class="p">, </span>sts_endpoint=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">AuthBackendClient</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>access_key=None<span class="p">, </span>backend=None<span class="p">, </span>ec2_endpoint=None<span class="p">, </span>iam_endpoint=None<span class="p">, </span>iam_server_id_header_value=None<span class="p">, </span>secret_key=None<span class="p">, </span>sts_endpoint=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
