@@ -97,7 +97,7 @@ const redis = new consul.Service("redis", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Service</span><span class="p">(resource_name, opts=None, </span>address=None<span class="p">, </span>checks=None<span class="p">, </span>datacenter=None<span class="p">, </span>external=None<span class="p">, </span>meta=None<span class="p">, </span>name=None<span class="p">, </span>namespace=None<span class="p">, </span>node=None<span class="p">, </span>port=None<span class="p">, </span>service_id=None<span class="p">, </span>tags=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Service</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>address=None<span class="p">, </span>checks=None<span class="p">, </span>datacenter=None<span class="p">, </span>external=None<span class="p">, </span>meta=None<span class="p">, </span>name=None<span class="p">, </span>namespace=None<span class="p">, </span>node=None<span class="p">, </span>port=None<span class="p">, </span>service_id=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
