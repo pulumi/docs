@@ -34,7 +34,7 @@ const zones = pulumi.output(openstack.sharedfilesystem.getAvailbilityZones({ asy
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
-{{% choosable language typescript %}}
+{{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getAvailbilityZones<span class="p">(</span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/sharedfilesystem/#GetAvailbilityZonesArgs">GetAvailbilityZonesArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/sharedfilesystem/#GetAvailbilityZonesResult">GetAvailbilityZonesResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
@@ -45,7 +45,7 @@ const zones = pulumi.output(openstack.sharedfilesystem.getAvailbilityZones({ asy
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupAvailbilityZones<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/sharedfilesystem?tab=doc#LookupAvailbilityZonesArgs">LookupAvailbilityZonesArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/sharedfilesystem?tab=doc#LookupAvailbilityZonesResult">LookupAvailbilityZonesResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAvailbilityZones<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/sharedfilesystem?tab=doc#GetAvailbilityZonesArgs">GetAvailbilityZonesArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/sharedfilesystem?tab=doc#GetAvailbilityZonesResult">GetAvailbilityZonesResult</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 

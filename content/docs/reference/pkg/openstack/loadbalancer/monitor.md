@@ -43,7 +43,7 @@ const monitor1 = new openstack.loadbalancer.Monitor("monitor_1", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Monitor</span><span class="p">(resource_name, opts=None, </span>admin_state_up=None<span class="p">, </span>delay=None<span class="p">, </span>expected_codes=None<span class="p">, </span>http_method=None<span class="p">, </span>max_retries=None<span class="p">, </span>max_retries_down=None<span class="p">, </span>name=None<span class="p">, </span>pool_id=None<span class="p">, </span>region=None<span class="p">, </span>tenant_id=None<span class="p">, </span>timeout=None<span class="p">, </span>type=None<span class="p">, </span>url_path=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Monitor</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>admin_state_up=None<span class="p">, </span>delay=None<span class="p">, </span>expected_codes=None<span class="p">, </span>http_method=None<span class="p">, </span>max_retries=None<span class="p">, </span>max_retries_down=None<span class="p">, </span>name=None<span class="p">, </span>pool_id=None<span class="p">, </span>region=None<span class="p">, </span>tenant_id=None<span class="p">, </span>timeout=None<span class="p">, </span>type=None<span class="p">, </span>url_path=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

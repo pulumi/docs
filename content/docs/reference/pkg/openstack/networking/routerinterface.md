@@ -51,7 +51,7 @@ const routerInterface1 = new openstack.networking.RouterInterface("router_interf
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">RouterInterface</span><span class="p">(resource_name, opts=None, </span>port_id=None<span class="p">, </span>region=None<span class="p">, </span>router_id=None<span class="p">, </span>subnet_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">RouterInterface</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>port_id=None<span class="p">, </span>region=None<span class="p">, </span>router_id=None<span class="p">, </span>subnet_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
