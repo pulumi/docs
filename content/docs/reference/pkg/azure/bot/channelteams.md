@@ -22,7 +22,7 @@ Manages a MS Teams integration for a Bot Channel
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const current = azure.core.getClientConfig();
+const current = pulumi.output(azure.core.getClientConfig({ async: true }));
 const exampleResourceGroup = new azure.core.ResourceGroup("example", {
     location: "northeurope",
 });
