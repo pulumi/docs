@@ -40,7 +40,7 @@ const privateNetwork = new docker.Network("private_network", {});
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Network</span><span class="p">(resource_name, opts=None, </span>attachable=None<span class="p">, </span>check_duplicate=None<span class="p">, </span>driver=None<span class="p">, </span>ingress=None<span class="p">, </span>internal=None<span class="p">, </span>ipam_configs=None<span class="p">, </span>ipam_driver=None<span class="p">, </span>ipv6=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>options=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Network</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>attachable=None<span class="p">, </span>check_duplicate=None<span class="p">, </span>driver=None<span class="p">, </span>ingress=None<span class="p">, </span>internal=None<span class="p">, </span>ipam_configs=None<span class="p">, </span>ipam_driver=None<span class="p">, </span>ipv6=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>options=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
