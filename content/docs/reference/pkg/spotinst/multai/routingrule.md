@@ -46,7 +46,7 @@ const myRoutingRule = new spotinst.multai.RoutingRule("my_routing_rule", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">RoutingRule</span><span class="p">(resource_name, opts=None, </span>balancer_id=None<span class="p">, </span>listener_id=None<span class="p">, </span>middleware_ids=None<span class="p">, </span>priority=None<span class="p">, </span>route=None<span class="p">, </span>strategy=None<span class="p">, </span>tags=None<span class="p">, </span>target_set_ids=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">RoutingRule</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>balancer_id=None<span class="p">, </span>listener_id=None<span class="p">, </span>middleware_ids=None<span class="p">, </span>priority=None<span class="p">, </span>route=None<span class="p">, </span>strategy=None<span class="p">, </span>tags=None<span class="p">, </span>target_set_ids=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
