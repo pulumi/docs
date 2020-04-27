@@ -35,7 +35,7 @@ The `term` mapping supports the following arguments:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">AlertCondition</span><span class="p">(resource_name, opts=None, </span>condition_scope=None<span class="p">, </span>enabled=None<span class="p">, </span>entities=None<span class="p">, </span>gc_metric=None<span class="p">, </span>metric=None<span class="p">, </span>name=None<span class="p">, </span>policy_id=None<span class="p">, </span>runbook_url=None<span class="p">, </span>terms=None<span class="p">, </span>type=None<span class="p">, </span>user_defined_metric=None<span class="p">, </span>user_defined_value_function=None<span class="p">, </span>violation_close_timer=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">AlertCondition</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>condition_scope=None<span class="p">, </span>enabled=None<span class="p">, </span>entities=None<span class="p">, </span>gc_metric=None<span class="p">, </span>metric=None<span class="p">, </span>name=None<span class="p">, </span>policy_id=None<span class="p">, </span>runbook_url=None<span class="p">, </span>terms=None<span class="p">, </span>type=None<span class="p">, </span>user_defined_metric=None<span class="p">, </span>user_defined_value_function=None<span class="p">, </span>violation_close_timer=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
