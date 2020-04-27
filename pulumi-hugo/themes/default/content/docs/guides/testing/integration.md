@@ -151,6 +151,6 @@ unlock new automation capabilities that improve your team's productivity and con
 
 ## Full Examples
 
-A minimal example of using Pulumi's Go integration test framework is available in the examples repository: [Integration Testing in Go](https://github.com/pulumi/examples/tree/31056c3480cc445e5d4d3a8a0a86977adce2bc5e/testing-integration).
+A minimal example of using Pulumi's Go integration test framework is available in the examples repository: [Integration Testing in Go](https://github.com/pulumi/examples/tree/05ae8e1803d7f44cecac69589175e416e421cdfe/testing-integration).
 
-Our own [integration test suite](https://github.com/pulumi/examples/blob/31056c3480cc445e5d4d3a8a0a86977adce2bc5e/misc/test/examples_test.go) can be a source of further inspiration.
+Our own [integration test suite](https://github.com/pulumi/examples/blob/05ae8e1803d7f44cecac69589175e416e421cdfe/misc/test/examples_test.go) can be a source of further inspiration.
