@@ -19,7 +19,7 @@ Serverless is a pattern for building services without having to manage servers. 
 
 Developers can write the application in any language that the service provider supports. That means developers can choose the language that best meets the needs of their application. For example, a compiled application may respond more quickly than a scripting language. Serverless applications can be either synchronous or asynchronous, depending on the task.
 
-Another component of serverless architecture is an API Gateway which maps HTTP operations such as GET, PUT, POST, and DELETE to functions. A gateway simplifies implementing REST interfaces for functions and applications.
+A common feature of serverless architecture is a REST interface which maps HTTP operations such as GET, PUT, POST, and DELETE to functions. A REST interface simplifies implementing REST interfaces for functions and applications. AWS offers API Gateway for building REST interfaces, while Azure and Google Cloud have out of the box solutions.
 
 Let’s take a look at examples where we can apply Architecture as Code to serverless.
 
@@ -164,6 +164,37 @@ Despite the many advantages of serverless, one of the challenges of serverless i
 - autoscaling based utilization adds workers by measuring utilization
 
 Deploying infrastructure with code lets you implement these [strategies]({{< relref "/blog/aws-lambda-provisioned-concurrency-no-cold-starts" >}}) based on your application requirements. A [worked example](https://github.com/pulumi/examples/tree/master/aws-ts-serverless-raw) is available on Github.
+
+```ts
+// Read the config of whether to provision fixed concurrency for Lambda
+const config = new pulumi.Config();
+const provisionedConcurrentExecutions = config.getNumber("provisionedConcurrency");
+
+// Create a Lambda function, using code from the `./app` folder.
+const lambda = new aws.lambda.Function("mylambda", {
+    runtime: aws.lambda.DotnetCore2d1Runtime,
+    code: new pulumi.asset.AssetArchive({
+        ".": new pulumi.asset.FileArchive(dotNetApplicationPublishFolder),
+    }),
+    timeout: 300,
+    handler: dotNetApplicationEntryPoint,
+    role: role.arn,
+    publish: !!provisionedConcurrentExecutions, // Versioning required for provisioned concurrency
+    environment: {
+        variables: {
+            "COUNTER_TABLE": counterTable.name,
+        },
+    },
+}, { dependsOn: [policy] });
+
+if (provisionedConcurrentExecutions) {
+    const concurrency = new aws.lambda.ProvisionedConcurrencyConfig("concurrency", {
+        functionName: lambda.name,
+        qualifier: lambda.version,
+        provisionedConcurrentExecutions,
+    });
+}
+```
 
 ## Conclusion
 
