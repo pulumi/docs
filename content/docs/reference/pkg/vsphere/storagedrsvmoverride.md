@@ -45,25 +45,25 @@ the datastore.
 import * as pulumi from "@pulumi/pulumi";
 import * as vsphere from "@pulumi/vsphere";
 
-const dc = vsphere.getDatacenter({
+const dc = pulumi.output(vsphere.getDatacenter({
     name: "dc1",
-});
-const datastoreCluster = vsphere.getDatastoreCluster({
+}, { async: true }));
+const datastoreCluster = dc.apply(dc => vsphere.getDatastoreCluster({
     datacenterId: dc.id,
     name: "datastore-cluster1",
-});
-const memberDatastore = vsphere.getDatastore({
+}, { async: true }));
+const memberDatastore = dc.apply(dc => vsphere.getDatastore({
     datacenterId: dc.id,
     name: "datastore-cluster1-member1",
-});
-const pool = vsphere.getResourcePool({
+}, { async: true }));
+const pool = dc.apply(dc => vsphere.getResourcePool({
     datacenterId: dc.id,
     name: "cluster1/Resources",
-});
-const network = vsphere.getNetwork({
+}, { async: true }));
+const network = dc.apply(dc => vsphere.getNetwork({
     datacenterId: dc.id,
     name: "public",
-});
+}, { async: true }));
 const vm = new vsphere.VirtualMachine("vm", {
     datastoreId: memberDatastore.id,
     disks: [{
