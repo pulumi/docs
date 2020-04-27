@@ -44,7 +44,7 @@ const example = new gitlab.ProjectHook("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ProjectHook</span><span class="p">(resource_name, opts=None, </span>enable_ssl_verification=None<span class="p">, </span>issues_events=None<span class="p">, </span>job_events=None<span class="p">, </span>merge_requests_events=None<span class="p">, </span>note_events=None<span class="p">, </span>pipeline_events=None<span class="p">, </span>project=None<span class="p">, </span>push_events=None<span class="p">, </span>tag_push_events=None<span class="p">, </span>token=None<span class="p">, </span>url=None<span class="p">, </span>wiki_page_events=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ProjectHook</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>enable_ssl_verification=None<span class="p">, </span>issues_events=None<span class="p">, </span>job_events=None<span class="p">, </span>merge_requests_events=None<span class="p">, </span>note_events=None<span class="p">, </span>pipeline_events=None<span class="p">, </span>project=None<span class="p">, </span>push_events=None<span class="p">, </span>tag_push_events=None<span class="p">, </span>token=None<span class="p">, </span>url=None<span class="p">, </span>wiki_page_events=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
