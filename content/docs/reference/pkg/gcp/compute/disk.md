@@ -1,7 +1,8 @@
 
 ---
 title: "Disk"
-block_external_search_index: true
+title_tag: "Resource Disk | Module compute | Package GCP"
+meta_desc: "Explore the Disk resource of the compute module, including examples, input properties, output properties, lookup functions, and supporting types. Persistent disks are durable storage devices that function similarly to"
 ---
 
 
@@ -65,7 +66,7 @@ const defaultDisk = new gcp.compute.Disk("default", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Disk</span><span class="p">(resource_name, opts=None, </span>description=None<span class="p">, </span>disk_encryption_key=None<span class="p">, </span>image=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>physical_block_size_bytes=None<span class="p">, </span>project=None<span class="p">, </span>resource_policies=None<span class="p">, </span>size=None<span class="p">, </span>snapshot=None<span class="p">, </span>source_image_encryption_key=None<span class="p">, </span>source_snapshot_encryption_key=None<span class="p">, </span>type=None<span class="p">, </span>zone=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Disk</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>description=None<span class="p">, </span>disk_encryption_key=None<span class="p">, </span>image=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>physical_block_size_bytes=None<span class="p">, </span>project=None<span class="p">, </span>resource_policies=None<span class="p">, </span>size=None<span class="p">, </span>snapshot=None<span class="p">, </span>source_image_encryption_key=None<span class="p">, </span>source_snapshot_encryption_key=None<span class="p">, </span>type=None<span class="p">, </span>zone=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2717,8 +2718,7 @@ recreated under the same name, the source snapshot ID would identify the exact v
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 

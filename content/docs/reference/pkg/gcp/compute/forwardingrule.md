@@ -1,7 +1,8 @@
 
 ---
 title: "ForwardingRule"
-block_external_search_index: true
+title_tag: "Resource ForwardingRule | Module compute | Package GCP"
+meta_desc: "Explore the ForwardingRule resource of the compute module, including examples, input properties, output properties, lookup functions, and supporting types. A ForwardingRule resource. A ForwardingRule resource specifies which pool"
 ---
 
 
@@ -69,7 +70,7 @@ const defaultForwardingRule = new gcp.compute.ForwardingRule("default", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ForwardingRule</span><span class="p">(resource_name, opts=None, </span>all_ports=None<span class="p">, </span>allow_global_access=None<span class="p">, </span>backend_service=None<span class="p">, </span>description=None<span class="p">, </span>ip_address=None<span class="p">, </span>ip_protocol=None<span class="p">, </span>is_mirroring_collector=None<span class="p">, </span>labels=None<span class="p">, </span>load_balancing_scheme=None<span class="p">, </span>name=None<span class="p">, </span>network=None<span class="p">, </span>network_tier=None<span class="p">, </span>port_range=None<span class="p">, </span>ports=None<span class="p">, </span>project=None<span class="p">, </span>region=None<span class="p">, </span>service_label=None<span class="p">, </span>subnetwork=None<span class="p">, </span>target=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ForwardingRule</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>all_ports=None<span class="p">, </span>allow_global_access=None<span class="p">, </span>backend_service=None<span class="p">, </span>description=None<span class="p">, </span>ip_address=None<span class="p">, </span>ip_protocol=None<span class="p">, </span>is_mirroring_collector=None<span class="p">, </span>labels=None<span class="p">, </span>load_balancing_scheme=None<span class="p">, </span>name=None<span class="p">, </span>network=None<span class="p">, </span>network_tier=None<span class="p">, </span>port_range=None<span class="p">, </span>ports=None<span class="p">, </span>project=None<span class="p">, </span>region=None<span class="p">, </span>service_label=None<span class="p">, </span>subnetwork=None<span class="p">, </span>target=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2490,8 +2491,7 @@ rule. The forwarded traffic must be of a type appropriate to the target object.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 

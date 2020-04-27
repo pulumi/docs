@@ -1,7 +1,8 @@
 
 ---
 title: "DataTransferConfig"
-block_external_search_index: true
+title_tag: "Resource DataTransferConfig | Module bigquery | Package GCP"
+meta_desc: "Explore the DataTransferConfig resource of the bigquery module, including examples, input properties, output properties, lookup functions, and supporting types. Represents a data transfer configuration. A transfer configuration"
 ---
 
 
@@ -30,7 +31,7 @@ To get more information about Config, see:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">DataTransferConfig</span><span class="p">(resource_name, opts=None, </span>data_refresh_window_days=None<span class="p">, </span>data_source_id=None<span class="p">, </span>destination_dataset_id=None<span class="p">, </span>disabled=None<span class="p">, </span>display_name=None<span class="p">, </span>location=None<span class="p">, </span>params=None<span class="p">, </span>project=None<span class="p">, </span>schedule=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">DataTransferConfig</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>data_refresh_window_days=None<span class="p">, </span>data_source_id=None<span class="p">, </span>destination_dataset_id=None<span class="p">, </span>disabled=None<span class="p">, </span>display_name=None<span class="p">, </span>location=None<span class="p">, </span>params=None<span class="p">, </span>project=None<span class="p">, </span>schedule=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1267,8 +1268,7 @@ NOTE: the granularity should be at least 8 hours, or less frequent.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 

@@ -1,7 +1,8 @@
 
 ---
 title: "StandardAppVersion"
-block_external_search_index: true
+title_tag: "Resource StandardAppVersion | Module appengine | Package GCP"
+meta_desc: "Explore the StandardAppVersion resource of the appengine module, including examples, input properties, output properties, lookup functions, and supporting types. Standard App Version resource to create a new version of standard GAE Application."
 ---
 
 
@@ -31,7 +32,7 @@ To get more information about StandardAppVersion, see:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">StandardAppVersion</span><span class="p">(resource_name, opts=None, </span>delete_service_on_destroy=None<span class="p">, </span>deployment=None<span class="p">, </span>entrypoint=None<span class="p">, </span>env_variables=None<span class="p">, </span>handlers=None<span class="p">, </span>instance_class=None<span class="p">, </span>libraries=None<span class="p">, </span>noop_on_destroy=None<span class="p">, </span>project=None<span class="p">, </span>runtime=None<span class="p">, </span>runtime_api_version=None<span class="p">, </span>service=None<span class="p">, </span>threadsafe=None<span class="p">, </span>version_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">StandardAppVersion</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>delete_service_on_destroy=None<span class="p">, </span>deployment=None<span class="p">, </span>entrypoint=None<span class="p">, </span>env_variables=None<span class="p">, </span>handlers=None<span class="p">, </span>instance_class=None<span class="p">, </span>libraries=None<span class="p">, </span>noop_on_destroy=None<span class="p">, </span>project=None<span class="p">, </span>runtime=None<span class="p">, </span>runtime_api_version=None<span class="p">, </span>service=None<span class="p">, </span>threadsafe=None<span class="p">, </span>version_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2746,8 +2747,7 @@ numbers, or hyphens. Reserved names,"default", "latest", and any name with the p
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 

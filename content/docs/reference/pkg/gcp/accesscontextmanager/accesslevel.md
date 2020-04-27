@@ -1,7 +1,8 @@
 
 ---
 title: "AccessLevel"
-block_external_search_index: true
+title_tag: "Resource AccessLevel | Module accesscontextmanager | Package GCP"
+meta_desc: "Explore the AccessLevel resource of the accesscontextmanager module, including examples, input properties, output properties, lookup functions, and supporting types. An AccessLevel is a label that can be applied to requests to GCP services,"
 ---
 
 
@@ -62,7 +63,7 @@ const access_policy = new gcp.accesscontextmanager.AccessPolicy("access-policy",
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">AccessLevel</span><span class="p">(resource_name, opts=None, </span>basic=None<span class="p">, </span>description=None<span class="p">, </span>name=None<span class="p">, </span>parent=None<span class="p">, </span>title=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">AccessLevel</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>basic=None<span class="p">, </span>description=None<span class="p">, </span>name=None<span class="p">, </span>parent=None<span class="p">, </span>title=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1557,8 +1558,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 

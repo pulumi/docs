@@ -1,7 +1,8 @@
 
 ---
 title: "Brand"
-block_external_search_index: true
+title_tag: "Resource Brand | Module iap | Package GCP"
+meta_desc: "Explore the Brand resource of the iap module, including examples, input properties, output properties, lookup functions, and supporting types. OAuth brand data. Only &#34;Organization Internal&#34; brands can be created"
 ---
 
 
@@ -29,7 +30,7 @@ will remove it from state but *will not delete the resource on the server.*
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Brand</span><span class="p">(resource_name, opts=None, </span>application_title=None<span class="p">, </span>project=None<span class="p">, </span>support_email=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Brand</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>application_title=None<span class="p">, </span>project=None<span class="p">, </span>support_email=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -858,8 +859,7 @@ can be either a user or a service account which is an owner of the specified gro
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 

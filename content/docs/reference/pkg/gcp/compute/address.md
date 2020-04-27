@@ -1,7 +1,8 @@
 
 ---
 title: "Address"
-block_external_search_index: true
+title_tag: "Resource Address | Module compute | Package GCP"
+meta_desc: "Explore the Address resource of the compute module, including examples, input properties, output properties, lookup functions, and supporting types. Represents an Address resource."
 ---
 
 
@@ -64,7 +65,7 @@ const internalWithGceEndpoint = new gcp.compute.Address("internal_with_gce_endpo
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Address</span><span class="p">(resource_name, opts=None, </span>address=None<span class="p">, </span>address_type=None<span class="p">, </span>description=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>network_tier=None<span class="p">, </span>project=None<span class="p">, </span>purpose=None<span class="p">, </span>region=None<span class="p">, </span>subnetwork=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Address</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>address=None<span class="p">, </span>address_type=None<span class="p">, </span>description=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>network_tier=None<span class="p">, </span>project=None<span class="p">, </span>purpose=None<span class="p">, </span>region=None<span class="p">, </span>subnetwork=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1581,8 +1582,7 @@ subnetwork's IP range. This field can only be used with INTERNAL type with GCE_E
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 

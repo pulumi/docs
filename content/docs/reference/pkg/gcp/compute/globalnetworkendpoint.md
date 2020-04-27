@@ -1,7 +1,8 @@
 
 ---
 title: "GlobalNetworkEndpoint"
-block_external_search_index: true
+title_tag: "Resource GlobalNetworkEndpoint | Module compute | Package GCP"
+meta_desc: "Explore the GlobalNetworkEndpoint resource of the compute module, including examples, input properties, output properties, lookup functions, and supporting types. A Global Network endpoint represents a IP address and port combination that exists outside of GCP."
 ---
 
 
@@ -31,7 +32,7 @@ To get more information about GlobalNetworkEndpoint, see:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">GlobalNetworkEndpoint</span><span class="p">(resource_name, opts=None, </span>fqdn=None<span class="p">, </span>global_network_endpoint_group=None<span class="p">, </span>ip_address=None<span class="p">, </span>port=None<span class="p">, </span>project=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">GlobalNetworkEndpoint</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>fqdn=None<span class="p">, </span>global_network_endpoint_group=None<span class="p">, </span>ip_address=None<span class="p">, </span>port=None<span class="p">, </span>project=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -844,8 +845,7 @@ If it is not provided, the provider project is used.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 

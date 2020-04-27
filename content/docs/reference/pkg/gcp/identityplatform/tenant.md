@@ -1,7 +1,8 @@
 
 ---
 title: "Tenant"
-block_external_search_index: true
+title_tag: "Resource Tenant | Module identityplatform | Package GCP"
+meta_desc: "Explore the Tenant resource of the identityplatform module, including examples, input properties, output properties, lookup functions, and supporting types. Tenant configuration in a multi-tenant project."
 ---
 
 
@@ -44,7 +45,7 @@ const tenant = new gcp.identityplatform.Tenant("tenant", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Tenant</span><span class="p">(resource_name, opts=None, </span>allow_password_signup=None<span class="p">, </span>disable_auth=None<span class="p">, </span>display_name=None<span class="p">, </span>enable_email_link_signin=None<span class="p">, </span>project=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Tenant</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>allow_password_signup=None<span class="p">, </span>disable_auth=None<span class="p">, </span>display_name=None<span class="p">, </span>enable_email_link_signin=None<span class="p">, </span>project=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -929,8 +930,7 @@ If it is not provided, the provider project is used.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 

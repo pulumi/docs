@@ -1,7 +1,8 @@
 
 ---
 title: "Trigger"
-block_external_search_index: true
+title_tag: "Resource Trigger | Module cloudbuild | Package GCP"
+meta_desc: "Explore the Trigger resource of the cloudbuild module, including examples, input properties, output properties, lookup functions, and supporting types. Configuration for an automated build in response to source repository changes."
 ---
 
 
@@ -49,7 +50,7 @@ const filename_trigger = new gcp.cloudbuild.Trigger("filename-trigger", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Trigger</span><span class="p">(resource_name, opts=None, </span>build=None<span class="p">, </span>description=None<span class="p">, </span>disabled=None<span class="p">, </span>filename=None<span class="p">, </span>github=None<span class="p">, </span>ignored_files=None<span class="p">, </span>included_files=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>substitutions=None<span class="p">, </span>trigger_template=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Trigger</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>build=None<span class="p">, </span>description=None<span class="p">, </span>disabled=None<span class="p">, </span>filename=None<span class="p">, </span>github=None<span class="p">, </span>ignored_files=None<span class="p">, </span>included_files=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>substitutions=None<span class="p">, </span>trigger_template=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2821,8 +2822,7 @@ One of 'trigger_template' or 'github' must be provided.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 

@@ -1,7 +1,8 @@
 
 ---
 title: "Subscription"
-block_external_search_index: true
+title_tag: "Resource Subscription | Module pubsub | Package GCP"
+meta_desc: "Explore the Subscription resource of the pubsub module, including examples, input properties, output properties, lookup functions, and supporting types. A named resource representing the stream of messages from a single,"
 ---
 
 
@@ -30,7 +31,7 @@ To get more information about Subscription, see:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Subscription</span><span class="p">(resource_name, opts=None, </span>ack_deadline_seconds=None<span class="p">, </span>dead_letter_policy=None<span class="p">, </span>expiration_policy=None<span class="p">, </span>labels=None<span class="p">, </span>message_retention_duration=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>push_config=None<span class="p">, </span>retain_acked_messages=None<span class="p">, </span>topic=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Subscription</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>ack_deadline_seconds=None<span class="p">, </span>dead_letter_policy=None<span class="p">, </span>expiration_policy=None<span class="p">, </span>labels=None<span class="p">, </span>message_retention_duration=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>push_config=None<span class="p">, </span>retain_acked_messages=None<span class="p">, </span>topic=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1853,8 +1854,7 @@ backlog, even if they are acknowledged, until they fall out of the messageRetent
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 

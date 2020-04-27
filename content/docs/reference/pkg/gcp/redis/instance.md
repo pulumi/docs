@@ -1,7 +1,8 @@
 
 ---
 title: "Instance"
-block_external_search_index: true
+title_tag: "Resource Instance | Module redis | Package GCP"
+meta_desc: "Explore the Instance resource of the redis module, including examples, input properties, output properties, lookup functions, and supporting types. A Google Cloud Redis instance."
 ---
 
 
@@ -41,7 +42,7 @@ const cache = new gcp.redis.Instance("cache", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Instance</span><span class="p">(resource_name, opts=None, </span>alternative_location_id=None<span class="p">, </span>authorized_network=None<span class="p">, </span>connect_mode=None<span class="p">, </span>display_name=None<span class="p">, </span>labels=None<span class="p">, </span>location_id=None<span class="p">, </span>memory_size_gb=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>redis_configs=None<span class="p">, </span>redis_version=None<span class="p">, </span>region=None<span class="p">, </span>reserved_ip_range=None<span class="p">, </span>tier=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Instance</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>alternative_location_id=None<span class="p">, </span>authorized_network=None<span class="p">, </span>connect_mode=None<span class="p">, </span>display_name=None<span class="p">, </span>labels=None<span class="p">, </span>location_id=None<span class="p">, </span>memory_size_gb=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>redis_configs=None<span class="p">, </span>redis_version=None<span class="p">, </span>region=None<span class="p">, </span>reserved_ip_range=None<span class="p">, </span>tier=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1886,8 +1887,7 @@ available primary/replica instances
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 

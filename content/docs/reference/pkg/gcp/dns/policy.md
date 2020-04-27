@@ -1,7 +1,8 @@
 
 ---
 title: "Policy"
-block_external_search_index: true
+title_tag: "Resource Policy | Module dns | Package GCP"
+meta_desc: "Explore the Policy resource of the dns module, including examples, input properties, output properties, lookup functions, and supporting types. A policy is a collection of DNS rules applied to one or more Virtual"
 ---
 
 
@@ -29,7 +30,7 @@ To get more information about Policy, see:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Policy</span><span class="p">(resource_name, opts=None, </span>alternative_name_server_config=None<span class="p">, </span>description=None<span class="p">, </span>enable_inbound_forwarding=None<span class="p">, </span>enable_logging=None<span class="p">, </span>name=None<span class="p">, </span>networks=None<span class="p">, </span>project=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Policy</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>alternative_name_server_config=None<span class="p">, </span>description=None<span class="p">, </span>enable_inbound_forwarding=None<span class="p">, </span>enable_logging=None<span class="p">, </span>name=None<span class="p">, </span>networks=None<span class="p">, </span>project=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1225,8 +1226,7 @@ If it is not provided, the provider project is used.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 

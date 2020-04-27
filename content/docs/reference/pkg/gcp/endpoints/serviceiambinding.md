@@ -1,7 +1,8 @@
 
 ---
 title: "ServiceIamBinding"
-block_external_search_index: true
+title_tag: "Resource ServiceIamBinding | Module endpoints | Package GCP"
+meta_desc: "Explore the ServiceIamBinding resource of the endpoints module, including examples, input properties, output properties, lookup functions, and supporting types. Three different resources help you manage your IAM policy for Service Management Service. Each of these resources serves a different use case:"
 ---
 
 
@@ -30,7 +31,7 @@ Three different resources help you manage your IAM policy for Service Management
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ServiceIamBinding</span><span class="p">(resource_name, opts=None, </span>condition=None<span class="p">, </span>members=None<span class="p">, </span>role=None<span class="p">, </span>service_name=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ServiceIamBinding</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>condition=None<span class="p">, </span>members=None<span class="p">, </span>role=None<span class="p">, </span>service_name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -972,8 +973,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 

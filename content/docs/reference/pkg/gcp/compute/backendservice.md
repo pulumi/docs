@@ -1,7 +1,8 @@
 
 ---
 title: "BackendService"
-block_external_search_index: true
+title_tag: "Resource BackendService | Module compute | Package GCP"
+meta_desc: "Explore the BackendService resource of the compute module, including examples, input properties, output properties, lookup functions, and supporting types. A Backend Service defines a group of virtual machines that will serve"
 ---
 
 
@@ -34,7 +35,7 @@ To get more information about BackendService, see:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">BackendService</span><span class="p">(resource_name, opts=None, </span>affinity_cookie_ttl_sec=None<span class="p">, </span>backends=None<span class="p">, </span>cdn_policy=None<span class="p">, </span>circuit_breakers=None<span class="p">, </span>connection_draining_timeout_sec=None<span class="p">, </span>consistent_hash=None<span class="p">, </span>custom_request_headers=None<span class="p">, </span>description=None<span class="p">, </span>enable_cdn=None<span class="p">, </span>health_checks=None<span class="p">, </span>iap=None<span class="p">, </span>load_balancing_scheme=None<span class="p">, </span>locality_lb_policy=None<span class="p">, </span>log_config=None<span class="p">, </span>name=None<span class="p">, </span>outlier_detection=None<span class="p">, </span>port_name=None<span class="p">, </span>project=None<span class="p">, </span>protocol=None<span class="p">, </span>security_policy=None<span class="p">, </span>session_affinity=None<span class="p">, </span>timeout_sec=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">BackendService</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>affinity_cookie_ttl_sec=None<span class="p">, </span>backends=None<span class="p">, </span>cdn_policy=None<span class="p">, </span>circuit_breakers=None<span class="p">, </span>connection_draining_timeout_sec=None<span class="p">, </span>consistent_hash=None<span class="p">, </span>custom_request_headers=None<span class="p">, </span>description=None<span class="p">, </span>enable_cdn=None<span class="p">, </span>health_checks=None<span class="p">, </span>iap=None<span class="p">, </span>load_balancing_scheme=None<span class="p">, </span>locality_lb_policy=None<span class="p">, </span>log_config=None<span class="p">, </span>name=None<span class="p">, </span>outlier_detection=None<span class="p">, </span>port_name=None<span class="p">, </span>project=None<span class="p">, </span>protocol=None<span class="p">, </span>security_policy=None<span class="p">, </span>session_affinity=None<span class="p">, </span>timeout_sec=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -4812,8 +4813,7 @@ used with the GA API.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 

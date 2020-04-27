@@ -1,7 +1,8 @@
 
 ---
 title: "Job"
-block_external_search_index: true
+title_tag: "Resource Job | Module dataflow | Package GCP"
+meta_desc: "Explore the Job resource of the dataflow module, including examples, input properties, output properties, lookup functions, and supporting types. Creates a job on Dataflow, which is an implementation of Apache Beam running on Google Compute Engine. For more information see"
 ---
 
 
@@ -52,7 +53,7 @@ A Dataflow job which is 'destroyed' may be "cancelled" or "drained".  If "cancel
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Job</span><span class="p">(resource_name, opts=None, </span>ip_configuration=None<span class="p">, </span>labels=None<span class="p">, </span>machine_type=None<span class="p">, </span>max_workers=None<span class="p">, </span>name=None<span class="p">, </span>network=None<span class="p">, </span>on_delete=None<span class="p">, </span>parameters=None<span class="p">, </span>project=None<span class="p">, </span>region=None<span class="p">, </span>service_account_email=None<span class="p">, </span>subnetwork=None<span class="p">, </span>temp_gcs_location=None<span class="p">, </span>template_gcs_path=None<span class="p">, </span>zone=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Job</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>ip_configuration=None<span class="p">, </span>labels=None<span class="p">, </span>machine_type=None<span class="p">, </span>max_workers=None<span class="p">, </span>name=None<span class="p">, </span>network=None<span class="p">, </span>on_delete=None<span class="p">, </span>parameters=None<span class="p">, </span>project=None<span class="p">, </span>region=None<span class="p">, </span>service_account_email=None<span class="p">, </span>subnetwork=None<span class="p">, </span>temp_gcs_location=None<span class="p">, </span>template_gcs_path=None<span class="p">, </span>zone=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1801,8 +1802,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 

@@ -1,7 +1,8 @@
 
 ---
 title: "Lien"
-block_external_search_index: true
+title_tag: "Resource Lien | Module resourcemanager | Package GCP"
+meta_desc: "Explore the Lien resource of the resourcemanager module, including examples, input properties, output properties, lookup functions, and supporting types. A Lien represents an encumbrance on the actions that can be performed on a resource."
 ---
 
 
@@ -42,7 +43,7 @@ const lien = new gcp.resourcemanager.Lien("lien", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Lien</span><span class="p">(resource_name, opts=None, </span>origin=None<span class="p">, </span>parent=None<span class="p">, </span>reason=None<span class="p">, </span>restrictions=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Lien</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>origin=None<span class="p">, </span>parent=None<span class="p">, </span>reason=None<span class="p">, </span>restrictions=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -959,8 +960,7 @@ meaningless and will be rejected. e.g. ['resourcemanager.projects.delete']
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 

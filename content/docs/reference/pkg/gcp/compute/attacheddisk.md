@@ -1,7 +1,8 @@
 
 ---
 title: "AttachedDisk"
-block_external_search_index: true
+title_tag: "Resource AttachedDisk | Module compute | Package GCP"
+meta_desc: "Explore the AttachedDisk resource of the compute module, including examples, input properties, output properties, lookup functions, and supporting types. Persistent disks can be attached to a compute instance using the `attached_disk`"
 ---
 
 
@@ -38,7 +39,7 @@ To get more information about attaching disks, see:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">AttachedDisk</span><span class="p">(resource_name, opts=None, </span>device_name=None<span class="p">, </span>disk=None<span class="p">, </span>instance=None<span class="p">, </span>mode=None<span class="p">, </span>project=None<span class="p">, </span>zone=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">AttachedDisk</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>device_name=None<span class="p">, </span>disk=None<span class="p">, </span>instance=None<span class="p">, </span>mode=None<span class="p">, </span>project=None<span class="p">, </span>zone=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -859,8 +860,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 

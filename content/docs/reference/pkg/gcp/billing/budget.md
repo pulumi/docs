@@ -1,7 +1,8 @@
 
 ---
 title: "Budget"
-block_external_search_index: true
+title_tag: "Resource Budget | Module billing | Package GCP"
+meta_desc: "Explore the Budget resource of the billing module, including examples, input properties, output properties, lookup functions, and supporting types. Budget configuration for a billing account."
 ---
 
 
@@ -28,7 +29,7 @@ To get more information about Budget, see:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Budget</span><span class="p">(resource_name, opts=None, </span>all_updates_rule=None<span class="p">, </span>amount=None<span class="p">, </span>billing_account=None<span class="p">, </span>budget_filter=None<span class="p">, </span>display_name=None<span class="p">, </span>threshold_rules=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Budget</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>all_updates_rule=None<span class="p">, </span>amount=None<span class="p">, </span>billing_account=None<span class="p">, </span>budget_filter=None<span class="p">, </span>display_name=None<span class="p">, </span>threshold_rules=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1566,8 +1567,7 @@ the budget.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 

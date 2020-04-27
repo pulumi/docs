@@ -1,7 +1,8 @@
 
 ---
 title: "Index"
-block_external_search_index: true
+title_tag: "Resource Index | Module firestore | Package GCP"
+meta_desc: "Explore the Index resource of the firestore module, including examples, input properties, output properties, lookup functions, and supporting types. Cloud Firestore indexes enable simple and complex queries against documents in a database."
 ---
 
 
@@ -58,7 +59,7 @@ const my_index = new gcp.firestore.Index("my-index", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Index</span><span class="p">(resource_name, opts=None, </span>collection=None<span class="p">, </span>database=None<span class="p">, </span>fields=None<span class="p">, </span>project=None<span class="p">, </span>query_scope=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Index</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>collection=None<span class="p">, </span>database=None<span class="p">, </span>fields=None<span class="p">, </span>project=None<span class="p">, </span>query_scope=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1112,8 +1113,7 @@ If it is not provided, the provider project is used.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 

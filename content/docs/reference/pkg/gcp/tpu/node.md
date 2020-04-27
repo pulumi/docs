@@ -1,7 +1,8 @@
 
 ---
 title: "Node"
-block_external_search_index: true
+title_tag: "Resource Node | Module tpu | Package GCP"
+meta_desc: "Explore the Node resource of the tpu module, including examples, input properties, output properties, lookup functions, and supporting types. A Cloud TPU instance."
 ---
 
 
@@ -29,7 +30,7 @@ To get more information about Node, see:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Node</span><span class="p">(resource_name, opts=None, </span>accelerator_type=None<span class="p">, </span>cidr_block=None<span class="p">, </span>description=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>network=None<span class="p">, </span>project=None<span class="p">, </span>scheduling_config=None<span class="p">, </span>tensorflow_version=None<span class="p">, </span>zone=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Node</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>accelerator_type=None<span class="p">, </span>cidr_block=None<span class="p">, </span>description=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>network=None<span class="p">, </span>project=None<span class="p">, </span>scheduling_config=None<span class="p">, </span>tensorflow_version=None<span class="p">, </span>zone=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1582,8 +1583,7 @@ Storage data, with the Tensorflow job running in the Node, this account must hav
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 

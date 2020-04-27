@@ -1,7 +1,8 @@
 
 ---
 title: "AutoscalingPolicy"
-block_external_search_index: true
+title_tag: "Resource AutoscalingPolicy | Module dataproc | Package GCP"
+meta_desc: "Explore the AutoscalingPolicy resource of the dataproc module, including examples, input properties, output properties, lookup functions, and supporting types. Describes an autoscaling policy for Dataproc cluster autoscaler."
 ---
 
 
@@ -22,7 +23,7 @@ Describes an autoscaling policy for Dataproc cluster autoscaler.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">AutoscalingPolicy</span><span class="p">(resource_name, opts=None, </span>basic_algorithm=None<span class="p">, </span>location=None<span class="p">, </span>policy_id=None<span class="p">, </span>project=None<span class="p">, </span>secondary_worker_config=None<span class="p">, </span>worker_config=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">AutoscalingPolicy</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>basic_algorithm=None<span class="p">, </span>location=None<span class="p">, </span>policy_id=None<span class="p">, </span>project=None<span class="p">, </span>secondary_worker_config=None<span class="p">, </span>worker_config=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1573,8 +1574,7 @@ If it is not provided, the provider project is used.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 

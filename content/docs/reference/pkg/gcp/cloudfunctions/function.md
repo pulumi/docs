@@ -1,7 +1,8 @@
 
 ---
 title: "Function"
-block_external_search_index: true
+title_tag: "Resource Function | Module cloudfunctions | Package GCP"
+meta_desc: "Explore the Function resource of the cloudfunctions module, including examples, input properties, output properties, lookup functions, and supporting types. Creates a new Cloud Function. For more information see"
 ---
 
 
@@ -31,7 +32,7 @@ for Cloud Functions.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Function</span><span class="p">(resource_name, opts=None, </span>available_memory_mb=None<span class="p">, </span>description=None<span class="p">, </span>entry_point=None<span class="p">, </span>environment_variables=None<span class="p">, </span>event_trigger=None<span class="p">, </span>https_trigger_url=None<span class="p">, </span>ingress_settings=None<span class="p">, </span>labels=None<span class="p">, </span>max_instances=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>region=None<span class="p">, </span>runtime=None<span class="p">, </span>service_account_email=None<span class="p">, </span>source_archive_bucket=None<span class="p">, </span>source_archive_object=None<span class="p">, </span>source_repository=None<span class="p">, </span>timeout=None<span class="p">, </span>trigger_http=None<span class="p">, </span>vpc_connector=None<span class="p">, </span>vpc_connector_egress_settings=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Function</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>available_memory_mb=None<span class="p">, </span>description=None<span class="p">, </span>entry_point=None<span class="p">, </span>environment_variables=None<span class="p">, </span>event_trigger=None<span class="p">, </span>https_trigger_url=None<span class="p">, </span>ingress_settings=None<span class="p">, </span>labels=None<span class="p">, </span>max_instances=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>region=None<span class="p">, </span>runtime=None<span class="p">, </span>service_account_email=None<span class="p">, </span>source_archive_bucket=None<span class="p">, </span>source_archive_object=None<span class="p">, </span>source_repository=None<span class="p">, </span>timeout=None<span class="p">, </span>trigger_http=None<span class="p">, </span>vpc_connector=None<span class="p">, </span>vpc_connector_egress_settings=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2355,8 +2356,7 @@ which to observe events. For example, `"myBucket"` or `"projects/my-project/topi
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 

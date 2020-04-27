@@ -1,7 +1,8 @@
 
 ---
 title: "Variable"
-block_external_search_index: true
+title_tag: "Resource Variable | Module runtimeconfig | Package GCP"
+meta_desc: "Explore the Variable resource of the runtimeconfig module, including examples, input properties, output properties, lookup functions, and supporting types. Manages a RuntimeConfig variable in Google Cloud. For more information, see the"
 ---
 
 
@@ -28,7 +29,7 @@ or the
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Variable</span><span class="p">(resource_name, opts=None, </span>name=None<span class="p">, </span>parent=None<span class="p">, </span>project=None<span class="p">, </span>text=None<span class="p">, </span>value=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Variable</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>name=None<span class="p">, </span>parent=None<span class="p">, </span>project=None<span class="p">, </span>text=None<span class="p">, </span>value=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -921,8 +922,7 @@ Example: "2016-10-09T12:33:37.578138407Z".
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 

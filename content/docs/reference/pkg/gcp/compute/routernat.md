@@ -1,7 +1,8 @@
 
 ---
 title: "RouterNat"
-block_external_search_index: true
+title_tag: "Resource RouterNat | Module compute | Package GCP"
+meta_desc: "Explore the RouterNat resource of the compute module, including examples, input properties, output properties, lookup functions, and supporting types. A NAT service created in a router."
 ---
 
 
@@ -29,7 +30,7 @@ To get more information about RouterNat, see:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">RouterNat</span><span class="p">(resource_name, opts=None, </span>drain_nat_ips=None<span class="p">, </span>icmp_idle_timeout_sec=None<span class="p">, </span>log_config=None<span class="p">, </span>min_ports_per_vm=None<span class="p">, </span>name=None<span class="p">, </span>nat_ip_allocate_option=None<span class="p">, </span>nat_ips=None<span class="p">, </span>project=None<span class="p">, </span>region=None<span class="p">, </span>router=None<span class="p">, </span>source_subnetwork_ip_ranges_to_nat=None<span class="p">, </span>subnetworks=None<span class="p">, </span>tcp_established_idle_timeout_sec=None<span class="p">, </span>tcp_transitory_idle_timeout_sec=None<span class="p">, </span>udp_idle_timeout_sec=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">RouterNat</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>drain_nat_ips=None<span class="p">, </span>icmp_idle_timeout_sec=None<span class="p">, </span>log_config=None<span class="p">, </span>min_ports_per_vm=None<span class="p">, </span>name=None<span class="p">, </span>nat_ip_allocate_option=None<span class="p">, </span>nat_ips=None<span class="p">, </span>project=None<span class="p">, </span>region=None<span class="p">, </span>router=None<span class="p">, </span>source_subnetwork_ip_ranges_to_nat=None<span class="p">, </span>subnetworks=None<span class="p">, </span>tcp_established_idle_timeout_sec=None<span class="p">, </span>tcp_transitory_idle_timeout_sec=None<span class="p">, </span>udp_idle_timeout_sec=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1870,8 +1871,7 @@ network in this region.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 
