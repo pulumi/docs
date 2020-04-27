@@ -1,6 +1,6 @@
 ---
 title: "Architecture as Code: Serverless"
-date: 2020-04-20
+date: 2020-04-28
 meta_desc: "Serverless can benefit from reusable resources created by infrastructure as code."
 meta_image: serverless.png
 authors:
@@ -163,7 +163,7 @@ Despite the many advantages of serverless, one of the challenges of serverless i
 - scheduled profile is warming scheduled during peak use
 - autoscaling based utilization adds workers by measuring utilization
 
-Deploying infrastructure with code lets you implement these [strategies]({{< relref "/blog/aws-lambda-provisioned-concurrency-no-cold-starts" >}}) based on your application requirements. A [worked example](https://github.com/pulumi/examples/tree/master/aws-ts-serverless-raw) is available on Github.
+Deploying infrastructure with code lets you implement these [strategies]({{< relref "/blog/aws-lambda-provisioned-concurrency-no-cold-starts" >}}) based on your application requirements. The code snippet below is an example of provisioned concurrency; a fully [worked example](https://github.com/pulumi/examples/tree/master/aws-ts-serverless-raw) is available on Github.
 
 ```ts
 // Read the config of whether to provision fixed concurrency for Lambda
