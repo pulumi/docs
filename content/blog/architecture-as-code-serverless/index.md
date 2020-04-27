@@ -160,7 +160,7 @@ Despite the many advantages of serverless, one of the challenges of serverless i
 - Invoking a pool of workers - a process known as 'warming'.
 - Provisioned concurrency - workers that are always warm and dedicated to a specific function.
 - Dynamic concurrency - workers configured to autoscale as needed.
-- scheduled profile is warming scheduled during peak use
+- Scheduled profile - warming is applied during peak use.
 - autoscaling based utilization adds workers by measuring utilization
 
 Deploying infrastructure with code lets you implement these [strategies]({{< relref "/blog/aws-lambda-provisioned-concurrency-no-cold-starts" >}}) based on your application requirements. The code snippet below is an example of provisioned concurrency; a fully [worked example](https://github.com/pulumi/examples/tree/master/aws-ts-serverless-raw) is available on Github.
