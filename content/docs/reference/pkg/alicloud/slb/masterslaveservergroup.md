@@ -38,19 +38,19 @@ const config = new pulumi.Config();
 const name = config.get("name") || "tf-testAccSlbMasterSlaveServerGroupVpc";
 const number = config.get("number") || "1";
 
-const defaultZones = alicloud.getZones({
+const defaultZones = pulumi.output(alicloud.getZones({
     availableDiskCategory: "cloud_efficiency",
     availableResourceCreation: "VSwitch",
-});
-const defaultInstanceTypes = alicloud.ecs.getInstanceTypes({
+}, { async: true }));
+const defaultInstanceTypes = defaultZones.apply(defaultZones => alicloud.ecs.getInstanceTypes({
     availabilityZone: defaultZones.zones[0].id,
     eniAmount: 2,
-});
-const image = alicloud.ecs.getImages({
+}, { async: true }));
+const image = pulumi.output(alicloud.ecs.getImages({
     mostRecent: true,
     nameRegex: "^ubuntu_18.*64",
     owners: "system",
-});
+}, { async: true }));
 const mainNetwork = new alicloud.vpc.Network("main", {
     cidrBlock: "172.16.0.0/16",
 });

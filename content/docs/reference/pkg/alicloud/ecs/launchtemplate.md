@@ -22,10 +22,10 @@ For information about Launch Template and how to use it, see [Launch Template](h
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const images = alicloud.ecs.getImages({
+const images = pulumi.output(alicloud.ecs.getImages({
     owners: "system",
-});
-const instances = alicloud.ecs.getInstances();
+}, { async: true }));
+const instances = pulumi.output(alicloud.ecs.getInstances({ async: true }));
 const template = new alicloud.ecs.LaunchTemplate("template", {
     dataDisks: [
         {

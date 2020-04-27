@@ -22,9 +22,9 @@ This data source provides a list of Anti-DDoS Advanced instances in an Alibaba C
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const instanceDdosBgpInstances = alicloud.ddos.getDdosBgpInstances({
+const instanceDdosBgpInstances = pulumi.output(alicloud.ddos.getDdosBgpInstances({
     nameRegex: "^ddosbgp",
-});
+}, { async: true }));
 
 export const instance = alicloud_ddosbgp_instances_instance.map(v => v.id);
 ```
@@ -39,7 +39,7 @@ export const instance = alicloud_ddosbgp_instances_instance.map(v => v.id);
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
-{{% choosable language typescript %}}
+{{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getDdosBgpInstances<span class="p">(</span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/ddos/#GetDdosBgpInstancesArgs">GetDdosBgpInstancesArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/ddos/#GetDdosBgpInstancesResult">GetDdosBgpInstancesResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
@@ -50,7 +50,7 @@ export const instance = alicloud_ddosbgp_instances_instance.map(v => v.id);
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupDdosBgpInstances<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ddos?tab=doc#LookupDdosBgpInstancesArgs">LookupDdosBgpInstancesArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ddos?tab=doc#LookupDdosBgpInstancesResult">LookupDdosBgpInstancesResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDdosBgpInstances<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ddos?tab=doc#GetDdosBgpInstancesArgs">GetDdosBgpInstancesArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ddos?tab=doc#GetDdosBgpInstancesResult">GetDdosBgpInstancesResult</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 

@@ -34,7 +34,7 @@ const ccn = new alicloud.cloudconnect.Network("ccn", {
 const defaultNetworkAttachment = new alicloud.cloudconnect.NetworkAttachment("default", {
     ccnId: ccn.id,
     sagId: "sag-xxxxx",
-}, {dependsOn: [ccn]});
+}, { dependsOn: [ccn] });
 ```
 {{% /example %}}
 {{% /examples %}}

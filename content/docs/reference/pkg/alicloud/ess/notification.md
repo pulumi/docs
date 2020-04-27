@@ -25,14 +25,14 @@ import * as alicloud from "@pulumi/alicloud";
 const config = new pulumi.Config();
 const name = config.get("name") || "tf-testAccEssNotification-%d";
 
-const defaultRegions = alicloud.getRegions({
+const defaultRegions = pulumi.output(alicloud.getRegions({
     current: true,
-});
-const defaultAccount = alicloud.getAccount();
-const defaultZones = alicloud.getZones({
+}, { async: true }));
+const defaultAccount = pulumi.output(alicloud.getAccount({ async: true }));
+const defaultZones = pulumi.output(alicloud.getZones({
     availableDiskCategory: "cloud_efficiency",
     availableResourceCreation: "VSwitch",
-});
+}, { async: true }));
 const defaultNetwork = new alicloud.vpc.Network("default", {
     cidrBlock: "172.16.0.0/16",
 });

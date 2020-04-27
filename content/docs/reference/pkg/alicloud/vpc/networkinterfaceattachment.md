@@ -31,9 +31,9 @@ const number = config.get("number") || "2";
 const vpc = new alicloud.vpc.Network("vpc", {
     cidrBlock: "192.168.0.0/24",
 });
-const defaultZones = alicloud.getZones({
+const defaultZones = pulumi.output(alicloud.getZones({
     availableResourceCreation: "VSwitch",
-});
+}, { async: true }));
 const vswitch = new alicloud.vpc.Switch("vswitch", {
     availabilityZone: defaultZones.zones[0].id,
     cidrBlock: "192.168.0.0/24",
@@ -42,15 +42,15 @@ const vswitch = new alicloud.vpc.Switch("vswitch", {
 const group = new alicloud.ecs.SecurityGroup("group", {
     vpcId: vpc.id,
 });
-const instanceType = alicloud.ecs.getInstanceTypes({
+const instanceType = defaultZones.apply(defaultZones => alicloud.ecs.getInstanceTypes({
     availabilityZone: defaultZones.zones[0].id,
     eniAmount: 2,
-});
-const defaultImages = alicloud.ecs.getImages({
+}, { async: true }));
+const defaultImages = pulumi.output(alicloud.ecs.getImages({
     mostRecent: true,
     nameRegex: "^ubuntu_18.*64",
     owners: "system",
-});
+}, { async: true }));
 const instance: alicloud.ecs.Instance[] = [];
 for (let i = 0; i < number; i++) {
     instance.push(new alicloud.ecs.Instance(`instance-${i}`, {
