@@ -157,7 +157,7 @@ The [full example](https://github.com/pulumi/examples/tree/master/gcp-ts-serverl
 
 Despite the many advantages of serverless, one of the challenges of serverless is latency, more commonly known as “cold starts.” There are several ways to lessen the impact of cold starts, including:
 
-- warming is the practice of invoking additional workers to provide a pool of workers
+- Invoking a pool of workers - a process known as 'warming'.
 - provisioned concurrency has a set of workers are always warm and dedicated to a specific function
 - dynamic concurrency is similar to provisioned concurrency but the workers can autoscale as needed
 - scheduled profile is warming scheduled during peak use
