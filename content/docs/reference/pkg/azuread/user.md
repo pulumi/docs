@@ -44,7 +44,7 @@ const example = new azuread.User("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">User</span><span class="p">(resource_name, opts=None, </span>account_enabled=None<span class="p">, </span>display_name=None<span class="p">, </span>force_password_change=None<span class="p">, </span>immutable_id=None<span class="p">, </span>mail_nickname=None<span class="p">, </span>password=None<span class="p">, </span>usage_location=None<span class="p">, </span>user_principal_name=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">User</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>account_enabled=None<span class="p">, </span>display_name=None<span class="p">, </span>force_password_change=None<span class="p">, </span>immutable_id=None<span class="p">, </span>mail_nickname=None<span class="p">, </span>password=None<span class="p">, </span>usage_location=None<span class="p">, </span>user_principal_name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
