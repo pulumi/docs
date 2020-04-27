@@ -45,7 +45,7 @@ const example = new okta.auth.ServerPolicy("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ServerPolicy</span><span class="p">(resource_name, opts=None, </span>auth_server_id=None<span class="p">, </span>client_whitelists=None<span class="p">, </span>description=None<span class="p">, </span>name=None<span class="p">, </span>priority=None<span class="p">, </span>status=None<span class="p">, </span>type=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ServerPolicy</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>auth_server_id=None<span class="p">, </span>client_whitelists=None<span class="p">, </span>description=None<span class="p">, </span>name=None<span class="p">, </span>priority=None<span class="p">, </span>status=None<span class="p">, </span>type=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

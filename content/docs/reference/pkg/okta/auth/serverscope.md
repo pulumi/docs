@@ -43,7 +43,7 @@ const example = new okta.auth.ServerScope("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ServerScope</span><span class="p">(resource_name, opts=None, </span>auth_server_id=None<span class="p">, </span>consent=None<span class="p">, </span>default=None<span class="p">, </span>description=None<span class="p">, </span>metadata_publish=None<span class="p">, </span>name=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ServerScope</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>auth_server_id=None<span class="p">, </span>consent=None<span class="p">, </span>default=None<span class="p">, </span>description=None<span class="p">, </span>metadata_publish=None<span class="p">, </span>name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

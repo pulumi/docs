@@ -52,7 +52,7 @@ const example = new okta.app.GroupAssignment("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">GroupAssignment</span><span class="p">(resource_name, opts=None, </span>app_id=None<span class="p">, </span>group_id=None<span class="p">, </span>priority=None<span class="p">, </span>profile=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">GroupAssignment</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>app_id=None<span class="p">, </span>group_id=None<span class="p">, </span>priority=None<span class="p">, </span>profile=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
