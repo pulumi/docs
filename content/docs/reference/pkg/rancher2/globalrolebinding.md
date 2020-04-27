@@ -46,7 +46,7 @@ const foo2 = new rancher2.GlobalRoleBinding("foo2", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">GlobalRoleBinding</span><span class="p">(resource_name, opts=None, </span>annotations=None<span class="p">, </span>global_role_id=None<span class="p">, </span>group_principal_id=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>user_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">GlobalRoleBinding</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>annotations=None<span class="p">, </span>global_role_id=None<span class="p">, </span>group_principal_id=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>user_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
