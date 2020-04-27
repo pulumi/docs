@@ -53,7 +53,7 @@ This resource exports no additional attributes.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">DomainRecord</span><span class="p">(resource_name, opts=None, </span>domain_id=None<span class="p">, </span>name=None<span class="p">, </span>port=None<span class="p">, </span>priority=None<span class="p">, </span>protocol=None<span class="p">, </span>record_type=None<span class="p">, </span>service=None<span class="p">, </span>tag=None<span class="p">, </span>target=None<span class="p">, </span>ttl_sec=None<span class="p">, </span>weight=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">DomainRecord</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>domain_id=None<span class="p">, </span>name=None<span class="p">, </span>port=None<span class="p">, </span>priority=None<span class="p">, </span>protocol=None<span class="p">, </span>record_type=None<span class="p">, </span>service=None<span class="p">, </span>tag=None<span class="p">, </span>target=None<span class="p">, </span>ttl_sec=None<span class="p">, </span>weight=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
