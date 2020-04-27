@@ -104,7 +104,7 @@ To learn more about creating [reusable components]({{< relref "/docs/intro/conce
 
 ## Polyglot applications
 
-This example shows how to deploy multiple functions in Google Cloud Functions. Note that we have one function written in Python and another in Go. The code that deploys the function is written in python and creates a Buckets to hold the function code and deploys both functions in the same script.
+This example shows how to deploy multiple functions in Google Cloud Functions. Note that we have one function written in Python and another in Go. The code that deploys the function is written in python and creates a Bucket to hold the function code and deploys both functions in the same script.
 
 ```python
 from pulumi_gcp import storage, cloudfunctions
