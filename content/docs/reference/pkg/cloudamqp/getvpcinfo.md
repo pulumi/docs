@@ -18,7 +18,7 @@ meta_desc: "Explore the GetVpcInfo function of the CloudAMQP package, including 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
-{{% choosable language typescript %}}
+{{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getVpcInfo<span class="p">(</span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/cloudamqp/#GetVpcInfoArgs">GetVpcInfoArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/cloudamqp/#GetVpcInfoResult">GetVpcInfoResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
@@ -29,7 +29,7 @@ meta_desc: "Explore the GetVpcInfo function of the CloudAMQP package, including 
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupVpcInfo<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudamqp/sdk/v2/go/cloudamqp/?tab=doc#GetVpcInfoArgs">GetVpcInfoArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudamqp/sdk/v2/go/cloudamqp/?tab=doc#LookupVpcInfoResult">LookupVpcInfoResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetVpcInfo<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudamqp/sdk/v2/go/cloudamqp/?tab=doc#GetVpcInfoArgs">GetVpcInfoArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudamqp/sdk/v2/go/cloudamqp/?tab=doc#GetVpcInfoResult">GetVpcInfoResult</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 
