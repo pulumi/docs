@@ -20,10 +20,10 @@ Use this data source to get Packet Spot Market Price.
 import * as pulumi from "@pulumi/pulumi";
 import * as packet from "@pulumi/packet";
 
-const example = packet.getSpotMarketPrice({
+const example = pulumi.output(packet.getSpotMarketPrice({
     facility: "ewr1",
     plan: "c1.small.x86",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -36,7 +36,7 @@ const example = packet.getSpotMarketPrice({
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
-{{% choosable language typescript %}}
+{{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getSpotMarketPrice<span class="p">(</span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/packet/#GetSpotMarketPriceArgs">GetSpotMarketPriceArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/packet/#GetSpotMarketPriceResult">GetSpotMarketPriceResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
@@ -47,7 +47,7 @@ const example = packet.getSpotMarketPrice({
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupSpotMarketPrice<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-packet/sdk/v2/go/packet/?tab=doc#GetSpotMarketPriceArgs">GetSpotMarketPriceArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-packet/sdk/v2/go/packet/?tab=doc#LookupSpotMarketPriceResult">LookupSpotMarketPriceResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSpotMarketPrice<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-packet/sdk/v2/go/packet/?tab=doc#GetSpotMarketPriceArgs">GetSpotMarketPriceArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-packet/sdk/v2/go/packet/?tab=doc#GetSpotMarketPriceResult">GetSpotMarketPriceResult</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 
