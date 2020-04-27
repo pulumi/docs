@@ -57,7 +57,7 @@ const test_snat = new f5bigip.ltm.Snat("test-snat", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Snat</span><span class="p">(resource_name, opts=None, </span>autolasthop=None<span class="p">, </span>full_path=None<span class="p">, </span>mirror=None<span class="p">, </span>name=None<span class="p">, </span>origins=None<span class="p">, </span>partition=None<span class="p">, </span>snatpool=None<span class="p">, </span>sourceport=None<span class="p">, </span>translation=None<span class="p">, </span>vlans=None<span class="p">, </span>vlansdisabled=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Snat</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>autolasthop=None<span class="p">, </span>full_path=None<span class="p">, </span>mirror=None<span class="p">, </span>name=None<span class="p">, </span>origins=None<span class="p">, </span>partition=None<span class="p">, </span>snatpool=None<span class="p">, </span>sourceport=None<span class="p">, </span>translation=None<span class="p">, </span>vlans=None<span class="p">, </span>vlansdisabled=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

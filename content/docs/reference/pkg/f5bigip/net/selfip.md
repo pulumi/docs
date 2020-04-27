@@ -29,7 +29,7 @@ Resource should be named with their "full path". The full path is the combinatio
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">SelfIp</span><span class="p">(resource_name, opts=None, </span>ip=None<span class="p">, </span>name=None<span class="p">, </span>traffic_group=None<span class="p">, </span>vlan=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">SelfIp</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>ip=None<span class="p">, </span>name=None<span class="p">, </span>traffic_group=None<span class="p">, </span>vlan=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

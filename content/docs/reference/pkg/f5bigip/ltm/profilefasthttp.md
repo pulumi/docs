@@ -52,7 +52,7 @@ const sjfasthttpprofile = new f5bigip.ltm.ProfileFastHttp("sjfasthttpprofile", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ProfileFastHttp</span><span class="p">(resource_name, opts=None, </span>connpool_maxreuse=None<span class="p">, </span>connpool_maxsize=None<span class="p">, </span>connpool_minsize=None<span class="p">, </span>connpool_replenish=None<span class="p">, </span>connpool_step=None<span class="p">, </span>connpoolidle_timeoutoverride=None<span class="p">, </span>defaults_from=None<span class="p">, </span>forcehttp10response=None<span class="p">, </span>idle_timeout=None<span class="p">, </span>maxheader_size=None<span class="p">, </span>name=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ProfileFastHttp</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>connpool_maxreuse=None<span class="p">, </span>connpool_maxsize=None<span class="p">, </span>connpool_minsize=None<span class="p">, </span>connpool_replenish=None<span class="p">, </span>connpool_step=None<span class="p">, </span>connpoolidle_timeoutoverride=None<span class="p">, </span>defaults_from=None<span class="p">, </span>forcehttp10response=None<span class="p">, </span>idle_timeout=None<span class="p">, </span>maxheader_size=None<span class="p">, </span>name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
