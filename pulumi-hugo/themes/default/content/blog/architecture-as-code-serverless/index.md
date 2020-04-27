@@ -159,7 +159,7 @@ Despite the many advantages of serverless, one of the challenges of serverless i
 
 - Invoking a pool of workers - a process known as 'warming'.
 - Provisioned concurrency - workers that are always warm and dedicated to a specific function.
-- dynamic concurrency is similar to provisioned concurrency but the workers can autoscale as needed
+- Dynamic concurrency - workers configured to autoscale as needed.
 - scheduled profile is warming scheduled during peak use
 - autoscaling based utilization adds workers by measuring utilization
 
