@@ -22,7 +22,7 @@ meta_desc: "Explore the ClientServiceAccountRealmRole resource of the openid mod
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ClientServiceAccountRealmRole</span><span class="p">(resource_name, opts=None, </span>realm_id=None<span class="p">, </span>role=None<span class="p">, </span>service_account_user_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ClientServiceAccountRealmRole</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>realm_id=None<span class="p">, </span>role=None<span class="p">, </span>service_account_user_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

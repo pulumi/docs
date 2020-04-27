@@ -67,7 +67,7 @@ The following arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">UserPropertyProtocolMapper</span><span class="p">(resource_name, opts=None, </span>client_id=None<span class="p">, </span>client_scope_id=None<span class="p">, </span>friendly_name=None<span class="p">, </span>name=None<span class="p">, </span>realm_id=None<span class="p">, </span>saml_attribute_name=None<span class="p">, </span>saml_attribute_name_format=None<span class="p">, </span>user_property=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">UserPropertyProtocolMapper</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>client_id=None<span class="p">, </span>client_scope_id=None<span class="p">, </span>friendly_name=None<span class="p">, </span>name=None<span class="p">, </span>realm_id=None<span class="p">, </span>saml_attribute_name=None<span class="p">, </span>saml_attribute_name_format=None<span class="p">, </span>user_property=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
