@@ -1,7 +1,8 @@
 
 ---
 title: "ScreenBoard"
-block_external_search_index: true
+title_tag: "Resource ScreenBoard | Package Datadog"
+meta_desc: "Explore the ScreenBoard resource of the Datadog package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Datadog screenboard resource. This can be used to create and manage Datadog screenboards."
 ---
 
 
@@ -18,7 +19,7 @@ Provides a Datadog screenboard resource. This can be used to create and manage D
 
 
 
-## Create a ScreenBoard Resource
+## Create a ScreenBoard Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -27,7 +28,7 @@ Provides a Datadog screenboard resource. This can be used to create and manage D
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ScreenBoard</span><span class="p">(resource_name, opts=None, </span>height=None<span class="p">, </span>read_only=None<span class="p">, </span>shared=None<span class="p">, </span>template_variables=None<span class="p">, </span>title=None<span class="p">, </span>widgets=None<span class="p">, </span>width=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ScreenBoard</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>height=None<span class="p">, </span>read_only=None<span class="p">, </span>shared=None<span class="p">, </span>template_variables=None<span class="p">, </span>title=None<span class="p">, </span>widgets=None<span class="p">, </span>width=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -108,7 +109,7 @@ Provides a Datadog screenboard resource. This can be used to create and manage D
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -185,7 +186,13 @@ Provides a Datadog screenboard resource. This can be used to create and manage D
 
 {{% /choosable %}}
 
-#### Resource Arguments
+## ScreenBoard Resource Properties {#properties}
+
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+
+### Inputs
+
+The ScreenBoard resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
 
 
 
@@ -470,11 +477,79 @@ Provides a Datadog screenboard resource. This can be used to create and manage D
 
 
 
+### Outputs
+
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the ScreenBoard resource produces the following output properties:
 
 
 
 
-## Look up an Existing ScreenBoard Resource
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+
+
+## Look up an Existing ScreenBoard Resource {#look-up}
 
 Get an existing ScreenBoard resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -881,7 +956,8 @@ The following state arguments are supported:
 
 ## Supporting Types
 
-<h4>Screen<wbr>Board<wbr>Template<wbr>Variable</h4>
+
+<h4 id="screenboardtemplatevariable">Screen<wbr>Board<wbr>Template<wbr>Variable</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#ScreenBoardTemplateVariable">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#ScreenBoardTemplateVariable">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1020,7 +1096,7 @@ The following state arguments are supported:
 
 
 
-<h4>Screen<wbr>Board<wbr>Widget</h4>
+<h4 id="screenboardwidget">Screen<wbr>Board<wbr>Widget</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#ScreenBoardWidget">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#ScreenBoardWidget">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2890,7 +2966,7 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>service_<wbr>name</span>
+        <span>service<wbr>Service</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2898,7 +2974,7 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>service<wbr>Service</span>
+        <span>service_<wbr>name</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3079,7 +3155,7 @@ The following state arguments are supported:
 
 
 
-<h4>Screen<wbr>Board<wbr>Widget<wbr>Rule</h4>
+<h4 id="screenboardwidgetrule">Screen<wbr>Board<wbr>Widget<wbr>Rule</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#ScreenBoardWidgetRule">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#ScreenBoardWidgetRule">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3218,7 +3294,7 @@ The following state arguments are supported:
 
 
 
-<h4>Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def</h4>
+<h4 id="screenboardwidgettiledef">Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#ScreenBoardWidgetTileDef">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#ScreenBoardWidgetTileDef">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3709,7 +3785,7 @@ The following state arguments are supported:
 
 
 
-<h4>Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Event</h4>
+<h4 id="screenboardwidgettiledefevent">Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Event</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#ScreenBoardWidgetTileDefEvent">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#ScreenBoardWidgetTileDefEvent">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3784,7 +3860,7 @@ The following state arguments are supported:
 
 
 
-<h4>Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Marker</h4>
+<h4 id="screenboardwidgettiledefmarker">Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Marker</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#ScreenBoardWidgetTileDefMarker">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#ScreenBoardWidgetTileDefMarker">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3923,7 +3999,7 @@ The following state arguments are supported:
 
 
 
-<h4>Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request</h4>
+<h4 id="screenboardwidgettiledefrequest">Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#ScreenBoardWidgetTileDefRequest">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#ScreenBoardWidgetTileDefRequest">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4606,7 +4682,7 @@ The following state arguments are supported:
 
 
 
-<h4>Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Apm<wbr>Query</h4>
+<h4 id="screenboardwidgettiledefrequestapmquery">Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Apm<wbr>Query</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#ScreenBoardWidgetTileDefRequestApmQuery">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#ScreenBoardWidgetTileDefRequestApmQuery">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4777,7 +4853,7 @@ The following state arguments are supported:
 
 
 
-<h4>Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Apm<wbr>Query<wbr>Compute</h4>
+<h4 id="screenboardwidgettiledefrequestapmquerycompute">Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Apm<wbr>Query<wbr>Compute</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#ScreenBoardWidgetTileDefRequestApmQueryCompute">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#ScreenBoardWidgetTileDefRequestApmQueryCompute">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4916,7 +4992,7 @@ The following state arguments are supported:
 
 
 
-<h4>Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Apm<wbr>Query<wbr>Group<wbr>By</h4>
+<h4 id="screenboardwidgettiledefrequestapmquerygroupby">Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Apm<wbr>Query<wbr>Group<wbr>By</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#ScreenBoardWidgetTileDefRequestApmQueryGroupBy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#ScreenBoardWidgetTileDefRequestApmQueryGroupBy">output</a> API doc for this type.
 {{% /choosable %}}
@@ -5055,7 +5131,7 @@ The following state arguments are supported:
 
 
 
-<h4>Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Apm<wbr>Query<wbr>Group<wbr>By<wbr>Sort</h4>
+<h4 id="screenboardwidgettiledefrequestapmquerygroupbysort">Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Apm<wbr>Query<wbr>Group<wbr>By<wbr>Sort</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#ScreenBoardWidgetTileDefRequestApmQueryGroupBySort">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#ScreenBoardWidgetTileDefRequestApmQueryGroupBySort">output</a> API doc for this type.
 {{% /choosable %}}
@@ -5194,7 +5270,7 @@ The following state arguments are supported:
 
 
 
-<h4>Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Apm<wbr>Query<wbr>Search</h4>
+<h4 id="screenboardwidgettiledefrequestapmquerysearch">Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Apm<wbr>Query<wbr>Search</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#ScreenBoardWidgetTileDefRequestApmQuerySearch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#ScreenBoardWidgetTileDefRequestApmQuerySearch">output</a> API doc for this type.
 {{% /choosable %}}
@@ -5269,7 +5345,7 @@ The following state arguments are supported:
 
 
 
-<h4>Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Conditional<wbr>Format</h4>
+<h4 id="screenboardwidgettiledefrequestconditionalformat">Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Conditional<wbr>Format</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#ScreenBoardWidgetTileDefRequestConditionalFormat">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#ScreenBoardWidgetTileDefRequestConditionalFormat">output</a> API doc for this type.
 {{% /choosable %}}
@@ -5504,7 +5580,7 @@ The following state arguments are supported:
 
 
 
-<h4>Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Log<wbr>Query</h4>
+<h4 id="screenboardwidgettiledefrequestlogquery">Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Log<wbr>Query</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#ScreenBoardWidgetTileDefRequestLogQuery">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#ScreenBoardWidgetTileDefRequestLogQuery">output</a> API doc for this type.
 {{% /choosable %}}
@@ -5675,7 +5751,7 @@ The following state arguments are supported:
 
 
 
-<h4>Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Log<wbr>Query<wbr>Compute</h4>
+<h4 id="screenboardwidgettiledefrequestlogquerycompute">Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Log<wbr>Query<wbr>Compute</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#ScreenBoardWidgetTileDefRequestLogQueryCompute">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#ScreenBoardWidgetTileDefRequestLogQueryCompute">output</a> API doc for this type.
 {{% /choosable %}}
@@ -5814,7 +5890,7 @@ The following state arguments are supported:
 
 
 
-<h4>Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Log<wbr>Query<wbr>Group<wbr>By</h4>
+<h4 id="screenboardwidgettiledefrequestlogquerygroupby">Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Log<wbr>Query<wbr>Group<wbr>By</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#ScreenBoardWidgetTileDefRequestLogQueryGroupBy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#ScreenBoardWidgetTileDefRequestLogQueryGroupBy">output</a> API doc for this type.
 {{% /choosable %}}
@@ -5953,7 +6029,7 @@ The following state arguments are supported:
 
 
 
-<h4>Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Log<wbr>Query<wbr>Group<wbr>By<wbr>Sort</h4>
+<h4 id="screenboardwidgettiledefrequestlogquerygroupbysort">Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Log<wbr>Query<wbr>Group<wbr>By<wbr>Sort</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#ScreenBoardWidgetTileDefRequestLogQueryGroupBySort">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#ScreenBoardWidgetTileDefRequestLogQueryGroupBySort">output</a> API doc for this type.
 {{% /choosable %}}
@@ -6092,7 +6168,7 @@ The following state arguments are supported:
 
 
 
-<h4>Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Log<wbr>Query<wbr>Search</h4>
+<h4 id="screenboardwidgettiledefrequestlogquerysearch">Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Log<wbr>Query<wbr>Search</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#ScreenBoardWidgetTileDefRequestLogQuerySearch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#ScreenBoardWidgetTileDefRequestLogQuerySearch">output</a> API doc for this type.
 {{% /choosable %}}
@@ -6167,7 +6243,7 @@ The following state arguments are supported:
 
 
 
-<h4>Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Process<wbr>Query</h4>
+<h4 id="screenboardwidgettiledefrequestprocessquery">Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Process<wbr>Query</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#ScreenBoardWidgetTileDefRequestProcessQuery">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#ScreenBoardWidgetTileDefRequestProcessQuery">output</a> API doc for this type.
 {{% /choosable %}}
@@ -6342,14 +6418,13 @@ The following state arguments are supported:
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-datadog">https://github.com/pulumi/pulumi-datadog</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`datadog` Terraform Provider](https://github.com/terraform-providers/terraform-provider-datadog).</dd>
-	
 </dl>
 

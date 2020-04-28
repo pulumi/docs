@@ -1,7 +1,8 @@
 
 ---
 title: "LogsCustomPipeline"
-block_external_search_index: true
+title_tag: "Resource LogsCustomPipeline | Package Datadog"
+meta_desc: "Explore the LogsCustomPipeline resource of the Datadog package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Datadog [Logs Pipeline API](https://docs.datadoghq.com/api/?lang=python#logs-pipelines) resource, which is used to create and manage Datadog logs custom pipelines."
 ---
 
 
@@ -189,7 +190,7 @@ resource to track the pipeline. Similarly, when a pipeline needs to be destroyed
 
 
 
-## Create a LogsCustomPipeline Resource
+## Create a LogsCustomPipeline Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -198,7 +199,7 @@ resource to track the pipeline. Similarly, when a pipeline needs to be destroyed
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">LogsCustomPipeline</span><span class="p">(resource_name, opts=None, </span>filters=None<span class="p">, </span>is_enabled=None<span class="p">, </span>name=None<span class="p">, </span>processors=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">LogsCustomPipeline</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>filters=None<span class="p">, </span>is_enabled=None<span class="p">, </span>name=None<span class="p">, </span>processors=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -279,7 +280,7 @@ resource to track the pipeline. Similarly, when a pipeline needs to be destroyed
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -356,7 +357,13 @@ resource to track the pipeline. Similarly, when a pipeline needs to be destroyed
 
 {{% /choosable %}}
 
-#### Resource Arguments
+## LogsCustomPipeline Resource Properties {#properties}
+
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+
+### Inputs
+
+The LogsCustomPipeline resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
 
 
 
@@ -537,11 +544,79 @@ resource to track the pipeline. Similarly, when a pipeline needs to be destroyed
 
 
 
+### Outputs
+
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the LogsCustomPipeline resource produces the following output properties:
 
 
 
 
-## Look up an Existing LogsCustomPipeline Resource
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+
+
+## Look up an Existing LogsCustomPipeline Resource {#look-up}
 
 Get an existing LogsCustomPipeline resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -844,7 +919,8 @@ The following state arguments are supported:
 
 ## Supporting Types
 
-<h4>Logs<wbr>Custom<wbr>Pipeline<wbr>Filter</h4>
+
+<h4 id="logscustompipelinefilter">Logs<wbr>Custom<wbr>Pipeline<wbr>Filter</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsCustomPipelineFilter">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#LogsCustomPipelineFilter">output</a> API doc for this type.
 {{% /choosable %}}
@@ -919,7 +995,7 @@ The following state arguments are supported:
 
 
 
-<h4>Logs<wbr>Custom<wbr>Pipeline<wbr>Processor</h4>
+<h4 id="logscustompipelineprocessor">Logs<wbr>Custom<wbr>Pipeline<wbr>Processor</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsCustomPipelineProcessor">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#LogsCustomPipelineProcessor">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1410,7 +1486,7 @@ The following state arguments are supported:
 
 
 
-<h4>Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Arithmetic<wbr>Processor</h4>
+<h4 id="logscustompipelineprocessorarithmeticprocessor">Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Arithmetic<wbr>Processor</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsCustomPipelineProcessorArithmeticProcessor">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#LogsCustomPipelineProcessorArithmeticProcessor">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1604,21 +1680,21 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>is_<wbr>enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
-    </dt>
-    <dd>{{% md %}}If the processor is enabled or not.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span>is<wbr>Replace<wbr>Missing</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}If it replaces all missing attributes of `template` by an empty string.
 * trace_id_remapper
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>is_<wbr>enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If the processor is enabled or not.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1637,7 +1713,7 @@ The following state arguments are supported:
 
 
 
-<h4>Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Attribute<wbr>Remapper</h4>
+<h4 id="logscustompipelineprocessorattributeremapper">Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Attribute<wbr>Remapper</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsCustomPipelineProcessorAttributeRemapper">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#LogsCustomPipelineProcessorAttributeRemapper">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1968,7 +2044,7 @@ The following state arguments are supported:
 
 
 
-<h4>Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Category<wbr>Processor</h4>
+<h4 id="logscustompipelineprocessorcategoryprocessor">Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Category<wbr>Processor</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsCustomPipelineProcessorCategoryProcessor">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#LogsCustomPipelineProcessorCategoryProcessor">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2155,7 +2231,7 @@ The following state arguments are supported:
 
 
 
-<h4>Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Category<wbr>Processor<wbr>Category</h4>
+<h4 id="logscustompipelineprocessorcategoryprocessorcategory">Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Category<wbr>Processor<wbr>Category</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsCustomPipelineProcessorCategoryProcessorCategory">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#LogsCustomPipelineProcessorCategoryProcessorCategory">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2270,7 +2346,7 @@ The following state arguments are supported:
 
 
 
-<h4>Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Category<wbr>Processor<wbr>Category<wbr>Filter</h4>
+<h4 id="logscustompipelineprocessorcategoryprocessorcategoryfilter">Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Category<wbr>Processor<wbr>Category<wbr>Filter</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsCustomPipelineProcessorCategoryProcessorCategoryFilter">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#LogsCustomPipelineProcessorCategoryProcessorCategoryFilter">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2345,7 +2421,7 @@ The following state arguments are supported:
 
 
 
-<h4>Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Date<wbr>Remapper</h4>
+<h4 id="logscustompipelineprocessordateremapper">Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Date<wbr>Remapper</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsCustomPipelineProcessorDateRemapper">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#LogsCustomPipelineProcessorDateRemapper">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2496,7 +2572,7 @@ The following state arguments are supported:
 
 
 
-<h4>Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Geo<wbr>Ip<wbr>Parser</h4>
+<h4 id="logscustompipelineprocessorgeoipparser">Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Geo<wbr>Ip<wbr>Parser</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsCustomPipelineProcessorGeoIpParser">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#LogsCustomPipelineProcessorGeoIpParser">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2683,7 +2759,7 @@ The following state arguments are supported:
 
 
 
-<h4>Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Grok<wbr>Parser</h4>
+<h4 id="logscustompipelineprocessorgrokparser">Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Grok<wbr>Parser</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsCustomPipelineProcessorGrokParser">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#LogsCustomPipelineProcessorGrokParser">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2906,7 +2982,7 @@ The following state arguments are supported:
 
 
 
-<h4>Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Grok<wbr>Parser<wbr>Grok</h4>
+<h4 id="logscustompipelineprocessorgrokparsergrok">Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Grok<wbr>Parser<wbr>Grok</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsCustomPipelineProcessorGrokParserGrok">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#LogsCustomPipelineProcessorGrokParserGrok">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3021,7 +3097,7 @@ The following state arguments are supported:
 
 
 
-<h4>Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Message<wbr>Remapper</h4>
+<h4 id="logscustompipelineprocessormessageremapper">Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Message<wbr>Remapper</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsCustomPipelineProcessorMessageRemapper">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#LogsCustomPipelineProcessorMessageRemapper">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3172,7 +3248,7 @@ The following state arguments are supported:
 
 
 
-<h4>Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Pipeline</h4>
+<h4 id="logscustompipelineprocessorpipeline">Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Pipeline</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsCustomPipelineProcessorPipeline">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#LogsCustomPipelineProcessorPipeline">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3359,7 +3435,7 @@ The following state arguments are supported:
 
 
 
-<h4>Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Pipeline<wbr>Filter</h4>
+<h4 id="logscustompipelineprocessorpipelinefilter">Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Pipeline<wbr>Filter</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsCustomPipelineProcessorPipelineFilter">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#LogsCustomPipelineProcessorPipelineFilter">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3434,7 +3510,7 @@ The following state arguments are supported:
 
 
 
-<h4>Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Pipeline<wbr>Processor</h4>
+<h4 id="logscustompipelineprocessorpipelineprocessor">Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Pipeline<wbr>Processor</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsCustomPipelineProcessorPipelineProcessor">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#LogsCustomPipelineProcessorPipelineProcessor">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3893,7 +3969,7 @@ The following state arguments are supported:
 
 
 
-<h4>Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Pipeline<wbr>Processor<wbr>Arithmetic<wbr>Processor</h4>
+<h4 id="logscustompipelineprocessorpipelineprocessorarithmeticprocessor">Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Pipeline<wbr>Processor<wbr>Arithmetic<wbr>Processor</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsCustomPipelineProcessorPipelineProcessorArithmeticProcessor">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#LogsCustomPipelineProcessorPipelineProcessorArithmeticProcessor">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4087,21 +4163,21 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>is_<wbr>enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
-    </dt>
-    <dd>{{% md %}}If the processor is enabled or not.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span>is<wbr>Replace<wbr>Missing</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}If it replaces all missing attributes of `template` by an empty string.
 * trace_id_remapper
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>is_<wbr>enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If the processor is enabled or not.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4120,7 +4196,7 @@ The following state arguments are supported:
 
 
 
-<h4>Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Pipeline<wbr>Processor<wbr>Attribute<wbr>Remapper</h4>
+<h4 id="logscustompipelineprocessorpipelineprocessorattributeremapper">Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Pipeline<wbr>Processor<wbr>Attribute<wbr>Remapper</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsCustomPipelineProcessorPipelineProcessorAttributeRemapper">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#LogsCustomPipelineProcessorPipelineProcessorAttributeRemapper">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4451,7 +4527,7 @@ The following state arguments are supported:
 
 
 
-<h4>Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Pipeline<wbr>Processor<wbr>Category<wbr>Processor</h4>
+<h4 id="logscustompipelineprocessorpipelineprocessorcategoryprocessor">Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Pipeline<wbr>Processor<wbr>Category<wbr>Processor</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsCustomPipelineProcessorPipelineProcessorCategoryProcessor">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#LogsCustomPipelineProcessorPipelineProcessorCategoryProcessor">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4638,7 +4714,7 @@ The following state arguments are supported:
 
 
 
-<h4>Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Pipeline<wbr>Processor<wbr>Category<wbr>Processor<wbr>Category</h4>
+<h4 id="logscustompipelineprocessorpipelineprocessorcategoryprocessorcategory">Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Pipeline<wbr>Processor<wbr>Category<wbr>Processor<wbr>Category</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsCustomPipelineProcessorPipelineProcessorCategoryProcessorCategory">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#LogsCustomPipelineProcessorPipelineProcessorCategoryProcessorCategory">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4753,7 +4829,7 @@ The following state arguments are supported:
 
 
 
-<h4>Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Pipeline<wbr>Processor<wbr>Category<wbr>Processor<wbr>Category<wbr>Filter</h4>
+<h4 id="logscustompipelineprocessorpipelineprocessorcategoryprocessorcategoryfilter">Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Pipeline<wbr>Processor<wbr>Category<wbr>Processor<wbr>Category<wbr>Filter</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsCustomPipelineProcessorPipelineProcessorCategoryProcessorCategoryFilter">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#LogsCustomPipelineProcessorPipelineProcessorCategoryProcessorCategoryFilter">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4828,7 +4904,7 @@ The following state arguments are supported:
 
 
 
-<h4>Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Pipeline<wbr>Processor<wbr>Date<wbr>Remapper</h4>
+<h4 id="logscustompipelineprocessorpipelineprocessordateremapper">Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Pipeline<wbr>Processor<wbr>Date<wbr>Remapper</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsCustomPipelineProcessorPipelineProcessorDateRemapper">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#LogsCustomPipelineProcessorPipelineProcessorDateRemapper">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4979,7 +5055,7 @@ The following state arguments are supported:
 
 
 
-<h4>Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Pipeline<wbr>Processor<wbr>Geo<wbr>Ip<wbr>Parser</h4>
+<h4 id="logscustompipelineprocessorpipelineprocessorgeoipparser">Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Pipeline<wbr>Processor<wbr>Geo<wbr>Ip<wbr>Parser</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsCustomPipelineProcessorPipelineProcessorGeoIpParser">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#LogsCustomPipelineProcessorPipelineProcessorGeoIpParser">output</a> API doc for this type.
 {{% /choosable %}}
@@ -5166,7 +5242,7 @@ The following state arguments are supported:
 
 
 
-<h4>Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Pipeline<wbr>Processor<wbr>Grok<wbr>Parser</h4>
+<h4 id="logscustompipelineprocessorpipelineprocessorgrokparser">Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Pipeline<wbr>Processor<wbr>Grok<wbr>Parser</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsCustomPipelineProcessorPipelineProcessorGrokParser">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#LogsCustomPipelineProcessorPipelineProcessorGrokParser">output</a> API doc for this type.
 {{% /choosable %}}
@@ -5389,7 +5465,7 @@ The following state arguments are supported:
 
 
 
-<h4>Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Pipeline<wbr>Processor<wbr>Grok<wbr>Parser<wbr>Grok</h4>
+<h4 id="logscustompipelineprocessorpipelineprocessorgrokparsergrok">Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Pipeline<wbr>Processor<wbr>Grok<wbr>Parser<wbr>Grok</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsCustomPipelineProcessorPipelineProcessorGrokParserGrok">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#LogsCustomPipelineProcessorPipelineProcessorGrokParserGrok">output</a> API doc for this type.
 {{% /choosable %}}
@@ -5504,7 +5580,7 @@ The following state arguments are supported:
 
 
 
-<h4>Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Pipeline<wbr>Processor<wbr>Message<wbr>Remapper</h4>
+<h4 id="logscustompipelineprocessorpipelineprocessormessageremapper">Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Pipeline<wbr>Processor<wbr>Message<wbr>Remapper</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsCustomPipelineProcessorPipelineProcessorMessageRemapper">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#LogsCustomPipelineProcessorPipelineProcessorMessageRemapper">output</a> API doc for this type.
 {{% /choosable %}}
@@ -5655,7 +5731,7 @@ The following state arguments are supported:
 
 
 
-<h4>Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Pipeline<wbr>Processor<wbr>Service<wbr>Remapper</h4>
+<h4 id="logscustompipelineprocessorpipelineprocessorserviceremapper">Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Pipeline<wbr>Processor<wbr>Service<wbr>Remapper</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsCustomPipelineProcessorPipelineProcessorServiceRemapper">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#LogsCustomPipelineProcessorPipelineProcessorServiceRemapper">output</a> API doc for this type.
 {{% /choosable %}}
@@ -5806,7 +5882,7 @@ The following state arguments are supported:
 
 
 
-<h4>Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Pipeline<wbr>Processor<wbr>Status<wbr>Remapper</h4>
+<h4 id="logscustompipelineprocessorpipelineprocessorstatusremapper">Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Pipeline<wbr>Processor<wbr>Status<wbr>Remapper</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsCustomPipelineProcessorPipelineProcessorStatusRemapper">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#LogsCustomPipelineProcessorPipelineProcessorStatusRemapper">output</a> API doc for this type.
 {{% /choosable %}}
@@ -5957,7 +6033,7 @@ The following state arguments are supported:
 
 
 
-<h4>Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Pipeline<wbr>Processor<wbr>String<wbr>Builder<wbr>Processor</h4>
+<h4 id="logscustompipelineprocessorpipelineprocessorstringbuilderprocessor">Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Pipeline<wbr>Processor<wbr>String<wbr>Builder<wbr>Processor</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsCustomPipelineProcessorPipelineProcessorStringBuilderProcessor">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#LogsCustomPipelineProcessorPipelineProcessorStringBuilderProcessor">output</a> API doc for this type.
 {{% /choosable %}}
@@ -6151,21 +6227,21 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>is_<wbr>enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
-    </dt>
-    <dd>{{% md %}}If the processor is enabled or not.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span>is<wbr>Replace<wbr>Missing</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}If it replaces all missing attributes of `template` by an empty string.
 * trace_id_remapper
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>is_<wbr>enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If the processor is enabled or not.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6184,7 +6260,7 @@ The following state arguments are supported:
 
 
 
-<h4>Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Pipeline<wbr>Processor<wbr>Trace<wbr>Id<wbr>Remapper</h4>
+<h4 id="logscustompipelineprocessorpipelineprocessortraceidremapper">Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Pipeline<wbr>Processor<wbr>Trace<wbr>Id<wbr>Remapper</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsCustomPipelineProcessorPipelineProcessorTraceIdRemapper">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#LogsCustomPipelineProcessorPipelineProcessorTraceIdRemapper">output</a> API doc for this type.
 {{% /choosable %}}
@@ -6335,7 +6411,7 @@ The following state arguments are supported:
 
 
 
-<h4>Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Pipeline<wbr>Processor<wbr>Url<wbr>Parser</h4>
+<h4 id="logscustompipelineprocessorpipelineprocessorurlparser">Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Pipeline<wbr>Processor<wbr>Url<wbr>Parser</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsCustomPipelineProcessorPipelineProcessorUrlParser">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#LogsCustomPipelineProcessorPipelineProcessorUrlParser">output</a> API doc for this type.
 {{% /choosable %}}
@@ -6558,7 +6634,7 @@ The following state arguments are supported:
 
 
 
-<h4>Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Pipeline<wbr>Processor<wbr>User<wbr>Agent<wbr>Parser</h4>
+<h4 id="logscustompipelineprocessorpipelineprocessoruseragentparser">Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Pipeline<wbr>Processor<wbr>User<wbr>Agent<wbr>Parser</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsCustomPipelineProcessorPipelineProcessorUserAgentParser">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#LogsCustomPipelineProcessorPipelineProcessorUserAgentParser">output</a> API doc for this type.
 {{% /choosable %}}
@@ -6749,20 +6825,20 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>is_<wbr>enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
-    </dt>
-    <dd>{{% md %}}If the processor is enabled or not.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span>is<wbr>Encoded</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}If the source attribute is URL encoded or not.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>is_<wbr>enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If the processor is enabled or not.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6781,7 +6857,7 @@ The following state arguments are supported:
 
 
 
-<h4>Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Service<wbr>Remapper</h4>
+<h4 id="logscustompipelineprocessorserviceremapper">Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Service<wbr>Remapper</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsCustomPipelineProcessorServiceRemapper">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#LogsCustomPipelineProcessorServiceRemapper">output</a> API doc for this type.
 {{% /choosable %}}
@@ -6932,7 +7008,7 @@ The following state arguments are supported:
 
 
 
-<h4>Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Status<wbr>Remapper</h4>
+<h4 id="logscustompipelineprocessorstatusremapper">Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Status<wbr>Remapper</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsCustomPipelineProcessorStatusRemapper">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#LogsCustomPipelineProcessorStatusRemapper">output</a> API doc for this type.
 {{% /choosable %}}
@@ -7083,7 +7159,7 @@ The following state arguments are supported:
 
 
 
-<h4>Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>String<wbr>Builder<wbr>Processor</h4>
+<h4 id="logscustompipelineprocessorstringbuilderprocessor">Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>String<wbr>Builder<wbr>Processor</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsCustomPipelineProcessorStringBuilderProcessor">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#LogsCustomPipelineProcessorStringBuilderProcessor">output</a> API doc for this type.
 {{% /choosable %}}
@@ -7277,21 +7353,21 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>is_<wbr>enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
-    </dt>
-    <dd>{{% md %}}If the processor is enabled or not.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span>is<wbr>Replace<wbr>Missing</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}If it replaces all missing attributes of `template` by an empty string.
 * trace_id_remapper
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>is_<wbr>enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If the processor is enabled or not.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -7310,7 +7386,7 @@ The following state arguments are supported:
 
 
 
-<h4>Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Trace<wbr>Id<wbr>Remapper</h4>
+<h4 id="logscustompipelineprocessortraceidremapper">Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Trace<wbr>Id<wbr>Remapper</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsCustomPipelineProcessorTraceIdRemapper">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#LogsCustomPipelineProcessorTraceIdRemapper">output</a> API doc for this type.
 {{% /choosable %}}
@@ -7461,7 +7537,7 @@ The following state arguments are supported:
 
 
 
-<h4>Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Url<wbr>Parser</h4>
+<h4 id="logscustompipelineprocessorurlparser">Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Url<wbr>Parser</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsCustomPipelineProcessorUrlParser">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#LogsCustomPipelineProcessorUrlParser">output</a> API doc for this type.
 {{% /choosable %}}
@@ -7684,7 +7760,7 @@ The following state arguments are supported:
 
 
 
-<h4>Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>User<wbr>Agent<wbr>Parser</h4>
+<h4 id="logscustompipelineprocessoruseragentparser">Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>User<wbr>Agent<wbr>Parser</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsCustomPipelineProcessorUserAgentParser">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#LogsCustomPipelineProcessorUserAgentParser">output</a> API doc for this type.
 {{% /choosable %}}
@@ -7875,20 +7951,20 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>is_<wbr>enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
-    </dt>
-    <dd>{{% md %}}If the processor is enabled or not.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span>is<wbr>Encoded</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}If the source attribute is URL encoded or not.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>is_<wbr>enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If the processor is enabled or not.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -7911,14 +7987,13 @@ The following state arguments are supported:
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-datadog">https://github.com/pulumi/pulumi-datadog</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`datadog` Terraform Provider](https://github.com/terraform-providers/terraform-provider-datadog).</dd>
-	
 </dl>
 

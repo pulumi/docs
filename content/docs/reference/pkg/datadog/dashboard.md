@@ -1,7 +1,8 @@
 
 ---
 title: "Dashboard"
-block_external_search_index: true
+title_tag: "Resource Dashboard | Package Datadog"
+meta_desc: "Explore the Dashboard resource of the Datadog package, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 
 
@@ -12,7 +13,7 @@ block_external_search_index: true
 
 
 
-## Create a Dashboard Resource
+## Create a Dashboard Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -21,7 +22,7 @@ block_external_search_index: true
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Dashboard</span><span class="p">(resource_name, opts=None, </span>description=None<span class="p">, </span>is_read_only=None<span class="p">, </span>layout_type=None<span class="p">, </span>notify_lists=None<span class="p">, </span>template_variable_presets=None<span class="p">, </span>template_variables=None<span class="p">, </span>title=None<span class="p">, </span>widgets=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Dashboard</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>description=None<span class="p">, </span>is_read_only=None<span class="p">, </span>layout_type=None<span class="p">, </span>notify_lists=None<span class="p">, </span>template_variable_presets=None<span class="p">, </span>template_variables=None<span class="p">, </span>title=None<span class="p">, </span>widgets=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -102,7 +103,7 @@ block_external_search_index: true
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -179,7 +180,13 @@ block_external_search_index: true
 
 {{% /choosable %}}
 
-#### Resource Arguments
+## Dashboard Resource Properties {#properties}
+
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+
+### Inputs
+
+The Dashboard resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
 
 
 
@@ -504,11 +511,79 @@ block_external_search_index: true
 
 
 
+### Outputs
+
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the Dashboard resource produces the following output properties:
 
 
 
 
-## Look up an Existing Dashboard Resource
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+
+
+## Look up an Existing Dashboard Resource {#look-up}
 
 Get an existing Dashboard resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -955,7 +1030,8 @@ The following state arguments are supported:
 
 ## Supporting Types
 
-<h4>Dashboard<wbr>Template<wbr>Variable</h4>
+
+<h4 id="dashboardtemplatevariable">Dashboard<wbr>Template<wbr>Variable</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardTemplateVariable">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardTemplateVariable">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1094,7 +1170,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Template<wbr>Variable<wbr>Preset</h4>
+<h4 id="dashboardtemplatevariablepreset">Dashboard<wbr>Template<wbr>Variable<wbr>Preset</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardTemplateVariablePreset">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardTemplateVariablePreset">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1201,7 +1277,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Template<wbr>Variable<wbr>Preset<wbr>Template<wbr>Variable</h4>
+<h4 id="dashboardtemplatevariablepresettemplatevariable">Dashboard<wbr>Template<wbr>Variable<wbr>Preset<wbr>Template<wbr>Variable</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardTemplateVariablePresetTemplateVariable">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardTemplateVariablePresetTemplateVariable">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1308,7 +1384,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget</h4>
+<h4 id="dashboardwidget">Dashboard<wbr>Widget</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidget">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidget">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2119,7 +2195,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Alert<wbr>Graph<wbr>Definition</h4>
+<h4 id="dashboardwidgetalertgraphdefinition">Dashboard<wbr>Widget<wbr>Alert<wbr>Graph<wbr>Definition</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetAlertGraphDefinition">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetAlertGraphDefinition">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2354,7 +2430,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Alert<wbr>Graph<wbr>Definition<wbr>Time</h4>
+<h4 id="dashboardwidgetalertgraphdefinitiontime">Dashboard<wbr>Widget<wbr>Alert<wbr>Graph<wbr>Definition<wbr>Time</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetAlertGraphDefinitionTime">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetAlertGraphDefinitionTime">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2429,7 +2505,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Alert<wbr>Value<wbr>Definition</h4>
+<h4 id="dashboardwidgetalertvaluedefinition">Dashboard<wbr>Widget<wbr>Alert<wbr>Value<wbr>Definition</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetAlertValueDefinition">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetAlertValueDefinition">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2696,7 +2772,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Change<wbr>Definition</h4>
+<h4 id="dashboardwidgetchangedefinition">Dashboard<wbr>Widget<wbr>Change<wbr>Definition</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetChangeDefinition">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetChangeDefinition">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2899,7 +2975,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Change<wbr>Definition<wbr>Request</h4>
+<h4 id="dashboardwidgetchangedefinitionrequest">Dashboard<wbr>Widget<wbr>Change<wbr>Definition<wbr>Request</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetChangeDefinitionRequest">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetChangeDefinitionRequest">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3262,7 +3338,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Change<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query</h4>
+<h4 id="dashboardwidgetchangedefinitionrequestapmquery">Dashboard<wbr>Widget<wbr>Change<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetChangeDefinitionRequestApmQuery">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetChangeDefinitionRequestApmQuery">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3433,7 +3509,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Change<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query<wbr>Compute</h4>
+<h4 id="dashboardwidgetchangedefinitionrequestapmquerycompute">Dashboard<wbr>Widget<wbr>Change<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query<wbr>Compute</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetChangeDefinitionRequestApmQueryCompute">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetChangeDefinitionRequestApmQueryCompute">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3572,7 +3648,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Change<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query<wbr>Group<wbr>By</h4>
+<h4 id="dashboardwidgetchangedefinitionrequestapmquerygroupby">Dashboard<wbr>Widget<wbr>Change<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query<wbr>Group<wbr>By</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetChangeDefinitionRequestApmQueryGroupBy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetChangeDefinitionRequestApmQueryGroupBy">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3711,7 +3787,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Change<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query<wbr>Group<wbr>By<wbr>Sort</h4>
+<h4 id="dashboardwidgetchangedefinitionrequestapmquerygroupbysort">Dashboard<wbr>Widget<wbr>Change<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query<wbr>Group<wbr>By<wbr>Sort</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetChangeDefinitionRequestApmQueryGroupBySort">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetChangeDefinitionRequestApmQueryGroupBySort">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3850,7 +3926,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Change<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query<wbr>Search</h4>
+<h4 id="dashboardwidgetchangedefinitionrequestapmquerysearch">Dashboard<wbr>Widget<wbr>Change<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query<wbr>Search</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetChangeDefinitionRequestApmQuerySearch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetChangeDefinitionRequestApmQuerySearch">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3925,7 +4001,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Change<wbr>Definition<wbr>Request<wbr>Log<wbr>Query</h4>
+<h4 id="dashboardwidgetchangedefinitionrequestlogquery">Dashboard<wbr>Widget<wbr>Change<wbr>Definition<wbr>Request<wbr>Log<wbr>Query</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetChangeDefinitionRequestLogQuery">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetChangeDefinitionRequestLogQuery">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4096,7 +4172,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Change<wbr>Definition<wbr>Request<wbr>Log<wbr>Query<wbr>Compute</h4>
+<h4 id="dashboardwidgetchangedefinitionrequestlogquerycompute">Dashboard<wbr>Widget<wbr>Change<wbr>Definition<wbr>Request<wbr>Log<wbr>Query<wbr>Compute</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetChangeDefinitionRequestLogQueryCompute">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetChangeDefinitionRequestLogQueryCompute">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4235,7 +4311,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Change<wbr>Definition<wbr>Request<wbr>Log<wbr>Query<wbr>Group<wbr>By</h4>
+<h4 id="dashboardwidgetchangedefinitionrequestlogquerygroupby">Dashboard<wbr>Widget<wbr>Change<wbr>Definition<wbr>Request<wbr>Log<wbr>Query<wbr>Group<wbr>By</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetChangeDefinitionRequestLogQueryGroupBy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetChangeDefinitionRequestLogQueryGroupBy">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4374,7 +4450,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Change<wbr>Definition<wbr>Request<wbr>Log<wbr>Query<wbr>Group<wbr>By<wbr>Sort</h4>
+<h4 id="dashboardwidgetchangedefinitionrequestlogquerygroupbysort">Dashboard<wbr>Widget<wbr>Change<wbr>Definition<wbr>Request<wbr>Log<wbr>Query<wbr>Group<wbr>By<wbr>Sort</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetChangeDefinitionRequestLogQueryGroupBySort">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetChangeDefinitionRequestLogQueryGroupBySort">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4513,7 +4589,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Change<wbr>Definition<wbr>Request<wbr>Log<wbr>Query<wbr>Search</h4>
+<h4 id="dashboardwidgetchangedefinitionrequestlogquerysearch">Dashboard<wbr>Widget<wbr>Change<wbr>Definition<wbr>Request<wbr>Log<wbr>Query<wbr>Search</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetChangeDefinitionRequestLogQuerySearch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetChangeDefinitionRequestLogQuerySearch">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4588,7 +4664,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Change<wbr>Definition<wbr>Request<wbr>Process<wbr>Query</h4>
+<h4 id="dashboardwidgetchangedefinitionrequestprocessquery">Dashboard<wbr>Widget<wbr>Change<wbr>Definition<wbr>Request<wbr>Process<wbr>Query</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetChangeDefinitionRequestProcessQuery">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetChangeDefinitionRequestProcessQuery">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4759,7 +4835,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Change<wbr>Definition<wbr>Time</h4>
+<h4 id="dashboardwidgetchangedefinitiontime">Dashboard<wbr>Widget<wbr>Change<wbr>Definition<wbr>Time</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetChangeDefinitionTime">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetChangeDefinitionTime">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4834,7 +4910,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Check<wbr>Status<wbr>Definition</h4>
+<h4 id="dashboardwidgetcheckstatusdefinition">Dashboard<wbr>Widget<wbr>Check<wbr>Status<wbr>Definition</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetCheckStatusDefinition">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetCheckStatusDefinition">output</a> API doc for this type.
 {{% /choosable %}}
@@ -5165,7 +5241,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Check<wbr>Status<wbr>Definition<wbr>Time</h4>
+<h4 id="dashboardwidgetcheckstatusdefinitiontime">Dashboard<wbr>Widget<wbr>Check<wbr>Status<wbr>Definition<wbr>Time</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetCheckStatusDefinitionTime">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetCheckStatusDefinitionTime">output</a> API doc for this type.
 {{% /choosable %}}
@@ -5240,7 +5316,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Distribution<wbr>Definition</h4>
+<h4 id="dashboardwidgetdistributiondefinition">Dashboard<wbr>Widget<wbr>Distribution<wbr>Definition</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetDistributionDefinition">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetDistributionDefinition">output</a> API doc for this type.
 {{% /choosable %}}
@@ -5443,7 +5519,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Distribution<wbr>Definition<wbr>Request</h4>
+<h4 id="dashboardwidgetdistributiondefinitionrequest">Dashboard<wbr>Widget<wbr>Distribution<wbr>Definition<wbr>Request</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetDistributionDefinitionRequest">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetDistributionDefinitionRequest">output</a> API doc for this type.
 {{% /choosable %}}
@@ -5646,7 +5722,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Distribution<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query</h4>
+<h4 id="dashboardwidgetdistributiondefinitionrequestapmquery">Dashboard<wbr>Widget<wbr>Distribution<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetDistributionDefinitionRequestApmQuery">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetDistributionDefinitionRequestApmQuery">output</a> API doc for this type.
 {{% /choosable %}}
@@ -5817,7 +5893,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Distribution<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query<wbr>Compute</h4>
+<h4 id="dashboardwidgetdistributiondefinitionrequestapmquerycompute">Dashboard<wbr>Widget<wbr>Distribution<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query<wbr>Compute</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetDistributionDefinitionRequestApmQueryCompute">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetDistributionDefinitionRequestApmQueryCompute">output</a> API doc for this type.
 {{% /choosable %}}
@@ -5956,7 +6032,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Distribution<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query<wbr>Group<wbr>By</h4>
+<h4 id="dashboardwidgetdistributiondefinitionrequestapmquerygroupby">Dashboard<wbr>Widget<wbr>Distribution<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query<wbr>Group<wbr>By</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetDistributionDefinitionRequestApmQueryGroupBy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetDistributionDefinitionRequestApmQueryGroupBy">output</a> API doc for this type.
 {{% /choosable %}}
@@ -6095,7 +6171,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Distribution<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query<wbr>Group<wbr>By<wbr>Sort</h4>
+<h4 id="dashboardwidgetdistributiondefinitionrequestapmquerygroupbysort">Dashboard<wbr>Widget<wbr>Distribution<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query<wbr>Group<wbr>By<wbr>Sort</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetDistributionDefinitionRequestApmQueryGroupBySort">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetDistributionDefinitionRequestApmQueryGroupBySort">output</a> API doc for this type.
 {{% /choosable %}}
@@ -6234,7 +6310,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Distribution<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query<wbr>Search</h4>
+<h4 id="dashboardwidgetdistributiondefinitionrequestapmquerysearch">Dashboard<wbr>Widget<wbr>Distribution<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query<wbr>Search</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetDistributionDefinitionRequestApmQuerySearch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetDistributionDefinitionRequestApmQuerySearch">output</a> API doc for this type.
 {{% /choosable %}}
@@ -6309,7 +6385,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Distribution<wbr>Definition<wbr>Request<wbr>Log<wbr>Query</h4>
+<h4 id="dashboardwidgetdistributiondefinitionrequestlogquery">Dashboard<wbr>Widget<wbr>Distribution<wbr>Definition<wbr>Request<wbr>Log<wbr>Query</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetDistributionDefinitionRequestLogQuery">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetDistributionDefinitionRequestLogQuery">output</a> API doc for this type.
 {{% /choosable %}}
@@ -6480,7 +6556,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Distribution<wbr>Definition<wbr>Request<wbr>Log<wbr>Query<wbr>Compute</h4>
+<h4 id="dashboardwidgetdistributiondefinitionrequestlogquerycompute">Dashboard<wbr>Widget<wbr>Distribution<wbr>Definition<wbr>Request<wbr>Log<wbr>Query<wbr>Compute</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetDistributionDefinitionRequestLogQueryCompute">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetDistributionDefinitionRequestLogQueryCompute">output</a> API doc for this type.
 {{% /choosable %}}
@@ -6619,7 +6695,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Distribution<wbr>Definition<wbr>Request<wbr>Log<wbr>Query<wbr>Group<wbr>By</h4>
+<h4 id="dashboardwidgetdistributiondefinitionrequestlogquerygroupby">Dashboard<wbr>Widget<wbr>Distribution<wbr>Definition<wbr>Request<wbr>Log<wbr>Query<wbr>Group<wbr>By</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetDistributionDefinitionRequestLogQueryGroupBy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetDistributionDefinitionRequestLogQueryGroupBy">output</a> API doc for this type.
 {{% /choosable %}}
@@ -6758,7 +6834,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Distribution<wbr>Definition<wbr>Request<wbr>Log<wbr>Query<wbr>Group<wbr>By<wbr>Sort</h4>
+<h4 id="dashboardwidgetdistributiondefinitionrequestlogquerygroupbysort">Dashboard<wbr>Widget<wbr>Distribution<wbr>Definition<wbr>Request<wbr>Log<wbr>Query<wbr>Group<wbr>By<wbr>Sort</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetDistributionDefinitionRequestLogQueryGroupBySort">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetDistributionDefinitionRequestLogQueryGroupBySort">output</a> API doc for this type.
 {{% /choosable %}}
@@ -6897,7 +6973,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Distribution<wbr>Definition<wbr>Request<wbr>Log<wbr>Query<wbr>Search</h4>
+<h4 id="dashboardwidgetdistributiondefinitionrequestlogquerysearch">Dashboard<wbr>Widget<wbr>Distribution<wbr>Definition<wbr>Request<wbr>Log<wbr>Query<wbr>Search</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetDistributionDefinitionRequestLogQuerySearch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetDistributionDefinitionRequestLogQuerySearch">output</a> API doc for this type.
 {{% /choosable %}}
@@ -6972,7 +7048,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Distribution<wbr>Definition<wbr>Request<wbr>Process<wbr>Query</h4>
+<h4 id="dashboardwidgetdistributiondefinitionrequestprocessquery">Dashboard<wbr>Widget<wbr>Distribution<wbr>Definition<wbr>Request<wbr>Process<wbr>Query</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetDistributionDefinitionRequestProcessQuery">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetDistributionDefinitionRequestProcessQuery">output</a> API doc for this type.
 {{% /choosable %}}
@@ -7143,7 +7219,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Distribution<wbr>Definition<wbr>Request<wbr>Style</h4>
+<h4 id="dashboardwidgetdistributiondefinitionrequeststyle">Dashboard<wbr>Widget<wbr>Distribution<wbr>Definition<wbr>Request<wbr>Style</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetDistributionDefinitionRequestStyle">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetDistributionDefinitionRequestStyle">output</a> API doc for this type.
 {{% /choosable %}}
@@ -7218,7 +7294,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Distribution<wbr>Definition<wbr>Time</h4>
+<h4 id="dashboardwidgetdistributiondefinitiontime">Dashboard<wbr>Widget<wbr>Distribution<wbr>Definition<wbr>Time</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetDistributionDefinitionTime">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetDistributionDefinitionTime">output</a> API doc for this type.
 {{% /choosable %}}
@@ -7293,7 +7369,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Event<wbr>Stream<wbr>Definition</h4>
+<h4 id="dashboardwidgeteventstreamdefinition">Dashboard<wbr>Widget<wbr>Event<wbr>Stream<wbr>Definition</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetEventStreamDefinition">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetEventStreamDefinition">output</a> API doc for this type.
 {{% /choosable %}}
@@ -7528,7 +7604,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Event<wbr>Stream<wbr>Definition<wbr>Time</h4>
+<h4 id="dashboardwidgeteventstreamdefinitiontime">Dashboard<wbr>Widget<wbr>Event<wbr>Stream<wbr>Definition<wbr>Time</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetEventStreamDefinitionTime">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetEventStreamDefinitionTime">output</a> API doc for this type.
 {{% /choosable %}}
@@ -7603,7 +7679,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Event<wbr>Timeline<wbr>Definition</h4>
+<h4 id="dashboardwidgeteventtimelinedefinition">Dashboard<wbr>Widget<wbr>Event<wbr>Timeline<wbr>Definition</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetEventTimelineDefinition">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetEventTimelineDefinition">output</a> API doc for this type.
 {{% /choosable %}}
@@ -7806,7 +7882,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Event<wbr>Timeline<wbr>Definition<wbr>Time</h4>
+<h4 id="dashboardwidgeteventtimelinedefinitiontime">Dashboard<wbr>Widget<wbr>Event<wbr>Timeline<wbr>Definition<wbr>Time</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetEventTimelineDefinitionTime">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetEventTimelineDefinitionTime">output</a> API doc for this type.
 {{% /choosable %}}
@@ -7881,7 +7957,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Free<wbr>Text<wbr>Definition</h4>
+<h4 id="dashboardwidgetfreetextdefinition">Dashboard<wbr>Widget<wbr>Free<wbr>Text<wbr>Definition</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetFreeTextDefinition">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetFreeTextDefinition">output</a> API doc for this type.
 {{% /choosable %}}
@@ -8052,7 +8128,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition</h4>
+<h4 id="dashboardwidgetgroupdefinition">Dashboard<wbr>Widget<wbr>Group<wbr>Definition</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinition">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinition">output</a> API doc for this type.
 {{% /choosable %}}
@@ -8191,7 +8267,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidget">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidget">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidget">output</a> API doc for this type.
 {{% /choosable %}}
@@ -8970,7 +9046,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Alert<wbr>Graph<wbr>Definition</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgetalertgraphdefinition">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Alert<wbr>Graph<wbr>Definition</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetAlertGraphDefinition">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetAlertGraphDefinition">output</a> API doc for this type.
 {{% /choosable %}}
@@ -9205,7 +9281,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Alert<wbr>Graph<wbr>Definition<wbr>Time</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgetalertgraphdefinitiontime">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Alert<wbr>Graph<wbr>Definition<wbr>Time</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetAlertGraphDefinitionTime">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetAlertGraphDefinitionTime">output</a> API doc for this type.
 {{% /choosable %}}
@@ -9280,7 +9356,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Alert<wbr>Value<wbr>Definition</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgetalertvaluedefinition">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Alert<wbr>Value<wbr>Definition</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetAlertValueDefinition">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetAlertValueDefinition">output</a> API doc for this type.
 {{% /choosable %}}
@@ -9547,7 +9623,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Change<wbr>Definition</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgetchangedefinition">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Change<wbr>Definition</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetChangeDefinition">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetChangeDefinition">output</a> API doc for this type.
 {{% /choosable %}}
@@ -9750,7 +9826,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Change<wbr>Definition<wbr>Request</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgetchangedefinitionrequest">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Change<wbr>Definition<wbr>Request</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetChangeDefinitionRequest">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetChangeDefinitionRequest">output</a> API doc for this type.
 {{% /choosable %}}
@@ -10113,7 +10189,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Change<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgetchangedefinitionrequestapmquery">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Change<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetChangeDefinitionRequestApmQuery">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetChangeDefinitionRequestApmQuery">output</a> API doc for this type.
 {{% /choosable %}}
@@ -10284,7 +10360,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Change<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query<wbr>Compute</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgetchangedefinitionrequestapmquerycompute">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Change<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query<wbr>Compute</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetChangeDefinitionRequestApmQueryCompute">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetChangeDefinitionRequestApmQueryCompute">output</a> API doc for this type.
 {{% /choosable %}}
@@ -10423,7 +10499,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Change<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query<wbr>Group<wbr>By</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgetchangedefinitionrequestapmquerygroupby">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Change<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query<wbr>Group<wbr>By</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetChangeDefinitionRequestApmQueryGroupBy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetChangeDefinitionRequestApmQueryGroupBy">output</a> API doc for this type.
 {{% /choosable %}}
@@ -10562,7 +10638,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Change<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query<wbr>Group<wbr>By<wbr>Sort</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgetchangedefinitionrequestapmquerygroupbysort">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Change<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query<wbr>Group<wbr>By<wbr>Sort</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetChangeDefinitionRequestApmQueryGroupBySort">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetChangeDefinitionRequestApmQueryGroupBySort">output</a> API doc for this type.
 {{% /choosable %}}
@@ -10701,7 +10777,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Change<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query<wbr>Search</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgetchangedefinitionrequestapmquerysearch">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Change<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query<wbr>Search</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetChangeDefinitionRequestApmQuerySearch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetChangeDefinitionRequestApmQuerySearch">output</a> API doc for this type.
 {{% /choosable %}}
@@ -10776,7 +10852,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Change<wbr>Definition<wbr>Request<wbr>Log<wbr>Query</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgetchangedefinitionrequestlogquery">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Change<wbr>Definition<wbr>Request<wbr>Log<wbr>Query</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetChangeDefinitionRequestLogQuery">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetChangeDefinitionRequestLogQuery">output</a> API doc for this type.
 {{% /choosable %}}
@@ -10947,7 +11023,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Change<wbr>Definition<wbr>Request<wbr>Log<wbr>Query<wbr>Compute</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgetchangedefinitionrequestlogquerycompute">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Change<wbr>Definition<wbr>Request<wbr>Log<wbr>Query<wbr>Compute</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetChangeDefinitionRequestLogQueryCompute">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetChangeDefinitionRequestLogQueryCompute">output</a> API doc for this type.
 {{% /choosable %}}
@@ -11086,7 +11162,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Change<wbr>Definition<wbr>Request<wbr>Log<wbr>Query<wbr>Group<wbr>By</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgetchangedefinitionrequestlogquerygroupby">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Change<wbr>Definition<wbr>Request<wbr>Log<wbr>Query<wbr>Group<wbr>By</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetChangeDefinitionRequestLogQueryGroupBy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetChangeDefinitionRequestLogQueryGroupBy">output</a> API doc for this type.
 {{% /choosable %}}
@@ -11225,7 +11301,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Change<wbr>Definition<wbr>Request<wbr>Log<wbr>Query<wbr>Group<wbr>By<wbr>Sort</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgetchangedefinitionrequestlogquerygroupbysort">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Change<wbr>Definition<wbr>Request<wbr>Log<wbr>Query<wbr>Group<wbr>By<wbr>Sort</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetChangeDefinitionRequestLogQueryGroupBySort">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetChangeDefinitionRequestLogQueryGroupBySort">output</a> API doc for this type.
 {{% /choosable %}}
@@ -11364,7 +11440,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Change<wbr>Definition<wbr>Request<wbr>Log<wbr>Query<wbr>Search</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgetchangedefinitionrequestlogquerysearch">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Change<wbr>Definition<wbr>Request<wbr>Log<wbr>Query<wbr>Search</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetChangeDefinitionRequestLogQuerySearch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetChangeDefinitionRequestLogQuerySearch">output</a> API doc for this type.
 {{% /choosable %}}
@@ -11439,7 +11515,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Change<wbr>Definition<wbr>Request<wbr>Process<wbr>Query</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgetchangedefinitionrequestprocessquery">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Change<wbr>Definition<wbr>Request<wbr>Process<wbr>Query</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetChangeDefinitionRequestProcessQuery">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetChangeDefinitionRequestProcessQuery">output</a> API doc for this type.
 {{% /choosable %}}
@@ -11610,7 +11686,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Change<wbr>Definition<wbr>Time</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgetchangedefinitiontime">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Change<wbr>Definition<wbr>Time</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetChangeDefinitionTime">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetChangeDefinitionTime">output</a> API doc for this type.
 {{% /choosable %}}
@@ -11685,7 +11761,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Check<wbr>Status<wbr>Definition</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgetcheckstatusdefinition">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Check<wbr>Status<wbr>Definition</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetCheckStatusDefinition">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetCheckStatusDefinition">output</a> API doc for this type.
 {{% /choosable %}}
@@ -12016,7 +12092,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Check<wbr>Status<wbr>Definition<wbr>Time</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgetcheckstatusdefinitiontime">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Check<wbr>Status<wbr>Definition<wbr>Time</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetCheckStatusDefinitionTime">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetCheckStatusDefinitionTime">output</a> API doc for this type.
 {{% /choosable %}}
@@ -12091,7 +12167,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Distribution<wbr>Definition</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgetdistributiondefinition">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Distribution<wbr>Definition</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetDistributionDefinition">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetDistributionDefinition">output</a> API doc for this type.
 {{% /choosable %}}
@@ -12294,7 +12370,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Distribution<wbr>Definition<wbr>Request</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgetdistributiondefinitionrequest">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Distribution<wbr>Definition<wbr>Request</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetDistributionDefinitionRequest">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetDistributionDefinitionRequest">output</a> API doc for this type.
 {{% /choosable %}}
@@ -12497,7 +12573,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Distribution<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgetdistributiondefinitionrequestapmquery">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Distribution<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetDistributionDefinitionRequestApmQuery">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetDistributionDefinitionRequestApmQuery">output</a> API doc for this type.
 {{% /choosable %}}
@@ -12668,7 +12744,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Distribution<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query<wbr>Compute</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgetdistributiondefinitionrequestapmquerycompute">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Distribution<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query<wbr>Compute</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetDistributionDefinitionRequestApmQueryCompute">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetDistributionDefinitionRequestApmQueryCompute">output</a> API doc for this type.
 {{% /choosable %}}
@@ -12807,7 +12883,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Distribution<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query<wbr>Group<wbr>By</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgetdistributiondefinitionrequestapmquerygroupby">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Distribution<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query<wbr>Group<wbr>By</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetDistributionDefinitionRequestApmQueryGroupBy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetDistributionDefinitionRequestApmQueryGroupBy">output</a> API doc for this type.
 {{% /choosable %}}
@@ -12946,7 +13022,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Distribution<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query<wbr>Group<wbr>By<wbr>Sort</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgetdistributiondefinitionrequestapmquerygroupbysort">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Distribution<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query<wbr>Group<wbr>By<wbr>Sort</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetDistributionDefinitionRequestApmQueryGroupBySort">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetDistributionDefinitionRequestApmQueryGroupBySort">output</a> API doc for this type.
 {{% /choosable %}}
@@ -13085,7 +13161,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Distribution<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query<wbr>Search</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgetdistributiondefinitionrequestapmquerysearch">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Distribution<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query<wbr>Search</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetDistributionDefinitionRequestApmQuerySearch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetDistributionDefinitionRequestApmQuerySearch">output</a> API doc for this type.
 {{% /choosable %}}
@@ -13160,7 +13236,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Distribution<wbr>Definition<wbr>Request<wbr>Log<wbr>Query</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgetdistributiondefinitionrequestlogquery">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Distribution<wbr>Definition<wbr>Request<wbr>Log<wbr>Query</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetDistributionDefinitionRequestLogQuery">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetDistributionDefinitionRequestLogQuery">output</a> API doc for this type.
 {{% /choosable %}}
@@ -13331,7 +13407,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Distribution<wbr>Definition<wbr>Request<wbr>Log<wbr>Query<wbr>Compute</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgetdistributiondefinitionrequestlogquerycompute">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Distribution<wbr>Definition<wbr>Request<wbr>Log<wbr>Query<wbr>Compute</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetDistributionDefinitionRequestLogQueryCompute">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetDistributionDefinitionRequestLogQueryCompute">output</a> API doc for this type.
 {{% /choosable %}}
@@ -13470,7 +13546,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Distribution<wbr>Definition<wbr>Request<wbr>Log<wbr>Query<wbr>Group<wbr>By</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgetdistributiondefinitionrequestlogquerygroupby">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Distribution<wbr>Definition<wbr>Request<wbr>Log<wbr>Query<wbr>Group<wbr>By</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetDistributionDefinitionRequestLogQueryGroupBy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetDistributionDefinitionRequestLogQueryGroupBy">output</a> API doc for this type.
 {{% /choosable %}}
@@ -13609,7 +13685,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Distribution<wbr>Definition<wbr>Request<wbr>Log<wbr>Query<wbr>Group<wbr>By<wbr>Sort</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgetdistributiondefinitionrequestlogquerygroupbysort">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Distribution<wbr>Definition<wbr>Request<wbr>Log<wbr>Query<wbr>Group<wbr>By<wbr>Sort</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetDistributionDefinitionRequestLogQueryGroupBySort">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetDistributionDefinitionRequestLogQueryGroupBySort">output</a> API doc for this type.
 {{% /choosable %}}
@@ -13748,7 +13824,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Distribution<wbr>Definition<wbr>Request<wbr>Log<wbr>Query<wbr>Search</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgetdistributiondefinitionrequestlogquerysearch">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Distribution<wbr>Definition<wbr>Request<wbr>Log<wbr>Query<wbr>Search</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetDistributionDefinitionRequestLogQuerySearch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetDistributionDefinitionRequestLogQuerySearch">output</a> API doc for this type.
 {{% /choosable %}}
@@ -13823,7 +13899,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Distribution<wbr>Definition<wbr>Request<wbr>Process<wbr>Query</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgetdistributiondefinitionrequestprocessquery">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Distribution<wbr>Definition<wbr>Request<wbr>Process<wbr>Query</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetDistributionDefinitionRequestProcessQuery">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetDistributionDefinitionRequestProcessQuery">output</a> API doc for this type.
 {{% /choosable %}}
@@ -13994,7 +14070,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Distribution<wbr>Definition<wbr>Request<wbr>Style</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgetdistributiondefinitionrequeststyle">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Distribution<wbr>Definition<wbr>Request<wbr>Style</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetDistributionDefinitionRequestStyle">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetDistributionDefinitionRequestStyle">output</a> API doc for this type.
 {{% /choosable %}}
@@ -14069,7 +14145,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Distribution<wbr>Definition<wbr>Time</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgetdistributiondefinitiontime">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Distribution<wbr>Definition<wbr>Time</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetDistributionDefinitionTime">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetDistributionDefinitionTime">output</a> API doc for this type.
 {{% /choosable %}}
@@ -14144,7 +14220,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Event<wbr>Stream<wbr>Definition</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgeteventstreamdefinition">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Event<wbr>Stream<wbr>Definition</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetEventStreamDefinition">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetEventStreamDefinition">output</a> API doc for this type.
 {{% /choosable %}}
@@ -14379,7 +14455,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Event<wbr>Stream<wbr>Definition<wbr>Time</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgeteventstreamdefinitiontime">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Event<wbr>Stream<wbr>Definition<wbr>Time</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetEventStreamDefinitionTime">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetEventStreamDefinitionTime">output</a> API doc for this type.
 {{% /choosable %}}
@@ -14454,7 +14530,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Event<wbr>Timeline<wbr>Definition</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgeteventtimelinedefinition">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Event<wbr>Timeline<wbr>Definition</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetEventTimelineDefinition">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetEventTimelineDefinition">output</a> API doc for this type.
 {{% /choosable %}}
@@ -14657,7 +14733,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Event<wbr>Timeline<wbr>Definition<wbr>Time</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgeteventtimelinedefinitiontime">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Event<wbr>Timeline<wbr>Definition<wbr>Time</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetEventTimelineDefinitionTime">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetEventTimelineDefinitionTime">output</a> API doc for this type.
 {{% /choosable %}}
@@ -14732,7 +14808,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Free<wbr>Text<wbr>Definition</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgetfreetextdefinition">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Free<wbr>Text<wbr>Definition</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetFreeTextDefinition">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetFreeTextDefinition">output</a> API doc for this type.
 {{% /choosable %}}
@@ -14903,7 +14979,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Heatmap<wbr>Definition</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgetheatmapdefinition">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Heatmap<wbr>Definition</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetHeatmapDefinition">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetHeatmapDefinition">output</a> API doc for this type.
 {{% /choosable %}}
@@ -15138,7 +15214,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Heatmap<wbr>Definition<wbr>Request</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgetheatmapdefinitionrequest">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Heatmap<wbr>Definition<wbr>Request</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetHeatmapDefinitionRequest">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetHeatmapDefinitionRequest">output</a> API doc for this type.
 {{% /choosable %}}
@@ -15341,7 +15417,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Heatmap<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgetheatmapdefinitionrequestapmquery">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Heatmap<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetHeatmapDefinitionRequestApmQuery">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetHeatmapDefinitionRequestApmQuery">output</a> API doc for this type.
 {{% /choosable %}}
@@ -15512,7 +15588,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Heatmap<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query<wbr>Compute</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgetheatmapdefinitionrequestapmquerycompute">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Heatmap<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query<wbr>Compute</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetHeatmapDefinitionRequestApmQueryCompute">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetHeatmapDefinitionRequestApmQueryCompute">output</a> API doc for this type.
 {{% /choosable %}}
@@ -15651,7 +15727,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Heatmap<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query<wbr>Group<wbr>By</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgetheatmapdefinitionrequestapmquerygroupby">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Heatmap<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query<wbr>Group<wbr>By</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetHeatmapDefinitionRequestApmQueryGroupBy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetHeatmapDefinitionRequestApmQueryGroupBy">output</a> API doc for this type.
 {{% /choosable %}}
@@ -15790,7 +15866,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Heatmap<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query<wbr>Group<wbr>By<wbr>Sort</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgetheatmapdefinitionrequestapmquerygroupbysort">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Heatmap<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query<wbr>Group<wbr>By<wbr>Sort</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetHeatmapDefinitionRequestApmQueryGroupBySort">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetHeatmapDefinitionRequestApmQueryGroupBySort">output</a> API doc for this type.
 {{% /choosable %}}
@@ -15929,7 +16005,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Heatmap<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query<wbr>Search</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgetheatmapdefinitionrequestapmquerysearch">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Heatmap<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query<wbr>Search</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetHeatmapDefinitionRequestApmQuerySearch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetHeatmapDefinitionRequestApmQuerySearch">output</a> API doc for this type.
 {{% /choosable %}}
@@ -16004,7 +16080,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Heatmap<wbr>Definition<wbr>Request<wbr>Log<wbr>Query</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgetheatmapdefinitionrequestlogquery">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Heatmap<wbr>Definition<wbr>Request<wbr>Log<wbr>Query</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetHeatmapDefinitionRequestLogQuery">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetHeatmapDefinitionRequestLogQuery">output</a> API doc for this type.
 {{% /choosable %}}
@@ -16175,7 +16251,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Heatmap<wbr>Definition<wbr>Request<wbr>Log<wbr>Query<wbr>Compute</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgetheatmapdefinitionrequestlogquerycompute">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Heatmap<wbr>Definition<wbr>Request<wbr>Log<wbr>Query<wbr>Compute</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetHeatmapDefinitionRequestLogQueryCompute">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetHeatmapDefinitionRequestLogQueryCompute">output</a> API doc for this type.
 {{% /choosable %}}
@@ -16314,7 +16390,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Heatmap<wbr>Definition<wbr>Request<wbr>Log<wbr>Query<wbr>Group<wbr>By</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgetheatmapdefinitionrequestlogquerygroupby">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Heatmap<wbr>Definition<wbr>Request<wbr>Log<wbr>Query<wbr>Group<wbr>By</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetHeatmapDefinitionRequestLogQueryGroupBy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetHeatmapDefinitionRequestLogQueryGroupBy">output</a> API doc for this type.
 {{% /choosable %}}
@@ -16453,7 +16529,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Heatmap<wbr>Definition<wbr>Request<wbr>Log<wbr>Query<wbr>Group<wbr>By<wbr>Sort</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgetheatmapdefinitionrequestlogquerygroupbysort">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Heatmap<wbr>Definition<wbr>Request<wbr>Log<wbr>Query<wbr>Group<wbr>By<wbr>Sort</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetHeatmapDefinitionRequestLogQueryGroupBySort">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetHeatmapDefinitionRequestLogQueryGroupBySort">output</a> API doc for this type.
 {{% /choosable %}}
@@ -16592,7 +16668,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Heatmap<wbr>Definition<wbr>Request<wbr>Log<wbr>Query<wbr>Search</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgetheatmapdefinitionrequestlogquerysearch">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Heatmap<wbr>Definition<wbr>Request<wbr>Log<wbr>Query<wbr>Search</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetHeatmapDefinitionRequestLogQuerySearch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetHeatmapDefinitionRequestLogQuerySearch">output</a> API doc for this type.
 {{% /choosable %}}
@@ -16667,7 +16743,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Heatmap<wbr>Definition<wbr>Request<wbr>Process<wbr>Query</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgetheatmapdefinitionrequestprocessquery">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Heatmap<wbr>Definition<wbr>Request<wbr>Process<wbr>Query</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetHeatmapDefinitionRequestProcessQuery">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetHeatmapDefinitionRequestProcessQuery">output</a> API doc for this type.
 {{% /choosable %}}
@@ -16838,7 +16914,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Heatmap<wbr>Definition<wbr>Request<wbr>Style</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgetheatmapdefinitionrequeststyle">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Heatmap<wbr>Definition<wbr>Request<wbr>Style</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetHeatmapDefinitionRequestStyle">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetHeatmapDefinitionRequestStyle">output</a> API doc for this type.
 {{% /choosable %}}
@@ -16913,7 +16989,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Heatmap<wbr>Definition<wbr>Time</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgetheatmapdefinitiontime">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Heatmap<wbr>Definition<wbr>Time</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetHeatmapDefinitionTime">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetHeatmapDefinitionTime">output</a> API doc for this type.
 {{% /choosable %}}
@@ -16988,7 +17064,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Heatmap<wbr>Definition<wbr>Yaxis</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgetheatmapdefinitionyaxis">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Heatmap<wbr>Definition<wbr>Yaxis</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetHeatmapDefinitionYaxis">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetHeatmapDefinitionYaxis">output</a> API doc for this type.
 {{% /choosable %}}
@@ -17191,7 +17267,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Hostmap<wbr>Definition</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgethostmapdefinition">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Hostmap<wbr>Definition</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetHostmapDefinition">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetHostmapDefinition">output</a> API doc for this type.
 {{% /choosable %}}
@@ -17554,7 +17630,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Hostmap<wbr>Definition<wbr>Request</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgethostmapdefinitionrequest">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Hostmap<wbr>Definition<wbr>Request</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequest">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequest">output</a> API doc for this type.
 {{% /choosable %}}
@@ -17661,7 +17737,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Hostmap<wbr>Definition<wbr>Request<wbr>Fill</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgethostmapdefinitionrequestfill">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Hostmap<wbr>Definition<wbr>Request<wbr>Fill</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestFill">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestFill">output</a> API doc for this type.
 {{% /choosable %}}
@@ -17832,7 +17908,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Hostmap<wbr>Definition<wbr>Request<wbr>Fill<wbr>Apm<wbr>Query</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgethostmapdefinitionrequestfillapmquery">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Hostmap<wbr>Definition<wbr>Request<wbr>Fill<wbr>Apm<wbr>Query</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillApmQuery">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillApmQuery">output</a> API doc for this type.
 {{% /choosable %}}
@@ -18003,7 +18079,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Hostmap<wbr>Definition<wbr>Request<wbr>Fill<wbr>Apm<wbr>Query<wbr>Compute</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgethostmapdefinitionrequestfillapmquerycompute">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Hostmap<wbr>Definition<wbr>Request<wbr>Fill<wbr>Apm<wbr>Query<wbr>Compute</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillApmQueryCompute">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillApmQueryCompute">output</a> API doc for this type.
 {{% /choosable %}}
@@ -18142,7 +18218,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Hostmap<wbr>Definition<wbr>Request<wbr>Fill<wbr>Apm<wbr>Query<wbr>Group<wbr>By</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgethostmapdefinitionrequestfillapmquerygroupby">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Hostmap<wbr>Definition<wbr>Request<wbr>Fill<wbr>Apm<wbr>Query<wbr>Group<wbr>By</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillApmQueryGroupBy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillApmQueryGroupBy">output</a> API doc for this type.
 {{% /choosable %}}
@@ -18281,7 +18357,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Hostmap<wbr>Definition<wbr>Request<wbr>Fill<wbr>Apm<wbr>Query<wbr>Group<wbr>By<wbr>Sort</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgethostmapdefinitionrequestfillapmquerygroupbysort">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Hostmap<wbr>Definition<wbr>Request<wbr>Fill<wbr>Apm<wbr>Query<wbr>Group<wbr>By<wbr>Sort</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillApmQueryGroupBySort">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillApmQueryGroupBySort">output</a> API doc for this type.
 {{% /choosable %}}
@@ -18420,7 +18496,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Hostmap<wbr>Definition<wbr>Request<wbr>Fill<wbr>Apm<wbr>Query<wbr>Search</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgethostmapdefinitionrequestfillapmquerysearch">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Hostmap<wbr>Definition<wbr>Request<wbr>Fill<wbr>Apm<wbr>Query<wbr>Search</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillApmQuerySearch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillApmQuerySearch">output</a> API doc for this type.
 {{% /choosable %}}
@@ -18495,7 +18571,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Hostmap<wbr>Definition<wbr>Request<wbr>Fill<wbr>Log<wbr>Query</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgethostmapdefinitionrequestfilllogquery">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Hostmap<wbr>Definition<wbr>Request<wbr>Fill<wbr>Log<wbr>Query</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillLogQuery">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillLogQuery">output</a> API doc for this type.
 {{% /choosable %}}
@@ -18666,7 +18742,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Hostmap<wbr>Definition<wbr>Request<wbr>Fill<wbr>Log<wbr>Query<wbr>Compute</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgethostmapdefinitionrequestfilllogquerycompute">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Hostmap<wbr>Definition<wbr>Request<wbr>Fill<wbr>Log<wbr>Query<wbr>Compute</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillLogQueryCompute">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillLogQueryCompute">output</a> API doc for this type.
 {{% /choosable %}}
@@ -18805,7 +18881,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Hostmap<wbr>Definition<wbr>Request<wbr>Fill<wbr>Log<wbr>Query<wbr>Group<wbr>By</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgethostmapdefinitionrequestfilllogquerygroupby">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Hostmap<wbr>Definition<wbr>Request<wbr>Fill<wbr>Log<wbr>Query<wbr>Group<wbr>By</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillLogQueryGroupBy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillLogQueryGroupBy">output</a> API doc for this type.
 {{% /choosable %}}
@@ -18944,7 +19020,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Hostmap<wbr>Definition<wbr>Request<wbr>Fill<wbr>Log<wbr>Query<wbr>Group<wbr>By<wbr>Sort</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgethostmapdefinitionrequestfilllogquerygroupbysort">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Hostmap<wbr>Definition<wbr>Request<wbr>Fill<wbr>Log<wbr>Query<wbr>Group<wbr>By<wbr>Sort</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillLogQueryGroupBySort">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillLogQueryGroupBySort">output</a> API doc for this type.
 {{% /choosable %}}
@@ -19083,7 +19159,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Hostmap<wbr>Definition<wbr>Request<wbr>Fill<wbr>Log<wbr>Query<wbr>Search</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgethostmapdefinitionrequestfilllogquerysearch">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Hostmap<wbr>Definition<wbr>Request<wbr>Fill<wbr>Log<wbr>Query<wbr>Search</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillLogQuerySearch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillLogQuerySearch">output</a> API doc for this type.
 {{% /choosable %}}
@@ -19158,7 +19234,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Hostmap<wbr>Definition<wbr>Request<wbr>Fill<wbr>Process<wbr>Query</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgethostmapdefinitionrequestfillprocessquery">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Hostmap<wbr>Definition<wbr>Request<wbr>Fill<wbr>Process<wbr>Query</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillProcessQuery">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestFillProcessQuery">output</a> API doc for this type.
 {{% /choosable %}}
@@ -19329,7 +19405,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Hostmap<wbr>Definition<wbr>Request<wbr>Size</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgethostmapdefinitionrequestsize">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Hostmap<wbr>Definition<wbr>Request<wbr>Size</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestSize">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestSize">output</a> API doc for this type.
 {{% /choosable %}}
@@ -19500,7 +19576,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Hostmap<wbr>Definition<wbr>Request<wbr>Size<wbr>Apm<wbr>Query</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgethostmapdefinitionrequestsizeapmquery">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Hostmap<wbr>Definition<wbr>Request<wbr>Size<wbr>Apm<wbr>Query</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeApmQuery">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeApmQuery">output</a> API doc for this type.
 {{% /choosable %}}
@@ -19671,7 +19747,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Hostmap<wbr>Definition<wbr>Request<wbr>Size<wbr>Apm<wbr>Query<wbr>Compute</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgethostmapdefinitionrequestsizeapmquerycompute">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Hostmap<wbr>Definition<wbr>Request<wbr>Size<wbr>Apm<wbr>Query<wbr>Compute</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeApmQueryCompute">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeApmQueryCompute">output</a> API doc for this type.
 {{% /choosable %}}
@@ -19810,7 +19886,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Hostmap<wbr>Definition<wbr>Request<wbr>Size<wbr>Apm<wbr>Query<wbr>Group<wbr>By</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgethostmapdefinitionrequestsizeapmquerygroupby">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Hostmap<wbr>Definition<wbr>Request<wbr>Size<wbr>Apm<wbr>Query<wbr>Group<wbr>By</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeApmQueryGroupBy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeApmQueryGroupBy">output</a> API doc for this type.
 {{% /choosable %}}
@@ -19949,7 +20025,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Hostmap<wbr>Definition<wbr>Request<wbr>Size<wbr>Apm<wbr>Query<wbr>Group<wbr>By<wbr>Sort</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgethostmapdefinitionrequestsizeapmquerygroupbysort">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Hostmap<wbr>Definition<wbr>Request<wbr>Size<wbr>Apm<wbr>Query<wbr>Group<wbr>By<wbr>Sort</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeApmQueryGroupBySort">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeApmQueryGroupBySort">output</a> API doc for this type.
 {{% /choosable %}}
@@ -20088,7 +20164,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Hostmap<wbr>Definition<wbr>Request<wbr>Size<wbr>Apm<wbr>Query<wbr>Search</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgethostmapdefinitionrequestsizeapmquerysearch">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Hostmap<wbr>Definition<wbr>Request<wbr>Size<wbr>Apm<wbr>Query<wbr>Search</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeApmQuerySearch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeApmQuerySearch">output</a> API doc for this type.
 {{% /choosable %}}
@@ -20163,7 +20239,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Hostmap<wbr>Definition<wbr>Request<wbr>Size<wbr>Log<wbr>Query</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgethostmapdefinitionrequestsizelogquery">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Hostmap<wbr>Definition<wbr>Request<wbr>Size<wbr>Log<wbr>Query</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeLogQuery">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeLogQuery">output</a> API doc for this type.
 {{% /choosable %}}
@@ -20334,7 +20410,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Hostmap<wbr>Definition<wbr>Request<wbr>Size<wbr>Log<wbr>Query<wbr>Compute</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgethostmapdefinitionrequestsizelogquerycompute">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Hostmap<wbr>Definition<wbr>Request<wbr>Size<wbr>Log<wbr>Query<wbr>Compute</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeLogQueryCompute">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeLogQueryCompute">output</a> API doc for this type.
 {{% /choosable %}}
@@ -20473,7 +20549,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Hostmap<wbr>Definition<wbr>Request<wbr>Size<wbr>Log<wbr>Query<wbr>Group<wbr>By</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgethostmapdefinitionrequestsizelogquerygroupby">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Hostmap<wbr>Definition<wbr>Request<wbr>Size<wbr>Log<wbr>Query<wbr>Group<wbr>By</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeLogQueryGroupBy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeLogQueryGroupBy">output</a> API doc for this type.
 {{% /choosable %}}
@@ -20612,7 +20688,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Hostmap<wbr>Definition<wbr>Request<wbr>Size<wbr>Log<wbr>Query<wbr>Group<wbr>By<wbr>Sort</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgethostmapdefinitionrequestsizelogquerygroupbysort">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Hostmap<wbr>Definition<wbr>Request<wbr>Size<wbr>Log<wbr>Query<wbr>Group<wbr>By<wbr>Sort</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeLogQueryGroupBySort">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeLogQueryGroupBySort">output</a> API doc for this type.
 {{% /choosable %}}
@@ -20751,7 +20827,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Hostmap<wbr>Definition<wbr>Request<wbr>Size<wbr>Log<wbr>Query<wbr>Search</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgethostmapdefinitionrequestsizelogquerysearch">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Hostmap<wbr>Definition<wbr>Request<wbr>Size<wbr>Log<wbr>Query<wbr>Search</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeLogQuerySearch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeLogQuerySearch">output</a> API doc for this type.
 {{% /choosable %}}
@@ -20826,7 +20902,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Hostmap<wbr>Definition<wbr>Request<wbr>Size<wbr>Process<wbr>Query</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgethostmapdefinitionrequestsizeprocessquery">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Hostmap<wbr>Definition<wbr>Request<wbr>Size<wbr>Process<wbr>Query</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeProcessQuery">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetHostmapDefinitionRequestSizeProcessQuery">output</a> API doc for this type.
 {{% /choosable %}}
@@ -20997,7 +21073,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Hostmap<wbr>Definition<wbr>Style</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgethostmapdefinitionstyle">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Hostmap<wbr>Definition<wbr>Style</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetHostmapDefinitionStyle">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetHostmapDefinitionStyle">output</a> API doc for this type.
 {{% /choosable %}}
@@ -21168,7 +21244,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Iframe<wbr>Definition</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgetiframedefinition">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Iframe<wbr>Definition</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetIframeDefinition">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetIframeDefinition">output</a> API doc for this type.
 {{% /choosable %}}
@@ -21243,7 +21319,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Image<wbr>Definition</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgetimagedefinition">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Image<wbr>Definition</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetImageDefinition">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetImageDefinition">output</a> API doc for this type.
 {{% /choosable %}}
@@ -21382,7 +21458,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Layout</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgetlayout">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Layout</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetLayout">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetLayout">output</a> API doc for this type.
 {{% /choosable %}}
@@ -21553,7 +21629,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Log<wbr>Stream<wbr>Definition</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgetlogstreamdefinition">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Log<wbr>Stream<wbr>Definition</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetLogStreamDefinition">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetLogStreamDefinition">output</a> API doc for this type.
 {{% /choosable %}}
@@ -21820,7 +21896,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Log<wbr>Stream<wbr>Definition<wbr>Time</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgetlogstreamdefinitiontime">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Log<wbr>Stream<wbr>Definition<wbr>Time</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetLogStreamDefinitionTime">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetLogStreamDefinitionTime">output</a> API doc for this type.
 {{% /choosable %}}
@@ -21895,7 +21971,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Manage<wbr>Status<wbr>Definition</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgetmanagestatusdefinition">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Manage<wbr>Status<wbr>Definition</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetManageStatusDefinition">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetManageStatusDefinition">output</a> API doc for this type.
 {{% /choosable %}}
@@ -22322,7 +22398,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Note<wbr>Definition</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgetnotedefinition">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Note<wbr>Definition</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetNoteDefinition">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetNoteDefinition">output</a> API doc for this type.
 {{% /choosable %}}
@@ -22589,7 +22665,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Query<wbr>Table<wbr>Definition</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgetquerytabledefinition">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Query<wbr>Table<wbr>Definition</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetQueryTableDefinition">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetQueryTableDefinition">output</a> API doc for this type.
 {{% /choosable %}}
@@ -22792,7 +22868,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Query<wbr>Table<wbr>Definition<wbr>Request</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgetquerytabledefinitionrequest">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Query<wbr>Table<wbr>Definition<wbr>Request</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetQueryTableDefinitionRequest">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetQueryTableDefinitionRequest">output</a> API doc for this type.
 {{% /choosable %}}
@@ -23123,7 +23199,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Query<wbr>Table<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgetquerytabledefinitionrequestapmquery">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Query<wbr>Table<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetQueryTableDefinitionRequestApmQuery">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetQueryTableDefinitionRequestApmQuery">output</a> API doc for this type.
 {{% /choosable %}}
@@ -23294,7 +23370,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Query<wbr>Table<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query<wbr>Compute</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgetquerytabledefinitionrequestapmquerycompute">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Query<wbr>Table<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query<wbr>Compute</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetQueryTableDefinitionRequestApmQueryCompute">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetQueryTableDefinitionRequestApmQueryCompute">output</a> API doc for this type.
 {{% /choosable %}}
@@ -23433,7 +23509,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Query<wbr>Table<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query<wbr>Group<wbr>By</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgetquerytabledefinitionrequestapmquerygroupby">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Query<wbr>Table<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query<wbr>Group<wbr>By</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetQueryTableDefinitionRequestApmQueryGroupBy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetQueryTableDefinitionRequestApmQueryGroupBy">output</a> API doc for this type.
 {{% /choosable %}}
@@ -23572,7 +23648,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Query<wbr>Table<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query<wbr>Group<wbr>By<wbr>Sort</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgetquerytabledefinitionrequestapmquerygroupbysort">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Query<wbr>Table<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query<wbr>Group<wbr>By<wbr>Sort</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetQueryTableDefinitionRequestApmQueryGroupBySort">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetQueryTableDefinitionRequestApmQueryGroupBySort">output</a> API doc for this type.
 {{% /choosable %}}
@@ -23711,7 +23787,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Query<wbr>Table<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query<wbr>Search</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgetquerytabledefinitionrequestapmquerysearch">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Query<wbr>Table<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query<wbr>Search</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetQueryTableDefinitionRequestApmQuerySearch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetQueryTableDefinitionRequestApmQuerySearch">output</a> API doc for this type.
 {{% /choosable %}}
@@ -23786,7 +23862,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Query<wbr>Table<wbr>Definition<wbr>Request<wbr>Conditional<wbr>Format</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgetquerytabledefinitionrequestconditionalformat">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Query<wbr>Table<wbr>Definition<wbr>Request<wbr>Conditional<wbr>Format</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetQueryTableDefinitionRequestConditionalFormat">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetQueryTableDefinitionRequestConditionalFormat">output</a> API doc for this type.
 {{% /choosable %}}
@@ -24085,7 +24161,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Query<wbr>Table<wbr>Definition<wbr>Request<wbr>Log<wbr>Query</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgetquerytabledefinitionrequestlogquery">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Query<wbr>Table<wbr>Definition<wbr>Request<wbr>Log<wbr>Query</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetQueryTableDefinitionRequestLogQuery">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetQueryTableDefinitionRequestLogQuery">output</a> API doc for this type.
 {{% /choosable %}}
@@ -24256,7 +24332,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Query<wbr>Table<wbr>Definition<wbr>Request<wbr>Log<wbr>Query<wbr>Compute</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgetquerytabledefinitionrequestlogquerycompute">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Query<wbr>Table<wbr>Definition<wbr>Request<wbr>Log<wbr>Query<wbr>Compute</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetQueryTableDefinitionRequestLogQueryCompute">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetQueryTableDefinitionRequestLogQueryCompute">output</a> API doc for this type.
 {{% /choosable %}}
@@ -24395,7 +24471,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Query<wbr>Table<wbr>Definition<wbr>Request<wbr>Log<wbr>Query<wbr>Group<wbr>By</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgetquerytabledefinitionrequestlogquerygroupby">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Query<wbr>Table<wbr>Definition<wbr>Request<wbr>Log<wbr>Query<wbr>Group<wbr>By</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetQueryTableDefinitionRequestLogQueryGroupBy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetQueryTableDefinitionRequestLogQueryGroupBy">output</a> API doc for this type.
 {{% /choosable %}}
@@ -24534,7 +24610,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Query<wbr>Table<wbr>Definition<wbr>Request<wbr>Log<wbr>Query<wbr>Group<wbr>By<wbr>Sort</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgetquerytabledefinitionrequestlogquerygroupbysort">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Query<wbr>Table<wbr>Definition<wbr>Request<wbr>Log<wbr>Query<wbr>Group<wbr>By<wbr>Sort</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetQueryTableDefinitionRequestLogQueryGroupBySort">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetQueryTableDefinitionRequestLogQueryGroupBySort">output</a> API doc for this type.
 {{% /choosable %}}
@@ -24673,7 +24749,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Query<wbr>Table<wbr>Definition<wbr>Request<wbr>Log<wbr>Query<wbr>Search</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgetquerytabledefinitionrequestlogquerysearch">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Query<wbr>Table<wbr>Definition<wbr>Request<wbr>Log<wbr>Query<wbr>Search</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetQueryTableDefinitionRequestLogQuerySearch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetQueryTableDefinitionRequestLogQuerySearch">output</a> API doc for this type.
 {{% /choosable %}}
@@ -24748,7 +24824,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Query<wbr>Table<wbr>Definition<wbr>Request<wbr>Process<wbr>Query</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgetquerytabledefinitionrequestprocessquery">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Query<wbr>Table<wbr>Definition<wbr>Request<wbr>Process<wbr>Query</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetQueryTableDefinitionRequestProcessQuery">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetQueryTableDefinitionRequestProcessQuery">output</a> API doc for this type.
 {{% /choosable %}}
@@ -24919,7 +24995,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Query<wbr>Table<wbr>Definition<wbr>Time</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgetquerytabledefinitiontime">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Query<wbr>Table<wbr>Definition<wbr>Time</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetQueryTableDefinitionTime">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetQueryTableDefinitionTime">output</a> API doc for this type.
 {{% /choosable %}}
@@ -24994,7 +25070,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Query<wbr>Value<wbr>Definition</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgetqueryvaluedefinition">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Query<wbr>Value<wbr>Definition</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetQueryValueDefinition">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetQueryValueDefinition">output</a> API doc for this type.
 {{% /choosable %}}
@@ -25325,7 +25401,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Query<wbr>Value<wbr>Definition<wbr>Request</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgetqueryvaluedefinitionrequest">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Query<wbr>Value<wbr>Definition<wbr>Request</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetQueryValueDefinitionRequest">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetQueryValueDefinitionRequest">output</a> API doc for this type.
 {{% /choosable %}}
@@ -25560,7 +25636,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Query<wbr>Value<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgetqueryvaluedefinitionrequestapmquery">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Query<wbr>Value<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetQueryValueDefinitionRequestApmQuery">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetQueryValueDefinitionRequestApmQuery">output</a> API doc for this type.
 {{% /choosable %}}
@@ -25731,7 +25807,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Query<wbr>Value<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query<wbr>Compute</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgetqueryvaluedefinitionrequestapmquerycompute">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Query<wbr>Value<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query<wbr>Compute</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetQueryValueDefinitionRequestApmQueryCompute">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetQueryValueDefinitionRequestApmQueryCompute">output</a> API doc for this type.
 {{% /choosable %}}
@@ -25870,7 +25946,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Query<wbr>Value<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query<wbr>Group<wbr>By</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgetqueryvaluedefinitionrequestapmquerygroupby">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Query<wbr>Value<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query<wbr>Group<wbr>By</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetQueryValueDefinitionRequestApmQueryGroupBy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetQueryValueDefinitionRequestApmQueryGroupBy">output</a> API doc for this type.
 {{% /choosable %}}
@@ -26009,7 +26085,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Query<wbr>Value<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query<wbr>Group<wbr>By<wbr>Sort</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgetqueryvaluedefinitionrequestapmquerygroupbysort">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Query<wbr>Value<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query<wbr>Group<wbr>By<wbr>Sort</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetQueryValueDefinitionRequestApmQueryGroupBySort">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetQueryValueDefinitionRequestApmQueryGroupBySort">output</a> API doc for this type.
 {{% /choosable %}}
@@ -26148,7 +26224,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Query<wbr>Value<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query<wbr>Search</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgetqueryvaluedefinitionrequestapmquerysearch">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Query<wbr>Value<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query<wbr>Search</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetQueryValueDefinitionRequestApmQuerySearch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetQueryValueDefinitionRequestApmQuerySearch">output</a> API doc for this type.
 {{% /choosable %}}
@@ -26223,7 +26299,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Query<wbr>Value<wbr>Definition<wbr>Request<wbr>Conditional<wbr>Format</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgetqueryvaluedefinitionrequestconditionalformat">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Query<wbr>Value<wbr>Definition<wbr>Request<wbr>Conditional<wbr>Format</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetQueryValueDefinitionRequestConditionalFormat">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetQueryValueDefinitionRequestConditionalFormat">output</a> API doc for this type.
 {{% /choosable %}}
@@ -26522,7 +26598,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Query<wbr>Value<wbr>Definition<wbr>Request<wbr>Log<wbr>Query</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgetqueryvaluedefinitionrequestlogquery">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Query<wbr>Value<wbr>Definition<wbr>Request<wbr>Log<wbr>Query</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetQueryValueDefinitionRequestLogQuery">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetQueryValueDefinitionRequestLogQuery">output</a> API doc for this type.
 {{% /choosable %}}
@@ -26693,7 +26769,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Query<wbr>Value<wbr>Definition<wbr>Request<wbr>Log<wbr>Query<wbr>Compute</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgetqueryvaluedefinitionrequestlogquerycompute">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Query<wbr>Value<wbr>Definition<wbr>Request<wbr>Log<wbr>Query<wbr>Compute</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetQueryValueDefinitionRequestLogQueryCompute">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetQueryValueDefinitionRequestLogQueryCompute">output</a> API doc for this type.
 {{% /choosable %}}
@@ -26832,7 +26908,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Query<wbr>Value<wbr>Definition<wbr>Request<wbr>Log<wbr>Query<wbr>Group<wbr>By</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgetqueryvaluedefinitionrequestlogquerygroupby">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Query<wbr>Value<wbr>Definition<wbr>Request<wbr>Log<wbr>Query<wbr>Group<wbr>By</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetQueryValueDefinitionRequestLogQueryGroupBy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetQueryValueDefinitionRequestLogQueryGroupBy">output</a> API doc for this type.
 {{% /choosable %}}
@@ -26971,7 +27047,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Query<wbr>Value<wbr>Definition<wbr>Request<wbr>Log<wbr>Query<wbr>Group<wbr>By<wbr>Sort</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgetqueryvaluedefinitionrequestlogquerygroupbysort">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Query<wbr>Value<wbr>Definition<wbr>Request<wbr>Log<wbr>Query<wbr>Group<wbr>By<wbr>Sort</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetQueryValueDefinitionRequestLogQueryGroupBySort">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetQueryValueDefinitionRequestLogQueryGroupBySort">output</a> API doc for this type.
 {{% /choosable %}}
@@ -27110,7 +27186,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Query<wbr>Value<wbr>Definition<wbr>Request<wbr>Log<wbr>Query<wbr>Search</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgetqueryvaluedefinitionrequestlogquerysearch">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Query<wbr>Value<wbr>Definition<wbr>Request<wbr>Log<wbr>Query<wbr>Search</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetQueryValueDefinitionRequestLogQuerySearch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetQueryValueDefinitionRequestLogQuerySearch">output</a> API doc for this type.
 {{% /choosable %}}
@@ -27185,7 +27261,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Query<wbr>Value<wbr>Definition<wbr>Request<wbr>Process<wbr>Query</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgetqueryvaluedefinitionrequestprocessquery">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Query<wbr>Value<wbr>Definition<wbr>Request<wbr>Process<wbr>Query</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetQueryValueDefinitionRequestProcessQuery">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetQueryValueDefinitionRequestProcessQuery">output</a> API doc for this type.
 {{% /choosable %}}
@@ -27356,7 +27432,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Query<wbr>Value<wbr>Definition<wbr>Time</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgetqueryvaluedefinitiontime">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Query<wbr>Value<wbr>Definition<wbr>Time</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetQueryValueDefinitionTime">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetQueryValueDefinitionTime">output</a> API doc for this type.
 {{% /choosable %}}
@@ -27431,7 +27507,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Scatterplot<wbr>Definition</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgetscatterplotdefinition">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Scatterplot<wbr>Definition</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetScatterplotDefinition">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetScatterplotDefinition">output</a> API doc for this type.
 {{% /choosable %}}
@@ -27730,7 +27806,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Scatterplot<wbr>Definition<wbr>Request</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgetscatterplotdefinitionrequest">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Scatterplot<wbr>Definition<wbr>Request</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequest">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequest">output</a> API doc for this type.
 {{% /choosable %}}
@@ -27837,7 +27913,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Scatterplot<wbr>Definition<wbr>Request<wbr>X</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgetscatterplotdefinitionrequestx">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Scatterplot<wbr>Definition<wbr>Request<wbr>X</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestX">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestX">output</a> API doc for this type.
 {{% /choosable %}}
@@ -28040,7 +28116,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Scatterplot<wbr>Definition<wbr>Request<wbr>XApm<wbr>Query</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgetscatterplotdefinitionrequestxapmquery">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Scatterplot<wbr>Definition<wbr>Request<wbr>XApm<wbr>Query</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXApmQuery">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXApmQuery">output</a> API doc for this type.
 {{% /choosable %}}
@@ -28211,7 +28287,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Scatterplot<wbr>Definition<wbr>Request<wbr>XApm<wbr>Query<wbr>Compute</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgetscatterplotdefinitionrequestxapmquerycompute">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Scatterplot<wbr>Definition<wbr>Request<wbr>XApm<wbr>Query<wbr>Compute</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXApmQueryCompute">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXApmQueryCompute">output</a> API doc for this type.
 {{% /choosable %}}
@@ -28350,7 +28426,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Scatterplot<wbr>Definition<wbr>Request<wbr>XApm<wbr>Query<wbr>Group<wbr>By</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgetscatterplotdefinitionrequestxapmquerygroupby">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Scatterplot<wbr>Definition<wbr>Request<wbr>XApm<wbr>Query<wbr>Group<wbr>By</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXApmQueryGroupBy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXApmQueryGroupBy">output</a> API doc for this type.
 {{% /choosable %}}
@@ -28489,7 +28565,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Scatterplot<wbr>Definition<wbr>Request<wbr>XApm<wbr>Query<wbr>Group<wbr>By<wbr>Sort</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgetscatterplotdefinitionrequestxapmquerygroupbysort">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Scatterplot<wbr>Definition<wbr>Request<wbr>XApm<wbr>Query<wbr>Group<wbr>By<wbr>Sort</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXApmQueryGroupBySort">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXApmQueryGroupBySort">output</a> API doc for this type.
 {{% /choosable %}}
@@ -28628,7 +28704,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Scatterplot<wbr>Definition<wbr>Request<wbr>XApm<wbr>Query<wbr>Search</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgetscatterplotdefinitionrequestxapmquerysearch">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Scatterplot<wbr>Definition<wbr>Request<wbr>XApm<wbr>Query<wbr>Search</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXApmQuerySearch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXApmQuerySearch">output</a> API doc for this type.
 {{% /choosable %}}
@@ -28703,7 +28779,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Scatterplot<wbr>Definition<wbr>Request<wbr>XLog<wbr>Query</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgetscatterplotdefinitionrequestxlogquery">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Scatterplot<wbr>Definition<wbr>Request<wbr>XLog<wbr>Query</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXLogQuery">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXLogQuery">output</a> API doc for this type.
 {{% /choosable %}}
@@ -28874,7 +28950,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Scatterplot<wbr>Definition<wbr>Request<wbr>XLog<wbr>Query<wbr>Compute</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgetscatterplotdefinitionrequestxlogquerycompute">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Scatterplot<wbr>Definition<wbr>Request<wbr>XLog<wbr>Query<wbr>Compute</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXLogQueryCompute">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXLogQueryCompute">output</a> API doc for this type.
 {{% /choosable %}}
@@ -29013,7 +29089,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Scatterplot<wbr>Definition<wbr>Request<wbr>XLog<wbr>Query<wbr>Group<wbr>By</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgetscatterplotdefinitionrequestxlogquerygroupby">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Scatterplot<wbr>Definition<wbr>Request<wbr>XLog<wbr>Query<wbr>Group<wbr>By</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXLogQueryGroupBy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXLogQueryGroupBy">output</a> API doc for this type.
 {{% /choosable %}}
@@ -29152,7 +29228,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Scatterplot<wbr>Definition<wbr>Request<wbr>XLog<wbr>Query<wbr>Group<wbr>By<wbr>Sort</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgetscatterplotdefinitionrequestxlogquerygroupbysort">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Scatterplot<wbr>Definition<wbr>Request<wbr>XLog<wbr>Query<wbr>Group<wbr>By<wbr>Sort</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXLogQueryGroupBySort">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXLogQueryGroupBySort">output</a> API doc for this type.
 {{% /choosable %}}
@@ -29291,7 +29367,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Scatterplot<wbr>Definition<wbr>Request<wbr>XLog<wbr>Query<wbr>Search</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgetscatterplotdefinitionrequestxlogquerysearch">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Scatterplot<wbr>Definition<wbr>Request<wbr>XLog<wbr>Query<wbr>Search</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXLogQuerySearch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXLogQuerySearch">output</a> API doc for this type.
 {{% /choosable %}}
@@ -29366,7 +29442,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Scatterplot<wbr>Definition<wbr>Request<wbr>XProcess<wbr>Query</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgetscatterplotdefinitionrequestxprocessquery">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Scatterplot<wbr>Definition<wbr>Request<wbr>XProcess<wbr>Query</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXProcessQuery">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestXProcessQuery">output</a> API doc for this type.
 {{% /choosable %}}
@@ -29537,7 +29613,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Scatterplot<wbr>Definition<wbr>Request<wbr>Y</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgetscatterplotdefinitionrequesty">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Scatterplot<wbr>Definition<wbr>Request<wbr>Y</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestY">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestY">output</a> API doc for this type.
 {{% /choosable %}}
@@ -29740,7 +29816,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Scatterplot<wbr>Definition<wbr>Request<wbr>YApm<wbr>Query</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgetscatterplotdefinitionrequestyapmquery">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Scatterplot<wbr>Definition<wbr>Request<wbr>YApm<wbr>Query</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYApmQuery">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYApmQuery">output</a> API doc for this type.
 {{% /choosable %}}
@@ -29911,7 +29987,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Scatterplot<wbr>Definition<wbr>Request<wbr>YApm<wbr>Query<wbr>Compute</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgetscatterplotdefinitionrequestyapmquerycompute">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Scatterplot<wbr>Definition<wbr>Request<wbr>YApm<wbr>Query<wbr>Compute</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYApmQueryCompute">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYApmQueryCompute">output</a> API doc for this type.
 {{% /choosable %}}
@@ -30050,7 +30126,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Scatterplot<wbr>Definition<wbr>Request<wbr>YApm<wbr>Query<wbr>Group<wbr>By</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgetscatterplotdefinitionrequestyapmquerygroupby">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Scatterplot<wbr>Definition<wbr>Request<wbr>YApm<wbr>Query<wbr>Group<wbr>By</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYApmQueryGroupBy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYApmQueryGroupBy">output</a> API doc for this type.
 {{% /choosable %}}
@@ -30189,7 +30265,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Scatterplot<wbr>Definition<wbr>Request<wbr>YApm<wbr>Query<wbr>Group<wbr>By<wbr>Sort</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgetscatterplotdefinitionrequestyapmquerygroupbysort">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Scatterplot<wbr>Definition<wbr>Request<wbr>YApm<wbr>Query<wbr>Group<wbr>By<wbr>Sort</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYApmQueryGroupBySort">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYApmQueryGroupBySort">output</a> API doc for this type.
 {{% /choosable %}}
@@ -30328,7 +30404,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Scatterplot<wbr>Definition<wbr>Request<wbr>YApm<wbr>Query<wbr>Search</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgetscatterplotdefinitionrequestyapmquerysearch">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Scatterplot<wbr>Definition<wbr>Request<wbr>YApm<wbr>Query<wbr>Search</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYApmQuerySearch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYApmQuerySearch">output</a> API doc for this type.
 {{% /choosable %}}
@@ -30403,7 +30479,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Scatterplot<wbr>Definition<wbr>Request<wbr>YLog<wbr>Query</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgetscatterplotdefinitionrequestylogquery">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Scatterplot<wbr>Definition<wbr>Request<wbr>YLog<wbr>Query</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYLogQuery">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYLogQuery">output</a> API doc for this type.
 {{% /choosable %}}
@@ -30574,7 +30650,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Scatterplot<wbr>Definition<wbr>Request<wbr>YLog<wbr>Query<wbr>Compute</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgetscatterplotdefinitionrequestylogquerycompute">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Scatterplot<wbr>Definition<wbr>Request<wbr>YLog<wbr>Query<wbr>Compute</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYLogQueryCompute">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYLogQueryCompute">output</a> API doc for this type.
 {{% /choosable %}}
@@ -30713,7 +30789,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Scatterplot<wbr>Definition<wbr>Request<wbr>YLog<wbr>Query<wbr>Group<wbr>By</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgetscatterplotdefinitionrequestylogquerygroupby">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Scatterplot<wbr>Definition<wbr>Request<wbr>YLog<wbr>Query<wbr>Group<wbr>By</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYLogQueryGroupBy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYLogQueryGroupBy">output</a> API doc for this type.
 {{% /choosable %}}
@@ -30852,7 +30928,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Scatterplot<wbr>Definition<wbr>Request<wbr>YLog<wbr>Query<wbr>Group<wbr>By<wbr>Sort</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgetscatterplotdefinitionrequestylogquerygroupbysort">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Scatterplot<wbr>Definition<wbr>Request<wbr>YLog<wbr>Query<wbr>Group<wbr>By<wbr>Sort</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYLogQueryGroupBySort">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYLogQueryGroupBySort">output</a> API doc for this type.
 {{% /choosable %}}
@@ -30991,7 +31067,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Scatterplot<wbr>Definition<wbr>Request<wbr>YLog<wbr>Query<wbr>Search</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgetscatterplotdefinitionrequestylogquerysearch">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Scatterplot<wbr>Definition<wbr>Request<wbr>YLog<wbr>Query<wbr>Search</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYLogQuerySearch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYLogQuerySearch">output</a> API doc for this type.
 {{% /choosable %}}
@@ -31066,7 +31142,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Scatterplot<wbr>Definition<wbr>Request<wbr>YProcess<wbr>Query</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgetscatterplotdefinitionrequestyprocessquery">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Scatterplot<wbr>Definition<wbr>Request<wbr>YProcess<wbr>Query</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYProcessQuery">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionRequestYProcessQuery">output</a> API doc for this type.
 {{% /choosable %}}
@@ -31237,7 +31313,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Scatterplot<wbr>Definition<wbr>Time</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgetscatterplotdefinitiontime">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Scatterplot<wbr>Definition<wbr>Time</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionTime">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionTime">output</a> API doc for this type.
 {{% /choosable %}}
@@ -31312,7 +31388,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Scatterplot<wbr>Definition<wbr>Xaxis</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgetscatterplotdefinitionxaxis">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Scatterplot<wbr>Definition<wbr>Xaxis</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionXaxis">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionXaxis">output</a> API doc for this type.
 {{% /choosable %}}
@@ -31515,7 +31591,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Scatterplot<wbr>Definition<wbr>Yaxis</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgetscatterplotdefinitionyaxis">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Scatterplot<wbr>Definition<wbr>Yaxis</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionYaxis">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetScatterplotDefinitionYaxis">output</a> API doc for this type.
 {{% /choosable %}}
@@ -31718,7 +31794,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Service<wbr>Level<wbr>Objective<wbr>Definition</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgetservicelevelobjectivedefinition">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Service<wbr>Level<wbr>Objective<wbr>Definition</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetServiceLevelObjectiveDefinition">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetServiceLevelObjectiveDefinition">output</a> API doc for this type.
 {{% /choosable %}}
@@ -32017,7 +32093,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Timeseries<wbr>Definition</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgettimeseriesdefinition">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Timeseries<wbr>Definition</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetTimeseriesDefinition">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetTimeseriesDefinition">output</a> API doc for this type.
 {{% /choosable %}}
@@ -32380,7 +32456,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Timeseries<wbr>Definition<wbr>Event</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgettimeseriesdefinitionevent">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Timeseries<wbr>Definition<wbr>Event</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionEvent">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionEvent">output</a> API doc for this type.
 {{% /choosable %}}
@@ -32455,7 +32531,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Timeseries<wbr>Definition<wbr>Marker</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgettimeseriesdefinitionmarker">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Timeseries<wbr>Definition<wbr>Marker</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionMarker">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionMarker">output</a> API doc for this type.
 {{% /choosable %}}
@@ -32594,7 +32670,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Timeseries<wbr>Definition<wbr>Request</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgettimeseriesdefinitionrequest">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Timeseries<wbr>Definition<wbr>Request</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionRequest">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionRequest">output</a> API doc for this type.
 {{% /choosable %}}
@@ -32861,7 +32937,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Timeseries<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgettimeseriesdefinitionrequestapmquery">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Timeseries<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestApmQuery">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestApmQuery">output</a> API doc for this type.
 {{% /choosable %}}
@@ -33032,7 +33108,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Timeseries<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query<wbr>Compute</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgettimeseriesdefinitionrequestapmquerycompute">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Timeseries<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query<wbr>Compute</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestApmQueryCompute">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestApmQueryCompute">output</a> API doc for this type.
 {{% /choosable %}}
@@ -33171,7 +33247,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Timeseries<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query<wbr>Group<wbr>By</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgettimeseriesdefinitionrequestapmquerygroupby">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Timeseries<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query<wbr>Group<wbr>By</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestApmQueryGroupBy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestApmQueryGroupBy">output</a> API doc for this type.
 {{% /choosable %}}
@@ -33310,7 +33386,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Timeseries<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query<wbr>Group<wbr>By<wbr>Sort</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgettimeseriesdefinitionrequestapmquerygroupbysort">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Timeseries<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query<wbr>Group<wbr>By<wbr>Sort</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestApmQueryGroupBySort">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestApmQueryGroupBySort">output</a> API doc for this type.
 {{% /choosable %}}
@@ -33449,7 +33525,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Timeseries<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query<wbr>Search</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgettimeseriesdefinitionrequestapmquerysearch">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Timeseries<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query<wbr>Search</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestApmQuerySearch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestApmQuerySearch">output</a> API doc for this type.
 {{% /choosable %}}
@@ -33524,7 +33600,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Timeseries<wbr>Definition<wbr>Request<wbr>Log<wbr>Query</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgettimeseriesdefinitionrequestlogquery">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Timeseries<wbr>Definition<wbr>Request<wbr>Log<wbr>Query</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestLogQuery">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestLogQuery">output</a> API doc for this type.
 {{% /choosable %}}
@@ -33695,7 +33771,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Timeseries<wbr>Definition<wbr>Request<wbr>Log<wbr>Query<wbr>Compute</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgettimeseriesdefinitionrequestlogquerycompute">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Timeseries<wbr>Definition<wbr>Request<wbr>Log<wbr>Query<wbr>Compute</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestLogQueryCompute">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestLogQueryCompute">output</a> API doc for this type.
 {{% /choosable %}}
@@ -33834,7 +33910,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Timeseries<wbr>Definition<wbr>Request<wbr>Log<wbr>Query<wbr>Group<wbr>By</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgettimeseriesdefinitionrequestlogquerygroupby">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Timeseries<wbr>Definition<wbr>Request<wbr>Log<wbr>Query<wbr>Group<wbr>By</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestLogQueryGroupBy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestLogQueryGroupBy">output</a> API doc for this type.
 {{% /choosable %}}
@@ -33973,7 +34049,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Timeseries<wbr>Definition<wbr>Request<wbr>Log<wbr>Query<wbr>Group<wbr>By<wbr>Sort</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgettimeseriesdefinitionrequestlogquerygroupbysort">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Timeseries<wbr>Definition<wbr>Request<wbr>Log<wbr>Query<wbr>Group<wbr>By<wbr>Sort</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestLogQueryGroupBySort">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestLogQueryGroupBySort">output</a> API doc for this type.
 {{% /choosable %}}
@@ -34112,7 +34188,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Timeseries<wbr>Definition<wbr>Request<wbr>Log<wbr>Query<wbr>Search</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgettimeseriesdefinitionrequestlogquerysearch">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Timeseries<wbr>Definition<wbr>Request<wbr>Log<wbr>Query<wbr>Search</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestLogQuerySearch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestLogQuerySearch">output</a> API doc for this type.
 {{% /choosable %}}
@@ -34187,7 +34263,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Timeseries<wbr>Definition<wbr>Request<wbr>Metadata</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgettimeseriesdefinitionrequestmetadata">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Timeseries<wbr>Definition<wbr>Request<wbr>Metadata</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestMetadata">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestMetadata">output</a> API doc for this type.
 {{% /choosable %}}
@@ -34294,7 +34370,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Timeseries<wbr>Definition<wbr>Request<wbr>Process<wbr>Query</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgettimeseriesdefinitionrequestprocessquery">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Timeseries<wbr>Definition<wbr>Request<wbr>Process<wbr>Query</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestProcessQuery">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestProcessQuery">output</a> API doc for this type.
 {{% /choosable %}}
@@ -34465,7 +34541,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Timeseries<wbr>Definition<wbr>Request<wbr>Style</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgettimeseriesdefinitionrequeststyle">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Timeseries<wbr>Definition<wbr>Request<wbr>Style</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestStyle">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionRequestStyle">output</a> API doc for this type.
 {{% /choosable %}}
@@ -34604,7 +34680,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Timeseries<wbr>Definition<wbr>Time</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgettimeseriesdefinitiontime">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Timeseries<wbr>Definition<wbr>Time</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionTime">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionTime">output</a> API doc for this type.
 {{% /choosable %}}
@@ -34679,7 +34755,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Timeseries<wbr>Definition<wbr>Yaxis</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgettimeseriesdefinitionyaxis">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Timeseries<wbr>Definition<wbr>Yaxis</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionYaxis">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetTimeseriesDefinitionYaxis">output</a> API doc for this type.
 {{% /choosable %}}
@@ -34882,7 +34958,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Toplist<wbr>Definition</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgettoplistdefinition">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Toplist<wbr>Definition</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetToplistDefinition">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetToplistDefinition">output</a> API doc for this type.
 {{% /choosable %}}
@@ -35085,7 +35161,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Toplist<wbr>Definition<wbr>Request</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgettoplistdefinitionrequest">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Toplist<wbr>Definition<wbr>Request</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetToplistDefinitionRequest">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetToplistDefinitionRequest">output</a> API doc for this type.
 {{% /choosable %}}
@@ -35320,7 +35396,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Toplist<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgettoplistdefinitionrequestapmquery">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Toplist<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetToplistDefinitionRequestApmQuery">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetToplistDefinitionRequestApmQuery">output</a> API doc for this type.
 {{% /choosable %}}
@@ -35491,7 +35567,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Toplist<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query<wbr>Compute</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgettoplistdefinitionrequestapmquerycompute">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Toplist<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query<wbr>Compute</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetToplistDefinitionRequestApmQueryCompute">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetToplistDefinitionRequestApmQueryCompute">output</a> API doc for this type.
 {{% /choosable %}}
@@ -35630,7 +35706,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Toplist<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query<wbr>Group<wbr>By</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgettoplistdefinitionrequestapmquerygroupby">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Toplist<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query<wbr>Group<wbr>By</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetToplistDefinitionRequestApmQueryGroupBy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetToplistDefinitionRequestApmQueryGroupBy">output</a> API doc for this type.
 {{% /choosable %}}
@@ -35769,7 +35845,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Toplist<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query<wbr>Group<wbr>By<wbr>Sort</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgettoplistdefinitionrequestapmquerygroupbysort">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Toplist<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query<wbr>Group<wbr>By<wbr>Sort</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetToplistDefinitionRequestApmQueryGroupBySort">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetToplistDefinitionRequestApmQueryGroupBySort">output</a> API doc for this type.
 {{% /choosable %}}
@@ -35908,7 +35984,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Toplist<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query<wbr>Search</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgettoplistdefinitionrequestapmquerysearch">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Toplist<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query<wbr>Search</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetToplistDefinitionRequestApmQuerySearch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetToplistDefinitionRequestApmQuerySearch">output</a> API doc for this type.
 {{% /choosable %}}
@@ -35983,7 +36059,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Toplist<wbr>Definition<wbr>Request<wbr>Conditional<wbr>Format</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgettoplistdefinitionrequestconditionalformat">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Toplist<wbr>Definition<wbr>Request<wbr>Conditional<wbr>Format</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetToplistDefinitionRequestConditionalFormat">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetToplistDefinitionRequestConditionalFormat">output</a> API doc for this type.
 {{% /choosable %}}
@@ -36282,7 +36358,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Toplist<wbr>Definition<wbr>Request<wbr>Log<wbr>Query</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgettoplistdefinitionrequestlogquery">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Toplist<wbr>Definition<wbr>Request<wbr>Log<wbr>Query</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetToplistDefinitionRequestLogQuery">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetToplistDefinitionRequestLogQuery">output</a> API doc for this type.
 {{% /choosable %}}
@@ -36453,7 +36529,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Toplist<wbr>Definition<wbr>Request<wbr>Log<wbr>Query<wbr>Compute</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgettoplistdefinitionrequestlogquerycompute">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Toplist<wbr>Definition<wbr>Request<wbr>Log<wbr>Query<wbr>Compute</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetToplistDefinitionRequestLogQueryCompute">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetToplistDefinitionRequestLogQueryCompute">output</a> API doc for this type.
 {{% /choosable %}}
@@ -36592,7 +36668,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Toplist<wbr>Definition<wbr>Request<wbr>Log<wbr>Query<wbr>Group<wbr>By</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgettoplistdefinitionrequestlogquerygroupby">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Toplist<wbr>Definition<wbr>Request<wbr>Log<wbr>Query<wbr>Group<wbr>By</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetToplistDefinitionRequestLogQueryGroupBy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetToplistDefinitionRequestLogQueryGroupBy">output</a> API doc for this type.
 {{% /choosable %}}
@@ -36731,7 +36807,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Toplist<wbr>Definition<wbr>Request<wbr>Log<wbr>Query<wbr>Group<wbr>By<wbr>Sort</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgettoplistdefinitionrequestlogquerygroupbysort">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Toplist<wbr>Definition<wbr>Request<wbr>Log<wbr>Query<wbr>Group<wbr>By<wbr>Sort</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetToplistDefinitionRequestLogQueryGroupBySort">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetToplistDefinitionRequestLogQueryGroupBySort">output</a> API doc for this type.
 {{% /choosable %}}
@@ -36870,7 +36946,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Toplist<wbr>Definition<wbr>Request<wbr>Log<wbr>Query<wbr>Search</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgettoplistdefinitionrequestlogquerysearch">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Toplist<wbr>Definition<wbr>Request<wbr>Log<wbr>Query<wbr>Search</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetToplistDefinitionRequestLogQuerySearch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetToplistDefinitionRequestLogQuerySearch">output</a> API doc for this type.
 {{% /choosable %}}
@@ -36945,7 +37021,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Toplist<wbr>Definition<wbr>Request<wbr>Process<wbr>Query</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgettoplistdefinitionrequestprocessquery">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Toplist<wbr>Definition<wbr>Request<wbr>Process<wbr>Query</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetToplistDefinitionRequestProcessQuery">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetToplistDefinitionRequestProcessQuery">output</a> API doc for this type.
 {{% /choosable %}}
@@ -37116,7 +37192,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Toplist<wbr>Definition<wbr>Request<wbr>Style</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgettoplistdefinitionrequeststyle">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Toplist<wbr>Definition<wbr>Request<wbr>Style</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetToplistDefinitionRequestStyle">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetToplistDefinitionRequestStyle">output</a> API doc for this type.
 {{% /choosable %}}
@@ -37191,7 +37267,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Toplist<wbr>Definition<wbr>Time</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgettoplistdefinitiontime">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Toplist<wbr>Definition<wbr>Time</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetToplistDefinitionTime">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetToplistDefinitionTime">output</a> API doc for this type.
 {{% /choosable %}}
@@ -37266,7 +37342,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Trace<wbr>Service<wbr>Definition</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgettraceservicedefinition">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Trace<wbr>Service<wbr>Definition</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetTraceServiceDefinition">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetTraceServiceDefinition">output</a> API doc for this type.
 {{% /choosable %}}
@@ -37789,7 +37865,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Trace<wbr>Service<wbr>Definition<wbr>Time</h4>
+<h4 id="dashboardwidgetgroupdefinitionwidgettraceservicedefinitiontime">Dashboard<wbr>Widget<wbr>Group<wbr>Definition<wbr>Widget<wbr>Trace<wbr>Service<wbr>Definition<wbr>Time</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetGroupDefinitionWidgetTraceServiceDefinitionTime">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetGroupDefinitionWidgetTraceServiceDefinitionTime">output</a> API doc for this type.
 {{% /choosable %}}
@@ -37864,7 +37940,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Heatmap<wbr>Definition</h4>
+<h4 id="dashboardwidgetheatmapdefinition">Dashboard<wbr>Widget<wbr>Heatmap<wbr>Definition</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetHeatmapDefinition">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetHeatmapDefinition">output</a> API doc for this type.
 {{% /choosable %}}
@@ -38099,7 +38175,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Heatmap<wbr>Definition<wbr>Request</h4>
+<h4 id="dashboardwidgetheatmapdefinitionrequest">Dashboard<wbr>Widget<wbr>Heatmap<wbr>Definition<wbr>Request</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetHeatmapDefinitionRequest">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetHeatmapDefinitionRequest">output</a> API doc for this type.
 {{% /choosable %}}
@@ -38302,7 +38378,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Heatmap<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query</h4>
+<h4 id="dashboardwidgetheatmapdefinitionrequestapmquery">Dashboard<wbr>Widget<wbr>Heatmap<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetHeatmapDefinitionRequestApmQuery">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetHeatmapDefinitionRequestApmQuery">output</a> API doc for this type.
 {{% /choosable %}}
@@ -38473,7 +38549,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Heatmap<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query<wbr>Compute</h4>
+<h4 id="dashboardwidgetheatmapdefinitionrequestapmquerycompute">Dashboard<wbr>Widget<wbr>Heatmap<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query<wbr>Compute</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetHeatmapDefinitionRequestApmQueryCompute">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetHeatmapDefinitionRequestApmQueryCompute">output</a> API doc for this type.
 {{% /choosable %}}
@@ -38612,7 +38688,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Heatmap<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query<wbr>Group<wbr>By</h4>
+<h4 id="dashboardwidgetheatmapdefinitionrequestapmquerygroupby">Dashboard<wbr>Widget<wbr>Heatmap<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query<wbr>Group<wbr>By</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetHeatmapDefinitionRequestApmQueryGroupBy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetHeatmapDefinitionRequestApmQueryGroupBy">output</a> API doc for this type.
 {{% /choosable %}}
@@ -38751,7 +38827,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Heatmap<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query<wbr>Group<wbr>By<wbr>Sort</h4>
+<h4 id="dashboardwidgetheatmapdefinitionrequestapmquerygroupbysort">Dashboard<wbr>Widget<wbr>Heatmap<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query<wbr>Group<wbr>By<wbr>Sort</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetHeatmapDefinitionRequestApmQueryGroupBySort">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetHeatmapDefinitionRequestApmQueryGroupBySort">output</a> API doc for this type.
 {{% /choosable %}}
@@ -38890,7 +38966,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Heatmap<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query<wbr>Search</h4>
+<h4 id="dashboardwidgetheatmapdefinitionrequestapmquerysearch">Dashboard<wbr>Widget<wbr>Heatmap<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query<wbr>Search</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetHeatmapDefinitionRequestApmQuerySearch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetHeatmapDefinitionRequestApmQuerySearch">output</a> API doc for this type.
 {{% /choosable %}}
@@ -38965,7 +39041,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Heatmap<wbr>Definition<wbr>Request<wbr>Log<wbr>Query</h4>
+<h4 id="dashboardwidgetheatmapdefinitionrequestlogquery">Dashboard<wbr>Widget<wbr>Heatmap<wbr>Definition<wbr>Request<wbr>Log<wbr>Query</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetHeatmapDefinitionRequestLogQuery">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetHeatmapDefinitionRequestLogQuery">output</a> API doc for this type.
 {{% /choosable %}}
@@ -39136,7 +39212,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Heatmap<wbr>Definition<wbr>Request<wbr>Log<wbr>Query<wbr>Compute</h4>
+<h4 id="dashboardwidgetheatmapdefinitionrequestlogquerycompute">Dashboard<wbr>Widget<wbr>Heatmap<wbr>Definition<wbr>Request<wbr>Log<wbr>Query<wbr>Compute</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetHeatmapDefinitionRequestLogQueryCompute">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetHeatmapDefinitionRequestLogQueryCompute">output</a> API doc for this type.
 {{% /choosable %}}
@@ -39275,7 +39351,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Heatmap<wbr>Definition<wbr>Request<wbr>Log<wbr>Query<wbr>Group<wbr>By</h4>
+<h4 id="dashboardwidgetheatmapdefinitionrequestlogquerygroupby">Dashboard<wbr>Widget<wbr>Heatmap<wbr>Definition<wbr>Request<wbr>Log<wbr>Query<wbr>Group<wbr>By</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetHeatmapDefinitionRequestLogQueryGroupBy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetHeatmapDefinitionRequestLogQueryGroupBy">output</a> API doc for this type.
 {{% /choosable %}}
@@ -39414,7 +39490,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Heatmap<wbr>Definition<wbr>Request<wbr>Log<wbr>Query<wbr>Group<wbr>By<wbr>Sort</h4>
+<h4 id="dashboardwidgetheatmapdefinitionrequestlogquerygroupbysort">Dashboard<wbr>Widget<wbr>Heatmap<wbr>Definition<wbr>Request<wbr>Log<wbr>Query<wbr>Group<wbr>By<wbr>Sort</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetHeatmapDefinitionRequestLogQueryGroupBySort">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetHeatmapDefinitionRequestLogQueryGroupBySort">output</a> API doc for this type.
 {{% /choosable %}}
@@ -39553,7 +39629,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Heatmap<wbr>Definition<wbr>Request<wbr>Log<wbr>Query<wbr>Search</h4>
+<h4 id="dashboardwidgetheatmapdefinitionrequestlogquerysearch">Dashboard<wbr>Widget<wbr>Heatmap<wbr>Definition<wbr>Request<wbr>Log<wbr>Query<wbr>Search</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetHeatmapDefinitionRequestLogQuerySearch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetHeatmapDefinitionRequestLogQuerySearch">output</a> API doc for this type.
 {{% /choosable %}}
@@ -39628,7 +39704,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Heatmap<wbr>Definition<wbr>Request<wbr>Process<wbr>Query</h4>
+<h4 id="dashboardwidgetheatmapdefinitionrequestprocessquery">Dashboard<wbr>Widget<wbr>Heatmap<wbr>Definition<wbr>Request<wbr>Process<wbr>Query</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetHeatmapDefinitionRequestProcessQuery">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetHeatmapDefinitionRequestProcessQuery">output</a> API doc for this type.
 {{% /choosable %}}
@@ -39799,7 +39875,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Heatmap<wbr>Definition<wbr>Request<wbr>Style</h4>
+<h4 id="dashboardwidgetheatmapdefinitionrequeststyle">Dashboard<wbr>Widget<wbr>Heatmap<wbr>Definition<wbr>Request<wbr>Style</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetHeatmapDefinitionRequestStyle">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetHeatmapDefinitionRequestStyle">output</a> API doc for this type.
 {{% /choosable %}}
@@ -39874,7 +39950,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Heatmap<wbr>Definition<wbr>Time</h4>
+<h4 id="dashboardwidgetheatmapdefinitiontime">Dashboard<wbr>Widget<wbr>Heatmap<wbr>Definition<wbr>Time</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetHeatmapDefinitionTime">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetHeatmapDefinitionTime">output</a> API doc for this type.
 {{% /choosable %}}
@@ -39949,7 +40025,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Heatmap<wbr>Definition<wbr>Yaxis</h4>
+<h4 id="dashboardwidgetheatmapdefinitionyaxis">Dashboard<wbr>Widget<wbr>Heatmap<wbr>Definition<wbr>Yaxis</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetHeatmapDefinitionYaxis">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetHeatmapDefinitionYaxis">output</a> API doc for this type.
 {{% /choosable %}}
@@ -40152,7 +40228,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Hostmap<wbr>Definition</h4>
+<h4 id="dashboardwidgethostmapdefinition">Dashboard<wbr>Widget<wbr>Hostmap<wbr>Definition</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetHostmapDefinition">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetHostmapDefinition">output</a> API doc for this type.
 {{% /choosable %}}
@@ -40515,7 +40591,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Hostmap<wbr>Definition<wbr>Request</h4>
+<h4 id="dashboardwidgethostmapdefinitionrequest">Dashboard<wbr>Widget<wbr>Hostmap<wbr>Definition<wbr>Request</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetHostmapDefinitionRequest">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetHostmapDefinitionRequest">output</a> API doc for this type.
 {{% /choosable %}}
@@ -40622,7 +40698,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Hostmap<wbr>Definition<wbr>Request<wbr>Fill</h4>
+<h4 id="dashboardwidgethostmapdefinitionrequestfill">Dashboard<wbr>Widget<wbr>Hostmap<wbr>Definition<wbr>Request<wbr>Fill</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetHostmapDefinitionRequestFill">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetHostmapDefinitionRequestFill">output</a> API doc for this type.
 {{% /choosable %}}
@@ -40793,7 +40869,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Hostmap<wbr>Definition<wbr>Request<wbr>Fill<wbr>Apm<wbr>Query</h4>
+<h4 id="dashboardwidgethostmapdefinitionrequestfillapmquery">Dashboard<wbr>Widget<wbr>Hostmap<wbr>Definition<wbr>Request<wbr>Fill<wbr>Apm<wbr>Query</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetHostmapDefinitionRequestFillApmQuery">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetHostmapDefinitionRequestFillApmQuery">output</a> API doc for this type.
 {{% /choosable %}}
@@ -40964,7 +41040,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Hostmap<wbr>Definition<wbr>Request<wbr>Fill<wbr>Apm<wbr>Query<wbr>Compute</h4>
+<h4 id="dashboardwidgethostmapdefinitionrequestfillapmquerycompute">Dashboard<wbr>Widget<wbr>Hostmap<wbr>Definition<wbr>Request<wbr>Fill<wbr>Apm<wbr>Query<wbr>Compute</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetHostmapDefinitionRequestFillApmQueryCompute">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetHostmapDefinitionRequestFillApmQueryCompute">output</a> API doc for this type.
 {{% /choosable %}}
@@ -41103,7 +41179,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Hostmap<wbr>Definition<wbr>Request<wbr>Fill<wbr>Apm<wbr>Query<wbr>Group<wbr>By</h4>
+<h4 id="dashboardwidgethostmapdefinitionrequestfillapmquerygroupby">Dashboard<wbr>Widget<wbr>Hostmap<wbr>Definition<wbr>Request<wbr>Fill<wbr>Apm<wbr>Query<wbr>Group<wbr>By</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetHostmapDefinitionRequestFillApmQueryGroupBy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetHostmapDefinitionRequestFillApmQueryGroupBy">output</a> API doc for this type.
 {{% /choosable %}}
@@ -41242,7 +41318,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Hostmap<wbr>Definition<wbr>Request<wbr>Fill<wbr>Apm<wbr>Query<wbr>Group<wbr>By<wbr>Sort</h4>
+<h4 id="dashboardwidgethostmapdefinitionrequestfillapmquerygroupbysort">Dashboard<wbr>Widget<wbr>Hostmap<wbr>Definition<wbr>Request<wbr>Fill<wbr>Apm<wbr>Query<wbr>Group<wbr>By<wbr>Sort</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetHostmapDefinitionRequestFillApmQueryGroupBySort">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetHostmapDefinitionRequestFillApmQueryGroupBySort">output</a> API doc for this type.
 {{% /choosable %}}
@@ -41381,7 +41457,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Hostmap<wbr>Definition<wbr>Request<wbr>Fill<wbr>Apm<wbr>Query<wbr>Search</h4>
+<h4 id="dashboardwidgethostmapdefinitionrequestfillapmquerysearch">Dashboard<wbr>Widget<wbr>Hostmap<wbr>Definition<wbr>Request<wbr>Fill<wbr>Apm<wbr>Query<wbr>Search</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetHostmapDefinitionRequestFillApmQuerySearch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetHostmapDefinitionRequestFillApmQuerySearch">output</a> API doc for this type.
 {{% /choosable %}}
@@ -41456,7 +41532,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Hostmap<wbr>Definition<wbr>Request<wbr>Fill<wbr>Log<wbr>Query</h4>
+<h4 id="dashboardwidgethostmapdefinitionrequestfilllogquery">Dashboard<wbr>Widget<wbr>Hostmap<wbr>Definition<wbr>Request<wbr>Fill<wbr>Log<wbr>Query</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetHostmapDefinitionRequestFillLogQuery">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetHostmapDefinitionRequestFillLogQuery">output</a> API doc for this type.
 {{% /choosable %}}
@@ -41627,7 +41703,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Hostmap<wbr>Definition<wbr>Request<wbr>Fill<wbr>Log<wbr>Query<wbr>Compute</h4>
+<h4 id="dashboardwidgethostmapdefinitionrequestfilllogquerycompute">Dashboard<wbr>Widget<wbr>Hostmap<wbr>Definition<wbr>Request<wbr>Fill<wbr>Log<wbr>Query<wbr>Compute</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetHostmapDefinitionRequestFillLogQueryCompute">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetHostmapDefinitionRequestFillLogQueryCompute">output</a> API doc for this type.
 {{% /choosable %}}
@@ -41766,7 +41842,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Hostmap<wbr>Definition<wbr>Request<wbr>Fill<wbr>Log<wbr>Query<wbr>Group<wbr>By</h4>
+<h4 id="dashboardwidgethostmapdefinitionrequestfilllogquerygroupby">Dashboard<wbr>Widget<wbr>Hostmap<wbr>Definition<wbr>Request<wbr>Fill<wbr>Log<wbr>Query<wbr>Group<wbr>By</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetHostmapDefinitionRequestFillLogQueryGroupBy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetHostmapDefinitionRequestFillLogQueryGroupBy">output</a> API doc for this type.
 {{% /choosable %}}
@@ -41905,7 +41981,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Hostmap<wbr>Definition<wbr>Request<wbr>Fill<wbr>Log<wbr>Query<wbr>Group<wbr>By<wbr>Sort</h4>
+<h4 id="dashboardwidgethostmapdefinitionrequestfilllogquerygroupbysort">Dashboard<wbr>Widget<wbr>Hostmap<wbr>Definition<wbr>Request<wbr>Fill<wbr>Log<wbr>Query<wbr>Group<wbr>By<wbr>Sort</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetHostmapDefinitionRequestFillLogQueryGroupBySort">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetHostmapDefinitionRequestFillLogQueryGroupBySort">output</a> API doc for this type.
 {{% /choosable %}}
@@ -42044,7 +42120,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Hostmap<wbr>Definition<wbr>Request<wbr>Fill<wbr>Log<wbr>Query<wbr>Search</h4>
+<h4 id="dashboardwidgethostmapdefinitionrequestfilllogquerysearch">Dashboard<wbr>Widget<wbr>Hostmap<wbr>Definition<wbr>Request<wbr>Fill<wbr>Log<wbr>Query<wbr>Search</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetHostmapDefinitionRequestFillLogQuerySearch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetHostmapDefinitionRequestFillLogQuerySearch">output</a> API doc for this type.
 {{% /choosable %}}
@@ -42119,7 +42195,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Hostmap<wbr>Definition<wbr>Request<wbr>Fill<wbr>Process<wbr>Query</h4>
+<h4 id="dashboardwidgethostmapdefinitionrequestfillprocessquery">Dashboard<wbr>Widget<wbr>Hostmap<wbr>Definition<wbr>Request<wbr>Fill<wbr>Process<wbr>Query</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetHostmapDefinitionRequestFillProcessQuery">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetHostmapDefinitionRequestFillProcessQuery">output</a> API doc for this type.
 {{% /choosable %}}
@@ -42290,7 +42366,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Hostmap<wbr>Definition<wbr>Request<wbr>Size</h4>
+<h4 id="dashboardwidgethostmapdefinitionrequestsize">Dashboard<wbr>Widget<wbr>Hostmap<wbr>Definition<wbr>Request<wbr>Size</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetHostmapDefinitionRequestSize">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetHostmapDefinitionRequestSize">output</a> API doc for this type.
 {{% /choosable %}}
@@ -42461,7 +42537,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Hostmap<wbr>Definition<wbr>Request<wbr>Size<wbr>Apm<wbr>Query</h4>
+<h4 id="dashboardwidgethostmapdefinitionrequestsizeapmquery">Dashboard<wbr>Widget<wbr>Hostmap<wbr>Definition<wbr>Request<wbr>Size<wbr>Apm<wbr>Query</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetHostmapDefinitionRequestSizeApmQuery">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetHostmapDefinitionRequestSizeApmQuery">output</a> API doc for this type.
 {{% /choosable %}}
@@ -42632,7 +42708,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Hostmap<wbr>Definition<wbr>Request<wbr>Size<wbr>Apm<wbr>Query<wbr>Compute</h4>
+<h4 id="dashboardwidgethostmapdefinitionrequestsizeapmquerycompute">Dashboard<wbr>Widget<wbr>Hostmap<wbr>Definition<wbr>Request<wbr>Size<wbr>Apm<wbr>Query<wbr>Compute</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetHostmapDefinitionRequestSizeApmQueryCompute">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetHostmapDefinitionRequestSizeApmQueryCompute">output</a> API doc for this type.
 {{% /choosable %}}
@@ -42771,7 +42847,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Hostmap<wbr>Definition<wbr>Request<wbr>Size<wbr>Apm<wbr>Query<wbr>Group<wbr>By</h4>
+<h4 id="dashboardwidgethostmapdefinitionrequestsizeapmquerygroupby">Dashboard<wbr>Widget<wbr>Hostmap<wbr>Definition<wbr>Request<wbr>Size<wbr>Apm<wbr>Query<wbr>Group<wbr>By</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetHostmapDefinitionRequestSizeApmQueryGroupBy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetHostmapDefinitionRequestSizeApmQueryGroupBy">output</a> API doc for this type.
 {{% /choosable %}}
@@ -42910,7 +42986,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Hostmap<wbr>Definition<wbr>Request<wbr>Size<wbr>Apm<wbr>Query<wbr>Group<wbr>By<wbr>Sort</h4>
+<h4 id="dashboardwidgethostmapdefinitionrequestsizeapmquerygroupbysort">Dashboard<wbr>Widget<wbr>Hostmap<wbr>Definition<wbr>Request<wbr>Size<wbr>Apm<wbr>Query<wbr>Group<wbr>By<wbr>Sort</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetHostmapDefinitionRequestSizeApmQueryGroupBySort">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetHostmapDefinitionRequestSizeApmQueryGroupBySort">output</a> API doc for this type.
 {{% /choosable %}}
@@ -43049,7 +43125,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Hostmap<wbr>Definition<wbr>Request<wbr>Size<wbr>Apm<wbr>Query<wbr>Search</h4>
+<h4 id="dashboardwidgethostmapdefinitionrequestsizeapmquerysearch">Dashboard<wbr>Widget<wbr>Hostmap<wbr>Definition<wbr>Request<wbr>Size<wbr>Apm<wbr>Query<wbr>Search</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetHostmapDefinitionRequestSizeApmQuerySearch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetHostmapDefinitionRequestSizeApmQuerySearch">output</a> API doc for this type.
 {{% /choosable %}}
@@ -43124,7 +43200,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Hostmap<wbr>Definition<wbr>Request<wbr>Size<wbr>Log<wbr>Query</h4>
+<h4 id="dashboardwidgethostmapdefinitionrequestsizelogquery">Dashboard<wbr>Widget<wbr>Hostmap<wbr>Definition<wbr>Request<wbr>Size<wbr>Log<wbr>Query</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetHostmapDefinitionRequestSizeLogQuery">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetHostmapDefinitionRequestSizeLogQuery">output</a> API doc for this type.
 {{% /choosable %}}
@@ -43295,7 +43371,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Hostmap<wbr>Definition<wbr>Request<wbr>Size<wbr>Log<wbr>Query<wbr>Compute</h4>
+<h4 id="dashboardwidgethostmapdefinitionrequestsizelogquerycompute">Dashboard<wbr>Widget<wbr>Hostmap<wbr>Definition<wbr>Request<wbr>Size<wbr>Log<wbr>Query<wbr>Compute</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetHostmapDefinitionRequestSizeLogQueryCompute">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetHostmapDefinitionRequestSizeLogQueryCompute">output</a> API doc for this type.
 {{% /choosable %}}
@@ -43434,7 +43510,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Hostmap<wbr>Definition<wbr>Request<wbr>Size<wbr>Log<wbr>Query<wbr>Group<wbr>By</h4>
+<h4 id="dashboardwidgethostmapdefinitionrequestsizelogquerygroupby">Dashboard<wbr>Widget<wbr>Hostmap<wbr>Definition<wbr>Request<wbr>Size<wbr>Log<wbr>Query<wbr>Group<wbr>By</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetHostmapDefinitionRequestSizeLogQueryGroupBy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetHostmapDefinitionRequestSizeLogQueryGroupBy">output</a> API doc for this type.
 {{% /choosable %}}
@@ -43573,7 +43649,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Hostmap<wbr>Definition<wbr>Request<wbr>Size<wbr>Log<wbr>Query<wbr>Group<wbr>By<wbr>Sort</h4>
+<h4 id="dashboardwidgethostmapdefinitionrequestsizelogquerygroupbysort">Dashboard<wbr>Widget<wbr>Hostmap<wbr>Definition<wbr>Request<wbr>Size<wbr>Log<wbr>Query<wbr>Group<wbr>By<wbr>Sort</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetHostmapDefinitionRequestSizeLogQueryGroupBySort">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetHostmapDefinitionRequestSizeLogQueryGroupBySort">output</a> API doc for this type.
 {{% /choosable %}}
@@ -43712,7 +43788,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Hostmap<wbr>Definition<wbr>Request<wbr>Size<wbr>Log<wbr>Query<wbr>Search</h4>
+<h4 id="dashboardwidgethostmapdefinitionrequestsizelogquerysearch">Dashboard<wbr>Widget<wbr>Hostmap<wbr>Definition<wbr>Request<wbr>Size<wbr>Log<wbr>Query<wbr>Search</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetHostmapDefinitionRequestSizeLogQuerySearch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetHostmapDefinitionRequestSizeLogQuerySearch">output</a> API doc for this type.
 {{% /choosable %}}
@@ -43787,7 +43863,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Hostmap<wbr>Definition<wbr>Request<wbr>Size<wbr>Process<wbr>Query</h4>
+<h4 id="dashboardwidgethostmapdefinitionrequestsizeprocessquery">Dashboard<wbr>Widget<wbr>Hostmap<wbr>Definition<wbr>Request<wbr>Size<wbr>Process<wbr>Query</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetHostmapDefinitionRequestSizeProcessQuery">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetHostmapDefinitionRequestSizeProcessQuery">output</a> API doc for this type.
 {{% /choosable %}}
@@ -43958,7 +44034,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Hostmap<wbr>Definition<wbr>Style</h4>
+<h4 id="dashboardwidgethostmapdefinitionstyle">Dashboard<wbr>Widget<wbr>Hostmap<wbr>Definition<wbr>Style</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetHostmapDefinitionStyle">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetHostmapDefinitionStyle">output</a> API doc for this type.
 {{% /choosable %}}
@@ -44129,7 +44205,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Iframe<wbr>Definition</h4>
+<h4 id="dashboardwidgetiframedefinition">Dashboard<wbr>Widget<wbr>Iframe<wbr>Definition</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetIframeDefinition">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetIframeDefinition">output</a> API doc for this type.
 {{% /choosable %}}
@@ -44204,7 +44280,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Image<wbr>Definition</h4>
+<h4 id="dashboardwidgetimagedefinition">Dashboard<wbr>Widget<wbr>Image<wbr>Definition</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetImageDefinition">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetImageDefinition">output</a> API doc for this type.
 {{% /choosable %}}
@@ -44343,7 +44419,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Layout</h4>
+<h4 id="dashboardwidgetlayout">Dashboard<wbr>Widget<wbr>Layout</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetLayout">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetLayout">output</a> API doc for this type.
 {{% /choosable %}}
@@ -44514,7 +44590,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Log<wbr>Stream<wbr>Definition</h4>
+<h4 id="dashboardwidgetlogstreamdefinition">Dashboard<wbr>Widget<wbr>Log<wbr>Stream<wbr>Definition</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetLogStreamDefinition">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetLogStreamDefinition">output</a> API doc for this type.
 {{% /choosable %}}
@@ -44781,7 +44857,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Log<wbr>Stream<wbr>Definition<wbr>Time</h4>
+<h4 id="dashboardwidgetlogstreamdefinitiontime">Dashboard<wbr>Widget<wbr>Log<wbr>Stream<wbr>Definition<wbr>Time</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetLogStreamDefinitionTime">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetLogStreamDefinitionTime">output</a> API doc for this type.
 {{% /choosable %}}
@@ -44856,7 +44932,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Manage<wbr>Status<wbr>Definition</h4>
+<h4 id="dashboardwidgetmanagestatusdefinition">Dashboard<wbr>Widget<wbr>Manage<wbr>Status<wbr>Definition</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetManageStatusDefinition">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetManageStatusDefinition">output</a> API doc for this type.
 {{% /choosable %}}
@@ -45283,7 +45359,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Note<wbr>Definition</h4>
+<h4 id="dashboardwidgetnotedefinition">Dashboard<wbr>Widget<wbr>Note<wbr>Definition</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetNoteDefinition">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetNoteDefinition">output</a> API doc for this type.
 {{% /choosable %}}
@@ -45550,7 +45626,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Query<wbr>Table<wbr>Definition</h4>
+<h4 id="dashboardwidgetquerytabledefinition">Dashboard<wbr>Widget<wbr>Query<wbr>Table<wbr>Definition</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetQueryTableDefinition">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetQueryTableDefinition">output</a> API doc for this type.
 {{% /choosable %}}
@@ -45753,7 +45829,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Query<wbr>Table<wbr>Definition<wbr>Request</h4>
+<h4 id="dashboardwidgetquerytabledefinitionrequest">Dashboard<wbr>Widget<wbr>Query<wbr>Table<wbr>Definition<wbr>Request</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetQueryTableDefinitionRequest">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetQueryTableDefinitionRequest">output</a> API doc for this type.
 {{% /choosable %}}
@@ -46084,7 +46160,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Query<wbr>Table<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query</h4>
+<h4 id="dashboardwidgetquerytabledefinitionrequestapmquery">Dashboard<wbr>Widget<wbr>Query<wbr>Table<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetQueryTableDefinitionRequestApmQuery">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetQueryTableDefinitionRequestApmQuery">output</a> API doc for this type.
 {{% /choosable %}}
@@ -46255,7 +46331,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Query<wbr>Table<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query<wbr>Compute</h4>
+<h4 id="dashboardwidgetquerytabledefinitionrequestapmquerycompute">Dashboard<wbr>Widget<wbr>Query<wbr>Table<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query<wbr>Compute</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetQueryTableDefinitionRequestApmQueryCompute">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetQueryTableDefinitionRequestApmQueryCompute">output</a> API doc for this type.
 {{% /choosable %}}
@@ -46394,7 +46470,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Query<wbr>Table<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query<wbr>Group<wbr>By</h4>
+<h4 id="dashboardwidgetquerytabledefinitionrequestapmquerygroupby">Dashboard<wbr>Widget<wbr>Query<wbr>Table<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query<wbr>Group<wbr>By</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetQueryTableDefinitionRequestApmQueryGroupBy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetQueryTableDefinitionRequestApmQueryGroupBy">output</a> API doc for this type.
 {{% /choosable %}}
@@ -46533,7 +46609,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Query<wbr>Table<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query<wbr>Group<wbr>By<wbr>Sort</h4>
+<h4 id="dashboardwidgetquerytabledefinitionrequestapmquerygroupbysort">Dashboard<wbr>Widget<wbr>Query<wbr>Table<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query<wbr>Group<wbr>By<wbr>Sort</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetQueryTableDefinitionRequestApmQueryGroupBySort">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetQueryTableDefinitionRequestApmQueryGroupBySort">output</a> API doc for this type.
 {{% /choosable %}}
@@ -46672,7 +46748,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Query<wbr>Table<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query<wbr>Search</h4>
+<h4 id="dashboardwidgetquerytabledefinitionrequestapmquerysearch">Dashboard<wbr>Widget<wbr>Query<wbr>Table<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query<wbr>Search</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetQueryTableDefinitionRequestApmQuerySearch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetQueryTableDefinitionRequestApmQuerySearch">output</a> API doc for this type.
 {{% /choosable %}}
@@ -46747,7 +46823,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Query<wbr>Table<wbr>Definition<wbr>Request<wbr>Conditional<wbr>Format</h4>
+<h4 id="dashboardwidgetquerytabledefinitionrequestconditionalformat">Dashboard<wbr>Widget<wbr>Query<wbr>Table<wbr>Definition<wbr>Request<wbr>Conditional<wbr>Format</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetQueryTableDefinitionRequestConditionalFormat">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetQueryTableDefinitionRequestConditionalFormat">output</a> API doc for this type.
 {{% /choosable %}}
@@ -47046,7 +47122,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Query<wbr>Table<wbr>Definition<wbr>Request<wbr>Log<wbr>Query</h4>
+<h4 id="dashboardwidgetquerytabledefinitionrequestlogquery">Dashboard<wbr>Widget<wbr>Query<wbr>Table<wbr>Definition<wbr>Request<wbr>Log<wbr>Query</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetQueryTableDefinitionRequestLogQuery">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetQueryTableDefinitionRequestLogQuery">output</a> API doc for this type.
 {{% /choosable %}}
@@ -47217,7 +47293,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Query<wbr>Table<wbr>Definition<wbr>Request<wbr>Log<wbr>Query<wbr>Compute</h4>
+<h4 id="dashboardwidgetquerytabledefinitionrequestlogquerycompute">Dashboard<wbr>Widget<wbr>Query<wbr>Table<wbr>Definition<wbr>Request<wbr>Log<wbr>Query<wbr>Compute</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetQueryTableDefinitionRequestLogQueryCompute">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetQueryTableDefinitionRequestLogQueryCompute">output</a> API doc for this type.
 {{% /choosable %}}
@@ -47356,7 +47432,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Query<wbr>Table<wbr>Definition<wbr>Request<wbr>Log<wbr>Query<wbr>Group<wbr>By</h4>
+<h4 id="dashboardwidgetquerytabledefinitionrequestlogquerygroupby">Dashboard<wbr>Widget<wbr>Query<wbr>Table<wbr>Definition<wbr>Request<wbr>Log<wbr>Query<wbr>Group<wbr>By</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetQueryTableDefinitionRequestLogQueryGroupBy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetQueryTableDefinitionRequestLogQueryGroupBy">output</a> API doc for this type.
 {{% /choosable %}}
@@ -47495,7 +47571,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Query<wbr>Table<wbr>Definition<wbr>Request<wbr>Log<wbr>Query<wbr>Group<wbr>By<wbr>Sort</h4>
+<h4 id="dashboardwidgetquerytabledefinitionrequestlogquerygroupbysort">Dashboard<wbr>Widget<wbr>Query<wbr>Table<wbr>Definition<wbr>Request<wbr>Log<wbr>Query<wbr>Group<wbr>By<wbr>Sort</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetQueryTableDefinitionRequestLogQueryGroupBySort">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetQueryTableDefinitionRequestLogQueryGroupBySort">output</a> API doc for this type.
 {{% /choosable %}}
@@ -47634,7 +47710,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Query<wbr>Table<wbr>Definition<wbr>Request<wbr>Log<wbr>Query<wbr>Search</h4>
+<h4 id="dashboardwidgetquerytabledefinitionrequestlogquerysearch">Dashboard<wbr>Widget<wbr>Query<wbr>Table<wbr>Definition<wbr>Request<wbr>Log<wbr>Query<wbr>Search</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetQueryTableDefinitionRequestLogQuerySearch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetQueryTableDefinitionRequestLogQuerySearch">output</a> API doc for this type.
 {{% /choosable %}}
@@ -47709,7 +47785,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Query<wbr>Table<wbr>Definition<wbr>Request<wbr>Process<wbr>Query</h4>
+<h4 id="dashboardwidgetquerytabledefinitionrequestprocessquery">Dashboard<wbr>Widget<wbr>Query<wbr>Table<wbr>Definition<wbr>Request<wbr>Process<wbr>Query</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetQueryTableDefinitionRequestProcessQuery">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetQueryTableDefinitionRequestProcessQuery">output</a> API doc for this type.
 {{% /choosable %}}
@@ -47880,7 +47956,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Query<wbr>Table<wbr>Definition<wbr>Time</h4>
+<h4 id="dashboardwidgetquerytabledefinitiontime">Dashboard<wbr>Widget<wbr>Query<wbr>Table<wbr>Definition<wbr>Time</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetQueryTableDefinitionTime">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetQueryTableDefinitionTime">output</a> API doc for this type.
 {{% /choosable %}}
@@ -47955,7 +48031,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Query<wbr>Value<wbr>Definition</h4>
+<h4 id="dashboardwidgetqueryvaluedefinition">Dashboard<wbr>Widget<wbr>Query<wbr>Value<wbr>Definition</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetQueryValueDefinition">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetQueryValueDefinition">output</a> API doc for this type.
 {{% /choosable %}}
@@ -48286,7 +48362,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Query<wbr>Value<wbr>Definition<wbr>Request</h4>
+<h4 id="dashboardwidgetqueryvaluedefinitionrequest">Dashboard<wbr>Widget<wbr>Query<wbr>Value<wbr>Definition<wbr>Request</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetQueryValueDefinitionRequest">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetQueryValueDefinitionRequest">output</a> API doc for this type.
 {{% /choosable %}}
@@ -48521,7 +48597,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Query<wbr>Value<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query</h4>
+<h4 id="dashboardwidgetqueryvaluedefinitionrequestapmquery">Dashboard<wbr>Widget<wbr>Query<wbr>Value<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetQueryValueDefinitionRequestApmQuery">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetQueryValueDefinitionRequestApmQuery">output</a> API doc for this type.
 {{% /choosable %}}
@@ -48692,7 +48768,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Query<wbr>Value<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query<wbr>Compute</h4>
+<h4 id="dashboardwidgetqueryvaluedefinitionrequestapmquerycompute">Dashboard<wbr>Widget<wbr>Query<wbr>Value<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query<wbr>Compute</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetQueryValueDefinitionRequestApmQueryCompute">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetQueryValueDefinitionRequestApmQueryCompute">output</a> API doc for this type.
 {{% /choosable %}}
@@ -48831,7 +48907,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Query<wbr>Value<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query<wbr>Group<wbr>By</h4>
+<h4 id="dashboardwidgetqueryvaluedefinitionrequestapmquerygroupby">Dashboard<wbr>Widget<wbr>Query<wbr>Value<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query<wbr>Group<wbr>By</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetQueryValueDefinitionRequestApmQueryGroupBy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetQueryValueDefinitionRequestApmQueryGroupBy">output</a> API doc for this type.
 {{% /choosable %}}
@@ -48970,7 +49046,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Query<wbr>Value<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query<wbr>Group<wbr>By<wbr>Sort</h4>
+<h4 id="dashboardwidgetqueryvaluedefinitionrequestapmquerygroupbysort">Dashboard<wbr>Widget<wbr>Query<wbr>Value<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query<wbr>Group<wbr>By<wbr>Sort</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetQueryValueDefinitionRequestApmQueryGroupBySort">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetQueryValueDefinitionRequestApmQueryGroupBySort">output</a> API doc for this type.
 {{% /choosable %}}
@@ -49109,7 +49185,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Query<wbr>Value<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query<wbr>Search</h4>
+<h4 id="dashboardwidgetqueryvaluedefinitionrequestapmquerysearch">Dashboard<wbr>Widget<wbr>Query<wbr>Value<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query<wbr>Search</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetQueryValueDefinitionRequestApmQuerySearch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetQueryValueDefinitionRequestApmQuerySearch">output</a> API doc for this type.
 {{% /choosable %}}
@@ -49184,7 +49260,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Query<wbr>Value<wbr>Definition<wbr>Request<wbr>Conditional<wbr>Format</h4>
+<h4 id="dashboardwidgetqueryvaluedefinitionrequestconditionalformat">Dashboard<wbr>Widget<wbr>Query<wbr>Value<wbr>Definition<wbr>Request<wbr>Conditional<wbr>Format</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetQueryValueDefinitionRequestConditionalFormat">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetQueryValueDefinitionRequestConditionalFormat">output</a> API doc for this type.
 {{% /choosable %}}
@@ -49483,7 +49559,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Query<wbr>Value<wbr>Definition<wbr>Request<wbr>Log<wbr>Query</h4>
+<h4 id="dashboardwidgetqueryvaluedefinitionrequestlogquery">Dashboard<wbr>Widget<wbr>Query<wbr>Value<wbr>Definition<wbr>Request<wbr>Log<wbr>Query</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetQueryValueDefinitionRequestLogQuery">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetQueryValueDefinitionRequestLogQuery">output</a> API doc for this type.
 {{% /choosable %}}
@@ -49654,7 +49730,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Query<wbr>Value<wbr>Definition<wbr>Request<wbr>Log<wbr>Query<wbr>Compute</h4>
+<h4 id="dashboardwidgetqueryvaluedefinitionrequestlogquerycompute">Dashboard<wbr>Widget<wbr>Query<wbr>Value<wbr>Definition<wbr>Request<wbr>Log<wbr>Query<wbr>Compute</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetQueryValueDefinitionRequestLogQueryCompute">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetQueryValueDefinitionRequestLogQueryCompute">output</a> API doc for this type.
 {{% /choosable %}}
@@ -49793,7 +49869,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Query<wbr>Value<wbr>Definition<wbr>Request<wbr>Log<wbr>Query<wbr>Group<wbr>By</h4>
+<h4 id="dashboardwidgetqueryvaluedefinitionrequestlogquerygroupby">Dashboard<wbr>Widget<wbr>Query<wbr>Value<wbr>Definition<wbr>Request<wbr>Log<wbr>Query<wbr>Group<wbr>By</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetQueryValueDefinitionRequestLogQueryGroupBy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetQueryValueDefinitionRequestLogQueryGroupBy">output</a> API doc for this type.
 {{% /choosable %}}
@@ -49932,7 +50008,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Query<wbr>Value<wbr>Definition<wbr>Request<wbr>Log<wbr>Query<wbr>Group<wbr>By<wbr>Sort</h4>
+<h4 id="dashboardwidgetqueryvaluedefinitionrequestlogquerygroupbysort">Dashboard<wbr>Widget<wbr>Query<wbr>Value<wbr>Definition<wbr>Request<wbr>Log<wbr>Query<wbr>Group<wbr>By<wbr>Sort</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetQueryValueDefinitionRequestLogQueryGroupBySort">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetQueryValueDefinitionRequestLogQueryGroupBySort">output</a> API doc for this type.
 {{% /choosable %}}
@@ -50071,7 +50147,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Query<wbr>Value<wbr>Definition<wbr>Request<wbr>Log<wbr>Query<wbr>Search</h4>
+<h4 id="dashboardwidgetqueryvaluedefinitionrequestlogquerysearch">Dashboard<wbr>Widget<wbr>Query<wbr>Value<wbr>Definition<wbr>Request<wbr>Log<wbr>Query<wbr>Search</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetQueryValueDefinitionRequestLogQuerySearch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetQueryValueDefinitionRequestLogQuerySearch">output</a> API doc for this type.
 {{% /choosable %}}
@@ -50146,7 +50222,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Query<wbr>Value<wbr>Definition<wbr>Request<wbr>Process<wbr>Query</h4>
+<h4 id="dashboardwidgetqueryvaluedefinitionrequestprocessquery">Dashboard<wbr>Widget<wbr>Query<wbr>Value<wbr>Definition<wbr>Request<wbr>Process<wbr>Query</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetQueryValueDefinitionRequestProcessQuery">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetQueryValueDefinitionRequestProcessQuery">output</a> API doc for this type.
 {{% /choosable %}}
@@ -50317,7 +50393,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Query<wbr>Value<wbr>Definition<wbr>Time</h4>
+<h4 id="dashboardwidgetqueryvaluedefinitiontime">Dashboard<wbr>Widget<wbr>Query<wbr>Value<wbr>Definition<wbr>Time</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetQueryValueDefinitionTime">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetQueryValueDefinitionTime">output</a> API doc for this type.
 {{% /choosable %}}
@@ -50392,7 +50468,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Scatterplot<wbr>Definition</h4>
+<h4 id="dashboardwidgetscatterplotdefinition">Dashboard<wbr>Widget<wbr>Scatterplot<wbr>Definition</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetScatterplotDefinition">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetScatterplotDefinition">output</a> API doc for this type.
 {{% /choosable %}}
@@ -50691,7 +50767,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Scatterplot<wbr>Definition<wbr>Request</h4>
+<h4 id="dashboardwidgetscatterplotdefinitionrequest">Dashboard<wbr>Widget<wbr>Scatterplot<wbr>Definition<wbr>Request</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetScatterplotDefinitionRequest">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetScatterplotDefinitionRequest">output</a> API doc for this type.
 {{% /choosable %}}
@@ -50798,7 +50874,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Scatterplot<wbr>Definition<wbr>Request<wbr>X</h4>
+<h4 id="dashboardwidgetscatterplotdefinitionrequestx">Dashboard<wbr>Widget<wbr>Scatterplot<wbr>Definition<wbr>Request<wbr>X</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetScatterplotDefinitionRequestX">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetScatterplotDefinitionRequestX">output</a> API doc for this type.
 {{% /choosable %}}
@@ -51001,7 +51077,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Scatterplot<wbr>Definition<wbr>Request<wbr>XApm<wbr>Query</h4>
+<h4 id="dashboardwidgetscatterplotdefinitionrequestxapmquery">Dashboard<wbr>Widget<wbr>Scatterplot<wbr>Definition<wbr>Request<wbr>XApm<wbr>Query</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetScatterplotDefinitionRequestXApmQuery">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetScatterplotDefinitionRequestXApmQuery">output</a> API doc for this type.
 {{% /choosable %}}
@@ -51172,7 +51248,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Scatterplot<wbr>Definition<wbr>Request<wbr>XApm<wbr>Query<wbr>Compute</h4>
+<h4 id="dashboardwidgetscatterplotdefinitionrequestxapmquerycompute">Dashboard<wbr>Widget<wbr>Scatterplot<wbr>Definition<wbr>Request<wbr>XApm<wbr>Query<wbr>Compute</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetScatterplotDefinitionRequestXApmQueryCompute">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetScatterplotDefinitionRequestXApmQueryCompute">output</a> API doc for this type.
 {{% /choosable %}}
@@ -51311,7 +51387,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Scatterplot<wbr>Definition<wbr>Request<wbr>XApm<wbr>Query<wbr>Group<wbr>By</h4>
+<h4 id="dashboardwidgetscatterplotdefinitionrequestxapmquerygroupby">Dashboard<wbr>Widget<wbr>Scatterplot<wbr>Definition<wbr>Request<wbr>XApm<wbr>Query<wbr>Group<wbr>By</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetScatterplotDefinitionRequestXApmQueryGroupBy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetScatterplotDefinitionRequestXApmQueryGroupBy">output</a> API doc for this type.
 {{% /choosable %}}
@@ -51450,7 +51526,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Scatterplot<wbr>Definition<wbr>Request<wbr>XApm<wbr>Query<wbr>Group<wbr>By<wbr>Sort</h4>
+<h4 id="dashboardwidgetscatterplotdefinitionrequestxapmquerygroupbysort">Dashboard<wbr>Widget<wbr>Scatterplot<wbr>Definition<wbr>Request<wbr>XApm<wbr>Query<wbr>Group<wbr>By<wbr>Sort</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetScatterplotDefinitionRequestXApmQueryGroupBySort">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetScatterplotDefinitionRequestXApmQueryGroupBySort">output</a> API doc for this type.
 {{% /choosable %}}
@@ -51589,7 +51665,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Scatterplot<wbr>Definition<wbr>Request<wbr>XApm<wbr>Query<wbr>Search</h4>
+<h4 id="dashboardwidgetscatterplotdefinitionrequestxapmquerysearch">Dashboard<wbr>Widget<wbr>Scatterplot<wbr>Definition<wbr>Request<wbr>XApm<wbr>Query<wbr>Search</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetScatterplotDefinitionRequestXApmQuerySearch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetScatterplotDefinitionRequestXApmQuerySearch">output</a> API doc for this type.
 {{% /choosable %}}
@@ -51664,7 +51740,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Scatterplot<wbr>Definition<wbr>Request<wbr>XLog<wbr>Query</h4>
+<h4 id="dashboardwidgetscatterplotdefinitionrequestxlogquery">Dashboard<wbr>Widget<wbr>Scatterplot<wbr>Definition<wbr>Request<wbr>XLog<wbr>Query</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetScatterplotDefinitionRequestXLogQuery">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetScatterplotDefinitionRequestXLogQuery">output</a> API doc for this type.
 {{% /choosable %}}
@@ -51835,7 +51911,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Scatterplot<wbr>Definition<wbr>Request<wbr>XLog<wbr>Query<wbr>Compute</h4>
+<h4 id="dashboardwidgetscatterplotdefinitionrequestxlogquerycompute">Dashboard<wbr>Widget<wbr>Scatterplot<wbr>Definition<wbr>Request<wbr>XLog<wbr>Query<wbr>Compute</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetScatterplotDefinitionRequestXLogQueryCompute">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetScatterplotDefinitionRequestXLogQueryCompute">output</a> API doc for this type.
 {{% /choosable %}}
@@ -51974,7 +52050,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Scatterplot<wbr>Definition<wbr>Request<wbr>XLog<wbr>Query<wbr>Group<wbr>By</h4>
+<h4 id="dashboardwidgetscatterplotdefinitionrequestxlogquerygroupby">Dashboard<wbr>Widget<wbr>Scatterplot<wbr>Definition<wbr>Request<wbr>XLog<wbr>Query<wbr>Group<wbr>By</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetScatterplotDefinitionRequestXLogQueryGroupBy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetScatterplotDefinitionRequestXLogQueryGroupBy">output</a> API doc for this type.
 {{% /choosable %}}
@@ -52113,7 +52189,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Scatterplot<wbr>Definition<wbr>Request<wbr>XLog<wbr>Query<wbr>Group<wbr>By<wbr>Sort</h4>
+<h4 id="dashboardwidgetscatterplotdefinitionrequestxlogquerygroupbysort">Dashboard<wbr>Widget<wbr>Scatterplot<wbr>Definition<wbr>Request<wbr>XLog<wbr>Query<wbr>Group<wbr>By<wbr>Sort</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetScatterplotDefinitionRequestXLogQueryGroupBySort">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetScatterplotDefinitionRequestXLogQueryGroupBySort">output</a> API doc for this type.
 {{% /choosable %}}
@@ -52252,7 +52328,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Scatterplot<wbr>Definition<wbr>Request<wbr>XLog<wbr>Query<wbr>Search</h4>
+<h4 id="dashboardwidgetscatterplotdefinitionrequestxlogquerysearch">Dashboard<wbr>Widget<wbr>Scatterplot<wbr>Definition<wbr>Request<wbr>XLog<wbr>Query<wbr>Search</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetScatterplotDefinitionRequestXLogQuerySearch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetScatterplotDefinitionRequestXLogQuerySearch">output</a> API doc for this type.
 {{% /choosable %}}
@@ -52327,7 +52403,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Scatterplot<wbr>Definition<wbr>Request<wbr>XProcess<wbr>Query</h4>
+<h4 id="dashboardwidgetscatterplotdefinitionrequestxprocessquery">Dashboard<wbr>Widget<wbr>Scatterplot<wbr>Definition<wbr>Request<wbr>XProcess<wbr>Query</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetScatterplotDefinitionRequestXProcessQuery">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetScatterplotDefinitionRequestXProcessQuery">output</a> API doc for this type.
 {{% /choosable %}}
@@ -52498,7 +52574,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Scatterplot<wbr>Definition<wbr>Request<wbr>Y</h4>
+<h4 id="dashboardwidgetscatterplotdefinitionrequesty">Dashboard<wbr>Widget<wbr>Scatterplot<wbr>Definition<wbr>Request<wbr>Y</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetScatterplotDefinitionRequestY">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetScatterplotDefinitionRequestY">output</a> API doc for this type.
 {{% /choosable %}}
@@ -52701,7 +52777,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Scatterplot<wbr>Definition<wbr>Request<wbr>YApm<wbr>Query</h4>
+<h4 id="dashboardwidgetscatterplotdefinitionrequestyapmquery">Dashboard<wbr>Widget<wbr>Scatterplot<wbr>Definition<wbr>Request<wbr>YApm<wbr>Query</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetScatterplotDefinitionRequestYApmQuery">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetScatterplotDefinitionRequestYApmQuery">output</a> API doc for this type.
 {{% /choosable %}}
@@ -52872,7 +52948,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Scatterplot<wbr>Definition<wbr>Request<wbr>YApm<wbr>Query<wbr>Compute</h4>
+<h4 id="dashboardwidgetscatterplotdefinitionrequestyapmquerycompute">Dashboard<wbr>Widget<wbr>Scatterplot<wbr>Definition<wbr>Request<wbr>YApm<wbr>Query<wbr>Compute</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetScatterplotDefinitionRequestYApmQueryCompute">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetScatterplotDefinitionRequestYApmQueryCompute">output</a> API doc for this type.
 {{% /choosable %}}
@@ -53011,7 +53087,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Scatterplot<wbr>Definition<wbr>Request<wbr>YApm<wbr>Query<wbr>Group<wbr>By</h4>
+<h4 id="dashboardwidgetscatterplotdefinitionrequestyapmquerygroupby">Dashboard<wbr>Widget<wbr>Scatterplot<wbr>Definition<wbr>Request<wbr>YApm<wbr>Query<wbr>Group<wbr>By</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetScatterplotDefinitionRequestYApmQueryGroupBy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetScatterplotDefinitionRequestYApmQueryGroupBy">output</a> API doc for this type.
 {{% /choosable %}}
@@ -53150,7 +53226,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Scatterplot<wbr>Definition<wbr>Request<wbr>YApm<wbr>Query<wbr>Group<wbr>By<wbr>Sort</h4>
+<h4 id="dashboardwidgetscatterplotdefinitionrequestyapmquerygroupbysort">Dashboard<wbr>Widget<wbr>Scatterplot<wbr>Definition<wbr>Request<wbr>YApm<wbr>Query<wbr>Group<wbr>By<wbr>Sort</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetScatterplotDefinitionRequestYApmQueryGroupBySort">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetScatterplotDefinitionRequestYApmQueryGroupBySort">output</a> API doc for this type.
 {{% /choosable %}}
@@ -53289,7 +53365,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Scatterplot<wbr>Definition<wbr>Request<wbr>YApm<wbr>Query<wbr>Search</h4>
+<h4 id="dashboardwidgetscatterplotdefinitionrequestyapmquerysearch">Dashboard<wbr>Widget<wbr>Scatterplot<wbr>Definition<wbr>Request<wbr>YApm<wbr>Query<wbr>Search</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetScatterplotDefinitionRequestYApmQuerySearch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetScatterplotDefinitionRequestYApmQuerySearch">output</a> API doc for this type.
 {{% /choosable %}}
@@ -53364,7 +53440,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Scatterplot<wbr>Definition<wbr>Request<wbr>YLog<wbr>Query</h4>
+<h4 id="dashboardwidgetscatterplotdefinitionrequestylogquery">Dashboard<wbr>Widget<wbr>Scatterplot<wbr>Definition<wbr>Request<wbr>YLog<wbr>Query</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetScatterplotDefinitionRequestYLogQuery">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetScatterplotDefinitionRequestYLogQuery">output</a> API doc for this type.
 {{% /choosable %}}
@@ -53535,7 +53611,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Scatterplot<wbr>Definition<wbr>Request<wbr>YLog<wbr>Query<wbr>Compute</h4>
+<h4 id="dashboardwidgetscatterplotdefinitionrequestylogquerycompute">Dashboard<wbr>Widget<wbr>Scatterplot<wbr>Definition<wbr>Request<wbr>YLog<wbr>Query<wbr>Compute</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetScatterplotDefinitionRequestYLogQueryCompute">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetScatterplotDefinitionRequestYLogQueryCompute">output</a> API doc for this type.
 {{% /choosable %}}
@@ -53674,7 +53750,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Scatterplot<wbr>Definition<wbr>Request<wbr>YLog<wbr>Query<wbr>Group<wbr>By</h4>
+<h4 id="dashboardwidgetscatterplotdefinitionrequestylogquerygroupby">Dashboard<wbr>Widget<wbr>Scatterplot<wbr>Definition<wbr>Request<wbr>YLog<wbr>Query<wbr>Group<wbr>By</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetScatterplotDefinitionRequestYLogQueryGroupBy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetScatterplotDefinitionRequestYLogQueryGroupBy">output</a> API doc for this type.
 {{% /choosable %}}
@@ -53813,7 +53889,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Scatterplot<wbr>Definition<wbr>Request<wbr>YLog<wbr>Query<wbr>Group<wbr>By<wbr>Sort</h4>
+<h4 id="dashboardwidgetscatterplotdefinitionrequestylogquerygroupbysort">Dashboard<wbr>Widget<wbr>Scatterplot<wbr>Definition<wbr>Request<wbr>YLog<wbr>Query<wbr>Group<wbr>By<wbr>Sort</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetScatterplotDefinitionRequestYLogQueryGroupBySort">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetScatterplotDefinitionRequestYLogQueryGroupBySort">output</a> API doc for this type.
 {{% /choosable %}}
@@ -53952,7 +54028,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Scatterplot<wbr>Definition<wbr>Request<wbr>YLog<wbr>Query<wbr>Search</h4>
+<h4 id="dashboardwidgetscatterplotdefinitionrequestylogquerysearch">Dashboard<wbr>Widget<wbr>Scatterplot<wbr>Definition<wbr>Request<wbr>YLog<wbr>Query<wbr>Search</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetScatterplotDefinitionRequestYLogQuerySearch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetScatterplotDefinitionRequestYLogQuerySearch">output</a> API doc for this type.
 {{% /choosable %}}
@@ -54027,7 +54103,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Scatterplot<wbr>Definition<wbr>Request<wbr>YProcess<wbr>Query</h4>
+<h4 id="dashboardwidgetscatterplotdefinitionrequestyprocessquery">Dashboard<wbr>Widget<wbr>Scatterplot<wbr>Definition<wbr>Request<wbr>YProcess<wbr>Query</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetScatterplotDefinitionRequestYProcessQuery">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetScatterplotDefinitionRequestYProcessQuery">output</a> API doc for this type.
 {{% /choosable %}}
@@ -54198,7 +54274,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Scatterplot<wbr>Definition<wbr>Time</h4>
+<h4 id="dashboardwidgetscatterplotdefinitiontime">Dashboard<wbr>Widget<wbr>Scatterplot<wbr>Definition<wbr>Time</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetScatterplotDefinitionTime">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetScatterplotDefinitionTime">output</a> API doc for this type.
 {{% /choosable %}}
@@ -54273,7 +54349,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Scatterplot<wbr>Definition<wbr>Xaxis</h4>
+<h4 id="dashboardwidgetscatterplotdefinitionxaxis">Dashboard<wbr>Widget<wbr>Scatterplot<wbr>Definition<wbr>Xaxis</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetScatterplotDefinitionXaxis">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetScatterplotDefinitionXaxis">output</a> API doc for this type.
 {{% /choosable %}}
@@ -54476,7 +54552,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Scatterplot<wbr>Definition<wbr>Yaxis</h4>
+<h4 id="dashboardwidgetscatterplotdefinitionyaxis">Dashboard<wbr>Widget<wbr>Scatterplot<wbr>Definition<wbr>Yaxis</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetScatterplotDefinitionYaxis">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetScatterplotDefinitionYaxis">output</a> API doc for this type.
 {{% /choosable %}}
@@ -54679,7 +54755,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Service<wbr>Level<wbr>Objective<wbr>Definition</h4>
+<h4 id="dashboardwidgetservicelevelobjectivedefinition">Dashboard<wbr>Widget<wbr>Service<wbr>Level<wbr>Objective<wbr>Definition</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetServiceLevelObjectiveDefinition">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetServiceLevelObjectiveDefinition">output</a> API doc for this type.
 {{% /choosable %}}
@@ -54978,7 +55054,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Timeseries<wbr>Definition</h4>
+<h4 id="dashboardwidgettimeseriesdefinition">Dashboard<wbr>Widget<wbr>Timeseries<wbr>Definition</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetTimeseriesDefinition">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetTimeseriesDefinition">output</a> API doc for this type.
 {{% /choosable %}}
@@ -55341,7 +55417,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Timeseries<wbr>Definition<wbr>Event</h4>
+<h4 id="dashboardwidgettimeseriesdefinitionevent">Dashboard<wbr>Widget<wbr>Timeseries<wbr>Definition<wbr>Event</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetTimeseriesDefinitionEvent">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetTimeseriesDefinitionEvent">output</a> API doc for this type.
 {{% /choosable %}}
@@ -55416,7 +55492,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Timeseries<wbr>Definition<wbr>Marker</h4>
+<h4 id="dashboardwidgettimeseriesdefinitionmarker">Dashboard<wbr>Widget<wbr>Timeseries<wbr>Definition<wbr>Marker</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetTimeseriesDefinitionMarker">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetTimeseriesDefinitionMarker">output</a> API doc for this type.
 {{% /choosable %}}
@@ -55555,7 +55631,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Timeseries<wbr>Definition<wbr>Request</h4>
+<h4 id="dashboardwidgettimeseriesdefinitionrequest">Dashboard<wbr>Widget<wbr>Timeseries<wbr>Definition<wbr>Request</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetTimeseriesDefinitionRequest">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetTimeseriesDefinitionRequest">output</a> API doc for this type.
 {{% /choosable %}}
@@ -55822,7 +55898,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Timeseries<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query</h4>
+<h4 id="dashboardwidgettimeseriesdefinitionrequestapmquery">Dashboard<wbr>Widget<wbr>Timeseries<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetTimeseriesDefinitionRequestApmQuery">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetTimeseriesDefinitionRequestApmQuery">output</a> API doc for this type.
 {{% /choosable %}}
@@ -55993,7 +56069,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Timeseries<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query<wbr>Compute</h4>
+<h4 id="dashboardwidgettimeseriesdefinitionrequestapmquerycompute">Dashboard<wbr>Widget<wbr>Timeseries<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query<wbr>Compute</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetTimeseriesDefinitionRequestApmQueryCompute">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetTimeseriesDefinitionRequestApmQueryCompute">output</a> API doc for this type.
 {{% /choosable %}}
@@ -56132,7 +56208,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Timeseries<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query<wbr>Group<wbr>By</h4>
+<h4 id="dashboardwidgettimeseriesdefinitionrequestapmquerygroupby">Dashboard<wbr>Widget<wbr>Timeseries<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query<wbr>Group<wbr>By</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetTimeseriesDefinitionRequestApmQueryGroupBy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetTimeseriesDefinitionRequestApmQueryGroupBy">output</a> API doc for this type.
 {{% /choosable %}}
@@ -56271,7 +56347,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Timeseries<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query<wbr>Group<wbr>By<wbr>Sort</h4>
+<h4 id="dashboardwidgettimeseriesdefinitionrequestapmquerygroupbysort">Dashboard<wbr>Widget<wbr>Timeseries<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query<wbr>Group<wbr>By<wbr>Sort</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetTimeseriesDefinitionRequestApmQueryGroupBySort">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetTimeseriesDefinitionRequestApmQueryGroupBySort">output</a> API doc for this type.
 {{% /choosable %}}
@@ -56410,7 +56486,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Timeseries<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query<wbr>Search</h4>
+<h4 id="dashboardwidgettimeseriesdefinitionrequestapmquerysearch">Dashboard<wbr>Widget<wbr>Timeseries<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query<wbr>Search</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetTimeseriesDefinitionRequestApmQuerySearch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetTimeseriesDefinitionRequestApmQuerySearch">output</a> API doc for this type.
 {{% /choosable %}}
@@ -56485,7 +56561,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Timeseries<wbr>Definition<wbr>Request<wbr>Log<wbr>Query</h4>
+<h4 id="dashboardwidgettimeseriesdefinitionrequestlogquery">Dashboard<wbr>Widget<wbr>Timeseries<wbr>Definition<wbr>Request<wbr>Log<wbr>Query</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetTimeseriesDefinitionRequestLogQuery">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetTimeseriesDefinitionRequestLogQuery">output</a> API doc for this type.
 {{% /choosable %}}
@@ -56656,7 +56732,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Timeseries<wbr>Definition<wbr>Request<wbr>Log<wbr>Query<wbr>Compute</h4>
+<h4 id="dashboardwidgettimeseriesdefinitionrequestlogquerycompute">Dashboard<wbr>Widget<wbr>Timeseries<wbr>Definition<wbr>Request<wbr>Log<wbr>Query<wbr>Compute</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetTimeseriesDefinitionRequestLogQueryCompute">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetTimeseriesDefinitionRequestLogQueryCompute">output</a> API doc for this type.
 {{% /choosable %}}
@@ -56795,7 +56871,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Timeseries<wbr>Definition<wbr>Request<wbr>Log<wbr>Query<wbr>Group<wbr>By</h4>
+<h4 id="dashboardwidgettimeseriesdefinitionrequestlogquerygroupby">Dashboard<wbr>Widget<wbr>Timeseries<wbr>Definition<wbr>Request<wbr>Log<wbr>Query<wbr>Group<wbr>By</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetTimeseriesDefinitionRequestLogQueryGroupBy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetTimeseriesDefinitionRequestLogQueryGroupBy">output</a> API doc for this type.
 {{% /choosable %}}
@@ -56934,7 +57010,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Timeseries<wbr>Definition<wbr>Request<wbr>Log<wbr>Query<wbr>Group<wbr>By<wbr>Sort</h4>
+<h4 id="dashboardwidgettimeseriesdefinitionrequestlogquerygroupbysort">Dashboard<wbr>Widget<wbr>Timeseries<wbr>Definition<wbr>Request<wbr>Log<wbr>Query<wbr>Group<wbr>By<wbr>Sort</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetTimeseriesDefinitionRequestLogQueryGroupBySort">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetTimeseriesDefinitionRequestLogQueryGroupBySort">output</a> API doc for this type.
 {{% /choosable %}}
@@ -57073,7 +57149,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Timeseries<wbr>Definition<wbr>Request<wbr>Log<wbr>Query<wbr>Search</h4>
+<h4 id="dashboardwidgettimeseriesdefinitionrequestlogquerysearch">Dashboard<wbr>Widget<wbr>Timeseries<wbr>Definition<wbr>Request<wbr>Log<wbr>Query<wbr>Search</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetTimeseriesDefinitionRequestLogQuerySearch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetTimeseriesDefinitionRequestLogQuerySearch">output</a> API doc for this type.
 {{% /choosable %}}
@@ -57148,7 +57224,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Timeseries<wbr>Definition<wbr>Request<wbr>Metadata</h4>
+<h4 id="dashboardwidgettimeseriesdefinitionrequestmetadata">Dashboard<wbr>Widget<wbr>Timeseries<wbr>Definition<wbr>Request<wbr>Metadata</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetTimeseriesDefinitionRequestMetadata">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetTimeseriesDefinitionRequestMetadata">output</a> API doc for this type.
 {{% /choosable %}}
@@ -57255,7 +57331,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Timeseries<wbr>Definition<wbr>Request<wbr>Process<wbr>Query</h4>
+<h4 id="dashboardwidgettimeseriesdefinitionrequestprocessquery">Dashboard<wbr>Widget<wbr>Timeseries<wbr>Definition<wbr>Request<wbr>Process<wbr>Query</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetTimeseriesDefinitionRequestProcessQuery">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetTimeseriesDefinitionRequestProcessQuery">output</a> API doc for this type.
 {{% /choosable %}}
@@ -57426,7 +57502,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Timeseries<wbr>Definition<wbr>Request<wbr>Style</h4>
+<h4 id="dashboardwidgettimeseriesdefinitionrequeststyle">Dashboard<wbr>Widget<wbr>Timeseries<wbr>Definition<wbr>Request<wbr>Style</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetTimeseriesDefinitionRequestStyle">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetTimeseriesDefinitionRequestStyle">output</a> API doc for this type.
 {{% /choosable %}}
@@ -57565,7 +57641,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Timeseries<wbr>Definition<wbr>Time</h4>
+<h4 id="dashboardwidgettimeseriesdefinitiontime">Dashboard<wbr>Widget<wbr>Timeseries<wbr>Definition<wbr>Time</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetTimeseriesDefinitionTime">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetTimeseriesDefinitionTime">output</a> API doc for this type.
 {{% /choosable %}}
@@ -57640,7 +57716,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Timeseries<wbr>Definition<wbr>Yaxis</h4>
+<h4 id="dashboardwidgettimeseriesdefinitionyaxis">Dashboard<wbr>Widget<wbr>Timeseries<wbr>Definition<wbr>Yaxis</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetTimeseriesDefinitionYaxis">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetTimeseriesDefinitionYaxis">output</a> API doc for this type.
 {{% /choosable %}}
@@ -57843,7 +57919,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Toplist<wbr>Definition</h4>
+<h4 id="dashboardwidgettoplistdefinition">Dashboard<wbr>Widget<wbr>Toplist<wbr>Definition</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetToplistDefinition">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetToplistDefinition">output</a> API doc for this type.
 {{% /choosable %}}
@@ -58046,7 +58122,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Toplist<wbr>Definition<wbr>Request</h4>
+<h4 id="dashboardwidgettoplistdefinitionrequest">Dashboard<wbr>Widget<wbr>Toplist<wbr>Definition<wbr>Request</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetToplistDefinitionRequest">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetToplistDefinitionRequest">output</a> API doc for this type.
 {{% /choosable %}}
@@ -58281,7 +58357,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Toplist<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query</h4>
+<h4 id="dashboardwidgettoplistdefinitionrequestapmquery">Dashboard<wbr>Widget<wbr>Toplist<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetToplistDefinitionRequestApmQuery">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetToplistDefinitionRequestApmQuery">output</a> API doc for this type.
 {{% /choosable %}}
@@ -58452,7 +58528,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Toplist<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query<wbr>Compute</h4>
+<h4 id="dashboardwidgettoplistdefinitionrequestapmquerycompute">Dashboard<wbr>Widget<wbr>Toplist<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query<wbr>Compute</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetToplistDefinitionRequestApmQueryCompute">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetToplistDefinitionRequestApmQueryCompute">output</a> API doc for this type.
 {{% /choosable %}}
@@ -58591,7 +58667,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Toplist<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query<wbr>Group<wbr>By</h4>
+<h4 id="dashboardwidgettoplistdefinitionrequestapmquerygroupby">Dashboard<wbr>Widget<wbr>Toplist<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query<wbr>Group<wbr>By</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetToplistDefinitionRequestApmQueryGroupBy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetToplistDefinitionRequestApmQueryGroupBy">output</a> API doc for this type.
 {{% /choosable %}}
@@ -58730,7 +58806,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Toplist<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query<wbr>Group<wbr>By<wbr>Sort</h4>
+<h4 id="dashboardwidgettoplistdefinitionrequestapmquerygroupbysort">Dashboard<wbr>Widget<wbr>Toplist<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query<wbr>Group<wbr>By<wbr>Sort</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetToplistDefinitionRequestApmQueryGroupBySort">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetToplistDefinitionRequestApmQueryGroupBySort">output</a> API doc for this type.
 {{% /choosable %}}
@@ -58869,7 +58945,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Toplist<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query<wbr>Search</h4>
+<h4 id="dashboardwidgettoplistdefinitionrequestapmquerysearch">Dashboard<wbr>Widget<wbr>Toplist<wbr>Definition<wbr>Request<wbr>Apm<wbr>Query<wbr>Search</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetToplistDefinitionRequestApmQuerySearch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetToplistDefinitionRequestApmQuerySearch">output</a> API doc for this type.
 {{% /choosable %}}
@@ -58944,7 +59020,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Toplist<wbr>Definition<wbr>Request<wbr>Conditional<wbr>Format</h4>
+<h4 id="dashboardwidgettoplistdefinitionrequestconditionalformat">Dashboard<wbr>Widget<wbr>Toplist<wbr>Definition<wbr>Request<wbr>Conditional<wbr>Format</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetToplistDefinitionRequestConditionalFormat">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetToplistDefinitionRequestConditionalFormat">output</a> API doc for this type.
 {{% /choosable %}}
@@ -59243,7 +59319,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Toplist<wbr>Definition<wbr>Request<wbr>Log<wbr>Query</h4>
+<h4 id="dashboardwidgettoplistdefinitionrequestlogquery">Dashboard<wbr>Widget<wbr>Toplist<wbr>Definition<wbr>Request<wbr>Log<wbr>Query</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetToplistDefinitionRequestLogQuery">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetToplistDefinitionRequestLogQuery">output</a> API doc for this type.
 {{% /choosable %}}
@@ -59414,7 +59490,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Toplist<wbr>Definition<wbr>Request<wbr>Log<wbr>Query<wbr>Compute</h4>
+<h4 id="dashboardwidgettoplistdefinitionrequestlogquerycompute">Dashboard<wbr>Widget<wbr>Toplist<wbr>Definition<wbr>Request<wbr>Log<wbr>Query<wbr>Compute</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetToplistDefinitionRequestLogQueryCompute">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetToplistDefinitionRequestLogQueryCompute">output</a> API doc for this type.
 {{% /choosable %}}
@@ -59553,7 +59629,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Toplist<wbr>Definition<wbr>Request<wbr>Log<wbr>Query<wbr>Group<wbr>By</h4>
+<h4 id="dashboardwidgettoplistdefinitionrequestlogquerygroupby">Dashboard<wbr>Widget<wbr>Toplist<wbr>Definition<wbr>Request<wbr>Log<wbr>Query<wbr>Group<wbr>By</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetToplistDefinitionRequestLogQueryGroupBy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetToplistDefinitionRequestLogQueryGroupBy">output</a> API doc for this type.
 {{% /choosable %}}
@@ -59692,7 +59768,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Toplist<wbr>Definition<wbr>Request<wbr>Log<wbr>Query<wbr>Group<wbr>By<wbr>Sort</h4>
+<h4 id="dashboardwidgettoplistdefinitionrequestlogquerygroupbysort">Dashboard<wbr>Widget<wbr>Toplist<wbr>Definition<wbr>Request<wbr>Log<wbr>Query<wbr>Group<wbr>By<wbr>Sort</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetToplistDefinitionRequestLogQueryGroupBySort">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetToplistDefinitionRequestLogQueryGroupBySort">output</a> API doc for this type.
 {{% /choosable %}}
@@ -59831,7 +59907,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Toplist<wbr>Definition<wbr>Request<wbr>Log<wbr>Query<wbr>Search</h4>
+<h4 id="dashboardwidgettoplistdefinitionrequestlogquerysearch">Dashboard<wbr>Widget<wbr>Toplist<wbr>Definition<wbr>Request<wbr>Log<wbr>Query<wbr>Search</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetToplistDefinitionRequestLogQuerySearch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetToplistDefinitionRequestLogQuerySearch">output</a> API doc for this type.
 {{% /choosable %}}
@@ -59906,7 +59982,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Toplist<wbr>Definition<wbr>Request<wbr>Process<wbr>Query</h4>
+<h4 id="dashboardwidgettoplistdefinitionrequestprocessquery">Dashboard<wbr>Widget<wbr>Toplist<wbr>Definition<wbr>Request<wbr>Process<wbr>Query</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetToplistDefinitionRequestProcessQuery">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetToplistDefinitionRequestProcessQuery">output</a> API doc for this type.
 {{% /choosable %}}
@@ -60077,7 +60153,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Toplist<wbr>Definition<wbr>Request<wbr>Style</h4>
+<h4 id="dashboardwidgettoplistdefinitionrequeststyle">Dashboard<wbr>Widget<wbr>Toplist<wbr>Definition<wbr>Request<wbr>Style</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetToplistDefinitionRequestStyle">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetToplistDefinitionRequestStyle">output</a> API doc for this type.
 {{% /choosable %}}
@@ -60152,7 +60228,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Toplist<wbr>Definition<wbr>Time</h4>
+<h4 id="dashboardwidgettoplistdefinitiontime">Dashboard<wbr>Widget<wbr>Toplist<wbr>Definition<wbr>Time</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetToplistDefinitionTime">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetToplistDefinitionTime">output</a> API doc for this type.
 {{% /choosable %}}
@@ -60227,7 +60303,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Trace<wbr>Service<wbr>Definition</h4>
+<h4 id="dashboardwidgettraceservicedefinition">Dashboard<wbr>Widget<wbr>Trace<wbr>Service<wbr>Definition</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetTraceServiceDefinition">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetTraceServiceDefinition">output</a> API doc for this type.
 {{% /choosable %}}
@@ -60750,7 +60826,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Widget<wbr>Trace<wbr>Service<wbr>Definition<wbr>Time</h4>
+<h4 id="dashboardwidgettraceservicedefinitiontime">Dashboard<wbr>Widget<wbr>Trace<wbr>Service<wbr>Definition<wbr>Time</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DashboardWidgetTraceServiceDefinitionTime">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DashboardWidgetTraceServiceDefinitionTime">output</a> API doc for this type.
 {{% /choosable %}}
@@ -60829,14 +60905,13 @@ The following state arguments are supported:
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-datadog">https://github.com/pulumi/pulumi-datadog</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`datadog` Terraform Provider](https://github.com/terraform-providers/terraform-provider-datadog).</dd>
-	
 </dl>
 

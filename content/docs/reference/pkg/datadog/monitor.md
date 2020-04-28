@@ -1,7 +1,8 @@
 
 ---
 title: "Monitor"
-block_external_search_index: true
+title_tag: "Resource Monitor | Package Datadog"
+meta_desc: "Explore the Monitor resource of the Datadog package, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 
 
@@ -12,7 +13,7 @@ block_external_search_index: true
 
 
 
-## Create a Monitor Resource
+## Create a Monitor Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -21,7 +22,7 @@ block_external_search_index: true
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Monitor</span><span class="p">(resource_name, opts=None, </span>enable_logs_sample=None<span class="p">, </span>escalation_message=None<span class="p">, </span>evaluation_delay=None<span class="p">, </span>include_tags=None<span class="p">, </span>locked=None<span class="p">, </span>message=None<span class="p">, </span>name=None<span class="p">, </span>new_host_delay=None<span class="p">, </span>no_data_timeframe=None<span class="p">, </span>notify_audit=None<span class="p">, </span>notify_no_data=None<span class="p">, </span>query=None<span class="p">, </span>renotify_interval=None<span class="p">, </span>require_full_window=None<span class="p">, </span>silenced=None<span class="p">, </span>tags=None<span class="p">, </span>threshold_windows=None<span class="p">, </span>thresholds=None<span class="p">, </span>timeout_h=None<span class="p">, </span>type=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Monitor</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>enable_logs_sample=None<span class="p">, </span>escalation_message=None<span class="p">, </span>evaluation_delay=None<span class="p">, </span>include_tags=None<span class="p">, </span>locked=None<span class="p">, </span>message=None<span class="p">, </span>name=None<span class="p">, </span>new_host_delay=None<span class="p">, </span>no_data_timeframe=None<span class="p">, </span>notify_audit=None<span class="p">, </span>notify_no_data=None<span class="p">, </span>query=None<span class="p">, </span>renotify_interval=None<span class="p">, </span>require_full_window=None<span class="p">, </span>silenced=None<span class="p">, </span>tags=None<span class="p">, </span>threshold_windows=None<span class="p">, </span>thresholds=None<span class="p">, </span>timeout_h=None<span class="p">, </span>type=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -102,7 +103,7 @@ block_external_search_index: true
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -179,7 +180,13 @@ block_external_search_index: true
 
 {{% /choosable %}}
 
-#### Resource Arguments
+## Monitor Resource Properties {#properties}
+
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+
+### Inputs
+
+The Monitor resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
 
 
 
@@ -255,7 +262,11 @@ notification allowed elsewhere.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Time (in seconds) to delay evaluation, as a non-negative integer.
+For example, if the value is set to 300 (5min), the timeframe is set to last_5m and the time is 7:00,
+the monitor will evaluate data from 6:50 to 6:55. This is useful for AWS CloudWatch and other backfilled
+metrics to ensure the monitor will always have data during evaluation.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -284,10 +295,6 @@ notification allowed elsewhere.
     <dd>{{% md %}}Time (in seconds) to allow a host to boot and
 applications to fully start before starting the evaluation of monitor
 results. Should be a non negative integer. Defaults to 300.
-* `evaluation_delay` (Optional, only applies to metric alert) Time (in seconds) to delay evaluation, as a non-negative integer.
-For example, if the value is set to 300 (5min), the timeframe is set to last_5m and the time is 7:00,
-the monitor will evaluate data from 6:50 to 6:55. This is useful for AWS CloudWatch and other backfilled
-metrics to ensure the monitor will always have data during evaluation.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -366,7 +373,6 @@ Default: True for "on average", "at all times" and "in total" aggregation. False
         <span class="property-type"><a href="#monitorthresholdwindows">Monitor<wbr>Threshold<wbr>Windows<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A mapping containing `recovery_window` and `trigger_window` values, e.g. `last_15m`. Can only be used for, and are required for, anomaly monitors.
-* `recovery_window` describes how long an anomalous metric must be normal before the alert recovers.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -487,7 +493,11 @@ notification allowed elsewhere.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Time (in seconds) to delay evaluation, as a non-negative integer.
+For example, if the value is set to 300 (5min), the timeframe is set to last_5m and the time is 7:00,
+the monitor will evaluate data from 6:50 to 6:55. This is useful for AWS CloudWatch and other backfilled
+metrics to ensure the monitor will always have data during evaluation.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -516,10 +526,6 @@ notification allowed elsewhere.
     <dd>{{% md %}}Time (in seconds) to allow a host to boot and
 applications to fully start before starting the evaluation of monitor
 results. Should be a non negative integer. Defaults to 300.
-* `evaluation_delay` (Optional, only applies to metric alert) Time (in seconds) to delay evaluation, as a non-negative integer.
-For example, if the value is set to 300 (5min), the timeframe is set to last_5m and the time is 7:00,
-the monitor will evaluate data from 6:50 to 6:55. This is useful for AWS CloudWatch and other backfilled
-metrics to ensure the monitor will always have data during evaluation.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -598,7 +604,6 @@ Default: True for "on average", "at all times" and "in total" aggregation. False
         <span class="property-type"><a href="#monitorthresholdwindows">Monitor<wbr>Threshold<wbr>Windows</a></span>
     </dt>
     <dd>{{% md %}}A mapping containing `recovery_window` and `trigger_window` values, e.g. `last_15m`. Can only be used for, and are required for, anomaly monitors.
-* `recovery_window` describes how long an anomalous metric must be normal before the alert recovers.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -719,7 +724,11 @@ notification allowed elsewhere.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Time (in seconds) to delay evaluation, as a non-negative integer.
+For example, if the value is set to 300 (5min), the timeframe is set to last_5m and the time is 7:00,
+the monitor will evaluate data from 6:50 to 6:55. This is useful for AWS CloudWatch and other backfilled
+metrics to ensure the monitor will always have data during evaluation.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -748,10 +757,6 @@ notification allowed elsewhere.
     <dd>{{% md %}}Time (in seconds) to allow a host to boot and
 applications to fully start before starting the evaluation of monitor
 results. Should be a non negative integer. Defaults to 300.
-* `evaluation_delay` (Optional, only applies to metric alert) Time (in seconds) to delay evaluation, as a non-negative integer.
-For example, if the value is set to 300 (5min), the timeframe is set to last_5m and the time is 7:00,
-the monitor will evaluate data from 6:50 to 6:55. This is useful for AWS CloudWatch and other backfilled
-metrics to ensure the monitor will always have data during evaluation.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -830,7 +835,6 @@ Default: True for "on average", "at all times" and "in total" aggregation. False
         <span class="property-type"><a href="#monitorthresholdwindows">Monitor<wbr>Threshold<wbr>Windows</a></span>
     </dt>
     <dd>{{% md %}}A mapping containing `recovery_window` and `trigger_window` values, e.g. `last_15m`. Can only be used for, and are required for, anomaly monitors.
-* `recovery_window` describes how long an anomalous metric must be normal before the alert recovers.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -951,7 +955,11 @@ notification allowed elsewhere.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Time (in seconds) to delay evaluation, as a non-negative integer.
+For example, if the value is set to 300 (5min), the timeframe is set to last_5m and the time is 7:00,
+the monitor will evaluate data from 6:50 to 6:55. This is useful for AWS CloudWatch and other backfilled
+metrics to ensure the monitor will always have data during evaluation.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -980,10 +988,6 @@ notification allowed elsewhere.
     <dd>{{% md %}}Time (in seconds) to allow a host to boot and
 applications to fully start before starting the evaluation of monitor
 results. Should be a non negative integer. Defaults to 300.
-* `evaluation_delay` (Optional, only applies to metric alert) Time (in seconds) to delay evaluation, as a non-negative integer.
-For example, if the value is set to 300 (5min), the timeframe is set to last_5m and the time is 7:00,
-the monitor will evaluate data from 6:50 to 6:55. This is useful for AWS CloudWatch and other backfilled
-metrics to ensure the monitor will always have data during evaluation.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1062,7 +1066,6 @@ Default: True for "on average", "at all times" and "in total" aggregation. False
         <span class="property-type"><a href="#monitorthresholdwindows">Dict[Monitor<wbr>Threshold<wbr>Windows]</a></span>
     </dt>
     <dd>{{% md %}}A mapping containing `recovery_window` and `trigger_window` values, e.g. `last_15m`. Can only be used for, and are required for, anomaly monitors.
-* `recovery_window` describes how long an anomalous metric must be normal before the alert recovers.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1116,11 +1119,79 @@ from a triggered state. Defaults to false.
 
 
 
+### Outputs
+
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the Monitor resource produces the following output properties:
 
 
 
 
-## Look up an Existing Monitor Resource
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+
+
+## Look up an Existing Monitor Resource {#look-up}
 
 Get an existing Monitor resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -1270,7 +1341,11 @@ notification allowed elsewhere.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Time (in seconds) to delay evaluation, as a non-negative integer.
+For example, if the value is set to 300 (5min), the timeframe is set to last_5m and the time is 7:00,
+the monitor will evaluate data from 6:50 to 6:55. This is useful for AWS CloudWatch and other backfilled
+metrics to ensure the monitor will always have data during evaluation.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1318,10 +1393,6 @@ Email notifications can be sent to specific users by using the same '@username' 
     <dd>{{% md %}}Time (in seconds) to allow a host to boot and
 applications to fully start before starting the evaluation of monitor
 results. Should be a non negative integer. Defaults to 300.
-* `evaluation_delay` (Optional, only applies to metric alert) Time (in seconds) to delay evaluation, as a non-negative integer.
-For example, if the value is set to 300 (5min), the timeframe is set to last_5m and the time is 7:00,
-the monitor will evaluate data from 6:50 to 6:55. This is useful for AWS CloudWatch and other backfilled
-metrics to ensure the monitor will always have data during evaluation.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1408,7 +1479,6 @@ Default: True for "on average", "at all times" and "in total" aggregation. False
         <span class="property-type"><a href="#monitorthresholdwindows">Monitor<wbr>Threshold<wbr>Windows<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A mapping containing `recovery_window` and `trigger_window` values, e.g. `last_15m`. Can only be used for, and are required for, anomaly monitors.
-* `recovery_window` describes how long an anomalous metric must be normal before the alert recovers.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1502,7 +1572,11 @@ notification allowed elsewhere.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Time (in seconds) to delay evaluation, as a non-negative integer.
+For example, if the value is set to 300 (5min), the timeframe is set to last_5m and the time is 7:00,
+the monitor will evaluate data from 6:50 to 6:55. This is useful for AWS CloudWatch and other backfilled
+metrics to ensure the monitor will always have data during evaluation.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1550,10 +1624,6 @@ Email notifications can be sent to specific users by using the same '@username' 
     <dd>{{% md %}}Time (in seconds) to allow a host to boot and
 applications to fully start before starting the evaluation of monitor
 results. Should be a non negative integer. Defaults to 300.
-* `evaluation_delay` (Optional, only applies to metric alert) Time (in seconds) to delay evaluation, as a non-negative integer.
-For example, if the value is set to 300 (5min), the timeframe is set to last_5m and the time is 7:00,
-the monitor will evaluate data from 6:50 to 6:55. This is useful for AWS CloudWatch and other backfilled
-metrics to ensure the monitor will always have data during evaluation.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1640,7 +1710,6 @@ Default: True for "on average", "at all times" and "in total" aggregation. False
         <span class="property-type"><a href="#monitorthresholdwindows">Monitor<wbr>Threshold<wbr>Windows</a></span>
     </dt>
     <dd>{{% md %}}A mapping containing `recovery_window` and `trigger_window` values, e.g. `last_15m`. Can only be used for, and are required for, anomaly monitors.
-* `recovery_window` describes how long an anomalous metric must be normal before the alert recovers.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1734,7 +1803,11 @@ notification allowed elsewhere.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Time (in seconds) to delay evaluation, as a non-negative integer.
+For example, if the value is set to 300 (5min), the timeframe is set to last_5m and the time is 7:00,
+the monitor will evaluate data from 6:50 to 6:55. This is useful for AWS CloudWatch and other backfilled
+metrics to ensure the monitor will always have data during evaluation.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1782,10 +1855,6 @@ Email notifications can be sent to specific users by using the same '@username' 
     <dd>{{% md %}}Time (in seconds) to allow a host to boot and
 applications to fully start before starting the evaluation of monitor
 results. Should be a non negative integer. Defaults to 300.
-* `evaluation_delay` (Optional, only applies to metric alert) Time (in seconds) to delay evaluation, as a non-negative integer.
-For example, if the value is set to 300 (5min), the timeframe is set to last_5m and the time is 7:00,
-the monitor will evaluate data from 6:50 to 6:55. This is useful for AWS CloudWatch and other backfilled
-metrics to ensure the monitor will always have data during evaluation.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1872,7 +1941,6 @@ Default: True for "on average", "at all times" and "in total" aggregation. False
         <span class="property-type"><a href="#monitorthresholdwindows">Monitor<wbr>Threshold<wbr>Windows</a></span>
     </dt>
     <dd>{{% md %}}A mapping containing `recovery_window` and `trigger_window` values, e.g. `last_15m`. Can only be used for, and are required for, anomaly monitors.
-* `recovery_window` describes how long an anomalous metric must be normal before the alert recovers.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1966,7 +2034,11 @@ notification allowed elsewhere.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Time (in seconds) to delay evaluation, as a non-negative integer.
+For example, if the value is set to 300 (5min), the timeframe is set to last_5m and the time is 7:00,
+the monitor will evaluate data from 6:50 to 6:55. This is useful for AWS CloudWatch and other backfilled
+metrics to ensure the monitor will always have data during evaluation.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2014,10 +2086,6 @@ Email notifications can be sent to specific users by using the same '@username' 
     <dd>{{% md %}}Time (in seconds) to allow a host to boot and
 applications to fully start before starting the evaluation of monitor
 results. Should be a non negative integer. Defaults to 300.
-* `evaluation_delay` (Optional, only applies to metric alert) Time (in seconds) to delay evaluation, as a non-negative integer.
-For example, if the value is set to 300 (5min), the timeframe is set to last_5m and the time is 7:00,
-the monitor will evaluate data from 6:50 to 6:55. This is useful for AWS CloudWatch and other backfilled
-metrics to ensure the monitor will always have data during evaluation.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2104,7 +2172,6 @@ Default: True for "on average", "at all times" and "in total" aggregation. False
         <span class="property-type"><a href="#monitorthresholdwindows">Dict[Monitor<wbr>Threshold<wbr>Windows]</a></span>
     </dt>
     <dd>{{% md %}}A mapping containing `recovery_window` and `trigger_window` values, e.g. `last_15m`. Can only be used for, and are required for, anomaly monitors.
-* `recovery_window` describes how long an anomalous metric must be normal before the alert recovers.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2179,7 +2246,8 @@ from a triggered state. Defaults to false.
 
 ## Supporting Types
 
-<h4>Monitor<wbr>Threshold<wbr>Windows</h4>
+
+<h4 id="monitorthresholdwindows">Monitor<wbr>Threshold<wbr>Windows</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#MonitorThresholdWindows">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#MonitorThresholdWindows">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2200,7 +2268,8 @@ from a triggered state. Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}describes how long an anomalous metric must be normal before the alert recovers.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2224,7 +2293,8 @@ from a triggered state. Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}describes how long an anomalous metric must be normal before the alert recovers.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2248,7 +2318,8 @@ from a triggered state. Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}describes how long an anomalous metric must be normal before the alert recovers.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2272,7 +2343,8 @@ from a triggered state. Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}describes how long an anomalous metric must be normal before the alert recovers.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2290,7 +2362,7 @@ from a triggered state. Defaults to false.
 
 
 
-<h4>Monitor<wbr>Thresholds</h4>
+<h4 id="monitorthresholds">Monitor<wbr>Thresholds</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#MonitorThresholds">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#MonitorThresholds">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2529,14 +2601,13 @@ from a triggered state. Defaults to false.
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-datadog">https://github.com/pulumi/pulumi-datadog</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`datadog` Terraform Provider](https://github.com/terraform-providers/terraform-provider-datadog).</dd>
-	
 </dl>
 
