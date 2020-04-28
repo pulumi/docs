@@ -1,8 +1,8 @@
 
 ---
 title: "Provider"
-title_tag: "Resource Provider | Package kong"
-meta_desc: "Explore the Provider resource of the kong package, including examples, input properties, output properties, lookup functions, and supporting types. The provider type for the kong package. By default, resources use package-wide configuration"
+title_tag: "Resource Provider | Package Kong"
+meta_desc: "Explore the Provider resource of the Kong package, including examples, input properties, output properties, lookup functions, and supporting types. The provider type for the kong package. By default, resources use package-wide configuration"
 ---
 
 
@@ -26,7 +26,7 @@ construction to achieve fine-grained programmatic control over provider settings
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Provider</span><span class="p">(resource_name, opts=None, </span>kong_admin_password=None<span class="p">, </span>kong_admin_token=None<span class="p">, </span>kong_admin_uri=None<span class="p">, </span>kong_admin_username=None<span class="p">, </span>kong_api_key=None<span class="p">, </span>strict_plugins_match=None<span class="p">, </span>tls_skip_verify=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Provider</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>kong_admin_password=None<span class="p">, </span>kong_admin_token=None<span class="p">, </span>kong_admin_uri=None<span class="p">, </span>kong_admin_username=None<span class="p">, </span>kong_api_key=None<span class="p">, </span>strict_plugins_match=None<span class="p">, </span>tls_skip_verify=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

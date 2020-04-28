@@ -1,6 +1,6 @@
 ---
-title: "kong"
-title_tag: "Module kong | Package kong"
+title: "Kong"
+title_tag: "Module Kong | Package Kong"
 meta_desc: "A Pulumi package for creating and managing Kong resources."
 menu:
     reference:
@@ -35,6 +35,6 @@ A Pulumi package for creating and managing Kong resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`kong` Terraform Provider](https://github.com/kevholditch/terraform-provider-kong).</dd>
 	<dt>Version</dt>
-	<dd>2.0.0</dd>
+	<dd>2.1.0</dd>
 </dl>
 
