@@ -63,7 +63,7 @@ The result of the above will set a random priority.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">RandomInteger</span><span class="p">(resource_name, opts=None, </span>keepers=None<span class="p">, </span>max=None<span class="p">, </span>min=None<span class="p">, </span>seed=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">RandomInteger</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>keepers=None<span class="p">, </span>max=None<span class="p">, </span>min=None<span class="p">, </span>seed=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
