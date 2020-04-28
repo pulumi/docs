@@ -31,11 +31,15 @@ anything, please consult the source <a class="reference external" href="https://
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>attestation_authority</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Note kind that represents a logical attestation “role” or “authority”. For example, an organization might have one
-AttestationAuthority for “QA” and one for “build”. This Note is intended to act strictly as a grouping mechanism for the
-attached Occurrences (Attestations). This grouping mechanism also provides a security boundary, since IAM ACLs gate the
-ability for a principle to attach an Occurrence to a given Note. It also provides a single point of lookup to find all
-attached Attestation Occurrences, even if they don’t all live in the same project.</p></li>
+<li><p><strong>attestation_authority</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Note kind that represents a logical attestation “role” or “authority”.
+For example, an organization might have one AttestationAuthority for
+“QA” and one for “build”. This Note is intended to act strictly as a
+grouping mechanism for the attached Occurrences (Attestations). This
+grouping mechanism also provides a security boundary, since IAM ACLs
+gate the ability for a principle to attach an Occurrence to a given
+Note. It also provides a single point of lookup to find all attached
+Attestation Occurrences, even if they don’t all live in the same
+project.  Structure is documented below.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the note.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
@@ -44,24 +48,44 @@ If it is not provided, the provider project is used.</p></li>
 </dl>
 <p>The <strong>attestation_authority</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">hint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">hint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - This submessage provides human-readable hints about the purpose of
+the AttestationAuthority. Because the name of a Note acts as its
+resource reference, it is important to disambiguate the canonical
+name of the Note (which might be a UUID for security purposes)
+from “readable” names more suitable for debug output. Note that
+these hints should NOT be used to look up AttestationAuthorities
+in security sensitive contexts, such as when looking up
+Attestations to verify.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">humanReadableName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">humanReadableName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The human readable name of this Attestation Authority, for
+example “qa”.</p></li>
 </ul>
 </li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_gcp.containeranalysis.Note.attestation_authority">
 <code class="sig-name descname">attestation_authority</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.containeranalysis.Note.attestation_authority" title="Permalink to this definition">¶</a></dt>
-<dd><p>Note kind that represents a logical attestation “role” or “authority”. For example, an organization might have one
-AttestationAuthority for “QA” and one for “build”. This Note is intended to act strictly as a grouping mechanism for the
-attached Occurrences (Attestations). This grouping mechanism also provides a security boundary, since IAM ACLs gate the
-ability for a principle to attach an Occurrence to a given Note. It also provides a single point of lookup to find all
-attached Attestation Occurrences, even if they don’t all live in the same project.</p>
+<dd><p>Note kind that represents a logical attestation “role” or “authority”.
+For example, an organization might have one AttestationAuthority for
+“QA” and one for “build”. This Note is intended to act strictly as a
+grouping mechanism for the attached Occurrences (Attestations). This
+grouping mechanism also provides a security boundary, since IAM ACLs
+gate the ability for a principle to attach an Occurrence to a given
+Note. It also provides a single point of lookup to find all attached
+Attestation Occurrences, even if they don’t all live in the same
+project.  Structure is documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">hint</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">hint</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - This submessage provides human-readable hints about the purpose of
+the AttestationAuthority. Because the name of a Note acts as its
+resource reference, it is important to disambiguate the canonical
+name of the Note (which might be a UUID for security purposes)
+from “readable” names more suitable for debug output. Note that
+these hints should NOT be used to look up AttestationAuthorities
+in security sensitive contexts, such as when looking up
+Attestations to verify.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">humanReadableName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">humanReadableName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The human readable name of this Attestation Authority, for
+example “qa”.</p></li>
 </ul>
 </li>
 </ul>
@@ -91,11 +115,15 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>attestation_authority</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Note kind that represents a logical attestation “role” or “authority”. For example, an organization might have one
-AttestationAuthority for “QA” and one for “build”. This Note is intended to act strictly as a grouping mechanism for the
-attached Occurrences (Attestations). This grouping mechanism also provides a security boundary, since IAM ACLs gate the
-ability for a principle to attach an Occurrence to a given Note. It also provides a single point of lookup to find all
-attached Attestation Occurrences, even if they don’t all live in the same project.</p></li>
+<li><p><strong>attestation_authority</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Note kind that represents a logical attestation “role” or “authority”.
+For example, an organization might have one AttestationAuthority for
+“QA” and one for “build”. This Note is intended to act strictly as a
+grouping mechanism for the attached Occurrences (Attestations). This
+grouping mechanism also provides a security boundary, since IAM ACLs
+gate the ability for a principle to attach an Occurrence to a given
+Note. It also provides a single point of lookup to find all attached
+Attestation Occurrences, even if they don’t all live in the same
+project.  Structure is documented below.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the note.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
@@ -104,9 +132,17 @@ If it is not provided, the provider project is used.</p></li>
 </dl>
 <p>The <strong>attestation_authority</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">hint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">hint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - This submessage provides human-readable hints about the purpose of
+the AttestationAuthority. Because the name of a Note acts as its
+resource reference, it is important to disambiguate the canonical
+name of the Note (which might be a UUID for security purposes)
+from “readable” names more suitable for debug output. Note that
+these hints should NOT be used to look up AttestationAuthorities
+in security sensitive contexts, such as when looking up
+Attestations to verify.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">humanReadableName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">humanReadableName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The human readable name of this Attestation Authority, for
+example “qa”.</p></li>
 </ul>
 </li>
 </ul>

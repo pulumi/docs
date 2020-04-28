@@ -1,7 +1,8 @@
 
 ---
 title: "AppEngineVersionIamBinding"
-block_external_search_index: true
+title_tag: "Resource AppEngineVersionIamBinding | Module iap | Package GCP"
+meta_desc: "Explore the AppEngineVersionIamBinding resource of the iap module, including examples, input properties, output properties, lookup functions, and supporting types. Three different resources help you manage your IAM policy for Identity-Aware Proxy AppEngineVersion. Each of these resources serves a different use case:"
 ---
 
 
@@ -105,7 +106,7 @@ const member = new gcp.iap.AppEngineVersionIamMember("member", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">AppEngineVersionIamBinding</span><span class="p">(resource_name, opts=None, </span>app_id=None<span class="p">, </span>condition=None<span class="p">, </span>members=None<span class="p">, </span>project=None<span class="p">, </span>role=None<span class="p">, </span>service=None<span class="p">, </span>version_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">AppEngineVersionIamBinding</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>app_id=None<span class="p">, </span>condition=None<span class="p">, </span>members=None<span class="p">, </span>project=None<span class="p">, </span>role=None<span class="p">, </span>service=None<span class="p">, </span>version_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1299,8 +1300,7 @@ If it is not provided, the project will be parsed from the identifier of the par
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 

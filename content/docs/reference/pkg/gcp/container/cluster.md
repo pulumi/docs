@@ -1,7 +1,8 @@
 
 ---
 title: "Cluster"
-block_external_search_index: true
+title_tag: "Resource Cluster | Module container | Package GCP"
+meta_desc: "Explore the Cluster resource of the container module, including examples, input properties, output properties, lookup functions, and supporting types. Manages a Google Kubernetes Engine (GKE) cluster. For more information see"
 ---
 
 
@@ -49,10 +50,10 @@ const primary = new gcp.container.Cluster("primary", {
             "bar",
         ],
     },
-}, {timeouts: {
+}, { timeouts: {
     create: "30m",
     update: "40m",
-}});
+} });
 ```
 
 
@@ -66,7 +67,7 @@ const primary = new gcp.container.Cluster("primary", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Cluster</span><span class="p">(resource_name, opts=None, </span>addons_config=None<span class="p">, </span>authenticator_groups_config=None<span class="p">, </span>cluster_autoscaling=None<span class="p">, </span>cluster_ipv4_cidr=None<span class="p">, </span>database_encryption=None<span class="p">, </span>default_max_pods_per_node=None<span class="p">, </span>description=None<span class="p">, </span>enable_binary_authorization=None<span class="p">, </span>enable_intranode_visibility=None<span class="p">, </span>enable_kubernetes_alpha=None<span class="p">, </span>enable_legacy_abac=None<span class="p">, </span>enable_shielded_nodes=None<span class="p">, </span>enable_tpu=None<span class="p">, </span>initial_node_count=None<span class="p">, </span>ip_allocation_policy=None<span class="p">, </span>location=None<span class="p">, </span>logging_service=None<span class="p">, </span>maintenance_policy=None<span class="p">, </span>master_auth=None<span class="p">, </span>master_authorized_networks_config=None<span class="p">, </span>min_master_version=None<span class="p">, </span>monitoring_service=None<span class="p">, </span>name=None<span class="p">, </span>network=None<span class="p">, </span>network_policy=None<span class="p">, </span>node_config=None<span class="p">, </span>node_locations=None<span class="p">, </span>node_pools=None<span class="p">, </span>node_version=None<span class="p">, </span>pod_security_policy_config=None<span class="p">, </span>private_cluster_config=None<span class="p">, </span>project=None<span class="p">, </span>release_channel=None<span class="p">, </span>remove_default_node_pool=None<span class="p">, </span>resource_labels=None<span class="p">, </span>resource_usage_export_config=None<span class="p">, </span>subnetwork=None<span class="p">, </span>vertical_pod_autoscaling=None<span class="p">, </span>workload_identity_config=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Cluster</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>addons_config=None<span class="p">, </span>authenticator_groups_config=None<span class="p">, </span>cluster_autoscaling=None<span class="p">, </span>cluster_ipv4_cidr=None<span class="p">, </span>database_encryption=None<span class="p">, </span>default_max_pods_per_node=None<span class="p">, </span>description=None<span class="p">, </span>enable_binary_authorization=None<span class="p">, </span>enable_intranode_visibility=None<span class="p">, </span>enable_kubernetes_alpha=None<span class="p">, </span>enable_legacy_abac=None<span class="p">, </span>enable_shielded_nodes=None<span class="p">, </span>enable_tpu=None<span class="p">, </span>initial_node_count=None<span class="p">, </span>ip_allocation_policy=None<span class="p">, </span>location=None<span class="p">, </span>logging_service=None<span class="p">, </span>maintenance_policy=None<span class="p">, </span>master_auth=None<span class="p">, </span>master_authorized_networks_config=None<span class="p">, </span>min_master_version=None<span class="p">, </span>monitoring_service=None<span class="p">, </span>name=None<span class="p">, </span>network=None<span class="p">, </span>network_policy=None<span class="p">, </span>node_config=None<span class="p">, </span>node_locations=None<span class="p">, </span>node_pools=None<span class="p">, </span>node_version=None<span class="p">, </span>pod_security_policy_config=None<span class="p">, </span>private_cluster_config=None<span class="p">, </span>project=None<span class="p">, </span>release_channel=None<span class="p">, </span>remove_default_node_pool=None<span class="p">, </span>resource_labels=None<span class="p">, </span>resource_usage_export_config=None<span class="p">, </span>subnetwork=None<span class="p">, </span>vertical_pod_autoscaling=None<span class="p">, </span>workload_identity_config=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -12033,8 +12034,7 @@ If enabled, pods must be valid under a PodSecurityPolicy to be created.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 

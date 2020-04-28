@@ -1,7 +1,8 @@
 
 ---
 title: "IAMMember"
-block_external_search_index: true
+title_tag: "Resource IAMMember | Module serviceAccount | Package GCP"
+meta_desc: "Explore the IAMMember resource of the serviceAccount module, including examples, input properties, output properties, lookup functions, and supporting types. When managing IAM roles, you can treat a service account either as a resource or as an identity. This resource is to add iam policy bindings to a service account resource **to configure permissions for who can edit the service account**. To configure permissions for a service account to act as an identity that can manage other GCP resources, use the google_project_iam set of resources."
 ---
 
 
@@ -32,7 +33,7 @@ Three different resources help you manage your IAM policy for a service account.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">IAMMember</span><span class="p">(resource_name, opts=None, </span>condition=None<span class="p">, </span>member=None<span class="p">, </span>role=None<span class="p">, </span>service_account_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">IAMMember</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>condition=None<span class="p">, </span>member=None<span class="p">, </span>role=None<span class="p">, </span>service_account_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1002,8 +1003,7 @@ Structure is documented below.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 

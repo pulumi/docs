@@ -1,7 +1,8 @@
 
 ---
 title: "URLMap"
-block_external_search_index: true
+title_tag: "Resource URLMap | Module compute | Package GCP"
+meta_desc: "Explore the URLMap resource of the compute module, including examples, input properties, output properties, lookup functions, and supporting types. UrlMaps are used to route requests to a backend service based on rules"
 ---
 
 
@@ -28,7 +29,7 @@ To get more information about UrlMap, see:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">URLMap</span><span class="p">(resource_name, opts=None, </span>default_service=None<span class="p">, </span>description=None<span class="p">, </span>header_action=None<span class="p">, </span>host_rules=None<span class="p">, </span>name=None<span class="p">, </span>path_matchers=None<span class="p">, </span>project=None<span class="p">, </span>tests=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">URLMap</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>default_service=None<span class="p">, </span>description=None<span class="p">, </span>header_action=None<span class="p">, </span>host_rules=None<span class="p">, </span>name=None<span class="p">, </span>path_matchers=None<span class="p">, </span>project=None<span class="p">, </span>tests=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -206,7 +207,7 @@ The URLMap resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The backend service or backend bucket to use when none of the given rules match.
+    <dd>{{% md %}}The backend service or backend bucket to use when none of the given paths match.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -215,7 +216,7 @@ The URLMap resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.
+    <dd>{{% md %}}Description of this test case.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -224,8 +225,9 @@ The URLMap resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmapheaderaction">URLMap<wbr>Header<wbr>Action<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for the selected backendService. The
-headerAction specified here take effect after headerAction specified under pathMatcher.
+    <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for
+the selected backendService. headerAction specified here take effect before
+headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -234,7 +236,7 @@ headerAction specified here take effect after headerAction specified under pathM
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmaphostrule">List&lt;URLMap<wbr>Host<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The list of HostRules to use against the URL.
+    <dd>{{% md %}}The list of HostRules to use against the URL.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -243,10 +245,8 @@ headerAction specified here take effect after headerAction specified under pathM
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
-comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-'[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+    <dd>{{% md %}}The name of the query parameter to match. The query parameter must exist in the
+request, in the absence of which the request match fails.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -255,7 +255,8 @@ must be a dash, lowercase letter, or digit, except the last character, which can
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcher">List&lt;URLMap<wbr>Path<wbr>Matcher<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The list of named PathMatchers to use against the URL.
+    <dd>{{% md %}}The name of the PathMatcher to use to match the path portion of the URL if the
+hostRule matches the URL's host portion.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -274,8 +275,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmaptest">List&lt;URLMap<wbr>Test<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The list of expected URL mapping tests. Request to update this UrlMap will succeed only if all of the test cases pass.
-You can specify a maximum of 100 tests per UrlMap.
+    <dd>{{% md %}}The list of expected URL mapping tests. Request to update this UrlMap will
+succeed only if all of the test cases pass. You can specify a maximum of 100
+tests per UrlMap.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -291,7 +293,7 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The backend service or backend bucket to use when none of the given rules match.
+    <dd>{{% md %}}The backend service or backend bucket to use when none of the given paths match.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -300,7 +302,7 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.
+    <dd>{{% md %}}Description of this test case.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -309,8 +311,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmapheaderaction">URLMap<wbr>Header<wbr>Action</a></span>
     </dt>
-    <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for the selected backendService. The
-headerAction specified here take effect after headerAction specified under pathMatcher.
+    <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for
+the selected backendService. headerAction specified here take effect before
+headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -319,7 +322,7 @@ headerAction specified here take effect after headerAction specified under pathM
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmaphostrule">[]URLMap<wbr>Host<wbr>Rule</a></span>
     </dt>
-    <dd>{{% md %}}The list of HostRules to use against the URL.
+    <dd>{{% md %}}The list of HostRules to use against the URL.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -328,10 +331,8 @@ headerAction specified here take effect after headerAction specified under pathM
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
-comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-'[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+    <dd>{{% md %}}The name of the query parameter to match. The query parameter must exist in the
+request, in the absence of which the request match fails.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -340,7 +341,8 @@ must be a dash, lowercase letter, or digit, except the last character, which can
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcher">[]URLMap<wbr>Path<wbr>Matcher</a></span>
     </dt>
-    <dd>{{% md %}}The list of named PathMatchers to use against the URL.
+    <dd>{{% md %}}The name of the PathMatcher to use to match the path portion of the URL if the
+hostRule matches the URL's host portion.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -359,8 +361,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmaptest">[]URLMap<wbr>Test</a></span>
     </dt>
-    <dd>{{% md %}}The list of expected URL mapping tests. Request to update this UrlMap will succeed only if all of the test cases pass.
-You can specify a maximum of 100 tests per UrlMap.
+    <dd>{{% md %}}The list of expected URL mapping tests. Request to update this UrlMap will
+succeed only if all of the test cases pass. You can specify a maximum of 100
+tests per UrlMap.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -376,7 +379,7 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The backend service or backend bucket to use when none of the given rules match.
+    <dd>{{% md %}}The backend service or backend bucket to use when none of the given paths match.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -385,7 +388,7 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.
+    <dd>{{% md %}}Description of this test case.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -394,8 +397,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmapheaderaction">URLMap<wbr>Header<wbr>Action</a></span>
     </dt>
-    <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for the selected backendService. The
-headerAction specified here take effect after headerAction specified under pathMatcher.
+    <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for
+the selected backendService. headerAction specified here take effect before
+headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -404,7 +408,7 @@ headerAction specified here take effect after headerAction specified under pathM
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmaphostrule">URLMap<wbr>Host<wbr>Rule[]</a></span>
     </dt>
-    <dd>{{% md %}}The list of HostRules to use against the URL.
+    <dd>{{% md %}}The list of HostRules to use against the URL.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -413,10 +417,8 @@ headerAction specified here take effect after headerAction specified under pathM
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
-comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-'[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+    <dd>{{% md %}}The name of the query parameter to match. The query parameter must exist in the
+request, in the absence of which the request match fails.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -425,7 +427,8 @@ must be a dash, lowercase letter, or digit, except the last character, which can
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcher">URLMap<wbr>Path<wbr>Matcher[]</a></span>
     </dt>
-    <dd>{{% md %}}The list of named PathMatchers to use against the URL.
+    <dd>{{% md %}}The name of the PathMatcher to use to match the path portion of the URL if the
+hostRule matches the URL's host portion.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -444,8 +447,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmaptest">URLMap<wbr>Test[]</a></span>
     </dt>
-    <dd>{{% md %}}The list of expected URL mapping tests. Request to update this UrlMap will succeed only if all of the test cases pass.
-You can specify a maximum of 100 tests per UrlMap.
+    <dd>{{% md %}}The list of expected URL mapping tests. Request to update this UrlMap will
+succeed only if all of the test cases pass. You can specify a maximum of 100
+tests per UrlMap.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -461,7 +465,7 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The backend service or backend bucket to use when none of the given rules match.
+    <dd>{{% md %}}The backend service or backend bucket to use when none of the given paths match.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -470,7 +474,7 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.
+    <dd>{{% md %}}Description of this test case.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -479,8 +483,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmapheaderaction">Dict[URLMap<wbr>Header<wbr>Action]</a></span>
     </dt>
-    <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for the selected backendService. The
-headerAction specified here take effect after headerAction specified under pathMatcher.
+    <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for
+the selected backendService. headerAction specified here take effect before
+headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -489,7 +494,7 @@ headerAction specified here take effect after headerAction specified under pathM
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmaphostrule">List[URLMap<wbr>Host<wbr>Rule]</a></span>
     </dt>
-    <dd>{{% md %}}The list of HostRules to use against the URL.
+    <dd>{{% md %}}The list of HostRules to use against the URL.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -498,10 +503,8 @@ headerAction specified here take effect after headerAction specified under pathM
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
-comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-'[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+    <dd>{{% md %}}The name of the query parameter to match. The query parameter must exist in the
+request, in the absence of which the request match fails.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -510,7 +513,8 @@ must be a dash, lowercase letter, or digit, except the last character, which can
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcher">List[URLMap<wbr>Path<wbr>Matcher]</a></span>
     </dt>
-    <dd>{{% md %}}The list of named PathMatchers to use against the URL.
+    <dd>{{% md %}}The name of the PathMatcher to use to match the path portion of the URL if the
+hostRule matches the URL's host portion.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -529,8 +533,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmaptest">List[URLMap<wbr>Test]</a></span>
     </dt>
-    <dd>{{% md %}}The list of expected URL mapping tests. Request to update this UrlMap will succeed only if all of the test cases pass.
-You can specify a maximum of 100 tests per UrlMap.
+    <dd>{{% md %}}The list of expected URL mapping tests. Request to update this UrlMap will
+succeed only if all of the test cases pass. You can specify a maximum of 100
+tests per UrlMap.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -896,7 +901,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The backend service or backend bucket to use when none of the given rules match.
+    <dd>{{% md %}}The backend service or backend bucket to use when none of the given paths match.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -905,7 +910,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.
+    <dd>{{% md %}}Description of this test case.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -923,8 +928,9 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmapheaderaction">URLMap<wbr>Header<wbr>Action<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for the selected backendService. The
-headerAction specified here take effect after headerAction specified under pathMatcher.
+    <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for
+the selected backendService. headerAction specified here take effect before
+headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -933,7 +939,7 @@ headerAction specified here take effect after headerAction specified under pathM
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmaphostrule">List&lt;URLMap<wbr>Host<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The list of HostRules to use against the URL.
+    <dd>{{% md %}}The list of HostRules to use against the URL.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -951,10 +957,8 @@ headerAction specified here take effect after headerAction specified under pathM
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
-comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-'[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+    <dd>{{% md %}}The name of the query parameter to match. The query parameter must exist in the
+request, in the absence of which the request match fails.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -963,7 +967,8 @@ must be a dash, lowercase letter, or digit, except the last character, which can
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcher">List&lt;URLMap<wbr>Path<wbr>Matcher<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The list of named PathMatchers to use against the URL.
+    <dd>{{% md %}}The name of the PathMatcher to use to match the path portion of the URL if the
+hostRule matches the URL's host portion.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -991,8 +996,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmaptest">List&lt;URLMap<wbr>Test<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The list of expected URL mapping tests. Request to update this UrlMap will succeed only if all of the test cases pass.
-You can specify a maximum of 100 tests per UrlMap.
+    <dd>{{% md %}}The list of expected URL mapping tests. Request to update this UrlMap will
+succeed only if all of the test cases pass. You can specify a maximum of 100
+tests per UrlMap.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1017,7 +1023,7 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The backend service or backend bucket to use when none of the given rules match.
+    <dd>{{% md %}}The backend service or backend bucket to use when none of the given paths match.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1026,7 +1032,7 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.
+    <dd>{{% md %}}Description of this test case.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1044,8 +1050,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmapheaderaction">URLMap<wbr>Header<wbr>Action</a></span>
     </dt>
-    <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for the selected backendService. The
-headerAction specified here take effect after headerAction specified under pathMatcher.
+    <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for
+the selected backendService. headerAction specified here take effect before
+headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1054,7 +1061,7 @@ headerAction specified here take effect after headerAction specified under pathM
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmaphostrule">[]URLMap<wbr>Host<wbr>Rule</a></span>
     </dt>
-    <dd>{{% md %}}The list of HostRules to use against the URL.
+    <dd>{{% md %}}The list of HostRules to use against the URL.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1072,10 +1079,8 @@ headerAction specified here take effect after headerAction specified under pathM
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
-comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-'[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+    <dd>{{% md %}}The name of the query parameter to match. The query parameter must exist in the
+request, in the absence of which the request match fails.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1084,7 +1089,8 @@ must be a dash, lowercase letter, or digit, except the last character, which can
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcher">[]URLMap<wbr>Path<wbr>Matcher</a></span>
     </dt>
-    <dd>{{% md %}}The list of named PathMatchers to use against the URL.
+    <dd>{{% md %}}The name of the PathMatcher to use to match the path portion of the URL if the
+hostRule matches the URL's host portion.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1112,8 +1118,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmaptest">[]URLMap<wbr>Test</a></span>
     </dt>
-    <dd>{{% md %}}The list of expected URL mapping tests. Request to update this UrlMap will succeed only if all of the test cases pass.
-You can specify a maximum of 100 tests per UrlMap.
+    <dd>{{% md %}}The list of expected URL mapping tests. Request to update this UrlMap will
+succeed only if all of the test cases pass. You can specify a maximum of 100
+tests per UrlMap.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1138,7 +1145,7 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The backend service or backend bucket to use when none of the given rules match.
+    <dd>{{% md %}}The backend service or backend bucket to use when none of the given paths match.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1147,7 +1154,7 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.
+    <dd>{{% md %}}Description of this test case.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1165,8 +1172,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmapheaderaction">URLMap<wbr>Header<wbr>Action</a></span>
     </dt>
-    <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for the selected backendService. The
-headerAction specified here take effect after headerAction specified under pathMatcher.
+    <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for
+the selected backendService. headerAction specified here take effect before
+headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1175,7 +1183,7 @@ headerAction specified here take effect after headerAction specified under pathM
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmaphostrule">URLMap<wbr>Host<wbr>Rule[]</a></span>
     </dt>
-    <dd>{{% md %}}The list of HostRules to use against the URL.
+    <dd>{{% md %}}The list of HostRules to use against the URL.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1193,10 +1201,8 @@ headerAction specified here take effect after headerAction specified under pathM
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
-comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-'[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+    <dd>{{% md %}}The name of the query parameter to match. The query parameter must exist in the
+request, in the absence of which the request match fails.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1205,7 +1211,8 @@ must be a dash, lowercase letter, or digit, except the last character, which can
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcher">URLMap<wbr>Path<wbr>Matcher[]</a></span>
     </dt>
-    <dd>{{% md %}}The list of named PathMatchers to use against the URL.
+    <dd>{{% md %}}The name of the PathMatcher to use to match the path portion of the URL if the
+hostRule matches the URL's host portion.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1233,8 +1240,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmaptest">URLMap<wbr>Test[]</a></span>
     </dt>
-    <dd>{{% md %}}The list of expected URL mapping tests. Request to update this UrlMap will succeed only if all of the test cases pass.
-You can specify a maximum of 100 tests per UrlMap.
+    <dd>{{% md %}}The list of expected URL mapping tests. Request to update this UrlMap will
+succeed only if all of the test cases pass. You can specify a maximum of 100
+tests per UrlMap.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1259,7 +1267,7 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The backend service or backend bucket to use when none of the given rules match.
+    <dd>{{% md %}}The backend service or backend bucket to use when none of the given paths match.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1268,7 +1276,7 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.
+    <dd>{{% md %}}Description of this test case.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1286,8 +1294,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmapheaderaction">Dict[URLMap<wbr>Header<wbr>Action]</a></span>
     </dt>
-    <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for the selected backendService. The
-headerAction specified here take effect after headerAction specified under pathMatcher.
+    <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for
+the selected backendService. headerAction specified here take effect before
+headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1296,7 +1305,7 @@ headerAction specified here take effect after headerAction specified under pathM
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmaphostrule">List[URLMap<wbr>Host<wbr>Rule]</a></span>
     </dt>
-    <dd>{{% md %}}The list of HostRules to use against the URL.
+    <dd>{{% md %}}The list of HostRules to use against the URL.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1314,10 +1323,8 @@ headerAction specified here take effect after headerAction specified under pathM
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
-comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-'[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+    <dd>{{% md %}}The name of the query parameter to match. The query parameter must exist in the
+request, in the absence of which the request match fails.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1326,7 +1333,8 @@ must be a dash, lowercase letter, or digit, except the last character, which can
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcher">List[URLMap<wbr>Path<wbr>Matcher]</a></span>
     </dt>
-    <dd>{{% md %}}The list of named PathMatchers to use against the URL.
+    <dd>{{% md %}}The name of the PathMatcher to use to match the path portion of the URL if the
+hostRule matches the URL's host portion.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1354,8 +1362,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmaptest">List[URLMap<wbr>Test]</a></span>
     </dt>
-    <dd>{{% md %}}The list of expected URL mapping tests. Request to update this UrlMap will succeed only if all of the test cases pass.
-You can specify a maximum of 100 tests per UrlMap.
+    <dd>{{% md %}}The list of expected URL mapping tests. Request to update this UrlMap will
+succeed only if all of the test cases pass. You can specify a maximum of 100
+tests per UrlMap.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1394,7 +1403,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmapheaderactionrequestheaderstoadd">List&lt;URLMap<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the
+backendService.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1402,7 +1413,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of header names for headers that need to be removed from the request
+prior to forwarding the request to the backendService.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1410,7 +1423,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmapheaderactionresponseheaderstoadd">List&lt;URLMap<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1418,7 +1432,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of header names for headers that need to be removed from the response
+prior to sending the response back to the client.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1433,7 +1449,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmapheaderactionrequestheaderstoadd">[]URLMap<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the
+backendService.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1441,7 +1459,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of header names for headers that need to be removed from the request
+prior to forwarding the request to the backendService.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1449,7 +1469,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmapheaderactionresponseheaderstoadd">[]URLMap<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1457,7 +1478,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of header names for headers that need to be removed from the response
+prior to sending the response back to the client.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1472,7 +1495,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmapheaderactionrequestheaderstoadd">URLMap<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the
+backendService.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1480,7 +1505,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of header names for headers that need to be removed from the request
+prior to forwarding the request to the backendService.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1488,7 +1515,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmapheaderactionresponseheaderstoadd">URLMap<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1496,7 +1524,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of header names for headers that need to be removed from the response
+prior to sending the response back to the client.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1511,7 +1541,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmapheaderactionrequestheaderstoadd">List[URLMap<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the
+backendService.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1519,7 +1551,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of header names for headers that need to be removed from the request
+prior to forwarding the request to the backendService.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1527,7 +1561,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmapheaderactionresponseheaderstoadd">List[URLMap<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1535,7 +1570,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of header names for headers that need to be removed from the response
+prior to sending the response back to the client.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1565,7 +1602,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the header.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1573,7 +1611,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The value of the header to add.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1581,7 +1620,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the
+header. If true, headerValue is set for the header, discarding any values that
+were set for that header.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1596,7 +1638,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the header.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1604,7 +1647,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The value of the header to add.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1612,7 +1656,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the
+header. If true, headerValue is set for the header, discarding any values that
+were set for that header.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1627,7 +1674,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the header.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1635,7 +1683,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The value of the header to add.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1643,7 +1692,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the
+header. If true, headerValue is set for the header, discarding any values that
+were set for that header.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1658,7 +1710,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the header.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1666,7 +1719,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The value of the header to add.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1674,7 +1728,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the
+header. If true, headerValue is set for the header, discarding any values that
+were set for that header.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1704,7 +1761,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the header.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1712,7 +1770,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The value of the header to add.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1720,7 +1779,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the
+header. If true, headerValue is set for the header, discarding any values that
+were set for that header.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1735,7 +1797,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the header.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1743,7 +1806,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The value of the header to add.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1751,7 +1815,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the
+header. If true, headerValue is set for the header, discarding any values that
+were set for that header.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1766,7 +1833,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the header.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1774,7 +1842,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The value of the header to add.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1782,7 +1851,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the
+header. If true, headerValue is set for the header, discarding any values that
+were set for that header.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1797,7 +1869,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the header.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1805,7 +1878,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The value of the header to add.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1813,7 +1887,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the
+header. If true, headerValue is set for the header, discarding any values that
+were set for that header.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1843,7 +1920,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The list of host patterns to match. They must be valid hostnames, except * will
+match any string of ([a-z0-9-.]*). In that case, * must be the first character
+and must be followed in the pattern by either - or ..
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1851,7 +1931,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the PathMatcher to use to match the path portion of the URL if the
+hostRule matches the URL's host portion.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1859,7 +1941,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Description of this test case.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1874,7 +1957,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The list of host patterns to match. They must be valid hostnames, except * will
+match any string of ([a-z0-9-.]*). In that case, * must be the first character
+and must be followed in the pattern by either - or ..
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1882,7 +1968,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the PathMatcher to use to match the path portion of the URL if the
+hostRule matches the URL's host portion.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1890,7 +1978,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Description of this test case.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1905,7 +1994,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The list of host patterns to match. They must be valid hostnames, except * will
+match any string of ([a-z0-9-.]*). In that case, * must be the first character
+and must be followed in the pattern by either - or ..
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1913,7 +2005,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the PathMatcher to use to match the path portion of the URL if the
+hostRule matches the URL's host portion.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1921,7 +2015,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Description of this test case.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1936,7 +2031,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The list of host patterns to match. They must be valid hostnames, except * will
+match any string of ([a-z0-9-.]*). In that case, * must be the first character
+and must be followed in the pattern by either - or ..
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1944,7 +2042,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the PathMatcher to use to match the path portion of the URL if the
+hostRule matches the URL's host portion.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1952,7 +2052,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Description of this test case.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1982,7 +2083,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the query parameter to match. The query parameter must exist in the
+request, in the absence of which the request match fails.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1990,7 +2093,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The backend service or backend bucket to use when none of the given paths match.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1998,7 +2102,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Description of this test case.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2006,7 +2111,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherheaderaction">URLMap<wbr>Path<wbr>Matcher<wbr>Header<wbr>Action<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for
+the selected backendService. headerAction specified here take effect before
+headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2014,7 +2122,13 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherpathrule">List&lt;URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The list of path rules. Use this list instead of routeRules when routing based
+on simple path matching is all that's required. The order by which path rules
+are specified does not matter. Matches are always done on the longest-path-first
+basis. For example: a pathRule with a path /a/b/c/* will match before /a/b/*
+irrespective of the order in which those paths appear in this list. Within a
+given pathMatcher, only one of pathRules or routeRules must be set.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2022,7 +2136,13 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouterule">List&lt;URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The list of ordered HTTP route rules. Use this list instead of pathRules when
+advanced route matching and routing actions are desired. The order of specifying
+routeRules matters: the first rule that matches will cause its specified routing
+action to take effect. Within a given pathMatcher, only one of pathRules or
+routeRules must be set. routeRules are not supported in UrlMaps intended for
+External load balancers.  Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2037,7 +2157,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the query parameter to match. The query parameter must exist in the
+request, in the absence of which the request match fails.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2045,7 +2167,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The backend service or backend bucket to use when none of the given paths match.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2053,7 +2176,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Description of this test case.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2061,7 +2185,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherheaderaction">URLMap<wbr>Path<wbr>Matcher<wbr>Header<wbr>Action</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for
+the selected backendService. headerAction specified here take effect before
+headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2069,7 +2196,13 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherpathrule">[]URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The list of path rules. Use this list instead of routeRules when routing based
+on simple path matching is all that's required. The order by which path rules
+are specified does not matter. Matches are always done on the longest-path-first
+basis. For example: a pathRule with a path /a/b/c/* will match before /a/b/*
+irrespective of the order in which those paths appear in this list. Within a
+given pathMatcher, only one of pathRules or routeRules must be set.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2077,7 +2210,13 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouterule">[]URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The list of ordered HTTP route rules. Use this list instead of pathRules when
+advanced route matching and routing actions are desired. The order of specifying
+routeRules matters: the first rule that matches will cause its specified routing
+action to take effect. Within a given pathMatcher, only one of pathRules or
+routeRules must be set. routeRules are not supported in UrlMaps intended for
+External load balancers.  Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2092,7 +2231,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the query parameter to match. The query parameter must exist in the
+request, in the absence of which the request match fails.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2100,7 +2241,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The backend service or backend bucket to use when none of the given paths match.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2108,7 +2250,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Description of this test case.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2116,7 +2259,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherheaderaction">URLMap<wbr>Path<wbr>Matcher<wbr>Header<wbr>Action</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for
+the selected backendService. headerAction specified here take effect before
+headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2124,7 +2270,13 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherpathrule">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The list of path rules. Use this list instead of routeRules when routing based
+on simple path matching is all that's required. The order by which path rules
+are specified does not matter. Matches are always done on the longest-path-first
+basis. For example: a pathRule with a path /a/b/c/* will match before /a/b/*
+irrespective of the order in which those paths appear in this list. Within a
+given pathMatcher, only one of pathRules or routeRules must be set.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2132,7 +2284,13 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouterule">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The list of ordered HTTP route rules. Use this list instead of pathRules when
+advanced route matching and routing actions are desired. The order of specifying
+routeRules matters: the first rule that matches will cause its specified routing
+action to take effect. Within a given pathMatcher, only one of pathRules or
+routeRules must be set. routeRules are not supported in UrlMaps intended for
+External load balancers.  Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2147,7 +2305,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the query parameter to match. The query parameter must exist in the
+request, in the absence of which the request match fails.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2155,7 +2315,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The backend service or backend bucket to use when none of the given paths match.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2163,7 +2324,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Description of this test case.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2171,7 +2333,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherheaderaction">Dict[URLMap<wbr>Path<wbr>Matcher<wbr>Header<wbr>Action]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for
+the selected backendService. headerAction specified here take effect before
+headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2179,7 +2344,13 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherpathrule">List[URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The list of path rules. Use this list instead of routeRules when routing based
+on simple path matching is all that's required. The order by which path rules
+are specified does not matter. Matches are always done on the longest-path-first
+basis. For example: a pathRule with a path /a/b/c/* will match before /a/b/*
+irrespective of the order in which those paths appear in this list. Within a
+given pathMatcher, only one of pathRules or routeRules must be set.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2187,7 +2358,13 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouterule">List[URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The list of ordered HTTP route rules. Use this list instead of pathRules when
+advanced route matching and routing actions are desired. The order of specifying
+routeRules matters: the first rule that matches will cause its specified routing
+action to take effect. Within a given pathMatcher, only one of pathRules or
+routeRules must be set. routeRules are not supported in UrlMaps intended for
+External load balancers.  Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2217,7 +2394,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherheaderactionrequestheaderstoadd">List&lt;URLMap<wbr>Path<wbr>Matcher<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the
+backendService.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2225,7 +2404,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of header names for headers that need to be removed from the request
+prior to forwarding the request to the backendService.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2233,7 +2414,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherheaderactionresponseheaderstoadd">List&lt;URLMap<wbr>Path<wbr>Matcher<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2241,7 +2423,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of header names for headers that need to be removed from the response
+prior to sending the response back to the client.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2256,7 +2440,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherheaderactionrequestheaderstoadd">[]URLMap<wbr>Path<wbr>Matcher<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the
+backendService.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2264,7 +2450,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of header names for headers that need to be removed from the request
+prior to forwarding the request to the backendService.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2272,7 +2460,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherheaderactionresponseheaderstoadd">[]URLMap<wbr>Path<wbr>Matcher<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2280,7 +2469,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of header names for headers that need to be removed from the response
+prior to sending the response back to the client.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2295,7 +2486,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherheaderactionrequestheaderstoadd">URLMap<wbr>Path<wbr>Matcher<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the
+backendService.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2303,7 +2496,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of header names for headers that need to be removed from the request
+prior to forwarding the request to the backendService.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2311,7 +2506,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherheaderactionresponseheaderstoadd">URLMap<wbr>Path<wbr>Matcher<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2319,7 +2515,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of header names for headers that need to be removed from the response
+prior to sending the response back to the client.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2334,7 +2532,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherheaderactionrequestheaderstoadd">List[URLMap<wbr>Path<wbr>Matcher<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the
+backendService.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2342,7 +2542,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of header names for headers that need to be removed from the request
+prior to forwarding the request to the backendService.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2350,7 +2552,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherheaderactionresponseheaderstoadd">List[URLMap<wbr>Path<wbr>Matcher<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2358,7 +2561,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of header names for headers that need to be removed from the response
+prior to sending the response back to the client.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2388,7 +2593,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the header.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2396,7 +2602,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The value of the header to add.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2404,7 +2611,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the
+header. If true, headerValue is set for the header, discarding any values that
+were set for that header.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2419,7 +2629,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the header.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2427,7 +2638,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The value of the header to add.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2435,7 +2647,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the
+header. If true, headerValue is set for the header, discarding any values that
+were set for that header.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2450,7 +2665,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the header.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2458,7 +2674,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The value of the header to add.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2466,7 +2683,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the
+header. If true, headerValue is set for the header, discarding any values that
+were set for that header.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2481,7 +2701,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the header.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2489,7 +2710,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The value of the header to add.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2497,7 +2719,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the
+header. If true, headerValue is set for the header, discarding any values that
+were set for that header.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2527,7 +2752,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the header.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2535,7 +2761,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The value of the header to add.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2543,7 +2770,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the
+header. If true, headerValue is set for the header, discarding any values that
+were set for that header.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2558,7 +2788,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the header.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2566,7 +2797,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The value of the header to add.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2574,7 +2806,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the
+header. If true, headerValue is set for the header, discarding any values that
+were set for that header.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2589,7 +2824,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the header.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2597,7 +2833,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The value of the header to add.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2605,7 +2842,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the
+header. If true, headerValue is set for the header, discarding any values that
+were set for that header.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2620,7 +2860,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the header.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2628,7 +2869,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The value of the header to add.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2636,7 +2878,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the
+header. If true, headerValue is set for the header, discarding any values that
+were set for that header.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2666,7 +2911,11 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The list of path patterns to match. Each must start with / and the only place a
+* is allowed is at the end following a /. The string fed to the path matcher
+does not include any text after the first ? or #, and those chars are not
+allowed here.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2674,7 +2923,13 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherpathrulerouteaction">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}In response to a matching matchRule, the load balancer performs advanced routing
+actions like URL rewrites, header transformations, etc. prior to forwarding the
+request to the selected backend. If  routeAction specifies any
+weightedBackendServices, service must not be set. Conversely if service is set,
+routeAction cannot contain any  weightedBackendServices. Only one of routeAction
+or urlRedirect must be set.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2682,7 +2937,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The backend service or backend bucket link that should be matched by this test.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2690,7 +2946,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherpathruleurlredirect">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Url<wbr>Redirect<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}When this rule is matched, the request is redirected to a URL specified by
+urlRedirect. If urlRedirect is specified, service or routeAction must not be
+set.  Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2705,7 +2964,11 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The list of path patterns to match. Each must start with / and the only place a
+* is allowed is at the end following a /. The string fed to the path matcher
+does not include any text after the first ? or #, and those chars are not
+allowed here.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2713,7 +2976,13 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherpathrulerouteaction">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}In response to a matching matchRule, the load balancer performs advanced routing
+actions like URL rewrites, header transformations, etc. prior to forwarding the
+request to the selected backend. If  routeAction specifies any
+weightedBackendServices, service must not be set. Conversely if service is set,
+routeAction cannot contain any  weightedBackendServices. Only one of routeAction
+or urlRedirect must be set.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2721,7 +2990,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The backend service or backend bucket link that should be matched by this test.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2729,7 +2999,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherpathruleurlredirect">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Url<wbr>Redirect</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}When this rule is matched, the request is redirected to a URL specified by
+urlRedirect. If urlRedirect is specified, service or routeAction must not be
+set.  Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2744,7 +3017,11 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The list of path patterns to match. Each must start with / and the only place a
+* is allowed is at the end following a /. The string fed to the path matcher
+does not include any text after the first ? or #, and those chars are not
+allowed here.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2752,7 +3029,13 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherpathrulerouteaction">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}In response to a matching matchRule, the load balancer performs advanced routing
+actions like URL rewrites, header transformations, etc. prior to forwarding the
+request to the selected backend. If  routeAction specifies any
+weightedBackendServices, service must not be set. Conversely if service is set,
+routeAction cannot contain any  weightedBackendServices. Only one of routeAction
+or urlRedirect must be set.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2760,7 +3043,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The backend service or backend bucket link that should be matched by this test.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2768,7 +3052,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherpathruleurlredirect">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Url<wbr>Redirect</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}When this rule is matched, the request is redirected to a URL specified by
+urlRedirect. If urlRedirect is specified, service or routeAction must not be
+set.  Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2783,7 +3070,11 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The list of path patterns to match. Each must start with / and the only place a
+* is allowed is at the end following a /. The string fed to the path matcher
+does not include any text after the first ? or #, and those chars are not
+allowed here.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2791,7 +3082,13 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherpathrulerouteaction">Dict[URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}In response to a matching matchRule, the load balancer performs advanced routing
+actions like URL rewrites, header transformations, etc. prior to forwarding the
+request to the selected backend. If  routeAction specifies any
+weightedBackendServices, service must not be set. Conversely if service is set,
+routeAction cannot contain any  weightedBackendServices. Only one of routeAction
+or urlRedirect must be set.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2799,7 +3096,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The backend service or backend bucket link that should be matched by this test.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2807,7 +3105,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherpathruleurlredirect">Dict[URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Url<wbr>Redirect]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}When this rule is matched, the request is redirected to a URL specified by
+urlRedirect. If urlRedirect is specified, service or routeAction must not be
+set.  Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2837,7 +3138,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactioncorspolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Cors<wbr>Policy<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The specification for allowing client side cross-origin requests. Please see W3C
+Recommendation for Cross Origin Resource Sharing  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2845,7 +3148,14 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionfaultinjectionpolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The specification for fault injection introduced into traffic to test the
+resiliency of clients to backend service failure. As part of fault injection,
+when clients send requests to a backend service, delays can be introduced by
+Loadbalancer on a percentage of requests before sending those request to the
+backend service. Similarly requests from clients can be aborted by the
+Loadbalancer for a percentage of requests. timeout and retry_policy will be
+ignored by clients that are configured with a fault_injection_policy.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2853,7 +3163,11 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionrequestmirrorpolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Request<wbr>Mirror<wbr>Policy<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the policy on how requests intended for the route's backends are
+shadowed to a separate mirrored backend service. Loadbalancer does not wait for
+responses from the shadow service. Prior to sending traffic to the shadow
+service, the host / authority header is suffixed with -shadow.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2861,7 +3175,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionretrypolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the retry policy associated with this route.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2869,7 +3184,11 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactiontimeout">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Timeout<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the timeout for the selected route. Timeout is computed from the time
+the request is has been fully processed (i.e. end-of-stream) up until the
+response has been completely processed. Timeout includes all retries. If not
+specified, the default value is 15 seconds.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2877,7 +3196,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionurlrewrite">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Url<wbr>Rewrite<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The spec to modify the URL of the request, prior to forwarding the request to
+the matched service  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2885,7 +3206,15 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionweightedbackendservice">List&lt;URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of weighted backend services to send traffic to when a route match
+occurs. The weights determine the fraction of traffic that flows to their
+corresponding backend service. If all traffic needs to go to a single backend
+service, there must be one  weightedBackendService with weight set to a non 0
+number. Once a backendService is identified and before forwarding the request to
+the backend service, advanced routing actions like Url rewrites and header
+transformations are applied depending on additional settings specified in this
+HttpRouteAction.  Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2900,7 +3229,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactioncorspolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Cors<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The specification for allowing client side cross-origin requests. Please see W3C
+Recommendation for Cross Origin Resource Sharing  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2908,7 +3239,14 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionfaultinjectionpolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The specification for fault injection introduced into traffic to test the
+resiliency of clients to backend service failure. As part of fault injection,
+when clients send requests to a backend service, delays can be introduced by
+Loadbalancer on a percentage of requests before sending those request to the
+backend service. Similarly requests from clients can be aborted by the
+Loadbalancer for a percentage of requests. timeout and retry_policy will be
+ignored by clients that are configured with a fault_injection_policy.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2916,7 +3254,11 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionrequestmirrorpolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Request<wbr>Mirror<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the policy on how requests intended for the route's backends are
+shadowed to a separate mirrored backend service. Loadbalancer does not wait for
+responses from the shadow service. Prior to sending traffic to the shadow
+service, the host / authority header is suffixed with -shadow.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2924,7 +3266,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionretrypolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the retry policy associated with this route.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2932,7 +3275,11 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactiontimeout">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Timeout</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the timeout for the selected route. Timeout is computed from the time
+the request is has been fully processed (i.e. end-of-stream) up until the
+response has been completely processed. Timeout includes all retries. If not
+specified, the default value is 15 seconds.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2940,7 +3287,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionurlrewrite">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Url<wbr>Rewrite</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The spec to modify the URL of the request, prior to forwarding the request to
+the matched service  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2948,7 +3297,15 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionweightedbackendservice">[]URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of weighted backend services to send traffic to when a route match
+occurs. The weights determine the fraction of traffic that flows to their
+corresponding backend service. If all traffic needs to go to a single backend
+service, there must be one  weightedBackendService with weight set to a non 0
+number. Once a backendService is identified and before forwarding the request to
+the backend service, advanced routing actions like Url rewrites and header
+transformations are applied depending on additional settings specified in this
+HttpRouteAction.  Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2963,7 +3320,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactioncorspolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Cors<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The specification for allowing client side cross-origin requests. Please see W3C
+Recommendation for Cross Origin Resource Sharing  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2971,7 +3330,14 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionfaultinjectionpolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The specification for fault injection introduced into traffic to test the
+resiliency of clients to backend service failure. As part of fault injection,
+when clients send requests to a backend service, delays can be introduced by
+Loadbalancer on a percentage of requests before sending those request to the
+backend service. Similarly requests from clients can be aborted by the
+Loadbalancer for a percentage of requests. timeout and retry_policy will be
+ignored by clients that are configured with a fault_injection_policy.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2979,7 +3345,11 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionrequestmirrorpolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Request<wbr>Mirror<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the policy on how requests intended for the route's backends are
+shadowed to a separate mirrored backend service. Loadbalancer does not wait for
+responses from the shadow service. Prior to sending traffic to the shadow
+service, the host / authority header is suffixed with -shadow.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2987,7 +3357,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionretrypolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the retry policy associated with this route.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2995,7 +3366,11 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactiontimeout">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Timeout</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the timeout for the selected route. Timeout is computed from the time
+the request is has been fully processed (i.e. end-of-stream) up until the
+response has been completely processed. Timeout includes all retries. If not
+specified, the default value is 15 seconds.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3003,7 +3378,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionurlrewrite">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Url<wbr>Rewrite</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The spec to modify the URL of the request, prior to forwarding the request to
+the matched service  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3011,7 +3388,15 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionweightedbackendservice">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of weighted backend services to send traffic to when a route match
+occurs. The weights determine the fraction of traffic that flows to their
+corresponding backend service. If all traffic needs to go to a single backend
+service, there must be one  weightedBackendService with weight set to a non 0
+number. Once a backendService is identified and before forwarding the request to
+the backend service, advanced routing actions like Url rewrites and header
+transformations are applied depending on additional settings specified in this
+HttpRouteAction.  Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3026,7 +3411,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactioncorspolicy">Dict[URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Cors<wbr>Policy]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The specification for allowing client side cross-origin requests. Please see W3C
+Recommendation for Cross Origin Resource Sharing  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3034,7 +3421,14 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionfaultinjectionpolicy">Dict[URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The specification for fault injection introduced into traffic to test the
+resiliency of clients to backend service failure. As part of fault injection,
+when clients send requests to a backend service, delays can be introduced by
+Loadbalancer on a percentage of requests before sending those request to the
+backend service. Similarly requests from clients can be aborted by the
+Loadbalancer for a percentage of requests. timeout and retry_policy will be
+ignored by clients that are configured with a fault_injection_policy.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3042,7 +3436,11 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionrequestmirrorpolicy">Dict[URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Request<wbr>Mirror<wbr>Policy]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the policy on how requests intended for the route's backends are
+shadowed to a separate mirrored backend service. Loadbalancer does not wait for
+responses from the shadow service. Prior to sending traffic to the shadow
+service, the host / authority header is suffixed with -shadow.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3050,7 +3448,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionretrypolicy">Dict[URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the retry policy associated with this route.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3058,7 +3457,11 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactiontimeout">Dict[URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Timeout]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the timeout for the selected route. Timeout is computed from the time
+the request is has been fully processed (i.e. end-of-stream) up until the
+response has been completely processed. Timeout includes all retries. If not
+specified, the default value is 15 seconds.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3066,7 +3469,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionurlrewrite">Dict[URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Url<wbr>Rewrite]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The spec to modify the URL of the request, prior to forwarding the request to
+the matched service  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3074,7 +3479,15 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionweightedbackendservice">List[URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of weighted backend services to send traffic to when a route match
+occurs. The weights determine the fraction of traffic that flows to their
+corresponding backend service. If all traffic needs to go to a single backend
+service, there must be one  weightedBackendService with weight set to a non 0
+number. Once a backendService is identified and before forwarding the request to
+the backend service, advanced routing actions like Url rewrites and header
+transformations are applied depending on additional settings specified in this
+HttpRouteAction.  Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3104,7 +3517,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If true, specifies the CORS policy is disabled.
+which indicates that the CORS policy is in effect. Defaults to false.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3112,7 +3527,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}In response to a preflight request, setting this to true indicates that the
+actual request can include user credentials. This translates to the Access-
+Control-Allow-Credentials header. Defaults to false.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3120,7 +3538,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the content for the Access-Control-Allow-Headers header.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3128,7 +3547,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the content for the Access-Control-Allow-Methods header.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3136,7 +3556,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the regualar expression patterns that match allowed origins. For
+regular expression grammar please see en.cppreference.com/w/cpp/regex/ecmascript
+An origin is allowed if it matches either allow_origins or allow_origin_regex.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3144,7 +3567,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the list of origins that will be allowed to do CORS requests. An
+origin is allowed if it matches either allow_origins or allow_origin_regex.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3152,7 +3577,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the content for the Access-Control-Expose-Headers header.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3160,7 +3586,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies how long the results of a preflight request can be cached. This
+translates to the content for the Access-Control-Max-Age header.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3175,7 +3603,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If true, specifies the CORS policy is disabled.
+which indicates that the CORS policy is in effect. Defaults to false.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3183,7 +3613,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}In response to a preflight request, setting this to true indicates that the
+actual request can include user credentials. This translates to the Access-
+Control-Allow-Credentials header. Defaults to false.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3191,7 +3624,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the content for the Access-Control-Allow-Headers header.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3199,7 +3633,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the content for the Access-Control-Allow-Methods header.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3207,7 +3642,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the regualar expression patterns that match allowed origins. For
+regular expression grammar please see en.cppreference.com/w/cpp/regex/ecmascript
+An origin is allowed if it matches either allow_origins or allow_origin_regex.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3215,7 +3653,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the list of origins that will be allowed to do CORS requests. An
+origin is allowed if it matches either allow_origins or allow_origin_regex.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3223,7 +3663,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the content for the Access-Control-Expose-Headers header.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3231,7 +3672,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies how long the results of a preflight request can be cached. This
+translates to the content for the Access-Control-Max-Age header.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3246,7 +3689,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If true, specifies the CORS policy is disabled.
+which indicates that the CORS policy is in effect. Defaults to false.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3254,7 +3699,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}In response to a preflight request, setting this to true indicates that the
+actual request can include user credentials. This translates to the Access-
+Control-Allow-Credentials header. Defaults to false.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3262,7 +3710,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the content for the Access-Control-Allow-Headers header.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3270,7 +3719,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the content for the Access-Control-Allow-Methods header.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3278,7 +3728,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the regualar expression patterns that match allowed origins. For
+regular expression grammar please see en.cppreference.com/w/cpp/regex/ecmascript
+An origin is allowed if it matches either allow_origins or allow_origin_regex.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3286,7 +3739,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the list of origins that will be allowed to do CORS requests. An
+origin is allowed if it matches either allow_origins or allow_origin_regex.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3294,7 +3749,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the content for the Access-Control-Expose-Headers header.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3302,7 +3758,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies how long the results of a preflight request can be cached. This
+translates to the content for the Access-Control-Max-Age header.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3317,7 +3775,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If true, specifies the CORS policy is disabled.
+which indicates that the CORS policy is in effect. Defaults to false.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3325,7 +3785,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}In response to a preflight request, setting this to true indicates that the
+actual request can include user credentials. This translates to the Access-
+Control-Allow-Credentials header. Defaults to false.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3333,7 +3796,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the content for the Access-Control-Allow-Headers header.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3341,7 +3805,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the content for the Access-Control-Allow-Methods header.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3349,7 +3814,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the regualar expression patterns that match allowed origins. For
+regular expression grammar please see en.cppreference.com/w/cpp/regex/ecmascript
+An origin is allowed if it matches either allow_origins or allow_origin_regex.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3357,7 +3825,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the list of origins that will be allowed to do CORS requests. An
+origin is allowed if it matches either allow_origins or allow_origin_regex.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3365,7 +3835,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the content for the Access-Control-Expose-Headers header.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3373,7 +3844,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies how long the results of a preflight request can be cached. This
+translates to the content for the Access-Control-Max-Age header.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3403,7 +3876,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionfaultinjectionpolicyabort">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Abort<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The specification for how client requests are aborted as part of fault
+injection.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3411,7 +3886,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionfaultinjectionpolicydelay">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The specification for how client requests are delayed as part of fault
+injection, before being sent to a backend service.  Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3426,7 +3903,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionfaultinjectionpolicyabort">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Abort</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The specification for how client requests are aborted as part of fault
+injection.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3434,7 +3913,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionfaultinjectionpolicydelay">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The specification for how client requests are delayed as part of fault
+injection, before being sent to a backend service.  Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3449,7 +3930,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionfaultinjectionpolicyabort">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Abort</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The specification for how client requests are aborted as part of fault
+injection.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3457,7 +3940,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionfaultinjectionpolicydelay">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The specification for how client requests are delayed as part of fault
+injection, before being sent to a backend service.  Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3472,7 +3957,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionfaultinjectionpolicyabort">Dict[URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Abort]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The specification for how client requests are aborted as part of fault
+injection.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3480,7 +3967,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionfaultinjectionpolicydelay">Dict[URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The specification for how client requests are delayed as part of fault
+injection, before being sent to a backend service.  Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3510,7 +3999,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The HTTP status code used to abort the request. The value must be between 200
+and 599 inclusive.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -3518,7 +4009,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The percentage of traffic (connections/operations/requests) on which delay will
+be introduced as part of fault injection. The value must be between 0.0 and
+100.0 inclusive.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3533,7 +4027,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The HTTP status code used to abort the request. The value must be between 200
+and 599 inclusive.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -3541,7 +4037,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The percentage of traffic (connections/operations/requests) on which delay will
+be introduced as part of fault injection. The value must be between 0.0 and
+100.0 inclusive.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3556,7 +4055,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The HTTP status code used to abort the request. The value must be between 200
+and 599 inclusive.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -3564,7 +4065,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The percentage of traffic (connections/operations/requests) on which delay will
+be introduced as part of fault injection. The value must be between 0.0 and
+100.0 inclusive.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3579,7 +4083,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The HTTP status code used to abort the request. The value must be between 200
+and 599 inclusive.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -3587,7 +4093,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The percentage of traffic (connections/operations/requests) on which delay will
+be introduced as part of fault injection. The value must be between 0.0 and
+100.0 inclusive.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3617,7 +4126,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionfaultinjectionpolicydelayfixeddelay">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay<wbr>Fixed<wbr>Delay<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the value of the fixed delay interval.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -3625,7 +4135,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The percentage of traffic (connections/operations/requests) on which delay will
+be introduced as part of fault injection. The value must be between 0.0 and
+100.0 inclusive.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3640,7 +4153,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionfaultinjectionpolicydelayfixeddelay">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay<wbr>Fixed<wbr>Delay</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the value of the fixed delay interval.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -3648,7 +4162,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The percentage of traffic (connections/operations/requests) on which delay will
+be introduced as part of fault injection. The value must be between 0.0 and
+100.0 inclusive.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3663,7 +4180,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionfaultinjectionpolicydelayfixeddelay">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay<wbr>Fixed<wbr>Delay</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the value of the fixed delay interval.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -3671,7 +4189,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The percentage of traffic (connections/operations/requests) on which delay will
+be introduced as part of fault injection. The value must be between 0.0 and
+100.0 inclusive.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3686,7 +4207,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionfaultinjectionpolicydelayfixeddelay">Dict[URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay<wbr>Fixed<wbr>Delay]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the value of the fixed delay interval.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -3694,7 +4216,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The percentage of traffic (connections/operations/requests) on which delay will
+be introduced as part of fault injection. The value must be between 0.0 and
+100.0 inclusive.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3724,7 +4249,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000
+inclusive.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3732,7 +4259,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations
+less than one second are represented with a 0 `seconds` field and a positive
+`nanos` field. Must be from 0 to 999,999,999 inclusive.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3747,7 +4277,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000
+inclusive.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3755,7 +4287,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations
+less than one second are represented with a 0 `seconds` field and a positive
+`nanos` field. Must be from 0 to 999,999,999 inclusive.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3770,7 +4305,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000
+inclusive.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3778,7 +4315,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations
+less than one second are represented with a 0 `seconds` field and a positive
+`nanos` field. Must be from 0 to 999,999,999 inclusive.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3793,7 +4333,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000
+inclusive.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3801,7 +4343,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations
+less than one second are represented with a 0 `seconds` field and a positive
+`nanos` field. Must be from 0 to 999,999,999 inclusive.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3831,7 +4376,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The default BackendService resource. Before
+forwarding the request to backendService, the loadbalancer applies any relevant
+headerActions specified as part of this backendServiceWeight.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3846,7 +4394,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The default BackendService resource. Before
+forwarding the request to backendService, the loadbalancer applies any relevant
+headerActions specified as part of this backendServiceWeight.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3861,7 +4412,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The default BackendService resource. Before
+forwarding the request to backendService, the loadbalancer applies any relevant
+headerActions specified as part of this backendServiceWeight.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3876,7 +4430,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The default BackendService resource. Before
+forwarding the request to backendService, the loadbalancer applies any relevant
+headerActions specified as part of this backendServiceWeight.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3906,7 +4463,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the allowed number retries. This number must be > 0.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3914,7 +4472,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionretrypolicypertrytimeout">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Per<wbr>Try<wbr>Timeout<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies a non-zero timeout per retry attempt.
+If not specified, will use the timeout set in HttpRouteAction. If timeout in HttpRouteAction
+is not set, will use the largest timeout among all backend services associated with the route.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3922,7 +4483,28 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specfies one or more conditions when this retry rule applies. Valid values are:
+- 5xx: Loadbalancer will attempt a retry if the backend service responds with
+any 5xx response code, or if the backend service does not respond at all,
+example: disconnects, reset, read timeout, connection failure, and refused
+streams.
+- gateway-error: Similar to 5xx, but only applies to response codes
+502, 503 or 504.
+- connect-failure: Loadbalancer will retry on failures
+connecting to backend services, for example due to connection timeouts.
+- retriable-4xx: Loadbalancer will retry for retriable 4xx response codes.
+Currently the only retriable error supported is 409.
+- refused-stream: Loadbalancer will retry if the backend service resets the stream with a
+REFUSED_STREAM error code. This reset type indicates that it is safe to retry.
+- cancelled: Loadbalancer will retry if the gRPC status code in the response
+header is set to cancelled
+- deadline-exceeded: Loadbalancer will retry if the
+gRPC status code in the response header is set to deadline-exceeded
+- resource-exhausted: Loadbalancer will retry if the gRPC status code in the response
+header is set to resource-exhausted
+- unavailable: Loadbalancer will retry if the gRPC status code in
+the response header is set to unavailable
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3937,7 +4519,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the allowed number retries. This number must be > 0.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3945,7 +4528,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionretrypolicypertrytimeout">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Per<wbr>Try<wbr>Timeout</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies a non-zero timeout per retry attempt.
+If not specified, will use the timeout set in HttpRouteAction. If timeout in HttpRouteAction
+is not set, will use the largest timeout among all backend services associated with the route.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3953,7 +4539,28 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specfies one or more conditions when this retry rule applies. Valid values are:
+- 5xx: Loadbalancer will attempt a retry if the backend service responds with
+any 5xx response code, or if the backend service does not respond at all,
+example: disconnects, reset, read timeout, connection failure, and refused
+streams.
+- gateway-error: Similar to 5xx, but only applies to response codes
+502, 503 or 504.
+- connect-failure: Loadbalancer will retry on failures
+connecting to backend services, for example due to connection timeouts.
+- retriable-4xx: Loadbalancer will retry for retriable 4xx response codes.
+Currently the only retriable error supported is 409.
+- refused-stream: Loadbalancer will retry if the backend service resets the stream with a
+REFUSED_STREAM error code. This reset type indicates that it is safe to retry.
+- cancelled: Loadbalancer will retry if the gRPC status code in the response
+header is set to cancelled
+- deadline-exceeded: Loadbalancer will retry if the
+gRPC status code in the response header is set to deadline-exceeded
+- resource-exhausted: Loadbalancer will retry if the gRPC status code in the response
+header is set to resource-exhausted
+- unavailable: Loadbalancer will retry if the gRPC status code in
+the response header is set to unavailable
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3968,7 +4575,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the allowed number retries. This number must be > 0.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3976,7 +4584,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionretrypolicypertrytimeout">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Per<wbr>Try<wbr>Timeout</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies a non-zero timeout per retry attempt.
+If not specified, will use the timeout set in HttpRouteAction. If timeout in HttpRouteAction
+is not set, will use the largest timeout among all backend services associated with the route.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3984,7 +4595,28 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specfies one or more conditions when this retry rule applies. Valid values are:
+- 5xx: Loadbalancer will attempt a retry if the backend service responds with
+any 5xx response code, or if the backend service does not respond at all,
+example: disconnects, reset, read timeout, connection failure, and refused
+streams.
+- gateway-error: Similar to 5xx, but only applies to response codes
+502, 503 or 504.
+- connect-failure: Loadbalancer will retry on failures
+connecting to backend services, for example due to connection timeouts.
+- retriable-4xx: Loadbalancer will retry for retriable 4xx response codes.
+Currently the only retriable error supported is 409.
+- refused-stream: Loadbalancer will retry if the backend service resets the stream with a
+REFUSED_STREAM error code. This reset type indicates that it is safe to retry.
+- cancelled: Loadbalancer will retry if the gRPC status code in the response
+header is set to cancelled
+- deadline-exceeded: Loadbalancer will retry if the
+gRPC status code in the response header is set to deadline-exceeded
+- resource-exhausted: Loadbalancer will retry if the gRPC status code in the response
+header is set to resource-exhausted
+- unavailable: Loadbalancer will retry if the gRPC status code in
+the response header is set to unavailable
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3999,7 +4631,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the allowed number retries. This number must be > 0.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4007,7 +4640,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionretrypolicypertrytimeout">Dict[URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Per<wbr>Try<wbr>Timeout]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies a non-zero timeout per retry attempt.
+If not specified, will use the timeout set in HttpRouteAction. If timeout in HttpRouteAction
+is not set, will use the largest timeout among all backend services associated with the route.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4015,7 +4651,28 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specfies one or more conditions when this retry rule applies. Valid values are:
+- 5xx: Loadbalancer will attempt a retry if the backend service responds with
+any 5xx response code, or if the backend service does not respond at all,
+example: disconnects, reset, read timeout, connection failure, and refused
+streams.
+- gateway-error: Similar to 5xx, but only applies to response codes
+502, 503 or 504.
+- connect-failure: Loadbalancer will retry on failures
+connecting to backend services, for example due to connection timeouts.
+- retriable-4xx: Loadbalancer will retry for retriable 4xx response codes.
+Currently the only retriable error supported is 409.
+- refused-stream: Loadbalancer will retry if the backend service resets the stream with a
+REFUSED_STREAM error code. This reset type indicates that it is safe to retry.
+- cancelled: Loadbalancer will retry if the gRPC status code in the response
+header is set to cancelled
+- deadline-exceeded: Loadbalancer will retry if the
+gRPC status code in the response header is set to deadline-exceeded
+- resource-exhausted: Loadbalancer will retry if the gRPC status code in the response
+header is set to resource-exhausted
+- unavailable: Loadbalancer will retry if the gRPC status code in
+the response header is set to unavailable
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -4045,7 +4702,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000
+inclusive.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4053,7 +4712,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations
+less than one second are represented with a 0 `seconds` field and a positive
+`nanos` field. Must be from 0 to 999,999,999 inclusive.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -4068,7 +4730,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000
+inclusive.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4076,7 +4740,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations
+less than one second are represented with a 0 `seconds` field and a positive
+`nanos` field. Must be from 0 to 999,999,999 inclusive.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -4091,7 +4758,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000
+inclusive.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4099,7 +4768,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations
+less than one second are represented with a 0 `seconds` field and a positive
+`nanos` field. Must be from 0 to 999,999,999 inclusive.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -4114,7 +4786,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000
+inclusive.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4122,7 +4796,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations
+less than one second are represented with a 0 `seconds` field and a positive
+`nanos` field. Must be from 0 to 999,999,999 inclusive.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -4152,7 +4829,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000
+inclusive.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4160,7 +4839,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations
+less than one second are represented with a 0 `seconds` field and a positive
+`nanos` field. Must be from 0 to 999,999,999 inclusive.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -4175,7 +4857,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000
+inclusive.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4183,7 +4867,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations
+less than one second are represented with a 0 `seconds` field and a positive
+`nanos` field. Must be from 0 to 999,999,999 inclusive.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -4198,7 +4885,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000
+inclusive.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4206,7 +4895,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations
+less than one second are represented with a 0 `seconds` field and a positive
+`nanos` field. Must be from 0 to 999,999,999 inclusive.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -4221,7 +4913,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000
+inclusive.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4229,7 +4923,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations
+less than one second are represented with a 0 `seconds` field and a positive
+`nanos` field. Must be from 0 to 999,999,999 inclusive.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -4259,7 +4956,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Prior to forwarding the request to the selected service, the request's host
+header is replaced with contents of hostRewrite. The value must be between 1 and
+255 characters.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4267,7 +4967,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Prior to forwarding the request to the selected backend service, the matching
+portion of the request's path is replaced by pathPrefixRewrite. The value must
+be between 1 and 1024 characters.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -4282,7 +4985,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Prior to forwarding the request to the selected service, the request's host
+header is replaced with contents of hostRewrite. The value must be between 1 and
+255 characters.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4290,7 +4996,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Prior to forwarding the request to the selected backend service, the matching
+portion of the request's path is replaced by pathPrefixRewrite. The value must
+be between 1 and 1024 characters.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -4305,7 +5014,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Prior to forwarding the request to the selected service, the request's host
+header is replaced with contents of hostRewrite. The value must be between 1 and
+255 characters.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4313,7 +5025,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Prior to forwarding the request to the selected backend service, the matching
+portion of the request's path is replaced by pathPrefixRewrite. The value must
+be between 1 and 1024 characters.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -4328,7 +5043,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Prior to forwarding the request to the selected service, the request's host
+header is replaced with contents of hostRewrite. The value must be between 1 and
+255 characters.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4336,7 +5054,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Prior to forwarding the request to the selected backend service, the matching
+portion of the request's path is replaced by pathPrefixRewrite. The value must
+be between 1 and 1024 characters.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -4366,7 +5087,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The default BackendService resource. Before
+forwarding the request to backendService, the loadbalancer applies any relevant
+headerActions specified as part of this backendServiceWeight.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -4374,7 +5098,13 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the fraction of traffic sent to backendService, computed as weight /
+(sum of all weightedBackendService weights in routeAction) . The selection of a
+backend service is determined only for new traffic. Once a user's request has
+been directed to a backendService, subsequent requests will be sent to the same
+backendService as determined by the BackendService's session affinity policy.
+The value must be between 0 and 1000
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4382,7 +5112,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionweightedbackendserviceheaderaction">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for
+the selected backendService. headerAction specified here take effect before
+headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap.  Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -4397,7 +5130,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The default BackendService resource. Before
+forwarding the request to backendService, the loadbalancer applies any relevant
+headerActions specified as part of this backendServiceWeight.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -4405,7 +5141,13 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the fraction of traffic sent to backendService, computed as weight /
+(sum of all weightedBackendService weights in routeAction) . The selection of a
+backend service is determined only for new traffic. Once a user's request has
+been directed to a backendService, subsequent requests will be sent to the same
+backendService as determined by the BackendService's session affinity policy.
+The value must be between 0 and 1000
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4413,7 +5155,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionweightedbackendserviceheaderaction">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for
+the selected backendService. headerAction specified here take effect before
+headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap.  Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -4428,7 +5173,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The default BackendService resource. Before
+forwarding the request to backendService, the loadbalancer applies any relevant
+headerActions specified as part of this backendServiceWeight.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -4436,7 +5184,13 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the fraction of traffic sent to backendService, computed as weight /
+(sum of all weightedBackendService weights in routeAction) . The selection of a
+backend service is determined only for new traffic. Once a user's request has
+been directed to a backendService, subsequent requests will be sent to the same
+backendService as determined by the BackendService's session affinity policy.
+The value must be between 0 and 1000
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4444,7 +5198,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionweightedbackendserviceheaderaction">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for
+the selected backendService. headerAction specified here take effect before
+headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap.  Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -4459,7 +5216,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The default BackendService resource. Before
+forwarding the request to backendService, the loadbalancer applies any relevant
+headerActions specified as part of this backendServiceWeight.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -4467,7 +5227,13 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the fraction of traffic sent to backendService, computed as weight /
+(sum of all weightedBackendService weights in routeAction) . The selection of a
+backend service is determined only for new traffic. Once a user's request has
+been directed to a backendService, subsequent requests will be sent to the same
+backendService as determined by the BackendService's session affinity policy.
+The value must be between 0 and 1000
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4475,7 +5241,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionweightedbackendserviceheaderaction">Dict[URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for
+the selected backendService. headerAction specified here take effect before
+headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap.  Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -4505,7 +5274,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionweightedbackendserviceheaderactionrequestheaderstoadd">List&lt;URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the
+backendService.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4513,7 +5284,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of header names for headers that need to be removed from the request
+prior to forwarding the request to the backendService.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4521,7 +5294,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionweightedbackendserviceheaderactionresponseheaderstoadd">List&lt;URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4529,7 +5303,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of header names for headers that need to be removed from the response
+prior to sending the response back to the client.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -4544,7 +5320,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionweightedbackendserviceheaderactionrequestheaderstoadd">[]URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the
+backendService.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4552,7 +5330,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of header names for headers that need to be removed from the request
+prior to forwarding the request to the backendService.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4560,7 +5340,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionweightedbackendserviceheaderactionresponseheaderstoadd">[]URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4568,7 +5349,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of header names for headers that need to be removed from the response
+prior to sending the response back to the client.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -4583,7 +5366,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionweightedbackendserviceheaderactionrequestheaderstoadd">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the
+backendService.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4591,7 +5376,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of header names for headers that need to be removed from the request
+prior to forwarding the request to the backendService.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4599,7 +5386,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionweightedbackendserviceheaderactionresponseheaderstoadd">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4607,7 +5395,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of header names for headers that need to be removed from the response
+prior to sending the response back to the client.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -4622,7 +5412,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionweightedbackendserviceheaderactionrequestheaderstoadd">List[URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the
+backendService.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4630,7 +5422,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of header names for headers that need to be removed from the request
+prior to forwarding the request to the backendService.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4638,7 +5432,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionweightedbackendserviceheaderactionresponseheaderstoadd">List[URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4646,7 +5441,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of header names for headers that need to be removed from the response
+prior to sending the response back to the client.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -4676,7 +5473,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the header.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -4684,7 +5482,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The value of the header to add.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -4692,7 +5491,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the
+header. If true, headerValue is set for the header, discarding any values that
+were set for that header.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -4707,7 +5509,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the header.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -4715,7 +5518,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The value of the header to add.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -4723,7 +5527,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the
+header. If true, headerValue is set for the header, discarding any values that
+were set for that header.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -4738,7 +5545,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the header.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -4746,7 +5554,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The value of the header to add.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -4754,7 +5563,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the
+header. If true, headerValue is set for the header, discarding any values that
+were set for that header.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -4769,7 +5581,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the header.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -4777,7 +5590,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The value of the header to add.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -4785,7 +5599,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the
+header. If true, headerValue is set for the header, discarding any values that
+were set for that header.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -4815,7 +5632,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the header.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -4823,7 +5641,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The value of the header to add.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -4831,7 +5650,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the
+header. If true, headerValue is set for the header, discarding any values that
+were set for that header.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -4846,7 +5668,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the header.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -4854,7 +5677,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The value of the header to add.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -4862,7 +5686,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the
+header. If true, headerValue is set for the header, discarding any values that
+were set for that header.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -4877,7 +5704,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the header.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -4885,7 +5713,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The value of the header to add.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -4893,7 +5722,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the
+header. If true, headerValue is set for the header, discarding any values that
+were set for that header.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -4908,7 +5740,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the header.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -4916,7 +5749,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The value of the header to add.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -4924,7 +5758,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the
+header. If true, headerValue is set for the header, discarding any values that
+were set for that header.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -4954,7 +5791,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If set to true, any accompanying query portion of the original URL is removed
+prior to redirecting the request. If set to false, the query portion of the
+original URL is retained. Defaults to false.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4962,7 +5802,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The host that will be used in the redirect response instead of the one that was
+supplied in the request. The value must be between 1 and 255 characters.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4970,7 +5812,11 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If set to true, the URL scheme in the redirected request is set to https. If set
+to false, the URL scheme of the redirected request will remain the same as that
+of the request. This must only be set for UrlMaps used in TargetHttpProxys.
+Setting this true for TargetHttpsProxy is not permitted. Defaults to false.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4978,7 +5824,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The path that will be used in the redirect response instead of the one that was
+supplied in the request. Only one of pathRedirect or prefixRedirect must be
+specified. The value must be between 1 and 1024 characters.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4986,7 +5835,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The prefix that replaces the prefixMatch specified in the HttpRouteRuleMatch,
+retaining the remaining portion of the URL before redirecting the request.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4994,7 +5845,13 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The HTTP Status code to use for this RedirectAction. Supported values are:   -
+MOVED_PERMANENTLY_DEFAULT, which is the default value and corresponds to 301.  -
+FOUND, which corresponds to 302.  - SEE_OTHER which corresponds to 303.  -
+TEMPORARY_REDIRECT, which corresponds to 307. In this case, the request method
+will be retained.  - PERMANENT_REDIRECT, which corresponds to 308. In this case,
+the request method will be retained.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -5009,7 +5866,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If set to true, any accompanying query portion of the original URL is removed
+prior to redirecting the request. If set to false, the query portion of the
+original URL is retained. Defaults to false.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5017,7 +5877,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The host that will be used in the redirect response instead of the one that was
+supplied in the request. The value must be between 1 and 255 characters.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5025,7 +5887,11 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If set to true, the URL scheme in the redirected request is set to https. If set
+to false, the URL scheme of the redirected request will remain the same as that
+of the request. This must only be set for UrlMaps used in TargetHttpProxys.
+Setting this true for TargetHttpsProxy is not permitted. Defaults to false.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5033,7 +5899,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The path that will be used in the redirect response instead of the one that was
+supplied in the request. Only one of pathRedirect or prefixRedirect must be
+specified. The value must be between 1 and 1024 characters.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5041,7 +5910,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The prefix that replaces the prefixMatch specified in the HttpRouteRuleMatch,
+retaining the remaining portion of the URL before redirecting the request.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5049,7 +5920,13 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The HTTP Status code to use for this RedirectAction. Supported values are:   -
+MOVED_PERMANENTLY_DEFAULT, which is the default value and corresponds to 301.  -
+FOUND, which corresponds to 302.  - SEE_OTHER which corresponds to 303.  -
+TEMPORARY_REDIRECT, which corresponds to 307. In this case, the request method
+will be retained.  - PERMANENT_REDIRECT, which corresponds to 308. In this case,
+the request method will be retained.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -5064,7 +5941,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If set to true, any accompanying query portion of the original URL is removed
+prior to redirecting the request. If set to false, the query portion of the
+original URL is retained. Defaults to false.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5072,7 +5952,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The host that will be used in the redirect response instead of the one that was
+supplied in the request. The value must be between 1 and 255 characters.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5080,7 +5962,11 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If set to true, the URL scheme in the redirected request is set to https. If set
+to false, the URL scheme of the redirected request will remain the same as that
+of the request. This must only be set for UrlMaps used in TargetHttpProxys.
+Setting this true for TargetHttpsProxy is not permitted. Defaults to false.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5088,7 +5974,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The path that will be used in the redirect response instead of the one that was
+supplied in the request. Only one of pathRedirect or prefixRedirect must be
+specified. The value must be between 1 and 1024 characters.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5096,7 +5985,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The prefix that replaces the prefixMatch specified in the HttpRouteRuleMatch,
+retaining the remaining portion of the URL before redirecting the request.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5104,7 +5995,13 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The HTTP Status code to use for this RedirectAction. Supported values are:   -
+MOVED_PERMANENTLY_DEFAULT, which is the default value and corresponds to 301.  -
+FOUND, which corresponds to 302.  - SEE_OTHER which corresponds to 303.  -
+TEMPORARY_REDIRECT, which corresponds to 307. In this case, the request method
+will be retained.  - PERMANENT_REDIRECT, which corresponds to 308. In this case,
+the request method will be retained.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -5119,7 +6016,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If set to true, any accompanying query portion of the original URL is removed
+prior to redirecting the request. If set to false, the query portion of the
+original URL is retained. Defaults to false.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5127,7 +6027,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The host that will be used in the redirect response instead of the one that was
+supplied in the request. The value must be between 1 and 255 characters.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5135,7 +6037,11 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If set to true, the URL scheme in the redirected request is set to https. If set
+to false, the URL scheme of the redirected request will remain the same as that
+of the request. This must only be set for UrlMaps used in TargetHttpProxys.
+Setting this true for TargetHttpsProxy is not permitted. Defaults to false.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5143,7 +6049,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The path that will be used in the redirect response instead of the one that was
+supplied in the request. Only one of pathRedirect or prefixRedirect must be
+specified. The value must be between 1 and 1024 characters.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5151,7 +6060,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The prefix that replaces the prefixMatch specified in the HttpRouteRuleMatch,
+retaining the remaining portion of the URL before redirecting the request.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5159,7 +6070,13 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The HTTP Status code to use for this RedirectAction. Supported values are:   -
+MOVED_PERMANENTLY_DEFAULT, which is the default value and corresponds to 301.  -
+FOUND, which corresponds to 302.  - SEE_OTHER which corresponds to 303.  -
+TEMPORARY_REDIRECT, which corresponds to 307. In this case, the request method
+will be retained.  - PERMANENT_REDIRECT, which corresponds to 308. In this case,
+the request method will be retained.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -5189,7 +6106,20 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}For routeRules within a given pathMatcher, priority determines the order
+in which load balancer will interpret routeRules. RouteRules are evaluated
+in order of priority, from the lowest to highest number. The priority of
+a rule decreases as its number increases (1, 2, 3, N+1). The first rule
+that matches the request is applied.
+You cannot configure two or more routeRules with the same priority.
+Priority for each rule must be set to a number between 0 and
+2147483647 inclusive.
+Priority numbers can have gaps, which enable you to add or remove rules
+in the future without affecting the rest of the rules. For example,
+1, 2, 3, 4, 5, 9, 12, 16 is a valid series of priority numbers to which
+you could add rules numbered from 6 to 8, 10 to 11, and 13 to 15 in the
+future without any impact on existing rules.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5197,7 +6127,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouteruleheaderaction">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Header<wbr>Action<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for
+the selected backendService. headerAction specified here take effect before
+headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5205,7 +6138,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouterulematchrule">List&lt;URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The rules for determining a match.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5213,7 +6147,13 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouterulerouteaction">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}In response to a matching matchRule, the load balancer performs advanced routing
+actions like URL rewrites, header transformations, etc. prior to forwarding the
+request to the selected backend. If  routeAction specifies any
+weightedBackendServices, service must not be set. Conversely if service is set,
+routeAction cannot contain any  weightedBackendServices. Only one of routeAction
+or urlRedirect must be set.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5221,7 +6161,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The backend service or backend bucket link that should be matched by this test.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5229,7 +6170,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouteruleurlredirect">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Url<wbr>Redirect<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}When this rule is matched, the request is redirected to a URL specified by
+urlRedirect. If urlRedirect is specified, service or routeAction must not be
+set.  Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -5244,7 +6188,20 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}For routeRules within a given pathMatcher, priority determines the order
+in which load balancer will interpret routeRules. RouteRules are evaluated
+in order of priority, from the lowest to highest number. The priority of
+a rule decreases as its number increases (1, 2, 3, N+1). The first rule
+that matches the request is applied.
+You cannot configure two or more routeRules with the same priority.
+Priority for each rule must be set to a number between 0 and
+2147483647 inclusive.
+Priority numbers can have gaps, which enable you to add or remove rules
+in the future without affecting the rest of the rules. For example,
+1, 2, 3, 4, 5, 9, 12, 16 is a valid series of priority numbers to which
+you could add rules numbered from 6 to 8, 10 to 11, and 13 to 15 in the
+future without any impact on existing rules.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5252,7 +6209,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouteruleheaderaction">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Header<wbr>Action</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for
+the selected backendService. headerAction specified here take effect before
+headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5260,7 +6220,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouterulematchrule">[]URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The rules for determining a match.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5268,7 +6229,13 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouterulerouteaction">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}In response to a matching matchRule, the load balancer performs advanced routing
+actions like URL rewrites, header transformations, etc. prior to forwarding the
+request to the selected backend. If  routeAction specifies any
+weightedBackendServices, service must not be set. Conversely if service is set,
+routeAction cannot contain any  weightedBackendServices. Only one of routeAction
+or urlRedirect must be set.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5276,7 +6243,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The backend service or backend bucket link that should be matched by this test.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5284,7 +6252,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouteruleurlredirect">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Url<wbr>Redirect</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}When this rule is matched, the request is redirected to a URL specified by
+urlRedirect. If urlRedirect is specified, service or routeAction must not be
+set.  Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -5299,7 +6270,20 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}For routeRules within a given pathMatcher, priority determines the order
+in which load balancer will interpret routeRules. RouteRules are evaluated
+in order of priority, from the lowest to highest number. The priority of
+a rule decreases as its number increases (1, 2, 3, N+1). The first rule
+that matches the request is applied.
+You cannot configure two or more routeRules with the same priority.
+Priority for each rule must be set to a number between 0 and
+2147483647 inclusive.
+Priority numbers can have gaps, which enable you to add or remove rules
+in the future without affecting the rest of the rules. For example,
+1, 2, 3, 4, 5, 9, 12, 16 is a valid series of priority numbers to which
+you could add rules numbered from 6 to 8, 10 to 11, and 13 to 15 in the
+future without any impact on existing rules.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5307,7 +6291,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouteruleheaderaction">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Header<wbr>Action</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for
+the selected backendService. headerAction specified here take effect before
+headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5315,7 +6302,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouterulematchrule">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The rules for determining a match.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5323,7 +6311,13 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouterulerouteaction">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}In response to a matching matchRule, the load balancer performs advanced routing
+actions like URL rewrites, header transformations, etc. prior to forwarding the
+request to the selected backend. If  routeAction specifies any
+weightedBackendServices, service must not be set. Conversely if service is set,
+routeAction cannot contain any  weightedBackendServices. Only one of routeAction
+or urlRedirect must be set.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5331,7 +6325,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The backend service or backend bucket link that should be matched by this test.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5339,7 +6334,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouteruleurlredirect">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Url<wbr>Redirect</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}When this rule is matched, the request is redirected to a URL specified by
+urlRedirect. If urlRedirect is specified, service or routeAction must not be
+set.  Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -5354,7 +6352,20 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}For routeRules within a given pathMatcher, priority determines the order
+in which load balancer will interpret routeRules. RouteRules are evaluated
+in order of priority, from the lowest to highest number. The priority of
+a rule decreases as its number increases (1, 2, 3, N+1). The first rule
+that matches the request is applied.
+You cannot configure two or more routeRules with the same priority.
+Priority for each rule must be set to a number between 0 and
+2147483647 inclusive.
+Priority numbers can have gaps, which enable you to add or remove rules
+in the future without affecting the rest of the rules. For example,
+1, 2, 3, 4, 5, 9, 12, 16 is a valid series of priority numbers to which
+you could add rules numbered from 6 to 8, 10 to 11, and 13 to 15 in the
+future without any impact on existing rules.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5362,7 +6373,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouteruleheaderaction">Dict[URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Header<wbr>Action]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for
+the selected backendService. headerAction specified here take effect before
+headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5370,7 +6384,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouterulematchrule">List[URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The rules for determining a match.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5378,7 +6393,13 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouterulerouteaction">Dict[URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}In response to a matching matchRule, the load balancer performs advanced routing
+actions like URL rewrites, header transformations, etc. prior to forwarding the
+request to the selected backend. If  routeAction specifies any
+weightedBackendServices, service must not be set. Conversely if service is set,
+routeAction cannot contain any  weightedBackendServices. Only one of routeAction
+or urlRedirect must be set.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5386,7 +6407,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The backend service or backend bucket link that should be matched by this test.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5394,7 +6416,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouteruleurlredirect">Dict[URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Url<wbr>Redirect]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}When this rule is matched, the request is redirected to a URL specified by
+urlRedirect. If urlRedirect is specified, service or routeAction must not be
+set.  Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -5424,7 +6449,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouteruleheaderactionrequestheaderstoadd">List&lt;URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the
+backendService.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5432,7 +6459,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of header names for headers that need to be removed from the request
+prior to forwarding the request to the backendService.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5440,7 +6469,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouteruleheaderactionresponseheaderstoadd">List&lt;URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5448,7 +6478,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of header names for headers that need to be removed from the response
+prior to sending the response back to the client.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -5463,7 +6495,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouteruleheaderactionrequestheaderstoadd">[]URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the
+backendService.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5471,7 +6505,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of header names for headers that need to be removed from the request
+prior to forwarding the request to the backendService.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5479,7 +6515,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouteruleheaderactionresponseheaderstoadd">[]URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5487,7 +6524,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of header names for headers that need to be removed from the response
+prior to sending the response back to the client.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -5502,7 +6541,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouteruleheaderactionrequestheaderstoadd">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the
+backendService.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5510,7 +6551,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of header names for headers that need to be removed from the request
+prior to forwarding the request to the backendService.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5518,7 +6561,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouteruleheaderactionresponseheaderstoadd">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5526,7 +6570,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of header names for headers that need to be removed from the response
+prior to sending the response back to the client.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -5541,7 +6587,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouteruleheaderactionrequestheaderstoadd">List[URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the
+backendService.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5549,7 +6597,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of header names for headers that need to be removed from the request
+prior to forwarding the request to the backendService.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5557,7 +6607,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouteruleheaderactionresponseheaderstoadd">List[URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5565,7 +6616,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of header names for headers that need to be removed from the response
+prior to sending the response back to the client.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -5595,7 +6648,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the header.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -5603,7 +6657,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The value of the header to add.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -5611,7 +6666,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the
+header. If true, headerValue is set for the header, discarding any values that
+were set for that header.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -5626,7 +6684,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the header.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -5634,7 +6693,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The value of the header to add.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -5642,7 +6702,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the
+header. If true, headerValue is set for the header, discarding any values that
+were set for that header.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -5657,7 +6720,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the header.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -5665,7 +6729,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The value of the header to add.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -5673,7 +6738,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the
+header. If true, headerValue is set for the header, discarding any values that
+were set for that header.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -5688,7 +6756,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the header.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -5696,7 +6765,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The value of the header to add.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -5704,7 +6774,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the
+header. If true, headerValue is set for the header, discarding any values that
+were set for that header.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -5734,7 +6807,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the header.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -5742,7 +6816,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The value of the header to add.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -5750,7 +6825,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the
+header. If true, headerValue is set for the header, discarding any values that
+were set for that header.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -5765,7 +6843,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the header.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -5773,7 +6852,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The value of the header to add.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -5781,7 +6861,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the
+header. If true, headerValue is set for the header, discarding any values that
+were set for that header.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -5796,7 +6879,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the header.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -5804,7 +6888,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The value of the header to add.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -5812,7 +6897,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the
+header. If true, headerValue is set for the header, discarding any values that
+were set for that header.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -5827,7 +6915,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the header.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -5835,7 +6924,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The value of the header to add.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -5843,7 +6933,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the
+header. If true, headerValue is set for the header, discarding any values that
+were set for that header.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -5873,7 +6966,12 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}For satifying the matchRule condition, the path of the request must exactly
+match the value specified in fullPathMatch after removing any query parameters
+and anchor that may be part of the original URL. FullPathMatch must be between 1
+and 1024 characters. Only one of prefixMatch, fullPathMatch or regexMatch must
+be specified.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5881,7 +6979,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouterulematchruleheadermatch">List&lt;URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Header<wbr>Match<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies a list of header match criteria, all of which must match corresponding
+headers in the request.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5889,7 +6989,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies that prefixMatch and fullPathMatch matches are case sensitive.
+Defaults to false.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5897,7 +6999,18 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouterulematchrulemetadatafilter">List&lt;URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Metadata<wbr>Filter<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Opaque filter criteria used by Loadbalancer to restrict routing configuration to
+a limited set xDS compliant clients. In their xDS requests to Loadbalancer, xDS
+clients present node metadata. If a match takes place, the relevant routing
+configuration is made available to those proxies. For each metadataFilter in
+this list, if its filterMatchCriteria is set to MATCH_ANY, at least one of the
+filterLabels must match the corresponding label provided in the metadata. If its
+filterMatchCriteria is set to MATCH_ALL, then all of its filterLabels must match
+with corresponding labels in the provided metadata. metadataFilters specified
+here can be overrides those specified in ForwardingRule that refers to this
+UrlMap. metadataFilters only applies to Loadbalancers that have their
+loadBalancingScheme set to INTERNAL_SELF_MANAGED.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5905,7 +7018,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The value of the header must start with the contents of prefixMatch. Only one of
+exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch
+must be set.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5913,7 +7029,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouterulematchrulequeryparametermatch">List&lt;URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Query<wbr>Parameter<wbr>Match<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies a list of query parameter match criteria, all of which must match
+corresponding query parameters in the request.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5921,7 +7039,11 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The queryParameterMatch matches if the value of the parameter matches the
+regular expression specified by regexMatch. For the regular expression grammar,
+please see en.cppreference.com/w/cpp/regex/ecmascript  Only one of presentMatch,
+exactMatch and regexMatch must be set.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -5936,7 +7058,12 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}For satifying the matchRule condition, the path of the request must exactly
+match the value specified in fullPathMatch after removing any query parameters
+and anchor that may be part of the original URL. FullPathMatch must be between 1
+and 1024 characters. Only one of prefixMatch, fullPathMatch or regexMatch must
+be specified.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5944,7 +7071,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouterulematchruleheadermatch">[]URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Header<wbr>Match</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies a list of header match criteria, all of which must match corresponding
+headers in the request.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5952,7 +7081,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies that prefixMatch and fullPathMatch matches are case sensitive.
+Defaults to false.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5960,7 +7091,18 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouterulematchrulemetadatafilter">[]URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Metadata<wbr>Filter</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Opaque filter criteria used by Loadbalancer to restrict routing configuration to
+a limited set xDS compliant clients. In their xDS requests to Loadbalancer, xDS
+clients present node metadata. If a match takes place, the relevant routing
+configuration is made available to those proxies. For each metadataFilter in
+this list, if its filterMatchCriteria is set to MATCH_ANY, at least one of the
+filterLabels must match the corresponding label provided in the metadata. If its
+filterMatchCriteria is set to MATCH_ALL, then all of its filterLabels must match
+with corresponding labels in the provided metadata. metadataFilters specified
+here can be overrides those specified in ForwardingRule that refers to this
+UrlMap. metadataFilters only applies to Loadbalancers that have their
+loadBalancingScheme set to INTERNAL_SELF_MANAGED.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5968,7 +7110,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The value of the header must start with the contents of prefixMatch. Only one of
+exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch
+must be set.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5976,7 +7121,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouterulematchrulequeryparametermatch">[]URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Query<wbr>Parameter<wbr>Match</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies a list of query parameter match criteria, all of which must match
+corresponding query parameters in the request.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5984,7 +7131,11 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The queryParameterMatch matches if the value of the parameter matches the
+regular expression specified by regexMatch. For the regular expression grammar,
+please see en.cppreference.com/w/cpp/regex/ecmascript  Only one of presentMatch,
+exactMatch and regexMatch must be set.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -5999,7 +7150,12 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}For satifying the matchRule condition, the path of the request must exactly
+match the value specified in fullPathMatch after removing any query parameters
+and anchor that may be part of the original URL. FullPathMatch must be between 1
+and 1024 characters. Only one of prefixMatch, fullPathMatch or regexMatch must
+be specified.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6007,7 +7163,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouterulematchruleheadermatch">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Header<wbr>Match[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies a list of header match criteria, all of which must match corresponding
+headers in the request.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6015,7 +7173,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies that prefixMatch and fullPathMatch matches are case sensitive.
+Defaults to false.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6023,7 +7183,18 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouterulematchrulemetadatafilter">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Metadata<wbr>Filter[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Opaque filter criteria used by Loadbalancer to restrict routing configuration to
+a limited set xDS compliant clients. In their xDS requests to Loadbalancer, xDS
+clients present node metadata. If a match takes place, the relevant routing
+configuration is made available to those proxies. For each metadataFilter in
+this list, if its filterMatchCriteria is set to MATCH_ANY, at least one of the
+filterLabels must match the corresponding label provided in the metadata. If its
+filterMatchCriteria is set to MATCH_ALL, then all of its filterLabels must match
+with corresponding labels in the provided metadata. metadataFilters specified
+here can be overrides those specified in ForwardingRule that refers to this
+UrlMap. metadataFilters only applies to Loadbalancers that have their
+loadBalancingScheme set to INTERNAL_SELF_MANAGED.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6031,7 +7202,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The value of the header must start with the contents of prefixMatch. Only one of
+exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch
+must be set.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6039,7 +7213,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouterulematchrulequeryparametermatch">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Query<wbr>Parameter<wbr>Match[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies a list of query parameter match criteria, all of which must match
+corresponding query parameters in the request.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6047,7 +7223,11 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The queryParameterMatch matches if the value of the parameter matches the
+regular expression specified by regexMatch. For the regular expression grammar,
+please see en.cppreference.com/w/cpp/regex/ecmascript  Only one of presentMatch,
+exactMatch and regexMatch must be set.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -6062,7 +7242,12 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}For satifying the matchRule condition, the path of the request must exactly
+match the value specified in fullPathMatch after removing any query parameters
+and anchor that may be part of the original URL. FullPathMatch must be between 1
+and 1024 characters. Only one of prefixMatch, fullPathMatch or regexMatch must
+be specified.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6070,7 +7255,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouterulematchruleheadermatch">List[URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Header<wbr>Match]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies a list of header match criteria, all of which must match corresponding
+headers in the request.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6078,7 +7265,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies that prefixMatch and fullPathMatch matches are case sensitive.
+Defaults to false.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6086,7 +7275,18 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouterulematchrulemetadatafilter">List[URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Metadata<wbr>Filter]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Opaque filter criteria used by Loadbalancer to restrict routing configuration to
+a limited set xDS compliant clients. In their xDS requests to Loadbalancer, xDS
+clients present node metadata. If a match takes place, the relevant routing
+configuration is made available to those proxies. For each metadataFilter in
+this list, if its filterMatchCriteria is set to MATCH_ANY, at least one of the
+filterLabels must match the corresponding label provided in the metadata. If its
+filterMatchCriteria is set to MATCH_ALL, then all of its filterLabels must match
+with corresponding labels in the provided metadata. metadataFilters specified
+here can be overrides those specified in ForwardingRule that refers to this
+UrlMap. metadataFilters only applies to Loadbalancers that have their
+loadBalancingScheme set to INTERNAL_SELF_MANAGED.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6094,7 +7294,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The value of the header must start with the contents of prefixMatch. Only one of
+exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch
+must be set.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6102,7 +7305,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouterulematchrulequeryparametermatch">List[URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Query<wbr>Parameter<wbr>Match]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies a list of query parameter match criteria, all of which must match
+corresponding query parameters in the request.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6110,7 +7315,11 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The queryParameterMatch matches if the value of the parameter matches the
+regular expression specified by regexMatch. For the regular expression grammar,
+please see en.cppreference.com/w/cpp/regex/ecmascript  Only one of presentMatch,
+exactMatch and regexMatch must be set.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -6140,7 +7349,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the header.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6148,7 +7358,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The queryParameterMatch matches if the value of the parameter exactly matches
+the contents of exactMatch. Only one of presentMatch, exactMatch and regexMatch
+must be set.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6156,7 +7369,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If set to false, the headerMatch is considered a match if the match criteria
+above are met. If set to true, the headerMatch is considered a match if the
+match criteria above are NOT met. Defaults to false.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6164,7 +7380,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The value of the header must start with the contents of prefixMatch. Only one of
+exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch
+must be set.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6172,7 +7391,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies that the queryParameterMatch matches if the request contains the query
+parameter, irrespective of whether the parameter has a value or not. Only one of
+presentMatch, exactMatch and regexMatch must be set.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6180,7 +7402,13 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouterulematchruleheadermatchrangematch">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Header<wbr>Match<wbr>Range<wbr>Match<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The header value must be an integer and its value must be in the range specified
+in rangeMatch. If the header does not contain an integer, number or is empty,
+the match fails. For example for a range [-5, 0]   - -3 will match.  - 0 will
+not match.  - 0.25 will not match.  - -3someString will not match.   Only one of
+exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch
+must be set.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6188,7 +7416,11 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The queryParameterMatch matches if the value of the parameter matches the
+regular expression specified by regexMatch. For the regular expression grammar,
+please see en.cppreference.com/w/cpp/regex/ecmascript  Only one of presentMatch,
+exactMatch and regexMatch must be set.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6196,7 +7428,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The value of the header must end with the contents of suffixMatch. Only one of
+exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch
+must be set.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -6211,7 +7446,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the header.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6219,7 +7455,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The queryParameterMatch matches if the value of the parameter exactly matches
+the contents of exactMatch. Only one of presentMatch, exactMatch and regexMatch
+must be set.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6227,7 +7466,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If set to false, the headerMatch is considered a match if the match criteria
+above are met. If set to true, the headerMatch is considered a match if the
+match criteria above are NOT met. Defaults to false.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6235,7 +7477,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The value of the header must start with the contents of prefixMatch. Only one of
+exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch
+must be set.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6243,7 +7488,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies that the queryParameterMatch matches if the request contains the query
+parameter, irrespective of whether the parameter has a value or not. Only one of
+presentMatch, exactMatch and regexMatch must be set.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6251,7 +7499,13 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouterulematchruleheadermatchrangematch">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Header<wbr>Match<wbr>Range<wbr>Match</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The header value must be an integer and its value must be in the range specified
+in rangeMatch. If the header does not contain an integer, number or is empty,
+the match fails. For example for a range [-5, 0]   - -3 will match.  - 0 will
+not match.  - 0.25 will not match.  - -3someString will not match.   Only one of
+exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch
+must be set.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6259,7 +7513,11 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The queryParameterMatch matches if the value of the parameter matches the
+regular expression specified by regexMatch. For the regular expression grammar,
+please see en.cppreference.com/w/cpp/regex/ecmascript  Only one of presentMatch,
+exactMatch and regexMatch must be set.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6267,7 +7525,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The value of the header must end with the contents of suffixMatch. Only one of
+exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch
+must be set.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -6282,7 +7543,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the header.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6290,7 +7552,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The queryParameterMatch matches if the value of the parameter exactly matches
+the contents of exactMatch. Only one of presentMatch, exactMatch and regexMatch
+must be set.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6298,7 +7563,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If set to false, the headerMatch is considered a match if the match criteria
+above are met. If set to true, the headerMatch is considered a match if the
+match criteria above are NOT met. Defaults to false.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6306,7 +7574,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The value of the header must start with the contents of prefixMatch. Only one of
+exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch
+must be set.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6314,7 +7585,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies that the queryParameterMatch matches if the request contains the query
+parameter, irrespective of whether the parameter has a value or not. Only one of
+presentMatch, exactMatch and regexMatch must be set.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6322,7 +7596,13 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouterulematchruleheadermatchrangematch">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Header<wbr>Match<wbr>Range<wbr>Match</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The header value must be an integer and its value must be in the range specified
+in rangeMatch. If the header does not contain an integer, number or is empty,
+the match fails. For example for a range [-5, 0]   - -3 will match.  - 0 will
+not match.  - 0.25 will not match.  - -3someString will not match.   Only one of
+exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch
+must be set.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6330,7 +7610,11 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The queryParameterMatch matches if the value of the parameter matches the
+regular expression specified by regexMatch. For the regular expression grammar,
+please see en.cppreference.com/w/cpp/regex/ecmascript  Only one of presentMatch,
+exactMatch and regexMatch must be set.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6338,7 +7622,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The value of the header must end with the contents of suffixMatch. Only one of
+exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch
+must be set.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -6353,7 +7640,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the header.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6361,7 +7649,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The queryParameterMatch matches if the value of the parameter exactly matches
+the contents of exactMatch. Only one of presentMatch, exactMatch and regexMatch
+must be set.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6369,7 +7660,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If set to false, the headerMatch is considered a match if the match criteria
+above are met. If set to true, the headerMatch is considered a match if the
+match criteria above are NOT met. Defaults to false.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6377,7 +7671,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The value of the header must start with the contents of prefixMatch. Only one of
+exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch
+must be set.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6385,7 +7682,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies that the queryParameterMatch matches if the request contains the query
+parameter, irrespective of whether the parameter has a value or not. Only one of
+presentMatch, exactMatch and regexMatch must be set.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6393,7 +7693,13 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouterulematchruleheadermatchrangematch">Dict[URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Header<wbr>Match<wbr>Range<wbr>Match]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The header value must be an integer and its value must be in the range specified
+in rangeMatch. If the header does not contain an integer, number or is empty,
+the match fails. For example for a range [-5, 0]   - -3 will match.  - 0 will
+not match.  - 0.25 will not match.  - -3someString will not match.   Only one of
+exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch
+must be set.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6401,7 +7707,11 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The queryParameterMatch matches if the value of the parameter matches the
+regular expression specified by regexMatch. For the regular expression grammar,
+please see en.cppreference.com/w/cpp/regex/ecmascript  Only one of presentMatch,
+exactMatch and regexMatch must be set.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6409,7 +7719,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The value of the header must end with the contents of suffixMatch. Only one of
+exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch
+must be set.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -6439,7 +7752,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The end of the range (exclusive).
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -6447,7 +7761,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The start of the range (inclusive).
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -6462,7 +7777,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The end of the range (exclusive).
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -6470,7 +7786,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The start of the range (inclusive).
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -6485,7 +7802,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The end of the range (exclusive).
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -6493,7 +7811,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The start of the range (inclusive).
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -6508,7 +7827,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The end of the range (exclusive).
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -6516,7 +7836,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The start of the range (inclusive).
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -6546,7 +7867,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouterulematchrulemetadatafilterfilterlabel">List&lt;URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Metadata<wbr>Filter<wbr>Filter<wbr>Label<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The list of label value pairs that must match labels in the provided metadata
+based on filterMatchCriteria  This list must not be empty and can have at the
+most 64 entries.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -6554,7 +7878,13 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies how individual filterLabel matches within the list of filterLabels
+contribute towards the overall metadataFilter match. Supported values are:
+- MATCH_ANY: At least one of the filterLabels must have a matching label in the
+provided metadata.
+- MATCH_ALL: All filterLabels must have matching labels in
+the provided metadata.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -6569,7 +7899,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouterulematchrulemetadatafilterfilterlabel">[]URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Metadata<wbr>Filter<wbr>Filter<wbr>Label</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The list of label value pairs that must match labels in the provided metadata
+based on filterMatchCriteria  This list must not be empty and can have at the
+most 64 entries.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -6577,7 +7910,13 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies how individual filterLabel matches within the list of filterLabels
+contribute towards the overall metadataFilter match. Supported values are:
+- MATCH_ANY: At least one of the filterLabels must have a matching label in the
+provided metadata.
+- MATCH_ALL: All filterLabels must have matching labels in
+the provided metadata.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -6592,7 +7931,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouterulematchrulemetadatafilterfilterlabel">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Metadata<wbr>Filter<wbr>Filter<wbr>Label[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The list of label value pairs that must match labels in the provided metadata
+based on filterMatchCriteria  This list must not be empty and can have at the
+most 64 entries.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -6600,7 +7942,13 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies how individual filterLabel matches within the list of filterLabels
+contribute towards the overall metadataFilter match. Supported values are:
+- MATCH_ANY: At least one of the filterLabels must have a matching label in the
+provided metadata.
+- MATCH_ALL: All filterLabels must have matching labels in
+the provided metadata.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -6615,7 +7963,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouterulematchrulemetadatafilterfilterlabel">List[URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Metadata<wbr>Filter<wbr>Filter<wbr>Label]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The list of label value pairs that must match labels in the provided metadata
+based on filterMatchCriteria  This list must not be empty and can have at the
+most 64 entries.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -6623,7 +7974,13 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies how individual filterLabel matches within the list of filterLabels
+contribute towards the overall metadataFilter match. Supported values are:
+- MATCH_ANY: At least one of the filterLabels must have a matching label in the
+provided metadata.
+- MATCH_ALL: All filterLabels must have matching labels in
+the provided metadata.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -6653,7 +8010,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the query parameter to match. The query parameter must exist in the
+request, in the absence of which the request match fails.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -6661,7 +8020,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The value of the label must match the specified value. value can have a maximum
+length of 1024 characters.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -6676,7 +8037,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the query parameter to match. The query parameter must exist in the
+request, in the absence of which the request match fails.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -6684,7 +8047,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The value of the label must match the specified value. value can have a maximum
+length of 1024 characters.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -6699,7 +8064,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the query parameter to match. The query parameter must exist in the
+request, in the absence of which the request match fails.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -6707,7 +8074,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The value of the label must match the specified value. value can have a maximum
+length of 1024 characters.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -6722,7 +8091,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the query parameter to match. The query parameter must exist in the
+request, in the absence of which the request match fails.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -6730,7 +8101,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The value of the label must match the specified value. value can have a maximum
+length of 1024 characters.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -6760,7 +8133,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the query parameter to match. The query parameter must exist in the
+request, in the absence of which the request match fails.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6768,7 +8143,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The queryParameterMatch matches if the value of the parameter exactly matches
+the contents of exactMatch. Only one of presentMatch, exactMatch and regexMatch
+must be set.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6776,7 +8154,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies that the queryParameterMatch matches if the request contains the query
+parameter, irrespective of whether the parameter has a value or not. Only one of
+presentMatch, exactMatch and regexMatch must be set.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6784,7 +8165,11 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The queryParameterMatch matches if the value of the parameter matches the
+regular expression specified by regexMatch. For the regular expression grammar,
+please see en.cppreference.com/w/cpp/regex/ecmascript  Only one of presentMatch,
+exactMatch and regexMatch must be set.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -6799,7 +8184,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the query parameter to match. The query parameter must exist in the
+request, in the absence of which the request match fails.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6807,7 +8194,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The queryParameterMatch matches if the value of the parameter exactly matches
+the contents of exactMatch. Only one of presentMatch, exactMatch and regexMatch
+must be set.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6815,7 +8205,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies that the queryParameterMatch matches if the request contains the query
+parameter, irrespective of whether the parameter has a value or not. Only one of
+presentMatch, exactMatch and regexMatch must be set.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6823,7 +8216,11 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The queryParameterMatch matches if the value of the parameter matches the
+regular expression specified by regexMatch. For the regular expression grammar,
+please see en.cppreference.com/w/cpp/regex/ecmascript  Only one of presentMatch,
+exactMatch and regexMatch must be set.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -6838,7 +8235,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the query parameter to match. The query parameter must exist in the
+request, in the absence of which the request match fails.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6846,7 +8245,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The queryParameterMatch matches if the value of the parameter exactly matches
+the contents of exactMatch. Only one of presentMatch, exactMatch and regexMatch
+must be set.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6854,7 +8256,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies that the queryParameterMatch matches if the request contains the query
+parameter, irrespective of whether the parameter has a value or not. Only one of
+presentMatch, exactMatch and regexMatch must be set.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6862,7 +8267,11 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The queryParameterMatch matches if the value of the parameter matches the
+regular expression specified by regexMatch. For the regular expression grammar,
+please see en.cppreference.com/w/cpp/regex/ecmascript  Only one of presentMatch,
+exactMatch and regexMatch must be set.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -6877,7 +8286,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the query parameter to match. The query parameter must exist in the
+request, in the absence of which the request match fails.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6885,7 +8296,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The queryParameterMatch matches if the value of the parameter exactly matches
+the contents of exactMatch. Only one of presentMatch, exactMatch and regexMatch
+must be set.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6893,7 +8307,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies that the queryParameterMatch matches if the request contains the query
+parameter, irrespective of whether the parameter has a value or not. Only one of
+presentMatch, exactMatch and regexMatch must be set.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6901,7 +8318,11 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The queryParameterMatch matches if the value of the parameter matches the
+regular expression specified by regexMatch. For the regular expression grammar,
+please see en.cppreference.com/w/cpp/regex/ecmascript  Only one of presentMatch,
+exactMatch and regexMatch must be set.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -6931,7 +8352,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactioncorspolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Cors<wbr>Policy<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The specification for allowing client side cross-origin requests. Please see W3C
+Recommendation for Cross Origin Resource Sharing  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6939,7 +8362,14 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionfaultinjectionpolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The specification for fault injection introduced into traffic to test the
+resiliency of clients to backend service failure. As part of fault injection,
+when clients send requests to a backend service, delays can be introduced by
+Loadbalancer on a percentage of requests before sending those request to the
+backend service. Similarly requests from clients can be aborted by the
+Loadbalancer for a percentage of requests. timeout and retry_policy will be
+ignored by clients that are configured with a fault_injection_policy.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6947,7 +8377,11 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionrequestmirrorpolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Request<wbr>Mirror<wbr>Policy<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the policy on how requests intended for the route's backends are
+shadowed to a separate mirrored backend service. Loadbalancer does not wait for
+responses from the shadow service. Prior to sending traffic to the shadow
+service, the host / authority header is suffixed with -shadow.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6955,7 +8389,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionretrypolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the retry policy associated with this route.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6963,7 +8398,11 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactiontimeout">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Timeout<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the timeout for the selected route. Timeout is computed from the time
+the request is has been fully processed (i.e. end-of-stream) up until the
+response has been completely processed. Timeout includes all retries. If not
+specified, the default value is 15 seconds.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6971,7 +8410,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionurlrewrite">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Url<wbr>Rewrite<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The spec to modify the URL of the request, prior to forwarding the request to
+the matched service  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6979,7 +8420,15 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionweightedbackendservice">List&lt;URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of weighted backend services to send traffic to when a route match
+occurs. The weights determine the fraction of traffic that flows to their
+corresponding backend service. If all traffic needs to go to a single backend
+service, there must be one  weightedBackendService with weight set to a non 0
+number. Once a backendService is identified and before forwarding the request to
+the backend service, advanced routing actions like Url rewrites and header
+transformations are applied depending on additional settings specified in this
+HttpRouteAction.  Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -6994,7 +8443,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactioncorspolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Cors<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The specification for allowing client side cross-origin requests. Please see W3C
+Recommendation for Cross Origin Resource Sharing  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7002,7 +8453,14 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionfaultinjectionpolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The specification for fault injection introduced into traffic to test the
+resiliency of clients to backend service failure. As part of fault injection,
+when clients send requests to a backend service, delays can be introduced by
+Loadbalancer on a percentage of requests before sending those request to the
+backend service. Similarly requests from clients can be aborted by the
+Loadbalancer for a percentage of requests. timeout and retry_policy will be
+ignored by clients that are configured with a fault_injection_policy.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7010,7 +8468,11 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionrequestmirrorpolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Request<wbr>Mirror<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the policy on how requests intended for the route's backends are
+shadowed to a separate mirrored backend service. Loadbalancer does not wait for
+responses from the shadow service. Prior to sending traffic to the shadow
+service, the host / authority header is suffixed with -shadow.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7018,7 +8480,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionretrypolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the retry policy associated with this route.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7026,7 +8489,11 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactiontimeout">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Timeout</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the timeout for the selected route. Timeout is computed from the time
+the request is has been fully processed (i.e. end-of-stream) up until the
+response has been completely processed. Timeout includes all retries. If not
+specified, the default value is 15 seconds.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7034,7 +8501,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionurlrewrite">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Url<wbr>Rewrite</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The spec to modify the URL of the request, prior to forwarding the request to
+the matched service  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7042,7 +8511,15 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionweightedbackendservice">[]URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of weighted backend services to send traffic to when a route match
+occurs. The weights determine the fraction of traffic that flows to their
+corresponding backend service. If all traffic needs to go to a single backend
+service, there must be one  weightedBackendService with weight set to a non 0
+number. Once a backendService is identified and before forwarding the request to
+the backend service, advanced routing actions like Url rewrites and header
+transformations are applied depending on additional settings specified in this
+HttpRouteAction.  Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -7057,7 +8534,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactioncorspolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Cors<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The specification for allowing client side cross-origin requests. Please see W3C
+Recommendation for Cross Origin Resource Sharing  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7065,7 +8544,14 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionfaultinjectionpolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The specification for fault injection introduced into traffic to test the
+resiliency of clients to backend service failure. As part of fault injection,
+when clients send requests to a backend service, delays can be introduced by
+Loadbalancer on a percentage of requests before sending those request to the
+backend service. Similarly requests from clients can be aborted by the
+Loadbalancer for a percentage of requests. timeout and retry_policy will be
+ignored by clients that are configured with a fault_injection_policy.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7073,7 +8559,11 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionrequestmirrorpolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Request<wbr>Mirror<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the policy on how requests intended for the route's backends are
+shadowed to a separate mirrored backend service. Loadbalancer does not wait for
+responses from the shadow service. Prior to sending traffic to the shadow
+service, the host / authority header is suffixed with -shadow.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7081,7 +8571,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionretrypolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the retry policy associated with this route.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7089,7 +8580,11 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactiontimeout">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Timeout</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the timeout for the selected route. Timeout is computed from the time
+the request is has been fully processed (i.e. end-of-stream) up until the
+response has been completely processed. Timeout includes all retries. If not
+specified, the default value is 15 seconds.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7097,7 +8592,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionurlrewrite">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Url<wbr>Rewrite</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The spec to modify the URL of the request, prior to forwarding the request to
+the matched service  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7105,7 +8602,15 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionweightedbackendservice">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of weighted backend services to send traffic to when a route match
+occurs. The weights determine the fraction of traffic that flows to their
+corresponding backend service. If all traffic needs to go to a single backend
+service, there must be one  weightedBackendService with weight set to a non 0
+number. Once a backendService is identified and before forwarding the request to
+the backend service, advanced routing actions like Url rewrites and header
+transformations are applied depending on additional settings specified in this
+HttpRouteAction.  Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -7120,7 +8625,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactioncorspolicy">Dict[URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Cors<wbr>Policy]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The specification for allowing client side cross-origin requests. Please see W3C
+Recommendation for Cross Origin Resource Sharing  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7128,7 +8635,14 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionfaultinjectionpolicy">Dict[URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The specification for fault injection introduced into traffic to test the
+resiliency of clients to backend service failure. As part of fault injection,
+when clients send requests to a backend service, delays can be introduced by
+Loadbalancer on a percentage of requests before sending those request to the
+backend service. Similarly requests from clients can be aborted by the
+Loadbalancer for a percentage of requests. timeout and retry_policy will be
+ignored by clients that are configured with a fault_injection_policy.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7136,7 +8650,11 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionrequestmirrorpolicy">Dict[URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Request<wbr>Mirror<wbr>Policy]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the policy on how requests intended for the route's backends are
+shadowed to a separate mirrored backend service. Loadbalancer does not wait for
+responses from the shadow service. Prior to sending traffic to the shadow
+service, the host / authority header is suffixed with -shadow.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7144,7 +8662,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionretrypolicy">Dict[URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the retry policy associated with this route.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7152,7 +8671,11 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactiontimeout">Dict[URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Timeout]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the timeout for the selected route. Timeout is computed from the time
+the request is has been fully processed (i.e. end-of-stream) up until the
+response has been completely processed. Timeout includes all retries. If not
+specified, the default value is 15 seconds.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7160,7 +8683,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionurlrewrite">Dict[URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Url<wbr>Rewrite]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The spec to modify the URL of the request, prior to forwarding the request to
+the matched service  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7168,7 +8693,15 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionweightedbackendservice">List[URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of weighted backend services to send traffic to when a route match
+occurs. The weights determine the fraction of traffic that flows to their
+corresponding backend service. If all traffic needs to go to a single backend
+service, there must be one  weightedBackendService with weight set to a non 0
+number. Once a backendService is identified and before forwarding the request to
+the backend service, advanced routing actions like Url rewrites and header
+transformations are applied depending on additional settings specified in this
+HttpRouteAction.  Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -7198,7 +8731,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}In response to a preflight request, setting this to true indicates that the
+actual request can include user credentials. This translates to the Access-
+Control-Allow-Credentials header. Defaults to false.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7206,7 +8742,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the content for the Access-Control-Allow-Headers header.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7214,7 +8751,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the content for the Access-Control-Allow-Methods header.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7222,7 +8760,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the regualar expression patterns that match allowed origins. For
+regular expression grammar please see en.cppreference.com/w/cpp/regex/ecmascript
+An origin is allowed if it matches either allow_origins or allow_origin_regex.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7230,7 +8771,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the list of origins that will be allowed to do CORS requests. An
+origin is allowed if it matches either allow_origins or allow_origin_regex.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7238,7 +8781,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If true, specifies the CORS policy is disabled.
+which indicates that the CORS policy is in effect. Defaults to false.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7246,7 +8791,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the content for the Access-Control-Expose-Headers header.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7254,7 +8800,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies how long the results of a preflight request can be cached. This
+translates to the content for the Access-Control-Max-Age header.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -7269,7 +8817,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}In response to a preflight request, setting this to true indicates that the
+actual request can include user credentials. This translates to the Access-
+Control-Allow-Credentials header. Defaults to false.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7277,7 +8828,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the content for the Access-Control-Allow-Headers header.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7285,7 +8837,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the content for the Access-Control-Allow-Methods header.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7293,7 +8846,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the regualar expression patterns that match allowed origins. For
+regular expression grammar please see en.cppreference.com/w/cpp/regex/ecmascript
+An origin is allowed if it matches either allow_origins or allow_origin_regex.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7301,7 +8857,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the list of origins that will be allowed to do CORS requests. An
+origin is allowed if it matches either allow_origins or allow_origin_regex.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7309,7 +8867,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If true, specifies the CORS policy is disabled.
+which indicates that the CORS policy is in effect. Defaults to false.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7317,7 +8877,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the content for the Access-Control-Expose-Headers header.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7325,7 +8886,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies how long the results of a preflight request can be cached. This
+translates to the content for the Access-Control-Max-Age header.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -7340,7 +8903,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}In response to a preflight request, setting this to true indicates that the
+actual request can include user credentials. This translates to the Access-
+Control-Allow-Credentials header. Defaults to false.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7348,7 +8914,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the content for the Access-Control-Allow-Headers header.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7356,7 +8923,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the content for the Access-Control-Allow-Methods header.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7364,7 +8932,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the regualar expression patterns that match allowed origins. For
+regular expression grammar please see en.cppreference.com/w/cpp/regex/ecmascript
+An origin is allowed if it matches either allow_origins or allow_origin_regex.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7372,7 +8943,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the list of origins that will be allowed to do CORS requests. An
+origin is allowed if it matches either allow_origins or allow_origin_regex.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7380,7 +8953,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If true, specifies the CORS policy is disabled.
+which indicates that the CORS policy is in effect. Defaults to false.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7388,7 +8963,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the content for the Access-Control-Expose-Headers header.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7396,7 +8972,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies how long the results of a preflight request can be cached. This
+translates to the content for the Access-Control-Max-Age header.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -7411,7 +8989,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}In response to a preflight request, setting this to true indicates that the
+actual request can include user credentials. This translates to the Access-
+Control-Allow-Credentials header. Defaults to false.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7419,7 +9000,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the content for the Access-Control-Allow-Headers header.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7427,7 +9009,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the content for the Access-Control-Allow-Methods header.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7435,7 +9018,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the regualar expression patterns that match allowed origins. For
+regular expression grammar please see en.cppreference.com/w/cpp/regex/ecmascript
+An origin is allowed if it matches either allow_origins or allow_origin_regex.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7443,7 +9029,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the list of origins that will be allowed to do CORS requests. An
+origin is allowed if it matches either allow_origins or allow_origin_regex.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7451,7 +9039,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If true, specifies the CORS policy is disabled.
+which indicates that the CORS policy is in effect. Defaults to false.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7459,7 +9049,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the content for the Access-Control-Expose-Headers header.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7467,7 +9058,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies how long the results of a preflight request can be cached. This
+translates to the content for the Access-Control-Max-Age header.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -7497,7 +9090,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionfaultinjectionpolicyabort">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Abort<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The specification for how client requests are aborted as part of fault
+injection.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7505,7 +9100,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionfaultinjectionpolicydelay">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The specification for how client requests are delayed as part of fault
+injection, before being sent to a backend service.  Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -7520,7 +9117,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionfaultinjectionpolicyabort">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Abort</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The specification for how client requests are aborted as part of fault
+injection.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7528,7 +9127,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionfaultinjectionpolicydelay">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The specification for how client requests are delayed as part of fault
+injection, before being sent to a backend service.  Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -7543,7 +9144,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionfaultinjectionpolicyabort">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Abort</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The specification for how client requests are aborted as part of fault
+injection.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7551,7 +9154,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionfaultinjectionpolicydelay">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The specification for how client requests are delayed as part of fault
+injection, before being sent to a backend service.  Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -7566,7 +9171,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionfaultinjectionpolicyabort">Dict[URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Abort]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The specification for how client requests are aborted as part of fault
+injection.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7574,7 +9181,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionfaultinjectionpolicydelay">Dict[URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The specification for how client requests are delayed as part of fault
+injection, before being sent to a backend service.  Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -7604,7 +9213,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The HTTP status code used to abort the request. The value must be between 200
+and 599 inclusive.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7612,7 +9223,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The percentage of traffic (connections/operations/requests) on which delay will
+be introduced as part of fault injection. The value must be between 0.0 and
+100.0 inclusive.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -7627,7 +9241,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The HTTP status code used to abort the request. The value must be between 200
+and 599 inclusive.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7635,7 +9251,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The percentage of traffic (connections/operations/requests) on which delay will
+be introduced as part of fault injection. The value must be between 0.0 and
+100.0 inclusive.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -7650,7 +9269,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The HTTP status code used to abort the request. The value must be between 200
+and 599 inclusive.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7658,7 +9279,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The percentage of traffic (connections/operations/requests) on which delay will
+be introduced as part of fault injection. The value must be between 0.0 and
+100.0 inclusive.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -7673,7 +9297,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The HTTP status code used to abort the request. The value must be between 200
+and 599 inclusive.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7681,7 +9307,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The percentage of traffic (connections/operations/requests) on which delay will
+be introduced as part of fault injection. The value must be between 0.0 and
+100.0 inclusive.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -7711,7 +9340,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionfaultinjectionpolicydelayfixeddelay">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay<wbr>Fixed<wbr>Delay<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the value of the fixed delay interval.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7719,7 +9349,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The percentage of traffic (connections/operations/requests) on which delay will
+be introduced as part of fault injection. The value must be between 0.0 and
+100.0 inclusive.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -7734,7 +9367,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionfaultinjectionpolicydelayfixeddelay">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay<wbr>Fixed<wbr>Delay</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the value of the fixed delay interval.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7742,7 +9376,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The percentage of traffic (connections/operations/requests) on which delay will
+be introduced as part of fault injection. The value must be between 0.0 and
+100.0 inclusive.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -7757,7 +9394,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionfaultinjectionpolicydelayfixeddelay">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay<wbr>Fixed<wbr>Delay</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the value of the fixed delay interval.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7765,7 +9403,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The percentage of traffic (connections/operations/requests) on which delay will
+be introduced as part of fault injection. The value must be between 0.0 and
+100.0 inclusive.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -7780,7 +9421,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionfaultinjectionpolicydelayfixeddelay">Dict[URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay<wbr>Fixed<wbr>Delay]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the value of the fixed delay interval.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7788,7 +9430,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The percentage of traffic (connections/operations/requests) on which delay will
+be introduced as part of fault injection. The value must be between 0.0 and
+100.0 inclusive.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -7818,7 +9463,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000
+inclusive.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7826,7 +9473,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations
+less than one second are represented with a 0 `seconds` field and a positive
+`nanos` field. Must be from 0 to 999,999,999 inclusive.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -7841,7 +9491,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000
+inclusive.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7849,7 +9501,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations
+less than one second are represented with a 0 `seconds` field and a positive
+`nanos` field. Must be from 0 to 999,999,999 inclusive.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -7864,7 +9519,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000
+inclusive.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7872,7 +9529,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations
+less than one second are represented with a 0 `seconds` field and a positive
+`nanos` field. Must be from 0 to 999,999,999 inclusive.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -7887,7 +9547,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000
+inclusive.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7895,7 +9557,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations
+less than one second are represented with a 0 `seconds` field and a positive
+`nanos` field. Must be from 0 to 999,999,999 inclusive.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -7925,7 +9590,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The default BackendService resource. Before
+forwarding the request to backendService, the loadbalancer applies any relevant
+headerActions specified as part of this backendServiceWeight.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -7940,7 +9608,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The default BackendService resource. Before
+forwarding the request to backendService, the loadbalancer applies any relevant
+headerActions specified as part of this backendServiceWeight.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -7955,7 +9626,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The default BackendService resource. Before
+forwarding the request to backendService, the loadbalancer applies any relevant
+headerActions specified as part of this backendServiceWeight.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -7970,7 +9644,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The default BackendService resource. Before
+forwarding the request to backendService, the loadbalancer applies any relevant
+headerActions specified as part of this backendServiceWeight.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -8000,7 +9677,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the allowed number retries. This number must be > 0.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -8008,7 +9686,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionretrypolicypertrytimeout">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Per<wbr>Try<wbr>Timeout<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies a non-zero timeout per retry attempt.
+If not specified, will use the timeout set in HttpRouteAction. If timeout in HttpRouteAction
+is not set, will use the largest timeout among all backend services associated with the route.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -8016,7 +9697,28 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specfies one or more conditions when this retry rule applies. Valid values are:
+- 5xx: Loadbalancer will attempt a retry if the backend service responds with
+any 5xx response code, or if the backend service does not respond at all,
+example: disconnects, reset, read timeout, connection failure, and refused
+streams.
+- gateway-error: Similar to 5xx, but only applies to response codes
+502, 503 or 504.
+- connect-failure: Loadbalancer will retry on failures
+connecting to backend services, for example due to connection timeouts.
+- retriable-4xx: Loadbalancer will retry for retriable 4xx response codes.
+Currently the only retriable error supported is 409.
+- refused-stream: Loadbalancer will retry if the backend service resets the stream with a
+REFUSED_STREAM error code. This reset type indicates that it is safe to retry.
+- cancelled: Loadbalancer will retry if the gRPC status code in the response
+header is set to cancelled
+- deadline-exceeded: Loadbalancer will retry if the
+gRPC status code in the response header is set to deadline-exceeded
+- resource-exhausted: Loadbalancer will retry if the gRPC status code in the response
+header is set to resource-exhausted
+- unavailable: Loadbalancer will retry if the gRPC status code in
+the response header is set to unavailable
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -8031,7 +9733,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the allowed number retries. This number must be > 0.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -8039,7 +9742,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionretrypolicypertrytimeout">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Per<wbr>Try<wbr>Timeout</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies a non-zero timeout per retry attempt.
+If not specified, will use the timeout set in HttpRouteAction. If timeout in HttpRouteAction
+is not set, will use the largest timeout among all backend services associated with the route.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -8047,7 +9753,28 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specfies one or more conditions when this retry rule applies. Valid values are:
+- 5xx: Loadbalancer will attempt a retry if the backend service responds with
+any 5xx response code, or if the backend service does not respond at all,
+example: disconnects, reset, read timeout, connection failure, and refused
+streams.
+- gateway-error: Similar to 5xx, but only applies to response codes
+502, 503 or 504.
+- connect-failure: Loadbalancer will retry on failures
+connecting to backend services, for example due to connection timeouts.
+- retriable-4xx: Loadbalancer will retry for retriable 4xx response codes.
+Currently the only retriable error supported is 409.
+- refused-stream: Loadbalancer will retry if the backend service resets the stream with a
+REFUSED_STREAM error code. This reset type indicates that it is safe to retry.
+- cancelled: Loadbalancer will retry if the gRPC status code in the response
+header is set to cancelled
+- deadline-exceeded: Loadbalancer will retry if the
+gRPC status code in the response header is set to deadline-exceeded
+- resource-exhausted: Loadbalancer will retry if the gRPC status code in the response
+header is set to resource-exhausted
+- unavailable: Loadbalancer will retry if the gRPC status code in
+the response header is set to unavailable
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -8062,7 +9789,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the allowed number retries. This number must be > 0.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -8070,7 +9798,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionretrypolicypertrytimeout">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Per<wbr>Try<wbr>Timeout</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies a non-zero timeout per retry attempt.
+If not specified, will use the timeout set in HttpRouteAction. If timeout in HttpRouteAction
+is not set, will use the largest timeout among all backend services associated with the route.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -8078,7 +9809,28 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specfies one or more conditions when this retry rule applies. Valid values are:
+- 5xx: Loadbalancer will attempt a retry if the backend service responds with
+any 5xx response code, or if the backend service does not respond at all,
+example: disconnects, reset, read timeout, connection failure, and refused
+streams.
+- gateway-error: Similar to 5xx, but only applies to response codes
+502, 503 or 504.
+- connect-failure: Loadbalancer will retry on failures
+connecting to backend services, for example due to connection timeouts.
+- retriable-4xx: Loadbalancer will retry for retriable 4xx response codes.
+Currently the only retriable error supported is 409.
+- refused-stream: Loadbalancer will retry if the backend service resets the stream with a
+REFUSED_STREAM error code. This reset type indicates that it is safe to retry.
+- cancelled: Loadbalancer will retry if the gRPC status code in the response
+header is set to cancelled
+- deadline-exceeded: Loadbalancer will retry if the
+gRPC status code in the response header is set to deadline-exceeded
+- resource-exhausted: Loadbalancer will retry if the gRPC status code in the response
+header is set to resource-exhausted
+- unavailable: Loadbalancer will retry if the gRPC status code in
+the response header is set to unavailable
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -8093,7 +9845,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the allowed number retries. This number must be > 0.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -8101,7 +9854,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionretrypolicypertrytimeout">Dict[URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Per<wbr>Try<wbr>Timeout]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies a non-zero timeout per retry attempt.
+If not specified, will use the timeout set in HttpRouteAction. If timeout in HttpRouteAction
+is not set, will use the largest timeout among all backend services associated with the route.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -8109,7 +9865,28 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specfies one or more conditions when this retry rule applies. Valid values are:
+- 5xx: Loadbalancer will attempt a retry if the backend service responds with
+any 5xx response code, or if the backend service does not respond at all,
+example: disconnects, reset, read timeout, connection failure, and refused
+streams.
+- gateway-error: Similar to 5xx, but only applies to response codes
+502, 503 or 504.
+- connect-failure: Loadbalancer will retry on failures
+connecting to backend services, for example due to connection timeouts.
+- retriable-4xx: Loadbalancer will retry for retriable 4xx response codes.
+Currently the only retriable error supported is 409.
+- refused-stream: Loadbalancer will retry if the backend service resets the stream with a
+REFUSED_STREAM error code. This reset type indicates that it is safe to retry.
+- cancelled: Loadbalancer will retry if the gRPC status code in the response
+header is set to cancelled
+- deadline-exceeded: Loadbalancer will retry if the
+gRPC status code in the response header is set to deadline-exceeded
+- resource-exhausted: Loadbalancer will retry if the gRPC status code in the response
+header is set to resource-exhausted
+- unavailable: Loadbalancer will retry if the gRPC status code in
+the response header is set to unavailable
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -8139,7 +9916,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000
+inclusive.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -8147,7 +9926,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations
+less than one second are represented with a 0 `seconds` field and a positive
+`nanos` field. Must be from 0 to 999,999,999 inclusive.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -8162,7 +9944,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000
+inclusive.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -8170,7 +9954,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations
+less than one second are represented with a 0 `seconds` field and a positive
+`nanos` field. Must be from 0 to 999,999,999 inclusive.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -8185,7 +9972,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000
+inclusive.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -8193,7 +9982,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations
+less than one second are represented with a 0 `seconds` field and a positive
+`nanos` field. Must be from 0 to 999,999,999 inclusive.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -8208,7 +10000,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000
+inclusive.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -8216,7 +10010,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations
+less than one second are represented with a 0 `seconds` field and a positive
+`nanos` field. Must be from 0 to 999,999,999 inclusive.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -8246,7 +10043,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000
+inclusive.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -8254,7 +10053,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations
+less than one second are represented with a 0 `seconds` field and a positive
+`nanos` field. Must be from 0 to 999,999,999 inclusive.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -8269,7 +10071,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000
+inclusive.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -8277,7 +10081,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations
+less than one second are represented with a 0 `seconds` field and a positive
+`nanos` field. Must be from 0 to 999,999,999 inclusive.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -8292,7 +10099,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000
+inclusive.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -8300,7 +10109,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations
+less than one second are represented with a 0 `seconds` field and a positive
+`nanos` field. Must be from 0 to 999,999,999 inclusive.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -8315,7 +10127,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000
+inclusive.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -8323,7 +10137,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations
+less than one second are represented with a 0 `seconds` field and a positive
+`nanos` field. Must be from 0 to 999,999,999 inclusive.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -8353,7 +10170,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Prior to forwarding the request to the selected service, the request's host
+header is replaced with contents of hostRewrite. The value must be between 1 and
+255 characters.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -8361,7 +10181,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Prior to forwarding the request to the selected backend service, the matching
+portion of the request's path is replaced by pathPrefixRewrite. The value must
+be between 1 and 1024 characters.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -8376,7 +10199,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Prior to forwarding the request to the selected service, the request's host
+header is replaced with contents of hostRewrite. The value must be between 1 and
+255 characters.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -8384,7 +10210,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Prior to forwarding the request to the selected backend service, the matching
+portion of the request's path is replaced by pathPrefixRewrite. The value must
+be between 1 and 1024 characters.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -8399,7 +10228,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Prior to forwarding the request to the selected service, the request's host
+header is replaced with contents of hostRewrite. The value must be between 1 and
+255 characters.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -8407,7 +10239,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Prior to forwarding the request to the selected backend service, the matching
+portion of the request's path is replaced by pathPrefixRewrite. The value must
+be between 1 and 1024 characters.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -8422,7 +10257,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Prior to forwarding the request to the selected service, the request's host
+header is replaced with contents of hostRewrite. The value must be between 1 and
+255 characters.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -8430,7 +10268,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Prior to forwarding the request to the selected backend service, the matching
+portion of the request's path is replaced by pathPrefixRewrite. The value must
+be between 1 and 1024 characters.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -8460,7 +10301,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The default BackendService resource. Before
+forwarding the request to backendService, the loadbalancer applies any relevant
+headerActions specified as part of this backendServiceWeight.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -8468,7 +10312,13 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the fraction of traffic sent to backendService, computed as weight /
+(sum of all weightedBackendService weights in routeAction) . The selection of a
+backend service is determined only for new traffic. Once a user's request has
+been directed to a backendService, subsequent requests will be sent to the same
+backendService as determined by the BackendService's session affinity policy.
+The value must be between 0 and 1000
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -8476,7 +10326,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionweightedbackendserviceheaderaction">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for
+the selected backendService. headerAction specified here take effect before
+headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap.  Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -8491,7 +10344,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The default BackendService resource. Before
+forwarding the request to backendService, the loadbalancer applies any relevant
+headerActions specified as part of this backendServiceWeight.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -8499,7 +10355,13 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the fraction of traffic sent to backendService, computed as weight /
+(sum of all weightedBackendService weights in routeAction) . The selection of a
+backend service is determined only for new traffic. Once a user's request has
+been directed to a backendService, subsequent requests will be sent to the same
+backendService as determined by the BackendService's session affinity policy.
+The value must be between 0 and 1000
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -8507,7 +10369,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionweightedbackendserviceheaderaction">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for
+the selected backendService. headerAction specified here take effect before
+headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap.  Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -8522,7 +10387,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The default BackendService resource. Before
+forwarding the request to backendService, the loadbalancer applies any relevant
+headerActions specified as part of this backendServiceWeight.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -8530,7 +10398,13 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the fraction of traffic sent to backendService, computed as weight /
+(sum of all weightedBackendService weights in routeAction) . The selection of a
+backend service is determined only for new traffic. Once a user's request has
+been directed to a backendService, subsequent requests will be sent to the same
+backendService as determined by the BackendService's session affinity policy.
+The value must be between 0 and 1000
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -8538,7 +10412,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionweightedbackendserviceheaderaction">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for
+the selected backendService. headerAction specified here take effect before
+headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap.  Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -8553,7 +10430,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The default BackendService resource. Before
+forwarding the request to backendService, the loadbalancer applies any relevant
+headerActions specified as part of this backendServiceWeight.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -8561,7 +10441,13 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the fraction of traffic sent to backendService, computed as weight /
+(sum of all weightedBackendService weights in routeAction) . The selection of a
+backend service is determined only for new traffic. Once a user's request has
+been directed to a backendService, subsequent requests will be sent to the same
+backendService as determined by the BackendService's session affinity policy.
+The value must be between 0 and 1000
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -8569,7 +10455,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionweightedbackendserviceheaderaction">Dict[URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for
+the selected backendService. headerAction specified here take effect before
+headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap.  Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -8599,7 +10488,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionweightedbackendserviceheaderactionrequestheaderstoadd">List&lt;URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the
+backendService.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -8607,7 +10498,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of header names for headers that need to be removed from the request
+prior to forwarding the request to the backendService.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -8615,7 +10508,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionweightedbackendserviceheaderactionresponseheaderstoadd">List&lt;URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -8623,7 +10517,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of header names for headers that need to be removed from the response
+prior to sending the response back to the client.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -8638,7 +10534,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionweightedbackendserviceheaderactionrequestheaderstoadd">[]URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the
+backendService.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -8646,7 +10544,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of header names for headers that need to be removed from the request
+prior to forwarding the request to the backendService.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -8654,7 +10554,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionweightedbackendserviceheaderactionresponseheaderstoadd">[]URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -8662,7 +10563,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of header names for headers that need to be removed from the response
+prior to sending the response back to the client.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -8677,7 +10580,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionweightedbackendserviceheaderactionrequestheaderstoadd">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the
+backendService.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -8685,7 +10590,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of header names for headers that need to be removed from the request
+prior to forwarding the request to the backendService.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -8693,7 +10600,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionweightedbackendserviceheaderactionresponseheaderstoadd">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -8701,7 +10609,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of header names for headers that need to be removed from the response
+prior to sending the response back to the client.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -8716,7 +10626,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionweightedbackendserviceheaderactionrequestheaderstoadd">List[URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the
+backendService.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -8724,7 +10636,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of header names for headers that need to be removed from the request
+prior to forwarding the request to the backendService.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -8732,7 +10646,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionweightedbackendserviceheaderactionresponseheaderstoadd">List[URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -8740,7 +10655,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of header names for headers that need to be removed from the response
+prior to sending the response back to the client.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -8770,7 +10687,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the header.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -8778,7 +10696,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The value of the header to add.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -8786,7 +10705,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the
+header. If true, headerValue is set for the header, discarding any values that
+were set for that header.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -8801,7 +10723,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the header.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -8809,7 +10732,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The value of the header to add.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -8817,7 +10741,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the
+header. If true, headerValue is set for the header, discarding any values that
+were set for that header.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -8832,7 +10759,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the header.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -8840,7 +10768,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The value of the header to add.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -8848,7 +10777,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the
+header. If true, headerValue is set for the header, discarding any values that
+were set for that header.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -8863,7 +10795,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the header.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -8871,7 +10804,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The value of the header to add.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -8879,7 +10813,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the
+header. If true, headerValue is set for the header, discarding any values that
+were set for that header.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -8909,7 +10846,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the header.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -8917,7 +10855,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The value of the header to add.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -8925,7 +10864,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the
+header. If true, headerValue is set for the header, discarding any values that
+were set for that header.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -8940,7 +10882,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the header.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -8948,7 +10891,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The value of the header to add.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -8956,7 +10900,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the
+header. If true, headerValue is set for the header, discarding any values that
+were set for that header.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -8971,7 +10918,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the header.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -8979,7 +10927,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The value of the header to add.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -8987,7 +10936,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the
+header. If true, headerValue is set for the header, discarding any values that
+were set for that header.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -9002,7 +10954,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the header.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -9010,7 +10963,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The value of the header to add.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -9018,7 +10972,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the
+header. If true, headerValue is set for the header, discarding any values that
+were set for that header.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -9048,7 +11005,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The host that will be used in the redirect response instead of the one that was
+supplied in the request. The value must be between 1 and 255 characters.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -9056,7 +11015,11 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If set to true, the URL scheme in the redirected request is set to https. If set
+to false, the URL scheme of the redirected request will remain the same as that
+of the request. This must only be set for UrlMaps used in TargetHttpProxys.
+Setting this true for TargetHttpsProxy is not permitted. Defaults to false.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -9064,7 +11027,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The path that will be used in the redirect response instead of the one that was
+supplied in the request. Only one of pathRedirect or prefixRedirect must be
+specified. The value must be between 1 and 1024 characters.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -9072,7 +11038,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The prefix that replaces the prefixMatch specified in the HttpRouteRuleMatch,
+retaining the remaining portion of the URL before redirecting the request.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -9080,7 +11048,13 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The HTTP Status code to use for this RedirectAction. Supported values are:   -
+MOVED_PERMANENTLY_DEFAULT, which is the default value and corresponds to 301.  -
+FOUND, which corresponds to 302.  - SEE_OTHER which corresponds to 303.  -
+TEMPORARY_REDIRECT, which corresponds to 307. In this case, the request method
+will be retained.  - PERMANENT_REDIRECT, which corresponds to 308. In this case,
+the request method will be retained.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -9088,7 +11062,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If set to true, any accompanying query portion of the original URL is removed
+prior to redirecting the request. If set to false, the query portion of the
+original URL is retained. Defaults to false.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -9103,7 +11080,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The host that will be used in the redirect response instead of the one that was
+supplied in the request. The value must be between 1 and 255 characters.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -9111,7 +11090,11 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If set to true, the URL scheme in the redirected request is set to https. If set
+to false, the URL scheme of the redirected request will remain the same as that
+of the request. This must only be set for UrlMaps used in TargetHttpProxys.
+Setting this true for TargetHttpsProxy is not permitted. Defaults to false.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -9119,7 +11102,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The path that will be used in the redirect response instead of the one that was
+supplied in the request. Only one of pathRedirect or prefixRedirect must be
+specified. The value must be between 1 and 1024 characters.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -9127,7 +11113,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The prefix that replaces the prefixMatch specified in the HttpRouteRuleMatch,
+retaining the remaining portion of the URL before redirecting the request.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -9135,7 +11123,13 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The HTTP Status code to use for this RedirectAction. Supported values are:   -
+MOVED_PERMANENTLY_DEFAULT, which is the default value and corresponds to 301.  -
+FOUND, which corresponds to 302.  - SEE_OTHER which corresponds to 303.  -
+TEMPORARY_REDIRECT, which corresponds to 307. In this case, the request method
+will be retained.  - PERMANENT_REDIRECT, which corresponds to 308. In this case,
+the request method will be retained.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -9143,7 +11137,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If set to true, any accompanying query portion of the original URL is removed
+prior to redirecting the request. If set to false, the query portion of the
+original URL is retained. Defaults to false.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -9158,7 +11155,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The host that will be used in the redirect response instead of the one that was
+supplied in the request. The value must be between 1 and 255 characters.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -9166,7 +11165,11 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If set to true, the URL scheme in the redirected request is set to https. If set
+to false, the URL scheme of the redirected request will remain the same as that
+of the request. This must only be set for UrlMaps used in TargetHttpProxys.
+Setting this true for TargetHttpsProxy is not permitted. Defaults to false.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -9174,7 +11177,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The path that will be used in the redirect response instead of the one that was
+supplied in the request. Only one of pathRedirect or prefixRedirect must be
+specified. The value must be between 1 and 1024 characters.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -9182,7 +11188,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The prefix that replaces the prefixMatch specified in the HttpRouteRuleMatch,
+retaining the remaining portion of the URL before redirecting the request.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -9190,7 +11198,13 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The HTTP Status code to use for this RedirectAction. Supported values are:   -
+MOVED_PERMANENTLY_DEFAULT, which is the default value and corresponds to 301.  -
+FOUND, which corresponds to 302.  - SEE_OTHER which corresponds to 303.  -
+TEMPORARY_REDIRECT, which corresponds to 307. In this case, the request method
+will be retained.  - PERMANENT_REDIRECT, which corresponds to 308. In this case,
+the request method will be retained.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -9198,7 +11212,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If set to true, any accompanying query portion of the original URL is removed
+prior to redirecting the request. If set to false, the query portion of the
+original URL is retained. Defaults to false.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -9213,7 +11230,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The host that will be used in the redirect response instead of the one that was
+supplied in the request. The value must be between 1 and 255 characters.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -9221,7 +11240,11 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If set to true, the URL scheme in the redirected request is set to https. If set
+to false, the URL scheme of the redirected request will remain the same as that
+of the request. This must only be set for UrlMaps used in TargetHttpProxys.
+Setting this true for TargetHttpsProxy is not permitted. Defaults to false.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -9229,7 +11252,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The path that will be used in the redirect response instead of the one that was
+supplied in the request. Only one of pathRedirect or prefixRedirect must be
+specified. The value must be between 1 and 1024 characters.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -9237,7 +11263,9 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The prefix that replaces the prefixMatch specified in the HttpRouteRuleMatch,
+retaining the remaining portion of the URL before redirecting the request.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -9245,7 +11273,13 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The HTTP Status code to use for this RedirectAction. Supported values are:   -
+MOVED_PERMANENTLY_DEFAULT, which is the default value and corresponds to 301.  -
+FOUND, which corresponds to 302.  - SEE_OTHER which corresponds to 303.  -
+TEMPORARY_REDIRECT, which corresponds to 307. In this case, the request method
+will be retained.  - PERMANENT_REDIRECT, which corresponds to 308. In this case,
+the request method will be retained.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -9253,7 +11287,10 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If set to true, any accompanying query portion of the original URL is removed
+prior to redirecting the request. If set to false, the query portion of the
+original URL is retained. Defaults to false.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -9283,7 +11320,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Host portion of the URL.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -9291,7 +11329,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Path portion of the URL.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -9299,7 +11338,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The backend service or backend bucket link that should be matched by this test.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -9307,7 +11347,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Description of this test case.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -9322,7 +11363,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Host portion of the URL.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -9330,7 +11372,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Path portion of the URL.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -9338,7 +11381,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The backend service or backend bucket link that should be matched by this test.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -9346,7 +11390,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Description of this test case.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -9361,7 +11406,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Host portion of the URL.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -9369,7 +11415,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Path portion of the URL.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -9377,7 +11424,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The backend service or backend bucket link that should be matched by this test.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -9385,7 +11433,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Description of this test case.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -9400,7 +11449,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Host portion of the URL.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -9408,7 +11458,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Path portion of the URL.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -9416,7 +11467,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The backend service or backend bucket link that should be matched by this test.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -9424,7 +11476,8 @@ You can specify a maximum of 100 tests per UrlMap.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Description of this test case.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -9443,8 +11496,7 @@ You can specify a maximum of 100 tests per UrlMap.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 

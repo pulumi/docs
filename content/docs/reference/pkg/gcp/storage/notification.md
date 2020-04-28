@@ -1,7 +1,8 @@
 
 ---
 title: "Notification"
-block_external_search_index: true
+title_tag: "Resource Notification | Module storage | Package GCP"
+meta_desc: "Explore the Notification resource of the storage module, including examples, input properties, output properties, lookup functions, and supporting types. Creates a new notification configuration on a specified bucket, establishing a flow of event notifications from GCS to a Cloud Pub/Sub topic."
 ---
 
 
@@ -38,7 +39,7 @@ making this resource dependent on those IAM resources via `depends_on`. This wil
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Notification</span><span class="p">(resource_name, opts=None, </span>bucket=None<span class="p">, </span>custom_attributes=None<span class="p">, </span>event_types=None<span class="p">, </span>object_name_prefix=None<span class="p">, </span>payload_format=None<span class="p">, </span>topic=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Notification</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>bucket=None<span class="p">, </span>custom_attributes=None<span class="p">, </span>event_types=None<span class="p">, </span>object_name_prefix=None<span class="p">, </span>payload_format=None<span class="p">, </span>topic=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1075,8 +1076,7 @@ you will need to use the project-level name.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 

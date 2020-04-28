@@ -1,7 +1,8 @@
 
 ---
 title: "Policy"
-block_external_search_index: true
+title_tag: "Resource Policy | Module binaryauthorization | Package GCP"
+meta_desc: "Explore the Policy resource of the binaryauthorization module, including examples, input properties, output properties, lookup functions, and supporting types. A policy for container image binary authorization."
 ---
 
 
@@ -29,7 +30,7 @@ To get more information about Policy, see:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Policy</span><span class="p">(resource_name, opts=None, </span>admission_whitelist_patterns=None<span class="p">, </span>cluster_admission_rules=None<span class="p">, </span>default_admission_rule=None<span class="p">, </span>description=None<span class="p">, </span>global_policy_evaluation_mode=None<span class="p">, </span>project=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Policy</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>admission_whitelist_patterns=None<span class="p">, </span>cluster_admission_rules=None<span class="p">, </span>default_admission_rule=None<span class="p">, </span>description=None<span class="p">, </span>global_policy_evaluation_mode=None<span class="p">, </span>project=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -207,7 +208,8 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policydefaultadmissionrule">Policy<wbr>Default<wbr>Admission<wbr>Rule<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Default admission rule for a cluster without a per-cluster admission rule.
+    <dd>{{% md %}}Default admission rule for a cluster without a per-cluster admission
+rule.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -216,8 +218,9 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policyadmissionwhitelistpattern">List&lt;Policy<wbr>Admission<wbr>Whitelist<wbr>Pattern<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A whitelist of image patterns to exclude from admission rules. If an image's name matches a whitelist pattern, the
-image's admission requests will always be permitted regardless of your admission rules.
+    <dd>{{% md %}}A whitelist of image patterns to exclude from admission rules. If an
+image's name matches a whitelist pattern, the image's admission
+requests will always be permitted regardless of your admission rules.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -226,10 +229,11 @@ image's admission requests will always be permitted regardless of your admission
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policyclusteradmissionrule">List&lt;Policy<wbr>Cluster<wbr>Admission<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Per-cluster admission rules. An admission rule specifies either that all container images used in a pod creation request
-must be attested to by one or more attestors, that all pod creations will be allowed, or that all pod creations will be
-denied. There can be at most one admission rule per cluster spec. Identifier format: '{{location}}.{{clusterId}}'. A
-location is either a compute zone (e.g. 'us-central1-a') or a region (e.g. 'us-central1').
+    <dd>{{% md %}}Per-cluster admission rules. An admission rule specifies either that
+all container images used in a pod creation request must be attested
+to by one or more attestors, that all pod creations will be allowed,
+or that all pod creations will be denied. There can be at most one
+admission rule per cluster spec.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -247,8 +251,9 @@ location is either a compute zone (e.g. 'us-central1-a') or a region (e.g. 'us-c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Controls the evaluation of a Google-maintained global admission policy for common system-level images. Images not
-covered by the global policy will be subject to the project admission policy.
+    <dd>{{% md %}}Controls the evaluation of a Google-maintained global admission policy
+for common system-level images. Images not covered by the global
+policy will be subject to the project admission policy.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -274,7 +279,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policydefaultadmissionrule">Policy<wbr>Default<wbr>Admission<wbr>Rule</a></span>
     </dt>
-    <dd>{{% md %}}Default admission rule for a cluster without a per-cluster admission rule.
+    <dd>{{% md %}}Default admission rule for a cluster without a per-cluster admission
+rule.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -283,8 +289,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policyadmissionwhitelistpattern">[]Policy<wbr>Admission<wbr>Whitelist<wbr>Pattern</a></span>
     </dt>
-    <dd>{{% md %}}A whitelist of image patterns to exclude from admission rules. If an image's name matches a whitelist pattern, the
-image's admission requests will always be permitted regardless of your admission rules.
+    <dd>{{% md %}}A whitelist of image patterns to exclude from admission rules. If an
+image's name matches a whitelist pattern, the image's admission
+requests will always be permitted regardless of your admission rules.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -293,10 +300,11 @@ image's admission requests will always be permitted regardless of your admission
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policyclusteradmissionrule">[]Policy<wbr>Cluster<wbr>Admission<wbr>Rule</a></span>
     </dt>
-    <dd>{{% md %}}Per-cluster admission rules. An admission rule specifies either that all container images used in a pod creation request
-must be attested to by one or more attestors, that all pod creations will be allowed, or that all pod creations will be
-denied. There can be at most one admission rule per cluster spec. Identifier format: '{{location}}.{{clusterId}}'. A
-location is either a compute zone (e.g. 'us-central1-a') or a region (e.g. 'us-central1').
+    <dd>{{% md %}}Per-cluster admission rules. An admission rule specifies either that
+all container images used in a pod creation request must be attested
+to by one or more attestors, that all pod creations will be allowed,
+or that all pod creations will be denied. There can be at most one
+admission rule per cluster spec.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -314,8 +322,9 @@ location is either a compute zone (e.g. 'us-central1-a') or a region (e.g. 'us-c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Controls the evaluation of a Google-maintained global admission policy for common system-level images. Images not
-covered by the global policy will be subject to the project admission policy.
+    <dd>{{% md %}}Controls the evaluation of a Google-maintained global admission policy
+for common system-level images. Images not covered by the global
+policy will be subject to the project admission policy.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -341,7 +350,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policydefaultadmissionrule">Policy<wbr>Default<wbr>Admission<wbr>Rule</a></span>
     </dt>
-    <dd>{{% md %}}Default admission rule for a cluster without a per-cluster admission rule.
+    <dd>{{% md %}}Default admission rule for a cluster without a per-cluster admission
+rule.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -350,8 +360,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policyadmissionwhitelistpattern">Policy<wbr>Admission<wbr>Whitelist<wbr>Pattern[]</a></span>
     </dt>
-    <dd>{{% md %}}A whitelist of image patterns to exclude from admission rules. If an image's name matches a whitelist pattern, the
-image's admission requests will always be permitted regardless of your admission rules.
+    <dd>{{% md %}}A whitelist of image patterns to exclude from admission rules. If an
+image's name matches a whitelist pattern, the image's admission
+requests will always be permitted regardless of your admission rules.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -360,10 +371,11 @@ image's admission requests will always be permitted regardless of your admission
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policyclusteradmissionrule">Policy<wbr>Cluster<wbr>Admission<wbr>Rule[]</a></span>
     </dt>
-    <dd>{{% md %}}Per-cluster admission rules. An admission rule specifies either that all container images used in a pod creation request
-must be attested to by one or more attestors, that all pod creations will be allowed, or that all pod creations will be
-denied. There can be at most one admission rule per cluster spec. Identifier format: '{{location}}.{{clusterId}}'. A
-location is either a compute zone (e.g. 'us-central1-a') or a region (e.g. 'us-central1').
+    <dd>{{% md %}}Per-cluster admission rules. An admission rule specifies either that
+all container images used in a pod creation request must be attested
+to by one or more attestors, that all pod creations will be allowed,
+or that all pod creations will be denied. There can be at most one
+admission rule per cluster spec.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -381,8 +393,9 @@ location is either a compute zone (e.g. 'us-central1-a') or a region (e.g. 'us-c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Controls the evaluation of a Google-maintained global admission policy for common system-level images. Images not
-covered by the global policy will be subject to the project admission policy.
+    <dd>{{% md %}}Controls the evaluation of a Google-maintained global admission policy
+for common system-level images. Images not covered by the global
+policy will be subject to the project admission policy.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -408,7 +421,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policydefaultadmissionrule">Dict[Policy<wbr>Default<wbr>Admission<wbr>Rule]</a></span>
     </dt>
-    <dd>{{% md %}}Default admission rule for a cluster without a per-cluster admission rule.
+    <dd>{{% md %}}Default admission rule for a cluster without a per-cluster admission
+rule.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -417,8 +431,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policyadmissionwhitelistpattern">List[Policy<wbr>Admission<wbr>Whitelist<wbr>Pattern]</a></span>
     </dt>
-    <dd>{{% md %}}A whitelist of image patterns to exclude from admission rules. If an image's name matches a whitelist pattern, the
-image's admission requests will always be permitted regardless of your admission rules.
+    <dd>{{% md %}}A whitelist of image patterns to exclude from admission rules. If an
+image's name matches a whitelist pattern, the image's admission
+requests will always be permitted regardless of your admission rules.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -427,10 +442,11 @@ image's admission requests will always be permitted regardless of your admission
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policyclusteradmissionrule">List[Policy<wbr>Cluster<wbr>Admission<wbr>Rule]</a></span>
     </dt>
-    <dd>{{% md %}}Per-cluster admission rules. An admission rule specifies either that all container images used in a pod creation request
-must be attested to by one or more attestors, that all pod creations will be allowed, or that all pod creations will be
-denied. There can be at most one admission rule per cluster spec. Identifier format: '{{location}}.{{clusterId}}'. A
-location is either a compute zone (e.g. 'us-central1-a') or a region (e.g. 'us-central1').
+    <dd>{{% md %}}Per-cluster admission rules. An admission rule specifies either that
+all container images used in a pod creation request must be attested
+to by one or more attestors, that all pod creations will be allowed,
+or that all pod creations will be denied. There can be at most one
+admission rule per cluster spec.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -448,8 +464,9 @@ location is either a compute zone (e.g. 'us-central1-a') or a region (e.g. 'us-c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Controls the evaluation of a Google-maintained global admission policy for common system-level images. Images not
-covered by the global policy will be subject to the project admission policy.
+    <dd>{{% md %}}Controls the evaluation of a Google-maintained global admission policy
+for common system-level images. Images not covered by the global
+policy will be subject to the project admission policy.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -672,8 +689,9 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policyadmissionwhitelistpattern">List&lt;Policy<wbr>Admission<wbr>Whitelist<wbr>Pattern<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A whitelist of image patterns to exclude from admission rules. If an image's name matches a whitelist pattern, the
-image's admission requests will always be permitted regardless of your admission rules.
+    <dd>{{% md %}}A whitelist of image patterns to exclude from admission rules. If an
+image's name matches a whitelist pattern, the image's admission
+requests will always be permitted regardless of your admission rules.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -682,10 +700,11 @@ image's admission requests will always be permitted regardless of your admission
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policyclusteradmissionrule">List&lt;Policy<wbr>Cluster<wbr>Admission<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Per-cluster admission rules. An admission rule specifies either that all container images used in a pod creation request
-must be attested to by one or more attestors, that all pod creations will be allowed, or that all pod creations will be
-denied. There can be at most one admission rule per cluster spec. Identifier format: '{{location}}.{{clusterId}}'. A
-location is either a compute zone (e.g. 'us-central1-a') or a region (e.g. 'us-central1').
+    <dd>{{% md %}}Per-cluster admission rules. An admission rule specifies either that
+all container images used in a pod creation request must be attested
+to by one or more attestors, that all pod creations will be allowed,
+or that all pod creations will be denied. There can be at most one
+admission rule per cluster spec.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -694,7 +713,8 @@ location is either a compute zone (e.g. 'us-central1-a') or a region (e.g. 'us-c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policydefaultadmissionrule">Policy<wbr>Default<wbr>Admission<wbr>Rule<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Default admission rule for a cluster without a per-cluster admission rule.
+    <dd>{{% md %}}Default admission rule for a cluster without a per-cluster admission
+rule.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -712,8 +732,9 @@ location is either a compute zone (e.g. 'us-central1-a') or a region (e.g. 'us-c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Controls the evaluation of a Google-maintained global admission policy for common system-level images. Images not
-covered by the global policy will be subject to the project admission policy.
+    <dd>{{% md %}}Controls the evaluation of a Google-maintained global admission policy
+for common system-level images. Images not covered by the global
+policy will be subject to the project admission policy.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -739,8 +760,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policyadmissionwhitelistpattern">[]Policy<wbr>Admission<wbr>Whitelist<wbr>Pattern</a></span>
     </dt>
-    <dd>{{% md %}}A whitelist of image patterns to exclude from admission rules. If an image's name matches a whitelist pattern, the
-image's admission requests will always be permitted regardless of your admission rules.
+    <dd>{{% md %}}A whitelist of image patterns to exclude from admission rules. If an
+image's name matches a whitelist pattern, the image's admission
+requests will always be permitted regardless of your admission rules.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -749,10 +771,11 @@ image's admission requests will always be permitted regardless of your admission
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policyclusteradmissionrule">[]Policy<wbr>Cluster<wbr>Admission<wbr>Rule</a></span>
     </dt>
-    <dd>{{% md %}}Per-cluster admission rules. An admission rule specifies either that all container images used in a pod creation request
-must be attested to by one or more attestors, that all pod creations will be allowed, or that all pod creations will be
-denied. There can be at most one admission rule per cluster spec. Identifier format: '{{location}}.{{clusterId}}'. A
-location is either a compute zone (e.g. 'us-central1-a') or a region (e.g. 'us-central1').
+    <dd>{{% md %}}Per-cluster admission rules. An admission rule specifies either that
+all container images used in a pod creation request must be attested
+to by one or more attestors, that all pod creations will be allowed,
+or that all pod creations will be denied. There can be at most one
+admission rule per cluster spec.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -761,7 +784,8 @@ location is either a compute zone (e.g. 'us-central1-a') or a region (e.g. 'us-c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policydefaultadmissionrule">Policy<wbr>Default<wbr>Admission<wbr>Rule</a></span>
     </dt>
-    <dd>{{% md %}}Default admission rule for a cluster without a per-cluster admission rule.
+    <dd>{{% md %}}Default admission rule for a cluster without a per-cluster admission
+rule.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -779,8 +803,9 @@ location is either a compute zone (e.g. 'us-central1-a') or a region (e.g. 'us-c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Controls the evaluation of a Google-maintained global admission policy for common system-level images. Images not
-covered by the global policy will be subject to the project admission policy.
+    <dd>{{% md %}}Controls the evaluation of a Google-maintained global admission policy
+for common system-level images. Images not covered by the global
+policy will be subject to the project admission policy.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -806,8 +831,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policyadmissionwhitelistpattern">Policy<wbr>Admission<wbr>Whitelist<wbr>Pattern[]</a></span>
     </dt>
-    <dd>{{% md %}}A whitelist of image patterns to exclude from admission rules. If an image's name matches a whitelist pattern, the
-image's admission requests will always be permitted regardless of your admission rules.
+    <dd>{{% md %}}A whitelist of image patterns to exclude from admission rules. If an
+image's name matches a whitelist pattern, the image's admission
+requests will always be permitted regardless of your admission rules.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -816,10 +842,11 @@ image's admission requests will always be permitted regardless of your admission
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policyclusteradmissionrule">Policy<wbr>Cluster<wbr>Admission<wbr>Rule[]</a></span>
     </dt>
-    <dd>{{% md %}}Per-cluster admission rules. An admission rule specifies either that all container images used in a pod creation request
-must be attested to by one or more attestors, that all pod creations will be allowed, or that all pod creations will be
-denied. There can be at most one admission rule per cluster spec. Identifier format: '{{location}}.{{clusterId}}'. A
-location is either a compute zone (e.g. 'us-central1-a') or a region (e.g. 'us-central1').
+    <dd>{{% md %}}Per-cluster admission rules. An admission rule specifies either that
+all container images used in a pod creation request must be attested
+to by one or more attestors, that all pod creations will be allowed,
+or that all pod creations will be denied. There can be at most one
+admission rule per cluster spec.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -828,7 +855,8 @@ location is either a compute zone (e.g. 'us-central1-a') or a region (e.g. 'us-c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policydefaultadmissionrule">Policy<wbr>Default<wbr>Admission<wbr>Rule</a></span>
     </dt>
-    <dd>{{% md %}}Default admission rule for a cluster without a per-cluster admission rule.
+    <dd>{{% md %}}Default admission rule for a cluster without a per-cluster admission
+rule.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -846,8 +874,9 @@ location is either a compute zone (e.g. 'us-central1-a') or a region (e.g. 'us-c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Controls the evaluation of a Google-maintained global admission policy for common system-level images. Images not
-covered by the global policy will be subject to the project admission policy.
+    <dd>{{% md %}}Controls the evaluation of a Google-maintained global admission policy
+for common system-level images. Images not covered by the global
+policy will be subject to the project admission policy.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -873,8 +902,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policyadmissionwhitelistpattern">List[Policy<wbr>Admission<wbr>Whitelist<wbr>Pattern]</a></span>
     </dt>
-    <dd>{{% md %}}A whitelist of image patterns to exclude from admission rules. If an image's name matches a whitelist pattern, the
-image's admission requests will always be permitted regardless of your admission rules.
+    <dd>{{% md %}}A whitelist of image patterns to exclude from admission rules. If an
+image's name matches a whitelist pattern, the image's admission
+requests will always be permitted regardless of your admission rules.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -883,10 +913,11 @@ image's admission requests will always be permitted regardless of your admission
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policyclusteradmissionrule">List[Policy<wbr>Cluster<wbr>Admission<wbr>Rule]</a></span>
     </dt>
-    <dd>{{% md %}}Per-cluster admission rules. An admission rule specifies either that all container images used in a pod creation request
-must be attested to by one or more attestors, that all pod creations will be allowed, or that all pod creations will be
-denied. There can be at most one admission rule per cluster spec. Identifier format: '{{location}}.{{clusterId}}'. A
-location is either a compute zone (e.g. 'us-central1-a') or a region (e.g. 'us-central1').
+    <dd>{{% md %}}Per-cluster admission rules. An admission rule specifies either that
+all container images used in a pod creation request must be attested
+to by one or more attestors, that all pod creations will be allowed,
+or that all pod creations will be denied. There can be at most one
+admission rule per cluster spec.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -895,7 +926,8 @@ location is either a compute zone (e.g. 'us-central1-a') or a region (e.g. 'us-c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policydefaultadmissionrule">Dict[Policy<wbr>Default<wbr>Admission<wbr>Rule]</a></span>
     </dt>
-    <dd>{{% md %}}Default admission rule for a cluster without a per-cluster admission rule.
+    <dd>{{% md %}}Default admission rule for a cluster without a per-cluster admission
+rule.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -913,8 +945,9 @@ location is either a compute zone (e.g. 'us-central1-a') or a region (e.g. 'us-c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Controls the evaluation of a Google-maintained global admission policy for common system-level images. Images not
-covered by the global policy will be subject to the project admission policy.
+    <dd>{{% md %}}Controls the evaluation of a Google-maintained global admission policy
+for common system-level images. Images not covered by the global
+policy will be subject to the project admission policy.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -963,7 +996,11 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}An image name pattern to whitelist, in the form
+`registry/path/to/image`. This supports a trailing * as a
+wildcard, but this is allowed only in text after the registry/
+part.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -978,7 +1015,11 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}An image name pattern to whitelist, in the form
+`registry/path/to/image`. This supports a trailing * as a
+wildcard, but this is allowed only in text after the registry/
+part.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -993,7 +1034,11 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}An image name pattern to whitelist, in the form
+`registry/path/to/image`. This supports a trailing * as a
+wildcard, but this is allowed only in text after the registry/
+part.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1008,7 +1053,11 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}An image name pattern to whitelist, in the form
+`registry/path/to/image`. This supports a trailing * as a
+wildcard, but this is allowed only in text after the registry/
+part.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1047,7 +1096,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The action when a pod creation is denied by the admission rule.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1055,7 +1105,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}How this admission rule will be evaluated.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1063,7 +1114,15 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The resource names of the attestors that must attest to a
+container image. If the attestor is in a different project from the
+policy, it should be specified in the format `projects/*/attestors/*`.
+Each attestor must exist before a policy can reference it. To add an
+attestor to a policy the principal issuing the policy change
+request must be able to read the attestor resource.
+Note: this field must be non-empty when the evaluation_mode field
+specifies REQUIRE_ATTESTATION, otherwise it must be empty.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1087,7 +1146,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The action when a pod creation is denied by the admission rule.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1095,7 +1155,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}How this admission rule will be evaluated.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1103,7 +1164,15 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The resource names of the attestors that must attest to a
+container image. If the attestor is in a different project from the
+policy, it should be specified in the format `projects/*/attestors/*`.
+Each attestor must exist before a policy can reference it. To add an
+attestor to a policy the principal issuing the policy change
+request must be able to read the attestor resource.
+Note: this field must be non-empty when the evaluation_mode field
+specifies REQUIRE_ATTESTATION, otherwise it must be empty.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1127,7 +1196,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The action when a pod creation is denied by the admission rule.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1135,7 +1205,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}How this admission rule will be evaluated.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1143,7 +1214,15 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The resource names of the attestors that must attest to a
+container image. If the attestor is in a different project from the
+policy, it should be specified in the format `projects/*/attestors/*`.
+Each attestor must exist before a policy can reference it. To add an
+attestor to a policy the principal issuing the policy change
+request must be able to read the attestor resource.
+Note: this field must be non-empty when the evaluation_mode field
+specifies REQUIRE_ATTESTATION, otherwise it must be empty.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1167,7 +1246,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The action when a pod creation is denied by the admission rule.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1175,7 +1255,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}How this admission rule will be evaluated.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1183,7 +1264,15 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The resource names of the attestors that must attest to a
+container image. If the attestor is in a different project from the
+policy, it should be specified in the format `projects/*/attestors/*`.
+Each attestor must exist before a policy can reference it. To add an
+attestor to a policy the principal issuing the policy change
+request must be able to read the attestor resource.
+Note: this field must be non-empty when the evaluation_mode field
+specifies REQUIRE_ATTESTATION, otherwise it must be empty.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1213,7 +1302,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The action when a pod creation is denied by the admission rule.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1221,7 +1311,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}How this admission rule will be evaluated.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1229,7 +1320,15 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The resource names of the attestors that must attest to a
+container image. If the attestor is in a different project from the
+policy, it should be specified in the format `projects/*/attestors/*`.
+Each attestor must exist before a policy can reference it. To add an
+attestor to a policy the principal issuing the policy change
+request must be able to read the attestor resource.
+Note: this field must be non-empty when the evaluation_mode field
+specifies REQUIRE_ATTESTATION, otherwise it must be empty.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1244,7 +1343,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The action when a pod creation is denied by the admission rule.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1252,7 +1352,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}How this admission rule will be evaluated.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1260,7 +1361,15 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The resource names of the attestors that must attest to a
+container image. If the attestor is in a different project from the
+policy, it should be specified in the format `projects/*/attestors/*`.
+Each attestor must exist before a policy can reference it. To add an
+attestor to a policy the principal issuing the policy change
+request must be able to read the attestor resource.
+Note: this field must be non-empty when the evaluation_mode field
+specifies REQUIRE_ATTESTATION, otherwise it must be empty.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1275,7 +1384,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The action when a pod creation is denied by the admission rule.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1283,7 +1393,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}How this admission rule will be evaluated.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1291,7 +1402,15 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The resource names of the attestors that must attest to a
+container image. If the attestor is in a different project from the
+policy, it should be specified in the format `projects/*/attestors/*`.
+Each attestor must exist before a policy can reference it. To add an
+attestor to a policy the principal issuing the policy change
+request must be able to read the attestor resource.
+Note: this field must be non-empty when the evaluation_mode field
+specifies REQUIRE_ATTESTATION, otherwise it must be empty.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1306,7 +1425,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The action when a pod creation is denied by the admission rule.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1314,7 +1434,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}How this admission rule will be evaluated.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1322,7 +1443,15 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The resource names of the attestors that must attest to a
+container image. If the attestor is in a different project from the
+policy, it should be specified in the format `projects/*/attestors/*`.
+Each attestor must exist before a policy can reference it. To add an
+attestor to a policy the principal issuing the policy change
+request must be able to read the attestor resource.
+Note: this field must be non-empty when the evaluation_mode field
+specifies REQUIRE_ATTESTATION, otherwise it must be empty.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1341,8 +1470,7 @@ If it is not provided, the provider project is used.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 

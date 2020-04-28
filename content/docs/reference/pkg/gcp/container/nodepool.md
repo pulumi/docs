@@ -1,7 +1,8 @@
 
 ---
 title: "NodePool"
-block_external_search_index: true
+title_tag: "Resource NodePool | Module container | Package GCP"
+meta_desc: "Explore the NodePool resource of the container module, including examples, input properties, output properties, lookup functions, and supporting types. Manages a node pool in a Google Kubernetes Engine (GKE) cluster separately from"
 ---
 
 
@@ -24,7 +25,7 @@ and [the API reference](https://cloud.google.com/kubernetes-engine/docs/referenc
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">NodePool</span><span class="p">(resource_name, opts=None, </span>autoscaling=None<span class="p">, </span>cluster=None<span class="p">, </span>initial_node_count=None<span class="p">, </span>location=None<span class="p">, </span>management=None<span class="p">, </span>max_pods_per_node=None<span class="p">, </span>name=None<span class="p">, </span>name_prefix=None<span class="p">, </span>node_config=None<span class="p">, </span>node_count=None<span class="p">, </span>node_locations=None<span class="p">, </span>project=None<span class="p">, </span>upgrade_settings=None<span class="p">, </span>version=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">NodePool</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>autoscaling=None<span class="p">, </span>cluster=None<span class="p">, </span>initial_node_count=None<span class="p">, </span>location=None<span class="p">, </span>management=None<span class="p">, </span>max_pods_per_node=None<span class="p">, </span>name=None<span class="p">, </span>name_prefix=None<span class="p">, </span>node_config=None<span class="p">, </span>node_count=None<span class="p">, </span>node_locations=None<span class="p">, </span>project=None<span class="p">, </span>upgrade_settings=None<span class="p">, </span>version=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -3226,8 +3227,7 @@ parallel. Can be set to 0 or greater.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 

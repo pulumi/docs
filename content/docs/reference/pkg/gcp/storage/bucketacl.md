@@ -1,7 +1,8 @@
 
 ---
 title: "BucketACL"
-block_external_search_index: true
+title_tag: "Resource BucketACL | Module storage | Package GCP"
+meta_desc: "Explore the BucketACL resource of the storage module, including examples, input properties, output properties, lookup functions, and supporting types. Authoritatively manages a bucket&#39;s ACLs in Google cloud storage service (GCS). For more information see"
 ---
 
 
@@ -34,7 +35,7 @@ Permissions can be granted either by ACLs or Cloud IAM policies. In general, per
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">BucketACL</span><span class="p">(resource_name, opts=None, </span>bucket=None<span class="p">, </span>default_acl=None<span class="p">, </span>predefined_acl=None<span class="p">, </span>role_entities=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">BucketACL</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>bucket=None<span class="p">, </span>default_acl=None<span class="p">, </span>predefined_acl=None<span class="p">, </span>role_entities=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -759,8 +760,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 

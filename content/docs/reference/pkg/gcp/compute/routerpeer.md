@@ -1,7 +1,8 @@
 
 ---
 title: "RouterPeer"
-block_external_search_index: true
+title_tag: "Resource RouterPeer | Module compute | Package GCP"
+meta_desc: "Explore the RouterPeer resource of the compute module, including examples, input properties, output properties, lookup functions, and supporting types. BGP information that must be configured into the routing stack to"
 ---
 
 
@@ -49,7 +50,7 @@ const peer = new gcp.compute.RouterPeer("peer", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">RouterPeer</span><span class="p">(resource_name, opts=None, </span>advertise_mode=None<span class="p">, </span>advertised_groups=None<span class="p">, </span>advertised_ip_ranges=None<span class="p">, </span>advertised_route_priority=None<span class="p">, </span>interface=None<span class="p">, </span>name=None<span class="p">, </span>peer_asn=None<span class="p">, </span>peer_ip_address=None<span class="p">, </span>project=None<span class="p">, </span>region=None<span class="p">, </span>router=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">RouterPeer</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>advertise_mode=None<span class="p">, </span>advertised_groups=None<span class="p">, </span>advertised_ip_ranges=None<span class="p">, </span>advertised_route_priority=None<span class="p">, </span>interface=None<span class="p">, </span>name=None<span class="p">, </span>peer_asn=None<span class="p">, </span>peer_ip_address=None<span class="p">, </span>project=None<span class="p">, </span>region=None<span class="p">, </span>router=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -236,7 +237,8 @@ The RouterPeer resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}Peer BGP Autonomous System Number (ASN). Each BGP interface may use a different value.
+    <dd>{{% md %}}Peer BGP Autonomous System Number (ASN).
+Each BGP interface may use a different value.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -245,7 +247,8 @@ The RouterPeer resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}IP address of the BGP interface outside Google Cloud Platform. Only IPv4 is supported.
+    <dd>{{% md %}}IP address of the BGP interface outside Google Cloud Platform.
+Only IPv4 is supported.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -263,8 +266,8 @@ The RouterPeer resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}User-specified flag to indicate which mode to use for advertisement. Valid values of this enum field are: 'DEFAULT',
-'CUSTOM'
+    <dd>{{% md %}}User-specified flag to indicate which mode to use for advertisement.
+Valid values of this enum field are: `DEFAULT`, `CUSTOM`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -273,12 +276,11 @@ The RouterPeer resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}User-specified list of prefix groups to advertise in custom mode, which can take one of the following options: *
-'ALL_SUBNETS': Advertises all available subnets, including peer VPC subnets. * 'ALL_VPC_SUBNETS': Advertises the
-router's own VPC subnets. * 'ALL_PEER_VPC_SUBNETS': Advertises peer subnets of the router's VPC network. Note that this
-field can only be populated if advertiseMode is 'CUSTOM' and overrides the list defined for the router (in the "bgp"
-message). These groups are advertised in addition to any specified prefixes. Leave this field blank to advertise no
-custom groups.
+    <dd>{{% md %}}User-specified list of prefix groups to advertise in custom
+mode, which can take one of the following options:
+* `ALL_SUBNETS`: Advertises all available subnets, including peer VPC subnets.
+* `ALL_VPC_SUBNETS`: Advertises the router's own VPC subnets.
+* `ALL_PEER_VPC_SUBNETS`: Advertises peer subnets of the router's VPC network.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -287,9 +289,11 @@ custom groups.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routerpeeradvertisediprange">List&lt;Router<wbr>Peer<wbr>Advertised<wbr>Ip<wbr>Range<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}User-specified list of individual IP ranges to advertise in custom mode. This field can only be populated if
-advertiseMode is 'CUSTOM' and is advertised to all peers of the router. These IP ranges will be advertised in addition
-to any specified groups. Leave this field blank to advertise no custom IP ranges.
+    <dd>{{% md %}}User-specified list of individual IP ranges to advertise in
+custom mode. This field can only be populated if advertiseMode
+is `CUSTOM` and is advertised to all peers of the router. These IP
+ranges will be advertised in addition to any specified groups.
+Leave this field blank to advertise no custom IP ranges.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -298,8 +302,9 @@ to any specified groups. Leave this field blank to advertise no custom IP ranges
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}The priority of routes advertised to this BGP peer. Where there is more than one matching route of maximum length, the
-routes with the lowest priority value win.
+    <dd>{{% md %}}The priority of routes advertised to this BGP peer.
+Where there is more than one matching route of maximum
+length, the routes with the lowest priority value win.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -308,10 +313,12 @@ routes with the lowest priority value win.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of this BGP peer. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be
-1-63 characters long and match the regular expression '[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must
-be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last
-character, which cannot be a dash.
+    <dd>{{% md %}}Name of this BGP peer. The name must be 1-63 characters long,
+and comply with RFC1035. Specifically, the name must be 1-63 characters
+long and match the regular expression `a-z?` which
+means the first character must be a lowercase letter, and all
+following characters must be a dash, lowercase letter, or digit,
+except the last character, which cannot be a dash.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -330,7 +337,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Region where the router and BgpPeer reside. If it is not provided, the provider region is used.
+    <dd>{{% md %}}Region where the router and BgpPeer reside.
+If it is not provided, the provider region is used.
 {{% /md %}}</dd>
 
 </dl>
@@ -355,7 +363,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}Peer BGP Autonomous System Number (ASN). Each BGP interface may use a different value.
+    <dd>{{% md %}}Peer BGP Autonomous System Number (ASN).
+Each BGP interface may use a different value.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -364,7 +373,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}IP address of the BGP interface outside Google Cloud Platform. Only IPv4 is supported.
+    <dd>{{% md %}}IP address of the BGP interface outside Google Cloud Platform.
+Only IPv4 is supported.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -382,8 +392,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}User-specified flag to indicate which mode to use for advertisement. Valid values of this enum field are: 'DEFAULT',
-'CUSTOM'
+    <dd>{{% md %}}User-specified flag to indicate which mode to use for advertisement.
+Valid values of this enum field are: `DEFAULT`, `CUSTOM`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -392,12 +402,11 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}User-specified list of prefix groups to advertise in custom mode, which can take one of the following options: *
-'ALL_SUBNETS': Advertises all available subnets, including peer VPC subnets. * 'ALL_VPC_SUBNETS': Advertises the
-router's own VPC subnets. * 'ALL_PEER_VPC_SUBNETS': Advertises peer subnets of the router's VPC network. Note that this
-field can only be populated if advertiseMode is 'CUSTOM' and overrides the list defined for the router (in the "bgp"
-message). These groups are advertised in addition to any specified prefixes. Leave this field blank to advertise no
-custom groups.
+    <dd>{{% md %}}User-specified list of prefix groups to advertise in custom
+mode, which can take one of the following options:
+* `ALL_SUBNETS`: Advertises all available subnets, including peer VPC subnets.
+* `ALL_VPC_SUBNETS`: Advertises the router's own VPC subnets.
+* `ALL_PEER_VPC_SUBNETS`: Advertises peer subnets of the router's VPC network.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -406,9 +415,11 @@ custom groups.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routerpeeradvertisediprange">[]Router<wbr>Peer<wbr>Advertised<wbr>Ip<wbr>Range</a></span>
     </dt>
-    <dd>{{% md %}}User-specified list of individual IP ranges to advertise in custom mode. This field can only be populated if
-advertiseMode is 'CUSTOM' and is advertised to all peers of the router. These IP ranges will be advertised in addition
-to any specified groups. Leave this field blank to advertise no custom IP ranges.
+    <dd>{{% md %}}User-specified list of individual IP ranges to advertise in
+custom mode. This field can only be populated if advertiseMode
+is `CUSTOM` and is advertised to all peers of the router. These IP
+ranges will be advertised in addition to any specified groups.
+Leave this field blank to advertise no custom IP ranges.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -417,8 +428,9 @@ to any specified groups. Leave this field blank to advertise no custom IP ranges
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}The priority of routes advertised to this BGP peer. Where there is more than one matching route of maximum length, the
-routes with the lowest priority value win.
+    <dd>{{% md %}}The priority of routes advertised to this BGP peer.
+Where there is more than one matching route of maximum
+length, the routes with the lowest priority value win.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -427,10 +439,12 @@ routes with the lowest priority value win.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of this BGP peer. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be
-1-63 characters long and match the regular expression '[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must
-be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last
-character, which cannot be a dash.
+    <dd>{{% md %}}Name of this BGP peer. The name must be 1-63 characters long,
+and comply with RFC1035. Specifically, the name must be 1-63 characters
+long and match the regular expression `a-z?` which
+means the first character must be a lowercase letter, and all
+following characters must be a dash, lowercase letter, or digit,
+except the last character, which cannot be a dash.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -449,7 +463,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Region where the router and BgpPeer reside. If it is not provided, the provider region is used.
+    <dd>{{% md %}}Region where the router and BgpPeer reside.
+If it is not provided, the provider region is used.
 {{% /md %}}</dd>
 
 </dl>
@@ -474,7 +489,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}Peer BGP Autonomous System Number (ASN). Each BGP interface may use a different value.
+    <dd>{{% md %}}Peer BGP Autonomous System Number (ASN).
+Each BGP interface may use a different value.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -483,7 +499,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}IP address of the BGP interface outside Google Cloud Platform. Only IPv4 is supported.
+    <dd>{{% md %}}IP address of the BGP interface outside Google Cloud Platform.
+Only IPv4 is supported.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -501,8 +518,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}User-specified flag to indicate which mode to use for advertisement. Valid values of this enum field are: 'DEFAULT',
-'CUSTOM'
+    <dd>{{% md %}}User-specified flag to indicate which mode to use for advertisement.
+Valid values of this enum field are: `DEFAULT`, `CUSTOM`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -511,12 +528,11 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}User-specified list of prefix groups to advertise in custom mode, which can take one of the following options: *
-'ALL_SUBNETS': Advertises all available subnets, including peer VPC subnets. * 'ALL_VPC_SUBNETS': Advertises the
-router's own VPC subnets. * 'ALL_PEER_VPC_SUBNETS': Advertises peer subnets of the router's VPC network. Note that this
-field can only be populated if advertiseMode is 'CUSTOM' and overrides the list defined for the router (in the "bgp"
-message). These groups are advertised in addition to any specified prefixes. Leave this field blank to advertise no
-custom groups.
+    <dd>{{% md %}}User-specified list of prefix groups to advertise in custom
+mode, which can take one of the following options:
+* `ALL_SUBNETS`: Advertises all available subnets, including peer VPC subnets.
+* `ALL_VPC_SUBNETS`: Advertises the router's own VPC subnets.
+* `ALL_PEER_VPC_SUBNETS`: Advertises peer subnets of the router's VPC network.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -525,9 +541,11 @@ custom groups.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routerpeeradvertisediprange">Router<wbr>Peer<wbr>Advertised<wbr>Ip<wbr>Range[]</a></span>
     </dt>
-    <dd>{{% md %}}User-specified list of individual IP ranges to advertise in custom mode. This field can only be populated if
-advertiseMode is 'CUSTOM' and is advertised to all peers of the router. These IP ranges will be advertised in addition
-to any specified groups. Leave this field blank to advertise no custom IP ranges.
+    <dd>{{% md %}}User-specified list of individual IP ranges to advertise in
+custom mode. This field can only be populated if advertiseMode
+is `CUSTOM` and is advertised to all peers of the router. These IP
+ranges will be advertised in addition to any specified groups.
+Leave this field blank to advertise no custom IP ranges.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -536,8 +554,9 @@ to any specified groups. Leave this field blank to advertise no custom IP ranges
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}The priority of routes advertised to this BGP peer. Where there is more than one matching route of maximum length, the
-routes with the lowest priority value win.
+    <dd>{{% md %}}The priority of routes advertised to this BGP peer.
+Where there is more than one matching route of maximum
+length, the routes with the lowest priority value win.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -546,10 +565,12 @@ routes with the lowest priority value win.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of this BGP peer. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be
-1-63 characters long and match the regular expression '[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must
-be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last
-character, which cannot be a dash.
+    <dd>{{% md %}}Name of this BGP peer. The name must be 1-63 characters long,
+and comply with RFC1035. Specifically, the name must be 1-63 characters
+long and match the regular expression `a-z?` which
+means the first character must be a lowercase letter, and all
+following characters must be a dash, lowercase letter, or digit,
+except the last character, which cannot be a dash.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -568,7 +589,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Region where the router and BgpPeer reside. If it is not provided, the provider region is used.
+    <dd>{{% md %}}Region where the router and BgpPeer reside.
+If it is not provided, the provider region is used.
 {{% /md %}}</dd>
 
 </dl>
@@ -593,7 +615,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}Peer BGP Autonomous System Number (ASN). Each BGP interface may use a different value.
+    <dd>{{% md %}}Peer BGP Autonomous System Number (ASN).
+Each BGP interface may use a different value.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -602,7 +625,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}IP address of the BGP interface outside Google Cloud Platform. Only IPv4 is supported.
+    <dd>{{% md %}}IP address of the BGP interface outside Google Cloud Platform.
+Only IPv4 is supported.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -620,8 +644,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}User-specified flag to indicate which mode to use for advertisement. Valid values of this enum field are: 'DEFAULT',
-'CUSTOM'
+    <dd>{{% md %}}User-specified flag to indicate which mode to use for advertisement.
+Valid values of this enum field are: `DEFAULT`, `CUSTOM`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -630,12 +654,11 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}User-specified list of prefix groups to advertise in custom mode, which can take one of the following options: *
-'ALL_SUBNETS': Advertises all available subnets, including peer VPC subnets. * 'ALL_VPC_SUBNETS': Advertises the
-router's own VPC subnets. * 'ALL_PEER_VPC_SUBNETS': Advertises peer subnets of the router's VPC network. Note that this
-field can only be populated if advertiseMode is 'CUSTOM' and overrides the list defined for the router (in the "bgp"
-message). These groups are advertised in addition to any specified prefixes. Leave this field blank to advertise no
-custom groups.
+    <dd>{{% md %}}User-specified list of prefix groups to advertise in custom
+mode, which can take one of the following options:
+* `ALL_SUBNETS`: Advertises all available subnets, including peer VPC subnets.
+* `ALL_VPC_SUBNETS`: Advertises the router's own VPC subnets.
+* `ALL_PEER_VPC_SUBNETS`: Advertises peer subnets of the router's VPC network.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -644,9 +667,11 @@ custom groups.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routerpeeradvertisediprange">List[Router<wbr>Peer<wbr>Advertised<wbr>Ip<wbr>Range]</a></span>
     </dt>
-    <dd>{{% md %}}User-specified list of individual IP ranges to advertise in custom mode. This field can only be populated if
-advertiseMode is 'CUSTOM' and is advertised to all peers of the router. These IP ranges will be advertised in addition
-to any specified groups. Leave this field blank to advertise no custom IP ranges.
+    <dd>{{% md %}}User-specified list of individual IP ranges to advertise in
+custom mode. This field can only be populated if advertiseMode
+is `CUSTOM` and is advertised to all peers of the router. These IP
+ranges will be advertised in addition to any specified groups.
+Leave this field blank to advertise no custom IP ranges.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -655,8 +680,9 @@ to any specified groups. Leave this field blank to advertise no custom IP ranges
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}The priority of routes advertised to this BGP peer. Where there is more than one matching route of maximum length, the
-routes with the lowest priority value win.
+    <dd>{{% md %}}The priority of routes advertised to this BGP peer.
+Where there is more than one matching route of maximum
+length, the routes with the lowest priority value win.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -665,10 +691,12 @@ routes with the lowest priority value win.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Name of this BGP peer. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be
-1-63 characters long and match the regular expression '[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must
-be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last
-character, which cannot be a dash.
+    <dd>{{% md %}}Name of this BGP peer. The name must be 1-63 characters long,
+and comply with RFC1035. Specifically, the name must be 1-63 characters
+long and match the regular expression `a-z?` which
+means the first character must be a lowercase letter, and all
+following characters must be a dash, lowercase letter, or digit,
+except the last character, which cannot be a dash.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -687,7 +715,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Region where the router and BgpPeer reside. If it is not provided, the provider region is used.
+    <dd>{{% md %}}Region where the router and BgpPeer reside.
+If it is not provided, the provider region is used.
 {{% /md %}}</dd>
 
 </dl>
@@ -984,8 +1013,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}User-specified flag to indicate which mode to use for advertisement. Valid values of this enum field are: 'DEFAULT',
-'CUSTOM'
+    <dd>{{% md %}}User-specified flag to indicate which mode to use for advertisement.
+Valid values of this enum field are: `DEFAULT`, `CUSTOM`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -994,12 +1023,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}User-specified list of prefix groups to advertise in custom mode, which can take one of the following options: *
-'ALL_SUBNETS': Advertises all available subnets, including peer VPC subnets. * 'ALL_VPC_SUBNETS': Advertises the
-router's own VPC subnets. * 'ALL_PEER_VPC_SUBNETS': Advertises peer subnets of the router's VPC network. Note that this
-field can only be populated if advertiseMode is 'CUSTOM' and overrides the list defined for the router (in the "bgp"
-message). These groups are advertised in addition to any specified prefixes. Leave this field blank to advertise no
-custom groups.
+    <dd>{{% md %}}User-specified list of prefix groups to advertise in custom
+mode, which can take one of the following options:
+* `ALL_SUBNETS`: Advertises all available subnets, including peer VPC subnets.
+* `ALL_VPC_SUBNETS`: Advertises the router's own VPC subnets.
+* `ALL_PEER_VPC_SUBNETS`: Advertises peer subnets of the router's VPC network.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1008,9 +1036,11 @@ custom groups.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routerpeeradvertisediprange">List&lt;Router<wbr>Peer<wbr>Advertised<wbr>Ip<wbr>Range<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}User-specified list of individual IP ranges to advertise in custom mode. This field can only be populated if
-advertiseMode is 'CUSTOM' and is advertised to all peers of the router. These IP ranges will be advertised in addition
-to any specified groups. Leave this field blank to advertise no custom IP ranges.
+    <dd>{{% md %}}User-specified list of individual IP ranges to advertise in
+custom mode. This field can only be populated if advertiseMode
+is `CUSTOM` and is advertised to all peers of the router. These IP
+ranges will be advertised in addition to any specified groups.
+Leave this field blank to advertise no custom IP ranges.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1019,8 +1049,9 @@ to any specified groups. Leave this field blank to advertise no custom IP ranges
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}The priority of routes advertised to this BGP peer. Where there is more than one matching route of maximum length, the
-routes with the lowest priority value win.
+    <dd>{{% md %}}The priority of routes advertised to this BGP peer.
+Where there is more than one matching route of maximum
+length, the routes with the lowest priority value win.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1059,10 +1090,12 @@ of BGP peer when the PARTNER InterconnectAttachment is created, updated, or dele
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of this BGP peer. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be
-1-63 characters long and match the regular expression '[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must
-be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last
-character, which cannot be a dash.
+    <dd>{{% md %}}Name of this BGP peer. The name must be 1-63 characters long,
+and comply with RFC1035. Specifically, the name must be 1-63 characters
+long and match the regular expression `a-z?` which
+means the first character must be a lowercase letter, and all
+following characters must be a dash, lowercase letter, or digit,
+except the last character, which cannot be a dash.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1071,7 +1104,8 @@ character, which cannot be a dash.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}Peer BGP Autonomous System Number (ASN). Each BGP interface may use a different value.
+    <dd>{{% md %}}Peer BGP Autonomous System Number (ASN).
+Each BGP interface may use a different value.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1080,7 +1114,8 @@ character, which cannot be a dash.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}IP address of the BGP interface outside Google Cloud Platform. Only IPv4 is supported.
+    <dd>{{% md %}}IP address of the BGP interface outside Google Cloud Platform.
+Only IPv4 is supported.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1099,7 +1134,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Region where the router and BgpPeer reside. If it is not provided, the provider region is used.
+    <dd>{{% md %}}Region where the router and BgpPeer reside.
+If it is not provided, the provider region is used.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1124,8 +1160,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}User-specified flag to indicate which mode to use for advertisement. Valid values of this enum field are: 'DEFAULT',
-'CUSTOM'
+    <dd>{{% md %}}User-specified flag to indicate which mode to use for advertisement.
+Valid values of this enum field are: `DEFAULT`, `CUSTOM`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1134,12 +1170,11 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}User-specified list of prefix groups to advertise in custom mode, which can take one of the following options: *
-'ALL_SUBNETS': Advertises all available subnets, including peer VPC subnets. * 'ALL_VPC_SUBNETS': Advertises the
-router's own VPC subnets. * 'ALL_PEER_VPC_SUBNETS': Advertises peer subnets of the router's VPC network. Note that this
-field can only be populated if advertiseMode is 'CUSTOM' and overrides the list defined for the router (in the "bgp"
-message). These groups are advertised in addition to any specified prefixes. Leave this field blank to advertise no
-custom groups.
+    <dd>{{% md %}}User-specified list of prefix groups to advertise in custom
+mode, which can take one of the following options:
+* `ALL_SUBNETS`: Advertises all available subnets, including peer VPC subnets.
+* `ALL_VPC_SUBNETS`: Advertises the router's own VPC subnets.
+* `ALL_PEER_VPC_SUBNETS`: Advertises peer subnets of the router's VPC network.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1148,9 +1183,11 @@ custom groups.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routerpeeradvertisediprange">[]Router<wbr>Peer<wbr>Advertised<wbr>Ip<wbr>Range</a></span>
     </dt>
-    <dd>{{% md %}}User-specified list of individual IP ranges to advertise in custom mode. This field can only be populated if
-advertiseMode is 'CUSTOM' and is advertised to all peers of the router. These IP ranges will be advertised in addition
-to any specified groups. Leave this field blank to advertise no custom IP ranges.
+    <dd>{{% md %}}User-specified list of individual IP ranges to advertise in
+custom mode. This field can only be populated if advertiseMode
+is `CUSTOM` and is advertised to all peers of the router. These IP
+ranges will be advertised in addition to any specified groups.
+Leave this field blank to advertise no custom IP ranges.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1159,8 +1196,9 @@ to any specified groups. Leave this field blank to advertise no custom IP ranges
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}The priority of routes advertised to this BGP peer. Where there is more than one matching route of maximum length, the
-routes with the lowest priority value win.
+    <dd>{{% md %}}The priority of routes advertised to this BGP peer.
+Where there is more than one matching route of maximum
+length, the routes with the lowest priority value win.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1199,10 +1237,12 @@ of BGP peer when the PARTNER InterconnectAttachment is created, updated, or dele
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of this BGP peer. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be
-1-63 characters long and match the regular expression '[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must
-be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last
-character, which cannot be a dash.
+    <dd>{{% md %}}Name of this BGP peer. The name must be 1-63 characters long,
+and comply with RFC1035. Specifically, the name must be 1-63 characters
+long and match the regular expression `a-z?` which
+means the first character must be a lowercase letter, and all
+following characters must be a dash, lowercase letter, or digit,
+except the last character, which cannot be a dash.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1211,7 +1251,8 @@ character, which cannot be a dash.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}Peer BGP Autonomous System Number (ASN). Each BGP interface may use a different value.
+    <dd>{{% md %}}Peer BGP Autonomous System Number (ASN).
+Each BGP interface may use a different value.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1220,7 +1261,8 @@ character, which cannot be a dash.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}IP address of the BGP interface outside Google Cloud Platform. Only IPv4 is supported.
+    <dd>{{% md %}}IP address of the BGP interface outside Google Cloud Platform.
+Only IPv4 is supported.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1239,7 +1281,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Region where the router and BgpPeer reside. If it is not provided, the provider region is used.
+    <dd>{{% md %}}Region where the router and BgpPeer reside.
+If it is not provided, the provider region is used.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1264,8 +1307,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}User-specified flag to indicate which mode to use for advertisement. Valid values of this enum field are: 'DEFAULT',
-'CUSTOM'
+    <dd>{{% md %}}User-specified flag to indicate which mode to use for advertisement.
+Valid values of this enum field are: `DEFAULT`, `CUSTOM`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1274,12 +1317,11 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}User-specified list of prefix groups to advertise in custom mode, which can take one of the following options: *
-'ALL_SUBNETS': Advertises all available subnets, including peer VPC subnets. * 'ALL_VPC_SUBNETS': Advertises the
-router's own VPC subnets. * 'ALL_PEER_VPC_SUBNETS': Advertises peer subnets of the router's VPC network. Note that this
-field can only be populated if advertiseMode is 'CUSTOM' and overrides the list defined for the router (in the "bgp"
-message). These groups are advertised in addition to any specified prefixes. Leave this field blank to advertise no
-custom groups.
+    <dd>{{% md %}}User-specified list of prefix groups to advertise in custom
+mode, which can take one of the following options:
+* `ALL_SUBNETS`: Advertises all available subnets, including peer VPC subnets.
+* `ALL_VPC_SUBNETS`: Advertises the router's own VPC subnets.
+* `ALL_PEER_VPC_SUBNETS`: Advertises peer subnets of the router's VPC network.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1288,9 +1330,11 @@ custom groups.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routerpeeradvertisediprange">Router<wbr>Peer<wbr>Advertised<wbr>Ip<wbr>Range[]</a></span>
     </dt>
-    <dd>{{% md %}}User-specified list of individual IP ranges to advertise in custom mode. This field can only be populated if
-advertiseMode is 'CUSTOM' and is advertised to all peers of the router. These IP ranges will be advertised in addition
-to any specified groups. Leave this field blank to advertise no custom IP ranges.
+    <dd>{{% md %}}User-specified list of individual IP ranges to advertise in
+custom mode. This field can only be populated if advertiseMode
+is `CUSTOM` and is advertised to all peers of the router. These IP
+ranges will be advertised in addition to any specified groups.
+Leave this field blank to advertise no custom IP ranges.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1299,8 +1343,9 @@ to any specified groups. Leave this field blank to advertise no custom IP ranges
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}The priority of routes advertised to this BGP peer. Where there is more than one matching route of maximum length, the
-routes with the lowest priority value win.
+    <dd>{{% md %}}The priority of routes advertised to this BGP peer.
+Where there is more than one matching route of maximum
+length, the routes with the lowest priority value win.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1339,10 +1384,12 @@ of BGP peer when the PARTNER InterconnectAttachment is created, updated, or dele
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of this BGP peer. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be
-1-63 characters long and match the regular expression '[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must
-be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last
-character, which cannot be a dash.
+    <dd>{{% md %}}Name of this BGP peer. The name must be 1-63 characters long,
+and comply with RFC1035. Specifically, the name must be 1-63 characters
+long and match the regular expression `a-z?` which
+means the first character must be a lowercase letter, and all
+following characters must be a dash, lowercase letter, or digit,
+except the last character, which cannot be a dash.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1351,7 +1398,8 @@ character, which cannot be a dash.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}Peer BGP Autonomous System Number (ASN). Each BGP interface may use a different value.
+    <dd>{{% md %}}Peer BGP Autonomous System Number (ASN).
+Each BGP interface may use a different value.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1360,7 +1408,8 @@ character, which cannot be a dash.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}IP address of the BGP interface outside Google Cloud Platform. Only IPv4 is supported.
+    <dd>{{% md %}}IP address of the BGP interface outside Google Cloud Platform.
+Only IPv4 is supported.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1379,7 +1428,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Region where the router and BgpPeer reside. If it is not provided, the provider region is used.
+    <dd>{{% md %}}Region where the router and BgpPeer reside.
+If it is not provided, the provider region is used.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1404,8 +1454,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}User-specified flag to indicate which mode to use for advertisement. Valid values of this enum field are: 'DEFAULT',
-'CUSTOM'
+    <dd>{{% md %}}User-specified flag to indicate which mode to use for advertisement.
+Valid values of this enum field are: `DEFAULT`, `CUSTOM`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1414,12 +1464,11 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}User-specified list of prefix groups to advertise in custom mode, which can take one of the following options: *
-'ALL_SUBNETS': Advertises all available subnets, including peer VPC subnets. * 'ALL_VPC_SUBNETS': Advertises the
-router's own VPC subnets. * 'ALL_PEER_VPC_SUBNETS': Advertises peer subnets of the router's VPC network. Note that this
-field can only be populated if advertiseMode is 'CUSTOM' and overrides the list defined for the router (in the "bgp"
-message). These groups are advertised in addition to any specified prefixes. Leave this field blank to advertise no
-custom groups.
+    <dd>{{% md %}}User-specified list of prefix groups to advertise in custom
+mode, which can take one of the following options:
+* `ALL_SUBNETS`: Advertises all available subnets, including peer VPC subnets.
+* `ALL_VPC_SUBNETS`: Advertises the router's own VPC subnets.
+* `ALL_PEER_VPC_SUBNETS`: Advertises peer subnets of the router's VPC network.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1428,9 +1477,11 @@ custom groups.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routerpeeradvertisediprange">List[Router<wbr>Peer<wbr>Advertised<wbr>Ip<wbr>Range]</a></span>
     </dt>
-    <dd>{{% md %}}User-specified list of individual IP ranges to advertise in custom mode. This field can only be populated if
-advertiseMode is 'CUSTOM' and is advertised to all peers of the router. These IP ranges will be advertised in addition
-to any specified groups. Leave this field blank to advertise no custom IP ranges.
+    <dd>{{% md %}}User-specified list of individual IP ranges to advertise in
+custom mode. This field can only be populated if advertiseMode
+is `CUSTOM` and is advertised to all peers of the router. These IP
+ranges will be advertised in addition to any specified groups.
+Leave this field blank to advertise no custom IP ranges.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1439,8 +1490,9 @@ to any specified groups. Leave this field blank to advertise no custom IP ranges
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}The priority of routes advertised to this BGP peer. Where there is more than one matching route of maximum length, the
-routes with the lowest priority value win.
+    <dd>{{% md %}}The priority of routes advertised to this BGP peer.
+Where there is more than one matching route of maximum
+length, the routes with the lowest priority value win.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1479,10 +1531,12 @@ of BGP peer when the PARTNER InterconnectAttachment is created, updated, or dele
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Name of this BGP peer. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be
-1-63 characters long and match the regular expression '[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must
-be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last
-character, which cannot be a dash.
+    <dd>{{% md %}}Name of this BGP peer. The name must be 1-63 characters long,
+and comply with RFC1035. Specifically, the name must be 1-63 characters
+long and match the regular expression `a-z?` which
+means the first character must be a lowercase letter, and all
+following characters must be a dash, lowercase letter, or digit,
+except the last character, which cannot be a dash.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1491,7 +1545,8 @@ character, which cannot be a dash.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}Peer BGP Autonomous System Number (ASN). Each BGP interface may use a different value.
+    <dd>{{% md %}}Peer BGP Autonomous System Number (ASN).
+Each BGP interface may use a different value.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1500,7 +1555,8 @@ character, which cannot be a dash.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}IP address of the BGP interface outside Google Cloud Platform. Only IPv4 is supported.
+    <dd>{{% md %}}IP address of the BGP interface outside Google Cloud Platform.
+Only IPv4 is supported.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1519,7 +1575,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Region where the router and BgpPeer reside. If it is not provided, the provider region is used.
+    <dd>{{% md %}}Region where the router and BgpPeer reside.
+If it is not provided, the provider region is used.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1567,7 +1624,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The IP range to advertise. The value must be a
+CIDR-formatted string.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1575,7 +1634,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}User-specified description for the IP range.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1590,7 +1650,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The IP range to advertise. The value must be a
+CIDR-formatted string.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1598,7 +1660,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}User-specified description for the IP range.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1613,7 +1676,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The IP range to advertise. The value must be a
+CIDR-formatted string.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1621,7 +1686,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}User-specified description for the IP range.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1636,7 +1702,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The IP range to advertise. The value must be a
+CIDR-formatted string.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1644,7 +1712,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}User-specified description for the IP range.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1663,8 +1732,7 @@ If it is not provided, the provider project is used.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 

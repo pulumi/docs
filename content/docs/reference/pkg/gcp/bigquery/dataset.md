@@ -1,7 +1,8 @@
 
 ---
 title: "Dataset"
-block_external_search_index: true
+title_tag: "Resource Dataset | Module bigquery | Package GCP"
+meta_desc: "Explore the Dataset resource of the bigquery module, including examples, input properties, output properties, lookup functions, and supporting types. Datasets allow you to organize and control access to your tables."
 ---
 
 
@@ -29,7 +30,7 @@ To get more information about Dataset, see:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Dataset</span><span class="p">(resource_name, opts=None, </span>accesses=None<span class="p">, </span>dataset_id=None<span class="p">, </span>default_encryption_configuration=None<span class="p">, </span>default_partition_expiration_ms=None<span class="p">, </span>default_table_expiration_ms=None<span class="p">, </span>delete_contents_on_destroy=None<span class="p">, </span>description=None<span class="p">, </span>friendly_name=None<span class="p">, </span>labels=None<span class="p">, </span>location=None<span class="p">, </span>project=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Dataset</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>accesses=None<span class="p">, </span>dataset_id=None<span class="p">, </span>default_encryption_configuration=None<span class="p">, </span>default_partition_expiration_ms=None<span class="p">, </span>default_table_expiration_ms=None<span class="p">, </span>delete_contents_on_destroy=None<span class="p">, </span>description=None<span class="p">, </span>friendly_name=None<span class="p">, </span>labels=None<span class="p">, </span>location=None<span class="p">, </span>project=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -207,8 +208,7 @@ The Dataset resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}A unique ID for this dataset, without the project name. The ID must contain only letters (a-z, A-Z), numbers (0-9), or
-underscores (_). The maximum length is 1,024 characters.
+    <dd>{{% md %}}The ID of the dataset containing this table.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -217,7 +217,7 @@ underscores (_). The maximum length is 1,024 characters.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetaccess">List&lt;Dataset<wbr>Access<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}An array of objects that define dataset access for one or more entities.
+    <dd>{{% md %}}An array of objects that define dataset access for one or more entities.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -226,9 +226,9 @@ underscores (_). The maximum length is 1,024 characters.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetdefaultencryptionconfiguration">Dataset<wbr>Default<wbr>Encryption<wbr>Configuration<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The default encryption key for all tables in the dataset. Once this property is set, all newly-created partitioned
-tables in the dataset will have encryption key set to this value, unless table creation request (or query) overrides the
-key.
+    <dd>{{% md %}}The default encryption key for all tables in the dataset. Once this property is set,
+all newly-created partitioned tables in the dataset will have encryption key set to
+this value, unless table creation request (or query) overrides the key.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -237,14 +237,8 @@ key.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}The default partition expiration for all partitioned tables in the dataset, in milliseconds. Once this property is set,
-all newly-created partitioned tables in the dataset will have an 'expirationMs' property in the 'timePartitioning'
-settings set to this value, and changing the value will only affect new tables, not existing ones. The storage in a
-partition will have an expiration time of its partition time plus this value. Setting this property overrides the use of
-'defaultTableExpirationMs' for partitioned tables: only one of 'defaultTableExpirationMs' and
-'defaultPartitionExpirationMs' will be used for any new partitioned table. If you provide an explicit
-'timePartitioning.expirationMs' when creating or updating a partitioned table, that value takes precedence over the
-default partition expiration time indicated by this property.
+    <dd>{{% md %}}The default partition expiration for all partitioned tables in
+the dataset, in milliseconds.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -253,12 +247,8 @@ default partition expiration time indicated by this property.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}The default lifetime of all tables in the dataset, in milliseconds. The minimum value is 3600000 milliseconds (one
-hour). Once this property is set, all newly-created tables in the dataset will have an 'expirationTime' property set to
-the creation time plus the value in this property, and changing the value will only affect new tables, not existing
-ones. When the 'expirationTime' for a given table is reached, that table will be deleted automatically. If a table's
-'expirationTime' is modified or removed before the table expires, or if you provide an explicit 'expirationTime' when
-creating a table, that value takes precedence over the default expiration time indicated by this property.
+    <dd>{{% md %}}The default lifetime of all tables in the dataset, in milliseconds.
+The minimum value is 3600000 milliseconds (one hour).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -296,7 +286,8 @@ destroying the resource will fail if tables are present.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}The labels associated with this dataset. You can use these to organize and group your datasets
+    <dd>{{% md %}}The labels associated with this dataset. You can use these to
+organize and group your datasets
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -305,13 +296,8 @@ destroying the resource will fail if tables are present.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The geographic location where the dataset should reside. See [official
-docs](https://cloud.google.com/bigquery/docs/dataset-locations). There are two types of locations, regional or
-multi-regional. A regional location is a specific geographic place, such as Tokyo, and a multi-regional location is a
-large geographic area, such as the United States, that contains at least two geographic places. Possible regional values
-include: 'asia-east1', 'asia-northeast1', 'asia-southeast1', 'australia-southeast1', 'europe-north1', 'europe-west2' and
-'us-east4'. Possible multi-regional values: 'EU' and 'US'. The default value is multi-regional location 'US'. Changing
-this forces a new resource to be created.
+    <dd>{{% md %}}The geographic location where the dataset should reside.
+See [official docs](https://cloud.google.com/bigquery/docs/dataset-locations).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -337,8 +323,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}A unique ID for this dataset, without the project name. The ID must contain only letters (a-z, A-Z), numbers (0-9), or
-underscores (_). The maximum length is 1,024 characters.
+    <dd>{{% md %}}The ID of the dataset containing this table.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -347,7 +332,7 @@ underscores (_). The maximum length is 1,024 characters.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetaccess">[]Dataset<wbr>Access<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}An array of objects that define dataset access for one or more entities.
+    <dd>{{% md %}}An array of objects that define dataset access for one or more entities.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -356,9 +341,9 @@ underscores (_). The maximum length is 1,024 characters.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetdefaultencryptionconfiguration">Dataset<wbr>Default<wbr>Encryption<wbr>Configuration</a></span>
     </dt>
-    <dd>{{% md %}}The default encryption key for all tables in the dataset. Once this property is set, all newly-created partitioned
-tables in the dataset will have encryption key set to this value, unless table creation request (or query) overrides the
-key.
+    <dd>{{% md %}}The default encryption key for all tables in the dataset. Once this property is set,
+all newly-created partitioned tables in the dataset will have encryption key set to
+this value, unless table creation request (or query) overrides the key.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -367,14 +352,8 @@ key.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}The default partition expiration for all partitioned tables in the dataset, in milliseconds. Once this property is set,
-all newly-created partitioned tables in the dataset will have an 'expirationMs' property in the 'timePartitioning'
-settings set to this value, and changing the value will only affect new tables, not existing ones. The storage in a
-partition will have an expiration time of its partition time plus this value. Setting this property overrides the use of
-'defaultTableExpirationMs' for partitioned tables: only one of 'defaultTableExpirationMs' and
-'defaultPartitionExpirationMs' will be used for any new partitioned table. If you provide an explicit
-'timePartitioning.expirationMs' when creating or updating a partitioned table, that value takes precedence over the
-default partition expiration time indicated by this property.
+    <dd>{{% md %}}The default partition expiration for all partitioned tables in
+the dataset, in milliseconds.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -383,12 +362,8 @@ default partition expiration time indicated by this property.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}The default lifetime of all tables in the dataset, in milliseconds. The minimum value is 3600000 milliseconds (one
-hour). Once this property is set, all newly-created tables in the dataset will have an 'expirationTime' property set to
-the creation time plus the value in this property, and changing the value will only affect new tables, not existing
-ones. When the 'expirationTime' for a given table is reached, that table will be deleted automatically. If a table's
-'expirationTime' is modified or removed before the table expires, or if you provide an explicit 'expirationTime' when
-creating a table, that value takes precedence over the default expiration time indicated by this property.
+    <dd>{{% md %}}The default lifetime of all tables in the dataset, in milliseconds.
+The minimum value is 3600000 milliseconds (one hour).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -426,7 +401,8 @@ destroying the resource will fail if tables are present.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}The labels associated with this dataset. You can use these to organize and group your datasets
+    <dd>{{% md %}}The labels associated with this dataset. You can use these to
+organize and group your datasets
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -435,13 +411,8 @@ destroying the resource will fail if tables are present.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The geographic location where the dataset should reside. See [official
-docs](https://cloud.google.com/bigquery/docs/dataset-locations). There are two types of locations, regional or
-multi-regional. A regional location is a specific geographic place, such as Tokyo, and a multi-regional location is a
-large geographic area, such as the United States, that contains at least two geographic places. Possible regional values
-include: 'asia-east1', 'asia-northeast1', 'asia-southeast1', 'australia-southeast1', 'europe-north1', 'europe-west2' and
-'us-east4'. Possible multi-regional values: 'EU' and 'US'. The default value is multi-regional location 'US'. Changing
-this forces a new resource to be created.
+    <dd>{{% md %}}The geographic location where the dataset should reside.
+See [official docs](https://cloud.google.com/bigquery/docs/dataset-locations).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -467,8 +438,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}A unique ID for this dataset, without the project name. The ID must contain only letters (a-z, A-Z), numbers (0-9), or
-underscores (_). The maximum length is 1,024 characters.
+    <dd>{{% md %}}The ID of the dataset containing this table.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -477,7 +447,7 @@ underscores (_). The maximum length is 1,024 characters.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetaccess">Dataset<wbr>Access[]</a></span>
     </dt>
-    <dd>{{% md %}}An array of objects that define dataset access for one or more entities.
+    <dd>{{% md %}}An array of objects that define dataset access for one or more entities.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -486,9 +456,9 @@ underscores (_). The maximum length is 1,024 characters.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetdefaultencryptionconfiguration">Dataset<wbr>Default<wbr>Encryption<wbr>Configuration</a></span>
     </dt>
-    <dd>{{% md %}}The default encryption key for all tables in the dataset. Once this property is set, all newly-created partitioned
-tables in the dataset will have encryption key set to this value, unless table creation request (or query) overrides the
-key.
+    <dd>{{% md %}}The default encryption key for all tables in the dataset. Once this property is set,
+all newly-created partitioned tables in the dataset will have encryption key set to
+this value, unless table creation request (or query) overrides the key.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -497,14 +467,8 @@ key.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}The default partition expiration for all partitioned tables in the dataset, in milliseconds. Once this property is set,
-all newly-created partitioned tables in the dataset will have an 'expirationMs' property in the 'timePartitioning'
-settings set to this value, and changing the value will only affect new tables, not existing ones. The storage in a
-partition will have an expiration time of its partition time plus this value. Setting this property overrides the use of
-'defaultTableExpirationMs' for partitioned tables: only one of 'defaultTableExpirationMs' and
-'defaultPartitionExpirationMs' will be used for any new partitioned table. If you provide an explicit
-'timePartitioning.expirationMs' when creating or updating a partitioned table, that value takes precedence over the
-default partition expiration time indicated by this property.
+    <dd>{{% md %}}The default partition expiration for all partitioned tables in
+the dataset, in milliseconds.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -513,12 +477,8 @@ default partition expiration time indicated by this property.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}The default lifetime of all tables in the dataset, in milliseconds. The minimum value is 3600000 milliseconds (one
-hour). Once this property is set, all newly-created tables in the dataset will have an 'expirationTime' property set to
-the creation time plus the value in this property, and changing the value will only affect new tables, not existing
-ones. When the 'expirationTime' for a given table is reached, that table will be deleted automatically. If a table's
-'expirationTime' is modified or removed before the table expires, or if you provide an explicit 'expirationTime' when
-creating a table, that value takes precedence over the default expiration time indicated by this property.
+    <dd>{{% md %}}The default lifetime of all tables in the dataset, in milliseconds.
+The minimum value is 3600000 milliseconds (one hour).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -556,7 +516,8 @@ destroying the resource will fail if tables are present.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}The labels associated with this dataset. You can use these to organize and group your datasets
+    <dd>{{% md %}}The labels associated with this dataset. You can use these to
+organize and group your datasets
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -565,13 +526,8 @@ destroying the resource will fail if tables are present.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The geographic location where the dataset should reside. See [official
-docs](https://cloud.google.com/bigquery/docs/dataset-locations). There are two types of locations, regional or
-multi-regional. A regional location is a specific geographic place, such as Tokyo, and a multi-regional location is a
-large geographic area, such as the United States, that contains at least two geographic places. Possible regional values
-include: 'asia-east1', 'asia-northeast1', 'asia-southeast1', 'australia-southeast1', 'europe-north1', 'europe-west2' and
-'us-east4'. Possible multi-regional values: 'EU' and 'US'. The default value is multi-regional location 'US'. Changing
-this forces a new resource to be created.
+    <dd>{{% md %}}The geographic location where the dataset should reside.
+See [official docs](https://cloud.google.com/bigquery/docs/dataset-locations).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -597,8 +553,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}A unique ID for this dataset, without the project name. The ID must contain only letters (a-z, A-Z), numbers (0-9), or
-underscores (_). The maximum length is 1,024 characters.
+    <dd>{{% md %}}The ID of the dataset containing this table.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -607,7 +562,7 @@ underscores (_). The maximum length is 1,024 characters.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetaccess">List[Dataset<wbr>Access]</a></span>
     </dt>
-    <dd>{{% md %}}An array of objects that define dataset access for one or more entities.
+    <dd>{{% md %}}An array of objects that define dataset access for one or more entities.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -616,9 +571,9 @@ underscores (_). The maximum length is 1,024 characters.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetdefaultencryptionconfiguration">Dict[Dataset<wbr>Default<wbr>Encryption<wbr>Configuration]</a></span>
     </dt>
-    <dd>{{% md %}}The default encryption key for all tables in the dataset. Once this property is set, all newly-created partitioned
-tables in the dataset will have encryption key set to this value, unless table creation request (or query) overrides the
-key.
+    <dd>{{% md %}}The default encryption key for all tables in the dataset. Once this property is set,
+all newly-created partitioned tables in the dataset will have encryption key set to
+this value, unless table creation request (or query) overrides the key.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -627,14 +582,8 @@ key.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}The default partition expiration for all partitioned tables in the dataset, in milliseconds. Once this property is set,
-all newly-created partitioned tables in the dataset will have an 'expirationMs' property in the 'timePartitioning'
-settings set to this value, and changing the value will only affect new tables, not existing ones. The storage in a
-partition will have an expiration time of its partition time plus this value. Setting this property overrides the use of
-'defaultTableExpirationMs' for partitioned tables: only one of 'defaultTableExpirationMs' and
-'defaultPartitionExpirationMs' will be used for any new partitioned table. If you provide an explicit
-'timePartitioning.expirationMs' when creating or updating a partitioned table, that value takes precedence over the
-default partition expiration time indicated by this property.
+    <dd>{{% md %}}The default partition expiration for all partitioned tables in
+the dataset, in milliseconds.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -643,12 +592,8 @@ default partition expiration time indicated by this property.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}The default lifetime of all tables in the dataset, in milliseconds. The minimum value is 3600000 milliseconds (one
-hour). Once this property is set, all newly-created tables in the dataset will have an 'expirationTime' property set to
-the creation time plus the value in this property, and changing the value will only affect new tables, not existing
-ones. When the 'expirationTime' for a given table is reached, that table will be deleted automatically. If a table's
-'expirationTime' is modified or removed before the table expires, or if you provide an explicit 'expirationTime' when
-creating a table, that value takes precedence over the default expiration time indicated by this property.
+    <dd>{{% md %}}The default lifetime of all tables in the dataset, in milliseconds.
+The minimum value is 3600000 milliseconds (one hour).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -686,7 +631,8 @@ destroying the resource will fail if tables are present.
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
-    <dd>{{% md %}}The labels associated with this dataset. You can use these to organize and group your datasets
+    <dd>{{% md %}}The labels associated with this dataset. You can use these to
+organize and group your datasets
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -695,13 +641,8 @@ destroying the resource will fail if tables are present.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The geographic location where the dataset should reside. See [official
-docs](https://cloud.google.com/bigquery/docs/dataset-locations). There are two types of locations, regional or
-multi-regional. A regional location is a specific geographic place, such as Tokyo, and a multi-regional location is a
-large geographic area, such as the United States, that contains at least two geographic places. Possible regional values
-include: 'asia-east1', 'asia-northeast1', 'asia-southeast1', 'australia-southeast1', 'europe-north1', 'europe-west2' and
-'us-east4'. Possible multi-regional values: 'EU' and 'US'. The default value is multi-regional location 'US'. Changing
-this forces a new resource to be created.
+    <dd>{{% md %}}The geographic location where the dataset should reside.
+See [official docs](https://cloud.google.com/bigquery/docs/dataset-locations).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1068,7 +1009,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetaccess">List&lt;Dataset<wbr>Access<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}An array of objects that define dataset access for one or more entities.
+    <dd>{{% md %}}An array of objects that define dataset access for one or more entities.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1086,8 +1027,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}A unique ID for this dataset, without the project name. The ID must contain only letters (a-z, A-Z), numbers (0-9), or
-underscores (_). The maximum length is 1,024 characters.
+    <dd>{{% md %}}The ID of the dataset containing this table.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1096,9 +1036,9 @@ underscores (_). The maximum length is 1,024 characters.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetdefaultencryptionconfiguration">Dataset<wbr>Default<wbr>Encryption<wbr>Configuration<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The default encryption key for all tables in the dataset. Once this property is set, all newly-created partitioned
-tables in the dataset will have encryption key set to this value, unless table creation request (or query) overrides the
-key.
+    <dd>{{% md %}}The default encryption key for all tables in the dataset. Once this property is set,
+all newly-created partitioned tables in the dataset will have encryption key set to
+this value, unless table creation request (or query) overrides the key.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1107,14 +1047,8 @@ key.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}The default partition expiration for all partitioned tables in the dataset, in milliseconds. Once this property is set,
-all newly-created partitioned tables in the dataset will have an 'expirationMs' property in the 'timePartitioning'
-settings set to this value, and changing the value will only affect new tables, not existing ones. The storage in a
-partition will have an expiration time of its partition time plus this value. Setting this property overrides the use of
-'defaultTableExpirationMs' for partitioned tables: only one of 'defaultTableExpirationMs' and
-'defaultPartitionExpirationMs' will be used for any new partitioned table. If you provide an explicit
-'timePartitioning.expirationMs' when creating or updating a partitioned table, that value takes precedence over the
-default partition expiration time indicated by this property.
+    <dd>{{% md %}}The default partition expiration for all partitioned tables in
+the dataset, in milliseconds.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1123,12 +1057,8 @@ default partition expiration time indicated by this property.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}The default lifetime of all tables in the dataset, in milliseconds. The minimum value is 3600000 milliseconds (one
-hour). Once this property is set, all newly-created tables in the dataset will have an 'expirationTime' property set to
-the creation time plus the value in this property, and changing the value will only affect new tables, not existing
-ones. When the 'expirationTime' for a given table is reached, that table will be deleted automatically. If a table's
-'expirationTime' is modified or removed before the table expires, or if you provide an explicit 'expirationTime' when
-creating a table, that value takes precedence over the default expiration time indicated by this property.
+    <dd>{{% md %}}The default lifetime of all tables in the dataset, in milliseconds.
+The minimum value is 3600000 milliseconds (one hour).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1175,7 +1105,8 @@ destroying the resource will fail if tables are present.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}The labels associated with this dataset. You can use these to organize and group your datasets
+    <dd>{{% md %}}The labels associated with this dataset. You can use these to
+organize and group your datasets
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1193,13 +1124,8 @@ destroying the resource will fail if tables are present.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The geographic location where the dataset should reside. See [official
-docs](https://cloud.google.com/bigquery/docs/dataset-locations). There are two types of locations, regional or
-multi-regional. A regional location is a specific geographic place, such as Tokyo, and a multi-regional location is a
-large geographic area, such as the United States, that contains at least two geographic places. Possible regional values
-include: 'asia-east1', 'asia-northeast1', 'asia-southeast1', 'australia-southeast1', 'europe-north1', 'europe-west2' and
-'us-east4'. Possible multi-regional values: 'EU' and 'US'. The default value is multi-regional location 'US'. Changing
-this forces a new resource to be created.
+    <dd>{{% md %}}The geographic location where the dataset should reside.
+See [official docs](https://cloud.google.com/bigquery/docs/dataset-locations).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1234,7 +1160,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetaccess">[]Dataset<wbr>Access<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}An array of objects that define dataset access for one or more entities.
+    <dd>{{% md %}}An array of objects that define dataset access for one or more entities.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1252,8 +1178,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}A unique ID for this dataset, without the project name. The ID must contain only letters (a-z, A-Z), numbers (0-9), or
-underscores (_). The maximum length is 1,024 characters.
+    <dd>{{% md %}}The ID of the dataset containing this table.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1262,9 +1187,9 @@ underscores (_). The maximum length is 1,024 characters.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetdefaultencryptionconfiguration">Dataset<wbr>Default<wbr>Encryption<wbr>Configuration</a></span>
     </dt>
-    <dd>{{% md %}}The default encryption key for all tables in the dataset. Once this property is set, all newly-created partitioned
-tables in the dataset will have encryption key set to this value, unless table creation request (or query) overrides the
-key.
+    <dd>{{% md %}}The default encryption key for all tables in the dataset. Once this property is set,
+all newly-created partitioned tables in the dataset will have encryption key set to
+this value, unless table creation request (or query) overrides the key.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1273,14 +1198,8 @@ key.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}The default partition expiration for all partitioned tables in the dataset, in milliseconds. Once this property is set,
-all newly-created partitioned tables in the dataset will have an 'expirationMs' property in the 'timePartitioning'
-settings set to this value, and changing the value will only affect new tables, not existing ones. The storage in a
-partition will have an expiration time of its partition time plus this value. Setting this property overrides the use of
-'defaultTableExpirationMs' for partitioned tables: only one of 'defaultTableExpirationMs' and
-'defaultPartitionExpirationMs' will be used for any new partitioned table. If you provide an explicit
-'timePartitioning.expirationMs' when creating or updating a partitioned table, that value takes precedence over the
-default partition expiration time indicated by this property.
+    <dd>{{% md %}}The default partition expiration for all partitioned tables in
+the dataset, in milliseconds.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1289,12 +1208,8 @@ default partition expiration time indicated by this property.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}The default lifetime of all tables in the dataset, in milliseconds. The minimum value is 3600000 milliseconds (one
-hour). Once this property is set, all newly-created tables in the dataset will have an 'expirationTime' property set to
-the creation time plus the value in this property, and changing the value will only affect new tables, not existing
-ones. When the 'expirationTime' for a given table is reached, that table will be deleted automatically. If a table's
-'expirationTime' is modified or removed before the table expires, or if you provide an explicit 'expirationTime' when
-creating a table, that value takes precedence over the default expiration time indicated by this property.
+    <dd>{{% md %}}The default lifetime of all tables in the dataset, in milliseconds.
+The minimum value is 3600000 milliseconds (one hour).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1341,7 +1256,8 @@ destroying the resource will fail if tables are present.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}The labels associated with this dataset. You can use these to organize and group your datasets
+    <dd>{{% md %}}The labels associated with this dataset. You can use these to
+organize and group your datasets
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1359,13 +1275,8 @@ destroying the resource will fail if tables are present.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The geographic location where the dataset should reside. See [official
-docs](https://cloud.google.com/bigquery/docs/dataset-locations). There are two types of locations, regional or
-multi-regional. A regional location is a specific geographic place, such as Tokyo, and a multi-regional location is a
-large geographic area, such as the United States, that contains at least two geographic places. Possible regional values
-include: 'asia-east1', 'asia-northeast1', 'asia-southeast1', 'australia-southeast1', 'europe-north1', 'europe-west2' and
-'us-east4'. Possible multi-regional values: 'EU' and 'US'. The default value is multi-regional location 'US'. Changing
-this forces a new resource to be created.
+    <dd>{{% md %}}The geographic location where the dataset should reside.
+See [official docs](https://cloud.google.com/bigquery/docs/dataset-locations).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1400,7 +1311,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetaccess">Dataset<wbr>Access[]</a></span>
     </dt>
-    <dd>{{% md %}}An array of objects that define dataset access for one or more entities.
+    <dd>{{% md %}}An array of objects that define dataset access for one or more entities.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1418,8 +1329,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}A unique ID for this dataset, without the project name. The ID must contain only letters (a-z, A-Z), numbers (0-9), or
-underscores (_). The maximum length is 1,024 characters.
+    <dd>{{% md %}}The ID of the dataset containing this table.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1428,9 +1338,9 @@ underscores (_). The maximum length is 1,024 characters.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetdefaultencryptionconfiguration">Dataset<wbr>Default<wbr>Encryption<wbr>Configuration</a></span>
     </dt>
-    <dd>{{% md %}}The default encryption key for all tables in the dataset. Once this property is set, all newly-created partitioned
-tables in the dataset will have encryption key set to this value, unless table creation request (or query) overrides the
-key.
+    <dd>{{% md %}}The default encryption key for all tables in the dataset. Once this property is set,
+all newly-created partitioned tables in the dataset will have encryption key set to
+this value, unless table creation request (or query) overrides the key.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1439,14 +1349,8 @@ key.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}The default partition expiration for all partitioned tables in the dataset, in milliseconds. Once this property is set,
-all newly-created partitioned tables in the dataset will have an 'expirationMs' property in the 'timePartitioning'
-settings set to this value, and changing the value will only affect new tables, not existing ones. The storage in a
-partition will have an expiration time of its partition time plus this value. Setting this property overrides the use of
-'defaultTableExpirationMs' for partitioned tables: only one of 'defaultTableExpirationMs' and
-'defaultPartitionExpirationMs' will be used for any new partitioned table. If you provide an explicit
-'timePartitioning.expirationMs' when creating or updating a partitioned table, that value takes precedence over the
-default partition expiration time indicated by this property.
+    <dd>{{% md %}}The default partition expiration for all partitioned tables in
+the dataset, in milliseconds.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1455,12 +1359,8 @@ default partition expiration time indicated by this property.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}The default lifetime of all tables in the dataset, in milliseconds. The minimum value is 3600000 milliseconds (one
-hour). Once this property is set, all newly-created tables in the dataset will have an 'expirationTime' property set to
-the creation time plus the value in this property, and changing the value will only affect new tables, not existing
-ones. When the 'expirationTime' for a given table is reached, that table will be deleted automatically. If a table's
-'expirationTime' is modified or removed before the table expires, or if you provide an explicit 'expirationTime' when
-creating a table, that value takes precedence over the default expiration time indicated by this property.
+    <dd>{{% md %}}The default lifetime of all tables in the dataset, in milliseconds.
+The minimum value is 3600000 milliseconds (one hour).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1507,7 +1407,8 @@ destroying the resource will fail if tables are present.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}The labels associated with this dataset. You can use these to organize and group your datasets
+    <dd>{{% md %}}The labels associated with this dataset. You can use these to
+organize and group your datasets
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1525,13 +1426,8 @@ destroying the resource will fail if tables are present.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The geographic location where the dataset should reside. See [official
-docs](https://cloud.google.com/bigquery/docs/dataset-locations). There are two types of locations, regional or
-multi-regional. A regional location is a specific geographic place, such as Tokyo, and a multi-regional location is a
-large geographic area, such as the United States, that contains at least two geographic places. Possible regional values
-include: 'asia-east1', 'asia-northeast1', 'asia-southeast1', 'australia-southeast1', 'europe-north1', 'europe-west2' and
-'us-east4'. Possible multi-regional values: 'EU' and 'US'. The default value is multi-regional location 'US'. Changing
-this forces a new resource to be created.
+    <dd>{{% md %}}The geographic location where the dataset should reside.
+See [official docs](https://cloud.google.com/bigquery/docs/dataset-locations).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1566,7 +1462,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetaccess">List[Dataset<wbr>Access]</a></span>
     </dt>
-    <dd>{{% md %}}An array of objects that define dataset access for one or more entities.
+    <dd>{{% md %}}An array of objects that define dataset access for one or more entities.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1584,8 +1480,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}A unique ID for this dataset, without the project name. The ID must contain only letters (a-z, A-Z), numbers (0-9), or
-underscores (_). The maximum length is 1,024 characters.
+    <dd>{{% md %}}The ID of the dataset containing this table.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1594,9 +1489,9 @@ underscores (_). The maximum length is 1,024 characters.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetdefaultencryptionconfiguration">Dict[Dataset<wbr>Default<wbr>Encryption<wbr>Configuration]</a></span>
     </dt>
-    <dd>{{% md %}}The default encryption key for all tables in the dataset. Once this property is set, all newly-created partitioned
-tables in the dataset will have encryption key set to this value, unless table creation request (or query) overrides the
-key.
+    <dd>{{% md %}}The default encryption key for all tables in the dataset. Once this property is set,
+all newly-created partitioned tables in the dataset will have encryption key set to
+this value, unless table creation request (or query) overrides the key.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1605,14 +1500,8 @@ key.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}The default partition expiration for all partitioned tables in the dataset, in milliseconds. Once this property is set,
-all newly-created partitioned tables in the dataset will have an 'expirationMs' property in the 'timePartitioning'
-settings set to this value, and changing the value will only affect new tables, not existing ones. The storage in a
-partition will have an expiration time of its partition time plus this value. Setting this property overrides the use of
-'defaultTableExpirationMs' for partitioned tables: only one of 'defaultTableExpirationMs' and
-'defaultPartitionExpirationMs' will be used for any new partitioned table. If you provide an explicit
-'timePartitioning.expirationMs' when creating or updating a partitioned table, that value takes precedence over the
-default partition expiration time indicated by this property.
+    <dd>{{% md %}}The default partition expiration for all partitioned tables in
+the dataset, in milliseconds.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1621,12 +1510,8 @@ default partition expiration time indicated by this property.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}The default lifetime of all tables in the dataset, in milliseconds. The minimum value is 3600000 milliseconds (one
-hour). Once this property is set, all newly-created tables in the dataset will have an 'expirationTime' property set to
-the creation time plus the value in this property, and changing the value will only affect new tables, not existing
-ones. When the 'expirationTime' for a given table is reached, that table will be deleted automatically. If a table's
-'expirationTime' is modified or removed before the table expires, or if you provide an explicit 'expirationTime' when
-creating a table, that value takes precedence over the default expiration time indicated by this property.
+    <dd>{{% md %}}The default lifetime of all tables in the dataset, in milliseconds.
+The minimum value is 3600000 milliseconds (one hour).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1673,7 +1558,8 @@ destroying the resource will fail if tables are present.
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
-    <dd>{{% md %}}The labels associated with this dataset. You can use these to organize and group your datasets
+    <dd>{{% md %}}The labels associated with this dataset. You can use these to
+organize and group your datasets
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1691,13 +1577,8 @@ destroying the resource will fail if tables are present.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The geographic location where the dataset should reside. See [official
-docs](https://cloud.google.com/bigquery/docs/dataset-locations). There are two types of locations, regional or
-multi-regional. A regional location is a specific geographic place, such as Tokyo, and a multi-regional location is a
-large geographic area, such as the United States, that contains at least two geographic places. Possible regional values
-include: 'asia-east1', 'asia-northeast1', 'asia-southeast1', 'australia-southeast1', 'europe-north1', 'europe-west2' and
-'us-east4'. Possible multi-regional values: 'EU' and 'US'. The default value is multi-regional location 'US'. Changing
-this forces a new resource to be created.
+    <dd>{{% md %}}The geographic location where the dataset should reside.
+See [official docs](https://cloud.google.com/bigquery/docs/dataset-locations).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1755,7 +1636,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A domain to grant access to. Any users signed in with the
+domain specified will be granted the specified access
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1763,7 +1646,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}An email address of a Google Group to grant access to.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1771,7 +1655,13 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes the rights granted to the user specified by the other
+member of the access object. Primitive, Predefined and custom
+roles are supported. Predefined roles that have equivalent
+primitive roles are swapped by the API to their Primitive
+counterparts, and will show a diff post-create. See
+[official docs](https://cloud.google.com/bigquery/docs/access-control).
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1779,7 +1669,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A special group to grant access to. Possible values include:
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1787,7 +1678,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}An email address of a user to grant access to. For example:
+fred@example.com
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1795,7 +1688,12 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetaccessview">Dataset<wbr>Access<wbr>View<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A view from a different dataset to grant access to. Queries
+executed against that view will have read access to tables in
+this dataset. The role field is not required when this field is
+set. If that view is updated by any user, access to the view
+needs to be granted again via an update operation.  Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1810,7 +1708,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A domain to grant access to. Any users signed in with the
+domain specified will be granted the specified access
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1818,7 +1718,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}An email address of a Google Group to grant access to.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1826,7 +1727,13 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes the rights granted to the user specified by the other
+member of the access object. Primitive, Predefined and custom
+roles are supported. Predefined roles that have equivalent
+primitive roles are swapped by the API to their Primitive
+counterparts, and will show a diff post-create. See
+[official docs](https://cloud.google.com/bigquery/docs/access-control).
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1834,7 +1741,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A special group to grant access to. Possible values include:
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1842,7 +1750,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}An email address of a user to grant access to. For example:
+fred@example.com
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1850,7 +1760,12 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetaccessview">Dataset<wbr>Access<wbr>View</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A view from a different dataset to grant access to. Queries
+executed against that view will have read access to tables in
+this dataset. The role field is not required when this field is
+set. If that view is updated by any user, access to the view
+needs to be granted again via an update operation.  Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1865,7 +1780,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A domain to grant access to. Any users signed in with the
+domain specified will be granted the specified access
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1873,7 +1790,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}An email address of a Google Group to grant access to.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1881,7 +1799,13 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes the rights granted to the user specified by the other
+member of the access object. Primitive, Predefined and custom
+roles are supported. Predefined roles that have equivalent
+primitive roles are swapped by the API to their Primitive
+counterparts, and will show a diff post-create. See
+[official docs](https://cloud.google.com/bigquery/docs/access-control).
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1889,7 +1813,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A special group to grant access to. Possible values include:
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1897,7 +1822,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}An email address of a user to grant access to. For example:
+fred@example.com
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1905,7 +1832,12 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetaccessview">Dataset<wbr>Access<wbr>View</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A view from a different dataset to grant access to. Queries
+executed against that view will have read access to tables in
+this dataset. The role field is not required when this field is
+set. If that view is updated by any user, access to the view
+needs to be granted again via an update operation.  Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1920,7 +1852,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A domain to grant access to. Any users signed in with the
+domain specified will be granted the specified access
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1928,7 +1862,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}An email address of a Google Group to grant access to.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1936,7 +1871,13 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes the rights granted to the user specified by the other
+member of the access object. Primitive, Predefined and custom
+roles are supported. Predefined roles that have equivalent
+primitive roles are swapped by the API to their Primitive
+counterparts, and will show a diff post-create. See
+[official docs](https://cloud.google.com/bigquery/docs/access-control).
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1944,7 +1885,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A special group to grant access to. Possible values include:
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1952,7 +1894,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}An email address of a user to grant access to. For example:
+fred@example.com
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1960,7 +1904,12 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetaccessview">Dict[Dataset<wbr>Access<wbr>View]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A view from a different dataset to grant access to. Queries
+executed against that view will have read access to tables in
+this dataset. The role field is not required when this field is
+set. If that view is updated by any user, access to the view
+needs to be granted again via an update operation.  Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1990,7 +1939,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The ID of the dataset containing this table.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1998,7 +1948,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The ID of the project containing this table.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2006,7 +1957,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The ID of the table. The ID must contain only letters (a-z,
+A-Z), numbers (0-9), or underscores (_). The maximum length
+is 1,024 characters.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2021,7 +1975,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The ID of the dataset containing this table.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2029,7 +1984,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The ID of the project containing this table.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2037,7 +1993,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The ID of the table. The ID must contain only letters (a-z,
+A-Z), numbers (0-9), or underscores (_). The maximum length
+is 1,024 characters.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2052,7 +2011,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The ID of the dataset containing this table.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2060,7 +2020,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The ID of the project containing this table.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2068,7 +2029,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The ID of the table. The ID must contain only letters (a-z,
+A-Z), numbers (0-9), or underscores (_). The maximum length
+is 1,024 characters.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2083,7 +2047,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The ID of the dataset containing this table.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2091,7 +2056,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The ID of the project containing this table.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2099,7 +2065,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The ID of the table. The ID must contain only letters (a-z,
+A-Z), numbers (0-9), or underscores (_). The maximum length
+is 1,024 characters.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2129,7 +2098,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes the Cloud KMS encryption key that will be used to protect destination
+BigQuery table. The BigQuery Service Account associated with your project requires
+access to this encryption key.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2144,7 +2116,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes the Cloud KMS encryption key that will be used to protect destination
+BigQuery table. The BigQuery Service Account associated with your project requires
+access to this encryption key.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2159,7 +2134,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes the Cloud KMS encryption key that will be used to protect destination
+BigQuery table. The BigQuery Service Account associated with your project requires
+access to this encryption key.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2174,7 +2152,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes the Cloud KMS encryption key that will be used to protect destination
+BigQuery table. The BigQuery Service Account associated with your project requires
+access to this encryption key.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2193,8 +2174,7 @@ If it is not provided, the provider project is used.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 

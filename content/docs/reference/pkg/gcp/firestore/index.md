@@ -1,7 +1,8 @@
 
 ---
 title: "Index"
-block_external_search_index: true
+title_tag: "Resource Index | Module firestore | Package GCP"
+meta_desc: "Explore the Index resource of the firestore module, including examples, input properties, output properties, lookup functions, and supporting types. Cloud Firestore indexes enable simple and complex queries against documents in a database."
 ---
 
 
@@ -58,7 +59,7 @@ const my_index = new gcp.firestore.Index("my-index", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Index</span><span class="p">(resource_name, opts=None, </span>collection=None<span class="p">, </span>database=None<span class="p">, </span>fields=None<span class="p">, </span>project=None<span class="p">, </span>query_scope=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Index</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>collection=None<span class="p">, </span>database=None<span class="p">, </span>fields=None<span class="p">, </span>project=None<span class="p">, </span>query_scope=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -245,10 +246,12 @@ The Index resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#indexfield">List&lt;Index<wbr>Field<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The fields supported by this index. The last field entry is always for the field path '__name__'. If, on creation,
-'__name__' was not specified as the last field, it will be added automatically with the same direction as that of the
-last field defined. If the final field in a composite index is not directional, the '__name__' will be ordered
-'"ASCENDING"' (unless explicitly specified otherwise).
+    <dd>{{% md %}}The fields supported by this index. The last field entry is always for
+the field path `__name__`. If, on creation, `__name__` was not
+specified as the last field, it will be added automatically with the
+same direction as that of the last field defined. If the final field
+in a composite index is not directional, the `__name__` will be
+ordered `"ASCENDING"` (unless explicitly specified otherwise).  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -257,7 +260,7 @@ last field defined. If the final field in a composite index is not directional, 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The Firestore database id. Defaults to '"(default)"'.
+    <dd>{{% md %}}The Firestore database id. Defaults to `"(default)"`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -276,7 +279,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The scope at which a query is run. One of '"COLLECTION"' or '"COLLECTION_GROUP"'. Defaults to '"COLLECTION"'.
+    <dd>{{% md %}}The scope at which a query is run. One of `"COLLECTION"` or
+`"COLLECTION_GROUP"`. Defaults to `"COLLECTION"`.
 {{% /md %}}</dd>
 
 </dl>
@@ -301,10 +305,12 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#indexfield">[]Index<wbr>Field</a></span>
     </dt>
-    <dd>{{% md %}}The fields supported by this index. The last field entry is always for the field path '__name__'. If, on creation,
-'__name__' was not specified as the last field, it will be added automatically with the same direction as that of the
-last field defined. If the final field in a composite index is not directional, the '__name__' will be ordered
-'"ASCENDING"' (unless explicitly specified otherwise).
+    <dd>{{% md %}}The fields supported by this index. The last field entry is always for
+the field path `__name__`. If, on creation, `__name__` was not
+specified as the last field, it will be added automatically with the
+same direction as that of the last field defined. If the final field
+in a composite index is not directional, the `__name__` will be
+ordered `"ASCENDING"` (unless explicitly specified otherwise).  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -313,7 +319,7 @@ last field defined. If the final field in a composite index is not directional, 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Firestore database id. Defaults to '"(default)"'.
+    <dd>{{% md %}}The Firestore database id. Defaults to `"(default)"`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -332,7 +338,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The scope at which a query is run. One of '"COLLECTION"' or '"COLLECTION_GROUP"'. Defaults to '"COLLECTION"'.
+    <dd>{{% md %}}The scope at which a query is run. One of `"COLLECTION"` or
+`"COLLECTION_GROUP"`. Defaults to `"COLLECTION"`.
 {{% /md %}}</dd>
 
 </dl>
@@ -357,10 +364,12 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#indexfield">Index<wbr>Field[]</a></span>
     </dt>
-    <dd>{{% md %}}The fields supported by this index. The last field entry is always for the field path '__name__'. If, on creation,
-'__name__' was not specified as the last field, it will be added automatically with the same direction as that of the
-last field defined. If the final field in a composite index is not directional, the '__name__' will be ordered
-'"ASCENDING"' (unless explicitly specified otherwise).
+    <dd>{{% md %}}The fields supported by this index. The last field entry is always for
+the field path `__name__`. If, on creation, `__name__` was not
+specified as the last field, it will be added automatically with the
+same direction as that of the last field defined. If the final field
+in a composite index is not directional, the `__name__` will be
+ordered `"ASCENDING"` (unless explicitly specified otherwise).  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -369,7 +378,7 @@ last field defined. If the final field in a composite index is not directional, 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Firestore database id. Defaults to '"(default)"'.
+    <dd>{{% md %}}The Firestore database id. Defaults to `"(default)"`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -388,7 +397,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The scope at which a query is run. One of '"COLLECTION"' or '"COLLECTION_GROUP"'. Defaults to '"COLLECTION"'.
+    <dd>{{% md %}}The scope at which a query is run. One of `"COLLECTION"` or
+`"COLLECTION_GROUP"`. Defaults to `"COLLECTION"`.
 {{% /md %}}</dd>
 
 </dl>
@@ -413,10 +423,12 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#indexfield">List[Index<wbr>Field]</a></span>
     </dt>
-    <dd>{{% md %}}The fields supported by this index. The last field entry is always for the field path '__name__'. If, on creation,
-'__name__' was not specified as the last field, it will be added automatically with the same direction as that of the
-last field defined. If the final field in a composite index is not directional, the '__name__' will be ordered
-'"ASCENDING"' (unless explicitly specified otherwise).
+    <dd>{{% md %}}The fields supported by this index. The last field entry is always for
+the field path `__name__`. If, on creation, `__name__` was not
+specified as the last field, it will be added automatically with the
+same direction as that of the last field defined. If the final field
+in a composite index is not directional, the `__name__` will be
+ordered `"ASCENDING"` (unless explicitly specified otherwise).  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -425,7 +437,7 @@ last field defined. If the final field in a composite index is not directional, 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The Firestore database id. Defaults to '"(default)"'.
+    <dd>{{% md %}}The Firestore database id. Defaults to `"(default)"`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -444,7 +456,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The scope at which a query is run. One of '"COLLECTION"' or '"COLLECTION_GROUP"'. Defaults to '"COLLECTION"'.
+    <dd>{{% md %}}The scope at which a query is run. One of `"COLLECTION"` or
+`"COLLECTION_GROUP"`. Defaults to `"COLLECTION"`.
 {{% /md %}}</dd>
 
 </dl>
@@ -706,7 +719,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The Firestore database id. Defaults to '"(default)"'.
+    <dd>{{% md %}}The Firestore database id. Defaults to `"(default)"`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -715,10 +728,12 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#indexfield">List&lt;Index<wbr>Field<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The fields supported by this index. The last field entry is always for the field path '__name__'. If, on creation,
-'__name__' was not specified as the last field, it will be added automatically with the same direction as that of the
-last field defined. If the final field in a composite index is not directional, the '__name__' will be ordered
-'"ASCENDING"' (unless explicitly specified otherwise).
+    <dd>{{% md %}}The fields supported by this index. The last field entry is always for
+the field path `__name__`. If, on creation, `__name__` was not
+specified as the last field, it will be added automatically with the
+same direction as that of the last field defined. If the final field
+in a composite index is not directional, the `__name__` will be
+ordered `"ASCENDING"` (unless explicitly specified otherwise).  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -747,7 +762,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The scope at which a query is run. One of '"COLLECTION"' or '"COLLECTION_GROUP"'. Defaults to '"COLLECTION"'.
+    <dd>{{% md %}}The scope at which a query is run. One of `"COLLECTION"` or
+`"COLLECTION_GROUP"`. Defaults to `"COLLECTION"`.
 {{% /md %}}</dd>
 
 </dl>
@@ -772,7 +788,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Firestore database id. Defaults to '"(default)"'.
+    <dd>{{% md %}}The Firestore database id. Defaults to `"(default)"`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -781,10 +797,12 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#indexfield">[]Index<wbr>Field</a></span>
     </dt>
-    <dd>{{% md %}}The fields supported by this index. The last field entry is always for the field path '__name__'. If, on creation,
-'__name__' was not specified as the last field, it will be added automatically with the same direction as that of the
-last field defined. If the final field in a composite index is not directional, the '__name__' will be ordered
-'"ASCENDING"' (unless explicitly specified otherwise).
+    <dd>{{% md %}}The fields supported by this index. The last field entry is always for
+the field path `__name__`. If, on creation, `__name__` was not
+specified as the last field, it will be added automatically with the
+same direction as that of the last field defined. If the final field
+in a composite index is not directional, the `__name__` will be
+ordered `"ASCENDING"` (unless explicitly specified otherwise).  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -813,7 +831,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The scope at which a query is run. One of '"COLLECTION"' or '"COLLECTION_GROUP"'. Defaults to '"COLLECTION"'.
+    <dd>{{% md %}}The scope at which a query is run. One of `"COLLECTION"` or
+`"COLLECTION_GROUP"`. Defaults to `"COLLECTION"`.
 {{% /md %}}</dd>
 
 </dl>
@@ -838,7 +857,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Firestore database id. Defaults to '"(default)"'.
+    <dd>{{% md %}}The Firestore database id. Defaults to `"(default)"`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -847,10 +866,12 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#indexfield">Index<wbr>Field[]</a></span>
     </dt>
-    <dd>{{% md %}}The fields supported by this index. The last field entry is always for the field path '__name__'. If, on creation,
-'__name__' was not specified as the last field, it will be added automatically with the same direction as that of the
-last field defined. If the final field in a composite index is not directional, the '__name__' will be ordered
-'"ASCENDING"' (unless explicitly specified otherwise).
+    <dd>{{% md %}}The fields supported by this index. The last field entry is always for
+the field path `__name__`. If, on creation, `__name__` was not
+specified as the last field, it will be added automatically with the
+same direction as that of the last field defined. If the final field
+in a composite index is not directional, the `__name__` will be
+ordered `"ASCENDING"` (unless explicitly specified otherwise).  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -879,7 +900,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The scope at which a query is run. One of '"COLLECTION"' or '"COLLECTION_GROUP"'. Defaults to '"COLLECTION"'.
+    <dd>{{% md %}}The scope at which a query is run. One of `"COLLECTION"` or
+`"COLLECTION_GROUP"`. Defaults to `"COLLECTION"`.
 {{% /md %}}</dd>
 
 </dl>
@@ -904,7 +926,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The Firestore database id. Defaults to '"(default)"'.
+    <dd>{{% md %}}The Firestore database id. Defaults to `"(default)"`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -913,10 +935,12 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#indexfield">List[Index<wbr>Field]</a></span>
     </dt>
-    <dd>{{% md %}}The fields supported by this index. The last field entry is always for the field path '__name__'. If, on creation,
-'__name__' was not specified as the last field, it will be added automatically with the same direction as that of the
-last field defined. If the final field in a composite index is not directional, the '__name__' will be ordered
-'"ASCENDING"' (unless explicitly specified otherwise).
+    <dd>{{% md %}}The fields supported by this index. The last field entry is always for
+the field path `__name__`. If, on creation, `__name__` was not
+specified as the last field, it will be added automatically with the
+same direction as that of the last field defined. If the final field
+in a composite index is not directional, the `__name__` will be
+ordered `"ASCENDING"` (unless explicitly specified otherwise).  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -945,7 +969,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The scope at which a query is run. One of '"COLLECTION"' or '"COLLECTION_GROUP"'. Defaults to '"COLLECTION"'.
+    <dd>{{% md %}}The scope at which a query is run. One of `"COLLECTION"` or
+`"COLLECTION_GROUP"`. Defaults to `"COLLECTION"`.
 {{% /md %}}</dd>
 
 </dl>
@@ -984,7 +1009,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Indicates that this field supports operations on arrayValues. Only one of `order` and `arrayConfig` can
+be specified.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -992,7 +1019,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the field.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1000,7 +1028,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Indicates that this field supports ordering by the specified order or comparing using =, <, <=, >, >=.
+Only one of `order` and `arrayConfig` can be specified.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1015,7 +1045,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Indicates that this field supports operations on arrayValues. Only one of `order` and `arrayConfig` can
+be specified.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1023,7 +1055,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the field.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1031,7 +1064,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Indicates that this field supports ordering by the specified order or comparing using =, <, <=, >, >=.
+Only one of `order` and `arrayConfig` can be specified.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1046,7 +1081,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Indicates that this field supports operations on arrayValues. Only one of `order` and `arrayConfig` can
+be specified.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1054,7 +1091,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the field.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1062,7 +1100,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Indicates that this field supports ordering by the specified order or comparing using =, <, <=, >, >=.
+Only one of `order` and `arrayConfig` can be specified.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1077,7 +1117,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Indicates that this field supports operations on arrayValues. Only one of `order` and `arrayConfig` can
+be specified.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1085,7 +1127,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the field.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1093,7 +1136,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Indicates that this field supports ordering by the specified order or comparing using =, <, <=, >, >=.
+Only one of `order` and `arrayConfig` can be specified.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1112,8 +1157,7 @@ If it is not provided, the provider project is used.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 

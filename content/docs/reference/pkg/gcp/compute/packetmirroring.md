@@ -1,7 +1,8 @@
 
 ---
 title: "PacketMirroring"
-block_external_search_index: true
+title_tag: "Resource PacketMirroring | Module compute | Package GCP"
+meta_desc: "Explore the PacketMirroring resource of the compute module, including examples, input properties, output properties, lookup functions, and supporting types. Packet Mirroring mirrors traffic to and from particular VM instances."
 ---
 
 
@@ -30,7 +31,7 @@ To get more information about PacketMirroring, see:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">PacketMirroring</span><span class="p">(resource_name, opts=None, </span>collector_ilb=None<span class="p">, </span>description=None<span class="p">, </span>filter=None<span class="p">, </span>mirrored_resources=None<span class="p">, </span>name=None<span class="p">, </span>network=None<span class="p">, </span>priority=None<span class="p">, </span>project=None<span class="p">, </span>region=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">PacketMirroring</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>collector_ilb=None<span class="p">, </span>description=None<span class="p">, </span>filter=None<span class="p">, </span>mirrored_resources=None<span class="p">, </span>name=None<span class="p">, </span>network=None<span class="p">, </span>priority=None<span class="p">, </span>project=None<span class="p">, </span>region=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -208,8 +209,10 @@ The PacketMirroring resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#packetmirroringcollectorilb">Packet<wbr>Mirroring<wbr>Collector<wbr>Ilb<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The Forwarding Rule resource (of type load_balancing_scheme=INTERNAL) that will be used as collector for mirrored
-traffic. The specified forwarding rule must have is_mirroring_collector set to true.
+    <dd>{{% md %}}The Forwarding Rule resource (of type load_balancing_scheme=INTERNAL)
+that will be used as collector for mirrored traffic. The
+specified forwarding rule must have is_mirroring_collector
+set to true.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -218,7 +221,7 @@ traffic. The specified forwarding rule must have is_mirroring_collector set to t
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#packetmirroringmirroredresources">Packet<wbr>Mirroring<wbr>Mirrored<wbr>Resources<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A means of specifying which resources to mirror.
+    <dd>{{% md %}}A means of specifying which resources to mirror.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -227,8 +230,9 @@ traffic. The specified forwarding rule must have is_mirroring_collector set to t
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#packetmirroringnetwork">Packet<wbr>Mirroring<wbr>Network<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the mirrored VPC network. Only packets in this network will be mirrored. All mirrored VMs should have a NIC in
-the given network. All mirrored subnetworks should belong to the given network.
+    <dd>{{% md %}}Specifies the mirrored VPC network. Only packets in this network
+will be mirrored. All mirrored VMs should have a NIC in the given
+network. All mirrored subnetworks should belong to the given network.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -246,7 +250,7 @@ the given network. All mirrored subnetworks should belong to the given network.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#packetmirroringfilter">Packet<wbr>Mirroring<wbr>Filter<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A filter for mirrored traffic. If unset, all traffic is mirrored.
+    <dd>{{% md %}}A filter for mirrored traffic.  If unset, all traffic is mirrored.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -264,8 +268,9 @@ the given network. All mirrored subnetworks should belong to the given network.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}Since only one rule can be active at a time, priority is used to break ties in the case of two rules that apply to the
-same instances.
+    <dd>{{% md %}}Since only one rule can be active at a time, priority is
+used to break ties in the case of two rules that apply to
+the same instances.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -284,7 +289,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The Region in which the created address should reside. If it is not provided, the provider region is used.
+    <dd>{{% md %}}The Region in which the created address should reside.
+If it is not provided, the provider region is used.
 {{% /md %}}</dd>
 
 </dl>
@@ -300,8 +306,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#packetmirroringcollectorilb">Packet<wbr>Mirroring<wbr>Collector<wbr>Ilb</a></span>
     </dt>
-    <dd>{{% md %}}The Forwarding Rule resource (of type load_balancing_scheme=INTERNAL) that will be used as collector for mirrored
-traffic. The specified forwarding rule must have is_mirroring_collector set to true.
+    <dd>{{% md %}}The Forwarding Rule resource (of type load_balancing_scheme=INTERNAL)
+that will be used as collector for mirrored traffic. The
+specified forwarding rule must have is_mirroring_collector
+set to true.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -310,7 +318,7 @@ traffic. The specified forwarding rule must have is_mirroring_collector set to t
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#packetmirroringmirroredresources">Packet<wbr>Mirroring<wbr>Mirrored<wbr>Resources</a></span>
     </dt>
-    <dd>{{% md %}}A means of specifying which resources to mirror.
+    <dd>{{% md %}}A means of specifying which resources to mirror.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -319,8 +327,9 @@ traffic. The specified forwarding rule must have is_mirroring_collector set to t
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#packetmirroringnetwork">Packet<wbr>Mirroring<wbr>Network</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the mirrored VPC network. Only packets in this network will be mirrored. All mirrored VMs should have a NIC in
-the given network. All mirrored subnetworks should belong to the given network.
+    <dd>{{% md %}}Specifies the mirrored VPC network. Only packets in this network
+will be mirrored. All mirrored VMs should have a NIC in the given
+network. All mirrored subnetworks should belong to the given network.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -338,7 +347,7 @@ the given network. All mirrored subnetworks should belong to the given network.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#packetmirroringfilter">Packet<wbr>Mirroring<wbr>Filter</a></span>
     </dt>
-    <dd>{{% md %}}A filter for mirrored traffic. If unset, all traffic is mirrored.
+    <dd>{{% md %}}A filter for mirrored traffic.  If unset, all traffic is mirrored.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -356,8 +365,9 @@ the given network. All mirrored subnetworks should belong to the given network.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}Since only one rule can be active at a time, priority is used to break ties in the case of two rules that apply to the
-same instances.
+    <dd>{{% md %}}Since only one rule can be active at a time, priority is
+used to break ties in the case of two rules that apply to
+the same instances.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -376,7 +386,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Region in which the created address should reside. If it is not provided, the provider region is used.
+    <dd>{{% md %}}The Region in which the created address should reside.
+If it is not provided, the provider region is used.
 {{% /md %}}</dd>
 
 </dl>
@@ -392,8 +403,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#packetmirroringcollectorilb">Packet<wbr>Mirroring<wbr>Collector<wbr>Ilb</a></span>
     </dt>
-    <dd>{{% md %}}The Forwarding Rule resource (of type load_balancing_scheme=INTERNAL) that will be used as collector for mirrored
-traffic. The specified forwarding rule must have is_mirroring_collector set to true.
+    <dd>{{% md %}}The Forwarding Rule resource (of type load_balancing_scheme=INTERNAL)
+that will be used as collector for mirrored traffic. The
+specified forwarding rule must have is_mirroring_collector
+set to true.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -402,7 +415,7 @@ traffic. The specified forwarding rule must have is_mirroring_collector set to t
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#packetmirroringmirroredresources">Packet<wbr>Mirroring<wbr>Mirrored<wbr>Resources</a></span>
     </dt>
-    <dd>{{% md %}}A means of specifying which resources to mirror.
+    <dd>{{% md %}}A means of specifying which resources to mirror.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -411,8 +424,9 @@ traffic. The specified forwarding rule must have is_mirroring_collector set to t
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#packetmirroringnetwork">Packet<wbr>Mirroring<wbr>Network</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the mirrored VPC network. Only packets in this network will be mirrored. All mirrored VMs should have a NIC in
-the given network. All mirrored subnetworks should belong to the given network.
+    <dd>{{% md %}}Specifies the mirrored VPC network. Only packets in this network
+will be mirrored. All mirrored VMs should have a NIC in the given
+network. All mirrored subnetworks should belong to the given network.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -430,7 +444,7 @@ the given network. All mirrored subnetworks should belong to the given network.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#packetmirroringfilter">Packet<wbr>Mirroring<wbr>Filter</a></span>
     </dt>
-    <dd>{{% md %}}A filter for mirrored traffic. If unset, all traffic is mirrored.
+    <dd>{{% md %}}A filter for mirrored traffic.  If unset, all traffic is mirrored.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -448,8 +462,9 @@ the given network. All mirrored subnetworks should belong to the given network.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}Since only one rule can be active at a time, priority is used to break ties in the case of two rules that apply to the
-same instances.
+    <dd>{{% md %}}Since only one rule can be active at a time, priority is
+used to break ties in the case of two rules that apply to
+the same instances.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -468,7 +483,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Region in which the created address should reside. If it is not provided, the provider region is used.
+    <dd>{{% md %}}The Region in which the created address should reside.
+If it is not provided, the provider region is used.
 {{% /md %}}</dd>
 
 </dl>
@@ -484,8 +500,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#packetmirroringcollectorilb">Dict[Packet<wbr>Mirroring<wbr>Collector<wbr>Ilb]</a></span>
     </dt>
-    <dd>{{% md %}}The Forwarding Rule resource (of type load_balancing_scheme=INTERNAL) that will be used as collector for mirrored
-traffic. The specified forwarding rule must have is_mirroring_collector set to true.
+    <dd>{{% md %}}The Forwarding Rule resource (of type load_balancing_scheme=INTERNAL)
+that will be used as collector for mirrored traffic. The
+specified forwarding rule must have is_mirroring_collector
+set to true.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -494,7 +512,7 @@ traffic. The specified forwarding rule must have is_mirroring_collector set to t
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#packetmirroringmirroredresources">Dict[Packet<wbr>Mirroring<wbr>Mirrored<wbr>Resources]</a></span>
     </dt>
-    <dd>{{% md %}}A means of specifying which resources to mirror.
+    <dd>{{% md %}}A means of specifying which resources to mirror.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -503,8 +521,9 @@ traffic. The specified forwarding rule must have is_mirroring_collector set to t
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#packetmirroringnetwork">Dict[Packet<wbr>Mirroring<wbr>Network]</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the mirrored VPC network. Only packets in this network will be mirrored. All mirrored VMs should have a NIC in
-the given network. All mirrored subnetworks should belong to the given network.
+    <dd>{{% md %}}Specifies the mirrored VPC network. Only packets in this network
+will be mirrored. All mirrored VMs should have a NIC in the given
+network. All mirrored subnetworks should belong to the given network.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -522,7 +541,7 @@ the given network. All mirrored subnetworks should belong to the given network.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#packetmirroringfilter">Dict[Packet<wbr>Mirroring<wbr>Filter]</a></span>
     </dt>
-    <dd>{{% md %}}A filter for mirrored traffic. If unset, all traffic is mirrored.
+    <dd>{{% md %}}A filter for mirrored traffic.  If unset, all traffic is mirrored.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -540,8 +559,9 @@ the given network. All mirrored subnetworks should belong to the given network.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}Since only one rule can be active at a time, priority is used to break ties in the case of two rules that apply to the
-same instances.
+    <dd>{{% md %}}Since only one rule can be active at a time, priority is
+used to break ties in the case of two rules that apply to
+the same instances.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -560,7 +580,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The Region in which the created address should reside. If it is not provided, the provider region is used.
+    <dd>{{% md %}}The Region in which the created address should reside.
+If it is not provided, the provider region is used.
 {{% /md %}}</dd>
 
 </dl>
@@ -773,8 +794,10 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#packetmirroringcollectorilb">Packet<wbr>Mirroring<wbr>Collector<wbr>Ilb<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The Forwarding Rule resource (of type load_balancing_scheme=INTERNAL) that will be used as collector for mirrored
-traffic. The specified forwarding rule must have is_mirroring_collector set to true.
+    <dd>{{% md %}}The Forwarding Rule resource (of type load_balancing_scheme=INTERNAL)
+that will be used as collector for mirrored traffic. The
+specified forwarding rule must have is_mirroring_collector
+set to true.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -792,7 +815,7 @@ traffic. The specified forwarding rule must have is_mirroring_collector set to t
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#packetmirroringfilter">Packet<wbr>Mirroring<wbr>Filter<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A filter for mirrored traffic. If unset, all traffic is mirrored.
+    <dd>{{% md %}}A filter for mirrored traffic.  If unset, all traffic is mirrored.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -801,7 +824,7 @@ traffic. The specified forwarding rule must have is_mirroring_collector set to t
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#packetmirroringmirroredresources">Packet<wbr>Mirroring<wbr>Mirrored<wbr>Resources<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A means of specifying which resources to mirror.
+    <dd>{{% md %}}A means of specifying which resources to mirror.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -819,8 +842,9 @@ traffic. The specified forwarding rule must have is_mirroring_collector set to t
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#packetmirroringnetwork">Packet<wbr>Mirroring<wbr>Network<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the mirrored VPC network. Only packets in this network will be mirrored. All mirrored VMs should have a NIC in
-the given network. All mirrored subnetworks should belong to the given network.
+    <dd>{{% md %}}Specifies the mirrored VPC network. Only packets in this network
+will be mirrored. All mirrored VMs should have a NIC in the given
+network. All mirrored subnetworks should belong to the given network.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -829,8 +853,9 @@ the given network. All mirrored subnetworks should belong to the given network.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}Since only one rule can be active at a time, priority is used to break ties in the case of two rules that apply to the
-same instances.
+    <dd>{{% md %}}Since only one rule can be active at a time, priority is
+used to break ties in the case of two rules that apply to
+the same instances.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -849,7 +874,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The Region in which the created address should reside. If it is not provided, the provider region is used.
+    <dd>{{% md %}}The Region in which the created address should reside.
+If it is not provided, the provider region is used.
 {{% /md %}}</dd>
 
 </dl>
@@ -865,8 +891,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#packetmirroringcollectorilb">Packet<wbr>Mirroring<wbr>Collector<wbr>Ilb</a></span>
     </dt>
-    <dd>{{% md %}}The Forwarding Rule resource (of type load_balancing_scheme=INTERNAL) that will be used as collector for mirrored
-traffic. The specified forwarding rule must have is_mirroring_collector set to true.
+    <dd>{{% md %}}The Forwarding Rule resource (of type load_balancing_scheme=INTERNAL)
+that will be used as collector for mirrored traffic. The
+specified forwarding rule must have is_mirroring_collector
+set to true.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -884,7 +912,7 @@ traffic. The specified forwarding rule must have is_mirroring_collector set to t
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#packetmirroringfilter">Packet<wbr>Mirroring<wbr>Filter</a></span>
     </dt>
-    <dd>{{% md %}}A filter for mirrored traffic. If unset, all traffic is mirrored.
+    <dd>{{% md %}}A filter for mirrored traffic.  If unset, all traffic is mirrored.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -893,7 +921,7 @@ traffic. The specified forwarding rule must have is_mirroring_collector set to t
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#packetmirroringmirroredresources">Packet<wbr>Mirroring<wbr>Mirrored<wbr>Resources</a></span>
     </dt>
-    <dd>{{% md %}}A means of specifying which resources to mirror.
+    <dd>{{% md %}}A means of specifying which resources to mirror.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -911,8 +939,9 @@ traffic. The specified forwarding rule must have is_mirroring_collector set to t
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#packetmirroringnetwork">Packet<wbr>Mirroring<wbr>Network</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the mirrored VPC network. Only packets in this network will be mirrored. All mirrored VMs should have a NIC in
-the given network. All mirrored subnetworks should belong to the given network.
+    <dd>{{% md %}}Specifies the mirrored VPC network. Only packets in this network
+will be mirrored. All mirrored VMs should have a NIC in the given
+network. All mirrored subnetworks should belong to the given network.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -921,8 +950,9 @@ the given network. All mirrored subnetworks should belong to the given network.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}Since only one rule can be active at a time, priority is used to break ties in the case of two rules that apply to the
-same instances.
+    <dd>{{% md %}}Since only one rule can be active at a time, priority is
+used to break ties in the case of two rules that apply to
+the same instances.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -941,7 +971,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Region in which the created address should reside. If it is not provided, the provider region is used.
+    <dd>{{% md %}}The Region in which the created address should reside.
+If it is not provided, the provider region is used.
 {{% /md %}}</dd>
 
 </dl>
@@ -957,8 +988,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#packetmirroringcollectorilb">Packet<wbr>Mirroring<wbr>Collector<wbr>Ilb</a></span>
     </dt>
-    <dd>{{% md %}}The Forwarding Rule resource (of type load_balancing_scheme=INTERNAL) that will be used as collector for mirrored
-traffic. The specified forwarding rule must have is_mirroring_collector set to true.
+    <dd>{{% md %}}The Forwarding Rule resource (of type load_balancing_scheme=INTERNAL)
+that will be used as collector for mirrored traffic. The
+specified forwarding rule must have is_mirroring_collector
+set to true.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -976,7 +1009,7 @@ traffic. The specified forwarding rule must have is_mirroring_collector set to t
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#packetmirroringfilter">Packet<wbr>Mirroring<wbr>Filter</a></span>
     </dt>
-    <dd>{{% md %}}A filter for mirrored traffic. If unset, all traffic is mirrored.
+    <dd>{{% md %}}A filter for mirrored traffic.  If unset, all traffic is mirrored.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -985,7 +1018,7 @@ traffic. The specified forwarding rule must have is_mirroring_collector set to t
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#packetmirroringmirroredresources">Packet<wbr>Mirroring<wbr>Mirrored<wbr>Resources</a></span>
     </dt>
-    <dd>{{% md %}}A means of specifying which resources to mirror.
+    <dd>{{% md %}}A means of specifying which resources to mirror.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1003,8 +1036,9 @@ traffic. The specified forwarding rule must have is_mirroring_collector set to t
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#packetmirroringnetwork">Packet<wbr>Mirroring<wbr>Network</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the mirrored VPC network. Only packets in this network will be mirrored. All mirrored VMs should have a NIC in
-the given network. All mirrored subnetworks should belong to the given network.
+    <dd>{{% md %}}Specifies the mirrored VPC network. Only packets in this network
+will be mirrored. All mirrored VMs should have a NIC in the given
+network. All mirrored subnetworks should belong to the given network.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1013,8 +1047,9 @@ the given network. All mirrored subnetworks should belong to the given network.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}Since only one rule can be active at a time, priority is used to break ties in the case of two rules that apply to the
-same instances.
+    <dd>{{% md %}}Since only one rule can be active at a time, priority is
+used to break ties in the case of two rules that apply to
+the same instances.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1033,7 +1068,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Region in which the created address should reside. If it is not provided, the provider region is used.
+    <dd>{{% md %}}The Region in which the created address should reside.
+If it is not provided, the provider region is used.
 {{% /md %}}</dd>
 
 </dl>
@@ -1049,8 +1085,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#packetmirroringcollectorilb">Dict[Packet<wbr>Mirroring<wbr>Collector<wbr>Ilb]</a></span>
     </dt>
-    <dd>{{% md %}}The Forwarding Rule resource (of type load_balancing_scheme=INTERNAL) that will be used as collector for mirrored
-traffic. The specified forwarding rule must have is_mirroring_collector set to true.
+    <dd>{{% md %}}The Forwarding Rule resource (of type load_balancing_scheme=INTERNAL)
+that will be used as collector for mirrored traffic. The
+specified forwarding rule must have is_mirroring_collector
+set to true.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1068,7 +1106,7 @@ traffic. The specified forwarding rule must have is_mirroring_collector set to t
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#packetmirroringfilter">Dict[Packet<wbr>Mirroring<wbr>Filter]</a></span>
     </dt>
-    <dd>{{% md %}}A filter for mirrored traffic. If unset, all traffic is mirrored.
+    <dd>{{% md %}}A filter for mirrored traffic.  If unset, all traffic is mirrored.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1077,7 +1115,7 @@ traffic. The specified forwarding rule must have is_mirroring_collector set to t
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#packetmirroringmirroredresources">Dict[Packet<wbr>Mirroring<wbr>Mirrored<wbr>Resources]</a></span>
     </dt>
-    <dd>{{% md %}}A means of specifying which resources to mirror.
+    <dd>{{% md %}}A means of specifying which resources to mirror.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1095,8 +1133,9 @@ traffic. The specified forwarding rule must have is_mirroring_collector set to t
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#packetmirroringnetwork">Dict[Packet<wbr>Mirroring<wbr>Network]</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the mirrored VPC network. Only packets in this network will be mirrored. All mirrored VMs should have a NIC in
-the given network. All mirrored subnetworks should belong to the given network.
+    <dd>{{% md %}}Specifies the mirrored VPC network. Only packets in this network
+will be mirrored. All mirrored VMs should have a NIC in the given
+network. All mirrored subnetworks should belong to the given network.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1105,8 +1144,9 @@ the given network. All mirrored subnetworks should belong to the given network.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}Since only one rule can be active at a time, priority is used to break ties in the case of two rules that apply to the
-same instances.
+    <dd>{{% md %}}Since only one rule can be active at a time, priority is
+used to break ties in the case of two rules that apply to
+the same instances.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1125,7 +1165,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The Region in which the created address should reside. If it is not provided, the provider region is used.
+    <dd>{{% md %}}The Region in which the created address should reside.
+If it is not provided, the provider region is used.
 {{% /md %}}</dd>
 
 </dl>
@@ -1164,7 +1205,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The URL of the instances where this rule should be active.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1179,7 +1221,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The URL of the instances where this rule should be active.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1194,7 +1237,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The URL of the instances where this rule should be active.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1209,7 +1253,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The URL of the instances where this rule should be active.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1239,7 +1284,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}IP CIDR ranges that apply as a filter on the source (ingress) or
+destination (egress) IP in the IP header. Only IPv4 is supported.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1247,7 +1294,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Protocols that apply as a filter on mirrored traffic.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1262,7 +1310,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}IP CIDR ranges that apply as a filter on the source (ingress) or
+destination (egress) IP in the IP header. Only IPv4 is supported.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1270,7 +1320,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Protocols that apply as a filter on mirrored traffic.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1285,7 +1336,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}IP CIDR ranges that apply as a filter on the source (ingress) or
+destination (egress) IP in the IP header. Only IPv4 is supported.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1293,7 +1346,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Protocols that apply as a filter on mirrored traffic.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1308,7 +1362,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}IP CIDR ranges that apply as a filter on the source (ingress) or
+destination (egress) IP in the IP header. Only IPv4 is supported.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1316,7 +1372,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Protocols that apply as a filter on mirrored traffic.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1346,7 +1403,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#packetmirroringmirroredresourcesinstance">List&lt;Packet<wbr>Mirroring<wbr>Mirrored<wbr>Resources<wbr>Instance<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}All the listed instances will be mirrored.  Specify at most 50.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1354,7 +1412,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#packetmirroringmirroredresourcessubnetwork">List&lt;Packet<wbr>Mirroring<wbr>Mirrored<wbr>Resources<wbr>Subnetwork<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}All instances in one of these subnetworks will be mirrored.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1362,7 +1421,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}All instances with these tags will be mirrored.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1377,7 +1437,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#packetmirroringmirroredresourcesinstance">[]Packet<wbr>Mirroring<wbr>Mirrored<wbr>Resources<wbr>Instance</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}All the listed instances will be mirrored.  Specify at most 50.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1385,7 +1446,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#packetmirroringmirroredresourcessubnetwork">[]Packet<wbr>Mirroring<wbr>Mirrored<wbr>Resources<wbr>Subnetwork</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}All instances in one of these subnetworks will be mirrored.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1393,7 +1455,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}All instances with these tags will be mirrored.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1408,7 +1471,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#packetmirroringmirroredresourcesinstance">Packet<wbr>Mirroring<wbr>Mirrored<wbr>Resources<wbr>Instance[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}All the listed instances will be mirrored.  Specify at most 50.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1416,7 +1480,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#packetmirroringmirroredresourcessubnetwork">Packet<wbr>Mirroring<wbr>Mirrored<wbr>Resources<wbr>Subnetwork[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}All instances in one of these subnetworks will be mirrored.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1424,7 +1489,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}All instances with these tags will be mirrored.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1439,7 +1505,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#packetmirroringmirroredresourcesinstance">List[Packet<wbr>Mirroring<wbr>Mirrored<wbr>Resources<wbr>Instance]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}All the listed instances will be mirrored.  Specify at most 50.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1447,7 +1514,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#packetmirroringmirroredresourcessubnetwork">List[Packet<wbr>Mirroring<wbr>Mirrored<wbr>Resources<wbr>Subnetwork]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}All instances in one of these subnetworks will be mirrored.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1455,7 +1523,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}All instances with these tags will be mirrored.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1485,7 +1554,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The URL of the instances where this rule should be active.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1500,7 +1570,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The URL of the instances where this rule should be active.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1515,7 +1586,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The URL of the instances where this rule should be active.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1530,7 +1602,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The URL of the instances where this rule should be active.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1560,7 +1633,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The URL of the instances where this rule should be active.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1575,7 +1649,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The URL of the instances where this rule should be active.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1590,7 +1665,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The URL of the instances where this rule should be active.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1605,7 +1681,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The URL of the instances where this rule should be active.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1635,7 +1712,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The URL of the instances where this rule should be active.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1650,7 +1728,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The URL of the instances where this rule should be active.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1665,7 +1744,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The URL of the instances where this rule should be active.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1680,7 +1760,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The URL of the instances where this rule should be active.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1699,8 +1780,7 @@ If it is not provided, the provider project is used.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 

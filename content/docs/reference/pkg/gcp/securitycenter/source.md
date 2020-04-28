@@ -1,7 +1,8 @@
 
 ---
 title: "Source"
-block_external_search_index: true
+title_tag: "Resource Source | Module securitycenter | Package GCP"
+meta_desc: "Explore the Source resource of the securitycenter module, including examples, input properties, output properties, lookup functions, and supporting types. A Cloud Security Command Center&#39;s (Cloud SCC) finding source. A finding"
 ---
 
 
@@ -46,7 +47,7 @@ const customSource = new gcp.securitycenter.Source("custom_source", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Source</span><span class="p">(resource_name, opts=None, </span>description=None<span class="p">, </span>display_name=None<span class="p">, </span>organization=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Source</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>description=None<span class="p">, </span>display_name=None<span class="p">, </span>organization=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -224,9 +225,11 @@ The Source resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The source’s display name. A source’s display name must be unique amongst its siblings, for example, two sources
-with the same parent can't share the same display name. The display name must start and end with a letter or digit, may
-contain letters, digits, spaces, hyphens, and underscores, and can be no longer than 32 characters.
+    <dd>{{% md %}}The source’s display name. A source’s display name must be unique
+amongst its siblings, for example, two sources with the same parent
+can't share the same display name. The display name must start and end
+with a letter or digit, may contain letters, digits, spaces, hyphens,
+and underscores, and can be no longer than 32 characters.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -235,7 +238,8 @@ contain letters, digits, spaces, hyphens, and underscores, and can be no longer 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The organization whose Cloud Security Command Center the Source lives in.
+    <dd>{{% md %}}The organization whose Cloud Security Command Center the Source
+lives in.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -260,9 +264,11 @@ contain letters, digits, spaces, hyphens, and underscores, and can be no longer 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The source’s display name. A source’s display name must be unique amongst its siblings, for example, two sources
-with the same parent can't share the same display name. The display name must start and end with a letter or digit, may
-contain letters, digits, spaces, hyphens, and underscores, and can be no longer than 32 characters.
+    <dd>{{% md %}}The source’s display name. A source’s display name must be unique
+amongst its siblings, for example, two sources with the same parent
+can't share the same display name. The display name must start and end
+with a letter or digit, may contain letters, digits, spaces, hyphens,
+and underscores, and can be no longer than 32 characters.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -271,7 +277,8 @@ contain letters, digits, spaces, hyphens, and underscores, and can be no longer 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The organization whose Cloud Security Command Center the Source lives in.
+    <dd>{{% md %}}The organization whose Cloud Security Command Center the Source
+lives in.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -296,9 +303,11 @@ contain letters, digits, spaces, hyphens, and underscores, and can be no longer 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The source’s display name. A source’s display name must be unique amongst its siblings, for example, two sources
-with the same parent can't share the same display name. The display name must start and end with a letter or digit, may
-contain letters, digits, spaces, hyphens, and underscores, and can be no longer than 32 characters.
+    <dd>{{% md %}}The source’s display name. A source’s display name must be unique
+amongst its siblings, for example, two sources with the same parent
+can't share the same display name. The display name must start and end
+with a letter or digit, may contain letters, digits, spaces, hyphens,
+and underscores, and can be no longer than 32 characters.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -307,7 +316,8 @@ contain letters, digits, spaces, hyphens, and underscores, and can be no longer 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The organization whose Cloud Security Command Center the Source lives in.
+    <dd>{{% md %}}The organization whose Cloud Security Command Center the Source
+lives in.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -332,9 +342,11 @@ contain letters, digits, spaces, hyphens, and underscores, and can be no longer 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The source’s display name. A source’s display name must be unique amongst its siblings, for example, two sources
-with the same parent can't share the same display name. The display name must start and end with a letter or digit, may
-contain letters, digits, spaces, hyphens, and underscores, and can be no longer than 32 characters.
+    <dd>{{% md %}}The source’s display name. A source’s display name must be unique
+amongst its siblings, for example, two sources with the same parent
+can't share the same display name. The display name must start and end
+with a letter or digit, may contain letters, digits, spaces, hyphens,
+and underscores, and can be no longer than 32 characters.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -343,7 +355,8 @@ contain letters, digits, spaces, hyphens, and underscores, and can be no longer 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The organization whose Cloud Security Command Center the Source lives in.
+    <dd>{{% md %}}The organization whose Cloud Security Command Center the Source
+lives in.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -610,9 +623,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The source’s display name. A source’s display name must be unique amongst its siblings, for example, two sources
-with the same parent can't share the same display name. The display name must start and end with a letter or digit, may
-contain letters, digits, spaces, hyphens, and underscores, and can be no longer than 32 characters.
+    <dd>{{% md %}}The source’s display name. A source’s display name must be unique
+amongst its siblings, for example, two sources with the same parent
+can't share the same display name. The display name must start and end
+with a letter or digit, may contain letters, digits, spaces, hyphens,
+and underscores, and can be no longer than 32 characters.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -630,7 +645,8 @@ contain letters, digits, spaces, hyphens, and underscores, and can be no longer 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The organization whose Cloud Security Command Center the Source lives in.
+    <dd>{{% md %}}The organization whose Cloud Security Command Center the Source
+lives in.
 {{% /md %}}</dd>
 
 </dl>
@@ -655,9 +671,11 @@ contain letters, digits, spaces, hyphens, and underscores, and can be no longer 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The source’s display name. A source’s display name must be unique amongst its siblings, for example, two sources
-with the same parent can't share the same display name. The display name must start and end with a letter or digit, may
-contain letters, digits, spaces, hyphens, and underscores, and can be no longer than 32 characters.
+    <dd>{{% md %}}The source’s display name. A source’s display name must be unique
+amongst its siblings, for example, two sources with the same parent
+can't share the same display name. The display name must start and end
+with a letter or digit, may contain letters, digits, spaces, hyphens,
+and underscores, and can be no longer than 32 characters.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -675,7 +693,8 @@ contain letters, digits, spaces, hyphens, and underscores, and can be no longer 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The organization whose Cloud Security Command Center the Source lives in.
+    <dd>{{% md %}}The organization whose Cloud Security Command Center the Source
+lives in.
 {{% /md %}}</dd>
 
 </dl>
@@ -700,9 +719,11 @@ contain letters, digits, spaces, hyphens, and underscores, and can be no longer 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The source’s display name. A source’s display name must be unique amongst its siblings, for example, two sources
-with the same parent can't share the same display name. The display name must start and end with a letter or digit, may
-contain letters, digits, spaces, hyphens, and underscores, and can be no longer than 32 characters.
+    <dd>{{% md %}}The source’s display name. A source’s display name must be unique
+amongst its siblings, for example, two sources with the same parent
+can't share the same display name. The display name must start and end
+with a letter or digit, may contain letters, digits, spaces, hyphens,
+and underscores, and can be no longer than 32 characters.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -720,7 +741,8 @@ contain letters, digits, spaces, hyphens, and underscores, and can be no longer 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The organization whose Cloud Security Command Center the Source lives in.
+    <dd>{{% md %}}The organization whose Cloud Security Command Center the Source
+lives in.
 {{% /md %}}</dd>
 
 </dl>
@@ -745,9 +767,11 @@ contain letters, digits, spaces, hyphens, and underscores, and can be no longer 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The source’s display name. A source’s display name must be unique amongst its siblings, for example, two sources
-with the same parent can't share the same display name. The display name must start and end with a letter or digit, may
-contain letters, digits, spaces, hyphens, and underscores, and can be no longer than 32 characters.
+    <dd>{{% md %}}The source’s display name. A source’s display name must be unique
+amongst its siblings, for example, two sources with the same parent
+can't share the same display name. The display name must start and end
+with a letter or digit, may contain letters, digits, spaces, hyphens,
+and underscores, and can be no longer than 32 characters.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -765,7 +789,8 @@ contain letters, digits, spaces, hyphens, and underscores, and can be no longer 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The organization whose Cloud Security Command Center the Source lives in.
+    <dd>{{% md %}}The organization whose Cloud Security Command Center the Source
+lives in.
 {{% /md %}}</dd>
 
 </dl>
@@ -787,8 +812,7 @@ contain letters, digits, spaces, hyphens, and underscores, and can be no longer 
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 

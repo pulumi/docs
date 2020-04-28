@@ -1,7 +1,8 @@
 
 ---
 title: "Image"
-block_external_search_index: true
+title_tag: "Resource Image | Module compute | Package GCP"
+meta_desc: "Explore the Image resource of the compute module, including examples, input properties, output properties, lookup functions, and supporting types. Represents an Image resource."
 ---
 
 
@@ -79,7 +80,7 @@ const example = new gcp.compute.Image("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Image</span><span class="p">(resource_name, opts=None, </span>description=None<span class="p">, </span>disk_size_gb=None<span class="p">, </span>family=None<span class="p">, </span>guest_os_features=None<span class="p">, </span>labels=None<span class="p">, </span>licenses=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>raw_disk=None<span class="p">, </span>source_disk=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Image</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>description=None<span class="p">, </span>disk_size_gb=None<span class="p">, </span>family=None<span class="p">, </span>guest_os_features=None<span class="p">, </span>labels=None<span class="p">, </span>licenses=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>raw_disk=None<span class="p">, </span>source_disk=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -257,7 +258,8 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.
+    <dd>{{% md %}}An optional description of this resource. Provide this property when
+you create the resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -275,9 +277,11 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the image family to which this image belongs. You can create disks by specifying an image family instead of
-a specific image name. The image family always returns its latest image that is not deprecated. The name of the image
-family must comply with RFC1035.
+    <dd>{{% md %}}The name of the image family to which this image belongs. You can
+create disks by specifying an image family instead of a specific
+image name. The image family always returns its latest image that is
+not deprecated. The name of the image family must comply with
+RFC1035.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -286,7 +290,8 @@ family must comply with RFC1035.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#imageguestosfeature">List&lt;Image<wbr>Guest<wbr>Os<wbr>Feature<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of features to enable on the guest operating system. Applicable only for bootable images.
+    <dd>{{% md %}}A list of features to enable on the guest operating system.
+Applicable only for bootable images.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -313,10 +318,13 @@ family must comply with RFC1035.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the resource; provided by the client when the resource is created. The name must be 1-63 characters long, and
-comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-'[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+    <dd>{{% md %}}Name of the resource; provided by the client when the resource is
+created. The name must be 1-63 characters long, and comply with
+RFC1035. Specifically, the name must be 1-63 characters long and
+match the regular expression `a-z?` which means
+the first character must be a lowercase letter, and all following
+characters must be a dash, lowercase letter, or digit, except the
+last character, which cannot be a dash.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -335,7 +343,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#imagerawdisk">Image<wbr>Raw<wbr>Disk<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The parameters of the raw disk image.
+    <dd>{{% md %}}The parameters of the raw disk image.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -344,8 +352,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The source disk to create this image based on. You must provide either this property or the rawDisk.source property but
-not both to create an image.
+    <dd>{{% md %}}The source disk to create this image based on.
+You must provide either this property or the
+rawDisk.source property but not both to create an image.
 {{% /md %}}</dd>
 
 </dl>
@@ -361,7 +370,8 @@ not both to create an image.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.
+    <dd>{{% md %}}An optional description of this resource. Provide this property when
+you create the resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -379,9 +389,11 @@ not both to create an image.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the image family to which this image belongs. You can create disks by specifying an image family instead of
-a specific image name. The image family always returns its latest image that is not deprecated. The name of the image
-family must comply with RFC1035.
+    <dd>{{% md %}}The name of the image family to which this image belongs. You can
+create disks by specifying an image family instead of a specific
+image name. The image family always returns its latest image that is
+not deprecated. The name of the image family must comply with
+RFC1035.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -390,7 +402,8 @@ family must comply with RFC1035.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#imageguestosfeature">[]Image<wbr>Guest<wbr>Os<wbr>Feature</a></span>
     </dt>
-    <dd>{{% md %}}A list of features to enable on the guest operating system. Applicable only for bootable images.
+    <dd>{{% md %}}A list of features to enable on the guest operating system.
+Applicable only for bootable images.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -417,10 +430,13 @@ family must comply with RFC1035.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the resource; provided by the client when the resource is created. The name must be 1-63 characters long, and
-comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-'[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+    <dd>{{% md %}}Name of the resource; provided by the client when the resource is
+created. The name must be 1-63 characters long, and comply with
+RFC1035. Specifically, the name must be 1-63 characters long and
+match the regular expression `a-z?` which means
+the first character must be a lowercase letter, and all following
+characters must be a dash, lowercase letter, or digit, except the
+last character, which cannot be a dash.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -439,7 +455,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#imagerawdisk">Image<wbr>Raw<wbr>Disk</a></span>
     </dt>
-    <dd>{{% md %}}The parameters of the raw disk image.
+    <dd>{{% md %}}The parameters of the raw disk image.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -448,8 +464,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The source disk to create this image based on. You must provide either this property or the rawDisk.source property but
-not both to create an image.
+    <dd>{{% md %}}The source disk to create this image based on.
+You must provide either this property or the
+rawDisk.source property but not both to create an image.
 {{% /md %}}</dd>
 
 </dl>
@@ -465,7 +482,8 @@ not both to create an image.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.
+    <dd>{{% md %}}An optional description of this resource. Provide this property when
+you create the resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -483,9 +501,11 @@ not both to create an image.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the image family to which this image belongs. You can create disks by specifying an image family instead of
-a specific image name. The image family always returns its latest image that is not deprecated. The name of the image
-family must comply with RFC1035.
+    <dd>{{% md %}}The name of the image family to which this image belongs. You can
+create disks by specifying an image family instead of a specific
+image name. The image family always returns its latest image that is
+not deprecated. The name of the image family must comply with
+RFC1035.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -494,7 +514,8 @@ family must comply with RFC1035.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#imageguestosfeature">Image<wbr>Guest<wbr>Os<wbr>Feature[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of features to enable on the guest operating system. Applicable only for bootable images.
+    <dd>{{% md %}}A list of features to enable on the guest operating system.
+Applicable only for bootable images.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -521,10 +542,13 @@ family must comply with RFC1035.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the resource; provided by the client when the resource is created. The name must be 1-63 characters long, and
-comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-'[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+    <dd>{{% md %}}Name of the resource; provided by the client when the resource is
+created. The name must be 1-63 characters long, and comply with
+RFC1035. Specifically, the name must be 1-63 characters long and
+match the regular expression `a-z?` which means
+the first character must be a lowercase letter, and all following
+characters must be a dash, lowercase letter, or digit, except the
+last character, which cannot be a dash.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -543,7 +567,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#imagerawdisk">Image<wbr>Raw<wbr>Disk</a></span>
     </dt>
-    <dd>{{% md %}}The parameters of the raw disk image.
+    <dd>{{% md %}}The parameters of the raw disk image.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -552,8 +576,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The source disk to create this image based on. You must provide either this property or the rawDisk.source property but
-not both to create an image.
+    <dd>{{% md %}}The source disk to create this image based on.
+You must provide either this property or the
+rawDisk.source property but not both to create an image.
 {{% /md %}}</dd>
 
 </dl>
@@ -569,7 +594,8 @@ not both to create an image.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.
+    <dd>{{% md %}}An optional description of this resource. Provide this property when
+you create the resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -587,9 +613,11 @@ not both to create an image.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the image family to which this image belongs. You can create disks by specifying an image family instead of
-a specific image name. The image family always returns its latest image that is not deprecated. The name of the image
-family must comply with RFC1035.
+    <dd>{{% md %}}The name of the image family to which this image belongs. You can
+create disks by specifying an image family instead of a specific
+image name. The image family always returns its latest image that is
+not deprecated. The name of the image family must comply with
+RFC1035.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -598,7 +626,8 @@ family must comply with RFC1035.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#imageguestosfeature">List[Image<wbr>Guest<wbr>Os<wbr>Feature]</a></span>
     </dt>
-    <dd>{{% md %}}A list of features to enable on the guest operating system. Applicable only for bootable images.
+    <dd>{{% md %}}A list of features to enable on the guest operating system.
+Applicable only for bootable images.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -625,10 +654,13 @@ family must comply with RFC1035.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Name of the resource; provided by the client when the resource is created. The name must be 1-63 characters long, and
-comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-'[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+    <dd>{{% md %}}Name of the resource; provided by the client when the resource is
+created. The name must be 1-63 characters long, and comply with
+RFC1035. Specifically, the name must be 1-63 characters long and
+match the regular expression `a-z?` which means
+the first character must be a lowercase letter, and all following
+characters must be a dash, lowercase letter, or digit, except the
+last character, which cannot be a dash.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -647,7 +679,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#imagerawdisk">Dict[Image<wbr>Raw<wbr>Disk]</a></span>
     </dt>
-    <dd>{{% md %}}The parameters of the raw disk image.
+    <dd>{{% md %}}The parameters of the raw disk image.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -656,8 +688,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The source disk to create this image based on. You must provide either this property or the rawDisk.source property but
-not both to create an image.
+    <dd>{{% md %}}The source disk to create this image based on.
+You must provide either this property or the
+rawDisk.source property but not both to create an image.
 {{% /md %}}</dd>
 
 </dl>
@@ -1032,7 +1065,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.
+    <dd>{{% md %}}An optional description of this resource. Provide this property when
+you create the resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1050,9 +1084,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the image family to which this image belongs. You can create disks by specifying an image family instead of
-a specific image name. The image family always returns its latest image that is not deprecated. The name of the image
-family must comply with RFC1035.
+    <dd>{{% md %}}The name of the image family to which this image belongs. You can
+create disks by specifying an image family instead of a specific
+image name. The image family always returns its latest image that is
+not deprecated. The name of the image family must comply with
+RFC1035.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1061,7 +1097,8 @@ family must comply with RFC1035.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#imageguestosfeature">List&lt;Image<wbr>Guest<wbr>Os<wbr>Feature<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of features to enable on the guest operating system. Applicable only for bootable images.
+    <dd>{{% md %}}A list of features to enable on the guest operating system.
+Applicable only for bootable images.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1097,10 +1134,13 @@ family must comply with RFC1035.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the resource; provided by the client when the resource is created. The name must be 1-63 characters long, and
-comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-'[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+    <dd>{{% md %}}Name of the resource; provided by the client when the resource is
+created. The name must be 1-63 characters long, and comply with
+RFC1035. Specifically, the name must be 1-63 characters long and
+match the regular expression `a-z?` which means
+the first character must be a lowercase letter, and all following
+characters must be a dash, lowercase letter, or digit, except the
+last character, which cannot be a dash.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1119,7 +1159,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#imagerawdisk">Image<wbr>Raw<wbr>Disk<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The parameters of the raw disk image.
+    <dd>{{% md %}}The parameters of the raw disk image.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1137,8 +1177,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The source disk to create this image based on. You must provide either this property or the rawDisk.source property but
-not both to create an image.
+    <dd>{{% md %}}The source disk to create this image based on.
+You must provide either this property or the
+rawDisk.source property but not both to create an image.
 {{% /md %}}</dd>
 
 </dl>
@@ -1172,7 +1213,8 @@ not both to create an image.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.
+    <dd>{{% md %}}An optional description of this resource. Provide this property when
+you create the resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1190,9 +1232,11 @@ not both to create an image.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the image family to which this image belongs. You can create disks by specifying an image family instead of
-a specific image name. The image family always returns its latest image that is not deprecated. The name of the image
-family must comply with RFC1035.
+    <dd>{{% md %}}The name of the image family to which this image belongs. You can
+create disks by specifying an image family instead of a specific
+image name. The image family always returns its latest image that is
+not deprecated. The name of the image family must comply with
+RFC1035.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1201,7 +1245,8 @@ family must comply with RFC1035.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#imageguestosfeature">[]Image<wbr>Guest<wbr>Os<wbr>Feature</a></span>
     </dt>
-    <dd>{{% md %}}A list of features to enable on the guest operating system. Applicable only for bootable images.
+    <dd>{{% md %}}A list of features to enable on the guest operating system.
+Applicable only for bootable images.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1237,10 +1282,13 @@ family must comply with RFC1035.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the resource; provided by the client when the resource is created. The name must be 1-63 characters long, and
-comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-'[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+    <dd>{{% md %}}Name of the resource; provided by the client when the resource is
+created. The name must be 1-63 characters long, and comply with
+RFC1035. Specifically, the name must be 1-63 characters long and
+match the regular expression `a-z?` which means
+the first character must be a lowercase letter, and all following
+characters must be a dash, lowercase letter, or digit, except the
+last character, which cannot be a dash.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1259,7 +1307,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#imagerawdisk">Image<wbr>Raw<wbr>Disk</a></span>
     </dt>
-    <dd>{{% md %}}The parameters of the raw disk image.
+    <dd>{{% md %}}The parameters of the raw disk image.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1277,8 +1325,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The source disk to create this image based on. You must provide either this property or the rawDisk.source property but
-not both to create an image.
+    <dd>{{% md %}}The source disk to create this image based on.
+You must provide either this property or the
+rawDisk.source property but not both to create an image.
 {{% /md %}}</dd>
 
 </dl>
@@ -1312,7 +1361,8 @@ not both to create an image.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.
+    <dd>{{% md %}}An optional description of this resource. Provide this property when
+you create the resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1330,9 +1380,11 @@ not both to create an image.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the image family to which this image belongs. You can create disks by specifying an image family instead of
-a specific image name. The image family always returns its latest image that is not deprecated. The name of the image
-family must comply with RFC1035.
+    <dd>{{% md %}}The name of the image family to which this image belongs. You can
+create disks by specifying an image family instead of a specific
+image name. The image family always returns its latest image that is
+not deprecated. The name of the image family must comply with
+RFC1035.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1341,7 +1393,8 @@ family must comply with RFC1035.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#imageguestosfeature">Image<wbr>Guest<wbr>Os<wbr>Feature[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of features to enable on the guest operating system. Applicable only for bootable images.
+    <dd>{{% md %}}A list of features to enable on the guest operating system.
+Applicable only for bootable images.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1377,10 +1430,13 @@ family must comply with RFC1035.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the resource; provided by the client when the resource is created. The name must be 1-63 characters long, and
-comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-'[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+    <dd>{{% md %}}Name of the resource; provided by the client when the resource is
+created. The name must be 1-63 characters long, and comply with
+RFC1035. Specifically, the name must be 1-63 characters long and
+match the regular expression `a-z?` which means
+the first character must be a lowercase letter, and all following
+characters must be a dash, lowercase letter, or digit, except the
+last character, which cannot be a dash.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1399,7 +1455,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#imagerawdisk">Image<wbr>Raw<wbr>Disk</a></span>
     </dt>
-    <dd>{{% md %}}The parameters of the raw disk image.
+    <dd>{{% md %}}The parameters of the raw disk image.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1417,8 +1473,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The source disk to create this image based on. You must provide either this property or the rawDisk.source property but
-not both to create an image.
+    <dd>{{% md %}}The source disk to create this image based on.
+You must provide either this property or the
+rawDisk.source property but not both to create an image.
 {{% /md %}}</dd>
 
 </dl>
@@ -1452,7 +1509,8 @@ not both to create an image.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.
+    <dd>{{% md %}}An optional description of this resource. Provide this property when
+you create the resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1470,9 +1528,11 @@ not both to create an image.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the image family to which this image belongs. You can create disks by specifying an image family instead of
-a specific image name. The image family always returns its latest image that is not deprecated. The name of the image
-family must comply with RFC1035.
+    <dd>{{% md %}}The name of the image family to which this image belongs. You can
+create disks by specifying an image family instead of a specific
+image name. The image family always returns its latest image that is
+not deprecated. The name of the image family must comply with
+RFC1035.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1481,7 +1541,8 @@ family must comply with RFC1035.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#imageguestosfeature">List[Image<wbr>Guest<wbr>Os<wbr>Feature]</a></span>
     </dt>
-    <dd>{{% md %}}A list of features to enable on the guest operating system. Applicable only for bootable images.
+    <dd>{{% md %}}A list of features to enable on the guest operating system.
+Applicable only for bootable images.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1517,10 +1578,13 @@ family must comply with RFC1035.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Name of the resource; provided by the client when the resource is created. The name must be 1-63 characters long, and
-comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-'[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+    <dd>{{% md %}}Name of the resource; provided by the client when the resource is
+created. The name must be 1-63 characters long, and comply with
+RFC1035. Specifically, the name must be 1-63 characters long and
+match the regular expression `a-z?` which means
+the first character must be a lowercase letter, and all following
+characters must be a dash, lowercase letter, or digit, except the
+last character, which cannot be a dash.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1539,7 +1603,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#imagerawdisk">Dict[Image<wbr>Raw<wbr>Disk]</a></span>
     </dt>
-    <dd>{{% md %}}The parameters of the raw disk image.
+    <dd>{{% md %}}The parameters of the raw disk image.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1557,8 +1621,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The source disk to create this image based on. You must provide either this property or the rawDisk.source property but
-not both to create an image.
+    <dd>{{% md %}}The source disk to create this image based on.
+You must provide either this property or the
+rawDisk.source property but not both to create an image.
 {{% /md %}}</dd>
 
 </dl>
@@ -1597,7 +1662,8 @@ not both to create an image.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The type of supported feature. Read [Enabling guest operating system features](https://cloud.google.com/compute/docs/images/create-delete-deprecate-private-images#guest-os-features) to see a list of available options.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1612,7 +1678,8 @@ not both to create an image.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The type of supported feature. Read [Enabling guest operating system features](https://cloud.google.com/compute/docs/images/create-delete-deprecate-private-images#guest-os-features) to see a list of available options.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1627,7 +1694,8 @@ not both to create an image.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The type of supported feature. Read [Enabling guest operating system features](https://cloud.google.com/compute/docs/images/create-delete-deprecate-private-images#guest-os-features) to see a list of available options.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1642,7 +1710,8 @@ not both to create an image.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The type of supported feature. Read [Enabling guest operating system features](https://cloud.google.com/compute/docs/images/create-delete-deprecate-private-images#guest-os-features) to see a list of available options.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1672,7 +1741,10 @@ not both to create an image.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The full Google Cloud Storage URL where disk storage is stored
+You must provide either this property or the sourceDisk property
+but not both.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1680,7 +1752,11 @@ not both to create an image.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The format used to encode and transmit the block device, which
+should be TAR. This is just a container and transmission format
+and not a runtime format. Provided by the client when the disk
+image is created.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1688,7 +1764,9 @@ not both to create an image.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}An optional SHA1 checksum of the disk image before unpackaging.
+This is provided by the client when the disk image is created.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1703,7 +1781,10 @@ not both to create an image.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The full Google Cloud Storage URL where disk storage is stored
+You must provide either this property or the sourceDisk property
+but not both.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1711,7 +1792,11 @@ not both to create an image.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The format used to encode and transmit the block device, which
+should be TAR. This is just a container and transmission format
+and not a runtime format. Provided by the client when the disk
+image is created.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1719,7 +1804,9 @@ not both to create an image.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}An optional SHA1 checksum of the disk image before unpackaging.
+This is provided by the client when the disk image is created.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1734,7 +1821,10 @@ not both to create an image.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The full Google Cloud Storage URL where disk storage is stored
+You must provide either this property or the sourceDisk property
+but not both.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1742,7 +1832,11 @@ not both to create an image.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The format used to encode and transmit the block device, which
+should be TAR. This is just a container and transmission format
+and not a runtime format. Provided by the client when the disk
+image is created.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1750,7 +1844,9 @@ not both to create an image.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}An optional SHA1 checksum of the disk image before unpackaging.
+This is provided by the client when the disk image is created.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1765,7 +1861,10 @@ not both to create an image.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The full Google Cloud Storage URL where disk storage is stored
+You must provide either this property or the sourceDisk property
+but not both.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1773,7 +1872,11 @@ not both to create an image.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The format used to encode and transmit the block device, which
+should be TAR. This is just a container and transmission format
+and not a runtime format. Provided by the client when the disk
+image is created.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1781,7 +1884,9 @@ not both to create an image.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}An optional SHA1 checksum of the disk image before unpackaging.
+This is provided by the client when the disk image is created.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1800,8 +1905,7 @@ not both to create an image.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 

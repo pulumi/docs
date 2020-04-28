@@ -31,12 +31,13 @@ anything, please consult the source <a class="reference external" href="https://
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>ddls</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – An optional list of DDL statements to run inside the newly created database. Statements can create tables, indexes, etc.
-These statements execute atomically with the creation of the database: if there is an error in any statement, the
-database is not created.</p></li>
+<li><p><strong>ddls</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – An optional list of DDL statements to run inside the newly created
+database. Statements can create tables, indexes, etc. These statements
+execute atomically with the creation of the database: if there is an
+error in any statement, the database is not created.</p></li>
 <li><p><strong>instance</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The instance to create the database on.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A unique identifier for the database, which cannot be changed after the instance is created. Values are of the form
-[a-z][-a-z0-9]*[a-z0-9].</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A unique identifier for the database, which cannot be changed after
+the instance is created. Values are of the form [a-z][-a-z0-9]*[a-z0-9].</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
 </ul>
@@ -45,9 +46,10 @@ If it is not provided, the provider project is used.</p></li>
 <dl class="attribute">
 <dt id="pulumi_gcp.spanner.Database.ddls">
 <code class="sig-name descname">ddls</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.spanner.Database.ddls" title="Permalink to this definition">¶</a></dt>
-<dd><p>An optional list of DDL statements to run inside the newly created database. Statements can create tables, indexes, etc.
-These statements execute atomically with the creation of the database: if there is an error in any statement, the
-database is not created.</p>
+<dd><p>An optional list of DDL statements to run inside the newly created
+database. Statements can create tables, indexes, etc. These statements
+execute atomically with the creation of the database: if there is an
+error in any statement, the database is not created.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -59,8 +61,8 @@ database is not created.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.spanner.Database.name">
 <code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.spanner.Database.name" title="Permalink to this definition">¶</a></dt>
-<dd><p>A unique identifier for the database, which cannot be changed after the instance is created. Values are of the form
-[a-z][-a-z0-9]*[a-z0-9].</p>
+<dd><p>A unique identifier for the database, which cannot be changed after
+the instance is created. Values are of the form [a-z][-a-z0-9]*[a-z0-9].</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -87,12 +89,13 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>ddls</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – An optional list of DDL statements to run inside the newly created database. Statements can create tables, indexes, etc.
-These statements execute atomically with the creation of the database: if there is an error in any statement, the
-database is not created.</p></li>
+<li><p><strong>ddls</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – An optional list of DDL statements to run inside the newly created
+database. Statements can create tables, indexes, etc. These statements
+execute atomically with the creation of the database: if there is an
+error in any statement, the database is not created.</p></li>
 <li><p><strong>instance</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The instance to create the database on.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A unique identifier for the database, which cannot be changed after the instance is created. Values are of the form
-[a-z][-a-z0-9]*[a-z0-9].</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A unique identifier for the database, which cannot be changed after
+the instance is created. Values are of the form [a-z][-a-z0-9]*[a-z0-9].</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
 <li><p><strong>state</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An explanation of the status of the database.</p></li>
@@ -563,15 +566,19 @@ hosted.</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>config</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the instance’s configuration (similar but not quite the same as a region) which defines defines the
-geographic placement and replication of your databases in this instance. It determines where your data is stored. Values
-are typically of the form ‘regional-europe-west1’ , ‘us-central’ etc. In order to obtain a valid list please consult the
+<li><p><strong>config</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the instance’s configuration (similar but not
+quite the same as a region) which defines defines the geographic placement and
+replication of your databases in this instance. It determines where your data
+is stored. Values are typically of the form <code class="docutils literal notranslate"><span class="pre">regional-europe-west1</span></code> , <code class="docutils literal notranslate"><span class="pre">us-central</span></code> etc.
+In order to obtain a valid list please consult the
 <a class="reference external" href="https://cloud.google.com/spanner/docs/instances">Configuration section of the docs</a>.</p></li>
-<li><p><strong>display_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The descriptive name for this instance as it appears in UIs. Must be unique per project and between 4 and 30 characters
+<li><p><strong>display_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The descriptive name for this instance as it appears in UIs. Must be
+unique per project and between 4 and 30 characters in length.</p></li>
+<li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – An object containing a list of “key”: value pairs.
+Example: { “name”: “wrench”, “mass”: “1.3kg”, “count”: “3” }.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A unique identifier for the instance, which cannot be changed after
+the instance is created. The name must be between 6 and 30 characters
 in length.</p></li>
-<li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – An object containing a list of “key”: value pairs. Example: { “name”: “wrench”, “mass”: “1.3kg”, “count”: “3” }.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A unique identifier for the instance, which cannot be changed after the instance is created. The name must be between 6
-and 30 characters in length. If not provided, a random string starting with ‘tf-‘ will be selected.</p></li>
 <li><p><strong>num_nodes</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of nodes allocated to this instance.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
@@ -581,30 +588,34 @@ If it is not provided, the provider project is used.</p></li>
 <dl class="attribute">
 <dt id="pulumi_gcp.spanner.Instance.config">
 <code class="sig-name descname">config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.spanner.Instance.config" title="Permalink to this definition">¶</a></dt>
-<dd><p>The name of the instance’s configuration (similar but not quite the same as a region) which defines defines the
-geographic placement and replication of your databases in this instance. It determines where your data is stored. Values
-are typically of the form ‘regional-europe-west1’ , ‘us-central’ etc. In order to obtain a valid list please consult the
+<dd><p>The name of the instance’s configuration (similar but not
+quite the same as a region) which defines defines the geographic placement and
+replication of your databases in this instance. It determines where your data
+is stored. Values are typically of the form <code class="docutils literal notranslate"><span class="pre">regional-europe-west1</span></code> , <code class="docutils literal notranslate"><span class="pre">us-central</span></code> etc.
+In order to obtain a valid list please consult the
 <a class="reference external" href="https://cloud.google.com/spanner/docs/instances">Configuration section of the docs</a>.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_gcp.spanner.Instance.display_name">
 <code class="sig-name descname">display_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.spanner.Instance.display_name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The descriptive name for this instance as it appears in UIs. Must be unique per project and between 4 and 30 characters
-in length.</p>
+<dd><p>The descriptive name for this instance as it appears in UIs. Must be
+unique per project and between 4 and 30 characters in length.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_gcp.spanner.Instance.labels">
 <code class="sig-name descname">labels</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.spanner.Instance.labels" title="Permalink to this definition">¶</a></dt>
-<dd><p>An object containing a list of “key”: value pairs. Example: { “name”: “wrench”, “mass”: “1.3kg”, “count”: “3” }.</p>
+<dd><p>An object containing a list of “key”: value pairs.
+Example: { “name”: “wrench”, “mass”: “1.3kg”, “count”: “3” }.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_gcp.spanner.Instance.name">
 <code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.spanner.Instance.name" title="Permalink to this definition">¶</a></dt>
-<dd><p>A unique identifier for the instance, which cannot be changed after the instance is created. The name must be between 6
-and 30 characters in length. If not provided, a random string starting with ‘tf-‘ will be selected.</p>
+<dd><p>A unique identifier for the instance, which cannot be changed after
+the instance is created. The name must be between 6 and 30 characters
+in length.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -637,16 +648,20 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>config</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The name of the instance’s configuration (similar but not quite the same as a region) which defines defines the
-geographic placement and replication of your databases in this instance. It determines where your data is stored. Values
-are typically of the form ‘regional-europe-west1’ , ‘us-central’ etc. In order to obtain a valid list please consult the
+<li><p><strong>config</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The name of the instance’s configuration (similar but not
+quite the same as a region) which defines defines the geographic placement and
+replication of your databases in this instance. It determines where your data
+is stored. Values are typically of the form <code class="docutils literal notranslate"><span class="pre">regional-europe-west1</span></code> , <code class="docutils literal notranslate"><span class="pre">us-central</span></code> etc.
+In order to obtain a valid list please consult the
 <a class="reference external" href="https://cloud.google.com/spanner/docs/instances">Configuration section of the docs</a>.</p>
 </p></li>
-<li><p><strong>display_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The descriptive name for this instance as it appears in UIs. Must be unique per project and between 4 and 30 characters
+<li><p><strong>display_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The descriptive name for this instance as it appears in UIs. Must be
+unique per project and between 4 and 30 characters in length.</p></li>
+<li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – An object containing a list of “key”: value pairs.
+Example: { “name”: “wrench”, “mass”: “1.3kg”, “count”: “3” }.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A unique identifier for the instance, which cannot be changed after
+the instance is created. The name must be between 6 and 30 characters
 in length.</p></li>
-<li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – An object containing a list of “key”: value pairs. Example: { “name”: “wrench”, “mass”: “1.3kg”, “count”: “3” }.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A unique identifier for the instance, which cannot be changed after the instance is created. The name must be between 6
-and 30 characters in length. If not provided, a random string starting with ‘tf-‘ will be selected.</p></li>
 <li><p><strong>num_nodes</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of nodes allocated to this instance.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>

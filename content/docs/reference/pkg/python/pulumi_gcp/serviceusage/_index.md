@@ -34,14 +34,14 @@ producer overrides, or the default limit of the service.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>dimensions</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – If this map is nonempty, then this override applies only to specific values for dimensions defined in the limit unit.</p></li>
-<li><p><strong>force</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If the new quota would decrease the existing quota by more than 10%, the request is rejected. If ‘force’ is ‘true’, that
-safety check is ignored.</p></li>
-<li><p><strong>limit</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The limit on the metric, e.g. ‘/project/region’.</p></li>
-<li><p><strong>metric</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The metric that should be limited, e.g. ‘compute.googleapis.com/cpus’.</p></li>
+<li><p><strong>force</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If the new quota would decrease the existing quota by more than 10%, the request is rejected.
+If <code class="docutils literal notranslate"><span class="pre">force</span></code> is <code class="docutils literal notranslate"><span class="pre">true</span></code>, that safety check is ignored.</p></li>
+<li><p><strong>limit</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The limit on the metric, e.g. <code class="docutils literal notranslate"><span class="pre">/project/region</span></code>.</p></li>
+<li><p><strong>metric</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The metric that should be limited, e.g. <code class="docutils literal notranslate"><span class="pre">compute.googleapis.com/cpus</span></code>.</p></li>
 <li><p><strong>override_value</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The overriding quota limit value. Can be any nonnegative integer, or -1 (unlimited quota).</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
-<li><p><strong>service</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The service that the metrics belong to, e.g. ‘compute.googleapis.com’.</p></li>
+<li><p><strong>service</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The service that the metrics belong to, e.g. <code class="docutils literal notranslate"><span class="pre">compute.googleapis.com</span></code>.</p></li>
 </ul>
 </dd>
 </dl>
@@ -54,20 +54,20 @@ If it is not provided, the provider project is used.</p></li>
 <dl class="attribute">
 <dt id="pulumi_gcp.serviceusage.ConsumerQuotaOverride.force">
 <code class="sig-name descname">force</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.serviceusage.ConsumerQuotaOverride.force" title="Permalink to this definition">¶</a></dt>
-<dd><p>If the new quota would decrease the existing quota by more than 10%, the request is rejected. If ‘force’ is ‘true’, that
-safety check is ignored.</p>
+<dd><p>If the new quota would decrease the existing quota by more than 10%, the request is rejected.
+If <code class="docutils literal notranslate"><span class="pre">force</span></code> is <code class="docutils literal notranslate"><span class="pre">true</span></code>, that safety check is ignored.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_gcp.serviceusage.ConsumerQuotaOverride.limit">
 <code class="sig-name descname">limit</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.serviceusage.ConsumerQuotaOverride.limit" title="Permalink to this definition">¶</a></dt>
-<dd><p>The limit on the metric, e.g. ‘/project/region’.</p>
+<dd><p>The limit on the metric, e.g. <code class="docutils literal notranslate"><span class="pre">/project/region</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_gcp.serviceusage.ConsumerQuotaOverride.metric">
 <code class="sig-name descname">metric</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.serviceusage.ConsumerQuotaOverride.metric" title="Permalink to this definition">¶</a></dt>
-<dd><p>The metric that should be limited, e.g. ‘compute.googleapis.com/cpus’.</p>
+<dd><p>The metric that should be limited, e.g. <code class="docutils literal notranslate"><span class="pre">compute.googleapis.com/cpus</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -92,7 +92,7 @@ If it is not provided, the provider project is used.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.serviceusage.ConsumerQuotaOverride.service">
 <code class="sig-name descname">service</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.serviceusage.ConsumerQuotaOverride.service" title="Permalink to this definition">¶</a></dt>
-<dd><p>The service that the metrics belong to, e.g. ‘compute.googleapis.com’.</p>
+<dd><p>The service that the metrics belong to, e.g. <code class="docutils literal notranslate"><span class="pre">compute.googleapis.com</span></code>.</p>
 </dd></dl>
 
 <dl class="method">
@@ -107,15 +107,15 @@ properties used to qualify the lookup.</p>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>dimensions</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – If this map is nonempty, then this override applies only to specific values for dimensions defined in the limit unit.</p></li>
-<li><p><strong>force</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If the new quota would decrease the existing quota by more than 10%, the request is rejected. If ‘force’ is ‘true’, that
-safety check is ignored.</p></li>
-<li><p><strong>limit</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The limit on the metric, e.g. ‘/project/region’.</p></li>
-<li><p><strong>metric</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The metric that should be limited, e.g. ‘compute.googleapis.com/cpus’.</p></li>
+<li><p><strong>force</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If the new quota would decrease the existing quota by more than 10%, the request is rejected.
+If <code class="docutils literal notranslate"><span class="pre">force</span></code> is <code class="docutils literal notranslate"><span class="pre">true</span></code>, that safety check is ignored.</p></li>
+<li><p><strong>limit</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The limit on the metric, e.g. <code class="docutils literal notranslate"><span class="pre">/project/region</span></code>.</p></li>
+<li><p><strong>metric</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The metric that should be limited, e.g. <code class="docutils literal notranslate"><span class="pre">compute.googleapis.com/cpus</span></code>.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The server-generated name of the quota override.</p></li>
 <li><p><strong>override_value</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The overriding quota limit value. Can be any nonnegative integer, or -1 (unlimited quota).</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
-<li><p><strong>service</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The service that the metrics belong to, e.g. ‘compute.googleapis.com’.</p></li>
+<li><p><strong>service</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The service that the metrics belong to, e.g. <code class="docutils literal notranslate"><span class="pre">compute.googleapis.com</span></code>.</p></li>
 </ul>
 </dd>
 </dl>

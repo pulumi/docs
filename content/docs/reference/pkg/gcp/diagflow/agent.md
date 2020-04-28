@@ -1,7 +1,8 @@
 
 ---
 title: "Agent"
-block_external_search_index: true
+title_tag: "Resource Agent | Module diagflow | Package GCP"
+meta_desc: "Explore the Agent resource of the diagflow module, including examples, input properties, output properties, lookup functions, and supporting types. A Dialogflow agent is a virtual agent that handles conversations with your end-users. It is a natural language"
 ---
 
 
@@ -58,7 +59,7 @@ const fullAgent = new gcp.diagflow.Agent("full_agent", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Agent</span><span class="p">(resource_name, opts=None, </span>api_version=None<span class="p">, </span>avatar_uri=None<span class="p">, </span>classification_threshold=None<span class="p">, </span>default_language_code=None<span class="p">, </span>description=None<span class="p">, </span>display_name=None<span class="p">, </span>enable_logging=None<span class="p">, </span>match_mode=None<span class="p">, </span>project=None<span class="p">, </span>supported_language_codes=None<span class="p">, </span>tier=None<span class="p">, </span>time_zone=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Agent</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>api_version=None<span class="p">, </span>avatar_uri=None<span class="p">, </span>classification_threshold=None<span class="p">, </span>default_language_code=None<span class="p">, </span>description=None<span class="p">, </span>display_name=None<span class="p">, </span>enable_logging=None<span class="p">, </span>match_mode=None<span class="p">, </span>project=None<span class="p">, </span>supported_language_codes=None<span class="p">, </span>tier=None<span class="p">, </span>time_zone=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -236,9 +237,8 @@ The Agent resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The default language of the agent as a language tag. [See Language
-Support](https://cloud.google.com/dialogflow/docs/reference/language) for a list of the currently supported language
-codes. This field cannot be updated after creation.
+    <dd>{{% md %}}The default language of the agent as a language tag. [See Language Support](https://cloud.google.com/dialogflow/docs/reference/language)
+for a list of the currently supported language codes. This field cannot be updated after creation.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -266,9 +266,12 @@ Europe/Paris.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}API version displayed in Dialogflow console. If not specified, V2 API is assumed. Clients are free to query different
-service endpoints for different API versions. However, bots connectors and webhook calls will follow the specified API
-version. * API_VERSION_V1: Legacy V1 API. * API_VERSION_V2: V2 API. * API_VERSION_V2_BETA_1: V2beta1 API.
+    <dd>{{% md %}}API version displayed in Dialogflow console. If not specified, V2 API is assumed. Clients are free to query
+different service endpoints for different API versions. However, bots connectors and webhook calls will follow
+the specified API version.
+* API_VERSION_V1: Legacy V1 API.
+* API_VERSION_V2: V2 API.
+* API_VERSION_V2_BETA_1: V2beta1 API.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -277,9 +280,9 @@ version. * API_VERSION_V1: Legacy V1 API. * API_VERSION_V2: V2 API. * API_VERSIO
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The URI of the agent's avatar, which are used throughout the Dialogflow console. When an image URL is entered into this
-field, the Dialogflow will save the image in the backend. The address of the backend image returned from the API will be
-shown in the [avatarUriBackend] field.
+    <dd>{{% md %}}The URI of the agent's avatar, which are used throughout the Dialogflow console. When an image URL is entered
+into this field, the Dialogflow will save the image in the backend. The address of the backend image returned
+from the API will be shown in the [avatarUriBackend] field.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -288,10 +291,11 @@ shown in the [avatarUriBackend] field.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
-    <dd>{{% md %}}To filter out false positive results and still get variety in matched natural language inputs for your agent, you can
-tune the machine learning classification threshold. If the returned score value is less than the threshold value, then a
-fallback intent will be triggered or, if there are no fallback intents defined, no intent will be triggered. The score
-values range from 0.0 (completely uncertain) to 1.0 (completely certain). If set to 0.0, the default of 0.3 is used.
+    <dd>{{% md %}}To filter out false positive results and still get variety in matched natural language inputs for your agent,
+you can tune the machine learning classification threshold. If the returned score value is less than the threshold
+value, then a fallback intent will be triggered or, if there are no fallback intents defined, no intent will be
+triggered. The score values range from 0.0 (completely uncertain) to 1.0 (completely certain). If set to 0.0, the
+default of 0.3 is used.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -318,9 +322,11 @@ values range from 0.0 (completely uncertain) to 1.0 (completely certain). If set
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Determines how intents are detected from user queries. * MATCH_MODE_HYBRID: Best for agents with a small number of
-examples in intents and/or wide use of templates syntax and composite entities. * MATCH_MODE_ML_ONLY: Can be used for
-agents with a large number of examples in intents, especially the ones using @sys.any or very large developer entities.
+    <dd>{{% md %}}Determines how intents are detected from user queries.
+* MATCH_MODE_HYBRID: Best for agents with a small number of examples in intents and/or wide use of templates
+syntax and composite entities.
+* MATCH_MODE_ML_ONLY: Can be used for agents with a large number of examples in intents, especially the ones
+using @sys.any or very large developer entities.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -348,10 +354,12 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The agent tier. If not specified, TIER_STANDARD is assumed. * TIER_STANDARD: Standard tier. * TIER_ENTERPRISE:
-Enterprise tier (Essentials). * TIER_ENTERPRISE_PLUS: Enterprise tier (Plus). NOTE: Due to consistency issues, the
-provider will not read this field from the API. Drift is possible between the Terraform state and Dialogflow if the
-agent tier is changed outside of Terraform.
+    <dd>{{% md %}}The agent tier. If not specified, TIER_STANDARD is assumed.
+* TIER_STANDARD: Standard tier.
+* TIER_ENTERPRISE: Enterprise tier (Essentials).
+* TIER_ENTERPRISE_PLUS: Enterprise tier (Plus).
+NOTE: Due to consistency issues, the provider will not read this field from the API. Drift is possible between
+the the provider state and Dialogflow if the agent tier is changed outside of the provider.
 {{% /md %}}</dd>
 
 </dl>
@@ -367,9 +375,8 @@ agent tier is changed outside of Terraform.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The default language of the agent as a language tag. [See Language
-Support](https://cloud.google.com/dialogflow/docs/reference/language) for a list of the currently supported language
-codes. This field cannot be updated after creation.
+    <dd>{{% md %}}The default language of the agent as a language tag. [See Language Support](https://cloud.google.com/dialogflow/docs/reference/language)
+for a list of the currently supported language codes. This field cannot be updated after creation.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -397,9 +404,12 @@ Europe/Paris.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}API version displayed in Dialogflow console. If not specified, V2 API is assumed. Clients are free to query different
-service endpoints for different API versions. However, bots connectors and webhook calls will follow the specified API
-version. * API_VERSION_V1: Legacy V1 API. * API_VERSION_V2: V2 API. * API_VERSION_V2_BETA_1: V2beta1 API.
+    <dd>{{% md %}}API version displayed in Dialogflow console. If not specified, V2 API is assumed. Clients are free to query
+different service endpoints for different API versions. However, bots connectors and webhook calls will follow
+the specified API version.
+* API_VERSION_V1: Legacy V1 API.
+* API_VERSION_V2: V2 API.
+* API_VERSION_V2_BETA_1: V2beta1 API.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -408,9 +418,9 @@ version. * API_VERSION_V1: Legacy V1 API. * API_VERSION_V2: V2 API. * API_VERSIO
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The URI of the agent's avatar, which are used throughout the Dialogflow console. When an image URL is entered into this
-field, the Dialogflow will save the image in the backend. The address of the backend image returned from the API will be
-shown in the [avatarUriBackend] field.
+    <dd>{{% md %}}The URI of the agent's avatar, which are used throughout the Dialogflow console. When an image URL is entered
+into this field, the Dialogflow will save the image in the backend. The address of the backend image returned
+from the API will be shown in the [avatarUriBackend] field.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -419,10 +429,11 @@ shown in the [avatarUriBackend] field.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
-    <dd>{{% md %}}To filter out false positive results and still get variety in matched natural language inputs for your agent, you can
-tune the machine learning classification threshold. If the returned score value is less than the threshold value, then a
-fallback intent will be triggered or, if there are no fallback intents defined, no intent will be triggered. The score
-values range from 0.0 (completely uncertain) to 1.0 (completely certain). If set to 0.0, the default of 0.3 is used.
+    <dd>{{% md %}}To filter out false positive results and still get variety in matched natural language inputs for your agent,
+you can tune the machine learning classification threshold. If the returned score value is less than the threshold
+value, then a fallback intent will be triggered or, if there are no fallback intents defined, no intent will be
+triggered. The score values range from 0.0 (completely uncertain) to 1.0 (completely certain). If set to 0.0, the
+default of 0.3 is used.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -449,9 +460,11 @@ values range from 0.0 (completely uncertain) to 1.0 (completely certain). If set
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Determines how intents are detected from user queries. * MATCH_MODE_HYBRID: Best for agents with a small number of
-examples in intents and/or wide use of templates syntax and composite entities. * MATCH_MODE_ML_ONLY: Can be used for
-agents with a large number of examples in intents, especially the ones using @sys.any or very large developer entities.
+    <dd>{{% md %}}Determines how intents are detected from user queries.
+* MATCH_MODE_HYBRID: Best for agents with a small number of examples in intents and/or wide use of templates
+syntax and composite entities.
+* MATCH_MODE_ML_ONLY: Can be used for agents with a large number of examples in intents, especially the ones
+using @sys.any or very large developer entities.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -479,10 +492,12 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The agent tier. If not specified, TIER_STANDARD is assumed. * TIER_STANDARD: Standard tier. * TIER_ENTERPRISE:
-Enterprise tier (Essentials). * TIER_ENTERPRISE_PLUS: Enterprise tier (Plus). NOTE: Due to consistency issues, the
-provider will not read this field from the API. Drift is possible between the Terraform state and Dialogflow if the
-agent tier is changed outside of Terraform.
+    <dd>{{% md %}}The agent tier. If not specified, TIER_STANDARD is assumed.
+* TIER_STANDARD: Standard tier.
+* TIER_ENTERPRISE: Enterprise tier (Essentials).
+* TIER_ENTERPRISE_PLUS: Enterprise tier (Plus).
+NOTE: Due to consistency issues, the provider will not read this field from the API. Drift is possible between
+the the provider state and Dialogflow if the agent tier is changed outside of the provider.
 {{% /md %}}</dd>
 
 </dl>
@@ -498,9 +513,8 @@ agent tier is changed outside of Terraform.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The default language of the agent as a language tag. [See Language
-Support](https://cloud.google.com/dialogflow/docs/reference/language) for a list of the currently supported language
-codes. This field cannot be updated after creation.
+    <dd>{{% md %}}The default language of the agent as a language tag. [See Language Support](https://cloud.google.com/dialogflow/docs/reference/language)
+for a list of the currently supported language codes. This field cannot be updated after creation.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -528,9 +542,12 @@ Europe/Paris.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}API version displayed in Dialogflow console. If not specified, V2 API is assumed. Clients are free to query different
-service endpoints for different API versions. However, bots connectors and webhook calls will follow the specified API
-version. * API_VERSION_V1: Legacy V1 API. * API_VERSION_V2: V2 API. * API_VERSION_V2_BETA_1: V2beta1 API.
+    <dd>{{% md %}}API version displayed in Dialogflow console. If not specified, V2 API is assumed. Clients are free to query
+different service endpoints for different API versions. However, bots connectors and webhook calls will follow
+the specified API version.
+* API_VERSION_V1: Legacy V1 API.
+* API_VERSION_V2: V2 API.
+* API_VERSION_V2_BETA_1: V2beta1 API.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -539,9 +556,9 @@ version. * API_VERSION_V1: Legacy V1 API. * API_VERSION_V2: V2 API. * API_VERSIO
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The URI of the agent's avatar, which are used throughout the Dialogflow console. When an image URL is entered into this
-field, the Dialogflow will save the image in the backend. The address of the backend image returned from the API will be
-shown in the [avatarUriBackend] field.
+    <dd>{{% md %}}The URI of the agent's avatar, which are used throughout the Dialogflow console. When an image URL is entered
+into this field, the Dialogflow will save the image in the backend. The address of the backend image returned
+from the API will be shown in the [avatarUriBackend] field.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -550,10 +567,11 @@ shown in the [avatarUriBackend] field.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
-    <dd>{{% md %}}To filter out false positive results and still get variety in matched natural language inputs for your agent, you can
-tune the machine learning classification threshold. If the returned score value is less than the threshold value, then a
-fallback intent will be triggered or, if there are no fallback intents defined, no intent will be triggered. The score
-values range from 0.0 (completely uncertain) to 1.0 (completely certain). If set to 0.0, the default of 0.3 is used.
+    <dd>{{% md %}}To filter out false positive results and still get variety in matched natural language inputs for your agent,
+you can tune the machine learning classification threshold. If the returned score value is less than the threshold
+value, then a fallback intent will be triggered or, if there are no fallback intents defined, no intent will be
+triggered. The score values range from 0.0 (completely uncertain) to 1.0 (completely certain). If set to 0.0, the
+default of 0.3 is used.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -580,9 +598,11 @@ values range from 0.0 (completely uncertain) to 1.0 (completely certain). If set
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Determines how intents are detected from user queries. * MATCH_MODE_HYBRID: Best for agents with a small number of
-examples in intents and/or wide use of templates syntax and composite entities. * MATCH_MODE_ML_ONLY: Can be used for
-agents with a large number of examples in intents, especially the ones using @sys.any or very large developer entities.
+    <dd>{{% md %}}Determines how intents are detected from user queries.
+* MATCH_MODE_HYBRID: Best for agents with a small number of examples in intents and/or wide use of templates
+syntax and composite entities.
+* MATCH_MODE_ML_ONLY: Can be used for agents with a large number of examples in intents, especially the ones
+using @sys.any or very large developer entities.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -610,10 +630,12 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The agent tier. If not specified, TIER_STANDARD is assumed. * TIER_STANDARD: Standard tier. * TIER_ENTERPRISE:
-Enterprise tier (Essentials). * TIER_ENTERPRISE_PLUS: Enterprise tier (Plus). NOTE: Due to consistency issues, the
-provider will not read this field from the API. Drift is possible between the Terraform state and Dialogflow if the
-agent tier is changed outside of Terraform.
+    <dd>{{% md %}}The agent tier. If not specified, TIER_STANDARD is assumed.
+* TIER_STANDARD: Standard tier.
+* TIER_ENTERPRISE: Enterprise tier (Essentials).
+* TIER_ENTERPRISE_PLUS: Enterprise tier (Plus).
+NOTE: Due to consistency issues, the provider will not read this field from the API. Drift is possible between
+the the provider state and Dialogflow if the agent tier is changed outside of the provider.
 {{% /md %}}</dd>
 
 </dl>
@@ -629,9 +651,8 @@ agent tier is changed outside of Terraform.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The default language of the agent as a language tag. [See Language
-Support](https://cloud.google.com/dialogflow/docs/reference/language) for a list of the currently supported language
-codes. This field cannot be updated after creation.
+    <dd>{{% md %}}The default language of the agent as a language tag. [See Language Support](https://cloud.google.com/dialogflow/docs/reference/language)
+for a list of the currently supported language codes. This field cannot be updated after creation.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -659,9 +680,12 @@ Europe/Paris.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}API version displayed in Dialogflow console. If not specified, V2 API is assumed. Clients are free to query different
-service endpoints for different API versions. However, bots connectors and webhook calls will follow the specified API
-version. * API_VERSION_V1: Legacy V1 API. * API_VERSION_V2: V2 API. * API_VERSION_V2_BETA_1: V2beta1 API.
+    <dd>{{% md %}}API version displayed in Dialogflow console. If not specified, V2 API is assumed. Clients are free to query
+different service endpoints for different API versions. However, bots connectors and webhook calls will follow
+the specified API version.
+* API_VERSION_V1: Legacy V1 API.
+* API_VERSION_V2: V2 API.
+* API_VERSION_V2_BETA_1: V2beta1 API.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -670,9 +694,9 @@ version. * API_VERSION_V1: Legacy V1 API. * API_VERSION_V2: V2 API. * API_VERSIO
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The URI of the agent's avatar, which are used throughout the Dialogflow console. When an image URL is entered into this
-field, the Dialogflow will save the image in the backend. The address of the backend image returned from the API will be
-shown in the [avatarUriBackend] field.
+    <dd>{{% md %}}The URI of the agent's avatar, which are used throughout the Dialogflow console. When an image URL is entered
+into this field, the Dialogflow will save the image in the backend. The address of the backend image returned
+from the API will be shown in the [avatarUriBackend] field.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -681,10 +705,11 @@ shown in the [avatarUriBackend] field.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}To filter out false positive results and still get variety in matched natural language inputs for your agent, you can
-tune the machine learning classification threshold. If the returned score value is less than the threshold value, then a
-fallback intent will be triggered or, if there are no fallback intents defined, no intent will be triggered. The score
-values range from 0.0 (completely uncertain) to 1.0 (completely certain). If set to 0.0, the default of 0.3 is used.
+    <dd>{{% md %}}To filter out false positive results and still get variety in matched natural language inputs for your agent,
+you can tune the machine learning classification threshold. If the returned score value is less than the threshold
+value, then a fallback intent will be triggered or, if there are no fallback intents defined, no intent will be
+triggered. The score values range from 0.0 (completely uncertain) to 1.0 (completely certain). If set to 0.0, the
+default of 0.3 is used.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -711,9 +736,11 @@ values range from 0.0 (completely uncertain) to 1.0 (completely certain). If set
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Determines how intents are detected from user queries. * MATCH_MODE_HYBRID: Best for agents with a small number of
-examples in intents and/or wide use of templates syntax and composite entities. * MATCH_MODE_ML_ONLY: Can be used for
-agents with a large number of examples in intents, especially the ones using @sys.any or very large developer entities.
+    <dd>{{% md %}}Determines how intents are detected from user queries.
+* MATCH_MODE_HYBRID: Best for agents with a small number of examples in intents and/or wide use of templates
+syntax and composite entities.
+* MATCH_MODE_ML_ONLY: Can be used for agents with a large number of examples in intents, especially the ones
+using @sys.any or very large developer entities.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -741,10 +768,12 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The agent tier. If not specified, TIER_STANDARD is assumed. * TIER_STANDARD: Standard tier. * TIER_ENTERPRISE:
-Enterprise tier (Essentials). * TIER_ENTERPRISE_PLUS: Enterprise tier (Plus). NOTE: Due to consistency issues, the
-provider will not read this field from the API. Drift is possible between the Terraform state and Dialogflow if the
-agent tier is changed outside of Terraform.
+    <dd>{{% md %}}The agent tier. If not specified, TIER_STANDARD is assumed.
+* TIER_STANDARD: Standard tier.
+* TIER_ENTERPRISE: Enterprise tier (Essentials).
+* TIER_ENTERPRISE_PLUS: Enterprise tier (Plus).
+NOTE: Due to consistency issues, the provider will not read this field from the API. Drift is possible between
+the the provider state and Dialogflow if the agent tier is changed outside of the provider.
 {{% /md %}}</dd>
 
 </dl>
@@ -997,9 +1026,12 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}API version displayed in Dialogflow console. If not specified, V2 API is assumed. Clients are free to query different
-service endpoints for different API versions. However, bots connectors and webhook calls will follow the specified API
-version. * API_VERSION_V1: Legacy V1 API. * API_VERSION_V2: V2 API. * API_VERSION_V2_BETA_1: V2beta1 API.
+    <dd>{{% md %}}API version displayed in Dialogflow console. If not specified, V2 API is assumed. Clients are free to query
+different service endpoints for different API versions. However, bots connectors and webhook calls will follow
+the specified API version.
+* API_VERSION_V1: Legacy V1 API.
+* API_VERSION_V2: V2 API.
+* API_VERSION_V2_BETA_1: V2beta1 API.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1008,9 +1040,9 @@ version. * API_VERSION_V1: Legacy V1 API. * API_VERSION_V2: V2 API. * API_VERSIO
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The URI of the agent's avatar, which are used throughout the Dialogflow console. When an image URL is entered into this
-field, the Dialogflow will save the image in the backend. The address of the backend image returned from the API will be
-shown in the [avatarUriBackend] field.
+    <dd>{{% md %}}The URI of the agent's avatar, which are used throughout the Dialogflow console. When an image URL is entered
+into this field, the Dialogflow will save the image in the backend. The address of the backend image returned
+from the API will be shown in the [avatarUriBackend] field.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1029,10 +1061,11 @@ shown in the [avatarUriBackend] field.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
-    <dd>{{% md %}}To filter out false positive results and still get variety in matched natural language inputs for your agent, you can
-tune the machine learning classification threshold. If the returned score value is less than the threshold value, then a
-fallback intent will be triggered or, if there are no fallback intents defined, no intent will be triggered. The score
-values range from 0.0 (completely uncertain) to 1.0 (completely certain). If set to 0.0, the default of 0.3 is used.
+    <dd>{{% md %}}To filter out false positive results and still get variety in matched natural language inputs for your agent,
+you can tune the machine learning classification threshold. If the returned score value is less than the threshold
+value, then a fallback intent will be triggered or, if there are no fallback intents defined, no intent will be
+triggered. The score values range from 0.0 (completely uncertain) to 1.0 (completely certain). If set to 0.0, the
+default of 0.3 is used.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1041,9 +1074,8 @@ values range from 0.0 (completely uncertain) to 1.0 (completely certain). If set
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The default language of the agent as a language tag. [See Language
-Support](https://cloud.google.com/dialogflow/docs/reference/language) for a list of the currently supported language
-codes. This field cannot be updated after creation.
+    <dd>{{% md %}}The default language of the agent as a language tag. [See Language Support](https://cloud.google.com/dialogflow/docs/reference/language)
+for a list of the currently supported language codes. This field cannot be updated after creation.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1079,9 +1111,11 @@ codes. This field cannot be updated after creation.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Determines how intents are detected from user queries. * MATCH_MODE_HYBRID: Best for agents with a small number of
-examples in intents and/or wide use of templates syntax and composite entities. * MATCH_MODE_ML_ONLY: Can be used for
-agents with a large number of examples in intents, especially the ones using @sys.any or very large developer entities.
+    <dd>{{% md %}}Determines how intents are detected from user queries.
+* MATCH_MODE_HYBRID: Best for agents with a small number of examples in intents and/or wide use of templates
+syntax and composite entities.
+* MATCH_MODE_ML_ONLY: Can be used for agents with a large number of examples in intents, especially the ones
+using @sys.any or very large developer entities.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1109,10 +1143,12 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The agent tier. If not specified, TIER_STANDARD is assumed. * TIER_STANDARD: Standard tier. * TIER_ENTERPRISE:
-Enterprise tier (Essentials). * TIER_ENTERPRISE_PLUS: Enterprise tier (Plus). NOTE: Due to consistency issues, the
-provider will not read this field from the API. Drift is possible between the Terraform state and Dialogflow if the
-agent tier is changed outside of Terraform.
+    <dd>{{% md %}}The agent tier. If not specified, TIER_STANDARD is assumed.
+* TIER_STANDARD: Standard tier.
+* TIER_ENTERPRISE: Enterprise tier (Essentials).
+* TIER_ENTERPRISE_PLUS: Enterprise tier (Plus).
+NOTE: Due to consistency issues, the provider will not read this field from the API. Drift is possible between
+the the provider state and Dialogflow if the agent tier is changed outside of the provider.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1138,9 +1174,12 @@ Europe/Paris.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}API version displayed in Dialogflow console. If not specified, V2 API is assumed. Clients are free to query different
-service endpoints for different API versions. However, bots connectors and webhook calls will follow the specified API
-version. * API_VERSION_V1: Legacy V1 API. * API_VERSION_V2: V2 API. * API_VERSION_V2_BETA_1: V2beta1 API.
+    <dd>{{% md %}}API version displayed in Dialogflow console. If not specified, V2 API is assumed. Clients are free to query
+different service endpoints for different API versions. However, bots connectors and webhook calls will follow
+the specified API version.
+* API_VERSION_V1: Legacy V1 API.
+* API_VERSION_V2: V2 API.
+* API_VERSION_V2_BETA_1: V2beta1 API.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1149,9 +1188,9 @@ version. * API_VERSION_V1: Legacy V1 API. * API_VERSION_V2: V2 API. * API_VERSIO
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The URI of the agent's avatar, which are used throughout the Dialogflow console. When an image URL is entered into this
-field, the Dialogflow will save the image in the backend. The address of the backend image returned from the API will be
-shown in the [avatarUriBackend] field.
+    <dd>{{% md %}}The URI of the agent's avatar, which are used throughout the Dialogflow console. When an image URL is entered
+into this field, the Dialogflow will save the image in the backend. The address of the backend image returned
+from the API will be shown in the [avatarUriBackend] field.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1170,10 +1209,11 @@ shown in the [avatarUriBackend] field.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
-    <dd>{{% md %}}To filter out false positive results and still get variety in matched natural language inputs for your agent, you can
-tune the machine learning classification threshold. If the returned score value is less than the threshold value, then a
-fallback intent will be triggered or, if there are no fallback intents defined, no intent will be triggered. The score
-values range from 0.0 (completely uncertain) to 1.0 (completely certain). If set to 0.0, the default of 0.3 is used.
+    <dd>{{% md %}}To filter out false positive results and still get variety in matched natural language inputs for your agent,
+you can tune the machine learning classification threshold. If the returned score value is less than the threshold
+value, then a fallback intent will be triggered or, if there are no fallback intents defined, no intent will be
+triggered. The score values range from 0.0 (completely uncertain) to 1.0 (completely certain). If set to 0.0, the
+default of 0.3 is used.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1182,9 +1222,8 @@ values range from 0.0 (completely uncertain) to 1.0 (completely certain). If set
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The default language of the agent as a language tag. [See Language
-Support](https://cloud.google.com/dialogflow/docs/reference/language) for a list of the currently supported language
-codes. This field cannot be updated after creation.
+    <dd>{{% md %}}The default language of the agent as a language tag. [See Language Support](https://cloud.google.com/dialogflow/docs/reference/language)
+for a list of the currently supported language codes. This field cannot be updated after creation.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1220,9 +1259,11 @@ codes. This field cannot be updated after creation.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Determines how intents are detected from user queries. * MATCH_MODE_HYBRID: Best for agents with a small number of
-examples in intents and/or wide use of templates syntax and composite entities. * MATCH_MODE_ML_ONLY: Can be used for
-agents with a large number of examples in intents, especially the ones using @sys.any or very large developer entities.
+    <dd>{{% md %}}Determines how intents are detected from user queries.
+* MATCH_MODE_HYBRID: Best for agents with a small number of examples in intents and/or wide use of templates
+syntax and composite entities.
+* MATCH_MODE_ML_ONLY: Can be used for agents with a large number of examples in intents, especially the ones
+using @sys.any or very large developer entities.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1250,10 +1291,12 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The agent tier. If not specified, TIER_STANDARD is assumed. * TIER_STANDARD: Standard tier. * TIER_ENTERPRISE:
-Enterprise tier (Essentials). * TIER_ENTERPRISE_PLUS: Enterprise tier (Plus). NOTE: Due to consistency issues, the
-provider will not read this field from the API. Drift is possible between the Terraform state and Dialogflow if the
-agent tier is changed outside of Terraform.
+    <dd>{{% md %}}The agent tier. If not specified, TIER_STANDARD is assumed.
+* TIER_STANDARD: Standard tier.
+* TIER_ENTERPRISE: Enterprise tier (Essentials).
+* TIER_ENTERPRISE_PLUS: Enterprise tier (Plus).
+NOTE: Due to consistency issues, the provider will not read this field from the API. Drift is possible between
+the the provider state and Dialogflow if the agent tier is changed outside of the provider.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1279,9 +1322,12 @@ Europe/Paris.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}API version displayed in Dialogflow console. If not specified, V2 API is assumed. Clients are free to query different
-service endpoints for different API versions. However, bots connectors and webhook calls will follow the specified API
-version. * API_VERSION_V1: Legacy V1 API. * API_VERSION_V2: V2 API. * API_VERSION_V2_BETA_1: V2beta1 API.
+    <dd>{{% md %}}API version displayed in Dialogflow console. If not specified, V2 API is assumed. Clients are free to query
+different service endpoints for different API versions. However, bots connectors and webhook calls will follow
+the specified API version.
+* API_VERSION_V1: Legacy V1 API.
+* API_VERSION_V2: V2 API.
+* API_VERSION_V2_BETA_1: V2beta1 API.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1290,9 +1336,9 @@ version. * API_VERSION_V1: Legacy V1 API. * API_VERSION_V2: V2 API. * API_VERSIO
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The URI of the agent's avatar, which are used throughout the Dialogflow console. When an image URL is entered into this
-field, the Dialogflow will save the image in the backend. The address of the backend image returned from the API will be
-shown in the [avatarUriBackend] field.
+    <dd>{{% md %}}The URI of the agent's avatar, which are used throughout the Dialogflow console. When an image URL is entered
+into this field, the Dialogflow will save the image in the backend. The address of the backend image returned
+from the API will be shown in the [avatarUriBackend] field.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1311,10 +1357,11 @@ shown in the [avatarUriBackend] field.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
-    <dd>{{% md %}}To filter out false positive results and still get variety in matched natural language inputs for your agent, you can
-tune the machine learning classification threshold. If the returned score value is less than the threshold value, then a
-fallback intent will be triggered or, if there are no fallback intents defined, no intent will be triggered. The score
-values range from 0.0 (completely uncertain) to 1.0 (completely certain). If set to 0.0, the default of 0.3 is used.
+    <dd>{{% md %}}To filter out false positive results and still get variety in matched natural language inputs for your agent,
+you can tune the machine learning classification threshold. If the returned score value is less than the threshold
+value, then a fallback intent will be triggered or, if there are no fallback intents defined, no intent will be
+triggered. The score values range from 0.0 (completely uncertain) to 1.0 (completely certain). If set to 0.0, the
+default of 0.3 is used.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1323,9 +1370,8 @@ values range from 0.0 (completely uncertain) to 1.0 (completely certain). If set
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The default language of the agent as a language tag. [See Language
-Support](https://cloud.google.com/dialogflow/docs/reference/language) for a list of the currently supported language
-codes. This field cannot be updated after creation.
+    <dd>{{% md %}}The default language of the agent as a language tag. [See Language Support](https://cloud.google.com/dialogflow/docs/reference/language)
+for a list of the currently supported language codes. This field cannot be updated after creation.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1361,9 +1407,11 @@ codes. This field cannot be updated after creation.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Determines how intents are detected from user queries. * MATCH_MODE_HYBRID: Best for agents with a small number of
-examples in intents and/or wide use of templates syntax and composite entities. * MATCH_MODE_ML_ONLY: Can be used for
-agents with a large number of examples in intents, especially the ones using @sys.any or very large developer entities.
+    <dd>{{% md %}}Determines how intents are detected from user queries.
+* MATCH_MODE_HYBRID: Best for agents with a small number of examples in intents and/or wide use of templates
+syntax and composite entities.
+* MATCH_MODE_ML_ONLY: Can be used for agents with a large number of examples in intents, especially the ones
+using @sys.any or very large developer entities.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1391,10 +1439,12 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The agent tier. If not specified, TIER_STANDARD is assumed. * TIER_STANDARD: Standard tier. * TIER_ENTERPRISE:
-Enterprise tier (Essentials). * TIER_ENTERPRISE_PLUS: Enterprise tier (Plus). NOTE: Due to consistency issues, the
-provider will not read this field from the API. Drift is possible between the Terraform state and Dialogflow if the
-agent tier is changed outside of Terraform.
+    <dd>{{% md %}}The agent tier. If not specified, TIER_STANDARD is assumed.
+* TIER_STANDARD: Standard tier.
+* TIER_ENTERPRISE: Enterprise tier (Essentials).
+* TIER_ENTERPRISE_PLUS: Enterprise tier (Plus).
+NOTE: Due to consistency issues, the provider will not read this field from the API. Drift is possible between
+the the provider state and Dialogflow if the agent tier is changed outside of the provider.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1420,9 +1470,12 @@ Europe/Paris.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}API version displayed in Dialogflow console. If not specified, V2 API is assumed. Clients are free to query different
-service endpoints for different API versions. However, bots connectors and webhook calls will follow the specified API
-version. * API_VERSION_V1: Legacy V1 API. * API_VERSION_V2: V2 API. * API_VERSION_V2_BETA_1: V2beta1 API.
+    <dd>{{% md %}}API version displayed in Dialogflow console. If not specified, V2 API is assumed. Clients are free to query
+different service endpoints for different API versions. However, bots connectors and webhook calls will follow
+the specified API version.
+* API_VERSION_V1: Legacy V1 API.
+* API_VERSION_V2: V2 API.
+* API_VERSION_V2_BETA_1: V2beta1 API.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1431,9 +1484,9 @@ version. * API_VERSION_V1: Legacy V1 API. * API_VERSION_V2: V2 API. * API_VERSIO
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The URI of the agent's avatar, which are used throughout the Dialogflow console. When an image URL is entered into this
-field, the Dialogflow will save the image in the backend. The address of the backend image returned from the API will be
-shown in the [avatarUriBackend] field.
+    <dd>{{% md %}}The URI of the agent's avatar, which are used throughout the Dialogflow console. When an image URL is entered
+into this field, the Dialogflow will save the image in the backend. The address of the backend image returned
+from the API will be shown in the [avatarUriBackend] field.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1452,10 +1505,11 @@ shown in the [avatarUriBackend] field.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}To filter out false positive results and still get variety in matched natural language inputs for your agent, you can
-tune the machine learning classification threshold. If the returned score value is less than the threshold value, then a
-fallback intent will be triggered or, if there are no fallback intents defined, no intent will be triggered. The score
-values range from 0.0 (completely uncertain) to 1.0 (completely certain). If set to 0.0, the default of 0.3 is used.
+    <dd>{{% md %}}To filter out false positive results and still get variety in matched natural language inputs for your agent,
+you can tune the machine learning classification threshold. If the returned score value is less than the threshold
+value, then a fallback intent will be triggered or, if there are no fallback intents defined, no intent will be
+triggered. The score values range from 0.0 (completely uncertain) to 1.0 (completely certain). If set to 0.0, the
+default of 0.3 is used.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1464,9 +1518,8 @@ values range from 0.0 (completely uncertain) to 1.0 (completely certain). If set
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The default language of the agent as a language tag. [See Language
-Support](https://cloud.google.com/dialogflow/docs/reference/language) for a list of the currently supported language
-codes. This field cannot be updated after creation.
+    <dd>{{% md %}}The default language of the agent as a language tag. [See Language Support](https://cloud.google.com/dialogflow/docs/reference/language)
+for a list of the currently supported language codes. This field cannot be updated after creation.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1502,9 +1555,11 @@ codes. This field cannot be updated after creation.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Determines how intents are detected from user queries. * MATCH_MODE_HYBRID: Best for agents with a small number of
-examples in intents and/or wide use of templates syntax and composite entities. * MATCH_MODE_ML_ONLY: Can be used for
-agents with a large number of examples in intents, especially the ones using @sys.any or very large developer entities.
+    <dd>{{% md %}}Determines how intents are detected from user queries.
+* MATCH_MODE_HYBRID: Best for agents with a small number of examples in intents and/or wide use of templates
+syntax and composite entities.
+* MATCH_MODE_ML_ONLY: Can be used for agents with a large number of examples in intents, especially the ones
+using @sys.any or very large developer entities.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1532,10 +1587,12 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The agent tier. If not specified, TIER_STANDARD is assumed. * TIER_STANDARD: Standard tier. * TIER_ENTERPRISE:
-Enterprise tier (Essentials). * TIER_ENTERPRISE_PLUS: Enterprise tier (Plus). NOTE: Due to consistency issues, the
-provider will not read this field from the API. Drift is possible between the Terraform state and Dialogflow if the
-agent tier is changed outside of Terraform.
+    <dd>{{% md %}}The agent tier. If not specified, TIER_STANDARD is assumed.
+* TIER_STANDARD: Standard tier.
+* TIER_ENTERPRISE: Enterprise tier (Essentials).
+* TIER_ENTERPRISE_PLUS: Enterprise tier (Plus).
+NOTE: Due to consistency issues, the provider will not read this field from the API. Drift is possible between
+the the provider state and Dialogflow if the agent tier is changed outside of the provider.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1567,8 +1624,7 @@ Europe/Paris.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 
