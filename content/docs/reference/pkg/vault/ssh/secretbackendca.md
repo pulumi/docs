@@ -43,7 +43,7 @@ const foo = new vault.ssh.SecretBackendCa("foo", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">SecretBackendCa</span><span class="p">(resource_name, opts=None, </span>backend=None<span class="p">, </span>generate_signing_key=None<span class="p">, </span>private_key=None<span class="p">, </span>public_key=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">SecretBackendCa</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>backend=None<span class="p">, </span>generate_signing_key=None<span class="p">, </span>private_key=None<span class="p">, </span>public_key=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

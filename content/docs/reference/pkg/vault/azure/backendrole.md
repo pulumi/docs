@@ -22,7 +22,7 @@ meta_desc: "Explore the BackendRole resource of the azure module, including exam
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">BackendRole</span><span class="p">(resource_name, opts=None, </span>application_object_id=None<span class="p">, </span>azure_roles=None<span class="p">, </span>backend=None<span class="p">, </span>description=None<span class="p">, </span>max_ttl=None<span class="p">, </span>role=None<span class="p">, </span>ttl=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">BackendRole</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>application_object_id=None<span class="p">, </span>azure_roles=None<span class="p">, </span>backend=None<span class="p">, </span>description=None<span class="p">, </span>max_ttl=None<span class="p">, </span>role=None<span class="p">, </span>ttl=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

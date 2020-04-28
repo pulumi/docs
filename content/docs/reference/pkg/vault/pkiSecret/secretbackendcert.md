@@ -22,7 +22,7 @@ meta_desc: "Explore the SecretBackendCert resource of the pkiSecret module, incl
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">SecretBackendCert</span><span class="p">(resource_name, opts=None, </span>alt_names=None<span class="p">, </span>auto_renew=None<span class="p">, </span>backend=None<span class="p">, </span>common_name=None<span class="p">, </span>exclude_cn_from_sans=None<span class="p">, </span>format=None<span class="p">, </span>ip_sans=None<span class="p">, </span>min_seconds_remaining=None<span class="p">, </span>name=None<span class="p">, </span>other_sans=None<span class="p">, </span>private_key_format=None<span class="p">, </span>ttl=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">SecretBackendCert</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>alt_names=None<span class="p">, </span>auto_renew=None<span class="p">, </span>backend=None<span class="p">, </span>common_name=None<span class="p">, </span>exclude_cn_from_sans=None<span class="p">, </span>format=None<span class="p">, </span>ip_sans=None<span class="p">, </span>min_seconds_remaining=None<span class="p">, </span>name=None<span class="p">, </span>other_sans=None<span class="p">, </span>private_key_format=None<span class="p">, </span>ttl=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
