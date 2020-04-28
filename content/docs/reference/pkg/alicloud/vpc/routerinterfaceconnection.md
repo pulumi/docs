@@ -64,7 +64,7 @@ const barRouterInterfaceConnection = new alicloud.vpc.RouterInterfaceConnection(
 const fooRouterInterfaceConnection = new alicloud.vpc.RouterInterfaceConnection("foo", {
     interfaceId: initiate.id,
     oppositeInterfaceId: opposite.id,
-}, {dependsOn: [barRouterInterfaceConnection]});
+}, { dependsOn: [barRouterInterfaceConnection] });
 ```
 {{% /example %}}
 {{% /examples %}}

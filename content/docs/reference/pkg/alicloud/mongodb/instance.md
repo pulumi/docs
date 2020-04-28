@@ -320,7 +320,6 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Number of replica set nodes. Valid values: [3, 5, 7]
-* `storage_engine` (Optional, ForceNew) Storage engine: WiredTiger or RocksDB. System Default value: WiredTiger.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -356,7 +355,8 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Storage engine: WiredTiger or RocksDB. System Default value: WiredTiger.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -529,7 +529,6 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Number of replica set nodes. Valid values: [3, 5, 7]
-* `storage_engine` (Optional, ForceNew) Storage engine: WiredTiger or RocksDB. System Default value: WiredTiger.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -565,7 +564,8 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Storage engine: WiredTiger or RocksDB. System Default value: WiredTiger.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -738,7 +738,6 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Number of replica set nodes. Valid values: [3, 5, 7]
-* `storage_engine` (Optional, ForceNew) Storage engine: WiredTiger or RocksDB. System Default value: WiredTiger.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -774,7 +773,8 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Storage engine: WiredTiger or RocksDB. System Default value: WiredTiger.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -947,7 +947,6 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Number of replica set nodes. Valid values: [3, 5, 7]
-* `storage_engine` (Optional, ForceNew) Storage engine: WiredTiger or RocksDB. System Default value: WiredTiger.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -983,7 +982,8 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Storage engine: WiredTiger or RocksDB. System Default value: WiredTiger.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1470,7 +1470,6 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Number of replica set nodes. Valid values: [3, 5, 7]
-* `storage_engine` (Optional, ForceNew) Storage engine: WiredTiger or RocksDB. System Default value: WiredTiger.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1524,7 +1523,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Storage engine: WiredTiger or RocksDB. System Default value: WiredTiger.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1706,7 +1706,6 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Number of replica set nodes. Valid values: [3, 5, 7]
-* `storage_engine` (Optional, ForceNew) Storage engine: WiredTiger or RocksDB. System Default value: WiredTiger.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1760,7 +1759,8 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Storage engine: WiredTiger or RocksDB. System Default value: WiredTiger.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1942,7 +1942,6 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Number of replica set nodes. Valid values: [3, 5, 7]
-* `storage_engine` (Optional, ForceNew) Storage engine: WiredTiger or RocksDB. System Default value: WiredTiger.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1996,7 +1995,8 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Storage engine: WiredTiger or RocksDB. System Default value: WiredTiger.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2178,7 +2178,6 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Number of replica set nodes. Valid values: [3, 5, 7]
-* `storage_engine` (Optional, ForceNew) Storage engine: WiredTiger or RocksDB. System Default value: WiredTiger.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2232,7 +2231,8 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Storage engine: WiredTiger or RocksDB. System Default value: WiredTiger.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">

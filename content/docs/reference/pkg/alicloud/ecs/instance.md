@@ -3922,7 +3922,6 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
 - `cloud_essd`: The ESSD cloud disk.
 - `ephemeral_ssd`: The local SSD disk.
 Default to `cloud_efficiency`.
-* `encrypted` -(Optional, Bool, ForceNew) Encrypted the data in this disk.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3949,7 +3948,8 @@ Default to `cloud_efficiency`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-(Optional, Bool, ForceNew) Encrypted the data in this disk.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4012,7 +4012,6 @@ Default to `cloud_efficiency`.
 - `cloud_essd`: The ESSD cloud disk.
 - `ephemeral_ssd`: The local SSD disk.
 Default to `cloud_efficiency`.
-* `encrypted` -(Optional, Bool, ForceNew) Encrypted the data in this disk.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4039,7 +4038,8 @@ Default to `cloud_efficiency`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-(Optional, Bool, ForceNew) Encrypted the data in this disk.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4102,7 +4102,6 @@ Default to `cloud_efficiency`.
 - `cloud_essd`: The ESSD cloud disk.
 - `ephemeral_ssd`: The local SSD disk.
 Default to `cloud_efficiency`.
-* `encrypted` -(Optional, Bool, ForceNew) Encrypted the data in this disk.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4129,7 +4128,8 @@ Default to `cloud_efficiency`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-(Optional, Bool, ForceNew) Encrypted the data in this disk.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4192,7 +4192,6 @@ Default to `cloud_efficiency`.
 - `cloud_essd`: The ESSD cloud disk.
 - `ephemeral_ssd`: The local SSD disk.
 Default to `cloud_efficiency`.
-* `encrypted` -(Optional, Bool, ForceNew) Encrypted the data in this disk.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4219,7 +4218,8 @@ Default to `cloud_efficiency`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-(Optional, Bool, ForceNew) Encrypted the data in this disk.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">

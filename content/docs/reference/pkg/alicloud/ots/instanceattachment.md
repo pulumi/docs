@@ -29,9 +29,9 @@ const fooInstance = new alicloud.ots.Instance("foo", {
         For: "Building table",
     },
 });
-const fooZones = alicloud.getZones({
+const fooZones = pulumi.output(alicloud.getZones({
     availableResourceCreation: "VSwitch",
-});
+}, { async: true }));
 const fooNetwork = new alicloud.vpc.Network("foo", {
     cidrBlock: "172.16.0.0/16",
 });

@@ -27,20 +27,20 @@ import * as alicloud from "@pulumi/alicloud";
 const config = new pulumi.Config();
 const name = config.get("name") || "keyPairAttachmentName";
 
-const defaultZones = alicloud.getZones({
+const defaultZones = pulumi.output(alicloud.getZones({
     availableDiskCategory: "cloud_ssd",
     availableResourceCreation: "VSwitch",
-});
-const type = alicloud.ecs.getInstanceTypes({
+}, { async: true }));
+const type = defaultZones.apply(defaultZones => alicloud.ecs.getInstanceTypes({
     availabilityZone: defaultZones.zones[0].id,
     cpuCoreCount: 1,
     memorySize: 2,
-});
-const images = alicloud.ecs.getImages({
+}, { async: true }));
+const images = pulumi.output(alicloud.ecs.getImages({
     mostRecent: true,
     nameRegex: "^ubuntu_18.*64",
     owners: "system",
-});
+}, { async: true }));
 const vpc = new alicloud.vpc.Network("vpc", {
     cidrBlock: "10.1.0.0/21",
 });
