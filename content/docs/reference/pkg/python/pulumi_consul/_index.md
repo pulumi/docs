@@ -1290,7 +1290,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_consul.GetAclAuthMethodResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_consul.GetAclAuthMethodResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1320,7 +1320,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_consul.GetAclPolicyResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_consul.GetAclPolicyResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1344,7 +1344,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_consul.GetAclRoleResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_consul.GetAclRoleResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1376,7 +1376,7 @@ Role. Each entry has a <code class="docutils literal notranslate"><span class="p
 <dl class="attribute">
 <dt id="pulumi_consul.GetAclTokenResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_consul.GetAclTokenResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1401,7 +1401,7 @@ an <code class="docutils literal notranslate"><span class="pre">id</span></code>
 <dl class="attribute">
 <dt id="pulumi_consul.GetAclTokenSecretIdResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_consul.GetAclTokenSecretIdResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1425,7 +1425,7 @@ an <code class="docutils literal notranslate"><span class="pre">id</span></code>
 <dl class="attribute">
 <dt id="pulumi_consul.GetAgentConfigResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_consul.GetAgentConfigResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1562,7 +1562,7 @@ configuration</p>
 <dl class="attribute">
 <dt id="pulumi_consul.GetAutopilotHealthResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_consul.GetAutopilotHealthResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1581,7 +1581,7 @@ available information.</p>
 <dl class="attribute">
 <dt id="pulumi_consul.GetCatalogNodesResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_consul.GetCatalogNodesResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 </dd></dl>
@@ -1593,7 +1593,7 @@ available information.</p>
 <dl class="attribute">
 <dt id="pulumi_consul.GetCatalogServiceResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_consul.GetCatalogServiceResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 </dd></dl>
@@ -1605,7 +1605,7 @@ available information.</p>
 <dl class="attribute">
 <dt id="pulumi_consul.GetCatalogServicesResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_consul.GetCatalogServicesResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 </dd></dl>
@@ -1623,7 +1623,7 @@ available information.</p>
 <dl class="attribute">
 <dt id="pulumi_consul.GetKeyPrefixResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_consul.GetKeyPrefixResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1662,7 +1662,7 @@ has the value of the key.</p></li>
 <dl class="attribute">
 <dt id="pulumi_consul.GetKeysResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_consul.GetKeysResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 </dd></dl>
@@ -1680,7 +1680,7 @@ has the value of the key.</p></li>
 <dl class="attribute">
 <dt id="pulumi_consul.GetNodesResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_consul.GetNodesResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1721,7 +1721,7 @@ List of explicit LAN and WAN IP addresses for the agent.</p></li>
 <dl class="attribute">
 <dt id="pulumi_consul.GetServiceHealthResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_consul.GetServiceHealthResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1778,7 +1778,7 @@ service.  Each element in the list has three attributes: <code class="docutils l
 <dl class="attribute">
 <dt id="pulumi_consul.GetServiceResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_consul.GetServiceResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1816,7 +1816,7 @@ each individual node.  The list of per-node attributes is detailed below.</p>
 <dl class="attribute">
 <dt id="pulumi_consul.GetServicesResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_consul.GetServicesResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 </dd></dl>
@@ -2738,7 +2738,11 @@ instance.</p></li>
 <li><p><strong>namespace</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The namespace to create the service within.</p></li>
 <li><p><strong>node</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the node the to register the service on.</p></li>
 <li><p><strong>port</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The port of the service.</p></li>
-<li><p><strong>service_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the service.</p></li>
+<li><p><strong>service_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <ul>
+<li><p>If the service ID is not provided, it will be defaulted to the value</p></li>
+</ul>
+<p>of the <code class="docutils literal notranslate"><span class="pre">name</span></code> attribute.</p>
+</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of values that are opaque to Consul,
 but can be used to distinguish between services or nodes.</p></li>
 </ul>
@@ -2819,7 +2823,10 @@ instance.</p>
 <dl class="attribute">
 <dt id="pulumi_consul.Service.service_id">
 <code class="sig-name descname">service_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_consul.Service.service_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>The ID of the service.</p>
+<dd><ul class="simple">
+<li><p>If the service ID is not provided, it will be defaulted to the value
+of the <code class="docutils literal notranslate"><span class="pre">name</span></code> attribute.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -2850,7 +2857,11 @@ instance.</p></li>
 <li><p><strong>namespace</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The namespace to create the service within.</p></li>
 <li><p><strong>node</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the node the to register the service on.</p></li>
 <li><p><strong>port</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The port of the service.</p></li>
-<li><p><strong>service_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the service.</p></li>
+<li><p><strong>service_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <ul>
+<li><p>If the service ID is not provided, it will be defaulted to the value</p></li>
+</ul>
+<p>of the <code class="docutils literal notranslate"><span class="pre">name</span></code> attribute.</p>
+</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of values that are opaque to Consul,
 but can be used to distinguish between services or nodes.</p></li>
 </ul>

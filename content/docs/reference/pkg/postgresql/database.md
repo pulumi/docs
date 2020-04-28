@@ -41,7 +41,7 @@ const myDb = new postgresql.Database("my_db", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Database</span><span class="p">(resource_name, opts=None, </span>allow_connections=None<span class="p">, </span>connection_limit=None<span class="p">, </span>encoding=None<span class="p">, </span>is_template=None<span class="p">, </span>lc_collate=None<span class="p">, </span>lc_ctype=None<span class="p">, </span>name=None<span class="p">, </span>owner=None<span class="p">, </span>tablespace_name=None<span class="p">, </span>template=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Database</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>allow_connections=None<span class="p">, </span>connection_limit=None<span class="p">, </span>encoding=None<span class="p">, </span>is_template=None<span class="p">, </span>lc_collate=None<span class="p">, </span>lc_ctype=None<span class="p">, </span>name=None<span class="p">, </span>owner=None<span class="p">, </span>tablespace_name=None<span class="p">, </span>template=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
