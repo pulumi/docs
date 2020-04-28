@@ -22,7 +22,7 @@ meta_desc: "Explore the App resource of the Rancher 2 package, including example
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">App</span><span class="p">(resource_name, opts=None, </span>annotations=None<span class="p">, </span>answers=None<span class="p">, </span>catalog_name=None<span class="p">, </span>description=None<span class="p">, </span>force_upgrade=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>project_id=None<span class="p">, </span>revision_id=None<span class="p">, </span>target_namespace=None<span class="p">, </span>template_name=None<span class="p">, </span>template_version=None<span class="p">, </span>values_yaml=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">App</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>annotations=None<span class="p">, </span>answers=None<span class="p">, </span>catalog_name=None<span class="p">, </span>description=None<span class="p">, </span>force_upgrade=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>project_id=None<span class="p">, </span>revision_id=None<span class="p">, </span>target_namespace=None<span class="p">, </span>template_name=None<span class="p">, </span>template_version=None<span class="p">, </span>values_yaml=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

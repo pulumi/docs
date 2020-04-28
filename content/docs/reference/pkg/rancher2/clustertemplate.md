@@ -22,7 +22,7 @@ meta_desc: "Explore the ClusterTemplate resource of the Rancher 2 package, inclu
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ClusterTemplate</span><span class="p">(resource_name, opts=None, </span>annotations=None<span class="p">, </span>description=None<span class="p">, </span>labels=None<span class="p">, </span>members=None<span class="p">, </span>name=None<span class="p">, </span>template_revisions=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ClusterTemplate</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>annotations=None<span class="p">, </span>description=None<span class="p">, </span>labels=None<span class="p">, </span>members=None<span class="p">, </span>name=None<span class="p">, </span>template_revisions=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1499,7 +1499,6 @@ The following state arguments are supported:
         <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfig">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Rancher Kubernetes Engine Config (list maxitems: 1)
-* `scheduled_cluster_scan`- (Optional) Cluster scheduled cis scan. For Rancher v2.4.0 or above (List MaxItem:1)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1589,7 +1588,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigscheduledclusterscan">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Scheduled<wbr>Cluster<wbr>Scan<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Cluster scheduled cis scan. For Rancher v2.4.0 or above (List MaxItem:1)
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1614,7 +1614,6 @@ The following state arguments are supported:
         <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfig">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Rancher Kubernetes Engine Config (list maxitems: 1)
-* `scheduled_cluster_scan`- (Optional) Cluster scheduled cis scan. For Rancher v2.4.0 or above (List MaxItem:1)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1704,7 +1703,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigscheduledclusterscan">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Scheduled<wbr>Cluster<wbr>Scan</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Cluster scheduled cis scan. For Rancher v2.4.0 or above (List MaxItem:1)
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1729,7 +1729,6 @@ The following state arguments are supported:
         <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfig">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Rancher Kubernetes Engine Config (list maxitems: 1)
-* `scheduled_cluster_scan`- (Optional) Cluster scheduled cis scan. For Rancher v2.4.0 or above (List MaxItem:1)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1819,7 +1818,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigscheduledclusterscan">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Scheduled<wbr>Cluster<wbr>Scan</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Cluster scheduled cis scan. For Rancher v2.4.0 or above (List MaxItem:1)
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1844,7 +1844,6 @@ The following state arguments are supported:
         <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfig">Dict[Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config]</a></span>
     </dt>
     <dd>{{% md %}}Rancher Kubernetes Engine Config (list maxitems: 1)
-* `scheduled_cluster_scan`- (Optional) Cluster scheduled cis scan. For Rancher v2.4.0 or above (List MaxItem:1)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1934,7 +1933,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigscheduledclusterscan">Dict[Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Scheduled<wbr>Cluster<wbr>Scan]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Cluster scheduled cis scan. For Rancher v2.4.0 or above (List MaxItem:1)
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">

@@ -22,7 +22,7 @@ meta_desc: "Explore the Notifier resource of the Rancher 2 package, including ex
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Notifier</span><span class="p">(resource_name, opts=None, </span>annotations=None<span class="p">, </span>cluster_id=None<span class="p">, </span>description=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>pagerduty_config=None<span class="p">, </span>send_resolved=None<span class="p">, </span>slack_config=None<span class="p">, </span>smtp_config=None<span class="p">, </span>webhook_config=None<span class="p">, </span>wechat_config=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Notifier</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>annotations=None<span class="p">, </span>cluster_id=None<span class="p">, </span>description=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>pagerduty_config=None<span class="p">, </span>send_resolved=None<span class="p">, </span>slack_config=None<span class="p">, </span>smtp_config=None<span class="p">, </span>webhook_config=None<span class="p">, </span>wechat_config=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -219,7 +219,6 @@ The Notifier resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The notifier description (string)
-* `send_resolved` = (Optional) Enable the notifier to send resolved notifications. Default `false` (bool)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -255,7 +254,7 @@ The Notifier resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Notifier send resolved
+    <dd>{{% md %}}= (Optional) Enable the notifier to send resolved notifications. Default `false` (bool)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -326,7 +325,6 @@ The Notifier resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The notifier description (string)
-* `send_resolved` = (Optional) Enable the notifier to send resolved notifications. Default `false` (bool)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -362,7 +360,7 @@ The Notifier resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Notifier send resolved
+    <dd>{{% md %}}= (Optional) Enable the notifier to send resolved notifications. Default `false` (bool)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -433,7 +431,6 @@ The Notifier resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The notifier description (string)
-* `send_resolved` = (Optional) Enable the notifier to send resolved notifications. Default `false` (bool)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -469,7 +466,7 @@ The Notifier resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Notifier send resolved
+    <dd>{{% md %}}= (Optional) Enable the notifier to send resolved notifications. Default `false` (bool)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -540,7 +537,6 @@ The Notifier resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The notifier description (string)
-* `send_resolved` = (Optional) Enable the notifier to send resolved notifications. Default `false` (bool)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -576,7 +572,7 @@ The Notifier resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Notifier send resolved
+    <dd>{{% md %}}= (Optional) Enable the notifier to send resolved notifications. Default `false` (bool)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -844,7 +840,6 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The notifier description (string)
-* `send_resolved` = (Optional) Enable the notifier to send resolved notifications. Default `false` (bool)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -880,7 +875,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Notifier send resolved
+    <dd>{{% md %}}= (Optional) Enable the notifier to send resolved notifications. Default `false` (bool)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -951,7 +946,6 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The notifier description (string)
-* `send_resolved` = (Optional) Enable the notifier to send resolved notifications. Default `false` (bool)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -987,7 +981,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Notifier send resolved
+    <dd>{{% md %}}= (Optional) Enable the notifier to send resolved notifications. Default `false` (bool)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1058,7 +1052,6 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The notifier description (string)
-* `send_resolved` = (Optional) Enable the notifier to send resolved notifications. Default `false` (bool)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1094,7 +1087,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Notifier send resolved
+    <dd>{{% md %}}= (Optional) Enable the notifier to send resolved notifications. Default `false` (bool)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1165,7 +1158,6 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The notifier description (string)
-* `send_resolved` = (Optional) Enable the notifier to send resolved notifications. Default `false` (bool)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1201,7 +1193,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Notifier send resolved
+    <dd>{{% md %}}= (Optional) Enable the notifier to send resolved notifications. Default `false` (bool)
 {{% /md %}}</dd>
 
     <dt class="property-optional"

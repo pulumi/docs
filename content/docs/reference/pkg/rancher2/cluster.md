@@ -26,7 +26,7 @@ Provides a Rancher v2 Cluster resource. This can be used to create Clusters for 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Cluster</span><span class="p">(resource_name, opts=None, </span>aks_config=None<span class="p">, </span>annotations=None<span class="p">, </span>cluster_auth_endpoint=None<span class="p">, </span>cluster_monitoring_input=None<span class="p">, </span>cluster_template_answers=None<span class="p">, </span>cluster_template_id=None<span class="p">, </span>cluster_template_questions=None<span class="p">, </span>cluster_template_revision_id=None<span class="p">, </span>default_pod_security_policy_template_id=None<span class="p">, </span>description=None<span class="p">, </span>desired_agent_image=None<span class="p">, </span>desired_auth_image=None<span class="p">, </span>docker_root_dir=None<span class="p">, </span>driver=None<span class="p">, </span>eks_config=None<span class="p">, </span>enable_cluster_alerting=None<span class="p">, </span>enable_cluster_istio=None<span class="p">, </span>enable_cluster_monitoring=None<span class="p">, </span>enable_network_policy=None<span class="p">, </span>gke_config=None<span class="p">, </span>k3s_config=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>rke_config=None<span class="p">, </span>scheduled_cluster_scan=None<span class="p">, </span>windows_prefered_cluster=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Cluster</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>aks_config=None<span class="p">, </span>annotations=None<span class="p">, </span>cluster_auth_endpoint=None<span class="p">, </span>cluster_monitoring_input=None<span class="p">, </span>cluster_template_answers=None<span class="p">, </span>cluster_template_id=None<span class="p">, </span>cluster_template_questions=None<span class="p">, </span>cluster_template_revision_id=None<span class="p">, </span>default_pod_security_policy_template_id=None<span class="p">, </span>description=None<span class="p">, </span>desired_agent_image=None<span class="p">, </span>desired_auth_image=None<span class="p">, </span>docker_root_dir=None<span class="p">, </span>driver=None<span class="p">, </span>eks_config=None<span class="p">, </span>enable_cluster_alerting=None<span class="p">, </span>enable_cluster_istio=None<span class="p">, </span>enable_cluster_monitoring=None<span class="p">, </span>enable_network_policy=None<span class="p">, </span>gke_config=None<span class="p">, </span>k3s_config=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>rke_config=None<span class="p">, </span>scheduled_cluster_scan=None<span class="p">, </span>windows_prefered_cluster=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -367,7 +367,6 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Enable project network isolation. Default `false` (bool)
-* `scheduled_cluster_scan`- (Optional) Cluster scheduled cis scan. For Rancher v2.4.0 or above (List maxitems:1)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -421,7 +420,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterscheduledclusterscan">Cluster<wbr>Scheduled<wbr>Cluster<wbr>Scan<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Cluster scheduled scan
+    <dd>{{% md %}}Cluster scheduled cis scan. For Rancher v2.4.0 or above (List maxitems:1)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -609,7 +608,6 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Enable project network isolation. Default `false` (bool)
-* `scheduled_cluster_scan`- (Optional) Cluster scheduled cis scan. For Rancher v2.4.0 or above (List maxitems:1)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -663,7 +661,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterscheduledclusterscan">Cluster<wbr>Scheduled<wbr>Cluster<wbr>Scan</a></span>
     </dt>
-    <dd>{{% md %}}Cluster scheduled scan
+    <dd>{{% md %}}Cluster scheduled cis scan. For Rancher v2.4.0 or above (List maxitems:1)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -851,7 +849,6 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Enable project network isolation. Default `false` (bool)
-* `scheduled_cluster_scan`- (Optional) Cluster scheduled cis scan. For Rancher v2.4.0 or above (List maxitems:1)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -905,7 +902,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterscheduledclusterscan">Cluster<wbr>Scheduled<wbr>Cluster<wbr>Scan</a></span>
     </dt>
-    <dd>{{% md %}}Cluster scheduled scan
+    <dd>{{% md %}}Cluster scheduled cis scan. For Rancher v2.4.0 or above (List maxitems:1)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1093,7 +1090,6 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Enable project network isolation. Default `false` (bool)
-* `scheduled_cluster_scan`- (Optional) Cluster scheduled cis scan. For Rancher v2.4.0 or above (List maxitems:1)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1147,7 +1143,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterscheduledclusterscan">Dict[Cluster<wbr>Scheduled<wbr>Cluster<wbr>Scan]</a></span>
     </dt>
-    <dd>{{% md %}}Cluster scheduled scan
+    <dd>{{% md %}}Cluster scheduled cis scan. For Rancher v2.4.0 or above (List maxitems:1)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1694,7 +1690,6 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Enable project network isolation. Default `false` (bool)
-* `scheduled_cluster_scan`- (Optional) Cluster scheduled cis scan. For Rancher v2.4.0 or above (List maxitems:1)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1757,7 +1752,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterscheduledclusterscan">Cluster<wbr>Scheduled<wbr>Cluster<wbr>Scan<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Cluster scheduled scan
+    <dd>{{% md %}}Cluster scheduled cis scan. For Rancher v2.4.0 or above (List maxitems:1)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1972,7 +1967,6 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Enable project network isolation. Default `false` (bool)
-* `scheduled_cluster_scan`- (Optional) Cluster scheduled cis scan. For Rancher v2.4.0 or above (List maxitems:1)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2035,7 +2029,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterscheduledclusterscan">Cluster<wbr>Scheduled<wbr>Cluster<wbr>Scan</a></span>
     </dt>
-    <dd>{{% md %}}Cluster scheduled scan
+    <dd>{{% md %}}Cluster scheduled cis scan. For Rancher v2.4.0 or above (List maxitems:1)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2250,7 +2244,6 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Enable project network isolation. Default `false` (bool)
-* `scheduled_cluster_scan`- (Optional) Cluster scheduled cis scan. For Rancher v2.4.0 or above (List maxitems:1)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2313,7 +2306,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterscheduledclusterscan">Cluster<wbr>Scheduled<wbr>Cluster<wbr>Scan</a></span>
     </dt>
-    <dd>{{% md %}}Cluster scheduled scan
+    <dd>{{% md %}}Cluster scheduled cis scan. For Rancher v2.4.0 or above (List maxitems:1)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2528,7 +2521,6 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Enable project network isolation. Default `false` (bool)
-* `scheduled_cluster_scan`- (Optional) Cluster scheduled cis scan. For Rancher v2.4.0 or above (List maxitems:1)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2591,7 +2583,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterscheduledclusterscan">Dict[Cluster<wbr>Scheduled<wbr>Cluster<wbr>Scan]</a></span>
     </dt>
-    <dd>{{% md %}}Cluster scheduled scan
+    <dd>{{% md %}}Cluster scheduled cis scan. For Rancher v2.4.0 or above (List maxitems:1)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -18419,7 +18411,6 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Enable or disable failing when swap on is not supported (bool)
-* `generate_serving_certificate` [Generate a certificate signed by the kube-ca](https://rancher.com/docs/rke/latest/en/config-options/services/#kubelet-serving-certificate-requirements). Default `false` (bool)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -18428,7 +18419,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}[Generate a certificate signed by the kube-ca](https://rancher.com/docs/rke/latest/en/config-options/services/#kubelet-serving-certificate-requirements). Default `false` (bool)
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -18507,7 +18499,6 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Enable or disable failing when swap on is not supported (bool)
-* `generate_serving_certificate` [Generate a certificate signed by the kube-ca](https://rancher.com/docs/rke/latest/en/config-options/services/#kubelet-serving-certificate-requirements). Default `false` (bool)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -18516,7 +18507,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}[Generate a certificate signed by the kube-ca](https://rancher.com/docs/rke/latest/en/config-options/services/#kubelet-serving-certificate-requirements). Default `false` (bool)
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -18595,7 +18587,6 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Enable or disable failing when swap on is not supported (bool)
-* `generate_serving_certificate` [Generate a certificate signed by the kube-ca](https://rancher.com/docs/rke/latest/en/config-options/services/#kubelet-serving-certificate-requirements). Default `false` (bool)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -18604,7 +18595,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}[Generate a certificate signed by the kube-ca](https://rancher.com/docs/rke/latest/en/config-options/services/#kubelet-serving-certificate-requirements). Default `false` (bool)
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -18683,7 +18675,6 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Enable or disable failing when swap on is not supported (bool)
-* `generate_serving_certificate` [Generate a certificate signed by the kube-ca](https://rancher.com/docs/rke/latest/en/config-options/services/#kubelet-serving-certificate-requirements). Default `false` (bool)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -18692,7 +18683,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}[Generate a certificate signed by the kube-ca](https://rancher.com/docs/rke/latest/en/config-options/services/#kubelet-serving-certificate-requirements). Default `false` (bool)
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">

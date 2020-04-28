@@ -22,7 +22,7 @@ meta_desc: "Explore the PodSecurityPolicyTemplate resource of the Rancher 2 pack
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">PodSecurityPolicyTemplate</span><span class="p">(resource_name, opts=None, </span>allow_privilege_escalation=None<span class="p">, </span>allowed_capabilities=None<span class="p">, </span>allowed_csi_drivers=None<span class="p">, </span>allowed_flex_volumes=None<span class="p">, </span>allowed_host_paths=None<span class="p">, </span>allowed_proc_mount_types=None<span class="p">, </span>allowed_unsafe_sysctls=None<span class="p">, </span>annotations=None<span class="p">, </span>default_add_capabilities=None<span class="p">, </span>default_allow_privilege_escalation=None<span class="p">, </span>description=None<span class="p">, </span>forbidden_sysctls=None<span class="p">, </span>fs_group=None<span class="p">, </span>host_ipc=None<span class="p">, </span>host_network=None<span class="p">, </span>host_pid=None<span class="p">, </span>host_ports=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>privileged=None<span class="p">, </span>read_only_root_filesystem=None<span class="p">, </span>required_drop_capabilities=None<span class="p">, </span>run_as_group=None<span class="p">, </span>run_as_user=None<span class="p">, </span>runtime_class=None<span class="p">, </span>se_linux=None<span class="p">, </span>supplemental_group=None<span class="p">, </span>volumes=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">PodSecurityPolicyTemplate</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>allow_privilege_escalation=None<span class="p">, </span>allowed_capabilities=None<span class="p">, </span>allowed_csi_drivers=None<span class="p">, </span>allowed_flex_volumes=None<span class="p">, </span>allowed_host_paths=None<span class="p">, </span>allowed_proc_mount_types=None<span class="p">, </span>allowed_unsafe_sysctls=None<span class="p">, </span>annotations=None<span class="p">, </span>default_add_capabilities=None<span class="p">, </span>default_allow_privilege_escalation=None<span class="p">, </span>description=None<span class="p">, </span>forbidden_sysctls=None<span class="p">, </span>fs_group=None<span class="p">, </span>host_ipc=None<span class="p">, </span>host_network=None<span class="p">, </span>host_pid=None<span class="p">, </span>host_ports=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>privileged=None<span class="p">, </span>read_only_root_filesystem=None<span class="p">, </span>required_drop_capabilities=None<span class="p">, </span>run_as_group=None<span class="p">, </span>run_as_user=None<span class="p">, </span>runtime_class=None<span class="p">, </span>se_linux=None<span class="p">, </span>supplemental_group=None<span class="p">, </span>volumes=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -200,8 +200,7 @@ The PodSecurityPolicyTemplate resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}allowPrivilegeEscalation determines if a pod can request to allow privilege escalation. If unspecified, defaults to
-true.
+    <dd>{{% md %}}= (Optional)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -355,7 +354,6 @@ true.
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Labels for PodSecurityPolicyTemplate object (map)
-* `allow_privilege_escalation` = (Optional)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -461,8 +459,7 @@ true.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}allowPrivilegeEscalation determines if a pod can request to allow privilege escalation. If unspecified, defaults to
-true.
+    <dd>{{% md %}}= (Optional)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -616,7 +613,6 @@ true.
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}Labels for PodSecurityPolicyTemplate object (map)
-* `allow_privilege_escalation` = (Optional)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -722,8 +718,7 @@ true.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}allowPrivilegeEscalation determines if a pod can request to allow privilege escalation. If unspecified, defaults to
-true.
+    <dd>{{% md %}}= (Optional)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -877,7 +872,6 @@ true.
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Labels for PodSecurityPolicyTemplate object (map)
-* `allow_privilege_escalation` = (Optional)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -983,8 +977,7 @@ true.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}allowPrivilegeEscalation determines if a pod can request to allow privilege escalation. If unspecified, defaults to
-true.
+    <dd>{{% md %}}= (Optional)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1138,7 +1131,6 @@ true.
         <span class="property-type">Dict[str, Any]</span>
     </dt>
     <dd>{{% md %}}Labels for PodSecurityPolicyTemplate object (map)
-* `allow_privilege_escalation` = (Optional)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1441,8 +1433,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}allowPrivilegeEscalation determines if a pod can request to allow privilege escalation. If unspecified, defaults to
-true.
+    <dd>{{% md %}}= (Optional)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1596,7 +1587,6 @@ true.
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Labels for PodSecurityPolicyTemplate object (map)
-* `allow_privilege_escalation` = (Optional)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1702,8 +1692,7 @@ true.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}allowPrivilegeEscalation determines if a pod can request to allow privilege escalation. If unspecified, defaults to
-true.
+    <dd>{{% md %}}= (Optional)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1857,7 +1846,6 @@ true.
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}Labels for PodSecurityPolicyTemplate object (map)
-* `allow_privilege_escalation` = (Optional)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1963,8 +1951,7 @@ true.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}allowPrivilegeEscalation determines if a pod can request to allow privilege escalation. If unspecified, defaults to
-true.
+    <dd>{{% md %}}= (Optional)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2118,7 +2105,6 @@ true.
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Labels for PodSecurityPolicyTemplate object (map)
-* `allow_privilege_escalation` = (Optional)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2224,8 +2210,7 @@ true.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}allowPrivilegeEscalation determines if a pod can request to allow privilege escalation. If unspecified, defaults to
-true.
+    <dd>{{% md %}}= (Optional)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2379,7 +2364,6 @@ true.
         <span class="property-type">Dict[str, Any]</span>
     </dt>
     <dd>{{% md %}}Labels for PodSecurityPolicyTemplate object (map)
-* `allow_privilege_escalation` = (Optional)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
