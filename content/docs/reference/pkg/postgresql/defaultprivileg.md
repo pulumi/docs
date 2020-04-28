@@ -11,6 +11,9 @@ meta_desc: "Explore the DefaultPrivileg resource of the PostgreSQL package, incl
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 
+Deprecated: postgresql.DefaultPrivileg has been deprecated in favour of postgresql.DefaultPrivileges
+
+<p class="resource-deprecated">Deprecated: {{% md %}}postgresql.DefaultPrivileg has been deprecated in favour of postgresql.DefaultPrivileges{{% /md %}}</p>
 
 
 ## Create a DefaultPrivileg Resource {#create}
@@ -22,7 +25,7 @@ meta_desc: "Explore the DefaultPrivileg resource of the PostgreSQL package, incl
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">DefaultPrivileg</span><span class="p">(resource_name, opts=None, </span>database=None<span class="p">, </span>object_type=None<span class="p">, </span>owner=None<span class="p">, </span>privileges=None<span class="p">, </span>role=None<span class="p">, </span>schema=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">DefaultPrivileg</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>database=None<span class="p">, </span>object_type=None<span class="p">, </span>owner=None<span class="p">, </span>privileges=None<span class="p">, </span>role=None<span class="p">, </span>schema=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
