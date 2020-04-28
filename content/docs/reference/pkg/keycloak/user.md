@@ -76,7 +76,7 @@ The following arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">User</span><span class="p">(resource_name, opts=None, </span>attributes=None<span class="p">, </span>email=None<span class="p">, </span>email_verified=None<span class="p">, </span>enabled=None<span class="p">, </span>federated_identities=None<span class="p">, </span>first_name=None<span class="p">, </span>initial_password=None<span class="p">, </span>last_name=None<span class="p">, </span>realm_id=None<span class="p">, </span>username=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">User</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>attributes=None<span class="p">, </span>email=None<span class="p">, </span>email_verified=None<span class="p">, </span>enabled=None<span class="p">, </span>federated_identities=None<span class="p">, </span>first_name=None<span class="p">, </span>initial_password=None<span class="p">, </span>last_name=None<span class="p">, </span>realm_id=None<span class="p">, </span>username=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
