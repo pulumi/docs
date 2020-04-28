@@ -45,7 +45,7 @@ const config = new consul.AutopilotConfig("config", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">AutopilotConfig</span><span class="p">(resource_name, opts=None, </span>cleanup_dead_servers=None<span class="p">, </span>datacenter=None<span class="p">, </span>disable_upgrade_migration=None<span class="p">, </span>last_contact_threshold=None<span class="p">, </span>max_trailing_logs=None<span class="p">, </span>redundancy_zone_tag=None<span class="p">, </span>server_stabilization_time=None<span class="p">, </span>upgrade_version_tag=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">AutopilotConfig</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>cleanup_dead_servers=None<span class="p">, </span>datacenter=None<span class="p">, </span>disable_upgrade_migration=None<span class="p">, </span>last_contact_threshold=None<span class="p">, </span>max_trailing_logs=None<span class="p">, </span>redundancy_zone_tag=None<span class="p">, </span>server_stabilization_time=None<span class="p">, </span>upgrade_version_tag=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

@@ -22,7 +22,7 @@ meta_desc: "Explore the PreparedQuery resource of the Consul package, including 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">PreparedQuery</span><span class="p">(resource_name, opts=None, </span>connect=None<span class="p">, </span>datacenter=None<span class="p">, </span>dns=None<span class="p">, </span>failover=None<span class="p">, </span>name=None<span class="p">, </span>near=None<span class="p">, </span>only_passing=None<span class="p">, </span>service=None<span class="p">, </span>session=None<span class="p">, </span>stored_token=None<span class="p">, </span>tags=None<span class="p">, </span>template=None<span class="p">, </span>token=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">PreparedQuery</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>connect=None<span class="p">, </span>datacenter=None<span class="p">, </span>dns=None<span class="p">, </span>failover=None<span class="p">, </span>name=None<span class="p">, </span>near=None<span class="p">, </span>only_passing=None<span class="p">, </span>service=None<span class="p">, </span>session=None<span class="p">, </span>stored_token=None<span class="p">, </span>tags=None<span class="p">, </span>template=None<span class="p">, </span>token=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
