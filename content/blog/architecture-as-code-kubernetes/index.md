@@ -2,7 +2,7 @@
 title: "Architecture as Code: Kubernetes"
 date: 2020-04-28
 meta_desc: "Using infrastructure as code to deploy Kubernetes to support hard multi-tenancy"
-meta_image: meta.png
+meta_image: kubernetes.png
 authors:
     - sophia-parafina
 tags:
@@ -100,3 +100,5 @@ Using this example, you can quickly build any of the Kubernetes architectural pa
 ## Conclusion
 
 Deploying modern applications is complex. Anyone of the architectures we’ve examined -- virtual machines, microservices, serverless and Kubernetes -- require deploying and configuring multiple resources. For many reasons, including security, compliance, and cost management, we want to reuse resources consistently. In a sense, architecture as code is the logical progression of the DevOps principle of ["cattle not pets"](https://medium.com/@Joachim8675309/devops-concepts-pets-vs-cattle-2380b5aab313). Infrastructure as code is the tool that enables this by bringing standard development practices, such as code review, CI/CD, and testing to infrastructure. Learn how to build reusable infrastructure components with Pulumi’s [programming model]({{< relref "/docs/intro/concepts/programming-model" >}}), [API reference for cloud service providers]({{< relref "/docs/reference/pkg" >}}), and [examples](https://github.com/pulumi/examples).
+
+Want to know more? Listen to the [New Stack Context podcast](https://thenewstack.io/pulumi-program-the-infrastructure-with-an-actual-programming-language/) on the Pulumi 2.0 release and Architecture as Code.
