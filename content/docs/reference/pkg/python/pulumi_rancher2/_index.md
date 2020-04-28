@@ -3098,13 +3098,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 :param pulumi.Input[bool] enable_cluster_istio: Enable built-in cluster istio. Default `false`. Just for Rancher v2.3.x and above (bool)
 :param pulumi.Input[bool] enable_cluster_monitoring: Enable built-in cluster monitoring. Default `false` (bool)
 :param pulumi.Input[bool] enable_network_policy: Enable project network isolation. Default `false` (bool)
-       * `scheduled_cluster_scan`- (Optional) Cluster scheduled cis scan. For Rancher v2.4.0 or above (List maxitems:1)
 :param pulumi.Input[dict] gke_config: The Google GKE configuration for `gke` Clusters. Conflicts with `aks_config`, `eks_config`, `k3s_config` and `rke_config` (list maxitems:1)
 :param pulumi.Input[dict] k3s_config: The K3S configuration for `k3s` imported Clusters. Conflicts with `aks_config`, `eks_config`, `gke_config` and `rke_config` (list maxitems:1)
 :param pulumi.Input[dict] labels: Labels for cluster registration token object (map)
 :param pulumi.Input[str] name: Name of cluster registration token (string)
 :param pulumi.Input[dict] rke_config: The RKE configuration for `rke` Clusters. Conflicts with `aks_config`, `eks_config`, `gke_config` and `k3s_config` (list maxitems:1)
-:param pulumi.Input[dict] scheduled_cluster_scan: Cluster scheduled scan
+:param pulumi.Input[dict] scheduled_cluster_scan: Cluster scheduled cis scan. For Rancher v2.4.0 or above (List maxitems:1)
 :param pulumi.Input[bool] windows_prefered_cluster: Windows preferred cluster. Default: `false` (bool)
 
 The **aks_config** object supports the following:
@@ -3545,8 +3544,7 @@ resources:</p>
      * `extraBinds` (`pulumi.Input[list]`) - Extra binds for scheduler service (list)
      * `extraEnvs` (`pulumi.Input[list]`) - Extra environment for scheduler service (list)
      * `failSwapOn` (`pulumi.Input[bool]`) - Enable or disable failing when swap on is not supported (bool)
-       * `generate_serving_certificate` [Generate a certificate signed by the kube-ca](https://rancher.com/docs/rke/latest/en/config-options/services/#kubelet-serving-certificate-requirements). Default `false` (bool)
-     * `generateServingCertificate` (`pulumi.Input[bool]`)
+     * `generateServingCertificate` (`pulumi.Input[bool]`) - [Generate a certificate signed by the kube-ca](https://rancher.com/docs/rke/latest/en/config-options/services/#kubelet-serving-certificate-requirements). Default `false` (bool)
      * `image` (`pulumi.Input[str]`) - Docker image for scheduler service (string)
      * `infraContainerImage` (`pulumi.Input[str]`) - Infra container image for kubelet service (string)
 
@@ -3817,9 +3815,6 @@ The **scheduled_cluster_scan** object supports the following:
 <dt id="pulumi_rancher2.Cluster.enable_network_policy">
 <code class="sig-name descname">enable_network_policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.Cluster.enable_network_policy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Enable project network isolation. Default <code class="docutils literal notranslate"><span class="pre">false</span></code> (bool)</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">scheduled_cluster_scan</span></code>- (Optional) Cluster scheduled cis scan. For Rancher v2.4.0 or above (List maxitems:1)</p></li>
-</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -4212,12 +4207,8 @@ resources:</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">extraArgs</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Extra arguments for scheduler service (map)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">extraBinds</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Extra binds for scheduler service (list)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">extraEnvs</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Extra environment for scheduler service (list)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">failSwapOn</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Enable or disable failing when swap on is not supported (bool)</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">generate_serving_certificate</span></code> <a class="reference external" href="https://rancher.com/docs/rke/latest/en/config-options/services/#kubelet-serving-certificate-requirements">Generate a certificate signed by the kube-ca</a>. Default <code class="docutils literal notranslate"><span class="pre">false</span></code> (bool)</p></li>
-</ul>
-</li>
-<li><p><code class="docutils literal notranslate"><span class="pre">generateServingCertificate</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">failSwapOn</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Enable or disable failing when swap on is not supported (bool)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">generateServingCertificate</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - <a class="reference external" href="https://rancher.com/docs/rke/latest/en/config-options/services/#kubelet-serving-certificate-requirements">Generate a certificate signed by the kube-ca</a>. Default <code class="docutils literal notranslate"><span class="pre">false</span></code> (bool)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">image</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Docker image for scheduler service (string)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">infraContainerImage</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Infra container image for kubelet service (string)</p></li>
 </ul>
@@ -4269,7 +4260,7 @@ resources:</p>
 <dl class="attribute">
 <dt id="pulumi_rancher2.Cluster.scheduled_cluster_scan">
 <code class="sig-name descname">scheduled_cluster_scan</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.Cluster.scheduled_cluster_scan" title="Permalink to this definition">¶</a></dt>
-<dd><p>Cluster scheduled scan</p>
+<dd><p>Cluster scheduled cis scan. For Rancher v2.4.0 or above (List maxitems:1)</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Enable scheduled cluster scan. Default: <code class="docutils literal notranslate"><span class="pre">false</span></code> (bool)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">scanConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Cluster scan config (List maxitems:1)</p>
@@ -4336,14 +4327,13 @@ properties used to qualify the lookup.
 :param pulumi.Input[bool] enable_cluster_istio: Enable built-in cluster istio. Default `false`. Just for Rancher v2.3.x and above (bool)
 :param pulumi.Input[bool] enable_cluster_monitoring: Enable built-in cluster monitoring. Default `false` (bool)
 :param pulumi.Input[bool] enable_network_policy: Enable project network isolation. Default `false` (bool)
-       * `scheduled_cluster_scan`- (Optional) Cluster scheduled cis scan. For Rancher v2.4.0 or above (List maxitems:1)
 :param pulumi.Input[dict] gke_config: The Google GKE configuration for `gke` Clusters. Conflicts with `aks_config`, `eks_config`, `k3s_config` and `rke_config` (list maxitems:1)
 :param pulumi.Input[dict] k3s_config: The K3S configuration for `k3s` imported Clusters. Conflicts with `aks_config`, `eks_config`, `gke_config` and `rke_config` (list maxitems:1)
 :param pulumi.Input[str] kube_config: (Computed/Sensitive) Kube Config generated for the cluster (string)
 :param pulumi.Input[dict] labels: Labels for cluster registration token object (map)
 :param pulumi.Input[str] name: Name of cluster registration token (string)
 :param pulumi.Input[dict] rke_config: The RKE configuration for `rke` Clusters. Conflicts with `aks_config`, `eks_config`, `gke_config` and `k3s_config` (list maxitems:1)
-:param pulumi.Input[dict] scheduled_cluster_scan: Cluster scheduled scan
+:param pulumi.Input[dict] scheduled_cluster_scan: Cluster scheduled cis scan. For Rancher v2.4.0 or above (List maxitems:1)
 :param pulumi.Input[str] system_project_id: (Computed) System project ID for the cluster (string)
 :param pulumi.Input[bool] windows_prefered_cluster: Windows preferred cluster. Default: `false` (bool)
 
@@ -4799,8 +4789,7 @@ resources:</p>
      * `extraBinds` (`pulumi.Input[list]`) - Extra binds for scheduler service (list)
      * `extraEnvs` (`pulumi.Input[list]`) - Extra environment for scheduler service (list)
      * `failSwapOn` (`pulumi.Input[bool]`) - Enable or disable failing when swap on is not supported (bool)
-       * `generate_serving_certificate` [Generate a certificate signed by the kube-ca](https://rancher.com/docs/rke/latest/en/config-options/services/#kubelet-serving-certificate-requirements). Default `false` (bool)
-     * `generateServingCertificate` (`pulumi.Input[bool]`)
+     * `generateServingCertificate` (`pulumi.Input[bool]`) - [Generate a certificate signed by the kube-ca](https://rancher.com/docs/rke/latest/en/config-options/services/#kubelet-serving-certificate-requirements). Default `false` (bool)
      * `image` (`pulumi.Input[str]`) - Docker image for scheduler service (string)
      * `infraContainerImage` (`pulumi.Input[str]`) - Infra container image for kubelet service (string)
 
@@ -6131,7 +6120,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">enable_network_policy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enable project network isolation. Default: <code class="docutils literal notranslate"><span class="pre">false</span></code> (bool)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">rke_config</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Rancher Kubernetes Engine Config (list maxitems: 1)</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">scheduled_cluster_scan</span></code>- (Optional) Cluster scheduled cis scan. For Rancher v2.4.0 or above (List MaxItem:1)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">addonJobTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">addons</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">addonsIncludes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
@@ -6535,7 +6523,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">scheduled_cluster_scan</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">scheduled_cluster_scan</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Cluster scheduled cis scan. For Rancher v2.4.0 or above (List MaxItem:1)</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enable cluster template revision. Default <code class="docutils literal notranslate"><span class="pre">true</span></code> (bool)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">scanConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
@@ -6643,7 +6631,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">enable_network_policy</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Enable project network isolation. Default: <code class="docutils literal notranslate"><span class="pre">false</span></code> (bool)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">rke_config</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Rancher Kubernetes Engine Config (list maxitems: 1)</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">scheduled_cluster_scan</span></code>- (Optional) Cluster scheduled cis scan. For Rancher v2.4.0 or above (List MaxItem:1)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">addonJobTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">addons</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">addonsIncludes</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
@@ -7047,7 +7034,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">scheduled_cluster_scan</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">scheduled_cluster_scan</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Cluster scheduled cis scan. For Rancher v2.4.0 or above (List MaxItem:1)</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Enable cluster template revision. Default <code class="docutils literal notranslate"><span class="pre">true</span></code> (bool)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">scanConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
@@ -7140,7 +7127,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">enable_network_policy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enable project network isolation. Default: <code class="docutils literal notranslate"><span class="pre">false</span></code> (bool)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">rke_config</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Rancher Kubernetes Engine Config (list maxitems: 1)</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">scheduled_cluster_scan</span></code>- (Optional) Cluster scheduled cis scan. For Rancher v2.4.0 or above (List MaxItem:1)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">addonJobTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">addons</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">addonsIncludes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
@@ -7544,7 +7530,7 @@ properties used to qualify the lookup.</p>
 </li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">scheduled_cluster_scan</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">scheduled_cluster_scan</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Cluster scheduled cis scan. For Rancher v2.4.0 or above (List MaxItem:1)</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enable cluster template revision. Default <code class="docutils literal notranslate"><span class="pre">true</span></code> (bool)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">scanConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
@@ -7840,7 +7826,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_rancher2.GetAppResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetAppResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -7906,7 +7892,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_rancher2.GetCatalogResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetCatalogResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -7978,7 +7964,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_rancher2.GetCertificateResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetCertificateResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -8002,7 +7988,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_rancher2.GetCloudCredentialResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetCloudCredentialResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -8044,7 +8030,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_rancher2.GetClusterAlertGroupResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetClusterAlertGroupResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -8104,7 +8090,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_rancher2.GetClusterAlterRuleResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetClusterAlterRuleResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -8188,7 +8174,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_rancher2.GetClusterDriverResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetClusterDriverResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -8236,7 +8222,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_rancher2.GetClusterLoggingResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetClusterLoggingResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -8404,7 +8390,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_rancher2.GetClusterResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetClusterResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -8464,7 +8450,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_rancher2.GetClusterRoleTemplateBindingResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetClusterRoleTemplateBindingResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -8494,7 +8480,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_rancher2.GetClusterScanResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetClusterScanResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 </dd></dl>
@@ -8518,7 +8504,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_rancher2.GetClusterTemplateResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetClusterTemplateResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -8566,7 +8552,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_rancher2.GetEtcdBackupResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetEtcdBackupResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -8608,7 +8594,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_rancher2.GetGlobalRoleBindingResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetGlobalRoleBindingResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -8650,7 +8636,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_rancher2.GetMultiClusterAppResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetMultiClusterAppResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -8740,7 +8726,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_rancher2.GetNamespaceResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetNamespaceResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -8800,7 +8786,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_rancher2.GetNodeDriverResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetNodeDriverResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -8860,7 +8846,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_rancher2.GetNodePoolResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetNodePoolResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -8962,7 +8948,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_rancher2.GetNodeTemplateResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetNodeTemplateResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -8998,7 +8984,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_rancher2.GetNotifierResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetNotifierResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -9046,7 +9032,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_rancher2.GetPodSecurityPolicyTemplateResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetPodSecurityPolicyTemplateResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 </dd></dl>
@@ -9082,7 +9068,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_rancher2.GetProjectAlertGroupResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetProjectAlertGroupResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -9136,7 +9122,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_rancher2.GetProjectAlertRuleResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetProjectAlertRuleResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -9208,7 +9194,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_rancher2.GetProjectLoggingResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetProjectLoggingResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -9298,7 +9284,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_rancher2.GetProjectResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetProjectResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -9352,7 +9338,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_rancher2.GetProjectRoleTemplateBindingResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetProjectRoleTemplateBindingResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -9394,7 +9380,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_rancher2.GetRegistryResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetRegistryResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -9460,7 +9446,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_rancher2.GetRoleTempalteResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetRoleTempalteResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -9538,7 +9524,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_rancher2.GetRoleTemplateResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetRoleTemplateResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -9592,7 +9578,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_rancher2.GetSecretResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetSecretResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -9610,7 +9596,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_rancher2.GetSettingResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetSettingResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -9640,7 +9626,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_rancher2.GetUserResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.GetUserResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -10727,12 +10713,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">diskResize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Size of the disk for the VM in MB (string)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">imageId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - OpenStack image id to use for the instance. Conflicts with <code class="docutils literal notranslate"><span class="pre">image_name</span></code> (string)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">imageName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - OpenStack image name to use for the instance. Conflicts with <code class="docutils literal notranslate"><span class="pre">image_id</span></code> (string)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">imageOwner</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Owner of the image to use as the VM OS (string)</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">memory</span></code>- (Optional) Size of the memory for the VM in MB (string)</p></li>
-</ul>
-</li>
-<li><p><code class="docutils literal notranslate"><span class="pre">memory</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">imageOwner</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Owner of the image to use as the VM OS (string)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">memory</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Size of the memory for the VM in MB (string)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">networkId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Opennebula network ID to connect the machine to. Conflicts with <code class="docutils literal notranslate"><span class="pre">network_name</span></code> (string)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">networkName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Opennebula network to connect the machine to. Conflicts with <code class="docutils literal notranslate"><span class="pre">network_id</span></code> (string)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">networkOwner</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Opennebula user ID of the Network to connect the machine to (string)</p></li>
@@ -10746,7 +10728,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 <p>The <strong>openstack_config</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">activeTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">activeTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - OpenStack active timeout Default <code class="docutils literal notranslate"><span class="pre">200</span></code> (string)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">authUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - OpenStack authentication URL (string)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">availabilityZone</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - OpenStack availability zone (string)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">cacert</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - CA certificate bundle to verify against (string)</p></li>
@@ -11038,12 +11020,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">diskResize</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Size of the disk for the VM in MB (string)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">imageId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - OpenStack image id to use for the instance. Conflicts with <code class="docutils literal notranslate"><span class="pre">image_name</span></code> (string)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">imageName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - OpenStack image name to use for the instance. Conflicts with <code class="docutils literal notranslate"><span class="pre">image_id</span></code> (string)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">imageOwner</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Owner of the image to use as the VM OS (string)</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">memory</span></code>- (Optional) Size of the memory for the VM in MB (string)</p></li>
-</ul>
-</li>
-<li><p><code class="docutils literal notranslate"><span class="pre">memory</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">imageOwner</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Owner of the image to use as the VM OS (string)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">memory</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Size of the memory for the VM in MB (string)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">networkId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Opennebula network ID to connect the machine to. Conflicts with <code class="docutils literal notranslate"><span class="pre">network_name</span></code> (string)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">networkName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Opennebula network to connect the machine to. Conflicts with <code class="docutils literal notranslate"><span class="pre">network_id</span></code> (string)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">networkOwner</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Opennebula user ID of the Network to connect the machine to (string)</p></li>
@@ -11062,7 +11040,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">openstack_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.NodeTemplate.openstack_config" title="Permalink to this definition">¶</a></dt>
 <dd><p>Openstack config for the Node Template (list maxitems:1)</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">activeTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">activeTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - OpenStack active timeout Default <code class="docutils literal notranslate"><span class="pre">200</span></code> (string)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">authUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - OpenStack authentication URL (string)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">availabilityZone</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - OpenStack availability zone (string)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">cacert</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - CA certificate bundle to verify against (string)</p></li>
@@ -11286,12 +11264,8 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">diskResize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Size of the disk for the VM in MB (string)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">imageId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - OpenStack image id to use for the instance. Conflicts with <code class="docutils literal notranslate"><span class="pre">image_name</span></code> (string)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">imageName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - OpenStack image name to use for the instance. Conflicts with <code class="docutils literal notranslate"><span class="pre">image_id</span></code> (string)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">imageOwner</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Owner of the image to use as the VM OS (string)</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">memory</span></code>- (Optional) Size of the memory for the VM in MB (string)</p></li>
-</ul>
-</li>
-<li><p><code class="docutils literal notranslate"><span class="pre">memory</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">imageOwner</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Owner of the image to use as the VM OS (string)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">memory</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Size of the memory for the VM in MB (string)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">networkId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Opennebula network ID to connect the machine to. Conflicts with <code class="docutils literal notranslate"><span class="pre">network_name</span></code> (string)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">networkName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Opennebula network to connect the machine to. Conflicts with <code class="docutils literal notranslate"><span class="pre">network_id</span></code> (string)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">networkOwner</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Opennebula user ID of the Network to connect the machine to (string)</p></li>
@@ -11305,7 +11279,7 @@ properties used to qualify the lookup.</p>
 </ul>
 <p>The <strong>openstack_config</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">activeTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">activeTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - OpenStack active timeout Default <code class="docutils literal notranslate"><span class="pre">200</span></code> (string)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">authUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - OpenStack authentication URL (string)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">availabilityZone</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - OpenStack availability zone (string)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">cacert</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - CA certificate bundle to verify against (string)</p></li>
@@ -11421,19 +11395,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>annotations</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Annotations for notifier object (map)</p></li>
 <li><p><strong>cluster_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The cluster id where create notifier (string)</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The notifier description (string)</p></li>
-</ul>
-</dd>
-</dl>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>* `send_resolved` = (Optional) Enable the notifier to send resolved notifications. Default `false` (bool)
-</pre></div>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
 <li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Labels for notifier object (map)</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the notifier (string)</p></li>
 <li><p><strong>pagerduty_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Pagerduty config for notifier (list maxitems:1)</p></li>
-<li><p><strong>send_resolved</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Notifier send resolved</p></li>
+<li><p><strong>send_resolved</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – = (Optional) Enable the notifier to send resolved notifications. Default <code class="docutils literal notranslate"><span class="pre">false</span></code> (bool)</p></li>
 <li><p><strong>slack_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Slack config for notifier (list maxitems:1)</p></li>
 <li><p><strong>smtp_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – SMTP config for notifier (list maxitems:1)</p></li>
 <li><p><strong>webhook_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Webhook config for notifier (list maxitems:1)</p></li>
@@ -11492,9 +11457,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_rancher2.Notifier.description">
 <code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.Notifier.description" title="Permalink to this definition">¶</a></dt>
 <dd><p>The notifier description (string)</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">send_resolved</span></code> = (Optional) Enable the notifier to send resolved notifications. Default <code class="docutils literal notranslate"><span class="pre">false</span></code> (bool)</p></li>
-</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -11522,7 +11484,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_rancher2.Notifier.send_resolved">
 <code class="sig-name descname">send_resolved</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.Notifier.send_resolved" title="Permalink to this definition">¶</a></dt>
-<dd><p>Notifier send resolved</p>
+<dd><p>= (Optional) Enable the notifier to send resolved notifications. Default <code class="docutils literal notranslate"><span class="pre">false</span></code> (bool)</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -11589,19 +11551,10 @@ properties used to qualify the lookup.</p>
 <li><p><strong>annotations</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Annotations for notifier object (map)</p></li>
 <li><p><strong>cluster_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The cluster id where create notifier (string)</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The notifier description (string)</p></li>
-</ul>
-</dd>
-</dl>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>* `send_resolved` = (Optional) Enable the notifier to send resolved notifications. Default `false` (bool)
-</pre></div>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
 <li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Labels for notifier object (map)</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the notifier (string)</p></li>
 <li><p><strong>pagerduty_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Pagerduty config for notifier (list maxitems:1)</p></li>
-<li><p><strong>send_resolved</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Notifier send resolved</p></li>
+<li><p><strong>send_resolved</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – = (Optional) Enable the notifier to send resolved notifications. Default <code class="docutils literal notranslate"><span class="pre">false</span></code> (bool)</p></li>
 <li><p><strong>slack_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Slack config for notifier (list maxitems:1)</p></li>
 <li><p><strong>smtp_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – SMTP config for notifier (list maxitems:1)</p></li>
 <li><p><strong>webhook_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Webhook config for notifier (list maxitems:1)</p></li>
@@ -11693,8 +11646,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>allow_privilege_escalation</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – allowPrivilegeEscalation determines if a pod can request to allow privilege escalation. If unspecified, defaults to
-true.</p></li>
+<li><p><strong>allow_privilege_escalation</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – = (Optional)</p></li>
 <li><p><strong>allowed_capabilities</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – (list)</p></li>
 <li><p><strong>allowed_csi_drivers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – (list)</p></li>
 <li><p><strong>allowed_flex_volumes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – (list)</p></li>
@@ -11712,15 +11664,6 @@ true.</p></li>
 <li><p><strong>host_pid</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – (bool)</p></li>
 <li><p><strong>host_ports</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – (list)</p></li>
 <li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Labels for PodSecurityPolicyTemplate object (map)</p></li>
-</ul>
-</dd>
-</dl>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>* `allow_privilege_escalation` = (Optional)
-</pre></div>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the PodSecurityPolicyTemplate (string)</p></li>
 <li><p><strong>privileged</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – (bool)</p></li>
 <li><p><strong>read_only_root_filesystem</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – (bool)</p></li>
@@ -11812,8 +11755,7 @@ true.</p></li>
 <dl class="attribute">
 <dt id="pulumi_rancher2.PodSecurityPolicyTemplate.allow_privilege_escalation">
 <code class="sig-name descname">allow_privilege_escalation</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.PodSecurityPolicyTemplate.allow_privilege_escalation" title="Permalink to this definition">¶</a></dt>
-<dd><p>allowPrivilegeEscalation determines if a pod can request to allow privilege escalation. If unspecified, defaults to
-true.</p>
+<dd><p>= (Optional)</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -11939,9 +11881,6 @@ true.</p>
 <dt id="pulumi_rancher2.PodSecurityPolicyTemplate.labels">
 <code class="sig-name descname">labels</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_rancher2.PodSecurityPolicyTemplate.labels" title="Permalink to this definition">¶</a></dt>
 <dd><p>Labels for PodSecurityPolicyTemplate object (map)</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">allow_privilege_escalation</span></code> = (Optional)</p></li>
-</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -12057,8 +11996,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>allow_privilege_escalation</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – allowPrivilegeEscalation determines if a pod can request to allow privilege escalation. If unspecified, defaults to
-true.</p></li>
+<li><p><strong>allow_privilege_escalation</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – = (Optional)</p></li>
 <li><p><strong>allowed_capabilities</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – (list)</p></li>
 <li><p><strong>allowed_csi_drivers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – (list)</p></li>
 <li><p><strong>allowed_flex_volumes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – (list)</p></li>
@@ -12076,15 +12014,6 @@ true.</p></li>
 <li><p><strong>host_pid</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – (bool)</p></li>
 <li><p><strong>host_ports</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – (list)</p></li>
 <li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Labels for PodSecurityPolicyTemplate object (map)</p></li>
-</ul>
-</dd>
-</dl>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>* `allow_privilege_escalation` = (Optional)
-</pre></div>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the PodSecurityPolicyTemplate (string)</p></li>
 <li><p><strong>privileged</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – (bool)</p></li>
 <li><p><strong>read_only_root_filesystem</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – (bool)</p></li>
@@ -14620,6 +14549,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>allow_privilege_escalation</strong> (<em>bool</em>) – = (Optional)</p></li>
 <li><p><strong>allowed_capabilities</strong> (<em>list</em>) – (list)</p></li>
 <li><p><strong>allowed_csi_drivers</strong> (<em>list</em>) – (list)</p></li>
 <li><p><strong>allowed_flex_volumes</strong> (<em>list</em>) – (list)</p></li>
@@ -14636,15 +14566,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>host_pid</strong> (<em>bool</em>) – (bool)</p></li>
 <li><p><strong>host_ports</strong> (<em>list</em>) – (list)</p></li>
 <li><p><strong>labels</strong> (<em>dict</em>) – Labels for PodSecurityPolicyTemplate object (map)</p></li>
-</ul>
-</dd>
-</dl>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>* `allow_privilege_escalation` = (Optional)
-</pre></div>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
 <li><p><strong>name</strong> (<em>str</em>) – The name of the PodSecurityPolicyTemplate (string)</p></li>
 <li><p><strong>privileged</strong> (<em>bool</em>) – (bool)</p></li>
 <li><p><strong>read_only_root_filesystem</strong> (<em>bool</em>) – (bool)</p></li>
@@ -14828,6 +14749,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_rancher2.get_role_tempalte">
 <code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">get_role_tempalte</code><span class="sig-paren">(</span><em class="sig-param">context=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.get_role_tempalte" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to retrieve information about a Rancher v2 role template resource.</p>
+<p>Deprecated: rancher2.getRoleTempalte has been deprecated in favour of rancher2.getRoleTemplate</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
