@@ -22,7 +22,7 @@ meta_desc: "Explore the ClientAuthorizationResource resource of the openid modul
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ClientAuthorizationResource</span><span class="p">(resource_name, opts=None, </span>attributes=None<span class="p">, </span>display_name=None<span class="p">, </span>icon_uri=None<span class="p">, </span>name=None<span class="p">, </span>owner_managed_access=None<span class="p">, </span>realm_id=None<span class="p">, </span>resource_server_id=None<span class="p">, </span>scopes=None<span class="p">, </span>type=None<span class="p">, </span>uris=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ClientAuthorizationResource</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>attributes=None<span class="p">, </span>display_name=None<span class="p">, </span>icon_uri=None<span class="p">, </span>name=None<span class="p">, </span>owner_managed_access=None<span class="p">, </span>realm_id=None<span class="p">, </span>resource_server_id=None<span class="p">, </span>scopes=None<span class="p">, </span>type=None<span class="p">, </span>uris=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

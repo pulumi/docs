@@ -31,6 +31,6 @@ Explore the resources and functions of the saml module in the Keycloak package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`keycloak` Terraform Provider](https://github.com/mrparkers/terraform-provider-keycloak).</dd>
 	<dt>Version</dt>
-	<dd>2.1.0</dd>
+	<dd>2.2.0</dd>
 </dl>
 
