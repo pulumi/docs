@@ -1,8 +1,8 @@
 
 ---
 title: "Upstream"
-title_tag: "Resource Upstream | Package kong"
-meta_desc: "Explore the Upstream resource of the kong package, including examples, input properties, output properties, lookup functions, and supporting types. "
+title_tag: "Resource Upstream | Package Kong"
+meta_desc: "Explore the Upstream resource of the Kong package, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 
 
@@ -22,7 +22,7 @@ meta_desc: "Explore the Upstream resource of the kong package, including example
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Upstream</span><span class="p">(resource_name, opts=None, </span>hash_fallback=None<span class="p">, </span>hash_fallback_header=None<span class="p">, </span>hash_on=None<span class="p">, </span>hash_on_cookie=None<span class="p">, </span>hash_on_cookie_path=None<span class="p">, </span>hash_on_header=None<span class="p">, </span>healthchecks=None<span class="p">, </span>name=None<span class="p">, </span>slots=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Upstream</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>hash_fallback=None<span class="p">, </span>hash_fallback_header=None<span class="p">, </span>hash_on=None<span class="p">, </span>hash_on_cookie=None<span class="p">, </span>hash_on_cookie_path=None<span class="p">, </span>hash_on_header=None<span class="p">, </span>healthchecks=None<span class="p">, </span>name=None<span class="p">, </span>slots=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

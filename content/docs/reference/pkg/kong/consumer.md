@@ -1,8 +1,8 @@
 
 ---
 title: "Consumer"
-title_tag: "Resource Consumer | Package kong"
-meta_desc: "Explore the Consumer resource of the kong package, including examples, input properties, output properties, lookup functions, and supporting types. "
+title_tag: "Resource Consumer | Package Kong"
+meta_desc: "Explore the Consumer resource of the Kong package, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 
 
@@ -22,7 +22,7 @@ meta_desc: "Explore the Consumer resource of the kong package, including example
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Consumer</span><span class="p">(resource_name, opts=None, </span>custom_id=None<span class="p">, </span>username=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Consumer</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>custom_id=None<span class="p">, </span>username=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
