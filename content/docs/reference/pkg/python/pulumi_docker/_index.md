@@ -69,15 +69,6 @@ the logging driver.</p></li>
 <li><p><strong>logs</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Save the container logs (<code class="docutils literal notranslate"><span class="pre">attach</span></code> must be enabled).</p></li>
 <li><p><strong>max_retry_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum amount of times to an attempt
 a restart when <code class="docutils literal notranslate"><span class="pre">restart</span></code> is set to “on-failure”</p></li>
-</ul>
-</dd>
-</dl>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>* `working_dir`- (Optional, string) The working directory for commands to run in
-</pre></div>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
 <li><p><strong>memory</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The memory limit for the container in MBs.</p></li>
 <li><p><strong>mounts</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – See Mounts below for details.</p></li>
 <li><p><strong>network_aliases</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Network aliases of the container for user-defined networks only. <em>Deprecated:</em> use <code class="docutils literal notranslate"><span class="pre">networks_advanced</span></code> instead.</p></li>
@@ -106,6 +97,7 @@ details.</p></li>
 by name.</p></li>
 <li><p><strong>userns_mode</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Sets the usernamespace mode for the container when usernamespace remapping option is enabled.</p></li>
 <li><p><strong>volumes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – See Volumes below for details.</p></li>
+<li><p><strong>working_dir</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The working directory for commands to run in</p></li>
 </ul>
 </dd>
 </dl>
@@ -140,12 +132,8 @@ command to be <code class="docutils literal notranslate"><span class="pre">[&quo
 </ul>
 <p>The <strong>labels</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">label</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Name of the label</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (Required, string) Value of the label</p></li>
-</ul>
-</li>
-<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">label</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Name of the label</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Value of the label</p></li>
 </ul>
 <p>The <strong>mounts</strong> object supports the following:</p>
 <ul class="simple">
@@ -171,12 +159,8 @@ Defaults to false.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">driverOptions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Options for the driver.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">labels</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Adding labels.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">label</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Name of the label</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (Required, string) Value of the label</p></li>
-</ul>
-</li>
-<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">label</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Name of the label</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Value of the label</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">noCopy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether to populate volume with data from the target.</p></li>
@@ -418,12 +402,8 @@ NetworkSettings.</p>
 <code class="sig-name descname">labels</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_docker.Container.labels" title="Permalink to this definition">¶</a></dt>
 <dd><p>Adding labels.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">label</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Name of the label</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (Required, string) Value of the label</p></li>
-</ul>
-</li>
-<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">label</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Name of the label</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Value of the label</p></li>
 </ul>
 </dd></dl>
 
@@ -459,9 +439,6 @@ the logging driver.</p>
 <code class="sig-name descname">max_retry_count</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_docker.Container.max_retry_count" title="Permalink to this definition">¶</a></dt>
 <dd><p>The maximum amount of times to an attempt
 a restart when <code class="docutils literal notranslate"><span class="pre">restart</span></code> is set to “on-failure”</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">working_dir</span></code>- (Optional, string) The working directory for commands to run in</p></li>
-</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -497,12 +474,8 @@ Defaults to false.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">driverOptions</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Options for the driver.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">labels</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Adding labels.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">label</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Name of the label</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (Required, string) Value of the label</p></li>
-</ul>
-</li>
-<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">label</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Name of the label</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Value of the label</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">noCopy</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Whether to populate volume with data from the target.</p></li>
@@ -687,6 +660,12 @@ should be mounted.</p></li>
 </ul>
 </dd></dl>
 
+<dl class="attribute">
+<dt id="pulumi_docker.Container.working_dir">
+<code class="sig-name descname">working_dir</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_docker.Container.working_dir" title="Permalink to this definition">¶</a></dt>
+<dd><p>The working directory for commands to run in</p>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_docker.Container.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">attach=None</em>, <em class="sig-param">bridge=None</em>, <em class="sig-param">capabilities=None</em>, <em class="sig-param">command=None</em>, <em class="sig-param">container_logs=None</em>, <em class="sig-param">cpu_set=None</em>, <em class="sig-param">cpu_shares=None</em>, <em class="sig-param">destroy_grace_seconds=None</em>, <em class="sig-param">devices=None</em>, <em class="sig-param">dns=None</em>, <em class="sig-param">dns_opts=None</em>, <em class="sig-param">dns_searches=None</em>, <em class="sig-param">domainname=None</em>, <em class="sig-param">entrypoints=None</em>, <em class="sig-param">envs=None</em>, <em class="sig-param">exit_code=None</em>, <em class="sig-param">gateway=None</em>, <em class="sig-param">group_adds=None</em>, <em class="sig-param">healthcheck=None</em>, <em class="sig-param">hostname=None</em>, <em class="sig-param">hosts=None</em>, <em class="sig-param">image=None</em>, <em class="sig-param">ip_address=None</em>, <em class="sig-param">ip_prefix_length=None</em>, <em class="sig-param">ipc_mode=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">links=None</em>, <em class="sig-param">log_driver=None</em>, <em class="sig-param">log_opts=None</em>, <em class="sig-param">logs=None</em>, <em class="sig-param">max_retry_count=None</em>, <em class="sig-param">memory=None</em>, <em class="sig-param">memory_swap=None</em>, <em class="sig-param">mounts=None</em>, <em class="sig-param">must_run=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_aliases=None</em>, <em class="sig-param">network_datas=None</em>, <em class="sig-param">network_mode=None</em>, <em class="sig-param">networks=None</em>, <em class="sig-param">networks_advanced=None</em>, <em class="sig-param">pid_mode=None</em>, <em class="sig-param">ports=None</em>, <em class="sig-param">privileged=None</em>, <em class="sig-param">publish_all_ports=None</em>, <em class="sig-param">read_only=None</em>, <em class="sig-param">restart=None</em>, <em class="sig-param">rm=None</em>, <em class="sig-param">shm_size=None</em>, <em class="sig-param">start=None</em>, <em class="sig-param">sysctls=None</em>, <em class="sig-param">tmpfs=None</em>, <em class="sig-param">ulimits=None</em>, <em class="sig-param">uploads=None</em>, <em class="sig-param">user=None</em>, <em class="sig-param">userns_mode=None</em>, <em class="sig-param">volumes=None</em>, <em class="sig-param">working_dir=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_docker.Container.get" title="Permalink to this definition">¶</a></dt>
@@ -743,15 +722,6 @@ the logging driver.</p></li>
 <li><p><strong>logs</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Save the container logs (<code class="docutils literal notranslate"><span class="pre">attach</span></code> must be enabled).</p></li>
 <li><p><strong>max_retry_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum amount of times to an attempt
 a restart when <code class="docutils literal notranslate"><span class="pre">restart</span></code> is set to “on-failure”</p></li>
-</ul>
-</dd>
-</dl>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>* `working_dir`- (Optional, string) The working directory for commands to run in
-</pre></div>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
 <li><p><strong>memory</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The memory limit for the container in MBs.</p></li>
 <li><p><strong>mounts</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – See Mounts below for details.</p></li>
 <li><p><strong>network_aliases</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Network aliases of the container for user-defined networks only. <em>Deprecated:</em> use <code class="docutils literal notranslate"><span class="pre">networks_advanced</span></code> instead.</p></li>
@@ -782,6 +752,7 @@ details.</p></li>
 by name.</p></li>
 <li><p><strong>userns_mode</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Sets the usernamespace mode for the container when usernamespace remapping option is enabled.</p></li>
 <li><p><strong>volumes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – See Volumes below for details.</p></li>
+<li><p><strong>working_dir</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The working directory for commands to run in</p></li>
 </ul>
 </dd>
 </dl>
@@ -816,12 +787,8 @@ command to be <code class="docutils literal notranslate"><span class="pre">[&quo
 </ul>
 <p>The <strong>labels</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">label</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Name of the label</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (Required, string) Value of the label</p></li>
-</ul>
-</li>
-<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">label</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Name of the label</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Value of the label</p></li>
 </ul>
 <p>The <strong>mounts</strong> object supports the following:</p>
 <ul class="simple">
@@ -847,12 +814,8 @@ Defaults to false.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">driverOptions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Options for the driver.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">labels</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Adding labels.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">label</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Name of the label</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (Required, string) Value of the label</p></li>
-</ul>
-</li>
-<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">label</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Name of the label</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Value of the label</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">noCopy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether to populate volume with data from the target.</p></li>
@@ -986,7 +949,7 @@ See [docker docs][networkdocs] for more details.</p>
 <dl class="attribute">
 <dt id="pulumi_docker.GetRegistryImageResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_docker.GetRegistryImageResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 </dd></dl>
@@ -1034,12 +997,8 @@ the drivers.</p></li>
 </ul>
 <p>The <strong>labels</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">label</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Name of the label</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (Required, string) Value of the label</p></li>
-</ul>
-</li>
-<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">label</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Name of the label</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Value of the label</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_docker.Network.attachable">
@@ -1108,12 +1067,8 @@ Defaults to <code class="docutils literal notranslate"><span class="pre">false</
 <code class="sig-name descname">labels</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_docker.Network.labels" title="Permalink to this definition">¶</a></dt>
 <dd><p>See Labels below for details.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">label</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Name of the label</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (Required, string) Value of the label</p></li>
-</ul>
-</li>
-<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">label</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Name of the label</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Value of the label</p></li>
 </ul>
 </dd></dl>
 
@@ -1173,12 +1128,8 @@ the drivers.</p></li>
 </ul>
 <p>The <strong>labels</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">label</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Name of the label</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (Required, string) Value of the label</p></li>
-</ul>
-</li>
-<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">label</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Name of the label</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Value of the label</p></li>
 </ul>
 </dd></dl>
 
@@ -1420,12 +1371,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 <p>The <strong>labels</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">label</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Name of the label</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (Required, string) Value of the label</p></li>
-</ul>
-</li>
-<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">label</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Name of the label</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Value of the label</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_docker.Secret.data">
@@ -1438,12 +1385,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">labels</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_docker.Secret.labels" title="Permalink to this definition">¶</a></dt>
 <dd><p>See Labels below for details.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">label</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Name of the label</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (Required, string) Value of the label</p></li>
-</ul>
-</li>
-<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">label</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Name of the label</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Value of the label</p></li>
 </ul>
 </dd></dl>
 
@@ -1472,12 +1415,8 @@ properties used to qualify the lookup.</p>
 </dl>
 <p>The <strong>labels</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">label</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Name of the label</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (Required, string) Value of the label</p></li>
-</ul>
-</li>
-<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">label</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Name of the label</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Value of the label</p></li>
 </ul>
 </dd></dl>
 
@@ -1561,12 +1500,8 @@ all tasks are up when a service is created, or to check if all tasks are success
 </ul>
 <p>The <strong>labels</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">label</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Name of the label</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (Required, string) Value of the label</p></li>
-</ul>
-</li>
-<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">label</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Name of the label</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Value of the label</p></li>
 </ul>
 <p>The <strong>mode</strong> object supports the following:</p>
 <ul class="simple">
@@ -1579,7 +1514,7 @@ all tasks are up when a service is created, or to check if all tasks are success
 </ul>
 <p>The <strong>rollback_config</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">delay</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Delay between updates <code class="docutils literal notranslate"><span class="pre">(ns|us|ms|s|m|h)</span></code>, e.g. <code class="docutils literal notranslate"><span class="pre">5s</span></code>.
+<li><p><code class="docutils literal notranslate"><span class="pre">delay</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Delay between restart attempts <code class="docutils literal notranslate"><span class="pre">(ms|s|m|h)</span></code>
 all tasks are up when a service is created, or to check if all tasks are successfully updated on an update. Default: <code class="docutils literal notranslate"><span class="pre">7s</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">failureAction</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Action on update failure: <code class="docutils literal notranslate"><span class="pre">pause|continue|rollback</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">maxFailureRatio</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The failure rate to tolerate during an update as <code class="docutils literal notranslate"><span class="pre">float</span></code>. <strong>Important:</strong> the <code class="docutils literal notranslate"><span class="pre">float</span></code>need to be wrapped in a <code class="docutils literal notranslate"><span class="pre">string</span></code> to avoid internal
@@ -1590,7 +1525,7 @@ casting and precision errors.</p></li>
 </ul>
 <p>The <strong>task_spec</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">containerSpec</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">containerSpec</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - See ContainerSpec below for details.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">args</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Arguments to the command.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">commands</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The command to be run in the image.</p></li>
@@ -1613,11 +1548,7 @@ casting and precision errors.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">env</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A list of environment variables in the form VAR=value.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">groups</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of additional groups that the container process will run as.</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">privileges</span></code> (Optional, block) See Privileges below for details.</p></li>
-</ul>
-</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">groups</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of additional groups that the container process will run as.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">healthcheck</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - See Healthcheck below for details.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">interval</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Time between running the check <code class="docutils literal notranslate"><span class="pre">(ms|s|m|h)</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">0s</span></code>.</p></li>
@@ -1639,12 +1570,8 @@ command to be <code class="docutils literal notranslate"><span class="pre">[&quo
 <li><p><code class="docutils literal notranslate"><span class="pre">isolation</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Isolation technology of the containers running the service. (Windows only). Valid values are: <code class="docutils literal notranslate"><span class="pre">default|process|hyperv</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">labels</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - See Labels below for details.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">label</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Name of the label</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (Required, string) Value of the label</p></li>
-</ul>
-</li>
-<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">label</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Name of the label</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Value of the label</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">mounts</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - See Mounts below for details.</p>
@@ -1670,12 +1597,8 @@ command to be <code class="docutils literal notranslate"><span class="pre">[&quo
 <li><p><code class="docutils literal notranslate"><span class="pre">driverOptions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">labels</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - See Labels below for details.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">label</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Name of the label</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (Required, string) Value of the label</p></li>
-</ul>
-</li>
-<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">label</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Name of the label</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Value of the label</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">noCopy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether to populate volume with data from the target.</p></li>
@@ -1683,7 +1606,7 @@ command to be <code class="docutils literal notranslate"><span class="pre">[&quo
 </li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">privileges</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">privileges</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - See Privileges below for details.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">credentialSpec</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - For managed service account (Windows only)</p>
 <ul>
@@ -1718,7 +1641,7 @@ command to be <code class="docutils literal notranslate"><span class="pre">[&quo
 <li><p><code class="docutils literal notranslate"><span class="pre">user</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The user inside the container.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">forceUpdate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">forceUpdate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - A counter that triggers an update even if no relevant parameters have been changed. See <a class="reference external" href="https://github.com/docker/swarmkit/blob/master/api/specs.proto#L126">Docker Spec</a>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">log_driver</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - See Log Driver below for details.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The logging driver to use. Either <code class="docutils literal notranslate"><span class="pre">(none|json-file|syslog|journald|gelf|fluentd|awslogs|splunk|etwlogs|gcplogs)</span></code>.</p></li>
@@ -1726,66 +1649,55 @@ command to be <code class="docutils literal notranslate"><span class="pre">[&quo
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">networks</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Ids of the networks in which the container will be put in.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">placement</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">placement</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - See Placement below for details.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">constraints</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">platforms</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">constraints</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - An array of constraints. e.g.: <code class="docutils literal notranslate"><span class="pre">node.role==manager</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">platforms</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Platforms stores all the platforms that the service’s image can run on</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">architecture</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">os</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">architecture</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The architecture, e.g., <code class="docutils literal notranslate"><span class="pre">amd64</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">os</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The operation system, e.g., <code class="docutils literal notranslate"><span class="pre">linux</span></code></p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">prefs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">prefs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Preferences provide a way to make the scheduler aware of factors such as topology. They are provided in order from highest to lowest precedence, e.g.: <code class="docutils literal notranslate"><span class="pre">spread=node.role.manager</span></code></p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">resources</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">resources</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - See Resources below for details.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">limits</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Describes the resources which can be advertised by a node and requested by a task.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">nano_cpus</span></code> (Optional, int) CPU shares in units of 1/1e9 (or 10^-9) of the CPU. Should be at least 1000000</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">memory_bytes</span></code> (Optional, int) The amount of memory in bytes the container allocates</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">generic_resources</span></code> (Optional, map) User-defined resources can be either Integer resources (e.g, SSD=3) or String resources (e.g, GPU=UUID1)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">named_resources_spec</span></code> (Optional, set of string) The String resources, delimited by <code class="docutils literal notranslate"><span class="pre">=</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">discrete_resources_spec</span></code> (Optional, set of string) The Integer resources, delimited by <code class="docutils literal notranslate"><span class="pre">=</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">genericResources</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">genericResources</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - User-defined resources can be either Integer resources (e.g, SSD=3) or String resources (e.g, GPU=UUID1)</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">discreteResourcesSpecs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">namedResourcesSpecs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">discreteResourcesSpecs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The Integer resources, delimited by <code class="docutils literal notranslate"><span class="pre">=</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">namedResourcesSpecs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The String resources, delimited by <code class="docutils literal notranslate"><span class="pre">=</span></code></p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">memoryBytes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">nanoCpus</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">memoryBytes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The amount of memory in bytes the container allocates</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nanoCpus</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - CPU shares in units of 1/1e9 (or 10^-9) of the CPU. Should be at least 1000000</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">reservation</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - An object describing the resources which can be advertised by a node and requested by a task.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">nano_cpus</span></code> (Optional, int) CPU shares in units of 1/1e9 (or 10^-9) of the CPU. Should be at least 1000000</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">memory_bytes</span></code> (Optional, int) The amount of memory in bytes the container allocates</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">generic_resources</span></code> (Optional, map) User-defined resources can be either Integer resources (e.g, SSD=3) or String resources (e.g, GPU=UUID1)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">named_resources_spec</span></code> (Optional, set of string) The String resources</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">discrete_resources_spec</span></code> (Optional, set of string) The Integer resources</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">genericResources</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">genericResources</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - User-defined resources can be either Integer resources (e.g, SSD=3) or String resources (e.g, GPU=UUID1)</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">discreteResourcesSpecs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">namedResourcesSpecs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">discreteResourcesSpecs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The Integer resources, delimited by <code class="docutils literal notranslate"><span class="pre">=</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">namedResourcesSpecs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The String resources, delimited by <code class="docutils literal notranslate"><span class="pre">=</span></code></p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">memoryBytes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">nanoCpus</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">memoryBytes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The amount of memory in bytes the container allocates</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nanoCpus</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - CPU shares in units of 1/1e9 (or 10^-9) of the CPU. Should be at least 1000000</p></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">restartPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">restartPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - See Restart Policy below for details.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">condition</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">delay</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Delay between updates <code class="docutils literal notranslate"><span class="pre">(ns|us|ms|s|m|h)</span></code>, e.g. <code class="docutils literal notranslate"><span class="pre">5s</span></code>.
-all tasks are up when a service is created, or to check if all tasks are successfully updated on an update. Default: <code class="docutils literal notranslate"><span class="pre">7s</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">maxAttempts</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">window</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">condition</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Condition for restart: <code class="docutils literal notranslate"><span class="pre">(none|on-failure|any)</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">delay</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Delay between restart attempts <code class="docutils literal notranslate"><span class="pre">(ms|s|m|h)</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxAttempts</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Maximum attempts to restart a given container before giving up (default value is <code class="docutils literal notranslate"><span class="pre">0</span></code>, which is ignored)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">window</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The time window used to evaluate the restart policy (default value is <code class="docutils literal notranslate"><span class="pre">0</span></code>, which is unbounded) <code class="docutils literal notranslate"><span class="pre">(ms|s|m|h)</span></code></p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">runtime</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">runtime</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Runtime is the type of runtime specified for the task executor. See <a class="reference external" href="https://github.com/moby/moby/blob/master/api/types/swarm/runtime.go">Docker Runtime</a>.</p></li>
 </ul>
 <p>The <strong>update_config</strong> object supports the following:</p>
 <ul class="simple">
@@ -1842,12 +1754,8 @@ all tasks are up when a service is created, or to check if all tasks are success
 <code class="sig-name descname">labels</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_docker.Service.labels" title="Permalink to this definition">¶</a></dt>
 <dd><p>See Labels below for details.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">label</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Name of the label</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (Required, string) Value of the label</p></li>
-</ul>
-</li>
-<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">label</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Name of the label</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Value of the label</p></li>
 </ul>
 </dd></dl>
 
@@ -1876,7 +1784,7 @@ all tasks are up when a service is created, or to check if all tasks are success
 <code class="sig-name descname">rollback_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_docker.Service.rollback_config" title="Permalink to this definition">¶</a></dt>
 <dd><p>See RollbackConfig below for details.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">delay</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Delay between updates <code class="docutils literal notranslate"><span class="pre">(ns|us|ms|s|m|h)</span></code>, e.g. <code class="docutils literal notranslate"><span class="pre">5s</span></code>.
+<li><p><code class="docutils literal notranslate"><span class="pre">delay</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Delay between restart attempts <code class="docutils literal notranslate"><span class="pre">(ms|s|m|h)</span></code>
 all tasks are up when a service is created, or to check if all tasks are successfully updated on an update. Default: <code class="docutils literal notranslate"><span class="pre">7s</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">failureAction</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Action on update failure: <code class="docutils literal notranslate"><span class="pre">pause|continue|rollback</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">maxFailureRatio</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The failure rate to tolerate during an update as <code class="docutils literal notranslate"><span class="pre">float</span></code>. <strong>Important:</strong> the <code class="docutils literal notranslate"><span class="pre">float</span></code>need to be wrapped in a <code class="docutils literal notranslate"><span class="pre">string</span></code> to avoid internal
@@ -1892,7 +1800,7 @@ casting and precision errors.</p></li>
 <code class="sig-name descname">task_spec</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_docker.Service.task_spec" title="Permalink to this definition">¶</a></dt>
 <dd><p>See TaskSpec below for details.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">containerSpec</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">containerSpec</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - See ContainerSpec below for details.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">args</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Arguments to the command.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">commands</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - The command to be run in the image.</p></li>
@@ -1915,11 +1823,7 @@ casting and precision errors.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">env</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A list of environment variables in the form VAR=value.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">groups</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of additional groups that the container process will run as.</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">privileges</span></code> (Optional, block) See Privileges below for details.</p></li>
-</ul>
-</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">groups</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of additional groups that the container process will run as.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">healthcheck</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - See Healthcheck below for details.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">interval</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Time between running the check <code class="docutils literal notranslate"><span class="pre">(ms|s|m|h)</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">0s</span></code>.</p></li>
@@ -1941,12 +1845,8 @@ command to be <code class="docutils literal notranslate"><span class="pre">[&quo
 <li><p><code class="docutils literal notranslate"><span class="pre">isolation</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Isolation technology of the containers running the service. (Windows only). Valid values are: <code class="docutils literal notranslate"><span class="pre">default|process|hyperv</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">labels</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - See Labels below for details.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">label</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Name of the label</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (Required, string) Value of the label</p></li>
-</ul>
-</li>
-<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">label</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Name of the label</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Value of the label</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">mounts</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - See Mounts below for details.</p>
@@ -1972,12 +1872,8 @@ command to be <code class="docutils literal notranslate"><span class="pre">[&quo
 <li><p><code class="docutils literal notranslate"><span class="pre">driverOptions</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">labels</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - See Labels below for details.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">label</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Name of the label</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (Required, string) Value of the label</p></li>
-</ul>
-</li>
-<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">label</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Name of the label</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Value of the label</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">noCopy</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Whether to populate volume with data from the target.</p></li>
@@ -1985,7 +1881,7 @@ command to be <code class="docutils literal notranslate"><span class="pre">[&quo
 </li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">privileges</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">privileges</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - See Privileges below for details.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">credentialSpec</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - For managed service account (Windows only)</p>
 <ul>
@@ -2020,7 +1916,7 @@ command to be <code class="docutils literal notranslate"><span class="pre">[&quo
 <li><p><code class="docutils literal notranslate"><span class="pre">user</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The user inside the container.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">forceUpdate</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">forceUpdate</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - A counter that triggers an update even if no relevant parameters have been changed. See <a class="reference external" href="https://github.com/docker/swarmkit/blob/master/api/specs.proto#L126">Docker Spec</a>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">log_driver</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - See Log Driver below for details.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The logging driver to use. Either <code class="docutils literal notranslate"><span class="pre">(none|json-file|syslog|journald|gelf|fluentd|awslogs|splunk|etwlogs|gcplogs)</span></code>.</p></li>
@@ -2028,66 +1924,55 @@ command to be <code class="docutils literal notranslate"><span class="pre">[&quo
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">networks</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Ids of the networks in which the container will be put in.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">placement</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">placement</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - See Placement below for details.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">constraints</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">platforms</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">constraints</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - An array of constraints. e.g.: <code class="docutils literal notranslate"><span class="pre">node.role==manager</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">platforms</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Platforms stores all the platforms that the service’s image can run on</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">architecture</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">os</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">architecture</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The architecture, e.g., <code class="docutils literal notranslate"><span class="pre">amd64</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">os</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The operation system, e.g., <code class="docutils literal notranslate"><span class="pre">linux</span></code></p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">prefs</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">prefs</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Preferences provide a way to make the scheduler aware of factors such as topology. They are provided in order from highest to lowest precedence, e.g.: <code class="docutils literal notranslate"><span class="pre">spread=node.role.manager</span></code></p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">resources</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">resources</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - See Resources below for details.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">limits</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Describes the resources which can be advertised by a node and requested by a task.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">nano_cpus</span></code> (Optional, int) CPU shares in units of 1/1e9 (or 10^-9) of the CPU. Should be at least 1000000</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">memory_bytes</span></code> (Optional, int) The amount of memory in bytes the container allocates</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">generic_resources</span></code> (Optional, map) User-defined resources can be either Integer resources (e.g, SSD=3) or String resources (e.g, GPU=UUID1)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">named_resources_spec</span></code> (Optional, set of string) The String resources, delimited by <code class="docutils literal notranslate"><span class="pre">=</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">discrete_resources_spec</span></code> (Optional, set of string) The Integer resources, delimited by <code class="docutils literal notranslate"><span class="pre">=</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">genericResources</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">genericResources</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - User-defined resources can be either Integer resources (e.g, SSD=3) or String resources (e.g, GPU=UUID1)</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">discreteResourcesSpecs</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">namedResourcesSpecs</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">discreteResourcesSpecs</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - The Integer resources, delimited by <code class="docutils literal notranslate"><span class="pre">=</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">namedResourcesSpecs</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - The String resources, delimited by <code class="docutils literal notranslate"><span class="pre">=</span></code></p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">memoryBytes</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">nanoCpus</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">memoryBytes</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The amount of memory in bytes the container allocates</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nanoCpus</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - CPU shares in units of 1/1e9 (or 10^-9) of the CPU. Should be at least 1000000</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">reservation</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - An object describing the resources which can be advertised by a node and requested by a task.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">nano_cpus</span></code> (Optional, int) CPU shares in units of 1/1e9 (or 10^-9) of the CPU. Should be at least 1000000</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">memory_bytes</span></code> (Optional, int) The amount of memory in bytes the container allocates</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">generic_resources</span></code> (Optional, map) User-defined resources can be either Integer resources (e.g, SSD=3) or String resources (e.g, GPU=UUID1)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">named_resources_spec</span></code> (Optional, set of string) The String resources</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">discrete_resources_spec</span></code> (Optional, set of string) The Integer resources</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">genericResources</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">genericResources</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - User-defined resources can be either Integer resources (e.g, SSD=3) or String resources (e.g, GPU=UUID1)</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">discreteResourcesSpecs</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">namedResourcesSpecs</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">discreteResourcesSpecs</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - The Integer resources, delimited by <code class="docutils literal notranslate"><span class="pre">=</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">namedResourcesSpecs</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - The String resources, delimited by <code class="docutils literal notranslate"><span class="pre">=</span></code></p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">memoryBytes</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">nanoCpus</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">memoryBytes</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The amount of memory in bytes the container allocates</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nanoCpus</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - CPU shares in units of 1/1e9 (or 10^-9) of the CPU. Should be at least 1000000</p></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">restartPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">restartPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - See Restart Policy below for details.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">condition</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">delay</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Delay between updates <code class="docutils literal notranslate"><span class="pre">(ns|us|ms|s|m|h)</span></code>, e.g. <code class="docutils literal notranslate"><span class="pre">5s</span></code>.
-all tasks are up when a service is created, or to check if all tasks are successfully updated on an update. Default: <code class="docutils literal notranslate"><span class="pre">7s</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">maxAttempts</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">window</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">condition</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Condition for restart: <code class="docutils literal notranslate"><span class="pre">(none|on-failure|any)</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">delay</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Delay between restart attempts <code class="docutils literal notranslate"><span class="pre">(ms|s|m|h)</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxAttempts</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Maximum attempts to restart a given container before giving up (default value is <code class="docutils literal notranslate"><span class="pre">0</span></code>, which is ignored)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">window</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The time window used to evaluate the restart policy (default value is <code class="docutils literal notranslate"><span class="pre">0</span></code>, which is unbounded) <code class="docutils literal notranslate"><span class="pre">(ms|s|m|h)</span></code></p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">runtime</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">runtime</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Runtime is the type of runtime specified for the task executor. See <a class="reference external" href="https://github.com/moby/moby/blob/master/api/types/swarm/runtime.go">Docker Runtime</a>.</p></li>
 </ul>
 </dd></dl>
 
@@ -2156,12 +2041,8 @@ all tasks are up when a service is created, or to check if all tasks are success
 </ul>
 <p>The <strong>labels</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">label</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Name of the label</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (Required, string) Value of the label</p></li>
-</ul>
-</li>
-<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">label</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Name of the label</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Value of the label</p></li>
 </ul>
 <p>The <strong>mode</strong> object supports the following:</p>
 <ul class="simple">
@@ -2174,7 +2055,7 @@ all tasks are up when a service is created, or to check if all tasks are success
 </ul>
 <p>The <strong>rollback_config</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">delay</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Delay between updates <code class="docutils literal notranslate"><span class="pre">(ns|us|ms|s|m|h)</span></code>, e.g. <code class="docutils literal notranslate"><span class="pre">5s</span></code>.
+<li><p><code class="docutils literal notranslate"><span class="pre">delay</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Delay between restart attempts <code class="docutils literal notranslate"><span class="pre">(ms|s|m|h)</span></code>
 all tasks are up when a service is created, or to check if all tasks are successfully updated on an update. Default: <code class="docutils literal notranslate"><span class="pre">7s</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">failureAction</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Action on update failure: <code class="docutils literal notranslate"><span class="pre">pause|continue|rollback</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">maxFailureRatio</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The failure rate to tolerate during an update as <code class="docutils literal notranslate"><span class="pre">float</span></code>. <strong>Important:</strong> the <code class="docutils literal notranslate"><span class="pre">float</span></code>need to be wrapped in a <code class="docutils literal notranslate"><span class="pre">string</span></code> to avoid internal
@@ -2185,7 +2066,7 @@ casting and precision errors.</p></li>
 </ul>
 <p>The <strong>task_spec</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">containerSpec</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">containerSpec</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - See ContainerSpec below for details.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">args</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Arguments to the command.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">commands</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The command to be run in the image.</p></li>
@@ -2208,11 +2089,7 @@ casting and precision errors.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">env</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A list of environment variables in the form VAR=value.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">groups</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of additional groups that the container process will run as.</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">privileges</span></code> (Optional, block) See Privileges below for details.</p></li>
-</ul>
-</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">groups</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of additional groups that the container process will run as.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">healthcheck</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - See Healthcheck below for details.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">interval</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Time between running the check <code class="docutils literal notranslate"><span class="pre">(ms|s|m|h)</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">0s</span></code>.</p></li>
@@ -2234,12 +2111,8 @@ command to be <code class="docutils literal notranslate"><span class="pre">[&quo
 <li><p><code class="docutils literal notranslate"><span class="pre">isolation</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Isolation technology of the containers running the service. (Windows only). Valid values are: <code class="docutils literal notranslate"><span class="pre">default|process|hyperv</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">labels</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - See Labels below for details.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">label</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Name of the label</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (Required, string) Value of the label</p></li>
-</ul>
-</li>
-<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">label</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Name of the label</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Value of the label</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">mounts</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - See Mounts below for details.</p>
@@ -2265,12 +2138,8 @@ command to be <code class="docutils literal notranslate"><span class="pre">[&quo
 <li><p><code class="docutils literal notranslate"><span class="pre">driverOptions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">labels</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - See Labels below for details.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">label</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Name of the label</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (Required, string) Value of the label</p></li>
-</ul>
-</li>
-<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">label</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Name of the label</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Value of the label</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">noCopy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether to populate volume with data from the target.</p></li>
@@ -2278,7 +2147,7 @@ command to be <code class="docutils literal notranslate"><span class="pre">[&quo
 </li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">privileges</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">privileges</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - See Privileges below for details.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">credentialSpec</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - For managed service account (Windows only)</p>
 <ul>
@@ -2313,7 +2182,7 @@ command to be <code class="docutils literal notranslate"><span class="pre">[&quo
 <li><p><code class="docutils literal notranslate"><span class="pre">user</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The user inside the container.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">forceUpdate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">forceUpdate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - A counter that triggers an update even if no relevant parameters have been changed. See <a class="reference external" href="https://github.com/docker/swarmkit/blob/master/api/specs.proto#L126">Docker Spec</a>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">log_driver</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - See Log Driver below for details.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The logging driver to use. Either <code class="docutils literal notranslate"><span class="pre">(none|json-file|syslog|journald|gelf|fluentd|awslogs|splunk|etwlogs|gcplogs)</span></code>.</p></li>
@@ -2321,66 +2190,55 @@ command to be <code class="docutils literal notranslate"><span class="pre">[&quo
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">networks</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Ids of the networks in which the container will be put in.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">placement</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">placement</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - See Placement below for details.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">constraints</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">platforms</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">constraints</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - An array of constraints. e.g.: <code class="docutils literal notranslate"><span class="pre">node.role==manager</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">platforms</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Platforms stores all the platforms that the service’s image can run on</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">architecture</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">os</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">architecture</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The architecture, e.g., <code class="docutils literal notranslate"><span class="pre">amd64</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">os</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The operation system, e.g., <code class="docutils literal notranslate"><span class="pre">linux</span></code></p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">prefs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">prefs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Preferences provide a way to make the scheduler aware of factors such as topology. They are provided in order from highest to lowest precedence, e.g.: <code class="docutils literal notranslate"><span class="pre">spread=node.role.manager</span></code></p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">resources</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">resources</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - See Resources below for details.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">limits</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Describes the resources which can be advertised by a node and requested by a task.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">nano_cpus</span></code> (Optional, int) CPU shares in units of 1/1e9 (or 10^-9) of the CPU. Should be at least 1000000</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">memory_bytes</span></code> (Optional, int) The amount of memory in bytes the container allocates</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">generic_resources</span></code> (Optional, map) User-defined resources can be either Integer resources (e.g, SSD=3) or String resources (e.g, GPU=UUID1)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">named_resources_spec</span></code> (Optional, set of string) The String resources, delimited by <code class="docutils literal notranslate"><span class="pre">=</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">discrete_resources_spec</span></code> (Optional, set of string) The Integer resources, delimited by <code class="docutils literal notranslate"><span class="pre">=</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">genericResources</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">genericResources</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - User-defined resources can be either Integer resources (e.g, SSD=3) or String resources (e.g, GPU=UUID1)</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">discreteResourcesSpecs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">namedResourcesSpecs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">discreteResourcesSpecs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The Integer resources, delimited by <code class="docutils literal notranslate"><span class="pre">=</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">namedResourcesSpecs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The String resources, delimited by <code class="docutils literal notranslate"><span class="pre">=</span></code></p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">memoryBytes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">nanoCpus</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">memoryBytes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The amount of memory in bytes the container allocates</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nanoCpus</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - CPU shares in units of 1/1e9 (or 10^-9) of the CPU. Should be at least 1000000</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">reservation</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - An object describing the resources which can be advertised by a node and requested by a task.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">nano_cpus</span></code> (Optional, int) CPU shares in units of 1/1e9 (or 10^-9) of the CPU. Should be at least 1000000</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">memory_bytes</span></code> (Optional, int) The amount of memory in bytes the container allocates</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">generic_resources</span></code> (Optional, map) User-defined resources can be either Integer resources (e.g, SSD=3) or String resources (e.g, GPU=UUID1)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">named_resources_spec</span></code> (Optional, set of string) The String resources</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">discrete_resources_spec</span></code> (Optional, set of string) The Integer resources</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">genericResources</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">genericResources</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - User-defined resources can be either Integer resources (e.g, SSD=3) or String resources (e.g, GPU=UUID1)</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">discreteResourcesSpecs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">namedResourcesSpecs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">discreteResourcesSpecs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The Integer resources, delimited by <code class="docutils literal notranslate"><span class="pre">=</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">namedResourcesSpecs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The String resources, delimited by <code class="docutils literal notranslate"><span class="pre">=</span></code></p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">memoryBytes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">nanoCpus</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">memoryBytes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The amount of memory in bytes the container allocates</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nanoCpus</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - CPU shares in units of 1/1e9 (or 10^-9) of the CPU. Should be at least 1000000</p></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">restartPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">restartPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - See Restart Policy below for details.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">condition</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">delay</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Delay between updates <code class="docutils literal notranslate"><span class="pre">(ns|us|ms|s|m|h)</span></code>, e.g. <code class="docutils literal notranslate"><span class="pre">5s</span></code>.
-all tasks are up when a service is created, or to check if all tasks are successfully updated on an update. Default: <code class="docutils literal notranslate"><span class="pre">7s</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">maxAttempts</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">window</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">condition</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Condition for restart: <code class="docutils literal notranslate"><span class="pre">(none|on-failure|any)</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">delay</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Delay between restart attempts <code class="docutils literal notranslate"><span class="pre">(ms|s|m|h)</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxAttempts</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Maximum attempts to restart a given container before giving up (default value is <code class="docutils literal notranslate"><span class="pre">0</span></code>, which is ignored)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">window</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The time window used to evaluate the restart policy (default value is <code class="docutils literal notranslate"><span class="pre">0</span></code>, which is unbounded) <code class="docutils literal notranslate"><span class="pre">(ms|s|m|h)</span></code></p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">runtime</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">runtime</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Runtime is the type of runtime specified for the task executor. See <a class="reference external" href="https://github.com/moby/moby/blob/master/api/types/swarm/runtime.go">Docker Runtime</a>.</p></li>
 </ul>
 <p>The <strong>update_config</strong> object supports the following:</p>
 <ul class="simple">
