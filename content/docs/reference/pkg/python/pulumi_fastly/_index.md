@@ -31,7 +31,7 @@ anything, please consult the source <a class="reference external" href="https://
 <dl class="attribute">
 <dt id="pulumi_fastly.GetFastlyIpRangesResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_fastly.GetFastlyIpRangesResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 </dd></dl>
@@ -1733,7 +1733,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="function">
 <dt id="pulumi_fastly.get_fastly_ip_ranges">
 <code class="sig-prename descclassname">pulumi_fastly.</code><code class="sig-name descname">get_fastly_ip_ranges</code><span class="sig-paren">(</span><em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_fastly.get_fastly_ip_ranges" title="Permalink to this definition">¶</a></dt>
-<dd><p>Use this data source to get the [IP ranges][1] of Fastly edge nodes.</p>
+<dd><p>Use this data source to get the <a class="reference external" href="https://docs.fastly.com/guides/securing-communications/accessing-fastlys-ip-ranges">IP ranges</a> of Fastly edge nodes.</p>
 </dd></dl>
 
 </div>

@@ -80,6 +80,6 @@ A Pulumi package for creating and managing Digital Ocean cloud resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`digitalocean` Terraform Provider](https://github.com/terraform-providers/terraform-provider-digitalocean).</dd>
 	<dt>Version</dt>
-	<dd>2.1.0</dd>
+	<dd>2.2.0</dd>
 </dl>
 
