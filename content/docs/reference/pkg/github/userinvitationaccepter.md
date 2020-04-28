@@ -1,8 +1,8 @@
 
 ---
 title: "UserInvitationAccepter"
-title_tag: "Resource UserInvitationAccepter | Package github"
-meta_desc: "Explore the UserInvitationAccepter resource of the github package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a resource to manage GitHub repository collaborator invitations."
+title_tag: "Resource UserInvitationAccepter | Package GitHub"
+meta_desc: "Explore the UserInvitationAccepter resource of the GitHub package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a resource to manage GitHub repository collaborator invitations."
 ---
 
 
@@ -31,7 +31,7 @@ const invitee = new github.Provider("invitee", {
 });
 const exampleUserInvitationAccepter = new github.UserInvitationAccepter("example", {
     invitationId: exampleRepositoryCollaborator.invitationId,
-}, {provider: invitee});
+}, { provider: invitee });
 ```
 
 {{% /example %}}

@@ -1,8 +1,8 @@
 
 ---
 title: "RepositoryDeployKey"
-title_tag: "Resource RepositoryDeployKey | Package github"
-meta_desc: "Explore the RepositoryDeployKey resource of the github package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a GitHub repository deploy key resource."
+title_tag: "Resource RepositoryDeployKey | Package GitHub"
+meta_desc: "Explore the RepositoryDeployKey resource of the GitHub package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a GitHub repository deploy key resource."
 ---
 
 

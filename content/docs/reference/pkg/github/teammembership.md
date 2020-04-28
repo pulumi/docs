@@ -1,8 +1,8 @@
 
 ---
 title: "TeamMembership"
-title_tag: "Resource TeamMembership | Package github"
-meta_desc: "Explore the TeamMembership resource of the github package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a GitHub team membership resource."
+title_tag: "Resource TeamMembership | Package GitHub"
+meta_desc: "Explore the TeamMembership resource of the GitHub package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a GitHub team membership resource."
 ---
 
 

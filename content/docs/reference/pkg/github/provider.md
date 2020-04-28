@@ -1,8 +1,8 @@
 
 ---
 title: "Provider"
-title_tag: "Resource Provider | Package github"
-meta_desc: "Explore the Provider resource of the github package, including examples, input properties, output properties, lookup functions, and supporting types. The provider type for the github package. By default, resources use package-wide configuration"
+title_tag: "Resource Provider | Package GitHub"
+meta_desc: "Explore the Provider resource of the GitHub package, including examples, input properties, output properties, lookup functions, and supporting types. The provider type for the github package. By default, resources use package-wide configuration"
 ---
 
 

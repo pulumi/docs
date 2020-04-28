@@ -1,8 +1,8 @@
 
 ---
 title: "RepositoryCollaborator"
-title_tag: "Resource RepositoryCollaborator | Package github"
-meta_desc: "Explore the RepositoryCollaborator resource of the github package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a GitHub repository collaborator resource."
+title_tag: "Resource RepositoryCollaborator | Package GitHub"
+meta_desc: "Explore the RepositoryCollaborator resource of the GitHub package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a GitHub repository collaborator resource."
 ---
 
 

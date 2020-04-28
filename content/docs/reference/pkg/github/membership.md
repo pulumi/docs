@@ -1,8 +1,8 @@
 
 ---
 title: "Membership"
-title_tag: "Resource Membership | Package github"
-meta_desc: "Explore the Membership resource of the github package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a GitHub membership resource."
+title_tag: "Resource Membership | Package GitHub"
+meta_desc: "Explore the Membership resource of the GitHub package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a GitHub membership resource."
 ---
 
 

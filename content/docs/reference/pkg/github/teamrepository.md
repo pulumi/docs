@@ -1,8 +1,8 @@
 
 ---
 title: "TeamRepository"
-title_tag: "Resource TeamRepository | Package github"
-meta_desc: "Explore the TeamRepository resource of the github package, including examples, input properties, output properties, lookup functions, and supporting types. This resource manages relationships between teams and repositories"
+title_tag: "Resource TeamRepository | Package GitHub"
+meta_desc: "Explore the TeamRepository resource of the GitHub package, including examples, input properties, output properties, lookup functions, and supporting types. This resource manages relationships between teams and repositories"
 ---
 
 

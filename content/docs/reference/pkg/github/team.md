@@ -1,8 +1,8 @@
 
 ---
 title: "Team"
-title_tag: "Resource Team | Package github"
-meta_desc: "Explore the Team resource of the github package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a GitHub team resource."
+title_tag: "Resource Team | Package GitHub"
+meta_desc: "Explore the Team resource of the GitHub package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a GitHub team resource."
 ---
 
 
