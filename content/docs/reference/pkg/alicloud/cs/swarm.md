@@ -322,7 +322,8 @@ Valid value:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether to create the default simple routing Server Load Balancer instance for the cluster. The default value is true.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -340,7 +341,6 @@ Valid value:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to release EIP after creating swarm cluster successfully. Default to false.
-* `need_slb`- (ForceNew) Whether to create the default simple routing Server Load Balancer instance for the cluster. The default value is true.
 {{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
@@ -458,7 +458,8 @@ Valid value:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether to create the default simple routing Server Load Balancer instance for the cluster. The default value is true.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -476,7 +477,6 @@ Valid value:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to release EIP after creating swarm cluster successfully. Default to false.
-* `need_slb`- (ForceNew) Whether to create the default simple routing Server Load Balancer instance for the cluster. The default value is true.
 {{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
@@ -594,7 +594,8 @@ Valid value:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether to create the default simple routing Server Load Balancer instance for the cluster. The default value is true.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -612,7 +613,6 @@ Valid value:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether to release EIP after creating swarm cluster successfully. Default to false.
-* `need_slb`- (ForceNew) Whether to create the default simple routing Server Load Balancer instance for the cluster. The default value is true.
 {{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
@@ -730,7 +730,8 @@ Valid value:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether to create the default simple routing Server Load Balancer instance for the cluster. The default value is true.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -748,7 +749,6 @@ Valid value:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to release EIP after creating swarm cluster successfully. Default to false.
-* `need_slb`- (ForceNew) Whether to create the default simple routing Server Load Balancer instance for the cluster. The default value is true.
 {{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
@@ -1234,7 +1234,8 @@ Valid value:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether to create the default simple routing Server Load Balancer instance for the cluster. The default value is true.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1270,7 +1271,6 @@ Valid value:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to release EIP after creating swarm cluster successfully. Default to false.
-* `need_slb`- (ForceNew) Whether to create the default simple routing Server Load Balancer instance for the cluster. The default value is true.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1415,7 +1415,8 @@ Valid value:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether to create the default simple routing Server Load Balancer instance for the cluster. The default value is true.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1451,7 +1452,6 @@ Valid value:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to release EIP after creating swarm cluster successfully. Default to false.
-* `need_slb`- (ForceNew) Whether to create the default simple routing Server Load Balancer instance for the cluster. The default value is true.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1596,7 +1596,8 @@ Valid value:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether to create the default simple routing Server Load Balancer instance for the cluster. The default value is true.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1632,7 +1633,6 @@ Valid value:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether to release EIP after creating swarm cluster successfully. Default to false.
-* `need_slb`- (ForceNew) Whether to create the default simple routing Server Load Balancer instance for the cluster. The default value is true.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1777,7 +1777,8 @@ Valid value:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether to create the default simple routing Server Load Balancer instance for the cluster. The default value is true.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1813,7 +1814,6 @@ Valid value:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to release EIP after creating swarm cluster successfully. Default to false.
-* `need_slb`- (ForceNew) Whether to create the default simple routing Server Load Balancer instance for the cluster. The default value is true.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

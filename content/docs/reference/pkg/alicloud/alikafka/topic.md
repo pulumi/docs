@@ -30,9 +30,9 @@ import * as alicloud from "@pulumi/alicloud";
 const config = new pulumi.Config();
 const topic = config.get("topic") || "alikafkaTopicName";
 
-const defaultZones = alicloud.getZones({
+const defaultZones = pulumi.output(alicloud.getZones({
     availableResourceCreation: "VSwitch",
-});
+}, { async: true }));
 const defaultNetwork = new alicloud.vpc.Network("default", {
     cidrBlock: "172.16.0.0/12",
 });

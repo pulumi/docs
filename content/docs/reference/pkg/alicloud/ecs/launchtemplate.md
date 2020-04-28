@@ -22,10 +22,10 @@ For information about Launch Template and how to use it, see [Launch Template](h
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const images = alicloud.ecs.getImages({
+const images = pulumi.output(alicloud.ecs.getImages({
     owners: "system",
-});
-const instances = alicloud.ecs.getInstances();
+}, { async: true }));
+const instances = pulumi.output(alicloud.ecs.getInstances({ async: true }));
 const template = new alicloud.ecs.LaunchTemplate("template", {
     dataDisks: [
         {
@@ -462,7 +462,8 @@ The LaunchTemplate resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-(Optional) 	Sets the maximum hourly instance price. Supports up to three decimal places.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -769,7 +770,8 @@ The LaunchTemplate resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-(Optional) 	Sets the maximum hourly instance price. Supports up to three decimal places.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1076,7 +1078,8 @@ The LaunchTemplate resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-(Optional) 	Sets the maximum hourly instance price. Supports up to three decimal places.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1383,7 +1386,8 @@ The LaunchTemplate resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-(Optional) 	Sets the maximum hourly instance price. Supports up to three decimal places.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1887,7 +1891,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-(Optional) 	Sets the maximum hourly instance price. Supports up to three decimal places.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2194,7 +2199,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-(Optional) 	Sets the maximum hourly instance price. Supports up to three decimal places.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2501,7 +2507,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-(Optional) 	Sets the maximum hourly instance price. Supports up to three decimal places.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2808,7 +2815,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-(Optional) 	Sets the maximum hourly instance price. Supports up to three decimal places.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2977,7 +2985,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-(Optional, Bool) Encrypted the data in this disk.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3056,7 +3065,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-(Optional, Bool) Encrypted the data in this disk.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3135,7 +3145,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-(Optional, Bool) Encrypted the data in this disk.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3214,7 +3225,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-(Optional, Bool) Encrypted the data in this disk.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">

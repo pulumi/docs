@@ -201,7 +201,6 @@ The ShardingInstance resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Database version. Value options can refer to the latest docs [CreateDBInstance](https://www.alibabacloud.com/help/zh/doc-detail/61884.htm) `EngineVersion`. 
-* `storage_engine` (Optional, ForceNew) Storage engine: WiredTiger or RocksDB. System Default value: WiredTiger.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -211,7 +210,6 @@ The ShardingInstance resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type"><a href="#shardinginstancemongolist">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Mongo<wbr>DB.<wbr>Inputs.<wbr>Sharding<wbr>Instance<wbr>Mongo<wbr>List<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The mongo-node count can be purchased is in range of [2, 32].
-* `node_class` -(Required) Node specification. see [Instance specifications](https://www.alibabacloud.com/help/doc-detail/57141.htm).
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -221,7 +219,6 @@ The ShardingInstance resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type"><a href="#shardinginstanceshardlist">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Mongo<wbr>DB.<wbr>Inputs.<wbr>Sharding<wbr>Instance<wbr>Shard<wbr>List<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}the shard-node count can be purchased is in range of [2, 32].
-* `node_class` -(Required) Node specification. see [Instance specifications](https://www.alibabacloud.com/help/doc-detail/57141.htm).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -320,7 +317,8 @@ The ShardingInstance resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Storage engine: WiredTiger or RocksDB. System Default value: WiredTiger.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -364,7 +362,6 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Database version. Value options can refer to the latest docs [CreateDBInstance](https://www.alibabacloud.com/help/zh/doc-detail/61884.htm) `EngineVersion`. 
-* `storage_engine` (Optional, ForceNew) Storage engine: WiredTiger or RocksDB. System Default value: WiredTiger.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -374,7 +371,6 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type"><a href="#shardinginstancemongolist">[]Sharding<wbr>Instance<wbr>Mongo<wbr>List</a></span>
     </dt>
     <dd>{{% md %}}The mongo-node count can be purchased is in range of [2, 32].
-* `node_class` -(Required) Node specification. see [Instance specifications](https://www.alibabacloud.com/help/doc-detail/57141.htm).
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -384,7 +380,6 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type"><a href="#shardinginstanceshardlist">[]Sharding<wbr>Instance<wbr>Shard<wbr>List</a></span>
     </dt>
     <dd>{{% md %}}the shard-node count can be purchased is in range of [2, 32].
-* `node_class` -(Required) Node specification. see [Instance specifications](https://www.alibabacloud.com/help/doc-detail/57141.htm).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -483,7 +478,8 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Storage engine: WiredTiger or RocksDB. System Default value: WiredTiger.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -527,7 +523,6 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Database version. Value options can refer to the latest docs [CreateDBInstance](https://www.alibabacloud.com/help/zh/doc-detail/61884.htm) `EngineVersion`. 
-* `storage_engine` (Optional, ForceNew) Storage engine: WiredTiger or RocksDB. System Default value: WiredTiger.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -537,7 +532,6 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type"><a href="#shardinginstancemongolist">Sharding<wbr>Instance<wbr>Mongo<wbr>List[]</a></span>
     </dt>
     <dd>{{% md %}}The mongo-node count can be purchased is in range of [2, 32].
-* `node_class` -(Required) Node specification. see [Instance specifications](https://www.alibabacloud.com/help/doc-detail/57141.htm).
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -547,7 +541,6 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type"><a href="#shardinginstanceshardlist">Sharding<wbr>Instance<wbr>Shard<wbr>List[]</a></span>
     </dt>
     <dd>{{% md %}}the shard-node count can be purchased is in range of [2, 32].
-* `node_class` -(Required) Node specification. see [Instance specifications](https://www.alibabacloud.com/help/doc-detail/57141.htm).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -646,7 +639,8 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Storage engine: WiredTiger or RocksDB. System Default value: WiredTiger.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -690,7 +684,6 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Database version. Value options can refer to the latest docs [CreateDBInstance](https://www.alibabacloud.com/help/zh/doc-detail/61884.htm) `EngineVersion`. 
-* `storage_engine` (Optional, ForceNew) Storage engine: WiredTiger or RocksDB. System Default value: WiredTiger.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -700,7 +693,6 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type"><a href="#shardinginstancemongolist">List[Sharding<wbr>Instance<wbr>Mongo<wbr>List]</a></span>
     </dt>
     <dd>{{% md %}}The mongo-node count can be purchased is in range of [2, 32].
-* `node_class` -(Required) Node specification. see [Instance specifications](https://www.alibabacloud.com/help/doc-detail/57141.htm).
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -710,7 +702,6 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type"><a href="#shardinginstanceshardlist">List[Sharding<wbr>Instance<wbr>Shard<wbr>List]</a></span>
     </dt>
     <dd>{{% md %}}the shard-node count can be purchased is in range of [2, 32].
-* `node_class` -(Required) Node specification. see [Instance specifications](https://www.alibabacloud.com/help/doc-detail/57141.htm).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -809,7 +800,8 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Storage engine: WiredTiger or RocksDB. System Default value: WiredTiger.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1113,7 +1105,6 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Database version. Value options can refer to the latest docs [CreateDBInstance](https://www.alibabacloud.com/help/zh/doc-detail/61884.htm) `EngineVersion`. 
-* `storage_engine` (Optional, ForceNew) Storage engine: WiredTiger or RocksDB. System Default value: WiredTiger.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1150,7 +1141,6 @@ The following state arguments are supported:
         <span class="property-type"><a href="#shardinginstancemongolist">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Mongo<wbr>DB.<wbr>Inputs.<wbr>Sharding<wbr>Instance<wbr>Mongo<wbr>List<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The mongo-node count can be purchased is in range of [2, 32].
-* `node_class` -(Required) Node specification. see [Instance specifications](https://www.alibabacloud.com/help/doc-detail/57141.htm).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1205,7 +1195,6 @@ The following state arguments are supported:
         <span class="property-type"><a href="#shardinginstanceshardlist">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Mongo<wbr>DB.<wbr>Inputs.<wbr>Sharding<wbr>Instance<wbr>Shard<wbr>List<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}the shard-node count can be purchased is in range of [2, 32].
-* `node_class` -(Required) Node specification. see [Instance specifications](https://www.alibabacloud.com/help/doc-detail/57141.htm).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1214,7 +1203,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Storage engine: WiredTiger or RocksDB. System Default value: WiredTiger.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1285,7 +1275,6 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Database version. Value options can refer to the latest docs [CreateDBInstance](https://www.alibabacloud.com/help/zh/doc-detail/61884.htm) `EngineVersion`. 
-* `storage_engine` (Optional, ForceNew) Storage engine: WiredTiger or RocksDB. System Default value: WiredTiger.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1322,7 +1311,6 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type"><a href="#shardinginstancemongolist">[]Sharding<wbr>Instance<wbr>Mongo<wbr>List</a></span>
     </dt>
     <dd>{{% md %}}The mongo-node count can be purchased is in range of [2, 32].
-* `node_class` -(Required) Node specification. see [Instance specifications](https://www.alibabacloud.com/help/doc-detail/57141.htm).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1377,7 +1365,6 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type"><a href="#shardinginstanceshardlist">[]Sharding<wbr>Instance<wbr>Shard<wbr>List</a></span>
     </dt>
     <dd>{{% md %}}the shard-node count can be purchased is in range of [2, 32].
-* `node_class` -(Required) Node specification. see [Instance specifications](https://www.alibabacloud.com/help/doc-detail/57141.htm).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1386,7 +1373,8 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Storage engine: WiredTiger or RocksDB. System Default value: WiredTiger.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1457,7 +1445,6 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Database version. Value options can refer to the latest docs [CreateDBInstance](https://www.alibabacloud.com/help/zh/doc-detail/61884.htm) `EngineVersion`. 
-* `storage_engine` (Optional, ForceNew) Storage engine: WiredTiger or RocksDB. System Default value: WiredTiger.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1494,7 +1481,6 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type"><a href="#shardinginstancemongolist">Sharding<wbr>Instance<wbr>Mongo<wbr>List[]</a></span>
     </dt>
     <dd>{{% md %}}The mongo-node count can be purchased is in range of [2, 32].
-* `node_class` -(Required) Node specification. see [Instance specifications](https://www.alibabacloud.com/help/doc-detail/57141.htm).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1549,7 +1535,6 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type"><a href="#shardinginstanceshardlist">Sharding<wbr>Instance<wbr>Shard<wbr>List[]</a></span>
     </dt>
     <dd>{{% md %}}the shard-node count can be purchased is in range of [2, 32].
-* `node_class` -(Required) Node specification. see [Instance specifications](https://www.alibabacloud.com/help/doc-detail/57141.htm).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1558,7 +1543,8 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Storage engine: WiredTiger or RocksDB. System Default value: WiredTiger.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1629,7 +1615,6 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Database version. Value options can refer to the latest docs [CreateDBInstance](https://www.alibabacloud.com/help/zh/doc-detail/61884.htm) `EngineVersion`. 
-* `storage_engine` (Optional, ForceNew) Storage engine: WiredTiger or RocksDB. System Default value: WiredTiger.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1666,7 +1651,6 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type"><a href="#shardinginstancemongolist">List[Sharding<wbr>Instance<wbr>Mongo<wbr>List]</a></span>
     </dt>
     <dd>{{% md %}}The mongo-node count can be purchased is in range of [2, 32].
-* `node_class` -(Required) Node specification. see [Instance specifications](https://www.alibabacloud.com/help/doc-detail/57141.htm).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1721,7 +1705,6 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type"><a href="#shardinginstanceshardlist">List[Sharding<wbr>Instance<wbr>Shard<wbr>List]</a></span>
     </dt>
     <dd>{{% md %}}the shard-node count can be purchased is in range of [2, 32].
-* `node_class` -(Required) Node specification. see [Instance specifications](https://www.alibabacloud.com/help/doc-detail/57141.htm).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1730,7 +1713,8 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Storage engine: WiredTiger or RocksDB. System Default value: WiredTiger.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1796,7 +1780,8 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-(Required) Node specification. see [Instance specifications](https://www.alibabacloud.com/help/doc-detail/57141.htm).
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1839,7 +1824,8 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-(Required) Node specification. see [Instance specifications](https://www.alibabacloud.com/help/doc-detail/57141.htm).
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1882,7 +1868,8 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-(Required) Node specification. see [Instance specifications](https://www.alibabacloud.com/help/doc-detail/57141.htm).
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1925,7 +1912,8 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-(Required) Node specification. see [Instance specifications](https://www.alibabacloud.com/help/doc-detail/57141.htm).
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1983,7 +1971,8 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-(Required) Node specification. see [Instance specifications](https://www.alibabacloud.com/help/doc-detail/57141.htm).
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2018,7 +2007,8 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-(Required) Node specification. see [Instance specifications](https://www.alibabacloud.com/help/doc-detail/57141.htm).
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2053,7 +2043,8 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-(Required) Node specification. see [Instance specifications](https://www.alibabacloud.com/help/doc-detail/57141.htm).
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2088,7 +2079,8 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-(Required) Node specification. see [Instance specifications](https://www.alibabacloud.com/help/doc-detail/57141.htm).
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
