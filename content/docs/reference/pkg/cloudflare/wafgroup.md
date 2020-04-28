@@ -41,7 +41,7 @@ const honeyPot = new cloudflare.WafGroup("honey_pot", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">WafGroup</span><span class="p">(resource_name, opts=None, </span>group_id=None<span class="p">, </span>mode=None<span class="p">, </span>package_id=None<span class="p">, </span>zone_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">WafGroup</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>group_id=None<span class="p">, </span>mode=None<span class="p">, </span>package_id=None<span class="p">, </span>zone_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

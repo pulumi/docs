@@ -405,7 +405,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_linode.GetAccountResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_linode.GetAccountResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 </dd></dl>
@@ -441,7 +441,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_linode.GetNetworkingIpResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_linode.GetNetworkingIpResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 </dd></dl>
@@ -459,7 +459,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_linode.GetProfileResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_linode.GetProfileResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 </dd></dl>
@@ -477,7 +477,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_linode.GetSshKeyResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_linode.GetSshKeyResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 </dd></dl>
@@ -495,7 +495,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_linode.GetUserResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_linode.GetUserResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 </dd></dl>
@@ -712,7 +712,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">comments</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - - Arbitrary user comments about this <code class="docutils literal notranslate"><span class="pre">config</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">devices</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A list of <code class="docutils literal notranslate"><span class="pre">disk</span></code> or <code class="docutils literal notranslate"><span class="pre">volume</span></code> attachments for this <code class="docutils literal notranslate"><span class="pre">config</span></code>.  If the <code class="docutils literal notranslate"><span class="pre">boot_config_label</span></code> omits a <code class="docutils literal notranslate"><span class="pre">devices</span></code> block, the Linode will not be booted.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">sda</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">sda</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - … <code class="docutils literal notranslate"><span class="pre">sdh</span></code> - (Optional) The SDA-SDH slots, represent the Linux block device nodes for the first 8 disks attached to the Linode.  Each device must be suplied sequentially.  The device can be either a Disk or a Volume identified by <code class="docutils literal notranslate"><span class="pre">disk_label</span></code> or <code class="docutils literal notranslate"><span class="pre">volume_id</span></code>. Only one disk identifier is permitted per slot. Devices mapped from <code class="docutils literal notranslate"><span class="pre">sde</span></code> through <code class="docutils literal notranslate"><span class="pre">sdh</span></code> are unavailable in <code class="docutils literal notranslate"><span class="pre">&quot;fullvirt&quot;</span></code> <code class="docutils literal notranslate"><span class="pre">virt_mode</span></code>.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">disk_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The Disk ID of the associated <code class="docutils literal notranslate"><span class="pre">disk_label</span></code>, if used.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">diskLabel</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The <code class="docutils literal notranslate"><span class="pre">label</span></code> of the <code class="docutils literal notranslate"><span class="pre">disk</span></code> to map to this <code class="docutils literal notranslate"><span class="pre">device</span></code> slot.</p></li>
@@ -853,7 +853,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">comments</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - - Arbitrary user comments about this <code class="docutils literal notranslate"><span class="pre">config</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">devices</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A list of <code class="docutils literal notranslate"><span class="pre">disk</span></code> or <code class="docutils literal notranslate"><span class="pre">volume</span></code> attachments for this <code class="docutils literal notranslate"><span class="pre">config</span></code>.  If the <code class="docutils literal notranslate"><span class="pre">boot_config_label</span></code> omits a <code class="docutils literal notranslate"><span class="pre">devices</span></code> block, the Linode will not be booted.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">sda</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">sda</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - … <code class="docutils literal notranslate"><span class="pre">sdh</span></code> - (Optional) The SDA-SDH slots, represent the Linux block device nodes for the first 8 disks attached to the Linode.  Each device must be suplied sequentially.  The device can be either a Disk or a Volume identified by <code class="docutils literal notranslate"><span class="pre">disk_label</span></code> or <code class="docutils literal notranslate"><span class="pre">volume_id</span></code>. Only one disk identifier is permitted per slot. Devices mapped from <code class="docutils literal notranslate"><span class="pre">sde</span></code> through <code class="docutils literal notranslate"><span class="pre">sdh</span></code> are unavailable in <code class="docutils literal notranslate"><span class="pre">&quot;fullvirt&quot;</span></code> <code class="docutils literal notranslate"><span class="pre">virt_mode</span></code>.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">disk_id</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The Disk ID of the associated <code class="docutils literal notranslate"><span class="pre">disk_label</span></code>, if used.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">diskLabel</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The <code class="docutils literal notranslate"><span class="pre">label</span></code> of the <code class="docutils literal notranslate"><span class="pre">disk</span></code> to map to this <code class="docutils literal notranslate"><span class="pre">device</span></code> slot.</p></li>
@@ -1101,7 +1101,7 @@ Instances in a region.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">comments</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - - Arbitrary user comments about this <code class="docutils literal notranslate"><span class="pre">config</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">devices</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A list of <code class="docutils literal notranslate"><span class="pre">disk</span></code> or <code class="docutils literal notranslate"><span class="pre">volume</span></code> attachments for this <code class="docutils literal notranslate"><span class="pre">config</span></code>.  If the <code class="docutils literal notranslate"><span class="pre">boot_config_label</span></code> omits a <code class="docutils literal notranslate"><span class="pre">devices</span></code> block, the Linode will not be booted.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">sda</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">sda</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - … <code class="docutils literal notranslate"><span class="pre">sdh</span></code> - (Optional) The SDA-SDH slots, represent the Linux block device nodes for the first 8 disks attached to the Linode.  Each device must be suplied sequentially.  The device can be either a Disk or a Volume identified by <code class="docutils literal notranslate"><span class="pre">disk_label</span></code> or <code class="docutils literal notranslate"><span class="pre">volume_id</span></code>. Only one disk identifier is permitted per slot. Devices mapped from <code class="docutils literal notranslate"><span class="pre">sde</span></code> through <code class="docutils literal notranslate"><span class="pre">sdh</span></code> are unavailable in <code class="docutils literal notranslate"><span class="pre">&quot;fullvirt&quot;</span></code> <code class="docutils literal notranslate"><span class="pre">virt_mode</span></code>.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">disk_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The Disk ID of the associated <code class="docutils literal notranslate"><span class="pre">disk_label</span></code>, if used.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">diskLabel</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The <code class="docutils literal notranslate"><span class="pre">label</span></code> of the <code class="docutils literal notranslate"><span class="pre">disk</span></code> to map to this <code class="docutils literal notranslate"><span class="pre">device</span></code> slot.</p></li>

@@ -28,7 +28,7 @@ Provides a Cloudflare Origin CA certificate used to protect traffic to your orig
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">OriginCaCertificate</span><span class="p">(resource_name, opts=None, </span>csr=None<span class="p">, </span>hostnames=None<span class="p">, </span>request_type=None<span class="p">, </span>requested_validity=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">OriginCaCertificate</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>csr=None<span class="p">, </span>hostnames=None<span class="p">, </span>request_type=None<span class="p">, </span>requested_validity=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

@@ -26,7 +26,7 @@ Provides a Cloudflare rate limit resource for a given zone. This can be used to 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">RateLimit</span><span class="p">(resource_name, opts=None, </span>action=None<span class="p">, </span>bypass_url_patterns=None<span class="p">, </span>correlate=None<span class="p">, </span>description=None<span class="p">, </span>disabled=None<span class="p">, </span>match=None<span class="p">, </span>period=None<span class="p">, </span>threshold=None<span class="p">, </span>zone_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">RateLimit</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>action=None<span class="p">, </span>bypass_url_patterns=None<span class="p">, </span>correlate=None<span class="p">, </span>description=None<span class="p">, </span>disabled=None<span class="p">, </span>match=None<span class="p">, </span>period=None<span class="p">, </span>threshold=None<span class="p">, </span>zone_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

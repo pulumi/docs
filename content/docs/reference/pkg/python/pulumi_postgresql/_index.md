@@ -203,15 +203,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_postgresql.DefaultPrivileg">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_postgresql.</code><code class="sig-name descname">DefaultPrivileg</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">database=None</em>, <em class="sig-param">object_type=None</em>, <em class="sig-param">owner=None</em>, <em class="sig-param">privileges=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">schema=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_postgresql.DefaultPrivileg" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a DefaultPrivileg resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] database: The database to grant default privileges for this role
-:param pulumi.Input[str] object_type: The PostgreSQL object type to set the default privileges on (one of: table, sequence)
-:param pulumi.Input[str] owner: Target role for which to alter default privileges.
-:param pulumi.Input[list] privileges: The list of privileges to apply as default privileges
-:param pulumi.Input[str] role: The name of the role to which grant default privileges on
-:param pulumi.Input[str] schema: The database schema to set default privileges for this role</p>
+<dd><p>Deprecated: postgresql.DefaultPrivileg has been deprecated in favour of postgresql.DefaultPrivileges</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>database</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The database to grant default privileges for this role</p></li>
+<li><p><strong>object_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The PostgreSQL object type to set the default privileges on (one of: table, sequence)</p></li>
+<li><p><strong>owner</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Target role for which to alter default privileges.</p></li>
+<li><p><strong>privileges</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The list of privileges to apply as default privileges</p></li>
+<li><p><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the role to which grant default privileges on</p></li>
+<li><p><strong>schema</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The database schema to set default privileges for this role</p></li>
+</ul>
+</dd>
+</dl>
 <dl class="attribute">
 <dt id="pulumi_postgresql.DefaultPrivileg.database">
 <code class="sig-name descname">database</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_postgresql.DefaultPrivileg.database" title="Permalink to this definition">¶</a></dt>

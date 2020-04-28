@@ -71,7 +71,7 @@ const tcpMonitor = new cloudflare.LoadBalancerMonitor("tcp_monitor", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">LoadBalancerMonitor</span><span class="p">(resource_name, opts=None, </span>allow_insecure=None<span class="p">, </span>description=None<span class="p">, </span>expected_body=None<span class="p">, </span>expected_codes=None<span class="p">, </span>follow_redirects=None<span class="p">, </span>headers=None<span class="p">, </span>interval=None<span class="p">, </span>method=None<span class="p">, </span>path=None<span class="p">, </span>port=None<span class="p">, </span>retries=None<span class="p">, </span>timeout=None<span class="p">, </span>type=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">LoadBalancerMonitor</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>allow_insecure=None<span class="p">, </span>description=None<span class="p">, </span>expected_body=None<span class="p">, </span>expected_codes=None<span class="p">, </span>follow_redirects=None<span class="p">, </span>headers=None<span class="p">, </span>interval=None<span class="p">, </span>method=None<span class="p">, </span>path=None<span class="p">, </span>port=None<span class="p">, </span>retries=None<span class="p">, </span>timeout=None<span class="p">, </span>type=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
