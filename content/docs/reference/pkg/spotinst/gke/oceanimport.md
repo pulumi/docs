@@ -86,7 +86,7 @@ import * as pulumi from "@pulumi/pulumi";
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">OceanImport</span><span class="p">(resource_name, opts=None, </span>backend_services=None<span class="p">, </span>cluster_name=None<span class="p">, </span>desired_capacity=None<span class="p">, </span>location=None<span class="p">, </span>max_size=None<span class="p">, </span>min_size=None<span class="p">, </span>scheduled_tasks=None<span class="p">, </span>whitelists=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">OceanImport</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>backend_services=None<span class="p">, </span>cluster_name=None<span class="p">, </span>desired_capacity=None<span class="p">, </span>location=None<span class="p">, </span>max_size=None<span class="p">, </span>min_size=None<span class="p">, </span>scheduled_tasks=None<span class="p">, </span>whitelists=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
