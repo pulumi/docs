@@ -51,21 +51,21 @@ exist, which may not possibly happen in the event that the names came from a
 import * as pulumi from "@pulumi/pulumi";
 import * as vsphere from "@pulumi/vsphere";
 
-const dc = vsphere.getDatacenter({
+const dc = pulumi.output(vsphere.getDatacenter({
     name: "dc1",
-});
-const datastore = vsphere.getDatastore({
+}, { async: true }));
+const datastore = dc.apply(dc => vsphere.getDatastore({
     datacenterId: dc.id,
     name: "datastore1",
-});
-const cluster = vsphere.getComputeCluster({
+}, { async: true }));
+const cluster = dc.apply(dc => vsphere.getComputeCluster({
     datacenterId: dc.id,
     name: "cluster1",
-});
-const network = vsphere.getNetwork({
+}, { async: true }));
+const network = dc.apply(dc => vsphere.getNetwork({
     datacenterId: dc.id,
     name: "network1",
-});
+}, { async: true }));
 const vm1 = new vsphere.VirtualMachine("vm1", {
     datastoreId: datastore.id,
     disks: [{

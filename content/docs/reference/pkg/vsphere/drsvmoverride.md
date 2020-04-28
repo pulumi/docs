@@ -48,25 +48,25 @@ machine, ensuring that it does not move.
 import * as pulumi from "@pulumi/pulumi";
 import * as vsphere from "@pulumi/vsphere";
 
-const dc = vsphere.getDatacenter({
+const dc = pulumi.output(vsphere.getDatacenter({
     name: "dc1",
-});
-const datastore = vsphere.getDatastore({
+}, { async: true }));
+const datastore = dc.apply(dc => vsphere.getDatastore({
     datacenterId: dc.id,
     name: "datastore1",
-});
-const cluster = vsphere.getComputeCluster({
+}, { async: true }));
+const cluster = dc.apply(dc => vsphere.getComputeCluster({
     datacenterId: dc.id,
     name: "cluster1",
-});
-const host = vsphere.getHost({
+}, { async: true }));
+const host = dc.apply(dc => vsphere.getHost({
     datacenterId: dc.id,
     name: "esxi1",
-});
-const network = vsphere.getNetwork({
+}, { async: true }));
+const network = dc.apply(dc => vsphere.getNetwork({
     datacenterId: dc.id,
     name: "network1",
-});
+}, { async: true }));
 const vm = new vsphere.VirtualMachine("vm", {
     datastoreId: datastore.id,
     disks: [{

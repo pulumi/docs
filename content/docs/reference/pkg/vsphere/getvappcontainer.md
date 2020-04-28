@@ -25,13 +25,13 @@ that you want to use to create virtual machines in using the
 import * as pulumi from "@pulumi/pulumi";
 import * as vsphere from "@pulumi/vsphere";
 
-const datacenter = vsphere.getDatacenter({
+const datacenter = pulumi.output(vsphere.getDatacenter({
     name: "dc1",
-});
-const pool = vsphere.getVappContainer({
+}, { async: true }));
+const pool = datacenter.apply(datacenter => vsphere.getVappContainer({
     datacenterId: datacenter.id,
     name: "vapp-container-1",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -44,7 +44,7 @@ const pool = vsphere.getVappContainer({
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
-{{% choosable language typescript %}}
+{{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getVappContainer<span class="p">(</span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#GetVappContainerArgs">GetVappContainerArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#GetVappContainerResult">GetVappContainerResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
@@ -55,7 +55,7 @@ const pool = vsphere.getVappContainer({
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupVappContainer<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#GetVappContainerArgs">GetVappContainerArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#LookupVappContainerResult">LookupVappContainerResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupVappContainer<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#LookupVappContainerArgs">LookupVappContainerArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#LookupVappContainerResult">LookupVappContainerResult</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -209,7 +209,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -241,7 +241,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -273,7 +273,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -305,7 +305,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
 
     <dt class="property-"

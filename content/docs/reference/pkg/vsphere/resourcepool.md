@@ -34,13 +34,13 @@ const config = new pulumi.Config();
 const datacenter = config.get("datacenter") || "dc1";
 const cluster = config.get("cluster") || "cluster1";
 
-const dc = vsphere.getDatacenter({
+const dc = pulumi.output(vsphere.getDatacenter({
     name: datacenter,
-});
-const computeCluster = vsphere.getComputeCluster({
+}, { async: true }));
+const computeCluster = dc.apply(dc => vsphere.getComputeCluster({
     datacenterId: dc.id,
     name: cluster,
-});
+}, { async: true }));
 const resourcePool = new vsphere.ResourcePool("resource_pool", {
     parentResourcePoolId: computeCluster.resourcePoolId,
 });

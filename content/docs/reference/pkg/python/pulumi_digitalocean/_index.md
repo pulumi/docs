@@ -137,20 +137,17 @@ anything, please consult the source <a class="reference external" href="https://
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>certificate_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ID of a DigitalOcean managed TLS certificate for use with custom domains</p></li>
+<li><p><strong>certificate_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of a DigitalOcean managed TLS certificate used for SSL when a custom subdomain is provided.</p></li>
 <li><p><strong>custom_domain</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The fully qualified domain name (FQDN) of the custom subdomain used with the CDN Endpoint.</p></li>
 <li><p><strong>origin</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The fully qualified domain name, (FQDN) for a Space.</p></li>
 <li><p><strong>ttl</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The time to live for the CDN Endpoint, in seconds. Default is 3600 seconds.</p></li>
 </ul>
 </dd>
 </dl>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>* `certificate_id`- (Optional) The ID of a DigitalOcean managed TLS certificate used for SSL when a custom subdomain is provided.
-</pre></div>
-</div>
 <dl class="attribute">
 <dt id="pulumi_digitalocean.Cdn.certificate_id">
 <code class="sig-name descname">certificate_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.Cdn.certificate_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>ID of a DigitalOcean managed TLS certificate for use with custom domains</p>
+<dd><p>The ID of a DigitalOcean managed TLS certificate used for SSL when a custom subdomain is provided.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -181,9 +178,6 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_digitalocean.Cdn.ttl">
 <code class="sig-name descname">ttl</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.Cdn.ttl" title="Permalink to this definition">¶</a></dt>
 <dd><p>The time to live for the CDN Endpoint, in seconds. Default is 3600 seconds.</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">certificate_id</span></code>- (Optional) The ID of a DigitalOcean managed TLS certificate used for SSL when a custom subdomain is provided.</p></li>
-</ul>
 </dd></dl>
 
 <dl class="method">
@@ -197,7 +191,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>certificate_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ID of a DigitalOcean managed TLS certificate for use with custom domains</p></li>
+<li><p><strong>certificate_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of a DigitalOcean managed TLS certificate used for SSL when a custom subdomain is provided.</p></li>
 <li><p><strong>created_at</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The date and time when the CDN Endpoint was created.</p></li>
 <li><p><strong>custom_domain</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The fully qualified domain name (FQDN) of the custom subdomain used with the CDN Endpoint.</p></li>
 <li><p><strong>endpoint</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The fully qualified domain name (FQDN) from which the CDN-backed content is served.</p></li>
@@ -206,9 +200,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>* `certificate_id`- (Optional) The ID of a DigitalOcean managed TLS certificate used for SSL when a custom subdomain is provided.
-</pre></div>
-</div>
 </dd></dl>
 
 <dl class="method">
@@ -2369,7 +2360,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_digitalocean.GetAccountResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.GetAccountResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 </dd></dl>
@@ -2381,7 +2372,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_digitalocean.GetCertificateResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.GetCertificateResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 </dd></dl>
@@ -2411,7 +2402,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_digitalocean.GetDatabaseClusterResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.GetDatabaseClusterResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -2501,7 +2492,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_digitalocean.GetDomainResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.GetDomainResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -2672,7 +2663,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_digitalocean.GetDropletSnapshotResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.GetDropletSnapshotResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -2702,7 +2693,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_digitalocean.GetFloatingIpResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.GetFloatingIpResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 </dd></dl>
@@ -2751,7 +2742,7 @@ snapshots and backups and are only available within your account.</p>
 <dl class="attribute">
 <dt id="pulumi_digitalocean.GetImagesResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.GetImagesResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -2805,7 +2796,7 @@ snapshots and backups and are only available within your account.</p></li>
 <dl class="attribute">
 <dt id="pulumi_digitalocean.GetKubernetesClusterResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.GetKubernetesClusterResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -2899,7 +2890,7 @@ snapshots and backups and are only available within your account.</p></li>
 <dl class="attribute">
 <dt id="pulumi_digitalocean.GetKubernetesVersionsResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.GetKubernetesVersionsResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -2923,7 +2914,7 @@ snapshots and backups and are only available within your account.</p></li>
 <dl class="attribute">
 <dt id="pulumi_digitalocean.GetLoadBalancerResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.GetLoadBalancerResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 </dd></dl>
@@ -2989,7 +2980,7 @@ snapshots and backups and are only available within your account.</p></li>
 <dl class="attribute">
 <dt id="pulumi_digitalocean.GetProjectsResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.GetProjectsResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -3020,7 +3011,7 @@ the following attributes:</p>
 <dl class="attribute">
 <dt id="pulumi_digitalocean.GetRecordResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.GetRecordResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 </dd></dl>
@@ -3044,7 +3035,7 @@ the following attributes:</p>
 <dl class="attribute">
 <dt id="pulumi_digitalocean.GetRegionResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.GetRegionResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -3074,7 +3065,7 @@ the following attributes:</p>
 <dl class="attribute">
 <dt id="pulumi_digitalocean.GetRegionsResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.GetRegionsResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -3099,7 +3090,7 @@ the following attributes:</p>
 <dl class="attribute">
 <dt id="pulumi_digitalocean.GetSizesResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.GetSizesResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 </dd></dl>
@@ -3111,7 +3102,7 @@ the following attributes:</p>
 <dl class="attribute">
 <dt id="pulumi_digitalocean.GetSshKeyResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.GetSshKeyResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 </dd></dl>
@@ -3123,7 +3114,7 @@ the following attributes:</p>
 <dl class="attribute">
 <dt id="pulumi_digitalocean.GetTagResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.GetTagResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 </dd></dl>
@@ -3159,7 +3150,7 @@ the following attributes:</p>
 <dl class="attribute">
 <dt id="pulumi_digitalocean.GetVolumeResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.GetVolumeResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -3189,7 +3180,7 @@ the following attributes:</p>
 <dl class="attribute">
 <dt id="pulumi_digitalocean.GetVolumeSnapshotResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.GetVolumeSnapshotResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">

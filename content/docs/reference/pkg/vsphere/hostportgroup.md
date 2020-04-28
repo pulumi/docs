@@ -28,13 +28,13 @@ For an overview on vSphere networking concepts, see [this page][ref-vsphere-net-
 import * as pulumi from "@pulumi/pulumi";
 import * as vsphere from "@pulumi/vsphere";
 
-const datacenter = vsphere.getDatacenter({
+const datacenter = pulumi.output(vsphere.getDatacenter({
     name: "dc1",
-});
-const esxiHost = vsphere.getHost({
+}, { async: true }));
+const esxiHost = datacenter.apply(datacenter => vsphere.getHost({
     datacenterId: datacenter.id,
     name: "esxi1",
-});
+}, { async: true }));
 const switchHostVirtualSwitch = new vsphere.HostVirtualSwitch("switch", {
     activeNics: ["vmnic0"],
     hostSystemId: esxiHost.id,
@@ -62,13 +62,13 @@ the implicit default of `false` set on the virtual switch.
 import * as pulumi from "@pulumi/pulumi";
 import * as vsphere from "@pulumi/vsphere";
 
-const datacenter = vsphere.getDatacenter({
+const datacenter = pulumi.output(vsphere.getDatacenter({
     name: "dc1",
-});
-const esxiHost = vsphere.getHost({
+}, { async: true }));
+const esxiHost = datacenter.apply(datacenter => vsphere.getHost({
     datacenterId: datacenter.id,
     name: "esxi1",
-});
+}, { async: true }));
 const switchHostVirtualSwitch = new vsphere.HostVirtualSwitch("switch", {
     activeNics: ["vmnic0"],
     hostSystemId: esxiHost.id,
