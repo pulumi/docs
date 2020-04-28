@@ -22,7 +22,7 @@ meta_desc: "Explore the Alarm resource of the CloudAMQP package, including examp
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Alarm</span><span class="p">(resource_name, opts=None, </span>enabled=None<span class="p">, </span>instance_id=None<span class="p">, </span>message_type=None<span class="p">, </span>queue_regex=None<span class="p">, </span>recipients=None<span class="p">, </span>time_threshold=None<span class="p">, </span>type=None<span class="p">, </span>value_threshold=None<span class="p">, </span>vhost_regex=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Alarm</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>enabled=None<span class="p">, </span>instance_id=None<span class="p">, </span>message_type=None<span class="p">, </span>queue_regex=None<span class="p">, </span>recipients=None<span class="p">, </span>time_threshold=None<span class="p">, </span>type=None<span class="p">, </span>value_threshold=None<span class="p">, </span>vhost_regex=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
