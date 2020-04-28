@@ -22,7 +22,7 @@ meta_desc: "Explore the Instance resource of the Linode package, including examp
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Instance</span><span class="p">(resource_name, opts=None, </span>alerts=None<span class="p">, </span>authorized_keys=None<span class="p">, </span>authorized_users=None<span class="p">, </span>backup_id=None<span class="p">, </span>backups_enabled=None<span class="p">, </span>boot_config_label=None<span class="p">, </span>configs=None<span class="p">, </span>disks=None<span class="p">, </span>group=None<span class="p">, </span>image=None<span class="p">, </span>label=None<span class="p">, </span>private_ip=None<span class="p">, </span>region=None<span class="p">, </span>root_pass=None<span class="p">, </span>stackscript_data=None<span class="p">, </span>stackscript_id=None<span class="p">, </span>swap_size=None<span class="p">, </span>tags=None<span class="p">, </span>type=None<span class="p">, </span>watchdog_enabled=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Instance</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>alerts=None<span class="p">, </span>authorized_keys=None<span class="p">, </span>authorized_users=None<span class="p">, </span>backup_id=None<span class="p">, </span>backups_enabled=None<span class="p">, </span>boot_config_label=None<span class="p">, </span>configs=None<span class="p">, </span>disks=None<span class="p">, </span>group=None<span class="p">, </span>image=None<span class="p">, </span>label=None<span class="p">, </span>private_ip=None<span class="p">, </span>region=None<span class="p">, </span>root_pass=None<span class="p">, </span>stackscript_data=None<span class="p">, </span>stackscript_id=None<span class="p">, </span>swap_size=None<span class="p">, </span>tags=None<span class="p">, </span>type=None<span class="p">, </span>watchdog_enabled=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -3204,7 +3204,8 @@ Instances in a region.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instanceconfigdevicessda">Instance<wbr>Config<wbr>Devices<wbr>Sda<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}... `sdh` - (Optional) The SDA-SDH slots, represent the Linux block device nodes for the first 8 disks attached to the Linode.  Each device must be suplied sequentially.  The device can be either a Disk or a Volume identified by `disk_label` or `volume_id`. Only one disk identifier is permitted per slot. Devices mapped from `sde` through `sdh` are unavailable in `"fullvirt"` `virt_mode`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3275,7 +3276,8 @@ Instances in a region.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instanceconfigdevicessda">Instance<wbr>Config<wbr>Devices<wbr>Sda</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}... `sdh` - (Optional) The SDA-SDH slots, represent the Linux block device nodes for the first 8 disks attached to the Linode.  Each device must be suplied sequentially.  The device can be either a Disk or a Volume identified by `disk_label` or `volume_id`. Only one disk identifier is permitted per slot. Devices mapped from `sde` through `sdh` are unavailable in `"fullvirt"` `virt_mode`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3346,7 +3348,8 @@ Instances in a region.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instanceconfigdevicessda">Instance<wbr>Config<wbr>Devices<wbr>Sda</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}... `sdh` - (Optional) The SDA-SDH slots, represent the Linux block device nodes for the first 8 disks attached to the Linode.  Each device must be suplied sequentially.  The device can be either a Disk or a Volume identified by `disk_label` or `volume_id`. Only one disk identifier is permitted per slot. Devices mapped from `sde` through `sdh` are unavailable in `"fullvirt"` `virt_mode`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3417,7 +3420,8 @@ Instances in a region.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instanceconfigdevicessda">Dict[Instance<wbr>Config<wbr>Devices<wbr>Sda]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}... `sdh` - (Optional) The SDA-SDH slots, represent the Linux block device nodes for the first 8 disks attached to the Linode.  Each device must be suplied sequentially.  The device can be either a Disk or a Volume identified by `disk_label` or `volume_id`. Only one disk identifier is permitted per slot. Devices mapped from `sde` through `sdh` are unavailable in `"fullvirt"` `virt_mode`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">

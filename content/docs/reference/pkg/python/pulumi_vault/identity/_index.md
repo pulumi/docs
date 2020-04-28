@@ -348,7 +348,7 @@ Vault, serialized in JSON format.</p>
 <dl class="attribute">
 <dt id="pulumi_vault.identity.GetEntityResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.identity.GetEntityResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -451,7 +451,7 @@ Vault, serialized in JSON format.</p>
 <dl class="attribute">
 <dt id="pulumi_vault.identity.GetGroupResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.identity.GetGroupResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
