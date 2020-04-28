@@ -370,64 +370,109 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>all_updates_rule</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Defines notifications that are sent on every update to the billing account’s spend, regardless of the thresholds defined
-using threshold rules.</p></li>
-<li><p><strong>amount</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The budgeted amount for each usage period.</p></li>
+<li><p><strong>all_updates_rule</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Defines notifications that are sent on every update to the
+billing account’s spend, regardless of the thresholds defined
+using threshold rules.  Structure is documented below.</p></li>
+<li><p><strong>amount</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The budgeted amount for each usage period.  Structure is documented below.</p></li>
 <li><p><strong>billing_account</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ID of the billing account to set a budget on.</p></li>
-<li><p><strong>budget_filter</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Filters that define which resources are used to compute the actual spend against the budget.</p></li>
+<li><p><strong>budget_filter</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Filters that define which resources are used to compute the actual
+spend against the budget.  Structure is documented below.</p></li>
 <li><p><strong>display_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – User data for display name in UI. Must be &lt;= 60 chars.</p></li>
-<li><p><strong>threshold_rules</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Rules that trigger alerts (notifications of thresholds being crossed) when spend exceeds the specified percentages of
-the budget.</p></li>
+<li><p><strong>threshold_rules</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Rules that trigger alerts (notifications of thresholds being
+crossed) when spend exceeds the specified percentages of the
+budget.  Structure is documented below.</p></li>
 </ul>
 </dd>
 </dl>
 <p>The <strong>all_updates_rule</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">pubsubTopic</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">schemaVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pubsubTopic</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Cloud Pub/Sub topic where budget related
+messages will be published, in the form
+projects/{project_id}/topics/{topic_id}. Updates are sent
+at regular intervals to the topic.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">schemaVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The schema version of the notification. Only “1.0” is
+accepted. It represents the JSON schema as defined in
+<a class="reference external" href="https://cloud.google.com/billing/docs/how-to/budgets#notification_format">https://cloud.google.com/billing/docs/how-to/budgets#notification_format</a>.</p></li>
 </ul>
 <p>The <strong>amount</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">specifiedAmount</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">specifiedAmount</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A specified amount to use as the budget. currencyCode is
+optional. If specified, it must match the currency of the
+billing account. The currencyCode is provided on output.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">currencyCode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">nanos</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">units</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">currencyCode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The 3-letter currency code defined in ISO 4217.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nanos</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Number of nano (10^-9) units of the amount.
+The value must be between -999,999,999 and +999,999,999
+inclusive. If units is positive, nanos must be positive or
+zero. If units is zero, nanos can be positive, zero, or
+negative. If units is negative, nanos must be negative or
+zero. For example $-1.75 is represented as units=-1 and
+nanos=-750,000,000.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">units</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The whole units of the amount. For example if currencyCode
+is “USD”, then 1 unit is one US dollar.</p></li>
 </ul>
 </li>
 </ul>
 <p>The <strong>budget_filter</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">creditTypesTreatment</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">projects</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">services</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">creditTypesTreatment</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies how credits should be treated when determining spend
+for threshold calculations.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">projects</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A set of projects of the form projects/{project_id},
+specifying that usage from only this set of projects should be
+included in the budget. If omitted, the report will include
+all usage for the billing account, regardless of which project
+the usage occurred on. Only zero or one project can be
+specified currently.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">services</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A set of services of the form services/{service_id},
+specifying that usage from only this set of services should be
+included in the budget. If omitted, the report will include
+usage for all the services. The service names are available
+through the Catalog API:
+<a class="reference external" href="https://cloud.google.com/billing/v1/how-tos/catalog-api">https://cloud.google.com/billing/v1/how-tos/catalog-api</a>.</p></li>
 </ul>
 <p>The <strong>threshold_rules</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">spendBasis</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">thresholdPercent</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">spendBasis</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of basis used to determine if spend has passed
+the threshold.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">thresholdPercent</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Send an alert when this threshold is exceeded. This is a
+1.0-based percentage, so 0.5 = 50%. Must be &gt;= 0.</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_gcp.billing.Budget.all_updates_rule">
 <code class="sig-name descname">all_updates_rule</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.billing.Budget.all_updates_rule" title="Permalink to this definition">¶</a></dt>
-<dd><p>Defines notifications that are sent on every update to the billing account’s spend, regardless of the thresholds defined
-using threshold rules.</p>
+<dd><p>Defines notifications that are sent on every update to the
+billing account’s spend, regardless of the thresholds defined
+using threshold rules.  Structure is documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">pubsubTopic</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">schemaVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pubsubTopic</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the Cloud Pub/Sub topic where budget related
+messages will be published, in the form
+projects/{project_id}/topics/{topic_id}. Updates are sent
+at regular intervals to the topic.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">schemaVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The schema version of the notification. Only “1.0” is
+accepted. It represents the JSON schema as defined in
+<a class="reference external" href="https://cloud.google.com/billing/docs/how-to/budgets#notification_format">https://cloud.google.com/billing/docs/how-to/budgets#notification_format</a>.</p></li>
 </ul>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_gcp.billing.Budget.amount">
 <code class="sig-name descname">amount</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.billing.Budget.amount" title="Permalink to this definition">¶</a></dt>
-<dd><p>The budgeted amount for each usage period.</p>
+<dd><p>The budgeted amount for each usage period.  Structure is documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">specifiedAmount</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">specifiedAmount</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A specified amount to use as the budget. currencyCode is
+optional. If specified, it must match the currency of the
+billing account. The currencyCode is provided on output.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">currencyCode</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">nanos</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">units</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">currencyCode</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The 3-letter currency code defined in ISO 4217.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nanos</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Number of nano (10^-9) units of the amount.
+The value must be between -999,999,999 and +999,999,999
+inclusive. If units is positive, nanos must be positive or
+zero. If units is zero, nanos can be positive, zero, or
+negative. If units is negative, nanos must be negative or
+zero. For example $-1.75 is represented as units=-1 and
+nanos=-750,000,000.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">units</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The whole units of the amount. For example if currencyCode
+is “USD”, then 1 unit is one US dollar.</p></li>
 </ul>
 </li>
 </ul>
@@ -442,11 +487,23 @@ using threshold rules.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.billing.Budget.budget_filter">
 <code class="sig-name descname">budget_filter</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.billing.Budget.budget_filter" title="Permalink to this definition">¶</a></dt>
-<dd><p>Filters that define which resources are used to compute the actual spend against the budget.</p>
+<dd><p>Filters that define which resources are used to compute the actual
+spend against the budget.  Structure is documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">creditTypesTreatment</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">projects</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">services</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">creditTypesTreatment</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies how credits should be treated when determining spend
+for threshold calculations.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">projects</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A set of projects of the form projects/{project_id},
+specifying that usage from only this set of projects should be
+included in the budget. If omitted, the report will include
+all usage for the billing account, regardless of which project
+the usage occurred on. Only zero or one project can be
+specified currently.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">services</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A set of services of the form services/{service_id},
+specifying that usage from only this set of services should be
+included in the budget. If omitted, the report will include
+usage for all the services. The service names are available
+through the Catalog API:
+<a class="reference external" href="https://cloud.google.com/billing/v1/how-tos/catalog-api">https://cloud.google.com/billing/v1/how-tos/catalog-api</a>.</p></li>
 </ul>
 </dd></dl>
 
@@ -466,11 +523,14 @@ billingAccounts/{billingAccountId}/budgets/{budgetId}.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.billing.Budget.threshold_rules">
 <code class="sig-name descname">threshold_rules</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.billing.Budget.threshold_rules" title="Permalink to this definition">¶</a></dt>
-<dd><p>Rules that trigger alerts (notifications of thresholds being crossed) when spend exceeds the specified percentages of
-the budget.</p>
+<dd><p>Rules that trigger alerts (notifications of thresholds being
+crossed) when spend exceeds the specified percentages of the
+budget.  Structure is documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">spendBasis</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">thresholdPercent</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">spendBasis</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The type of basis used to determine if spend has passed
+the threshold.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">thresholdPercent</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Send an alert when this threshold is exceeded. This is a
+1.0-based percentage, so 0.5 = 50%. Must be &gt;= 0.</p></li>
 </ul>
 </dd></dl>
 
@@ -485,44 +545,74 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>all_updates_rule</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Defines notifications that are sent on every update to the billing account’s spend, regardless of the thresholds defined
-using threshold rules.</p></li>
-<li><p><strong>amount</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The budgeted amount for each usage period.</p></li>
+<li><p><strong>all_updates_rule</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Defines notifications that are sent on every update to the
+billing account’s spend, regardless of the thresholds defined
+using threshold rules.  Structure is documented below.</p></li>
+<li><p><strong>amount</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The budgeted amount for each usage period.  Structure is documented below.</p></li>
 <li><p><strong>billing_account</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ID of the billing account to set a budget on.</p></li>
-<li><p><strong>budget_filter</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Filters that define which resources are used to compute the actual spend against the budget.</p></li>
+<li><p><strong>budget_filter</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Filters that define which resources are used to compute the actual
+spend against the budget.  Structure is documented below.</p></li>
 <li><p><strong>display_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – User data for display name in UI. Must be &lt;= 60 chars.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Resource name of the budget. The resource name implies the scope of a budget. Values are of the form
 billingAccounts/{billingAccountId}/budgets/{budgetId}.</p></li>
-<li><p><strong>threshold_rules</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Rules that trigger alerts (notifications of thresholds being crossed) when spend exceeds the specified percentages of
-the budget.</p></li>
+<li><p><strong>threshold_rules</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Rules that trigger alerts (notifications of thresholds being
+crossed) when spend exceeds the specified percentages of the
+budget.  Structure is documented below.</p></li>
 </ul>
 </dd>
 </dl>
 <p>The <strong>all_updates_rule</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">pubsubTopic</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">schemaVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pubsubTopic</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Cloud Pub/Sub topic where budget related
+messages will be published, in the form
+projects/{project_id}/topics/{topic_id}. Updates are sent
+at regular intervals to the topic.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">schemaVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The schema version of the notification. Only “1.0” is
+accepted. It represents the JSON schema as defined in
+<a class="reference external" href="https://cloud.google.com/billing/docs/how-to/budgets#notification_format">https://cloud.google.com/billing/docs/how-to/budgets#notification_format</a>.</p></li>
 </ul>
 <p>The <strong>amount</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">specifiedAmount</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">specifiedAmount</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A specified amount to use as the budget. currencyCode is
+optional. If specified, it must match the currency of the
+billing account. The currencyCode is provided on output.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">currencyCode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">nanos</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">units</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">currencyCode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The 3-letter currency code defined in ISO 4217.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nanos</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Number of nano (10^-9) units of the amount.
+The value must be between -999,999,999 and +999,999,999
+inclusive. If units is positive, nanos must be positive or
+zero. If units is zero, nanos can be positive, zero, or
+negative. If units is negative, nanos must be negative or
+zero. For example $-1.75 is represented as units=-1 and
+nanos=-750,000,000.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">units</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The whole units of the amount. For example if currencyCode
+is “USD”, then 1 unit is one US dollar.</p></li>
 </ul>
 </li>
 </ul>
 <p>The <strong>budget_filter</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">creditTypesTreatment</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">projects</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">services</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">creditTypesTreatment</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies how credits should be treated when determining spend
+for threshold calculations.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">projects</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A set of projects of the form projects/{project_id},
+specifying that usage from only this set of projects should be
+included in the budget. If omitted, the report will include
+all usage for the billing account, regardless of which project
+the usage occurred on. Only zero or one project can be
+specified currently.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">services</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A set of services of the form services/{service_id},
+specifying that usage from only this set of services should be
+included in the budget. If omitted, the report will include
+usage for all the services. The service names are available
+through the Catalog API:
+<a class="reference external" href="https://cloud.google.com/billing/v1/how-tos/catalog-api">https://cloud.google.com/billing/v1/how-tos/catalog-api</a>.</p></li>
 </ul>
 <p>The <strong>threshold_rules</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">spendBasis</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">thresholdPercent</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">spendBasis</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of basis used to determine if spend has passed
+the threshold.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">thresholdPercent</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Send an alert when this threshold is exceeded. This is a
+1.0-based percentage, so 0.5 = 50%. Must be &gt;= 0.</p></li>
 </ul>
 </dd></dl>
 
