@@ -42,7 +42,7 @@ The `nrql` attribute supports the following arguments:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">NrqlAlertCondition</span><span class="p">(resource_name, opts=None, </span>enabled=None<span class="p">, </span>expected_groups=None<span class="p">, </span>ignore_overlap=None<span class="p">, </span>name=None<span class="p">, </span>nrql=None<span class="p">, </span>policy_id=None<span class="p">, </span>runbook_url=None<span class="p">, </span>terms=None<span class="p">, </span>type=None<span class="p">, </span>value_function=None<span class="p">, </span>violation_time_limit_seconds=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">NrqlAlertCondition</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>enabled=None<span class="p">, </span>expected_groups=None<span class="p">, </span>ignore_overlap=None<span class="p">, </span>name=None<span class="p">, </span>nrql=None<span class="p">, </span>policy_id=None<span class="p">, </span>runbook_url=None<span class="p">, </span>terms=None<span class="p">, </span>type=None<span class="p">, </span>value_function=None<span class="p">, </span>violation_time_limit_seconds=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
