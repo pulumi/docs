@@ -22,7 +22,7 @@ meta_desc: "Explore the LocallySignedCert resource of the TLS package, including
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">LocallySignedCert</span><span class="p">(resource_name, opts=None, </span>allowed_uses=None<span class="p">, </span>ca_cert_pem=None<span class="p">, </span>ca_key_algorithm=None<span class="p">, </span>ca_private_key_pem=None<span class="p">, </span>cert_request_pem=None<span class="p">, </span>early_renewal_hours=None<span class="p">, </span>is_ca_certificate=None<span class="p">, </span>set_subject_key_id=None<span class="p">, </span>validity_period_hours=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">LocallySignedCert</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>allowed_uses=None<span class="p">, </span>ca_cert_pem=None<span class="p">, </span>ca_key_algorithm=None<span class="p">, </span>ca_private_key_pem=None<span class="p">, </span>cert_request_pem=None<span class="p">, </span>early_renewal_hours=None<span class="p">, </span>is_ca_certificate=None<span class="p">, </span>set_subject_key_id=None<span class="p">, </span>validity_period_hours=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
