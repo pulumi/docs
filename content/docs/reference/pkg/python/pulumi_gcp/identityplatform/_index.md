@@ -28,11 +28,26 @@ the marketplace prior to using this resource.</p>
 <li><p><strong>client_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – OAuth client ID</p></li>
 <li><p><strong>client_secret</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – OAuth client secret</p></li>
 <li><p><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If this IDP allows the user to sign in</p></li>
-<li><p><strong>idp_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ID of the IDP. Possible values include: * ‘apple.com’ * ‘facebook.com’ * ‘gc.apple.com’ * ‘github.com’ * ‘google.com’ *
-‘linkedin.com’ * ‘microsoft.com’ * ‘playgames.google.com’ * ‘twitter.com’ * ‘yahoo.com’</p></li>
-<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
-If it is not provided, the provider project is used.</p></li>
+<li><p><strong>idp_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ID of the IDP. Possible values include:</p></li>
 </ul>
+</dd>
+</dl>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>* `apple.com`
+* `facebook.com`
+* `gc.apple.com`
+* `github.com`
+* `google.com`
+* `linkedin.com`
+* `microsoft.com`
+* `playgames.google.com`
+* `twitter.com`
+* `yahoo.com`
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</p>
 </dd>
 </dl>
 <dl class="attribute">
@@ -56,8 +71,19 @@ If it is not provided, the provider project is used.</p></li>
 <dl class="attribute">
 <dt id="pulumi_gcp.identityplatform.DefaultSupportedIdpConfig.idp_id">
 <code class="sig-name descname">idp_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.identityplatform.DefaultSupportedIdpConfig.idp_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>ID of the IDP. Possible values include: * ‘apple.com’ * ‘facebook.com’ * ‘gc.apple.com’ * ‘github.com’ * ‘google.com’ *
-‘linkedin.com’ * ‘microsoft.com’ * ‘playgames.google.com’ * ‘twitter.com’ * ‘yahoo.com’</p>
+<dd><p>ID of the IDP. Possible values include:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">apple.com</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">facebook.com</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">gc.apple.com</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">github.com</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">google.com</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">linkedin.com</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">microsoft.com</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">playgames.google.com</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">twitter.com</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">yahoo.com</span></code></p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -87,8 +113,25 @@ properties used to qualify the lookup.</p>
 <li><p><strong>client_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – OAuth client ID</p></li>
 <li><p><strong>client_secret</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – OAuth client secret</p></li>
 <li><p><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If this IDP allows the user to sign in</p></li>
-<li><p><strong>idp_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ID of the IDP. Possible values include: * ‘apple.com’ * ‘facebook.com’ * ‘gc.apple.com’ * ‘github.com’ * ‘google.com’ *
-‘linkedin.com’ * ‘microsoft.com’ * ‘playgames.google.com’ * ‘twitter.com’ * ‘yahoo.com’</p></li>
+<li><p><strong>idp_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ID of the IDP. Possible values include:</p></li>
+</ul>
+</dd>
+</dl>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>* `apple.com`
+* `facebook.com`
+* `gc.apple.com`
+* `github.com`
+* `google.com`
+* `linkedin.com`
+* `microsoft.com`
+* `playgames.google.com`
+* `twitter.com`
+* `yahoo.com`
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the DefaultSupportedIdpConfig resource</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
@@ -149,37 +192,40 @@ the marketplace prior to using this resource.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>display_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Human friendly display name.</p></li>
 <li><p><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If this config allows users to sign in with the provider.</p></li>
-<li><p><strong>idp_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – SAML IdP configuration when the project acts as the relying party</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the InboundSamlConfig resource. Must start with ‘saml.’ and can only have alphanumeric characters, hyphens,
-underscores or periods. The part after ‘saml.’ must also start with a lowercase letter, end with an alphanumeric
-character, and have at least 2 characters.</p></li>
+<li><p><strong>idp_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – SAML IdP configuration when the project acts as the relying party  Structure is documented below.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the InboundSamlConfig resource. Must start with ‘saml.’ and can only have alphanumeric characters,
+hyphens, underscores or periods. The part after ‘saml.’ must also start with a lowercase letter, end with an
+alphanumeric character, and have at least 2 characters.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
-<li><p><strong>sp_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – SAML SP (Service Provider) configuration when the project acts as the relying party to receive and accept an
-authentication assertion issued by a SAML identity provider.</p></li>
+<li><p><strong>sp_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – SAML SP (Service Provider) configuration when the project acts as the relying party to receive
+and accept an authentication assertion issued by a SAML identity provider.  Structure is documented below.</p></li>
 </ul>
 </dd>
 </dl>
 <p>The <strong>idp_config</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">idpCertificates</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">idpCertificates</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The IdP’s certificate data to verify the signature in the SAMLResponse issued by the IDP.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">x509Certificate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">x509Certificate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - -
+The x509 certificate</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">idpEntityId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">signRequest</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ssoUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">idpEntityId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Unique identifier for all SAML entities</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">signRequest</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Indicates if outbounding SAMLRequest should be signed.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ssoUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - URL to send Authentication request to.</p></li>
 </ul>
 <p>The <strong>sp_config</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">callbackUri</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">spCertificates</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">callbackUri</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Callback URI where responses from IDP are handled. Must start with <code class="docutils literal notranslate"><span class="pre">https://</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">spCertificates</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - -
+The IDP’s certificate data to verify the signature in the SAMLResponse issued by the IDP.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">x509Certificate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">x509Certificate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - -
+The x509 certificate</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">spEntityId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">spEntityId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Unique identifier for all SAML entities.</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_gcp.identityplatform.InboundSamlConfig.display_name">
@@ -196,25 +242,26 @@ authentication assertion issued by a SAML identity provider.</p></li>
 <dl class="attribute">
 <dt id="pulumi_gcp.identityplatform.InboundSamlConfig.idp_config">
 <code class="sig-name descname">idp_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.identityplatform.InboundSamlConfig.idp_config" title="Permalink to this definition">¶</a></dt>
-<dd><p>SAML IdP configuration when the project acts as the relying party</p>
+<dd><p>SAML IdP configuration when the project acts as the relying party  Structure is documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">idpCertificates</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">idpCertificates</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - The IdP’s certificate data to verify the signature in the SAMLResponse issued by the IDP.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">x509Certificate</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">x509Certificate</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - -
+The x509 certificate</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">idpEntityId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">signRequest</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ssoUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">idpEntityId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Unique identifier for all SAML entities</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">signRequest</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Indicates if outbounding SAMLRequest should be signed.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ssoUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - URL to send Authentication request to.</p></li>
 </ul>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_gcp.identityplatform.InboundSamlConfig.name">
 <code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.identityplatform.InboundSamlConfig.name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The name of the InboundSamlConfig resource. Must start with ‘saml.’ and can only have alphanumeric characters, hyphens,
-underscores or periods. The part after ‘saml.’ must also start with a lowercase letter, end with an alphanumeric
-character, and have at least 2 characters.</p>
+<dd><p>The name of the InboundSamlConfig resource. Must start with ‘saml.’ and can only have alphanumeric characters,
+hyphens, underscores or periods. The part after ‘saml.’ must also start with a lowercase letter, end with an
+alphanumeric character, and have at least 2 characters.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -227,16 +274,18 @@ If it is not provided, the provider project is used.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.identityplatform.InboundSamlConfig.sp_config">
 <code class="sig-name descname">sp_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.identityplatform.InboundSamlConfig.sp_config" title="Permalink to this definition">¶</a></dt>
-<dd><p>SAML SP (Service Provider) configuration when the project acts as the relying party to receive and accept an
-authentication assertion issued by a SAML identity provider.</p>
+<dd><p>SAML SP (Service Provider) configuration when the project acts as the relying party to receive
+and accept an authentication assertion issued by a SAML identity provider.  Structure is documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">callbackUri</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">spCertificates</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">callbackUri</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Callback URI where responses from IDP are handled. Must start with <code class="docutils literal notranslate"><span class="pre">https://</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">spCertificates</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - -
+The IDP’s certificate data to verify the signature in the SAMLResponse issued by the IDP.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">x509Certificate</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">x509Certificate</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - -
+The x509 certificate</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">spEntityId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">spEntityId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Unique identifier for all SAML entities.</p></li>
 </ul>
 </dd></dl>
 
@@ -253,37 +302,40 @@ properties used to qualify the lookup.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>display_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Human friendly display name.</p></li>
 <li><p><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If this config allows users to sign in with the provider.</p></li>
-<li><p><strong>idp_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – SAML IdP configuration when the project acts as the relying party</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the InboundSamlConfig resource. Must start with ‘saml.’ and can only have alphanumeric characters, hyphens,
-underscores or periods. The part after ‘saml.’ must also start with a lowercase letter, end with an alphanumeric
-character, and have at least 2 characters.</p></li>
+<li><p><strong>idp_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – SAML IdP configuration when the project acts as the relying party  Structure is documented below.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the InboundSamlConfig resource. Must start with ‘saml.’ and can only have alphanumeric characters,
+hyphens, underscores or periods. The part after ‘saml.’ must also start with a lowercase letter, end with an
+alphanumeric character, and have at least 2 characters.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
-<li><p><strong>sp_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – SAML SP (Service Provider) configuration when the project acts as the relying party to receive and accept an
-authentication assertion issued by a SAML identity provider.</p></li>
+<li><p><strong>sp_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – SAML SP (Service Provider) configuration when the project acts as the relying party to receive
+and accept an authentication assertion issued by a SAML identity provider.  Structure is documented below.</p></li>
 </ul>
 </dd>
 </dl>
 <p>The <strong>idp_config</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">idpCertificates</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">idpCertificates</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The IdP’s certificate data to verify the signature in the SAMLResponse issued by the IDP.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">x509Certificate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">x509Certificate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - -
+The x509 certificate</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">idpEntityId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">signRequest</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ssoUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">idpEntityId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Unique identifier for all SAML entities</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">signRequest</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Indicates if outbounding SAMLRequest should be signed.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ssoUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - URL to send Authentication request to.</p></li>
 </ul>
 <p>The <strong>sp_config</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">callbackUri</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">spCertificates</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">callbackUri</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Callback URI where responses from IDP are handled. Must start with <code class="docutils literal notranslate"><span class="pre">https://</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">spCertificates</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - -
+The IDP’s certificate data to verify the signature in the SAMLResponse issued by the IDP.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">x509Certificate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">x509Certificate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - -
+The x509 certificate</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">spEntityId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">spEntityId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Unique identifier for all SAML entities.</p></li>
 </ul>
 </dd></dl>
 
@@ -342,7 +394,7 @@ the marketplace prior to using this resource.</p>
 <li><p><strong>display_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Human friendly display name.</p></li>
 <li><p><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If this config allows users to sign in with the provider.</p></li>
 <li><p><strong>issuer</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – For OIDC Idps, the issuer identifier.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the OauthIdpConfig. Must start with ‘oidc.’.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the OauthIdpConfig. Must start with <code class="docutils literal notranslate"><span class="pre">oidc.</span></code>.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
 </ul>
@@ -381,7 +433,7 @@ If it is not provided, the provider project is used.</p></li>
 <dl class="attribute">
 <dt id="pulumi_gcp.identityplatform.OauthIdpConfig.name">
 <code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.identityplatform.OauthIdpConfig.name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The name of the OauthIdpConfig. Must start with ‘oidc.’.</p>
+<dd><p>The name of the OauthIdpConfig. Must start with <code class="docutils literal notranslate"><span class="pre">oidc.</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -407,7 +459,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>display_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Human friendly display name.</p></li>
 <li><p><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If this config allows users to sign in with the provider.</p></li>
 <li><p><strong>issuer</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – For OIDC Idps, the issuer identifier.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the OauthIdpConfig. Must start with ‘oidc.’.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the OauthIdpConfig. Must start with <code class="docutils literal notranslate"><span class="pre">oidc.</span></code>.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
 </ul>
@@ -468,8 +520,9 @@ the Cloud Console prior to creating tenants.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>allow_password_signup</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to allow email/password user authentication.</p></li>
-<li><p><strong>disable_auth</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether authentication is disabled for the tenant. If true, the users under the disabled tenant are not allowed to
-sign-in. Admins of the disabled tenant are not able to manage its users.</p></li>
+<li><p><strong>disable_auth</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether authentication is disabled for the tenant. If true, the users under
+the disabled tenant are not allowed to sign-in. Admins of the disabled tenant
+are not able to manage its users.</p></li>
 <li><p><strong>display_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Human friendly display name of the tenant.</p></li>
 <li><p><strong>enable_email_link_signin</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to enable email link user authentication.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
@@ -486,8 +539,9 @@ If it is not provided, the provider project is used.</p></li>
 <dl class="attribute">
 <dt id="pulumi_gcp.identityplatform.Tenant.disable_auth">
 <code class="sig-name descname">disable_auth</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.identityplatform.Tenant.disable_auth" title="Permalink to this definition">¶</a></dt>
-<dd><p>Whether authentication is disabled for the tenant. If true, the users under the disabled tenant are not allowed to
-sign-in. Admins of the disabled tenant are not able to manage its users.</p>
+<dd><p>Whether authentication is disabled for the tenant. If true, the users under
+the disabled tenant are not allowed to sign-in. Admins of the disabled tenant
+are not able to manage its users.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -527,8 +581,9 @@ properties used to qualify the lookup.</p>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>allow_password_signup</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to allow email/password user authentication.</p></li>
-<li><p><strong>disable_auth</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether authentication is disabled for the tenant. If true, the users under the disabled tenant are not allowed to
-sign-in. Admins of the disabled tenant are not able to manage its users.</p></li>
+<li><p><strong>disable_auth</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether authentication is disabled for the tenant. If true, the users under
+the disabled tenant are not allowed to sign-in. Admins of the disabled tenant
+are not able to manage its users.</p></li>
 <li><p><strong>display_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Human friendly display name of the tenant.</p></li>
 <li><p><strong>enable_email_link_signin</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to enable email link user authentication.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the tenant that is generated by the server</p></li>
@@ -592,8 +647,25 @@ the marketplace prior to using this resource.</p>
 <li><p><strong>client_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – OAuth client ID</p></li>
 <li><p><strong>client_secret</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – OAuth client secret</p></li>
 <li><p><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If this IDP allows the user to sign in</p></li>
-<li><p><strong>idp_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ID of the IDP. Possible values include: * ‘apple.com’ * ‘facebook.com’ * ‘gc.apple.com’ * ‘github.com’ * ‘google.com’ *
-‘linkedin.com’ * ‘microsoft.com’ * ‘playgames.google.com’ * ‘twitter.com’ * ‘yahoo.com’</p></li>
+<li><p><strong>idp_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ID of the IDP. Possible values include:</p></li>
+</ul>
+</dd>
+</dl>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>* `apple.com`
+* `facebook.com`
+* `gc.apple.com`
+* `github.com`
+* `google.com`
+* `linkedin.com`
+* `microsoft.com`
+* `playgames.google.com`
+* `twitter.com`
+* `yahoo.com`
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
 <li><p><strong>tenant</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the tenant where this DefaultSupportedIdpConfig resource exists</p></li>
@@ -621,8 +693,19 @@ If it is not provided, the provider project is used.</p></li>
 <dl class="attribute">
 <dt id="pulumi_gcp.identityplatform.TenantDefaultSupportedIdpConfig.idp_id">
 <code class="sig-name descname">idp_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.identityplatform.TenantDefaultSupportedIdpConfig.idp_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>ID of the IDP. Possible values include: * ‘apple.com’ * ‘facebook.com’ * ‘gc.apple.com’ * ‘github.com’ * ‘google.com’ *
-‘linkedin.com’ * ‘microsoft.com’ * ‘playgames.google.com’ * ‘twitter.com’ * ‘yahoo.com’</p>
+<dd><p>ID of the IDP. Possible values include:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">apple.com</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">facebook.com</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">gc.apple.com</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">github.com</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">google.com</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">linkedin.com</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">microsoft.com</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">playgames.google.com</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">twitter.com</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">yahoo.com</span></code></p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -658,8 +741,25 @@ properties used to qualify the lookup.</p>
 <li><p><strong>client_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – OAuth client ID</p></li>
 <li><p><strong>client_secret</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – OAuth client secret</p></li>
 <li><p><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If this IDP allows the user to sign in</p></li>
-<li><p><strong>idp_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ID of the IDP. Possible values include: * ‘apple.com’ * ‘facebook.com’ * ‘gc.apple.com’ * ‘github.com’ * ‘google.com’ *
-‘linkedin.com’ * ‘microsoft.com’ * ‘playgames.google.com’ * ‘twitter.com’ * ‘yahoo.com’</p></li>
+<li><p><strong>idp_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ID of the IDP. Possible values include:</p></li>
+</ul>
+</dd>
+</dl>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>* `apple.com`
+* `facebook.com`
+* `gc.apple.com`
+* `github.com`
+* `google.com`
+* `linkedin.com`
+* `microsoft.com`
+* `playgames.google.com`
+* `twitter.com`
+* `yahoo.com`
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the default supported IDP config resource</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
@@ -721,38 +821,41 @@ the marketplace prior to using this resource.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>display_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Human friendly display name.</p></li>
 <li><p><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If this config allows users to sign in with the provider.</p></li>
-<li><p><strong>idp_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – SAML IdP configuration when the project acts as the relying party</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the InboundSamlConfig resource. Must start with ‘saml.’ and can only have alphanumeric characters, hyphens,
-underscores or periods. The part after ‘saml.’ must also start with a lowercase letter, end with an alphanumeric
-character, and have at least 2 characters.</p></li>
+<li><p><strong>idp_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – SAML IdP configuration when the project acts as the relying party  Structure is documented below.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the InboundSamlConfig resource. Must start with ‘saml.’ and can only have alphanumeric characters,
+hyphens, underscores or periods. The part after ‘saml.’ must also start with a lowercase letter, end with an
+alphanumeric character, and have at least 2 characters.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
-<li><p><strong>sp_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – SAML SP (Service Provider) configuration when the project acts as the relying party to receive and accept an
-authentication assertion issued by a SAML identity provider.</p></li>
+<li><p><strong>sp_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – SAML SP (Service Provider) configuration when the project acts as the relying party to receive
+and accept an authentication assertion issued by a SAML identity provider.  Structure is documented below.</p></li>
 <li><p><strong>tenant</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the tenant where this inbound SAML config resource exists</p></li>
 </ul>
 </dd>
 </dl>
 <p>The <strong>idp_config</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">idpCertificates</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">idpCertificates</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The IDP’s certificate data to verify the signature in the SAMLResponse issued by the IDP.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">x509Certificate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">x509Certificate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - -
+The x509 certificate</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">idpEntityId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">signRequest</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ssoUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">idpEntityId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Unique identifier for all SAML entities</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">signRequest</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Indicates if outbounding SAMLRequest should be signed.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ssoUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - URL to send Authentication request to.</p></li>
 </ul>
 <p>The <strong>sp_config</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">callbackUri</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">spCertificates</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">callbackUri</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Callback URI where responses from IDP are handled. Must start with <code class="docutils literal notranslate"><span class="pre">https://</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">spCertificates</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - -
+The IDP’s certificate data to verify the signature in the SAMLResponse issued by the IDP.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">x509Certificate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">x509Certificate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - -
+The x509 certificate</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">spEntityId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">spEntityId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Unique identifier for all SAML entities.</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_gcp.identityplatform.TenantInboundSamlConfig.display_name">
@@ -769,25 +872,26 @@ authentication assertion issued by a SAML identity provider.</p></li>
 <dl class="attribute">
 <dt id="pulumi_gcp.identityplatform.TenantInboundSamlConfig.idp_config">
 <code class="sig-name descname">idp_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.identityplatform.TenantInboundSamlConfig.idp_config" title="Permalink to this definition">¶</a></dt>
-<dd><p>SAML IdP configuration when the project acts as the relying party</p>
+<dd><p>SAML IdP configuration when the project acts as the relying party  Structure is documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">idpCertificates</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">idpCertificates</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - The IDP’s certificate data to verify the signature in the SAMLResponse issued by the IDP.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">x509Certificate</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">x509Certificate</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - -
+The x509 certificate</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">idpEntityId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">signRequest</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ssoUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">idpEntityId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Unique identifier for all SAML entities</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">signRequest</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Indicates if outbounding SAMLRequest should be signed.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ssoUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - URL to send Authentication request to.</p></li>
 </ul>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_gcp.identityplatform.TenantInboundSamlConfig.name">
 <code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.identityplatform.TenantInboundSamlConfig.name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The name of the InboundSamlConfig resource. Must start with ‘saml.’ and can only have alphanumeric characters, hyphens,
-underscores or periods. The part after ‘saml.’ must also start with a lowercase letter, end with an alphanumeric
-character, and have at least 2 characters.</p>
+<dd><p>The name of the InboundSamlConfig resource. Must start with ‘saml.’ and can only have alphanumeric characters,
+hyphens, underscores or periods. The part after ‘saml.’ must also start with a lowercase letter, end with an
+alphanumeric character, and have at least 2 characters.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -800,16 +904,18 @@ If it is not provided, the provider project is used.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.identityplatform.TenantInboundSamlConfig.sp_config">
 <code class="sig-name descname">sp_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.identityplatform.TenantInboundSamlConfig.sp_config" title="Permalink to this definition">¶</a></dt>
-<dd><p>SAML SP (Service Provider) configuration when the project acts as the relying party to receive and accept an
-authentication assertion issued by a SAML identity provider.</p>
+<dd><p>SAML SP (Service Provider) configuration when the project acts as the relying party to receive
+and accept an authentication assertion issued by a SAML identity provider.  Structure is documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">callbackUri</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">spCertificates</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">callbackUri</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Callback URI where responses from IDP are handled. Must start with <code class="docutils literal notranslate"><span class="pre">https://</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">spCertificates</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - -
+The IDP’s certificate data to verify the signature in the SAMLResponse issued by the IDP.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">x509Certificate</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">x509Certificate</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - -
+The x509 certificate</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">spEntityId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">spEntityId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Unique identifier for all SAML entities.</p></li>
 </ul>
 </dd></dl>
 
@@ -832,38 +938,41 @@ properties used to qualify the lookup.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>display_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Human friendly display name.</p></li>
 <li><p><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If this config allows users to sign in with the provider.</p></li>
-<li><p><strong>idp_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – SAML IdP configuration when the project acts as the relying party</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the InboundSamlConfig resource. Must start with ‘saml.’ and can only have alphanumeric characters, hyphens,
-underscores or periods. The part after ‘saml.’ must also start with a lowercase letter, end with an alphanumeric
-character, and have at least 2 characters.</p></li>
+<li><p><strong>idp_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – SAML IdP configuration when the project acts as the relying party  Structure is documented below.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the InboundSamlConfig resource. Must start with ‘saml.’ and can only have alphanumeric characters,
+hyphens, underscores or periods. The part after ‘saml.’ must also start with a lowercase letter, end with an
+alphanumeric character, and have at least 2 characters.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
-<li><p><strong>sp_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – SAML SP (Service Provider) configuration when the project acts as the relying party to receive and accept an
-authentication assertion issued by a SAML identity provider.</p></li>
+<li><p><strong>sp_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – SAML SP (Service Provider) configuration when the project acts as the relying party to receive
+and accept an authentication assertion issued by a SAML identity provider.  Structure is documented below.</p></li>
 <li><p><strong>tenant</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the tenant where this inbound SAML config resource exists</p></li>
 </ul>
 </dd>
 </dl>
 <p>The <strong>idp_config</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">idpCertificates</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">idpCertificates</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The IDP’s certificate data to verify the signature in the SAMLResponse issued by the IDP.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">x509Certificate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">x509Certificate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - -
+The x509 certificate</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">idpEntityId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">signRequest</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ssoUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">idpEntityId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Unique identifier for all SAML entities</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">signRequest</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Indicates if outbounding SAMLRequest should be signed.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ssoUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - URL to send Authentication request to.</p></li>
 </ul>
 <p>The <strong>sp_config</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">callbackUri</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">spCertificates</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">callbackUri</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Callback URI where responses from IDP are handled. Must start with <code class="docutils literal notranslate"><span class="pre">https://</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">spCertificates</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - -
+The IDP’s certificate data to verify the signature in the SAMLResponse issued by the IDP.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">x509Certificate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">x509Certificate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - -
+The x509 certificate</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">spEntityId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">spEntityId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Unique identifier for all SAML entities.</p></li>
 </ul>
 </dd></dl>
 
@@ -922,7 +1031,7 @@ the marketplace prior to using this resource.</p>
 <li><p><strong>display_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Human friendly display name.</p></li>
 <li><p><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If this config allows users to sign in with the provider.</p></li>
 <li><p><strong>issuer</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – For OIDC Idps, the issuer identifier.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the OauthIdpConfig. Must start with ‘oidc.’.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the OauthIdpConfig. Must start with <code class="docutils literal notranslate"><span class="pre">oidc.</span></code>.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
 <li><p><strong>tenant</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the tenant where this OIDC IDP configuration resource exists</p></li>
@@ -962,7 +1071,7 @@ If it is not provided, the provider project is used.</p></li>
 <dl class="attribute">
 <dt id="pulumi_gcp.identityplatform.TenantOauthIdpConfig.name">
 <code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.identityplatform.TenantOauthIdpConfig.name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The name of the OauthIdpConfig. Must start with ‘oidc.’.</p>
+<dd><p>The name of the OauthIdpConfig. Must start with <code class="docutils literal notranslate"><span class="pre">oidc.</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -994,7 +1103,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>display_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Human friendly display name.</p></li>
 <li><p><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If this config allows users to sign in with the provider.</p></li>
 <li><p><strong>issuer</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – For OIDC Idps, the issuer identifier.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the OauthIdpConfig. Must start with ‘oidc.’.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the OauthIdpConfig. Must start with <code class="docutils literal notranslate"><span class="pre">oidc.</span></code>.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
 <li><p><strong>tenant</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the tenant where this OIDC IDP configuration resource exists</p></li>

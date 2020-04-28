@@ -31,8 +31,8 @@ anything, please consult the source <a class="reference external" href="https://
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>ip_cidr_range</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The range of internal addresses that follows RFC 4632 notation. Example: ‘10.132.0.0/28’.</p></li>
-<li><p><strong>max_throughput</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Maximum throughput of the connector in Mbps, must be greater than ‘min_throughput’. Default is 1000.</p></li>
+<li><p><strong>ip_cidr_range</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The range of internal addresses that follows RFC 4632 notation. Example: <code class="docutils literal notranslate"><span class="pre">10.132.0.0/28</span></code>.</p></li>
+<li><p><strong>max_throughput</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Maximum throughput of the connector in Mbps, must be greater than <code class="docutils literal notranslate"><span class="pre">min_throughput</span></code>. Default is 1000.</p></li>
 <li><p><strong>min_throughput</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Minimum throughput of the connector in Mbps. Default and min is 200.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource (Max 25 characters).</p></li>
 <li><p><strong>network</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of a VPC network.</p></li>
@@ -45,13 +45,13 @@ If it is not provided, the provider project is used.</p></li>
 <dl class="attribute">
 <dt id="pulumi_gcp.vpcaccess.Connector.ip_cidr_range">
 <code class="sig-name descname">ip_cidr_range</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.vpcaccess.Connector.ip_cidr_range" title="Permalink to this definition">¶</a></dt>
-<dd><p>The range of internal addresses that follows RFC 4632 notation. Example: ‘10.132.0.0/28’.</p>
+<dd><p>The range of internal addresses that follows RFC 4632 notation. Example: <code class="docutils literal notranslate"><span class="pre">10.132.0.0/28</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_gcp.vpcaccess.Connector.max_throughput">
 <code class="sig-name descname">max_throughput</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.vpcaccess.Connector.max_throughput" title="Permalink to this definition">¶</a></dt>
-<dd><p>Maximum throughput of the connector in Mbps, must be greater than ‘min_throughput’. Default is 1000.</p>
+<dd><p>Maximum throughput of the connector in Mbps, must be greater than <code class="docutils literal notranslate"><span class="pre">min_throughput</span></code>. Default is 1000.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -108,8 +108,8 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>ip_cidr_range</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The range of internal addresses that follows RFC 4632 notation. Example: ‘10.132.0.0/28’.</p></li>
-<li><p><strong>max_throughput</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Maximum throughput of the connector in Mbps, must be greater than ‘min_throughput’. Default is 1000.</p></li>
+<li><p><strong>ip_cidr_range</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The range of internal addresses that follows RFC 4632 notation. Example: <code class="docutils literal notranslate"><span class="pre">10.132.0.0/28</span></code>.</p></li>
+<li><p><strong>max_throughput</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Maximum throughput of the connector in Mbps, must be greater than <code class="docutils literal notranslate"><span class="pre">min_throughput</span></code>. Default is 1000.</p></li>
 <li><p><strong>min_throughput</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Minimum throughput of the connector in Mbps. Default and min is 200.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource (Max 25 characters).</p></li>
 <li><p><strong>network</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of a VPC network.</p></li>

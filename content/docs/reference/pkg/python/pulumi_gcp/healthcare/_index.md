@@ -35,9 +35,9 @@ anything, please consult the source <a class="reference external" href="https://
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The resource name for the Dataset.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
-<li><p><strong>time_zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The default timezone used by this dataset. Must be a either a valid IANA time zone name such as “America/New_York” or
-empty, which defaults to UTC. This is used for parsing times in resources (e.g., HL7 messages) where no explicit
-timezone is specified.</p></li>
+<li><p><strong>time_zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The default timezone used by this dataset. Must be a either a valid IANA time zone name such as
+“America/New_York” or empty, which defaults to UTC. This is used for parsing times in resources
+(e.g., HL7 messages) where no explicit timezone is specified.</p></li>
 </ul>
 </dd>
 </dl>
@@ -69,9 +69,9 @@ If it is not provided, the provider project is used.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.healthcare.Dataset.time_zone">
 <code class="sig-name descname">time_zone</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.healthcare.Dataset.time_zone" title="Permalink to this definition">¶</a></dt>
-<dd><p>The default timezone used by this dataset. Must be a either a valid IANA time zone name such as “America/New_York” or
-empty, which defaults to UTC. This is used for parsing times in resources (e.g., HL7 messages) where no explicit
-timezone is specified.</p>
+<dd><p>The default timezone used by this dataset. Must be a either a valid IANA time zone name such as
+“America/New_York” or empty, which defaults to UTC. This is used for parsing times in resources
+(e.g., HL7 messages) where no explicit timezone is specified.</p>
 </dd></dl>
 
 <dl class="method">
@@ -90,9 +90,9 @@ properties used to qualify the lookup.</p>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
 <li><p><strong>self_link</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The fully qualified name of this dataset</p></li>
-<li><p><strong>time_zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The default timezone used by this dataset. Must be a either a valid IANA time zone name such as “America/New_York” or
-empty, which defaults to UTC. This is used for parsing times in resources (e.g., HL7 messages) where no explicit
-timezone is specified.</p></li>
+<li><p><strong>time_zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The default timezone used by this dataset. Must be a either a valid IANA time zone name such as
+“America/New_York” or empty, which defaults to UTC. This is used for parsing times in resources
+(e.g., HL7 messages) where no explicit timezone is specified.</p></li>
 </ul>
 </dd>
 </dl>
@@ -518,20 +518,28 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>dataset</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Identifies the dataset addressed by this request. Must be in the format
 ‘projects/{project}/locations/{location}/datasets/{dataset}’</p></li>
-<li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – User-supplied key-value pairs used to organize DICOM stores. Label keys must be between 1 and 63 characters long, have a
-UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression:
-[p{Ll}p{Lo}][p{Ll}p{Lo}p{N}*-]{0,62} Label values are optional, must be between 1 and 63 characters long, have a
-UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression:
-[p{Ll}p{Lo}p{N}_-]{0,63} No more than 64 labels can be associated with a given store. An object containing a list of
-“key”: value pairs. Example: { “name”: “wrench”, “mass”: “1.3kg”, “count”: “3” }.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The resource name for the DicomStore. ** Changing this property may recreate the Dicom store (removing all data) **</p></li>
-<li><p><strong>notification_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A nested object resource</p></li>
+<li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – User-supplied key-value pairs used to organize DICOM stores.
+Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must
+conform to the following PCRE regular expression: [p{Ll}p{Lo}][p{Ll}p{Lo}p{N}*-]{0,62}
+Label values are optional, must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128
+bytes, and must conform to the following PCRE regular expression: [p{Ll}p{Lo}p{N}_-]{0,63}
+No more than 64 labels can be associated with a given store.
+An object containing a list of “key”: value pairs.
+Example: { “name”: “wrench”, “mass”: “1.3kg”, “count”: “3” }.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The resource name for the DicomStore.
+** Changing this property may recreate the Dicom store (removing all data) **</p></li>
+<li><p><strong>notification_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A nested object resource  Structure is documented below.</p></li>
 </ul>
 </dd>
 </dl>
 <p>The <strong>notification_config</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">pubsubTopic</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pubsubTopic</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Cloud Pub/Sub topic that notifications of changes are published on. Supplied by the client.
+PubsubMessage.Data will contain the resource name. PubsubMessage.MessageId is the ID of this message.
+It is guaranteed to be unique within the topic. PubsubMessage.PublishTime is the time at which the message
+was published. Notifications are only sent if the topic is non-empty. Topic names must be scoped to a
+project. <a class="reference external" href="mailto:cloud-healthcare&#37;&#52;&#48;system&#46;gserviceaccount&#46;com">cloud-healthcare<span>&#64;</span>system<span>&#46;</span>gserviceaccount<span>&#46;</span>com</a> must have publisher permissions on the given
+Cloud Pub/Sub topic. Not having adequate permissions will cause the calls that send notifications to fail.</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_gcp.healthcare.DicomStore.dataset">
@@ -543,26 +551,34 @@ UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regu
 <dl class="attribute">
 <dt id="pulumi_gcp.healthcare.DicomStore.labels">
 <code class="sig-name descname">labels</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.healthcare.DicomStore.labels" title="Permalink to this definition">¶</a></dt>
-<dd><p>User-supplied key-value pairs used to organize DICOM stores. Label keys must be between 1 and 63 characters long, have a
-UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression:
-[p{Ll}p{Lo}][p{Ll}p{Lo}p{N}<em>-]{0,62} Label values are optional, must be between 1 and 63 characters long, have a
-UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression:
-[p{Ll}p{Lo}p{N}</em>-]{0,63} No more than 64 labels can be associated with a given store. An object containing a list of
-“key”: value pairs. Example: { “name”: “wrench”, “mass”: “1.3kg”, “count”: “3” }.</p>
+<dd><p>User-supplied key-value pairs used to organize DICOM stores.
+Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must
+conform to the following PCRE regular expression: [p{Ll}p{Lo}][p{Ll}p{Lo}p{N}<em>-]{0,62}
+Label values are optional, must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128
+bytes, and must conform to the following PCRE regular expression: [p{Ll}p{Lo}p{N}</em>-]{0,63}
+No more than 64 labels can be associated with a given store.
+An object containing a list of “key”: value pairs.
+Example: { “name”: “wrench”, “mass”: “1.3kg”, “count”: “3” }.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_gcp.healthcare.DicomStore.name">
 <code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.healthcare.DicomStore.name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The resource name for the DicomStore. ** Changing this property may recreate the Dicom store (removing all data) **</p>
+<dd><p>The resource name for the DicomStore.
+** Changing this property may recreate the Dicom store (removing all data) **</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_gcp.healthcare.DicomStore.notification_config">
 <code class="sig-name descname">notification_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.healthcare.DicomStore.notification_config" title="Permalink to this definition">¶</a></dt>
-<dd><p>A nested object resource</p>
+<dd><p>A nested object resource  Structure is documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">pubsubTopic</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pubsubTopic</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Cloud Pub/Sub topic that notifications of changes are published on. Supplied by the client.
+PubsubMessage.Data will contain the resource name. PubsubMessage.MessageId is the ID of this message.
+It is guaranteed to be unique within the topic. PubsubMessage.PublishTime is the time at which the message
+was published. Notifications are only sent if the topic is non-empty. Topic names must be scoped to a
+project. <a class="reference external" href="mailto:cloud-healthcare&#37;&#52;&#48;system&#46;gserviceaccount&#46;com">cloud-healthcare<span>&#64;</span>system<span>&#46;</span>gserviceaccount<span>&#46;</span>com</a> must have publisher permissions on the given
+Cloud Pub/Sub topic. Not having adequate permissions will cause the calls that send notifications to fail.</p></li>
 </ul>
 </dd></dl>
 
@@ -586,21 +602,29 @@ properties used to qualify the lookup.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>dataset</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Identifies the dataset addressed by this request. Must be in the format
 ‘projects/{project}/locations/{location}/datasets/{dataset}’</p></li>
-<li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – User-supplied key-value pairs used to organize DICOM stores. Label keys must be between 1 and 63 characters long, have a
-UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression:
-[p{Ll}p{Lo}][p{Ll}p{Lo}p{N}*-]{0,62} Label values are optional, must be between 1 and 63 characters long, have a
-UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression:
-[p{Ll}p{Lo}p{N}_-]{0,63} No more than 64 labels can be associated with a given store. An object containing a list of
-“key”: value pairs. Example: { “name”: “wrench”, “mass”: “1.3kg”, “count”: “3” }.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The resource name for the DicomStore. ** Changing this property may recreate the Dicom store (removing all data) **</p></li>
-<li><p><strong>notification_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A nested object resource</p></li>
+<li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – User-supplied key-value pairs used to organize DICOM stores.
+Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must
+conform to the following PCRE regular expression: [p{Ll}p{Lo}][p{Ll}p{Lo}p{N}*-]{0,62}
+Label values are optional, must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128
+bytes, and must conform to the following PCRE regular expression: [p{Ll}p{Lo}p{N}_-]{0,63}
+No more than 64 labels can be associated with a given store.
+An object containing a list of “key”: value pairs.
+Example: { “name”: “wrench”, “mass”: “1.3kg”, “count”: “3” }.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The resource name for the DicomStore.
+** Changing this property may recreate the Dicom store (removing all data) **</p></li>
+<li><p><strong>notification_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A nested object resource  Structure is documented below.</p></li>
 <li><p><strong>self_link</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The fully qualified name of this dataset</p></li>
 </ul>
 </dd>
 </dl>
 <p>The <strong>notification_config</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">pubsubTopic</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pubsubTopic</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Cloud Pub/Sub topic that notifications of changes are published on. Supplied by the client.
+PubsubMessage.Data will contain the resource name. PubsubMessage.MessageId is the ID of this message.
+It is guaranteed to be unique within the topic. PubsubMessage.PublishTime is the time at which the message
+was published. Notifications are only sent if the topic is non-empty. Topic names must be scoped to a
+project. <a class="reference external" href="mailto:cloud-healthcare&#37;&#52;&#48;system&#46;gserviceaccount&#46;com">cloud-healthcare<span>&#64;</span>system<span>&#46;</span>gserviceaccount<span>&#46;</span>com</a> must have publisher permissions on the given
+Cloud Pub/Sub topic. Not having adequate permissions will cause the calls that send notifications to fail.</p></li>
 </ul>
 </dd></dl>
 
@@ -1023,42 +1047,54 @@ standard for Healthcare information exchange</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>dataset</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Identifies the dataset addressed by this request. Must be in the format
 ‘projects/{project}/locations/{location}/datasets/{dataset}’</p></li>
-<li><p><strong>disable_referential_integrity</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to disable referential integrity in this FHIR store. This field is immutable after FHIR store creation. The
-default value is false, meaning that the API will enforce referential integrity and fail the requests that will result
-in inconsistent state in the FHIR store. When this field is set to true, the API will skip referential integrity check.
-Consequently, operations that rely on references, such as Patient.get$everything, will not return all the results if
-broken references exist. ** Changing this property may recreate the FHIR store (removing all data) **</p></li>
-<li><p><strong>disable_resource_versioning</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to disable resource versioning for this FHIR store. This field can not be changed after the creation of FHIR
-store. If set to false, which is the default behavior, all write operations will cause historical versions to be
-recorded automatically. The historical versions can be fetched through the history APIs, but cannot be updated. If set
-to true, no historical versions will be kept. The server will send back errors for attempts to read the historical
-versions. ** Changing this property may recreate the FHIR store (removing all data) **</p></li>
-<li><p><strong>enable_history_import</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to allow the bulk import API to accept history bundles and directly insert historical resource versions into the
-FHIR store. Importing resource histories creates resource interactions that appear to have occurred in the past, which
-clients may not want to allow. If set to false, history bundles within an import will fail with an error. ** Changing
-this property may recreate the FHIR store (removing all data) ** ** This property can be changed manually in the Google
-Cloud Healthcare admin console without recreating the FHIR store **</p></li>
-<li><p><strong>enable_update*create</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – <p>Whether this FHIR store has the updateCreate capability. This determines if the client can use an Update operation to
-create a new resource with a client-specified ID. If false, all IDs are server-assigned through the Create operation and
-attempts to Update a non-existent resource will return errors. Please treat the audit logs with appropriate levels of
-care if client-specified resource IDs contain sensitive data such as patient identifiers, those IDs will be part of the
-FHIR resource path recorded in Cloud audit logs and Cloud Pub/Sub notifications.</p>
+<li><p><strong>disable_referential_integrity</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to disable referential integrity in this FHIR store. This field is immutable after FHIR store
+creation. The default value is false, meaning that the API will enforce referential integrity and fail the
+requests that will result in inconsistent state in the FHIR store. When this field is set to true, the API
+will skip referential integrity check. Consequently, operations that rely on references, such as
+Patient.get$everything, will not return all the results if broken references exist.
+** Changing this property may recreate the FHIR store (removing all data) **</p></li>
+<li><p><strong>disable_resource_versioning</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to disable resource versioning for this FHIR store. This field can not be changed after the creation
+of FHIR store. If set to false, which is the default behavior, all write operations will cause historical
+versions to be recorded automatically. The historical versions can be fetched through the history APIs, but
+cannot be updated. If set to true, no historical versions will be kept. The server will send back errors for
+attempts to read the historical versions.
+** Changing this property may recreate the FHIR store (removing all data) **</p></li>
+<li><p><strong>enable_history_import</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to allow the bulk import API to accept history bundles and directly insert historical resource
+versions into the FHIR store. Importing resource histories creates resource interactions that appear to have
+occurred in the past, which clients may not want to allow. If set to false, history bundles within an import
+will fail with an error.
+** Changing this property may recreate the FHIR store (removing all data) **
+** This property can be changed manually in the Google Cloud Healthcare admin console without recreating the FHIR store **</p></li>
+<li><p><strong>enable_update*create</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – <p>Whether this FHIR store has the updateCreate capability. This determines if the client can use an Update
+operation to create a new resource with a client-specified ID. If false, all IDs are server-assigned through
+the Create operation and attempts to Update a non-existent resource will return errors. Please treat the audit
+logs with appropriate levels of care if client-specified resource IDs contain sensitive data such as patient
+identifiers, those IDs will be part of the FHIR resource path recorded in Cloud audit logs and Cloud Pub/Sub
+notifications.</p>
 </p></li>
-<li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – User-supplied key-value pairs used to organize FHIR stores. Label keys must be between 1 and 63 characters long, have a
-UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression:
-[p{Ll}p{Lo}][p{Ll}p{Lo}p{N}*-]{0,62} Label values are optional, must be between 1 and 63 characters long, have a
-UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression:
-[p{Ll}p{Lo}p{N}_-]{0,63} No more than 64 labels can be associated with a given store. An object containing a list of
-“key”: value pairs. Example: { “name”: “wrench”, “mass”: “1.3kg”, “count”: “3” }.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The resource name for the FhirStore. ** Changing this property may recreate the FHIR store (removing all data) **</p></li>
-<li><p><strong>notification_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A nested object resource</p></li>
+<li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – User-supplied key-value pairs used to organize FHIR stores.
+Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must
+conform to the following PCRE regular expression: [p{Ll}p{Lo}][p{Ll}p{Lo}p{N}*-]{0,62}
+Label values are optional, must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128
+bytes, and must conform to the following PCRE regular expression: [p{Ll}p{Lo}p{N}_-]{0,63}
+No more than 64 labels can be associated with a given store.
+An object containing a list of “key”: value pairs.
+Example: { “name”: “wrench”, “mass”: “1.3kg”, “count”: “3” }.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The resource name for the FhirStore.
+** Changing this property may recreate the FHIR store (removing all data) **</p></li>
+<li><p><strong>notification_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A nested object resource  Structure is documented below.</p></li>
 <li><p><strong>version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The FHIR specification version. Supported values include DSTU2, STU3 and R4. Defaults to STU3.</p></li>
 </ul>
 </dd>
 </dl>
 <p>The <strong>notification_config</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">pubsubTopic</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pubsubTopic</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Cloud Pub/Sub topic that notifications of changes are published on. Supplied by the client.
+PubsubMessage.Data will contain the resource name. PubsubMessage.MessageId is the ID of this message.
+It is guaranteed to be unique within the topic. PubsubMessage.PublishTime is the time at which the message
+was published. Notifications are only sent if the topic is non-empty. Topic names must be scoped to a
+project. <a class="reference external" href="mailto:cloud-healthcare&#37;&#52;&#48;system&#46;gserviceaccount&#46;com">cloud-healthcare<span>&#64;</span>system<span>&#46;</span>gserviceaccount<span>&#46;</span>com</a> must have publisher permissions on the given
+Cloud Pub/Sub topic. Not having adequate permissions will cause the calls that send notifications to fail.</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_gcp.healthcare.FhirStore.dataset">
@@ -1070,66 +1106,78 @@ UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regu
 <dl class="attribute">
 <dt id="pulumi_gcp.healthcare.FhirStore.disable_referential_integrity">
 <code class="sig-name descname">disable_referential_integrity</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.healthcare.FhirStore.disable_referential_integrity" title="Permalink to this definition">¶</a></dt>
-<dd><p>Whether to disable referential integrity in this FHIR store. This field is immutable after FHIR store creation. The
-default value is false, meaning that the API will enforce referential integrity and fail the requests that will result
-in inconsistent state in the FHIR store. When this field is set to true, the API will skip referential integrity check.
-Consequently, operations that rely on references, such as Patient.get$everything, will not return all the results if
-broken references exist. ** Changing this property may recreate the FHIR store (removing all data) **</p>
+<dd><p>Whether to disable referential integrity in this FHIR store. This field is immutable after FHIR store
+creation. The default value is false, meaning that the API will enforce referential integrity and fail the
+requests that will result in inconsistent state in the FHIR store. When this field is set to true, the API
+will skip referential integrity check. Consequently, operations that rely on references, such as
+Patient.get$everything, will not return all the results if broken references exist.
+** Changing this property may recreate the FHIR store (removing all data) **</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_gcp.healthcare.FhirStore.disable_resource_versioning">
 <code class="sig-name descname">disable_resource_versioning</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.healthcare.FhirStore.disable_resource_versioning" title="Permalink to this definition">¶</a></dt>
-<dd><p>Whether to disable resource versioning for this FHIR store. This field can not be changed after the creation of FHIR
-store. If set to false, which is the default behavior, all write operations will cause historical versions to be
-recorded automatically. The historical versions can be fetched through the history APIs, but cannot be updated. If set
-to true, no historical versions will be kept. The server will send back errors for attempts to read the historical
-versions. ** Changing this property may recreate the FHIR store (removing all data) **</p>
+<dd><p>Whether to disable resource versioning for this FHIR store. This field can not be changed after the creation
+of FHIR store. If set to false, which is the default behavior, all write operations will cause historical
+versions to be recorded automatically. The historical versions can be fetched through the history APIs, but
+cannot be updated. If set to true, no historical versions will be kept. The server will send back errors for
+attempts to read the historical versions.
+** Changing this property may recreate the FHIR store (removing all data) **</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_gcp.healthcare.FhirStore.enable_history_import">
 <code class="sig-name descname">enable_history_import</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.healthcare.FhirStore.enable_history_import" title="Permalink to this definition">¶</a></dt>
-<dd><p>Whether to allow the bulk import API to accept history bundles and directly insert historical resource versions into the
-FHIR store. Importing resource histories creates resource interactions that appear to have occurred in the past, which
-clients may not want to allow. If set to false, history bundles within an import will fail with an error. ** Changing
-this property may recreate the FHIR store (removing all data) ** ** This property can be changed manually in the Google
-Cloud Healthcare admin console without recreating the FHIR store **</p>
+<dd><p>Whether to allow the bulk import API to accept history bundles and directly insert historical resource
+versions into the FHIR store. Importing resource histories creates resource interactions that appear to have
+occurred in the past, which clients may not want to allow. If set to false, history bundles within an import
+will fail with an error.
+** Changing this property may recreate the FHIR store (removing all data) **
+** This property can be changed manually in the Google Cloud Healthcare admin console without recreating the FHIR store **</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_gcp.healthcare.FhirStore.enable_update_create">
 <code class="sig-name descname">enable_update_create</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.healthcare.FhirStore.enable_update_create" title="Permalink to this definition">¶</a></dt>
-<dd><p>Whether this FHIR store has the updateCreate capability. This determines if the client can use an Update operation to
-create a new resource with a client-specified ID. If false, all IDs are server-assigned through the Create operation and
-attempts to Update a non-existent resource will return errors. Please treat the audit logs with appropriate levels of
-care if client-specified resource IDs contain sensitive data such as patient identifiers, those IDs will be part of the
-FHIR resource path recorded in Cloud audit logs and Cloud Pub/Sub notifications.</p>
+<dd><p>Whether this FHIR store has the updateCreate capability. This determines if the client can use an Update
+operation to create a new resource with a client-specified ID. If false, all IDs are server-assigned through
+the Create operation and attempts to Update a non-existent resource will return errors. Please treat the audit
+logs with appropriate levels of care if client-specified resource IDs contain sensitive data such as patient
+identifiers, those IDs will be part of the FHIR resource path recorded in Cloud audit logs and Cloud Pub/Sub
+notifications.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_gcp.healthcare.FhirStore.labels">
 <code class="sig-name descname">labels</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.healthcare.FhirStore.labels" title="Permalink to this definition">¶</a></dt>
-<dd><p>User-supplied key-value pairs used to organize FHIR stores. Label keys must be between 1 and 63 characters long, have a
-UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression:
-[p{Ll}p{Lo}][p{Ll}p{Lo}p{N}<em>-]{0,62} Label values are optional, must be between 1 and 63 characters long, have a
-UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression:
-[p{Ll}p{Lo}p{N}</em>-]{0,63} No more than 64 labels can be associated with a given store. An object containing a list of
-“key”: value pairs. Example: { “name”: “wrench”, “mass”: “1.3kg”, “count”: “3” }.</p>
+<dd><p>User-supplied key-value pairs used to organize FHIR stores.
+Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must
+conform to the following PCRE regular expression: [p{Ll}p{Lo}][p{Ll}p{Lo}p{N}<em>-]{0,62}
+Label values are optional, must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128
+bytes, and must conform to the following PCRE regular expression: [p{Ll}p{Lo}p{N}</em>-]{0,63}
+No more than 64 labels can be associated with a given store.
+An object containing a list of “key”: value pairs.
+Example: { “name”: “wrench”, “mass”: “1.3kg”, “count”: “3” }.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_gcp.healthcare.FhirStore.name">
 <code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.healthcare.FhirStore.name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The resource name for the FhirStore. ** Changing this property may recreate the FHIR store (removing all data) **</p>
+<dd><p>The resource name for the FhirStore.
+** Changing this property may recreate the FHIR store (removing all data) **</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_gcp.healthcare.FhirStore.notification_config">
 <code class="sig-name descname">notification_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.healthcare.FhirStore.notification_config" title="Permalink to this definition">¶</a></dt>
-<dd><p>A nested object resource</p>
+<dd><p>A nested object resource  Structure is documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">pubsubTopic</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pubsubTopic</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Cloud Pub/Sub topic that notifications of changes are published on. Supplied by the client.
+PubsubMessage.Data will contain the resource name. PubsubMessage.MessageId is the ID of this message.
+It is guaranteed to be unique within the topic. PubsubMessage.PublishTime is the time at which the message
+was published. Notifications are only sent if the topic is non-empty. Topic names must be scoped to a
+project. <a class="reference external" href="mailto:cloud-healthcare&#37;&#52;&#48;system&#46;gserviceaccount&#46;com">cloud-healthcare<span>&#64;</span>system<span>&#46;</span>gserviceaccount<span>&#46;</span>com</a> must have publisher permissions on the given
+Cloud Pub/Sub topic. Not having adequate permissions will cause the calls that send notifications to fail.</p></li>
 </ul>
 </dd></dl>
 
@@ -1158,35 +1206,42 @@ properties used to qualify the lookup.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>dataset</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Identifies the dataset addressed by this request. Must be in the format
 ‘projects/{project}/locations/{location}/datasets/{dataset}’</p></li>
-<li><p><strong>disable_referential_integrity</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to disable referential integrity in this FHIR store. This field is immutable after FHIR store creation. The
-default value is false, meaning that the API will enforce referential integrity and fail the requests that will result
-in inconsistent state in the FHIR store. When this field is set to true, the API will skip referential integrity check.
-Consequently, operations that rely on references, such as Patient.get$everything, will not return all the results if
-broken references exist. ** Changing this property may recreate the FHIR store (removing all data) **</p></li>
-<li><p><strong>disable_resource_versioning</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to disable resource versioning for this FHIR store. This field can not be changed after the creation of FHIR
-store. If set to false, which is the default behavior, all write operations will cause historical versions to be
-recorded automatically. The historical versions can be fetched through the history APIs, but cannot be updated. If set
-to true, no historical versions will be kept. The server will send back errors for attempts to read the historical
-versions. ** Changing this property may recreate the FHIR store (removing all data) **</p></li>
-<li><p><strong>enable_history_import</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to allow the bulk import API to accept history bundles and directly insert historical resource versions into the
-FHIR store. Importing resource histories creates resource interactions that appear to have occurred in the past, which
-clients may not want to allow. If set to false, history bundles within an import will fail with an error. ** Changing
-this property may recreate the FHIR store (removing all data) ** ** This property can be changed manually in the Google
-Cloud Healthcare admin console without recreating the FHIR store **</p></li>
-<li><p><strong>enable_update*create</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – <p>Whether this FHIR store has the updateCreate capability. This determines if the client can use an Update operation to
-create a new resource with a client-specified ID. If false, all IDs are server-assigned through the Create operation and
-attempts to Update a non-existent resource will return errors. Please treat the audit logs with appropriate levels of
-care if client-specified resource IDs contain sensitive data such as patient identifiers, those IDs will be part of the
-FHIR resource path recorded in Cloud audit logs and Cloud Pub/Sub notifications.</p>
+<li><p><strong>disable_referential_integrity</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to disable referential integrity in this FHIR store. This field is immutable after FHIR store
+creation. The default value is false, meaning that the API will enforce referential integrity and fail the
+requests that will result in inconsistent state in the FHIR store. When this field is set to true, the API
+will skip referential integrity check. Consequently, operations that rely on references, such as
+Patient.get$everything, will not return all the results if broken references exist.
+** Changing this property may recreate the FHIR store (removing all data) **</p></li>
+<li><p><strong>disable_resource_versioning</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to disable resource versioning for this FHIR store. This field can not be changed after the creation
+of FHIR store. If set to false, which is the default behavior, all write operations will cause historical
+versions to be recorded automatically. The historical versions can be fetched through the history APIs, but
+cannot be updated. If set to true, no historical versions will be kept. The server will send back errors for
+attempts to read the historical versions.
+** Changing this property may recreate the FHIR store (removing all data) **</p></li>
+<li><p><strong>enable_history_import</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to allow the bulk import API to accept history bundles and directly insert historical resource
+versions into the FHIR store. Importing resource histories creates resource interactions that appear to have
+occurred in the past, which clients may not want to allow. If set to false, history bundles within an import
+will fail with an error.
+** Changing this property may recreate the FHIR store (removing all data) **
+** This property can be changed manually in the Google Cloud Healthcare admin console without recreating the FHIR store **</p></li>
+<li><p><strong>enable_update*create</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – <p>Whether this FHIR store has the updateCreate capability. This determines if the client can use an Update
+operation to create a new resource with a client-specified ID. If false, all IDs are server-assigned through
+the Create operation and attempts to Update a non-existent resource will return errors. Please treat the audit
+logs with appropriate levels of care if client-specified resource IDs contain sensitive data such as patient
+identifiers, those IDs will be part of the FHIR resource path recorded in Cloud audit logs and Cloud Pub/Sub
+notifications.</p>
 </p></li>
-<li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – User-supplied key-value pairs used to organize FHIR stores. Label keys must be between 1 and 63 characters long, have a
-UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression:
-[p{Ll}p{Lo}][p{Ll}p{Lo}p{N}*-]{0,62} Label values are optional, must be between 1 and 63 characters long, have a
-UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression:
-[p{Ll}p{Lo}p{N}_-]{0,63} No more than 64 labels can be associated with a given store. An object containing a list of
-“key”: value pairs. Example: { “name”: “wrench”, “mass”: “1.3kg”, “count”: “3” }.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The resource name for the FhirStore. ** Changing this property may recreate the FHIR store (removing all data) **</p></li>
-<li><p><strong>notification_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A nested object resource</p></li>
+<li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – User-supplied key-value pairs used to organize FHIR stores.
+Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must
+conform to the following PCRE regular expression: [p{Ll}p{Lo}][p{Ll}p{Lo}p{N}*-]{0,62}
+Label values are optional, must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128
+bytes, and must conform to the following PCRE regular expression: [p{Ll}p{Lo}p{N}_-]{0,63}
+No more than 64 labels can be associated with a given store.
+An object containing a list of “key”: value pairs.
+Example: { “name”: “wrench”, “mass”: “1.3kg”, “count”: “3” }.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The resource name for the FhirStore.
+** Changing this property may recreate the FHIR store (removing all data) **</p></li>
+<li><p><strong>notification_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A nested object resource  Structure is documented below.</p></li>
 <li><p><strong>self_link</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The fully qualified name of this dataset</p></li>
 <li><p><strong>version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The FHIR specification version. Supported values include DSTU2, STU3 and R4. Defaults to STU3.</p></li>
 </ul>
@@ -1194,7 +1249,12 @@ UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regu
 </dl>
 <p>The <strong>notification_config</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">pubsubTopic</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pubsubTopic</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Cloud Pub/Sub topic that notifications of changes are published on. Supplied by the client.
+PubsubMessage.Data will contain the resource name. PubsubMessage.MessageId is the ID of this message.
+It is guaranteed to be unique within the topic. PubsubMessage.PublishTime is the time at which the message
+was published. Notifications are only sent if the topic is non-empty. Topic names must be scoped to a
+project. <a class="reference external" href="mailto:cloud-healthcare&#37;&#52;&#48;system&#46;gserviceaccount&#46;com">cloud-healthcare<span>&#64;</span>system<span>&#46;</span>gserviceaccount<span>&#46;</span>com</a> must have publisher permissions on the given
+Cloud Pub/Sub topic. Not having adequate permissions will cause the calls that send notifications to fail.</p></li>
 </ul>
 </dd></dl>
 
@@ -1599,46 +1659,51 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.healthcare.Hl7Store">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.healthcare.</code><code class="sig-name descname">Hl7Store</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">dataset=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">notification_config=None</em>, <em class="sig-param">parser_config=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.healthcare.Hl7Store" title="Permalink to this definition">¶</a></dt>
-<dd><p>A Hl7V2Store is a datastore inside a Healthcare dataset that conforms to the FHIR (<a class="reference external" href="https://www.hl7.org/hl7V2/STU3/">https://www.hl7.org/hl7V2/STU3/</a>)
-standard for Healthcare information exchange</p>
-<p>To get more information about Hl7V2Store, see:</p>
-<ul class="simple">
-<li><p><a class="reference external" href="https://cloud.google.com/healthcare/docs/reference/rest/v1beta1/projects.locations.datasets.hl7V2Stores">API documentation</a></p></li>
-<li><p>How-to Guides</p>
-<ul>
-<li><p><a class="reference external" href="https://cloud.google.com/healthcare/docs/how-tos/hl7v2">Creating a HL7v2 Store</a></p></li>
-</ul>
-</li>
-</ul>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource*name</strong> (<em>str</em>) – <p>The name of the resource.</p>
-</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>dataset</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Identifies the dataset addressed by this request. Must be in the format
-‘projects/{project}/locations/{location}/datasets/{dataset}’</p></li>
-<li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – User-supplied key-value pairs used to organize HL7v2 stores. Label keys must be between 1 and 63 characters long, have a
-UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression:
-[p{Ll}p{Lo}][p{Ll}p{Lo}p{N}*-]{0,62} Label values are optional, must be between 1 and 63 characters long, have a
-UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression:
-[p{Ll}p{Lo}p{N}_-]{0,63} No more than 64 labels can be associated with a given store. An object containing a list of
-“key”: value pairs. Example: { “name”: “wrench”, “mass”: “1.3kg”, “count”: “3” }.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The resource name for the Hl7V2Store. ** Changing this property may recreate the Hl7v2 store (removing all data) **</p></li>
-<li><p><strong>notification_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A nested object resource</p></li>
-<li><p><strong>parser_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A nested object resource</p></li>
-</ul>
+<dd><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>A Hl7V2Store is a datastore inside a Healthcare dataset that conforms to the FHIR (https://www.hl7.org/hl7V2/STU3/)
+standard for Healthcare information exchange
+
+To get more information about Hl7V2Store, see:
+
+* [API documentation](https://cloud.google.com/healthcare/docs/reference/rest/v1beta1/projects.locations.datasets.hl7V2Stores)
+* How-to Guides
+    * [Creating a HL7v2 Store](https://cloud.google.com/healthcare/docs/how-tos/hl7v2)
+
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] dataset: Identifies the dataset addressed by this request. Must be in the format
+       &#39;projects/{project}/locations/{location}/datasets/{dataset}&#39;
+:param pulumi.Input[dict] labels: User-supplied key-value pairs used to organize HL7v2 stores.
+       Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must
+       conform to the following PCRE regular expression: [\p{Ll}\p{Lo}][\p{Ll}\p{Lo}\p{N}_-]{0,62}
+       Label values are optional, must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128
+       bytes, and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}\p{N}_-]{0,63}
+       No more than 64 labels can be associated with a given store.
+       An object containing a list of &quot;key&quot;: value pairs.
+       Example: { &quot;name&quot;: &quot;wrench&quot;, &quot;mass&quot;: &quot;1.3kg&quot;, &quot;count&quot;: &quot;3&quot; }.
+:param pulumi.Input[str] name: The resource name for the Hl7V2Store.
+       ** Changing this property may recreate the Hl7v2 store (removing all data) **
+:param pulumi.Input[dict] notification_config: A nested object resource  Structure is documented below.
+:param pulumi.Input[dict] parser_config: A nested object resource  Structure is documented below.
+
+The **notification_config** object supports the following:
+
+  * `pubsubTopic` (`pulumi.Input[str]`) - The Cloud Pub/Sub topic that notifications of changes are published on. Supplied by the client.
+    PubsubMessage.Data will contain the resource name. PubsubMessage.MessageId is the ID of this message.
+    It is guaranteed to be unique within the topic. PubsubMessage.PublishTime is the time at which the message
+    was published. Notifications are only sent if the topic is non-empty. Topic names must be scoped to a
+    project. cloud-healthcare@system.gserviceaccount.com must have publisher permissions on the given
+    Cloud Pub/Sub topic. Not having adequate permissions will cause the calls that send notifications to fail.
+
+The **parser_config** object supports the following:
+
+  * `allowNullHeader` (`pulumi.Input[bool]`) - Determines whether messages with no header are allowed.
+  * `segmentTerminator` (`pulumi.Input[str]`) - Byte(s) to be used as the segment terminator. If this is unset, &#39;
+</pre></div>
+</div>
+<dl class="simple">
+<dt>‘ will be used as segment terminator.</dt><dd><p>A base64-encoded string.</p>
 </dd>
 </dl>
-<p>The <strong>notification_config</strong> object supports the following:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">pubsubTopic</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-</ul>
-<p>The <strong>parser_config</strong> object supports the following:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">allowNullHeader</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">segmentTerminator</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-</ul>
 <dl class="attribute">
 <dt id="pulumi_gcp.healthcare.Hl7Store.dataset">
 <code class="sig-name descname">dataset</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.healthcare.Hl7Store.dataset" title="Permalink to this definition">¶</a></dt>
@@ -1649,36 +1714,46 @@ UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regu
 <dl class="attribute">
 <dt id="pulumi_gcp.healthcare.Hl7Store.labels">
 <code class="sig-name descname">labels</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.healthcare.Hl7Store.labels" title="Permalink to this definition">¶</a></dt>
-<dd><p>User-supplied key-value pairs used to organize HL7v2 stores. Label keys must be between 1 and 63 characters long, have a
-UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression:
-[p{Ll}p{Lo}][p{Ll}p{Lo}p{N}<em>-]{0,62} Label values are optional, must be between 1 and 63 characters long, have a
-UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression:
-[p{Ll}p{Lo}p{N}</em>-]{0,63} No more than 64 labels can be associated with a given store. An object containing a list of
-“key”: value pairs. Example: { “name”: “wrench”, “mass”: “1.3kg”, “count”: “3” }.</p>
+<dd><p>User-supplied key-value pairs used to organize HL7v2 stores.
+Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must
+conform to the following PCRE regular expression: [p{Ll}p{Lo}][p{Ll}p{Lo}p{N}<em>-]{0,62}
+Label values are optional, must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128
+bytes, and must conform to the following PCRE regular expression: [p{Ll}p{Lo}p{N}</em>-]{0,63}
+No more than 64 labels can be associated with a given store.
+An object containing a list of “key”: value pairs.
+Example: { “name”: “wrench”, “mass”: “1.3kg”, “count”: “3” }.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_gcp.healthcare.Hl7Store.name">
 <code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.healthcare.Hl7Store.name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The resource name for the Hl7V2Store. ** Changing this property may recreate the Hl7v2 store (removing all data) **</p>
+<dd><p>The resource name for the Hl7V2Store.
+** Changing this property may recreate the Hl7v2 store (removing all data) **</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_gcp.healthcare.Hl7Store.notification_config">
 <code class="sig-name descname">notification_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.healthcare.Hl7Store.notification_config" title="Permalink to this definition">¶</a></dt>
-<dd><p>A nested object resource</p>
+<dd><p>A nested object resource  Structure is documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">pubsubTopic</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pubsubTopic</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Cloud Pub/Sub topic that notifications of changes are published on. Supplied by the client.
+PubsubMessage.Data will contain the resource name. PubsubMessage.MessageId is the ID of this message.
+It is guaranteed to be unique within the topic. PubsubMessage.PublishTime is the time at which the message
+was published. Notifications are only sent if the topic is non-empty. Topic names must be scoped to a
+project. <a class="reference external" href="mailto:cloud-healthcare&#37;&#52;&#48;system&#46;gserviceaccount&#46;com">cloud-healthcare<span>&#64;</span>system<span>&#46;</span>gserviceaccount<span>&#46;</span>com</a> must have publisher permissions on the given
+Cloud Pub/Sub topic. Not having adequate permissions will cause the calls that send notifications to fail.</p></li>
 </ul>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_gcp.healthcare.Hl7Store.parser_config">
 <code class="sig-name descname">parser_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.healthcare.Hl7Store.parser_config" title="Permalink to this definition">¶</a></dt>
-<dd><p>A nested object resource</p>
+<dd><p>A nested object resource  Structure is documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">allowNullHeader</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">segmentTerminator</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowNullHeader</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Determines whether messages with no header are allowed.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">segmentTerminator</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Byte(s) to be used as the segment terminator. If this is unset, ‘
+‘ will be used as segment terminator.
+A base64-encoded string.</p></li>
 </ul>
 </dd></dl>
 
@@ -1691,39 +1766,47 @@ UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regu
 <dl class="method">
 <dt id="pulumi_gcp.healthcare.Hl7Store.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">dataset=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">notification_config=None</em>, <em class="sig-param">parser_config=None</em>, <em class="sig-param">self_link=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.healthcare.Hl7Store.get" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get an existing Hl7Store resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource*name</strong> (<em>str</em>) – <p>The unique name of the resulting resource.</p>
-</p></li>
-<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>dataset</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Identifies the dataset addressed by this request. Must be in the format
-‘projects/{project}/locations/{location}/datasets/{dataset}’</p></li>
-<li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – User-supplied key-value pairs used to organize HL7v2 stores. Label keys must be between 1 and 63 characters long, have a
-UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression:
-[p{Ll}p{Lo}][p{Ll}p{Lo}p{N}*-]{0,62} Label values are optional, must be between 1 and 63 characters long, have a
-UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression:
-[p{Ll}p{Lo}p{N}_-]{0,63} No more than 64 labels can be associated with a given store. An object containing a list of
-“key”: value pairs. Example: { “name”: “wrench”, “mass”: “1.3kg”, “count”: “3” }.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The resource name for the Hl7V2Store. ** Changing this property may recreate the Hl7v2 store (removing all data) **</p></li>
-<li><p><strong>notification_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A nested object resource</p></li>
-<li><p><strong>parser_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A nested object resource</p></li>
-<li><p><strong>self_link</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The fully qualified name of this dataset</p></li>
-</ul>
+<dd><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Get an existing Hl7Store resource&#39;s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] dataset: Identifies the dataset addressed by this request. Must be in the format
+       &#39;projects/{project}/locations/{location}/datasets/{dataset}&#39;
+:param pulumi.Input[dict] labels: User-supplied key-value pairs used to organize HL7v2 stores.
+       Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must
+       conform to the following PCRE regular expression: [\p{Ll}\p{Lo}][\p{Ll}\p{Lo}\p{N}_-]{0,62}
+       Label values are optional, must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128
+       bytes, and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}\p{N}_-]{0,63}
+       No more than 64 labels can be associated with a given store.
+       An object containing a list of &quot;key&quot;: value pairs.
+       Example: { &quot;name&quot;: &quot;wrench&quot;, &quot;mass&quot;: &quot;1.3kg&quot;, &quot;count&quot;: &quot;3&quot; }.
+:param pulumi.Input[str] name: The resource name for the Hl7V2Store.
+       ** Changing this property may recreate the Hl7v2 store (removing all data) **
+:param pulumi.Input[dict] notification_config: A nested object resource  Structure is documented below.
+:param pulumi.Input[dict] parser_config: A nested object resource  Structure is documented below.
+:param pulumi.Input[str] self_link: The fully qualified name of this dataset
+
+The **notification_config** object supports the following:
+
+  * `pubsubTopic` (`pulumi.Input[str]`) - The Cloud Pub/Sub topic that notifications of changes are published on. Supplied by the client.
+    PubsubMessage.Data will contain the resource name. PubsubMessage.MessageId is the ID of this message.
+    It is guaranteed to be unique within the topic. PubsubMessage.PublishTime is the time at which the message
+    was published. Notifications are only sent if the topic is non-empty. Topic names must be scoped to a
+    project. cloud-healthcare@system.gserviceaccount.com must have publisher permissions on the given
+    Cloud Pub/Sub topic. Not having adequate permissions will cause the calls that send notifications to fail.
+
+The **parser_config** object supports the following:
+
+  * `allowNullHeader` (`pulumi.Input[bool]`) - Determines whether messages with no header are allowed.
+  * `segmentTerminator` (`pulumi.Input[str]`) - Byte(s) to be used as the segment terminator. If this is unset, &#39;
+</pre></div>
+</div>
+<dl class="simple">
+<dt>‘ will be used as segment terminator.</dt><dd><p>A base64-encoded string.</p>
 </dd>
 </dl>
-<p>The <strong>notification_config</strong> object supports the following:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">pubsubTopic</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-</ul>
-<p>The <strong>parser_config</strong> object supports the following:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">allowNullHeader</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">segmentTerminator</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-</ul>
 </dd></dl>
 
 <dl class="method">

@@ -45,7 +45,7 @@ anything, please consult the source <a class="reference external" href="https://
 <dl class="attribute">
 <dt id="pulumi_openstack.blockstorage.GetAvailabilityZonesV3Result.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.blockstorage.GetAvailabilityZonesV3Result.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -82,7 +82,7 @@ match the queried <code class="docutils literal notranslate"><span class="pre">s
 <dl class="attribute">
 <dt id="pulumi_openstack.blockstorage.GetSnapshotV2Result.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.blockstorage.GetSnapshotV2Result.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -136,7 +136,7 @@ match the queried <code class="docutils literal notranslate"><span class="pre">s
 <dl class="attribute">
 <dt id="pulumi_openstack.blockstorage.GetSnapshotV3Result.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.blockstorage.GetSnapshotV3Result.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -190,7 +190,7 @@ match the queried <code class="docutils literal notranslate"><span class="pre">s
 <dl class="attribute">
 <dt id="pulumi_openstack.blockstorage.GetVolumeV2Result.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.blockstorage.GetVolumeV2Result.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -250,7 +250,7 @@ match the queried <code class="docutils literal notranslate"><span class="pre">s
 <dl class="attribute">
 <dt id="pulumi_openstack.blockstorage.GetVolumeV3Result.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.blockstorage.GetVolumeV3Result.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">

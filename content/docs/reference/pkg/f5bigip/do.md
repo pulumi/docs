@@ -43,7 +43,7 @@ const do_example = new f5bigip.Do("do-example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Do</span><span class="p">(resource_name, opts=None, </span>do_json=None<span class="p">, </span>tenant_name=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Do</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>do_json=None<span class="p">, </span>tenant_name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

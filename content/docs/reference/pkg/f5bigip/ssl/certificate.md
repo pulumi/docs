@@ -28,7 +28,7 @@ Certificates can be imported from certificate files on the local disk, in PEM fo
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Certificate</span><span class="p">(resource_name, opts=None, </span>content=None<span class="p">, </span>name=None<span class="p">, </span>partition=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Certificate</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>content=None<span class="p">, </span>name=None<span class="p">, </span>partition=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -215,7 +215,7 @@ The Certificate resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of SSL Certificate with .crt extension
+    <dd>{{% md %}}Name of the SSL Certificate to be Imported on to BIGIP
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -249,7 +249,7 @@ The Certificate resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of SSL Certificate with .crt extension
+    <dd>{{% md %}}Name of the SSL Certificate to be Imported on to BIGIP
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -283,7 +283,7 @@ The Certificate resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of SSL Certificate with .crt extension
+    <dd>{{% md %}}Name of the SSL Certificate to be Imported on to BIGIP
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -317,7 +317,7 @@ The Certificate resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Name of SSL Certificate with .crt extension
+    <dd>{{% md %}}Name of the SSL Certificate to be Imported on to BIGIP
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -548,7 +548,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of SSL Certificate with .crt extension
+    <dd>{{% md %}}Name of the SSL Certificate to be Imported on to BIGIP
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -582,7 +582,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of SSL Certificate with .crt extension
+    <dd>{{% md %}}Name of the SSL Certificate to be Imported on to BIGIP
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -616,7 +616,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of SSL Certificate with .crt extension
+    <dd>{{% md %}}Name of the SSL Certificate to be Imported on to BIGIP
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -650,7 +650,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Name of SSL Certificate with .crt extension
+    <dd>{{% md %}}Name of the SSL Certificate to be Imported on to BIGIP
 {{% /md %}}</dd>
 
     <dt class="property-optional"

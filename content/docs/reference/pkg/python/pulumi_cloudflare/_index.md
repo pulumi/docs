@@ -2268,7 +2268,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_cloudflare.GetIpRangesResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.GetIpRangesResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 </dd></dl>
@@ -2280,7 +2280,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_cloudflare.GetWafGroupsResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.GetWafGroupsResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 </dd></dl>
@@ -2292,7 +2292,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_cloudflare.GetWafPackagesResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.GetWafPackagesResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 </dd></dl>
@@ -2304,7 +2304,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_cloudflare.GetWafRulesResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.GetWafRulesResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 </dd></dl>
@@ -2316,7 +2316,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_cloudflare.GetZonesResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.GetZonesResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 </dd></dl>
@@ -4447,24 +4447,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>pattern</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The <a class="reference external" href="https://developers.cloudflare.com/workers/about/routes/">route pattern</a></p></li>
+<li><p><strong>script_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Which worker script to run for requests that match the route pattern. If <code class="docutils literal notranslate"><span class="pre">script_name</span></code> is empty, workers will be skipped for matching requests.</p></li>
+<li><p><strong>zone_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The zone ID to add the route to.</p></li>
 </ul>
-</dd>
-</dl>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>* `script_name` Which worker script to run for requests that match the route pattern. If `script_name` is empty, workers will be skipped for matching requests.
-</pre></div>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>zone_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The zone ID to add the route to.</p>
 </dd>
 </dl>
 <dl class="attribute">
 <dt id="pulumi_cloudflare.WorkerRoute.pattern">
 <code class="sig-name descname">pattern</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.WorkerRoute.pattern" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <a class="reference external" href="https://developers.cloudflare.com/workers/about/routes/">route pattern</a></p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">script_name</span></code> Which worker script to run for requests that match the route pattern. If <code class="docutils literal notranslate"><span class="pre">script_name</span></code> is empty, workers will be skipped for matching requests.</p></li>
-</ul>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_cloudflare.WorkerRoute.script_name">
+<code class="sig-name descname">script_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.WorkerRoute.script_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Which worker script to run for requests that match the route pattern. If <code class="docutils literal notranslate"><span class="pre">script_name</span></code> is empty, workers will be skipped for matching requests.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -4486,15 +4483,9 @@ properties used to qualify the lookup.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>pattern</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The <a class="reference external" href="https://developers.cloudflare.com/workers/about/routes/">route pattern</a></p>
 </p></li>
+<li><p><strong>script_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Which worker script to run for requests that match the route pattern. If <code class="docutils literal notranslate"><span class="pre">script_name</span></code> is empty, workers will be skipped for matching requests.</p></li>
+<li><p><strong>zone_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The zone ID to add the route to.</p></li>
 </ul>
-</dd>
-</dl>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>* `script_name` Which worker script to run for requests that match the route pattern. If `script_name` is empty, workers will be skipped for matching requests.
-</pre></div>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>zone_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The zone ID to add the route to.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -5105,12 +5096,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">minify</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">css</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - “on”/”off”</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">html</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - “on”/”off”</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">js</span></code> (Required)”on”/”off”</p></li>
-</ul>
-</li>
-<li><p><code class="docutils literal notranslate"><span class="pre">js</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">html</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - “on”/”off”</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">js</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - “on”/”off”</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">mirage</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
@@ -5149,7 +5136,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">trueClientIpHeader</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">universalSsl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">waf</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">webp</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">webp</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - . Note that the value specified will be ignored unless <code class="docutils literal notranslate"><span class="pre">polish</span></code> is turned on (i.e. is “lossless” or “lossy”)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">websockets</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">zeroRtt</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
@@ -5181,12 +5168,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">minify</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">css</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - “on”/”off”</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">html</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - “on”/”off”</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">js</span></code> (Required)”on”/”off”</p></li>
-</ul>
-</li>
-<li><p><code class="docutils literal notranslate"><span class="pre">js</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">html</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - “on”/”off”</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">js</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - “on”/”off”</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">mirage</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
@@ -5225,7 +5208,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">trueClientIpHeader</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">universalSsl</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">waf</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">webp</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">webp</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - . Note that the value specified will be ignored unless <code class="docutils literal notranslate"><span class="pre">polish</span></code> is turned on (i.e. is “lossless” or “lossy”)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">websockets</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">zeroRtt</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 </ul>
@@ -5269,12 +5252,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">minify</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">css</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - “on”/”off”</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">html</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - “on”/”off”</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">js</span></code> (Required)”on”/”off”</p></li>
-</ul>
-</li>
-<li><p><code class="docutils literal notranslate"><span class="pre">js</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">html</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - “on”/”off”</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">js</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - “on”/”off”</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">mirage</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
@@ -5313,7 +5292,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">trueClientIpHeader</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">universalSsl</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">waf</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">webp</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">webp</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - . Note that the value specified will be ignored unless <code class="docutils literal notranslate"><span class="pre">polish</span></code> is turned on (i.e. is “lossless” or “lossy”)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">websockets</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">zeroRtt</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 </ul>
@@ -5378,12 +5357,8 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">minify</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">css</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - “on”/”off”</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">html</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - “on”/”off”</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">js</span></code> (Required)”on”/”off”</p></li>
-</ul>
-</li>
-<li><p><code class="docutils literal notranslate"><span class="pre">js</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">html</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - “on”/”off”</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">js</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - “on”/”off”</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">mirage</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
@@ -5422,7 +5397,7 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">trueClientIpHeader</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">universalSsl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">waf</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">webp</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">webp</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - . Note that the value specified will be ignored unless <code class="docutils literal notranslate"><span class="pre">polish</span></code> is turned on (i.e. is “lossless” or “lossy”)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">websockets</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">zeroRtt</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
@@ -5451,12 +5426,8 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">minify</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">css</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - “on”/”off”</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">html</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - “on”/”off”</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">js</span></code> (Required)”on”/”off”</p></li>
-</ul>
-</li>
-<li><p><code class="docutils literal notranslate"><span class="pre">js</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">html</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - “on”/”off”</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">js</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - “on”/”off”</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">mirage</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
@@ -5495,7 +5466,7 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">trueClientIpHeader</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">universalSsl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">waf</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">webp</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">webp</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - . Note that the value specified will be ignored unless <code class="docutils literal notranslate"><span class="pre">polish</span></code> is turned on (i.e. is “lossless” or “lossy”)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">websockets</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">zeroRtt</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
@@ -5542,13 +5513,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="function">
 <dt id="pulumi_cloudflare.get_ip_ranges">
 <code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">get_ip_ranges</code><span class="sig-paren">(</span><em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.get_ip_ranges" title="Permalink to this definition">¶</a></dt>
-<dd><p>Use this data source to get the [IP ranges][1] of Cloudflare edge nodes.</p>
+<dd><p>Use this data source to get the <a class="reference external" href="https://www.cloudflare.com/ips/">IP ranges</a> of Cloudflare edge nodes.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_cloudflare.get_waf_groups">
 <code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">get_waf_groups</code><span class="sig-paren">(</span><em class="sig-param">filter=None</em>, <em class="sig-param">package_id=None</em>, <em class="sig-param">zone_id=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.get_waf_groups" title="Permalink to this definition">¶</a></dt>
-<dd><p>Use this data source to look up [WAF Rule Groups][1].</p>
+<dd><p>Use this data source to look up <a class="reference external" href="https://api.cloudflare.com/#waf-rule-groups-properties">WAF Rule Groups</a>.</p>
 <p>The <strong>filter</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">mode</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
@@ -5559,7 +5530,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="function">
 <dt id="pulumi_cloudflare.get_waf_packages">
 <code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">get_waf_packages</code><span class="sig-paren">(</span><em class="sig-param">filter=None</em>, <em class="sig-param">zone_id=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.get_waf_packages" title="Permalink to this definition">¶</a></dt>
-<dd><p>Use this data source to look up [WAF Rule Packages][1].</p>
+<dd><p>Use this data source to look up <a class="reference external" href="https://api.cloudflare.com/#waf-rule-packages-properties">WAF Rule Packages</a>.</p>
 <p>The <strong>filter</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">action_mode</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
@@ -5572,7 +5543,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="function">
 <dt id="pulumi_cloudflare.get_waf_rules">
 <code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">get_waf_rules</code><span class="sig-paren">(</span><em class="sig-param">filter=None</em>, <em class="sig-param">package_id=None</em>, <em class="sig-param">zone_id=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.get_waf_rules" title="Permalink to this definition">¶</a></dt>
-<dd><p>Use this data source to look up [WAF Rules][1].</p>
+<dd><p>Use this data source to look up <a class="reference external" href="https://api.cloudflare.com/#waf-rule-groups-properties">WAF Rules</a>.</p>
 <p>The <strong>filter</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
@@ -5584,7 +5555,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="function">
 <dt id="pulumi_cloudflare.get_zones">
 <code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">get_zones</code><span class="sig-paren">(</span><em class="sig-param">filter=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.get_zones" title="Permalink to this definition">¶</a></dt>
-<dd><p>Use this data source to look up [Zone][1] records.</p>
+<dd><p>Use this data source to look up <a class="reference external" href="https://api.cloudflare.com/#zone-properties">Zone</a> records.</p>
 <p>The <strong>filter</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
