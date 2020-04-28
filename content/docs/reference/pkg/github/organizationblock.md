@@ -1,8 +1,8 @@
 
 ---
 title: "OrganizationBlock"
-title_tag: "Resource OrganizationBlock | Package github"
-meta_desc: "Explore the OrganizationBlock resource of the github package, including examples, input properties, output properties, lookup functions, and supporting types. This resource allows you to create and manage blocks for GitHub organizations."
+title_tag: "Resource OrganizationBlock | Package GitHub"
+meta_desc: "Explore the OrganizationBlock resource of the GitHub package, including examples, input properties, output properties, lookup functions, and supporting types. This resource allows you to create and manage blocks for GitHub organizations."
 ---
 
 

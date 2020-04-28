@@ -1,8 +1,8 @@
 
 ---
 title: "OrganizationWebhook"
-title_tag: "Resource OrganizationWebhook | Package github"
-meta_desc: "Explore the OrganizationWebhook resource of the github package, including examples, input properties, output properties, lookup functions, and supporting types. This resource allows you to create and manage webhooks for GitHub organization."
+title_tag: "Resource OrganizationWebhook | Package GitHub"
+meta_desc: "Explore the OrganizationWebhook resource of the GitHub package, including examples, input properties, output properties, lookup functions, and supporting types. This resource allows you to create and manage webhooks for GitHub organization."
 ---
 
 

@@ -1,8 +1,8 @@
 
 ---
 title: "ProjectColumn"
-title_tag: "Resource ProjectColumn | Package github"
-meta_desc: "Explore the ProjectColumn resource of the github package, including examples, input properties, output properties, lookup functions, and supporting types. This resource allows you to create and manage columns for GitHub projects."
+title_tag: "Resource ProjectColumn | Package GitHub"
+meta_desc: "Explore the ProjectColumn resource of the GitHub package, including examples, input properties, output properties, lookup functions, and supporting types. This resource allows you to create and manage columns for GitHub projects."
 ---
 
 

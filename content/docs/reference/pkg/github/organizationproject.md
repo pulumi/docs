@@ -1,8 +1,8 @@
 
 ---
 title: "OrganizationProject"
-title_tag: "Resource OrganizationProject | Package github"
-meta_desc: "Explore the OrganizationProject resource of the github package, including examples, input properties, output properties, lookup functions, and supporting types. This resource allows you to create and manage projects for GitHub organization."
+title_tag: "Resource OrganizationProject | Package GitHub"
+meta_desc: "Explore the OrganizationProject resource of the GitHub package, including examples, input properties, output properties, lookup functions, and supporting types. This resource allows you to create and manage projects for GitHub organization."
 ---
 
 

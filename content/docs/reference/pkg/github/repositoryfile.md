@@ -1,8 +1,8 @@
 
 ---
 title: "RepositoryFile"
-title_tag: "Resource RepositoryFile | Package github"
-meta_desc: "Explore the RepositoryFile resource of the github package, including examples, input properties, output properties, lookup functions, and supporting types. This resource allows you to create and manage files within a"
+title_tag: "Resource RepositoryFile | Package GitHub"
+meta_desc: "Explore the RepositoryFile resource of the GitHub package, including examples, input properties, output properties, lookup functions, and supporting types. This resource allows you to create and manage files within a"
 ---
 
 

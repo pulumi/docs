@@ -1,8 +1,8 @@
 
 ---
 title: "UserSshKey"
-title_tag: "Resource UserSshKey | Package github"
-meta_desc: "Explore the UserSshKey resource of the github package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a GitHub user&#39;s SSH key resource."
+title_tag: "Resource UserSshKey | Package GitHub"
+meta_desc: "Explore the UserSshKey resource of the GitHub package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a GitHub user&#39;s SSH key resource."
 ---
 
 

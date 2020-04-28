@@ -1,8 +1,8 @@
 
 ---
 title: "RepositoryWebhook"
-title_tag: "Resource RepositoryWebhook | Package github"
-meta_desc: "Explore the RepositoryWebhook resource of the github package, including examples, input properties, output properties, lookup functions, and supporting types. "
+title_tag: "Resource RepositoryWebhook | Package GitHub"
+meta_desc: "Explore the RepositoryWebhook resource of the GitHub package, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 
 

@@ -1,8 +1,8 @@
 
 ---
 title: "BranchProtection"
-title_tag: "Resource BranchProtection | Package github"
-meta_desc: "Explore the BranchProtection resource of the github package, including examples, input properties, output properties, lookup functions, and supporting types. Protects a GitHub branch."
+title_tag: "Resource BranchProtection | Package GitHub"
+meta_desc: "Explore the BranchProtection resource of the GitHub package, including examples, input properties, output properties, lookup functions, and supporting types. Protects a GitHub branch."
 ---
 
 

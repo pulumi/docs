@@ -1,8 +1,8 @@
 
 ---
 title: "ActionsSecret"
-title_tag: "Resource ActionsSecret | Package github"
-meta_desc: "Explore the ActionsSecret resource of the github package, including examples, input properties, output properties, lookup functions, and supporting types. "
+title_tag: "Resource ActionsSecret | Package GitHub"
+meta_desc: "Explore the ActionsSecret resource of the GitHub package, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 
 
