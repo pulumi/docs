@@ -65,28 +65,32 @@ to the resource to prevent accidental destruction.</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>key_ring</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The KeyRing that this key belongs to. Format: ‘’projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}’’.</p></li>
+<li><p><strong>key_ring</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The KeyRing that this key belongs to.
+Format: <code class="docutils literal notranslate"><span class="pre">'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}'</span></code>.</p></li>
 <li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Labels with user-defined metadata to apply to this resource.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The resource name for the CryptoKey.</p></li>
-<li><p><strong>purpose</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The immutable purpose of this CryptoKey. See the <a class="reference external" href="https://cloud.google.com/kms/docs/reference/rest/v1/projects.locations.keyRings.cryptoKeys#CryptoKeyPurpose">purpose
-reference</a>
+<li><p><strong>purpose</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The immutable purpose of this CryptoKey. See the
+<a class="reference external" href="https://cloud.google.com/kms/docs/reference/rest/v1/projects.locations.keyRings.cryptoKeys#CryptoKeyPurpose">purpose reference</a>
 for possible inputs.</p></li>
-<li><p><strong>rotation_period</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Every time this period passes, generate a new CryptoKeyVersion and set it as the primary. The first rotation will take
-place after the specified period. The rotation period has the format of a decimal number with up to 9 fractional digits,
-followed by the letter ‘s’ (seconds). It must be greater than a day (ie, 86400).</p></li>
-<li><p><strong>version_template</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A template describing settings for new crypto key versions.</p></li>
+<li><p><strong>rotation_period</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Every time this period passes, generate a new CryptoKeyVersion and set it as the primary.
+The first rotation will take place after the specified period. The rotation period has
+the format of a decimal number with up to 9 fractional digits, followed by the
+letter <code class="docutils literal notranslate"><span class="pre">s</span></code> (seconds). It must be greater than a day (ie, 86400).</p></li>
+<li><p><strong>version_template</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A template describing settings for new crypto key versions.  Structure is documented below.</p></li>
 </ul>
 </dd>
 </dl>
 <p>The <strong>version_template</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">algorithm</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">protectionLevel</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">algorithm</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The algorithm to use when creating a version based on this template.
+See the <a class="reference external" href="https://cloud.google.com/kms/docs/reference/rest/v1/CryptoKeyVersionAlgorithm">algorithm reference</a> for possible inputs.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">protectionLevel</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The protection level to use when creating a version based on this template.</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_gcp.kms.CryptoKey.key_ring">
 <code class="sig-name descname">key_ring</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.kms.CryptoKey.key_ring" title="Permalink to this definition">¶</a></dt>
-<dd><p>The KeyRing that this key belongs to. Format: ‘’projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}’’.</p>
+<dd><p>The KeyRing that this key belongs to.
+Format: <code class="docutils literal notranslate"><span class="pre">'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}'</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -104,26 +108,28 @@ followed by the letter ‘s’ (seconds). It must be greater than a day (ie, 864
 <dl class="attribute">
 <dt id="pulumi_gcp.kms.CryptoKey.purpose">
 <code class="sig-name descname">purpose</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.kms.CryptoKey.purpose" title="Permalink to this definition">¶</a></dt>
-<dd><p>The immutable purpose of this CryptoKey. See the <a class="reference external" href="https://cloud.google.com/kms/docs/reference/rest/v1/projects.locations.keyRings.cryptoKeys#CryptoKeyPurpose">purpose
-reference</a>
+<dd><p>The immutable purpose of this CryptoKey. See the
+<a class="reference external" href="https://cloud.google.com/kms/docs/reference/rest/v1/projects.locations.keyRings.cryptoKeys#CryptoKeyPurpose">purpose reference</a>
 for possible inputs.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_gcp.kms.CryptoKey.rotation_period">
 <code class="sig-name descname">rotation_period</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.kms.CryptoKey.rotation_period" title="Permalink to this definition">¶</a></dt>
-<dd><p>Every time this period passes, generate a new CryptoKeyVersion and set it as the primary. The first rotation will take
-place after the specified period. The rotation period has the format of a decimal number with up to 9 fractional digits,
-followed by the letter ‘s’ (seconds). It must be greater than a day (ie, 86400).</p>
+<dd><p>Every time this period passes, generate a new CryptoKeyVersion and set it as the primary.
+The first rotation will take place after the specified period. The rotation period has
+the format of a decimal number with up to 9 fractional digits, followed by the
+letter <code class="docutils literal notranslate"><span class="pre">s</span></code> (seconds). It must be greater than a day (ie, 86400).</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_gcp.kms.CryptoKey.version_template">
 <code class="sig-name descname">version_template</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.kms.CryptoKey.version_template" title="Permalink to this definition">¶</a></dt>
-<dd><p>A template describing settings for new crypto key versions.</p>
+<dd><p>A template describing settings for new crypto key versions.  Structure is documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">algorithm</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">protectionLevel</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">algorithm</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The algorithm to use when creating a version based on this template.
+See the <a class="reference external" href="https://cloud.google.com/kms/docs/reference/rest/v1/CryptoKeyVersionAlgorithm">algorithm reference</a> for possible inputs.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">protectionLevel</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The protection level to use when creating a version based on this template.</p></li>
 </ul>
 </dd></dl>
 
@@ -138,24 +144,27 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>key_ring</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The KeyRing that this key belongs to. Format: ‘’projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}’’.</p></li>
+<li><p><strong>key_ring</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The KeyRing that this key belongs to.
+Format: <code class="docutils literal notranslate"><span class="pre">'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}'</span></code>.</p></li>
 <li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Labels with user-defined metadata to apply to this resource.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The resource name for the CryptoKey.</p></li>
-<li><p><strong>purpose</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The immutable purpose of this CryptoKey. See the <a class="reference external" href="https://cloud.google.com/kms/docs/reference/rest/v1/projects.locations.keyRings.cryptoKeys#CryptoKeyPurpose">purpose
-reference</a>
+<li><p><strong>purpose</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The immutable purpose of this CryptoKey. See the
+<a class="reference external" href="https://cloud.google.com/kms/docs/reference/rest/v1/projects.locations.keyRings.cryptoKeys#CryptoKeyPurpose">purpose reference</a>
 for possible inputs.</p>
 </p></li>
-<li><p><strong>rotation_period</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Every time this period passes, generate a new CryptoKeyVersion and set it as the primary. The first rotation will take
-place after the specified period. The rotation period has the format of a decimal number with up to 9 fractional digits,
-followed by the letter ‘s’ (seconds). It must be greater than a day (ie, 86400).</p></li>
-<li><p><strong>version_template</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A template describing settings for new crypto key versions.</p></li>
+<li><p><strong>rotation_period</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Every time this period passes, generate a new CryptoKeyVersion and set it as the primary.
+The first rotation will take place after the specified period. The rotation period has
+the format of a decimal number with up to 9 fractional digits, followed by the
+letter <code class="docutils literal notranslate"><span class="pre">s</span></code> (seconds). It must be greater than a day (ie, 86400).</p></li>
+<li><p><strong>version_template</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A template describing settings for new crypto key versions.  Structure is documented below.</p></li>
 </ul>
 </dd>
 </dl>
 <p>The <strong>version_template</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">algorithm</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">protectionLevel</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">algorithm</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The algorithm to use when creating a version based on this template.
+See the <a class="reference external" href="https://cloud.google.com/kms/docs/reference/rest/v1/CryptoKeyVersionAlgorithm">algorithm reference</a> for possible inputs.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">protectionLevel</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The protection level to use when creating a version based on this template.</p></li>
 </ul>
 </dd></dl>
 
@@ -602,7 +611,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_gcp.kms.GetKMSCryptoKeyResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.kms.GetKMSCryptoKeyResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -640,7 +649,7 @@ of a decimal number with up to 9 fractional digits, followed by the letter s (se
 <dl class="attribute">
 <dt id="pulumi_gcp.kms.GetKMSCryptoKeyVersionResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.kms.GetKMSCryptoKeyVersionResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -670,7 +679,7 @@ of a decimal number with up to 9 fractional digits, followed by the letter s (se
 <dl class="attribute">
 <dt id="pulumi_gcp.kms.GetKMSKeyRingResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.kms.GetKMSKeyRingResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -694,7 +703,7 @@ of a decimal number with up to 9 fractional digits, followed by the letter s (se
 <dl class="attribute">
 <dt id="pulumi_gcp.kms.GetKMSSecretCiphertextResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.kms.GetKMSSecretCiphertextResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 </dd></dl>
@@ -706,7 +715,7 @@ of a decimal number with up to 9 fractional digits, followed by the letter s (se
 <dl class="attribute">
 <dt id="pulumi_gcp.kms.GetKMSSecretResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.kms.GetKMSSecretResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -740,7 +749,8 @@ Destroying a provider-managed KeyRing will remove it from state but
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The location for the KeyRing. A full list of valid locations can be found by running ‘gcloud kms locations list’.</p></li>
+<li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The location for the KeyRing.
+A full list of valid locations can be found by running <code class="docutils literal notranslate"><span class="pre">gcloud</span> <span class="pre">kms</span> <span class="pre">locations</span> <span class="pre">list</span></code>.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The resource name for the KeyRing.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
@@ -750,7 +760,8 @@ If it is not provided, the provider project is used.</p></li>
 <dl class="attribute">
 <dt id="pulumi_gcp.kms.KeyRing.location">
 <code class="sig-name descname">location</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.kms.KeyRing.location" title="Permalink to this definition">¶</a></dt>
-<dd><p>The location for the KeyRing. A full list of valid locations can be found by running ‘gcloud kms locations list’.</p>
+<dd><p>The location for the KeyRing.
+A full list of valid locations can be found by running <code class="docutils literal notranslate"><span class="pre">gcloud</span> <span class="pre">kms</span> <span class="pre">locations</span> <span class="pre">list</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -777,7 +788,8 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The location for the KeyRing. A full list of valid locations can be found by running ‘gcloud kms locations list’.</p></li>
+<li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The location for the KeyRing.
+A full list of valid locations can be found by running <code class="docutils literal notranslate"><span class="pre">gcloud</span> <span class="pre">kms</span> <span class="pre">locations</span> <span class="pre">list</span></code>.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The resource name for the KeyRing.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
@@ -1223,9 +1235,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.kms.Registry">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.kms.</code><code class="sig-name descname">Registry</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">credentials=None</em>, <em class="sig-param">event_notification_configs=None</em>, <em class="sig-param">http_config=None</em>, <em class="sig-param">log_level=None</em>, <em class="sig-param">mqtt_config=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">state_notification_config=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.kms.Registry" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a Registry resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.</p>
+<dd><p>Deprecated: gcp.Registry has been deprecated in favour of gcp.Registry</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+</ul>
+</dd>
+</dl>
 <p>The <strong>credentials</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">publicKeyCertificate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
@@ -1357,8 +1375,8 @@ data outside of resource definitions.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>additional_authenticated_data</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The additional authenticated data used for integrity checks during encryption and decryption.</p></li>
-<li><p><strong>crypto_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The full name of the CryptoKey that will be used to encrypt the provided plaintext. Format:
-‘’projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}/cryptoKeys/{{cryptoKey}}’’</p></li>
+<li><p><strong>crypto_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The full name of the CryptoKey that will be used to encrypt the provided plaintext.
+Format: <code class="docutils literal notranslate"><span class="pre">'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}/cryptoKeys/{{cryptoKey}}'</span></code></p></li>
 <li><p><strong>plaintext</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The plaintext to be encrypted.</p></li>
 </ul>
 </dd>
@@ -1378,8 +1396,8 @@ data outside of resource definitions.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.kms.SecretCiphertext.crypto_key">
 <code class="sig-name descname">crypto_key</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.kms.SecretCiphertext.crypto_key" title="Permalink to this definition">¶</a></dt>
-<dd><p>The full name of the CryptoKey that will be used to encrypt the provided plaintext. Format:
-‘’projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}/cryptoKeys/{{cryptoKey}}’’</p>
+<dd><p>The full name of the CryptoKey that will be used to encrypt the provided plaintext.
+Format: <code class="docutils literal notranslate"><span class="pre">'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}/cryptoKeys/{{cryptoKey}}'</span></code></p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1401,8 +1419,8 @@ properties used to qualify the lookup.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>additional_authenticated_data</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The additional authenticated data used for integrity checks during encryption and decryption.</p></li>
 <li><p><strong>ciphertext</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Contains the result of encrypting the provided plaintext, encoded in base64.</p></li>
-<li><p><strong>crypto_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The full name of the CryptoKey that will be used to encrypt the provided plaintext. Format:
-‘’projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}/cryptoKeys/{{cryptoKey}}’’</p></li>
+<li><p><strong>crypto_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The full name of the CryptoKey that will be used to encrypt the provided plaintext.
+Format: <code class="docutils literal notranslate"><span class="pre">'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}/cryptoKeys/{{cryptoKey}}'</span></code></p></li>
 <li><p><strong>plaintext</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The plaintext to be encrypted.</p></li>
 </ul>
 </dd>

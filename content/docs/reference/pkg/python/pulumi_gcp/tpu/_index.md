@@ -25,7 +25,7 @@ anything, please consult the source <a class="reference external" href="https://
 <dl class="attribute">
 <dt id="pulumi_gcp.tpu.GetTensorflowVersionsResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.tpu.GetTensorflowVersionsResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -55,19 +55,24 @@ anything, please consult the source <a class="reference external" href="https://
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>accelerator_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of hardware accelerators associated with this node.</p></li>
-<li><p><strong>cidr_block</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The CIDR block that the TPU node will use when selecting an IP address. This CIDR block must be a /29 block; the Compute
-Engine networks API forbids a smaller block, and using a larger block would be wasteful (a node can only consume one IP
-address). Errors will occur if the CIDR block has already been used for a currently existing TPU node, the CIDR block
-conflicts with any subnetworks in the user’s provided network, or the provided network is peered with another network
-that is using that CIDR block.</p></li>
+<li><p><strong>cidr_block</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The CIDR block that the TPU node will use when selecting an IP
+address. This CIDR block must be a /29 block; the Compute Engine
+networks API forbids a smaller block, and using a larger block would
+be wasteful (a node can only consume one IP address).
+Errors will occur if the CIDR block has already been used for a
+currently existing TPU node, the CIDR block conflicts with any
+subnetworks in the user’s provided network, or the provided network
+is peered with another network that is using that CIDR block.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The user-supplied description of the TPU. Maximum of 512 characters.</p></li>
 <li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Resource labels to represent user provided metadata.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The immutable name of the TPU.</p></li>
-<li><p><strong>network</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of a network to peer the TPU node to. It must be a preexisting Compute Engine network inside of the project on
-which this API has been activated. If none is provided, “default” will be used.</p></li>
+<li><p><strong>network</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of a network to peer the TPU node to. It must be a
+preexisting Compute Engine network inside of the project on which
+this API has been activated. If none is provided, “default” will be
+used.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
-<li><p><strong>scheduling_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Sets the scheduling options for this TPU instance.</p></li>
+<li><p><strong>scheduling_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Sets the scheduling options for this TPU instance.  Structure is documented below.</p></li>
 <li><p><strong>tensorflow_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The version of Tensorflow running in the Node.</p></li>
 <li><p><strong>zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The GCP location for the TPU.</p></li>
 </ul>
@@ -75,7 +80,7 @@ If it is not provided, the provider project is used.</p></li>
 </dl>
 <p>The <strong>scheduling_config</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">preemptible</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">preemptible</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Defines whether the TPU instance is preemptible.</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_gcp.tpu.Node.accelerator_type">
@@ -86,11 +91,14 @@ If it is not provided, the provider project is used.</p></li>
 <dl class="attribute">
 <dt id="pulumi_gcp.tpu.Node.cidr_block">
 <code class="sig-name descname">cidr_block</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.tpu.Node.cidr_block" title="Permalink to this definition">¶</a></dt>
-<dd><p>The CIDR block that the TPU node will use when selecting an IP address. This CIDR block must be a /29 block; the Compute
-Engine networks API forbids a smaller block, and using a larger block would be wasteful (a node can only consume one IP
-address). Errors will occur if the CIDR block has already been used for a currently existing TPU node, the CIDR block
-conflicts with any subnetworks in the user’s provided network, or the provided network is peered with another network
-that is using that CIDR block.</p>
+<dd><p>The CIDR block that the TPU node will use when selecting an IP
+address. This CIDR block must be a /29 block; the Compute Engine
+networks API forbids a smaller block, and using a larger block would
+be wasteful (a node can only consume one IP address).
+Errors will occur if the CIDR block has already been used for a
+currently existing TPU node, the CIDR block conflicts with any
+subnetworks in the user’s provided network, or the provided network
+is peered with another network that is using that CIDR block.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -114,8 +122,10 @@ that is using that CIDR block.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.tpu.Node.network">
 <code class="sig-name descname">network</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.tpu.Node.network" title="Permalink to this definition">¶</a></dt>
-<dd><p>The name of a network to peer the TPU node to. It must be a preexisting Compute Engine network inside of the project on
-which this API has been activated. If none is provided, “default” will be used.</p>
+<dd><p>The name of a network to peer the TPU node to. It must be a
+preexisting Compute Engine network inside of the project on which
+this API has been activated. If none is provided, “default” will be
+used.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -139,9 +149,9 @@ If it is not provided, the provider project is used.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.tpu.Node.scheduling_config">
 <code class="sig-name descname">scheduling_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.tpu.Node.scheduling_config" title="Permalink to this definition">¶</a></dt>
-<dd><p>Sets the scheduling options for this TPU instance.</p>
+<dd><p>Sets the scheduling options for this TPU instance.  Structure is documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">preemptible</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">preemptible</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Defines whether the TPU instance is preemptible.</p></li>
 </ul>
 </dd></dl>
 
@@ -176,21 +186,26 @@ properties used to qualify the lookup.</p>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>accelerator_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of hardware accelerators associated with this node.</p></li>
-<li><p><strong>cidr_block</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The CIDR block that the TPU node will use when selecting an IP address. This CIDR block must be a /29 block; the Compute
-Engine networks API forbids a smaller block, and using a larger block would be wasteful (a node can only consume one IP
-address). Errors will occur if the CIDR block has already been used for a currently existing TPU node, the CIDR block
-conflicts with any subnetworks in the user’s provided network, or the provided network is peered with another network
-that is using that CIDR block.</p></li>
+<li><p><strong>cidr_block</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The CIDR block that the TPU node will use when selecting an IP
+address. This CIDR block must be a /29 block; the Compute Engine
+networks API forbids a smaller block, and using a larger block would
+be wasteful (a node can only consume one IP address).
+Errors will occur if the CIDR block has already been used for a
+currently existing TPU node, the CIDR block conflicts with any
+subnetworks in the user’s provided network, or the provided network
+is peered with another network that is using that CIDR block.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The user-supplied description of the TPU. Maximum of 512 characters.</p></li>
 <li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Resource labels to represent user provided metadata.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The immutable name of the TPU.</p></li>
-<li><p><strong>network</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of a network to peer the TPU node to. It must be a preexisting Compute Engine network inside of the project on
-which this API has been activated. If none is provided, “default” will be used.</p></li>
+<li><p><strong>network</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of a network to peer the TPU node to. It must be a
+preexisting Compute Engine network inside of the project on which
+this API has been activated. If none is provided, “default” will be
+used.</p></li>
 <li><p><strong>network_endpoints</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The network endpoints where TPU workers can be accessed and sent work. It is recommended that Tensorflow clients of the
 node first reach out to the first (index 0) entry.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
-<li><p><strong>scheduling_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Sets the scheduling options for this TPU instance.</p></li>
+<li><p><strong>scheduling_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Sets the scheduling options for this TPU instance.  Structure is documented below.</p></li>
 <li><p><strong>service_account</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The service account used to run the tensor flow services within the node. To share resources, including Google Cloud
 Storage data, with the Tensorflow job running in the Node, this account must have permissions to that data.</p></li>
 <li><p><strong>tensorflow_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The version of Tensorflow running in the Node.</p></li>
@@ -205,7 +220,7 @@ Storage data, with the Tensorflow job running in the Node, this account must hav
 </ul>
 <p>The <strong>scheduling_config</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">preemptible</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">preemptible</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Defines whether the TPU instance is preemptible.</p></li>
 </ul>
 </dd></dl>
 
