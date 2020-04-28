@@ -37,7 +37,7 @@ const policy1 = new openstack.vpnaas.IpSecPolicy("policy_1", {});
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">IpSecPolicy</span><span class="p">(resource_name, opts=None, </span>auth_algorithm=None<span class="p">, </span>description=None<span class="p">, </span>encapsulation_mode=None<span class="p">, </span>encryption_algorithm=None<span class="p">, </span>lifetimes=None<span class="p">, </span>name=None<span class="p">, </span>pfs=None<span class="p">, </span>region=None<span class="p">, </span>tenant_id=None<span class="p">, </span>transform_protocol=None<span class="p">, </span>value_specs=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">IpSecPolicy</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>auth_algorithm=None<span class="p">, </span>description=None<span class="p">, </span>encapsulation_mode=None<span class="p">, </span>encryption_algorithm=None<span class="p">, </span>lifetimes=None<span class="p">, </span>name=None<span class="p">, </span>pfs=None<span class="p">, </span>region=None<span class="p">, </span>tenant_id=None<span class="p">, </span>transform_protocol=None<span class="p">, </span>value_specs=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

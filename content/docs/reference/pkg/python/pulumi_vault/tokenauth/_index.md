@@ -28,7 +28,8 @@ information.</p>
 <li><p><strong>bound_cidrs</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – If set, a list of
 CIDRs valid as the source address for login requests. This value is also encoded into any resulting token.</p></li>
 <li><p><strong>disallowed_policies</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of disallowed policies for given role.</p></li>
-<li><p><strong>explicit_max_ttl</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Number of seconds after which issued tokens can no longer be renewed.</p></li>
+<li><p><strong>explicit_max_ttl</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – If set, the
+token will have an explicit max TTL set upon it.</p></li>
 <li><p><strong>orphan</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If true, tokens created against this policy will be orphan tokens.</p></li>
 <li><p><strong>path_suffix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Tokens created against this role will have the given suffix as part of their path in addition to the role name.</p></li>
 <li><p><strong>period</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – If set, indicates that the
@@ -88,7 +89,8 @@ CIDRs valid as the source address for login requests. This value is also encoded
 <dl class="attribute">
 <dt id="pulumi_vault.tokenauth.AuthBackendRole.explicit_max_ttl">
 <code class="sig-name descname">explicit_max_ttl</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.tokenauth.AuthBackendRole.explicit_max_ttl" title="Permalink to this definition">¶</a></dt>
-<dd><p>Number of seconds after which issued tokens can no longer be renewed.</p>
+<dd><p>If set, the
+token will have an explicit max TTL set upon it.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -210,7 +212,8 @@ properties used to qualify the lookup.</p>
 <li><p><strong>bound_cidrs</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – If set, a list of
 CIDRs valid as the source address for login requests. This value is also encoded into any resulting token.</p></li>
 <li><p><strong>disallowed_policies</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of disallowed policies for given role.</p></li>
-<li><p><strong>explicit_max_ttl</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Number of seconds after which issued tokens can no longer be renewed.</p></li>
+<li><p><strong>explicit_max_ttl</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – If set, the
+token will have an explicit max TTL set upon it.</p></li>
 <li><p><strong>orphan</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If true, tokens created against this policy will be orphan tokens.</p></li>
 <li><p><strong>path_suffix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Tokens created against this role will have the given suffix as part of their path in addition to the role name.</p></li>
 <li><p><strong>period</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – If set, indicates that the

@@ -61,7 +61,7 @@ resource that connects the next hop to the router, as in the example above.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">RouterRoute</span><span class="p">(resource_name, opts=None, </span>destination_cidr=None<span class="p">, </span>next_hop=None<span class="p">, </span>region=None<span class="p">, </span>router_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">RouterRoute</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>destination_cidr=None<span class="p">, </span>next_hop=None<span class="p">, </span>region=None<span class="p">, </span>router_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
