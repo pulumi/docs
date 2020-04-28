@@ -28,7 +28,7 @@ conditions which can be applied. The conditions are:
 * `email_domain` - (Optional) A list of email domains. Example:
   `email_domain = ["example.com"]`
 * `service_token` - (Optional) A list of service token ids. Example:
-  `service_token = cloudflare_access_service_token.demo.id`
+  `service_token = [cloudflare_access_service_token.demo.id]`
 * `any_valid_service_token` - (Optional) Boolean indicating if allow
   all tokens to be granted. Example: `any_valid_service_token = true`
 * `group` - (Optional) A list of access group ids. Example:
@@ -106,7 +106,7 @@ conditions which can be applied. The conditions are:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">AccessGroup</span><span class="p">(resource_name, opts=None, </span>account_id=None<span class="p">, </span>excludes=None<span class="p">, </span>includes=None<span class="p">, </span>name=None<span class="p">, </span>requires=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">AccessGroup</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>account_id=None<span class="p">, </span>excludes=None<span class="p">, </span>includes=None<span class="p">, </span>name=None<span class="p">, </span>requires=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -948,6 +948,38 @@ full list.
 
     <dt class="property-optional"
             title="Optional">
+        <span>Any<wbr>Valid<wbr>Service<wbr>Token</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Azures</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accessgroupexcludeazure">List&lt;Access<wbr>Group<wbr>Exclude<wbr>Azure<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Certificate</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Common<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Email<wbr>Domains</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
@@ -972,9 +1004,25 @@ full list.
 
     <dt class="property-optional"
             title="Optional">
+        <span>Githubs</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accessgroupexcludegithub">List&lt;Access<wbr>Group<wbr>Exclude<wbr>Github<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Groups</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Gsuites</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accessgroupexcludegsuite">List&lt;Access<wbr>Group<wbr>Exclude<wbr>Gsuite<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -986,12 +1034,68 @@ full list.
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Oktas</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accessgroupexcludeokta">List&lt;Access<wbr>Group<wbr>Exclude<wbr>Okta<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Samls</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accessgroupexcludesaml">List&lt;Access<wbr>Group<wbr>Exclude<wbr>Saml<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Service<wbr>Tokens</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Any<wbr>Valid<wbr>Service<wbr>Token</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Azures</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accessgroupexcludeazure">[]Access<wbr>Group<wbr>Exclude<wbr>Azure</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Certificate</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Common<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1019,9 +1123,25 @@ full list.
 
     <dt class="property-optional"
             title="Optional">
+        <span>Githubs</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accessgroupexcludegithub">[]Access<wbr>Group<wbr>Exclude<wbr>Github</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Groups</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Gsuites</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accessgroupexcludegsuite">[]Access<wbr>Group<wbr>Exclude<wbr>Gsuite</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1033,12 +1153,68 @@ full list.
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Oktas</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accessgroupexcludeokta">[]Access<wbr>Group<wbr>Exclude<wbr>Okta</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Samls</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accessgroupexcludesaml">[]Access<wbr>Group<wbr>Exclude<wbr>Saml</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Service<wbr>Tokens</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>any<wbr>Valid<wbr>Service<wbr>Token</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>azures</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accessgroupexcludeazure">Access<wbr>Group<wbr>Exclude<wbr>Azure[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>certificate</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>common<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1066,9 +1242,25 @@ full list.
 
     <dt class="property-optional"
             title="Optional">
+        <span>githubs</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accessgroupexcludegithub">Access<wbr>Group<wbr>Exclude<wbr>Github[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>groups</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>gsuites</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accessgroupexcludegsuite">Access<wbr>Group<wbr>Exclude<wbr>Gsuite[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1080,12 +1272,68 @@ full list.
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>oktas</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accessgroupexcludeokta">Access<wbr>Group<wbr>Exclude<wbr>Okta[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>samls</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accessgroupexcludesaml">Access<wbr>Group<wbr>Exclude<wbr>Saml[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>service<wbr>Tokens</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>any<wbr>Valid<wbr>Service<wbr>Token</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>azures</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accessgroupexcludeazure">List[Access<wbr>Group<wbr>Exclude<wbr>Azure]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>certificate</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>common<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1113,6 +1361,14 @@ full list.
 
     <dt class="property-optional"
             title="Optional">
+        <span>githubs</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accessgroupexcludegithub">List[Access<wbr>Group<wbr>Exclude<wbr>Github]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>groups</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -1121,9 +1377,616 @@ full list.
 
     <dt class="property-optional"
             title="Optional">
+        <span>gsuites</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accessgroupexcludegsuite">List[Access<wbr>Group<wbr>Exclude<wbr>Gsuite]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>ips</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>oktas</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accessgroupexcludeokta">List[Access<wbr>Group<wbr>Exclude<wbr>Okta]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>samls</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accessgroupexcludesaml">List[Access<wbr>Group<wbr>Exclude<wbr>Saml]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>service<wbr>Tokens</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="accessgroupexcludeazure">Access<wbr>Group<wbr>Exclude<wbr>Azure</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/cloudflare/types/input/#AccessGroupExcludeAzure">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/cloudflare/types/output/#AccessGroupExcludeAzure">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudflare/sdk/v2/go/cloudflare/?tab=doc#AccessGroupExcludeAzureArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudflare/sdk/v2/go/cloudflare/?tab=doc#AccessGroupExcludeAzureOutput">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Identity<wbr>Provider<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Identity<wbr>Provider<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>identity<wbr>Provider<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>identity<wbr>Provider<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="accessgroupexcludegithub">Access<wbr>Group<wbr>Exclude<wbr>Github</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/cloudflare/types/input/#AccessGroupExcludeGithub">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/cloudflare/types/output/#AccessGroupExcludeGithub">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudflare/sdk/v2/go/cloudflare/?tab=doc#AccessGroupExcludeGithubArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudflare/sdk/v2/go/cloudflare/?tab=doc#AccessGroupExcludeGithubOutput">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Identity<wbr>Provider<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Friendly name of the Access Group.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Identity<wbr>Provider<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Friendly name of the Access Group.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>identity<wbr>Provider<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Friendly name of the Access Group.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>identity<wbr>Provider<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Friendly name of the Access Group.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="accessgroupexcludegsuite">Access<wbr>Group<wbr>Exclude<wbr>Gsuite</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/cloudflare/types/input/#AccessGroupExcludeGsuite">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/cloudflare/types/output/#AccessGroupExcludeGsuite">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudflare/sdk/v2/go/cloudflare/?tab=doc#AccessGroupExcludeGsuiteArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudflare/sdk/v2/go/cloudflare/?tab=doc#AccessGroupExcludeGsuiteOutput">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Email</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Identity<wbr>Provider<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Email</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Identity<wbr>Provider<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>email</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>identity<wbr>Provider<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>email</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>identity<wbr>Provider<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="accessgroupexcludeokta">Access<wbr>Group<wbr>Exclude<wbr>Okta</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/cloudflare/types/input/#AccessGroupExcludeOkta">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/cloudflare/types/output/#AccessGroupExcludeOkta">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudflare/sdk/v2/go/cloudflare/?tab=doc#AccessGroupExcludeOktaArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudflare/sdk/v2/go/cloudflare/?tab=doc#AccessGroupExcludeOktaOutput">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Identity<wbr>Provider<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Friendly name of the Access Group.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Identity<wbr>Provider<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Friendly name of the Access Group.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>identity<wbr>Provider<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Friendly name of the Access Group.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>identity<wbr>Provider<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Friendly name of the Access Group.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="accessgroupexcludesaml">Access<wbr>Group<wbr>Exclude<wbr>Saml</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/cloudflare/types/input/#AccessGroupExcludeSaml">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/cloudflare/types/output/#AccessGroupExcludeSaml">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudflare/sdk/v2/go/cloudflare/?tab=doc#AccessGroupExcludeSamlArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudflare/sdk/v2/go/cloudflare/?tab=doc#AccessGroupExcludeSamlOutput">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Attribute<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Attribute<wbr>Value</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Identity<wbr>Provider<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Attribute<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Attribute<wbr>Value</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Identity<wbr>Provider<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>attribute<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>attribute<wbr>Value</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>identity<wbr>Provider<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>attribute<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>attribute<wbr>Value</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>identity<wbr>Provider<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1151,6 +2014,38 @@ full list.
 
     <dt class="property-optional"
             title="Optional">
+        <span>Any<wbr>Valid<wbr>Service<wbr>Token</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Azures</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accessgroupincludeazure">List&lt;Access<wbr>Group<wbr>Include<wbr>Azure<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Certificate</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Common<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Email<wbr>Domains</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
@@ -1175,9 +2070,25 @@ full list.
 
     <dt class="property-optional"
             title="Optional">
+        <span>Githubs</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accessgroupincludegithub">List&lt;Access<wbr>Group<wbr>Include<wbr>Github<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Groups</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Gsuites</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accessgroupincludegsuite">List&lt;Access<wbr>Group<wbr>Include<wbr>Gsuite<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1189,12 +2100,68 @@ full list.
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Oktas</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accessgroupincludeokta">List&lt;Access<wbr>Group<wbr>Include<wbr>Okta<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Samls</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accessgroupincludesaml">List&lt;Access<wbr>Group<wbr>Include<wbr>Saml<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Service<wbr>Tokens</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Any<wbr>Valid<wbr>Service<wbr>Token</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Azures</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accessgroupincludeazure">[]Access<wbr>Group<wbr>Include<wbr>Azure</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Certificate</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Common<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1222,9 +2189,25 @@ full list.
 
     <dt class="property-optional"
             title="Optional">
+        <span>Githubs</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accessgroupincludegithub">[]Access<wbr>Group<wbr>Include<wbr>Github</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Groups</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Gsuites</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accessgroupincludegsuite">[]Access<wbr>Group<wbr>Include<wbr>Gsuite</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1236,12 +2219,68 @@ full list.
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Oktas</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accessgroupincludeokta">[]Access<wbr>Group<wbr>Include<wbr>Okta</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Samls</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accessgroupincludesaml">[]Access<wbr>Group<wbr>Include<wbr>Saml</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Service<wbr>Tokens</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>any<wbr>Valid<wbr>Service<wbr>Token</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>azures</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accessgroupincludeazure">Access<wbr>Group<wbr>Include<wbr>Azure[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>certificate</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>common<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1269,9 +2308,25 @@ full list.
 
     <dt class="property-optional"
             title="Optional">
+        <span>githubs</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accessgroupincludegithub">Access<wbr>Group<wbr>Include<wbr>Github[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>groups</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>gsuites</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accessgroupincludegsuite">Access<wbr>Group<wbr>Include<wbr>Gsuite[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1283,12 +2338,68 @@ full list.
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>oktas</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accessgroupincludeokta">Access<wbr>Group<wbr>Include<wbr>Okta[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>samls</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accessgroupincludesaml">Access<wbr>Group<wbr>Include<wbr>Saml[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>service<wbr>Tokens</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>any<wbr>Valid<wbr>Service<wbr>Token</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>azures</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accessgroupincludeazure">List[Access<wbr>Group<wbr>Include<wbr>Azure]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>certificate</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>common<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1316,6 +2427,14 @@ full list.
 
     <dt class="property-optional"
             title="Optional">
+        <span>githubs</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accessgroupincludegithub">List[Access<wbr>Group<wbr>Include<wbr>Github]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>groups</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -1324,9 +2443,616 @@ full list.
 
     <dt class="property-optional"
             title="Optional">
+        <span>gsuites</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accessgroupincludegsuite">List[Access<wbr>Group<wbr>Include<wbr>Gsuite]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>ips</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>oktas</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accessgroupincludeokta">List[Access<wbr>Group<wbr>Include<wbr>Okta]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>samls</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accessgroupincludesaml">List[Access<wbr>Group<wbr>Include<wbr>Saml]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>service<wbr>Tokens</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="accessgroupincludeazure">Access<wbr>Group<wbr>Include<wbr>Azure</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/cloudflare/types/input/#AccessGroupIncludeAzure">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/cloudflare/types/output/#AccessGroupIncludeAzure">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudflare/sdk/v2/go/cloudflare/?tab=doc#AccessGroupIncludeAzureArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudflare/sdk/v2/go/cloudflare/?tab=doc#AccessGroupIncludeAzureOutput">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Identity<wbr>Provider<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Identity<wbr>Provider<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>identity<wbr>Provider<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>identity<wbr>Provider<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="accessgroupincludegithub">Access<wbr>Group<wbr>Include<wbr>Github</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/cloudflare/types/input/#AccessGroupIncludeGithub">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/cloudflare/types/output/#AccessGroupIncludeGithub">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudflare/sdk/v2/go/cloudflare/?tab=doc#AccessGroupIncludeGithubArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudflare/sdk/v2/go/cloudflare/?tab=doc#AccessGroupIncludeGithubOutput">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Identity<wbr>Provider<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Friendly name of the Access Group.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Identity<wbr>Provider<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Friendly name of the Access Group.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>identity<wbr>Provider<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Friendly name of the Access Group.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>identity<wbr>Provider<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Friendly name of the Access Group.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="accessgroupincludegsuite">Access<wbr>Group<wbr>Include<wbr>Gsuite</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/cloudflare/types/input/#AccessGroupIncludeGsuite">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/cloudflare/types/output/#AccessGroupIncludeGsuite">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudflare/sdk/v2/go/cloudflare/?tab=doc#AccessGroupIncludeGsuiteArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudflare/sdk/v2/go/cloudflare/?tab=doc#AccessGroupIncludeGsuiteOutput">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Email</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Identity<wbr>Provider<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Email</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Identity<wbr>Provider<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>email</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>identity<wbr>Provider<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>email</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>identity<wbr>Provider<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="accessgroupincludeokta">Access<wbr>Group<wbr>Include<wbr>Okta</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/cloudflare/types/input/#AccessGroupIncludeOkta">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/cloudflare/types/output/#AccessGroupIncludeOkta">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudflare/sdk/v2/go/cloudflare/?tab=doc#AccessGroupIncludeOktaArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudflare/sdk/v2/go/cloudflare/?tab=doc#AccessGroupIncludeOktaOutput">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Identity<wbr>Provider<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Friendly name of the Access Group.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Identity<wbr>Provider<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Friendly name of the Access Group.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>identity<wbr>Provider<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Friendly name of the Access Group.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>identity<wbr>Provider<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Friendly name of the Access Group.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="accessgroupincludesaml">Access<wbr>Group<wbr>Include<wbr>Saml</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/cloudflare/types/input/#AccessGroupIncludeSaml">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/cloudflare/types/output/#AccessGroupIncludeSaml">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudflare/sdk/v2/go/cloudflare/?tab=doc#AccessGroupIncludeSamlArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudflare/sdk/v2/go/cloudflare/?tab=doc#AccessGroupIncludeSamlOutput">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Attribute<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Attribute<wbr>Value</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Identity<wbr>Provider<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Attribute<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Attribute<wbr>Value</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Identity<wbr>Provider<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>attribute<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>attribute<wbr>Value</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>identity<wbr>Provider<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>attribute<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>attribute<wbr>Value</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>identity<wbr>Provider<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1354,6 +3080,38 @@ full list.
 
     <dt class="property-optional"
             title="Optional">
+        <span>Any<wbr>Valid<wbr>Service<wbr>Token</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Azures</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accessgrouprequireazure">List&lt;Access<wbr>Group<wbr>Require<wbr>Azure<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Certificate</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Common<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Email<wbr>Domains</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
@@ -1378,9 +3136,25 @@ full list.
 
     <dt class="property-optional"
             title="Optional">
+        <span>Githubs</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accessgrouprequiregithub">List&lt;Access<wbr>Group<wbr>Require<wbr>Github<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Groups</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Gsuites</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accessgrouprequiregsuite">List&lt;Access<wbr>Group<wbr>Require<wbr>Gsuite<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1392,12 +3166,68 @@ full list.
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Oktas</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accessgrouprequireokta">List&lt;Access<wbr>Group<wbr>Require<wbr>Okta<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Samls</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accessgrouprequiresaml">List&lt;Access<wbr>Group<wbr>Require<wbr>Saml<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Service<wbr>Tokens</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Any<wbr>Valid<wbr>Service<wbr>Token</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Azures</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accessgrouprequireazure">[]Access<wbr>Group<wbr>Require<wbr>Azure</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Certificate</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Common<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1425,9 +3255,25 @@ full list.
 
     <dt class="property-optional"
             title="Optional">
+        <span>Githubs</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accessgrouprequiregithub">[]Access<wbr>Group<wbr>Require<wbr>Github</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Groups</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Gsuites</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accessgrouprequiregsuite">[]Access<wbr>Group<wbr>Require<wbr>Gsuite</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1439,12 +3285,68 @@ full list.
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Oktas</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accessgrouprequireokta">[]Access<wbr>Group<wbr>Require<wbr>Okta</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Samls</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accessgrouprequiresaml">[]Access<wbr>Group<wbr>Require<wbr>Saml</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Service<wbr>Tokens</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>any<wbr>Valid<wbr>Service<wbr>Token</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>azures</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accessgrouprequireazure">Access<wbr>Group<wbr>Require<wbr>Azure[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>certificate</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>common<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1472,9 +3374,25 @@ full list.
 
     <dt class="property-optional"
             title="Optional">
+        <span>githubs</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accessgrouprequiregithub">Access<wbr>Group<wbr>Require<wbr>Github[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>groups</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>gsuites</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accessgrouprequiregsuite">Access<wbr>Group<wbr>Require<wbr>Gsuite[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1486,12 +3404,68 @@ full list.
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>oktas</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accessgrouprequireokta">Access<wbr>Group<wbr>Require<wbr>Okta[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>samls</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accessgrouprequiresaml">Access<wbr>Group<wbr>Require<wbr>Saml[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>service<wbr>Tokens</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>any<wbr>Valid<wbr>Service<wbr>Token</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>azures</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accessgrouprequireazure">List[Access<wbr>Group<wbr>Require<wbr>Azure]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>certificate</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>common<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1519,6 +3493,14 @@ full list.
 
     <dt class="property-optional"
             title="Optional">
+        <span>githubs</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accessgrouprequiregithub">List[Access<wbr>Group<wbr>Require<wbr>Github]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>groups</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -1527,9 +3509,616 @@ full list.
 
     <dt class="property-optional"
             title="Optional">
+        <span>gsuites</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accessgrouprequiregsuite">List[Access<wbr>Group<wbr>Require<wbr>Gsuite]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>ips</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>oktas</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accessgrouprequireokta">List[Access<wbr>Group<wbr>Require<wbr>Okta]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>samls</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accessgrouprequiresaml">List[Access<wbr>Group<wbr>Require<wbr>Saml]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>service<wbr>Tokens</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="accessgrouprequireazure">Access<wbr>Group<wbr>Require<wbr>Azure</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/cloudflare/types/input/#AccessGroupRequireAzure">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/cloudflare/types/output/#AccessGroupRequireAzure">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudflare/sdk/v2/go/cloudflare/?tab=doc#AccessGroupRequireAzureArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudflare/sdk/v2/go/cloudflare/?tab=doc#AccessGroupRequireAzureOutput">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Identity<wbr>Provider<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Identity<wbr>Provider<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>identity<wbr>Provider<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>identity<wbr>Provider<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="accessgrouprequiregithub">Access<wbr>Group<wbr>Require<wbr>Github</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/cloudflare/types/input/#AccessGroupRequireGithub">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/cloudflare/types/output/#AccessGroupRequireGithub">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudflare/sdk/v2/go/cloudflare/?tab=doc#AccessGroupRequireGithubArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudflare/sdk/v2/go/cloudflare/?tab=doc#AccessGroupRequireGithubOutput">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Identity<wbr>Provider<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Friendly name of the Access Group.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Identity<wbr>Provider<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Friendly name of the Access Group.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>identity<wbr>Provider<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Friendly name of the Access Group.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>identity<wbr>Provider<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Friendly name of the Access Group.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="accessgrouprequiregsuite">Access<wbr>Group<wbr>Require<wbr>Gsuite</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/cloudflare/types/input/#AccessGroupRequireGsuite">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/cloudflare/types/output/#AccessGroupRequireGsuite">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudflare/sdk/v2/go/cloudflare/?tab=doc#AccessGroupRequireGsuiteArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudflare/sdk/v2/go/cloudflare/?tab=doc#AccessGroupRequireGsuiteOutput">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Email</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Identity<wbr>Provider<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Email</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Identity<wbr>Provider<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>email</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>identity<wbr>Provider<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>email</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>identity<wbr>Provider<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="accessgrouprequireokta">Access<wbr>Group<wbr>Require<wbr>Okta</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/cloudflare/types/input/#AccessGroupRequireOkta">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/cloudflare/types/output/#AccessGroupRequireOkta">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudflare/sdk/v2/go/cloudflare/?tab=doc#AccessGroupRequireOktaArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudflare/sdk/v2/go/cloudflare/?tab=doc#AccessGroupRequireOktaOutput">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Identity<wbr>Provider<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Friendly name of the Access Group.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Identity<wbr>Provider<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Friendly name of the Access Group.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>identity<wbr>Provider<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Friendly name of the Access Group.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>identity<wbr>Provider<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Friendly name of the Access Group.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="accessgrouprequiresaml">Access<wbr>Group<wbr>Require<wbr>Saml</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/cloudflare/types/input/#AccessGroupRequireSaml">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/cloudflare/types/output/#AccessGroupRequireSaml">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudflare/sdk/v2/go/cloudflare/?tab=doc#AccessGroupRequireSamlArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudflare/sdk/v2/go/cloudflare/?tab=doc#AccessGroupRequireSamlOutput">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Attribute<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Attribute<wbr>Value</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Identity<wbr>Provider<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Attribute<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Attribute<wbr>Value</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Identity<wbr>Provider<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>attribute<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>attribute<wbr>Value</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>identity<wbr>Provider<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>attribute<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>attribute<wbr>Value</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>identity<wbr>Provider<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
