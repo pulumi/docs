@@ -22,7 +22,7 @@ meta_desc: "Explore the PasswordPolicyRule resource of the deprecated module, in
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">PasswordPolicyRule</span><span class="p">(resource_name, opts=None, </span>name=None<span class="p">, </span>network_connection=None<span class="p">, </span>network_excludes=None<span class="p">, </span>network_includes=None<span class="p">, </span>password_change=None<span class="p">, </span>password_reset=None<span class="p">, </span>password_unlock=None<span class="p">, </span>policyid=None<span class="p">, </span>priority=None<span class="p">, </span>status=None<span class="p">, </span>users_excludeds=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">PasswordPolicyRule</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>name=None<span class="p">, </span>network_connection=None<span class="p">, </span>network_excludes=None<span class="p">, </span>network_includes=None<span class="p">, </span>password_change=None<span class="p">, </span>password_reset=None<span class="p">, </span>password_unlock=None<span class="p">, </span>policyid=None<span class="p">, </span>priority=None<span class="p">, </span>status=None<span class="p">, </span>users_excludeds=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
