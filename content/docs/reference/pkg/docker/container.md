@@ -44,7 +44,7 @@ const ubuntuContainer = new docker.Container("ubuntu", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Container</span><span class="p">(resource_name, opts=None, </span>attach=None<span class="p">, </span>capabilities=None<span class="p">, </span>command=None<span class="p">, </span>cpu_set=None<span class="p">, </span>cpu_shares=None<span class="p">, </span>destroy_grace_seconds=None<span class="p">, </span>devices=None<span class="p">, </span>dns=None<span class="p">, </span>dns_opts=None<span class="p">, </span>dns_searches=None<span class="p">, </span>domainname=None<span class="p">, </span>entrypoints=None<span class="p">, </span>envs=None<span class="p">, </span>group_adds=None<span class="p">, </span>healthcheck=None<span class="p">, </span>hostname=None<span class="p">, </span>hosts=None<span class="p">, </span>image=None<span class="p">, </span>ipc_mode=None<span class="p">, </span>labels=None<span class="p">, </span>links=None<span class="p">, </span>log_driver=None<span class="p">, </span>log_opts=None<span class="p">, </span>logs=None<span class="p">, </span>max_retry_count=None<span class="p">, </span>memory=None<span class="p">, </span>memory_swap=None<span class="p">, </span>mounts=None<span class="p">, </span>must_run=None<span class="p">, </span>name=None<span class="p">, </span>network_aliases=None<span class="p">, </span>network_mode=None<span class="p">, </span>networks=None<span class="p">, </span>networks_advanced=None<span class="p">, </span>pid_mode=None<span class="p">, </span>ports=None<span class="p">, </span>privileged=None<span class="p">, </span>publish_all_ports=None<span class="p">, </span>read_only=None<span class="p">, </span>restart=None<span class="p">, </span>rm=None<span class="p">, </span>shm_size=None<span class="p">, </span>start=None<span class="p">, </span>sysctls=None<span class="p">, </span>tmpfs=None<span class="p">, </span>ulimits=None<span class="p">, </span>uploads=None<span class="p">, </span>user=None<span class="p">, </span>userns_mode=None<span class="p">, </span>volumes=None<span class="p">, </span>working_dir=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Container</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>attach=None<span class="p">, </span>capabilities=None<span class="p">, </span>command=None<span class="p">, </span>cpu_set=None<span class="p">, </span>cpu_shares=None<span class="p">, </span>destroy_grace_seconds=None<span class="p">, </span>devices=None<span class="p">, </span>dns=None<span class="p">, </span>dns_opts=None<span class="p">, </span>dns_searches=None<span class="p">, </span>domainname=None<span class="p">, </span>entrypoints=None<span class="p">, </span>envs=None<span class="p">, </span>group_adds=None<span class="p">, </span>healthcheck=None<span class="p">, </span>hostname=None<span class="p">, </span>hosts=None<span class="p">, </span>image=None<span class="p">, </span>ipc_mode=None<span class="p">, </span>labels=None<span class="p">, </span>links=None<span class="p">, </span>log_driver=None<span class="p">, </span>log_opts=None<span class="p">, </span>logs=None<span class="p">, </span>max_retry_count=None<span class="p">, </span>memory=None<span class="p">, </span>memory_swap=None<span class="p">, </span>mounts=None<span class="p">, </span>must_run=None<span class="p">, </span>name=None<span class="p">, </span>network_aliases=None<span class="p">, </span>network_mode=None<span class="p">, </span>networks=None<span class="p">, </span>networks_advanced=None<span class="p">, </span>pid_mode=None<span class="p">, </span>ports=None<span class="p">, </span>privileged=None<span class="p">, </span>publish_all_ports=None<span class="p">, </span>read_only=None<span class="p">, </span>restart=None<span class="p">, </span>rm=None<span class="p">, </span>shm_size=None<span class="p">, </span>start=None<span class="p">, </span>sysctls=None<span class="p">, </span>tmpfs=None<span class="p">, </span>ulimits=None<span class="p">, </span>uploads=None<span class="p">, </span>user=None<span class="p">, </span>userns_mode=None<span class="p">, </span>volumes=None<span class="p">, </span>working_dir=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -451,7 +451,6 @@ the logging driver.
     </dt>
     <dd>{{% md %}}The maximum amount of times to an attempt
 a restart when `restart` is set to "on-failure"
-* `working_dir`- (Optional, string) The working directory for commands to run in
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -688,7 +687,8 @@ by name.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The working directory for commands to run in
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -932,7 +932,6 @@ the logging driver.
     </dt>
     <dd>{{% md %}}The maximum amount of times to an attempt
 a restart when `restart` is set to "on-failure"
-* `working_dir`- (Optional, string) The working directory for commands to run in
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1169,7 +1168,8 @@ by name.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The working directory for commands to run in
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1413,7 +1413,6 @@ the logging driver.
     </dt>
     <dd>{{% md %}}The maximum amount of times to an attempt
 a restart when `restart` is set to "on-failure"
-* `working_dir`- (Optional, string) The working directory for commands to run in
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1650,7 +1649,8 @@ by name.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The working directory for commands to run in
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1894,7 +1894,6 @@ the logging driver.
     </dt>
     <dd>{{% md %}}The maximum amount of times to an attempt
 a restart when `restart` is set to "on-failure"
-* `working_dir`- (Optional, string) The working directory for commands to run in
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2131,7 +2130,8 @@ by name.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The working directory for commands to run in
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2892,7 +2892,6 @@ the logging driver.
     </dt>
     <dd>{{% md %}}The maximum amount of times to an attempt
 a restart when `restart` is set to "on-failure"
-* `working_dir`- (Optional, string) The working directory for commands to run in
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3139,7 +3138,8 @@ by name.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The working directory for commands to run in
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3439,7 +3439,6 @@ the logging driver.
     </dt>
     <dd>{{% md %}}The maximum amount of times to an attempt
 a restart when `restart` is set to "on-failure"
-* `working_dir`- (Optional, string) The working directory for commands to run in
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3686,7 +3685,8 @@ by name.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The working directory for commands to run in
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3986,7 +3986,6 @@ the logging driver.
     </dt>
     <dd>{{% md %}}The maximum amount of times to an attempt
 a restart when `restart` is set to "on-failure"
-* `working_dir`- (Optional, string) The working directory for commands to run in
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4233,7 +4232,8 @@ by name.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The working directory for commands to run in
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -4533,7 +4533,6 @@ the logging driver.
     </dt>
     <dd>{{% md %}}The maximum amount of times to an attempt
 a restart when `restart` is set to "on-failure"
-* `working_dir`- (Optional, string) The working directory for commands to run in
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4780,7 +4779,8 @@ by name.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The working directory for commands to run in
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -5443,7 +5443,6 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the label
-* `value` (Required, string) Value of the label
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -5452,7 +5451,8 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Value of the label
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -5468,7 +5468,6 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the label
-* `value` (Required, string) Value of the label
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -5477,7 +5476,8 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Value of the label
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -5493,7 +5493,6 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the label
-* `value` (Required, string) Value of the label
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -5502,7 +5501,8 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Value of the label
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -5518,7 +5518,6 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Name of the label
-* `value` (Required, string) Value of the label
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -5527,7 +5526,8 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Value of the label
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -6234,7 +6234,6 @@ Defaults to false.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the label
-* `value` (Required, string) Value of the label
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -6243,7 +6242,8 @@ Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Value of the label
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -6259,7 +6259,6 @@ Defaults to false.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the label
-* `value` (Required, string) Value of the label
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -6268,7 +6267,8 @@ Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Value of the label
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -6284,7 +6284,6 @@ Defaults to false.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the label
-* `value` (Required, string) Value of the label
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -6293,7 +6292,8 @@ Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Value of the label
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -6309,7 +6309,6 @@ Defaults to false.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Name of the label
-* `value` (Required, string) Value of the label
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -6318,7 +6317,8 @@ Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Value of the label
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
