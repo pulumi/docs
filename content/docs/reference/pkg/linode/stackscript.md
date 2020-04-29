@@ -22,7 +22,7 @@ meta_desc: "Explore the StackScript resource of the Linode package, including ex
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">StackScript</span><span class="p">(resource_name, opts=None, </span>description=None<span class="p">, </span>images=None<span class="p">, </span>is_public=None<span class="p">, </span>label=None<span class="p">, </span>rev_note=None<span class="p">, </span>script=None<span class="p">, </span>user_defined_fields=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">StackScript</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>description=None<span class="p">, </span>images=None<span class="p">, </span>is_public=None<span class="p">, </span>label=None<span class="p">, </span>rev_note=None<span class="p">, </span>script=None<span class="p">, </span>user_defined_fields=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
