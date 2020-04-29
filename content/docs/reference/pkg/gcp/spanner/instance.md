@@ -1,7 +1,8 @@
 
 ---
 title: "Instance"
-block_external_search_index: true
+title_tag: "Resource Instance | Module spanner | Package GCP"
+meta_desc: "Explore the Instance resource of the spanner module, including examples, input properties, output properties, lookup functions, and supporting types. An isolated set of Cloud Spanner resources on which databases can be"
 ---
 
 
@@ -47,7 +48,7 @@ const example = new gcp.spanner.Instance("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Instance</span><span class="p">(resource_name, opts=None, </span>config=None<span class="p">, </span>display_name=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>num_nodes=None<span class="p">, </span>project=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Instance</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>config=None<span class="p">, </span>display_name=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>num_nodes=None<span class="p">, </span>project=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -225,9 +226,11 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the instance's configuration (similar but not quite the same as a region) which defines defines the
-geographic placement and replication of your databases in this instance. It determines where your data is stored. Values
-are typically of the form 'regional-europe-west1' , 'us-central' etc. In order to obtain a valid list please consult the
+    <dd>{{% md %}}The name of the instance's configuration (similar but not
+quite the same as a region) which defines defines the geographic placement and
+replication of your databases in this instance. It determines where your data
+is stored. Values are typically of the form `regional-europe-west1` , `us-central` etc.
+In order to obtain a valid list please consult the
 [Configuration section of the docs](https://cloud.google.com/spanner/docs/instances).
 {{% /md %}}</dd>
 
@@ -237,8 +240,8 @@ are typically of the form 'regional-europe-west1' , 'us-central' etc. In order t
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The descriptive name for this instance as it appears in UIs. Must be unique per project and between 4 and 30 characters
-in length.
+    <dd>{{% md %}}The descriptive name for this instance as it appears in UIs. Must be
+unique per project and between 4 and 30 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -247,7 +250,8 @@ in length.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
+    <dd>{{% md %}}An object containing a list of "key": value pairs.
+Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -256,8 +260,9 @@ in length.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}A unique identifier for the instance, which cannot be changed after the instance is created. The name must be between 6
-and 30 characters in length. If not provided, a random string starting with 'tf-' will be selected.
+    <dd>{{% md %}}A unique identifier for the instance, which cannot be changed after
+the instance is created. The name must be between 6 and 30 characters
+in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -292,9 +297,11 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the instance's configuration (similar but not quite the same as a region) which defines defines the
-geographic placement and replication of your databases in this instance. It determines where your data is stored. Values
-are typically of the form 'regional-europe-west1' , 'us-central' etc. In order to obtain a valid list please consult the
+    <dd>{{% md %}}The name of the instance's configuration (similar but not
+quite the same as a region) which defines defines the geographic placement and
+replication of your databases in this instance. It determines where your data
+is stored. Values are typically of the form `regional-europe-west1` , `us-central` etc.
+In order to obtain a valid list please consult the
 [Configuration section of the docs](https://cloud.google.com/spanner/docs/instances).
 {{% /md %}}</dd>
 
@@ -304,8 +311,8 @@ are typically of the form 'regional-europe-west1' , 'us-central' etc. In order t
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The descriptive name for this instance as it appears in UIs. Must be unique per project and between 4 and 30 characters
-in length.
+    <dd>{{% md %}}The descriptive name for this instance as it appears in UIs. Must be
+unique per project and between 4 and 30 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -314,7 +321,8 @@ in length.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
+    <dd>{{% md %}}An object containing a list of "key": value pairs.
+Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -323,8 +331,9 @@ in length.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}A unique identifier for the instance, which cannot be changed after the instance is created. The name must be between 6
-and 30 characters in length. If not provided, a random string starting with 'tf-' will be selected.
+    <dd>{{% md %}}A unique identifier for the instance, which cannot be changed after
+the instance is created. The name must be between 6 and 30 characters
+in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -359,9 +368,11 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the instance's configuration (similar but not quite the same as a region) which defines defines the
-geographic placement and replication of your databases in this instance. It determines where your data is stored. Values
-are typically of the form 'regional-europe-west1' , 'us-central' etc. In order to obtain a valid list please consult the
+    <dd>{{% md %}}The name of the instance's configuration (similar but not
+quite the same as a region) which defines defines the geographic placement and
+replication of your databases in this instance. It determines where your data
+is stored. Values are typically of the form `regional-europe-west1` , `us-central` etc.
+In order to obtain a valid list please consult the
 [Configuration section of the docs](https://cloud.google.com/spanner/docs/instances).
 {{% /md %}}</dd>
 
@@ -371,8 +382,8 @@ are typically of the form 'regional-europe-west1' , 'us-central' etc. In order t
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The descriptive name for this instance as it appears in UIs. Must be unique per project and between 4 and 30 characters
-in length.
+    <dd>{{% md %}}The descriptive name for this instance as it appears in UIs. Must be
+unique per project and between 4 and 30 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -381,7 +392,8 @@ in length.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
+    <dd>{{% md %}}An object containing a list of "key": value pairs.
+Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -390,8 +402,9 @@ in length.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}A unique identifier for the instance, which cannot be changed after the instance is created. The name must be between 6
-and 30 characters in length. If not provided, a random string starting with 'tf-' will be selected.
+    <dd>{{% md %}}A unique identifier for the instance, which cannot be changed after
+the instance is created. The name must be between 6 and 30 characters
+in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -426,9 +439,11 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the instance's configuration (similar but not quite the same as a region) which defines defines the
-geographic placement and replication of your databases in this instance. It determines where your data is stored. Values
-are typically of the form 'regional-europe-west1' , 'us-central' etc. In order to obtain a valid list please consult the
+    <dd>{{% md %}}The name of the instance's configuration (similar but not
+quite the same as a region) which defines defines the geographic placement and
+replication of your databases in this instance. It determines where your data
+is stored. Values are typically of the form `regional-europe-west1` , `us-central` etc.
+In order to obtain a valid list please consult the
 [Configuration section of the docs](https://cloud.google.com/spanner/docs/instances).
 {{% /md %}}</dd>
 
@@ -438,8 +453,8 @@ are typically of the form 'regional-europe-west1' , 'us-central' etc. In order t
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The descriptive name for this instance as it appears in UIs. Must be unique per project and between 4 and 30 characters
-in length.
+    <dd>{{% md %}}The descriptive name for this instance as it appears in UIs. Must be
+unique per project and between 4 and 30 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -448,7 +463,8 @@ in length.
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
-    <dd>{{% md %}}An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
+    <dd>{{% md %}}An object containing a list of "key": value pairs.
+Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -457,8 +473,9 @@ in length.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}A unique identifier for the instance, which cannot be changed after the instance is created. The name must be between 6
-and 30 characters in length. If not provided, a random string starting with 'tf-' will be selected.
+    <dd>{{% md %}}A unique identifier for the instance, which cannot be changed after
+the instance is created. The name must be between 6 and 30 characters
+in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -726,9 +743,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the instance's configuration (similar but not quite the same as a region) which defines defines the
-geographic placement and replication of your databases in this instance. It determines where your data is stored. Values
-are typically of the form 'regional-europe-west1' , 'us-central' etc. In order to obtain a valid list please consult the
+    <dd>{{% md %}}The name of the instance's configuration (similar but not
+quite the same as a region) which defines defines the geographic placement and
+replication of your databases in this instance. It determines where your data
+is stored. Values are typically of the form `regional-europe-west1` , `us-central` etc.
+In order to obtain a valid list please consult the
 [Configuration section of the docs](https://cloud.google.com/spanner/docs/instances).
 {{% /md %}}</dd>
 
@@ -738,8 +757,8 @@ are typically of the form 'regional-europe-west1' , 'us-central' etc. In order t
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The descriptive name for this instance as it appears in UIs. Must be unique per project and between 4 and 30 characters
-in length.
+    <dd>{{% md %}}The descriptive name for this instance as it appears in UIs. Must be
+unique per project and between 4 and 30 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -748,7 +767,8 @@ in length.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
+    <dd>{{% md %}}An object containing a list of "key": value pairs.
+Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -757,8 +777,9 @@ in length.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}A unique identifier for the instance, which cannot be changed after the instance is created. The name must be between 6
-and 30 characters in length. If not provided, a random string starting with 'tf-' will be selected.
+    <dd>{{% md %}}A unique identifier for the instance, which cannot be changed after
+the instance is created. The name must be between 6 and 30 characters
+in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -802,9 +823,11 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the instance's configuration (similar but not quite the same as a region) which defines defines the
-geographic placement and replication of your databases in this instance. It determines where your data is stored. Values
-are typically of the form 'regional-europe-west1' , 'us-central' etc. In order to obtain a valid list please consult the
+    <dd>{{% md %}}The name of the instance's configuration (similar but not
+quite the same as a region) which defines defines the geographic placement and
+replication of your databases in this instance. It determines where your data
+is stored. Values are typically of the form `regional-europe-west1` , `us-central` etc.
+In order to obtain a valid list please consult the
 [Configuration section of the docs](https://cloud.google.com/spanner/docs/instances).
 {{% /md %}}</dd>
 
@@ -814,8 +837,8 @@ are typically of the form 'regional-europe-west1' , 'us-central' etc. In order t
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The descriptive name for this instance as it appears in UIs. Must be unique per project and between 4 and 30 characters
-in length.
+    <dd>{{% md %}}The descriptive name for this instance as it appears in UIs. Must be
+unique per project and between 4 and 30 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -824,7 +847,8 @@ in length.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
+    <dd>{{% md %}}An object containing a list of "key": value pairs.
+Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -833,8 +857,9 @@ in length.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}A unique identifier for the instance, which cannot be changed after the instance is created. The name must be between 6
-and 30 characters in length. If not provided, a random string starting with 'tf-' will be selected.
+    <dd>{{% md %}}A unique identifier for the instance, which cannot be changed after
+the instance is created. The name must be between 6 and 30 characters
+in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -878,9 +903,11 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the instance's configuration (similar but not quite the same as a region) which defines defines the
-geographic placement and replication of your databases in this instance. It determines where your data is stored. Values
-are typically of the form 'regional-europe-west1' , 'us-central' etc. In order to obtain a valid list please consult the
+    <dd>{{% md %}}The name of the instance's configuration (similar but not
+quite the same as a region) which defines defines the geographic placement and
+replication of your databases in this instance. It determines where your data
+is stored. Values are typically of the form `regional-europe-west1` , `us-central` etc.
+In order to obtain a valid list please consult the
 [Configuration section of the docs](https://cloud.google.com/spanner/docs/instances).
 {{% /md %}}</dd>
 
@@ -890,8 +917,8 @@ are typically of the form 'regional-europe-west1' , 'us-central' etc. In order t
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The descriptive name for this instance as it appears in UIs. Must be unique per project and between 4 and 30 characters
-in length.
+    <dd>{{% md %}}The descriptive name for this instance as it appears in UIs. Must be
+unique per project and between 4 and 30 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -900,7 +927,8 @@ in length.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
+    <dd>{{% md %}}An object containing a list of "key": value pairs.
+Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -909,8 +937,9 @@ in length.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}A unique identifier for the instance, which cannot be changed after the instance is created. The name must be between 6
-and 30 characters in length. If not provided, a random string starting with 'tf-' will be selected.
+    <dd>{{% md %}}A unique identifier for the instance, which cannot be changed after
+the instance is created. The name must be between 6 and 30 characters
+in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -954,9 +983,11 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the instance's configuration (similar but not quite the same as a region) which defines defines the
-geographic placement and replication of your databases in this instance. It determines where your data is stored. Values
-are typically of the form 'regional-europe-west1' , 'us-central' etc. In order to obtain a valid list please consult the
+    <dd>{{% md %}}The name of the instance's configuration (similar but not
+quite the same as a region) which defines defines the geographic placement and
+replication of your databases in this instance. It determines where your data
+is stored. Values are typically of the form `regional-europe-west1` , `us-central` etc.
+In order to obtain a valid list please consult the
 [Configuration section of the docs](https://cloud.google.com/spanner/docs/instances).
 {{% /md %}}</dd>
 
@@ -966,8 +997,8 @@ are typically of the form 'regional-europe-west1' , 'us-central' etc. In order t
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The descriptive name for this instance as it appears in UIs. Must be unique per project and between 4 and 30 characters
-in length.
+    <dd>{{% md %}}The descriptive name for this instance as it appears in UIs. Must be
+unique per project and between 4 and 30 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -976,7 +1007,8 @@ in length.
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
-    <dd>{{% md %}}An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
+    <dd>{{% md %}}An object containing a list of "key": value pairs.
+Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -985,8 +1017,9 @@ in length.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}A unique identifier for the instance, which cannot be changed after the instance is created. The name must be between 6
-and 30 characters in length. If not provided, a random string starting with 'tf-' will be selected.
+    <dd>{{% md %}}A unique identifier for the instance, which cannot be changed after
+the instance is created. The name must be between 6 and 30 characters
+in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1036,8 +1069,7 @@ If it is not provided, the provider project is used.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 

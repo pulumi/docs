@@ -1,7 +1,8 @@
 
 ---
 title: "Folder"
-block_external_search_index: true
+title_tag: "Resource Folder | Module organizations | Package GCP"
+meta_desc: "Explore the Folder resource of the organizations module, including examples, input properties, output properties, lookup functions, and supporting types. Allows management of a Google Cloud Platform folder. For more information see "
 ---
 
 
@@ -37,7 +38,7 @@ doc for more information.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Folder</span><span class="p">(resource_name, opts=None, </span>display_name=None<span class="p">, </span>parent=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Folder</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>display_name=None<span class="p">, </span>parent=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -858,8 +859,7 @@ Must be of the form `folders/{folder_id}` or `organizations/{org_id}`.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 

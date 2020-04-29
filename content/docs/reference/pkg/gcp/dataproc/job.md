@@ -1,7 +1,8 @@
 
 ---
 title: "Job"
-block_external_search_index: true
+title_tag: "Resource Job | Module dataproc | Package GCP"
+meta_desc: "Explore the Job resource of the dataproc module, including examples, input properties, output properties, lookup functions, and supporting types. Manages a job resource within a Dataproc cluster within GCE. For more information see"
 ---
 
 
@@ -25,7 +26,7 @@ Manages a job resource within a Dataproc cluster within GCE. For more informatio
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Job</span><span class="p">(resource_name, opts=None, </span>force_delete=None<span class="p">, </span>hadoop_config=None<span class="p">, </span>hive_config=None<span class="p">, </span>labels=None<span class="p">, </span>pig_config=None<span class="p">, </span>placement=None<span class="p">, </span>project=None<span class="p">, </span>pyspark_config=None<span class="p">, </span>reference=None<span class="p">, </span>region=None<span class="p">, </span>scheduling=None<span class="p">, </span>spark_config=None<span class="p">, </span>sparksql_config=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Job</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>force_delete=None<span class="p">, </span>hadoop_config=None<span class="p">, </span>hive_config=None<span class="p">, </span>labels=None<span class="p">, </span>pig_config=None<span class="p">, </span>placement=None<span class="p">, </span>project=None<span class="p">, </span>pyspark_config=None<span class="p">, </span>reference=None<span class="p">, </span>region=None<span class="p">, </span>scheduling=None<span class="p">, </span>spark_config=None<span class="p">, </span>sparksql_config=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1635,7 +1636,8 @@ for this job to be submitted to. If not specified, defaults to `global`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the driver's main class. The jar file containing the class must be in the default CLASSPATH or specified in `jar_file_uris`. Conflicts with `main_jar_file_uri`
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1712,7 +1714,8 @@ for this job to be submitted to. If not specified, defaults to `global`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the driver's main class. The jar file containing the class must be in the default CLASSPATH or specified in `jar_file_uris`. Conflicts with `main_jar_file_uri`
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1789,7 +1792,8 @@ for this job to be submitted to. If not specified, defaults to `global`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the driver's main class. The jar file containing the class must be in the default CLASSPATH or specified in `jar_file_uris`. Conflicts with `main_jar_file_uri`
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1866,7 +1870,8 @@ for this job to be submitted to. If not specified, defaults to `global`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the driver's main class. The jar file containing the class must be in the default CLASSPATH or specified in `jar_file_uris`. Conflicts with `main_jar_file_uri`
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2026,7 +2031,9 @@ Conflicts with `query_list`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The list of SQL queries or statements to execute as part of the job.
+Conflicts with `query_file_uri`
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2087,7 +2094,9 @@ Conflicts with `query_list`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The list of SQL queries or statements to execute as part of the job.
+Conflicts with `query_file_uri`
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2148,7 +2157,9 @@ Conflicts with `query_list`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The list of SQL queries or statements to execute as part of the job.
+Conflicts with `query_file_uri`
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2209,7 +2220,9 @@ Conflicts with `query_list`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The list of SQL queries or statements to execute as part of the job.
+Conflicts with `query_file_uri`
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2293,7 +2306,9 @@ Conflicts with `query_list`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The list of SQL queries or statements to execute as part of the job.
+Conflicts with `query_file_uri`
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2362,7 +2377,9 @@ Conflicts with `query_list`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The list of SQL queries or statements to execute as part of the job.
+Conflicts with `query_file_uri`
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2431,7 +2448,9 @@ Conflicts with `query_list`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The list of SQL queries or statements to execute as part of the job.
+Conflicts with `query_file_uri`
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2500,7 +2519,9 @@ Conflicts with `query_list`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The list of SQL queries or statements to execute as part of the job.
+Conflicts with `query_file_uri`
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2721,7 +2742,8 @@ Conflicts with `query_list`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The HCFS URI of the main Python file to use as the driver. Must be a .py file.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2798,7 +2820,8 @@ Conflicts with `query_list`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The HCFS URI of the main Python file to use as the driver. Must be a .py file.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2875,7 +2898,8 @@ Conflicts with `query_list`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The HCFS URI of the main Python file to use as the driver. Must be a .py file.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2952,7 +2976,8 @@ Conflicts with `query_list`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The HCFS URI of the main Python file to use as the driver. Must be a .py file.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3313,7 +3338,8 @@ Conflicts with `query_list`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the driver's main class. The jar file containing the class must be in the default CLASSPATH or specified in `jar_file_uris`. Conflicts with `main_jar_file_uri`
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3390,7 +3416,8 @@ Conflicts with `query_list`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the driver's main class. The jar file containing the class must be in the default CLASSPATH or specified in `jar_file_uris`. Conflicts with `main_jar_file_uri`
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3467,7 +3494,8 @@ Conflicts with `query_list`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the driver's main class. The jar file containing the class must be in the default CLASSPATH or specified in `jar_file_uris`. Conflicts with `main_jar_file_uri`
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3544,7 +3572,8 @@ Conflicts with `query_list`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the driver's main class. The jar file containing the class must be in the default CLASSPATH or specified in `jar_file_uris`. Conflicts with `main_jar_file_uri`
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3703,7 +3732,9 @@ Conflicts with `query_list`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The list of SQL queries or statements to execute as part of the job.
+Conflicts with `query_file_uri`
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3763,7 +3794,9 @@ Conflicts with `query_list`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The list of SQL queries or statements to execute as part of the job.
+Conflicts with `query_file_uri`
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3823,7 +3856,9 @@ Conflicts with `query_list`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The list of SQL queries or statements to execute as part of the job.
+Conflicts with `query_file_uri`
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3883,7 +3918,9 @@ Conflicts with `query_list`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The list of SQL queries or statements to execute as part of the job.
+Conflicts with `query_file_uri`
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4157,8 +4194,7 @@ Conflicts with `query_list`
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 

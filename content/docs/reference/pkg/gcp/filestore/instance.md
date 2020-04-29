@@ -1,7 +1,8 @@
 
 ---
 title: "Instance"
-block_external_search_index: true
+title_tag: "Resource Instance | Module filestore | Package GCP"
+meta_desc: "Explore the Instance resource of the filestore module, including examples, input properties, output properties, lookup functions, and supporting types. A Google Cloud Filestore instance."
 ---
 
 
@@ -52,7 +53,7 @@ const instance = new gcp.filestore.Instance("instance", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Instance</span><span class="p">(resource_name, opts=None, </span>description=None<span class="p">, </span>file_shares=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>networks=None<span class="p">, </span>project=None<span class="p">, </span>tier=None<span class="p">, </span>zone=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Instance</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>description=None<span class="p">, </span>file_shares=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>networks=None<span class="p">, </span>project=None<span class="p">, </span>tier=None<span class="p">, </span>zone=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -230,7 +231,8 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancefileshares">Instance<wbr>File<wbr>Shares<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}File system shares on the instance. For this version, only a single file share is supported.
+    <dd>{{% md %}}File system shares on the instance. For this version, only a
+single file share is supported.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -239,7 +241,8 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancenetwork">List&lt;Instance<wbr>Network<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}VPC networks to which the instance is connected. For this version, only a single network is supported.
+    <dd>{{% md %}}VPC networks to which the instance is connected. For this version,
+only a single network is supported.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -284,7 +287,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The resource name of the instance.
+    <dd>{{% md %}}The name of the fileshare (16 characters or less)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -310,7 +313,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancefileshares">Instance<wbr>File<wbr>Shares</a></span>
     </dt>
-    <dd>{{% md %}}File system shares on the instance. For this version, only a single file share is supported.
+    <dd>{{% md %}}File system shares on the instance. For this version, only a
+single file share is supported.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -319,7 +323,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancenetwork">[]Instance<wbr>Network</a></span>
     </dt>
-    <dd>{{% md %}}VPC networks to which the instance is connected. For this version, only a single network is supported.
+    <dd>{{% md %}}VPC networks to which the instance is connected. For this version,
+only a single network is supported.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -364,7 +369,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The resource name of the instance.
+    <dd>{{% md %}}The name of the fileshare (16 characters or less)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -390,7 +395,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancefileshares">Instance<wbr>File<wbr>Shares</a></span>
     </dt>
-    <dd>{{% md %}}File system shares on the instance. For this version, only a single file share is supported.
+    <dd>{{% md %}}File system shares on the instance. For this version, only a
+single file share is supported.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -399,7 +405,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancenetwork">Instance<wbr>Network[]</a></span>
     </dt>
-    <dd>{{% md %}}VPC networks to which the instance is connected. For this version, only a single network is supported.
+    <dd>{{% md %}}VPC networks to which the instance is connected. For this version,
+only a single network is supported.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -444,7 +451,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The resource name of the instance.
+    <dd>{{% md %}}The name of the fileshare (16 characters or less)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -470,7 +477,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancefileshares">Dict[Instance<wbr>File<wbr>Shares]</a></span>
     </dt>
-    <dd>{{% md %}}File system shares on the instance. For this version, only a single file share is supported.
+    <dd>{{% md %}}File system shares on the instance. For this version, only a
+single file share is supported.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -479,7 +487,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancenetwork">List[Instance<wbr>Network]</a></span>
     </dt>
-    <dd>{{% md %}}VPC networks to which the instance is connected. For this version, only a single network is supported.
+    <dd>{{% md %}}VPC networks to which the instance is connected. For this version,
+only a single network is supported.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -524,7 +533,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The resource name of the instance.
+    <dd>{{% md %}}The name of the fileshare (16 characters or less)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -846,7 +855,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancefileshares">Instance<wbr>File<wbr>Shares<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}File system shares on the instance. For this version, only a single file share is supported.
+    <dd>{{% md %}}File system shares on the instance. For this version, only a
+single file share is supported.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -864,7 +874,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The resource name of the instance.
+    <dd>{{% md %}}The name of the fileshare (16 characters or less)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -873,7 +883,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancenetwork">List&lt;Instance<wbr>Network<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}VPC networks to which the instance is connected. For this version, only a single network is supported.
+    <dd>{{% md %}}VPC networks to which the instance is connected. For this version,
+only a single network is supported.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -944,7 +955,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancefileshares">Instance<wbr>File<wbr>Shares</a></span>
     </dt>
-    <dd>{{% md %}}File system shares on the instance. For this version, only a single file share is supported.
+    <dd>{{% md %}}File system shares on the instance. For this version, only a
+single file share is supported.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -962,7 +974,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The resource name of the instance.
+    <dd>{{% md %}}The name of the fileshare (16 characters or less)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -971,7 +983,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancenetwork">[]Instance<wbr>Network</a></span>
     </dt>
-    <dd>{{% md %}}VPC networks to which the instance is connected. For this version, only a single network is supported.
+    <dd>{{% md %}}VPC networks to which the instance is connected. For this version,
+only a single network is supported.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1042,7 +1055,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancefileshares">Instance<wbr>File<wbr>Shares</a></span>
     </dt>
-    <dd>{{% md %}}File system shares on the instance. For this version, only a single file share is supported.
+    <dd>{{% md %}}File system shares on the instance. For this version, only a
+single file share is supported.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1060,7 +1074,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The resource name of the instance.
+    <dd>{{% md %}}The name of the fileshare (16 characters or less)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1069,7 +1083,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancenetwork">Instance<wbr>Network[]</a></span>
     </dt>
-    <dd>{{% md %}}VPC networks to which the instance is connected. For this version, only a single network is supported.
+    <dd>{{% md %}}VPC networks to which the instance is connected. For this version,
+only a single network is supported.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1140,7 +1155,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancefileshares">Dict[Instance<wbr>File<wbr>Shares]</a></span>
     </dt>
-    <dd>{{% md %}}File system shares on the instance. For this version, only a single file share is supported.
+    <dd>{{% md %}}File system shares on the instance. For this version, only a
+single file share is supported.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1158,7 +1174,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The resource name of the instance.
+    <dd>{{% md %}}The name of the fileshare (16 characters or less)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1167,7 +1183,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancenetwork">List[Instance<wbr>Network]</a></span>
     </dt>
-    <dd>{{% md %}}VPC networks to which the instance is connected. For this version, only a single network is supported.
+    <dd>{{% md %}}VPC networks to which the instance is connected. For this version,
+only a single network is supported.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1234,7 +1251,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}File share capacity in GiB. This must be at least 1024 GiB
+for the standard tier, or 2560 GiB for the premium tier.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1242,7 +1261,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the fileshare (16 characters or less)
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1257,7 +1277,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}File share capacity in GiB. This must be at least 1024 GiB
+for the standard tier, or 2560 GiB for the premium tier.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1265,7 +1287,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the fileshare (16 characters or less)
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1280,7 +1303,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}File share capacity in GiB. This must be at least 1024 GiB
+for the standard tier, or 2560 GiB for the premium tier.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1288,7 +1313,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the fileshare (16 characters or less)
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1303,7 +1329,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}File share capacity in GiB. This must be at least 1024 GiB
+for the standard tier, or 2560 GiB for the premium tier.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1311,7 +1339,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the fileshare (16 characters or less)
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1341,7 +1370,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}IP versions for which the instance has
+IP addresses assigned.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1349,7 +1380,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the GCE VPC network to which the
+instance is connected.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1357,7 +1390,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-
+A list of IPv4 or IPv6 addresses.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1365,7 +1400,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A /29 CIDR block that identifies the range of IP
+addresses reserved for this instance.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1380,7 +1417,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}IP versions for which the instance has
+IP addresses assigned.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1388,7 +1427,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the GCE VPC network to which the
+instance is connected.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1396,7 +1437,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-
+A list of IPv4 or IPv6 addresses.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1404,7 +1447,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A /29 CIDR block that identifies the range of IP
+addresses reserved for this instance.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1419,7 +1464,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}IP versions for which the instance has
+IP addresses assigned.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1427,7 +1474,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the GCE VPC network to which the
+instance is connected.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1435,7 +1484,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-
+A list of IPv4 or IPv6 addresses.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1443,7 +1494,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A /29 CIDR block that identifies the range of IP
+addresses reserved for this instance.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1458,7 +1511,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}IP versions for which the instance has
+IP addresses assigned.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1466,7 +1521,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the GCE VPC network to which the
+instance is connected.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1474,7 +1531,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-
+A list of IPv4 or IPv6 addresses.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1482,7 +1541,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A /29 CIDR block that identifies the range of IP
+addresses reserved for this instance.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1501,8 +1562,7 @@ If it is not provided, the provider project is used.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 

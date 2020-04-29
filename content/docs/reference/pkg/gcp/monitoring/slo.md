@@ -1,7 +1,8 @@
 
 ---
 title: "Slo"
-block_external_search_index: true
+title_tag: "Resource Slo | Module monitoring | Package GCP"
+meta_desc: "Explore the Slo resource of the monitoring module, including examples, input properties, output properties, lookup functions, and supporting types. A Service-Level Objective (SLO) describes the level of desired good"
 ---
 
 
@@ -36,7 +37,7 @@ To get more information about Slo, see:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Slo</span><span class="p">(resource_name, opts=None, </span>basic_sli=None<span class="p">, </span>calendar_period=None<span class="p">, </span>display_name=None<span class="p">, </span>goal=None<span class="p">, </span>project=None<span class="p">, </span>rolling_period_days=None<span class="p">, </span>service=None<span class="p">, </span>slo_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Slo</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>basic_sli=None<span class="p">, </span>calendar_period=None<span class="p">, </span>display_name=None<span class="p">, </span>goal=None<span class="p">, </span>project=None<span class="p">, </span>rolling_period_days=None<span class="p">, </span>service=None<span class="p">, </span>slo_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -214,9 +215,10 @@ The Slo resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#slobasicsli">Slo<wbr>Basic<wbr>Sli<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Basic Service-Level Indicator (SLI) on a well-known service type. Performance will be computed on the basis of
-pre-defined metrics. SLIs are used to measure and calculate the quality of the Service's performance with respect to a
-single aspect of service quality.
+    <dd>{{% md %}}Basic Service-Level Indicator (SLI) on a well-known service type.
+Performance will be computed on the basis of pre-defined metrics.
+SLIs are used to measure and calculate the quality of the Service's
+performance with respect to a single aspect of service quality.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -225,7 +227,8 @@ single aspect of service quality.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
-    <dd>{{% md %}}The fraction of service that must be good in order for this objective to be met. 0 < goal <= 0.999
+    <dd>{{% md %}}The fraction of service that must be good in order for this objective
+to be met. 0 < goal <= 0.999
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -243,7 +246,8 @@ single aspect of service quality.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}A calendar period, semantically "since the start of the current <calendarPeriod>".
+    <dd>{{% md %}}A calendar period, semantically "since the start of the current
+<calendarPeriod>".
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -271,7 +275,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}A rolling time period, semantically "in the past X days". Must be between 1 to 30 days, inclusive.
+    <dd>{{% md %}}A rolling time period, semantically "in the past X days".
+Must be between 1 to 30 days, inclusive.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -296,9 +301,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#slobasicsli">Slo<wbr>Basic<wbr>Sli</a></span>
     </dt>
-    <dd>{{% md %}}Basic Service-Level Indicator (SLI) on a well-known service type. Performance will be computed on the basis of
-pre-defined metrics. SLIs are used to measure and calculate the quality of the Service's performance with respect to a
-single aspect of service quality.
+    <dd>{{% md %}}Basic Service-Level Indicator (SLI) on a well-known service type.
+Performance will be computed on the basis of pre-defined metrics.
+SLIs are used to measure and calculate the quality of the Service's
+performance with respect to a single aspect of service quality.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -307,7 +313,8 @@ single aspect of service quality.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
-    <dd>{{% md %}}The fraction of service that must be good in order for this objective to be met. 0 < goal <= 0.999
+    <dd>{{% md %}}The fraction of service that must be good in order for this objective
+to be met. 0 < goal <= 0.999
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -325,7 +332,8 @@ single aspect of service quality.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}A calendar period, semantically "since the start of the current <calendarPeriod>".
+    <dd>{{% md %}}A calendar period, semantically "since the start of the current
+<calendarPeriod>".
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -353,7 +361,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}A rolling time period, semantically "in the past X days". Must be between 1 to 30 days, inclusive.
+    <dd>{{% md %}}A rolling time period, semantically "in the past X days".
+Must be between 1 to 30 days, inclusive.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -378,9 +387,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#slobasicsli">Slo<wbr>Basic<wbr>Sli</a></span>
     </dt>
-    <dd>{{% md %}}Basic Service-Level Indicator (SLI) on a well-known service type. Performance will be computed on the basis of
-pre-defined metrics. SLIs are used to measure and calculate the quality of the Service's performance with respect to a
-single aspect of service quality.
+    <dd>{{% md %}}Basic Service-Level Indicator (SLI) on a well-known service type.
+Performance will be computed on the basis of pre-defined metrics.
+SLIs are used to measure and calculate the quality of the Service's
+performance with respect to a single aspect of service quality.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -389,7 +399,8 @@ single aspect of service quality.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
-    <dd>{{% md %}}The fraction of service that must be good in order for this objective to be met. 0 < goal <= 0.999
+    <dd>{{% md %}}The fraction of service that must be good in order for this objective
+to be met. 0 < goal <= 0.999
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -407,7 +418,8 @@ single aspect of service quality.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}A calendar period, semantically "since the start of the current <calendarPeriod>".
+    <dd>{{% md %}}A calendar period, semantically "since the start of the current
+<calendarPeriod>".
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -435,7 +447,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}A rolling time period, semantically "in the past X days". Must be between 1 to 30 days, inclusive.
+    <dd>{{% md %}}A rolling time period, semantically "in the past X days".
+Must be between 1 to 30 days, inclusive.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -460,9 +473,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#slobasicsli">Dict[Slo<wbr>Basic<wbr>Sli]</a></span>
     </dt>
-    <dd>{{% md %}}Basic Service-Level Indicator (SLI) on a well-known service type. Performance will be computed on the basis of
-pre-defined metrics. SLIs are used to measure and calculate the quality of the Service's performance with respect to a
-single aspect of service quality.
+    <dd>{{% md %}}Basic Service-Level Indicator (SLI) on a well-known service type.
+Performance will be computed on the basis of pre-defined metrics.
+SLIs are used to measure and calculate the quality of the Service's
+performance with respect to a single aspect of service quality.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -471,7 +485,8 @@ single aspect of service quality.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}The fraction of service that must be good in order for this objective to be met. 0 < goal <= 0.999
+    <dd>{{% md %}}The fraction of service that must be good in order for this objective
+to be met. 0 < goal <= 0.999
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -489,7 +504,8 @@ single aspect of service quality.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}A calendar period, semantically "since the start of the current <calendarPeriod>".
+    <dd>{{% md %}}A calendar period, semantically "since the start of the current
+<calendarPeriod>".
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -517,7 +533,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}A rolling time period, semantically "in the past X days". Must be between 1 to 30 days, inclusive.
+    <dd>{{% md %}}A rolling time period, semantically "in the past X days".
+Must be between 1 to 30 days, inclusive.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -779,9 +796,10 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#slobasicsli">Slo<wbr>Basic<wbr>Sli<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Basic Service-Level Indicator (SLI) on a well-known service type. Performance will be computed on the basis of
-pre-defined metrics. SLIs are used to measure and calculate the quality of the Service's performance with respect to a
-single aspect of service quality.
+    <dd>{{% md %}}Basic Service-Level Indicator (SLI) on a well-known service type.
+Performance will be computed on the basis of pre-defined metrics.
+SLIs are used to measure and calculate the quality of the Service's
+performance with respect to a single aspect of service quality.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -790,7 +808,8 @@ single aspect of service quality.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}A calendar period, semantically "since the start of the current <calendarPeriod>".
+    <dd>{{% md %}}A calendar period, semantically "since the start of the current
+<calendarPeriod>".
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -808,7 +827,8 @@ single aspect of service quality.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
-    <dd>{{% md %}}The fraction of service that must be good in order for this objective to be met. 0 < goal <= 0.999
+    <dd>{{% md %}}The fraction of service that must be good in order for this objective
+to be met. 0 < goal <= 0.999
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -837,7 +857,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}A rolling time period, semantically "in the past X days". Must be between 1 to 30 days, inclusive.
+    <dd>{{% md %}}A rolling time period, semantically "in the past X days".
+Must be between 1 to 30 days, inclusive.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -871,9 +892,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#slobasicsli">Slo<wbr>Basic<wbr>Sli</a></span>
     </dt>
-    <dd>{{% md %}}Basic Service-Level Indicator (SLI) on a well-known service type. Performance will be computed on the basis of
-pre-defined metrics. SLIs are used to measure and calculate the quality of the Service's performance with respect to a
-single aspect of service quality.
+    <dd>{{% md %}}Basic Service-Level Indicator (SLI) on a well-known service type.
+Performance will be computed on the basis of pre-defined metrics.
+SLIs are used to measure and calculate the quality of the Service's
+performance with respect to a single aspect of service quality.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -882,7 +904,8 @@ single aspect of service quality.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}A calendar period, semantically "since the start of the current <calendarPeriod>".
+    <dd>{{% md %}}A calendar period, semantically "since the start of the current
+<calendarPeriod>".
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -900,7 +923,8 @@ single aspect of service quality.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
-    <dd>{{% md %}}The fraction of service that must be good in order for this objective to be met. 0 < goal <= 0.999
+    <dd>{{% md %}}The fraction of service that must be good in order for this objective
+to be met. 0 < goal <= 0.999
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -929,7 +953,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}A rolling time period, semantically "in the past X days". Must be between 1 to 30 days, inclusive.
+    <dd>{{% md %}}A rolling time period, semantically "in the past X days".
+Must be between 1 to 30 days, inclusive.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -963,9 +988,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#slobasicsli">Slo<wbr>Basic<wbr>Sli</a></span>
     </dt>
-    <dd>{{% md %}}Basic Service-Level Indicator (SLI) on a well-known service type. Performance will be computed on the basis of
-pre-defined metrics. SLIs are used to measure and calculate the quality of the Service's performance with respect to a
-single aspect of service quality.
+    <dd>{{% md %}}Basic Service-Level Indicator (SLI) on a well-known service type.
+Performance will be computed on the basis of pre-defined metrics.
+SLIs are used to measure and calculate the quality of the Service's
+performance with respect to a single aspect of service quality.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -974,7 +1000,8 @@ single aspect of service quality.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}A calendar period, semantically "since the start of the current <calendarPeriod>".
+    <dd>{{% md %}}A calendar period, semantically "since the start of the current
+<calendarPeriod>".
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -992,7 +1019,8 @@ single aspect of service quality.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
-    <dd>{{% md %}}The fraction of service that must be good in order for this objective to be met. 0 < goal <= 0.999
+    <dd>{{% md %}}The fraction of service that must be good in order for this objective
+to be met. 0 < goal <= 0.999
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1021,7 +1049,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}A rolling time period, semantically "in the past X days". Must be between 1 to 30 days, inclusive.
+    <dd>{{% md %}}A rolling time period, semantically "in the past X days".
+Must be between 1 to 30 days, inclusive.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1055,9 +1084,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#slobasicsli">Dict[Slo<wbr>Basic<wbr>Sli]</a></span>
     </dt>
-    <dd>{{% md %}}Basic Service-Level Indicator (SLI) on a well-known service type. Performance will be computed on the basis of
-pre-defined metrics. SLIs are used to measure and calculate the quality of the Service's performance with respect to a
-single aspect of service quality.
+    <dd>{{% md %}}Basic Service-Level Indicator (SLI) on a well-known service type.
+Performance will be computed on the basis of pre-defined metrics.
+SLIs are used to measure and calculate the quality of the Service's
+performance with respect to a single aspect of service quality.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1066,7 +1096,8 @@ single aspect of service quality.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}A calendar period, semantically "since the start of the current <calendarPeriod>".
+    <dd>{{% md %}}A calendar period, semantically "since the start of the current
+<calendarPeriod>".
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1084,7 +1115,8 @@ single aspect of service quality.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}The fraction of service that must be good in order for this objective to be met. 0 < goal <= 0.999
+    <dd>{{% md %}}The fraction of service that must be good in order for this objective
+to be met. 0 < goal <= 0.999
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1113,7 +1145,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}A rolling time period, semantically "in the past X days". Must be between 1 to 30 days, inclusive.
+    <dd>{{% md %}}A rolling time period, semantically "in the past X days".
+Must be between 1 to 30 days, inclusive.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1170,7 +1203,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#slobasicslilatency">Slo<wbr>Basic<wbr>Sli<wbr>Latency<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Parameters for a latency threshold SLI.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1178,7 +1212,13 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}An optional set of locations to which this SLI is relevant.
+Telemetry from other locations will not be used to calculate
+performance for this SLI. If omitted, this SLI applies to all
+locations in which the Service has activity. For service types
+that don't support breaking down by location, setting this
+field will result in an error.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1186,7 +1226,13 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}An optional set of RPCs to which this SLI is relevant.
+Telemetry from other methods will not be used to calculate
+performance for this SLI. If omitted, this SLI applies to all
+the Service's methods. For service types that don't support
+breaking down by method, setting this field will result in an
+error.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1194,7 +1240,13 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The set of API versions to which this SLI is relevant.
+Telemetry from other API versions will not be used to
+calculate performance for this SLI. If omitted,
+this SLI applies to all API versions. For service types
+that don't support breaking down by version, setting this
+field will result in an error.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1209,7 +1261,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#slobasicslilatency">Slo<wbr>Basic<wbr>Sli<wbr>Latency</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Parameters for a latency threshold SLI.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1217,7 +1270,13 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}An optional set of locations to which this SLI is relevant.
+Telemetry from other locations will not be used to calculate
+performance for this SLI. If omitted, this SLI applies to all
+locations in which the Service has activity. For service types
+that don't support breaking down by location, setting this
+field will result in an error.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1225,7 +1284,13 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}An optional set of RPCs to which this SLI is relevant.
+Telemetry from other methods will not be used to calculate
+performance for this SLI. If omitted, this SLI applies to all
+the Service's methods. For service types that don't support
+breaking down by method, setting this field will result in an
+error.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1233,7 +1298,13 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The set of API versions to which this SLI is relevant.
+Telemetry from other API versions will not be used to
+calculate performance for this SLI. If omitted,
+this SLI applies to all API versions. For service types
+that don't support breaking down by version, setting this
+field will result in an error.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1248,7 +1319,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#slobasicslilatency">Slo<wbr>Basic<wbr>Sli<wbr>Latency</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Parameters for a latency threshold SLI.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1256,7 +1328,13 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}An optional set of locations to which this SLI is relevant.
+Telemetry from other locations will not be used to calculate
+performance for this SLI. If omitted, this SLI applies to all
+locations in which the Service has activity. For service types
+that don't support breaking down by location, setting this
+field will result in an error.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1264,7 +1342,13 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}An optional set of RPCs to which this SLI is relevant.
+Telemetry from other methods will not be used to calculate
+performance for this SLI. If omitted, this SLI applies to all
+the Service's methods. For service types that don't support
+breaking down by method, setting this field will result in an
+error.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1272,7 +1356,13 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The set of API versions to which this SLI is relevant.
+Telemetry from other API versions will not be used to
+calculate performance for this SLI. If omitted,
+this SLI applies to all API versions. For service types
+that don't support breaking down by version, setting this
+field will result in an error.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1287,7 +1377,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#slobasicslilatency">Dict[Slo<wbr>Basic<wbr>Sli<wbr>Latency]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Parameters for a latency threshold SLI.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1295,7 +1386,13 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}An optional set of locations to which this SLI is relevant.
+Telemetry from other locations will not be used to calculate
+performance for this SLI. If omitted, this SLI applies to all
+locations in which the Service has activity. For service types
+that don't support breaking down by location, setting this
+field will result in an error.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1303,7 +1400,13 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}An optional set of RPCs to which this SLI is relevant.
+Telemetry from other methods will not be used to calculate
+performance for this SLI. If omitted, this SLI applies to all
+the Service's methods. For service types that don't support
+breaking down by method, setting this field will result in an
+error.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1311,7 +1414,13 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The set of API versions to which this SLI is relevant.
+Telemetry from other API versions will not be used to
+calculate performance for this SLI. If omitted,
+this SLI applies to all API versions. For service types
+that don't support breaking down by version, setting this
+field will result in an error.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1341,7 +1450,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A duration string, e.g. 10s.
+Good service is defined to be the count of requests made to
+this service that return in no more than threshold.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1356,7 +1468,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A duration string, e.g. 10s.
+Good service is defined to be the count of requests made to
+this service that return in no more than threshold.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1371,7 +1486,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A duration string, e.g. 10s.
+Good service is defined to be the count of requests made to
+this service that return in no more than threshold.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1386,7 +1504,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A duration string, e.g. 10s.
+Good service is defined to be the count of requests made to
+this service that return in no more than threshold.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1405,8 +1526,7 @@ If it is not provided, the provider project is used.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 

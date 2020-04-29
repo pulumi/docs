@@ -1,7 +1,8 @@
 
 ---
 title: "Reservation"
-block_external_search_index: true
+title_tag: "Resource Reservation | Module compute | Package GCP"
+meta_desc: "Explore the Reservation resource of the compute module, including examples, input properties, output properties, lookup functions, and supporting types. Represents a reservation resource. A reservation ensures that capacity is"
 ---
 
 
@@ -55,7 +56,7 @@ const gceReservation = new gcp.compute.Reservation("gce_reservation", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Reservation</span><span class="p">(resource_name, opts=None, </span>description=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>specific_reservation=None<span class="p">, </span>specific_reservation_required=None<span class="p">, </span>zone=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Reservation</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>description=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>specific_reservation=None<span class="p">, </span>specific_reservation_required=None<span class="p">, </span>zone=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -233,7 +234,7 @@ The Reservation resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reservationspecificreservation">Reservation<wbr>Specific<wbr>Reservation<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Reservation for instances with specific machine shapes.
+    <dd>{{% md %}}Reservation for instances with specific machine shapes.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -260,10 +261,13 @@ The Reservation resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
-comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-'[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is
+created. The name must be 1-63 characters long, and comply with
+RFC1035. Specifically, the name must be 1-63 characters long and match
+the regular expression `a-z?` which means the
+first character must be a lowercase letter, and all following
+characters must be a dash, lowercase letter, or digit, except the last
+character, which cannot be a dash.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -282,8 +286,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}When set to true, only VMs that target this reservation by name can consume this reservation. Otherwise, it can be
-consumed by VMs with affinity for any reservation. Defaults to false.
+    <dd>{{% md %}}When set to true, only VMs that target this reservation by name can
+consume this reservation. Otherwise, it can be consumed by VMs with
+affinity for any reservation. Defaults to false.
 {{% /md %}}</dd>
 
 </dl>
@@ -299,7 +304,7 @@ consumed by VMs with affinity for any reservation. Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reservationspecificreservation">Reservation<wbr>Specific<wbr>Reservation</a></span>
     </dt>
-    <dd>{{% md %}}Reservation for instances with specific machine shapes.
+    <dd>{{% md %}}Reservation for instances with specific machine shapes.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -326,10 +331,13 @@ consumed by VMs with affinity for any reservation. Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
-comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-'[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is
+created. The name must be 1-63 characters long, and comply with
+RFC1035. Specifically, the name must be 1-63 characters long and match
+the regular expression `a-z?` which means the
+first character must be a lowercase letter, and all following
+characters must be a dash, lowercase letter, or digit, except the last
+character, which cannot be a dash.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -348,8 +356,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}When set to true, only VMs that target this reservation by name can consume this reservation. Otherwise, it can be
-consumed by VMs with affinity for any reservation. Defaults to false.
+    <dd>{{% md %}}When set to true, only VMs that target this reservation by name can
+consume this reservation. Otherwise, it can be consumed by VMs with
+affinity for any reservation. Defaults to false.
 {{% /md %}}</dd>
 
 </dl>
@@ -365,7 +374,7 @@ consumed by VMs with affinity for any reservation. Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reservationspecificreservation">Reservation<wbr>Specific<wbr>Reservation</a></span>
     </dt>
-    <dd>{{% md %}}Reservation for instances with specific machine shapes.
+    <dd>{{% md %}}Reservation for instances with specific machine shapes.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -392,10 +401,13 @@ consumed by VMs with affinity for any reservation. Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
-comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-'[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is
+created. The name must be 1-63 characters long, and comply with
+RFC1035. Specifically, the name must be 1-63 characters long and match
+the regular expression `a-z?` which means the
+first character must be a lowercase letter, and all following
+characters must be a dash, lowercase letter, or digit, except the last
+character, which cannot be a dash.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -414,8 +426,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}When set to true, only VMs that target this reservation by name can consume this reservation. Otherwise, it can be
-consumed by VMs with affinity for any reservation. Defaults to false.
+    <dd>{{% md %}}When set to true, only VMs that target this reservation by name can
+consume this reservation. Otherwise, it can be consumed by VMs with
+affinity for any reservation. Defaults to false.
 {{% /md %}}</dd>
 
 </dl>
@@ -431,7 +444,7 @@ consumed by VMs with affinity for any reservation. Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reservationspecificreservation">Dict[Reservation<wbr>Specific<wbr>Reservation]</a></span>
     </dt>
-    <dd>{{% md %}}Reservation for instances with specific machine shapes.
+    <dd>{{% md %}}Reservation for instances with specific machine shapes.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -458,10 +471,13 @@ consumed by VMs with affinity for any reservation. Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
-comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-'[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is
+created. The name must be 1-63 characters long, and comply with
+RFC1035. Specifically, the name must be 1-63 characters long and match
+the regular expression `a-z?` which means the
+first character must be a lowercase letter, and all following
+characters must be a dash, lowercase letter, or digit, except the last
+character, which cannot be a dash.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -480,8 +496,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}When set to true, only VMs that target this reservation by name can consume this reservation. Otherwise, it can be
-consumed by VMs with affinity for any reservation. Defaults to false.
+    <dd>{{% md %}}When set to true, only VMs that target this reservation by name can
+consume this reservation. Otherwise, it can be consumed by VMs with
+affinity for any reservation. Defaults to false.
 {{% /md %}}</dd>
 
 </dl>
@@ -865,10 +882,13 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
-comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-'[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is
+created. The name must be 1-63 characters long, and comply with
+RFC1035. Specifically, the name must be 1-63 characters long and match
+the regular expression `a-z?` which means the
+first character must be a lowercase letter, and all following
+characters must be a dash, lowercase letter, or digit, except the last
+character, which cannot be a dash.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -896,7 +916,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reservationspecificreservation">Reservation<wbr>Specific<wbr>Reservation<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Reservation for instances with specific machine shapes.
+    <dd>{{% md %}}Reservation for instances with specific machine shapes.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -905,8 +925,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}When set to true, only VMs that target this reservation by name can consume this reservation. Otherwise, it can be
-consumed by VMs with affinity for any reservation. Defaults to false.
+    <dd>{{% md %}}When set to true, only VMs that target this reservation by name can
+consume this reservation. Otherwise, it can be consumed by VMs with
+affinity for any reservation. Defaults to false.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -967,10 +988,13 @@ consumed by VMs with affinity for any reservation. Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
-comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-'[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is
+created. The name must be 1-63 characters long, and comply with
+RFC1035. Specifically, the name must be 1-63 characters long and match
+the regular expression `a-z?` which means the
+first character must be a lowercase letter, and all following
+characters must be a dash, lowercase letter, or digit, except the last
+character, which cannot be a dash.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -998,7 +1022,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reservationspecificreservation">Reservation<wbr>Specific<wbr>Reservation</a></span>
     </dt>
-    <dd>{{% md %}}Reservation for instances with specific machine shapes.
+    <dd>{{% md %}}Reservation for instances with specific machine shapes.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1007,8 +1031,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}When set to true, only VMs that target this reservation by name can consume this reservation. Otherwise, it can be
-consumed by VMs with affinity for any reservation. Defaults to false.
+    <dd>{{% md %}}When set to true, only VMs that target this reservation by name can
+consume this reservation. Otherwise, it can be consumed by VMs with
+affinity for any reservation. Defaults to false.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1069,10 +1094,13 @@ consumed by VMs with affinity for any reservation. Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
-comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-'[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is
+created. The name must be 1-63 characters long, and comply with
+RFC1035. Specifically, the name must be 1-63 characters long and match
+the regular expression `a-z?` which means the
+first character must be a lowercase letter, and all following
+characters must be a dash, lowercase letter, or digit, except the last
+character, which cannot be a dash.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1100,7 +1128,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reservationspecificreservation">Reservation<wbr>Specific<wbr>Reservation</a></span>
     </dt>
-    <dd>{{% md %}}Reservation for instances with specific machine shapes.
+    <dd>{{% md %}}Reservation for instances with specific machine shapes.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1109,8 +1137,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}When set to true, only VMs that target this reservation by name can consume this reservation. Otherwise, it can be
-consumed by VMs with affinity for any reservation. Defaults to false.
+    <dd>{{% md %}}When set to true, only VMs that target this reservation by name can
+consume this reservation. Otherwise, it can be consumed by VMs with
+affinity for any reservation. Defaults to false.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1171,10 +1200,13 @@ consumed by VMs with affinity for any reservation. Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
-comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-'[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is
+created. The name must be 1-63 characters long, and comply with
+RFC1035. Specifically, the name must be 1-63 characters long and match
+the regular expression `a-z?` which means the
+first character must be a lowercase letter, and all following
+characters must be a dash, lowercase letter, or digit, except the last
+character, which cannot be a dash.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1202,7 +1234,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reservationspecificreservation">Dict[Reservation<wbr>Specific<wbr>Reservation]</a></span>
     </dt>
-    <dd>{{% md %}}Reservation for instances with specific machine shapes.
+    <dd>{{% md %}}Reservation for instances with specific machine shapes.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1211,8 +1243,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}When set to true, only VMs that target this reservation by name can consume this reservation. Otherwise, it can be
-consumed by VMs with affinity for any reservation. Defaults to false.
+    <dd>{{% md %}}When set to true, only VMs that target this reservation by name can
+consume this reservation. Otherwise, it can be consumed by VMs with
+affinity for any reservation. Defaults to false.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1269,7 +1302,8 @@ consumed by VMs with affinity for any reservation. Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of resources that are allocated.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1277,7 +1311,8 @@ consumed by VMs with affinity for any reservation. Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reservationspecificreservationinstanceproperties">Reservation<wbr>Specific<wbr>Reservation<wbr>Instance<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The instance properties for the reservation.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1285,7 +1320,9 @@ consumed by VMs with affinity for any reservation. Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-
+How many instances are in use.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1300,7 +1337,8 @@ consumed by VMs with affinity for any reservation. Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of resources that are allocated.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1308,7 +1346,8 @@ consumed by VMs with affinity for any reservation. Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reservationspecificreservationinstanceproperties">Reservation<wbr>Specific<wbr>Reservation<wbr>Instance<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The instance properties for the reservation.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1316,7 +1355,9 @@ consumed by VMs with affinity for any reservation. Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-
+How many instances are in use.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1331,7 +1372,8 @@ consumed by VMs with affinity for any reservation. Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of resources that are allocated.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1339,7 +1381,8 @@ consumed by VMs with affinity for any reservation. Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reservationspecificreservationinstanceproperties">Reservation<wbr>Specific<wbr>Reservation<wbr>Instance<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The instance properties for the reservation.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1347,7 +1390,9 @@ consumed by VMs with affinity for any reservation. Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-
+How many instances are in use.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1362,7 +1407,8 @@ consumed by VMs with affinity for any reservation. Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of resources that are allocated.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1370,7 +1416,8 @@ consumed by VMs with affinity for any reservation. Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reservationspecificreservationinstanceproperties">Dict[Reservation<wbr>Specific<wbr>Reservation<wbr>Instance<wbr>Properties]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The instance properties for the reservation.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1378,7 +1425,9 @@ consumed by VMs with affinity for any reservation. Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-
+How many instances are in use.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1408,7 +1457,8 @@ consumed by VMs with affinity for any reservation. Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the machine type to reserve.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1416,7 +1466,8 @@ consumed by VMs with affinity for any reservation. Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reservationspecificreservationinstancepropertiesguestaccelerator">List&lt;Reservation<wbr>Specific<wbr>Reservation<wbr>Instance<wbr>Properties<wbr>Guest<wbr>Accelerator<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Guest accelerator type and count.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1424,7 +1475,9 @@ consumed by VMs with affinity for any reservation. Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reservationspecificreservationinstancepropertieslocalssd">List&lt;Reservation<wbr>Specific<wbr>Reservation<wbr>Instance<wbr>Properties<wbr>Local<wbr>Ssd<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The amount of local ssd to reserve with each instance. This
+reserves disks of type `local-ssd`.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1432,7 +1485,11 @@ consumed by VMs with affinity for any reservation. Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The minimum CPU platform for the reservation. For example,
+`"Intel Skylake"`. See
+the CPU platform availability reference](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform#availablezones)
+for information on available CPU platforms.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1447,7 +1504,8 @@ consumed by VMs with affinity for any reservation. Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the machine type to reserve.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1455,7 +1513,8 @@ consumed by VMs with affinity for any reservation. Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reservationspecificreservationinstancepropertiesguestaccelerator">[]Reservation<wbr>Specific<wbr>Reservation<wbr>Instance<wbr>Properties<wbr>Guest<wbr>Accelerator</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Guest accelerator type and count.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1463,7 +1522,9 @@ consumed by VMs with affinity for any reservation. Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reservationspecificreservationinstancepropertieslocalssd">[]Reservation<wbr>Specific<wbr>Reservation<wbr>Instance<wbr>Properties<wbr>Local<wbr>Ssd</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The amount of local ssd to reserve with each instance. This
+reserves disks of type `local-ssd`.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1471,7 +1532,11 @@ consumed by VMs with affinity for any reservation. Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The minimum CPU platform for the reservation. For example,
+`"Intel Skylake"`. See
+the CPU platform availability reference](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform#availablezones)
+for information on available CPU platforms.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1486,7 +1551,8 @@ consumed by VMs with affinity for any reservation. Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the machine type to reserve.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1494,7 +1560,8 @@ consumed by VMs with affinity for any reservation. Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reservationspecificreservationinstancepropertiesguestaccelerator">Reservation<wbr>Specific<wbr>Reservation<wbr>Instance<wbr>Properties<wbr>Guest<wbr>Accelerator[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Guest accelerator type and count.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1502,7 +1569,9 @@ consumed by VMs with affinity for any reservation. Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reservationspecificreservationinstancepropertieslocalssd">Reservation<wbr>Specific<wbr>Reservation<wbr>Instance<wbr>Properties<wbr>Local<wbr>Ssd[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The amount of local ssd to reserve with each instance. This
+reserves disks of type `local-ssd`.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1510,7 +1579,11 @@ consumed by VMs with affinity for any reservation. Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The minimum CPU platform for the reservation. For example,
+`"Intel Skylake"`. See
+the CPU platform availability reference](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform#availablezones)
+for information on available CPU platforms.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1525,7 +1598,8 @@ consumed by VMs with affinity for any reservation. Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the machine type to reserve.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1533,7 +1607,8 @@ consumed by VMs with affinity for any reservation. Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reservationspecificreservationinstancepropertiesguestaccelerator">List[Reservation<wbr>Specific<wbr>Reservation<wbr>Instance<wbr>Properties<wbr>Guest<wbr>Accelerator]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Guest accelerator type and count.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1541,7 +1616,9 @@ consumed by VMs with affinity for any reservation. Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reservationspecificreservationinstancepropertieslocalssd">List[Reservation<wbr>Specific<wbr>Reservation<wbr>Instance<wbr>Properties<wbr>Local<wbr>Ssd]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The amount of local ssd to reserve with each instance. This
+reserves disks of type `local-ssd`.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1549,7 +1626,11 @@ consumed by VMs with affinity for any reservation. Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The minimum CPU platform for the reservation. For example,
+`"Intel Skylake"`. See
+the CPU platform availability reference](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform#availablezones)
+for information on available CPU platforms.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1579,7 +1660,9 @@ consumed by VMs with affinity for any reservation. Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of the guest accelerator cards exposed to
+this instance.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1587,7 +1670,11 @@ consumed by VMs with affinity for any reservation. Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The full or partial URL of the accelerator type to
+attach to this instance. For example:
+`projects/my-project/zones/us-central1-c/acceleratorTypes/nvidia-tesla-p100`
+If you are creating an instance template, specify only the accelerator name.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1602,7 +1689,9 @@ consumed by VMs with affinity for any reservation. Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of the guest accelerator cards exposed to
+this instance.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1610,7 +1699,11 @@ consumed by VMs with affinity for any reservation. Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The full or partial URL of the accelerator type to
+attach to this instance. For example:
+`projects/my-project/zones/us-central1-c/acceleratorTypes/nvidia-tesla-p100`
+If you are creating an instance template, specify only the accelerator name.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1625,7 +1718,9 @@ consumed by VMs with affinity for any reservation. Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of the guest accelerator cards exposed to
+this instance.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1633,7 +1728,11 @@ consumed by VMs with affinity for any reservation. Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The full or partial URL of the accelerator type to
+attach to this instance. For example:
+`projects/my-project/zones/us-central1-c/acceleratorTypes/nvidia-tesla-p100`
+If you are creating an instance template, specify only the accelerator name.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1648,7 +1747,9 @@ consumed by VMs with affinity for any reservation. Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of the guest accelerator cards exposed to
+this instance.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1656,7 +1757,11 @@ consumed by VMs with affinity for any reservation. Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The full or partial URL of the accelerator type to
+attach to this instance. For example:
+`projects/my-project/zones/us-central1-c/acceleratorTypes/nvidia-tesla-p100`
+If you are creating an instance template, specify only the accelerator name.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1686,7 +1791,8 @@ consumed by VMs with affinity for any reservation. Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The size of the disk in base-2 GB.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1694,7 +1800,9 @@ consumed by VMs with affinity for any reservation. Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The disk interface to use for attaching this disk, one
+of `SCSI` or `NVME`. The default is `SCSI`.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1709,7 +1817,8 @@ consumed by VMs with affinity for any reservation. Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The size of the disk in base-2 GB.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1717,7 +1826,9 @@ consumed by VMs with affinity for any reservation. Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The disk interface to use for attaching this disk, one
+of `SCSI` or `NVME`. The default is `SCSI`.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1732,7 +1843,8 @@ consumed by VMs with affinity for any reservation. Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The size of the disk in base-2 GB.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1740,7 +1852,9 @@ consumed by VMs with affinity for any reservation. Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The disk interface to use for attaching this disk, one
+of `SCSI` or `NVME`. The default is `SCSI`.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1755,7 +1869,8 @@ consumed by VMs with affinity for any reservation. Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The size of the disk in base-2 GB.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1763,7 +1878,9 @@ consumed by VMs with affinity for any reservation. Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The disk interface to use for attaching this disk, one
+of `SCSI` or `NVME`. The default is `SCSI`.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1782,8 +1899,7 @@ consumed by VMs with affinity for any reservation. Defaults to false.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 

@@ -1,7 +1,8 @@
 
 ---
 title: "AppProfile"
-block_external_search_index: true
+title_tag: "Resource AppProfile | Module bigquery | Package GCP"
+meta_desc: "Explore the AppProfile resource of the bigquery module, including examples, input properties, output properties, lookup functions, and supporting types. App profile is a configuration object describing how Cloud Bigtable should treat traffic from a particular end user application."
 ---
 
 
@@ -22,7 +23,7 @@ App profile is a configuration object describing how Cloud Bigtable should treat
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">AppProfile</span><span class="p">(resource_name, opts=None, </span>app_profile_id=None<span class="p">, </span>description=None<span class="p">, </span>ignore_warnings=None<span class="p">, </span>instance=None<span class="p">, </span>multi_cluster_routing_use_any=None<span class="p">, </span>project=None<span class="p">, </span>single_cluster_routing=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">AppProfile</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>app_profile_id=None<span class="p">, </span>description=None<span class="p">, </span>ignore_warnings=None<span class="p">, </span>instance=None<span class="p">, </span>multi_cluster_routing_use_any=None<span class="p">, </span>project=None<span class="p">, </span>single_cluster_routing=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -200,7 +201,7 @@ The AppProfile resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The unique name of the app profile in the form '[_a-zA-Z0-9][-_.a-zA-Z0-9]*'.
+    <dd>{{% md %}}The unique name of the app profile in the form `[_a-zA-Z0-9][-_.a-zA-Z0-9]*`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -236,9 +237,9 @@ The AppProfile resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}If true, read/write requests are routed to the nearest cluster in the instance, and will fail over to the nearest
-cluster that is available in the event of transient errors or delays. Clusters in a region are considered equidistant.
-Choosing this option sacrifices read-your-writes consistency to improve availability.
+    <dd>{{% md %}}If true, read/write requests are routed to the nearest cluster in the instance, and will fail over to the nearest cluster that is available
+in the event of transient errors or delays. Clusters in a region are considered equidistant. Choosing this option sacrifices read-your-writes
+consistency to improve availability.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -257,7 +258,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#appprofilesingleclusterrouting">App<wbr>Profile<wbr>Single<wbr>Cluster<wbr>Routing<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Use a single-cluster routing policy.
+    <dd>{{% md %}}Use a single-cluster routing policy.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -273,7 +274,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The unique name of the app profile in the form '[_a-zA-Z0-9][-_.a-zA-Z0-9]*'.
+    <dd>{{% md %}}The unique name of the app profile in the form `[_a-zA-Z0-9][-_.a-zA-Z0-9]*`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -309,9 +310,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}If true, read/write requests are routed to the nearest cluster in the instance, and will fail over to the nearest
-cluster that is available in the event of transient errors or delays. Clusters in a region are considered equidistant.
-Choosing this option sacrifices read-your-writes consistency to improve availability.
+    <dd>{{% md %}}If true, read/write requests are routed to the nearest cluster in the instance, and will fail over to the nearest cluster that is available
+in the event of transient errors or delays. Clusters in a region are considered equidistant. Choosing this option sacrifices read-your-writes
+consistency to improve availability.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -330,7 +331,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#appprofilesingleclusterrouting">App<wbr>Profile<wbr>Single<wbr>Cluster<wbr>Routing</a></span>
     </dt>
-    <dd>{{% md %}}Use a single-cluster routing policy.
+    <dd>{{% md %}}Use a single-cluster routing policy.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -346,7 +347,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The unique name of the app profile in the form '[_a-zA-Z0-9][-_.a-zA-Z0-9]*'.
+    <dd>{{% md %}}The unique name of the app profile in the form `[_a-zA-Z0-9][-_.a-zA-Z0-9]*`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -382,9 +383,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}If true, read/write requests are routed to the nearest cluster in the instance, and will fail over to the nearest
-cluster that is available in the event of transient errors or delays. Clusters in a region are considered equidistant.
-Choosing this option sacrifices read-your-writes consistency to improve availability.
+    <dd>{{% md %}}If true, read/write requests are routed to the nearest cluster in the instance, and will fail over to the nearest cluster that is available
+in the event of transient errors or delays. Clusters in a region are considered equidistant. Choosing this option sacrifices read-your-writes
+consistency to improve availability.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -403,7 +404,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#appprofilesingleclusterrouting">App<wbr>Profile<wbr>Single<wbr>Cluster<wbr>Routing</a></span>
     </dt>
-    <dd>{{% md %}}Use a single-cluster routing policy.
+    <dd>{{% md %}}Use a single-cluster routing policy.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -419,7 +420,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The unique name of the app profile in the form '[_a-zA-Z0-9][-_.a-zA-Z0-9]*'.
+    <dd>{{% md %}}The unique name of the app profile in the form `[_a-zA-Z0-9][-_.a-zA-Z0-9]*`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -455,9 +456,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}If true, read/write requests are routed to the nearest cluster in the instance, and will fail over to the nearest
-cluster that is available in the event of transient errors or delays. Clusters in a region are considered equidistant.
-Choosing this option sacrifices read-your-writes consistency to improve availability.
+    <dd>{{% md %}}If true, read/write requests are routed to the nearest cluster in the instance, and will fail over to the nearest cluster that is available
+in the event of transient errors or delays. Clusters in a region are considered equidistant. Choosing this option sacrifices read-your-writes
+consistency to improve availability.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -476,7 +477,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#appprofilesingleclusterrouting">Dict[App<wbr>Profile<wbr>Single<wbr>Cluster<wbr>Routing]</a></span>
     </dt>
-    <dd>{{% md %}}Use a single-cluster routing policy.
+    <dd>{{% md %}}Use a single-cluster routing policy.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -729,7 +730,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The unique name of the app profile in the form '[_a-zA-Z0-9][-_.a-zA-Z0-9]*'.
+    <dd>{{% md %}}The unique name of the app profile in the form `[_a-zA-Z0-9][-_.a-zA-Z0-9]*`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -765,9 +766,9 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}If true, read/write requests are routed to the nearest cluster in the instance, and will fail over to the nearest
-cluster that is available in the event of transient errors or delays. Clusters in a region are considered equidistant.
-Choosing this option sacrifices read-your-writes consistency to improve availability.
+    <dd>{{% md %}}If true, read/write requests are routed to the nearest cluster in the instance, and will fail over to the nearest cluster that is available
+in the event of transient errors or delays. Clusters in a region are considered equidistant. Choosing this option sacrifices read-your-writes
+consistency to improve availability.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -796,7 +797,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#appprofilesingleclusterrouting">App<wbr>Profile<wbr>Single<wbr>Cluster<wbr>Routing<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Use a single-cluster routing policy.
+    <dd>{{% md %}}Use a single-cluster routing policy.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -812,7 +813,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The unique name of the app profile in the form '[_a-zA-Z0-9][-_.a-zA-Z0-9]*'.
+    <dd>{{% md %}}The unique name of the app profile in the form `[_a-zA-Z0-9][-_.a-zA-Z0-9]*`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -848,9 +849,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}If true, read/write requests are routed to the nearest cluster in the instance, and will fail over to the nearest
-cluster that is available in the event of transient errors or delays. Clusters in a region are considered equidistant.
-Choosing this option sacrifices read-your-writes consistency to improve availability.
+    <dd>{{% md %}}If true, read/write requests are routed to the nearest cluster in the instance, and will fail over to the nearest cluster that is available
+in the event of transient errors or delays. Clusters in a region are considered equidistant. Choosing this option sacrifices read-your-writes
+consistency to improve availability.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -879,7 +880,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#appprofilesingleclusterrouting">App<wbr>Profile<wbr>Single<wbr>Cluster<wbr>Routing</a></span>
     </dt>
-    <dd>{{% md %}}Use a single-cluster routing policy.
+    <dd>{{% md %}}Use a single-cluster routing policy.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -895,7 +896,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The unique name of the app profile in the form '[_a-zA-Z0-9][-_.a-zA-Z0-9]*'.
+    <dd>{{% md %}}The unique name of the app profile in the form `[_a-zA-Z0-9][-_.a-zA-Z0-9]*`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -931,9 +932,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}If true, read/write requests are routed to the nearest cluster in the instance, and will fail over to the nearest
-cluster that is available in the event of transient errors or delays. Clusters in a region are considered equidistant.
-Choosing this option sacrifices read-your-writes consistency to improve availability.
+    <dd>{{% md %}}If true, read/write requests are routed to the nearest cluster in the instance, and will fail over to the nearest cluster that is available
+in the event of transient errors or delays. Clusters in a region are considered equidistant. Choosing this option sacrifices read-your-writes
+consistency to improve availability.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -962,7 +963,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#appprofilesingleclusterrouting">App<wbr>Profile<wbr>Single<wbr>Cluster<wbr>Routing</a></span>
     </dt>
-    <dd>{{% md %}}Use a single-cluster routing policy.
+    <dd>{{% md %}}Use a single-cluster routing policy.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -978,7 +979,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The unique name of the app profile in the form '[_a-zA-Z0-9][-_.a-zA-Z0-9]*'.
+    <dd>{{% md %}}The unique name of the app profile in the form `[_a-zA-Z0-9][-_.a-zA-Z0-9]*`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1014,9 +1015,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}If true, read/write requests are routed to the nearest cluster in the instance, and will fail over to the nearest
-cluster that is available in the event of transient errors or delays. Clusters in a region are considered equidistant.
-Choosing this option sacrifices read-your-writes consistency to improve availability.
+    <dd>{{% md %}}If true, read/write requests are routed to the nearest cluster in the instance, and will fail over to the nearest cluster that is available
+in the event of transient errors or delays. Clusters in a region are considered equidistant. Choosing this option sacrifices read-your-writes
+consistency to improve availability.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1045,7 +1046,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#appprofilesingleclusterrouting">Dict[App<wbr>Profile<wbr>Single<wbr>Cluster<wbr>Routing]</a></span>
     </dt>
-    <dd>{{% md %}}Use a single-cluster routing policy.
+    <dd>{{% md %}}Use a single-cluster routing policy.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1084,7 +1085,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The cluster to which read/write requests should be routed.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1092,7 +1094,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If true, CheckAndMutateRow and ReadModifyWriteRow requests are allowed by this app profile.
+It is unsafe to send these requests to the same table/row/column in multiple clusters.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1107,7 +1111,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The cluster to which read/write requests should be routed.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1115,7 +1120,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If true, CheckAndMutateRow and ReadModifyWriteRow requests are allowed by this app profile.
+It is unsafe to send these requests to the same table/row/column in multiple clusters.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1130,7 +1137,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The cluster to which read/write requests should be routed.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1138,7 +1146,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If true, CheckAndMutateRow and ReadModifyWriteRow requests are allowed by this app profile.
+It is unsafe to send these requests to the same table/row/column in multiple clusters.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1153,7 +1163,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The cluster to which read/write requests should be routed.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1161,7 +1172,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If true, CheckAndMutateRow and ReadModifyWriteRow requests are allowed by this app profile.
+It is unsafe to send these requests to the same table/row/column in multiple clusters.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1180,8 +1193,7 @@ If it is not provided, the provider project is used.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 

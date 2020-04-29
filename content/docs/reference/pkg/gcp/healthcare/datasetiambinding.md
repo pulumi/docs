@@ -1,7 +1,8 @@
 
 ---
 title: "DatasetIamBinding"
-block_external_search_index: true
+title_tag: "Resource DatasetIamBinding | Module healthcare | Package GCP"
+meta_desc: "Explore the DatasetIamBinding resource of the healthcare module, including examples, input properties, output properties, lookup functions, and supporting types. Three different resources help you manage your IAM policy for Healthcare dataset. Each of these resources serves a different use case:"
 ---
 
 
@@ -56,7 +57,7 @@ const dataset = new gcp.healthcare.DatasetIamMember("dataset", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">DatasetIamBinding</span><span class="p">(resource_name, opts=None, </span>condition=None<span class="p">, </span>dataset_id=None<span class="p">, </span>members=None<span class="p">, </span>role=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">DatasetIamBinding</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>condition=None<span class="p">, </span>dataset_id=None<span class="p">, </span>members=None<span class="p">, </span>role=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1022,8 +1023,7 @@ project setting will be used as a fallback.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 

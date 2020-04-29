@@ -1,7 +1,8 @@
 
 ---
 title: "Network"
-block_external_search_index: true
+title_tag: "Resource Network | Module compute | Package GCP"
+meta_desc: "Explore the Network resource of the compute module, including examples, input properties, output properties, lookup functions, and supporting types. Manages a VPC network or legacy network resource on GCP."
 ---
 
 
@@ -39,7 +40,7 @@ const vpcNetwork = new gcp.compute.Network("vpc_network", {});
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Network</span><span class="p">(resource_name, opts=None, </span>auto_create_subnetworks=None<span class="p">, </span>delete_default_routes_on_create=None<span class="p">, </span>description=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>routing_mode=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Network</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>auto_create_subnetworks=None<span class="p">, </span>delete_default_routes_on_create=None<span class="p">, </span>description=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>routing_mode=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -217,9 +218,11 @@ The Network resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}When set to 'true', the network is created in "auto subnet mode" and it will create a subnet for each region
-automatically across the '10.128.0.0/9' address range. When set to 'false', the network is created in "custom subnet
-mode" so the user can explicitly connect subnetwork resources.
+    <dd>{{% md %}}When set to `true`, the network is created in "auto subnet mode" and
+it will create a subnet for each region automatically across the
+`10.128.0.0/9` address range.
+When set to `false`, the network is created in "custom subnet mode" so
+the user can explicitly connect subnetwork resources.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -238,7 +241,8 @@ immediately after network creation. Defaults to `false`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}An optional description of this resource. The resource must be recreated to modify this field.
+    <dd>{{% md %}}An optional description of this resource. The resource must be
+recreated to modify this field.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -247,10 +251,13 @@ immediately after network creation. Defaults to `false`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
-comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-'[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is
+created. The name must be 1-63 characters long, and comply with
+RFC1035. Specifically, the name must be 1-63 characters long and match
+the regular expression `a-z?` which means the
+first character must be a lowercase letter, and all following
+characters must be a dash, lowercase letter, or digit, except the last
+character, which cannot be a dash.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -269,9 +276,11 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The network-wide routing mode to use. If set to 'REGIONAL', this network's cloud routers will only advertise routes with
-subnetworks of this network in the same region as the router. If set to 'GLOBAL', this network's cloud routers will
-advertise routes with all subnetworks of this network, across regions.
+    <dd>{{% md %}}The network-wide routing mode to use. If set to `REGIONAL`, this
+network's cloud routers will only advertise routes with subnetworks
+of this network in the same region as the router. If set to `GLOBAL`,
+this network's cloud routers will advertise routes with all
+subnetworks of this network, across regions.
 {{% /md %}}</dd>
 
 </dl>
@@ -287,9 +296,11 @@ advertise routes with all subnetworks of this network, across regions.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}When set to 'true', the network is created in "auto subnet mode" and it will create a subnet for each region
-automatically across the '10.128.0.0/9' address range. When set to 'false', the network is created in "custom subnet
-mode" so the user can explicitly connect subnetwork resources.
+    <dd>{{% md %}}When set to `true`, the network is created in "auto subnet mode" and
+it will create a subnet for each region automatically across the
+`10.128.0.0/9` address range.
+When set to `false`, the network is created in "custom subnet mode" so
+the user can explicitly connect subnetwork resources.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -308,7 +319,8 @@ immediately after network creation. Defaults to `false`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}An optional description of this resource. The resource must be recreated to modify this field.
+    <dd>{{% md %}}An optional description of this resource. The resource must be
+recreated to modify this field.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -317,10 +329,13 @@ immediately after network creation. Defaults to `false`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
-comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-'[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is
+created. The name must be 1-63 characters long, and comply with
+RFC1035. Specifically, the name must be 1-63 characters long and match
+the regular expression `a-z?` which means the
+first character must be a lowercase letter, and all following
+characters must be a dash, lowercase letter, or digit, except the last
+character, which cannot be a dash.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -339,9 +354,11 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The network-wide routing mode to use. If set to 'REGIONAL', this network's cloud routers will only advertise routes with
-subnetworks of this network in the same region as the router. If set to 'GLOBAL', this network's cloud routers will
-advertise routes with all subnetworks of this network, across regions.
+    <dd>{{% md %}}The network-wide routing mode to use. If set to `REGIONAL`, this
+network's cloud routers will only advertise routes with subnetworks
+of this network in the same region as the router. If set to `GLOBAL`,
+this network's cloud routers will advertise routes with all
+subnetworks of this network, across regions.
 {{% /md %}}</dd>
 
 </dl>
@@ -357,9 +374,11 @@ advertise routes with all subnetworks of this network, across regions.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}When set to 'true', the network is created in "auto subnet mode" and it will create a subnet for each region
-automatically across the '10.128.0.0/9' address range. When set to 'false', the network is created in "custom subnet
-mode" so the user can explicitly connect subnetwork resources.
+    <dd>{{% md %}}When set to `true`, the network is created in "auto subnet mode" and
+it will create a subnet for each region automatically across the
+`10.128.0.0/9` address range.
+When set to `false`, the network is created in "custom subnet mode" so
+the user can explicitly connect subnetwork resources.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -378,7 +397,8 @@ immediately after network creation. Defaults to `false`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}An optional description of this resource. The resource must be recreated to modify this field.
+    <dd>{{% md %}}An optional description of this resource. The resource must be
+recreated to modify this field.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -387,10 +407,13 @@ immediately after network creation. Defaults to `false`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
-comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-'[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is
+created. The name must be 1-63 characters long, and comply with
+RFC1035. Specifically, the name must be 1-63 characters long and match
+the regular expression `a-z?` which means the
+first character must be a lowercase letter, and all following
+characters must be a dash, lowercase letter, or digit, except the last
+character, which cannot be a dash.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -409,9 +432,11 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The network-wide routing mode to use. If set to 'REGIONAL', this network's cloud routers will only advertise routes with
-subnetworks of this network in the same region as the router. If set to 'GLOBAL', this network's cloud routers will
-advertise routes with all subnetworks of this network, across regions.
+    <dd>{{% md %}}The network-wide routing mode to use. If set to `REGIONAL`, this
+network's cloud routers will only advertise routes with subnetworks
+of this network in the same region as the router. If set to `GLOBAL`,
+this network's cloud routers will advertise routes with all
+subnetworks of this network, across regions.
 {{% /md %}}</dd>
 
 </dl>
@@ -427,9 +452,11 @@ advertise routes with all subnetworks of this network, across regions.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}When set to 'true', the network is created in "auto subnet mode" and it will create a subnet for each region
-automatically across the '10.128.0.0/9' address range. When set to 'false', the network is created in "custom subnet
-mode" so the user can explicitly connect subnetwork resources.
+    <dd>{{% md %}}When set to `true`, the network is created in "auto subnet mode" and
+it will create a subnet for each region automatically across the
+`10.128.0.0/9` address range.
+When set to `false`, the network is created in "custom subnet mode" so
+the user can explicitly connect subnetwork resources.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -448,7 +475,8 @@ immediately after network creation. Defaults to `false`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}An optional description of this resource. The resource must be recreated to modify this field.
+    <dd>{{% md %}}An optional description of this resource. The resource must be
+recreated to modify this field.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -457,10 +485,13 @@ immediately after network creation. Defaults to `false`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
-comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-'[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is
+created. The name must be 1-63 characters long, and comply with
+RFC1035. Specifically, the name must be 1-63 characters long and match
+the regular expression `a-z?` which means the
+first character must be a lowercase letter, and all following
+characters must be a dash, lowercase letter, or digit, except the last
+character, which cannot be a dash.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -479,9 +510,11 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The network-wide routing mode to use. If set to 'REGIONAL', this network's cloud routers will only advertise routes with
-subnetworks of this network in the same region as the router. If set to 'GLOBAL', this network's cloud routers will
-advertise routes with all subnetworks of this network, across regions.
+    <dd>{{% md %}}The network-wide routing mode to use. If set to `REGIONAL`, this
+network's cloud routers will only advertise routes with subnetworks
+of this network in the same region as the router. If set to `GLOBAL`,
+this network's cloud routers will advertise routes with all
+subnetworks of this network, across regions.
 {{% /md %}}</dd>
 
 </dl>
@@ -766,9 +799,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}When set to 'true', the network is created in "auto subnet mode" and it will create a subnet for each region
-automatically across the '10.128.0.0/9' address range. When set to 'false', the network is created in "custom subnet
-mode" so the user can explicitly connect subnetwork resources.
+    <dd>{{% md %}}When set to `true`, the network is created in "auto subnet mode" and
+it will create a subnet for each region automatically across the
+`10.128.0.0/9` address range.
+When set to `false`, the network is created in "custom subnet mode" so
+the user can explicitly connect subnetwork resources.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -787,7 +822,8 @@ immediately after network creation. Defaults to `false`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}An optional description of this resource. The resource must be recreated to modify this field.
+    <dd>{{% md %}}An optional description of this resource. The resource must be
+recreated to modify this field.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -805,10 +841,13 @@ immediately after network creation. Defaults to `false`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
-comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-'[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is
+created. The name must be 1-63 characters long, and comply with
+RFC1035. Specifically, the name must be 1-63 characters long and match
+the regular expression `a-z?` which means the
+first character must be a lowercase letter, and all following
+characters must be a dash, lowercase letter, or digit, except the last
+character, which cannot be a dash.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -827,9 +866,11 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The network-wide routing mode to use. If set to 'REGIONAL', this network's cloud routers will only advertise routes with
-subnetworks of this network in the same region as the router. If set to 'GLOBAL', this network's cloud routers will
-advertise routes with all subnetworks of this network, across regions.
+    <dd>{{% md %}}The network-wide routing mode to use. If set to `REGIONAL`, this
+network's cloud routers will only advertise routes with subnetworks
+of this network in the same region as the router. If set to `GLOBAL`,
+this network's cloud routers will advertise routes with all
+subnetworks of this network, across regions.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -854,9 +895,11 @@ advertise routes with all subnetworks of this network, across regions.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}When set to 'true', the network is created in "auto subnet mode" and it will create a subnet for each region
-automatically across the '10.128.0.0/9' address range. When set to 'false', the network is created in "custom subnet
-mode" so the user can explicitly connect subnetwork resources.
+    <dd>{{% md %}}When set to `true`, the network is created in "auto subnet mode" and
+it will create a subnet for each region automatically across the
+`10.128.0.0/9` address range.
+When set to `false`, the network is created in "custom subnet mode" so
+the user can explicitly connect subnetwork resources.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -875,7 +918,8 @@ immediately after network creation. Defaults to `false`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}An optional description of this resource. The resource must be recreated to modify this field.
+    <dd>{{% md %}}An optional description of this resource. The resource must be
+recreated to modify this field.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -893,10 +937,13 @@ immediately after network creation. Defaults to `false`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
-comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-'[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is
+created. The name must be 1-63 characters long, and comply with
+RFC1035. Specifically, the name must be 1-63 characters long and match
+the regular expression `a-z?` which means the
+first character must be a lowercase letter, and all following
+characters must be a dash, lowercase letter, or digit, except the last
+character, which cannot be a dash.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -915,9 +962,11 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The network-wide routing mode to use. If set to 'REGIONAL', this network's cloud routers will only advertise routes with
-subnetworks of this network in the same region as the router. If set to 'GLOBAL', this network's cloud routers will
-advertise routes with all subnetworks of this network, across regions.
+    <dd>{{% md %}}The network-wide routing mode to use. If set to `REGIONAL`, this
+network's cloud routers will only advertise routes with subnetworks
+of this network in the same region as the router. If set to `GLOBAL`,
+this network's cloud routers will advertise routes with all
+subnetworks of this network, across regions.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -942,9 +991,11 @@ advertise routes with all subnetworks of this network, across regions.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}When set to 'true', the network is created in "auto subnet mode" and it will create a subnet for each region
-automatically across the '10.128.0.0/9' address range. When set to 'false', the network is created in "custom subnet
-mode" so the user can explicitly connect subnetwork resources.
+    <dd>{{% md %}}When set to `true`, the network is created in "auto subnet mode" and
+it will create a subnet for each region automatically across the
+`10.128.0.0/9` address range.
+When set to `false`, the network is created in "custom subnet mode" so
+the user can explicitly connect subnetwork resources.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -963,7 +1014,8 @@ immediately after network creation. Defaults to `false`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}An optional description of this resource. The resource must be recreated to modify this field.
+    <dd>{{% md %}}An optional description of this resource. The resource must be
+recreated to modify this field.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -981,10 +1033,13 @@ immediately after network creation. Defaults to `false`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
-comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-'[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is
+created. The name must be 1-63 characters long, and comply with
+RFC1035. Specifically, the name must be 1-63 characters long and match
+the regular expression `a-z?` which means the
+first character must be a lowercase letter, and all following
+characters must be a dash, lowercase letter, or digit, except the last
+character, which cannot be a dash.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1003,9 +1058,11 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The network-wide routing mode to use. If set to 'REGIONAL', this network's cloud routers will only advertise routes with
-subnetworks of this network in the same region as the router. If set to 'GLOBAL', this network's cloud routers will
-advertise routes with all subnetworks of this network, across regions.
+    <dd>{{% md %}}The network-wide routing mode to use. If set to `REGIONAL`, this
+network's cloud routers will only advertise routes with subnetworks
+of this network in the same region as the router. If set to `GLOBAL`,
+this network's cloud routers will advertise routes with all
+subnetworks of this network, across regions.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1030,9 +1087,11 @@ advertise routes with all subnetworks of this network, across regions.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}When set to 'true', the network is created in "auto subnet mode" and it will create a subnet for each region
-automatically across the '10.128.0.0/9' address range. When set to 'false', the network is created in "custom subnet
-mode" so the user can explicitly connect subnetwork resources.
+    <dd>{{% md %}}When set to `true`, the network is created in "auto subnet mode" and
+it will create a subnet for each region automatically across the
+`10.128.0.0/9` address range.
+When set to `false`, the network is created in "custom subnet mode" so
+the user can explicitly connect subnetwork resources.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1051,7 +1110,8 @@ immediately after network creation. Defaults to `false`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}An optional description of this resource. The resource must be recreated to modify this field.
+    <dd>{{% md %}}An optional description of this resource. The resource must be
+recreated to modify this field.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1069,10 +1129,13 @@ immediately after network creation. Defaults to `false`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
-comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-'[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is
+created. The name must be 1-63 characters long, and comply with
+RFC1035. Specifically, the name must be 1-63 characters long and match
+the regular expression `a-z?` which means the
+first character must be a lowercase letter, and all following
+characters must be a dash, lowercase letter, or digit, except the last
+character, which cannot be a dash.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1091,9 +1154,11 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The network-wide routing mode to use. If set to 'REGIONAL', this network's cloud routers will only advertise routes with
-subnetworks of this network in the same region as the router. If set to 'GLOBAL', this network's cloud routers will
-advertise routes with all subnetworks of this network, across regions.
+    <dd>{{% md %}}The network-wide routing mode to use. If set to `REGIONAL`, this
+network's cloud routers will only advertise routes with subnetworks
+of this network in the same region as the router. If set to `GLOBAL`,
+this network's cloud routers will advertise routes with all
+subnetworks of this network, across regions.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1124,8 +1189,7 @@ advertise routes with all subnetworks of this network, across regions.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 

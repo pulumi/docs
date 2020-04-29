@@ -1,7 +1,8 @@
 
 ---
 title: "DatasetAccess"
-block_external_search_index: true
+title_tag: "Resource DatasetAccess | Module bigquery | Package GCP"
+meta_desc: "Explore the DatasetAccess resource of the bigquery module, including examples, input properties, output properties, lookup functions, and supporting types. Gives dataset access for a single entity. This resource is intended to be used in cases where"
 ---
 
 
@@ -35,7 +36,7 @@ To get more information about DatasetAccess, see:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">DatasetAccess</span><span class="p">(resource_name, opts=None, </span>dataset_id=None<span class="p">, </span>domain=None<span class="p">, </span>group_by_email=None<span class="p">, </span>iam_member=None<span class="p">, </span>project=None<span class="p">, </span>role=None<span class="p">, </span>special_group=None<span class="p">, </span>user_by_email=None<span class="p">, </span>view=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">DatasetAccess</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>dataset_id=None<span class="p">, </span>domain=None<span class="p">, </span>group_by_email=None<span class="p">, </span>iam_member=None<span class="p">, </span>project=None<span class="p">, </span>role=None<span class="p">, </span>special_group=None<span class="p">, </span>user_by_email=None<span class="p">, </span>view=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -213,8 +214,7 @@ The DatasetAccess resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}A unique ID for this dataset, without the project name. The ID must contain only letters (a-z, A-Z), numbers (0-9), or
-underscores (_). The maximum length is 1,024 characters.
+    <dd>{{% md %}}The ID of the dataset containing this table.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -223,7 +223,8 @@ underscores (_). The maximum length is 1,024 characters.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}A domain to grant access to. Any users signed in with the domain specified will be granted the specified access
+    <dd>{{% md %}}A domain to grant access to. Any users signed in with the
+domain specified will be granted the specified access
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -241,8 +242,8 @@ underscores (_). The maximum length is 1,024 characters.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Some other type of member that appears in the IAM Policy but isn't a user, group, domain, or special group. For example:
-'allUsers'
+    <dd>{{% md %}}Some other type of member that appears in the IAM Policy but isn't a user,
+group, domain, or special group. For example: `allUsers`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -261,10 +262,12 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Describes the rights granted to the user specified by the other member of the access object. Primitive, Predefined and
-custom roles are supported. Predefined roles that have equivalent primitive roles are swapped by the API to their
-Primitive counterparts, and will show a diff post-create. See [official
-docs](https://cloud.google.com/bigquery/docs/access-control).
+    <dd>{{% md %}}Describes the rights granted to the user specified by the other
+member of the access object. Primitive, Predefined and custom
+roles are supported. Predefined roles that have equivalent
+primitive roles are swapped by the API to their Primitive
+counterparts, and will show a diff post-create. See
+[official docs](https://cloud.google.com/bigquery/docs/access-control).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -273,9 +276,7 @@ docs](https://cloud.google.com/bigquery/docs/access-control).
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}A special group to grant access to. Possible values include: * 'projectOwners': Owners of the enclosing project. *
-'projectReaders': Readers of the enclosing project. * 'projectWriters': Writers of the enclosing project. *
-'allAuthenticatedUsers': All authenticated BigQuery users.
+    <dd>{{% md %}}A special group to grant access to. Possible values include:
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -284,7 +285,8 @@ docs](https://cloud.google.com/bigquery/docs/access-control).
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}An email address of a user to grant access to. For example: fred@example.com
+    <dd>{{% md %}}An email address of a user to grant access to. For example:
+fred@example.com
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -293,9 +295,11 @@ docs](https://cloud.google.com/bigquery/docs/access-control).
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetaccessview">Dataset<wbr>Access<wbr>View<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A view from a different dataset to grant access to. Queries executed against that view will have read access to tables
-in this dataset. The role field is not required when this field is set. If that view is updated by any user, access to
-the view needs to be granted again via an update operation.
+    <dd>{{% md %}}A view from a different dataset to grant access to. Queries
+executed against that view will have read access to tables in
+this dataset. The role field is not required when this field is
+set. If that view is updated by any user, access to the view
+needs to be granted again via an update operation.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -311,8 +315,7 @@ the view needs to be granted again via an update operation.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}A unique ID for this dataset, without the project name. The ID must contain only letters (a-z, A-Z), numbers (0-9), or
-underscores (_). The maximum length is 1,024 characters.
+    <dd>{{% md %}}The ID of the dataset containing this table.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -321,7 +324,8 @@ underscores (_). The maximum length is 1,024 characters.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}A domain to grant access to. Any users signed in with the domain specified will be granted the specified access
+    <dd>{{% md %}}A domain to grant access to. Any users signed in with the
+domain specified will be granted the specified access
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -339,8 +343,8 @@ underscores (_). The maximum length is 1,024 characters.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Some other type of member that appears in the IAM Policy but isn't a user, group, domain, or special group. For example:
-'allUsers'
+    <dd>{{% md %}}Some other type of member that appears in the IAM Policy but isn't a user,
+group, domain, or special group. For example: `allUsers`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -359,10 +363,12 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Describes the rights granted to the user specified by the other member of the access object. Primitive, Predefined and
-custom roles are supported. Predefined roles that have equivalent primitive roles are swapped by the API to their
-Primitive counterparts, and will show a diff post-create. See [official
-docs](https://cloud.google.com/bigquery/docs/access-control).
+    <dd>{{% md %}}Describes the rights granted to the user specified by the other
+member of the access object. Primitive, Predefined and custom
+roles are supported. Predefined roles that have equivalent
+primitive roles are swapped by the API to their Primitive
+counterparts, and will show a diff post-create. See
+[official docs](https://cloud.google.com/bigquery/docs/access-control).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -371,9 +377,7 @@ docs](https://cloud.google.com/bigquery/docs/access-control).
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}A special group to grant access to. Possible values include: * 'projectOwners': Owners of the enclosing project. *
-'projectReaders': Readers of the enclosing project. * 'projectWriters': Writers of the enclosing project. *
-'allAuthenticatedUsers': All authenticated BigQuery users.
+    <dd>{{% md %}}A special group to grant access to. Possible values include:
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -382,7 +386,8 @@ docs](https://cloud.google.com/bigquery/docs/access-control).
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}An email address of a user to grant access to. For example: fred@example.com
+    <dd>{{% md %}}An email address of a user to grant access to. For example:
+fred@example.com
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -391,9 +396,11 @@ docs](https://cloud.google.com/bigquery/docs/access-control).
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetaccessview">Dataset<wbr>Access<wbr>View</a></span>
     </dt>
-    <dd>{{% md %}}A view from a different dataset to grant access to. Queries executed against that view will have read access to tables
-in this dataset. The role field is not required when this field is set. If that view is updated by any user, access to
-the view needs to be granted again via an update operation.
+    <dd>{{% md %}}A view from a different dataset to grant access to. Queries
+executed against that view will have read access to tables in
+this dataset. The role field is not required when this field is
+set. If that view is updated by any user, access to the view
+needs to be granted again via an update operation.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -409,8 +416,7 @@ the view needs to be granted again via an update operation.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}A unique ID for this dataset, without the project name. The ID must contain only letters (a-z, A-Z), numbers (0-9), or
-underscores (_). The maximum length is 1,024 characters.
+    <dd>{{% md %}}The ID of the dataset containing this table.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -419,7 +425,8 @@ underscores (_). The maximum length is 1,024 characters.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}A domain to grant access to. Any users signed in with the domain specified will be granted the specified access
+    <dd>{{% md %}}A domain to grant access to. Any users signed in with the
+domain specified will be granted the specified access
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -437,8 +444,8 @@ underscores (_). The maximum length is 1,024 characters.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Some other type of member that appears in the IAM Policy but isn't a user, group, domain, or special group. For example:
-'allUsers'
+    <dd>{{% md %}}Some other type of member that appears in the IAM Policy but isn't a user,
+group, domain, or special group. For example: `allUsers`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -457,10 +464,12 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Describes the rights granted to the user specified by the other member of the access object. Primitive, Predefined and
-custom roles are supported. Predefined roles that have equivalent primitive roles are swapped by the API to their
-Primitive counterparts, and will show a diff post-create. See [official
-docs](https://cloud.google.com/bigquery/docs/access-control).
+    <dd>{{% md %}}Describes the rights granted to the user specified by the other
+member of the access object. Primitive, Predefined and custom
+roles are supported. Predefined roles that have equivalent
+primitive roles are swapped by the API to their Primitive
+counterparts, and will show a diff post-create. See
+[official docs](https://cloud.google.com/bigquery/docs/access-control).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -469,9 +478,7 @@ docs](https://cloud.google.com/bigquery/docs/access-control).
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}A special group to grant access to. Possible values include: * 'projectOwners': Owners of the enclosing project. *
-'projectReaders': Readers of the enclosing project. * 'projectWriters': Writers of the enclosing project. *
-'allAuthenticatedUsers': All authenticated BigQuery users.
+    <dd>{{% md %}}A special group to grant access to. Possible values include:
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -480,7 +487,8 @@ docs](https://cloud.google.com/bigquery/docs/access-control).
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}An email address of a user to grant access to. For example: fred@example.com
+    <dd>{{% md %}}An email address of a user to grant access to. For example:
+fred@example.com
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -489,9 +497,11 @@ docs](https://cloud.google.com/bigquery/docs/access-control).
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetaccessview">Dataset<wbr>Access<wbr>View</a></span>
     </dt>
-    <dd>{{% md %}}A view from a different dataset to grant access to. Queries executed against that view will have read access to tables
-in this dataset. The role field is not required when this field is set. If that view is updated by any user, access to
-the view needs to be granted again via an update operation.
+    <dd>{{% md %}}A view from a different dataset to grant access to. Queries
+executed against that view will have read access to tables in
+this dataset. The role field is not required when this field is
+set. If that view is updated by any user, access to the view
+needs to be granted again via an update operation.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -507,8 +517,7 @@ the view needs to be granted again via an update operation.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}A unique ID for this dataset, without the project name. The ID must contain only letters (a-z, A-Z), numbers (0-9), or
-underscores (_). The maximum length is 1,024 characters.
+    <dd>{{% md %}}The ID of the dataset containing this table.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -517,7 +526,8 @@ underscores (_). The maximum length is 1,024 characters.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}A domain to grant access to. Any users signed in with the domain specified will be granted the specified access
+    <dd>{{% md %}}A domain to grant access to. Any users signed in with the
+domain specified will be granted the specified access
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -535,8 +545,8 @@ underscores (_). The maximum length is 1,024 characters.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Some other type of member that appears in the IAM Policy but isn't a user, group, domain, or special group. For example:
-'allUsers'
+    <dd>{{% md %}}Some other type of member that appears in the IAM Policy but isn't a user,
+group, domain, or special group. For example: `allUsers`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -555,10 +565,12 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Describes the rights granted to the user specified by the other member of the access object. Primitive, Predefined and
-custom roles are supported. Predefined roles that have equivalent primitive roles are swapped by the API to their
-Primitive counterparts, and will show a diff post-create. See [official
-docs](https://cloud.google.com/bigquery/docs/access-control).
+    <dd>{{% md %}}Describes the rights granted to the user specified by the other
+member of the access object. Primitive, Predefined and custom
+roles are supported. Predefined roles that have equivalent
+primitive roles are swapped by the API to their Primitive
+counterparts, and will show a diff post-create. See
+[official docs](https://cloud.google.com/bigquery/docs/access-control).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -567,9 +579,7 @@ docs](https://cloud.google.com/bigquery/docs/access-control).
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}A special group to grant access to. Possible values include: * 'projectOwners': Owners of the enclosing project. *
-'projectReaders': Readers of the enclosing project. * 'projectWriters': Writers of the enclosing project. *
-'allAuthenticatedUsers': All authenticated BigQuery users.
+    <dd>{{% md %}}A special group to grant access to. Possible values include:
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -578,7 +588,8 @@ docs](https://cloud.google.com/bigquery/docs/access-control).
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}An email address of a user to grant access to. For example: fred@example.com
+    <dd>{{% md %}}An email address of a user to grant access to. For example:
+fred@example.com
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -587,9 +598,11 @@ docs](https://cloud.google.com/bigquery/docs/access-control).
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetaccessview">Dict[Dataset<wbr>Access<wbr>View]</a></span>
     </dt>
-    <dd>{{% md %}}A view from a different dataset to grant access to. Queries executed against that view will have read access to tables
-in this dataset. The role field is not required when this field is set. If that view is updated by any user, access to
-the view needs to be granted again via an update operation.
+    <dd>{{% md %}}A view from a different dataset to grant access to. Queries
+executed against that view will have read access to tables in
+this dataset. The role field is not required when this field is
+set. If that view is updated by any user, access to the view
+needs to be granted again via an update operation.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -802,8 +815,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}A unique ID for this dataset, without the project name. The ID must contain only letters (a-z, A-Z), numbers (0-9), or
-underscores (_). The maximum length is 1,024 characters.
+    <dd>{{% md %}}The ID of the dataset containing this table.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -812,7 +824,8 @@ underscores (_). The maximum length is 1,024 characters.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}A domain to grant access to. Any users signed in with the domain specified will be granted the specified access
+    <dd>{{% md %}}A domain to grant access to. Any users signed in with the
+domain specified will be granted the specified access
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -830,8 +843,8 @@ underscores (_). The maximum length is 1,024 characters.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Some other type of member that appears in the IAM Policy but isn't a user, group, domain, or special group. For example:
-'allUsers'
+    <dd>{{% md %}}Some other type of member that appears in the IAM Policy but isn't a user,
+group, domain, or special group. For example: `allUsers`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -850,10 +863,12 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Describes the rights granted to the user specified by the other member of the access object. Primitive, Predefined and
-custom roles are supported. Predefined roles that have equivalent primitive roles are swapped by the API to their
-Primitive counterparts, and will show a diff post-create. See [official
-docs](https://cloud.google.com/bigquery/docs/access-control).
+    <dd>{{% md %}}Describes the rights granted to the user specified by the other
+member of the access object. Primitive, Predefined and custom
+roles are supported. Predefined roles that have equivalent
+primitive roles are swapped by the API to their Primitive
+counterparts, and will show a diff post-create. See
+[official docs](https://cloud.google.com/bigquery/docs/access-control).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -862,9 +877,7 @@ docs](https://cloud.google.com/bigquery/docs/access-control).
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}A special group to grant access to. Possible values include: * 'projectOwners': Owners of the enclosing project. *
-'projectReaders': Readers of the enclosing project. * 'projectWriters': Writers of the enclosing project. *
-'allAuthenticatedUsers': All authenticated BigQuery users.
+    <dd>{{% md %}}A special group to grant access to. Possible values include:
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -873,7 +886,8 @@ docs](https://cloud.google.com/bigquery/docs/access-control).
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}An email address of a user to grant access to. For example: fred@example.com
+    <dd>{{% md %}}An email address of a user to grant access to. For example:
+fred@example.com
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -882,9 +896,11 @@ docs](https://cloud.google.com/bigquery/docs/access-control).
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetaccessview">Dataset<wbr>Access<wbr>View<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A view from a different dataset to grant access to. Queries executed against that view will have read access to tables
-in this dataset. The role field is not required when this field is set. If that view is updated by any user, access to
-the view needs to be granted again via an update operation.
+    <dd>{{% md %}}A view from a different dataset to grant access to. Queries
+executed against that view will have read access to tables in
+this dataset. The role field is not required when this field is
+set. If that view is updated by any user, access to the view
+needs to be granted again via an update operation.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -900,8 +916,7 @@ the view needs to be granted again via an update operation.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}A unique ID for this dataset, without the project name. The ID must contain only letters (a-z, A-Z), numbers (0-9), or
-underscores (_). The maximum length is 1,024 characters.
+    <dd>{{% md %}}The ID of the dataset containing this table.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -910,7 +925,8 @@ underscores (_). The maximum length is 1,024 characters.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}A domain to grant access to. Any users signed in with the domain specified will be granted the specified access
+    <dd>{{% md %}}A domain to grant access to. Any users signed in with the
+domain specified will be granted the specified access
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -928,8 +944,8 @@ underscores (_). The maximum length is 1,024 characters.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Some other type of member that appears in the IAM Policy but isn't a user, group, domain, or special group. For example:
-'allUsers'
+    <dd>{{% md %}}Some other type of member that appears in the IAM Policy but isn't a user,
+group, domain, or special group. For example: `allUsers`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -948,10 +964,12 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Describes the rights granted to the user specified by the other member of the access object. Primitive, Predefined and
-custom roles are supported. Predefined roles that have equivalent primitive roles are swapped by the API to their
-Primitive counterparts, and will show a diff post-create. See [official
-docs](https://cloud.google.com/bigquery/docs/access-control).
+    <dd>{{% md %}}Describes the rights granted to the user specified by the other
+member of the access object. Primitive, Predefined and custom
+roles are supported. Predefined roles that have equivalent
+primitive roles are swapped by the API to their Primitive
+counterparts, and will show a diff post-create. See
+[official docs](https://cloud.google.com/bigquery/docs/access-control).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -960,9 +978,7 @@ docs](https://cloud.google.com/bigquery/docs/access-control).
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}A special group to grant access to. Possible values include: * 'projectOwners': Owners of the enclosing project. *
-'projectReaders': Readers of the enclosing project. * 'projectWriters': Writers of the enclosing project. *
-'allAuthenticatedUsers': All authenticated BigQuery users.
+    <dd>{{% md %}}A special group to grant access to. Possible values include:
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -971,7 +987,8 @@ docs](https://cloud.google.com/bigquery/docs/access-control).
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}An email address of a user to grant access to. For example: fred@example.com
+    <dd>{{% md %}}An email address of a user to grant access to. For example:
+fred@example.com
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -980,9 +997,11 @@ docs](https://cloud.google.com/bigquery/docs/access-control).
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetaccessview">Dataset<wbr>Access<wbr>View</a></span>
     </dt>
-    <dd>{{% md %}}A view from a different dataset to grant access to. Queries executed against that view will have read access to tables
-in this dataset. The role field is not required when this field is set. If that view is updated by any user, access to
-the view needs to be granted again via an update operation.
+    <dd>{{% md %}}A view from a different dataset to grant access to. Queries
+executed against that view will have read access to tables in
+this dataset. The role field is not required when this field is
+set. If that view is updated by any user, access to the view
+needs to be granted again via an update operation.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -998,8 +1017,7 @@ the view needs to be granted again via an update operation.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}A unique ID for this dataset, without the project name. The ID must contain only letters (a-z, A-Z), numbers (0-9), or
-underscores (_). The maximum length is 1,024 characters.
+    <dd>{{% md %}}The ID of the dataset containing this table.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1008,7 +1026,8 @@ underscores (_). The maximum length is 1,024 characters.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}A domain to grant access to. Any users signed in with the domain specified will be granted the specified access
+    <dd>{{% md %}}A domain to grant access to. Any users signed in with the
+domain specified will be granted the specified access
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1026,8 +1045,8 @@ underscores (_). The maximum length is 1,024 characters.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Some other type of member that appears in the IAM Policy but isn't a user, group, domain, or special group. For example:
-'allUsers'
+    <dd>{{% md %}}Some other type of member that appears in the IAM Policy but isn't a user,
+group, domain, or special group. For example: `allUsers`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1046,10 +1065,12 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Describes the rights granted to the user specified by the other member of the access object. Primitive, Predefined and
-custom roles are supported. Predefined roles that have equivalent primitive roles are swapped by the API to their
-Primitive counterparts, and will show a diff post-create. See [official
-docs](https://cloud.google.com/bigquery/docs/access-control).
+    <dd>{{% md %}}Describes the rights granted to the user specified by the other
+member of the access object. Primitive, Predefined and custom
+roles are supported. Predefined roles that have equivalent
+primitive roles are swapped by the API to their Primitive
+counterparts, and will show a diff post-create. See
+[official docs](https://cloud.google.com/bigquery/docs/access-control).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1058,9 +1079,7 @@ docs](https://cloud.google.com/bigquery/docs/access-control).
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}A special group to grant access to. Possible values include: * 'projectOwners': Owners of the enclosing project. *
-'projectReaders': Readers of the enclosing project. * 'projectWriters': Writers of the enclosing project. *
-'allAuthenticatedUsers': All authenticated BigQuery users.
+    <dd>{{% md %}}A special group to grant access to. Possible values include:
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1069,7 +1088,8 @@ docs](https://cloud.google.com/bigquery/docs/access-control).
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}An email address of a user to grant access to. For example: fred@example.com
+    <dd>{{% md %}}An email address of a user to grant access to. For example:
+fred@example.com
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1078,9 +1098,11 @@ docs](https://cloud.google.com/bigquery/docs/access-control).
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetaccessview">Dataset<wbr>Access<wbr>View</a></span>
     </dt>
-    <dd>{{% md %}}A view from a different dataset to grant access to. Queries executed against that view will have read access to tables
-in this dataset. The role field is not required when this field is set. If that view is updated by any user, access to
-the view needs to be granted again via an update operation.
+    <dd>{{% md %}}A view from a different dataset to grant access to. Queries
+executed against that view will have read access to tables in
+this dataset. The role field is not required when this field is
+set. If that view is updated by any user, access to the view
+needs to be granted again via an update operation.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1096,8 +1118,7 @@ the view needs to be granted again via an update operation.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}A unique ID for this dataset, without the project name. The ID must contain only letters (a-z, A-Z), numbers (0-9), or
-underscores (_). The maximum length is 1,024 characters.
+    <dd>{{% md %}}The ID of the dataset containing this table.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1106,7 +1127,8 @@ underscores (_). The maximum length is 1,024 characters.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}A domain to grant access to. Any users signed in with the domain specified will be granted the specified access
+    <dd>{{% md %}}A domain to grant access to. Any users signed in with the
+domain specified will be granted the specified access
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1124,8 +1146,8 @@ underscores (_). The maximum length is 1,024 characters.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Some other type of member that appears in the IAM Policy but isn't a user, group, domain, or special group. For example:
-'allUsers'
+    <dd>{{% md %}}Some other type of member that appears in the IAM Policy but isn't a user,
+group, domain, or special group. For example: `allUsers`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1144,10 +1166,12 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Describes the rights granted to the user specified by the other member of the access object. Primitive, Predefined and
-custom roles are supported. Predefined roles that have equivalent primitive roles are swapped by the API to their
-Primitive counterparts, and will show a diff post-create. See [official
-docs](https://cloud.google.com/bigquery/docs/access-control).
+    <dd>{{% md %}}Describes the rights granted to the user specified by the other
+member of the access object. Primitive, Predefined and custom
+roles are supported. Predefined roles that have equivalent
+primitive roles are swapped by the API to their Primitive
+counterparts, and will show a diff post-create. See
+[official docs](https://cloud.google.com/bigquery/docs/access-control).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1156,9 +1180,7 @@ docs](https://cloud.google.com/bigquery/docs/access-control).
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}A special group to grant access to. Possible values include: * 'projectOwners': Owners of the enclosing project. *
-'projectReaders': Readers of the enclosing project. * 'projectWriters': Writers of the enclosing project. *
-'allAuthenticatedUsers': All authenticated BigQuery users.
+    <dd>{{% md %}}A special group to grant access to. Possible values include:
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1167,7 +1189,8 @@ docs](https://cloud.google.com/bigquery/docs/access-control).
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}An email address of a user to grant access to. For example: fred@example.com
+    <dd>{{% md %}}An email address of a user to grant access to. For example:
+fred@example.com
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1176,9 +1199,11 @@ docs](https://cloud.google.com/bigquery/docs/access-control).
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetaccessview">Dict[Dataset<wbr>Access<wbr>View]</a></span>
     </dt>
-    <dd>{{% md %}}A view from a different dataset to grant access to. Queries executed against that view will have read access to tables
-in this dataset. The role field is not required when this field is set. If that view is updated by any user, access to
-the view needs to be granted again via an update operation.
+    <dd>{{% md %}}A view from a different dataset to grant access to. Queries
+executed against that view will have read access to tables in
+this dataset. The role field is not required when this field is
+set. If that view is updated by any user, access to the view
+needs to be granted again via an update operation.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1217,7 +1242,8 @@ the view needs to be granted again via an update operation.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The ID of the dataset containing this table.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1225,7 +1251,8 @@ the view needs to be granted again via an update operation.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The ID of the project containing this table.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1233,7 +1260,10 @@ the view needs to be granted again via an update operation.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The ID of the table. The ID must contain only letters (a-z,
+A-Z), numbers (0-9), or underscores (_). The maximum length
+is 1,024 characters.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1248,7 +1278,8 @@ the view needs to be granted again via an update operation.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The ID of the dataset containing this table.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1256,7 +1287,8 @@ the view needs to be granted again via an update operation.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The ID of the project containing this table.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1264,7 +1296,10 @@ the view needs to be granted again via an update operation.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The ID of the table. The ID must contain only letters (a-z,
+A-Z), numbers (0-9), or underscores (_). The maximum length
+is 1,024 characters.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1279,7 +1314,8 @@ the view needs to be granted again via an update operation.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The ID of the dataset containing this table.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1287,7 +1323,8 @@ the view needs to be granted again via an update operation.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The ID of the project containing this table.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1295,7 +1332,10 @@ the view needs to be granted again via an update operation.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The ID of the table. The ID must contain only letters (a-z,
+A-Z), numbers (0-9), or underscores (_). The maximum length
+is 1,024 characters.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1310,7 +1350,8 @@ the view needs to be granted again via an update operation.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The ID of the dataset containing this table.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1318,7 +1359,8 @@ the view needs to be granted again via an update operation.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The ID of the project containing this table.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1326,7 +1368,10 @@ the view needs to be granted again via an update operation.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The ID of the table. The ID must contain only letters (a-z,
+A-Z), numbers (0-9), or underscores (_). The maximum length
+is 1,024 characters.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1345,8 +1390,7 @@ the view needs to be granted again via an update operation.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 

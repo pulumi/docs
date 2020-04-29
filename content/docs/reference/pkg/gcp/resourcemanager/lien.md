@@ -1,7 +1,8 @@
 
 ---
 title: "Lien"
-block_external_search_index: true
+title_tag: "Resource Lien | Module resourcemanager | Package GCP"
+meta_desc: "Explore the Lien resource of the resourcemanager module, including examples, input properties, output properties, lookup functions, and supporting types. A Lien represents an encumbrance on the actions that can be performed on a resource."
 ---
 
 
@@ -42,7 +43,7 @@ const lien = new gcp.resourcemanager.Lien("lien", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Lien</span><span class="p">(resource_name, opts=None, </span>origin=None<span class="p">, </span>parent=None<span class="p">, </span>reason=None<span class="p">, </span>restrictions=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Lien</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>origin=None<span class="p">, </span>parent=None<span class="p">, </span>reason=None<span class="p">, </span>restrictions=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -220,8 +221,9 @@ The Lien resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}A stable, user-visible/meaningful string identifying the origin of the Lien, intended to be inspected programmatically.
-Maximum length of 200 characters.
+    <dd>{{% md %}}A stable, user-visible/meaningful string identifying the origin
+of the Lien, intended to be inspected programmatically. Maximum length of
+200 characters.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -230,9 +232,10 @@ Maximum length of 200 characters.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}A reference to the resource this Lien is attached to. The server will validate the parent against those for which Liens
-are supported. Since a variety of objects can have Liens against them, you must provide the type prefix (e.g.
-"projects/my-project-name").
+    <dd>{{% md %}}A reference to the resource this Lien is attached to.
+The server will validate the parent against those for which Liens are supported.
+Since a variety of objects can have Liens against them, you must provide the type
+prefix (e.g. "projects/my-project-name").
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -241,8 +244,8 @@ are supported. Since a variety of objects can have Liens against them, you must 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Concise user-visible strings indicating why an action cannot be performed on a resource. Maximum length of 200
-characters.
+    <dd>{{% md %}}Concise user-visible strings indicating why an action cannot be performed
+on a resource. Maximum length of 200 characters.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -251,9 +254,11 @@ characters.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The types of operations which should be blocked as a result of this Lien. Each value should correspond to an IAM
-permission. The server will validate the permissions against those for which Liens are supported. An empty list is
-meaningless and will be rejected. e.g. ['resourcemanager.projects.delete']
+    <dd>{{% md %}}The types of operations which should be blocked as a result of this Lien.
+Each value should correspond to an IAM permission. The server will validate
+the permissions against those for which Liens are supported.  An empty
+list is meaningless and will be rejected.
+e.g. ['resourcemanager.projects.delete']
 {{% /md %}}</dd>
 
 </dl>
@@ -269,8 +274,9 @@ meaningless and will be rejected. e.g. ['resourcemanager.projects.delete']
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}A stable, user-visible/meaningful string identifying the origin of the Lien, intended to be inspected programmatically.
-Maximum length of 200 characters.
+    <dd>{{% md %}}A stable, user-visible/meaningful string identifying the origin
+of the Lien, intended to be inspected programmatically. Maximum length of
+200 characters.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -279,9 +285,10 @@ Maximum length of 200 characters.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}A reference to the resource this Lien is attached to. The server will validate the parent against those for which Liens
-are supported. Since a variety of objects can have Liens against them, you must provide the type prefix (e.g.
-"projects/my-project-name").
+    <dd>{{% md %}}A reference to the resource this Lien is attached to.
+The server will validate the parent against those for which Liens are supported.
+Since a variety of objects can have Liens against them, you must provide the type
+prefix (e.g. "projects/my-project-name").
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -290,8 +297,8 @@ are supported. Since a variety of objects can have Liens against them, you must 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Concise user-visible strings indicating why an action cannot be performed on a resource. Maximum length of 200
-characters.
+    <dd>{{% md %}}Concise user-visible strings indicating why an action cannot be performed
+on a resource. Maximum length of 200 characters.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -300,9 +307,11 @@ characters.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}The types of operations which should be blocked as a result of this Lien. Each value should correspond to an IAM
-permission. The server will validate the permissions against those for which Liens are supported. An empty list is
-meaningless and will be rejected. e.g. ['resourcemanager.projects.delete']
+    <dd>{{% md %}}The types of operations which should be blocked as a result of this Lien.
+Each value should correspond to an IAM permission. The server will validate
+the permissions against those for which Liens are supported.  An empty
+list is meaningless and will be rejected.
+e.g. ['resourcemanager.projects.delete']
 {{% /md %}}</dd>
 
 </dl>
@@ -318,8 +327,9 @@ meaningless and will be rejected. e.g. ['resourcemanager.projects.delete']
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}A stable, user-visible/meaningful string identifying the origin of the Lien, intended to be inspected programmatically.
-Maximum length of 200 characters.
+    <dd>{{% md %}}A stable, user-visible/meaningful string identifying the origin
+of the Lien, intended to be inspected programmatically. Maximum length of
+200 characters.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -328,9 +338,10 @@ Maximum length of 200 characters.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}A reference to the resource this Lien is attached to. The server will validate the parent against those for which Liens
-are supported. Since a variety of objects can have Liens against them, you must provide the type prefix (e.g.
-"projects/my-project-name").
+    <dd>{{% md %}}A reference to the resource this Lien is attached to.
+The server will validate the parent against those for which Liens are supported.
+Since a variety of objects can have Liens against them, you must provide the type
+prefix (e.g. "projects/my-project-name").
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -339,8 +350,8 @@ are supported. Since a variety of objects can have Liens against them, you must 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Concise user-visible strings indicating why an action cannot be performed on a resource. Maximum length of 200
-characters.
+    <dd>{{% md %}}Concise user-visible strings indicating why an action cannot be performed
+on a resource. Maximum length of 200 characters.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -349,9 +360,11 @@ characters.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}The types of operations which should be blocked as a result of this Lien. Each value should correspond to an IAM
-permission. The server will validate the permissions against those for which Liens are supported. An empty list is
-meaningless and will be rejected. e.g. ['resourcemanager.projects.delete']
+    <dd>{{% md %}}The types of operations which should be blocked as a result of this Lien.
+Each value should correspond to an IAM permission. The server will validate
+the permissions against those for which Liens are supported.  An empty
+list is meaningless and will be rejected.
+e.g. ['resourcemanager.projects.delete']
 {{% /md %}}</dd>
 
 </dl>
@@ -367,8 +380,9 @@ meaningless and will be rejected. e.g. ['resourcemanager.projects.delete']
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}A stable, user-visible/meaningful string identifying the origin of the Lien, intended to be inspected programmatically.
-Maximum length of 200 characters.
+    <dd>{{% md %}}A stable, user-visible/meaningful string identifying the origin
+of the Lien, intended to be inspected programmatically. Maximum length of
+200 characters.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -377,9 +391,10 @@ Maximum length of 200 characters.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}A reference to the resource this Lien is attached to. The server will validate the parent against those for which Liens
-are supported. Since a variety of objects can have Liens against them, you must provide the type prefix (e.g.
-"projects/my-project-name").
+    <dd>{{% md %}}A reference to the resource this Lien is attached to.
+The server will validate the parent against those for which Liens are supported.
+Since a variety of objects can have Liens against them, you must provide the type
+prefix (e.g. "projects/my-project-name").
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -388,8 +403,8 @@ are supported. Since a variety of objects can have Liens against them, you must 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Concise user-visible strings indicating why an action cannot be performed on a resource. Maximum length of 200
-characters.
+    <dd>{{% md %}}Concise user-visible strings indicating why an action cannot be performed
+on a resource. Maximum length of 200 characters.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -398,9 +413,11 @@ characters.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}The types of operations which should be blocked as a result of this Lien. Each value should correspond to an IAM
-permission. The server will validate the permissions against those for which Liens are supported. An empty list is
-meaningless and will be rejected. e.g. ['resourcemanager.projects.delete']
+    <dd>{{% md %}}The types of operations which should be blocked as a result of this Lien.
+Each value should correspond to an IAM permission. The server will validate
+the permissions against those for which Liens are supported.  An empty
+list is meaningless and will be rejected.
+e.g. ['resourcemanager.projects.delete']
 {{% /md %}}</dd>
 
 </dl>
@@ -703,8 +720,9 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}A stable, user-visible/meaningful string identifying the origin of the Lien, intended to be inspected programmatically.
-Maximum length of 200 characters.
+    <dd>{{% md %}}A stable, user-visible/meaningful string identifying the origin
+of the Lien, intended to be inspected programmatically. Maximum length of
+200 characters.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -713,9 +731,10 @@ Maximum length of 200 characters.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}A reference to the resource this Lien is attached to. The server will validate the parent against those for which Liens
-are supported. Since a variety of objects can have Liens against them, you must provide the type prefix (e.g.
-"projects/my-project-name").
+    <dd>{{% md %}}A reference to the resource this Lien is attached to.
+The server will validate the parent against those for which Liens are supported.
+Since a variety of objects can have Liens against them, you must provide the type
+prefix (e.g. "projects/my-project-name").
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -724,8 +743,8 @@ are supported. Since a variety of objects can have Liens against them, you must 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Concise user-visible strings indicating why an action cannot be performed on a resource. Maximum length of 200
-characters.
+    <dd>{{% md %}}Concise user-visible strings indicating why an action cannot be performed
+on a resource. Maximum length of 200 characters.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -734,9 +753,11 @@ characters.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The types of operations which should be blocked as a result of this Lien. Each value should correspond to an IAM
-permission. The server will validate the permissions against those for which Liens are supported. An empty list is
-meaningless and will be rejected. e.g. ['resourcemanager.projects.delete']
+    <dd>{{% md %}}The types of operations which should be blocked as a result of this Lien.
+Each value should correspond to an IAM permission. The server will validate
+the permissions against those for which Liens are supported.  An empty
+list is meaningless and will be rejected.
+e.g. ['resourcemanager.projects.delete']
 {{% /md %}}</dd>
 
 </dl>
@@ -770,8 +791,9 @@ meaningless and will be rejected. e.g. ['resourcemanager.projects.delete']
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}A stable, user-visible/meaningful string identifying the origin of the Lien, intended to be inspected programmatically.
-Maximum length of 200 characters.
+    <dd>{{% md %}}A stable, user-visible/meaningful string identifying the origin
+of the Lien, intended to be inspected programmatically. Maximum length of
+200 characters.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -780,9 +802,10 @@ Maximum length of 200 characters.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}A reference to the resource this Lien is attached to. The server will validate the parent against those for which Liens
-are supported. Since a variety of objects can have Liens against them, you must provide the type prefix (e.g.
-"projects/my-project-name").
+    <dd>{{% md %}}A reference to the resource this Lien is attached to.
+The server will validate the parent against those for which Liens are supported.
+Since a variety of objects can have Liens against them, you must provide the type
+prefix (e.g. "projects/my-project-name").
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -791,8 +814,8 @@ are supported. Since a variety of objects can have Liens against them, you must 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Concise user-visible strings indicating why an action cannot be performed on a resource. Maximum length of 200
-characters.
+    <dd>{{% md %}}Concise user-visible strings indicating why an action cannot be performed
+on a resource. Maximum length of 200 characters.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -801,9 +824,11 @@ characters.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}The types of operations which should be blocked as a result of this Lien. Each value should correspond to an IAM
-permission. The server will validate the permissions against those for which Liens are supported. An empty list is
-meaningless and will be rejected. e.g. ['resourcemanager.projects.delete']
+    <dd>{{% md %}}The types of operations which should be blocked as a result of this Lien.
+Each value should correspond to an IAM permission. The server will validate
+the permissions against those for which Liens are supported.  An empty
+list is meaningless and will be rejected.
+e.g. ['resourcemanager.projects.delete']
 {{% /md %}}</dd>
 
 </dl>
@@ -837,8 +862,9 @@ meaningless and will be rejected. e.g. ['resourcemanager.projects.delete']
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}A stable, user-visible/meaningful string identifying the origin of the Lien, intended to be inspected programmatically.
-Maximum length of 200 characters.
+    <dd>{{% md %}}A stable, user-visible/meaningful string identifying the origin
+of the Lien, intended to be inspected programmatically. Maximum length of
+200 characters.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -847,9 +873,10 @@ Maximum length of 200 characters.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}A reference to the resource this Lien is attached to. The server will validate the parent against those for which Liens
-are supported. Since a variety of objects can have Liens against them, you must provide the type prefix (e.g.
-"projects/my-project-name").
+    <dd>{{% md %}}A reference to the resource this Lien is attached to.
+The server will validate the parent against those for which Liens are supported.
+Since a variety of objects can have Liens against them, you must provide the type
+prefix (e.g. "projects/my-project-name").
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -858,8 +885,8 @@ are supported. Since a variety of objects can have Liens against them, you must 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Concise user-visible strings indicating why an action cannot be performed on a resource. Maximum length of 200
-characters.
+    <dd>{{% md %}}Concise user-visible strings indicating why an action cannot be performed
+on a resource. Maximum length of 200 characters.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -868,9 +895,11 @@ characters.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}The types of operations which should be blocked as a result of this Lien. Each value should correspond to an IAM
-permission. The server will validate the permissions against those for which Liens are supported. An empty list is
-meaningless and will be rejected. e.g. ['resourcemanager.projects.delete']
+    <dd>{{% md %}}The types of operations which should be blocked as a result of this Lien.
+Each value should correspond to an IAM permission. The server will validate
+the permissions against those for which Liens are supported.  An empty
+list is meaningless and will be rejected.
+e.g. ['resourcemanager.projects.delete']
 {{% /md %}}</dd>
 
 </dl>
@@ -904,8 +933,9 @@ meaningless and will be rejected. e.g. ['resourcemanager.projects.delete']
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}A stable, user-visible/meaningful string identifying the origin of the Lien, intended to be inspected programmatically.
-Maximum length of 200 characters.
+    <dd>{{% md %}}A stable, user-visible/meaningful string identifying the origin
+of the Lien, intended to be inspected programmatically. Maximum length of
+200 characters.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -914,9 +944,10 @@ Maximum length of 200 characters.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}A reference to the resource this Lien is attached to. The server will validate the parent against those for which Liens
-are supported. Since a variety of objects can have Liens against them, you must provide the type prefix (e.g.
-"projects/my-project-name").
+    <dd>{{% md %}}A reference to the resource this Lien is attached to.
+The server will validate the parent against those for which Liens are supported.
+Since a variety of objects can have Liens against them, you must provide the type
+prefix (e.g. "projects/my-project-name").
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -925,8 +956,8 @@ are supported. Since a variety of objects can have Liens against them, you must 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Concise user-visible strings indicating why an action cannot be performed on a resource. Maximum length of 200
-characters.
+    <dd>{{% md %}}Concise user-visible strings indicating why an action cannot be performed
+on a resource. Maximum length of 200 characters.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -935,9 +966,11 @@ characters.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}The types of operations which should be blocked as a result of this Lien. Each value should correspond to an IAM
-permission. The server will validate the permissions against those for which Liens are supported. An empty list is
-meaningless and will be rejected. e.g. ['resourcemanager.projects.delete']
+    <dd>{{% md %}}The types of operations which should be blocked as a result of this Lien.
+Each value should correspond to an IAM permission. The server will validate
+the permissions against those for which Liens are supported.  An empty
+list is meaningless and will be rejected.
+e.g. ['resourcemanager.projects.delete']
 {{% /md %}}</dd>
 
 </dl>
@@ -959,8 +992,7 @@ meaningless and will be rejected. e.g. ['resourcemanager.projects.delete']
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 

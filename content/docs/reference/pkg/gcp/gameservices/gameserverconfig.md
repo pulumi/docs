@@ -1,7 +1,8 @@
 
 ---
 title: "GameServerConfig"
-block_external_search_index: true
+title_tag: "Resource GameServerConfig | Module gameservices | Package GCP"
+meta_desc: "Explore the GameServerConfig resource of the gameservices module, including examples, input properties, output properties, lookup functions, and supporting types. A game server config resource. Configs are global and immutable."
 ---
 
 
@@ -28,7 +29,7 @@ To get more information about GameServerConfig, see:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">GameServerConfig</span><span class="p">(resource_name, opts=None, </span>config_id=None<span class="p">, </span>deployment_id=None<span class="p">, </span>description=None<span class="p">, </span>fleet_configs=None<span class="p">, </span>labels=None<span class="p">, </span>location=None<span class="p">, </span>project=None<span class="p">, </span>scaling_configs=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">GameServerConfig</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>config_id=None<span class="p">, </span>deployment_id=None<span class="p">, </span>description=None<span class="p">, </span>fleet_configs=None<span class="p">, </span>labels=None<span class="p">, </span>location=None<span class="p">, </span>project=None<span class="p">, </span>scaling_configs=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -224,7 +225,8 @@ The GameServerConfig resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gameserverconfigfleetconfig">List&lt;Game<wbr>Server<wbr>Config<wbr>Fleet<wbr>Config<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The fleet config contains list of fleet specs. In the Single Cloud, there will be only one.
+    <dd>{{% md %}}The fleet config contains list of fleet specs. In the Single Cloud, there
+will be only one.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -242,7 +244,7 @@ The GameServerConfig resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}The labels associated with this game server config. Each label is a key-value pair.
+    <dd>{{% md %}}Set of labels to group by.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -270,7 +272,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gameserverconfigscalingconfig">List&lt;Game<wbr>Server<wbr>Config<wbr>Scaling<wbr>Config<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Optional. This contains the autoscaling settings.
+    <dd>{{% md %}}Optional. This contains the autoscaling settings.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -304,7 +306,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gameserverconfigfleetconfig">[]Game<wbr>Server<wbr>Config<wbr>Fleet<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}The fleet config contains list of fleet specs. In the Single Cloud, there will be only one.
+    <dd>{{% md %}}The fleet config contains list of fleet specs. In the Single Cloud, there
+will be only one.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -322,7 +325,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}The labels associated with this game server config. Each label is a key-value pair.
+    <dd>{{% md %}}Set of labels to group by.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -350,7 +353,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gameserverconfigscalingconfig">[]Game<wbr>Server<wbr>Config<wbr>Scaling<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Optional. This contains the autoscaling settings.
+    <dd>{{% md %}}Optional. This contains the autoscaling settings.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -384,7 +387,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gameserverconfigfleetconfig">Game<wbr>Server<wbr>Config<wbr>Fleet<wbr>Config[]</a></span>
     </dt>
-    <dd>{{% md %}}The fleet config contains list of fleet specs. In the Single Cloud, there will be only one.
+    <dd>{{% md %}}The fleet config contains list of fleet specs. In the Single Cloud, there
+will be only one.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -402,7 +406,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}The labels associated with this game server config. Each label is a key-value pair.
+    <dd>{{% md %}}Set of labels to group by.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -430,7 +434,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gameserverconfigscalingconfig">Game<wbr>Server<wbr>Config<wbr>Scaling<wbr>Config[]</a></span>
     </dt>
-    <dd>{{% md %}}Optional. This contains the autoscaling settings.
+    <dd>{{% md %}}Optional. This contains the autoscaling settings.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -464,7 +468,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gameserverconfigfleetconfig">List[Game<wbr>Server<wbr>Config<wbr>Fleet<wbr>Config]</a></span>
     </dt>
-    <dd>{{% md %}}The fleet config contains list of fleet specs. In the Single Cloud, there will be only one.
+    <dd>{{% md %}}The fleet config contains list of fleet specs. In the Single Cloud, there
+will be only one.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -482,7 +487,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
-    <dd>{{% md %}}The labels associated with this game server config. Each label is a key-value pair.
+    <dd>{{% md %}}Set of labels to group by.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -510,7 +515,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gameserverconfigscalingconfig">List[Game<wbr>Server<wbr>Config<wbr>Scaling<wbr>Config]</a></span>
     </dt>
-    <dd>{{% md %}}Optional. This contains the autoscaling settings.
+    <dd>{{% md %}}Optional. This contains the autoscaling settings.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -545,8 +550,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The resource name of the game server config, in the form:
-'projects/{project_id}/locations/{location}/gameServerDeployments/{deployment_id}/configs/{config_id}'.
+    <dd>{{% md %}}The name of the ScalingConfig
 {{% /md %}}</dd>
 
 </dl>
@@ -570,8 +574,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The resource name of the game server config, in the form:
-'projects/{project_id}/locations/{location}/gameServerDeployments/{deployment_id}/configs/{config_id}'.
+    <dd>{{% md %}}The name of the ScalingConfig
 {{% /md %}}</dd>
 
 </dl>
@@ -595,8 +598,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The resource name of the game server config, in the form:
-'projects/{project_id}/locations/{location}/gameServerDeployments/{deployment_id}/configs/{config_id}'.
+    <dd>{{% md %}}The name of the ScalingConfig
 {{% /md %}}</dd>
 
 </dl>
@@ -620,8 +622,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The resource name of the game server config, in the form:
-'projects/{project_id}/locations/{location}/gameServerDeployments/{deployment_id}/configs/{config_id}'.
+    <dd>{{% md %}}The name of the ScalingConfig
 {{% /md %}}</dd>
 
 </dl>
@@ -790,7 +791,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gameserverconfigfleetconfig">List&lt;Game<wbr>Server<wbr>Config<wbr>Fleet<wbr>Config<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The fleet config contains list of fleet specs. In the Single Cloud, there will be only one.
+    <dd>{{% md %}}The fleet config contains list of fleet specs. In the Single Cloud, there
+will be only one.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -799,7 +801,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}The labels associated with this game server config. Each label is a key-value pair.
+    <dd>{{% md %}}Set of labels to group by.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -817,8 +819,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The resource name of the game server config, in the form:
-'projects/{project_id}/locations/{location}/gameServerDeployments/{deployment_id}/configs/{config_id}'.
+    <dd>{{% md %}}The name of the ScalingConfig
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -837,7 +838,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gameserverconfigscalingconfig">List&lt;Game<wbr>Server<wbr>Config<wbr>Scaling<wbr>Config<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Optional. This contains the autoscaling settings.
+    <dd>{{% md %}}Optional. This contains the autoscaling settings.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -880,7 +881,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gameserverconfigfleetconfig">[]Game<wbr>Server<wbr>Config<wbr>Fleet<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}The fleet config contains list of fleet specs. In the Single Cloud, there will be only one.
+    <dd>{{% md %}}The fleet config contains list of fleet specs. In the Single Cloud, there
+will be only one.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -889,7 +891,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}The labels associated with this game server config. Each label is a key-value pair.
+    <dd>{{% md %}}Set of labels to group by.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -907,8 +909,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The resource name of the game server config, in the form:
-'projects/{project_id}/locations/{location}/gameServerDeployments/{deployment_id}/configs/{config_id}'.
+    <dd>{{% md %}}The name of the ScalingConfig
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -927,7 +928,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gameserverconfigscalingconfig">[]Game<wbr>Server<wbr>Config<wbr>Scaling<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Optional. This contains the autoscaling settings.
+    <dd>{{% md %}}Optional. This contains the autoscaling settings.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -970,7 +971,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gameserverconfigfleetconfig">Game<wbr>Server<wbr>Config<wbr>Fleet<wbr>Config[]</a></span>
     </dt>
-    <dd>{{% md %}}The fleet config contains list of fleet specs. In the Single Cloud, there will be only one.
+    <dd>{{% md %}}The fleet config contains list of fleet specs. In the Single Cloud, there
+will be only one.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -979,7 +981,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}The labels associated with this game server config. Each label is a key-value pair.
+    <dd>{{% md %}}Set of labels to group by.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -997,8 +999,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The resource name of the game server config, in the form:
-'projects/{project_id}/locations/{location}/gameServerDeployments/{deployment_id}/configs/{config_id}'.
+    <dd>{{% md %}}The name of the ScalingConfig
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1017,7 +1018,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gameserverconfigscalingconfig">Game<wbr>Server<wbr>Config<wbr>Scaling<wbr>Config[]</a></span>
     </dt>
-    <dd>{{% md %}}Optional. This contains the autoscaling settings.
+    <dd>{{% md %}}Optional. This contains the autoscaling settings.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1060,7 +1061,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gameserverconfigfleetconfig">List[Game<wbr>Server<wbr>Config<wbr>Fleet<wbr>Config]</a></span>
     </dt>
-    <dd>{{% md %}}The fleet config contains list of fleet specs. In the Single Cloud, there will be only one.
+    <dd>{{% md %}}The fleet config contains list of fleet specs. In the Single Cloud, there
+will be only one.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1069,7 +1071,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
-    <dd>{{% md %}}The labels associated with this game server config. Each label is a key-value pair.
+    <dd>{{% md %}}Set of labels to group by.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1087,8 +1089,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The resource name of the game server config, in the form:
-'projects/{project_id}/locations/{location}/gameServerDeployments/{deployment_id}/configs/{config_id}'.
+    <dd>{{% md %}}The name of the ScalingConfig
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1107,7 +1108,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gameserverconfigscalingconfig">List[Game<wbr>Server<wbr>Config<wbr>Scaling<wbr>Config]</a></span>
     </dt>
-    <dd>{{% md %}}Optional. This contains the autoscaling settings.
+    <dd>{{% md %}}Optional. This contains the autoscaling settings.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1146,7 +1147,14 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The fleet spec, which is sent to Agones to configure fleet.
+The spec can be passed as inline json but it is recommended to use a file reference
+instead. File references can contain the json or yaml format of the fleet spec. Eg:
+* fleet_spec = jsonencode(yamldecode(file("fleet_configs.yaml")))
+* fleet_spec = file("fleet_configs.json")
+The format of the spec can be found :
+`https://agones.dev/site/docs/reference/fleet/`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1154,7 +1162,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the ScalingConfig
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1169,7 +1178,14 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The fleet spec, which is sent to Agones to configure fleet.
+The spec can be passed as inline json but it is recommended to use a file reference
+instead. File references can contain the json or yaml format of the fleet spec. Eg:
+* fleet_spec = jsonencode(yamldecode(file("fleet_configs.yaml")))
+* fleet_spec = file("fleet_configs.json")
+The format of the spec can be found :
+`https://agones.dev/site/docs/reference/fleet/`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1177,7 +1193,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the ScalingConfig
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1192,7 +1209,14 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The fleet spec, which is sent to Agones to configure fleet.
+The spec can be passed as inline json but it is recommended to use a file reference
+instead. File references can contain the json or yaml format of the fleet spec. Eg:
+* fleet_spec = jsonencode(yamldecode(file("fleet_configs.yaml")))
+* fleet_spec = file("fleet_configs.json")
+The format of the spec can be found :
+`https://agones.dev/site/docs/reference/fleet/`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1200,7 +1224,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the ScalingConfig
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1215,7 +1240,14 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The fleet spec, which is sent to Agones to configure fleet.
+The spec can be passed as inline json but it is recommended to use a file reference
+instead. File references can contain the json or yaml format of the fleet spec. Eg:
+* fleet_spec = jsonencode(yamldecode(file("fleet_configs.yaml")))
+* fleet_spec = file("fleet_configs.json")
+The format of the spec can be found :
+`https://agones.dev/site/docs/reference/fleet/`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1223,7 +1255,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the ScalingConfig
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1253,7 +1286,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Fleet autoscaler spec, which is sent to Agones.
+Example spec can be found :
+https://agones.dev/site/docs/reference/fleetautoscaler/
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1261,7 +1297,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the ScalingConfig
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1269,7 +1306,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gameserverconfigscalingconfigschedule">List&lt;Game<wbr>Server<wbr>Config<wbr>Scaling<wbr>Config<wbr>Schedule<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The schedules to which this scaling config applies.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1277,7 +1315,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gameserverconfigscalingconfigselector">List&lt;Game<wbr>Server<wbr>Config<wbr>Scaling<wbr>Config<wbr>Selector<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Labels used to identify the clusters to which this scaling config
+applies. A cluster is subject to this scaling config if its labels match
+any of the selector entries.  Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1292,7 +1333,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Fleet autoscaler spec, which is sent to Agones.
+Example spec can be found :
+https://agones.dev/site/docs/reference/fleetautoscaler/
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1300,7 +1344,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the ScalingConfig
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1308,7 +1353,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gameserverconfigscalingconfigschedule">[]Game<wbr>Server<wbr>Config<wbr>Scaling<wbr>Config<wbr>Schedule</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The schedules to which this scaling config applies.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1316,7 +1362,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gameserverconfigscalingconfigselector">[]Game<wbr>Server<wbr>Config<wbr>Scaling<wbr>Config<wbr>Selector</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Labels used to identify the clusters to which this scaling config
+applies. A cluster is subject to this scaling config if its labels match
+any of the selector entries.  Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1331,7 +1380,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Fleet autoscaler spec, which is sent to Agones.
+Example spec can be found :
+https://agones.dev/site/docs/reference/fleetautoscaler/
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1339,7 +1391,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the ScalingConfig
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1347,7 +1400,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gameserverconfigscalingconfigschedule">Game<wbr>Server<wbr>Config<wbr>Scaling<wbr>Config<wbr>Schedule[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The schedules to which this scaling config applies.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1355,7 +1409,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gameserverconfigscalingconfigselector">Game<wbr>Server<wbr>Config<wbr>Scaling<wbr>Config<wbr>Selector[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Labels used to identify the clusters to which this scaling config
+applies. A cluster is subject to this scaling config if its labels match
+any of the selector entries.  Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1370,7 +1427,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Fleet autoscaler spec, which is sent to Agones.
+Example spec can be found :
+https://agones.dev/site/docs/reference/fleetautoscaler/
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1378,7 +1438,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the ScalingConfig
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1386,7 +1447,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gameserverconfigscalingconfigschedule">List[Game<wbr>Server<wbr>Config<wbr>Scaling<wbr>Config<wbr>Schedule]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The schedules to which this scaling config applies.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1394,7 +1456,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gameserverconfigscalingconfigselector">List[Game<wbr>Server<wbr>Config<wbr>Scaling<wbr>Config<wbr>Selector]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Labels used to identify the clusters to which this scaling config
+applies. A cluster is subject to this scaling config if its labels match
+any of the selector entries.  Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1424,7 +1489,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The duration for the cron job event. The duration of the event is effective
+after the cron job's start time.
+A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1432,7 +1500,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The cron definition of the scheduled event. See
+https://en.wikipedia.org/wiki/Cron. Cron spec specifies the local time as
+defined by the realm.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1440,7 +1511,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The end time of the event.
+A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1448,7 +1521,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The start time of the event.
+A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1463,7 +1538,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The duration for the cron job event. The duration of the event is effective
+after the cron job's start time.
+A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1471,7 +1549,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The cron definition of the scheduled event. See
+https://en.wikipedia.org/wiki/Cron. Cron spec specifies the local time as
+defined by the realm.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1479,7 +1560,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The end time of the event.
+A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1487,7 +1570,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The start time of the event.
+A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1502,7 +1587,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The duration for the cron job event. The duration of the event is effective
+after the cron job's start time.
+A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1510,7 +1598,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The cron definition of the scheduled event. See
+https://en.wikipedia.org/wiki/Cron. Cron spec specifies the local time as
+defined by the realm.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1518,7 +1609,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The end time of the event.
+A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1526,7 +1619,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The start time of the event.
+A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1541,7 +1636,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The duration for the cron job event. The duration of the event is effective
+after the cron job's start time.
+A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1549,7 +1647,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The cron definition of the scheduled event. See
+https://en.wikipedia.org/wiki/Cron. Cron spec specifies the local time as
+defined by the realm.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1557,7 +1658,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The end time of the event.
+A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1565,7 +1668,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The start time of the event.
+A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1595,7 +1700,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Set of labels to group by.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1610,7 +1716,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Set of labels to group by.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1625,7 +1732,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Set of labels to group by.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1640,7 +1748,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Set of labels to group by.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1659,8 +1768,7 @@ If it is not provided, the provider project is used.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 

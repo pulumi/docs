@@ -1,7 +1,8 @@
 
 ---
 title: "InstanceIAMPolicy"
-block_external_search_index: true
+title_tag: "Resource InstanceIAMPolicy | Module compute | Package GCP"
+meta_desc: "Explore the InstanceIAMPolicy resource of the compute module, including examples, input properties, output properties, lookup functions, and supporting types. Three different resources help you manage your IAM policy for Compute Engine Instance. Each of these resources serves a different use case:"
 ---
 
 
@@ -30,7 +31,7 @@ Three different resources help you manage your IAM policy for Compute Engine Ins
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">InstanceIAMPolicy</span><span class="p">(resource_name, opts=None, </span>instance_name=None<span class="p">, </span>policy_data=None<span class="p">, </span>project=None<span class="p">, </span>zone=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">InstanceIAMPolicy</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>instance_name=None<span class="p">, </span>policy_data=None<span class="p">, </span>project=None<span class="p">, </span>zone=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -859,8 +860,7 @@ zone is specified, it is taken from the provider configuration.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 
