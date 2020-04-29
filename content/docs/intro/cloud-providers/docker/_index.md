@@ -71,7 +71,7 @@ container = docker.Container("ubuntu",
 
 ```go
 import (
-  do "github.com/pulumi/pulumi-docker/sdk/go/docker"
+  do "github.com/pulumi/pulumi-docker/sdk/v2/go/docker"
 )
 
 image, _ := docker.NewRemoteImage(ctx, "ubuntu", &docker.RemoteImageArgs{

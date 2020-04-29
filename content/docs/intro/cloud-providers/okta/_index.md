@@ -68,7 +68,7 @@ last_name="user",
 
 ```go
 import (
-  user "github.com/pulumi/pulumi-okta/sdk/go/okta/user"
+  user "github.com/pulumi/pulumi-okta/sdk/v2/go/okta/user"
 )
 
 user, _ := user.User(ctx, "example-user", &user.UserArgs{

@@ -65,7 +65,7 @@ domain = linode.Domain("my-domain",
 
 ```go
 import (
-    linode "github.com/pulumi/pulumi-linode/sdk/go/linode"
+    linode "github.com/pulumi/pulumi-linode/sdk/v2/go/linode"
 )
 domain, _ := linode.NewDomain(ctx, "test", &linode.DomainArgs{
   Domain: "foobar.example",
