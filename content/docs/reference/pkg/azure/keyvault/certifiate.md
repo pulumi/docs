@@ -12,6 +12,9 @@ meta_desc: "Explore the Certifiate resource of the keyvault module, including ex
 
 Manages a Key Vault Certificate.
 
+Deprecated: azure.Certifiate has been deprecated in favour of azure.Certificate
+
+<p class="resource-deprecated">Deprecated: {{% md %}}azure.Certifiate has been deprecated in favour of azure.Certificate{{% /md %}}</p>
 
 
 ## Create a Certifiate Resource {#create}

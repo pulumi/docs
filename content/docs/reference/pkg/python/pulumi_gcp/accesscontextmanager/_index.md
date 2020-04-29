@@ -32,71 +32,143 @@ along with a list of requirements necessary for the label to be applied.</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>basic</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A set of predefined conditions for the access level and a combining function.</p></li>
+<li><p><strong>basic</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A set of predefined conditions for the access level and a combining function.  Structure is documented below.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description of the AccessLevel and its use. Does not affect behavior.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Resource name for the Access Level. The short<em>name component must begin with a letter and only include alphanumeric and
-‘</em>’. Format: accessPolicies/{policy_id}/accessLevels/{short_name}</p></li>
-<li><p><strong>parent</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The AccessPolicy this AccessLevel lives in. Format: accessPolicies/{policy_id}</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Resource name for the Access Level. The short<em>name component must begin
+with a letter and only include alphanumeric and ‘</em>’.
+Format: accessPolicies/{policy_id}/accessLevels/{short_name}</p></li>
+<li><p><strong>parent</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The AccessPolicy this AccessLevel lives in.
+Format: accessPolicies/{policy_id}</p></li>
 <li><p><strong>title</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Human readable title. Must be unique within the Policy.</p></li>
 </ul>
 </dd>
 </dl>
 <p>The <strong>basic</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">combiningFunction</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">conditions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">combiningFunction</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - How the conditions list should be combined to determine if a request
+is granted this AccessLevel. If AND is used, each Condition in
+conditions must be satisfied for the AccessLevel to be applied. If
+OR is used, at least one Condition in conditions must be satisfied
+for the AccessLevel to be applied. Defaults to AND if unspecified.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">conditions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A set of requirements for the AccessLevel to be granted.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">devicePolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">devicePolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Device specific restrictions, all restrictions must hold for
+the Condition to be true. If not specified, all devices are
+allowed.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">allowedDeviceManagementLevels</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">allowedEncryptionStatuses</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">osConstraints</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowedDeviceManagementLevels</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of allowed device management levels.
+An empty list allows all management levels.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowedEncryptionStatuses</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of allowed encryptions statuses.
+An empty list allows all statuses.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">osConstraints</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of allowed OS versions.
+An empty list allows all types and all versions.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">minimumVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">osType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">minimumVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The minimum allowed OS version. If not set, any version
+of this OS satisfies the constraint.
+Format: “major.minor.patch” such as “10.5.301”, “9.2.1”.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">osType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The operating system type of the device.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">requireAdminApproval</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">requireCorpOwned</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">requireScreenLock</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">requireAdminApproval</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether the device needs to be approved by the customer admin.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">requireCorpOwned</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether the device needs to be corp owned.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">requireScreenLock</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether or not screenlock is required for the DevicePolicy
+to be true. Defaults to false.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ipSubnetworks</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">members</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">negate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">regions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">requiredAccessLevels</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipSubnetworks</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of CIDR block IP subnetwork specification. May be IPv4
+or IPv6.
+Note that for a CIDR IP address block, the specified IP address
+portion must be properly truncated (i.e. all the host bits must
+be zero) or the input is considered malformed. For example,
+“192.0.2.0/24” is accepted but “192.0.2.1/24” is not. Similarly,
+for IPv6, “2001:db8::/32” is accepted whereas “2001:db8::1/32”
+is not. The originating IP of a request must be in one of the
+listed subnets in order for this Condition to be true.
+If empty, all IP addresses are allowed.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">members</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - An allowed list of members (users, service accounts).
+Using groups is not supported yet.
+The signed-in user originating the request must be a part of one
+of the provided members. If not specified, a request may come
+from any user (logged in/not logged in, not present in any
+groups, etc.).
+Formats: <code class="docutils literal notranslate"><span class="pre">user:{emailid}</span></code>, <code class="docutils literal notranslate"><span class="pre">serviceAccount:{emailid}</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">negate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether to negate the Condition. If true, the Condition becomes
+a NAND over its non-empty fields, each field must be false for
+the Condition overall to be satisfied. Defaults to false.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">regions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The request must originate from one of the provided
+countries/regions.
+Format: A valid ISO 3166-1 alpha-2 code.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">requiredAccessLevels</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of other access levels defined in the same Policy,
+referenced by resource name. Referencing an AccessLevel which
+does not exist is an error. All access levels listed must be
+granted for the Condition to be true.
+Format: accessPolicies/{policy_id}/accessLevels/{short_name}</p></li>
 </ul>
 </li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_gcp.accesscontextmanager.AccessLevel.basic">
 <code class="sig-name descname">basic</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.accesscontextmanager.AccessLevel.basic" title="Permalink to this definition">¶</a></dt>
-<dd><p>A set of predefined conditions for the access level and a combining function.</p>
+<dd><p>A set of predefined conditions for the access level and a combining function.  Structure is documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">combiningFunction</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">conditions</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">combiningFunction</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - How the conditions list should be combined to determine if a request
+is granted this AccessLevel. If AND is used, each Condition in
+conditions must be satisfied for the AccessLevel to be applied. If
+OR is used, at least one Condition in conditions must be satisfied
+for the AccessLevel to be applied. Defaults to AND if unspecified.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">conditions</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A set of requirements for the AccessLevel to be granted.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">devicePolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">devicePolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Device specific restrictions, all restrictions must hold for
+the Condition to be true. If not specified, all devices are
+allowed.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">allowedDeviceManagementLevels</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">allowedEncryptionStatuses</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">osConstraints</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowedDeviceManagementLevels</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of allowed device management levels.
+An empty list allows all management levels.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowedEncryptionStatuses</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of allowed encryptions statuses.
+An empty list allows all statuses.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">osConstraints</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of allowed OS versions.
+An empty list allows all types and all versions.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">minimumVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">osType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">minimumVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The minimum allowed OS version. If not set, any version
+of this OS satisfies the constraint.
+Format: “major.minor.patch” such as “10.5.301”, “9.2.1”.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">osType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The operating system type of the device.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">requireAdminApproval</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">requireCorpOwned</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">requireScreenLock</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">requireAdminApproval</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Whether the device needs to be approved by the customer admin.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">requireCorpOwned</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Whether the device needs to be corp owned.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">requireScreenLock</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Whether or not screenlock is required for the DevicePolicy
+to be true. Defaults to false.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ipSubnetworks</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">members</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">negate</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">regions</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">requiredAccessLevels</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipSubnetworks</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of CIDR block IP subnetwork specification. May be IPv4
+or IPv6.
+Note that for a CIDR IP address block, the specified IP address
+portion must be properly truncated (i.e. all the host bits must
+be zero) or the input is considered malformed. For example,
+“192.0.2.0/24” is accepted but “192.0.2.1/24” is not. Similarly,
+for IPv6, “2001:db8::/32” is accepted whereas “2001:db8::1/32”
+is not. The originating IP of a request must be in one of the
+listed subnets in order for this Condition to be true.
+If empty, all IP addresses are allowed.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">members</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - An allowed list of members (users, service accounts).
+Using groups is not supported yet.
+The signed-in user originating the request must be a part of one
+of the provided members. If not specified, a request may come
+from any user (logged in/not logged in, not present in any
+groups, etc.).
+Formats: <code class="docutils literal notranslate"><span class="pre">user:{emailid}</span></code>, <code class="docutils literal notranslate"><span class="pre">serviceAccount:{emailid}</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">negate</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Whether to negate the Condition. If true, the Condition becomes
+a NAND over its non-empty fields, each field must be false for
+the Condition overall to be satisfied. Defaults to false.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">regions</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - The request must originate from one of the provided
+countries/regions.
+Format: A valid ISO 3166-1 alpha-2 code.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">requiredAccessLevels</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of other access levels defined in the same Policy,
+referenced by resource name. Referencing an AccessLevel which
+does not exist is an error. All access levels listed must be
+granted for the Condition to be true.
+Format: accessPolicies/{policy_id}/accessLevels/{short_name}</p></li>
 </ul>
 </li>
 </ul>
@@ -111,14 +183,16 @@ along with a list of requirements necessary for the label to be applied.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.accesscontextmanager.AccessLevel.name">
 <code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.accesscontextmanager.AccessLevel.name" title="Permalink to this definition">¶</a></dt>
-<dd><p>Resource name for the Access Level. The short<em>name component must begin with a letter and only include alphanumeric and
-‘</em>’. Format: accessPolicies/{policy_id}/accessLevels/{short_name}</p>
+<dd><p>Resource name for the Access Level. The short<em>name component must begin
+with a letter and only include alphanumeric and ‘</em>’.
+Format: accessPolicies/{policy_id}/accessLevels/{short_name}</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_gcp.accesscontextmanager.AccessLevel.parent">
 <code class="sig-name descname">parent</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.accesscontextmanager.AccessLevel.parent" title="Permalink to this definition">¶</a></dt>
-<dd><p>The AccessPolicy this AccessLevel lives in. Format: accessPolicies/{policy_id}</p>
+<dd><p>The AccessPolicy this AccessLevel lives in.
+Format: accessPolicies/{policy_id}</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -138,40 +212,77 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>basic</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A set of predefined conditions for the access level and a combining function.</p></li>
+<li><p><strong>basic</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A set of predefined conditions for the access level and a combining function.  Structure is documented below.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description of the AccessLevel and its use. Does not affect behavior.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Resource name for the Access Level. The short<em>name component must begin with a letter and only include alphanumeric and
-‘</em>’. Format: accessPolicies/{policy_id}/accessLevels/{short_name}</p></li>
-<li><p><strong>parent</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The AccessPolicy this AccessLevel lives in. Format: accessPolicies/{policy_id}</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Resource name for the Access Level. The short<em>name component must begin
+with a letter and only include alphanumeric and ‘</em>’.
+Format: accessPolicies/{policy_id}/accessLevels/{short_name}</p></li>
+<li><p><strong>parent</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The AccessPolicy this AccessLevel lives in.
+Format: accessPolicies/{policy_id}</p></li>
 <li><p><strong>title</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Human readable title. Must be unique within the Policy.</p></li>
 </ul>
 </dd>
 </dl>
 <p>The <strong>basic</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">combiningFunction</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">conditions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">combiningFunction</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - How the conditions list should be combined to determine if a request
+is granted this AccessLevel. If AND is used, each Condition in
+conditions must be satisfied for the AccessLevel to be applied. If
+OR is used, at least one Condition in conditions must be satisfied
+for the AccessLevel to be applied. Defaults to AND if unspecified.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">conditions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A set of requirements for the AccessLevel to be granted.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">devicePolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">devicePolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Device specific restrictions, all restrictions must hold for
+the Condition to be true. If not specified, all devices are
+allowed.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">allowedDeviceManagementLevels</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">allowedEncryptionStatuses</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">osConstraints</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowedDeviceManagementLevels</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of allowed device management levels.
+An empty list allows all management levels.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowedEncryptionStatuses</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of allowed encryptions statuses.
+An empty list allows all statuses.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">osConstraints</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of allowed OS versions.
+An empty list allows all types and all versions.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">minimumVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">osType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">minimumVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The minimum allowed OS version. If not set, any version
+of this OS satisfies the constraint.
+Format: “major.minor.patch” such as “10.5.301”, “9.2.1”.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">osType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The operating system type of the device.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">requireAdminApproval</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">requireCorpOwned</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">requireScreenLock</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">requireAdminApproval</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether the device needs to be approved by the customer admin.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">requireCorpOwned</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether the device needs to be corp owned.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">requireScreenLock</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether or not screenlock is required for the DevicePolicy
+to be true. Defaults to false.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ipSubnetworks</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">members</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">negate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">regions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">requiredAccessLevels</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipSubnetworks</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of CIDR block IP subnetwork specification. May be IPv4
+or IPv6.
+Note that for a CIDR IP address block, the specified IP address
+portion must be properly truncated (i.e. all the host bits must
+be zero) or the input is considered malformed. For example,
+“192.0.2.0/24” is accepted but “192.0.2.1/24” is not. Similarly,
+for IPv6, “2001:db8::/32” is accepted whereas “2001:db8::1/32”
+is not. The originating IP of a request must be in one of the
+listed subnets in order for this Condition to be true.
+If empty, all IP addresses are allowed.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">members</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - An allowed list of members (users, service accounts).
+Using groups is not supported yet.
+The signed-in user originating the request must be a part of one
+of the provided members. If not specified, a request may come
+from any user (logged in/not logged in, not present in any
+groups, etc.).
+Formats: <code class="docutils literal notranslate"><span class="pre">user:{emailid}</span></code>, <code class="docutils literal notranslate"><span class="pre">serviceAccount:{emailid}</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">negate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether to negate the Condition. If true, the Condition becomes
+a NAND over its non-empty fields, each field must be false for
+the Condition overall to be satisfied. Defaults to false.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">regions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The request must originate from one of the provided
+countries/regions.
+Format: A valid ISO 3166-1 alpha-2 code.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">requiredAccessLevels</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of other access levels defined in the same Policy,
+referenced by resource name. Referencing an AccessLevel which
+does not exist is an error. All access levels listed must be
+granted for the Condition to be true.
+Format: accessPolicies/{policy_id}/accessLevels/{short_name}</p></li>
 </ul>
 </li>
 </ul>
@@ -237,7 +348,8 @@ restrictions it specifies apply to all projects within an organization.</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>parent</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The parent of this AccessPolicy in the Cloud Resource Hierarchy. Format: organizations/{organization_id}</p></li>
+<li><p><strong>parent</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The parent of this AccessPolicy in the Cloud Resource Hierarchy.
+Format: organizations/{organization_id}</p></li>
 <li><p><strong>title</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Human readable title. Does not affect behavior.</p></li>
 </ul>
 </dd>
@@ -257,7 +369,8 @@ restrictions it specifies apply to all projects within an organization.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.accesscontextmanager.AccessPolicy.parent">
 <code class="sig-name descname">parent</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.accesscontextmanager.AccessPolicy.parent" title="Permalink to this definition">¶</a></dt>
-<dd><p>The parent of this AccessPolicy in the Cloud Resource Hierarchy. Format: organizations/{organization_id}</p>
+<dd><p>The parent of this AccessPolicy in the Cloud Resource Hierarchy.
+Format: organizations/{organization_id}</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -285,7 +398,8 @@ properties used to qualify the lookup.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>create_time</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Time the AccessPolicy was created in UTC.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Resource name of the AccessPolicy. Format: {policy_id}</p></li>
-<li><p><strong>parent</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The parent of this AccessPolicy in the Cloud Resource Hierarchy. Format: organizations/{organization_id}</p></li>
+<li><p><strong>parent</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The parent of this AccessPolicy in the Cloud Resource Hierarchy.
+Format: organizations/{organization_id}</p></li>
 <li><p><strong>title</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Human readable title. Does not affect behavior.</p></li>
 <li><p><strong>update_time</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Time the AccessPolicy was updated in UTC.</p></li>
 </ul>
@@ -359,54 +473,102 @@ project may belong to multiple Service Perimeter Bridges.</p></li>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description of the ServicePerimeter and its use. Does not affect behavior.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Resource name for the ServicePerimeter. The short<em>name component must begin with a letter and only include alphanumeric
-and ‘</em>’. Format: accessPolicies/{policy_id}/servicePerimeters/{short_name}</p></li>
-<li><p><strong>parent</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The AccessPolicy this ServicePerimeter lives in. Format: accessPolicies/{policy_id}</p></li>
-<li><p><strong>perimeter_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the type of the Perimeter. There are two types: regular and bridge. Regular Service Perimeter contains
-resources, access levels, and restricted services. Every resource can be in at most ONE regular Service Perimeter. In
-addition to being in a regular service perimeter, a resource can also be in zero or more perimeter bridges. A perimeter
-bridge only contains resources. Cross project operations are permitted if all effected resources share some perimeter
-(whether bridge or regular). Perimeter Bridge does not contain access levels or services: those are governed entirely by
-the regular perimeter that resource is in. Perimeter Bridges are typically useful when building more complex topologies
-with many independent perimeters that need to share some data with a common perimeter, but should not be able to share
-data among themselves.</p></li>
-<li><p><strong>spec</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Proposed (or dry run) ServicePerimeter configuration. This configuration allows to specify and test ServicePerimeter
-configuration without enforcing actual access restrictions. Only allowed to be set when the ‘useExplicitDryRunSpec’ flag
-is set.</p></li>
-<li><p><strong>status</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – ServicePerimeter configuration. Specifies sets of resources, restricted services and access levels that determine
-perimeter content and boundaries.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description of the ServicePerimeter and its use. Does not affect
+behavior.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Resource name for the ServicePerimeter. The short<em>name component must
+begin with a letter and only include alphanumeric and ‘</em>’.
+Format: accessPolicies/{policy_id}/servicePerimeters/{short_name}</p></li>
+<li><p><strong>parent</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The AccessPolicy this ServicePerimeter lives in.
+Format: accessPolicies/{policy_id}</p></li>
+<li><p><strong>perimeter_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the type of the Perimeter. There are two types: regular and
+bridge. Regular Service Perimeter contains resources, access levels,
+and restricted services. Every resource can be in at most
+ONE regular Service Perimeter.
+In addition to being in a regular service perimeter, a resource can also
+be in zero or more perimeter bridges. A perimeter bridge only contains
+resources. Cross project operations are permitted if all effected
+resources share some perimeter (whether bridge or regular). Perimeter
+Bridge does not contain access levels or services: those are governed
+entirely by the regular perimeter that resource is in.
+Perimeter Bridges are typically useful when building more complex
+topologies with many independent perimeters that need to share some data
+with a common perimeter, but should not be able to share data among
+themselves.</p></li>
+<li><p><strong>spec</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Proposed (or dry run) ServicePerimeter configuration.
+This configuration allows to specify and test ServicePerimeter configuration
+without enforcing actual access restrictions. Only allowed to be set when
+the <code class="docutils literal notranslate"><span class="pre">useExplicitDryRunSpec</span></code> flag is set.  Structure is documented below.</p></li>
+<li><p><strong>status</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – ServicePerimeter configuration. Specifies sets of resources,
+restricted services and access levels that determine
+perimeter content and boundaries.  Structure is documented below.</p></li>
 <li><p><strong>title</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Human readable title. Must be unique within the Policy.</p></li>
-<li><p><strong>use_explicit_dry_run_spec</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Use explicit dry run spec flag. Ordinarily, a dry-run spec implicitly exists for all Service Perimeters, and that spec
-is identical to the status for those Service Perimeters. When this flag is set, it inhibits the generation of the
-implicit spec, thereby allowing the user to explicitly provide a configuration (“spec”) to use in a dry-run version of
-the Service Perimeter. This allows the user to test changes to the enforced config (“status”) without actually enforcing
-them. This testing is done through analyzing the differences between currently enforced and suggested restrictions.
-useExplicitDryRunSpec must bet set to True if any of the fields in the spec are set to non-default values.</p></li>
+<li><p><strong>use_explicit_dry_run_spec</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Use explicit dry run spec flag. Ordinarily, a dry-run spec implicitly exists
+for all Service Perimeters, and that spec is identical to the status for those
+Service Perimeters. When this flag is set, it inhibits the generation of the
+implicit spec, thereby allowing the user to explicitly provide a
+configuration (“spec”) to use in a dry-run version of the Service Perimeter.
+This allows the user to test changes to the enforced config (“status”) without
+actually enforcing them. This testing is done through analyzing the differences
+between currently enforced and suggested restrictions. useExplicitDryRunSpec must
+bet set to True if any of the fields in the spec are set to non-default values.</p></li>
 </ul>
 </dd>
 </dl>
 <p>The <strong>spec</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">accessLevels</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">resources</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">restrictedServices</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">vpcAccessibleServices</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">accessLevels</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of AccessLevel resource names that allow resources within
+the ServicePerimeter to be accessed from the internet.
+AccessLevels listed must be in the same policy as this
+ServicePerimeter. Referencing a nonexistent AccessLevel is a
+syntax error. If no AccessLevel names are listed, resources within
+the perimeter can only be accessed via GCP calls with request
+origins within the perimeter. For Service Perimeter Bridge, must
+be empty.
+Format: accessPolicies/{policy_id}/accessLevels/{access_level_name}</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">resources</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of GCP resources that are inside of the service perimeter.
+Currently only projects are allowed.
+Format: projects/{project_number}</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">restrictedServices</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - GCP services that are subject to the Service Perimeter
+restrictions. Must contain a list of services. For example, if
+<code class="docutils literal notranslate"><span class="pre">storage.googleapis.com</span></code> is specified, access to the storage
+buckets inside the perimeter must meet the perimeter’s access
+restrictions.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">vpcAccessibleServices</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Specifies how APIs are allowed to communicate within the Service
+Perimeter.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">allowedServices</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enableRestriction</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowedServices</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The list of APIs usable within the Service Perimeter.
+Must be empty unless <code class="docutils literal notranslate"><span class="pre">enableRestriction</span></code> is True.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enableRestriction</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether to restrict API calls within the Service Perimeter to the
+list of APIs specified in ‘allowedServices’.</p></li>
 </ul>
 </li>
 </ul>
 <p>The <strong>status</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">accessLevels</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">resources</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">restrictedServices</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">vpcAccessibleServices</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">accessLevels</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of AccessLevel resource names that allow resources within
+the ServicePerimeter to be accessed from the internet.
+AccessLevels listed must be in the same policy as this
+ServicePerimeter. Referencing a nonexistent AccessLevel is a
+syntax error. If no AccessLevel names are listed, resources within
+the perimeter can only be accessed via GCP calls with request
+origins within the perimeter. For Service Perimeter Bridge, must
+be empty.
+Format: accessPolicies/{policy_id}/accessLevels/{access_level_name}</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">resources</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of GCP resources that are inside of the service perimeter.
+Currently only projects are allowed.
+Format: projects/{project_number}</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">restrictedServices</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - GCP services that are subject to the Service Perimeter
+restrictions. Must contain a list of services. For example, if
+<code class="docutils literal notranslate"><span class="pre">storage.googleapis.com</span></code> is specified, access to the storage
+buckets inside the perimeter must meet the perimeter’s access
+restrictions.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">vpcAccessibleServices</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Specifies how APIs are allowed to communicate within the Service
+Perimeter.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">allowedServices</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enableRestriction</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowedServices</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The list of APIs usable within the Service Perimeter.
+Must be empty unless <code class="docutils literal notranslate"><span class="pre">enableRestriction</span></code> is True.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enableRestriction</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether to restrict API calls within the Service Perimeter to the
+list of APIs specified in ‘allowedServices’.</p></li>
 </ul>
 </li>
 </ul>
@@ -419,49 +581,76 @@ useExplicitDryRunSpec must bet set to True if any of the fields in the spec are 
 <dl class="attribute">
 <dt id="pulumi_gcp.accesscontextmanager.ServicePerimeter.description">
 <code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.accesscontextmanager.ServicePerimeter.description" title="Permalink to this definition">¶</a></dt>
-<dd><p>Description of the ServicePerimeter and its use. Does not affect behavior.</p>
+<dd><p>Description of the ServicePerimeter and its use. Does not affect
+behavior.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_gcp.accesscontextmanager.ServicePerimeter.name">
 <code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.accesscontextmanager.ServicePerimeter.name" title="Permalink to this definition">¶</a></dt>
-<dd><p>Resource name for the ServicePerimeter. The short<em>name component must begin with a letter and only include alphanumeric
-and ‘</em>’. Format: accessPolicies/{policy_id}/servicePerimeters/{short_name}</p>
+<dd><p>Resource name for the ServicePerimeter. The short<em>name component must
+begin with a letter and only include alphanumeric and ‘</em>’.
+Format: accessPolicies/{policy_id}/servicePerimeters/{short_name}</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_gcp.accesscontextmanager.ServicePerimeter.parent">
 <code class="sig-name descname">parent</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.accesscontextmanager.ServicePerimeter.parent" title="Permalink to this definition">¶</a></dt>
-<dd><p>The AccessPolicy this ServicePerimeter lives in. Format: accessPolicies/{policy_id}</p>
+<dd><p>The AccessPolicy this ServicePerimeter lives in.
+Format: accessPolicies/{policy_id}</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_gcp.accesscontextmanager.ServicePerimeter.perimeter_type">
 <code class="sig-name descname">perimeter_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.accesscontextmanager.ServicePerimeter.perimeter_type" title="Permalink to this definition">¶</a></dt>
-<dd><p>Specifies the type of the Perimeter. There are two types: regular and bridge. Regular Service Perimeter contains
-resources, access levels, and restricted services. Every resource can be in at most ONE regular Service Perimeter. In
-addition to being in a regular service perimeter, a resource can also be in zero or more perimeter bridges. A perimeter
-bridge only contains resources. Cross project operations are permitted if all effected resources share some perimeter
-(whether bridge or regular). Perimeter Bridge does not contain access levels or services: those are governed entirely by
-the regular perimeter that resource is in. Perimeter Bridges are typically useful when building more complex topologies
-with many independent perimeters that need to share some data with a common perimeter, but should not be able to share
-data among themselves.</p>
+<dd><p>Specifies the type of the Perimeter. There are two types: regular and
+bridge. Regular Service Perimeter contains resources, access levels,
+and restricted services. Every resource can be in at most
+ONE regular Service Perimeter.
+In addition to being in a regular service perimeter, a resource can also
+be in zero or more perimeter bridges. A perimeter bridge only contains
+resources. Cross project operations are permitted if all effected
+resources share some perimeter (whether bridge or regular). Perimeter
+Bridge does not contain access levels or services: those are governed
+entirely by the regular perimeter that resource is in.
+Perimeter Bridges are typically useful when building more complex
+topologies with many independent perimeters that need to share some data
+with a common perimeter, but should not be able to share data among
+themselves.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_gcp.accesscontextmanager.ServicePerimeter.spec">
 <code class="sig-name descname">spec</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.accesscontextmanager.ServicePerimeter.spec" title="Permalink to this definition">¶</a></dt>
-<dd><p>Proposed (or dry run) ServicePerimeter configuration. This configuration allows to specify and test ServicePerimeter
-configuration without enforcing actual access restrictions. Only allowed to be set when the ‘useExplicitDryRunSpec’ flag
-is set.</p>
+<dd><p>Proposed (or dry run) ServicePerimeter configuration.
+This configuration allows to specify and test ServicePerimeter configuration
+without enforcing actual access restrictions. Only allowed to be set when
+the <code class="docutils literal notranslate"><span class="pre">useExplicitDryRunSpec</span></code> flag is set.  Structure is documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">accessLevels</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">resources</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">restrictedServices</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">vpcAccessibleServices</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">accessLevels</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of AccessLevel resource names that allow resources within
+the ServicePerimeter to be accessed from the internet.
+AccessLevels listed must be in the same policy as this
+ServicePerimeter. Referencing a nonexistent AccessLevel is a
+syntax error. If no AccessLevel names are listed, resources within
+the perimeter can only be accessed via GCP calls with request
+origins within the perimeter. For Service Perimeter Bridge, must
+be empty.
+Format: accessPolicies/{policy_id}/accessLevels/{access_level_name}</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">resources</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of GCP resources that are inside of the service perimeter.
+Currently only projects are allowed.
+Format: projects/{project_number}</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">restrictedServices</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - GCP services that are subject to the Service Perimeter
+restrictions. Must contain a list of services. For example, if
+<code class="docutils literal notranslate"><span class="pre">storage.googleapis.com</span></code> is specified, access to the storage
+buckets inside the perimeter must meet the perimeter’s access
+restrictions.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">vpcAccessibleServices</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Specifies how APIs are allowed to communicate within the Service
+Perimeter.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">allowedServices</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enableRestriction</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowedServices</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - The list of APIs usable within the Service Perimeter.
+Must be empty unless <code class="docutils literal notranslate"><span class="pre">enableRestriction</span></code> is True.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enableRestriction</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Whether to restrict API calls within the Service Perimeter to the
+list of APIs specified in ‘allowedServices’.</p></li>
 </ul>
 </li>
 </ul>
@@ -470,16 +659,34 @@ is set.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.accesscontextmanager.ServicePerimeter.status">
 <code class="sig-name descname">status</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.accesscontextmanager.ServicePerimeter.status" title="Permalink to this definition">¶</a></dt>
-<dd><p>ServicePerimeter configuration. Specifies sets of resources, restricted services and access levels that determine
-perimeter content and boundaries.</p>
+<dd><p>ServicePerimeter configuration. Specifies sets of resources,
+restricted services and access levels that determine
+perimeter content and boundaries.  Structure is documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">accessLevels</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">resources</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">restrictedServices</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">vpcAccessibleServices</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">accessLevels</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of AccessLevel resource names that allow resources within
+the ServicePerimeter to be accessed from the internet.
+AccessLevels listed must be in the same policy as this
+ServicePerimeter. Referencing a nonexistent AccessLevel is a
+syntax error. If no AccessLevel names are listed, resources within
+the perimeter can only be accessed via GCP calls with request
+origins within the perimeter. For Service Perimeter Bridge, must
+be empty.
+Format: accessPolicies/{policy_id}/accessLevels/{access_level_name}</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">resources</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of GCP resources that are inside of the service perimeter.
+Currently only projects are allowed.
+Format: projects/{project_number}</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">restrictedServices</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - GCP services that are subject to the Service Perimeter
+restrictions. Must contain a list of services. For example, if
+<code class="docutils literal notranslate"><span class="pre">storage.googleapis.com</span></code> is specified, access to the storage
+buckets inside the perimeter must meet the perimeter’s access
+restrictions.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">vpcAccessibleServices</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Specifies how APIs are allowed to communicate within the Service
+Perimeter.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">allowedServices</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enableRestriction</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowedServices</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - The list of APIs usable within the Service Perimeter.
+Must be empty unless <code class="docutils literal notranslate"><span class="pre">enableRestriction</span></code> is True.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enableRestriction</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Whether to restrict API calls within the Service Perimeter to the
+list of APIs specified in ‘allowedServices’.</p></li>
 </ul>
 </li>
 </ul>
@@ -500,12 +707,15 @@ perimeter content and boundaries.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.accesscontextmanager.ServicePerimeter.use_explicit_dry_run_spec">
 <code class="sig-name descname">use_explicit_dry_run_spec</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.accesscontextmanager.ServicePerimeter.use_explicit_dry_run_spec" title="Permalink to this definition">¶</a></dt>
-<dd><p>Use explicit dry run spec flag. Ordinarily, a dry-run spec implicitly exists for all Service Perimeters, and that spec
-is identical to the status for those Service Perimeters. When this flag is set, it inhibits the generation of the
-implicit spec, thereby allowing the user to explicitly provide a configuration (“spec”) to use in a dry-run version of
-the Service Perimeter. This allows the user to test changes to the enforced config (“status”) without actually enforcing
-them. This testing is done through analyzing the differences between currently enforced and suggested restrictions.
-useExplicitDryRunSpec must bet set to True if any of the fields in the spec are set to non-default values.</p>
+<dd><p>Use explicit dry run spec flag. Ordinarily, a dry-run spec implicitly exists
+for all Service Perimeters, and that spec is identical to the status for those
+Service Perimeters. When this flag is set, it inhibits the generation of the
+implicit spec, thereby allowing the user to explicitly provide a
+configuration (“spec”) to use in a dry-run version of the Service Perimeter.
+This allows the user to test changes to the enforced config (“status”) without
+actually enforcing them. This testing is done through analyzing the differences
+between currently enforced and suggested restrictions. useExplicitDryRunSpec must
+bet set to True if any of the fields in the spec are set to non-default values.</p>
 </dd></dl>
 
 <dl class="method">
@@ -520,55 +730,103 @@ properties used to qualify the lookup.</p>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>create_time</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Time the AccessPolicy was created in UTC.</p></li>
-<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description of the ServicePerimeter and its use. Does not affect behavior.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Resource name for the ServicePerimeter. The short<em>name component must begin with a letter and only include alphanumeric
-and ‘</em>’. Format: accessPolicies/{policy_id}/servicePerimeters/{short_name}</p></li>
-<li><p><strong>parent</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The AccessPolicy this ServicePerimeter lives in. Format: accessPolicies/{policy_id}</p></li>
-<li><p><strong>perimeter_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the type of the Perimeter. There are two types: regular and bridge. Regular Service Perimeter contains
-resources, access levels, and restricted services. Every resource can be in at most ONE regular Service Perimeter. In
-addition to being in a regular service perimeter, a resource can also be in zero or more perimeter bridges. A perimeter
-bridge only contains resources. Cross project operations are permitted if all effected resources share some perimeter
-(whether bridge or regular). Perimeter Bridge does not contain access levels or services: those are governed entirely by
-the regular perimeter that resource is in. Perimeter Bridges are typically useful when building more complex topologies
-with many independent perimeters that need to share some data with a common perimeter, but should not be able to share
-data among themselves.</p></li>
-<li><p><strong>spec</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Proposed (or dry run) ServicePerimeter configuration. This configuration allows to specify and test ServicePerimeter
-configuration without enforcing actual access restrictions. Only allowed to be set when the ‘useExplicitDryRunSpec’ flag
-is set.</p></li>
-<li><p><strong>status</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – ServicePerimeter configuration. Specifies sets of resources, restricted services and access levels that determine
-perimeter content and boundaries.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description of the ServicePerimeter and its use. Does not affect
+behavior.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Resource name for the ServicePerimeter. The short<em>name component must
+begin with a letter and only include alphanumeric and ‘</em>’.
+Format: accessPolicies/{policy_id}/servicePerimeters/{short_name}</p></li>
+<li><p><strong>parent</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The AccessPolicy this ServicePerimeter lives in.
+Format: accessPolicies/{policy_id}</p></li>
+<li><p><strong>perimeter_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the type of the Perimeter. There are two types: regular and
+bridge. Regular Service Perimeter contains resources, access levels,
+and restricted services. Every resource can be in at most
+ONE regular Service Perimeter.
+In addition to being in a regular service perimeter, a resource can also
+be in zero or more perimeter bridges. A perimeter bridge only contains
+resources. Cross project operations are permitted if all effected
+resources share some perimeter (whether bridge or regular). Perimeter
+Bridge does not contain access levels or services: those are governed
+entirely by the regular perimeter that resource is in.
+Perimeter Bridges are typically useful when building more complex
+topologies with many independent perimeters that need to share some data
+with a common perimeter, but should not be able to share data among
+themselves.</p></li>
+<li><p><strong>spec</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Proposed (or dry run) ServicePerimeter configuration.
+This configuration allows to specify and test ServicePerimeter configuration
+without enforcing actual access restrictions. Only allowed to be set when
+the <code class="docutils literal notranslate"><span class="pre">useExplicitDryRunSpec</span></code> flag is set.  Structure is documented below.</p></li>
+<li><p><strong>status</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – ServicePerimeter configuration. Specifies sets of resources,
+restricted services and access levels that determine
+perimeter content and boundaries.  Structure is documented below.</p></li>
 <li><p><strong>title</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Human readable title. Must be unique within the Policy.</p></li>
 <li><p><strong>update_time</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Time the AccessPolicy was updated in UTC.</p></li>
-<li><p><strong>use_explicit_dry_run_spec</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Use explicit dry run spec flag. Ordinarily, a dry-run spec implicitly exists for all Service Perimeters, and that spec
-is identical to the status for those Service Perimeters. When this flag is set, it inhibits the generation of the
-implicit spec, thereby allowing the user to explicitly provide a configuration (“spec”) to use in a dry-run version of
-the Service Perimeter. This allows the user to test changes to the enforced config (“status”) without actually enforcing
-them. This testing is done through analyzing the differences between currently enforced and suggested restrictions.
-useExplicitDryRunSpec must bet set to True if any of the fields in the spec are set to non-default values.</p></li>
+<li><p><strong>use_explicit_dry_run_spec</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Use explicit dry run spec flag. Ordinarily, a dry-run spec implicitly exists
+for all Service Perimeters, and that spec is identical to the status for those
+Service Perimeters. When this flag is set, it inhibits the generation of the
+implicit spec, thereby allowing the user to explicitly provide a
+configuration (“spec”) to use in a dry-run version of the Service Perimeter.
+This allows the user to test changes to the enforced config (“status”) without
+actually enforcing them. This testing is done through analyzing the differences
+between currently enforced and suggested restrictions. useExplicitDryRunSpec must
+bet set to True if any of the fields in the spec are set to non-default values.</p></li>
 </ul>
 </dd>
 </dl>
 <p>The <strong>spec</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">accessLevels</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">resources</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">restrictedServices</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">vpcAccessibleServices</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">accessLevels</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of AccessLevel resource names that allow resources within
+the ServicePerimeter to be accessed from the internet.
+AccessLevels listed must be in the same policy as this
+ServicePerimeter. Referencing a nonexistent AccessLevel is a
+syntax error. If no AccessLevel names are listed, resources within
+the perimeter can only be accessed via GCP calls with request
+origins within the perimeter. For Service Perimeter Bridge, must
+be empty.
+Format: accessPolicies/{policy_id}/accessLevels/{access_level_name}</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">resources</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of GCP resources that are inside of the service perimeter.
+Currently only projects are allowed.
+Format: projects/{project_number}</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">restrictedServices</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - GCP services that are subject to the Service Perimeter
+restrictions. Must contain a list of services. For example, if
+<code class="docutils literal notranslate"><span class="pre">storage.googleapis.com</span></code> is specified, access to the storage
+buckets inside the perimeter must meet the perimeter’s access
+restrictions.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">vpcAccessibleServices</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Specifies how APIs are allowed to communicate within the Service
+Perimeter.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">allowedServices</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enableRestriction</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowedServices</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The list of APIs usable within the Service Perimeter.
+Must be empty unless <code class="docutils literal notranslate"><span class="pre">enableRestriction</span></code> is True.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enableRestriction</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether to restrict API calls within the Service Perimeter to the
+list of APIs specified in ‘allowedServices’.</p></li>
 </ul>
 </li>
 </ul>
 <p>The <strong>status</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">accessLevels</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">resources</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">restrictedServices</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">vpcAccessibleServices</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">accessLevels</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of AccessLevel resource names that allow resources within
+the ServicePerimeter to be accessed from the internet.
+AccessLevels listed must be in the same policy as this
+ServicePerimeter. Referencing a nonexistent AccessLevel is a
+syntax error. If no AccessLevel names are listed, resources within
+the perimeter can only be accessed via GCP calls with request
+origins within the perimeter. For Service Perimeter Bridge, must
+be empty.
+Format: accessPolicies/{policy_id}/accessLevels/{access_level_name}</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">resources</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of GCP resources that are inside of the service perimeter.
+Currently only projects are allowed.
+Format: projects/{project_number}</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">restrictedServices</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - GCP services that are subject to the Service Perimeter
+restrictions. Must contain a list of services. For example, if
+<code class="docutils literal notranslate"><span class="pre">storage.googleapis.com</span></code> is specified, access to the storage
+buckets inside the perimeter must meet the perimeter’s access
+restrictions.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">vpcAccessibleServices</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Specifies how APIs are allowed to communicate within the Service
+Perimeter.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">allowedServices</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enableRestriction</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowedServices</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The list of APIs usable within the Service Perimeter.
+Must be empty unless <code class="docutils literal notranslate"><span class="pre">enableRestriction</span></code> is True.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enableRestriction</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether to restrict API calls within the Service Perimeter to the
+list of APIs specified in ‘allowedServices’.</p></li>
 </ul>
 </li>
 </ul>
@@ -639,8 +897,9 @@ they don’t fight over which resources should be in the policy.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>perimeter_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Service Perimeter to add this resource to.</p></li>
-<li><p><strong>resource</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A GCP resource that is inside of the service perimeter. Currently only projects are allowed. Format:
-projects/{project_number}</p></li>
+<li><p><strong>resource</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A GCP resource that is inside of the service perimeter.
+Currently only projects are allowed.
+Format: projects/{project_number}</p></li>
 </ul>
 </dd>
 </dl>
@@ -653,8 +912,9 @@ projects/{project_number}</p></li>
 <dl class="attribute">
 <dt id="pulumi_gcp.accesscontextmanager.ServicePerimeterResource.resource">
 <code class="sig-name descname">resource</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.accesscontextmanager.ServicePerimeterResource.resource" title="Permalink to this definition">¶</a></dt>
-<dd><p>A GCP resource that is inside of the service perimeter. Currently only projects are allowed. Format:
-projects/{project_number}</p>
+<dd><p>A GCP resource that is inside of the service perimeter.
+Currently only projects are allowed.
+Format: projects/{project_number}</p>
 </dd></dl>
 
 <dl class="method">
@@ -669,8 +929,9 @@ properties used to qualify the lookup.</p>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>perimeter_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Service Perimeter to add this resource to.</p></li>
-<li><p><strong>resource</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A GCP resource that is inside of the service perimeter. Currently only projects are allowed. Format:
-projects/{project_number}</p></li>
+<li><p><strong>resource</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A GCP resource that is inside of the service perimeter.
+Currently only projects are allowed.
+Format: projects/{project_number}</p></li>
 </ul>
 </dd>
 </dl>

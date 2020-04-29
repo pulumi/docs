@@ -34,51 +34,85 @@ agent to handle the types of conversations required for your system.</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>api_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – API version displayed in Dialogflow console. If not specified, V2 API is assumed. Clients are free to query different
-service endpoints for different API versions. However, bots connectors and webhook calls will follow the specified API
-version. * API_VERSION_V1: Legacy V1 API. * API_VERSION_V2: V2 API. * API_VERSION_V2_BETA_1: V2beta1 API.</p></li>
-<li><p><strong>avatar_uri</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The URI of the agent’s avatar, which are used throughout the Dialogflow console. When an image URL is entered into this
-field, the Dialogflow will save the image in the backend. The address of the backend image returned from the API will be
-shown in the [avatarUriBackend] field.</p></li>
-<li><p><strong>classification_threshold</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – To filter out false positive results and still get variety in matched natural language inputs for your agent, you can
-tune the machine learning classification threshold. If the returned score value is less than the threshold value, then a
-fallback intent will be triggered or, if there are no fallback intents defined, no intent will be triggered. The score
-values range from 0.0 (completely uncertain) to 1.0 (completely certain). If set to 0.0, the default of 0.3 is used.</p></li>
-<li><p><strong>default_language_code</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The default language of the agent as a language tag. <a class="reference external" href="https://cloud.google.com/dialogflow/docs/reference/language">See Language
-Support</a> for a list of the currently supported language
-codes. This field cannot be updated after creation.</p></li>
+<li><p><strong>api_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – API version displayed in Dialogflow console. If not specified, V2 API is assumed. Clients are free to query
+different service endpoints for different API versions. However, bots connectors and webhook calls will follow
+the specified API version.</p></li>
+</ul>
+</dd>
+</dl>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">*</span> <span class="n">API_VERSION_V1</span><span class="p">:</span> <span class="n">Legacy</span> <span class="n">V1</span> <span class="n">API</span><span class="o">.</span>
+<span class="o">*</span> <span class="n">API_VERSION_V2</span><span class="p">:</span> <span class="n">V2</span> <span class="n">API</span><span class="o">.</span>
+<span class="o">*</span> <span class="n">API_VERSION_V2_BETA_1</span><span class="p">:</span> <span class="n">V2beta1</span> <span class="n">API</span><span class="o">.</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>avatar_uri</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The URI of the agent’s avatar, which are used throughout the Dialogflow console. When an image URL is entered
+into this field, the Dialogflow will save the image in the backend. The address of the backend image returned
+from the API will be shown in the [avatarUriBackend] field.</p></li>
+<li><p><strong>classification_threshold</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – To filter out false positive results and still get variety in matched natural language inputs for your agent,
+you can tune the machine learning classification threshold. If the returned score value is less than the threshold
+value, then a fallback intent will be triggered or, if there are no fallback intents defined, no intent will be
+triggered. The score values range from 0.0 (completely uncertain) to 1.0 (completely certain). If set to 0.0, the
+default of 0.3 is used.</p></li>
+<li><p><strong>default_language_code</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The default language of the agent as a language tag. <a class="reference external" href="https://cloud.google.com/dialogflow/docs/reference/language">See Language Support</a>
+for a list of the currently supported language codes. This field cannot be updated after creation.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of this agent. The maximum length is 500 characters. If exceeded, the request is rejected.</p></li>
 <li><p><strong>display_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of this agent.</p></li>
 <li><p><strong>enable_logging</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Determines whether this agent should log conversation queries.</p></li>
-<li><p><strong>match_mode</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Determines how intents are detected from user queries. * MATCH_MODE_HYBRID: Best for agents with a small number of
-examples in intents and/or wide use of templates syntax and composite entities. * MATCH_MODE_ML_ONLY: Can be used for
-agents with a large number of examples in intents, especially the ones using &#64;sys.any or very large developer entities.</p></li>
+<li><p><strong>match_mode</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Determines how intents are detected from user queries.</p></li>
+</ul>
+</dd>
+</dl>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">*</span> <span class="n">MATCH_MODE_HYBRID</span><span class="p">:</span> <span class="n">Best</span> <span class="k">for</span> <span class="n">agents</span> <span class="k">with</span> <span class="n">a</span> <span class="n">small</span> <span class="n">number</span> <span class="n">of</span> <span class="n">examples</span> <span class="ow">in</span> <span class="n">intents</span> <span class="ow">and</span><span class="o">/</span><span class="ow">or</span> <span class="n">wide</span> <span class="n">use</span> <span class="n">of</span> <span class="n">templates</span>
+<span class="n">syntax</span> <span class="ow">and</span> <span class="n">composite</span> <span class="n">entities</span><span class="o">.</span>
+<span class="o">*</span> <span class="n">MATCH_MODE_ML_ONLY</span><span class="p">:</span> <span class="n">Can</span> <span class="n">be</span> <span class="n">used</span> <span class="k">for</span> <span class="n">agents</span> <span class="k">with</span> <span class="n">a</span> <span class="n">large</span> <span class="n">number</span> <span class="n">of</span> <span class="n">examples</span> <span class="ow">in</span> <span class="n">intents</span><span class="p">,</span> <span class="n">especially</span> <span class="n">the</span> <span class="n">ones</span>
+<span class="n">using</span> <span class="nd">@sys</span><span class="o">.</span><span class="n">any</span> <span class="ow">or</span> <span class="n">very</span> <span class="n">large</span> <span class="n">developer</span> <span class="n">entities</span><span class="o">.</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
 <li><p><strong>supported_language_codes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The list of all languages supported by this agent (except for the defaultLanguageCode).</p></li>
-<li><p><strong>tier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The agent tier. If not specified, TIER_STANDARD is assumed. * TIER_STANDARD: Standard tier. * TIER_ENTERPRISE:
-Enterprise tier (Essentials). * TIER_ENTERPRISE_PLUS: Enterprise tier (Plus). NOTE: Due to consistency issues, the
-provider will not read this field from the API. Drift is possible between the Terraform state and Dialogflow if the
-agent tier is changed outside of Terraform.</p></li>
-<li><p><strong>time_zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The time zone of this agent from the <a class="reference external" href="https://www.iana.org/time-zones">time zone database</a>, e.g., America/New_York,
-Europe/Paris.</p></li>
+<li><p><strong>tier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The agent tier. If not specified, TIER_STANDARD is assumed.</p></li>
 </ul>
+</dd>
+</dl>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">*</span> <span class="n">TIER_STANDARD</span><span class="p">:</span> <span class="n">Standard</span> <span class="n">tier</span><span class="o">.</span>
+<span class="o">*</span> <span class="n">TIER_ENTERPRISE</span><span class="p">:</span> <span class="n">Enterprise</span> <span class="n">tier</span> <span class="p">(</span><span class="n">Essentials</span><span class="p">)</span><span class="o">.</span>
+<span class="o">*</span> <span class="n">TIER_ENTERPRISE_PLUS</span><span class="p">:</span> <span class="n">Enterprise</span> <span class="n">tier</span> <span class="p">(</span><span class="n">Plus</span><span class="p">)</span><span class="o">.</span>
+<span class="n">NOTE</span><span class="p">:</span> <span class="n">Due</span> <span class="n">to</span> <span class="n">consistency</span> <span class="n">issues</span><span class="p">,</span> <span class="n">the</span> <span class="n">provider</span> <span class="n">will</span> <span class="ow">not</span> <span class="n">read</span> <span class="n">this</span> <span class="n">field</span> <span class="kn">from</span> <span class="nn">the</span> <span class="n">API</span><span class="o">.</span> <span class="n">Drift</span> <span class="ow">is</span> <span class="n">possible</span> <span class="n">between</span>
+<span class="n">the</span> <span class="n">the</span> <span class="n">provider</span> <span class="n">state</span> <span class="ow">and</span> <span class="n">Dialogflow</span> <span class="k">if</span> <span class="n">the</span> <span class="n">agent</span> <span class="n">tier</span> <span class="ow">is</span> <span class="n">changed</span> <span class="n">outside</span> <span class="n">of</span> <span class="n">the</span> <span class="n">provider</span><span class="o">.</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>time_zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The time zone of this agent from the <a class="reference external" href="https://www.iana.org/time-zones">time zone database</a>, e.g., America/New_York,
+Europe/Paris.</p>
 </dd>
 </dl>
 <dl class="attribute">
 <dt id="pulumi_gcp.diagflow.Agent.api_version">
 <code class="sig-name descname">api_version</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.diagflow.Agent.api_version" title="Permalink to this definition">¶</a></dt>
-<dd><p>API version displayed in Dialogflow console. If not specified, V2 API is assumed. Clients are free to query different
-service endpoints for different API versions. However, bots connectors and webhook calls will follow the specified API
-version. * API_VERSION_V1: Legacy V1 API. * API_VERSION_V2: V2 API. * API_VERSION_V2_BETA_1: V2beta1 API.</p>
+<dd><p>API version displayed in Dialogflow console. If not specified, V2 API is assumed. Clients are free to query
+different service endpoints for different API versions. However, bots connectors and webhook calls will follow
+the specified API version.</p>
+<ul class="simple">
+<li><p>API_VERSION_V1: Legacy V1 API.</p></li>
+<li><p>API_VERSION_V2: V2 API.</p></li>
+<li><p>API_VERSION_V2_BETA_1: V2beta1 API.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_gcp.diagflow.Agent.avatar_uri">
 <code class="sig-name descname">avatar_uri</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.diagflow.Agent.avatar_uri" title="Permalink to this definition">¶</a></dt>
-<dd><p>The URI of the agent’s avatar, which are used throughout the Dialogflow console. When an image URL is entered into this
-field, the Dialogflow will save the image in the backend. The address of the backend image returned from the API will be
-shown in the [avatarUriBackend] field.</p>
+<dd><p>The URI of the agent’s avatar, which are used throughout the Dialogflow console. When an image URL is entered
+into this field, the Dialogflow will save the image in the backend. The address of the backend image returned
+from the API will be shown in the [avatarUriBackend] field.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -91,18 +125,18 @@ shown in the [avatarUriBackend] field.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.diagflow.Agent.classification_threshold">
 <code class="sig-name descname">classification_threshold</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.diagflow.Agent.classification_threshold" title="Permalink to this definition">¶</a></dt>
-<dd><p>To filter out false positive results and still get variety in matched natural language inputs for your agent, you can
-tune the machine learning classification threshold. If the returned score value is less than the threshold value, then a
-fallback intent will be triggered or, if there are no fallback intents defined, no intent will be triggered. The score
-values range from 0.0 (completely uncertain) to 1.0 (completely certain). If set to 0.0, the default of 0.3 is used.</p>
+<dd><p>To filter out false positive results and still get variety in matched natural language inputs for your agent,
+you can tune the machine learning classification threshold. If the returned score value is less than the threshold
+value, then a fallback intent will be triggered or, if there are no fallback intents defined, no intent will be
+triggered. The score values range from 0.0 (completely uncertain) to 1.0 (completely certain). If set to 0.0, the
+default of 0.3 is used.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_gcp.diagflow.Agent.default_language_code">
 <code class="sig-name descname">default_language_code</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.diagflow.Agent.default_language_code" title="Permalink to this definition">¶</a></dt>
-<dd><p>The default language of the agent as a language tag. <a class="reference external" href="https://cloud.google.com/dialogflow/docs/reference/language">See Language
-Support</a> for a list of the currently supported language
-codes. This field cannot be updated after creation.</p>
+<dd><p>The default language of the agent as a language tag. <a class="reference external" href="https://cloud.google.com/dialogflow/docs/reference/language">See Language Support</a>
+for a list of the currently supported language codes. This field cannot be updated after creation.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -126,9 +160,13 @@ codes. This field cannot be updated after creation.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.diagflow.Agent.match_mode">
 <code class="sig-name descname">match_mode</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.diagflow.Agent.match_mode" title="Permalink to this definition">¶</a></dt>
-<dd><p>Determines how intents are detected from user queries. * MATCH_MODE_HYBRID: Best for agents with a small number of
-examples in intents and/or wide use of templates syntax and composite entities. * MATCH_MODE_ML_ONLY: Can be used for
-agents with a large number of examples in intents, especially the ones using &#64;sys.any or very large developer entities.</p>
+<dd><p>Determines how intents are detected from user queries.</p>
+<ul class="simple">
+<li><p>MATCH_MODE_HYBRID: Best for agents with a small number of examples in intents and/or wide use of templates
+syntax and composite entities.</p></li>
+<li><p>MATCH_MODE_ML_ONLY: Can be used for agents with a large number of examples in intents, especially the ones
+using &#64;sys.any or very large developer entities.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -147,10 +185,14 @@ If it is not provided, the provider project is used.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.diagflow.Agent.tier">
 <code class="sig-name descname">tier</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.diagflow.Agent.tier" title="Permalink to this definition">¶</a></dt>
-<dd><p>The agent tier. If not specified, TIER_STANDARD is assumed. * TIER_STANDARD: Standard tier. * TIER_ENTERPRISE:
-Enterprise tier (Essentials). * TIER_ENTERPRISE_PLUS: Enterprise tier (Plus). NOTE: Due to consistency issues, the
-provider will not read this field from the API. Drift is possible between the Terraform state and Dialogflow if the
-agent tier is changed outside of Terraform.</p>
+<dd><p>The agent tier. If not specified, TIER_STANDARD is assumed.</p>
+<ul class="simple">
+<li><p>TIER_STANDARD: Standard tier.</p></li>
+<li><p>TIER_ENTERPRISE: Enterprise tier (Essentials).</p></li>
+<li><p>TIER_ENTERPRISE_PLUS: Enterprise tier (Plus).
+NOTE: Due to consistency issues, the provider will not read this field from the API. Drift is possible between
+the the provider state and Dialogflow if the agent tier is changed outside of the provider.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -171,39 +213,68 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>api_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – API version displayed in Dialogflow console. If not specified, V2 API is assumed. Clients are free to query different
-service endpoints for different API versions. However, bots connectors and webhook calls will follow the specified API
-version. * API_VERSION_V1: Legacy V1 API. * API_VERSION_V2: V2 API. * API_VERSION_V2_BETA_1: V2beta1 API.</p></li>
-<li><p><strong>avatar_uri</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The URI of the agent’s avatar, which are used throughout the Dialogflow console. When an image URL is entered into this
-field, the Dialogflow will save the image in the backend. The address of the backend image returned from the API will be
-shown in the [avatarUriBackend] field.</p></li>
+<li><p><strong>api_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – API version displayed in Dialogflow console. If not specified, V2 API is assumed. Clients are free to query
+different service endpoints for different API versions. However, bots connectors and webhook calls will follow
+the specified API version.</p></li>
+</ul>
+</dd>
+</dl>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">*</span> <span class="n">API_VERSION_V1</span><span class="p">:</span> <span class="n">Legacy</span> <span class="n">V1</span> <span class="n">API</span><span class="o">.</span>
+<span class="o">*</span> <span class="n">API_VERSION_V2</span><span class="p">:</span> <span class="n">V2</span> <span class="n">API</span><span class="o">.</span>
+<span class="o">*</span> <span class="n">API_VERSION_V2_BETA_1</span><span class="p">:</span> <span class="n">V2beta1</span> <span class="n">API</span><span class="o">.</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>avatar_uri</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The URI of the agent’s avatar, which are used throughout the Dialogflow console. When an image URL is entered
+into this field, the Dialogflow will save the image in the backend. The address of the backend image returned
+from the API will be shown in the [avatarUriBackend] field.</p></li>
 <li><p><strong>avatar_uri_backend</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The URI of the agent’s avatar as returned from the API. Output only. To provide an image URL for the agent avatar, the
 [avatarUri] field can be used.</p></li>
-<li><p><strong>classification_threshold</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – To filter out false positive results and still get variety in matched natural language inputs for your agent, you can
-tune the machine learning classification threshold. If the returned score value is less than the threshold value, then a
-fallback intent will be triggered or, if there are no fallback intents defined, no intent will be triggered. The score
-values range from 0.0 (completely uncertain) to 1.0 (completely certain). If set to 0.0, the default of 0.3 is used.</p></li>
-<li><p><strong>default_language_code</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The default language of the agent as a language tag. <a class="reference external" href="https://cloud.google.com/dialogflow/docs/reference/language">See Language
-Support</a> for a list of the currently supported language
-codes. This field cannot be updated after creation.</p>
+<li><p><strong>classification_threshold</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – To filter out false positive results and still get variety in matched natural language inputs for your agent,
+you can tune the machine learning classification threshold. If the returned score value is less than the threshold
+value, then a fallback intent will be triggered or, if there are no fallback intents defined, no intent will be
+triggered. The score values range from 0.0 (completely uncertain) to 1.0 (completely certain). If set to 0.0, the
+default of 0.3 is used.</p></li>
+<li><p><strong>default_language_code</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The default language of the agent as a language tag. <a class="reference external" href="https://cloud.google.com/dialogflow/docs/reference/language">See Language Support</a>
+for a list of the currently supported language codes. This field cannot be updated after creation.</p>
 </p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of this agent. The maximum length is 500 characters. If exceeded, the request is rejected.</p></li>
 <li><p><strong>display_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of this agent.</p></li>
 <li><p><strong>enable_logging</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Determines whether this agent should log conversation queries.</p></li>
-<li><p><strong>match_mode</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Determines how intents are detected from user queries. * MATCH_MODE_HYBRID: Best for agents with a small number of
-examples in intents and/or wide use of templates syntax and composite entities. * MATCH_MODE_ML_ONLY: Can be used for
-agents with a large number of examples in intents, especially the ones using &#64;sys.any or very large developer entities.</p></li>
+<li><p><strong>match_mode</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Determines how intents are detected from user queries.</p></li>
+</ul>
+</dd>
+</dl>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">*</span> <span class="n">MATCH_MODE_HYBRID</span><span class="p">:</span> <span class="n">Best</span> <span class="k">for</span> <span class="n">agents</span> <span class="k">with</span> <span class="n">a</span> <span class="n">small</span> <span class="n">number</span> <span class="n">of</span> <span class="n">examples</span> <span class="ow">in</span> <span class="n">intents</span> <span class="ow">and</span><span class="o">/</span><span class="ow">or</span> <span class="n">wide</span> <span class="n">use</span> <span class="n">of</span> <span class="n">templates</span>
+<span class="n">syntax</span> <span class="ow">and</span> <span class="n">composite</span> <span class="n">entities</span><span class="o">.</span>
+<span class="o">*</span> <span class="n">MATCH_MODE_ML_ONLY</span><span class="p">:</span> <span class="n">Can</span> <span class="n">be</span> <span class="n">used</span> <span class="k">for</span> <span class="n">agents</span> <span class="k">with</span> <span class="n">a</span> <span class="n">large</span> <span class="n">number</span> <span class="n">of</span> <span class="n">examples</span> <span class="ow">in</span> <span class="n">intents</span><span class="p">,</span> <span class="n">especially</span> <span class="n">the</span> <span class="n">ones</span>
+<span class="n">using</span> <span class="nd">@sys</span><span class="o">.</span><span class="n">any</span> <span class="ow">or</span> <span class="n">very</span> <span class="n">large</span> <span class="n">developer</span> <span class="n">entities</span><span class="o">.</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
 <li><p><strong>supported_language_codes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The list of all languages supported by this agent (except for the defaultLanguageCode).</p></li>
-<li><p><strong>tier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The agent tier. If not specified, TIER_STANDARD is assumed. * TIER_STANDARD: Standard tier. * TIER_ENTERPRISE:
-Enterprise tier (Essentials). * TIER_ENTERPRISE_PLUS: Enterprise tier (Plus). NOTE: Due to consistency issues, the
-provider will not read this field from the API. Drift is possible between the Terraform state and Dialogflow if the
-agent tier is changed outside of Terraform.</p></li>
-<li><p><strong>time_zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The time zone of this agent from the <a class="reference external" href="https://www.iana.org/time-zones">time zone database</a>, e.g., America/New_York,
-Europe/Paris.</p>
-</p></li>
+<li><p><strong>tier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The agent tier. If not specified, TIER_STANDARD is assumed.</p></li>
 </ul>
+</dd>
+</dl>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">*</span> <span class="n">TIER_STANDARD</span><span class="p">:</span> <span class="n">Standard</span> <span class="n">tier</span><span class="o">.</span>
+<span class="o">*</span> <span class="n">TIER_ENTERPRISE</span><span class="p">:</span> <span class="n">Enterprise</span> <span class="n">tier</span> <span class="p">(</span><span class="n">Essentials</span><span class="p">)</span><span class="o">.</span>
+<span class="o">*</span> <span class="n">TIER_ENTERPRISE_PLUS</span><span class="p">:</span> <span class="n">Enterprise</span> <span class="n">tier</span> <span class="p">(</span><span class="n">Plus</span><span class="p">)</span><span class="o">.</span>
+<span class="n">NOTE</span><span class="p">:</span> <span class="n">Due</span> <span class="n">to</span> <span class="n">consistency</span> <span class="n">issues</span><span class="p">,</span> <span class="n">the</span> <span class="n">provider</span> <span class="n">will</span> <span class="ow">not</span> <span class="n">read</span> <span class="n">this</span> <span class="n">field</span> <span class="kn">from</span> <span class="nn">the</span> <span class="n">API</span><span class="o">.</span> <span class="n">Drift</span> <span class="ow">is</span> <span class="n">possible</span> <span class="n">between</span>
+<span class="n">the</span> <span class="n">the</span> <span class="n">provider</span> <span class="n">state</span> <span class="ow">and</span> <span class="n">Dialogflow</span> <span class="k">if</span> <span class="n">the</span> <span class="n">agent</span> <span class="n">tier</span> <span class="ow">is</span> <span class="n">changed</span> <span class="n">outside</span> <span class="n">of</span> <span class="n">the</span> <span class="n">provider</span><span class="o">.</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>time_zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The time zone of this agent from the <a class="reference external" href="https://www.iana.org/time-zones">time zone database</a>, e.g., America/New_York,
+Europe/Paris.</p>
+</p>
 </dd>
 </dl>
 </dd></dl>
@@ -265,43 +336,58 @@ is an extraction of a user command or sentence semantics.</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>action</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the action associated with the intent. Note: The action name must not contain whitespaces.</p></li>
-<li><p><strong>default_response_platforms</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The list of platforms for which the first responses will be copied from the messages in PLATFORM_UNSPECIFIED (i.e.
-default platform).</p></li>
+<li><p><strong>action</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the action associated with the intent.
+Note: The action name must not contain whitespaces.</p></li>
+<li><p><strong>default_response_platforms</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The list of platforms for which the first responses will be copied from the messages in PLATFORM_UNSPECIFIED
+(i.e. default platform).</p></li>
 <li><p><strong>display_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of this intent to be displayed on the console.</p></li>
-<li><p><strong>events</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The collection of event names that trigger the intent. If the collection of input contexts is not empty, all of the
-contexts must be present in the active user session for an event to trigger this intent. See the <a class="reference external" href="https://cloud.google.com/dialogflow/docs/events-overview">events
-reference</a> for more details.</p></li>
-<li><p><strong>input_context_names</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The list of context names required for this intent to be triggered. Format: projects/<span class="raw-html-m2r"><Project
-ID></span>/agent/sessions/-/contexts/<span class="raw-html-m2r"><Context ID></span>.</p></li>
+<li><p><strong>events</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The collection of event names that trigger the intent. If the collection of input contexts is not empty, all of
+the contexts must be present in the active user session for an event to trigger this intent. See the
+<a class="reference external" href="https://cloud.google.com/dialogflow/docs/events-overview">events reference</a> for more details.</p></li>
+<li><p><strong>input_context_names</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The list of context names required for this intent to be triggered.
+Format: projects/<span class="raw-html-m2r"><Project ID></span>/agent/sessions/-/contexts/<span class="raw-html-m2r"><Context ID></span>.</p></li>
 <li><p><strong>is_fallback</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates whether this is a fallback intent.</p></li>
-<li><p><strong>ml_disabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates whether Machine Learning is disabled for the intent. Note: If mlDisabled setting is set to true, then this
-intent is not taken into account during inference in ML ONLY match mode. Also, auto-markup in the UI is turned off.</p></li>
-<li><p><strong>parent_followup_intent_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique identifier of the parent intent in the chain of followup intents. Format: projects/<span class="raw-html-m2r"><Project
-ID></span>/agent/intents/<span class="raw-html-m2r"><Intent ID></span>.</p></li>
-<li><p><strong>priority</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The priority of this intent. Higher numbers represent higher priorities. - If the supplied value is unspecified or 0,
-the service translates the value to 500,000, which corresponds to the Normal priority in the console. - If the supplied
-value is negative, the intent is ignored in runtime detect intent requests.</p></li>
-<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
-If it is not provided, the provider project is used.</p></li>
-<li><p><strong>reset_contexts</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates whether to delete all contexts in the current session when this intent is matched.</p></li>
-<li><p><strong>webhook_state</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Indicates whether webhooks are enabled for the intent. * WEBHOOK_STATE_ENABLED: Webhook is enabled in the agent and in
-the intent. * WEBHOOK_STATE_ENABLED_FOR_SLOT_FILLING: Webhook is enabled in the agent and in the intent. Also, each slot
-filling prompt is forwarded to the webhook.</p></li>
+<li><p><strong>ml_disabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates whether Machine Learning is disabled for the intent.
+Note: If mlDisabled setting is set to true, then this intent is not taken into account during inference in ML
+ONLY match mode. Also, auto-markup in the UI is turned off.</p></li>
+<li><p><strong>parent_followup_intent_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique identifier of the parent intent in the chain of followup intents.
+Format: projects/<span class="raw-html-m2r"><Project ID></span>/agent/intents/<span class="raw-html-m2r"><Intent ID></span>.</p></li>
+<li><p><strong>priority</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The priority of this intent. Higher numbers represent higher priorities.</p></li>
 </ul>
 </dd>
 </dl>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="n">If</span> <span class="n">the</span> <span class="n">supplied</span> <span class="n">value</span> <span class="ow">is</span> <span class="n">unspecified</span> <span class="ow">or</span> <span class="mi">0</span><span class="p">,</span> <span class="n">the</span> <span class="n">service</span> <span class="n">translates</span> <span class="n">the</span> <span class="n">value</span> <span class="n">to</span> <span class="mi">500</span><span class="p">,</span><span class="mi">000</span><span class="p">,</span> <span class="n">which</span> <span class="n">corresponds</span>
+<span class="n">to</span> <span class="n">the</span> <span class="n">Normal</span> <span class="n">priority</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">console</span><span class="o">.</span>
+<span class="o">-</span> <span class="n">If</span> <span class="n">the</span> <span class="n">supplied</span> <span class="n">value</span> <span class="ow">is</span> <span class="n">negative</span><span class="p">,</span> <span class="n">the</span> <span class="n">intent</span> <span class="ow">is</span> <span class="n">ignored</span> <span class="ow">in</span> <span class="n">runtime</span> <span class="n">detect</span> <span class="n">intent</span> <span class="n">requests</span><span class="o">.</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</p></li>
+<li><p><strong>reset_contexts</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates whether to delete all contexts in the current session when this intent is matched.</p></li>
+<li><p><strong>webhook_state</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Indicates whether webhooks are enabled for the intent.</p></li>
+</ul>
+</dd>
+</dl>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">*</span> <span class="n">WEBHOOK_STATE_ENABLED</span><span class="p">:</span> <span class="n">Webhook</span> <span class="ow">is</span> <span class="n">enabled</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">agent</span> <span class="ow">and</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">intent</span><span class="o">.</span>
+<span class="o">*</span> <span class="n">WEBHOOK_STATE_ENABLED_FOR_SLOT_FILLING</span><span class="p">:</span> <span class="n">Webhook</span> <span class="ow">is</span> <span class="n">enabled</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">agent</span> <span class="ow">and</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">intent</span><span class="o">.</span> <span class="n">Also</span><span class="p">,</span> <span class="n">each</span> <span class="n">slot</span>
+<span class="n">filling</span> <span class="n">prompt</span> <span class="ow">is</span> <span class="n">forwarded</span> <span class="n">to</span> <span class="n">the</span> <span class="n">webhook</span><span class="o">.</span>
+</pre></div>
+</div>
 <dl class="attribute">
 <dt id="pulumi_gcp.diagflow.Intent.action">
 <code class="sig-name descname">action</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.diagflow.Intent.action" title="Permalink to this definition">¶</a></dt>
-<dd><p>The name of the action associated with the intent. Note: The action name must not contain whitespaces.</p>
+<dd><p>The name of the action associated with the intent.
+Note: The action name must not contain whitespaces.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_gcp.diagflow.Intent.default_response_platforms">
 <code class="sig-name descname">default_response_platforms</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.diagflow.Intent.default_response_platforms" title="Permalink to this definition">¶</a></dt>
-<dd><p>The list of platforms for which the first responses will be copied from the messages in PLATFORM_UNSPECIFIED (i.e.
-default platform).</p>
+<dd><p>The list of platforms for which the first responses will be copied from the messages in PLATFORM_UNSPECIFIED
+(i.e. default platform).</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -313,9 +399,9 @@ default platform).</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.diagflow.Intent.events">
 <code class="sig-name descname">events</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.diagflow.Intent.events" title="Permalink to this definition">¶</a></dt>
-<dd><p>The collection of event names that trigger the intent. If the collection of input contexts is not empty, all of the
-contexts must be present in the active user session for an event to trigger this intent. See the <a class="reference external" href="https://cloud.google.com/dialogflow/docs/events-overview">events
-reference</a> for more details.</p>
+<dd><p>The collection of event names that trigger the intent. If the collection of input contexts is not empty, all of
+the contexts must be present in the active user session for an event to trigger this intent. See the
+<a class="reference external" href="https://cloud.google.com/dialogflow/docs/events-overview">events reference</a> for more details.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -325,15 +411,16 @@ reference</a> for more details.</p>
 in the output.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">followupIntentName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">parent_followup_intent_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">parent_followup_intent_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The unique identifier of the parent intent in the chain of followup intents.
+Format: projects/<span class="raw-html-m2r"><Project ID></span>/agent/intents/<span class="raw-html-m2r"><Intent ID></span>.</p></li>
 </ul>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_gcp.diagflow.Intent.input_context_names">
 <code class="sig-name descname">input_context_names</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.diagflow.Intent.input_context_names" title="Permalink to this definition">¶</a></dt>
-<dd><p>The list of context names required for this intent to be triggered. Format: projects/<span class="raw-html-m2r"><Project
-ID></span>/agent/sessions/-/contexts/<span class="raw-html-m2r"><Context ID></span>.</p>
+<dd><p>The list of context names required for this intent to be triggered.
+Format: projects/<span class="raw-html-m2r"><Project ID></span>/agent/sessions/-/contexts/<span class="raw-html-m2r"><Context ID></span>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -345,8 +432,9 @@ ID></span>/agent/sessions/-/contexts/<span class="raw-html-m2r"><Context ID></sp
 <dl class="attribute">
 <dt id="pulumi_gcp.diagflow.Intent.ml_disabled">
 <code class="sig-name descname">ml_disabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.diagflow.Intent.ml_disabled" title="Permalink to this definition">¶</a></dt>
-<dd><p>Indicates whether Machine Learning is disabled for the intent. Note: If mlDisabled setting is set to true, then this
-intent is not taken into account during inference in ML ONLY match mode. Also, auto-markup in the UI is turned off.</p>
+<dd><p>Indicates whether Machine Learning is disabled for the intent.
+Note: If mlDisabled setting is set to true, then this intent is not taken into account during inference in ML
+ONLY match mode. Also, auto-markup in the UI is turned off.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -358,16 +446,19 @@ intent is not taken into account during inference in ML ONLY match mode. Also, a
 <dl class="attribute">
 <dt id="pulumi_gcp.diagflow.Intent.parent_followup_intent_name">
 <code class="sig-name descname">parent_followup_intent_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.diagflow.Intent.parent_followup_intent_name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The unique identifier of the parent intent in the chain of followup intents. Format: projects/<span class="raw-html-m2r"><Project
-ID></span>/agent/intents/<span class="raw-html-m2r"><Intent ID></span>.</p>
+<dd><p>The unique identifier of the parent intent in the chain of followup intents.
+Format: projects/<span class="raw-html-m2r"><Project ID></span>/agent/intents/<span class="raw-html-m2r"><Intent ID></span>.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_gcp.diagflow.Intent.priority">
 <code class="sig-name descname">priority</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.diagflow.Intent.priority" title="Permalink to this definition">¶</a></dt>
-<dd><p>The priority of this intent. Higher numbers represent higher priorities. - If the supplied value is unspecified or 0,
-the service translates the value to 500,000, which corresponds to the Normal priority in the console. - If the supplied
-value is negative, the intent is ignored in runtime detect intent requests.</p>
+<dd><p>The priority of this intent. Higher numbers represent higher priorities.</p>
+<ul class="simple">
+<li><p>If the supplied value is unspecified or 0, the service translates the value to 500,000, which corresponds
+to the Normal priority in the console.</p></li>
+<li><p>If the supplied value is negative, the intent is ignored in runtime detect intent requests.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -393,9 +484,12 @@ chain for this intent. Format: projects/<span class="raw-html-m2r"><Project ID><
 <dl class="attribute">
 <dt id="pulumi_gcp.diagflow.Intent.webhook_state">
 <code class="sig-name descname">webhook_state</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.diagflow.Intent.webhook_state" title="Permalink to this definition">¶</a></dt>
-<dd><p>Indicates whether webhooks are enabled for the intent. * WEBHOOK_STATE_ENABLED: Webhook is enabled in the agent and in
-the intent. * WEBHOOK_STATE_ENABLED_FOR_SLOT_FILLING: Webhook is enabled in the agent and in the intent. Also, each slot
-filling prompt is forwarded to the webhook.</p>
+<dd><p>Indicates whether webhooks are enabled for the intent.</p>
+<ul class="simple">
+<li><p>WEBHOOK_STATE_ENABLED: Webhook is enabled in the agent and in the intent.</p></li>
+<li><p>WEBHOOK_STATE_ENABLED_FOR_SLOT_FILLING: Webhook is enabled in the agent and in the intent. Also, each slot
+filling prompt is forwarded to the webhook.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="method">
@@ -409,42 +503,57 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>action</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the action associated with the intent. Note: The action name must not contain whitespaces.</p></li>
-<li><p><strong>default_response_platforms</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The list of platforms for which the first responses will be copied from the messages in PLATFORM_UNSPECIFIED (i.e.
-default platform).</p></li>
+<li><p><strong>action</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the action associated with the intent.
+Note: The action name must not contain whitespaces.</p></li>
+<li><p><strong>default_response_platforms</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The list of platforms for which the first responses will be copied from the messages in PLATFORM_UNSPECIFIED
+(i.e. default platform).</p></li>
 <li><p><strong>display_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of this intent to be displayed on the console.</p></li>
-<li><p><strong>events</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – <p>The collection of event names that trigger the intent. If the collection of input contexts is not empty, all of the
-contexts must be present in the active user session for an event to trigger this intent. See the <a class="reference external" href="https://cloud.google.com/dialogflow/docs/events-overview">events
-reference</a> for more details.</p>
+<li><p><strong>events</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – <p>The collection of event names that trigger the intent. If the collection of input contexts is not empty, all of
+the contexts must be present in the active user session for an event to trigger this intent. See the
+<a class="reference external" href="https://cloud.google.com/dialogflow/docs/events-overview">events reference</a> for more details.</p>
 </p></li>
 <li><p><strong>followup_intent_infos</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Information about all followup intents that have this intent as a direct or indirect parent. We populate this field only
 in the output.</p></li>
-<li><p><strong>input_context_names</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The list of context names required for this intent to be triggered. Format: projects/<span class="raw-html-m2r"><Project
-ID></span>/agent/sessions/-/contexts/<span class="raw-html-m2r"><Context ID></span>.</p></li>
+<li><p><strong>input_context_names</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The list of context names required for this intent to be triggered.
+Format: projects/<span class="raw-html-m2r"><Project ID></span>/agent/sessions/-/contexts/<span class="raw-html-m2r"><Context ID></span>.</p></li>
 <li><p><strong>is_fallback</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates whether this is a fallback intent.</p></li>
-<li><p><strong>ml_disabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates whether Machine Learning is disabled for the intent. Note: If mlDisabled setting is set to true, then this
-intent is not taken into account during inference in ML ONLY match mode. Also, auto-markup in the UI is turned off.</p></li>
+<li><p><strong>ml_disabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates whether Machine Learning is disabled for the intent.
+Note: If mlDisabled setting is set to true, then this intent is not taken into account during inference in ML
+ONLY match mode. Also, auto-markup in the UI is turned off.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique identifier of this intent. Format: projects/<span class="raw-html-m2r"><Project ID></span>/agent/intents/<span class="raw-html-m2r"><Intent ID></span>.</p></li>
-<li><p><strong>parent_followup_intent_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique identifier of the parent intent in the chain of followup intents. Format: projects/<span class="raw-html-m2r"><Project
-ID></span>/agent/intents/<span class="raw-html-m2r"><Intent ID></span>.</p></li>
-<li><p><strong>priority</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The priority of this intent. Higher numbers represent higher priorities. - If the supplied value is unspecified or 0,
-the service translates the value to 500,000, which corresponds to the Normal priority in the console. - If the supplied
-value is negative, the intent is ignored in runtime detect intent requests.</p></li>
+<li><p><strong>parent_followup_intent_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique identifier of the parent intent in the chain of followup intents.
+Format: projects/<span class="raw-html-m2r"><Project ID></span>/agent/intents/<span class="raw-html-m2r"><Intent ID></span>.</p></li>
+<li><p><strong>priority</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The priority of this intent. Higher numbers represent higher priorities.</p></li>
+</ul>
+</dd>
+</dl>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="n">If</span> <span class="n">the</span> <span class="n">supplied</span> <span class="n">value</span> <span class="ow">is</span> <span class="n">unspecified</span> <span class="ow">or</span> <span class="mi">0</span><span class="p">,</span> <span class="n">the</span> <span class="n">service</span> <span class="n">translates</span> <span class="n">the</span> <span class="n">value</span> <span class="n">to</span> <span class="mi">500</span><span class="p">,</span><span class="mi">000</span><span class="p">,</span> <span class="n">which</span> <span class="n">corresponds</span>
+<span class="n">to</span> <span class="n">the</span> <span class="n">Normal</span> <span class="n">priority</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">console</span><span class="o">.</span>
+<span class="o">-</span> <span class="n">If</span> <span class="n">the</span> <span class="n">supplied</span> <span class="n">value</span> <span class="ow">is</span> <span class="n">negative</span><span class="p">,</span> <span class="n">the</span> <span class="n">intent</span> <span class="ow">is</span> <span class="n">ignored</span> <span class="ow">in</span> <span class="n">runtime</span> <span class="n">detect</span> <span class="n">intent</span> <span class="n">requests</span><span class="o">.</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
 <li><p><strong>reset_contexts</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates whether to delete all contexts in the current session when this intent is matched.</p></li>
 <li><p><strong>root_followup_intent_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique identifier of the root intent in the chain of followup intents. It identifies the correct followup intents
 chain for this intent. Format: projects/<span class="raw-html-m2r"><Project ID></span>/agent/intents/<span class="raw-html-m2r"><Intent ID></span>.</p></li>
-<li><p><strong>webhook_state</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Indicates whether webhooks are enabled for the intent. * WEBHOOK_STATE_ENABLED: Webhook is enabled in the agent and in
-the intent. * WEBHOOK_STATE_ENABLED_FOR_SLOT_FILLING: Webhook is enabled in the agent and in the intent. Also, each slot
-filling prompt is forwarded to the webhook.</p></li>
+<li><p><strong>webhook_state</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Indicates whether webhooks are enabled for the intent.</p></li>
 </ul>
 </dd>
 </dl>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">*</span> <span class="n">WEBHOOK_STATE_ENABLED</span><span class="p">:</span> <span class="n">Webhook</span> <span class="ow">is</span> <span class="n">enabled</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">agent</span> <span class="ow">and</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">intent</span><span class="o">.</span>
+<span class="o">*</span> <span class="n">WEBHOOK_STATE_ENABLED_FOR_SLOT_FILLING</span><span class="p">:</span> <span class="n">Webhook</span> <span class="ow">is</span> <span class="n">enabled</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">agent</span> <span class="ow">and</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">intent</span><span class="o">.</span> <span class="n">Also</span><span class="p">,</span> <span class="n">each</span> <span class="n">slot</span>
+<span class="n">filling</span> <span class="n">prompt</span> <span class="ow">is</span> <span class="n">forwarded</span> <span class="n">to</span> <span class="n">the</span> <span class="n">webhook</span><span class="o">.</span>
+</pre></div>
+</div>
 <p>The <strong>followup_intent_infos</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">followupIntentName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">parent_followup_intent_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">parent_followup_intent_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The unique identifier of the parent intent in the chain of followup intents.
+Format: projects/<span class="raw-html-m2r"><Project ID></span>/agent/intents/<span class="raw-html-m2r"><Intent ID></span>.</p></li>
 </ul>
 </dd></dl>
 

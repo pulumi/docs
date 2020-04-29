@@ -40,19 +40,6 @@ anything, please consult the source <a class="reference external" href="https://
 <blockquote>
 <div><p><strong>NOTE:</strong> The AWS API does not currently support deleting ECS cluster capacity providers. Removing this resource will only remove the state for it.</p>
 </div></blockquote>
-<p>The <code class="docutils literal notranslate"><span class="pre">auto_scaling_group_provider</span></code> block supports the following:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">auto_scaling_group_arn</span></code> - (Required) - The Amazon Resource Name (ARN) of the associated auto scaling group.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">managed_scaling</span></code> - (Optional) - Nested argument defining the parameters of the auto scaling. Defined below.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">managed_termination_protection</span></code> - (Optional) - Enables or disables container-aware termination of instances in the auto scaling group when scale-in happens. Valid values are <code class="docutils literal notranslate"><span class="pre">ENABLED</span></code> and <code class="docutils literal notranslate"><span class="pre">DISABLED</span></code>.</p></li>
-</ul>
-<p>The <code class="docutils literal notranslate"><span class="pre">managed_scaling</span></code> block supports the following:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">maximum_scaling_step_size</span></code> - (Optional) The maximum step adjustment size. A number between 1 and 10,000.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">minimum_scaling_step_size</span></code> - (Optional) The minimum step adjustment size. A number between 1 and 10,000.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">status</span></code> - (Optional) Whether auto scaling is managed by ECS. Valid values are <code class="docutils literal notranslate"><span class="pre">ENABLED</span></code> and <code class="docutils literal notranslate"><span class="pre">DISABLED</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">target_capacity</span></code> - (Optional) The target utilization for the capacity provider. A number between 1 and 100.</p></li>
-</ul>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -66,16 +53,16 @@ anything, please consult the source <a class="reference external" href="https://
 </dl>
 <p>The <strong>auto_scaling_group_provider</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">autoScalingGroupArn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">managedScaling</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">autoScalingGroupArn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - - The Amazon Resource Name (ARN) of the associated auto scaling group.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">managedScaling</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - - Nested argument defining the parameters of the auto scaling. Defined below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">maximumScalingStepSize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">minimumScalingStepSize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">status</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">target_capacity</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maximumScalingStepSize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The maximum step adjustment size. A number between 1 and 10,000.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">minimumScalingStepSize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The minimum step adjustment size. A number between 1 and 10,000.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">status</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Whether auto scaling is managed by ECS. Valid values are <code class="docutils literal notranslate"><span class="pre">ENABLED</span></code> and <code class="docutils literal notranslate"><span class="pre">DISABLED</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">target_capacity</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The target utilization for the capacity provider. A number between 1 and 100.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">managedTerminationProtection</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">managedTerminationProtection</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - - Enables or disables container-aware termination of instances in the auto scaling group when scale-in happens. Valid values are <code class="docutils literal notranslate"><span class="pre">ENABLED</span></code> and <code class="docutils literal notranslate"><span class="pre">DISABLED</span></code>.</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_aws.ecs.CapacityProvider.arn">
@@ -88,16 +75,16 @@ anything, please consult the source <a class="reference external" href="https://
 <code class="sig-name descname">auto_scaling_group_provider</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ecs.CapacityProvider.auto_scaling_group_provider" title="Permalink to this definition">¶</a></dt>
 <dd><p>Nested argument defining the provider for the ECS auto scaling group. Defined below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">autoScalingGroupArn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">managedScaling</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">autoScalingGroupArn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - - The Amazon Resource Name (ARN) of the associated auto scaling group.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">managedScaling</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - - Nested argument defining the parameters of the auto scaling. Defined below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">maximumScalingStepSize</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">minimumScalingStepSize</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">status</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">target_capacity</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maximumScalingStepSize</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The maximum step adjustment size. A number between 1 and 10,000.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">minimumScalingStepSize</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The minimum step adjustment size. A number between 1 and 10,000.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">status</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Whether auto scaling is managed by ECS. Valid values are <code class="docutils literal notranslate"><span class="pre">ENABLED</span></code> and <code class="docutils literal notranslate"><span class="pre">DISABLED</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">target_capacity</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The target utilization for the capacity provider. A number between 1 and 100.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">managedTerminationProtection</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">managedTerminationProtection</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - - Enables or disables container-aware termination of instances in the auto scaling group when scale-in happens. Valid values are <code class="docutils literal notranslate"><span class="pre">ENABLED</span></code> and <code class="docutils literal notranslate"><span class="pre">DISABLED</span></code>.</p></li>
 </ul>
 </dd></dl>
 
@@ -133,16 +120,16 @@ properties used to qualify the lookup.</p>
 </dl>
 <p>The <strong>auto_scaling_group_provider</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">autoScalingGroupArn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">managedScaling</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">autoScalingGroupArn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - - The Amazon Resource Name (ARN) of the associated auto scaling group.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">managedScaling</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - - Nested argument defining the parameters of the auto scaling. Defined below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">maximumScalingStepSize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">minimumScalingStepSize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">status</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">target_capacity</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maximumScalingStepSize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The maximum step adjustment size. A number between 1 and 10,000.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">minimumScalingStepSize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The minimum step adjustment size. A number between 1 and 10,000.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">status</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Whether auto scaling is managed by ECS. Valid values are <code class="docutils literal notranslate"><span class="pre">ENABLED</span></code> and <code class="docutils literal notranslate"><span class="pre">DISABLED</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">target_capacity</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The target utilization for the capacity provider. A number between 1 and 100.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">managedTerminationProtection</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">managedTerminationProtection</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - - Enables or disables container-aware termination of instances in the auto scaling group when scale-in happens. Valid values are <code class="docutils literal notranslate"><span class="pre">ENABLED</span></code> and <code class="docutils literal notranslate"><span class="pre">DISABLED</span></code>.</p></li>
 </ul>
 </dd></dl>
 
@@ -188,17 +175,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ecs.Cluster">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ecs.</code><code class="sig-name descname">Cluster</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">capacity_providers=None</em>, <em class="sig-param">default_capacity_provider_strategies=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">settings=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ecs.Cluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an ECS cluster.</p>
-<p>The <code class="docutils literal notranslate"><span class="pre">setting</span></code> configuration block supports the following:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> - (Required) Name of the setting to manage. Valid values: <code class="docutils literal notranslate"><span class="pre">containerInsights</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> -  (Required) The value to assign to the setting. Value values are <code class="docutils literal notranslate"><span class="pre">enabled</span></code> and <code class="docutils literal notranslate"><span class="pre">disabled</span></code>.</p></li>
-</ul>
-<p>The <code class="docutils literal notranslate"><span class="pre">default_capacity_provider_strategy</span></code> configuration block supports the following:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">capacity_provider</span></code> - (Required) The short name of the capacity provider.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">weight</span></code> - (Optional) The relative percentage of the total number of launched tasks that should use the specified capacity provider.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">base</span></code> - (Optional) The number of tasks, at a minimum, to run on the specified capacity provider. Only one capacity provider in a capacity provider strategy can have a base defined.</p></li>
-</ul>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -214,14 +190,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 <p>The <strong>default_capacity_provider_strategies</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">base</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">capacityProvider</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">weight</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">base</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of tasks, at a minimum, to run on the specified capacity provider. Only one capacity provider in a capacity provider strategy can have a base defined.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">capacityProvider</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The short name of the capacity provider.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">weight</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The relative percentage of the total number of launched tasks that should use the specified capacity provider.</p></li>
 </ul>
 <p>The <strong>settings</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the cluster (up to 255 letters, numbers, hyphens, and underscores)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Name of the setting to manage. Valid values: <code class="docutils literal notranslate"><span class="pre">containerInsights</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The value to assign to the setting. Value values are <code class="docutils literal notranslate"><span class="pre">enabled</span></code> and <code class="docutils literal notranslate"><span class="pre">disabled</span></code>.</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_aws.ecs.Cluster.arn">
@@ -240,9 +216,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">default_capacity_provider_strategies</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ecs.Cluster.default_capacity_provider_strategies" title="Permalink to this definition">¶</a></dt>
 <dd><p>The capacity provider strategy to use by default for the cluster. Can be one or more.  Defined below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">base</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">capacityProvider</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">weight</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">base</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The number of tasks, at a minimum, to run on the specified capacity provider. Only one capacity provider in a capacity provider strategy can have a base defined.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">capacityProvider</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The short name of the capacity provider.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">weight</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The relative percentage of the total number of launched tasks that should use the specified capacity provider.</p></li>
 </ul>
 </dd></dl>
 
@@ -257,8 +233,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">settings</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ecs.Cluster.settings" title="Permalink to this definition">¶</a></dt>
 <dd><p>Configuration block(s) with cluster settings. For example, this can be used to enable CloudWatch Container Insights for a cluster. Defined below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the cluster (up to 255 letters, numbers, hyphens, and underscores)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Name of the setting to manage. Valid values: <code class="docutils literal notranslate"><span class="pre">containerInsights</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The value to assign to the setting. Value values are <code class="docutils literal notranslate"><span class="pre">enabled</span></code> and <code class="docutils literal notranslate"><span class="pre">disabled</span></code>.</p></li>
 </ul>
 </dd></dl>
 
@@ -290,14 +266,14 @@ properties used to qualify the lookup.</p>
 </dl>
 <p>The <strong>default_capacity_provider_strategies</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">base</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">capacityProvider</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">weight</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">base</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of tasks, at a minimum, to run on the specified capacity provider. Only one capacity provider in a capacity provider strategy can have a base defined.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">capacityProvider</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The short name of the capacity provider.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">weight</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The relative percentage of the total number of launched tasks that should use the specified capacity provider.</p></li>
 </ul>
 <p>The <strong>settings</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the cluster (up to 255 letters, numbers, hyphens, and underscores)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Name of the setting to manage. Valid values: <code class="docutils literal notranslate"><span class="pre">containerInsights</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The value to assign to the setting. Value values are <code class="docutils literal notranslate"><span class="pre">enabled</span></code> and <code class="docutils literal notranslate"><span class="pre">disabled</span></code>.</p></li>
 </ul>
 </dd></dl>
 
@@ -352,7 +328,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.ecs.GetClusterResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ecs.GetClusterResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -418,7 +394,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.ecs.GetContainerDefinitionResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ecs.GetContainerDefinitionResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -466,7 +442,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.ecs.GetServiceResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ecs.GetServiceResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -502,7 +478,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.ecs.GetTaskDefinitionResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ecs.GetTaskDefinitionResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -539,60 +515,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </div></blockquote>
 <p>Provides an ECS service - effectively a task that is expected to run until an error occurs or a user terminates it (typically a webserver or a database).</p>
 <p>See <a class="reference external" href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs_services.html">ECS Services section in AWS developer guide</a>.</p>
-<p>The <code class="docutils literal notranslate"><span class="pre">capacity_provider_strategy</span></code> configuration block supports the following:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">capacity_provider</span></code> - (Required) The short name or full Amazon Resource Name (ARN) of the capacity provider.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">weight</span></code> - (Required) The relative percentage of the total number of launched tasks that should use the specified capacity provider.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">base</span></code> - (Optional) The number of tasks, at a minimum, to run on the specified capacity provider. Only one capacity provider in a capacity provider strategy can have a base defined.</p></li>
-</ul>
-<p>The <code class="docutils literal notranslate"><span class="pre">deployment_controller</span></code> configuration block supports the following:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> - (Optional) Type of deployment controller. Valid values: <code class="docutils literal notranslate"><span class="pre">CODE_DEPLOY</span></code>, <code class="docutils literal notranslate"><span class="pre">ECS</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">ECS</span></code>.</p></li>
-</ul>
-<p><code class="docutils literal notranslate"><span class="pre">load_balancer</span></code> supports the following:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">elb_name</span></code> - (Required for ELB Classic) The name of the ELB (Classic) to associate with the service.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">target_group_arn</span></code> - (Required for ALB/NLB) The ARN of the Load Balancer target group to associate with the service.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">container_name</span></code> - (Required) The name of the container to associate with the load balancer (as it appears in a container definition).</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">container_port</span></code> - (Required) The port on the container to associate with the load balancer.</p></li>
-</ul>
-<blockquote>
-<div><p><strong>Version note:</strong> Multiple <code class="docutils literal notranslate"><span class="pre">load_balancer</span></code> configuration block support was added in version 2.22.0 of the provider. This allows configuration of <a class="reference external" href="https://aws.amazon.com/about-aws/whats-new/2019/07/amazon-ecs-services-now-support-multiple-load-balancer-target-groups/">ECS service support for multiple target groups</a>.</p>
-</div></blockquote>
-<p><code class="docutils literal notranslate"><span class="pre">ordered_placement_strategy</span></code> supports the following:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> - (Required) The type of placement strategy. Must be one of: <code class="docutils literal notranslate"><span class="pre">binpack</span></code>, <code class="docutils literal notranslate"><span class="pre">random</span></code>, or <code class="docutils literal notranslate"><span class="pre">spread</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">field</span></code> - (Optional) For the <code class="docutils literal notranslate"><span class="pre">spread</span></code> placement strategy, valid values are <code class="docutils literal notranslate"><span class="pre">instanceId</span></code> (or <code class="docutils literal notranslate"><span class="pre">host</span></code>,
-which has the same effect), or any platform or custom attribute that is applied to a container instance.
-For the <code class="docutils literal notranslate"><span class="pre">binpack</span></code> type, valid values are <code class="docutils literal notranslate"><span class="pre">memory</span></code> and <code class="docutils literal notranslate"><span class="pre">cpu</span></code>. For the <code class="docutils literal notranslate"><span class="pre">random</span></code> type, this attribute is not
-needed. For more information, see <a class="reference external" href="https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_PlacementStrategy.html">Placement Strategy</a>.</p></li>
-</ul>
-<blockquote>
-<div><p><strong>Note:</strong> for <code class="docutils literal notranslate"><span class="pre">spread</span></code>, <code class="docutils literal notranslate"><span class="pre">host</span></code> and <code class="docutils literal notranslate"><span class="pre">instanceId</span></code> will be normalized, by AWS, to be <code class="docutils literal notranslate"><span class="pre">instanceId</span></code>. This means the statefile will show <code class="docutils literal notranslate"><span class="pre">instanceId</span></code> but your config will differ if you use <code class="docutils literal notranslate"><span class="pre">host</span></code>.</p>
-</div></blockquote>
-<p><code class="docutils literal notranslate"><span class="pre">placement_constraints</span></code> support the following:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> - (Required) The type of constraint. The only valid values at this time are <code class="docutils literal notranslate"><span class="pre">memberOf</span></code> and <code class="docutils literal notranslate"><span class="pre">distinctInstance</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code> -  (Optional) Cluster Query Language expression to apply to the constraint. Does not need to be specified
-for the <code class="docutils literal notranslate"><span class="pre">distinctInstance</span></code> type.
-For more information, see <a class="reference external" href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-query-language.html">Cluster Query Language in the Amazon EC2 Container
-Service Developer
-Guide</a>.</p></li>
-</ul>
-<p><code class="docutils literal notranslate"><span class="pre">network_configuration</span></code> support the following:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">subnets</span></code> - (Required) The subnets associated with the task or service.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">security_groups</span></code> - (Optional) The security groups associated with the task or service. If you do not specify a security group, the default security group for the VPC is used.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">assign_public_ip</span></code> - (Optional) Assign a public IP address to the ENI (Fargate launch type only). Valid values are <code class="docutils literal notranslate"><span class="pre">true</span></code> or <code class="docutils literal notranslate"><span class="pre">false</span></code>. Default <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
-</ul>
-<p>For more information, see <a class="reference external" href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-networking.html">Task Networking</a></p>
-<p><code class="docutils literal notranslate"><span class="pre">service_registries</span></code> support the following:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">registry_arn</span></code> - (Required) The ARN of the Service Registry. The currently supported service registry is Amazon Route 53 Auto Naming Service(<code class="docutils literal notranslate"><span class="pre">servicediscovery.Service</span></code>). For more information, see <a class="reference external" href="https://docs.aws.amazon.com/Route53/latest/APIReference/API_autonaming_Service.html">Service</a></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> - (Optional) The port value used if your Service Discovery service specified an SRV record.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">container_port</span></code> - (Optional) The port value, already specified in the task definition, to be used for your service discovery service.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">container_name</span></code> - (Optional) The container name value, already specified in the task definition, to be used for your service discovery service.</p></li>
-</ul>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -626,52 +548,59 @@ Guide</a>.</p></li>
 </dl>
 <p>The <strong>capacity_provider_strategies</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">base</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">capacityProvider</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">weight</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">base</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of tasks, at a minimum, to run on the specified capacity provider. Only one capacity provider in a capacity provider strategy can have a base defined.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">capacityProvider</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The short name or full Amazon Resource Name (ARN) of the capacity provider.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">weight</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The relative percentage of the total number of launched tasks that should use the specified capacity provider.</p></li>
 </ul>
 <p>The <strong>deployment_controller</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Type of deployment controller. Valid values: <code class="docutils literal notranslate"><span class="pre">CODE_DEPLOY</span></code>, <code class="docutils literal notranslate"><span class="pre">ECS</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">ECS</span></code>.</p></li>
 </ul>
 <p>The <strong>load_balancers</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">container_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">containerPort</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">elbName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">target_group_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">container_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the container to associate with the load balancer (as it appears in a container definition).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">containerPort</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The port on the container to associate with the load balancer.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">elbName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the ELB (Classic) to associate with the service.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">target_group_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of the Load Balancer target group to associate with the service.</p></li>
 </ul>
 <p>The <strong>network_configuration</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">assignPublicIp</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">security_groups</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">subnets</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">assignPublicIp</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Assign a public IP address to the ENI (Fargate launch type only). Valid values are <code class="docutils literal notranslate"><span class="pre">true</span></code> or <code class="docutils literal notranslate"><span class="pre">false</span></code>. Default <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">security_groups</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The security groups associated with the task or service. If you do not specify a security group, the default security group for the VPC is used.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnets</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The subnets associated with the task or service.</p></li>
 </ul>
 <p>The <strong>ordered_placement_strategies</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">field</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">field</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - For the <code class="docutils literal notranslate"><span class="pre">spread</span></code> placement strategy, valid values are <code class="docutils literal notranslate"><span class="pre">instanceId</span></code> (or <code class="docutils literal notranslate"><span class="pre">host</span></code>,
+which has the same effect), or any platform or custom attribute that is applied to a container instance.
+For the <code class="docutils literal notranslate"><span class="pre">binpack</span></code> type, valid values are <code class="docutils literal notranslate"><span class="pre">memory</span></code> and <code class="docutils literal notranslate"><span class="pre">cpu</span></code>. For the <code class="docutils literal notranslate"><span class="pre">random</span></code> type, this attribute is not
+needed. For more information, see <a class="reference external" href="https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_PlacementStrategy.html">Placement Strategy</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of placement strategy. Must be one of: <code class="docutils literal notranslate"><span class="pre">binpack</span></code>, <code class="docutils literal notranslate"><span class="pre">random</span></code>, or <code class="docutils literal notranslate"><span class="pre">spread</span></code></p></li>
 </ul>
 <p>The <strong>placement_constraints</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Cluster Query Language expression to apply to the constraint. Does not need to be specified
+for the <code class="docutils literal notranslate"><span class="pre">distinctInstance</span></code> type.
+For more information, see <a class="reference external" href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-query-language.html">Cluster Query Language in the Amazon EC2 Container
+Service Developer
+Guide</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of constraint. The only valid values at this time are <code class="docutils literal notranslate"><span class="pre">memberOf</span></code> and <code class="docutils literal notranslate"><span class="pre">distinctInstance</span></code>.</p></li>
 </ul>
 <p>The <strong>service_registries</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">container_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">containerPort</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">registryArn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">container_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The container name value, already specified in the task definition, to be used for your service discovery service.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">containerPort</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The port value, already specified in the task definition, to be used for your service discovery service.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The port value used if your Service Discovery service specified an SRV record.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">registryArn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of the Service Registry. The currently supported service registry is Amazon Route 53 Auto Naming Service(<code class="docutils literal notranslate"><span class="pre">servicediscovery.Service</span></code>). For more information, see <a class="reference external" href="https://docs.aws.amazon.com/Route53/latest/APIReference/API_autonaming_Service.html">Service</a></p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_aws.ecs.Service.capacity_provider_strategies">
 <code class="sig-name descname">capacity_provider_strategies</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ecs.Service.capacity_provider_strategies" title="Permalink to this definition">¶</a></dt>
 <dd><p>The capacity provider strategy to use for the service. Can be one or more.  Defined below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">base</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">capacityProvider</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">weight</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">base</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The number of tasks, at a minimum, to run on the specified capacity provider. Only one capacity provider in a capacity provider strategy can have a base defined.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">capacityProvider</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The short name or full Amazon Resource Name (ARN) of the capacity provider.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">weight</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The relative percentage of the total number of launched tasks that should use the specified capacity provider.</p></li>
 </ul>
 </dd></dl>
 
@@ -686,7 +615,7 @@ Guide</a>.</p></li>
 <code class="sig-name descname">deployment_controller</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ecs.Service.deployment_controller" title="Permalink to this definition">¶</a></dt>
 <dd><p>Configuration block containing deployment controller configuration. Defined below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Type of deployment controller. Valid values: <code class="docutils literal notranslate"><span class="pre">CODE_DEPLOY</span></code>, <code class="docutils literal notranslate"><span class="pre">ECS</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">ECS</span></code>.</p></li>
 </ul>
 </dd></dl>
 
@@ -737,10 +666,10 @@ Guide</a>.</p></li>
 <code class="sig-name descname">load_balancers</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ecs.Service.load_balancers" title="Permalink to this definition">¶</a></dt>
 <dd><p>A load balancer block. Load balancers documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">container_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">containerPort</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">elbName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">target_group_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">container_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the container to associate with the load balancer (as it appears in a container definition).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">containerPort</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The port on the container to associate with the load balancer.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">elbName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the ELB (Classic) to associate with the service.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">target_group_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ARN of the Load Balancer target group to associate with the service.</p></li>
 </ul>
 </dd></dl>
 
@@ -755,9 +684,9 @@ Guide</a>.</p></li>
 <code class="sig-name descname">network_configuration</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ecs.Service.network_configuration" title="Permalink to this definition">¶</a></dt>
 <dd><p>The network configuration for the service. This parameter is required for task definitions that use the <code class="docutils literal notranslate"><span class="pre">awsvpc</span></code> network mode to receive their own Elastic Network Interface, and it is not supported for other network modes.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">assignPublicIp</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">security_groups</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">subnets</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">assignPublicIp</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Assign a public IP address to the ENI (Fargate launch type only). Valid values are <code class="docutils literal notranslate"><span class="pre">true</span></code> or <code class="docutils literal notranslate"><span class="pre">false</span></code>. Default <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">security_groups</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - The security groups associated with the task or service. If you do not specify a security group, the default security group for the VPC is used.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnets</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - The subnets associated with the task or service.</p></li>
 </ul>
 </dd></dl>
 
@@ -766,8 +695,11 @@ Guide</a>.</p></li>
 <code class="sig-name descname">ordered_placement_strategies</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ecs.Service.ordered_placement_strategies" title="Permalink to this definition">¶</a></dt>
 <dd><p>Service level strategy rules that are taken into consideration during task placement. List from top to bottom in order of precedence. The maximum number of <code class="docutils literal notranslate"><span class="pre">ordered_placement_strategy</span></code> blocks is <code class="docutils literal notranslate"><span class="pre">5</span></code>. Defined below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">field</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">field</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - For the <code class="docutils literal notranslate"><span class="pre">spread</span></code> placement strategy, valid values are <code class="docutils literal notranslate"><span class="pre">instanceId</span></code> (or <code class="docutils literal notranslate"><span class="pre">host</span></code>,
+which has the same effect), or any platform or custom attribute that is applied to a container instance.
+For the <code class="docutils literal notranslate"><span class="pre">binpack</span></code> type, valid values are <code class="docutils literal notranslate"><span class="pre">memory</span></code> and <code class="docutils literal notranslate"><span class="pre">cpu</span></code>. For the <code class="docutils literal notranslate"><span class="pre">random</span></code> type, this attribute is not
+needed. For more information, see <a class="reference external" href="https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_PlacementStrategy.html">Placement Strategy</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The type of placement strategy. Must be one of: <code class="docutils literal notranslate"><span class="pre">binpack</span></code>, <code class="docutils literal notranslate"><span class="pre">random</span></code>, or <code class="docutils literal notranslate"><span class="pre">spread</span></code></p></li>
 </ul>
 </dd></dl>
 
@@ -777,8 +709,12 @@ Guide</a>.</p></li>
 <dd><p>rules that are taken into consideration during task placement. Maximum number of
 <code class="docutils literal notranslate"><span class="pre">placement_constraints</span></code> is <code class="docutils literal notranslate"><span class="pre">10</span></code>. Defined below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Cluster Query Language expression to apply to the constraint. Does not need to be specified
+for the <code class="docutils literal notranslate"><span class="pre">distinctInstance</span></code> type.
+For more information, see <a class="reference external" href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-query-language.html">Cluster Query Language in the Amazon EC2 Container
+Service Developer
+Guide</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The type of constraint. The only valid values at this time are <code class="docutils literal notranslate"><span class="pre">memberOf</span></code> and <code class="docutils literal notranslate"><span class="pre">distinctInstance</span></code>.</p></li>
 </ul>
 </dd></dl>
 
@@ -805,10 +741,10 @@ Guide</a>.</p></li>
 <code class="sig-name descname">service_registries</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ecs.Service.service_registries" title="Permalink to this definition">¶</a></dt>
 <dd><p>The service discovery registries for the service. The maximum number of <code class="docutils literal notranslate"><span class="pre">service_registries</span></code> blocks is <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">container_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">containerPort</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">registryArn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">container_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The container name value, already specified in the task definition, to be used for your service discovery service.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">containerPort</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The port value, already specified in the task definition, to be used for your service discovery service.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The port value used if your Service Discovery service specified an SRV record.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">registryArn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ARN of the Service Registry. The currently supported service registry is Amazon Route 53 Auto Naming Service(<code class="docutils literal notranslate"><span class="pre">servicediscovery.Service</span></code>). For more information, see <a class="reference external" href="https://docs.aws.amazon.com/Route53/latest/APIReference/API_autonaming_Service.html">Service</a></p></li>
 </ul>
 </dd></dl>
 
@@ -870,43 +806,50 @@ properties used to qualify the lookup.</p>
 </dl>
 <p>The <strong>capacity_provider_strategies</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">base</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">capacityProvider</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">weight</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">base</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of tasks, at a minimum, to run on the specified capacity provider. Only one capacity provider in a capacity provider strategy can have a base defined.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">capacityProvider</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The short name or full Amazon Resource Name (ARN) of the capacity provider.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">weight</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The relative percentage of the total number of launched tasks that should use the specified capacity provider.</p></li>
 </ul>
 <p>The <strong>deployment_controller</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Type of deployment controller. Valid values: <code class="docutils literal notranslate"><span class="pre">CODE_DEPLOY</span></code>, <code class="docutils literal notranslate"><span class="pre">ECS</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">ECS</span></code>.</p></li>
 </ul>
 <p>The <strong>load_balancers</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">container_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">containerPort</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">elbName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">target_group_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">container_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the container to associate with the load balancer (as it appears in a container definition).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">containerPort</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The port on the container to associate with the load balancer.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">elbName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the ELB (Classic) to associate with the service.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">target_group_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of the Load Balancer target group to associate with the service.</p></li>
 </ul>
 <p>The <strong>network_configuration</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">assignPublicIp</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">security_groups</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">subnets</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">assignPublicIp</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Assign a public IP address to the ENI (Fargate launch type only). Valid values are <code class="docutils literal notranslate"><span class="pre">true</span></code> or <code class="docutils literal notranslate"><span class="pre">false</span></code>. Default <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">security_groups</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The security groups associated with the task or service. If you do not specify a security group, the default security group for the VPC is used.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnets</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The subnets associated with the task or service.</p></li>
 </ul>
 <p>The <strong>ordered_placement_strategies</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">field</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">field</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - For the <code class="docutils literal notranslate"><span class="pre">spread</span></code> placement strategy, valid values are <code class="docutils literal notranslate"><span class="pre">instanceId</span></code> (or <code class="docutils literal notranslate"><span class="pre">host</span></code>,
+which has the same effect), or any platform or custom attribute that is applied to a container instance.
+For the <code class="docutils literal notranslate"><span class="pre">binpack</span></code> type, valid values are <code class="docutils literal notranslate"><span class="pre">memory</span></code> and <code class="docutils literal notranslate"><span class="pre">cpu</span></code>. For the <code class="docutils literal notranslate"><span class="pre">random</span></code> type, this attribute is not
+needed. For more information, see <a class="reference external" href="https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_PlacementStrategy.html">Placement Strategy</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of placement strategy. Must be one of: <code class="docutils literal notranslate"><span class="pre">binpack</span></code>, <code class="docutils literal notranslate"><span class="pre">random</span></code>, or <code class="docutils literal notranslate"><span class="pre">spread</span></code></p></li>
 </ul>
 <p>The <strong>placement_constraints</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Cluster Query Language expression to apply to the constraint. Does not need to be specified
+for the <code class="docutils literal notranslate"><span class="pre">distinctInstance</span></code> type.
+For more information, see <a class="reference external" href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-query-language.html">Cluster Query Language in the Amazon EC2 Container
+Service Developer
+Guide</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of constraint. The only valid values at this time are <code class="docutils literal notranslate"><span class="pre">memberOf</span></code> and <code class="docutils literal notranslate"><span class="pre">distinctInstance</span></code>.</p></li>
 </ul>
 <p>The <strong>service_registries</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">container_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">containerPort</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">registryArn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">container_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The container name value, already specified in the task definition, to be used for your service discovery service.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">containerPort</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The port value, already specified in the task definition, to be used for your service discovery service.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The port value used if your Service Discovery service specified an SRV record.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">registryArn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of the Service Registry. The currently supported service registry is Amazon Route 53 Auto Naming Service(<code class="docutils literal notranslate"><span class="pre">servicediscovery.Service</span></code>). For more information, see <a class="reference external" href="https://docs.aws.amazon.com/Route53/latest/APIReference/API_autonaming_Service.html">Service</a></p></li>
 </ul>
 </dd></dl>
 

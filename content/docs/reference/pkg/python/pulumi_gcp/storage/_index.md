@@ -542,10 +542,21 @@ READER, WRITER, and OWNER instead of READ, WRITE, and FULL_CONTROL.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>bucket</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the bucket.</p></li>
-<li><p><strong>entity</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The entity holding the permission, in one of the following forms: user-userId user-email group-groupId group-email
-domain-domain project-team-projectId allUsers allAuthenticatedUsers Examples: The user <a class="reference external" href="mailto:liz&#37;&#52;&#48;example&#46;com">liz<span>&#64;</span>example<span>&#46;</span>com</a> would be
-<a class="reference external" href="mailto:user-liz&#37;&#52;&#48;example&#46;com">user-liz<span>&#64;</span>example<span>&#46;</span>com</a>. The group <a class="reference external" href="mailto:example&#37;&#52;&#48;googlegroups&#46;com">example<span>&#64;</span>googlegroups<span>&#46;</span>com</a> would be <a class="reference external" href="mailto:group-example&#37;&#52;&#48;googlegroups&#46;com">group-example<span>&#64;</span>googlegroups<span>&#46;</span>com</a>. To refer to all
-members of the Google Apps for Business domain example.com, the entity would be domain-example.com.</p></li>
+<li><p><strong>entity</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The entity holding the permission, in one of the following forms:
+user-userId
+user-email
+group-groupId
+group-email
+domain-domain
+project-team-projectId
+allUsers
+allAuthenticatedUsers
+Examples:
+The user <a class="reference external" href="mailto:liz&#37;&#52;&#48;example&#46;com">liz<span>&#64;</span>example<span>&#46;</span>com</a> would be <a class="reference external" href="mailto:user-liz&#37;&#52;&#48;example&#46;com">user-liz<span>&#64;</span>example<span>&#46;</span>com</a>.
+The group <a class="reference external" href="mailto:example&#37;&#52;&#48;googlegroups&#46;com">example<span>&#64;</span>googlegroups<span>&#46;</span>com</a> would be
+<a class="reference external" href="mailto:group-example&#37;&#52;&#48;googlegroups&#46;com">group-example<span>&#64;</span>googlegroups<span>&#46;</span>com</a>.
+To refer to all members of the Google Apps for Business domain
+example.com, the entity would be domain-example.com.</p></li>
 <li><p><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The access permission for the entity.</p></li>
 </ul>
 </dd>
@@ -571,10 +582,21 @@ members of the Google Apps for Business domain example.com, the entity would be 
 <dl class="attribute">
 <dt id="pulumi_gcp.storage.BucketAccessControl.entity">
 <code class="sig-name descname">entity</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.storage.BucketAccessControl.entity" title="Permalink to this definition">¶</a></dt>
-<dd><p>The entity holding the permission, in one of the following forms: user-userId user-email group-groupId group-email
-domain-domain project-team-projectId allUsers allAuthenticatedUsers Examples: The user <a class="reference external" href="mailto:liz&#37;&#52;&#48;example&#46;com">liz<span>&#64;</span>example<span>&#46;</span>com</a> would be
-<a class="reference external" href="mailto:user-liz&#37;&#52;&#48;example&#46;com">user-liz<span>&#64;</span>example<span>&#46;</span>com</a>. The group <a class="reference external" href="mailto:example&#37;&#52;&#48;googlegroups&#46;com">example<span>&#64;</span>googlegroups<span>&#46;</span>com</a> would be <a class="reference external" href="mailto:group-example&#37;&#52;&#48;googlegroups&#46;com">group-example<span>&#64;</span>googlegroups<span>&#46;</span>com</a>. To refer to all
-members of the Google Apps for Business domain example.com, the entity would be domain-example.com.</p>
+<dd><p>The entity holding the permission, in one of the following forms:
+user-userId
+user-email
+group-groupId
+group-email
+domain-domain
+project-team-projectId
+allUsers
+allAuthenticatedUsers
+Examples:
+The user <a class="reference external" href="mailto:liz&#37;&#52;&#48;example&#46;com">liz<span>&#64;</span>example<span>&#46;</span>com</a> would be <a class="reference external" href="mailto:user-liz&#37;&#52;&#48;example&#46;com">user-liz<span>&#64;</span>example<span>&#46;</span>com</a>.
+The group <a class="reference external" href="mailto:example&#37;&#52;&#48;googlegroups&#46;com">example<span>&#64;</span>googlegroups<span>&#46;</span>com</a> would be
+<a class="reference external" href="mailto:group-example&#37;&#52;&#48;googlegroups&#46;com">group-example<span>&#64;</span>googlegroups<span>&#46;</span>com</a>.
+To refer to all members of the Google Apps for Business domain
+example.com, the entity would be domain-example.com.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -597,10 +619,21 @@ properties used to qualify the lookup.</p>
 <li><p><strong>bucket</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the bucket.</p></li>
 <li><p><strong>domain</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The domain associated with the entity.</p></li>
 <li><p><strong>email</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The email address associated with the entity.</p></li>
-<li><p><strong>entity</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The entity holding the permission, in one of the following forms: user-userId user-email group-groupId group-email
-domain-domain project-team-projectId allUsers allAuthenticatedUsers Examples: The user <a class="reference external" href="mailto:liz&#37;&#52;&#48;example&#46;com">liz<span>&#64;</span>example<span>&#46;</span>com</a> would be
-<a class="reference external" href="mailto:user-liz&#37;&#52;&#48;example&#46;com">user-liz<span>&#64;</span>example<span>&#46;</span>com</a>. The group <a class="reference external" href="mailto:example&#37;&#52;&#48;googlegroups&#46;com">example<span>&#64;</span>googlegroups<span>&#46;</span>com</a> would be <a class="reference external" href="mailto:group-example&#37;&#52;&#48;googlegroups&#46;com">group-example<span>&#64;</span>googlegroups<span>&#46;</span>com</a>. To refer to all
-members of the Google Apps for Business domain example.com, the entity would be domain-example.com.</p></li>
+<li><p><strong>entity</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The entity holding the permission, in one of the following forms:
+user-userId
+user-email
+group-groupId
+group-email
+domain-domain
+project-team-projectId
+allUsers
+allAuthenticatedUsers
+Examples:
+The user <a class="reference external" href="mailto:liz&#37;&#52;&#48;example&#46;com">liz<span>&#64;</span>example<span>&#46;</span>com</a> would be <a class="reference external" href="mailto:user-liz&#37;&#52;&#48;example&#46;com">user-liz<span>&#64;</span>example<span>&#46;</span>com</a>.
+The group <a class="reference external" href="mailto:example&#37;&#52;&#48;googlegroups&#46;com">example<span>&#64;</span>googlegroups<span>&#46;</span>com</a> would be
+<a class="reference external" href="mailto:group-example&#37;&#52;&#48;googlegroups&#46;com">group-example<span>&#64;</span>googlegroups<span>&#46;</span>com</a>.
+To refer to all members of the Google Apps for Business domain
+example.com, the entity would be domain-example.com.</p></li>
 <li><p><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The access permission for the entity.</p></li>
 </ul>
 </dd>
@@ -1353,9 +1386,23 @@ uses READER and OWNER instead of READ and FULL_CONTROL.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>bucket</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the bucket.</p></li>
-<li><p><strong>entity</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The entity holding the permission, in one of the following forms: * user-{{userId}} * user-{{email}} (such as
-“<a class="reference external" href="mailto:user-liz&#37;&#52;&#48;example&#46;com">user-liz<span>&#64;</span>example<span>&#46;</span>com</a>”) * group-{{groupId}} * group-{{email}} (such as “<a class="reference external" href="mailto:group-example&#37;&#52;&#48;googlegroups&#46;com">group-example<span>&#64;</span>googlegroups<span>&#46;</span>com</a>”) *
-domain-{{domain}} (such as “domain-example.com”) * project-team-{{projectId}} * allUsers * allAuthenticatedUsers</p></li>
+<li><p><strong>entity</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The entity holding the permission, in one of the following forms:</p></li>
+</ul>
+</dd>
+</dl>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">*</span> <span class="n">user</span><span class="o">-</span><span class="p">{{</span><span class="n">userId</span><span class="p">}}</span>
+<span class="o">*</span> <span class="n">user</span><span class="o">-</span><span class="p">{{</span><span class="n">email</span><span class="p">}}</span> <span class="p">(</span><span class="n">such</span> <span class="k">as</span> <span class="s2">&quot;user-liz@example.com&quot;</span><span class="p">)</span>
+<span class="o">*</span> <span class="n">group</span><span class="o">-</span><span class="p">{{</span><span class="n">groupId</span><span class="p">}}</span>
+<span class="o">*</span> <span class="n">group</span><span class="o">-</span><span class="p">{{</span><span class="n">email</span><span class="p">}}</span> <span class="p">(</span><span class="n">such</span> <span class="k">as</span> <span class="s2">&quot;group-example@googlegroups.com&quot;</span><span class="p">)</span>
+<span class="o">*</span> <span class="n">domain</span><span class="o">-</span><span class="p">{{</span><span class="n">domain</span><span class="p">}}</span> <span class="p">(</span><span class="n">such</span> <span class="k">as</span> <span class="s2">&quot;domain-example.com&quot;</span><span class="p">)</span>
+<span class="o">*</span> <span class="n">project</span><span class="o">-</span><span class="n">team</span><span class="o">-</span><span class="p">{{</span><span class="n">projectId</span><span class="p">}}</span>
+<span class="o">*</span> <span class="n">allUsers</span>
+<span class="o">*</span> <span class="n">allAuthenticatedUsers</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
 <li><p><strong>object</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the object, if applied to an object.</p></li>
 <li><p><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The access permission for the entity.</p></li>
 </ul>
@@ -1382,9 +1429,17 @@ domain-{{domain}} (such as “domain-example.com”) * project-team-{{projectId}
 <dl class="attribute">
 <dt id="pulumi_gcp.storage.DefaultObjectAccessControl.entity">
 <code class="sig-name descname">entity</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.storage.DefaultObjectAccessControl.entity" title="Permalink to this definition">¶</a></dt>
-<dd><p>The entity holding the permission, in one of the following forms: * user-{{userId}} * user-{{email}} (such as
-“<a class="reference external" href="mailto:user-liz&#37;&#52;&#48;example&#46;com">user-liz<span>&#64;</span>example<span>&#46;</span>com</a>”) * group-{{groupId}} * group-{{email}} (such as “<a class="reference external" href="mailto:group-example&#37;&#52;&#48;googlegroups&#46;com">group-example<span>&#64;</span>googlegroups<span>&#46;</span>com</a>”) *
-domain-{{domain}} (such as “domain-example.com”) * project-team-{{projectId}} * allUsers * allAuthenticatedUsers</p>
+<dd><p>The entity holding the permission, in one of the following forms:</p>
+<ul class="simple">
+<li><p>user-{{userId}}</p></li>
+<li><p>user-{{email}} (such as “<a class="reference external" href="mailto:user-liz&#37;&#52;&#48;example&#46;com">user-liz<span>&#64;</span>example<span>&#46;</span>com</a>”)</p></li>
+<li><p>group-{{groupId}}</p></li>
+<li><p>group-{{email}} (such as “<a class="reference external" href="mailto:group-example&#37;&#52;&#48;googlegroups&#46;com">group-example<span>&#64;</span>googlegroups<span>&#46;</span>com</a>”)</p></li>
+<li><p>domain-{{domain}} (such as “domain-example.com”)</p></li>
+<li><p>project-team-{{projectId}}</p></li>
+<li><p>allUsers</p></li>
+<li><p>allAuthenticatedUsers</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -1435,9 +1490,23 @@ properties used to qualify the lookup.</p>
 <li><p><strong>bucket</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the bucket.</p></li>
 <li><p><strong>domain</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The domain associated with the entity.</p></li>
 <li><p><strong>email</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The email address associated with the entity.</p></li>
-<li><p><strong>entity</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The entity holding the permission, in one of the following forms: * user-{{userId}} * user-{{email}} (such as
-“<a class="reference external" href="mailto:user-liz&#37;&#52;&#48;example&#46;com">user-liz<span>&#64;</span>example<span>&#46;</span>com</a>”) * group-{{groupId}} * group-{{email}} (such as “<a class="reference external" href="mailto:group-example&#37;&#52;&#48;googlegroups&#46;com">group-example<span>&#64;</span>googlegroups<span>&#46;</span>com</a>”) *
-domain-{{domain}} (such as “domain-example.com”) * project-team-{{projectId}} * allUsers * allAuthenticatedUsers</p></li>
+<li><p><strong>entity</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The entity holding the permission, in one of the following forms:</p></li>
+</ul>
+</dd>
+</dl>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">*</span> <span class="n">user</span><span class="o">-</span><span class="p">{{</span><span class="n">userId</span><span class="p">}}</span>
+<span class="o">*</span> <span class="n">user</span><span class="o">-</span><span class="p">{{</span><span class="n">email</span><span class="p">}}</span> <span class="p">(</span><span class="n">such</span> <span class="k">as</span> <span class="s2">&quot;user-liz@example.com&quot;</span><span class="p">)</span>
+<span class="o">*</span> <span class="n">group</span><span class="o">-</span><span class="p">{{</span><span class="n">groupId</span><span class="p">}}</span>
+<span class="o">*</span> <span class="n">group</span><span class="o">-</span><span class="p">{{</span><span class="n">email</span><span class="p">}}</span> <span class="p">(</span><span class="n">such</span> <span class="k">as</span> <span class="s2">&quot;group-example@googlegroups.com&quot;</span><span class="p">)</span>
+<span class="o">*</span> <span class="n">domain</span><span class="o">-</span><span class="p">{{</span><span class="n">domain</span><span class="p">}}</span> <span class="p">(</span><span class="n">such</span> <span class="k">as</span> <span class="s2">&quot;domain-example.com&quot;</span><span class="p">)</span>
+<span class="o">*</span> <span class="n">project</span><span class="o">-</span><span class="n">team</span><span class="o">-</span><span class="p">{{</span><span class="n">projectId</span><span class="p">}}</span>
+<span class="o">*</span> <span class="n">allUsers</span>
+<span class="o">*</span> <span class="n">allAuthenticatedUsers</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
 <li><p><strong>entity_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID for the entity</p></li>
 <li><p><strong>generation</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The content generation of the object, if applied to an object.</p></li>
 <li><p><strong>object</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the object, if applied to an object.</p></li>
@@ -1535,7 +1604,7 @@ directive to specify caching behavior of object data. If omitted and object is a
 <dl class="attribute">
 <dt id="pulumi_gcp.storage.GetBucketObjectResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.storage.GetBucketObjectResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1567,7 +1636,7 @@ storage class or to a <a class="reference external" href="https://cloud.google.c
 <dl class="attribute">
 <dt id="pulumi_gcp.storage.GetObjectSignedUrlResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.storage.GetObjectSignedUrlResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1592,7 +1661,7 @@ in order to grant IAM permissions.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.storage.GetProjectServiceAccountResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.storage.GetProjectServiceAccountResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 </dd></dl>
@@ -1610,7 +1679,7 @@ in order to grant IAM permissions.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.storage.GetTransferProjectServieAccountResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.storage.GetTransferProjectServieAccountResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 </dd></dl>
@@ -2047,9 +2116,23 @@ uses READER and OWNER instead of READ and FULL_CONTROL.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>bucket</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the bucket.</p></li>
-<li><p><strong>entity</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The entity holding the permission, in one of the following forms: * user-{{userId}} * user-{{email}} (such as
-“<a class="reference external" href="mailto:user-liz&#37;&#52;&#48;example&#46;com">user-liz<span>&#64;</span>example<span>&#46;</span>com</a>”) * group-{{groupId}} * group-{{email}} (such as “<a class="reference external" href="mailto:group-example&#37;&#52;&#48;googlegroups&#46;com">group-example<span>&#64;</span>googlegroups<span>&#46;</span>com</a>”) *
-domain-{{domain}} (such as “domain-example.com”) * project-team-{{projectId}} * allUsers * allAuthenticatedUsers</p></li>
+<li><p><strong>entity</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The entity holding the permission, in one of the following forms:</p></li>
+</ul>
+</dd>
+</dl>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">*</span> <span class="n">user</span><span class="o">-</span><span class="p">{{</span><span class="n">userId</span><span class="p">}}</span>
+<span class="o">*</span> <span class="n">user</span><span class="o">-</span><span class="p">{{</span><span class="n">email</span><span class="p">}}</span> <span class="p">(</span><span class="n">such</span> <span class="k">as</span> <span class="s2">&quot;user-liz@example.com&quot;</span><span class="p">)</span>
+<span class="o">*</span> <span class="n">group</span><span class="o">-</span><span class="p">{{</span><span class="n">groupId</span><span class="p">}}</span>
+<span class="o">*</span> <span class="n">group</span><span class="o">-</span><span class="p">{{</span><span class="n">email</span><span class="p">}}</span> <span class="p">(</span><span class="n">such</span> <span class="k">as</span> <span class="s2">&quot;group-example@googlegroups.com&quot;</span><span class="p">)</span>
+<span class="o">*</span> <span class="n">domain</span><span class="o">-</span><span class="p">{{</span><span class="n">domain</span><span class="p">}}</span> <span class="p">(</span><span class="n">such</span> <span class="k">as</span> <span class="s2">&quot;domain-example.com&quot;</span><span class="p">)</span>
+<span class="o">*</span> <span class="n">project</span><span class="o">-</span><span class="n">team</span><span class="o">-</span><span class="p">{{</span><span class="n">projectId</span><span class="p">}}</span>
+<span class="o">*</span> <span class="n">allUsers</span>
+<span class="o">*</span> <span class="n">allAuthenticatedUsers</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
 <li><p><strong>object</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the object to apply the access control to.</p></li>
 <li><p><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The access permission for the entity.</p></li>
 </ul>
@@ -2076,9 +2159,17 @@ domain-{{domain}} (such as “domain-example.com”) * project-team-{{projectId}
 <dl class="attribute">
 <dt id="pulumi_gcp.storage.ObjectAccessControl.entity">
 <code class="sig-name descname">entity</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.storage.ObjectAccessControl.entity" title="Permalink to this definition">¶</a></dt>
-<dd><p>The entity holding the permission, in one of the following forms: * user-{{userId}} * user-{{email}} (such as
-“<a class="reference external" href="mailto:user-liz&#37;&#52;&#48;example&#46;com">user-liz<span>&#64;</span>example<span>&#46;</span>com</a>”) * group-{{groupId}} * group-{{email}} (such as “<a class="reference external" href="mailto:group-example&#37;&#52;&#48;googlegroups&#46;com">group-example<span>&#64;</span>googlegroups<span>&#46;</span>com</a>”) *
-domain-{{domain}} (such as “domain-example.com”) * project-team-{{projectId}} * allUsers * allAuthenticatedUsers</p>
+<dd><p>The entity holding the permission, in one of the following forms:</p>
+<ul class="simple">
+<li><p>user-{{userId}}</p></li>
+<li><p>user-{{email}} (such as “<a class="reference external" href="mailto:user-liz&#37;&#52;&#48;example&#46;com">user-liz<span>&#64;</span>example<span>&#46;</span>com</a>”)</p></li>
+<li><p>group-{{groupId}}</p></li>
+<li><p>group-{{email}} (such as “<a class="reference external" href="mailto:group-example&#37;&#52;&#48;googlegroups&#46;com">group-example<span>&#64;</span>googlegroups<span>&#46;</span>com</a>”)</p></li>
+<li><p>domain-{{domain}} (such as “domain-example.com”)</p></li>
+<li><p>project-team-{{projectId}}</p></li>
+<li><p>allUsers</p></li>
+<li><p>allAuthenticatedUsers</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -2129,9 +2220,23 @@ properties used to qualify the lookup.</p>
 <li><p><strong>bucket</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the bucket.</p></li>
 <li><p><strong>domain</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The domain associated with the entity.</p></li>
 <li><p><strong>email</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The email address associated with the entity.</p></li>
-<li><p><strong>entity</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The entity holding the permission, in one of the following forms: * user-{{userId}} * user-{{email}} (such as
-“<a class="reference external" href="mailto:user-liz&#37;&#52;&#48;example&#46;com">user-liz<span>&#64;</span>example<span>&#46;</span>com</a>”) * group-{{groupId}} * group-{{email}} (such as “<a class="reference external" href="mailto:group-example&#37;&#52;&#48;googlegroups&#46;com">group-example<span>&#64;</span>googlegroups<span>&#46;</span>com</a>”) *
-domain-{{domain}} (such as “domain-example.com”) * project-team-{{projectId}} * allUsers * allAuthenticatedUsers</p></li>
+<li><p><strong>entity</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The entity holding the permission, in one of the following forms:</p></li>
+</ul>
+</dd>
+</dl>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">*</span> <span class="n">user</span><span class="o">-</span><span class="p">{{</span><span class="n">userId</span><span class="p">}}</span>
+<span class="o">*</span> <span class="n">user</span><span class="o">-</span><span class="p">{{</span><span class="n">email</span><span class="p">}}</span> <span class="p">(</span><span class="n">such</span> <span class="k">as</span> <span class="s2">&quot;user-liz@example.com&quot;</span><span class="p">)</span>
+<span class="o">*</span> <span class="n">group</span><span class="o">-</span><span class="p">{{</span><span class="n">groupId</span><span class="p">}}</span>
+<span class="o">*</span> <span class="n">group</span><span class="o">-</span><span class="p">{{</span><span class="n">email</span><span class="p">}}</span> <span class="p">(</span><span class="n">such</span> <span class="k">as</span> <span class="s2">&quot;group-example@googlegroups.com&quot;</span><span class="p">)</span>
+<span class="o">*</span> <span class="n">domain</span><span class="o">-</span><span class="p">{{</span><span class="n">domain</span><span class="p">}}</span> <span class="p">(</span><span class="n">such</span> <span class="k">as</span> <span class="s2">&quot;domain-example.com&quot;</span><span class="p">)</span>
+<span class="o">*</span> <span class="n">project</span><span class="o">-</span><span class="n">team</span><span class="o">-</span><span class="p">{{</span><span class="n">projectId</span><span class="p">}}</span>
+<span class="o">*</span> <span class="n">allUsers</span>
+<span class="o">*</span> <span class="n">allAuthenticatedUsers</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
 <li><p><strong>entity_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID for the entity</p></li>
 <li><p><strong>generation</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The content generation of the object, if applied to an object.</p></li>
 <li><p><strong>object</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the object to apply the access control to.</p></li>

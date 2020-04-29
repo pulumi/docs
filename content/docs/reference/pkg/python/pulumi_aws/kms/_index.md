@@ -418,7 +418,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.kms.GetAliasResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kms.GetAliasResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -448,7 +448,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.kms.GetCipherTextResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kms.GetCipherTextResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 </dd></dl>
@@ -460,7 +460,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.kms.GetKeyResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kms.GetKeyResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 </dd></dl>
@@ -472,7 +472,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.kms.GetSecretResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kms.GetSecretResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 </dd></dl>
@@ -484,7 +484,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.kms.GetSecretsResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kms.GetSecretsResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -506,20 +506,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>constraints</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A structure that you can use to allow certain operations in the grant only when the desired encryption context is present. For more information about encryption context, see <a class="reference external" href="http://docs.aws.amazon.com/kms/latest/developerguide/encryption-context.html">Encryption Context</a>.</p></li>
 <li><p><strong>grant_creation_tokens</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of grant tokens to be used when creating the grant. See <a class="reference external" href="http://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#grant_token">Grant Tokens</a> for more information about grant tokens.</p></li>
-</ul>
-</dd>
-</dl>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>* `retire_on_delete` -(Defaults to false, Forces new resources) If set to false (the default) the grants will be revoked upon deletion, and if set to true the grants will try to be retired upon deletion. Note that retiring grants requires special permissions, hence why we default to revoking grants.
-See [RetireGrant](https://docs.aws.amazon.com/kms/latest/APIReference/API_RetireGrant.html) for more information.
-</pre></div>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
 <li><p><strong>grantee_principal</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The principal that is given permission to perform the operations that the grant permits in ARN format. Note that due to eventual consistency issues around IAM principals, the state may not always be refreshed to reflect what is true in AWS.</p></li>
 <li><p><strong>key_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique identifier for the customer master key (CMK) that the grant applies to. Specify the key ID or the Amazon Resource Name (ARN) of the CMK. To specify a CMK in a different AWS account, you must use the key ARN.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A friendly name for identifying the grant.</p></li>
 <li><p><strong>operations</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of operations that the grant permits. The permitted values are: <code class="docutils literal notranslate"><span class="pre">Decrypt,</span> <span class="pre">Encrypt,</span> <span class="pre">GenerateDataKey,</span> <span class="pre">GenerateDataKeyWithoutPlaintext,</span> <span class="pre">ReEncryptFrom,</span> <span class="pre">ReEncryptTo,</span> <span class="pre">CreateGrant,</span> <span class="pre">RetireGrant,</span> <span class="pre">DescribeKey</span></code></p></li>
+<li><p><strong>retire_on_delete</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – -(Defaults to false, Forces new resources) If set to false (the default) the grants will be revoked upon deletion, and if set to true the grants will try to be retired upon deletion. Note that retiring grants requires special permissions, hence why we default to revoking grants.
+See <a class="reference external" href="https://docs.aws.amazon.com/kms/latest/APIReference/API_RetireGrant.html">RetireGrant</a> for more information.</p></li>
 <li><p><strong>retiring_principal</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The principal that is given permission to retire the grant by using RetireGrant operation in ARN format. Note that due to eventual consistency issues around IAM principals, the state may not always be refreshed to reflect what is true in AWS.</p></li>
 </ul>
 </dd>
@@ -543,10 +535,6 @@ See [RetireGrant](https://docs.aws.amazon.com/kms/latest/APIReference/API_Retire
 <dt id="pulumi_aws.kms.Grant.grant_creation_tokens">
 <code class="sig-name descname">grant_creation_tokens</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kms.Grant.grant_creation_tokens" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of grant tokens to be used when creating the grant. See <a class="reference external" href="http://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#grant_token">Grant Tokens</a> for more information about grant tokens.</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">retire_on_delete</span></code> -(Defaults to false, Forces new resources) If set to false (the default) the grants will be revoked upon deletion, and if set to true the grants will try to be retired upon deletion. Note that retiring grants requires special permissions, hence why we default to revoking grants.
-See <a class="reference external" href="https://docs.aws.amazon.com/kms/latest/APIReference/API_RetireGrant.html">RetireGrant</a> for more information.</p></li>
-</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -586,6 +574,13 @@ See <a class="reference external" href="https://docs.aws.amazon.com/kms/latest/A
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_aws.kms.Grant.retire_on_delete">
+<code class="sig-name descname">retire_on_delete</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kms.Grant.retire_on_delete" title="Permalink to this definition">¶</a></dt>
+<dd><p>-(Defaults to false, Forces new resources) If set to false (the default) the grants will be revoked upon deletion, and if set to true the grants will try to be retired upon deletion. Note that retiring grants requires special permissions, hence why we default to revoking grants.
+See <a class="reference external" href="https://docs.aws.amazon.com/kms/latest/APIReference/API_RetireGrant.html">RetireGrant</a> for more information.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_aws.kms.Grant.retiring_principal">
 <code class="sig-name descname">retiring_principal</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kms.Grant.retiring_principal" title="Permalink to this definition">¶</a></dt>
 <dd><p>The principal that is given permission to retire the grant by using RetireGrant operation in ARN format. Note that due to eventual consistency issues around IAM principals, the state may not always be refreshed to reflect what is true in AWS.</p>
@@ -606,16 +601,6 @@ properties used to qualify the lookup.</p>
 </p></li>
 <li><p><strong>grant_creation_tokens</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – <p>A list of grant tokens to be used when creating the grant. See <a class="reference external" href="http://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#grant_token">Grant Tokens</a> for more information about grant tokens.</p>
 </p></li>
-</ul>
-</dd>
-</dl>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>* `retire_on_delete` -(Defaults to false, Forces new resources) If set to false (the default) the grants will be revoked upon deletion, and if set to true the grants will try to be retired upon deletion. Note that retiring grants requires special permissions, hence why we default to revoking grants.
-See [RetireGrant](https://docs.aws.amazon.com/kms/latest/APIReference/API_RetireGrant.html) for more information.
-</pre></div>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
 <li><p><strong>grant_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique identifier for the grant.</p></li>
 <li><p><strong>grant_token</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The grant token for the created grant. For more information, see <a class="reference external" href="http://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#grant_token">Grant Tokens</a>.</p>
 </p></li>
@@ -623,6 +608,9 @@ See [RetireGrant](https://docs.aws.amazon.com/kms/latest/APIReference/API_Retire
 <li><p><strong>key_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique identifier for the customer master key (CMK) that the grant applies to. Specify the key ID or the Amazon Resource Name (ARN) of the CMK. To specify a CMK in a different AWS account, you must use the key ARN.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A friendly name for identifying the grant.</p></li>
 <li><p><strong>operations</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of operations that the grant permits. The permitted values are: <code class="docutils literal notranslate"><span class="pre">Decrypt,</span> <span class="pre">Encrypt,</span> <span class="pre">GenerateDataKey,</span> <span class="pre">GenerateDataKeyWithoutPlaintext,</span> <span class="pre">ReEncryptFrom,</span> <span class="pre">ReEncryptTo,</span> <span class="pre">CreateGrant,</span> <span class="pre">RetireGrant,</span> <span class="pre">DescribeKey</span></code></p></li>
+<li><p><strong>retire_on_delete</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – <p>-(Defaults to false, Forces new resources) If set to false (the default) the grants will be revoked upon deletion, and if set to true the grants will try to be retired upon deletion. Note that retiring grants requires special permissions, hence why we default to revoking grants.
+See <a class="reference external" href="https://docs.aws.amazon.com/kms/latest/APIReference/API_RetireGrant.html">RetireGrant</a> for more information.</p>
+</p></li>
 <li><p><strong>retiring_principal</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The principal that is given permission to retire the grant by using RetireGrant operation in ARN format. Note that due to eventual consistency issues around IAM principals, the state may not always be refreshed to reflect what is true in AWS.</p></li>
 </ul>
 </dd>

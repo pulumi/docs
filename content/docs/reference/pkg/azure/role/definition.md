@@ -15,6 +15,9 @@ Manages a custom Role Definition, used to assign Roles to Users/Principals. See 
 {{% examples %}}
 {{% /examples %}}
 
+Deprecated: azure.Definition has been deprecated in favour of azure.RoleDefinition
+
+<p class="resource-deprecated">Deprecated: {{% md %}}azure.Definition has been deprecated in favour of azure.RoleDefinition{{% /md %}}</p>
 
 
 ## Create a Definition Resource {#create}

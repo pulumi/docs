@@ -17,6 +17,9 @@ Manages a ServiceBus Topic.
 {{% examples %}}
 {{% /examples %}}
 
+Deprecated: azure.Topic has been deprecated in favour of azure.Topic
+
+<p class="resource-deprecated">Deprecated: {{% md %}}azure.Topic has been deprecated in favour of azure.Topic{{% /md %}}</p>
 
 
 ## Create a Topic Resource {#create}

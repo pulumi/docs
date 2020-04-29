@@ -15,6 +15,9 @@ Manages an EventGrid Event Subscription
 {{% examples %}}
 {{% /examples %}}
 
+Deprecated: azure.EventSubscription has been deprecated in favour of azure.EventSubscription
+
+<p class="resource-deprecated">Deprecated: {{% md %}}azure.EventSubscription has been deprecated in favour of azure.EventSubscription{{% /md %}}</p>
 
 
 ## Create a EventSubscription Resource {#create}

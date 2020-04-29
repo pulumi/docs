@@ -20,7 +20,7 @@ Allows you to set a user or group as the AD administrator for an Azure SQL serve
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const current = azure.core.getClientConfig();
+const current = pulumi.output(azure.core.getClientConfig({ async: true }));
 const exampleResourceGroup = new azure.core.ResourceGroup("example", {
     location: "West US",
 });

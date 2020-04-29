@@ -31,54 +31,79 @@ anything, please consult the source <a class="reference external" href="https://
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>alternative_location_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Only applicable to STANDARD_HA tier which protects the instance against zonal failures by provisioning it across two
-zones. If provided, it must be a different zone from the one provided in [locationId].</p></li>
-<li><p><strong>authorized_network</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The full name of the Google Compute Engine network to which the instance is connected. If left unspecified, the default
-network will be used.</p></li>
-<li><p><strong>connect_mode</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The connection mode of the Redis instance. Can be either ‘DIRECT_PEERING’ or ‘PRIVATE_SERVICE_ACCESS’. The default
-connect mode if not provided is ‘DIRECT_PEERING’.</p></li>
+<li><p><strong>alternative_location_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Only applicable to STANDARD_HA tier which protects the instance
+against zonal failures by provisioning it across two zones.
+If provided, it must be a different zone from the one provided in
+[locationId].</p></li>
+<li><p><strong>authorized_network</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The full name of the Google Compute Engine network to which the
+instance is connected. If left unspecified, the default network
+will be used.</p></li>
+<li><p><strong>connect_mode</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The connection mode of the Redis instance. Can be either
+<code class="docutils literal notranslate"><span class="pre">DIRECT_PEERING</span></code> or <code class="docutils literal notranslate"><span class="pre">PRIVATE_SERVICE_ACCESS</span></code>. The default
+connect mode if not provided is <code class="docutils literal notranslate"><span class="pre">DIRECT_PEERING</span></code>.</p></li>
 <li><p><strong>display_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An arbitrary and optional user-provided name for the instance.</p></li>
 <li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Resource labels to represent user provided metadata.</p></li>
-<li><p><strong>location_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The zone where the instance will be provisioned. If not provided, the service will choose a zone for the instance. For
-STANDARD_HA tier, instances will be created across two zones for protection against zonal failures. If
-[alternativeLocationId] is also provided, it must be different from [locationId].</p></li>
+<li><p><strong>location_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The zone where the instance will be provisioned. If not provided,
+the service will choose a zone for the instance. For STANDARD_HA tier,
+instances will be created across two zones for protection against
+zonal failures. If [alternativeLocationId] is also provided, it must
+be different from [locationId].</p></li>
 <li><p><strong>memory_size_gb</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Redis memory size in GiB.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the instance or a fully qualified identifier for the instance.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
-<li><p><strong>redis_configs</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Redis configuration parameters, according to <a class="reference external" href="http://redis.io/topics/config">http://redis.io/topics/config</a>. Please check Memorystore documentation for
-the list of supported parameters:
+<li><p><strong>redis_configs</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Redis configuration parameters, according to <a class="reference external" href="http://redis.io/topics/config">http://redis.io/topics/config</a>.
+Please check Memorystore documentation for the list of supported parameters:
 <a class="reference external" href="https://cloud.google.com/memorystore/docs/redis/reference/rest/v1/projects.locations.instances#Instance.FIELDS.redis_configs">https://cloud.google.com/memorystore/docs/redis/reference/rest/v1/projects.locations.instances#Instance.FIELDS.redis_configs</a></p></li>
-<li><p><strong>redis_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The version of Redis software. If not provided, latest supported version will be used. Currently, the supported values
-are: - REDIS_4_0 for Redis 4.0 compatibility - REDIS_3_2 for Redis 3.2 compatibility</p></li>
-<li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Redis region of the instance.</p></li>
-<li><p><strong>reserved_ip_range</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The CIDR range of internal addresses that are reserved for this instance. If not provided, the service will choose an
-unused /29 block, for example, 10.0.0.0/29 or 192.168.0.0/29. Ranges must be unique and non-overlapping with existing
-subnets in an authorized network.</p></li>
-<li><p><strong>tier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The service tier of the instance. Must be one of these values: - BASIC: standalone instance - STANDARD_HA: highly
-available primary/replica instances</p></li>
+<li><p><strong>redis_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The version of Redis software. If not provided, latest supported
+version will be used. Currently, the supported values are:</p></li>
 </ul>
 </dd>
 </dl>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="n">REDIS_4_0</span> <span class="k">for</span> <span class="n">Redis</span> <span class="mf">4.0</span> <span class="n">compatibility</span>
+<span class="o">-</span> <span class="n">REDIS_3_2</span> <span class="k">for</span> <span class="n">Redis</span> <span class="mf">3.2</span> <span class="n">compatibility</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Redis region of the instance.</p></li>
+<li><p><strong>reserved_ip_range</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The CIDR range of internal addresses that are reserved for this
+instance. If not provided, the service will choose an unused /29
+block, for example, 10.0.0.0/29 or 192.168.0.0/29. Ranges must be
+unique and non-overlapping with existing subnets in an authorized
+network.</p></li>
+<li><p><strong>tier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The service tier of the instance. Must be one of these values:</p></li>
+</ul>
+</dd>
+</dl>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="n">BASIC</span><span class="p">:</span> <span class="n">standalone</span> <span class="n">instance</span>
+<span class="o">-</span> <span class="n">STANDARD_HA</span><span class="p">:</span> <span class="n">highly</span> <span class="n">available</span> <span class="n">primary</span><span class="o">/</span><span class="n">replica</span> <span class="n">instances</span>
+</pre></div>
+</div>
 <dl class="attribute">
 <dt id="pulumi_gcp.redis.Instance.alternative_location_id">
 <code class="sig-name descname">alternative_location_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.redis.Instance.alternative_location_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>Only applicable to STANDARD_HA tier which protects the instance against zonal failures by provisioning it across two
-zones. If provided, it must be a different zone from the one provided in [locationId].</p>
+<dd><p>Only applicable to STANDARD_HA tier which protects the instance
+against zonal failures by provisioning it across two zones.
+If provided, it must be a different zone from the one provided in
+[locationId].</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_gcp.redis.Instance.authorized_network">
 <code class="sig-name descname">authorized_network</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.redis.Instance.authorized_network" title="Permalink to this definition">¶</a></dt>
-<dd><p>The full name of the Google Compute Engine network to which the instance is connected. If left unspecified, the default
-network will be used.</p>
+<dd><p>The full name of the Google Compute Engine network to which the
+instance is connected. If left unspecified, the default network
+will be used.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_gcp.redis.Instance.connect_mode">
 <code class="sig-name descname">connect_mode</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.redis.Instance.connect_mode" title="Permalink to this definition">¶</a></dt>
-<dd><p>The connection mode of the Redis instance. Can be either ‘DIRECT_PEERING’ or ‘PRIVATE_SERVICE_ACCESS’. The default
-connect mode if not provided is ‘DIRECT_PEERING’.</p>
+<dd><p>The connection mode of the Redis instance. Can be either
+<code class="docutils literal notranslate"><span class="pre">DIRECT_PEERING</span></code> or <code class="docutils literal notranslate"><span class="pre">PRIVATE_SERVICE_ACCESS</span></code>. The default
+connect mode if not provided is <code class="docutils literal notranslate"><span class="pre">DIRECT_PEERING</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -116,9 +141,11 @@ connect mode if not provided is ‘DIRECT_PEERING’.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.redis.Instance.location_id">
 <code class="sig-name descname">location_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.redis.Instance.location_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>The zone where the instance will be provisioned. If not provided, the service will choose a zone for the instance. For
-STANDARD_HA tier, instances will be created across two zones for protection against zonal failures. If
-[alternativeLocationId] is also provided, it must be different from [locationId].</p>
+<dd><p>The zone where the instance will be provisioned. If not provided,
+the service will choose a zone for the instance. For STANDARD_HA tier,
+instances will be created across two zones for protection against
+zonal failures. If [alternativeLocationId] is also provided, it must
+be different from [locationId].</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -149,16 +176,20 @@ If it is not provided, the provider project is used.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.redis.Instance.redis_configs">
 <code class="sig-name descname">redis_configs</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.redis.Instance.redis_configs" title="Permalink to this definition">¶</a></dt>
-<dd><p>Redis configuration parameters, according to <a class="reference external" href="http://redis.io/topics/config">http://redis.io/topics/config</a>. Please check Memorystore documentation for
-the list of supported parameters:
+<dd><p>Redis configuration parameters, according to <a class="reference external" href="http://redis.io/topics/config">http://redis.io/topics/config</a>.
+Please check Memorystore documentation for the list of supported parameters:
 <a class="reference external" href="https://cloud.google.com/memorystore/docs/redis/reference/rest/v1/projects.locations.instances#Instance.FIELDS.redis_configs">https://cloud.google.com/memorystore/docs/redis/reference/rest/v1/projects.locations.instances#Instance.FIELDS.redis_configs</a></p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_gcp.redis.Instance.redis_version">
 <code class="sig-name descname">redis_version</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.redis.Instance.redis_version" title="Permalink to this definition">¶</a></dt>
-<dd><p>The version of Redis software. If not provided, latest supported version will be used. Currently, the supported values
-are: - REDIS_4_0 for Redis 4.0 compatibility - REDIS_3_2 for Redis 3.2 compatibility</p>
+<dd><p>The version of Redis software. If not provided, latest supported
+version will be used. Currently, the supported values are:</p>
+<ul class="simple">
+<li><p>REDIS_4_0 for Redis 4.0 compatibility</p></li>
+<li><p>REDIS_3_2 for Redis 3.2 compatibility</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -170,16 +201,21 @@ are: - REDIS_4_0 for Redis 4.0 compatibility - REDIS_3_2 for Redis 3.2 compatibi
 <dl class="attribute">
 <dt id="pulumi_gcp.redis.Instance.reserved_ip_range">
 <code class="sig-name descname">reserved_ip_range</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.redis.Instance.reserved_ip_range" title="Permalink to this definition">¶</a></dt>
-<dd><p>The CIDR range of internal addresses that are reserved for this instance. If not provided, the service will choose an
-unused /29 block, for example, 10.0.0.0/29 or 192.168.0.0/29. Ranges must be unique and non-overlapping with existing
-subnets in an authorized network.</p>
+<dd><p>The CIDR range of internal addresses that are reserved for this
+instance. If not provided, the service will choose an unused /29
+block, for example, 10.0.0.0/29 or 192.168.0.0/29. Ranges must be
+unique and non-overlapping with existing subnets in an authorized
+network.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_gcp.redis.Instance.tier">
 <code class="sig-name descname">tier</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.redis.Instance.tier" title="Permalink to this definition">¶</a></dt>
-<dd><p>The service tier of the instance. Must be one of these values: - BASIC: standalone instance - STANDARD_HA: highly
-available primary/replica instances</p>
+<dd><p>The service tier of the instance. Must be one of these values:</p>
+<ul class="simple">
+<li><p>BASIC: standalone instance</p></li>
+<li><p>STANDARD_HA: highly available primary/replica instances</p></li>
+</ul>
 </dd></dl>
 
 <dl class="method">
@@ -193,12 +229,16 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>alternative_location_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Only applicable to STANDARD_HA tier which protects the instance against zonal failures by provisioning it across two
-zones. If provided, it must be a different zone from the one provided in [locationId].</p></li>
-<li><p><strong>authorized_network</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The full name of the Google Compute Engine network to which the instance is connected. If left unspecified, the default
-network will be used.</p></li>
-<li><p><strong>connect_mode</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The connection mode of the Redis instance. Can be either ‘DIRECT_PEERING’ or ‘PRIVATE_SERVICE_ACCESS’. The default
-connect mode if not provided is ‘DIRECT_PEERING’.</p></li>
+<li><p><strong>alternative_location_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Only applicable to STANDARD_HA tier which protects the instance
+against zonal failures by provisioning it across two zones.
+If provided, it must be a different zone from the one provided in
+[locationId].</p></li>
+<li><p><strong>authorized_network</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The full name of the Google Compute Engine network to which the
+instance is connected. If left unspecified, the default network
+will be used.</p></li>
+<li><p><strong>connect_mode</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The connection mode of the Redis instance. Can be either
+<code class="docutils literal notranslate"><span class="pre">DIRECT_PEERING</span></code> or <code class="docutils literal notranslate"><span class="pre">PRIVATE_SERVICE_ACCESS</span></code>. The default
+connect mode if not provided is <code class="docutils literal notranslate"><span class="pre">DIRECT_PEERING</span></code>.</p></li>
 <li><p><strong>create_time</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The time the instance was created in RFC3339 UTC “Zulu” format, accurate to nanoseconds.</p></li>
 <li><p><strong>current_location_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The current zone where the Redis endpoint is placed. For Basic Tier instances, this will always be the same as the
 [locationId] provided by the user at creation time. For Standard Tier instances, this can be either [locationId] or
@@ -206,28 +246,45 @@ connect mode if not provided is ‘DIRECT_PEERING’.</p></li>
 <li><p><strong>display_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An arbitrary and optional user-provided name for the instance.</p></li>
 <li><p><strong>host</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Hostname or IP address of the exposed Redis endpoint used by clients to connect to the service.</p></li>
 <li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Resource labels to represent user provided metadata.</p></li>
-<li><p><strong>location_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The zone where the instance will be provisioned. If not provided, the service will choose a zone for the instance. For
-STANDARD_HA tier, instances will be created across two zones for protection against zonal failures. If
-[alternativeLocationId] is also provided, it must be different from [locationId].</p></li>
+<li><p><strong>location_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The zone where the instance will be provisioned. If not provided,
+the service will choose a zone for the instance. For STANDARD_HA tier,
+instances will be created across two zones for protection against
+zonal failures. If [alternativeLocationId] is also provided, it must
+be different from [locationId].</p></li>
 <li><p><strong>memory_size_gb</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Redis memory size in GiB.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the instance or a fully qualified identifier for the instance.</p></li>
 <li><p><strong>port</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The port number of the exposed Redis endpoint.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
-<li><p><strong>redis_configs</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Redis configuration parameters, according to <a class="reference external" href="http://redis.io/topics/config">http://redis.io/topics/config</a>. Please check Memorystore documentation for
-the list of supported parameters:
+<li><p><strong>redis_configs</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Redis configuration parameters, according to <a class="reference external" href="http://redis.io/topics/config">http://redis.io/topics/config</a>.
+Please check Memorystore documentation for the list of supported parameters:
 <a class="reference external" href="https://cloud.google.com/memorystore/docs/redis/reference/rest/v1/projects.locations.instances#Instance.FIELDS.redis_configs">https://cloud.google.com/memorystore/docs/redis/reference/rest/v1/projects.locations.instances#Instance.FIELDS.redis_configs</a></p></li>
-<li><p><strong>redis_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The version of Redis software. If not provided, latest supported version will be used. Currently, the supported values
-are: - REDIS_4_0 for Redis 4.0 compatibility - REDIS_3_2 for Redis 3.2 compatibility</p></li>
-<li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Redis region of the instance.</p></li>
-<li><p><strong>reserved_ip_range</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The CIDR range of internal addresses that are reserved for this instance. If not provided, the service will choose an
-unused /29 block, for example, 10.0.0.0/29 or 192.168.0.0/29. Ranges must be unique and non-overlapping with existing
-subnets in an authorized network.</p></li>
-<li><p><strong>tier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The service tier of the instance. Must be one of these values: - BASIC: standalone instance - STANDARD_HA: highly
-available primary/replica instances</p></li>
+<li><p><strong>redis_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The version of Redis software. If not provided, latest supported
+version will be used. Currently, the supported values are:</p></li>
 </ul>
 </dd>
 </dl>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="n">REDIS_4_0</span> <span class="k">for</span> <span class="n">Redis</span> <span class="mf">4.0</span> <span class="n">compatibility</span>
+<span class="o">-</span> <span class="n">REDIS_3_2</span> <span class="k">for</span> <span class="n">Redis</span> <span class="mf">3.2</span> <span class="n">compatibility</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Redis region of the instance.</p></li>
+<li><p><strong>reserved_ip_range</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The CIDR range of internal addresses that are reserved for this
+instance. If not provided, the service will choose an unused /29
+block, for example, 10.0.0.0/29 or 192.168.0.0/29. Ranges must be
+unique and non-overlapping with existing subnets in an authorized
+network.</p></li>
+<li><p><strong>tier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The service tier of the instance. Must be one of these values:</p></li>
+</ul>
+</dd>
+</dl>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="n">BASIC</span><span class="p">:</span> <span class="n">standalone</span> <span class="n">instance</span>
+<span class="o">-</span> <span class="n">STANDARD_HA</span><span class="p">:</span> <span class="n">highly</span> <span class="n">available</span> <span class="n">primary</span><span class="o">/</span><span class="n">replica</span> <span class="n">instances</span>
+</pre></div>
+</div>
 </dd></dl>
 
 <dl class="method">
