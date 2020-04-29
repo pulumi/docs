@@ -50,7 +50,7 @@ hero:
 main:
     # Webinar title.
     title: "Pulumi Up(date)"
-    youtube_url: ""
+    youtube_url: "https://www.youtube.com/embed/qHVVIicxUyM"
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
     sortable_date: 2020-04-29T11:00:00.000-07:00
     # Duration of the webinar.
