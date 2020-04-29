@@ -206,7 +206,7 @@ provided list of resources.</p></li>
 <li><p><strong>provider</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="#pulumi.ProviderResource" title="pulumi.ProviderResource"><em>ProviderResource</em></a><em>]</em>) – An optional provider to use for this resource’s CRUD operations.
 If no provider is supplied, the default provider for the resource’s package will be used. The default
 provider is pulled from the parent’s provider bag.</p></li>
-<li><p><strong>providers</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="../pulumi_okta/profile/#pulumi_okta.profile.Mapping" title="pulumi_okta.profile.Mapping"><em>Mapping</em></a><em>[</em><em>str</em><em>,</em><a class="reference internal" href="#pulumi.ProviderResource" title="pulumi.ProviderResource"><em>ProviderResource</em></a><em>]</em><em>]</em>) – An optional set of providers to use for child resources. Keyed
+<li><p><strong>providers</strong> (<em>Optional</em><em>[</em><em>Mapping</em><em>[</em><em>str</em><em>,</em><a class="reference internal" href="#pulumi.ProviderResource" title="pulumi.ProviderResource"><em>ProviderResource</em></a><em>]</em><em>]</em>) – An optional set of providers to use for child resources. Keyed
 by package name (e.g. “aws”)</p></li>
 <li><p><strong>delete_before_replace</strong> (<em>Optional</em><em>[</em><em>bool</em><em>]</em>) – If provided and True, this resource must be deleted before it is replaced.</p></li>
 <li><p><strong>ignore_changes</strong> (<em>Optional</em><em>[</em><em>List</em><em>[</em><em>string</em><em>]</em><em>]</em>) – If provided, a list of property names to ignore for purposes of updates
@@ -331,7 +331,7 @@ parents walking from the resource up to the stack.</p>
 
 <dl class="method">
 <dt id="pulumi.ResourceOptions.merge">
-<em class="property">static </em><code class="sig-name descname">merge</code><span class="sig-paren">(</span><em class="sig-param">opts1: pulumi.resource.ResourceOptions</em>, <em class="sig-param">opts2: pulumi.resource.ResourceOptions</em><span class="sig-paren">)</span> &#x2192; pulumi.resource.ResourceOptions<a class="headerlink" href="#pulumi.ResourceOptions.merge" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">merge</code><span class="sig-paren">(</span><em class="sig-param">opts1: Optional[ResourceOptions], opts2: Optional[ResourceOptions]</em><span class="sig-paren">)</span> &#x2192; pulumi.resource.ResourceOptions<a class="headerlink" href="#pulumi.ResourceOptions.merge" title="Permalink to this definition">¶</a></dt>
 <dd><p>merge produces a new ResourceOptions object with the respective attributes of the <code class="docutils literal notranslate"><span class="pre">opts1</span></code>
 instance in it with the attributes of <code class="docutils literal notranslate"><span class="pre">opts2</span></code> merged over them.</p>
 <p>Both the <code class="docutils literal notranslate"><span class="pre">opts1</span></code> instance and the <code class="docutils literal notranslate"><span class="pre">opts2</span></code> instance will be unchanged.  Both of <code class="docutils literal notranslate"><span class="pre">opts1</span></code> and
