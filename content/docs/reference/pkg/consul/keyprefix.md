@@ -22,7 +22,7 @@ meta_desc: "Explore the KeyPrefix resource of the Consul package, including exam
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">KeyPrefix</span><span class="p">(resource_name, opts=None, </span>datacenter=None<span class="p">, </span>namespace=None<span class="p">, </span>path_prefix=None<span class="p">, </span>subkey_collection=None<span class="p">, </span>subkeys=None<span class="p">, </span>token=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">KeyPrefix</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>datacenter=None<span class="p">, </span>namespace=None<span class="p">, </span>path_prefix=None<span class="p">, </span>subkey_collection=None<span class="p">, </span>subkeys=None<span class="p">, </span>token=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
