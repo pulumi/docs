@@ -1,5 +1,5 @@
 ---
-title: "Supporting Kubernetes with Easier Test Environment Creation"
+title: "Supporting Kubernetes with Faster, Easier Test Environments"
 date: 2020-04-30
 meta_desc: "Scott Lowe uses Pulumi to quickly create Kubernetes environments for testing."
 meta_image: scott_lowe.png
