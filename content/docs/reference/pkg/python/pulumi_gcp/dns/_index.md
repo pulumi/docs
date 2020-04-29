@@ -30,7 +30,7 @@ anything, please consult the source <a class="reference external" href="https://
 <dl class="attribute">
 <dt id="pulumi_gcp.dns.GetKeysResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.dns.GetKeysResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -66,7 +66,7 @@ anything, please consult the source <a class="reference external" href="https://
 <dl class="attribute">
 <dt id="pulumi_gcp.dns.GetManagedZoneResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.dns.GetManagedZoneResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -108,52 +108,70 @@ hosted by the Cloud DNS service.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A textual description field. Defaults to ‘Managed by Terraform’.</p></li>
 <li><p><strong>dns_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The DNS name of this managed zone, for instance “example.com.”.</p></li>
-<li><p><strong>dnssec_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – DNSSEC configuration</p></li>
+<li><p><strong>dnssec_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – DNSSEC configuration  Structure is documented below.</p></li>
 <li><p><strong>forwarding_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The presence for this field indicates that outbound forwarding is enabled for this zone. The value of this field
 contains the set of destinations to forward to.</p></li>
 <li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A set of key/value label pairs to assign to this ManagedZone.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – User assigned name for this resource. Must be unique within the project.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – User assigned name for this resource.
+Must be unique within the project.</p></li>
 <li><p><strong>peering_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The presence of this field indicates that DNS Peering is enabled for this zone. The value of this field contains the
 network to peer with.</p></li>
-<li><p><strong>private_visibility_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – For privately visible zones, the set of Virtual Private Cloud resources that the zone is visible from.</p></li>
+<li><p><strong>private_visibility_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – For privately visible zones, the set of Virtual Private Cloud
+resources that the zone is visible from.  Structure is documented below.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
 <li><p><strong>reverse_lookup</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies if this is a managed reverse lookup zone. If true, Cloud DNS will resolve reverse lookup queries using
 automatically configured records for VPC resources. This only applies to networks listed under
 ‘private_visibility_config’.</p></li>
-<li><p><strong>visibility</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The zone’s visibility: public zones are exposed to the Internet, while private zones are visible only to Virtual Private
-Cloud resources. Must be one of: ‘public’, ‘private’.</p></li>
+<li><p><strong>visibility</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The zone’s visibility: public zones are exposed to the Internet,
+while private zones are visible only to Virtual Private Cloud resources.
+Must be one of: <code class="docutils literal notranslate"><span class="pre">public</span></code>, <code class="docutils literal notranslate"><span class="pre">private</span></code>.</p></li>
 </ul>
 </dd>
 </dl>
 <p>The <strong>dnssec_config</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">defaultKeySpecs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">defaultKeySpecs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies parameters that will be used for generating initial DnsKeys
+for this ManagedZone. If you provide a spec for keySigning or zoneSigning,
+you must also provide one for the other.
+default_key_specs can only be updated when the state is <code class="docutils literal notranslate"><span class="pre">off</span></code>.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">algorithm</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">keyLength</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">keyType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">kind</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">algorithm</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - String mnemonic specifying the DNSSEC algorithm of this key</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">keyLength</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Length of the keys in bits</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">keyType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies whether this is a key signing key (KSK) or a zone
+signing key (ZSK). Key signing keys have the Secure Entry
+Point flag set and, when active, will only be used to sign
+resource record sets of type DNSKEY. Zone signing keys do
+not have the Secure Entry Point flag set and will be used
+to sign all other types of resource record sets.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kind</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Identifies what kind of resource this is</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">kind</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">nonExistence</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">state</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kind</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Identifies what kind of resource this is</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nonExistence</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the mechanism used to provide authenticated denial-of-existence responses.
+non_existence can only be updated when the state is <code class="docutils literal notranslate"><span class="pre">off</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">state</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies whether DNSSEC is enabled, and what mode it is in</p></li>
 </ul>
 <p>The <strong>forwarding_config</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">targetNameServers</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">targetNameServers</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - List of target name servers to forward to. Cloud DNS will
+select the best available name server if more than
+one target is given.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">forwardingPath</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ipv4Address</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">forwardingPath</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Forwarding path for this TargetNameServer. If unset or <code class="docutils literal notranslate"><span class="pre">default</span></code> Cloud DNS will make forwarding
+decision based on address ranges, i.e. RFC1918 addresses go to the VPC, Non-RFC1918 addresses go
+to the Internet. When set to <code class="docutils literal notranslate"><span class="pre">private</span></code>, Cloud DNS will always send queries through VPC for this target</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipv4Address</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - IPv4 address of a target name server.</p></li>
 </ul>
 </li>
 </ul>
 <p>The <strong>peering_config</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">targetNetwork</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">targetNetwork</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The network with which to peer.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">networkUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">networkUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The fully qualified URL of the VPC network to forward queries to.
+This should be formatted like
+<code class="docutils literal notranslate"><span class="pre">https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}</span></code></p></li>
 </ul>
 </li>
 </ul>
@@ -161,7 +179,9 @@ Cloud resources. Must be one of: ‘public’, ‘private’.</p></li>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">networks</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">networkUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">networkUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The fully qualified URL of the VPC network to forward queries to.
+This should be formatted like
+<code class="docutils literal notranslate"><span class="pre">https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}</span></code></p></li>
 </ul>
 </li>
 </ul>
@@ -180,19 +200,28 @@ Cloud resources. Must be one of: ‘public’, ‘private’.</p></li>
 <dl class="attribute">
 <dt id="pulumi_gcp.dns.ManagedZone.dnssec_config">
 <code class="sig-name descname">dnssec_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.dns.ManagedZone.dnssec_config" title="Permalink to this definition">¶</a></dt>
-<dd><p>DNSSEC configuration</p>
+<dd><p>DNSSEC configuration  Structure is documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">defaultKeySpecs</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">defaultKeySpecs</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Specifies parameters that will be used for generating initial DnsKeys
+for this ManagedZone. If you provide a spec for keySigning or zoneSigning,
+you must also provide one for the other.
+default_key_specs can only be updated when the state is <code class="docutils literal notranslate"><span class="pre">off</span></code>.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">algorithm</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">keyLength</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">keyType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">kind</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">algorithm</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - String mnemonic specifying the DNSSEC algorithm of this key</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">keyLength</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Length of the keys in bits</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">keyType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies whether this is a key signing key (KSK) or a zone
+signing key (ZSK). Key signing keys have the Secure Entry
+Point flag set and, when active, will only be used to sign
+resource record sets of type DNSKEY. Zone signing keys do
+not have the Secure Entry Point flag set and will be used
+to sign all other types of resource record sets.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kind</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Identifies what kind of resource this is</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">kind</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">nonExistence</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">state</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kind</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Identifies what kind of resource this is</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nonExistence</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the mechanism used to provide authenticated denial-of-existence responses.
+non_existence can only be updated when the state is <code class="docutils literal notranslate"><span class="pre">off</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">state</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies whether DNSSEC is enabled, and what mode it is in</p></li>
 </ul>
 </dd></dl>
 
@@ -202,10 +231,14 @@ Cloud resources. Must be one of: ‘public’, ‘private’.</p></li>
 <dd><p>The presence for this field indicates that outbound forwarding is enabled for this zone. The value of this field
 contains the set of destinations to forward to.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">targetNameServers</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">targetNameServers</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - List of target name servers to forward to. Cloud DNS will
+select the best available name server if more than
+one target is given.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">forwardingPath</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ipv4Address</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">forwardingPath</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Forwarding path for this TargetNameServer. If unset or <code class="docutils literal notranslate"><span class="pre">default</span></code> Cloud DNS will make forwarding
+decision based on address ranges, i.e. RFC1918 addresses go to the VPC, Non-RFC1918 addresses go
+to the Internet. When set to <code class="docutils literal notranslate"><span class="pre">private</span></code>, Cloud DNS will always send queries through VPC for this target</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipv4Address</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - IPv4 address of a target name server.</p></li>
 </ul>
 </li>
 </ul>
@@ -220,7 +253,8 @@ contains the set of destinations to forward to.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.dns.ManagedZone.name">
 <code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.dns.ManagedZone.name" title="Permalink to this definition">¶</a></dt>
-<dd><p>User assigned name for this resource. Must be unique within the project.</p>
+<dd><p>User assigned name for this resource.
+Must be unique within the project.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -235,9 +269,11 @@ contains the set of destinations to forward to.</p>
 <dd><p>The presence of this field indicates that DNS Peering is enabled for this zone. The value of this field contains the
 network to peer with.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">targetNetwork</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">targetNetwork</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The network with which to peer.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">networkUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">networkUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The fully qualified URL of the VPC network to forward queries to.
+This should be formatted like
+<code class="docutils literal notranslate"><span class="pre">https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}</span></code></p></li>
 </ul>
 </li>
 </ul>
@@ -246,11 +282,14 @@ network to peer with.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.dns.ManagedZone.private_visibility_config">
 <code class="sig-name descname">private_visibility_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.dns.ManagedZone.private_visibility_config" title="Permalink to this definition">¶</a></dt>
-<dd><p>For privately visible zones, the set of Virtual Private Cloud resources that the zone is visible from.</p>
+<dd><p>For privately visible zones, the set of Virtual Private Cloud
+resources that the zone is visible from.  Structure is documented below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">networks</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">networkUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">networkUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The fully qualified URL of the VPC network to forward queries to.
+This should be formatted like
+<code class="docutils literal notranslate"><span class="pre">https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}</span></code></p></li>
 </ul>
 </li>
 </ul>
@@ -274,8 +313,9 @@ automatically configured records for VPC resources. This only applies to network
 <dl class="attribute">
 <dt id="pulumi_gcp.dns.ManagedZone.visibility">
 <code class="sig-name descname">visibility</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.dns.ManagedZone.visibility" title="Permalink to this definition">¶</a></dt>
-<dd><p>The zone’s visibility: public zones are exposed to the Internet, while private zones are visible only to Virtual Private
-Cloud resources. Must be one of: ‘public’, ‘private’.</p>
+<dd><p>The zone’s visibility: public zones are exposed to the Internet,
+while private zones are visible only to Virtual Private Cloud resources.
+Must be one of: <code class="docutils literal notranslate"><span class="pre">public</span></code>, <code class="docutils literal notranslate"><span class="pre">private</span></code>.</p>
 </dd></dl>
 
 <dl class="method">
@@ -291,53 +331,71 @@ properties used to qualify the lookup.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A textual description field. Defaults to ‘Managed by Terraform’.</p></li>
 <li><p><strong>dns_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The DNS name of this managed zone, for instance “example.com.”.</p></li>
-<li><p><strong>dnssec_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – DNSSEC configuration</p></li>
+<li><p><strong>dnssec_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – DNSSEC configuration  Structure is documented below.</p></li>
 <li><p><strong>forwarding_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The presence for this field indicates that outbound forwarding is enabled for this zone. The value of this field
 contains the set of destinations to forward to.</p></li>
 <li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A set of key/value label pairs to assign to this ManagedZone.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – User assigned name for this resource. Must be unique within the project.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – User assigned name for this resource.
+Must be unique within the project.</p></li>
 <li><p><strong>name_servers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Delegate your managed_zone to these virtual name servers; defined by the server</p></li>
 <li><p><strong>peering_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The presence of this field indicates that DNS Peering is enabled for this zone. The value of this field contains the
 network to peer with.</p></li>
-<li><p><strong>private_visibility_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – For privately visible zones, the set of Virtual Private Cloud resources that the zone is visible from.</p></li>
+<li><p><strong>private_visibility_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – For privately visible zones, the set of Virtual Private Cloud
+resources that the zone is visible from.  Structure is documented below.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
 <li><p><strong>reverse_lookup</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies if this is a managed reverse lookup zone. If true, Cloud DNS will resolve reverse lookup queries using
 automatically configured records for VPC resources. This only applies to networks listed under
 ‘private_visibility_config’.</p></li>
-<li><p><strong>visibility</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The zone’s visibility: public zones are exposed to the Internet, while private zones are visible only to Virtual Private
-Cloud resources. Must be one of: ‘public’, ‘private’.</p></li>
+<li><p><strong>visibility</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The zone’s visibility: public zones are exposed to the Internet,
+while private zones are visible only to Virtual Private Cloud resources.
+Must be one of: <code class="docutils literal notranslate"><span class="pre">public</span></code>, <code class="docutils literal notranslate"><span class="pre">private</span></code>.</p></li>
 </ul>
 </dd>
 </dl>
 <p>The <strong>dnssec_config</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">defaultKeySpecs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">defaultKeySpecs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies parameters that will be used for generating initial DnsKeys
+for this ManagedZone. If you provide a spec for keySigning or zoneSigning,
+you must also provide one for the other.
+default_key_specs can only be updated when the state is <code class="docutils literal notranslate"><span class="pre">off</span></code>.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">algorithm</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">keyLength</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">keyType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">kind</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">algorithm</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - String mnemonic specifying the DNSSEC algorithm of this key</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">keyLength</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Length of the keys in bits</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">keyType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies whether this is a key signing key (KSK) or a zone
+signing key (ZSK). Key signing keys have the Secure Entry
+Point flag set and, when active, will only be used to sign
+resource record sets of type DNSKEY. Zone signing keys do
+not have the Secure Entry Point flag set and will be used
+to sign all other types of resource record sets.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kind</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Identifies what kind of resource this is</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">kind</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">nonExistence</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">state</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kind</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Identifies what kind of resource this is</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nonExistence</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the mechanism used to provide authenticated denial-of-existence responses.
+non_existence can only be updated when the state is <code class="docutils literal notranslate"><span class="pre">off</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">state</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies whether DNSSEC is enabled, and what mode it is in</p></li>
 </ul>
 <p>The <strong>forwarding_config</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">targetNameServers</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">targetNameServers</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - List of target name servers to forward to. Cloud DNS will
+select the best available name server if more than
+one target is given.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">forwardingPath</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ipv4Address</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">forwardingPath</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Forwarding path for this TargetNameServer. If unset or <code class="docutils literal notranslate"><span class="pre">default</span></code> Cloud DNS will make forwarding
+decision based on address ranges, i.e. RFC1918 addresses go to the VPC, Non-RFC1918 addresses go
+to the Internet. When set to <code class="docutils literal notranslate"><span class="pre">private</span></code>, Cloud DNS will always send queries through VPC for this target</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipv4Address</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - IPv4 address of a target name server.</p></li>
 </ul>
 </li>
 </ul>
 <p>The <strong>peering_config</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">targetNetwork</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">targetNetwork</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The network with which to peer.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">networkUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">networkUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The fully qualified URL of the VPC network to forward queries to.
+This should be formatted like
+<code class="docutils literal notranslate"><span class="pre">https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}</span></code></p></li>
 </ul>
 </li>
 </ul>
@@ -345,7 +403,9 @@ Cloud resources. Must be one of: ‘public’, ‘private’.</p></li>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">networks</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">networkUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">networkUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The fully qualified URL of the VPC network to forward queries to.
+This should be formatted like
+<code class="docutils literal notranslate"><span class="pre">https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}</span></code></p></li>
 </ul>
 </li>
 </ul>
@@ -408,14 +468,18 @@ Private Cloud resources.</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>alternative_name_server_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Sets an alternative name server for the associated networks. When specified, all DNS queries are forwarded to a name
-server that you choose. Names such as .internal are not available when an alternative name server is specified.</p></li>
-<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A textual description field. Defaults to ‘Managed by Terraform’.</p></li>
-<li><p><strong>enable_inbound_forwarding</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Allows networks bound to this policy to receive DNS queries sent by VMs or applications over VPN connections. When
-enabled, a virtual IP address will be allocated from each of the sub-networks that are bound to this policy.</p></li>
-<li><p><strong>enable_logging</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Controls whether logging is enabled for the networks bound to this policy. Defaults to no logging if not set.</p></li>
+<li><p><strong>alternative_name_server_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Sets an alternative name server for the associated networks.
+When specified, all DNS queries are forwarded to a name server that you choose.
+Names such as .internal are not available when an alternative name server is specified.  Structure is documented below.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A textual description field. Defaults to ‘Managed by Pulumi’.</p></li>
+<li><p><strong>enable_inbound_forwarding</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Allows networks bound to this policy to receive DNS queries sent
+by VMs or applications over VPN connections. When enabled, a
+virtual IP address will be allocated from each of the sub-networks
+that are bound to this policy.</p></li>
+<li><p><strong>enable_logging</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Controls whether logging is enabled for the networks bound to this policy.
+Defaults to no logging if not set.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – User assigned name for this policy.</p></li>
-<li><p><strong>networks</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of network names specifying networks to which this policy is applied.</p></li>
+<li><p><strong>networks</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of network names specifying networks to which this policy is applied.  Structure is documented below.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
 </ul>
@@ -423,25 +487,32 @@ If it is not provided, the provider project is used.</p></li>
 </dl>
 <p>The <strong>alternative_name_server_config</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">targetNameServers</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">targetNameServers</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Sets an alternative name server for the associated networks. When specified,
+all DNS queries are forwarded to a name server that you choose. Names such as .internal
+are not available when an alternative name server is specified.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">ipv4Address</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipv4Address</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - IPv4 address to forward to.</p></li>
 </ul>
 </li>
 </ul>
 <p>The <strong>networks</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">networkUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">networkUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The fully qualified URL of the VPC network to bind to.
+This should be formatted like
+<code class="docutils literal notranslate"><span class="pre">https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}</span></code></p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_gcp.dns.Policy.alternative_name_server_config">
 <code class="sig-name descname">alternative_name_server_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.dns.Policy.alternative_name_server_config" title="Permalink to this definition">¶</a></dt>
-<dd><p>Sets an alternative name server for the associated networks. When specified, all DNS queries are forwarded to a name
-server that you choose. Names such as .internal are not available when an alternative name server is specified.</p>
+<dd><p>Sets an alternative name server for the associated networks.
+When specified, all DNS queries are forwarded to a name server that you choose.
+Names such as .internal are not available when an alternative name server is specified.  Structure is documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">targetNameServers</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">targetNameServers</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Sets an alternative name server for the associated networks. When specified,
+all DNS queries are forwarded to a name server that you choose. Names such as .internal
+are not available when an alternative name server is specified.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">ipv4Address</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipv4Address</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - IPv4 address to forward to.</p></li>
 </ul>
 </li>
 </ul>
@@ -450,20 +521,23 @@ server that you choose. Names such as .internal are not available when an altern
 <dl class="attribute">
 <dt id="pulumi_gcp.dns.Policy.description">
 <code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.dns.Policy.description" title="Permalink to this definition">¶</a></dt>
-<dd><p>A textual description field. Defaults to ‘Managed by Terraform’.</p>
+<dd><p>A textual description field. Defaults to ‘Managed by Pulumi’.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_gcp.dns.Policy.enable_inbound_forwarding">
 <code class="sig-name descname">enable_inbound_forwarding</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.dns.Policy.enable_inbound_forwarding" title="Permalink to this definition">¶</a></dt>
-<dd><p>Allows networks bound to this policy to receive DNS queries sent by VMs or applications over VPN connections. When
-enabled, a virtual IP address will be allocated from each of the sub-networks that are bound to this policy.</p>
+<dd><p>Allows networks bound to this policy to receive DNS queries sent
+by VMs or applications over VPN connections. When enabled, a
+virtual IP address will be allocated from each of the sub-networks
+that are bound to this policy.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_gcp.dns.Policy.enable_logging">
 <code class="sig-name descname">enable_logging</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.dns.Policy.enable_logging" title="Permalink to this definition">¶</a></dt>
-<dd><p>Controls whether logging is enabled for the networks bound to this policy. Defaults to no logging if not set.</p>
+<dd><p>Controls whether logging is enabled for the networks bound to this policy.
+Defaults to no logging if not set.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -475,9 +549,11 @@ enabled, a virtual IP address will be allocated from each of the sub-networks th
 <dl class="attribute">
 <dt id="pulumi_gcp.dns.Policy.networks">
 <code class="sig-name descname">networks</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.dns.Policy.networks" title="Permalink to this definition">¶</a></dt>
-<dd><p>List of network names specifying networks to which this policy is applied.</p>
+<dd><p>List of network names specifying networks to which this policy is applied.  Structure is documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">networkUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">networkUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The fully qualified URL of the VPC network to bind to.
+This should be formatted like
+<code class="docutils literal notranslate"><span class="pre">https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}</span></code></p></li>
 </ul>
 </dd></dl>
 
@@ -499,14 +575,18 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>alternative_name_server_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Sets an alternative name server for the associated networks. When specified, all DNS queries are forwarded to a name
-server that you choose. Names such as .internal are not available when an alternative name server is specified.</p></li>
-<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A textual description field. Defaults to ‘Managed by Terraform’.</p></li>
-<li><p><strong>enable_inbound_forwarding</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Allows networks bound to this policy to receive DNS queries sent by VMs or applications over VPN connections. When
-enabled, a virtual IP address will be allocated from each of the sub-networks that are bound to this policy.</p></li>
-<li><p><strong>enable_logging</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Controls whether logging is enabled for the networks bound to this policy. Defaults to no logging if not set.</p></li>
+<li><p><strong>alternative_name_server_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Sets an alternative name server for the associated networks.
+When specified, all DNS queries are forwarded to a name server that you choose.
+Names such as .internal are not available when an alternative name server is specified.  Structure is documented below.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A textual description field. Defaults to ‘Managed by Pulumi’.</p></li>
+<li><p><strong>enable_inbound_forwarding</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Allows networks bound to this policy to receive DNS queries sent
+by VMs or applications over VPN connections. When enabled, a
+virtual IP address will be allocated from each of the sub-networks
+that are bound to this policy.</p></li>
+<li><p><strong>enable_logging</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Controls whether logging is enabled for the networks bound to this policy.
+Defaults to no logging if not set.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – User assigned name for this policy.</p></li>
-<li><p><strong>networks</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of network names specifying networks to which this policy is applied.</p></li>
+<li><p><strong>networks</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of network names specifying networks to which this policy is applied.  Structure is documented below.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
 </ul>
@@ -514,15 +594,19 @@ If it is not provided, the provider project is used.</p></li>
 </dl>
 <p>The <strong>alternative_name_server_config</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">targetNameServers</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">targetNameServers</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Sets an alternative name server for the associated networks. When specified,
+all DNS queries are forwarded to a name server that you choose. Names such as .internal
+are not available when an alternative name server is specified.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">ipv4Address</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipv4Address</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - IPv4 address to forward to.</p></li>
 </ul>
 </li>
 </ul>
 <p>The <strong>networks</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">networkUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">networkUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The fully qualified URL of the VPC network to bind to.
+This should be formatted like
+<code class="docutils literal notranslate"><span class="pre">https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}</span></code></p></li>
 </ul>
 </dd></dl>
 

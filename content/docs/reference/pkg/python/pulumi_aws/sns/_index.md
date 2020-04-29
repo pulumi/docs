@@ -31,7 +31,7 @@ anything, please consult the source <a class="reference external" href="https://
 <dl class="attribute">
 <dt id="pulumi_aws.sns.GetTopicResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.sns.GetTopicResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 </dd></dl>
@@ -51,9 +51,9 @@ anything, please consult the source <a class="reference external" href="https://
 <li><p><strong>event_endpoint_updated_topic_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – SNS Topic triggered when an existing platform endpoint is changed from your platform application.</p></li>
 <li><p><strong>failure_feedback_role_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IAM role permitted to receive failure feedback for this application.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The friendly name for the SNS platform application</p></li>
-<li><p><strong>platform</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The platform that the app is registered with. See [Platform][1] for supported platforms.</p></li>
-<li><p><strong>platform_credential</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Application Platform credential. See [Credential][1] for type of credential required for platform. The value of this attribute when stored into the state is only a hash of the real value, so therefore it is not practical to use this as an attribute for other resources.</p></li>
-<li><p><strong>platform_principal</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Application Platform principal. See [Principal][2] for type of principal required for platform. The value of this attribute when stored into the state is only a hash of the real value, so therefore it is not practical to use this as an attribute for other resources.</p></li>
+<li><p><strong>platform</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The platform that the app is registered with. See <a class="reference external" href="http://docs.aws.amazon.com/sns/latest/dg/mobile-push-send-register.html">Platform</a> for supported platforms.</p></li>
+<li><p><strong>platform_credential</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Application Platform credential. See <a class="reference external" href="http://docs.aws.amazon.com/sns/latest/dg/mobile-push-send-register.html">Credential</a> for type of credential required for platform. The value of this attribute when stored into the state is only a hash of the real value, so therefore it is not practical to use this as an attribute for other resources.</p></li>
+<li><p><strong>platform_principal</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Application Platform principal. See <a class="reference external" href="http://docs.aws.amazon.com/sns/latest/api/API_CreatePlatformApplication.html">Principal</a> for type of principal required for platform. The value of this attribute when stored into the state is only a hash of the real value, so therefore it is not practical to use this as an attribute for other resources.</p></li>
 <li><p><strong>success_feedback_role_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IAM role permitted to receive success feedback for this application.</p></li>
 <li><p><strong>success_feedback_sample_rate</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The percentage of success to sample (0-100)</p></li>
 </ul>
@@ -104,19 +104,19 @@ anything, please consult the source <a class="reference external" href="https://
 <dl class="attribute">
 <dt id="pulumi_aws.sns.PlatformApplication.platform">
 <code class="sig-name descname">platform</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.sns.PlatformApplication.platform" title="Permalink to this definition">¶</a></dt>
-<dd><p>The platform that the app is registered with. See [Platform][1] for supported platforms.</p>
+<dd><p>The platform that the app is registered with. See <a class="reference external" href="http://docs.aws.amazon.com/sns/latest/dg/mobile-push-send-register.html">Platform</a> for supported platforms.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.sns.PlatformApplication.platform_credential">
 <code class="sig-name descname">platform_credential</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.sns.PlatformApplication.platform_credential" title="Permalink to this definition">¶</a></dt>
-<dd><p>Application Platform credential. See [Credential][1] for type of credential required for platform. The value of this attribute when stored into the state is only a hash of the real value, so therefore it is not practical to use this as an attribute for other resources.</p>
+<dd><p>Application Platform credential. See <a class="reference external" href="http://docs.aws.amazon.com/sns/latest/dg/mobile-push-send-register.html">Credential</a> for type of credential required for platform. The value of this attribute when stored into the state is only a hash of the real value, so therefore it is not practical to use this as an attribute for other resources.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.sns.PlatformApplication.platform_principal">
 <code class="sig-name descname">platform_principal</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.sns.PlatformApplication.platform_principal" title="Permalink to this definition">¶</a></dt>
-<dd><p>Application Platform principal. See [Principal][2] for type of principal required for platform. The value of this attribute when stored into the state is only a hash of the real value, so therefore it is not practical to use this as an attribute for other resources.</p>
+<dd><p>Application Platform principal. See <a class="reference external" href="http://docs.aws.amazon.com/sns/latest/api/API_CreatePlatformApplication.html">Principal</a> for type of principal required for platform. The value of this attribute when stored into the state is only a hash of the real value, so therefore it is not practical to use this as an attribute for other resources.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -149,9 +149,12 @@ properties used to qualify the lookup.</p>
 <li><p><strong>event_endpoint_updated_topic_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – SNS Topic triggered when an existing platform endpoint is changed from your platform application.</p></li>
 <li><p><strong>failure_feedback_role_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IAM role permitted to receive failure feedback for this application.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The friendly name for the SNS platform application</p></li>
-<li><p><strong>platform</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The platform that the app is registered with. See [Platform][1] for supported platforms.</p></li>
-<li><p><strong>platform_credential</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Application Platform credential. See [Credential][1] for type of credential required for platform. The value of this attribute when stored into the state is only a hash of the real value, so therefore it is not practical to use this as an attribute for other resources.</p></li>
-<li><p><strong>platform_principal</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Application Platform principal. See [Principal][2] for type of principal required for platform. The value of this attribute when stored into the state is only a hash of the real value, so therefore it is not practical to use this as an attribute for other resources.</p></li>
+<li><p><strong>platform</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The platform that the app is registered with. See <a class="reference external" href="http://docs.aws.amazon.com/sns/latest/dg/mobile-push-send-register.html">Platform</a> for supported platforms.</p>
+</p></li>
+<li><p><strong>platform_credential</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Application Platform credential. See <a class="reference external" href="http://docs.aws.amazon.com/sns/latest/dg/mobile-push-send-register.html">Credential</a> for type of credential required for platform. The value of this attribute when stored into the state is only a hash of the real value, so therefore it is not practical to use this as an attribute for other resources.</p>
+</p></li>
+<li><p><strong>platform_principal</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Application Platform principal. See <a class="reference external" href="http://docs.aws.amazon.com/sns/latest/api/API_CreatePlatformApplication.html">Principal</a> for type of principal required for platform. The value of this attribute when stored into the state is only a hash of the real value, so therefore it is not practical to use this as an attribute for other resources.</p>
+</p></li>
 <li><p><strong>success_feedback_role_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IAM role permitted to receive success feedback for this application.</p></li>
 <li><p><strong>success_feedback_sample_rate</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The percentage of success to sample (0-100)</p></li>
 </ul>

@@ -2180,7 +2180,7 @@ into management.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>enable_classiclink</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – A boolean flag to enable/disable ClassicLink
 for the VPC. Only valid in regions and accounts that support EC2 Classic.
-See the [ClassicLink documentation][1] for more information. Defaults false.</p></li>
+See the <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-classiclink.html">ClassicLink documentation</a> for more information. Defaults false.</p></li>
 <li><p><strong>enable_dns_hostnames</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – A boolean flag to enable/disable DNS hostnames in the VPC. Defaults false.</p></li>
 <li><p><strong>enable_dns_support</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – A boolean flag to enable/disable DNS support in the VPC. Defaults true.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
@@ -2229,7 +2229,7 @@ block with a /56 prefix length for the VPC was assigned</p>
 <code class="sig-name descname">enable_classiclink</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.DefaultVpc.enable_classiclink" title="Permalink to this definition">¶</a></dt>
 <dd><p>A boolean flag to enable/disable ClassicLink
 for the VPC. Only valid in regions and accounts that support EC2 Classic.
-See the [ClassicLink documentation][1] for more information. Defaults false.</p>
+See the <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-classiclink.html">ClassicLink documentation</a> for more information. Defaults false.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -2300,9 +2300,10 @@ block with a /56 prefix length for the VPC was assigned</p></li>
 <li><p><strong>default_network_acl_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the network ACL created by default on VPC creation</p></li>
 <li><p><strong>default_route_table_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the route table created by default on VPC creation</p></li>
 <li><p><strong>default_security_group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the security group created by default on VPC creation</p></li>
-<li><p><strong>enable_classiclink</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – A boolean flag to enable/disable ClassicLink
+<li><p><strong>enable_classiclink</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – <p>A boolean flag to enable/disable ClassicLink
 for the VPC. Only valid in regions and accounts that support EC2 Classic.
-See the [ClassicLink documentation][1] for more information. Defaults false.</p></li>
+See the <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-classiclink.html">ClassicLink documentation</a> for more information. Defaults false.</p>
+</p></li>
 <li><p><strong>enable_dns_hostnames</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – A boolean flag to enable/disable DNS hostnames in the VPC. Defaults false.</p></li>
 <li><p><strong>enable_dns_support</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – A boolean flag to enable/disable DNS support in the VPC. Defaults true.</p></li>
 <li><p><strong>instance_tenancy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Tenancy of instances spin up within VPC.</p></li>
@@ -3359,7 +3360,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.GetInstanceResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetInstanceResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -3503,7 +3504,7 @@ is only available if you’ve enabled DNS hostnames for your VPC.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.GetInstanceTypeOfferingResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetInstanceTypeOfferingResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -3521,7 +3522,7 @@ is only available if you’ve enabled DNS hostnames for your VPC.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.GetInstanceTypeOfferingsResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetInstanceTypeOfferingsResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -3539,7 +3540,7 @@ is only available if you’ve enabled DNS hostnames for your VPC.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.GetInstancesResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetInstancesResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -3569,7 +3570,7 @@ is only available if you’ve enabled DNS hostnames for your VPC.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.GetInternetGatewayResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetInternetGatewayResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -3629,7 +3630,7 @@ is only available if you’ve enabled DNS hostnames for your VPC.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.GetLaunchConfigurationResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetLaunchConfigurationResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -3771,7 +3772,7 @@ below for more details.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.GetLaunchTemplateResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetLaunchTemplateResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -3919,7 +3920,7 @@ Interfaces below for more details.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.GetNetworkAclsResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetNetworkAclsResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -4033,7 +4034,7 @@ Interfaces below for more details.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.GetNetworkInterfacesResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetNetworkInterfacesResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -4051,7 +4052,7 @@ Interfaces below for more details.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.GetRouteResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetRouteResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 </dd></dl>
@@ -4069,7 +4070,7 @@ Interfaces below for more details.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.GetRouteTableResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetRouteTableResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -4099,7 +4100,7 @@ Interfaces below for more details.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.GetRouteTablesResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetRouteTablesResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -4135,7 +4136,7 @@ Interfaces below for more details.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.GetSecurityGroupsResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetSecurityGroupsResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -4160,7 +4161,7 @@ unless the <code class="docutils literal notranslate"><span class="pre">vpc-id</
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.GetSubnetIdsResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetSubnetIdsResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -4214,7 +4215,7 @@ unless the <code class="docutils literal notranslate"><span class="pre">vpc-id</
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.GetVpcDhcpOptionsResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetVpcDhcpOptionsResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -4352,7 +4353,7 @@ unless the <code class="docutils literal notranslate"><span class="pre">vpc-id</
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.GetVpcEndpointServiceResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetVpcEndpointServiceResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -4493,7 +4494,7 @@ selected VPC. May be any of <code class="docutils literal notranslate"><span cla
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.GetVpcsResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetVpcsResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -4546,20 +4547,12 @@ See the <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/l
 <li><p><strong>host_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Id of a dedicated host that the instance will be assigned to. Use when an instance is to be launched on a specific dedicated host.</p></li>
 <li><p><strong>iam_instance_profile</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The IAM Instance Profile to
 launch the instance with. Specified as the name of the Instance Profile. Ensure your credentials have the correct permission to assign the instance profile according to the <a class="reference external" href="http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2.html#roles-usingrole-ec2instance-permissions">EC2 documentation</a>, notably <code class="docutils literal notranslate"><span class="pre">iam:PassRole</span></code>.</p></li>
-</ul>
-</dd>
-</dl>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>* `ipv6_address_count`- (Optional) A number of IPv6 addresses to associate with the primary network interface. Amazon EC2 chooses the IPv6 addresses from the range of your subnet.
-</pre></div>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
 <li><p><strong>instance_initiated_shutdown_behavior</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Shutdown behavior for the
 instance. Amazon defaults this to <code class="docutils literal notranslate"><span class="pre">stop</span></code> for EBS-backed instances and
 <code class="docutils literal notranslate"><span class="pre">terminate</span></code> for instance-store instances. Cannot be set on instance-store
 instances. See <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingInstanceInitiatedShutdownBehavior">Shutdown Behavior</a> for more information.</p></li>
 <li><p><strong>instance_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of instance to start. Updates to this field will trigger a stop/start of the EC2 instance.</p></li>
+<li><p><strong>ipv6_address_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – A number of IPv6 addresses to associate with the primary network interface. Amazon EC2 chooses the IPv6 addresses from the range of your subnet.</p></li>
 <li><p><strong>ipv6_addresses</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Specify one or more IPv6 addresses from the range of the subnet to associate with the primary network interface</p></li>
 <li><p><strong>key_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The key name of the Key Pair to use for the instance; which can be managed using the <code class="docutils literal notranslate"><span class="pre">ec2.KeyPair</span></code> resource.</p></li>
 <li><p><strong>metadata_options</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Customize the metadata options of the instance. See Metadata Options below for more details.</p></li>
@@ -4765,9 +4758,6 @@ Name</a>
 <code class="sig-name descname">iam_instance_profile</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.Instance.iam_instance_profile" title="Permalink to this definition">¶</a></dt>
 <dd><p>The IAM Instance Profile to
 launch the instance with. Specified as the name of the Instance Profile. Ensure your credentials have the correct permission to assign the instance profile according to the <a class="reference external" href="http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2.html#roles-usingrole-ec2instance-permissions">EC2 documentation</a>, notably <code class="docutils literal notranslate"><span class="pre">iam:PassRole</span></code>.</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">ipv6_address_count</span></code>- (Optional) A number of IPv6 addresses to associate with the primary network interface. Amazon EC2 chooses the IPv6 addresses from the range of your subnet.</p></li>
-</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -4789,6 +4779,12 @@ instances. See <a class="reference external" href="https://docs.aws.amazon.com/A
 <dt id="pulumi_aws.ec2.Instance.instance_type">
 <code class="sig-name descname">instance_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.Instance.instance_type" title="Permalink to this definition">¶</a></dt>
 <dd><p>The type of instance to start. Updates to this field will trigger a stop/start of the EC2 instance.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.ec2.Instance.ipv6_address_count">
+<code class="sig-name descname">ipv6_address_count</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.Instance.ipv6_address_count" title="Permalink to this definition">¶</a></dt>
+<dd><p>A number of IPv6 addresses to associate with the primary network interface. Amazon EC2 chooses the IPv6 addresses from the range of your subnet.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -4999,15 +4995,6 @@ See the <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/l
 <li><p><strong>iam_instance_profile</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>The IAM Instance Profile to
 launch the instance with. Specified as the name of the Instance Profile. Ensure your credentials have the correct permission to assign the instance profile according to the <a class="reference external" href="http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2.html#roles-usingrole-ec2instance-permissions">EC2 documentation</a>, notably <code class="docutils literal notranslate"><span class="pre">iam:PassRole</span></code>.</p>
 </p></li>
-</ul>
-</dd>
-</dl>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>* `ipv6_address_count`- (Optional) A number of IPv6 addresses to associate with the primary network interface. Amazon EC2 chooses the IPv6 addresses from the range of your subnet.
-</pre></div>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
 <li><p><strong>instance_initiated_shutdown_behavior</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Shutdown behavior for the
 instance. Amazon defaults this to <code class="docutils literal notranslate"><span class="pre">stop</span></code> for EBS-backed instances and
 <code class="docutils literal notranslate"><span class="pre">terminate</span></code> for instance-store instances. Cannot be set on instance-store
@@ -5016,6 +5003,7 @@ instances. See <a class="reference external" href="https://docs.aws.amazon.com/A
 <li><p><strong>instance_state</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The state of the instance. One of: <code class="docutils literal notranslate"><span class="pre">pending</span></code>, <code class="docutils literal notranslate"><span class="pre">running</span></code>, <code class="docutils literal notranslate"><span class="pre">shutting-down</span></code>, <code class="docutils literal notranslate"><span class="pre">terminated</span></code>, <code class="docutils literal notranslate"><span class="pre">stopping</span></code>, <code class="docutils literal notranslate"><span class="pre">stopped</span></code>. See <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-lifecycle.html">Instance Lifecycle</a> for more information.</p>
 </p></li>
 <li><p><strong>instance_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of instance to start. Updates to this field will trigger a stop/start of the EC2 instance.</p></li>
+<li><p><strong>ipv6_address_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – A number of IPv6 addresses to associate with the primary network interface. Amazon EC2 chooses the IPv6 addresses from the range of your subnet.</p></li>
 <li><p><strong>ipv6_addresses</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Specify one or more IPv6 addresses from the range of the subnet to associate with the primary network interface</p></li>
 <li><p><strong>key_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The key name of the Key Pair to use for the instance; which can be managed using the <code class="docutils literal notranslate"><span class="pre">ec2.KeyPair</span></code> resource.</p></li>
 <li><p><strong>metadata_options</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Customize the metadata options of the instance. See Metadata Options below for more details.</p></li>
@@ -9209,15 +9197,6 @@ See the <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/l
 <li><p><strong>iam_instance_profile</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The IAM Instance Profile to
 launch the instance with. Specified as the name of the Instance Profile. Ensure your credentials have the correct permission to assign the instance profile according to the <a class="reference external" href="http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2.html#roles-usingrole-ec2instance-permissions">EC2 documentation</a>, notably <code class="docutils literal notranslate"><span class="pre">iam:PassRole</span></code>.</p>
 </p></li>
-</ul>
-</dd>
-</dl>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>* `ipv6_address_count`- (Optional) A number of IPv6 addresses to associate with the primary network interface. Amazon EC2 chooses the IPv6 addresses from the range of your subnet.
-</pre></div>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
 <li><p><strong>instance_initiated_shutdown_behavior</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Shutdown behavior for the
 instance. Amazon defaults this to <code class="docutils literal notranslate"><span class="pre">stop</span></code> for EBS-backed instances and
 <code class="docutils literal notranslate"><span class="pre">terminate</span></code> for instance-store instances. Cannot be set on instance-store
@@ -9225,6 +9204,7 @@ instances. See <a class="reference external" href="https://docs.aws.amazon.com/A
 </p></li>
 <li><p><strong>instance_interruption_behaviour</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Indicates whether a Spot instance stops or terminates when it is interrupted. Default is <code class="docutils literal notranslate"><span class="pre">terminate</span></code> as this is the current AWS behaviour.</p></li>
 <li><p><strong>instance_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of instance to start. Updates to this field will trigger a stop/start of the EC2 instance.</p></li>
+<li><p><strong>ipv6_address_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – A number of IPv6 addresses to associate with the primary network interface. Amazon EC2 chooses the IPv6 addresses from the range of your subnet.</p></li>
 <li><p><strong>ipv6_addresses</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Specify one or more IPv6 addresses from the range of the subnet to associate with the primary network interface</p></li>
 <li><p><strong>key_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The key name of the Key Pair to use for the instance; which can be managed using the <code class="docutils literal notranslate"><span class="pre">ec2.KeyPair</span></code> resource.</p></li>
 <li><p><strong>launch_group</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A launch group is a group of spot instances that launch together and terminate together.
@@ -9444,9 +9424,6 @@ Name</a>
 <code class="sig-name descname">iam_instance_profile</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.SpotInstanceRequest.iam_instance_profile" title="Permalink to this definition">¶</a></dt>
 <dd><p>The IAM Instance Profile to
 launch the instance with. Specified as the name of the Instance Profile. Ensure your credentials have the correct permission to assign the instance profile according to the <a class="reference external" href="http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2.html#roles-usingrole-ec2instance-permissions">EC2 documentation</a>, notably <code class="docutils literal notranslate"><span class="pre">iam:PassRole</span></code>.</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">ipv6_address_count</span></code>- (Optional) A number of IPv6 addresses to associate with the primary network interface. Amazon EC2 chooses the IPv6 addresses from the range of your subnet.</p></li>
-</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -9468,6 +9445,12 @@ instances. See <a class="reference external" href="https://docs.aws.amazon.com/A
 <dt id="pulumi_aws.ec2.SpotInstanceRequest.instance_type">
 <code class="sig-name descname">instance_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.SpotInstanceRequest.instance_type" title="Permalink to this definition">¶</a></dt>
 <dd><p>The type of instance to start. Updates to this field will trigger a stop/start of the EC2 instance.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.ec2.SpotInstanceRequest.ipv6_address_count">
+<code class="sig-name descname">ipv6_address_count</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.SpotInstanceRequest.ipv6_address_count" title="Permalink to this definition">¶</a></dt>
+<dd><p>A number of IPv6 addresses to associate with the primary network interface. Amazon EC2 chooses the IPv6 addresses from the range of your subnet.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -9724,15 +9707,6 @@ See the <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/l
 <li><p><strong>iam_instance_profile</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The IAM Instance Profile to
 launch the instance with. Specified as the name of the Instance Profile. Ensure your credentials have the correct permission to assign the instance profile according to the <a class="reference external" href="http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2.html#roles-usingrole-ec2instance-permissions">EC2 documentation</a>, notably <code class="docutils literal notranslate"><span class="pre">iam:PassRole</span></code>.</p>
 </p></li>
-</ul>
-</dd>
-</dl>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>* `ipv6_address_count`- (Optional) A number of IPv6 addresses to associate with the primary network interface. Amazon EC2 chooses the IPv6 addresses from the range of your subnet.
-</pre></div>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
 <li><p><strong>instance_initiated_shutdown_behavior</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Shutdown behavior for the
 instance. Amazon defaults this to <code class="docutils literal notranslate"><span class="pre">stop</span></code> for EBS-backed instances and
 <code class="docutils literal notranslate"><span class="pre">terminate</span></code> for instance-store instances. Cannot be set on instance-store
@@ -9740,6 +9714,7 @@ instances. See <a class="reference external" href="https://docs.aws.amazon.com/A
 </p></li>
 <li><p><strong>instance_interruption_behaviour</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Indicates whether a Spot instance stops or terminates when it is interrupted. Default is <code class="docutils literal notranslate"><span class="pre">terminate</span></code> as this is the current AWS behaviour.</p></li>
 <li><p><strong>instance_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of instance to start. Updates to this field will trigger a stop/start of the EC2 instance.</p></li>
+<li><p><strong>ipv6_address_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – A number of IPv6 addresses to associate with the primary network interface. Amazon EC2 chooses the IPv6 addresses from the range of your subnet.</p></li>
 <li><p><strong>ipv6_addresses</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Specify one or more IPv6 addresses from the range of the subnet to associate with the primary network interface</p></li>
 <li><p><strong>key_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The key name of the Key Pair to use for the instance; which can be managed using the <code class="docutils literal notranslate"><span class="pre">ec2.KeyPair</span></code> resource.</p></li>
 <li><p><strong>launch_group</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A launch group is a group of spot instances that launch together and terminate together.
@@ -10591,11 +10566,11 @@ detach volumes from AWS Instances.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>device_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The device name to expose to the instance (for
-example, <code class="docutils literal notranslate"><span class="pre">/dev/sdh</span></code> or <code class="docutils literal notranslate"><span class="pre">xvdh</span></code>).  See [Device Naming on Linux Instances][1] and [Device Naming on Windows Instances][2] for more information.</p></li>
+example, <code class="docutils literal notranslate"><span class="pre">/dev/sdh</span></code> or <code class="docutils literal notranslate"><span class="pre">xvdh</span></code>).  See <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/device_naming.html#available-ec2-device-names">Device Naming on Linux Instances</a> and <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/device_naming.html#available-ec2-device-names">Device Naming on Windows Instances</a> for more information.</p></li>
 <li><p><strong>force_detach</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Set to <code class="docutils literal notranslate"><span class="pre">true</span></code> if you want to force the
 volume to detach. Useful if previous attempts failed, but use this option only
 as a last resort, as this can result in <strong>data loss</strong>. See
-[Detaching an Amazon EBS Volume from an Instance][3] for more information.</p></li>
+<a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-detaching-volume.html">Detaching an Amazon EBS Volume from an Instance</a> for more information.</p></li>
 <li><p><strong>instance_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ID of the Instance to attach to</p></li>
 <li><p><strong>skip_destroy</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Set this to true if you do not wish
 to detach the volume from the instance to which it is attached at destroy
@@ -10610,7 +10585,7 @@ means attached.</p></li>
 <dt id="pulumi_aws.ec2.VolumeAttachment.device_name">
 <code class="sig-name descname">device_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.VolumeAttachment.device_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The device name to expose to the instance (for
-example, <code class="docutils literal notranslate"><span class="pre">/dev/sdh</span></code> or <code class="docutils literal notranslate"><span class="pre">xvdh</span></code>).  See [Device Naming on Linux Instances][1] and [Device Naming on Windows Instances][2] for more information.</p>
+example, <code class="docutils literal notranslate"><span class="pre">/dev/sdh</span></code> or <code class="docutils literal notranslate"><span class="pre">xvdh</span></code>).  See <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/device_naming.html#available-ec2-device-names">Device Naming on Linux Instances</a> and <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/device_naming.html#available-ec2-device-names">Device Naming on Windows Instances</a> for more information.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -10619,7 +10594,7 @@ example, <code class="docutils literal notranslate"><span class="pre">/dev/sdh</
 <dd><p>Set to <code class="docutils literal notranslate"><span class="pre">true</span></code> if you want to force the
 volume to detach. Useful if previous attempts failed, but use this option only
 as a last resort, as this can result in <strong>data loss</strong>. See
-[Detaching an Amazon EBS Volume from an Instance][3] for more information.</p>
+<a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-detaching-volume.html">Detaching an Amazon EBS Volume from an Instance</a> for more information.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -10655,12 +10630,14 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>device_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The device name to expose to the instance (for
-example, <code class="docutils literal notranslate"><span class="pre">/dev/sdh</span></code> or <code class="docutils literal notranslate"><span class="pre">xvdh</span></code>).  See [Device Naming on Linux Instances][1] and [Device Naming on Windows Instances][2] for more information.</p></li>
-<li><p><strong>force_detach</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Set to <code class="docutils literal notranslate"><span class="pre">true</span></code> if you want to force the
+<li><p><strong>device_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The device name to expose to the instance (for
+example, <code class="docutils literal notranslate"><span class="pre">/dev/sdh</span></code> or <code class="docutils literal notranslate"><span class="pre">xvdh</span></code>).  See <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/device_naming.html#available-ec2-device-names">Device Naming on Linux Instances</a> and <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/device_naming.html#available-ec2-device-names">Device Naming on Windows Instances</a> for more information.</p>
+</p></li>
+<li><p><strong>force_detach</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – <p>Set to <code class="docutils literal notranslate"><span class="pre">true</span></code> if you want to force the
 volume to detach. Useful if previous attempts failed, but use this option only
 as a last resort, as this can result in <strong>data loss</strong>. See
-[Detaching an Amazon EBS Volume from an Instance][3] for more information.</p></li>
+<a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-detaching-volume.html">Detaching an Amazon EBS Volume from an Instance</a> for more information.</p>
+</p></li>
 <li><p><strong>instance_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ID of the Instance to attach to</p></li>
 <li><p><strong>skip_destroy</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Set this to true if you do not wish
 to detach the volume from the instance to which it is attached at destroy
@@ -10724,9 +10701,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 block with a /56 prefix length for the VPC. You cannot specify the range of IP addresses, or
 the size of the CIDR block. Default is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><strong>cidr_block</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The CIDR block for the VPC.</p></li>
-<li><p><strong>enable_classiclink</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – A boolean flag to enable/disable ClassicLink
+<li><p><strong>enable_classiclink</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – <p>A boolean flag to enable/disable ClassicLink
 for the VPC. Only valid in regions and accounts that support EC2 Classic.
-See the [ClassicLink documentation][1] for more information. Defaults false.</p></li>
+See the <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-classiclink.html">ClassicLink documentation</a> for more information. Defaults false.</p>
+</p></li>
 <li><p><strong>enable_classiclink_dns_support</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – A boolean flag to enable/disable ClassicLink DNS Support for the VPC.
 Only valid in regions and accounts that support EC2 Classic.</p></li>
 <li><p><strong>enable_dns_hostnames</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – A boolean flag to enable/disable DNS hostnames in the VPC. Defaults false.</p></li>
@@ -10779,7 +10757,7 @@ the size of the CIDR block. Default is <code class="docutils literal notranslate
 <code class="sig-name descname">enable_classiclink</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.Vpc.enable_classiclink" title="Permalink to this definition">¶</a></dt>
 <dd><p>A boolean flag to enable/disable ClassicLink
 for the VPC. Only valid in regions and accounts that support EC2 Classic.
-See the [ClassicLink documentation][1] for more information. Defaults false.</p>
+See the <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-classiclink.html">ClassicLink documentation</a> for more information. Defaults false.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -10858,9 +10836,10 @@ the size of the CIDR block. Default is <code class="docutils literal notranslate
 <li><p><strong>default_network_acl_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the network ACL created by default on VPC creation</p></li>
 <li><p><strong>default_route_table_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the route table created by default on VPC creation</p></li>
 <li><p><strong>default_security_group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the security group created by default on VPC creation</p></li>
-<li><p><strong>enable_classiclink</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – A boolean flag to enable/disable ClassicLink
+<li><p><strong>enable_classiclink</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – <p>A boolean flag to enable/disable ClassicLink
 for the VPC. Only valid in regions and accounts that support EC2 Classic.
-See the [ClassicLink documentation][1] for more information. Defaults false.</p></li>
+See the <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-classiclink.html">ClassicLink documentation</a> for more information. Defaults false.</p>
+</p></li>
 <li><p><strong>enable_classiclink_dns_support</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – A boolean flag to enable/disable ClassicLink DNS Support for the VPC.
 Only valid in regions and accounts that support EC2 Classic.</p></li>
 <li><p><strong>enable_dns_hostnames</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – A boolean flag to enable/disable DNS hostnames in the VPC. Defaults false.</p></li>
@@ -11990,7 +11969,7 @@ or accept the connection manually using the AWS Management Console, AWS CLI, thr
 the peering connection (a maximum of one).</p></li>
 <li><p><strong>auto_accept</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Accept the peering (both VPCs need to be in the same AWS account).</p></li>
 <li><p><strong>peer_owner_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The AWS account ID of the owner of the peer VPC.
-Defaults to the account ID the [AWS provider][1] is currently connected to.</p></li>
+Defaults to the account ID the <a class="reference external" href="https://www.terraform.io/docs/providers/aws/index.html">AWS provider</a> is currently connected to.</p></li>
 <li><p><strong>peer_region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region of the accepter VPC of the [VPC Peering Connection]. <code class="docutils literal notranslate"><span class="pre">auto_accept</span></code> must be <code class="docutils literal notranslate"><span class="pre">false</span></code>,
 and use the <code class="docutils literal notranslate"><span class="pre">ec2.VpcPeeringConnectionAccepter</span></code> to manage the accepter side.</p></li>
 <li><p><strong>peer_vpc_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the VPC with which you are creating the VPC Peering Connection.</p></li>
@@ -12064,7 +12043,7 @@ connection.</p></li>
 <dt id="pulumi_aws.ec2.VpcPeeringConnection.peer_owner_id">
 <code class="sig-name descname">peer_owner_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.VpcPeeringConnection.peer_owner_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The AWS account ID of the owner of the peer VPC.
-Defaults to the account ID the [AWS provider][1] is currently connected to.</p>
+Defaults to the account ID the <a class="reference external" href="https://www.terraform.io/docs/providers/aws/index.html">AWS provider</a> is currently connected to.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -12128,8 +12107,9 @@ properties used to qualify the lookup.</p>
 (<a class="reference external" href="http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide">http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide</a>) options to be set for the VPC that accepts
 the peering connection (a maximum of one).</p></li>
 <li><p><strong>auto_accept</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Accept the peering (both VPCs need to be in the same AWS account).</p></li>
-<li><p><strong>peer_owner_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The AWS account ID of the owner of the peer VPC.
-Defaults to the account ID the [AWS provider][1] is currently connected to.</p></li>
+<li><p><strong>peer_owner_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The AWS account ID of the owner of the peer VPC.
+Defaults to the account ID the <a class="reference external" href="https://www.terraform.io/docs/providers/aws/index.html">AWS provider</a> is currently connected to.</p>
+</p></li>
 <li><p><strong>peer_region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region of the accepter VPC of the [VPC Peering Connection]. <code class="docutils literal notranslate"><span class="pre">auto_accept</span></code> must be <code class="docutils literal notranslate"><span class="pre">false</span></code>,
 and use the <code class="docutils literal notranslate"><span class="pre">ec2.VpcPeeringConnectionAccepter</span></code> to manage the accepter side.</p></li>
 <li><p><strong>peer_vpc_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the VPC with which you are creating the VPC Peering Connection.</p></li>

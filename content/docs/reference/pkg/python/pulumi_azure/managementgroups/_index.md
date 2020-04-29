@@ -31,7 +31,7 @@ anything, please consult the source <a class="reference external" href="https://
 <dl class="attribute">
 <dt id="pulumi_azure.managementgroups.GetManagementGroupResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.managementgroups.GetManagementGroupResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -52,6 +52,7 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_azure.managementgroups.ManagementGroup">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.managementgroups.</code><code class="sig-name descname">ManagementGroup</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">display_name=None</em>, <em class="sig-param">group_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">parent_management_group_id=None</em>, <em class="sig-param">subscription_ids=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.managementgroups.ManagementGroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Management Group.</p>
+<p>Deprecated: azure.ManagementGroup has been deprecated in favour of azure.Group</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -158,6 +159,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.managementgroups.get_management_group">
 <code class="sig-prename descclassname">pulumi_azure.managementgroups.</code><code class="sig-name descname">get_management_group</code><span class="sig-paren">(</span><em class="sig-param">group_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.managementgroups.get_management_group" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Management Group.</p>
+<p>Deprecated: azure.getManagementGroup has been deprecated in favour of azure.getGroup</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

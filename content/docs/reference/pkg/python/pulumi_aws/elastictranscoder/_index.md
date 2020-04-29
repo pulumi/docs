@@ -257,13 +257,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the preset. (maximum 40 characters)</p></li>
 <li><p><strong>thumbnails</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Thumbnail parameters object (documented below)</p></li>
 <li><p><strong>video</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Video parameters object (documented below)</p></li>
+<li><p><strong>video_codec_options</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Codec options for the video parameters</p></li>
 <li><p><strong>video_watermarks</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Watermark parameters for the video parameters (documented below)</p></li>
 </ul>
 </dd>
 </dl>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>* `video_codec_options` (Optional, Forces new resource) Codec options for the video parameters
-</pre></div>
-</div>
 <p>The <strong>audio</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">audioPackingMode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The method of organizing audio channels and tracks. Use Audio:Channels to specify the number of channels in your output, and Audio:AudioPackingMode to specify the number of tracks and their relation to the channels. If you do not specify an Audio:AudioPackingMode, Elastic Transcoder uses SingleTrack.</p></li>
@@ -400,12 +398,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_aws.elastictranscoder.Preset.video_codec_options">
+<code class="sig-name descname">video_codec_options</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elastictranscoder.Preset.video_codec_options" title="Permalink to this definition">¶</a></dt>
+<dd><p>Codec options for the video parameters</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_aws.elastictranscoder.Preset.video_watermarks">
 <code class="sig-name descname">video_watermarks</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elastictranscoder.Preset.video_watermarks" title="Permalink to this definition">¶</a></dt>
 <dd><p>Watermark parameters for the video parameters (documented below)</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">video_codec_options</span></code> (Optional, Forces new resource) Codec options for the video parameters</p>
-<ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">horizontalAlign</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The horizontal position of the watermark unless you specify a nonzero value for <code class="docutils literal notranslate"><span class="pre">horzontal_offset</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">horizontalOffset</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The amount by which you want the horizontal position of the watermark to be offset from the position specified by <code class="docutils literal notranslate"><span class="pre">horizontal_align</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A unique identifier for the settings for one watermark. The value of Id can be up to 40 characters long. You can specify settings for up to four watermarks.</p></li>
@@ -416,8 +418,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">target</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A value that determines how Elastic Transcoder interprets values that you specified for <code class="docutils literal notranslate"><span class="pre">video_watermarks.horizontal_offset</span></code>, <code class="docutils literal notranslate"><span class="pre">video_watermarks.vertical_offset</span></code>, <code class="docutils literal notranslate"><span class="pre">video_watermarks.max_width</span></code>, and <code class="docutils literal notranslate"><span class="pre">video_watermarks.max_height</span></code>. Valid values are <code class="docutils literal notranslate"><span class="pre">Content</span></code> and <code class="docutils literal notranslate"><span class="pre">Frame</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">verticalAlign</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The vertical position of the watermark unless you specify a nonzero value for <code class="docutils literal notranslate"><span class="pre">vertical_align</span></code>. Valid values are <code class="docutils literal notranslate"><span class="pre">Top</span></code>, <code class="docutils literal notranslate"><span class="pre">Bottom</span></code>, <code class="docutils literal notranslate"><span class="pre">Center</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">verticalOffset</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The amount by which you want the vertical position of the watermark to be offset from the position specified by <code class="docutils literal notranslate"><span class="pre">vertical_align</span></code></p></li>
-</ul>
-</li>
 </ul>
 </dd></dl>
 
@@ -439,13 +439,11 @@ properties used to qualify the lookup.</p>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the preset. (maximum 40 characters)</p></li>
 <li><p><strong>thumbnails</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Thumbnail parameters object (documented below)</p></li>
 <li><p><strong>video</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Video parameters object (documented below)</p></li>
+<li><p><strong>video_codec_options</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Codec options for the video parameters</p></li>
 <li><p><strong>video_watermarks</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Watermark parameters for the video parameters (documented below)</p></li>
 </ul>
 </dd>
 </dl>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>* `video_codec_options` (Optional, Forces new resource) Codec options for the video parameters
-</pre></div>
-</div>
 <p>The <strong>audio</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">audioPackingMode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The method of organizing audio channels and tracks. Use Audio:Channels to specify the number of channels in your output, and Audio:AudioPackingMode to specify the number of tracks and their relation to the channels. If you do not specify an Audio:AudioPackingMode, Elastic Transcoder uses SingleTrack.</p></li>
