@@ -28,17 +28,21 @@ Google’s cloud.</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>charset</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The charset value. See MySQL’s <a class="reference external" href="https://dev.mysql.com/doc/refman/5.7/en/charset-charsets.html">Supported Character Sets and
-Collations</a> and Postgres’ <a class="reference external" href="https://www.postgresql.org/docs/9.6/static/multibyte.html">Character Set
-Support</a> for more details and supported values. Postgres
-databases only support a value of ‘UTF8’ at creation time.</p></li>
-<li><p><strong>collation</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The collation value. See MySQL’s <a class="reference external" href="https://dev.mysql.com/doc/refman/5.7/en/charset-charsets.html">Supported Character Sets and
-Collations</a> and Postgres’ <a class="reference external" href="https://www.postgresql.org/docs/9.6/static/collation.html">Collation
-Support</a> for more details and supported values. Postgres
-databases only support a value of ‘en_US.UTF8’ at creation time.</p>
+<li><p><strong>charset</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The charset value. See MySQL’s
+<a class="reference external" href="https://dev.mysql.com/doc/refman/5.7/en/charset-charsets.html">Supported Character Sets and Collations</a>
+and Postgres’ <a class="reference external" href="https://www.postgresql.org/docs/9.6/static/multibyte.html">Character Set Support</a>
+for more details and supported values. Postgres databases only support
+a value of <code class="docutils literal notranslate"><span class="pre">UTF8</span></code> at creation time.</p></li>
+<li><p><strong>collation</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The collation value. See MySQL’s
+<a class="reference external" href="https://dev.mysql.com/doc/refman/5.7/en/charset-charsets.html">Supported Character Sets and Collations</a>
+and Postgres’ <a class="reference external" href="https://www.postgresql.org/docs/9.6/static/collation.html">Collation Support</a>
+for more details and supported values. Postgres databases only support
+a value of <code class="docutils literal notranslate"><span class="pre">en_US.UTF8</span></code> at creation time.</p>
 </p></li>
-<li><p><strong>instance</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Cloud SQL instance. This does not include the project ID.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the database in the Cloud SQL instance. This does not include the project ID or instance name.</p></li>
+<li><p><strong>instance</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Cloud SQL instance. This does not include the project
+ID.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the database in the Cloud SQL instance.
+This does not include the project ID or instance name.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
 </ul>
@@ -47,31 +51,35 @@ If it is not provided, the provider project is used.</p></li>
 <dl class="attribute">
 <dt id="pulumi_gcp.sql.Database.charset">
 <code class="sig-name descname">charset</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.sql.Database.charset" title="Permalink to this definition">¶</a></dt>
-<dd><p>The charset value. See MySQL’s <a class="reference external" href="https://dev.mysql.com/doc/refman/5.7/en/charset-charsets.html">Supported Character Sets and
-Collations</a> and Postgres’ <a class="reference external" href="https://www.postgresql.org/docs/9.6/static/multibyte.html">Character Set
-Support</a> for more details and supported values. Postgres
-databases only support a value of ‘UTF8’ at creation time.</p>
+<dd><p>The charset value. See MySQL’s
+<a class="reference external" href="https://dev.mysql.com/doc/refman/5.7/en/charset-charsets.html">Supported Character Sets and Collations</a>
+and Postgres’ <a class="reference external" href="https://www.postgresql.org/docs/9.6/static/multibyte.html">Character Set Support</a>
+for more details and supported values. Postgres databases only support
+a value of <code class="docutils literal notranslate"><span class="pre">UTF8</span></code> at creation time.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_gcp.sql.Database.collation">
 <code class="sig-name descname">collation</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.sql.Database.collation" title="Permalink to this definition">¶</a></dt>
-<dd><p>The collation value. See MySQL’s <a class="reference external" href="https://dev.mysql.com/doc/refman/5.7/en/charset-charsets.html">Supported Character Sets and
-Collations</a> and Postgres’ <a class="reference external" href="https://www.postgresql.org/docs/9.6/static/collation.html">Collation
-Support</a> for more details and supported values. Postgres
-databases only support a value of ‘en_US.UTF8’ at creation time.</p>
+<dd><p>The collation value. See MySQL’s
+<a class="reference external" href="https://dev.mysql.com/doc/refman/5.7/en/charset-charsets.html">Supported Character Sets and Collations</a>
+and Postgres’ <a class="reference external" href="https://www.postgresql.org/docs/9.6/static/collation.html">Collation Support</a>
+for more details and supported values. Postgres databases only support
+a value of <code class="docutils literal notranslate"><span class="pre">en_US.UTF8</span></code> at creation time.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_gcp.sql.Database.instance">
 <code class="sig-name descname">instance</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.sql.Database.instance" title="Permalink to this definition">¶</a></dt>
-<dd><p>The name of the Cloud SQL instance. This does not include the project ID.</p>
+<dd><p>The name of the Cloud SQL instance. This does not include the project
+ID.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_gcp.sql.Database.name">
 <code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.sql.Database.name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The name of the database in the Cloud SQL instance. This does not include the project ID or instance name.</p>
+<dd><p>The name of the database in the Cloud SQL instance.
+This does not include the project ID or instance name.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -98,18 +106,22 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>charset</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The charset value. See MySQL’s <a class="reference external" href="https://dev.mysql.com/doc/refman/5.7/en/charset-charsets.html">Supported Character Sets and
-Collations</a> and Postgres’ <a class="reference external" href="https://www.postgresql.org/docs/9.6/static/multibyte.html">Character Set
-Support</a> for more details and supported values. Postgres
-databases only support a value of ‘UTF8’ at creation time.</p>
+<li><p><strong>charset</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The charset value. See MySQL’s
+<a class="reference external" href="https://dev.mysql.com/doc/refman/5.7/en/charset-charsets.html">Supported Character Sets and Collations</a>
+and Postgres’ <a class="reference external" href="https://www.postgresql.org/docs/9.6/static/multibyte.html">Character Set Support</a>
+for more details and supported values. Postgres databases only support
+a value of <code class="docutils literal notranslate"><span class="pre">UTF8</span></code> at creation time.</p>
 </p></li>
-<li><p><strong>collation</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The collation value. See MySQL’s <a class="reference external" href="https://dev.mysql.com/doc/refman/5.7/en/charset-charsets.html">Supported Character Sets and
-Collations</a> and Postgres’ <a class="reference external" href="https://www.postgresql.org/docs/9.6/static/collation.html">Collation
-Support</a> for more details and supported values. Postgres
-databases only support a value of ‘en_US.UTF8’ at creation time.</p>
+<li><p><strong>collation</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The collation value. See MySQL’s
+<a class="reference external" href="https://dev.mysql.com/doc/refman/5.7/en/charset-charsets.html">Supported Character Sets and Collations</a>
+and Postgres’ <a class="reference external" href="https://www.postgresql.org/docs/9.6/static/collation.html">Collation Support</a>
+for more details and supported values. Postgres databases only support
+a value of <code class="docutils literal notranslate"><span class="pre">en_US.UTF8</span></code> at creation time.</p>
 </p></li>
-<li><p><strong>instance</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Cloud SQL instance. This does not include the project ID.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the database in the Cloud SQL instance. This does not include the project ID or instance name.</p></li>
+<li><p><strong>instance</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Cloud SQL instance. This does not include the project
+ID.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the database in the Cloud SQL instance.
+This does not include the project ID or instance name.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
 <li><p><strong>self_link</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The URI of the created resource.</p></li>
@@ -809,7 +821,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_gcp.sql.GetCaCertsResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.sql.GetCaCertsResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 </dd></dl>
@@ -830,10 +842,12 @@ affect billing. You cannot update the source representation instance.</p>
 <li><p><strong>database_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The MySQL version running on your source database server: MYSQL_5_6 or MYSQL_5_7.</p></li>
 <li><p><strong>host</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The externally accessible IPv4 address for the source database server.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the source representation instance. Use any valid Cloud SQL instance name.</p></li>
-<li><p><strong>port</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The externally accessible port for the source database server. Defaults to 3306.</p></li>
+<li><p><strong>port</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The externally accessible port for the source database server.
+Defaults to 3306.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
-<li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Region in which the created instance should reside. If it is not provided, the provider region is used.</p></li>
+<li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Region in which the created instance should reside.
+If it is not provided, the provider region is used.</p></li>
 </ul>
 </dd>
 </dl>
@@ -858,7 +872,8 @@ If it is not provided, the provider project is used.</p></li>
 <dl class="attribute">
 <dt id="pulumi_gcp.sql.SourceRepresentationInstance.port">
 <code class="sig-name descname">port</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.sql.SourceRepresentationInstance.port" title="Permalink to this definition">¶</a></dt>
-<dd><p>The externally accessible port for the source database server. Defaults to 3306.</p>
+<dd><p>The externally accessible port for the source database server.
+Defaults to 3306.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -871,7 +886,8 @@ If it is not provided, the provider project is used.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.sql.SourceRepresentationInstance.region">
 <code class="sig-name descname">region</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.sql.SourceRepresentationInstance.region" title="Permalink to this definition">¶</a></dt>
-<dd><p>The Region in which the created instance should reside. If it is not provided, the provider region is used.</p>
+<dd><p>The Region in which the created instance should reside.
+If it is not provided, the provider region is used.</p>
 </dd></dl>
 
 <dl class="method">
@@ -888,10 +904,12 @@ properties used to qualify the lookup.</p>
 <li><p><strong>database_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The MySQL version running on your source database server: MYSQL_5_6 or MYSQL_5_7.</p></li>
 <li><p><strong>host</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The externally accessible IPv4 address for the source database server.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the source representation instance. Use any valid Cloud SQL instance name.</p></li>
-<li><p><strong>port</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The externally accessible port for the source database server. Defaults to 3306.</p></li>
+<li><p><strong>port</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The externally accessible port for the source database server.
+Defaults to 3306.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
-<li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Region in which the created instance should reside. If it is not provided, the provider region is used.</p></li>
+<li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Region in which the created instance should reside.
+If it is not provided, the provider region is used.</p></li>
 </ul>
 </dd>
 </dl>

@@ -53,7 +53,7 @@ anything, please consult the source <a class="reference external" href="https://
 <dd><p>The DNS name of the accelerator. For example, <code class="docutils literal notranslate"><span class="pre">a5d53ff5ee6bca4ce.awsglobalaccelerator.com</span></code>.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">hosted_zone_id</span></code> –  The Global Accelerator Route 53 zone ID that can be used to
-route an [Alias Resource Record Set][1] to the Global Accelerator. This attribute
+route an <a class="reference external" href="https://docs.aws.amazon.com/Route53/latest/APIReference/API_AliasTarget.html">Alias Resource Record Set</a> to the Global Accelerator. This attribute
 is simply an alias for the zone ID <code class="docutils literal notranslate"><span class="pre">Z2BJ6XQ5FK7U4H</span></code>.</p></li>
 </ul>
 </dd></dl>
@@ -109,7 +109,7 @@ properties used to qualify the lookup.</p>
 </dd>
 </dl>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>* `hosted_zone_id` --  The Global Accelerator Route 53 zone ID that can be used to
-route an [Alias Resource Record Set][1] to the Global Accelerator. This attribute
+route an [Alias Resource Record Set](https://docs.aws.amazon.com/Route53/latest/APIReference/API_AliasTarget.html) to the Global Accelerator. This attribute
 is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
 </pre></div>
 </div>

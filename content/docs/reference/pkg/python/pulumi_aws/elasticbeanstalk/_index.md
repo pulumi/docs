@@ -311,7 +311,7 @@ application with the same configuration settings.</p>
 override specific values that are set as defaults. The format is detailed
 below in Option Settings</p></li>
 <li><p><strong>solution_stack_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A solution stack to base your Template
-off of. Example stacks can be found in the [Amazon API documentation][1]</p></li>
+off of. Example stacks can be found in the <a class="reference external" href="https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/concepts.platforms.html">Amazon API documentation</a></p></li>
 </ul>
 </dd>
 </dl>
@@ -364,7 +364,7 @@ below in Option Settings</p>
 <dt id="pulumi_aws.elasticbeanstalk.ConfigurationTemplate.solution_stack_name">
 <code class="sig-name descname">solution_stack_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticbeanstalk.ConfigurationTemplate.solution_stack_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>A solution stack to base your Template
-off of. Example stacks can be found in the [Amazon API documentation][1]</p>
+off of. Example stacks can be found in the <a class="reference external" href="https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/concepts.platforms.html">Amazon API documentation</a></p>
 </dd></dl>
 
 <dl class="method">
@@ -385,8 +385,9 @@ properties used to qualify the lookup.</p>
 <li><p><strong>settings</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Option settings to configure the new Environment. These
 override specific values that are set as defaults. The format is detailed
 below in Option Settings</p></li>
-<li><p><strong>solution_stack_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A solution stack to base your Template
-off of. Example stacks can be found in the [Amazon API documentation][1]</p></li>
+<li><p><strong>solution_stack_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>A solution stack to base your Template
+off of. Example stacks can be found in the <a class="reference external" href="https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/concepts.platforms.html">Amazon API documentation</a></p>
+</p></li>
 </ul>
 </dd>
 </dl>
@@ -466,7 +467,7 @@ the Environment.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Short description of the Environment</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A unique name for this Environment. This name is used
 in the application URL</p></li>
-<li><p><strong>platform_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The [ARN][2] of the Elastic Beanstalk [Platform][3]
+<li><p><strong>platform_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The <a class="reference external" href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">ARN</a> of the Elastic Beanstalk <a class="reference external" href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-beanstalk-environment.html#cfn-beanstalk-environment-platformarn">Platform</a>
 to use in deployment</p></li>
 <li><p><strong>poll_interval</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The time between polling the AWS API to
 check if changes have been applied. Use this to adjust the rate of API calls
@@ -475,8 +476,9 @@ use the default behavior, which is an exponential backoff</p></li>
 <li><p><strong>settings</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Option settings to configure the new Environment. These
 override specific values that are set as defaults. The format is detailed
 below in Option Settings</p></li>
-<li><p><strong>solution_stack_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A solution stack to base your environment
-off of. Example stacks can be found in the [Amazon API documentation][1]</p></li>
+<li><p><strong>solution_stack_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>A solution stack to base your environment
+off of. Example stacks can be found in the <a class="reference external" href="https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/concepts.platforms.html">Amazon API documentation</a></p>
+</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A set of tags to apply to the Environment.</p></li>
 <li><p><strong>template_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Elastic Beanstalk Configuration
 template to use in deployment</p></li>
@@ -580,7 +582,7 @@ in the application URL</p>
 <dl class="attribute">
 <dt id="pulumi_aws.elasticbeanstalk.Environment.platform_arn">
 <code class="sig-name descname">platform_arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticbeanstalk.Environment.platform_arn" title="Permalink to this definition">¶</a></dt>
-<dd><p>The [ARN][2] of the Elastic Beanstalk [Platform][3]
+<dd><p>The <a class="reference external" href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">ARN</a> of the Elastic Beanstalk <a class="reference external" href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-beanstalk-environment.html#cfn-beanstalk-environment-platformarn">Platform</a>
 to use in deployment</p>
 </dd></dl>
 
@@ -618,7 +620,7 @@ in the application URL</p></li>
 <dt id="pulumi_aws.elasticbeanstalk.Environment.solution_stack_name">
 <code class="sig-name descname">solution_stack_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticbeanstalk.Environment.solution_stack_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>A solution stack to base your environment
-off of. Example stacks can be found in the [Amazon API documentation][1]</p>
+off of. Example stacks can be found in the <a class="reference external" href="https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/concepts.platforms.html">Amazon API documentation</a></p>
 </dd></dl>
 
 <dl class="attribute">
@@ -690,8 +692,9 @@ the Environment.</p></li>
 <li><p><strong>load_balancers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Elastic load balancers in use by this Environment.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A unique name for this Environment. This name is used
 in the application URL</p></li>
-<li><p><strong>platform_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The [ARN][2] of the Elastic Beanstalk [Platform][3]
-to use in deployment</p></li>
+<li><p><strong>platform_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The <a class="reference external" href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">ARN</a> of the Elastic Beanstalk <a class="reference external" href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-beanstalk-environment.html#cfn-beanstalk-environment-platformarn">Platform</a>
+to use in deployment</p>
+</p></li>
 <li><p><strong>poll_interval</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The time between polling the AWS API to
 check if changes have been applied. Use this to adjust the rate of API calls
 for any <code class="docutils literal notranslate"><span class="pre">create</span></code> or <code class="docutils literal notranslate"><span class="pre">update</span></code> action. Minimum <code class="docutils literal notranslate"><span class="pre">10s</span></code>, maximum <code class="docutils literal notranslate"><span class="pre">180s</span></code>. Omit this to
@@ -700,8 +703,9 @@ use the default behavior, which is an exponential backoff</p></li>
 <li><p><strong>settings</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Option settings to configure the new Environment. These
 override specific values that are set as defaults. The format is detailed
 below in Option Settings</p></li>
-<li><p><strong>solution_stack_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A solution stack to base your environment
-off of. Example stacks can be found in the [Amazon API documentation][1]</p></li>
+<li><p><strong>solution_stack_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>A solution stack to base your environment
+off of. Example stacks can be found in the <a class="reference external" href="https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/concepts.platforms.html">Amazon API documentation</a></p>
+</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A set of tags to apply to the Environment.</p></li>
 <li><p><strong>template_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Elastic Beanstalk Configuration
 template to use in deployment</p></li>
@@ -793,7 +797,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.elasticbeanstalk.GetApplicationResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticbeanstalk.GetApplicationResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 </dd></dl>
@@ -805,7 +809,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.elasticbeanstalk.GetHostedZoneResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticbeanstalk.GetHostedZoneResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -823,7 +827,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.elasticbeanstalk.GetSolutionStackResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticbeanstalk.GetSolutionStackResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">

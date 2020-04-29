@@ -44,6 +44,11 @@ anything, please consult the source <a class="reference external" href="https://
 <dd></dd></dl>
 
 <dl class="class">
+<dt id="pulumi_digitalocean.AwaitableGetDropletsResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">AwaitableGetDropletsResult</code><span class="sig-paren">(</span><em class="sig-param">droplets=None</em>, <em class="sig-param">filters=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">sorts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.AwaitableGetDropletsResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
 <dt id="pulumi_digitalocean.AwaitableGetFloatingIpResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">AwaitableGetFloatingIpResult</code><span class="sig-paren">(</span><em class="sig-param">droplet_id=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ip_address=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">urn=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.AwaitableGetFloatingIpResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
@@ -101,6 +106,26 @@ anything, please consult the source <a class="reference external" href="https://
 <dl class="class">
 <dt id="pulumi_digitalocean.AwaitableGetSizesResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">AwaitableGetSizesResult</code><span class="sig-paren">(</span><em class="sig-param">filters=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">sizes=None</em>, <em class="sig-param">sorts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.AwaitableGetSizesResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="pulumi_digitalocean.AwaitableGetSpacesBucketObjectResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">AwaitableGetSpacesBucketObjectResult</code><span class="sig-paren">(</span><em class="sig-param">body=None</em>, <em class="sig-param">bucket=None</em>, <em class="sig-param">cache_control=None</em>, <em class="sig-param">content_disposition=None</em>, <em class="sig-param">content_encoding=None</em>, <em class="sig-param">content_language=None</em>, <em class="sig-param">content_length=None</em>, <em class="sig-param">content_type=None</em>, <em class="sig-param">etag=None</em>, <em class="sig-param">expiration=None</em>, <em class="sig-param">expires=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">key=None</em>, <em class="sig-param">last_modified=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">range=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">version_id=None</em>, <em class="sig-param">website_redirect_location=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.AwaitableGetSpacesBucketObjectResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="pulumi_digitalocean.AwaitableGetSpacesBucketObjectsResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">AwaitableGetSpacesBucketObjectsResult</code><span class="sig-paren">(</span><em class="sig-param">bucket=None</em>, <em class="sig-param">common_prefixes=None</em>, <em class="sig-param">delimiter=None</em>, <em class="sig-param">encoding_type=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">keys=None</em>, <em class="sig-param">max_keys=None</em>, <em class="sig-param">owners=None</em>, <em class="sig-param">prefix=None</em>, <em class="sig-param">region=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.AwaitableGetSpacesBucketObjectsResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="pulumi_digitalocean.AwaitableGetSpacesBucketResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">AwaitableGetSpacesBucketResult</code><span class="sig-paren">(</span><em class="sig-param">bucket_domain_name=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">urn=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.AwaitableGetSpacesBucketResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="pulumi_digitalocean.AwaitableGetSpacesBucketsResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">AwaitableGetSpacesBucketsResult</code><span class="sig-paren">(</span><em class="sig-param">buckets=None</em>, <em class="sig-param">filters=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">sorts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.AwaitableGetSpacesBucketsResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
@@ -2687,6 +2712,24 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="class">
+<dt id="pulumi_digitalocean.GetDropletsResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">GetDropletsResult</code><span class="sig-paren">(</span><em class="sig-param">droplets=None</em>, <em class="sig-param">filters=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">sorts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.GetDropletsResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getDroplets.</p>
+<dl class="attribute">
+<dt id="pulumi_digitalocean.GetDropletsResult.droplets">
+<code class="sig-name descname">droplets</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.GetDropletsResult.droplets" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of Droplets satisfying any <code class="docutils literal notranslate"><span class="pre">filter</span></code> and <code class="docutils literal notranslate"><span class="pre">sort</span></code> criteria. Each Droplet has the following attributes:</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_digitalocean.GetDropletsResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.GetDropletsResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="pulumi_digitalocean.GetFloatingIpResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">GetFloatingIpResult</code><span class="sig-paren">(</span><em class="sig-param">droplet_id=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ip_address=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">urn=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.GetFloatingIpResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getFloatingIp.</p>
@@ -3090,6 +3133,186 @@ the following attributes:</p>
 <dl class="attribute">
 <dt id="pulumi_digitalocean.GetSizesResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.GetSizesResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_digitalocean.GetSpacesBucketObjectResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">GetSpacesBucketObjectResult</code><span class="sig-paren">(</span><em class="sig-param">body=None</em>, <em class="sig-param">bucket=None</em>, <em class="sig-param">cache_control=None</em>, <em class="sig-param">content_disposition=None</em>, <em class="sig-param">content_encoding=None</em>, <em class="sig-param">content_language=None</em>, <em class="sig-param">content_length=None</em>, <em class="sig-param">content_type=None</em>, <em class="sig-param">etag=None</em>, <em class="sig-param">expiration=None</em>, <em class="sig-param">expires=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">key=None</em>, <em class="sig-param">last_modified=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">range=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">version_id=None</em>, <em class="sig-param">website_redirect_location=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.GetSpacesBucketObjectResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getSpacesBucketObject.</p>
+<dl class="attribute">
+<dt id="pulumi_digitalocean.GetSpacesBucketObjectResult.body">
+<code class="sig-name descname">body</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.GetSpacesBucketObjectResult.body" title="Permalink to this definition">¶</a></dt>
+<dd><p>Object data (see <strong>limitations above</strong> to understand cases in which this field is actually available)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_digitalocean.GetSpacesBucketObjectResult.cache_control">
+<code class="sig-name descname">cache_control</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.GetSpacesBucketObjectResult.cache_control" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies caching behavior along the request/reply chain.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_digitalocean.GetSpacesBucketObjectResult.content_disposition">
+<code class="sig-name descname">content_disposition</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.GetSpacesBucketObjectResult.content_disposition" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies presentational information for the object.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_digitalocean.GetSpacesBucketObjectResult.content_encoding">
+<code class="sig-name descname">content_encoding</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.GetSpacesBucketObjectResult.content_encoding" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies what content encodings have been applied to the object and thus what decoding mechanisms must be applied to obtain the media-type referenced by the Content-Type header field.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_digitalocean.GetSpacesBucketObjectResult.content_language">
+<code class="sig-name descname">content_language</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.GetSpacesBucketObjectResult.content_language" title="Permalink to this definition">¶</a></dt>
+<dd><p>The language the content is in.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_digitalocean.GetSpacesBucketObjectResult.content_length">
+<code class="sig-name descname">content_length</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.GetSpacesBucketObjectResult.content_length" title="Permalink to this definition">¶</a></dt>
+<dd><p>Size of the body in bytes.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_digitalocean.GetSpacesBucketObjectResult.content_type">
+<code class="sig-name descname">content_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.GetSpacesBucketObjectResult.content_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>A standard MIME type describing the format of the object data.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_digitalocean.GetSpacesBucketObjectResult.etag">
+<code class="sig-name descname">etag</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.GetSpacesBucketObjectResult.etag" title="Permalink to this definition">¶</a></dt>
+<dd><p><a class="reference external" href="https://en.wikipedia.org/wiki/HTTP_ETag">ETag</a> generated for the object (an MD5 sum of the object content in case it’s not encrypted)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_digitalocean.GetSpacesBucketObjectResult.expiration">
+<code class="sig-name descname">expiration</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.GetSpacesBucketObjectResult.expiration" title="Permalink to this definition">¶</a></dt>
+<dd><p>If the object expiration is configured (see <a class="reference external" href="http://docs.aws.amazon.com/AmazonS3/latest/dev/object-lifecycle-mgmt.html">object lifecycle management</a>), the field includes this header. It includes the expiry-date and rule-id key value pairs providing object expiration information. The value of the rule-id is URL encoded.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_digitalocean.GetSpacesBucketObjectResult.expires">
+<code class="sig-name descname">expires</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.GetSpacesBucketObjectResult.expires" title="Permalink to this definition">¶</a></dt>
+<dd><p>The date and time at which the object is no longer cacheable.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_digitalocean.GetSpacesBucketObjectResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.GetSpacesBucketObjectResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_digitalocean.GetSpacesBucketObjectResult.last_modified">
+<code class="sig-name descname">last_modified</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.GetSpacesBucketObjectResult.last_modified" title="Permalink to this definition">¶</a></dt>
+<dd><p>Last modified date of the object in RFC1123 format (e.g. <code class="docutils literal notranslate"><span class="pre">Mon,</span> <span class="pre">02</span> <span class="pre">Jan</span> <span class="pre">2006</span> <span class="pre">15:04:05</span> <span class="pre">MST</span></code>)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_digitalocean.GetSpacesBucketObjectResult.metadata">
+<code class="sig-name descname">metadata</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.GetSpacesBucketObjectResult.metadata" title="Permalink to this definition">¶</a></dt>
+<dd><p>A map of metadata stored with the object in Spaces</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_digitalocean.GetSpacesBucketObjectResult.version_id">
+<code class="sig-name descname">version_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.GetSpacesBucketObjectResult.version_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The latest version ID of the object returned.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_digitalocean.GetSpacesBucketObjectResult.website_redirect_location">
+<code class="sig-name descname">website_redirect_location</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.GetSpacesBucketObjectResult.website_redirect_location" title="Permalink to this definition">¶</a></dt>
+<dd><p>If the bucket is configured as a website, redirects requests for this object to another object in the same bucket or to an external URL. Spaces stores the value of this header in the object metadata.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_digitalocean.GetSpacesBucketObjectsResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">GetSpacesBucketObjectsResult</code><span class="sig-paren">(</span><em class="sig-param">bucket=None</em>, <em class="sig-param">common_prefixes=None</em>, <em class="sig-param">delimiter=None</em>, <em class="sig-param">encoding_type=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">keys=None</em>, <em class="sig-param">max_keys=None</em>, <em class="sig-param">owners=None</em>, <em class="sig-param">prefix=None</em>, <em class="sig-param">region=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.GetSpacesBucketObjectsResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getSpacesBucketObjects.</p>
+<dl class="attribute">
+<dt id="pulumi_digitalocean.GetSpacesBucketObjectsResult.common_prefixes">
+<code class="sig-name descname">common_prefixes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.GetSpacesBucketObjectsResult.common_prefixes" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of any keys between <code class="docutils literal notranslate"><span class="pre">prefix</span></code> and the next occurrence of <code class="docutils literal notranslate"><span class="pre">delimiter</span></code> (i.e., similar to subdirectories of the <code class="docutils literal notranslate"><span class="pre">prefix</span></code> “directory”); the list is only returned when you specify <code class="docutils literal notranslate"><span class="pre">delimiter</span></code></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_digitalocean.GetSpacesBucketObjectsResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.GetSpacesBucketObjectsResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_digitalocean.GetSpacesBucketObjectsResult.keys">
+<code class="sig-name descname">keys</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.GetSpacesBucketObjectsResult.keys" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of strings representing object keys</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_digitalocean.GetSpacesBucketObjectsResult.owners">
+<code class="sig-name descname">owners</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.GetSpacesBucketObjectsResult.owners" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of strings representing object owner IDs</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_digitalocean.GetSpacesBucketResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">GetSpacesBucketResult</code><span class="sig-paren">(</span><em class="sig-param">bucket_domain_name=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">urn=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.GetSpacesBucketResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getSpacesBucket.</p>
+<dl class="attribute">
+<dt id="pulumi_digitalocean.GetSpacesBucketResult.bucket_domain_name">
+<code class="sig-name descname">bucket_domain_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.GetSpacesBucketResult.bucket_domain_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The FQDN of the bucket (e.g. bucket-name.nyc3.digitaloceanspaces.com)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_digitalocean.GetSpacesBucketResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.GetSpacesBucketResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_digitalocean.GetSpacesBucketResult.name">
+<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.GetSpacesBucketResult.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the Spaces bucket</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_digitalocean.GetSpacesBucketResult.region">
+<code class="sig-name descname">region</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.GetSpacesBucketResult.region" title="Permalink to this definition">¶</a></dt>
+<dd><p>The slug of the region where the bucket is stored.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_digitalocean.GetSpacesBucketResult.urn">
+<code class="sig-name descname">urn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.GetSpacesBucketResult.urn" title="Permalink to this definition">¶</a></dt>
+<dd><p>The uniform resource name of the bucket</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_digitalocean.GetSpacesBucketsResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">GetSpacesBucketsResult</code><span class="sig-paren">(</span><em class="sig-param">buckets=None</em>, <em class="sig-param">filters=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">sorts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.GetSpacesBucketsResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getSpacesBuckets.</p>
+<dl class="attribute">
+<dt id="pulumi_digitalocean.GetSpacesBucketsResult.buckets">
+<code class="sig-name descname">buckets</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.GetSpacesBucketsResult.buckets" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of Spaces buckets satisfying any <code class="docutils literal notranslate"><span class="pre">filter</span></code> and <code class="docutils literal notranslate"><span class="pre">sort</span></code> criteria. Each bucket has the following attributes:</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_digitalocean.GetSpacesBucketsResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.GetSpacesBucketsResult.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
@@ -5445,6 +5668,39 @@ resources.</p>
 </dd></dl>
 
 <dl class="function">
+<dt id="pulumi_digitalocean.get_droplets">
+<code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">get_droplets</code><span class="sig-paren">(</span><em class="sig-param">filters=None</em>, <em class="sig-param">sorts=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.get_droplets" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use this data source to access information about an existing resource.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filters</strong> (<em>list</em>) – Filter the results.
+The <code class="docutils literal notranslate"><span class="pre">filter</span></code> block is documented below.</p></li>
+<li><p><strong>sorts</strong> (<em>list</em>) – Sort the results.
+The <code class="docutils literal notranslate"><span class="pre">sort</span></code> block is documented below.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>filters</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Filter the Droplets by this key. This may be one of ‘<code class="docutils literal notranslate"><span class="pre">backups</span></code>, <code class="docutils literal notranslate"><span class="pre">created_at</span></code>, <code class="docutils literal notranslate"><span class="pre">disk</span></code>, <code class="docutils literal notranslate"><span class="pre">id</span></code>,
+<code class="docutils literal notranslate"><span class="pre">image</span></code>, <code class="docutils literal notranslate"><span class="pre">ipv4_address</span></code>, <code class="docutils literal notranslate"><span class="pre">ipv4_address_private</span></code>, <code class="docutils literal notranslate"><span class="pre">ipv6</span></code>, <code class="docutils literal notranslate"><span class="pre">ipv6_address</span></code>, <code class="docutils literal notranslate"><span class="pre">ipv6_address_private</span></code>, <code class="docutils literal notranslate"><span class="pre">locked</span></code>,
+<code class="docutils literal notranslate"><span class="pre">memory</span></code>, <code class="docutils literal notranslate"><span class="pre">monitoring</span></code>, <code class="docutils literal notranslate"><span class="pre">name</span></code>, <code class="docutils literal notranslate"><span class="pre">price_hourly</span></code>, <code class="docutils literal notranslate"><span class="pre">price_monthly</span></code>, <code class="docutils literal notranslate"><span class="pre">private_networking</span></code>, <code class="docutils literal notranslate"><span class="pre">region</span></code>, <code class="docutils literal notranslate"><span class="pre">size</span></code>,
+<code class="docutils literal notranslate"><span class="pre">status</span></code>, <code class="docutils literal notranslate"><span class="pre">tags</span></code>, <code class="docutils literal notranslate"><span class="pre">urn</span></code>, <code class="docutils literal notranslate"><span class="pre">vcpus</span></code>, <code class="docutils literal notranslate"><span class="pre">volume_ids</span></code>, or <code class="docutils literal notranslate"><span class="pre">vpc_uuid</span></code>’.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of values to match against the <code class="docutils literal notranslate"><span class="pre">key</span></code> field. Only retrieves Droplets
+where the <code class="docutils literal notranslate"><span class="pre">key</span></code> field takes on one or more of the values provided here.</p></li>
+</ul>
+<p>The <strong>sorts</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">direction</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The sort direction. This may be either <code class="docutils literal notranslate"><span class="pre">asc</span></code> or <code class="docutils literal notranslate"><span class="pre">desc</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Sort the Droplets by this key. This may be one of <code class="docutils literal notranslate"><span class="pre">backups</span></code>, <code class="docutils literal notranslate"><span class="pre">created_at</span></code>, <code class="docutils literal notranslate"><span class="pre">disk</span></code>, <code class="docutils literal notranslate"><span class="pre">id</span></code>,
+<code class="docutils literal notranslate"><span class="pre">image</span></code>, <code class="docutils literal notranslate"><span class="pre">ipv4_address</span></code>, <code class="docutils literal notranslate"><span class="pre">ipv4_address_private</span></code>, <code class="docutils literal notranslate"><span class="pre">ipv6</span></code>, <code class="docutils literal notranslate"><span class="pre">ipv6_address</span></code>, <code class="docutils literal notranslate"><span class="pre">ipv6_address_private</span></code>, <code class="docutils literal notranslate"><span class="pre">locked</span></code>,
+<code class="docutils literal notranslate"><span class="pre">memory</span></code>, <code class="docutils literal notranslate"><span class="pre">monitoring</span></code>, <code class="docutils literal notranslate"><span class="pre">name</span></code>, <code class="docutils literal notranslate"><span class="pre">price_hourly</span></code>, <code class="docutils literal notranslate"><span class="pre">price_monthly</span></code>, <code class="docutils literal notranslate"><span class="pre">private_networking</span></code>, <code class="docutils literal notranslate"><span class="pre">region</span></code>, <code class="docutils literal notranslate"><span class="pre">size</span></code>,
+<code class="docutils literal notranslate"><span class="pre">status</span></code>, <code class="docutils literal notranslate"><span class="pre">urn</span></code>, <code class="docutils literal notranslate"><span class="pre">vcpus</span></code>, or <code class="docutils literal notranslate"><span class="pre">vpc_uuid</span></code>.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="function">
 <dt id="pulumi_digitalocean.get_floating_ip">
 <code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">get_floating_ip</code><span class="sig-paren">(</span><em class="sig-param">ip_address=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.get_floating_ip" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing resource.</p>
@@ -5675,6 +5931,90 @@ one of the values provided here.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">direction</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The sort direction. This may be either <code class="docutils literal notranslate"><span class="pre">asc</span></code> or <code class="docutils literal notranslate"><span class="pre">desc</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Sort the sizes by this key. This may be one of <code class="docutils literal notranslate"><span class="pre">slug</span></code>,
 <code class="docutils literal notranslate"><span class="pre">memory</span></code>, <code class="docutils literal notranslate"><span class="pre">vcpus</span></code>, <code class="docutils literal notranslate"><span class="pre">disk</span></code>, <code class="docutils literal notranslate"><span class="pre">transfer</span></code>, <code class="docutils literal notranslate"><span class="pre">price_monthly</span></code>, or <code class="docutils literal notranslate"><span class="pre">price_hourly</span></code>.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_digitalocean.get_spaces_bucket">
+<code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">get_spaces_bucket</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.get_spaces_bucket" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use this data source to access information about an existing resource.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>str</em>) – The name of the Spaces bucket.</p></li>
+<li><p><strong>region</strong> (<em>str</em>) – The slug of the region where the bucket is stored.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_digitalocean.get_spaces_bucket_object">
+<code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">get_spaces_bucket_object</code><span class="sig-paren">(</span><em class="sig-param">bucket=None</em>, <em class="sig-param">key=None</em>, <em class="sig-param">range=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">version_id=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.get_spaces_bucket_object" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Spaces object data source allows access to the metadata and
+<em>optionally</em> (see below) content of an object stored inside a Spaces bucket.</p>
+<blockquote>
+<div><p><strong>Note:</strong> The content of an object (<code class="docutils literal notranslate"><span class="pre">body</span></code> field) is available only for objects which have a human-readable
+<code class="docutils literal notranslate"><span class="pre">Content-Type</span></code> (<code class="docutils literal notranslate"><span class="pre">text/*</span></code> and <code class="docutils literal notranslate"><span class="pre">application/json</span></code>). This is to prevent printing unsafe characters and potentially
+downloading large amount of data which would be thrown away in favor of metadata.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>bucket</strong> (<em>str</em>) – The name of the bucket to read the object from.</p></li>
+<li><p><strong>key</strong> (<em>str</em>) – The full path to the object inside the bucket</p></li>
+<li><p><strong>region</strong> (<em>str</em>) – The slug of the region where the bucket is stored.</p></li>
+<li><p><strong>version_id</strong> (<em>str</em>) – Specific version ID of the object returned (defaults to latest version)</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_digitalocean.get_spaces_bucket_objects">
+<code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">get_spaces_bucket_objects</code><span class="sig-paren">(</span><em class="sig-param">bucket=None</em>, <em class="sig-param">delimiter=None</em>, <em class="sig-param">encoding_type=None</em>, <em class="sig-param">max_keys=None</em>, <em class="sig-param">prefix=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.get_spaces_bucket_objects" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use this data source to access information about an existing resource.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>bucket</strong> (<em>str</em>) – Lists object keys in this Spaces bucket</p></li>
+<li><p><strong>delimiter</strong> (<em>str</em>) – A character used to group keys (Default: none)</p></li>
+<li><p><strong>encoding_type</strong> (<em>str</em>) – Encodes keys using this method (Default: none; besides none, only “url” can be used)</p></li>
+<li><p><strong>max_keys</strong> (<em>float</em>) – Maximum object keys to return (Default: 1000)</p></li>
+<li><p><strong>prefix</strong> (<em>str</em>) – Limits results to object keys with this prefix (Default: none)</p></li>
+<li><p><strong>region</strong> (<em>str</em>) – The slug of the region where the bucket is stored.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_digitalocean.get_spaces_buckets">
+<code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">get_spaces_buckets</code><span class="sig-paren">(</span><em class="sig-param">filters=None</em>, <em class="sig-param">sorts=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.get_spaces_buckets" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get information on Spaces buckets for use in other resources, with the ability to filter and sort the results.
+If no filters are specified, all Spaces buckets will be returned.</p>
+<p>Note: You can use the <cite>`</cite>.SpacesBucket`` &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/do/d/spaces_bucket.html">https://www.terraform.io/docs/providers/do/d/spaces_bucket.html</a>&gt;`_ data source to
+obtain metadata about a single bucket if you already know its <code class="docutils literal notranslate"><span class="pre">name</span></code> and <code class="docutils literal notranslate"><span class="pre">region</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filters</strong> (<em>list</em>) – Filter the results.
+The <code class="docutils literal notranslate"><span class="pre">filter</span></code> block is documented below.</p></li>
+<li><p><strong>sorts</strong> (<em>list</em>) – Sort the results.
+The <code class="docutils literal notranslate"><span class="pre">sort</span></code> block is documented below.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>filters</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Filter the images by this key. This may be one of <code class="docutils literal notranslate"><span class="pre">bucket_domain_name</span></code>, <code class="docutils literal notranslate"><span class="pre">name</span></code>, <code class="docutils literal notranslate"><span class="pre">region</span></code>, or <code class="docutils literal notranslate"><span class="pre">urn</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of values to match against the <code class="docutils literal notranslate"><span class="pre">key</span></code> field. Only retrieves images
+where the <code class="docutils literal notranslate"><span class="pre">key</span></code> field takes on one or more of the values provided here.</p></li>
+</ul>
+<p>The <strong>sorts</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">direction</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The sort direction. This may be either <code class="docutils literal notranslate"><span class="pre">asc</span></code> or <code class="docutils literal notranslate"><span class="pre">desc</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Sort the images by this key. This may be one of <code class="docutils literal notranslate"><span class="pre">bucket_domain_name</span></code>, <code class="docutils literal notranslate"><span class="pre">name</span></code>, <code class="docutils literal notranslate"><span class="pre">region</span></code>, or <code class="docutils literal notranslate"><span class="pre">urn</span></code>.</p></li>
 </ul>
 </dd></dl>
 

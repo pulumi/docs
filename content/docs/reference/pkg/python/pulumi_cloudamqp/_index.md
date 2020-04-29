@@ -151,6 +151,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="class">
+<dt id="pulumi_cloudamqp.AwaitableGetAlarmResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudamqp.</code><code class="sig-name descname">AwaitableGetAlarmResult</code><span class="sig-paren">(</span><em class="sig-param">alarm_id=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">instance_id=None</em>, <em class="sig-param">message_type=None</em>, <em class="sig-param">queue_regex=None</em>, <em class="sig-param">recipients=None</em>, <em class="sig-param">time_threshold=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">value_threshold=None</em>, <em class="sig-param">vhost_regex=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudamqp.AwaitableGetAlarmResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
 <dt id="pulumi_cloudamqp.AwaitableGetCredentialsResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudamqp.</code><code class="sig-name descname">AwaitableGetCredentialsResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">instance_id=None</em>, <em class="sig-param">password=None</em>, <em class="sig-param">username=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudamqp.AwaitableGetCredentialsResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
@@ -158,6 +163,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_cloudamqp.AwaitableGetInstanceResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudamqp.</code><code class="sig-name descname">AwaitableGetInstanceResult</code><span class="sig-paren">(</span><em class="sig-param">apikey=None</em>, <em class="sig-param">host=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">instance_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">nodes=None</em>, <em class="sig-param">plan=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">rmq_version=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">url=None</em>, <em class="sig-param">vhost=None</em>, <em class="sig-param">vpc_subnet=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudamqp.AwaitableGetInstanceResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="pulumi_cloudamqp.AwaitableGetNotificationResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudamqp.</code><code class="sig-name descname">AwaitableGetNotificationResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">instance_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">recipient_id=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">value=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudamqp.AwaitableGetNotificationResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
@@ -174,6 +184,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_cloudamqp.AwaitableGetVpcInfoResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudamqp.</code><code class="sig-name descname">AwaitableGetVpcInfoResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">instance_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">owner_id=None</em>, <em class="sig-param">security_group_id=None</em>, <em class="sig-param">vpc_subnet=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudamqp.AwaitableGetVpcInfoResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
+
+<dl class="class">
+<dt id="pulumi_cloudamqp.GetAlarmResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudamqp.</code><code class="sig-name descname">GetAlarmResult</code><span class="sig-paren">(</span><em class="sig-param">alarm_id=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">instance_id=None</em>, <em class="sig-param">message_type=None</em>, <em class="sig-param">queue_regex=None</em>, <em class="sig-param">recipients=None</em>, <em class="sig-param">time_threshold=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">value_threshold=None</em>, <em class="sig-param">vhost_regex=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudamqp.GetAlarmResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getAlarm.</p>
+<dl class="attribute">
+<dt id="pulumi_cloudamqp.GetAlarmResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudamqp.GetAlarmResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+</dd></dl>
 
 <dl class="class">
 <dt id="pulumi_cloudamqp.GetCredentialsResult">
@@ -194,6 +216,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_cloudamqp.GetInstanceResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudamqp.GetInstanceResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_cloudamqp.GetNotificationResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudamqp.</code><code class="sig-name descname">GetNotificationResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">instance_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">recipient_id=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">value=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudamqp.GetNotificationResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getNotification.</p>
+<dl class="attribute">
+<dt id="pulumi_cloudamqp.GetNotificationResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudamqp.GetNotificationResult.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
@@ -279,6 +313,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_cloudamqp.Instance.ready">
+<code class="sig-name descname">ready</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudamqp.Instance.ready" title="Permalink to this definition">¶</a></dt>
+<dd><p>Flag describing if the resource is ready</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_cloudamqp.Instance.region">
 <code class="sig-name descname">region</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudamqp.Instance.region" title="Permalink to this definition">¶</a></dt>
 <dd><p>Name of the region you want to create your instance in</p>
@@ -316,7 +356,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="method">
 <dt id="pulumi_cloudamqp.Instance.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">apikey=None</em>, <em class="sig-param">host=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">nodes=None</em>, <em class="sig-param">plan=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">rmq_version=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">url=None</em>, <em class="sig-param">vhost=None</em>, <em class="sig-param">vpc_subnet=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudamqp.Instance.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">apikey=None</em>, <em class="sig-param">host=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">nodes=None</em>, <em class="sig-param">plan=None</em>, <em class="sig-param">ready=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">rmq_version=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">url=None</em>, <em class="sig-param">vhost=None</em>, <em class="sig-param">vpc_subnet=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudamqp.Instance.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Instance resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -330,6 +370,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the instance</p></li>
 <li><p><strong>nodes</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Number of nodes in cluster (plan must support it)</p></li>
 <li><p><strong>plan</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the plan, valid options are: lemur, tiger, bunny, rabbit, panda, ape, hippo, lion</p></li>
+<li><p><strong>ready</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Flag describing if the resource is ready</p></li>
 <li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the region you want to create your instance in</p></li>
 <li><p><strong>rmq_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – RabbitMQ version</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Tag the instances with optional tags</p></li>
@@ -362,6 +403,278 @@ into a format of their choosing before writing those properties to the resource 
 <dl class="method">
 <dt id="pulumi_cloudamqp.Instance.translate_input_property">
 <code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudamqp.Instance.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_cloudamqp.IntegrationLog">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudamqp.</code><code class="sig-name descname">IntegrationLog</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">access_key_id=None</em>, <em class="sig-param">host_port=None</em>, <em class="sig-param">instance_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">secret_access_key=None</em>, <em class="sig-param">token=None</em>, <em class="sig-param">url=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudamqp.IntegrationLog" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a IntegrationLog resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] access_key_id: AWS access key identifier. (Cloudwatch)
+:param pulumi.Input[str] host_port: Destination to send the logs. (Splunk)
+:param pulumi.Input[float] instance_id: Instance identifier used to make proxy calls
+:param pulumi.Input[str] name: The name of log integration
+:param pulumi.Input[str] region: The region hosting integration service. (Cloudwatch)
+:param pulumi.Input[str] secret_access_key: AWS secret access key. (Cloudwatch)
+:param pulumi.Input[str] token: The token used for authentication. (Loggly, Logentries, Splunk)
+:param pulumi.Input[str] url: The URL to push the logs to. (Papertrail)</p>
+<dl class="attribute">
+<dt id="pulumi_cloudamqp.IntegrationLog.access_key_id">
+<code class="sig-name descname">access_key_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudamqp.IntegrationLog.access_key_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>AWS access key identifier. (Cloudwatch)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_cloudamqp.IntegrationLog.host_port">
+<code class="sig-name descname">host_port</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudamqp.IntegrationLog.host_port" title="Permalink to this definition">¶</a></dt>
+<dd><p>Destination to send the logs. (Splunk)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_cloudamqp.IntegrationLog.instance_id">
+<code class="sig-name descname">instance_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudamqp.IntegrationLog.instance_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Instance identifier used to make proxy calls</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_cloudamqp.IntegrationLog.name">
+<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudamqp.IntegrationLog.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of log integration</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_cloudamqp.IntegrationLog.region">
+<code class="sig-name descname">region</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudamqp.IntegrationLog.region" title="Permalink to this definition">¶</a></dt>
+<dd><p>The region hosting integration service. (Cloudwatch)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_cloudamqp.IntegrationLog.secret_access_key">
+<code class="sig-name descname">secret_access_key</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudamqp.IntegrationLog.secret_access_key" title="Permalink to this definition">¶</a></dt>
+<dd><p>AWS secret access key. (Cloudwatch)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_cloudamqp.IntegrationLog.token">
+<code class="sig-name descname">token</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudamqp.IntegrationLog.token" title="Permalink to this definition">¶</a></dt>
+<dd><p>The token used for authentication. (Loggly, Logentries, Splunk)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_cloudamqp.IntegrationLog.url">
+<code class="sig-name descname">url</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudamqp.IntegrationLog.url" title="Permalink to this definition">¶</a></dt>
+<dd><p>The URL to push the logs to. (Papertrail)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_cloudamqp.IntegrationLog.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">access_key_id=None</em>, <em class="sig-param">host_port=None</em>, <em class="sig-param">instance_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">secret_access_key=None</em>, <em class="sig-param">token=None</em>, <em class="sig-param">url=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudamqp.IntegrationLog.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing IntegrationLog resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>access_key_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – AWS access key identifier. (Cloudwatch)</p></li>
+<li><p><strong>host_port</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Destination to send the logs. (Splunk)</p></li>
+<li><p><strong>instance_id</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Instance identifier used to make proxy calls</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of log integration</p></li>
+<li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region hosting integration service. (Cloudwatch)</p></li>
+<li><p><strong>secret_access_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – AWS secret access key. (Cloudwatch)</p></li>
+<li><p><strong>token</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The token used for authentication. (Loggly, Logentries, Splunk)</p></li>
+<li><p><strong>url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The URL to push the logs to. (Papertrail)</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_cloudamqp.IntegrationLog.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudamqp.IntegrationLog.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_cloudamqp.IntegrationLog.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudamqp.IntegrationLog.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_cloudamqp.IntegrationMetric">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudamqp.</code><code class="sig-name descname">IntegrationMetric</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">access_key_id=None</em>, <em class="sig-param">api_key=None</em>, <em class="sig-param">email=None</em>, <em class="sig-param">instance_id=None</em>, <em class="sig-param">license_key=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">queue_whitelist=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">secret_access_key=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vhost_whitelist=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudamqp.IntegrationMetric" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a IntegrationMetric resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] access_key_id: AWS access key identifier. (Cloudwatch)
+:param pulumi.Input[str] api_key: The API key for the integration service. (Librato)
+:param pulumi.Input[str] email: The email address registred for the integration service. (Librato)
+:param pulumi.Input[float] instance_id: Instance identifier
+:param pulumi.Input[str] license_key: The license key registred for the integration service. (New Relic)
+:param pulumi.Input[str] name: The name of metrics integration
+:param pulumi.Input[str] queue_whitelist: (optional) whitelist using regular expression
+:param pulumi.Input[str] region: AWS region for Cloudwatch and [US/EU] for Data dog/New relic. (Cloudwatch, Data Dog, New Relic)
+:param pulumi.Input[str] secret_access_key: AWS secret key. (Cloudwatch)
+:param pulumi.Input[str] tags: (optional) tags. E.g. env=prod,region=europe
+:param pulumi.Input[str] vhost_whitelist: (optional) whitelist using regular expression</p>
+<dl class="attribute">
+<dt id="pulumi_cloudamqp.IntegrationMetric.access_key_id">
+<code class="sig-name descname">access_key_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudamqp.IntegrationMetric.access_key_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>AWS access key identifier. (Cloudwatch)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_cloudamqp.IntegrationMetric.api_key">
+<code class="sig-name descname">api_key</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudamqp.IntegrationMetric.api_key" title="Permalink to this definition">¶</a></dt>
+<dd><p>The API key for the integration service. (Librato)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_cloudamqp.IntegrationMetric.email">
+<code class="sig-name descname">email</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudamqp.IntegrationMetric.email" title="Permalink to this definition">¶</a></dt>
+<dd><p>The email address registred for the integration service. (Librato)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_cloudamqp.IntegrationMetric.instance_id">
+<code class="sig-name descname">instance_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudamqp.IntegrationMetric.instance_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Instance identifier</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_cloudamqp.IntegrationMetric.license_key">
+<code class="sig-name descname">license_key</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudamqp.IntegrationMetric.license_key" title="Permalink to this definition">¶</a></dt>
+<dd><p>The license key registred for the integration service. (New Relic)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_cloudamqp.IntegrationMetric.name">
+<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudamqp.IntegrationMetric.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of metrics integration</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_cloudamqp.IntegrationMetric.queue_whitelist">
+<code class="sig-name descname">queue_whitelist</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudamqp.IntegrationMetric.queue_whitelist" title="Permalink to this definition">¶</a></dt>
+<dd><p>(optional) whitelist using regular expression</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_cloudamqp.IntegrationMetric.region">
+<code class="sig-name descname">region</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudamqp.IntegrationMetric.region" title="Permalink to this definition">¶</a></dt>
+<dd><p>AWS region for Cloudwatch and [US/EU] for Data dog/New relic. (Cloudwatch, Data Dog, New Relic)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_cloudamqp.IntegrationMetric.secret_access_key">
+<code class="sig-name descname">secret_access_key</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudamqp.IntegrationMetric.secret_access_key" title="Permalink to this definition">¶</a></dt>
+<dd><p>AWS secret key. (Cloudwatch)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_cloudamqp.IntegrationMetric.tags">
+<code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudamqp.IntegrationMetric.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>(optional) tags. E.g. env=prod,region=europe</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_cloudamqp.IntegrationMetric.vhost_whitelist">
+<code class="sig-name descname">vhost_whitelist</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudamqp.IntegrationMetric.vhost_whitelist" title="Permalink to this definition">¶</a></dt>
+<dd><p>(optional) whitelist using regular expression</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_cloudamqp.IntegrationMetric.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">access_key_id=None</em>, <em class="sig-param">api_key=None</em>, <em class="sig-param">email=None</em>, <em class="sig-param">instance_id=None</em>, <em class="sig-param">license_key=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">queue_whitelist=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">secret_access_key=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vhost_whitelist=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudamqp.IntegrationMetric.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing IntegrationMetric resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>access_key_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – AWS access key identifier. (Cloudwatch)</p></li>
+<li><p><strong>api_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The API key for the integration service. (Librato)</p></li>
+<li><p><strong>email</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The email address registred for the integration service. (Librato)</p></li>
+<li><p><strong>instance_id</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Instance identifier</p></li>
+<li><p><strong>license_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The license key registred for the integration service. (New Relic)</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of metrics integration</p></li>
+<li><p><strong>queue_whitelist</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – (optional) whitelist using regular expression</p></li>
+<li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – AWS region for Cloudwatch and [US/EU] for Data dog/New relic. (Cloudwatch, Data Dog, New Relic)</p></li>
+<li><p><strong>secret_access_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – AWS secret key. (Cloudwatch)</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – (optional) tags. E.g. env=prod,region=europe</p></li>
+<li><p><strong>vhost_whitelist</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – (optional) whitelist using regular expression</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_cloudamqp.IntegrationMetric.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudamqp.IntegrationMetric.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_cloudamqp.IntegrationMetric.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudamqp.IntegrationMetric.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -858,6 +1171,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="function">
+<dt id="pulumi_cloudamqp.get_alarm">
+<code class="sig-prename descclassname">pulumi_cloudamqp.</code><code class="sig-name descname">get_alarm</code><span class="sig-paren">(</span><em class="sig-param">alarm_id=None</em>, <em class="sig-param">instance_id=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudamqp.get_alarm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use this data source to access information about an existing resource.</p>
+</dd></dl>
+
+<dl class="function">
 <dt id="pulumi_cloudamqp.get_credentials">
 <code class="sig-prename descclassname">pulumi_cloudamqp.</code><code class="sig-name descname">get_credentials</code><span class="sig-paren">(</span><em class="sig-param">instance_id=None</em>, <em class="sig-param">password=None</em>, <em class="sig-param">username=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudamqp.get_credentials" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing resource.</p>
@@ -866,6 +1185,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="function">
 <dt id="pulumi_cloudamqp.get_instance">
 <code class="sig-prename descclassname">pulumi_cloudamqp.</code><code class="sig-name descname">get_instance</code><span class="sig-paren">(</span><em class="sig-param">instance_id=None</em>, <em class="sig-param">vpc_subnet=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudamqp.get_instance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use this data source to access information about an existing resource.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_cloudamqp.get_notification">
+<code class="sig-prename descclassname">pulumi_cloudamqp.</code><code class="sig-name descname">get_notification</code><span class="sig-paren">(</span><em class="sig-param">instance_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">recipient_id=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudamqp.get_notification" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing resource.</p>
 </dd></dl>
 

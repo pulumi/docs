@@ -32,12 +32,8 @@ Use a <code class="docutils literal notranslate"><span class="pre">acm.Certifica
 deploy the required validation records and wait for validation to complete.</p>
 <p>Domain validation through E-Mail is also supported but should be avoided as it requires a manual step outside
 of this provider.</p>
-<p>It’s recommended to specify <code class="docutils literal notranslate"><span class="pre">create_before_destroy</span> <span class="pre">=</span> <span class="pre">true</span></code> in a [lifecycle][1] block to replace a certificate
+<p>It’s recommended to specify <code class="docutils literal notranslate"><span class="pre">create_before_destroy</span> <span class="pre">=</span> <span class="pre">true</span></code> in a <a class="reference external" href="https://www.terraform.io/docs/configuration/resources.html#lifecycle">lifecycle</a> block to replace a certificate
 which is currently in use (eg, by <code class="docutils literal notranslate"><span class="pre">lb.Listener</span></code>).</p>
-<p>Supported nested arguments for the <code class="docutils literal notranslate"><span class="pre">options</span></code> configuration block:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">certificate_transparency_logging_preference</span></code> - (Optional) Specifies whether certificate details should be added to a certificate transparency log. Valid values are <code class="docutils literal notranslate"><span class="pre">ENABLED</span></code> or <code class="docutils literal notranslate"><span class="pre">DISABLED</span></code>. See <a class="reference external" href="https://docs.aws.amazon.com/acm/latest/userguide/acm-concepts.html#concept-transparency">https://docs.aws.amazon.com/acm/latest/userguide/acm-concepts.html#concept-transparency</a> for more details.</p></li>
-</ul>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -68,7 +64,7 @@ which is currently in use (eg, by <code class="docutils literal notranslate"><sp
 </div>
 <p>The <strong>options</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">certificateTransparencyLoggingPreference</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">certificateTransparencyLoggingPreference</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies whether certificate details should be added to a certificate transparency log. Valid values are <code class="docutils literal notranslate"><span class="pre">ENABLED</span></code> or <code class="docutils literal notranslate"><span class="pre">DISABLED</span></code>. See <a class="reference external" href="https://docs.aws.amazon.com/acm/latest/userguide/acm-concepts.html#concept-transparency">https://docs.aws.amazon.com/acm/latest/userguide/acm-concepts.html#concept-transparency</a> for more details.</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_aws.acm.Certificate.arn">
@@ -194,7 +190,7 @@ properties used to qualify the lookup.</p>
 </ul>
 <p>The <strong>options</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">certificateTransparencyLoggingPreference</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">certificateTransparencyLoggingPreference</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies whether certificate details should be added to a certificate transparency log. Valid values are <code class="docutils literal notranslate"><span class="pre">ENABLED</span></code> or <code class="docutils literal notranslate"><span class="pre">DISABLED</span></code>. See <a class="reference external" href="https://docs.aws.amazon.com/acm/latest/userguide/acm-concepts.html#concept-transparency">https://docs.aws.amazon.com/acm/latest/userguide/acm-concepts.html#concept-transparency</a> for more details.</p></li>
 </ul>
 </dd></dl>
 
@@ -338,7 +334,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.acm.GetCertificateResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.acm.GetCertificateResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 </dd></dl>

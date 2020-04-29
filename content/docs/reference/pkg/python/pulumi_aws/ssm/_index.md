@@ -367,15 +367,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Provides an SSM Document resource</p>
 <blockquote>
 <div><p><strong>NOTE on updating SSM documents:</strong> Only documents with a schema version of 2.0
-or greater can update their content once created, see [SSM Schema Features][1]. To update a document with an older
+or greater can update their content once created, see <a class="reference external" href="http://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-ssm-docs.html#document-schemas-features">SSM Schema Features</a>. To update a document with an older
 schema version you must recreate the resource.</p>
 </div></blockquote>
-<p>The <code class="docutils literal notranslate"><span class="pre">attachments_source</span></code> block supports the following:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> - (Required) The key describing the location of an attachment to a document. Valid key types include: <code class="docutils literal notranslate"><span class="pre">SourceUrl</span></code> and <code class="docutils literal notranslate"><span class="pre">S3FileUrl</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> - (Required) The value describing the location of an attachment to a document</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> - (Optional) The name of the document attachment file</p></li>
-</ul>
 <p>The permissions attribute specifies how you want to share the document. If you share a document privately,
 you must specify the AWS user account IDs for those people who can use the document. If you share a document
 publicly, you must specify All as the account ID.</p>
@@ -402,9 +396,9 @@ publicly, you must specify All as the account ID.</p>
 </dl>
 <p>The <strong>attachments_sources</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the document.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The key describing the location of an attachment to a document. Valid key types include: <code class="docutils literal notranslate"><span class="pre">SourceUrl</span></code> and <code class="docutils literal notranslate"><span class="pre">S3FileUrl</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the document attachment file</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The value describing the location of an attachment to a document</p></li>
 </ul>
 <p>The <strong>permissions</strong> object supports the following:</p>
 <ul class="simple">
@@ -416,9 +410,9 @@ publicly, you must specify All as the account ID.</p>
 <code class="sig-name descname">attachments_sources</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ssm.Document.attachments_sources" title="Permalink to this definition">¶</a></dt>
 <dd><p>One or more configuration blocks describing attachments sources to a version of a document. Defined below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the document.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The key describing the location of an attachment to a document. Valid key types include: <code class="docutils literal notranslate"><span class="pre">SourceUrl</span></code> and <code class="docutils literal notranslate"><span class="pre">S3FileUrl</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the document attachment file</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - The value describing the location of an attachment to a document</p></li>
 </ul>
 </dd></dl>
 
@@ -575,9 +569,9 @@ properties used to qualify the lookup.</p>
 </dl>
 <p>The <strong>attachments_sources</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the document.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The key describing the location of an attachment to a document. Valid key types include: <code class="docutils literal notranslate"><span class="pre">SourceUrl</span></code> and <code class="docutils literal notranslate"><span class="pre">S3FileUrl</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the document attachment file</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The value describing the location of an attachment to a document</p></li>
 </ul>
 <p>The <strong>parameters</strong> object supports the following:</p>
 <ul class="simple">
@@ -656,7 +650,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.ssm.GetDocumentResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ssm.GetDocumentResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 </dd></dl>
@@ -668,7 +662,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.ssm.GetParameterResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ssm.GetParameterResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 </dd></dl>
@@ -686,7 +680,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.ssm.GetPatchBaselineResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ssm.GetPatchBaselineResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1539,7 +1533,6 @@ of them is specified.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">enableNonSecurity</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Boolean enabling the application of non-security updates. The default value is ‘false’. Valid for Linux instances only.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">patchFilters</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The patch filter group that defines the criteria for the rule. Up to 5 patch filters can be specified per approval rule using Key/Value pairs. Valid Keys are <code class="docutils literal notranslate"><span class="pre">PATCH_SET</span> <span class="pre">|</span> <span class="pre">PRODUCT</span> <span class="pre">|</span> <span class="pre">CLASSIFICATION</span> <span class="pre">|</span> <span class="pre">MSRC_SEVERITY</span> <span class="pre">|</span> <span class="pre">PATCH_ID</span></code>.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">PATCH_SET</span></code> defaults to <code class="docutils literal notranslate"><span class="pre">OS</span></code> if unspecified</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
 </ul>
@@ -1560,7 +1553,6 @@ of them is specified.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">enableNonSecurity</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Boolean enabling the application of non-security updates. The default value is ‘false’. Valid for Linux instances only.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">patchFilters</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - The patch filter group that defines the criteria for the rule. Up to 5 patch filters can be specified per approval rule using Key/Value pairs. Valid Keys are <code class="docutils literal notranslate"><span class="pre">PATCH_SET</span> <span class="pre">|</span> <span class="pre">PRODUCT</span> <span class="pre">|</span> <span class="pre">CLASSIFICATION</span> <span class="pre">|</span> <span class="pre">MSRC_SEVERITY</span> <span class="pre">|</span> <span class="pre">PATCH_ID</span></code>.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">PATCH_SET</span></code> defaults to <code class="docutils literal notranslate"><span class="pre">OS</span></code> if unspecified</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
 </ul>
@@ -1650,7 +1642,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">enableNonSecurity</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Boolean enabling the application of non-security updates. The default value is ‘false’. Valid for Linux instances only.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">patchFilters</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The patch filter group that defines the criteria for the rule. Up to 5 patch filters can be specified per approval rule using Key/Value pairs. Valid Keys are <code class="docutils literal notranslate"><span class="pre">PATCH_SET</span> <span class="pre">|</span> <span class="pre">PRODUCT</span> <span class="pre">|</span> <span class="pre">CLASSIFICATION</span> <span class="pre">|</span> <span class="pre">MSRC_SEVERITY</span> <span class="pre">|</span> <span class="pre">PATCH_ID</span></code>.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">PATCH_SET</span></code> defaults to <code class="docutils literal notranslate"><span class="pre">OS</span></code> if unspecified</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
 </ul>
@@ -1787,14 +1778,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ssm.ResourceDataSync">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ssm.</code><code class="sig-name descname">ResourceDataSync</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">s3_destination=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ssm.ResourceDataSync" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a SSM resource data sync.</p>
-<p><code class="docutils literal notranslate"><span class="pre">s3_destination</span></code> supports the following:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">bucket_name</span></code> - (Required) Name of S3 bucket where the aggregated data is stored.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">region</span></code> - (Required) Region with the bucket targeted by the Resource Data Sync.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">kms_key_arn</span></code> - (Optional) ARN of an encryption key for a destination in Amazon S3.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">prefix</span></code> - (Optional) Prefix for the bucket.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">sync_format</span></code> - (Optional) A supported sync format. Only JsonSerDe is currently supported. Defaults to JsonSerDe.</p></li>
-</ul>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1807,11 +1790,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 <p>The <strong>s3_destination</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">bucket_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">kms_key_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">prefix</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">region</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">syncFormat</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bucket_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Name of S3 bucket where the aggregated data is stored.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kms_key_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - ARN of an encryption key for a destination in Amazon S3.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">prefix</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Prefix for the bucket.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">region</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Region with the bucket targeted by the Resource Data Sync.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">syncFormat</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A supported sync format. Only JsonSerDe is currently supported. Defaults to JsonSerDe.</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_aws.ssm.ResourceDataSync.name">
@@ -1824,11 +1807,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">s3_destination</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ssm.ResourceDataSync.s3_destination" title="Permalink to this definition">¶</a></dt>
 <dd><p>Amazon S3 configuration details for the sync.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">bucket_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">kms_key_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">prefix</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">region</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">syncFormat</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bucket_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Name of S3 bucket where the aggregated data is stored.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kms_key_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - ARN of an encryption key for a destination in Amazon S3.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">prefix</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Prefix for the bucket.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">region</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Region with the bucket targeted by the Resource Data Sync.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">syncFormat</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A supported sync format. Only JsonSerDe is currently supported. Defaults to JsonSerDe.</p></li>
 </ul>
 </dd></dl>
 
@@ -1850,11 +1833,11 @@ properties used to qualify the lookup.</p>
 </dl>
 <p>The <strong>s3_destination</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">bucket_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">kms_key_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">prefix</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">region</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">syncFormat</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bucket_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Name of S3 bucket where the aggregated data is stored.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kms_key_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - ARN of an encryption key for a destination in Amazon S3.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">prefix</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Prefix for the bucket.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">region</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Region with the bucket targeted by the Resource Data Sync.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">syncFormat</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A supported sync format. Only JsonSerDe is currently supported. Defaults to JsonSerDe.</p></li>
 </ul>
 </dd></dl>
 

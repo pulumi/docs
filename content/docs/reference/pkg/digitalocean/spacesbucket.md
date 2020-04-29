@@ -87,7 +87,7 @@ const foobar = new digitalocean.SpacesBucket("foobar", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">SpacesBucket</span><span class="p">(resource_name, opts=None, </span>acl=None<span class="p">, </span>cors_rules=None<span class="p">, </span>force_destroy=None<span class="p">, </span>lifecycle_rules=None<span class="p">, </span>name=None<span class="p">, </span>region=None<span class="p">, </span>versioning=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">SpacesBucket</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>acl=None<span class="p">, </span>cors_rules=None<span class="p">, </span>force_destroy=None<span class="p">, </span>lifecycle_rules=None<span class="p">, </span>name=None<span class="p">, </span>region=None<span class="p">, </span>versioning=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

@@ -98,7 +98,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the Dns Servers</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Provide description for your DNS server</p></li>
 <li><p><strong>name_servers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Name or IP address of the DNS server</p></li>
 <li><p><strong>number_of_dots</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Configures the number of dots needed in a name before an initial absolute query will be made.</p></li>
 <li><p><strong>searches</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Specify what domains you want to search</p></li>
@@ -108,7 +108,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_f5bigip.sys.Dns.description">
 <code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_f5bigip.sys.Dns.description" title="Permalink to this definition">¶</a></dt>
-<dd><p>Name of the Dns Servers</p>
+<dd><p>Provide description for your DNS server</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -140,7 +140,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the Dns Servers</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Provide description for your DNS server</p></li>
 <li><p><strong>name_servers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Name or IP address of the DNS server</p></li>
 <li><p><strong>number_of_dots</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Configures the number of dots needed in a name before an initial absolute query will be made.</p></li>
 <li><p><strong>searches</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Specify what domains you want to search</p></li>
