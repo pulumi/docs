@@ -1,8 +1,8 @@
 ---
-title: "Helping Support Kubernetes Through Faster, Easier Test Environment Creation with Pulumi"
-date: 2020-04-28T16:04:16-05:00
-meta_desc:
-meta_image: meta.png
+title: "Supporting Kubernetes with Easier Test Environment Creation"
+date: 2020-04-30
+meta_desc: "Scott Lowe uses Pulumi to quickly create Kubernetes environments for testing."
+meta_image: scott_lowe.png
 authors:
     - scott-lowe
 tags:
@@ -19,7 +19,7 @@ For this guest post, Scott demonstrates how he uses Pulumi to deploy AWS test en
 
 The Cluster API project is a Kubernetes project for implementing a declarative API to manage the lifecycle of a Kubernetes cluster from creation, configuration, and maintenance. The project lives outside of the Kubernetes core project but follows best practices for using a declarative API. Ultimately, it seeks to define everyday operations, provide a default implementation, and the ability to swap between implementations seamlessly.
 
-Cluster API allows you to define Kubernetes clusters as a Kubernetes resource. It lets you use the Kubernetes API to manage Kubernetes clusters, which sounds a little bit like inception, but it greatly simplifies lifecycle management both on-prem and in the cloud. 
+Cluster API allows you to define Kubernetes clusters as a Kubernetes resource. It lets you use the Kubernetes API to manage Kubernetes clusters, which sounds a little bit like inception, but it greatly simplifies lifecycle management both on-prem and in the cloud.
 
 ## Benefits of Infrastructure as Code
 
@@ -41,9 +41,9 @@ Maps provide different configuration values for each region, such as different I
 
 A second Pulumi project, again with four stacks, is used to spin up AWS EC2 instances, which are used as Cluster API management clusters. This second project creates instances inside the infrastructure that was spun up by the first project. A stack reference is used to refer to a stack in the first project; this connection is what enables the second project to place its resources inside the infrastructure created by the first project.
 
-![](./scott_lowe_3.png)
+![Cluster API](./scott_lowe_3.png)
 
-Once there are a couple of instances running in the region, native Kubernetes tools bootstrap the initial Kubernetes cluster for that region. This first Kubernetes cluster becomes the management cluster, and from there, it's possible to create additional Kubernetes clusters as needed using Cluster API. 
+Once there are a couple of instances running in the region, native Kubernetes tools bootstrap the initial Kubernetes cluster for that region. This first Kubernetes cluster becomes the management cluster, and from there, it's possible to create additional Kubernetes clusters as needed using Cluster API.
 
 Aside from helping create clusters in multiple regions, Pulumi makes it easy to spin up other, independent new environments for testing. A third Pulumi project creates a VPC with all the necessary added components (subnets, route tables, route table associations, NAT gateways, and an Internet gateway) for testing other Kubernetes-related technologies or projects. Because this environment is ephemeral, it isn't parameterized for multiple regions and is typically used only within a single AWS region.
 
