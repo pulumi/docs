@@ -180,7 +180,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_gcp.organizations.GetActiveFolderResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.GetActiveFolderResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -198,7 +198,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_gcp.organizations.GetBillingAccountResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.GetBillingAccountResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -228,7 +228,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_gcp.organizations.GetClientConfigResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.GetClientConfigResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -264,7 +264,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_gcp.organizations.GetClientOpenIdUserInfoResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.GetClientOpenIdUserInfoResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 </dd></dl>
@@ -288,7 +288,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_gcp.organizations.GetFolderResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.GetFolderResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -324,7 +324,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_gcp.organizations.GetIAMPolicyResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.GetIAMPolicyResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -355,7 +355,7 @@ referencing from a resource that supports IAM.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.organizations.GetOrganizationResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.GetOrganizationResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -385,7 +385,7 @@ referencing from a resource that supports IAM.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.organizations.GetProjectResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.GetProjectResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 </dd></dl>
@@ -1044,7 +1044,7 @@ documentation</a> and
 </ul>
 <p>The <strong>list_policy</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">allow</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">allow</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - or <code class="docutils literal notranslate"><span class="pre">deny</span></code> - (Optional) One or the other must be set.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">all</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - The policy allows or denies all values.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The policy can define specific values that are allowed or denied.</p></li>
@@ -1090,7 +1090,7 @@ are inherited, meaning the values set in this Policy are added to the values inh
 <code class="sig-name descname">list_policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.Policy.list_policy" title="Permalink to this definition">¶</a></dt>
 <dd><p>A policy that can define specific values that are allowed or denied for the given constraint. It can also be used to allow or deny all values. Structure is documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">allow</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">allow</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - or <code class="docutils literal notranslate"><span class="pre">deny</span></code> - (Optional) One or the other must be set.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">all</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - The policy allows or denies all values.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - The policy can define specific values that are allowed or denied.</p></li>
@@ -1164,7 +1164,7 @@ properties used to qualify the lookup.</p>
 </ul>
 <p>The <strong>list_policy</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">allow</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">allow</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - or <code class="docutils literal notranslate"><span class="pre">deny</span></code> - (Optional) One or the other must be set.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">all</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - The policy allows or denies all values.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The policy can define specific values that are allowed or denied.</p></li>

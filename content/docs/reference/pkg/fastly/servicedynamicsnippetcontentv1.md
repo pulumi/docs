@@ -22,7 +22,7 @@ meta_desc: "Explore the ServiceDynamicSnippetContentv1 resource of the Fastly pa
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ServiceDynamicSnippetContentv1</span><span class="p">(resource_name, opts=None, </span>content=None<span class="p">, </span>service_id=None<span class="p">, </span>snippet_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ServiceDynamicSnippetContentv1</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>content=None<span class="p">, </span>service_id=None<span class="p">, </span>snippet_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

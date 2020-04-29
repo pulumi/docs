@@ -35,10 +35,13 @@ monitor, etc.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the source (max of 1024 characters).</p></li>
-<li><p><strong>display_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The source’s display name. A source’s display name must be unique amongst its siblings, for example, two sources
-with the same parent can’t share the same display name. The display name must start and end with a letter or digit, may
-contain letters, digits, spaces, hyphens, and underscores, and can be no longer than 32 characters.</p></li>
-<li><p><strong>organization</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The organization whose Cloud Security Command Center the Source lives in.</p></li>
+<li><p><strong>display_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The source’s display name. A source’s display name must be unique
+amongst its siblings, for example, two sources with the same parent
+can’t share the same display name. The display name must start and end
+with a letter or digit, may contain letters, digits, spaces, hyphens,
+and underscores, and can be no longer than 32 characters.</p></li>
+<li><p><strong>organization</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The organization whose Cloud Security Command Center the Source
+lives in.</p></li>
 </ul>
 </dd>
 </dl>
@@ -51,9 +54,11 @@ contain letters, digits, spaces, hyphens, and underscores, and can be no longer 
 <dl class="attribute">
 <dt id="pulumi_gcp.securitycenter.Source.display_name">
 <code class="sig-name descname">display_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.securitycenter.Source.display_name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The source’s display name. A source’s display name must be unique amongst its siblings, for example, two sources
-with the same parent can’t share the same display name. The display name must start and end with a letter or digit, may
-contain letters, digits, spaces, hyphens, and underscores, and can be no longer than 32 characters.</p>
+<dd><p>The source’s display name. A source’s display name must be unique
+amongst its siblings, for example, two sources with the same parent
+can’t share the same display name. The display name must start and end
+with a letter or digit, may contain letters, digits, spaces, hyphens,
+and underscores, and can be no longer than 32 characters.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -65,7 +70,8 @@ contain letters, digits, spaces, hyphens, and underscores, and can be no longer 
 <dl class="attribute">
 <dt id="pulumi_gcp.securitycenter.Source.organization">
 <code class="sig-name descname">organization</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.securitycenter.Source.organization" title="Permalink to this definition">¶</a></dt>
-<dd><p>The organization whose Cloud Security Command Center the Source lives in.</p>
+<dd><p>The organization whose Cloud Security Command Center the Source
+lives in.</p>
 </dd></dl>
 
 <dl class="method">
@@ -80,11 +86,14 @@ properties used to qualify the lookup.</p>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the source (max of 1024 characters).</p></li>
-<li><p><strong>display_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The source’s display name. A source’s display name must be unique amongst its siblings, for example, two sources
-with the same parent can’t share the same display name. The display name must start and end with a letter or digit, may
-contain letters, digits, spaces, hyphens, and underscores, and can be no longer than 32 characters.</p></li>
+<li><p><strong>display_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The source’s display name. A source’s display name must be unique
+amongst its siblings, for example, two sources with the same parent
+can’t share the same display name. The display name must start and end
+with a letter or digit, may contain letters, digits, spaces, hyphens,
+and underscores, and can be no longer than 32 characters.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The resource name of this source, in the format ‘organizations/{{organization}}/sources/{{source}}’.</p></li>
-<li><p><strong>organization</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The organization whose Cloud Security Command Center the Source lives in.</p></li>
+<li><p><strong>organization</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The organization whose Cloud Security Command Center the Source
+lives in.</p></li>
 </ul>
 </dd>
 </dl>

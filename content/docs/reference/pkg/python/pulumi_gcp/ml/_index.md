@@ -24,28 +24,31 @@ ready to receive prediction requests. The model itself is just a container.</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>default_version</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The default version of the model. This version will be used to handle prediction requests that do not specify a version.</p></li>
+<li><p><strong>default_version</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The default version of the model. This version will be used to handle
+prediction requests that do not specify a version.  Structure is documented below.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description specified for the model when it was created.</p></li>
 <li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – One or more labels that you can add, to organize your models.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name specified for the model.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name specified for the version when it was created.</p></li>
 <li><p><strong>online_prediction_console_logging</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If true, online prediction nodes send stderr and stdout streams to Stackdriver Logging</p></li>
 <li><p><strong>online_prediction_logging</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If true, online prediction access logs are sent to StackDriver Logging.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
-<li><p><strong>regions</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The list of regions where the model is going to be deployed. Currently only one region per model is supported</p></li>
+<li><p><strong>regions</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The list of regions where the model is going to be deployed.
+Currently only one region per model is supported</p></li>
 </ul>
 </dd>
 </dl>
 <p>The <strong>default_version</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name specified for the version when it was created.</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_gcp.ml.EngineModel.default_version">
 <code class="sig-name descname">default_version</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.ml.EngineModel.default_version" title="Permalink to this definition">¶</a></dt>
-<dd><p>The default version of the model. This version will be used to handle prediction requests that do not specify a version.</p>
+<dd><p>The default version of the model. This version will be used to handle
+prediction requests that do not specify a version.  Structure is documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name specified for the version when it was created.</p></li>
 </ul>
 </dd></dl>
 
@@ -64,7 +67,7 @@ If it is not provided, the provider project is used.</p></li>
 <dl class="attribute">
 <dt id="pulumi_gcp.ml.EngineModel.name">
 <code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.ml.EngineModel.name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The name specified for the model.</p>
+<dd><p>The name specified for the version when it was created.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -89,7 +92,8 @@ If it is not provided, the provider project is used.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.ml.EngineModel.regions">
 <code class="sig-name descname">regions</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.ml.EngineModel.regions" title="Permalink to this definition">¶</a></dt>
-<dd><p>The list of regions where the model is going to be deployed. Currently only one region per model is supported</p>
+<dd><p>The list of regions where the model is going to be deployed.
+Currently only one region per model is supported</p>
 </dd></dl>
 
 <dl class="method">
@@ -103,21 +107,23 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>default_version</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The default version of the model. This version will be used to handle prediction requests that do not specify a version.</p></li>
+<li><p><strong>default_version</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The default version of the model. This version will be used to handle
+prediction requests that do not specify a version.  Structure is documented below.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description specified for the model when it was created.</p></li>
 <li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – One or more labels that you can add, to organize your models.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name specified for the model.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name specified for the version when it was created.</p></li>
 <li><p><strong>online_prediction_console_logging</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If true, online prediction nodes send stderr and stdout streams to Stackdriver Logging</p></li>
 <li><p><strong>online_prediction_logging</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If true, online prediction access logs are sent to StackDriver Logging.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
-<li><p><strong>regions</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The list of regions where the model is going to be deployed. Currently only one region per model is supported</p></li>
+<li><p><strong>regions</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The list of regions where the model is going to be deployed.
+Currently only one region per model is supported</p></li>
 </ul>
 </dd>
 </dl>
 <p>The <strong>default_version</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name specified for the version when it was created.</p></li>
 </ul>
 </dd></dl>
 

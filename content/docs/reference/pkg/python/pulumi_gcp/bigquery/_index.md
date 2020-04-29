@@ -22,28 +22,29 @@ anything, please consult the source <a class="reference external" href="https://
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>app_profile_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique name of the app profile in the form ‘[<em>a-zA-Z0-9][-</em>.a-zA-Z0-9]*’.</p></li>
+<li><p><strong>app_profile_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique name of the app profile in the form <code class="docutils literal notranslate"><span class="pre">[_a-zA-Z0-9][-_.a-zA-Z0-9]*</span></code>.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Long form description of the use case for this app profile.</p></li>
 <li><p><strong>ignore_warnings</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If true, ignore safety checks when deleting/updating the app profile.</p></li>
 <li><p><strong>instance</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the instance to create the app profile within.</p></li>
-<li><p><strong>multi_cluster_routing_use_any</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If true, read/write requests are routed to the nearest cluster in the instance, and will fail over to the nearest
-cluster that is available in the event of transient errors or delays. Clusters in a region are considered equidistant.
-Choosing this option sacrifices read-your-writes consistency to improve availability.</p></li>
+<li><p><strong>multi_cluster_routing_use_any</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If true, read/write requests are routed to the nearest cluster in the instance, and will fail over to the nearest cluster that is available
+in the event of transient errors or delays. Clusters in a region are considered equidistant. Choosing this option sacrifices read-your-writes
+consistency to improve availability.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
-<li><p><strong>single_cluster_routing</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Use a single-cluster routing policy.</p></li>
+<li><p><strong>single_cluster_routing</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Use a single-cluster routing policy.  Structure is documented below.</p></li>
 </ul>
 </dd>
 </dl>
 <p>The <strong>single_cluster_routing</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">allowTransactionalWrites</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">cluster_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowTransactionalWrites</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If true, CheckAndMutateRow and ReadModifyWriteRow requests are allowed by this app profile.
+It is unsafe to send these requests to the same table/row/column in multiple clusters.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cluster_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The cluster to which read/write requests should be routed.</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_gcp.bigquery.AppProfile.app_profile_id">
 <code class="sig-name descname">app_profile_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.AppProfile.app_profile_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>The unique name of the app profile in the form ‘[<em>a-zA-Z0-9][-</em>.a-zA-Z0-9]*’.</p>
+<dd><p>The unique name of the app profile in the form <code class="docutils literal notranslate"><span class="pre">[_a-zA-Z0-9][-_.a-zA-Z0-9]*</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -67,9 +68,9 @@ If it is not provided, the provider project is used.</p></li>
 <dl class="attribute">
 <dt id="pulumi_gcp.bigquery.AppProfile.multi_cluster_routing_use_any">
 <code class="sig-name descname">multi_cluster_routing_use_any</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.AppProfile.multi_cluster_routing_use_any" title="Permalink to this definition">¶</a></dt>
-<dd><p>If true, read/write requests are routed to the nearest cluster in the instance, and will fail over to the nearest
-cluster that is available in the event of transient errors or delays. Clusters in a region are considered equidistant.
-Choosing this option sacrifices read-your-writes consistency to improve availability.</p>
+<dd><p>If true, read/write requests are routed to the nearest cluster in the instance, and will fail over to the nearest cluster that is available
+in the event of transient errors or delays. Clusters in a region are considered equidistant. Choosing this option sacrifices read-your-writes
+consistency to improve availability.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -89,10 +90,11 @@ If it is not provided, the provider project is used.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.bigquery.AppProfile.single_cluster_routing">
 <code class="sig-name descname">single_cluster_routing</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.AppProfile.single_cluster_routing" title="Permalink to this definition">¶</a></dt>
-<dd><p>Use a single-cluster routing policy.</p>
+<dd><p>Use a single-cluster routing policy.  Structure is documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">allowTransactionalWrites</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">cluster_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowTransactionalWrites</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - If true, CheckAndMutateRow and ReadModifyWriteRow requests are allowed by this app profile.
+It is unsafe to send these requests to the same table/row/column in multiple clusters.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cluster_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The cluster to which read/write requests should be routed.</p></li>
 </ul>
 </dd></dl>
 
@@ -107,25 +109,26 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>app_profile_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique name of the app profile in the form ‘[<em>a-zA-Z0-9][-</em>.a-zA-Z0-9]*’.</p></li>
+<li><p><strong>app_profile_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique name of the app profile in the form <code class="docutils literal notranslate"><span class="pre">[_a-zA-Z0-9][-_.a-zA-Z0-9]*</span></code>.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Long form description of the use case for this app profile.</p></li>
 <li><p><strong>ignore_warnings</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If true, ignore safety checks when deleting/updating the app profile.</p></li>
 <li><p><strong>instance</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the instance to create the app profile within.</p></li>
-<li><p><strong>multi_cluster_routing_use_any</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If true, read/write requests are routed to the nearest cluster in the instance, and will fail over to the nearest
-cluster that is available in the event of transient errors or delays. Clusters in a region are considered equidistant.
-Choosing this option sacrifices read-your-writes consistency to improve availability.</p></li>
+<li><p><strong>multi_cluster_routing_use_any</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If true, read/write requests are routed to the nearest cluster in the instance, and will fail over to the nearest cluster that is available
+in the event of transient errors or delays. Clusters in a region are considered equidistant. Choosing this option sacrifices read-your-writes
+consistency to improve availability.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique name of the requested app profile. Values are of the form
 ‘projects/<span class="raw-html-m2r"><project></span>/instances/<span class="raw-html-m2r"><instance></span>/appProfiles/<span class="raw-html-m2r"><appProfileId></span>’.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
-<li><p><strong>single_cluster_routing</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Use a single-cluster routing policy.</p></li>
+<li><p><strong>single_cluster_routing</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Use a single-cluster routing policy.  Structure is documented below.</p></li>
 </ul>
 </dd>
 </dl>
 <p>The <strong>single_cluster_routing</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">allowTransactionalWrites</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">cluster_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowTransactionalWrites</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If true, CheckAndMutateRow and ReadModifyWriteRow requests are allowed by this app profile.
+It is unsafe to send these requests to the same table/row/column in multiple clusters.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cluster_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The cluster to which read/write requests should be routed.</p></li>
 </ul>
 </dd></dl>
 
@@ -191,22 +194,27 @@ contains all metadata needed to perform a data transfer.</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>data_refresh_window_days</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of days to look back to automatically refresh the data. For example, if dataRefreshWindowDays = 10, then
-every day BigQuery reingests data for [today-10, today-1], rather than ingesting data for just [today-1]. Only valid if
-the data source supports the feature. Set the value to 0 to use the default value.</p></li>
+<li><p><strong>data_refresh_window_days</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of days to look back to automatically refresh the data.
+For example, if dataRefreshWindowDays = 10, then every day BigQuery
+reingests data for [today-10, today-1], rather than ingesting data for
+just [today-1]. Only valid if the data source supports the feature.
+Set the value to 0 to use the default value.</p></li>
 <li><p><strong>data_source_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The data source id. Cannot be changed once the transfer config is created.</p></li>
 <li><p><strong>destination_dataset_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The BigQuery target dataset id.</p></li>
 <li><p><strong>disabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – When set to true, no runs are scheduled for a given transfer.</p></li>
 <li><p><strong>display_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The user specified display name for the transfer config.</p></li>
-<li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The geographic location where the transfer config should reside. Examples: US, EU, asia-northeast1. The default value is
-US.</p></li>
+<li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The geographic location where the transfer config should reside.
+Examples: US, EU, asia-northeast1. The default value is US.</p></li>
 <li><p><strong>params</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – These parameters are specific to each data source.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
-<li><p><strong>schedule</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Data transfer schedule. If the data source does not support a custom schedule, this should be empty. If it is empty, the
-default value for the data source will be used. The specified times are in UTC. Examples of valid format: 1st,3rd monday
-of month 15:30, every wed,fri of jan, jun 13:15, and first sunday of quarter 00:00. See more explanation about the
-format here: <a class="reference external" href="https://cloud.google.com/appengine/docs/flexible/python/scheduling-jobs-with-cron-yaml#the_schedule_format">https://cloud.google.com/appengine/docs/flexible/python/scheduling-jobs-with-cron-yaml#the_schedule_format</a>
+<li><p><strong>schedule</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Data transfer schedule. If the data source does not support a custom
+schedule, this should be empty. If it is empty, the default value for
+the data source will be used. The specified times are in UTC. Examples
+of valid format: 1st,3rd monday of month 15:30, every wed,fri of jan,
+jun 13:15, and first sunday of quarter 00:00. See more explanation
+about the format here:
+<a class="reference external" href="https://cloud.google.com/appengine/docs/flexible/python/scheduling-jobs-with-cron-yaml#the_schedule_format">https://cloud.google.com/appengine/docs/flexible/python/scheduling-jobs-with-cron-yaml#the_schedule_format</a>
 NOTE: the granularity should be at least 8 hours, or less frequent.</p></li>
 </ul>
 </dd>
@@ -214,9 +222,11 @@ NOTE: the granularity should be at least 8 hours, or less frequent.</p></li>
 <dl class="attribute">
 <dt id="pulumi_gcp.bigquery.DataTransferConfig.data_refresh_window_days">
 <code class="sig-name descname">data_refresh_window_days</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.DataTransferConfig.data_refresh_window_days" title="Permalink to this definition">¶</a></dt>
-<dd><p>The number of days to look back to automatically refresh the data. For example, if dataRefreshWindowDays = 10, then
-every day BigQuery reingests data for [today-10, today-1], rather than ingesting data for just [today-1]. Only valid if
-the data source supports the feature. Set the value to 0 to use the default value.</p>
+<dd><p>The number of days to look back to automatically refresh the data.
+For example, if dataRefreshWindowDays = 10, then every day BigQuery
+reingests data for [today-10, today-1], rather than ingesting data for
+just [today-1]. Only valid if the data source supports the feature.
+Set the value to 0 to use the default value.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -246,8 +256,8 @@ the data source supports the feature. Set the value to 0 to use the default valu
 <dl class="attribute">
 <dt id="pulumi_gcp.bigquery.DataTransferConfig.location">
 <code class="sig-name descname">location</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.DataTransferConfig.location" title="Permalink to this definition">¶</a></dt>
-<dd><p>The geographic location where the transfer config should reside. Examples: US, EU, asia-northeast1. The default value is
-US.</p>
+<dd><p>The geographic location where the transfer config should reside.
+Examples: US, EU, asia-northeast1. The default value is US.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -274,10 +284,13 @@ If it is not provided, the provider project is used.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.bigquery.DataTransferConfig.schedule">
 <code class="sig-name descname">schedule</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.DataTransferConfig.schedule" title="Permalink to this definition">¶</a></dt>
-<dd><p>Data transfer schedule. If the data source does not support a custom schedule, this should be empty. If it is empty, the
-default value for the data source will be used. The specified times are in UTC. Examples of valid format: 1st,3rd monday
-of month 15:30, every wed,fri of jan, jun 13:15, and first sunday of quarter 00:00. See more explanation about the
-format here: <a class="reference external" href="https://cloud.google.com/appengine/docs/flexible/python/scheduling-jobs-with-cron-yaml#the_schedule_format">https://cloud.google.com/appengine/docs/flexible/python/scheduling-jobs-with-cron-yaml#the_schedule_format</a>
+<dd><p>Data transfer schedule. If the data source does not support a custom
+schedule, this should be empty. If it is empty, the default value for
+the data source will be used. The specified times are in UTC. Examples
+of valid format: 1st,3rd monday of month 15:30, every wed,fri of jan,
+jun 13:15, and first sunday of quarter 00:00. See more explanation
+about the format here:
+<a class="reference external" href="https://cloud.google.com/appengine/docs/flexible/python/scheduling-jobs-with-cron-yaml#the_schedule_format">https://cloud.google.com/appengine/docs/flexible/python/scheduling-jobs-with-cron-yaml#the_schedule_format</a>
 NOTE: the granularity should be at least 8 hours, or less frequent.</p>
 </dd></dl>
 
@@ -292,25 +305,30 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>data_refresh_window_days</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of days to look back to automatically refresh the data. For example, if dataRefreshWindowDays = 10, then
-every day BigQuery reingests data for [today-10, today-1], rather than ingesting data for just [today-1]. Only valid if
-the data source supports the feature. Set the value to 0 to use the default value.</p></li>
+<li><p><strong>data_refresh_window_days</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of days to look back to automatically refresh the data.
+For example, if dataRefreshWindowDays = 10, then every day BigQuery
+reingests data for [today-10, today-1], rather than ingesting data for
+just [today-1]. Only valid if the data source supports the feature.
+Set the value to 0 to use the default value.</p></li>
 <li><p><strong>data_source_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The data source id. Cannot be changed once the transfer config is created.</p></li>
 <li><p><strong>destination_dataset_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The BigQuery target dataset id.</p></li>
 <li><p><strong>disabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – When set to true, no runs are scheduled for a given transfer.</p></li>
 <li><p><strong>display_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The user specified display name for the transfer config.</p></li>
-<li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The geographic location where the transfer config should reside. Examples: US, EU, asia-northeast1. The default value is
-US.</p></li>
+<li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The geographic location where the transfer config should reside.
+Examples: US, EU, asia-northeast1. The default value is US.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The resource name of the transfer config. Transfer config names have the form
 projects/{projectId}/locations/{location}/transferConfigs/{configId}. Where configId is usually a uuid, but this is not
 required. The name is ignored when creating a transfer config.</p></li>
 <li><p><strong>params</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – These parameters are specific to each data source.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
-<li><p><strong>schedule</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Data transfer schedule. If the data source does not support a custom schedule, this should be empty. If it is empty, the
-default value for the data source will be used. The specified times are in UTC. Examples of valid format: 1st,3rd monday
-of month 15:30, every wed,fri of jan, jun 13:15, and first sunday of quarter 00:00. See more explanation about the
-format here: <a class="reference external" href="https://cloud.google.com/appengine/docs/flexible/python/scheduling-jobs-with-cron-yaml#the_schedule_format">https://cloud.google.com/appengine/docs/flexible/python/scheduling-jobs-with-cron-yaml#the_schedule_format</a>
+<li><p><strong>schedule</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Data transfer schedule. If the data source does not support a custom
+schedule, this should be empty. If it is empty, the default value for
+the data source will be used. The specified times are in UTC. Examples
+of valid format: 1st,3rd monday of month 15:30, every wed,fri of jan,
+jun 13:15, and first sunday of quarter 00:00. See more explanation
+about the format here:
+<a class="reference external" href="https://cloud.google.com/appengine/docs/flexible/python/scheduling-jobs-with-cron-yaml#the_schedule_format">https://cloud.google.com/appengine/docs/flexible/python/scheduling-jobs-with-cron-yaml#the_schedule_format</a>
 NOTE: the granularity should be at least 8 hours, or less frequent.</p></li>
 </ul>
 </dd>
@@ -373,40 +391,24 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>accesses</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – An array of objects that define dataset access for one or more entities.</p></li>
-<li><p><strong>dataset*id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>A unique ID for this dataset, without the project name. The ID must contain only letters (a-z, A-Z), numbers (0-9), or
-underscores (<a href="#id4"><span class="problematic" id="id5">*</span></a>). The maximum length is 1,024 characters.</p>
-</p></li>
-<li><p><strong>default_encryption_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The default encryption key for all tables in the dataset. Once this property is set, all newly-created partitioned
-tables in the dataset will have encryption key set to this value, unless table creation request (or query) overrides the
-key.</p></li>
-<li><p><strong>default_partition_expiration_ms</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The default partition expiration for all partitioned tables in the dataset, in milliseconds. Once this property is set,
-all newly-created partitioned tables in the dataset will have an ‘expirationMs’ property in the ‘timePartitioning’
-settings set to this value, and changing the value will only affect new tables, not existing ones. The storage in a
-partition will have an expiration time of its partition time plus this value. Setting this property overrides the use of
-‘defaultTableExpirationMs’ for partitioned tables: only one of ‘defaultTableExpirationMs’ and
-‘defaultPartitionExpirationMs’ will be used for any new partitioned table. If you provide an explicit
-‘timePartitioning.expirationMs’ when creating or updating a partitioned table, that value takes precedence over the
-default partition expiration time indicated by this property.</p></li>
-<li><p><strong>default_table_expiration_ms</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The default lifetime of all tables in the dataset, in milliseconds. The minimum value is 3600000 milliseconds (one
-hour). Once this property is set, all newly-created tables in the dataset will have an ‘expirationTime’ property set to
-the creation time plus the value in this property, and changing the value will only affect new tables, not existing
-ones. When the ‘expirationTime’ for a given table is reached, that table will be deleted automatically. If a table’s
-‘expirationTime’ is modified or removed before the table expires, or if you provide an explicit ‘expirationTime’ when
-creating a table, that value takes precedence over the default expiration time indicated by this property.</p></li>
+<li><p><strong>accesses</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – An array of objects that define dataset access for one or more entities.  Structure is documented below.</p></li>
+<li><p><strong>dataset_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the dataset containing this table.</p></li>
+<li><p><strong>default_encryption_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The default encryption key for all tables in the dataset. Once this property is set,
+all newly-created partitioned tables in the dataset will have encryption key set to
+this value, unless table creation request (or query) overrides the key.  Structure is documented below.</p></li>
+<li><p><strong>default_partition_expiration_ms</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The default partition expiration for all partitioned tables in
+the dataset, in milliseconds.</p></li>
+<li><p><strong>default_table_expiration_ms</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The default lifetime of all tables in the dataset, in milliseconds.
+The minimum value is 3600000 milliseconds (one hour).</p></li>
 <li><p><strong>delete_contents_on_destroy</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If set to <code class="docutils literal notranslate"><span class="pre">true</span></code>, delete all the tables in the
 dataset when destroying the resource; otherwise,
 destroying the resource will fail if tables are present.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A user-friendly description of the dataset</p></li>
 <li><p><strong>friendly_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A descriptive name for the dataset</p></li>
-<li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The labels associated with this dataset. You can use these to organize and group your datasets</p></li>
-<li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The geographic location where the dataset should reside. See <a class="reference external" href="https://cloud.google.com/bigquery/docs/dataset-locations">official
-docs</a>. There are two types of locations, regional or
-multi-regional. A regional location is a specific geographic place, such as Tokyo, and a multi-regional location is a
-large geographic area, such as the United States, that contains at least two geographic places. Possible regional values
-include: ‘asia-east1’, ‘asia-northeast1’, ‘asia-southeast1’, ‘australia-southeast1’, ‘europe-north1’, ‘europe-west2’ and
-‘us-east4’. Possible multi-regional values: ‘EU’ and ‘US’. The default value is multi-regional location ‘US’. Changing
-this forces a new resource to be created.</p></li>
+<li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The labels associated with this dataset. You can use these to
+organize and group your datasets</p></li>
+<li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The geographic location where the dataset should reside.
+See <a class="reference external" href="https://cloud.google.com/bigquery/docs/dataset-locations">official docs</a>.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
 </ul>
@@ -414,38 +416,66 @@ If it is not provided, the provider project is used.</p></li>
 </dl>
 <p>The <strong>accesses</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">domain</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">group_by_email</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">role</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">special_group</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">user_by_email</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">view</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">domain</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A domain to grant access to. Any users signed in with the
+domain specified will be granted the specified access</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">group_by_email</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - An email address of a Google Group to grant access to.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">role</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Describes the rights granted to the user specified by the other
+member of the access object. Primitive, Predefined and custom
+roles are supported. Predefined roles that have equivalent
+primitive roles are swapped by the API to their Primitive
+counterparts, and will show a diff post-create. See
+<a class="reference external" href="https://cloud.google.com/bigquery/docs/access-control">official docs</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">special_group</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A special group to grant access to. Possible values include:</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">user_by_email</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - An email address of a user to grant access to. For example:
+<a class="reference external" href="mailto:fred&#37;&#52;&#48;example&#46;com">fred<span>&#64;</span>example<span>&#46;</span>com</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">view</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A view from a different dataset to grant access to. Queries
+executed against that view will have read access to tables in
+this dataset. The role field is not required when this field is
+set. If that view is updated by any user, access to the view
+needs to be granted again via an update operation.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">dataset_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">project_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">table_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dataset_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the dataset containing this table.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">project_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the project containing this table.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">table_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the table. The ID must contain only letters (a-z,
+A-Z), numbers (0-9), or underscores (_). The maximum length
+is 1,024 characters.</p></li>
 </ul>
 </li>
 </ul>
 <p>The <strong>default_encryption_configuration</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">kms_key_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kms_key_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Describes the Cloud KMS encryption key that will be used to protect destination
+BigQuery table. The BigQuery Service Account associated with your project requires
+access to this encryption key.</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_gcp.bigquery.Dataset.accesses">
 <code class="sig-name descname">accesses</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Dataset.accesses" title="Permalink to this definition">¶</a></dt>
-<dd><p>An array of objects that define dataset access for one or more entities.</p>
+<dd><p>An array of objects that define dataset access for one or more entities.  Structure is documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">domain</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">group_by_email</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">role</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">special_group</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">user_by_email</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">view</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">domain</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A domain to grant access to. Any users signed in with the
+domain specified will be granted the specified access</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">group_by_email</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - An email address of a Google Group to grant access to.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">role</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Describes the rights granted to the user specified by the other
+member of the access object. Primitive, Predefined and custom
+roles are supported. Predefined roles that have equivalent
+primitive roles are swapped by the API to their Primitive
+counterparts, and will show a diff post-create. See
+<a class="reference external" href="https://cloud.google.com/bigquery/docs/access-control">official docs</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">special_group</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A special group to grant access to. Possible values include:</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">user_by_email</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - An email address of a user to grant access to. For example:
+<a class="reference external" href="mailto:fred&#37;&#52;&#48;example&#46;com">fred<span>&#64;</span>example<span>&#46;</span>com</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">view</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A view from a different dataset to grant access to. Queries
+executed against that view will have read access to tables in
+this dataset. The role field is not required when this field is
+set. If that view is updated by any user, access to the view
+needs to be granted again via an update operation.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">dataset_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">project_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">table_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dataset_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the dataset containing this table.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">project_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the project containing this table.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">table_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the table. The ID must contain only letters (a-z,
+A-Z), numbers (0-9), or underscores (_). The maximum length
+is 1,024 characters.</p></li>
 </ul>
 </li>
 </ul>
@@ -460,43 +490,34 @@ If it is not provided, the provider project is used.</p></li>
 <dl class="attribute">
 <dt id="pulumi_gcp.bigquery.Dataset.dataset_id">
 <code class="sig-name descname">dataset_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Dataset.dataset_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>A unique ID for this dataset, without the project name. The ID must contain only letters (a-z, A-Z), numbers (0-9), or
-underscores (_). The maximum length is 1,024 characters.</p>
+<dd><p>The ID of the dataset containing this table.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_gcp.bigquery.Dataset.default_encryption_configuration">
 <code class="sig-name descname">default_encryption_configuration</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Dataset.default_encryption_configuration" title="Permalink to this definition">¶</a></dt>
-<dd><p>The default encryption key for all tables in the dataset. Once this property is set, all newly-created partitioned
-tables in the dataset will have encryption key set to this value, unless table creation request (or query) overrides the
-key.</p>
+<dd><p>The default encryption key for all tables in the dataset. Once this property is set,
+all newly-created partitioned tables in the dataset will have encryption key set to
+this value, unless table creation request (or query) overrides the key.  Structure is documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">kms_key_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kms_key_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Describes the Cloud KMS encryption key that will be used to protect destination
+BigQuery table. The BigQuery Service Account associated with your project requires
+access to this encryption key.</p></li>
 </ul>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_gcp.bigquery.Dataset.default_partition_expiration_ms">
 <code class="sig-name descname">default_partition_expiration_ms</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Dataset.default_partition_expiration_ms" title="Permalink to this definition">¶</a></dt>
-<dd><p>The default partition expiration for all partitioned tables in the dataset, in milliseconds. Once this property is set,
-all newly-created partitioned tables in the dataset will have an ‘expirationMs’ property in the ‘timePartitioning’
-settings set to this value, and changing the value will only affect new tables, not existing ones. The storage in a
-partition will have an expiration time of its partition time plus this value. Setting this property overrides the use of
-‘defaultTableExpirationMs’ for partitioned tables: only one of ‘defaultTableExpirationMs’ and
-‘defaultPartitionExpirationMs’ will be used for any new partitioned table. If you provide an explicit
-‘timePartitioning.expirationMs’ when creating or updating a partitioned table, that value takes precedence over the
-default partition expiration time indicated by this property.</p>
+<dd><p>The default partition expiration for all partitioned tables in
+the dataset, in milliseconds.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_gcp.bigquery.Dataset.default_table_expiration_ms">
 <code class="sig-name descname">default_table_expiration_ms</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Dataset.default_table_expiration_ms" title="Permalink to this definition">¶</a></dt>
-<dd><p>The default lifetime of all tables in the dataset, in milliseconds. The minimum value is 3600000 milliseconds (one
-hour). Once this property is set, all newly-created tables in the dataset will have an ‘expirationTime’ property set to
-the creation time plus the value in this property, and changing the value will only affect new tables, not existing
-ones. When the ‘expirationTime’ for a given table is reached, that table will be deleted automatically. If a table’s
-‘expirationTime’ is modified or removed before the table expires, or if you provide an explicit ‘expirationTime’ when
-creating a table, that value takes precedence over the default expiration time indicated by this property.</p>
+<dd><p>The default lifetime of all tables in the dataset, in milliseconds.
+The minimum value is 3600000 milliseconds (one hour).</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -528,7 +549,8 @@ destroying the resource will fail if tables are present.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.bigquery.Dataset.labels">
 <code class="sig-name descname">labels</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Dataset.labels" title="Permalink to this definition">¶</a></dt>
-<dd><p>The labels associated with this dataset. You can use these to organize and group your datasets</p>
+<dd><p>The labels associated with this dataset. You can use these to
+organize and group your datasets</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -540,13 +562,8 @@ destroying the resource will fail if tables are present.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.bigquery.Dataset.location">
 <code class="sig-name descname">location</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Dataset.location" title="Permalink to this definition">¶</a></dt>
-<dd><p>The geographic location where the dataset should reside. See <a class="reference external" href="https://cloud.google.com/bigquery/docs/dataset-locations">official
-docs</a>. There are two types of locations, regional or
-multi-regional. A regional location is a specific geographic place, such as Tokyo, and a multi-regional location is a
-large geographic area, such as the United States, that contains at least two geographic places. Possible regional values
-include: ‘asia-east1’, ‘asia-northeast1’, ‘asia-southeast1’, ‘australia-southeast1’, ‘europe-north1’, ‘europe-west2’ and
-‘us-east4’. Possible multi-regional values: ‘EU’ and ‘US’. The default value is multi-regional location ‘US’. Changing
-this forces a new resource to be created.</p>
+<dd><p>The geographic location where the dataset should reside.
+See <a class="reference external" href="https://cloud.google.com/bigquery/docs/dataset-locations">official docs</a>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -573,43 +590,27 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>accesses</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – An array of objects that define dataset access for one or more entities.</p></li>
+<li><p><strong>accesses</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – An array of objects that define dataset access for one or more entities.  Structure is documented below.</p></li>
 <li><p><strong>creation_time</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The time when this dataset was created, in milliseconds since the epoch.</p></li>
-<li><p><strong>dataset*id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>A unique ID for this dataset, without the project name. The ID must contain only letters (a-z, A-Z), numbers (0-9), or
-underscores (<a href="#id9"><span class="problematic" id="id10">*</span></a>). The maximum length is 1,024 characters.</p>
-</p></li>
-<li><p><strong>default_encryption_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The default encryption key for all tables in the dataset. Once this property is set, all newly-created partitioned
-tables in the dataset will have encryption key set to this value, unless table creation request (or query) overrides the
-key.</p></li>
-<li><p><strong>default_partition_expiration_ms</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The default partition expiration for all partitioned tables in the dataset, in milliseconds. Once this property is set,
-all newly-created partitioned tables in the dataset will have an ‘expirationMs’ property in the ‘timePartitioning’
-settings set to this value, and changing the value will only affect new tables, not existing ones. The storage in a
-partition will have an expiration time of its partition time plus this value. Setting this property overrides the use of
-‘defaultTableExpirationMs’ for partitioned tables: only one of ‘defaultTableExpirationMs’ and
-‘defaultPartitionExpirationMs’ will be used for any new partitioned table. If you provide an explicit
-‘timePartitioning.expirationMs’ when creating or updating a partitioned table, that value takes precedence over the
-default partition expiration time indicated by this property.</p></li>
-<li><p><strong>default_table_expiration_ms</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The default lifetime of all tables in the dataset, in milliseconds. The minimum value is 3600000 milliseconds (one
-hour). Once this property is set, all newly-created tables in the dataset will have an ‘expirationTime’ property set to
-the creation time plus the value in this property, and changing the value will only affect new tables, not existing
-ones. When the ‘expirationTime’ for a given table is reached, that table will be deleted automatically. If a table’s
-‘expirationTime’ is modified or removed before the table expires, or if you provide an explicit ‘expirationTime’ when
-creating a table, that value takes precedence over the default expiration time indicated by this property.</p></li>
+<li><p><strong>dataset_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the dataset containing this table.</p></li>
+<li><p><strong>default_encryption_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The default encryption key for all tables in the dataset. Once this property is set,
+all newly-created partitioned tables in the dataset will have encryption key set to
+this value, unless table creation request (or query) overrides the key.  Structure is documented below.</p></li>
+<li><p><strong>default_partition_expiration_ms</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The default partition expiration for all partitioned tables in
+the dataset, in milliseconds.</p></li>
+<li><p><strong>default_table_expiration_ms</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The default lifetime of all tables in the dataset, in milliseconds.
+The minimum value is 3600000 milliseconds (one hour).</p></li>
 <li><p><strong>delete_contents_on_destroy</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If set to <code class="docutils literal notranslate"><span class="pre">true</span></code>, delete all the tables in the
 dataset when destroying the resource; otherwise,
 destroying the resource will fail if tables are present.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A user-friendly description of the dataset</p></li>
 <li><p><strong>etag</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A hash of the resource.</p></li>
 <li><p><strong>friendly_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A descriptive name for the dataset</p></li>
-<li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The labels associated with this dataset. You can use these to organize and group your datasets</p></li>
+<li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The labels associated with this dataset. You can use these to
+organize and group your datasets</p></li>
 <li><p><strong>last_modified_time</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The date when this dataset or any of its tables was last modified, in milliseconds since the epoch.</p></li>
-<li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The geographic location where the dataset should reside. See <a class="reference external" href="https://cloud.google.com/bigquery/docs/dataset-locations">official
-docs</a>. There are two types of locations, regional or
-multi-regional. A regional location is a specific geographic place, such as Tokyo, and a multi-regional location is a
-large geographic area, such as the United States, that contains at least two geographic places. Possible regional values
-include: ‘asia-east1’, ‘asia-northeast1’, ‘asia-southeast1’, ‘australia-southeast1’, ‘europe-north1’, ‘europe-west2’ and
-‘us-east4’. Possible multi-regional values: ‘EU’ and ‘US’. The default value is multi-regional location ‘US’. Changing
-this forces a new resource to be created.</p>
+<li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The geographic location where the dataset should reside.
+See <a class="reference external" href="https://cloud.google.com/bigquery/docs/dataset-locations">official docs</a>.</p>
 </p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
@@ -619,22 +620,37 @@ If it is not provided, the provider project is used.</p></li>
 </dl>
 <p>The <strong>accesses</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">domain</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">group_by_email</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">role</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">special_group</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">user_by_email</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">view</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">domain</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A domain to grant access to. Any users signed in with the
+domain specified will be granted the specified access</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">group_by_email</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - An email address of a Google Group to grant access to.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">role</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Describes the rights granted to the user specified by the other
+member of the access object. Primitive, Predefined and custom
+roles are supported. Predefined roles that have equivalent
+primitive roles are swapped by the API to their Primitive
+counterparts, and will show a diff post-create. See
+<a class="reference external" href="https://cloud.google.com/bigquery/docs/access-control">official docs</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">special_group</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A special group to grant access to. Possible values include:</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">user_by_email</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - An email address of a user to grant access to. For example:
+<a class="reference external" href="mailto:fred&#37;&#52;&#48;example&#46;com">fred<span>&#64;</span>example<span>&#46;</span>com</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">view</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A view from a different dataset to grant access to. Queries
+executed against that view will have read access to tables in
+this dataset. The role field is not required when this field is
+set. If that view is updated by any user, access to the view
+needs to be granted again via an update operation.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">dataset_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">project_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">table_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dataset_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the dataset containing this table.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">project_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the project containing this table.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">table_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the table. The ID must contain only letters (a-z,
+A-Z), numbers (0-9), or underscores (_). The maximum length
+is 1,024 characters.</p></li>
 </ul>
 </li>
 </ul>
 <p>The <strong>default_encryption_configuration</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">kms_key_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kms_key_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Describes the Cloud KMS encryption key that will be used to protect destination
+BigQuery table. The BigQuery Service Account associated with your project requires
+access to this encryption key.</p></li>
 </ul>
 </dd></dl>
 
@@ -701,47 +717,51 @@ dataset resource must either have no defined <code class="docutils literal notra
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>dataset*id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>A unique ID for this dataset, without the project name. The ID must contain only letters (a-z, A-Z), numbers (0-9), or
-underscores (<a href="#id15"><span class="problematic" id="id16">*</span></a>). The maximum length is 1,024 characters.</p>
-</p></li>
-<li><p><strong>domain</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A domain to grant access to. Any users signed in with the domain specified will be granted the specified access</p></li>
+<li><p><strong>dataset_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the dataset containing this table.</p></li>
+<li><p><strong>domain</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A domain to grant access to. Any users signed in with the
+domain specified will be granted the specified access</p></li>
 <li><p><strong>group_by_email</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An email address of a Google Group to grant access to.</p></li>
-<li><p><strong>iam_member</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Some other type of member that appears in the IAM Policy but isn’t a user, group, domain, or special group. For example:
-‘allUsers’</p></li>
+<li><p><strong>iam_member</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Some other type of member that appears in the IAM Policy but isn’t a user,
+group, domain, or special group. For example: <code class="docutils literal notranslate"><span class="pre">allUsers</span></code></p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
-<li><p><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Describes the rights granted to the user specified by the other member of the access object. Primitive, Predefined and
-custom roles are supported. Predefined roles that have equivalent primitive roles are swapped by the API to their
-Primitive counterparts, and will show a diff post-create. See <a class="reference external" href="https://cloud.google.com/bigquery/docs/access-control">official
-docs</a>.</p>
+<li><p><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Describes the rights granted to the user specified by the other
+member of the access object. Primitive, Predefined and custom
+roles are supported. Predefined roles that have equivalent
+primitive roles are swapped by the API to their Primitive
+counterparts, and will show a diff post-create. See
+<a class="reference external" href="https://cloud.google.com/bigquery/docs/access-control">official docs</a>.</p>
 </p></li>
-<li><p><strong>special_group</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A special group to grant access to. Possible values include: * ‘projectOwners’: Owners of the enclosing project. *
-‘projectReaders’: Readers of the enclosing project. * ‘projectWriters’: Writers of the enclosing project. *
-‘allAuthenticatedUsers’: All authenticated BigQuery users.</p></li>
-<li><p><strong>user_by_email</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An email address of a user to grant access to. For example: <a class="reference external" href="mailto:fred&#37;&#52;&#48;example&#46;com">fred<span>&#64;</span>example<span>&#46;</span>com</a></p></li>
-<li><p><strong>view</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A view from a different dataset to grant access to. Queries executed against that view will have read access to tables
-in this dataset. The role field is not required when this field is set. If that view is updated by any user, access to
-the view needs to be granted again via an update operation.</p></li>
+<li><p><strong>special_group</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A special group to grant access to. Possible values include:</p></li>
+<li><p><strong>user_by_email</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An email address of a user to grant access to. For example:
+<a class="reference external" href="mailto:fred&#37;&#52;&#48;example&#46;com">fred<span>&#64;</span>example<span>&#46;</span>com</a></p></li>
+<li><p><strong>view</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A view from a different dataset to grant access to. Queries
+executed against that view will have read access to tables in
+this dataset. The role field is not required when this field is
+set. If that view is updated by any user, access to the view
+needs to be granted again via an update operation.  Structure is documented below.</p></li>
 </ul>
 </dd>
 </dl>
 <p>The <strong>view</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">dataset_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">project_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">table_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dataset_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the dataset containing this table.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">project_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the project containing this table.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">table_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the table. The ID must contain only letters (a-z,
+A-Z), numbers (0-9), or underscores (_). The maximum length
+is 1,024 characters.</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_gcp.bigquery.DatasetAccess.dataset_id">
 <code class="sig-name descname">dataset_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.DatasetAccess.dataset_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>A unique ID for this dataset, without the project name. The ID must contain only letters (a-z, A-Z), numbers (0-9), or
-underscores (_). The maximum length is 1,024 characters.</p>
+<dd><p>The ID of the dataset containing this table.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_gcp.bigquery.DatasetAccess.domain">
 <code class="sig-name descname">domain</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.DatasetAccess.domain" title="Permalink to this definition">¶</a></dt>
-<dd><p>A domain to grant access to. Any users signed in with the domain specified will be granted the specified access</p>
+<dd><p>A domain to grant access to. Any users signed in with the
+domain specified will be granted the specified access</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -753,8 +773,8 @@ underscores (_). The maximum length is 1,024 characters.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.bigquery.DatasetAccess.iam_member">
 <code class="sig-name descname">iam_member</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.DatasetAccess.iam_member" title="Permalink to this definition">¶</a></dt>
-<dd><p>Some other type of member that appears in the IAM Policy but isn’t a user, group, domain, or special group. For example:
-‘allUsers’</p>
+<dd><p>Some other type of member that appears in the IAM Policy but isn’t a user,
+group, domain, or special group. For example: <code class="docutils literal notranslate"><span class="pre">allUsers</span></code></p>
 </dd></dl>
 
 <dl class="attribute">
@@ -767,36 +787,41 @@ If it is not provided, the provider project is used.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.bigquery.DatasetAccess.role">
 <code class="sig-name descname">role</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.DatasetAccess.role" title="Permalink to this definition">¶</a></dt>
-<dd><p>Describes the rights granted to the user specified by the other member of the access object. Primitive, Predefined and
-custom roles are supported. Predefined roles that have equivalent primitive roles are swapped by the API to their
-Primitive counterparts, and will show a diff post-create. See <a class="reference external" href="https://cloud.google.com/bigquery/docs/access-control">official
-docs</a>.</p>
+<dd><p>Describes the rights granted to the user specified by the other
+member of the access object. Primitive, Predefined and custom
+roles are supported. Predefined roles that have equivalent
+primitive roles are swapped by the API to their Primitive
+counterparts, and will show a diff post-create. See
+<a class="reference external" href="https://cloud.google.com/bigquery/docs/access-control">official docs</a>.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_gcp.bigquery.DatasetAccess.special_group">
 <code class="sig-name descname">special_group</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.DatasetAccess.special_group" title="Permalink to this definition">¶</a></dt>
-<dd><p>A special group to grant access to. Possible values include: * ‘projectOwners’: Owners of the enclosing project. *
-‘projectReaders’: Readers of the enclosing project. * ‘projectWriters’: Writers of the enclosing project. *
-‘allAuthenticatedUsers’: All authenticated BigQuery users.</p>
+<dd><p>A special group to grant access to. Possible values include:</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_gcp.bigquery.DatasetAccess.user_by_email">
 <code class="sig-name descname">user_by_email</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.DatasetAccess.user_by_email" title="Permalink to this definition">¶</a></dt>
-<dd><p>An email address of a user to grant access to. For example: <a class="reference external" href="mailto:fred&#37;&#52;&#48;example&#46;com">fred<span>&#64;</span>example<span>&#46;</span>com</a></p>
+<dd><p>An email address of a user to grant access to. For example:
+<a class="reference external" href="mailto:fred&#37;&#52;&#48;example&#46;com">fred<span>&#64;</span>example<span>&#46;</span>com</a></p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_gcp.bigquery.DatasetAccess.view">
 <code class="sig-name descname">view</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.DatasetAccess.view" title="Permalink to this definition">¶</a></dt>
-<dd><p>A view from a different dataset to grant access to. Queries executed against that view will have read access to tables
-in this dataset. The role field is not required when this field is set. If that view is updated by any user, access to
-the view needs to be granted again via an update operation.</p>
+<dd><p>A view from a different dataset to grant access to. Queries
+executed against that view will have read access to tables in
+this dataset. The role field is not required when this field is
+set. If that view is updated by any user, access to the view
+needs to be granted again via an update operation.  Structure is documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">dataset_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">project_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">table_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dataset_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the dataset containing this table.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">project_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the project containing this table.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">table_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the table. The ID must contain only letters (a-z,
+A-Z), numbers (0-9), or underscores (_). The maximum length
+is 1,024 characters.</p></li>
 </ul>
 </dd></dl>
 
@@ -811,35 +836,39 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>dataset*id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>A unique ID for this dataset, without the project name. The ID must contain only letters (a-z, A-Z), numbers (0-9), or
-underscores (<a href="#id21"><span class="problematic" id="id22">*</span></a>). The maximum length is 1,024 characters.</p>
-</p></li>
-<li><p><strong>domain</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A domain to grant access to. Any users signed in with the domain specified will be granted the specified access</p></li>
+<li><p><strong>dataset_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the dataset containing this table.</p></li>
+<li><p><strong>domain</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A domain to grant access to. Any users signed in with the
+domain specified will be granted the specified access</p></li>
 <li><p><strong>group_by_email</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An email address of a Google Group to grant access to.</p></li>
-<li><p><strong>iam_member</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Some other type of member that appears in the IAM Policy but isn’t a user, group, domain, or special group. For example:
-‘allUsers’</p></li>
+<li><p><strong>iam_member</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Some other type of member that appears in the IAM Policy but isn’t a user,
+group, domain, or special group. For example: <code class="docutils literal notranslate"><span class="pre">allUsers</span></code></p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
-<li><p><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Describes the rights granted to the user specified by the other member of the access object. Primitive, Predefined and
-custom roles are supported. Predefined roles that have equivalent primitive roles are swapped by the API to their
-Primitive counterparts, and will show a diff post-create. See <a class="reference external" href="https://cloud.google.com/bigquery/docs/access-control">official
-docs</a>.</p>
+<li><p><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Describes the rights granted to the user specified by the other
+member of the access object. Primitive, Predefined and custom
+roles are supported. Predefined roles that have equivalent
+primitive roles are swapped by the API to their Primitive
+counterparts, and will show a diff post-create. See
+<a class="reference external" href="https://cloud.google.com/bigquery/docs/access-control">official docs</a>.</p>
 </p></li>
-<li><p><strong>special_group</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A special group to grant access to. Possible values include: * ‘projectOwners’: Owners of the enclosing project. *
-‘projectReaders’: Readers of the enclosing project. * ‘projectWriters’: Writers of the enclosing project. *
-‘allAuthenticatedUsers’: All authenticated BigQuery users.</p></li>
-<li><p><strong>user_by_email</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An email address of a user to grant access to. For example: <a class="reference external" href="mailto:fred&#37;&#52;&#48;example&#46;com">fred<span>&#64;</span>example<span>&#46;</span>com</a></p></li>
-<li><p><strong>view</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A view from a different dataset to grant access to. Queries executed against that view will have read access to tables
-in this dataset. The role field is not required when this field is set. If that view is updated by any user, access to
-the view needs to be granted again via an update operation.</p></li>
+<li><p><strong>special_group</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A special group to grant access to. Possible values include:</p></li>
+<li><p><strong>user_by_email</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An email address of a user to grant access to. For example:
+<a class="reference external" href="mailto:fred&#37;&#52;&#48;example&#46;com">fred<span>&#64;</span>example<span>&#46;</span>com</a></p></li>
+<li><p><strong>view</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A view from a different dataset to grant access to. Queries
+executed against that view will have read access to tables in
+this dataset. The role field is not required when this field is
+set. If that view is updated by any user, access to the view
+needs to be granted again via an update operation.  Structure is documented below.</p></li>
 </ul>
 </dd>
 </dl>
 <p>The <strong>view</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">dataset_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">project_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">table_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dataset_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the dataset containing this table.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">project_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the project containing this table.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">table_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the table. The ID must contain only letters (a-z,
+A-Z), numbers (0-9), or underscores (_). The maximum length
+is 1,024 characters.</p></li>
 </ul>
 </dd></dl>
 
@@ -895,7 +924,7 @@ in order to grant IAM permissions.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.bigquery.GetDefaultServiceAccountResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.GetDefaultServiceAccountResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 </dd></dl>
@@ -918,30 +947,32 @@ in order to grant IAM permissions.</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>ignore_idle_slots</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If false, any query using this reservation will use idle slots from other reservations within the same admin project. If
-true, a query using this reservation will execute with the slot capacity specified above at most.</p></li>
-<li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The geographic location where the transfer config should reside. Examples: US, EU, asia-northeast1. The default value is
-US.</p></li>
+<li><p><strong>ignore_idle_slots</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If false, any query using this reservation will use idle slots from other reservations within
+the same admin project. If true, a query using this reservation will execute with the slot
+capacity specified above at most.</p></li>
+<li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The geographic location where the transfer config should reside.
+Examples: US, EU, asia-northeast1. The default value is US.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the reservation. This field must only contain alphanumeric characters or dash.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
-<li><p><strong>slot_capacity</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Minimum slots available to this reservation. A slot is a unit of computational power in BigQuery, and serves as the unit
-of parallelism. Queries using this reservation might use more slots during runtime if ignoreIdleSlots is set to false.</p></li>
+<li><p><strong>slot_capacity</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Minimum slots available to this reservation. A slot is a unit of computational power in BigQuery, and serves as the
+unit of parallelism. Queries using this reservation might use more slots during runtime if ignoreIdleSlots is set to false.</p></li>
 </ul>
 </dd>
 </dl>
 <dl class="attribute">
 <dt id="pulumi_gcp.bigquery.Reservation.ignore_idle_slots">
 <code class="sig-name descname">ignore_idle_slots</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Reservation.ignore_idle_slots" title="Permalink to this definition">¶</a></dt>
-<dd><p>If false, any query using this reservation will use idle slots from other reservations within the same admin project. If
-true, a query using this reservation will execute with the slot capacity specified above at most.</p>
+<dd><p>If false, any query using this reservation will use idle slots from other reservations within
+the same admin project. If true, a query using this reservation will execute with the slot
+capacity specified above at most.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_gcp.bigquery.Reservation.location">
 <code class="sig-name descname">location</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Reservation.location" title="Permalink to this definition">¶</a></dt>
-<dd><p>The geographic location where the transfer config should reside. Examples: US, EU, asia-northeast1. The default value is
-US.</p>
+<dd><p>The geographic location where the transfer config should reside.
+Examples: US, EU, asia-northeast1. The default value is US.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -960,8 +991,8 @@ If it is not provided, the provider project is used.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.bigquery.Reservation.slot_capacity">
 <code class="sig-name descname">slot_capacity</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Reservation.slot_capacity" title="Permalink to this definition">¶</a></dt>
-<dd><p>Minimum slots available to this reservation. A slot is a unit of computational power in BigQuery, and serves as the unit
-of parallelism. Queries using this reservation might use more slots during runtime if ignoreIdleSlots is set to false.</p>
+<dd><p>Minimum slots available to this reservation. A slot is a unit of computational power in BigQuery, and serves as the
+unit of parallelism. Queries using this reservation might use more slots during runtime if ignoreIdleSlots is set to false.</p>
 </dd></dl>
 
 <dl class="method">
@@ -975,15 +1006,16 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>ignore_idle_slots</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If false, any query using this reservation will use idle slots from other reservations within the same admin project. If
-true, a query using this reservation will execute with the slot capacity specified above at most.</p></li>
-<li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The geographic location where the transfer config should reside. Examples: US, EU, asia-northeast1. The default value is
-US.</p></li>
+<li><p><strong>ignore_idle_slots</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If false, any query using this reservation will use idle slots from other reservations within
+the same admin project. If true, a query using this reservation will execute with the slot
+capacity specified above at most.</p></li>
+<li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The geographic location where the transfer config should reside.
+Examples: US, EU, asia-northeast1. The default value is US.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the reservation. This field must only contain alphanumeric characters or dash.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
-<li><p><strong>slot_capacity</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Minimum slots available to this reservation. A slot is a unit of computational power in BigQuery, and serves as the unit
-of parallelism. Queries using this reservation might use more slots during runtime if ignoreIdleSlots is set to false.</p></li>
+<li><p><strong>slot_capacity</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Minimum slots available to this reservation. A slot is a unit of computational power in BigQuery, and serves as the
+unit of parallelism. Queries using this reservation might use more slots during runtime if ignoreIdleSlots is set to false.</p></li>
 </ul>
 </dd>
 </dl>

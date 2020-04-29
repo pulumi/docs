@@ -428,8 +428,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>dynamic_ratio</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Specifies the fixed ratio value used for a node during ratio load balancing.</p></li>
 <li><p><strong>monitor</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – specifies the name of the monitor or monitor rule that you want to associate with the node.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the node</p></li>
-<li><p><strong>rate_limit</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the maximum number of connections per second allowed for a node or node address. The default value is
-‘disabled’.</p></li>
+<li><p><strong>rate_limit</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the maximum number of connections per second allowed for a node or node address. The default value is ‘disabled’.</p></li>
 <li><p><strong>ratio</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Sets the ratio number for the node.</p></li>
 <li><p><strong>state</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Default is “user-up” you can set to “user-down” if you want to disable</p></li>
 </ul>
@@ -482,8 +481,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_f5bigip.ltm.Node.rate_limit">
 <code class="sig-name descname">rate_limit</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_f5bigip.ltm.Node.rate_limit" title="Permalink to this definition">¶</a></dt>
-<dd><p>Specifies the maximum number of connections per second allowed for a node or node address. The default value is
-‘disabled’.</p>
+<dd><p>Specifies the maximum number of connections per second allowed for a node or node address. The default value is ‘disabled’.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -515,8 +513,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>dynamic_ratio</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Specifies the fixed ratio value used for a node during ratio load balancing.</p></li>
 <li><p><strong>monitor</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – specifies the name of the monitor or monitor rule that you want to associate with the node.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the node</p></li>
-<li><p><strong>rate_limit</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the maximum number of connections per second allowed for a node or node address. The default value is
-‘disabled’.</p></li>
+<li><p><strong>rate_limit</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the maximum number of connections per second allowed for a node or node address. The default value is ‘disabled’.</p></li>
 <li><p><strong>ratio</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Sets the ratio number for the node.</p></li>
 <li><p><strong>state</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Default is “user-up” you can set to “user-down” if you want to disable</p></li>
 </ul>
@@ -1515,7 +1512,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">vlanId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Name of the Policy</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_f5bigip.ltm.Policy.controls">
@@ -1746,7 +1743,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">vlanId</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Name of the Policy</p></li>
 </ul>
 </dd></dl>
 
@@ -1978,7 +1975,7 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">vlanId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Name of the Policy</p></li>
 </ul>
 </dd></dl>
 
@@ -4231,7 +4228,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>autolasthop</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies whether to automatically map last hop for pools or not. The default is to use next level’s defaul</p></li>
+<li><p><strong>autolasthop</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – -(Optional) Specifies whether to automatically map last hop for pools or not. The default is to use next level’s default.</p></li>
 <li><p><strong>full_path</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Fullpath</p></li>
 <li><p><strong>mirror</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Enables or disables mirroring of SNAT connections.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the snat</p></li>
@@ -4253,7 +4250,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_f5bigip.ltm.Snat.autolasthop">
 <code class="sig-name descname">autolasthop</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_f5bigip.ltm.Snat.autolasthop" title="Permalink to this definition">¶</a></dt>
-<dd><p>Specifies whether to automatically map last hop for pools or not. The default is to use next level’s defaul</p>
+<dd><p>-(Optional) Specifies whether to automatically map last hop for pools or not. The default is to use next level’s default.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -4331,7 +4328,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>autolasthop</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies whether to automatically map last hop for pools or not. The default is to use next level’s defaul</p></li>
+<li><p><strong>autolasthop</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – -(Optional) Specifies whether to automatically map last hop for pools or not. The default is to use next level’s default.</p></li>
 <li><p><strong>full_path</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Fullpath</p></li>
 <li><p><strong>mirror</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Enables or disables mirroring of SNAT connections.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the snat</p></li>
@@ -4618,7 +4615,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description of Virtual server</p></li>
 <li><p><strong>destination</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Destination IP</p></li>
 <li><p><strong>fallback_persistence_profile</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies a fallback persistence profile for the Virtual Server to use when the default persistence profile is not available.</p></li>
-<li><p><strong>ip_protocol</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – all, tcp, udp</p></li>
+<li><p><strong>ip_protocol</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specify the IP protocol to use with the the virtual server (all, tcp, or udp are valid)</p></li>
 <li><p><strong>irules</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The iRules list you want run on this virtual server. iRules help automate the intercepting, processing, and routing of application traffic.</p></li>
 <li><p><strong>mask</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Mask can either be in CIDR notation or decimal, i.e.: 24 or 255.255.255.0. A CIDR mask of 0 is the same as 0.0.0.0</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the virtual server</p></li>
@@ -4665,7 +4662,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_f5bigip.ltm.VirtualServer.ip_protocol">
 <code class="sig-name descname">ip_protocol</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_f5bigip.ltm.VirtualServer.ip_protocol" title="Permalink to this definition">¶</a></dt>
-<dd><p>all, tcp, udp</p>
+<dd><p>Specify the IP protocol to use with the the virtual server (all, tcp, or udp are valid)</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -4779,7 +4776,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description of Virtual server</p></li>
 <li><p><strong>destination</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Destination IP</p></li>
 <li><p><strong>fallback_persistence_profile</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies a fallback persistence profile for the Virtual Server to use when the default persistence profile is not available.</p></li>
-<li><p><strong>ip_protocol</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – all, tcp, udp</p></li>
+<li><p><strong>ip_protocol</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specify the IP protocol to use with the the virtual server (all, tcp, or udp are valid)</p></li>
 <li><p><strong>irules</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The iRules list you want run on this virtual server. iRules help automate the intercepting, processing, and routing of application traffic.</p></li>
 <li><p><strong>mask</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Mask can either be in CIDR notation or decimal, i.e.: 24 or 255.255.255.0. A CIDR mask of 0 is the same as 0.0.0.0</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the virtual server</p></li>
