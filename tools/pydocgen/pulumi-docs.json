@@ -119,7 +119,7 @@
       "name": "Pulumi Kong",
       "package_name": "pulumi_kong",
       "pulumi_provider_name": "kong",
-      "terraform_provider_name": "kong"
+      "terraform_provider_name": ""
     },
     {
       "name": "Pulumi vSphere",
