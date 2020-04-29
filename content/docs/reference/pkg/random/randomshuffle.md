@@ -52,7 +52,7 @@ const example = new aws.elb.LoadBalancer("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">RandomShuffle</span><span class="p">(resource_name, opts=None, </span>inputs=None<span class="p">, </span>keepers=None<span class="p">, </span>result_count=None<span class="p">, </span>seed=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">RandomShuffle</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>inputs=None<span class="p">, </span>keepers=None<span class="p">, </span>result_count=None<span class="p">, </span>seed=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
