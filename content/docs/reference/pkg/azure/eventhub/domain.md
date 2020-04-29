@@ -15,6 +15,9 @@ Manages an EventGrid Domain
 {{% examples %}}
 {{% /examples %}}
 
+Deprecated: azure.Domain has been deprecated in favour of azure.Domain
+
+<p class="resource-deprecated">Deprecated: {{% md %}}azure.Domain has been deprecated in favour of azure.Domain{{% /md %}}</p>
 
 
 ## Create a Domain Resource {#create}

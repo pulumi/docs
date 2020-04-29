@@ -15,6 +15,9 @@ Manages an Authorization Rule for a ServiceBus Queue.
 {{% examples %}}
 {{% /examples %}}
 
+Deprecated: azure.QueueAuthorizationRule has been deprecated in favour of azure.QueueAuthorizationRule
+
+<p class="resource-deprecated">Deprecated: {{% md %}}azure.QueueAuthorizationRule has been deprecated in favour of azure.QueueAuthorizationRule{{% /md %}}</p>
 
 
 ## Create a QueueAuthorizationRule Resource {#create}

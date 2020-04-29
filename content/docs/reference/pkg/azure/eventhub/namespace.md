@@ -15,6 +15,9 @@ Manages a ServiceBus Namespace.
 {{% examples %}}
 {{% /examples %}}
 
+Deprecated: azure.Namespace has been deprecated in favour of azure.Namespace
+
+<p class="resource-deprecated">Deprecated: {{% md %}}azure.Namespace has been deprecated in favour of azure.Namespace{{% /md %}}</p>
 
 
 ## Create a Namespace Resource {#create}

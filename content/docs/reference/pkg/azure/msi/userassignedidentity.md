@@ -32,6 +32,9 @@ const exampleUserAssignedIdentity = new azure.authorization.UserAssignedIdentity
 {{% /example %}}
 {{% /examples %}}
 
+Deprecated: azure.UserAssignedIdentity has been deprecated in favour of azure.UserAssignedIdentity
+
+<p class="resource-deprecated">Deprecated: {{% md %}}azure.UserAssignedIdentity has been deprecated in favour of azure.UserAssignedIdentity{{% /md %}}</p>
 
 
 ## Create a UserAssignedIdentity Resource {#create}
