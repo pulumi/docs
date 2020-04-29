@@ -166,6 +166,15 @@
     {
       "src": [
         {
+          "src": "../../pulumi-github/sdk/dotnet",
+          "files": ["Pulumi.*.csproj"]
+        }
+      ],
+      "dest": "metadata/Pulumi.GitHub"
+    },
+    {
+      "src": [
+        {
           "src": "../../pulumi-gitlab/sdk/dotnet",
           "files": ["Pulumi.*.csproj"]
         }
@@ -193,6 +202,15 @@
     {
       "src": [
         {
+          "src": "../../pulumi-kong/sdk/dotnet",
+          "files": ["Pulumi.*.csproj"]
+        }
+      ],
+      "dest": "metadata/Pulumi.Kong"
+    },
+    {
+      "src": [
+        {
           "src": "../../pulumi-linode/sdk/dotnet",
           "files": ["Pulumi.*.csproj"]
         }
@@ -207,6 +225,15 @@
         }
       ],
       "dest": "metadata/Pulumi.Mailgun"
+    },
+    {
+      "src": [
+        {
+          "src": "../../pulumi-mongodbatlas/sdk/dotnet",
+          "files": ["Pulumi.*.csproj"]
+        }
+      ],
+      "dest": "metadata/Pulumi.Mongodbatlas"
     },
     {
       "src": [
