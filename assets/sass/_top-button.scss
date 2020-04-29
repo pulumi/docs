@@ -1,17 +1,3 @@
-// .top-button {
-//     position: fixed; /* Fixed/sticky position */
-//     bottom: 430px; /* Place the button at the bottom of the page */
-//     right: 400px; /* Place the button 30px from the right */
-//     z-index: 99; /* Make sure it does not overlap */
-//     border: none; /* Remove borders */
-//     outline: none; /* Remove outline */
-//     background-color: grey;
-//     color: white; /* Text color */
-//     cursor: pointer; /* Add a mouse pointer on hover */
-//     padding: 15px; /* Some padding */
-//     border-radius: 10px; /* Rounded corners */
-//     font-size: 18px; /* Increase font size */
-// }
 .top-button {
     border-radius: 3px;
     color: #fff!important;
@@ -29,29 +15,7 @@
     text-align: center;
 }
 
-// .top-button {
-//     display: inline-block;
-//     background-color: #FF9800;
-//     width: 50px;
-//     height: 50px;
-//     text-align: center;
-//     border-radius: 4px;
-//     margin: 30px;
-//     position: fixed;
-//     bottom: 30px;
-//     right: 30px;
-//     transition: background-color .3s;
-//     z-index: 1000;
-//   }
-//   .top-button:hover {
-//     cursor: pointer;
-//     background-color: #333;
-//   }
-//   .top-button:active {
-//     background-color: #555;
-//   }
-
-  .top-button::after {
+.top-button::after {
     content: "🔝";
     font-family: "Font Awesome 5 Free";
     font-weight: normal;
@@ -59,4 +23,4 @@
     font-size: 20px;
     line-height: 27px;
     color: #fff;
-  }
+}

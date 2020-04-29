@@ -26,6 +26,7 @@
 {{ end }}
 
 {{ $s = $s | append (resources.Get "js/copybutton.js") }}
+{{ $s = $s | append (resources.Get "js/topbutton.js") }}
 {{ $js := $s | resources.Concat "js/bundle.js" | resources.Minify | resources.Fingerprint }}
 <script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}"></script>
 
