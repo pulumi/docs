@@ -228,7 +228,7 @@ Each cloud vendor has a dedicated package for deploying resources to it:
 * [**Rancher2** (`Pulumi.Rancher2`)](/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.html)
 * [**SignalFX** (`Pulumi.SignalFX`)](/docs/reference/pkg/dotnet/Pulumi.SignalFX/Pulumi.SignalFX.html)
 * [**SpotInst** (`Pulumi.SpotInst`)](/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.html)
-* [**Terraform** (`Pulumi.Terraform`)](/docs/reference/pkg/dotnet/Pulumi.Terraform/Pulumi.Terraform.html)
+* [**Terraform** (`Pulumi.Terraform`)](/docs/reference/pkg/dotnet/Pulumi.Terraform/Pulumi.Terraform.State.html)
 * [**TLS** (`Pulumi.Tls`)](/docs/reference/pkg/dotnet/Pulumi.Tls/Pulumi.Tls.html)
 * [**Hashicorp Vault** (`Pulumi.Vault`)](/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.html)
 * [**vSphere** (`Pulumi.VSphere`)](/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.html)
