@@ -1,8 +1,8 @@
 
 ---
-title: "GetFloatingIp"
-title_tag: "Function GetFloatingIp | Package Digital Ocean"
-meta_desc: "Explore the GetFloatingIp function of the Digital Ocean package, including examples, input properties, output properties, and supporting types. "
+title: "GetSpacesBucket"
+title_tag: "Function GetSpacesBucket | Package Digital Ocean"
+meta_desc: "Explore the GetSpacesBucket function of the Digital Ocean package, including examples, input properties, output properties, and supporting types. "
 ---
 
 
@@ -13,29 +13,29 @@ meta_desc: "Explore the GetFloatingIp function of the Digital Ocean package, inc
 
 
 
-## Using GetFloatingIp {#using}
+## Using GetSpacesBucket {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getFloatingIp<span class="p">(</span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/#GetFloatingIpArgs">GetFloatingIpArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/#GetFloatingIpResult">GetFloatingIpResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getSpacesBucket<span class="p">(</span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/#GetSpacesBucketArgs">GetSpacesBucketArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/#GetSpacesBucketResult">GetSpacesBucketResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_floating_ip(</span>ip_address=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_spaces_bucket(</span>name=None<span class="p">, </span>region=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupFloatingIp<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v2/go/digitalocean/?tab=doc#LookupFloatingIpArgs">LookupFloatingIpArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v2/go/digitalocean/?tab=doc#LookupFloatingIpResult">LookupFloatingIpResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupSpacesBucket<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v2/go/digitalocean/?tab=doc#LookupSpacesBucketArgs">LookupSpacesBucketArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v2/go/digitalocean/?tab=doc#LookupSpacesBucketResult">LookupSpacesBucketResult</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetFloatingIp </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.Digitalocean.GetFloatingIpResult.html">GetFloatingIpResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.DigitalOcean.GetFloatingIpArgs.html">GetFloatingIpArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetSpacesBucket </span><span class="p">{</span><span class="k">
+    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.Digitalocean.GetSpacesBucketResult.html">GetSpacesBucketResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.DigitalOcean.GetSpacesBucketArgs.html">GetSpacesBucketArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -50,11 +50,20 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Ip<wbr>Address</span>
+        <span>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The allocated IP address of the specific floating IP to retrieve.
+    <dd>{{% md %}}The name of the Spaces bucket.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Region</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The slug of the region where the bucket is stored.
 {{% /md %}}</dd>
 
 </dl>
@@ -66,11 +75,20 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Ip<wbr>Address</span>
+        <span>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The allocated IP address of the specific floating IP to retrieve.
+    <dd>{{% md %}}The name of the Spaces bucket.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Region</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The slug of the region where the bucket is stored.
 {{% /md %}}</dd>
 
 </dl>
@@ -82,11 +100,20 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>ip<wbr>Address</span>
+        <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The allocated IP address of the specific floating IP to retrieve.
+    <dd>{{% md %}}The name of the Spaces bucket.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>region</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The slug of the region where the bucket is stored.
 {{% /md %}}</dd>
 
 </dl>
@@ -98,11 +125,20 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>ip_<wbr>address</span>
+        <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The allocated IP address of the specific floating IP to retrieve.
+    <dd>{{% md %}}The name of the Spaces bucket.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>region</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The slug of the region where the bucket is stored.
 {{% /md %}}</dd>
 
 </dl>
@@ -115,7 +151,7 @@ The following arguments are supported:
 
 
 
-## GetFloatingIp Result {#result}
+## GetSpacesBucket Result {#result}
 
 The following output properties are available:
 
@@ -127,11 +163,12 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Droplet<wbr>Id</span>
+        <span>Bucket<wbr>Domain<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The FQDN of the bucket (e.g. bucket-name.nyc3.digitaloceanspaces.com)
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -144,11 +181,12 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Ip<wbr>Address</span>
+        <span>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the Spaces bucket
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -156,7 +194,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The slug of the region where the bucket is stored.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -164,7 +203,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The uniform resource name of the bucket
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -175,11 +215,12 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Droplet<wbr>Id</span>
+        <span>Bucket<wbr>Domain<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The FQDN of the bucket (e.g. bucket-name.nyc3.digitaloceanspaces.com)
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -192,11 +233,12 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Ip<wbr>Address</span>
+        <span>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the Spaces bucket
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -204,7 +246,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The slug of the region where the bucket is stored.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -212,7 +255,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The uniform resource name of the bucket
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -223,11 +267,12 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>droplet<wbr>Id</span>
+        <span>bucket<wbr>Domain<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The FQDN of the bucket (e.g. bucket-name.nyc3.digitaloceanspaces.com)
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -240,11 +285,12 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>ip<wbr>Address</span>
+        <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the Spaces bucket
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -252,7 +298,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The slug of the region where the bucket is stored.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -260,7 +307,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The uniform resource name of the bucket
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -271,11 +319,12 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>droplet_<wbr>id</span>
+        <span>bucket_<wbr>domain_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The FQDN of the bucket (e.g. bucket-name.nyc3.digitaloceanspaces.com)
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -288,11 +337,12 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>ip_<wbr>address</span>
+        <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the Spaces bucket
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -300,7 +350,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The slug of the region where the bucket is stored.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -308,7 +359,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The uniform resource name of the bucket
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
