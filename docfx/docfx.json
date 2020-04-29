@@ -170,7 +170,7 @@
           "files": ["Pulumi.*.csproj"]
         }
       ],
-      "dest": "metadata/Pulumi.GitHub"
+      "dest": "metadata/Pulumi.Github"
     },
     {
       "src": [
