@@ -23,7 +23,7 @@ CrossGuard is now enabled for all enterprise organizations in the Pulumi Console
 We have added richer CLI support for CrossGuard. Organization administrators can now manage their Policy Packs from the CLI. In additional to being able to publish Policy Packs, you may now enable a Policy Pack by simply running:
 
 ```bash
-pulumi policy enable <organization>/<pack-name> <version>
+$ pulumi policy enable <organization>/<pack-name> <version>
 ```
 
 This same command can be used upgrade an already enabled Policy Pack.
@@ -31,7 +31,7 @@ This same command can be used upgrade an already enabled Policy Pack.
 Organization administrators may also disable a Policy Pack by running:
 
 ```bash
-pulumi policy disable  <organization>/<pack-name>
+$ pulumi policy disable <organization>/<pack-name>
 ```
 
 By default, the `enable` and `disable` commands use an organization's default Policy Group. Using the `--policy-group` flag, you can specify another Policy Group. You can also specify `latest` instead of a specific Policy Pack version to enable the latest version of that Policy Pack.
@@ -42,7 +42,7 @@ Policies now have access to more information about the resources under review. W
 
 You may access a [resource's options]({{< relref "/docs/intro/concepts/programming-model#resourceoptions" >}}) via the `ResourceValidationArgs` parameter. In the below example, we enforce that all DynamoDB tables be `protected` to prevent data loss.
 
-```TypeScript
+```typescript
 new PolicyPack("aws-policies", {
     policies: [
         {
@@ -61,7 +61,7 @@ new PolicyPack("aws-policies", {
 
 Access to the parent and dependencies of a resource allow you to author policies about the relationship between resources. For example, you may want to make sure that each DynamoDB table in a stack has an attached scaling policy.
 
-```TypeScript
+```typescript
 new PolicyPack("aws-policies", {
     policies: [
         {
@@ -89,7 +89,7 @@ As of our 2.0 launch, you can now author Policy Pack in Python. Our multi-langua
 
 The Python-based Policy Pack prohibits public permission of Azure Storage Blob Containers.
 
-```Python
+```python
 def storage_container_no_public_read_validator(args: ResourceValidationArgs, report_violation: ReportViolation):
     if args.resource_type == "azure:storage/container:Container" and "containerAccessType" in args.props:
         access_type = args.props["containerAccessType"]
@@ -120,7 +120,7 @@ And lastly, the feature I am most excited to share with you all is Configurable 
 
 For example, you may have a policy that restricts the allowed EC2 instance types. This set of instance may vary between your non-production stack and production stacks.
 
-```TypeScript
+```typescript
 new PolicyPack("aws-policies", {
     policies: [
         {
@@ -153,7 +153,7 @@ new PolicyPack("aws-policies", {
 
 Using configuration, you can make this deviation, allowing larger, more costly instances only in production. We can enable this configurable Policy Pack for our Policy Group `prod-stacks` using configuration that allows for other instance types.
 
-```JSON
+```json
 {
    "allowed-ec2-instance-type": {
       "allowedTypes": ["t2.medium", "t2.large"]
@@ -177,8 +177,8 @@ Configuration allows organization administrators to quickly and easily tweak Pol
 
 We've invested in improving the user experience for authoring and managing policy. Whether you're an enterprise customer or an open source user, you can get started by taking CrossGuard for a spin.
 
-* [Getting Started with Pulumi](https://www.pulumi.com/docs/get-started/)
-* [Getting Started with CrossGuard](https://www.pulumi.com/docs/get-started/crossguard/)
+* [Getting Started with Pulumi]({{< relref "/docs/get-started" >}})
+* [Getting Started with CrossGuard]({{< relref "/docs/get-started/crossguard" >}})
 * [Example Policy Packs](https://github.com/pulumi/examples/tree/master/policy-packs)
 
 The Getting Started with Policy as Code webinar recording is also a great resource for seeing these features in action.
