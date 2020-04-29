@@ -54,7 +54,7 @@ policy = newrelic.AlertPolicy("my-policy")
 
 ```go
 import (
-  newrelic "github.com/pulumi/pulumi-newrelic/sdk/go/newrelic"
+  newrelic "github.com/pulumi/pulumi-newrelic/sdk/v2/go/newrelic"
 )
 
 policy, _ := newrelic.NewAlertPolicy(ctx, "my-policy"

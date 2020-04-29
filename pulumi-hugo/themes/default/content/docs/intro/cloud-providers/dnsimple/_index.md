@@ -69,7 +69,7 @@ record = dnsimple.Record("test",
 
 ```go
 import (
-  dnsimple "github.com/pulumi/pulumi-dnsimple/sdk/go/dnsimple"
+  dnsimple "github.com/pulumi/pulumi-dnsimple/sdk/v2/go/dnsimple"
 )
 
 record, _ := dnsimple.NewRecord(ctx, "test", &dnsimple.RecordArgs{

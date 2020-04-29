@@ -54,7 +54,7 @@ my_db = postgresql.Database("my-database")
 
 ```go
 import (
-  postgresql "github.com/pulumi/pulumi-postgresql/sdk/go/postgresql"
+  postgresql "github.com/pulumi/pulumi-postgresql/sdk/v2/go/postgresql"
 )
 
 myDb, _ := postgresql.NewDatabase(ctx, "my-database", &postgresql.DatabaseArgs{})

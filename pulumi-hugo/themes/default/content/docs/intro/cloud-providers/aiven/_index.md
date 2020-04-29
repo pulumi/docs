@@ -72,7 +72,7 @@ service = aiven.Service("my-service",
 
 ```go
 import (
-  aiven "github.com/pulumi/pulumi-aiven/sdk/go/aiven"
+  aiven "github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven"
 )
 
 service, _ := aiven.NewService(ctx, "test", &aiven.ServiceArgs{
