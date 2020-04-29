@@ -60,7 +60,7 @@ const va1 = new openstack.blockstorage.VolumeAttach("va_1", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">VolumeAttach</span><span class="p">(resource_name, opts=None, </span>attach_mode=None<span class="p">, </span>device=None<span class="p">, </span>host_name=None<span class="p">, </span>initiator=None<span class="p">, </span>ip_address=None<span class="p">, </span>multipath=None<span class="p">, </span>os_type=None<span class="p">, </span>platform=None<span class="p">, </span>region=None<span class="p">, </span>volume_id=None<span class="p">, </span>wwnn=None<span class="p">, </span>wwpns=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">VolumeAttach</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>attach_mode=None<span class="p">, </span>device=None<span class="p">, </span>host_name=None<span class="p">, </span>initiator=None<span class="p">, </span>ip_address=None<span class="p">, </span>multipath=None<span class="p">, </span>os_type=None<span class="p">, </span>platform=None<span class="p">, </span>region=None<span class="p">, </span>volume_id=None<span class="p">, </span>wwnn=None<span class="p">, </span>wwpns=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

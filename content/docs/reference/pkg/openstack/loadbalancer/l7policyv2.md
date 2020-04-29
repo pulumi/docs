@@ -64,7 +64,7 @@ const l7policy1 = new openstack.loadbalancer.L7PolicyV2("l7policy_1", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">L7PolicyV2</span><span class="p">(resource_name, opts=None, </span>action=None<span class="p">, </span>admin_state_up=None<span class="p">, </span>description=None<span class="p">, </span>listener_id=None<span class="p">, </span>name=None<span class="p">, </span>position=None<span class="p">, </span>redirect_pool_id=None<span class="p">, </span>redirect_url=None<span class="p">, </span>region=None<span class="p">, </span>tenant_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">L7PolicyV2</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>action=None<span class="p">, </span>admin_state_up=None<span class="p">, </span>description=None<span class="p">, </span>listener_id=None<span class="p">, </span>name=None<span class="p">, </span>position=None<span class="p">, </span>redirect_pool_id=None<span class="p">, </span>redirect_url=None<span class="p">, </span>region=None<span class="p">, </span>tenant_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

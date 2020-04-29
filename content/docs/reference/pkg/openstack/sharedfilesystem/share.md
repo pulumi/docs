@@ -55,7 +55,7 @@ const share1 = new openstack.sharedfilesystem.Share("share_1", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Share</span><span class="p">(resource_name, opts=None, </span>availability_zone=None<span class="p">, </span>description=None<span class="p">, </span>is_public=None<span class="p">, </span>metadata=None<span class="p">, </span>name=None<span class="p">, </span>region=None<span class="p">, </span>share_network_id=None<span class="p">, </span>share_proto=None<span class="p">, </span>share_type=None<span class="p">, </span>size=None<span class="p">, </span>snapshot_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Share</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>availability_zone=None<span class="p">, </span>description=None<span class="p">, </span>is_public=None<span class="p">, </span>metadata=None<span class="p">, </span>name=None<span class="p">, </span>region=None<span class="p">, </span>share_network_id=None<span class="p">, </span>share_proto=None<span class="p">, </span>share_type=None<span class="p">, </span>size=None<span class="p">, </span>snapshot_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

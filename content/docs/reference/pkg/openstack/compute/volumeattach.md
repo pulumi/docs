@@ -145,7 +145,7 @@ to enforce the volume attachments to happen one at a time.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">VolumeAttach</span><span class="p">(resource_name, opts=None, </span>device=None<span class="p">, </span>instance_id=None<span class="p">, </span>multiattach=None<span class="p">, </span>region=None<span class="p">, </span>volume_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">VolumeAttach</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>device=None<span class="p">, </span>instance_id=None<span class="p">, </span>multiattach=None<span class="p">, </span>region=None<span class="p">, </span>volume_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

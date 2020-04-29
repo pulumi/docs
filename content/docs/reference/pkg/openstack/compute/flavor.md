@@ -45,7 +45,7 @@ const test_flavor = new openstack.compute.Flavor("test-flavor", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Flavor</span><span class="p">(resource_name, opts=None, </span>disk=None<span class="p">, </span>ephemeral=None<span class="p">, </span>extra_specs=None<span class="p">, </span>is_public=None<span class="p">, </span>name=None<span class="p">, </span>ram=None<span class="p">, </span>region=None<span class="p">, </span>rx_tx_factor=None<span class="p">, </span>swap=None<span class="p">, </span>vcpus=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Flavor</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>disk=None<span class="p">, </span>ephemeral=None<span class="p">, </span>extra_specs=None<span class="p">, </span>is_public=None<span class="p">, </span>name=None<span class="p">, </span>ram=None<span class="p">, </span>region=None<span class="p">, </span>rx_tx_factor=None<span class="p">, </span>swap=None<span class="p">, </span>vcpus=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

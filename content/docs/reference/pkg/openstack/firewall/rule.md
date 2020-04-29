@@ -43,7 +43,7 @@ const rule1 = new openstack.firewall.Rule("rule_1", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Rule</span><span class="p">(resource_name, opts=None, </span>action=None<span class="p">, </span>description=None<span class="p">, </span>destination_ip_address=None<span class="p">, </span>destination_port=None<span class="p">, </span>enabled=None<span class="p">, </span>ip_version=None<span class="p">, </span>name=None<span class="p">, </span>protocol=None<span class="p">, </span>region=None<span class="p">, </span>source_ip_address=None<span class="p">, </span>source_port=None<span class="p">, </span>tenant_id=None<span class="p">, </span>value_specs=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Rule</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>action=None<span class="p">, </span>description=None<span class="p">, </span>destination_ip_address=None<span class="p">, </span>destination_port=None<span class="p">, </span>enabled=None<span class="p">, </span>ip_version=None<span class="p">, </span>name=None<span class="p">, </span>protocol=None<span class="p">, </span>region=None<span class="p">, </span>source_ip_address=None<span class="p">, </span>source_port=None<span class="p">, </span>tenant_id=None<span class="p">, </span>value_specs=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
