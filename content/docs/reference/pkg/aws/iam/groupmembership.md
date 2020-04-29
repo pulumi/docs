@@ -13,8 +13,8 @@ meta_desc: "Explore the GroupMembership resource of the iam module, including ex
 > **WARNING:** Multiple aws.iam.GroupMembership resources with the same group name will produce inconsistent behavior!
 
 Provides a top level resource to manage IAM Group membership for IAM Users. For
-more information on managing IAM Groups or IAM Users, see [IAM Groups][1] or
-[IAM Users][2]
+more information on managing IAM Groups or IAM Users, see [IAM Groups](https://www.terraform.io/docs/providers/aws/r/iam_group.html) or
+[IAM Users](https://www.terraform.io/docs/providers/aws/r/iam_user.html)
 
 > **Note:** `aws.iam.GroupMembership` will conflict with itself if used more than once with the same group. To non-exclusively manage the users in a group, see the
 [`aws.iam.UserGroupMembership` resource][3].
@@ -53,7 +53,7 @@ const team = new aws.iam.GroupMembership("team", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">GroupMembership</span><span class="p">(resource_name, opts=None, </span>group=None<span class="p">, </span>name=None<span class="p">, </span>users=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">GroupMembership</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>group=None<span class="p">, </span>name=None<span class="p">, </span>users=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

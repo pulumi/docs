@@ -43,7 +43,7 @@ const account = new aws.organizations.Account("account", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Account</span><span class="p">(resource_name, opts=None, </span>email=None<span class="p">, </span>iam_user_access_to_billing=None<span class="p">, </span>name=None<span class="p">, </span>parent_id=None<span class="p">, </span>role_name=None<span class="p">, </span>tags=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Account</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>email=None<span class="p">, </span>iam_user_access_to_billing=None<span class="p">, </span>name=None<span class="p">, </span>parent_id=None<span class="p">, </span>role_name=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

@@ -18,7 +18,7 @@ anything, please consult the source <a class="reference external" href="https://
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.kinesis.</code><code class="sig-name descname">AnalyticsApplication</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">cloudwatch_logging_options=None</em>, <em class="sig-param">code=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">inputs=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">outputs=None</em>, <em class="sig-param">reference_data_sources=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kinesis.AnalyticsApplication" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Kinesis Analytics Application resource. Kinesis Analytics is a managed service that
 allows processing and analyzing streaming data using standard SQL.</p>
-<p>For more details, see the [Amazon Kinesis Analytics Documentation][1].</p>
+<p>For more details, see the <a class="reference external" href="https://docs.aws.amazon.com/kinesisanalytics/latest/dev/what-is.html">Amazon Kinesis Analytics Documentation</a>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -683,7 +683,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.kinesis.FirehoseDeliveryStream">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.kinesis.</code><code class="sig-name descname">FirehoseDeliveryStream</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">destination=None</em>, <em class="sig-param">destination_id=None</em>, <em class="sig-param">elasticsearch_configuration=None</em>, <em class="sig-param">extended_s3_configuration=None</em>, <em class="sig-param">kinesis_source_configuration=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">redshift_configuration=None</em>, <em class="sig-param">s3_configuration=None</em>, <em class="sig-param">server_side_encryption=None</em>, <em class="sig-param">splunk_configuration=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">version_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kinesis.FirehoseDeliveryStream" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Kinesis Firehose Delivery Stream resource. Amazon Kinesis Firehose is a fully managed, elastic service to easily deliver real-time data streams to destinations such as Amazon S3 and Amazon Redshift.</p>
-<p>For more details, see the [Amazon Kinesis Firehose Documentation][1].</p>
+<p>For more details, see the <a class="reference external" href="https://aws.amazon.com/documentation/firehose/">Amazon Kinesis Firehose Documentation</a>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1646,7 +1646,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.kinesis.GetStreamResult.closed_shards">
 <code class="sig-name descname">closed_shards</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.GetStreamResult.closed_shards" title="Permalink to this definition">¶</a></dt>
-<dd><p>The list of shard ids in the CLOSED state. See [Shard State][2] for more.</p>
+<dd><p>The list of shard ids in the CLOSED state. See <a class="reference external" href="https://docs.aws.amazon.com/streams/latest/dev/kinesis-using-sdk-java-after-resharding.html#kinesis-using-sdk-java-resharding-data-routing">Shard State</a> for more.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1658,7 +1658,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.kinesis.GetStreamResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.GetStreamResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1670,7 +1670,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.kinesis.GetStreamResult.open_shards">
 <code class="sig-name descname">open_shards</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.GetStreamResult.open_shards" title="Permalink to this definition">¶</a></dt>
-<dd><p>The list of shard ids in the OPEN state. See [Shard State][2] for more.</p>
+<dd><p>The list of shard ids in the OPEN state. See <a class="reference external" href="https://docs.aws.amazon.com/streams/latest/dev/kinesis-using-sdk-java-after-resharding.html#kinesis-using-sdk-java-resharding-data-routing">Shard State</a> for more.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1682,7 +1682,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.kinesis.GetStreamResult.shard_level_metrics">
 <code class="sig-name descname">shard_level_metrics</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.GetStreamResult.shard_level_metrics" title="Permalink to this definition">¶</a></dt>
-<dd><p>A list of shard-level CloudWatch metrics which are enabled for the stream. See [Monitoring with CloudWatch][3] for more.</p>
+<dd><p>A list of shard-level CloudWatch metrics which are enabled for the stream. See <a class="reference external" href="https://docs.aws.amazon.com/streams/latest/dev/monitoring-with-cloudwatch.html">Monitoring with CloudWatch</a> for more.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1704,7 +1704,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.kinesis.</code><code class="sig-name descname">Stream</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">encryption_type=None</em>, <em class="sig-param">enforce_consumer_deletion=None</em>, <em class="sig-param">kms_key_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">retention_period=None</em>, <em class="sig-param">shard_count=None</em>, <em class="sig-param">shard_level_metrics=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kinesis.Stream" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Kinesis Stream resource. Amazon Kinesis is a managed service that
 scales elastically for real-time processing of streaming big data.</p>
-<p>For more details, see the [Amazon Kinesis Documentation][1].</p>
+<p>For more details, see the <a class="reference external" href="https://aws.amazon.com/documentation/kinesis/">Amazon Kinesis Documentation</a>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1717,8 +1717,9 @@ scales elastically for real-time processing of streaming big data.</p>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A name to identify the stream. This is unique to the AWS account and region the Stream is created in.</p></li>
 <li><p><strong>retention_period</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Length of time data records are accessible after they are added to the stream. The maximum value of a stream’s retention period is 168 hours. Minimum value is 24. Default is 24.</p></li>
 <li><p><strong>shard_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of shards that the stream will use.
-Amazon has guidelines for specifying the Stream size that should be referenced when creating a Kinesis stream. See [Amazon Kinesis Streams][2] for more.</p></li>
-<li><p><strong>shard_level_metrics</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of shard-level CloudWatch metrics which can be enabled for the stream. See [Monitoring with CloudWatch][3] for more. Note that the value ALL should not be used; instead you should provide an explicit list of metrics you wish to enable.</p></li>
+Amazon has guidelines for specifying the Stream size that should be referenced when creating a Kinesis stream. See <a class="reference external" href="https://docs.aws.amazon.com/kinesis/latest/dev/amazon-kinesis-streams.html">Amazon Kinesis Streams</a> for more.</p></li>
+<li><p><strong>shard_level_metrics</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – <p>A list of shard-level CloudWatch metrics which can be enabled for the stream. See <a class="reference external" href="https://docs.aws.amazon.com/streams/latest/dev/monitoring-with-cloudwatch.html">Monitoring with CloudWatch</a> for more. Note that the value ALL should not be used; instead you should provide an explicit list of metrics you wish to enable.</p>
+</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
 </ul>
 </dd>
@@ -1763,13 +1764,13 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
 <dt id="pulumi_aws.kinesis.Stream.shard_count">
 <code class="sig-name descname">shard_count</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.Stream.shard_count" title="Permalink to this definition">¶</a></dt>
 <dd><p>The number of shards that the stream will use.
-Amazon has guidelines for specifying the Stream size that should be referenced when creating a Kinesis stream. See [Amazon Kinesis Streams][2] for more.</p>
+Amazon has guidelines for specifying the Stream size that should be referenced when creating a Kinesis stream. See <a class="reference external" href="https://docs.aws.amazon.com/kinesis/latest/dev/amazon-kinesis-streams.html">Amazon Kinesis Streams</a> for more.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.kinesis.Stream.shard_level_metrics">
 <code class="sig-name descname">shard_level_metrics</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.Stream.shard_level_metrics" title="Permalink to this definition">¶</a></dt>
-<dd><p>A list of shard-level CloudWatch metrics which can be enabled for the stream. See [Monitoring with CloudWatch][3] for more. Note that the value ALL should not be used; instead you should provide an explicit list of metrics you wish to enable.</p>
+<dd><p>A list of shard-level CloudWatch metrics which can be enabled for the stream. See <a class="reference external" href="https://docs.aws.amazon.com/streams/latest/dev/monitoring-with-cloudwatch.html">Monitoring with CloudWatch</a> for more. Note that the value ALL should not be used; instead you should provide an explicit list of metrics you wish to enable.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1795,9 +1796,11 @@ properties used to qualify the lookup.</p>
 <li><p><strong>kms_key_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The GUID for the customer-managed KMS key to use for encryption. You can also use a Kinesis-owned master key by specifying the alias <code class="docutils literal notranslate"><span class="pre">alias/aws/kinesis</span></code>.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A name to identify the stream. This is unique to the AWS account and region the Stream is created in.</p></li>
 <li><p><strong>retention_period</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Length of time data records are accessible after they are added to the stream. The maximum value of a stream’s retention period is 168 hours. Minimum value is 24. Default is 24.</p></li>
-<li><p><strong>shard_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of shards that the stream will use.
-Amazon has guidelines for specifying the Stream size that should be referenced when creating a Kinesis stream. See [Amazon Kinesis Streams][2] for more.</p></li>
-<li><p><strong>shard_level_metrics</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of shard-level CloudWatch metrics which can be enabled for the stream. See [Monitoring with CloudWatch][3] for more. Note that the value ALL should not be used; instead you should provide an explicit list of metrics you wish to enable.</p></li>
+<li><p><strong>shard_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – <p>The number of shards that the stream will use.
+Amazon has guidelines for specifying the Stream size that should be referenced when creating a Kinesis stream. See <a class="reference external" href="https://docs.aws.amazon.com/kinesis/latest/dev/amazon-kinesis-streams.html">Amazon Kinesis Streams</a> for more.</p>
+</p></li>
+<li><p><strong>shard_level_metrics</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – <p>A list of shard-level CloudWatch metrics which can be enabled for the stream. See <a class="reference external" href="https://docs.aws.amazon.com/streams/latest/dev/monitoring-with-cloudwatch.html">Monitoring with CloudWatch</a> for more. Note that the value ALL should not be used; instead you should provide an explicit list of metrics you wish to enable.</p>
+</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
 </ul>
 </dd>
@@ -1846,7 +1849,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.kinesis.VideoStream">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.kinesis.</code><code class="sig-name descname">VideoStream</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">data_retention_in_hours=None</em>, <em class="sig-param">device_name=None</em>, <em class="sig-param">kms_key_id=None</em>, <em class="sig-param">media_type=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kinesis.VideoStream" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Kinesis Video Stream resource. Amazon Kinesis Video Streams makes it easy to securely stream video from connected devices to AWS for analytics, machine learning (ML), playback, and other processing.</p>
-<p>For more details, see the [Amazon Kinesis Documentation][1].</p>
+<p>For more details, see the <a class="reference external" href="https://aws.amazon.com/documentation/kinesis/">Amazon Kinesis Documentation</a>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1855,7 +1858,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>data_retention_in_hours</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of hours that you want to retain the data in the stream. Kinesis Video Streams retains the data in a data store that is associated with the stream. The default value is <code class="docutils literal notranslate"><span class="pre">0</span></code>, indicating that the stream does not persist data.</p></li>
 <li><p><strong>device_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the device that is writing to the stream. <strong>In the current implementation, Kinesis Video Streams does not use this name.</strong></p></li>
 <li><p><strong>kms_key_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the AWS Key Management Service (AWS KMS) key that you want Kinesis Video Streams to use to encrypt stream data. If no key ID is specified, the default, Kinesis Video-managed key (<code class="docutils literal notranslate"><span class="pre">aws/kinesisvideo</span></code>) is used.</p></li>
-<li><p><strong>media_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The media type of the stream. Consumers of the stream can use this information when processing the stream. For more information about media types, see [Media Types][2]. If you choose to specify the MediaType, see [Naming Requirements][3] for guidelines.</p></li>
+<li><p><strong>media_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The media type of the stream. Consumers of the stream can use this information when processing the stream. For more information about media types, see <a class="reference external" href="http://www.iana.org/assignments/media-types/media-types.xhtml">Media Types</a>. If you choose to specify the MediaType, see <a class="reference external" href="https://tools.ietf.org/html/rfc6838#section-4.2">Naming Requirements</a> for guidelines.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A name to identify the stream. This is unique to the
 AWS account and region the Stream is created in.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
@@ -1895,7 +1898,7 @@ AWS account and region the Stream is created in.</p></li>
 <dl class="attribute">
 <dt id="pulumi_aws.kinesis.VideoStream.media_type">
 <code class="sig-name descname">media_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.VideoStream.media_type" title="Permalink to this definition">¶</a></dt>
-<dd><p>The media type of the stream. Consumers of the stream can use this information when processing the stream. For more information about media types, see [Media Types][2]. If you choose to specify the MediaType, see [Naming Requirements][3] for guidelines.</p>
+<dd><p>The media type of the stream. Consumers of the stream can use this information when processing the stream. For more information about media types, see <a class="reference external" href="http://www.iana.org/assignments/media-types/media-types.xhtml">Media Types</a>. If you choose to specify the MediaType, see <a class="reference external" href="https://tools.ietf.org/html/rfc6838#section-4.2">Naming Requirements</a> for guidelines.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1933,7 +1936,8 @@ properties used to qualify the lookup.</p>
 <li><p><strong>data_retention_in_hours</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of hours that you want to retain the data in the stream. Kinesis Video Streams retains the data in a data store that is associated with the stream. The default value is <code class="docutils literal notranslate"><span class="pre">0</span></code>, indicating that the stream does not persist data.</p></li>
 <li><p><strong>device_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the device that is writing to the stream. <strong>In the current implementation, Kinesis Video Streams does not use this name.</strong></p></li>
 <li><p><strong>kms_key_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the AWS Key Management Service (AWS KMS) key that you want Kinesis Video Streams to use to encrypt stream data. If no key ID is specified, the default, Kinesis Video-managed key (<code class="docutils literal notranslate"><span class="pre">aws/kinesisvideo</span></code>) is used.</p></li>
-<li><p><strong>media_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The media type of the stream. Consumers of the stream can use this information when processing the stream. For more information about media types, see [Media Types][2]. If you choose to specify the MediaType, see [Naming Requirements][3] for guidelines.</p></li>
+<li><p><strong>media_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The media type of the stream. Consumers of the stream can use this information when processing the stream. For more information about media types, see <a class="reference external" href="http://www.iana.org/assignments/media-types/media-types.xhtml">Media Types</a>. If you choose to specify the MediaType, see <a class="reference external" href="https://tools.ietf.org/html/rfc6838#section-4.2">Naming Requirements</a> for guidelines.</p>
+</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A name to identify the stream. This is unique to the
 AWS account and region the Stream is created in.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
@@ -1986,7 +1990,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-prename descclassname">pulumi_aws.kinesis.</code><code class="sig-name descname">get_stream</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kinesis.get_stream" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get information about a Kinesis Stream for use in other
 resources.</p>
-<p>For more details, see the [Amazon Kinesis Documentation][1].</p>
+<p>For more details, see the <a class="reference external" href="https://aws.amazon.com/documentation/kinesis/">Amazon Kinesis Documentation</a>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

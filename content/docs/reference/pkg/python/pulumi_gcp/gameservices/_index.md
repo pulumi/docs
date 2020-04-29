@@ -32,9 +32,11 @@ anything, please consult the source <a class="reference external" href="https://
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>cluster_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Required. The resource name of the game server cluster</p></li>
-<li><p><strong>connection_info</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Game server cluster connection information. This information is used to manage game server clusters.</p></li>
+<li><p><strong>connection_info</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Game server cluster connection information. This information is used to
+manage game server clusters.  Structure is documented below.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Human readable description of the cluster.</p></li>
-<li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The labels associated with this game server cluster. Each label is a key-value pair.</p></li>
+<li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The labels associated with this game server cluster. Each label is a
+key-value pair.</p></li>
 <li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Location of the Cluster.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
@@ -44,12 +46,24 @@ If it is not provided, the provider project is used.</p></li>
 </dl>
 <p>The <strong>connection_info</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">gkeClusterReference</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">gkeClusterReference</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Reference of the GKE cluster where the game servers are installed.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">cluster</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cluster</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The full or partial name of a GKE cluster, using one of the following
+forms:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">projects/{project_id}/locations/{location}/clusters/{cluster_id}</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">locations/{location}/clusters/{cluster_id}</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">{cluster_id}</span></code>
+If project and location are not specified, the project and location of the
+GameServerCluster resource are used to generate the full name of the
+GKE cluster.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">namespace</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">namespace</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Namespace designated on the game server cluster where the game server
+instances will be created. The namespace existence will be validated
+during creation.</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_gcp.gameservices.GameServerCluster.cluster_id">
@@ -60,14 +74,27 @@ If it is not provided, the provider project is used.</p></li>
 <dl class="attribute">
 <dt id="pulumi_gcp.gameservices.GameServerCluster.connection_info">
 <code class="sig-name descname">connection_info</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.gameservices.GameServerCluster.connection_info" title="Permalink to this definition">¶</a></dt>
-<dd><p>Game server cluster connection information. This information is used to manage game server clusters.</p>
+<dd><p>Game server cluster connection information. This information is used to
+manage game server clusters.  Structure is documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">gkeClusterReference</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">gkeClusterReference</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Reference of the GKE cluster where the game servers are installed.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">cluster</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cluster</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The full or partial name of a GKE cluster, using one of the following
+forms:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">projects/{project_id}/locations/{location}/clusters/{cluster_id}</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">locations/{location}/clusters/{cluster_id}</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">{cluster_id}</span></code>
+If project and location are not specified, the project and location of the
+GameServerCluster resource are used to generate the full name of the
+GKE cluster.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">namespace</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">namespace</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Namespace designated on the game server cluster where the game server
+instances will be created. The namespace existence will be validated
+during creation.</p></li>
 </ul>
 </dd></dl>
 
@@ -80,7 +107,8 @@ If it is not provided, the provider project is used.</p></li>
 <dl class="attribute">
 <dt id="pulumi_gcp.gameservices.GameServerCluster.labels">
 <code class="sig-name descname">labels</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.gameservices.GameServerCluster.labels" title="Permalink to this definition">¶</a></dt>
-<dd><p>The labels associated with this game server cluster. Each label is a key-value pair.</p>
+<dd><p>The labels associated with this game server cluster. Each label is a
+key-value pair.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -122,9 +150,11 @@ properties used to qualify the lookup.</p>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>cluster_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Required. The resource name of the game server cluster</p></li>
-<li><p><strong>connection_info</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Game server cluster connection information. This information is used to manage game server clusters.</p></li>
+<li><p><strong>connection_info</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Game server cluster connection information. This information is used to
+manage game server clusters.  Structure is documented below.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Human readable description of the cluster.</p></li>
-<li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The labels associated with this game server cluster. Each label is a key-value pair.</p></li>
+<li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The labels associated with this game server cluster. Each label is a
+key-value pair.</p></li>
 <li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Location of the Cluster.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The resource id of the game server cluster, eg:
 ‘projects/{project_id}/locations/{location}/realms/{realm_id}/gameServerClusters/{cluster_id}’. For example,
@@ -137,12 +167,24 @@ If it is not provided, the provider project is used.</p></li>
 </dl>
 <p>The <strong>connection_info</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">gkeClusterReference</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">gkeClusterReference</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Reference of the GKE cluster where the game servers are installed.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">cluster</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cluster</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The full or partial name of a GKE cluster, using one of the following
+forms:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">projects/{project_id}/locations/{location}/clusters/{cluster_id}</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">locations/{location}/clusters/{cluster_id}</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">{cluster_id}</span></code>
+If project and location are not specified, the project and location of the
+GameServerCluster resource are used to generate the full name of the
+GKE cluster.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">namespace</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">namespace</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Namespace designated on the game server cluster where the game server
+instances will be created. The namespace existence will be validated
+during creation.</p></li>
 </ul>
 </dd></dl>
 
@@ -205,35 +247,55 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>config_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A unique id for the deployment config.</p></li>
 <li><p><strong>deployment_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A unique id for the deployment.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the game server config.</p></li>
-<li><p><strong>fleet_configs</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The fleet config contains list of fleet specs. In the Single Cloud, there will be only one.</p></li>
-<li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The labels associated with this game server config. Each label is a key-value pair.</p></li>
+<li><p><strong>fleet_configs</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The fleet config contains list of fleet specs. In the Single Cloud, there
+will be only one.  Structure is documented below.</p></li>
+<li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Set of labels to group by.</p></li>
 <li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Location of the Deployment.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
-<li><p><strong>scaling_configs</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Optional. This contains the autoscaling settings.</p></li>
+<li><p><strong>scaling_configs</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Optional. This contains the autoscaling settings.  Structure is documented below.</p></li>
 </ul>
 </dd>
 </dl>
 <p>The <strong>fleet_configs</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">fleetSpec</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fleetSpec</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The fleet spec, which is sent to Agones to configure fleet.
+The spec can be passed as inline json but it is recommended to use a file reference
+instead. File references can contain the json or yaml format of the fleet spec. Eg:</p>
+<ul>
+<li><p>fleet_spec = jsonencode(yamldecode(file(“fleet_configs.yaml”)))</p></li>
+<li><p>fleet_spec = file(“fleet_configs.json”)
+The format of the spec can be found :
+<code class="docutils literal notranslate"><span class="pre">https://agones.dev/site/docs/reference/fleet/</span></code>.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the ScalingConfig</p></li>
 </ul>
 <p>The <strong>scaling_configs</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">fleetAutoscalerSpec</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">schedules</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">fleetAutoscalerSpec</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Fleet autoscaler spec, which is sent to Agones.
+Example spec can be found :
+<a class="reference external" href="https://agones.dev/site/docs/reference/fleetautoscaler/">https://agones.dev/site/docs/reference/fleetautoscaler/</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the ScalingConfig</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">schedules</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The schedules to which this scaling config applies.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">cronJobDuration</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">cronSpec</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">endTime</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">startTime</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cronJobDuration</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The duration for the cron job event. The duration of the event is effective
+after the cron job’s start time.
+A duration in seconds with up to nine fractional digits, terminated by ‘s’. Example: “3.5s”.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cronSpec</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The cron definition of the scheduled event. See
+<a class="reference external" href="https://en.wikipedia.org/wiki/Cron">https://en.wikipedia.org/wiki/Cron</a>. Cron spec specifies the local time as
+defined by the realm.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">endTime</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The end time of the event.
+A timestamp in RFC3339 UTC “Zulu” format, accurate to nanoseconds. Example: “2014-10-02T15:01:23.045123456Z”.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">startTime</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The start time of the event.
+A timestamp in RFC3339 UTC “Zulu” format, accurate to nanoseconds. Example: “2014-10-02T15:01:23.045123456Z”.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">selectors</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">selectors</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Labels used to identify the clusters to which this scaling config
+applies. A cluster is subject to this scaling config if its labels match
+any of the selector entries.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">labels</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">labels</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Set of labels to group by.</p></li>
 </ul>
 </li>
 </ul>
@@ -258,17 +320,27 @@ If it is not provided, the provider project is used.</p></li>
 <dl class="attribute">
 <dt id="pulumi_gcp.gameservices.GameServerConfig.fleet_configs">
 <code class="sig-name descname">fleet_configs</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.gameservices.GameServerConfig.fleet_configs" title="Permalink to this definition">¶</a></dt>
-<dd><p>The fleet config contains list of fleet specs. In the Single Cloud, there will be only one.</p>
+<dd><p>The fleet config contains list of fleet specs. In the Single Cloud, there
+will be only one.  Structure is documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">fleetSpec</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fleetSpec</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The fleet spec, which is sent to Agones to configure fleet.
+The spec can be passed as inline json but it is recommended to use a file reference
+instead. File references can contain the json or yaml format of the fleet spec. Eg:</p>
+<ul>
+<li><p>fleet_spec = jsonencode(yamldecode(file(“fleet_configs.yaml”)))</p></li>
+<li><p>fleet_spec = file(“fleet_configs.json”)
+The format of the spec can be found :
+<code class="docutils literal notranslate"><span class="pre">https://agones.dev/site/docs/reference/fleet/</span></code>.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the ScalingConfig</p></li>
 </ul>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_gcp.gameservices.GameServerConfig.labels">
 <code class="sig-name descname">labels</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.gameservices.GameServerConfig.labels" title="Permalink to this definition">¶</a></dt>
-<dd><p>The labels associated with this game server config. Each label is a key-value pair.</p>
+<dd><p>Set of labels to group by.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -280,8 +352,7 @@ If it is not provided, the provider project is used.</p></li>
 <dl class="attribute">
 <dt id="pulumi_gcp.gameservices.GameServerConfig.name">
 <code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.gameservices.GameServerConfig.name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The resource name of the game server config, in the form:
-‘projects/{project_id}/locations/{location}/gameServerDeployments/{deployment_id}/configs/{config_id}’.</p>
+<dd><p>The name of the ScalingConfig</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -294,21 +365,31 @@ If it is not provided, the provider project is used.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.gameservices.GameServerConfig.scaling_configs">
 <code class="sig-name descname">scaling_configs</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.gameservices.GameServerConfig.scaling_configs" title="Permalink to this definition">¶</a></dt>
-<dd><p>Optional. This contains the autoscaling settings.</p>
+<dd><p>Optional. This contains the autoscaling settings.  Structure is documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">fleetAutoscalerSpec</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">schedules</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">fleetAutoscalerSpec</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Fleet autoscaler spec, which is sent to Agones.
+Example spec can be found :
+<a class="reference external" href="https://agones.dev/site/docs/reference/fleetautoscaler/">https://agones.dev/site/docs/reference/fleetautoscaler/</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the ScalingConfig</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">schedules</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - The schedules to which this scaling config applies.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">cronJobDuration</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">cronSpec</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">endTime</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">startTime</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cronJobDuration</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The duration for the cron job event. The duration of the event is effective
+after the cron job’s start time.
+A duration in seconds with up to nine fractional digits, terminated by ‘s’. Example: “3.5s”.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cronSpec</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The cron definition of the scheduled event. See
+<a class="reference external" href="https://en.wikipedia.org/wiki/Cron">https://en.wikipedia.org/wiki/Cron</a>. Cron spec specifies the local time as
+defined by the realm.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">endTime</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The end time of the event.
+A timestamp in RFC3339 UTC “Zulu” format, accurate to nanoseconds. Example: “2014-10-02T15:01:23.045123456Z”.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">startTime</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The start time of the event.
+A timestamp in RFC3339 UTC “Zulu” format, accurate to nanoseconds. Example: “2014-10-02T15:01:23.045123456Z”.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">selectors</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">selectors</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Labels used to identify the clusters to which this scaling config
+applies. A cluster is subject to this scaling config if its labels match
+any of the selector entries.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">labels</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">labels</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Set of labels to group by.</p></li>
 </ul>
 </li>
 </ul>
@@ -328,37 +409,56 @@ properties used to qualify the lookup.</p>
 <li><p><strong>config_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A unique id for the deployment config.</p></li>
 <li><p><strong>deployment_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A unique id for the deployment.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the game server config.</p></li>
-<li><p><strong>fleet_configs</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The fleet config contains list of fleet specs. In the Single Cloud, there will be only one.</p></li>
-<li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The labels associated with this game server config. Each label is a key-value pair.</p></li>
+<li><p><strong>fleet_configs</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The fleet config contains list of fleet specs. In the Single Cloud, there
+will be only one.  Structure is documented below.</p></li>
+<li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Set of labels to group by.</p></li>
 <li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Location of the Deployment.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The resource name of the game server config, in the form:
-‘projects/{project_id}/locations/{location}/gameServerDeployments/{deployment_id}/configs/{config_id}’.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the ScalingConfig</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
-<li><p><strong>scaling_configs</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Optional. This contains the autoscaling settings.</p></li>
+<li><p><strong>scaling_configs</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Optional. This contains the autoscaling settings.  Structure is documented below.</p></li>
 </ul>
 </dd>
 </dl>
 <p>The <strong>fleet_configs</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">fleetSpec</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fleetSpec</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The fleet spec, which is sent to Agones to configure fleet.
+The spec can be passed as inline json but it is recommended to use a file reference
+instead. File references can contain the json or yaml format of the fleet spec. Eg:</p>
+<ul>
+<li><p>fleet_spec = jsonencode(yamldecode(file(“fleet_configs.yaml”)))</p></li>
+<li><p>fleet_spec = file(“fleet_configs.json”)
+The format of the spec can be found :
+<code class="docutils literal notranslate"><span class="pre">https://agones.dev/site/docs/reference/fleet/</span></code>.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the ScalingConfig</p></li>
 </ul>
 <p>The <strong>scaling_configs</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">fleetAutoscalerSpec</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">schedules</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">fleetAutoscalerSpec</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Fleet autoscaler spec, which is sent to Agones.
+Example spec can be found :
+<a class="reference external" href="https://agones.dev/site/docs/reference/fleetautoscaler/">https://agones.dev/site/docs/reference/fleetautoscaler/</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the ScalingConfig</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">schedules</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The schedules to which this scaling config applies.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">cronJobDuration</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">cronSpec</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">endTime</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">startTime</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cronJobDuration</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The duration for the cron job event. The duration of the event is effective
+after the cron job’s start time.
+A duration in seconds with up to nine fractional digits, terminated by ‘s’. Example: “3.5s”.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cronSpec</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The cron definition of the scheduled event. See
+<a class="reference external" href="https://en.wikipedia.org/wiki/Cron">https://en.wikipedia.org/wiki/Cron</a>. Cron spec specifies the local time as
+defined by the realm.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">endTime</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The end time of the event.
+A timestamp in RFC3339 UTC “Zulu” format, accurate to nanoseconds. Example: “2014-10-02T15:01:23.045123456Z”.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">startTime</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The start time of the event.
+A timestamp in RFC3339 UTC “Zulu” format, accurate to nanoseconds. Example: “2014-10-02T15:01:23.045123456Z”.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">selectors</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">selectors</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Labels used to identify the clusters to which this scaling config
+applies. A cluster is subject to this scaling config if its labels match
+any of the selector entries.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">labels</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">labels</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Set of labels to group by.</p></li>
 </ul>
 </li>
 </ul>
@@ -422,7 +522,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>deployment_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A unique id for the deployment.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Human readable description of the game server deployment.</p></li>
-<li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The labels associated with this game server deployment. Each label is a key-value pair.</p></li>
+<li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The labels associated with this game server deployment. Each label is a
+key-value pair.</p></li>
 <li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Location of the Deployment.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
@@ -444,7 +545,8 @@ If it is not provided, the provider project is used.</p></li>
 <dl class="attribute">
 <dt id="pulumi_gcp.gameservices.GameServerDeployment.labels">
 <code class="sig-name descname">labels</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.gameservices.GameServerDeployment.labels" title="Permalink to this definition">¶</a></dt>
-<dd><p>The labels associated with this game server deployment. Each label is a key-value pair.</p>
+<dd><p>The labels associated with this game server deployment. Each label is a
+key-value pair.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -481,7 +583,8 @@ properties used to qualify the lookup.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>deployment_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A unique id for the deployment.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Human readable description of the game server deployment.</p></li>
-<li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The labels associated with this game server deployment. Each label is a key-value pair.</p></li>
+<li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The labels associated with this game server deployment. Each label is a
+key-value pair.</p></li>
 <li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Location of the Deployment.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The resource id of the game server deployment, eg:
 ‘projects/{project_id}/locations/{location}/gameServerDeployments/{deployment_id}’. For example,
@@ -550,11 +653,14 @@ deployment.</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>default_game_server_config</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – This field points to the game server config that is applied by default to all realms and clusters. For example,
-‘projects/my-project/locations/global/gameServerDeployments/my-game/configs/my-config’.</p></li>
+<li><p><strong>default_game_server_config</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – This field points to the game server config that is
+applied by default to all realms and clusters. For example,
+<code class="docutils literal notranslate"><span class="pre">projects/my-project/locations/global/gameServerDeployments/my-game/configs/my-config</span></code>.</p></li>
 <li><p><strong>deployment_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The deployment to rollout the new config to. Only 1 rollout must be associated with each deployment.</p></li>
-<li><p><strong>game_server_config_overrides</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The game_server_config_overrides contains the per game server config overrides. The overrides are processed in the order
-they are listed. As soon as a match is found for a cluster, the rest of the list is not processed.</p></li>
+<li><p><strong>game_server_config_overrides</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The game_server_config_overrides contains the per game server config
+overrides. The overrides are processed in the order they are listed. As
+soon as a match is found for a cluster, the rest of the list is not
+processed.  Structure is documented below.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
 </ul>
@@ -562,18 +668,19 @@ If it is not provided, the provider project is used.</p></li>
 </dl>
 <p>The <strong>game_server_config_overrides</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">configVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">realmsSelector</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">configVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Version of the configuration.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">realmsSelector</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Selection by realms.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">realms</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">realms</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - List of realms to match against.</p></li>
 </ul>
 </li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_gcp.gameservices.GameServerDeploymentRollout.default_game_server_config">
 <code class="sig-name descname">default_game_server_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.gameservices.GameServerDeploymentRollout.default_game_server_config" title="Permalink to this definition">¶</a></dt>
-<dd><p>This field points to the game server config that is applied by default to all realms and clusters. For example,
-‘projects/my-project/locations/global/gameServerDeployments/my-game/configs/my-config’.</p>
+<dd><p>This field points to the game server config that is
+applied by default to all realms and clusters. For example,
+<code class="docutils literal notranslate"><span class="pre">projects/my-project/locations/global/gameServerDeployments/my-game/configs/my-config</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -585,13 +692,15 @@ If it is not provided, the provider project is used.</p></li>
 <dl class="attribute">
 <dt id="pulumi_gcp.gameservices.GameServerDeploymentRollout.game_server_config_overrides">
 <code class="sig-name descname">game_server_config_overrides</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.gameservices.GameServerDeploymentRollout.game_server_config_overrides" title="Permalink to this definition">¶</a></dt>
-<dd><p>The game_server_config_overrides contains the per game server config overrides. The overrides are processed in the order
-they are listed. As soon as a match is found for a cluster, the rest of the list is not processed.</p>
+<dd><p>The game_server_config_overrides contains the per game server config
+overrides. The overrides are processed in the order they are listed. As
+soon as a match is found for a cluster, the rest of the list is not
+processed.  Structure is documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">configVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">realmsSelector</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">configVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Version of the configuration.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">realmsSelector</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Selection by realms.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">realms</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">realms</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - List of realms to match against.</p></li>
 </ul>
 </li>
 </ul>
@@ -622,11 +731,14 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>default_game_server_config</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – This field points to the game server config that is applied by default to all realms and clusters. For example,
-‘projects/my-project/locations/global/gameServerDeployments/my-game/configs/my-config’.</p></li>
+<li><p><strong>default_game_server_config</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – This field points to the game server config that is
+applied by default to all realms and clusters. For example,
+<code class="docutils literal notranslate"><span class="pre">projects/my-project/locations/global/gameServerDeployments/my-game/configs/my-config</span></code>.</p></li>
 <li><p><strong>deployment_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The deployment to rollout the new config to. Only 1 rollout must be associated with each deployment.</p></li>
-<li><p><strong>game_server_config_overrides</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The game_server_config_overrides contains the per game server config overrides. The overrides are processed in the order
-they are listed. As soon as a match is found for a cluster, the rest of the list is not processed.</p></li>
+<li><p><strong>game_server_config_overrides</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The game_server_config_overrides contains the per game server config
+overrides. The overrides are processed in the order they are listed. As
+soon as a match is found for a cluster, the rest of the list is not
+processed.  Structure is documented below.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The resource id of the game server deployment eg:
 ‘projects/my-project/locations/global/gameServerDeployments/my-deployment/rollout’.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
@@ -636,10 +748,10 @@ If it is not provided, the provider project is used.</p></li>
 </dl>
 <p>The <strong>game_server_config_overrides</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">configVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">realmsSelector</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">configVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Version of the configuration.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">realmsSelector</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Selection by realms.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">realms</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">realms</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - List of realms to match against.</p></li>
 </ul>
 </li>
 </ul>
@@ -707,8 +819,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
 <li><p><strong>realm_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – GCP region of the Realm.</p></li>
-<li><p><strong>time_zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Required. Time zone where all realm-specific policies are evaluated. The value of this field must be from the IANA time
-zone database: <a class="reference external" href="https://www.iana.org/time-zones">https://www.iana.org/time-zones</a>.</p></li>
+<li><p><strong>time_zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Required. Time zone where all realm-specific policies are evaluated. The value of
+this field must be from the IANA time zone database:
+<a class="reference external" href="https://www.iana.org/time-zones">https://www.iana.org/time-zones</a>.</p></li>
 </ul>
 </dd>
 </dl>
@@ -759,8 +872,9 @@ If it is not provided, the provider project is used.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.gameservices.Realm.time_zone">
 <code class="sig-name descname">time_zone</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.gameservices.Realm.time_zone" title="Permalink to this definition">¶</a></dt>
-<dd><p>Required. Time zone where all realm-specific policies are evaluated. The value of this field must be from the IANA time
-zone database: <a class="reference external" href="https://www.iana.org/time-zones">https://www.iana.org/time-zones</a>.</p>
+<dd><p>Required. Time zone where all realm-specific policies are evaluated. The value of
+this field must be from the IANA time zone database:
+<a class="reference external" href="https://www.iana.org/time-zones">https://www.iana.org/time-zones</a>.</p>
 </dd></dl>
 
 <dl class="method">
@@ -783,8 +897,9 @@ properties used to qualify the lookup.</p>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
 <li><p><strong>realm_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – GCP region of the Realm.</p></li>
-<li><p><strong>time_zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Required. Time zone where all realm-specific policies are evaluated. The value of this field must be from the IANA time
-zone database: <a class="reference external" href="https://www.iana.org/time-zones">https://www.iana.org/time-zones</a>.</p></li>
+<li><p><strong>time_zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Required. Time zone where all realm-specific policies are evaluated. The value of
+this field must be from the IANA time zone database:
+<a class="reference external" href="https://www.iana.org/time-zones">https://www.iana.org/time-zones</a>.</p></li>
 </ul>
 </dd>
 </dl>

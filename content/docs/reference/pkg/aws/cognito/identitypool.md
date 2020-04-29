@@ -62,7 +62,7 @@ const main = new aws.cognito.IdentityPool("main", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">IdentityPool</span><span class="p">(resource_name, opts=None, </span>allow_unauthenticated_identities=None<span class="p">, </span>cognito_identity_providers=None<span class="p">, </span>developer_provider_name=None<span class="p">, </span>identity_pool_name=None<span class="p">, </span>openid_connect_provider_arns=None<span class="p">, </span>saml_provider_arns=None<span class="p">, </span>supported_login_providers=None<span class="p">, </span>tags=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">IdentityPool</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>allow_unauthenticated_identities=None<span class="p">, </span>cognito_identity_providers=None<span class="p">, </span>developer_provider_name=None<span class="p">, </span>identity_pool_name=None<span class="p">, </span>openid_connect_provider_arns=None<span class="p">, </span>saml_provider_arns=None<span class="p">, </span>supported_login_providers=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

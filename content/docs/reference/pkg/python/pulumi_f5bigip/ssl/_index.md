@@ -24,7 +24,7 @@ Certificates can be imported from certificate files on the local disk, in PEM fo
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>content</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Content of certificate on Disk</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of SSL Certificate with .crt extension</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the SSL Certificate to be Imported on to BIGIP</p></li>
 <li><p><strong>partition</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Partition on to SSL Certificate to be imported</p></li>
 </ul>
 </dd>
@@ -38,7 +38,7 @@ Certificates can be imported from certificate files on the local disk, in PEM fo
 <dl class="attribute">
 <dt id="pulumi_f5bigip.ssl.Certificate.name">
 <code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_f5bigip.ssl.Certificate.name" title="Permalink to this definition">¶</a></dt>
-<dd><p>Name of SSL Certificate with .crt extension</p>
+<dd><p>Name of the SSL Certificate to be Imported on to BIGIP</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -59,7 +59,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>content</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Content of certificate on Disk</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of SSL Certificate with .crt extension</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the SSL Certificate to be Imported on to BIGIP</p></li>
 <li><p><strong>partition</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Partition on to SSL Certificate to be imported</p></li>
 </ul>
 </dd>
@@ -115,7 +115,7 @@ Certificate key can be imported from certificate key files on the local disk, in
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>content</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Content of SSL certificate key present on local Disk</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of SSL Certificate key with .key extension</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the SSL Certificate key to be Imported on to BIGIP</p></li>
 <li><p><strong>partition</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Partition on to SSL Certificate key to be imported</p></li>
 </ul>
 </dd>
@@ -129,7 +129,7 @@ Certificate key can be imported from certificate key files on the local disk, in
 <dl class="attribute">
 <dt id="pulumi_f5bigip.ssl.Key.name">
 <code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_f5bigip.ssl.Key.name" title="Permalink to this definition">¶</a></dt>
-<dd><p>Name of SSL Certificate key with .key extension</p>
+<dd><p>Name of the SSL Certificate key to be Imported on to BIGIP</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -150,7 +150,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>content</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Content of SSL certificate key present on local Disk</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of SSL Certificate key with .key extension</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the SSL Certificate key to be Imported on to BIGIP</p></li>
 <li><p><strong>partition</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Partition on to SSL Certificate key to be imported</p></li>
 </ul>
 </dd>

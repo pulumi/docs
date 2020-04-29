@@ -36,22 +36,27 @@ anything, please consult the source <a class="reference external" href="https://
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>collection</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The collection being indexed.</p></li>
-<li><p><strong>database</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Firestore database id. Defaults to ‘”(default)”’.</p></li>
-<li><p><strong>fields</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The fields supported by this index. The last field entry is always for the field path ‘<strong>name</strong>’. If, on creation,
-‘<strong>name</strong>’ was not specified as the last field, it will be added automatically with the same direction as that of the
-last field defined. If the final field in a composite index is not directional, the ‘<strong>name</strong>’ will be ordered
-‘“ASCENDING”’ (unless explicitly specified otherwise).</p></li>
+<li><p><strong>database</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Firestore database id. Defaults to <code class="docutils literal notranslate"><span class="pre">&quot;(default)&quot;</span></code>.</p></li>
+<li><p><strong>fields</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The fields supported by this index. The last field entry is always for
+the field path <code class="docutils literal notranslate"><span class="pre">__name__</span></code>. If, on creation, <code class="docutils literal notranslate"><span class="pre">__name__</span></code> was not
+specified as the last field, it will be added automatically with the
+same direction as that of the last field defined. If the final field
+in a composite index is not directional, the <code class="docutils literal notranslate"><span class="pre">__name__</span></code> will be
+ordered <code class="docutils literal notranslate"><span class="pre">&quot;ASCENDING&quot;</span></code> (unless explicitly specified otherwise).  Structure is documented below.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
-<li><p><strong>query_scope</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The scope at which a query is run. One of ‘“COLLECTION”’ or ‘“COLLECTION_GROUP”’. Defaults to ‘“COLLECTION”’.</p></li>
+<li><p><strong>query_scope</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The scope at which a query is run. One of <code class="docutils literal notranslate"><span class="pre">&quot;COLLECTION&quot;</span></code> or
+<code class="docutils literal notranslate"><span class="pre">&quot;COLLECTION_GROUP&quot;</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">&quot;COLLECTION&quot;</span></code>.</p></li>
 </ul>
 </dd>
 </dl>
 <p>The <strong>fields</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">arrayConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">fieldPath</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">order</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">arrayConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Indicates that this field supports operations on arrayValues. Only one of <code class="docutils literal notranslate"><span class="pre">order</span></code> and <code class="docutils literal notranslate"><span class="pre">arrayConfig</span></code> can
+be specified.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fieldPath</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Name of the field.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">order</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Indicates that this field supports ordering by the specified order or comparing using =, &lt;, &lt;=, &gt;, &gt;=.
+Only one of <code class="docutils literal notranslate"><span class="pre">order</span></code> and <code class="docutils literal notranslate"><span class="pre">arrayConfig</span></code> can be specified.</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_gcp.firestore.Index.collection">
@@ -62,20 +67,24 @@ If it is not provided, the provider project is used.</p></li>
 <dl class="attribute">
 <dt id="pulumi_gcp.firestore.Index.database">
 <code class="sig-name descname">database</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.firestore.Index.database" title="Permalink to this definition">¶</a></dt>
-<dd><p>The Firestore database id. Defaults to ‘”(default)”’.</p>
+<dd><p>The Firestore database id. Defaults to <code class="docutils literal notranslate"><span class="pre">&quot;(default)&quot;</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_gcp.firestore.Index.fields">
 <code class="sig-name descname">fields</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.firestore.Index.fields" title="Permalink to this definition">¶</a></dt>
-<dd><p>The fields supported by this index. The last field entry is always for the field path ‘<strong>name</strong>’. If, on creation,
-‘<strong>name</strong>’ was not specified as the last field, it will be added automatically with the same direction as that of the
-last field defined. If the final field in a composite index is not directional, the ‘<strong>name</strong>’ will be ordered
-‘“ASCENDING”’ (unless explicitly specified otherwise).</p>
+<dd><p>The fields supported by this index. The last field entry is always for
+the field path <code class="docutils literal notranslate"><span class="pre">__name__</span></code>. If, on creation, <code class="docutils literal notranslate"><span class="pre">__name__</span></code> was not
+specified as the last field, it will be added automatically with the
+same direction as that of the last field defined. If the final field
+in a composite index is not directional, the <code class="docutils literal notranslate"><span class="pre">__name__</span></code> will be
+ordered <code class="docutils literal notranslate"><span class="pre">&quot;ASCENDING&quot;</span></code> (unless explicitly specified otherwise).  Structure is documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">arrayConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">fieldPath</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">order</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">arrayConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Indicates that this field supports operations on arrayValues. Only one of <code class="docutils literal notranslate"><span class="pre">order</span></code> and <code class="docutils literal notranslate"><span class="pre">arrayConfig</span></code> can
+be specified.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fieldPath</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Name of the field.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">order</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Indicates that this field supports ordering by the specified order or comparing using =, &lt;, &lt;=, &gt;, &gt;=.
+Only one of <code class="docutils literal notranslate"><span class="pre">order</span></code> and <code class="docutils literal notranslate"><span class="pre">arrayConfig</span></code> can be specified.</p></li>
 </ul>
 </dd></dl>
 
@@ -96,7 +105,8 @@ If it is not provided, the provider project is used.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.firestore.Index.query_scope">
 <code class="sig-name descname">query_scope</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.firestore.Index.query_scope" title="Permalink to this definition">¶</a></dt>
-<dd><p>The scope at which a query is run. One of ‘“COLLECTION”’ or ‘“COLLECTION_GROUP”’. Defaults to ‘“COLLECTION”’.</p>
+<dd><p>The scope at which a query is run. One of <code class="docutils literal notranslate"><span class="pre">&quot;COLLECTION&quot;</span></code> or
+<code class="docutils literal notranslate"><span class="pre">&quot;COLLECTION_GROUP&quot;</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">&quot;COLLECTION&quot;</span></code>.</p>
 </dd></dl>
 
 <dl class="method">
@@ -111,24 +121,29 @@ properties used to qualify the lookup.</p>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>collection</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The collection being indexed.</p></li>
-<li><p><strong>database</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Firestore database id. Defaults to ‘”(default)”’.</p></li>
-<li><p><strong>fields</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The fields supported by this index. The last field entry is always for the field path ‘<strong>name</strong>’. If, on creation,
-‘<strong>name</strong>’ was not specified as the last field, it will be added automatically with the same direction as that of the
-last field defined. If the final field in a composite index is not directional, the ‘<strong>name</strong>’ will be ordered
-‘“ASCENDING”’ (unless explicitly specified otherwise).</p></li>
+<li><p><strong>database</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Firestore database id. Defaults to <code class="docutils literal notranslate"><span class="pre">&quot;(default)&quot;</span></code>.</p></li>
+<li><p><strong>fields</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The fields supported by this index. The last field entry is always for
+the field path <code class="docutils literal notranslate"><span class="pre">__name__</span></code>. If, on creation, <code class="docutils literal notranslate"><span class="pre">__name__</span></code> was not
+specified as the last field, it will be added automatically with the
+same direction as that of the last field defined. If the final field
+in a composite index is not directional, the <code class="docutils literal notranslate"><span class="pre">__name__</span></code> will be
+ordered <code class="docutils literal notranslate"><span class="pre">&quot;ASCENDING&quot;</span></code> (unless explicitly specified otherwise).  Structure is documented below.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A server defined name for this index. Format:
 ‘projects/{{project}}/databases/{{database}}/collectionGroups/{{collection}}/indexes/{{server_generated_id}}’</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
-<li><p><strong>query_scope</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The scope at which a query is run. One of ‘“COLLECTION”’ or ‘“COLLECTION_GROUP”’. Defaults to ‘“COLLECTION”’.</p></li>
+<li><p><strong>query_scope</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The scope at which a query is run. One of <code class="docutils literal notranslate"><span class="pre">&quot;COLLECTION&quot;</span></code> or
+<code class="docutils literal notranslate"><span class="pre">&quot;COLLECTION_GROUP&quot;</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">&quot;COLLECTION&quot;</span></code>.</p></li>
 </ul>
 </dd>
 </dl>
 <p>The <strong>fields</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">arrayConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">fieldPath</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">order</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">arrayConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Indicates that this field supports operations on arrayValues. Only one of <code class="docutils literal notranslate"><span class="pre">order</span></code> and <code class="docutils literal notranslate"><span class="pre">arrayConfig</span></code> can
+be specified.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fieldPath</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Name of the field.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">order</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Indicates that this field supports ordering by the specified order or comparing using =, &lt;, &lt;=, &gt;, &gt;=.
+Only one of <code class="docutils literal notranslate"><span class="pre">order</span></code> and <code class="docutils literal notranslate"><span class="pre">arrayConfig</span></code> can be specified.</p></li>
 </ul>
 </dd></dl>
 

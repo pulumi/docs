@@ -60,7 +60,7 @@ const smtp = new aws.ec2.ProxyProtocolPolicy("smtp", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ProxyProtocolPolicy</span><span class="p">(resource_name, opts=None, </span>instance_ports=None<span class="p">, </span>load_balancer=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ProxyProtocolPolicy</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>instance_ports=None<span class="p">, </span>load_balancer=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

@@ -57,7 +57,7 @@ const main = new aws.elasticsearch.DomainPolicy("main", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">DomainPolicy</span><span class="p">(resource_name, opts=None, </span>access_policies=None<span class="p">, </span>domain_name=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">DomainPolicy</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>access_policies=None<span class="p">, </span>domain_name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

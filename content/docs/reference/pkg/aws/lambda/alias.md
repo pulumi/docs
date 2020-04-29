@@ -12,8 +12,8 @@ meta_desc: "Explore the Alias resource of the lambda module, including examples,
 
 Creates a Lambda function alias. Creates an alias that points to the specified Lambda function version.
 
-For information about Lambda and how to use it, see [What is AWS Lambda?][1]
-For information about function aliases, see [CreateAlias][2] and [AliasRoutingConfiguration][3] in the API docs.
+For information about Lambda and how to use it, see [What is AWS Lambda?](http://docs.aws.amazon.com/lambda/latest/dg/welcome.html)
+For information about function aliases, see [CreateAlias](http://docs.aws.amazon.com/lambda/latest/dg/API_CreateAlias.html) and [AliasRoutingConfiguration](https://docs.aws.amazon.com/lambda/latest/dg/API_AliasRoutingConfiguration.html) in the API docs.
 
 {{% examples %}}
 ## Example Usage
@@ -49,7 +49,7 @@ const testAlias = new aws.lambda.Alias("test_alias", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Alias</span><span class="p">(resource_name, opts=None, </span>description=None<span class="p">, </span>function_name=None<span class="p">, </span>function_version=None<span class="p">, </span>name=None<span class="p">, </span>routing_config=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Alias</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>description=None<span class="p">, </span>function_name=None<span class="p">, </span>function_version=None<span class="p">, </span>name=None<span class="p">, </span>routing_config=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

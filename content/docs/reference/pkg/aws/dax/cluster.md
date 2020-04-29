@@ -42,7 +42,7 @@ const bar = new aws.dax.Cluster("bar", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Cluster</span><span class="p">(resource_name, opts=None, </span>availability_zones=None<span class="p">, </span>cluster_name=None<span class="p">, </span>description=None<span class="p">, </span>iam_role_arn=None<span class="p">, </span>maintenance_window=None<span class="p">, </span>node_type=None<span class="p">, </span>notification_topic_arn=None<span class="p">, </span>parameter_group_name=None<span class="p">, </span>replication_factor=None<span class="p">, </span>security_group_ids=None<span class="p">, </span>server_side_encryption=None<span class="p">, </span>subnet_group_name=None<span class="p">, </span>tags=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Cluster</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>availability_zones=None<span class="p">, </span>cluster_name=None<span class="p">, </span>description=None<span class="p">, </span>iam_role_arn=None<span class="p">, </span>maintenance_window=None<span class="p">, </span>node_type=None<span class="p">, </span>notification_topic_arn=None<span class="p">, </span>parameter_group_name=None<span class="p">, </span>replication_factor=None<span class="p">, </span>security_group_ids=None<span class="p">, </span>server_side_encryption=None<span class="p">, </span>subnet_group_name=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -242,7 +242,7 @@ permissions to access DynamoDB on your behalf
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The compute and memory capacity of the nodes. See
-[Nodes][1] for supported node types
+[Nodes](http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DAX.concepts.cluster.html#DAX.concepts.nodes) for supported node types
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -381,7 +381,7 @@ permissions to access DynamoDB on your behalf
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The compute and memory capacity of the nodes. See
-[Nodes][1] for supported node types
+[Nodes](http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DAX.concepts.cluster.html#DAX.concepts.nodes) for supported node types
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -520,7 +520,7 @@ permissions to access DynamoDB on your behalf
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The compute and memory capacity of the nodes. See
-[Nodes][1] for supported node types
+[Nodes](http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DAX.concepts.cluster.html#DAX.concepts.nodes) for supported node types
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -659,7 +659,7 @@ permissions to access DynamoDB on your behalf
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The compute and memory capacity of the nodes. See
-[Nodes][1] for supported node types
+[Nodes](http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DAX.concepts.cluster.html#DAX.concepts.nodes) for supported node types
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1246,7 +1246,7 @@ maintenance on the cluster is performed. The format is `ddd:hh24:mi-ddd:hh24:mi`
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The compute and memory capacity of the nodes. See
-[Nodes][1] for supported node types
+[Nodes](http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DAX.concepts.cluster.html#DAX.concepts.nodes) for supported node types
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1433,7 +1433,7 @@ maintenance on the cluster is performed. The format is `ddd:hh24:mi-ddd:hh24:mi`
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The compute and memory capacity of the nodes. See
-[Nodes][1] for supported node types
+[Nodes](http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DAX.concepts.cluster.html#DAX.concepts.nodes) for supported node types
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1620,7 +1620,7 @@ maintenance on the cluster is performed. The format is `ddd:hh24:mi-ddd:hh24:mi`
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The compute and memory capacity of the nodes. See
-[Nodes][1] for supported node types
+[Nodes](http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DAX.concepts.cluster.html#DAX.concepts.nodes) for supported node types
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1807,7 +1807,7 @@ maintenance on the cluster is performed. The format is `ddd:hh24:mi-ddd:hh24:mi`
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The compute and memory capacity of the nodes. See
-[Nodes][1] for supported node types
+[Nodes](http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DAX.concepts.cluster.html#DAX.concepts.nodes) for supported node types
 {{% /md %}}</dd>
 
     <dt class="property-optional"

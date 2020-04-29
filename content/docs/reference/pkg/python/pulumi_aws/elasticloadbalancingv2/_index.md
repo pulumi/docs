@@ -35,7 +35,7 @@ anything, please consult the source <a class="reference external" href="https://
 <dl class="attribute">
 <dt id="pulumi_aws.elasticloadbalancingv2.GetListenerResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticloadbalancingv2.GetListenerResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 </dd></dl>
@@ -47,7 +47,7 @@ anything, please consult the source <a class="reference external" href="https://
 <dl class="attribute">
 <dt id="pulumi_aws.elasticloadbalancingv2.GetLoadBalancerResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticloadbalancingv2.GetLoadBalancerResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 </dd></dl>
@@ -59,7 +59,7 @@ anything, please consult the source <a class="reference external" href="https://
 <dl class="attribute">
 <dt id="pulumi_aws.elasticloadbalancingv2.GetTargetGroupResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticloadbalancingv2.GetTargetGroupResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 </dd></dl>
@@ -71,6 +71,7 @@ anything, please consult the source <a class="reference external" href="https://
 <blockquote>
 <div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">alb.Listener</span></code> is known as <code class="docutils literal notranslate"><span class="pre">lb.Listener</span></code>. The functionality is identical.</p>
 </div></blockquote>
+<p>Deprecated: aws.Listener has been deprecated in favour of aws.Listener</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -345,6 +346,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">alb.ListenerCertificate</span></code> is known as <code class="docutils literal notranslate"><span class="pre">lb.ListenerCertificate</span></code>. The functionality is identical.</p>
 </div></blockquote>
+<p>Deprecated: aws.ListenerCertificate has been deprecated in favour of aws.ListenerCertificate</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -430,6 +432,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">alb.ListenerRule</span></code> is known as <code class="docutils literal notranslate"><span class="pre">lb.ListenerRule</span></code>. The functionality is identical.</p>
 </div></blockquote>
+<p>Deprecated: aws.ListenerRule has been deprecated in favour of aws.ListenerRule</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -797,6 +800,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">alb.LoadBalancer</span></code> is known as <code class="docutils literal notranslate"><span class="pre">lb.LoadBalancer</span></code>. The functionality is identical.</p>
 </div></blockquote>
+<p>Deprecated: aws.LoadBalancer has been deprecated in favour of aws.LoadBalancer</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1063,6 +1067,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">alb.TargetGroup</span></code> is known as <code class="docutils literal notranslate"><span class="pre">lb.TargetGroup</span></code>. The functionality is identical.</p>
 </div></blockquote>
+<p>Deprecated: aws.TargetGroup has been deprecated in favour of aws.TargetGroup</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1095,16 +1100,12 @@ You can’t specify publicly routable IP addresses.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Boolean to enable / disable <code class="docutils literal notranslate"><span class="pre">stickiness</span></code>. Default is <code class="docutils literal notranslate"><span class="pre">true</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">healthyThreshold</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of consecutive health checks successes required before considering an unhealthy target healthy. Defaults to 3.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">interval</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The approximate amount of time, in seconds, between health checks of an individual target. Minimum value 5 seconds, Maximum value 300 seconds. For <code class="docutils literal notranslate"><span class="pre">lambda</span></code> target groups, it needs to be greater as the <code class="docutils literal notranslate"><span class="pre">timeout</span></code> of the underlying <code class="docutils literal notranslate"><span class="pre">lambda</span></code>. Default 30 seconds.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">matcher</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">matcher</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The HTTP codes to use when checking for a successful response from a target. You can specify multiple values (for example, “200,202”) or a range of values (for example, “200-299”). Applies to Application Load Balancers only (HTTP/HTTPS), not Network Load Balancers (TCP).</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The destination for the health check request. Applies to Application Load Balancers only (HTTP/HTTPS), not Network Load Balancers (TCP).</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The port on which targets receive traffic, unless overridden when registering a specific target. Required when <code class="docutils literal notranslate"><span class="pre">target_type</span></code> is <code class="docutils literal notranslate"><span class="pre">instance</span></code> or <code class="docutils literal notranslate"><span class="pre">ip</span></code>. Does not apply when <code class="docutils literal notranslate"><span class="pre">target_type</span></code> is <code class="docutils literal notranslate"><span class="pre">lambda</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The protocol to use for routing traffic to the targets. Should be one of “TCP”, “TLS”, “UDP”, “TCP_UDP”, “HTTP” or “HTTPS”. Required when <code class="docutils literal notranslate"><span class="pre">target_type</span></code> is <code class="docutils literal notranslate"><span class="pre">instance</span></code> or <code class="docutils literal notranslate"><span class="pre">ip</span></code>. Does not apply when <code class="docutils literal notranslate"><span class="pre">target_type</span></code> is <code class="docutils literal notranslate"><span class="pre">lambda</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">timeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The amount of time, in seconds, during which no response means a failed health check. For Application Load Balancers, the range is 2 to 120 seconds, and the default is 5 seconds for the <code class="docutils literal notranslate"><span class="pre">instance</span></code> target type and 30 seconds for the <code class="docutils literal notranslate"><span class="pre">lambda</span></code> target type. For Network Load Balancers, you cannot set a custom value, and the default is 10 seconds for TCP and HTTPS health checks and 6 seconds for HTTP health checks.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">unhealthyThreshold</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of consecutive health check failures required before considering the target unhealthy . For Network Load Balancers, this value must be the same as the <code class="docutils literal notranslate"><span class="pre">healthy_threshold</span></code>. Defaults to 3.</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">matcher</span></code> (Required for HTTP/HTTPS ALB) The HTTP codes to use when checking for a successful response from a target. You can specify multiple values (for example, “200,202”) or a range of values (for example, “200-299”). Applies to Application Load Balancers only (HTTP/HTTPS), not Network Load Balancers (TCP).</p></li>
-</ul>
-</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">unhealthyThreshold</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of consecutive health check failures required before considering the target unhealthy . For Network Load Balancers, this value must be the same as the <code class="docutils literal notranslate"><span class="pre">healthy_threshold</span></code>. Defaults to 3.</p></li>
 </ul>
 <p>The <strong>stickiness</strong> object supports the following:</p>
 <ul class="simple">
@@ -1138,16 +1139,12 @@ You can’t specify publicly routable IP addresses.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Boolean to enable / disable <code class="docutils literal notranslate"><span class="pre">stickiness</span></code>. Default is <code class="docutils literal notranslate"><span class="pre">true</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">healthyThreshold</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The number of consecutive health checks successes required before considering an unhealthy target healthy. Defaults to 3.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">interval</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The approximate amount of time, in seconds, between health checks of an individual target. Minimum value 5 seconds, Maximum value 300 seconds. For <code class="docutils literal notranslate"><span class="pre">lambda</span></code> target groups, it needs to be greater as the <code class="docutils literal notranslate"><span class="pre">timeout</span></code> of the underlying <code class="docutils literal notranslate"><span class="pre">lambda</span></code>. Default 30 seconds.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">matcher</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">matcher</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The HTTP codes to use when checking for a successful response from a target. You can specify multiple values (for example, “200,202”) or a range of values (for example, “200-299”). Applies to Application Load Balancers only (HTTP/HTTPS), not Network Load Balancers (TCP).</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The destination for the health check request. Applies to Application Load Balancers only (HTTP/HTTPS), not Network Load Balancers (TCP).</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The port on which targets receive traffic, unless overridden when registering a specific target. Required when <code class="docutils literal notranslate"><span class="pre">target_type</span></code> is <code class="docutils literal notranslate"><span class="pre">instance</span></code> or <code class="docutils literal notranslate"><span class="pre">ip</span></code>. Does not apply when <code class="docutils literal notranslate"><span class="pre">target_type</span></code> is <code class="docutils literal notranslate"><span class="pre">lambda</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The protocol to use for routing traffic to the targets. Should be one of “TCP”, “TLS”, “UDP”, “TCP_UDP”, “HTTP” or “HTTPS”. Required when <code class="docutils literal notranslate"><span class="pre">target_type</span></code> is <code class="docutils literal notranslate"><span class="pre">instance</span></code> or <code class="docutils literal notranslate"><span class="pre">ip</span></code>. Does not apply when <code class="docutils literal notranslate"><span class="pre">target_type</span></code> is <code class="docutils literal notranslate"><span class="pre">lambda</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">timeout</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The amount of time, in seconds, during which no response means a failed health check. For Application Load Balancers, the range is 2 to 120 seconds, and the default is 5 seconds for the <code class="docutils literal notranslate"><span class="pre">instance</span></code> target type and 30 seconds for the <code class="docutils literal notranslate"><span class="pre">lambda</span></code> target type. For Network Load Balancers, you cannot set a custom value, and the default is 10 seconds for TCP and HTTPS health checks and 6 seconds for HTTP health checks.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">unhealthyThreshold</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The number of consecutive health check failures required before considering the target unhealthy . For Network Load Balancers, this value must be the same as the <code class="docutils literal notranslate"><span class="pre">healthy_threshold</span></code>. Defaults to 3.</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">matcher</span></code> (Required for HTTP/HTTPS ALB) The HTTP codes to use when checking for a successful response from a target. You can specify multiple values (for example, “200,202”) or a range of values (for example, “200-299”). Applies to Application Load Balancers only (HTTP/HTTPS), not Network Load Balancers (TCP).</p></li>
-</ul>
-</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">unhealthyThreshold</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The number of consecutive health check failures required before considering the target unhealthy . For Network Load Balancers, this value must be the same as the <code class="docutils literal notranslate"><span class="pre">healthy_threshold</span></code>. Defaults to 3.</p></li>
 </ul>
 </dd></dl>
 
@@ -1274,16 +1271,12 @@ You can’t specify publicly routable IP addresses.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Boolean to enable / disable <code class="docutils literal notranslate"><span class="pre">stickiness</span></code>. Default is <code class="docutils literal notranslate"><span class="pre">true</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">healthyThreshold</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of consecutive health checks successes required before considering an unhealthy target healthy. Defaults to 3.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">interval</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The approximate amount of time, in seconds, between health checks of an individual target. Minimum value 5 seconds, Maximum value 300 seconds. For <code class="docutils literal notranslate"><span class="pre">lambda</span></code> target groups, it needs to be greater as the <code class="docutils literal notranslate"><span class="pre">timeout</span></code> of the underlying <code class="docutils literal notranslate"><span class="pre">lambda</span></code>. Default 30 seconds.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">matcher</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">matcher</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The HTTP codes to use when checking for a successful response from a target. You can specify multiple values (for example, “200,202”) or a range of values (for example, “200-299”). Applies to Application Load Balancers only (HTTP/HTTPS), not Network Load Balancers (TCP).</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The destination for the health check request. Applies to Application Load Balancers only (HTTP/HTTPS), not Network Load Balancers (TCP).</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The port on which targets receive traffic, unless overridden when registering a specific target. Required when <code class="docutils literal notranslate"><span class="pre">target_type</span></code> is <code class="docutils literal notranslate"><span class="pre">instance</span></code> or <code class="docutils literal notranslate"><span class="pre">ip</span></code>. Does not apply when <code class="docutils literal notranslate"><span class="pre">target_type</span></code> is <code class="docutils literal notranslate"><span class="pre">lambda</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The protocol to use for routing traffic to the targets. Should be one of “TCP”, “TLS”, “UDP”, “TCP_UDP”, “HTTP” or “HTTPS”. Required when <code class="docutils literal notranslate"><span class="pre">target_type</span></code> is <code class="docutils literal notranslate"><span class="pre">instance</span></code> or <code class="docutils literal notranslate"><span class="pre">ip</span></code>. Does not apply when <code class="docutils literal notranslate"><span class="pre">target_type</span></code> is <code class="docutils literal notranslate"><span class="pre">lambda</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">timeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The amount of time, in seconds, during which no response means a failed health check. For Application Load Balancers, the range is 2 to 120 seconds, and the default is 5 seconds for the <code class="docutils literal notranslate"><span class="pre">instance</span></code> target type and 30 seconds for the <code class="docutils literal notranslate"><span class="pre">lambda</span></code> target type. For Network Load Balancers, you cannot set a custom value, and the default is 10 seconds for TCP and HTTPS health checks and 6 seconds for HTTP health checks.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">unhealthyThreshold</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of consecutive health check failures required before considering the target unhealthy . For Network Load Balancers, this value must be the same as the <code class="docutils literal notranslate"><span class="pre">healthy_threshold</span></code>. Defaults to 3.</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">matcher</span></code> (Required for HTTP/HTTPS ALB) The HTTP codes to use when checking for a successful response from a target. You can specify multiple values (for example, “200,202”) or a range of values (for example, “200-299”). Applies to Application Load Balancers only (HTTP/HTTPS), not Network Load Balancers (TCP).</p></li>
-</ul>
-</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">unhealthyThreshold</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of consecutive health check failures required before considering the target unhealthy . For Network Load Balancers, this value must be the same as the <code class="docutils literal notranslate"><span class="pre">healthy_threshold</span></code>. Defaults to 3.</p></li>
 </ul>
 <p>The <strong>stickiness</strong> object supports the following:</p>
 <ul class="simple">
@@ -1338,6 +1331,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">alb.TargetGroupAttachment</span></code> is known as <code class="docutils literal notranslate"><span class="pre">lb.TargetGroupAttachment</span></code>. The functionality is identical.</p>
 </div></blockquote>
+<p>Deprecated: aws.TargetGroupAttachment has been deprecated in favour of aws.TargetGroupAttachment</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1442,6 +1436,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <p>This data source can prove useful when a module accepts an LB Listener as an
 input variable and needs to know the LB it is attached to, or other
 information specific to the listener in question.</p>
+<p>Deprecated: aws.getListener has been deprecated in favour of aws.getListener</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1463,6 +1458,7 @@ information specific to the listener in question.</p>
 <p>This data source can prove useful when a module accepts an LB as an input
 variable and needs to, for example, determine the security groups associated
 with it, etc.</p>
+<p>Deprecated: aws.getLoadBalancer has been deprecated in favour of aws.getLoadBalancer</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1483,6 +1479,7 @@ with it, etc.</p>
 <p>This data source can prove useful when a module accepts an LB Target Group as an
 input variable and needs to know its attributes. It can also be used to get the ARN of
 an LB Target Group for use in other resources, given LB Target Group name.</p>
+<p>Deprecated: aws.getTargetGroup has been deprecated in favour of aws.getTargetGroup</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

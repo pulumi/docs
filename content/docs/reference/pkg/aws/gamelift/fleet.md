@@ -47,7 +47,7 @@ const example = new aws.gamelift.Fleet("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Fleet</span><span class="p">(resource_name, opts=None, </span>build_id=None<span class="p">, </span>description=None<span class="p">, </span>ec2_inbound_permissions=None<span class="p">, </span>ec2_instance_type=None<span class="p">, </span>fleet_type=None<span class="p">, </span>instance_role_arn=None<span class="p">, </span>metric_groups=None<span class="p">, </span>name=None<span class="p">, </span>new_game_session_protection_policy=None<span class="p">, </span>resource_creation_limit_policy=None<span class="p">, </span>runtime_configuration=None<span class="p">, </span>tags=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Fleet</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>build_id=None<span class="p">, </span>description=None<span class="p">, </span>ec2_inbound_permissions=None<span class="p">, </span>ec2_instance_type=None<span class="p">, </span>fleet_type=None<span class="p">, </span>instance_role_arn=None<span class="p">, </span>metric_groups=None<span class="p">, </span>name=None<span class="p">, </span>new_game_session_protection_policy=None<span class="p">, </span>resource_creation_limit_policy=None<span class="p">, </span>runtime_configuration=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

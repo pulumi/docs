@@ -184,7 +184,7 @@ const exampleDeploymentGroup = new aws.codedeploy.DeploymentGroup("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">DeploymentGroup</span><span class="p">(resource_name, opts=None, </span>alarm_configuration=None<span class="p">, </span>app_name=None<span class="p">, </span>auto_rollback_configuration=None<span class="p">, </span>autoscaling_groups=None<span class="p">, </span>blue_green_deployment_config=None<span class="p">, </span>deployment_config_name=None<span class="p">, </span>deployment_group_name=None<span class="p">, </span>deployment_style=None<span class="p">, </span>ec2_tag_filters=None<span class="p">, </span>ec2_tag_sets=None<span class="p">, </span>ecs_service=None<span class="p">, </span>load_balancer_info=None<span class="p">, </span>on_premises_instance_tag_filters=None<span class="p">, </span>service_role_arn=None<span class="p">, </span>trigger_configurations=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">DeploymentGroup</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>alarm_configuration=None<span class="p">, </span>app_name=None<span class="p">, </span>auto_rollback_configuration=None<span class="p">, </span>autoscaling_groups=None<span class="p">, </span>blue_green_deployment_config=None<span class="p">, </span>deployment_config_name=None<span class="p">, </span>deployment_group_name=None<span class="p">, </span>deployment_style=None<span class="p">, </span>ec2_tag_filters=None<span class="p">, </span>ec2_tag_sets=None<span class="p">, </span>ecs_service=None<span class="p">, </span>load_balancer_info=None<span class="p">, </span>on_premises_instance_tag_filters=None<span class="p">, </span>service_role_arn=None<span class="p">, </span>trigger_configurations=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -3935,7 +3935,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The event type or types for which notifications are triggered. Some values that are supported: `DeploymentStart`, `DeploymentSuccess`, `DeploymentFailure`, `DeploymentStop`, `DeploymentRollback`, `InstanceStart`, `InstanceSuccess`, `InstanceFailure`.  See [the CodeDeploy documentation][1] for all possible values.
+    <dd>{{% md %}}The event type or types for which notifications are triggered. Some values that are supported: `DeploymentStart`, `DeploymentSuccess`, `DeploymentFailure`, `DeploymentStop`, `DeploymentRollback`, `InstanceStart`, `InstanceSuccess`, `InstanceFailure`.  See [the CodeDeploy documentation](http://docs.aws.amazon.com/codedeploy/latest/userguide/monitoring-sns-event-notifications-create-trigger.html) for all possible values.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -3969,7 +3969,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}The event type or types for which notifications are triggered. Some values that are supported: `DeploymentStart`, `DeploymentSuccess`, `DeploymentFailure`, `DeploymentStop`, `DeploymentRollback`, `InstanceStart`, `InstanceSuccess`, `InstanceFailure`.  See [the CodeDeploy documentation][1] for all possible values.
+    <dd>{{% md %}}The event type or types for which notifications are triggered. Some values that are supported: `DeploymentStart`, `DeploymentSuccess`, `DeploymentFailure`, `DeploymentStop`, `DeploymentRollback`, `InstanceStart`, `InstanceSuccess`, `InstanceFailure`.  See [the CodeDeploy documentation](http://docs.aws.amazon.com/codedeploy/latest/userguide/monitoring-sns-event-notifications-create-trigger.html) for all possible values.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -4003,7 +4003,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}The event type or types for which notifications are triggered. Some values that are supported: `DeploymentStart`, `DeploymentSuccess`, `DeploymentFailure`, `DeploymentStop`, `DeploymentRollback`, `InstanceStart`, `InstanceSuccess`, `InstanceFailure`.  See [the CodeDeploy documentation][1] for all possible values.
+    <dd>{{% md %}}The event type or types for which notifications are triggered. Some values that are supported: `DeploymentStart`, `DeploymentSuccess`, `DeploymentFailure`, `DeploymentStop`, `DeploymentRollback`, `InstanceStart`, `InstanceSuccess`, `InstanceFailure`.  See [the CodeDeploy documentation](http://docs.aws.amazon.com/codedeploy/latest/userguide/monitoring-sns-event-notifications-create-trigger.html) for all possible values.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -4037,7 +4037,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}The event type or types for which notifications are triggered. Some values that are supported: `DeploymentStart`, `DeploymentSuccess`, `DeploymentFailure`, `DeploymentStop`, `DeploymentRollback`, `InstanceStart`, `InstanceSuccess`, `InstanceFailure`.  See [the CodeDeploy documentation][1] for all possible values.
+    <dd>{{% md %}}The event type or types for which notifications are triggered. Some values that are supported: `DeploymentStart`, `DeploymentSuccess`, `DeploymentFailure`, `DeploymentStop`, `DeploymentRollback`, `InstanceStart`, `InstanceSuccess`, `InstanceFailure`.  See [the CodeDeploy documentation](http://docs.aws.amazon.com/codedeploy/latest/userguide/monitoring-sns-event-notifications-create-trigger.html) for all possible values.
 {{% /md %}}</dd>
 
     <dt class="property-required"
