@@ -54,18 +54,20 @@ pipenv --python 3
 pipenv install
 
 if [ -z "${REPO_OVERRIDE:-}" ]; then
+    echo "Building all Python docs..."
+    # Install the Python package for all the providers.
     for PACKAGE in "${PACKAGES[@]}" ; do \
-        # Install the provider package.
         pipenv run pip install "${PACKAGE}"
     done
 
     # Run the pydocgen to generate the docs for all the packages.
     pipenv run python -m pydocgen "../../content/docs/reference/pkg"
 else
+    # Install the Python package and run the pydocgen tool for just the provider that
+    # was requested.
+    echo "Building Python docs for ${REPO_OVERRIDE}..."
     PACKAGE="pulumi_${REPO_OVERRIDE}"
-    # Install the provider package.
     pipenv run pip install "${PACKAGE}"
-    # Run the pydocgen to generate the docs just for the provider that was requested.
     pipenv run python -m pydocgen "../../content/docs/reference/pkg" "${PACKAGE}"
 fi
 
