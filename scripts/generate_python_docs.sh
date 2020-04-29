@@ -27,6 +27,7 @@ PACKAGES=(
   "pulumi_gitlab"
   "pulumi_kafka"
   "pulumi_keycloak"
+  "pulumi_kong"
   "pulumi_kubernetes"
   "pulumi_linode"
   "pulumi_mailgun"
