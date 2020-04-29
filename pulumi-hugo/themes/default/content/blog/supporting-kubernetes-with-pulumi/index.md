@@ -51,6 +51,9 @@ It's not a complex environment: you create the base AWS infrastructure then add 
 
 For example, I recently needed to refresh my AWS lab infrastructure. There were a variety of reasons, but in the end, I had a set of changes I needed to apply to all four regions where my Pulumi project maintains infrastructure. After making the necessary changes to the TypeScript code, I was able to tear down all my lab infrastructure and re-create it in a matter of 10 to 15 minutes with a simple `pulumi destroy` followed by `pulumi up`. Making these changes without an infrastructure-as-code tool like Pulumi would have taken a lot longer.
 
+Watch Scott's demo.
+
+{{< youtube "EWILzQ7_jMI=0" >}}
 ## Your Infrastructure as Code Story
 
 We appreciate Scott taking the time to share his infrastructure as code story. Let us know you’re using Pulumi on [Twitter](https://twitter.com/pulumicorp) or on [Slack](https://slack.pulumi.com/).
