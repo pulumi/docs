@@ -92,19 +92,24 @@ class CreateMarkdownInput(NamedTuple):
     out_file: str
 
 
-def read_input(input_file: str) -> Input:
+def read_input(input_file: str, package_override: str = "") -> Input:
     """
     read_input produces an Input from an input file with the given filename.
 
     :param str input_file: Filename of a JSON file to read inputs from.
+    :param package_override: Pass the Pulumi package name (i.e. pulumi_aws) to generate docs for just that provider.
     :returns str: An Input representing the current run of the tool.
     """
     with open(input_file) as f:
         input_dict = json.load(f)
         project = Project(**input_dict["project"])
         providers = []
-        for provider in input_dict.get("providers") or []:
-            providers.append(Provider(**provider))
+        if package_override != "":
+            provider = [obj for obj in input_dict.get("providers") if obj["package_name"] == package_override]
+            providers.append(Provider(**provider[0]))
+        else:
+            for provider in input_dict.get("providers") or []:
+                providers.append(Provider(**provider))
         return Input(project=project, providers=providers)
 
 
@@ -335,12 +340,16 @@ def create_markdown_file(input: CreateMarkdownInput):
 
 
 def main():
-    if len(sys.argv) != 2:
-        print("usage: python -m pydocgen <output_dir>")
+    if len(sys.argv) > 3:
+        print("usage: python -m pydocgen <output_dir> [package_override]")
         exit(1)
 
     output_directory = sys.argv[1]
-    input = read_input("pulumi-docs.json")
+    package_override = ""
+    if len(sys.argv) == 3:
+        package_override = sys.argv[2]
+
+    docs_input = read_input("pulumi-docs.json", package_override)
     env = Environment(
         loader=PackageLoader('pydocgen', 'templates'),
         autoescape=select_autoescape(['html', 'xml']))
@@ -348,7 +357,7 @@ def main():
     tempdir = tempfile.mkdtemp()
     outdir = tempfile.mkdtemp()
     mdoutdir = output_directory
-    ctx = Context(template_env=env,  input=input,
+    ctx = Context(template_env=env, input=docs_input,
                   tempdir=tempdir, outdir=outdir, mdoutdir=mdoutdir)
 
     try:
