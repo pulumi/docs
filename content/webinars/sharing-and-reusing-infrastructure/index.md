@@ -1,6 +1,6 @@
 ---
 # Name of the webinar.
-title: "Sharing and Reusing Infrastructure with Pulumi and Artifactory"
+title: "Sharing & Reusing Infrastructure with Pulumi and Artifactory"
 meta_desc: "Dan Hernandez and Melissa McKay will show you how to define resources such as VPCs, Kubernetes clusters, and policies using multiple languages."
 
 # A featured webinar will display first in the list.
