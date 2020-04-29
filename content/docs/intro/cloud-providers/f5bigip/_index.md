@@ -72,7 +72,7 @@ monitor = f5bigip.ltm.Monitor("backend",
 
 ```go
 import (
-  ltm "github.com/pulumi/pulumi-f5bigip/sdk/go/f5bigip/ltm"
+  ltm "github.com/pulumi/pulumi-f5bigip/sdk/v2/go/f5bigip/ltm"
 )
 
 monitor, _ := ltm.NewMonitor(ctx, "backend", &ltm.MonitorArgs{

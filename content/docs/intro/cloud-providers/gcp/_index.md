@@ -68,7 +68,7 @@ bucket = storage.Bucket('my-bucket')
 {{% choosable language go %}}
 
 ```go
-import "github.com/pulumi/pulumi-gcp/sdk/go/gcp/storage"
+import "github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/storage"
 
 bucket, _ := storage.NewBucket(ctx, "my-bucket", nil)
 ```

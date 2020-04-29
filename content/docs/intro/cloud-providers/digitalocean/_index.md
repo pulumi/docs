@@ -65,7 +65,7 @@ instance = do.Domain("test",
 
 ```go
 import (
-  do "github.com/pulumi/pulumi-digitalocean/sdk/go/digitalocean"
+  do "github.com/pulumi/pulumi-digitalocean/sdk/v2/go/digitalocean"
 )
 
 domain, _ := do.NewDomain(ctx, "test", &do.DomainArgs{
