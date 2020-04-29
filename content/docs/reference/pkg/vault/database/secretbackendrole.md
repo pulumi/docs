@@ -22,7 +22,7 @@ meta_desc: "Explore the SecretBackendRole resource of the database module, inclu
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">SecretBackendRole</span><span class="p">(resource_name, opts=None, </span>backend=None<span class="p">, </span>creation_statements=None<span class="p">, </span>db_name=None<span class="p">, </span>default_ttl=None<span class="p">, </span>max_ttl=None<span class="p">, </span>name=None<span class="p">, </span>renew_statements=None<span class="p">, </span>revocation_statements=None<span class="p">, </span>rollback_statements=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">SecretBackendRole</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>backend=None<span class="p">, </span>creation_statements=None<span class="p">, </span>db_name=None<span class="p">, </span>default_ttl=None<span class="p">, </span>max_ttl=None<span class="p">, </span>name=None<span class="p">, </span>renew_statements=None<span class="p">, </span>revocation_statements=None<span class="p">, </span>rollback_statements=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
