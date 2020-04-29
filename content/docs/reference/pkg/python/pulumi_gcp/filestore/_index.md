@@ -34,10 +34,12 @@ anything, please consult the source <a class="reference external" href="https://
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A description of the instance.</p></li>
-<li><p><strong>file_shares</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – File system shares on the instance. For this version, only a single file share is supported.</p></li>
+<li><p><strong>file_shares</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – File system shares on the instance. For this version, only a
+single file share is supported.  Structure is documented below.</p></li>
 <li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Resource labels to represent user-provided metadata.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The resource name of the instance.</p></li>
-<li><p><strong>networks</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – VPC networks to which the instance is connected. For this version, only a single network is supported.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the fileshare (16 characters or less)</p></li>
+<li><p><strong>networks</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – VPC networks to which the instance is connected. For this version,
+only a single network is supported.  Structure is documented below.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
 <li><p><strong>tier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The service tier of the instance.</p></li>
@@ -47,15 +49,20 @@ If it is not provided, the provider project is used.</p></li>
 </dl>
 <p>The <strong>file_shares</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">capacityGb</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">capacityGb</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - File share capacity in GiB. This must be at least 1024 GiB
+for the standard tier, or 2560 GiB for the premium tier.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the fileshare (16 characters or less)</p></li>
 </ul>
 <p>The <strong>networks</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">ip_addresses</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">modes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">network</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">reserved_ip_range</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ip_addresses</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - -
+A list of IPv4 or IPv6 addresses.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">modes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - IP versions for which the instance has
+IP addresses assigned.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">network</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the GCE VPC network to which the
+instance is connected.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">reserved_ip_range</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A /29 CIDR block that identifies the range of IP
+addresses reserved for this instance.</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_gcp.filestore.Instance.create_time">
@@ -78,10 +85,12 @@ If it is not provided, the provider project is used.</p></li>
 <dl class="attribute">
 <dt id="pulumi_gcp.filestore.Instance.file_shares">
 <code class="sig-name descname">file_shares</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.filestore.Instance.file_shares" title="Permalink to this definition">¶</a></dt>
-<dd><p>File system shares on the instance. For this version, only a single file share is supported.</p>
+<dd><p>File system shares on the instance. For this version, only a
+single file share is supported.  Structure is documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">capacityGb</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">capacityGb</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - File share capacity in GiB. This must be at least 1024 GiB
+for the standard tier, or 2560 GiB for the premium tier.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the fileshare (16 characters or less)</p></li>
 </ul>
 </dd></dl>
 
@@ -94,18 +103,23 @@ If it is not provided, the provider project is used.</p></li>
 <dl class="attribute">
 <dt id="pulumi_gcp.filestore.Instance.name">
 <code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.filestore.Instance.name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The resource name of the instance.</p>
+<dd><p>The name of the fileshare (16 characters or less)</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_gcp.filestore.Instance.networks">
 <code class="sig-name descname">networks</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.filestore.Instance.networks" title="Permalink to this definition">¶</a></dt>
-<dd><p>VPC networks to which the instance is connected. For this version, only a single network is supported.</p>
+<dd><p>VPC networks to which the instance is connected. For this version,
+only a single network is supported.  Structure is documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">ip_addresses</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">modes</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">network</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">reserved_ip_range</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ip_addresses</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - -
+A list of IPv4 or IPv6 addresses.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">modes</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - IP versions for which the instance has
+IP addresses assigned.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">network</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the GCE VPC network to which the
+instance is connected.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">reserved_ip_range</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A /29 CIDR block that identifies the range of IP
+addresses reserved for this instance.</p></li>
 </ul>
 </dd></dl>
 
@@ -142,10 +156,12 @@ properties used to qualify the lookup.</p>
 <li><p><strong>create_time</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creation timestamp in RFC3339 text format.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A description of the instance.</p></li>
 <li><p><strong>etag</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Server-specified ETag for the instance resource to prevent simultaneous updates from overwriting each other.</p></li>
-<li><p><strong>file_shares</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – File system shares on the instance. For this version, only a single file share is supported.</p></li>
+<li><p><strong>file_shares</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – File system shares on the instance. For this version, only a
+single file share is supported.  Structure is documented below.</p></li>
 <li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Resource labels to represent user-provided metadata.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The resource name of the instance.</p></li>
-<li><p><strong>networks</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – VPC networks to which the instance is connected. For this version, only a single network is supported.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the fileshare (16 characters or less)</p></li>
+<li><p><strong>networks</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – VPC networks to which the instance is connected. For this version,
+only a single network is supported.  Structure is documented below.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
 <li><p><strong>tier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The service tier of the instance.</p></li>
@@ -155,15 +171,20 @@ If it is not provided, the provider project is used.</p></li>
 </dl>
 <p>The <strong>file_shares</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">capacityGb</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">capacityGb</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - File share capacity in GiB. This must be at least 1024 GiB
+for the standard tier, or 2560 GiB for the premium tier.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the fileshare (16 characters or less)</p></li>
 </ul>
 <p>The <strong>networks</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">ip_addresses</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">modes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">network</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">reserved_ip_range</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ip_addresses</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - -
+A list of IPv4 or IPv6 addresses.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">modes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - IP versions for which the instance has
+IP addresses assigned.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">network</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the GCE VPC network to which the
+instance is connected.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">reserved_ip_range</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A /29 CIDR block that identifies the range of IP
+addresses reserved for this instance.</p></li>
 </ul>
 </dd></dl>
 

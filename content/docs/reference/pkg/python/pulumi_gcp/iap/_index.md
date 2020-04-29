@@ -907,9 +907,11 @@ will remove it from state but <em>will not delete the resource on the server.</e
 <li><p><strong>application_title</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Application name displayed on OAuth consent screen.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
-<li><p><strong>support_email</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Support email displayed on the OAuth consent screen. Can be either a user or group email. When a user email is
-specified, the caller must be the user with the associated email address. When a group email is specified, the caller
-can be either a user or a service account which is an owner of the specified group in Cloud Identity.</p></li>
+<li><p><strong>support_email</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Support email displayed on the OAuth consent screen. Can be either a
+user or group email. When a user email is specified, the caller must
+be the user with the associated email address. When a group email is
+specified, the caller can be either a user or a service account which
+is an owner of the specified group in Cloud Identity.</p></li>
 </ul>
 </dd>
 </dl>
@@ -942,9 +944,11 @@ If it is not provided, the provider project is used.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.iap.Brand.support_email">
 <code class="sig-name descname">support_email</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.iap.Brand.support_email" title="Permalink to this definition">¶</a></dt>
-<dd><p>Support email displayed on the OAuth consent screen. Can be either a user or group email. When a user email is
-specified, the caller must be the user with the associated email address. When a group email is specified, the caller
-can be either a user or a service account which is an owner of the specified group in Cloud Identity.</p>
+<dd><p>Support email displayed on the OAuth consent screen. Can be either a
+user or group email. When a user email is specified, the caller must
+be the user with the associated email address. When a group email is
+specified, the caller can be either a user or a service account which
+is an owner of the specified group in Cloud Identity.</p>
 </dd></dl>
 
 <dl class="method">
@@ -964,9 +968,11 @@ identification corresponds to the project number as only one brand per project c
 <li><p><strong>org_internal_only</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether the brand is only intended for usage inside the GSuite organization only.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
-<li><p><strong>support_email</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Support email displayed on the OAuth consent screen. Can be either a user or group email. When a user email is
-specified, the caller must be the user with the associated email address. When a group email is specified, the caller
-can be either a user or a service account which is an owner of the specified group in Cloud Identity.</p></li>
+<li><p><strong>support_email</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Support email displayed on the OAuth consent screen. Can be either a
+user or group email. When a user email is specified, the caller must
+be the user with the associated email address. When a group email is
+specified, the caller can be either a user or a service account which
+is an owner of the specified group in Cloud Identity.</p></li>
 </ul>
 </dd>
 </dl>
@@ -1019,8 +1025,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>brand</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Identifier of the brand to which this client is attached to. The format is
-‘projects/{project_number}/brands/{brand_id}/identityAwareProxyClients/{client_id}’.</p></li>
+<li><p><strong>brand</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Identifier of the brand to which this client
+is attached to. The format is
+<code class="docutils literal notranslate"><span class="pre">projects/{project_number}/brands/{brand_id}/identityAwareProxyClients/{client_id}</span></code>.</p></li>
 <li><p><strong>display_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Human-friendly name given to the OAuth client.</p></li>
 </ul>
 </dd>
@@ -1028,8 +1035,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_gcp.iap.Client.brand">
 <code class="sig-name descname">brand</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.iap.Client.brand" title="Permalink to this definition">¶</a></dt>
-<dd><p>Identifier of the brand to which this client is attached to. The format is
-‘projects/{project_number}/brands/{brand_id}/identityAwareProxyClients/{client_id}’.</p>
+<dd><p>Identifier of the brand to which this client
+is attached to. The format is
+<code class="docutils literal notranslate"><span class="pre">projects/{project_number}/brands/{brand_id}/identityAwareProxyClients/{client_id}</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1061,8 +1069,9 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>brand</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Identifier of the brand to which this client is attached to. The format is
-‘projects/{project_number}/brands/{brand_id}/identityAwareProxyClients/{client_id}’.</p></li>
+<li><p><strong>brand</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Identifier of the brand to which this client
+is attached to. The format is
+<code class="docutils literal notranslate"><span class="pre">projects/{project_number}/brands/{brand_id}/identityAwareProxyClients/{client_id}</span></code>.</p></li>
 <li><p><strong>client_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Output only. Unique identifier of the OAuth client.</p></li>
 <li><p><strong>display_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Human-friendly name given to the OAuth client.</p></li>
 <li><p><strong>secret</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Output only. Client secret of the OAuth client.</p></li>

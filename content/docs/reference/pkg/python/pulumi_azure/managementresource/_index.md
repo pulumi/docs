@@ -17,6 +17,7 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_azure.managementresource.ManangementLock">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.managementresource.</code><code class="sig-name descname">ManangementLock</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">lock_level=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">notes=None</em>, <em class="sig-param">scope=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.managementresource.ManangementLock" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Management Lock which is scoped to a Subscription, Resource Group or Resource.</p>
+<p>Deprecated: azure.ManangementLock has been deprecated in favour of azure.Lock</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
