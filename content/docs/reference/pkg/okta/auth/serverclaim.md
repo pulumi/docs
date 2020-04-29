@@ -44,7 +44,7 @@ const example = new okta.auth.ServerClaim("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ServerClaim</span><span class="p">(resource_name, opts=None, </span>always_include_in_token=None<span class="p">, </span>auth_server_id=None<span class="p">, </span>claim_type=None<span class="p">, </span>group_filter_type=None<span class="p">, </span>name=None<span class="p">, </span>scopes=None<span class="p">, </span>status=None<span class="p">, </span>value=None<span class="p">, </span>value_type=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ServerClaim</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>always_include_in_token=None<span class="p">, </span>auth_server_id=None<span class="p">, </span>claim_type=None<span class="p">, </span>group_filter_type=None<span class="p">, </span>name=None<span class="p">, </span>scopes=None<span class="p">, </span>status=None<span class="p">, </span>value=None<span class="p">, </span>value_type=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

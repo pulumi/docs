@@ -43,7 +43,7 @@ const example = new okta.app.BasicAuth("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">BasicAuth</span><span class="p">(resource_name, opts=None, </span>auth_url=None<span class="p">, </span>auto_submit_toolbar=None<span class="p">, </span>groups=None<span class="p">, </span>hide_ios=None<span class="p">, </span>hide_web=None<span class="p">, </span>label=None<span class="p">, </span>status=None<span class="p">, </span>url=None<span class="p">, </span>users=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">BasicAuth</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>auth_url=None<span class="p">, </span>auto_submit_toolbar=None<span class="p">, </span>groups=None<span class="p">, </span>hide_ios=None<span class="p">, </span>hide_web=None<span class="p">, </span>label=None<span class="p">, </span>status=None<span class="p">, </span>url=None<span class="p">, </span>users=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
