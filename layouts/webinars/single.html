@@ -100,14 +100,20 @@
 
     <section class="px-4">
         <div class="container mx-auto max-w-6xl pb-16">
-            <h3 class="text-orange">Get Started with Pulumi:</h3>
-            <ul class="text-gray-600">
-                <li><strong><a href="{{ relref . "/docs/get-started/aws" }}">Deploy an AWS S3 Bucket</a></strong> with a KMS key that enables server-side encryption on the S3 bucket using the KMS key.</li>
-                <li><strong><a href="{{ relref . "/docs/get-started/azure" }}">Create an Azure Resource Group and Storage Account</a></strong>, then export the storage account’s connection string.</li>
-                <li><strong><a href="{{ relref . "/docs/get-started/gcp" }}">Create a GCP Storage Bucket</a></strong> and apply labels to that bucket.</li>
-                <li><strong><a href="{{ relref . "/docs/get-started/kubernetes" }}">Create a Kubernetes NGINX deployment</a></strong> and add a config value for MiniKube deployments.</li>
-                <li><strong><a href="{{ relref . "/docs/tutorials" }}">More topics and tutorials.</a></strong></li>
-            </ul>
+            {{ if .Params.gated }}
+                <div class="md:mx-8">
+            {{ else }}
+                <div>
+            {{ end }}
+                <h3 class="text-orange">Get Started with Pulumi:</h3>
+                <ul class="text-gray-600">
+                    <li><strong><a href="{{ relref . "/docs/get-started/aws" }}">Deploy an AWS S3 Bucket</a></strong> with a KMS key that enables server-side encryption on the S3 bucket using the KMS key.</li>
+                    <li><strong><a href="{{ relref . "/docs/get-started/azure" }}">Create an Azure Resource Group and Storage Account</a></strong>, then export the storage account’s connection string.</li>
+                    <li><strong><a href="{{ relref . "/docs/get-started/gcp" }}">Create a GCP Storage Bucket</a></strong> and apply labels to that bucket.</li>
+                    <li><strong><a href="{{ relref . "/docs/get-started/kubernetes" }}">Create a Kubernetes NGINX deployment</a></strong> and add a config value for MiniKube deployments.</li>
+                    <li><strong><a href="{{ relref . "/docs/tutorials" }}">More topics and tutorials.</a></strong></li>
+                </ul>
+            </div>
         </div>
     </section>
 

@@ -4,7 +4,7 @@ title: "GitOps with Pulumi and GitLab"
 meta_desc: "Deploy and update your infrastructure the same way you deliver the rest of your application: with real code delivered through your CI/CD pipeline."
 
 # A featured webinar will display first in the list.
-featured: false
+featured: true
 
 # If the video is pre-recorded or live.
 pre_recorded: false
