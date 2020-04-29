@@ -22,7 +22,7 @@ meta_desc: "Explore the BigIpLicense resource of the sys module, including examp
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">BigIpLicense</span><span class="p">(resource_name, opts=None, </span>command=None<span class="p">, </span>registration_key=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">BigIpLicense</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>command=None<span class="p">, </span>registration_key=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

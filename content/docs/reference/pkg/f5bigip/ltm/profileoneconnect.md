@@ -50,7 +50,7 @@ const oneconnect_sanjose = new f5bigip.ltm.ProfileOneConnect("oneconnect-sanjose
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ProfileOneConnect</span><span class="p">(resource_name, opts=None, </span>defaults_from=None<span class="p">, </span>idle_timeout_override=None<span class="p">, </span>max_age=None<span class="p">, </span>max_reuse=None<span class="p">, </span>max_size=None<span class="p">, </span>name=None<span class="p">, </span>partition=None<span class="p">, </span>share_pools=None<span class="p">, </span>source_mask=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ProfileOneConnect</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>defaults_from=None<span class="p">, </span>idle_timeout_override=None<span class="p">, </span>max_age=None<span class="p">, </span>max_reuse=None<span class="p">, </span>max_size=None<span class="p">, </span>name=None<span class="p">, </span>partition=None<span class="p">, </span>share_pools=None<span class="p">, </span>source_mask=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

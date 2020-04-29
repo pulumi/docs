@@ -46,7 +46,7 @@ const dns1 = new f5bigip.sys.Dns("dns1", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Dns</span><span class="p">(resource_name, opts=None, </span>description=None<span class="p">, </span>name_servers=None<span class="p">, </span>number_of_dots=None<span class="p">, </span>searches=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Dns</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>description=None<span class="p">, </span>name_servers=None<span class="p">, </span>number_of_dots=None<span class="p">, </span>searches=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -224,7 +224,7 @@ The Dns resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the Dns Servers
+    <dd>{{% md %}}Provide description for your DNS server
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -267,7 +267,7 @@ The Dns resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the Dns Servers
+    <dd>{{% md %}}Provide description for your DNS server
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -310,7 +310,7 @@ The Dns resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the Dns Servers
+    <dd>{{% md %}}Provide description for your DNS server
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -353,7 +353,7 @@ The Dns resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Name of the Dns Servers
+    <dd>{{% md %}}Provide description for your DNS server
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -593,7 +593,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the Dns Servers
+    <dd>{{% md %}}Provide description for your DNS server
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -636,7 +636,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the Dns Servers
+    <dd>{{% md %}}Provide description for your DNS server
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -679,7 +679,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the Dns Servers
+    <dd>{{% md %}}Provide description for your DNS server
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -722,7 +722,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Name of the Dns Servers
+    <dd>{{% md %}}Provide description for your DNS server
 {{% /md %}}</dd>
 
     <dt class="property-optional"

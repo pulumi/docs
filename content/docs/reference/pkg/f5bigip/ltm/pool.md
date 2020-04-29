@@ -29,7 +29,7 @@ Resources should be named with their "full path". The full path is the combinati
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Pool</span><span class="p">(resource_name, opts=None, </span>allow_nat=None<span class="p">, </span>allow_snat=None<span class="p">, </span>description=None<span class="p">, </span>load_balancing_mode=None<span class="p">, </span>monitors=None<span class="p">, </span>name=None<span class="p">, </span>reselect_tries=None<span class="p">, </span>service_down_action=None<span class="p">, </span>slow_ramp_time=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Pool</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>allow_nat=None<span class="p">, </span>allow_snat=None<span class="p">, </span>description=None<span class="p">, </span>load_balancing_mode=None<span class="p">, </span>monitors=None<span class="p">, </span>name=None<span class="p">, </span>reselect_tries=None<span class="p">, </span>service_down_action=None<span class="p">, </span>slow_ramp_time=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
