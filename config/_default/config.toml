@@ -36,8 +36,24 @@ timeout = 300000
     authors = "/blog/author/:slug/"
     tags = "/blog/tag/:slug/"
 
-[blackfriday]
-    fractions = false
+[markup]
+  [markup.goldmark]
+    # [markup.goldmark.extensions]
+    #   definitionList = true
+    #   footnote = true
+    #   linkify = true
+    #   strikethrough = true
+    #   table = true
+    #   taskList = true
+    #   typographer = true
+    # [markup.goldmark.parser]
+    #   attribute = true
+      autoHeadingID = true
+      autoHeadingIDType = "github"
+    [markup.goldmark.renderer]
+    #   hardWraps = false
+      unsafe = true
+    #   xhtml = false
 
 [params]
     canonicalURL = "https://www.pulumi.com"
