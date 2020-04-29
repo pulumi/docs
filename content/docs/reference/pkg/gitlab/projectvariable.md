@@ -45,7 +45,7 @@ const example = new gitlab.ProjectVariable("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ProjectVariable</span><span class="p">(resource_name, opts=None, </span>environment_scope=None<span class="p">, </span>key=None<span class="p">, </span>masked=None<span class="p">, </span>project=None<span class="p">, </span>protected=None<span class="p">, </span>value=None<span class="p">, </span>variable_type=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ProjectVariable</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>environment_scope=None<span class="p">, </span>key=None<span class="p">, </span>masked=None<span class="p">, </span>project=None<span class="p">, </span>protected=None<span class="p">, </span>value=None<span class="p">, </span>variable_type=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

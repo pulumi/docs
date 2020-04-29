@@ -42,7 +42,7 @@ const branchProtect = new gitlab.BranchProtection("BranchProtect", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">BranchProtection</span><span class="p">(resource_name, opts=None, </span>branch=None<span class="p">, </span>merge_access_level=None<span class="p">, </span>project=None<span class="p">, </span>push_access_level=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">BranchProtection</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>branch=None<span class="p">, </span>merge_access_level=None<span class="p">, </span>project=None<span class="p">, </span>push_access_level=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
