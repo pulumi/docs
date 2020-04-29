@@ -7,7 +7,7 @@ aliases:
   - /webinars/getting-started-with-infrastrcuture-as-code
 
 # A featured webinar will display first in the list.
-featured: true
+featured: false
 
 # If the video is pre-recorded or live.
 pre_recorded: true
