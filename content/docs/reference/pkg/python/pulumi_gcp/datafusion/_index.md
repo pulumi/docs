@@ -34,27 +34,36 @@ anything, please consult the source <a class="reference external" href="https://
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An optional description of the instance.</p></li>
 <li><p><strong>enable_stackdriver_logging</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Option to enable Stackdriver Logging.</p></li>
 <li><p><strong>enable_stackdriver_monitoring</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Option to enable Stackdriver Monitoring.</p></li>
-<li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The resource labels for instance to use to annotate any related underlying resources, such as Compute Engine VMs.</p></li>
+<li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The resource labels for instance to use to annotate any related underlying resources,
+such as Compute Engine VMs.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the instance or a fully qualified identifier for the instance.</p></li>
-<li><p><strong>network_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Network configuration options. These are required when a private Data Fusion instance is to be created.</p></li>
+<li><p><strong>network_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Network configuration options. These are required when a private Data Fusion instance is to be created.  Structure is documented below.</p></li>
 <li><p><strong>options</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Map of additional options used to configure the behavior of Data Fusion instance.</p></li>
-<li><p><strong>private_instance</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether the Data Fusion instance should be private. If set to true, all Data Fusion nodes will have private IP
-addresses and will not be able to access the public internet.</p></li>
+<li><p><strong>private_instance</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether the Data Fusion instance should be private. If set to
+true, all Data Fusion nodes will have private IP addresses and will not be
+able to access the public internet.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
 <li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region of the Data Fusion instance.</p></li>
-<li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Represents the type of Data Fusion instance. Each type is configured with the default settings for processing and
-memory. - BASIC: Basic Data Fusion instance. In Basic type, the user will be able to create data pipelines using point
-and click UI. However, there are certain limitations, such as fewer number of concurrent pipelines, no support for
-streaming pipelines, etc. - ENTERPRISE: Enterprise Data Fusion instance. In Enterprise type, the user will have more
-features available, such as support for streaming pipelines, higher number of concurrent pipelines, etc.</p></li>
+<li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Represents the type of Data Fusion instance. Each type is configured with
+the default settings for processing and memory.</p></li>
 </ul>
 </dd>
 </dl>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="n">BASIC</span><span class="p">:</span> <span class="n">Basic</span> <span class="n">Data</span> <span class="n">Fusion</span> <span class="n">instance</span><span class="o">.</span> <span class="n">In</span> <span class="n">Basic</span> <span class="nb">type</span><span class="p">,</span> <span class="n">the</span> <span class="n">user</span> <span class="n">will</span> <span class="n">be</span> <span class="n">able</span> <span class="n">to</span> <span class="n">create</span> <span class="n">data</span> <span class="n">pipelines</span>
+<span class="n">using</span> <span class="n">point</span> <span class="ow">and</span> <span class="n">click</span> <span class="n">UI</span><span class="o">.</span> <span class="n">However</span><span class="p">,</span> <span class="n">there</span> <span class="n">are</span> <span class="n">certain</span> <span class="n">limitations</span><span class="p">,</span> <span class="n">such</span> <span class="k">as</span> <span class="n">fewer</span> <span class="n">number</span>
+<span class="n">of</span> <span class="n">concurrent</span> <span class="n">pipelines</span><span class="p">,</span> <span class="n">no</span> <span class="n">support</span> <span class="k">for</span> <span class="n">streaming</span> <span class="n">pipelines</span><span class="p">,</span> <span class="n">etc</span><span class="o">.</span>
+<span class="o">-</span> <span class="n">ENTERPRISE</span><span class="p">:</span> <span class="n">Enterprise</span> <span class="n">Data</span> <span class="n">Fusion</span> <span class="n">instance</span><span class="o">.</span> <span class="n">In</span> <span class="n">Enterprise</span> <span class="nb">type</span><span class="p">,</span> <span class="n">the</span> <span class="n">user</span> <span class="n">will</span> <span class="n">have</span> <span class="n">more</span> <span class="n">features</span>
+<span class="n">available</span><span class="p">,</span> <span class="n">such</span> <span class="k">as</span> <span class="n">support</span> <span class="k">for</span> <span class="n">streaming</span> <span class="n">pipelines</span><span class="p">,</span> <span class="n">higher</span> <span class="n">number</span> <span class="n">of</span> <span class="n">concurrent</span> <span class="n">pipelines</span><span class="p">,</span> <span class="n">etc</span><span class="o">.</span>
+</pre></div>
+</div>
 <p>The <strong>network_config</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">ipAllocation</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">network</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipAllocation</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The IP range in CIDR notation to use for the managed Data Fusion instance
+nodes. This range must not overlap with any other ranges used in the Data Fusion instance network.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">network</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Name of the network in the project with which the tenant project
+will be peered for executing pipelines. In case of shared VPC where the network resides in another host
+project the network should specified in the form of projects/{host-project-id}/global/networks/{network}</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_gcp.datafusion.Instance.create_time">
@@ -83,7 +92,8 @@ features available, such as support for streaming pipelines, higher number of co
 <dl class="attribute">
 <dt id="pulumi_gcp.datafusion.Instance.labels">
 <code class="sig-name descname">labels</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.datafusion.Instance.labels" title="Permalink to this definition">¶</a></dt>
-<dd><p>The resource labels for instance to use to annotate any related underlying resources, such as Compute Engine VMs.</p>
+<dd><p>The resource labels for instance to use to annotate any related underlying resources,
+such as Compute Engine VMs.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -95,10 +105,13 @@ features available, such as support for streaming pipelines, higher number of co
 <dl class="attribute">
 <dt id="pulumi_gcp.datafusion.Instance.network_config">
 <code class="sig-name descname">network_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.datafusion.Instance.network_config" title="Permalink to this definition">¶</a></dt>
-<dd><p>Network configuration options. These are required when a private Data Fusion instance is to be created.</p>
+<dd><p>Network configuration options. These are required when a private Data Fusion instance is to be created.  Structure is documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">ipAllocation</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">network</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipAllocation</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The IP range in CIDR notation to use for the managed Data Fusion instance
+nodes. This range must not overlap with any other ranges used in the Data Fusion instance network.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">network</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Name of the network in the project with which the tenant project
+will be peered for executing pipelines. In case of shared VPC where the network resides in another host
+project the network should specified in the form of projects/{host-project-id}/global/networks/{network}</p></li>
 </ul>
 </dd></dl>
 
@@ -111,8 +124,9 @@ features available, such as support for streaming pipelines, higher number of co
 <dl class="attribute">
 <dt id="pulumi_gcp.datafusion.Instance.private_instance">
 <code class="sig-name descname">private_instance</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.datafusion.Instance.private_instance" title="Permalink to this definition">¶</a></dt>
-<dd><p>Specifies whether the Data Fusion instance should be private. If set to true, all Data Fusion nodes will have private IP
-addresses and will not be able to access the public internet.</p>
+<dd><p>Specifies whether the Data Fusion instance should be private. If set to
+true, all Data Fusion nodes will have private IP addresses and will not be
+able to access the public internet.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -157,11 +171,15 @@ being upgraded - RESTARTING: Instance is being restarted</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.datafusion.Instance.type">
 <code class="sig-name descname">type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.datafusion.Instance.type" title="Permalink to this definition">¶</a></dt>
-<dd><p>Represents the type of Data Fusion instance. Each type is configured with the default settings for processing and
-memory. - BASIC: Basic Data Fusion instance. In Basic type, the user will be able to create data pipelines using point
-and click UI. However, there are certain limitations, such as fewer number of concurrent pipelines, no support for
-streaming pipelines, etc. - ENTERPRISE: Enterprise Data Fusion instance. In Enterprise type, the user will have more
-features available, such as support for streaming pipelines, higher number of concurrent pipelines, etc.</p>
+<dd><p>Represents the type of Data Fusion instance. Each type is configured with
+the default settings for processing and memory.</p>
+<ul class="simple">
+<li><p>BASIC: Basic Data Fusion instance. In Basic type, the user will be able to create data pipelines
+using point and click UI. However, there are certain limitations, such as fewer number
+of concurrent pipelines, no support for streaming pipelines, etc.</p></li>
+<li><p>ENTERPRISE: Enterprise Data Fusion instance. In Enterprise type, the user will have more features
+available, such as support for streaming pipelines, higher number of concurrent pipelines, etc.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -191,12 +209,14 @@ properties used to qualify the lookup.</p>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An optional description of the instance.</p></li>
 <li><p><strong>enable_stackdriver_logging</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Option to enable Stackdriver Logging.</p></li>
 <li><p><strong>enable_stackdriver_monitoring</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Option to enable Stackdriver Monitoring.</p></li>
-<li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The resource labels for instance to use to annotate any related underlying resources, such as Compute Engine VMs.</p></li>
+<li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The resource labels for instance to use to annotate any related underlying resources,
+such as Compute Engine VMs.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the instance or a fully qualified identifier for the instance.</p></li>
-<li><p><strong>network_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Network configuration options. These are required when a private Data Fusion instance is to be created.</p></li>
+<li><p><strong>network_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Network configuration options. These are required when a private Data Fusion instance is to be created.  Structure is documented below.</p></li>
 <li><p><strong>options</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Map of additional options used to configure the behavior of Data Fusion instance.</p></li>
-<li><p><strong>private_instance</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether the Data Fusion instance should be private. If set to true, all Data Fusion nodes will have private IP
-addresses and will not be able to access the public internet.</p></li>
+<li><p><strong>private_instance</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether the Data Fusion instance should be private. If set to
+true, all Data Fusion nodes will have private IP addresses and will not be
+able to access the public internet.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
 <li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region of the Data Fusion instance.</p></li>
@@ -206,11 +226,21 @@ If it is not provided, the provider project is used.</p></li>
 ready for requests - FAILED: Instance creation failed - DELETING: Instance is being deleted - UPGRADING: Instance is
 being upgraded - RESTARTING: Instance is being restarted</p></li>
 <li><p><strong>state_message</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Additional information about the current state of this Data Fusion instance if available.</p></li>
-<li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Represents the type of Data Fusion instance. Each type is configured with the default settings for processing and
-memory. - BASIC: Basic Data Fusion instance. In Basic type, the user will be able to create data pipelines using point
-and click UI. However, there are certain limitations, such as fewer number of concurrent pipelines, no support for
-streaming pipelines, etc. - ENTERPRISE: Enterprise Data Fusion instance. In Enterprise type, the user will have more
-features available, such as support for streaming pipelines, higher number of concurrent pipelines, etc.</p></li>
+<li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Represents the type of Data Fusion instance. Each type is configured with
+the default settings for processing and memory.</p></li>
+</ul>
+</dd>
+</dl>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="n">BASIC</span><span class="p">:</span> <span class="n">Basic</span> <span class="n">Data</span> <span class="n">Fusion</span> <span class="n">instance</span><span class="o">.</span> <span class="n">In</span> <span class="n">Basic</span> <span class="nb">type</span><span class="p">,</span> <span class="n">the</span> <span class="n">user</span> <span class="n">will</span> <span class="n">be</span> <span class="n">able</span> <span class="n">to</span> <span class="n">create</span> <span class="n">data</span> <span class="n">pipelines</span>
+<span class="n">using</span> <span class="n">point</span> <span class="ow">and</span> <span class="n">click</span> <span class="n">UI</span><span class="o">.</span> <span class="n">However</span><span class="p">,</span> <span class="n">there</span> <span class="n">are</span> <span class="n">certain</span> <span class="n">limitations</span><span class="p">,</span> <span class="n">such</span> <span class="k">as</span> <span class="n">fewer</span> <span class="n">number</span>
+<span class="n">of</span> <span class="n">concurrent</span> <span class="n">pipelines</span><span class="p">,</span> <span class="n">no</span> <span class="n">support</span> <span class="k">for</span> <span class="n">streaming</span> <span class="n">pipelines</span><span class="p">,</span> <span class="n">etc</span><span class="o">.</span>
+<span class="o">-</span> <span class="n">ENTERPRISE</span><span class="p">:</span> <span class="n">Enterprise</span> <span class="n">Data</span> <span class="n">Fusion</span> <span class="n">instance</span><span class="o">.</span> <span class="n">In</span> <span class="n">Enterprise</span> <span class="nb">type</span><span class="p">,</span> <span class="n">the</span> <span class="n">user</span> <span class="n">will</span> <span class="n">have</span> <span class="n">more</span> <span class="n">features</span>
+<span class="n">available</span><span class="p">,</span> <span class="n">such</span> <span class="k">as</span> <span class="n">support</span> <span class="k">for</span> <span class="n">streaming</span> <span class="n">pipelines</span><span class="p">,</span> <span class="n">higher</span> <span class="n">number</span> <span class="n">of</span> <span class="n">concurrent</span> <span class="n">pipelines</span><span class="p">,</span> <span class="n">etc</span><span class="o">.</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
 <li><p><strong>update_time</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The time the instance was last updated in RFC3339 UTC “Zulu” format, accurate to nanoseconds.</p></li>
 <li><p><strong>version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Current version of the Data Fusion.</p></li>
 </ul>
@@ -218,8 +248,11 @@ features available, such as support for streaming pipelines, higher number of co
 </dl>
 <p>The <strong>network_config</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">ipAllocation</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">network</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipAllocation</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The IP range in CIDR notation to use for the managed Data Fusion instance
+nodes. This range must not overlap with any other ranges used in the Data Fusion instance network.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">network</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Name of the network in the project with which the tenant project
+will be peered for executing pipelines. In case of shared VPC where the network resides in another host
+project the network should specified in the form of projects/{host-project-id}/global/networks/{network}</p></li>
 </ul>
 </dd></dl>
 

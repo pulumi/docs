@@ -153,7 +153,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.autoscaling.GetGroupResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.GetGroupResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -282,19 +282,6 @@ for more information.</p>
 should be running in the group. (See also Waiting for
 Capacity below.)</p></li>
 <li><p><strong>enabled_metrics</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of metrics to collect. The allowed values are <code class="docutils literal notranslate"><span class="pre">GroupDesiredCapacity</span></code>, <code class="docutils literal notranslate"><span class="pre">GroupInServiceCapacity</span></code>, <code class="docutils literal notranslate"><span class="pre">GroupPendingCapacity</span></code>, <code class="docutils literal notranslate"><span class="pre">GroupMinSize</span></code>, <code class="docutils literal notranslate"><span class="pre">GroupMaxSize</span></code>, <code class="docutils literal notranslate"><span class="pre">GroupInServiceInstances</span></code>, <code class="docutils literal notranslate"><span class="pre">GroupPendingInstances</span></code>, <code class="docutils literal notranslate"><span class="pre">GroupStandbyInstances</span></code>, <code class="docutils literal notranslate"><span class="pre">GroupStandbyCapacity</span></code>, <code class="docutils literal notranslate"><span class="pre">GroupTerminatingCapacity</span></code>, <code class="docutils literal notranslate"><span class="pre">GroupTerminatingInstances</span></code>, <code class="docutils literal notranslate"><span class="pre">GroupTotalCapacity</span></code>, <code class="docutils literal notranslate"><span class="pre">GroupTotalInstances</span></code>.</p></li>
-</ul>
-</dd>
-</dl>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>* `wait_for_capacity_timeout` (Default: &quot;10m&quot;) A maximum
-[duration](https://golang.org/pkg/time/#ParseDuration) that this provider should
-wait for ASG instances to be healthy before timing out.  (See also Waiting
-for Capacity below.) Setting this to &quot;0&quot; causes
-this provider to skip all Capacity Waiting behavior.
-</pre></div>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
 <li><p><strong>force_delete</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Allows deleting the autoscaling group without waiting
 for all instances in the pool to terminate.  You can force an autoscaling group to delete
 even if it’s in the process of scaling a resource. Normally, this provider
@@ -338,6 +325,11 @@ Note that if you suspend either the <code class="docutils literal notranslate"><
 <li><p><strong>target_group_arns</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of <code class="docutils literal notranslate"><span class="pre">alb.TargetGroup</span></code> ARNs, for use with Application or Network Load Balancing.</p></li>
 <li><p><strong>termination_policies</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of policies to decide how the instances in the auto scale group should be terminated. The allowed values are <code class="docutils literal notranslate"><span class="pre">OldestInstance</span></code>, <code class="docutils literal notranslate"><span class="pre">NewestInstance</span></code>, <code class="docutils literal notranslate"><span class="pre">OldestLaunchConfiguration</span></code>, <code class="docutils literal notranslate"><span class="pre">ClosestToNextInstanceHour</span></code>, <code class="docutils literal notranslate"><span class="pre">OldestLaunchTemplate</span></code>, <code class="docutils literal notranslate"><span class="pre">AllocationStrategy</span></code>, <code class="docutils literal notranslate"><span class="pre">Default</span></code>.</p></li>
 <li><p><strong>vpc_zone_identifiers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of subnet IDs to launch resources in.</p></li>
+<li><p><strong>wait_for_capacity_timeout</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A maximum
+<a class="reference external" href="https://golang.org/pkg/time/#ParseDuration">duration</a> that this provider should
+wait for ASG instances to be healthy before timing out.  (See also Waiting
+for Capacity below.) Setting this to “0” causes
+this provider to skip all Capacity Waiting behavior.</p></li>
 <li><p><strong>wait_for_elb_capacity</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Setting this will cause this provider to wait
 for exactly this number of healthy instances from this autoscaling group in
 all attached load balancers on both create and update operations. (Takes
@@ -429,13 +421,6 @@ Capacity below.)</p>
 <dt id="pulumi_aws.autoscaling.Group.enabled_metrics">
 <code class="sig-name descname">enabled_metrics</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Group.enabled_metrics" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of metrics to collect. The allowed values are <code class="docutils literal notranslate"><span class="pre">GroupDesiredCapacity</span></code>, <code class="docutils literal notranslate"><span class="pre">GroupInServiceCapacity</span></code>, <code class="docutils literal notranslate"><span class="pre">GroupPendingCapacity</span></code>, <code class="docutils literal notranslate"><span class="pre">GroupMinSize</span></code>, <code class="docutils literal notranslate"><span class="pre">GroupMaxSize</span></code>, <code class="docutils literal notranslate"><span class="pre">GroupInServiceInstances</span></code>, <code class="docutils literal notranslate"><span class="pre">GroupPendingInstances</span></code>, <code class="docutils literal notranslate"><span class="pre">GroupStandbyInstances</span></code>, <code class="docutils literal notranslate"><span class="pre">GroupStandbyCapacity</span></code>, <code class="docutils literal notranslate"><span class="pre">GroupTerminatingCapacity</span></code>, <code class="docutils literal notranslate"><span class="pre">GroupTerminatingInstances</span></code>, <code class="docutils literal notranslate"><span class="pre">GroupTotalCapacity</span></code>, <code class="docutils literal notranslate"><span class="pre">GroupTotalInstances</span></code>.</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">wait_for_capacity_timeout</span></code> (Default: “10m”) A maximum
-<a class="reference external" href="https://golang.org/pkg/time/#ParseDuration">duration</a> that this provider should
-wait for ASG instances to be healthy before timing out.  (See also Waiting
-for Capacity below.) Setting this to “0” causes
-this provider to skip all Capacity Waiting behavior.</p></li>
-</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -651,6 +636,16 @@ Amazon EC2 instances launched via this ASG</p></li>
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_aws.autoscaling.Group.wait_for_capacity_timeout">
+<code class="sig-name descname">wait_for_capacity_timeout</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Group.wait_for_capacity_timeout" title="Permalink to this definition">¶</a></dt>
+<dd><p>A maximum
+<a class="reference external" href="https://golang.org/pkg/time/#ParseDuration">duration</a> that this provider should
+wait for ASG instances to be healthy before timing out.  (See also Waiting
+for Capacity below.) Setting this to “0” causes
+this provider to skip all Capacity Waiting behavior.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_aws.autoscaling.Group.wait_for_elb_capacity">
 <code class="sig-name descname">wait_for_elb_capacity</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Group.wait_for_elb_capacity" title="Permalink to this definition">¶</a></dt>
 <dd><p>Setting this will cause this provider to wait
@@ -678,19 +673,6 @@ properties used to qualify the lookup.</p>
 should be running in the group. (See also Waiting for
 Capacity below.)</p></li>
 <li><p><strong>enabled_metrics</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of metrics to collect. The allowed values are <code class="docutils literal notranslate"><span class="pre">GroupDesiredCapacity</span></code>, <code class="docutils literal notranslate"><span class="pre">GroupInServiceCapacity</span></code>, <code class="docutils literal notranslate"><span class="pre">GroupPendingCapacity</span></code>, <code class="docutils literal notranslate"><span class="pre">GroupMinSize</span></code>, <code class="docutils literal notranslate"><span class="pre">GroupMaxSize</span></code>, <code class="docutils literal notranslate"><span class="pre">GroupInServiceInstances</span></code>, <code class="docutils literal notranslate"><span class="pre">GroupPendingInstances</span></code>, <code class="docutils literal notranslate"><span class="pre">GroupStandbyInstances</span></code>, <code class="docutils literal notranslate"><span class="pre">GroupStandbyCapacity</span></code>, <code class="docutils literal notranslate"><span class="pre">GroupTerminatingCapacity</span></code>, <code class="docutils literal notranslate"><span class="pre">GroupTerminatingInstances</span></code>, <code class="docutils literal notranslate"><span class="pre">GroupTotalCapacity</span></code>, <code class="docutils literal notranslate"><span class="pre">GroupTotalInstances</span></code>.</p></li>
-</ul>
-</dd>
-</dl>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>* `wait_for_capacity_timeout` (Default: &quot;10m&quot;) A maximum
-[duration](https://golang.org/pkg/time/#ParseDuration) that this provider should
-wait for ASG instances to be healthy before timing out.  (See also Waiting
-for Capacity below.) Setting this to &quot;0&quot; causes
-this provider to skip all Capacity Waiting behavior.
-</pre></div>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
 <li><p><strong>force_delete</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Allows deleting the autoscaling group without waiting
 for all instances in the pool to terminate.  You can force an autoscaling group to delete
 even if it’s in the process of scaling a resource. Normally, this provider
@@ -735,6 +717,12 @@ Note that if you suspend either the <code class="docutils literal notranslate"><
 <li><p><strong>target_group_arns</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of <code class="docutils literal notranslate"><span class="pre">alb.TargetGroup</span></code> ARNs, for use with Application or Network Load Balancing.</p></li>
 <li><p><strong>termination_policies</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of policies to decide how the instances in the auto scale group should be terminated. The allowed values are <code class="docutils literal notranslate"><span class="pre">OldestInstance</span></code>, <code class="docutils literal notranslate"><span class="pre">NewestInstance</span></code>, <code class="docutils literal notranslate"><span class="pre">OldestLaunchConfiguration</span></code>, <code class="docutils literal notranslate"><span class="pre">ClosestToNextInstanceHour</span></code>, <code class="docutils literal notranslate"><span class="pre">OldestLaunchTemplate</span></code>, <code class="docutils literal notranslate"><span class="pre">AllocationStrategy</span></code>, <code class="docutils literal notranslate"><span class="pre">Default</span></code>.</p></li>
 <li><p><strong>vpc_zone_identifiers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of subnet IDs to launch resources in.</p></li>
+<li><p><strong>wait_for_capacity_timeout</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>A maximum
+<a class="reference external" href="https://golang.org/pkg/time/#ParseDuration">duration</a> that this provider should
+wait for ASG instances to be healthy before timing out.  (See also Waiting
+for Capacity below.) Setting this to “0” causes
+this provider to skip all Capacity Waiting behavior.</p>
+</p></li>
 <li><p><strong>wait_for_elb_capacity</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Setting this will cause this provider to wait
 for exactly this number of healthy instances from this autoscaling group in
 all attached load balancers on both create and update operations. (Takes
@@ -984,7 +972,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.autoscaling.Notification">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.autoscaling.</code><code class="sig-name descname">Notification</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">group_names=None</em>, <em class="sig-param">notifications=None</em>, <em class="sig-param">topic_arn=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.autoscaling.Notification" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an AutoScaling Group with Notification support, via SNS Topics. Each of
-the <code class="docutils literal notranslate"><span class="pre">notifications</span></code> map to a [Notification Configuration][2] inside Amazon Web
+the <code class="docutils literal notranslate"><span class="pre">notifications</span></code> map to a <a class="reference external" href="https://docs.aws.amazon.com/AutoScaling/latest/APIReference/API_DescribeNotificationConfigurations.html">Notification Configuration</a> inside Amazon Web
 Services, and are applied to each AutoScaling Group you supply.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -993,7 +981,7 @@ Services, and are applied to each AutoScaling Group you supply.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>group_names</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of AutoScaling Group Names</p></li>
 <li><p><strong>notifications</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of Notification Types that trigger
-notifications. Acceptable values are documented [in the AWS documentation here][1]</p></li>
+notifications. Acceptable values are documented <a class="reference external" href="https://docs.aws.amazon.com/AutoScaling/latest/APIReference/API_NotificationConfiguration.html">in the AWS documentation here</a></p></li>
 <li><p><strong>topic_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Topic ARN for notifications to be sent through</p></li>
 </ul>
 </dd>
@@ -1008,7 +996,7 @@ notifications. Acceptable values are documented [in the AWS documentation here][
 <dt id="pulumi_aws.autoscaling.Notification.notifications">
 <code class="sig-name descname">notifications</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Notification.notifications" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of Notification Types that trigger
-notifications. Acceptable values are documented [in the AWS documentation here][1]</p>
+notifications. Acceptable values are documented <a class="reference external" href="https://docs.aws.amazon.com/AutoScaling/latest/APIReference/API_NotificationConfiguration.html">in the AWS documentation here</a></p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1029,8 +1017,9 @@ properties used to qualify the lookup.</p>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>group_names</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of AutoScaling Group Names</p></li>
-<li><p><strong>notifications</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of Notification Types that trigger
-notifications. Acceptable values are documented [in the AWS documentation here][1]</p></li>
+<li><p><strong>notifications</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – <p>A list of Notification Types that trigger
+notifications. Acceptable values are documented <a class="reference external" href="https://docs.aws.amazon.com/AutoScaling/latest/APIReference/API_NotificationConfiguration.html">in the AWS documentation here</a></p>
+</p></li>
 <li><p><strong>topic_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Topic ARN for notifications to be sent through</p></li>
 </ul>
 </dd>

@@ -22,56 +22,130 @@ anything, please consult the source <a class="reference external" href="https://
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>basic_algorithm</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Basic algorithm for autoscaling.</p></li>
-<li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The location where the autoscaling poicy should reside. The default value is ‘global’.</p></li>
-<li><p><strong>policy*id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The policy id. The id must contain only letters (a-z, A-Z), numbers (0-9), underscores (<a href="#id3"><span class="problematic" id="id4">*</span></a>), and hyphens (-). Cannot
-begin or end with underscore or hyphen. Must consist of between 3 and 50 characters.</p>
+<li><p><strong>basic_algorithm</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Basic algorithm for autoscaling.  Structure is documented below.</p></li>
+<li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The  location where the autoscaling poicy should reside.
+The default value is <code class="docutils literal notranslate"><span class="pre">global</span></code>.</p></li>
+<li><p><strong>policy*id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The policy id. The id must contain only letters (a-z, A-Z), numbers (0-9), underscores (<a href="#id3"><span class="problematic" id="id4">*</span></a>),
+and hyphens (-). Cannot begin or end with underscore or hyphen. Must consist of between
+3 and 50 characters.</p>
 </p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
-<li><p><strong>secondary_worker_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Describes how the autoscaler will operate for secondary workers.</p></li>
-<li><p><strong>worker_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Describes how the autoscaler will operate for primary workers.</p></li>
+<li><p><strong>secondary_worker_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Describes how the autoscaler will operate for secondary workers.  Structure is documented below.</p></li>
+<li><p><strong>worker_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Describes how the autoscaler will operate for primary workers.  Structure is documented below.</p></li>
 </ul>
 </dd>
 </dl>
 <p>The <strong>basic_algorithm</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">cooldownPeriod</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">yarnConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">cooldownPeriod</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Duration between scaling events. A scaling period starts after the
+update operation from the previous event has completed.
+Bounds: [2m, 1d]. Default: 2m.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">yarnConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - YARN autoscaling configuration.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">gracefulDecommissionTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">scaleDownFactor</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">scaleDownMinWorkerFraction</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">scaleUpFactor</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">scaleUpMinWorkerFraction</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">gracefulDecommissionTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Timeout for YARN graceful decommissioning of Node Managers. Specifies the
+duration to wait for jobs to complete before forcefully removing workers
+(and potentially interrupting jobs). Only applicable to downscaling operations.
+Bounds: [0s, 1d].</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">scaleDownFactor</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Fraction of average pending memory in the last cooldown period for which to
+remove workers. A scale-down factor of 1 will result in scaling down so that there
+is no available memory remaining after the update (more aggressive scaling).
+A scale-down factor of 0 disables removing workers, which can be beneficial for
+autoscaling a single job.
+Bounds: [0.0, 1.0].</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">scaleDownMinWorkerFraction</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Minimum scale-down threshold as a fraction of total cluster size before scaling occurs.
+For example, in a 20-worker cluster, a threshold of 0.1 means the autoscaler must
+recommend at least a 2 worker scale-down for the cluster to scale. A threshold of 0
+means the autoscaler will scale down on any recommended change.
+Bounds: [0.0, 1.0]. Default: 0.0.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">scaleUpFactor</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Fraction of average pending memory in the last cooldown period for which to
+add workers. A scale-up factor of 1.0 will result in scaling up so that there
+is no pending memory remaining after the update (more aggressive scaling).
+A scale-up factor closer to 0 will result in a smaller magnitude of scaling up
+(less aggressive scaling).
+Bounds: [0.0, 1.0].</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">scaleUpMinWorkerFraction</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Minimum scale-up threshold as a fraction of total cluster size before scaling
+occurs. For example, in a 20-worker cluster, a threshold of 0.1 means the autoscaler
+must recommend at least a 2-worker scale-up for the cluster to scale. A threshold of
+0 means the autoscaler will scale up on any recommended change.
+Bounds: [0.0, 1.0]. Default: 0.0.</p></li>
 </ul>
 </li>
 </ul>
 <p>The <strong>secondary_worker_config</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">max_instances</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">minInstances</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">weight</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">max_instances</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Maximum number of instances for this group. Note that by default, clusters will not use
+secondary workers. Required for secondary workers if the minimum secondary instances is set.
+Bounds: [minInstances, ). Defaults to 0.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">minInstances</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Minimum number of instances for this group. Bounds: [0, maxInstances]. Defaults to 0.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">weight</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Weight for the instance group, which is used to determine the fraction of total workers
+in the cluster from this instance group. For example, if primary workers have weight 2,
+and secondary workers have weight 1, the cluster will have approximately 2 primary workers
+for each secondary worker.
+The cluster may not reach the specified balance if constrained by min/max bounds or other
+autoscaling settings. For example, if maxInstances for secondary workers is 0, then only
+primary workers will be added. The cluster can also be out of balance when created.
+If weight is not set on any instance group, the cluster will default to equal weight for
+all groups: the cluster will attempt to maintain an equal number of workers in each group
+within the configured size bounds for each group. If weight is set for one group only,
+the cluster will default to zero weight on the unset group. For example if weight is set
+only on primary workers, the cluster will use primary workers only and no secondary workers.</p></li>
 </ul>
 <p>The <strong>worker_config</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">max_instances</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">minInstances</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">weight</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">max_instances</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Maximum number of instances for this group. Note that by default, clusters will not use
+secondary workers. Required for secondary workers if the minimum secondary instances is set.
+Bounds: [minInstances, ). Defaults to 0.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">minInstances</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Minimum number of instances for this group. Bounds: [0, maxInstances]. Defaults to 0.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">weight</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Weight for the instance group, which is used to determine the fraction of total workers
+in the cluster from this instance group. For example, if primary workers have weight 2,
+and secondary workers have weight 1, the cluster will have approximately 2 primary workers
+for each secondary worker.
+The cluster may not reach the specified balance if constrained by min/max bounds or other
+autoscaling settings. For example, if maxInstances for secondary workers is 0, then only
+primary workers will be added. The cluster can also be out of balance when created.
+If weight is not set on any instance group, the cluster will default to equal weight for
+all groups: the cluster will attempt to maintain an equal number of workers in each group
+within the configured size bounds for each group. If weight is set for one group only,
+the cluster will default to zero weight on the unset group. For example if weight is set
+only on primary workers, the cluster will use primary workers only and no secondary workers.</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_gcp.dataproc.AutoscalingPolicy.basic_algorithm">
 <code class="sig-name descname">basic_algorithm</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.dataproc.AutoscalingPolicy.basic_algorithm" title="Permalink to this definition">¶</a></dt>
-<dd><p>Basic algorithm for autoscaling.</p>
+<dd><p>Basic algorithm for autoscaling.  Structure is documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">cooldownPeriod</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">yarnConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">cooldownPeriod</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Duration between scaling events. A scaling period starts after the
+update operation from the previous event has completed.
+Bounds: [2m, 1d]. Default: 2m.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">yarnConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - YARN autoscaling configuration.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">gracefulDecommissionTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">scaleDownFactor</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">scaleDownMinWorkerFraction</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">scaleUpFactor</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">scaleUpMinWorkerFraction</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">gracefulDecommissionTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Timeout for YARN graceful decommissioning of Node Managers. Specifies the
+duration to wait for jobs to complete before forcefully removing workers
+(and potentially interrupting jobs). Only applicable to downscaling operations.
+Bounds: [0s, 1d].</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">scaleDownFactor</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Fraction of average pending memory in the last cooldown period for which to
+remove workers. A scale-down factor of 1 will result in scaling down so that there
+is no available memory remaining after the update (more aggressive scaling).
+A scale-down factor of 0 disables removing workers, which can be beneficial for
+autoscaling a single job.
+Bounds: [0.0, 1.0].</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">scaleDownMinWorkerFraction</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Minimum scale-down threshold as a fraction of total cluster size before scaling occurs.
+For example, in a 20-worker cluster, a threshold of 0.1 means the autoscaler must
+recommend at least a 2 worker scale-down for the cluster to scale. A threshold of 0
+means the autoscaler will scale down on any recommended change.
+Bounds: [0.0, 1.0]. Default: 0.0.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">scaleUpFactor</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Fraction of average pending memory in the last cooldown period for which to
+add workers. A scale-up factor of 1.0 will result in scaling up so that there
+is no pending memory remaining after the update (more aggressive scaling).
+A scale-up factor closer to 0 will result in a smaller magnitude of scaling up
+(less aggressive scaling).
+Bounds: [0.0, 1.0].</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">scaleUpMinWorkerFraction</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Minimum scale-up threshold as a fraction of total cluster size before scaling
+occurs. For example, in a 20-worker cluster, a threshold of 0.1 means the autoscaler
+must recommend at least a 2-worker scale-up for the cluster to scale. A threshold of
+0 means the autoscaler will scale up on any recommended change.
+Bounds: [0.0, 1.0]. Default: 0.0.</p></li>
 </ul>
 </li>
 </ul>
@@ -80,7 +154,8 @@ If it is not provided, the provider project is used.</p></li>
 <dl class="attribute">
 <dt id="pulumi_gcp.dataproc.AutoscalingPolicy.location">
 <code class="sig-name descname">location</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.dataproc.AutoscalingPolicy.location" title="Permalink to this definition">¶</a></dt>
-<dd><p>The location where the autoscaling poicy should reside. The default value is ‘global’.</p>
+<dd><p>The  location where the autoscaling poicy should reside.
+The default value is <code class="docutils literal notranslate"><span class="pre">global</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -92,8 +167,9 @@ If it is not provided, the provider project is used.</p></li>
 <dl class="attribute">
 <dt id="pulumi_gcp.dataproc.AutoscalingPolicy.policy_id">
 <code class="sig-name descname">policy_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.dataproc.AutoscalingPolicy.policy_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>The policy id. The id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). Cannot
-begin or end with underscore or hyphen. Must consist of between 3 and 50 characters.</p>
+<dd><p>The policy id. The id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_),
+and hyphens (-). Cannot begin or end with underscore or hyphen. Must consist of between
+3 and 50 characters.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -106,22 +182,48 @@ If it is not provided, the provider project is used.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.dataproc.AutoscalingPolicy.secondary_worker_config">
 <code class="sig-name descname">secondary_worker_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.dataproc.AutoscalingPolicy.secondary_worker_config" title="Permalink to this definition">¶</a></dt>
-<dd><p>Describes how the autoscaler will operate for secondary workers.</p>
+<dd><p>Describes how the autoscaler will operate for secondary workers.  Structure is documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">max_instances</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">minInstances</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">weight</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">max_instances</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Maximum number of instances for this group. Note that by default, clusters will not use
+secondary workers. Required for secondary workers if the minimum secondary instances is set.
+Bounds: [minInstances, ). Defaults to 0.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">minInstances</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Minimum number of instances for this group. Bounds: [0, maxInstances]. Defaults to 0.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">weight</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Weight for the instance group, which is used to determine the fraction of total workers
+in the cluster from this instance group. For example, if primary workers have weight 2,
+and secondary workers have weight 1, the cluster will have approximately 2 primary workers
+for each secondary worker.
+The cluster may not reach the specified balance if constrained by min/max bounds or other
+autoscaling settings. For example, if maxInstances for secondary workers is 0, then only
+primary workers will be added. The cluster can also be out of balance when created.
+If weight is not set on any instance group, the cluster will default to equal weight for
+all groups: the cluster will attempt to maintain an equal number of workers in each group
+within the configured size bounds for each group. If weight is set for one group only,
+the cluster will default to zero weight on the unset group. For example if weight is set
+only on primary workers, the cluster will use primary workers only and no secondary workers.</p></li>
 </ul>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_gcp.dataproc.AutoscalingPolicy.worker_config">
 <code class="sig-name descname">worker_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.dataproc.AutoscalingPolicy.worker_config" title="Permalink to this definition">¶</a></dt>
-<dd><p>Describes how the autoscaler will operate for primary workers.</p>
+<dd><p>Describes how the autoscaler will operate for primary workers.  Structure is documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">max_instances</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">minInstances</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">weight</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">max_instances</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Maximum number of instances for this group. Note that by default, clusters will not use
+secondary workers. Required for secondary workers if the minimum secondary instances is set.
+Bounds: [minInstances, ). Defaults to 0.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">minInstances</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Minimum number of instances for this group. Bounds: [0, maxInstances]. Defaults to 0.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">weight</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Weight for the instance group, which is used to determine the fraction of total workers
+in the cluster from this instance group. For example, if primary workers have weight 2,
+and secondary workers have weight 1, the cluster will have approximately 2 primary workers
+for each secondary worker.
+The cluster may not reach the specified balance if constrained by min/max bounds or other
+autoscaling settings. For example, if maxInstances for secondary workers is 0, then only
+primary workers will be added. The cluster can also be out of balance when created.
+If weight is not set on any instance group, the cluster will default to equal weight for
+all groups: the cluster will attempt to maintain an equal number of workers in each group
+within the configured size bounds for each group. If weight is set for one group only,
+the cluster will default to zero weight on the unset group. For example if weight is set
+only on primary workers, the cluster will use primary workers only and no secondary workers.</p></li>
 </ul>
 </dd></dl>
 
@@ -136,43 +238,94 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>basic_algorithm</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Basic algorithm for autoscaling.</p></li>
-<li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The location where the autoscaling poicy should reside. The default value is ‘global’.</p></li>
+<li><p><strong>basic_algorithm</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Basic algorithm for autoscaling.  Structure is documented below.</p></li>
+<li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The  location where the autoscaling poicy should reside.
+The default value is <code class="docutils literal notranslate"><span class="pre">global</span></code>.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The “resource name” of the autoscaling policy.</p></li>
-<li><p><strong>policy*id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The policy id. The id must contain only letters (a-z, A-Z), numbers (0-9), underscores (<a href="#id7"><span class="problematic" id="id8">*</span></a>), and hyphens (-). Cannot
-begin or end with underscore or hyphen. Must consist of between 3 and 50 characters.</p>
+<li><p><strong>policy*id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The policy id. The id must contain only letters (a-z, A-Z), numbers (0-9), underscores (<a href="#id7"><span class="problematic" id="id8">*</span></a>),
+and hyphens (-). Cannot begin or end with underscore or hyphen. Must consist of between
+3 and 50 characters.</p>
 </p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
-<li><p><strong>secondary_worker_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Describes how the autoscaler will operate for secondary workers.</p></li>
-<li><p><strong>worker_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Describes how the autoscaler will operate for primary workers.</p></li>
+<li><p><strong>secondary_worker_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Describes how the autoscaler will operate for secondary workers.  Structure is documented below.</p></li>
+<li><p><strong>worker_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Describes how the autoscaler will operate for primary workers.  Structure is documented below.</p></li>
 </ul>
 </dd>
 </dl>
 <p>The <strong>basic_algorithm</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">cooldownPeriod</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">yarnConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">cooldownPeriod</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Duration between scaling events. A scaling period starts after the
+update operation from the previous event has completed.
+Bounds: [2m, 1d]. Default: 2m.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">yarnConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - YARN autoscaling configuration.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">gracefulDecommissionTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">scaleDownFactor</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">scaleDownMinWorkerFraction</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">scaleUpFactor</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">scaleUpMinWorkerFraction</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">gracefulDecommissionTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Timeout for YARN graceful decommissioning of Node Managers. Specifies the
+duration to wait for jobs to complete before forcefully removing workers
+(and potentially interrupting jobs). Only applicable to downscaling operations.
+Bounds: [0s, 1d].</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">scaleDownFactor</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Fraction of average pending memory in the last cooldown period for which to
+remove workers. A scale-down factor of 1 will result in scaling down so that there
+is no available memory remaining after the update (more aggressive scaling).
+A scale-down factor of 0 disables removing workers, which can be beneficial for
+autoscaling a single job.
+Bounds: [0.0, 1.0].</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">scaleDownMinWorkerFraction</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Minimum scale-down threshold as a fraction of total cluster size before scaling occurs.
+For example, in a 20-worker cluster, a threshold of 0.1 means the autoscaler must
+recommend at least a 2 worker scale-down for the cluster to scale. A threshold of 0
+means the autoscaler will scale down on any recommended change.
+Bounds: [0.0, 1.0]. Default: 0.0.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">scaleUpFactor</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Fraction of average pending memory in the last cooldown period for which to
+add workers. A scale-up factor of 1.0 will result in scaling up so that there
+is no pending memory remaining after the update (more aggressive scaling).
+A scale-up factor closer to 0 will result in a smaller magnitude of scaling up
+(less aggressive scaling).
+Bounds: [0.0, 1.0].</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">scaleUpMinWorkerFraction</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Minimum scale-up threshold as a fraction of total cluster size before scaling
+occurs. For example, in a 20-worker cluster, a threshold of 0.1 means the autoscaler
+must recommend at least a 2-worker scale-up for the cluster to scale. A threshold of
+0 means the autoscaler will scale up on any recommended change.
+Bounds: [0.0, 1.0]. Default: 0.0.</p></li>
 </ul>
 </li>
 </ul>
 <p>The <strong>secondary_worker_config</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">max_instances</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">minInstances</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">weight</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">max_instances</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Maximum number of instances for this group. Note that by default, clusters will not use
+secondary workers. Required for secondary workers if the minimum secondary instances is set.
+Bounds: [minInstances, ). Defaults to 0.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">minInstances</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Minimum number of instances for this group. Bounds: [0, maxInstances]. Defaults to 0.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">weight</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Weight for the instance group, which is used to determine the fraction of total workers
+in the cluster from this instance group. For example, if primary workers have weight 2,
+and secondary workers have weight 1, the cluster will have approximately 2 primary workers
+for each secondary worker.
+The cluster may not reach the specified balance if constrained by min/max bounds or other
+autoscaling settings. For example, if maxInstances for secondary workers is 0, then only
+primary workers will be added. The cluster can also be out of balance when created.
+If weight is not set on any instance group, the cluster will default to equal weight for
+all groups: the cluster will attempt to maintain an equal number of workers in each group
+within the configured size bounds for each group. If weight is set for one group only,
+the cluster will default to zero weight on the unset group. For example if weight is set
+only on primary workers, the cluster will use primary workers only and no secondary workers.</p></li>
 </ul>
 <p>The <strong>worker_config</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">max_instances</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">minInstances</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">weight</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">max_instances</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Maximum number of instances for this group. Note that by default, clusters will not use
+secondary workers. Required for secondary workers if the minimum secondary instances is set.
+Bounds: [minInstances, ). Defaults to 0.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">minInstances</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Minimum number of instances for this group. Bounds: [0, maxInstances]. Defaults to 0.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">weight</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Weight for the instance group, which is used to determine the fraction of total workers
+in the cluster from this instance group. For example, if primary workers have weight 2,
+and secondary workers have weight 1, the cluster will have approximately 2 primary workers
+for each secondary worker.
+The cluster may not reach the specified balance if constrained by min/max bounds or other
+autoscaling settings. For example, if maxInstances for secondary workers is 0, then only
+primary workers will be added. The cluster can also be out of balance when created.
+If weight is not set on any instance group, the cluster will default to equal weight for
+all groups: the cluster will attempt to maintain an equal number of workers in each group
+within the configured size bounds for each group. If weight is set for one group only,
+the cluster will default to zero weight on the unset group. For example if weight is set
+only on primary workers, the cluster will use primary workers only and no secondary workers.</p></li>
 </ul>
 </dd></dl>
 
@@ -293,13 +446,15 @@ which computing resources are available for use with other configs such as
 <li><p><code class="docutils literal notranslate"><span class="pre">initializationActions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Commands to execute on each node after config is completed.
 You can specify multiple versions of these. Structure defined below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">script</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">script</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The script to be executed during initialization of the cluster.
+The script must be a GCS file with a gs:// prefix.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">timeout_sec</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The maximum duration (in seconds) which <code class="docutils literal notranslate"><span class="pre">script</span></code> is
 allowed to take to execute its action. GCP will default to a predetermined
 computed value if not set (currently 300).</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">lifecycleConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">lifecycleConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The settings for auto deletion cluster schedule.
+Structure defined below.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">autoDeleteTime</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The time when cluster will be auto-deleted.
 A timestamp in RFC3339 UTC “Zulu” format, accurate to nanoseconds.
@@ -340,7 +495,8 @@ computed value (currently <code class="docutils literal notranslate"><span class
 for the master. If not specified, GCP will default to a predetermined computed value
 for each zone. See <a class="reference external" href="https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform">the guide</a>
 for details about which CPU families are available (and defaulted) for each zone.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">numInstances</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">numInstances</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Specifies the number of preemptible nodes to create.
+Defaults to 0.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">preemptibleWorkerConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The Google Compute Engine config settings for the additional (aka
@@ -359,7 +515,8 @@ attached to each preemptible worker node. Defaults to 0.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">instanceNames</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">numInstances</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">numInstances</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Specifies the number of preemptible nodes to create.
+Defaults to 0.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">securityConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Security related configuration. Structure defined below.</p>
@@ -467,7 +624,8 @@ computed value (currently <code class="docutils literal notranslate"><span class
 for the master. If not specified, GCP will default to a predetermined computed value
 for each zone. See <a class="reference external" href="https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform">the guide</a>
 for details about which CPU families are available (and defaulted) for each zone.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">numInstances</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">numInstances</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Specifies the number of preemptible nodes to create.
+Defaults to 0.</p></li>
 </ul>
 </li>
 </ul>
@@ -527,13 +685,15 @@ which computing resources are available for use with other configs such as
 <li><p><code class="docutils literal notranslate"><span class="pre">initializationActions</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Commands to execute on each node after config is completed.
 You can specify multiple versions of these. Structure defined below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">script</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">script</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The script to be executed during initialization of the cluster.
+The script must be a GCS file with a gs:// prefix.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">timeout_sec</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The maximum duration (in seconds) which <code class="docutils literal notranslate"><span class="pre">script</span></code> is
 allowed to take to execute its action. GCP will default to a predetermined
 computed value if not set (currently 300).</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">lifecycleConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">lifecycleConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The settings for auto deletion cluster schedule.
+Structure defined below.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">autoDeleteTime</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The time when cluster will be auto-deleted.
 A timestamp in RFC3339 UTC “Zulu” format, accurate to nanoseconds.
@@ -574,7 +734,8 @@ computed value (currently <code class="docutils literal notranslate"><span class
 for the master. If not specified, GCP will default to a predetermined computed value
 for each zone. See <a class="reference external" href="https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform">the guide</a>
 for details about which CPU families are available (and defaulted) for each zone.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">numInstances</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">numInstances</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Specifies the number of preemptible nodes to create.
+Defaults to 0.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">preemptibleWorkerConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The Google Compute Engine config settings for the additional (aka
@@ -593,7 +754,8 @@ attached to each preemptible worker node. Defaults to 0.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">instanceNames</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">numInstances</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">numInstances</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Specifies the number of preemptible nodes to create.
+Defaults to 0.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">securityConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Security related configuration. Structure defined below.</p>
@@ -701,7 +863,8 @@ computed value (currently <code class="docutils literal notranslate"><span class
 for the master. If not specified, GCP will default to a predetermined computed value
 for each zone. See <a class="reference external" href="https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform">the guide</a>
 for details about which CPU families are available (and defaulted) for each zone.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">numInstances</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">numInstances</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Specifies the number of preemptible nodes to create.
+Defaults to 0.</p></li>
 </ul>
 </li>
 </ul>
@@ -813,13 +976,15 @@ which computing resources are available for use with other configs such as
 <li><p><code class="docutils literal notranslate"><span class="pre">initializationActions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Commands to execute on each node after config is completed.
 You can specify multiple versions of these. Structure defined below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">script</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">script</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The script to be executed during initialization of the cluster.
+The script must be a GCS file with a gs:// prefix.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">timeout_sec</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The maximum duration (in seconds) which <code class="docutils literal notranslate"><span class="pre">script</span></code> is
 allowed to take to execute its action. GCP will default to a predetermined
 computed value if not set (currently 300).</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">lifecycleConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">lifecycleConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The settings for auto deletion cluster schedule.
+Structure defined below.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">autoDeleteTime</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The time when cluster will be auto-deleted.
 A timestamp in RFC3339 UTC “Zulu” format, accurate to nanoseconds.
@@ -860,7 +1025,8 @@ computed value (currently <code class="docutils literal notranslate"><span class
 for the master. If not specified, GCP will default to a predetermined computed value
 for each zone. See <a class="reference external" href="https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform">the guide</a>
 for details about which CPU families are available (and defaulted) for each zone.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">numInstances</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">numInstances</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Specifies the number of preemptible nodes to create.
+Defaults to 0.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">preemptibleWorkerConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The Google Compute Engine config settings for the additional (aka
@@ -879,7 +1045,8 @@ attached to each preemptible worker node. Defaults to 0.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">instanceNames</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">numInstances</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">numInstances</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Specifies the number of preemptible nodes to create.
+Defaults to 0.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">securityConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Security related configuration. Structure defined below.</p>
@@ -987,7 +1154,8 @@ computed value (currently <code class="docutils literal notranslate"><span class
 for the master. If not specified, GCP will default to a predetermined computed value
 for each zone. See <a class="reference external" href="https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform">the guide</a>
 for details about which CPU families are available (and defaulted) for each zone.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">numInstances</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">numInstances</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Specifies the number of preemptible nodes to create.
+Defaults to 0.</p></li>
 </ul>
 </li>
 </ul>
@@ -1461,7 +1629,7 @@ for this job to be submitted to. If not specified, defaults to <code class="docu
 <li><p><code class="docutils literal notranslate"><span class="pre">driverLogLevels</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">mainClass</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mainClass</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the driver’s main class. The jar file containing the class must be in the default CLASSPATH or specified in <code class="docutils literal notranslate"><span class="pre">jar_file_uris</span></code>. Conflicts with <code class="docutils literal notranslate"><span class="pre">main_jar_file_uri</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">mainJarFileUri</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The HCFS URI of the jar file containing the main class. Examples: ‘gs://foo-bucket/analytics-binaries/extract-useful-metrics-mr.jar’ ‘hdfs:/tmp/test-samples/custom-wordcount.jar’ ‘file:///home/usr/lib/hadoop-mapreduce/hadoop-mapreduce-examples.jar’. Conflicts with <code class="docutils literal notranslate"><span class="pre">main_class</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">properties</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A mapping of property names to values, used to configure Spark SQL’s SparkConf. Properties that conflict with values set by the Cloud Dataproc API may be overwritten.</p></li>
 </ul>
@@ -1472,7 +1640,8 @@ for this job to be submitted to. If not specified, defaults to <code class="docu
 <li><p><code class="docutils literal notranslate"><span class="pre">properties</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A mapping of property names to values, used to configure Spark SQL’s SparkConf. Properties that conflict with values set by the Cloud Dataproc API may be overwritten.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">queryFileUri</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The HCFS URI of the script that contains SQL queries.
 Conflicts with <code class="docutils literal notranslate"><span class="pre">query_list</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">queryLists</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">queryLists</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The list of SQL queries or statements to execute as part of the job.
+Conflicts with <code class="docutils literal notranslate"><span class="pre">query_file_uri</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">scriptVariables</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Mapping of query variable names to values (equivalent to the Spark SQL command: <code class="docutils literal notranslate"><span class="pre">SET</span> <span class="pre">name=&quot;value&quot;;</span></code>).</p></li>
 </ul>
 <p>The <strong>pig_config</strong> object supports the following:</p>
@@ -1487,7 +1656,8 @@ Conflicts with <code class="docutils literal notranslate"><span class="pre">quer
 <li><p><code class="docutils literal notranslate"><span class="pre">properties</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A mapping of property names to values, used to configure Spark SQL’s SparkConf. Properties that conflict with values set by the Cloud Dataproc API may be overwritten.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">queryFileUri</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The HCFS URI of the script that contains SQL queries.
 Conflicts with <code class="docutils literal notranslate"><span class="pre">query_list</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">queryLists</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">queryLists</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The list of SQL queries or statements to execute as part of the job.
+Conflicts with <code class="docutils literal notranslate"><span class="pre">query_file_uri</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">scriptVariables</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Mapping of query variable names to values (equivalent to the Spark SQL command: <code class="docutils literal notranslate"><span class="pre">SET</span> <span class="pre">name=&quot;value&quot;;</span></code>).</p></li>
 </ul>
 <p>The <strong>placement</strong> object supports the following:</p>
@@ -1506,7 +1676,7 @@ Conflicts with <code class="docutils literal notranslate"><span class="pre">quer
 <li><p><code class="docutils literal notranslate"><span class="pre">driverLogLevels</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">mainPythonFileUri</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mainPythonFileUri</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The HCFS URI of the main Python file to use as the driver. Must be a .py file.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">properties</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A mapping of property names to values, used to configure Spark SQL’s SparkConf. Properties that conflict with values set by the Cloud Dataproc API may be overwritten.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">pythonFileUris</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - HCFS file URIs of Python files to pass to the PySpark framework. Supported file types: .py, .egg, and .zip.</p></li>
 </ul>
@@ -1529,7 +1699,7 @@ Conflicts with <code class="docutils literal notranslate"><span class="pre">quer
 <li><p><code class="docutils literal notranslate"><span class="pre">driverLogLevels</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">mainClass</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mainClass</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the driver’s main class. The jar file containing the class must be in the default CLASSPATH or specified in <code class="docutils literal notranslate"><span class="pre">jar_file_uris</span></code>. Conflicts with <code class="docutils literal notranslate"><span class="pre">main_jar_file_uri</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">mainJarFileUri</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The HCFS URI of the jar file containing the main class. Examples: ‘gs://foo-bucket/analytics-binaries/extract-useful-metrics-mr.jar’ ‘hdfs:/tmp/test-samples/custom-wordcount.jar’ ‘file:///home/usr/lib/hadoop-mapreduce/hadoop-mapreduce-examples.jar’. Conflicts with <code class="docutils literal notranslate"><span class="pre">main_class</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">properties</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A mapping of property names to values, used to configure Spark SQL’s SparkConf. Properties that conflict with values set by the Cloud Dataproc API may be overwritten.</p></li>
 </ul>
@@ -1544,7 +1714,8 @@ Conflicts with <code class="docutils literal notranslate"><span class="pre">quer
 <li><p><code class="docutils literal notranslate"><span class="pre">properties</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A mapping of property names to values, used to configure Spark SQL’s SparkConf. Properties that conflict with values set by the Cloud Dataproc API may be overwritten.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">queryFileUri</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The HCFS URI of the script that contains SQL queries.
 Conflicts with <code class="docutils literal notranslate"><span class="pre">query_list</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">queryLists</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">queryLists</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The list of SQL queries or statements to execute as part of the job.
+Conflicts with <code class="docutils literal notranslate"><span class="pre">query_file_uri</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">scriptVariables</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Mapping of query variable names to values (equivalent to the Spark SQL command: <code class="docutils literal notranslate"><span class="pre">SET</span> <span class="pre">name=&quot;value&quot;;</span></code>).</p></li>
 </ul>
 <dl class="attribute">
@@ -1632,7 +1803,7 @@ for this job to be submitted to. If not specified, defaults to <code class="docu
 <li><p><code class="docutils literal notranslate"><span class="pre">driverLogLevels</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">mainClass</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mainClass</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the driver’s main class. The jar file containing the class must be in the default CLASSPATH or specified in <code class="docutils literal notranslate"><span class="pre">jar_file_uris</span></code>. Conflicts with <code class="docutils literal notranslate"><span class="pre">main_jar_file_uri</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">mainJarFileUri</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The HCFS URI of the jar file containing the main class. Examples: ‘gs://foo-bucket/analytics-binaries/extract-useful-metrics-mr.jar’ ‘hdfs:/tmp/test-samples/custom-wordcount.jar’ ‘file:///home/usr/lib/hadoop-mapreduce/hadoop-mapreduce-examples.jar’. Conflicts with <code class="docutils literal notranslate"><span class="pre">main_class</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">properties</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A mapping of property names to values, used to configure Spark SQL’s SparkConf. Properties that conflict with values set by the Cloud Dataproc API may be overwritten.</p></li>
 </ul>
@@ -1643,7 +1814,8 @@ for this job to be submitted to. If not specified, defaults to <code class="docu
 <li><p><code class="docutils literal notranslate"><span class="pre">properties</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A mapping of property names to values, used to configure Spark SQL’s SparkConf. Properties that conflict with values set by the Cloud Dataproc API may be overwritten.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">queryFileUri</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The HCFS URI of the script that contains SQL queries.
 Conflicts with <code class="docutils literal notranslate"><span class="pre">query_list</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">queryLists</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">queryLists</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The list of SQL queries or statements to execute as part of the job.
+Conflicts with <code class="docutils literal notranslate"><span class="pre">query_file_uri</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">scriptVariables</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Mapping of query variable names to values (equivalent to the Spark SQL command: <code class="docutils literal notranslate"><span class="pre">SET</span> <span class="pre">name=&quot;value&quot;;</span></code>).</p></li>
 </ul>
 <p>The <strong>pig_config</strong> object supports the following:</p>
@@ -1658,7 +1830,8 @@ Conflicts with <code class="docutils literal notranslate"><span class="pre">quer
 <li><p><code class="docutils literal notranslate"><span class="pre">properties</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A mapping of property names to values, used to configure Spark SQL’s SparkConf. Properties that conflict with values set by the Cloud Dataproc API may be overwritten.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">queryFileUri</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The HCFS URI of the script that contains SQL queries.
 Conflicts with <code class="docutils literal notranslate"><span class="pre">query_list</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">queryLists</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">queryLists</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The list of SQL queries or statements to execute as part of the job.
+Conflicts with <code class="docutils literal notranslate"><span class="pre">query_file_uri</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">scriptVariables</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Mapping of query variable names to values (equivalent to the Spark SQL command: <code class="docutils literal notranslate"><span class="pre">SET</span> <span class="pre">name=&quot;value&quot;;</span></code>).</p></li>
 </ul>
 <p>The <strong>placement</strong> object supports the following:</p>
@@ -1677,7 +1850,7 @@ Conflicts with <code class="docutils literal notranslate"><span class="pre">quer
 <li><p><code class="docutils literal notranslate"><span class="pre">driverLogLevels</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">mainPythonFileUri</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mainPythonFileUri</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The HCFS URI of the main Python file to use as the driver. Must be a .py file.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">properties</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A mapping of property names to values, used to configure Spark SQL’s SparkConf. Properties that conflict with values set by the Cloud Dataproc API may be overwritten.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">pythonFileUris</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - HCFS file URIs of Python files to pass to the PySpark framework. Supported file types: .py, .egg, and .zip.</p></li>
 </ul>
@@ -1700,7 +1873,7 @@ Conflicts with <code class="docutils literal notranslate"><span class="pre">quer
 <li><p><code class="docutils literal notranslate"><span class="pre">driverLogLevels</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">mainClass</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mainClass</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the driver’s main class. The jar file containing the class must be in the default CLASSPATH or specified in <code class="docutils literal notranslate"><span class="pre">jar_file_uris</span></code>. Conflicts with <code class="docutils literal notranslate"><span class="pre">main_jar_file_uri</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">mainJarFileUri</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The HCFS URI of the jar file containing the main class. Examples: ‘gs://foo-bucket/analytics-binaries/extract-useful-metrics-mr.jar’ ‘hdfs:/tmp/test-samples/custom-wordcount.jar’ ‘file:///home/usr/lib/hadoop-mapreduce/hadoop-mapreduce-examples.jar’. Conflicts with <code class="docutils literal notranslate"><span class="pre">main_class</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">properties</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A mapping of property names to values, used to configure Spark SQL’s SparkConf. Properties that conflict with values set by the Cloud Dataproc API may be overwritten.</p></li>
 </ul>
@@ -1715,7 +1888,8 @@ Conflicts with <code class="docutils literal notranslate"><span class="pre">quer
 <li><p><code class="docutils literal notranslate"><span class="pre">properties</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A mapping of property names to values, used to configure Spark SQL’s SparkConf. Properties that conflict with values set by the Cloud Dataproc API may be overwritten.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">queryFileUri</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The HCFS URI of the script that contains SQL queries.
 Conflicts with <code class="docutils literal notranslate"><span class="pre">query_list</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">queryLists</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">queryLists</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The list of SQL queries or statements to execute as part of the job.
+Conflicts with <code class="docutils literal notranslate"><span class="pre">query_file_uri</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">scriptVariables</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Mapping of query variable names to values (equivalent to the Spark SQL command: <code class="docutils literal notranslate"><span class="pre">SET</span> <span class="pre">name=&quot;value&quot;;</span></code>).</p></li>
 </ul>
 <p>The <strong>status</strong> object supports the following:</p>

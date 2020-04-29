@@ -27,11 +27,11 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.batch.ComputeEnvironment">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.batch.</code><code class="sig-name descname">ComputeEnvironment</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">compute_environment_name=None</em>, <em class="sig-param">compute_environment_name_prefix=None</em>, <em class="sig-param">compute_resources=None</em>, <em class="sig-param">service_role=None</em>, <em class="sig-param">state=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.batch.ComputeEnvironment" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a AWS Batch compute environment. Compute environments contain the Amazon ECS container instances that are used to run containerized batch jobs.</p>
-<p>For information about AWS Batch, see [What is AWS Batch?][1] .
-For information about compute environment, see [Compute Environments][2] .</p>
+<p>For information about AWS Batch, see <a class="reference external" href="http://docs.aws.amazon.com/batch/latest/userguide/what-is-batch.html">What is AWS Batch?</a> .
+For information about compute environment, see <a class="reference external" href="http://docs.aws.amazon.com/batch/latest/userguide/compute_environments.html">Compute Environments</a> .</p>
 <blockquote>
 <div><p><strong>Note:</strong> To prevent a race condition during environment deletion, make sure to set <code class="docutils literal notranslate"><span class="pre">depends_on</span></code> to the related <code class="docutils literal notranslate"><span class="pre">iam.RolePolicyAttachment</span></code>;
-otherwise, the policy may be destroyed too soon and the compute environment will then get stuck in the <code class="docutils literal notranslate"><span class="pre">DELETING</span></code> state, see [Troubleshooting AWS Batch][3] .</p>
+otherwise, the policy may be destroyed too soon and the compute environment will then get stuck in the <code class="docutils literal notranslate"><span class="pre">DELETING</span></code> state, see <a class="reference external" href="http://docs.aws.amazon.com/batch/latest/userguide/troubleshooting.html">Troubleshooting AWS Batch</a> .</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -261,7 +261,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.batch.GetComputeEnvironmentResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.batch.GetComputeEnvironmentResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -320,7 +320,7 @@ which job placement is preferred. Compute environments are selected for job plac
 <dl class="attribute">
 <dt id="pulumi_aws.batch.GetJobQueueResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.batch.GetJobQueueResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -355,14 +355,6 @@ of the job queue.</p>
 <dt id="pulumi_aws.batch.JobDefinition">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.batch.</code><code class="sig-name descname">JobDefinition</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">container_properties=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">parameters=None</em>, <em class="sig-param">retry_strategy=None</em>, <em class="sig-param">timeout=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.batch.JobDefinition" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Batch Job Definition resource.</p>
-<p><code class="docutils literal notranslate"><span class="pre">retry_strategy</span></code> supports the following:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">attempts</span></code> - (Optional) The number of times to move a job to the <code class="docutils literal notranslate"><span class="pre">RUNNABLE</span></code> status. You may specify between <code class="docutils literal notranslate"><span class="pre">1</span></code> and <code class="docutils literal notranslate"><span class="pre">10</span></code> attempts.</p></li>
-</ul>
-<p><code class="docutils literal notranslate"><span class="pre">timeout</span></code> supports the following:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">attempt_duration_seconds</span></code> - (Optional) The time duration in seconds after which AWS Batch terminates your jobs if they have not finished. The minimum value for the timeout is <code class="docutils literal notranslate"><span class="pre">60</span></code> seconds.</p></li>
-</ul>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -381,11 +373,11 @@ Maximum number of <code class="docutils literal notranslate"><span class="pre">r
 </dl>
 <p>The <strong>retry_strategy</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">attempts</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">attempts</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of times to move a job to the <code class="docutils literal notranslate"><span class="pre">RUNNABLE</span></code> status. You may specify between <code class="docutils literal notranslate"><span class="pre">1</span></code> and <code class="docutils literal notranslate"><span class="pre">10</span></code> attempts.</p></li>
 </ul>
 <p>The <strong>timeout</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">attemptDurationSeconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">attemptDurationSeconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The time duration in seconds after which AWS Batch terminates your jobs if they have not finished. The minimum value for the timeout is <code class="docutils literal notranslate"><span class="pre">60</span></code> seconds.</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_aws.batch.JobDefinition.arn">
@@ -418,7 +410,7 @@ provided as a single valid JSON document. This parameter is required if the <cod
 <dd><p>Specifies the retry strategy to use for failed jobs that are submitted with this job definition.
 Maximum number of <code class="docutils literal notranslate"><span class="pre">retry_strategy</span></code> is <code class="docutils literal notranslate"><span class="pre">1</span></code>.  Defined below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">attempts</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">attempts</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The number of times to move a job to the <code class="docutils literal notranslate"><span class="pre">RUNNABLE</span></code> status. You may specify between <code class="docutils literal notranslate"><span class="pre">1</span></code> and <code class="docutils literal notranslate"><span class="pre">10</span></code> attempts.</p></li>
 </ul>
 </dd></dl>
 
@@ -433,7 +425,7 @@ Maximum number of <code class="docutils literal notranslate"><span class="pre">r
 <code class="sig-name descname">timeout</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.batch.JobDefinition.timeout" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies the timeout for jobs so that if a job runs longer, AWS Batch terminates the job. Maximum number of <code class="docutils literal notranslate"><span class="pre">timeout</span></code> is <code class="docutils literal notranslate"><span class="pre">1</span></code>. Defined below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">attemptDurationSeconds</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">attemptDurationSeconds</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The time duration in seconds after which AWS Batch terminates your jobs if they have not finished. The minimum value for the timeout is <code class="docutils literal notranslate"><span class="pre">60</span></code> seconds.</p></li>
 </ul>
 </dd></dl>
 
@@ -470,11 +462,11 @@ Maximum number of <code class="docutils literal notranslate"><span class="pre">r
 </dl>
 <p>The <strong>retry_strategy</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">attempts</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">attempts</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of times to move a job to the <code class="docutils literal notranslate"><span class="pre">RUNNABLE</span></code> status. You may specify between <code class="docutils literal notranslate"><span class="pre">1</span></code> and <code class="docutils literal notranslate"><span class="pre">10</span></code> attempts.</p></li>
 </ul>
 <p>The <strong>timeout</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">attemptDurationSeconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">attemptDurationSeconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The time duration in seconds after which AWS Batch terminates your jobs if they have not finished. The minimum value for the timeout is <code class="docutils literal notranslate"><span class="pre">60</span></code> seconds.</p></li>
 </ul>
 </dd></dl>
 

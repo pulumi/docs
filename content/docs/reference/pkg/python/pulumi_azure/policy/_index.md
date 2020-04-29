@@ -30,6 +30,7 @@ anything, please consult the source <a class="reference external" href="https://
 <li><p><strong>not_scopes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of the Policy Assignment’s excluded scopes. The list must contain Resource IDs (such as Subscriptions e.g. <code class="docutils literal notranslate"><span class="pre">/subscriptions/00000000-0000-0000-000000000000</span></code> or Resource Groups e.g.<code class="docutils literal notranslate"><span class="pre">/subscriptions/00000000-0000-0000-000000000000/resourceGroups/myResourceGroup</span></code>).</p></li>
 <li><p><strong>parameters</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Parameters for the policy definition. This field is a JSON object that maps to the Parameters field from the Policy Definition. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>policy_definition_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Policy Definition to be applied at the specified Scope.</p></li>
+<li><p><strong>scope</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Scope at which the Policy Assignment should be applied, which must be a Resource ID (such as Subscription e.g. <code class="docutils literal notranslate"><span class="pre">/subscriptions/00000000-0000-0000-000000000000</span></code> or a Resource Group e.g.<code class="docutils literal notranslate"><span class="pre">/subscriptions/00000000-0000-0000-000000000000/resourceGroups/myResourceGroup</span></code>). Changing this forces a new resource to be created.</p></li>
 </ul>
 </dd>
 </dl>
@@ -92,6 +93,12 @@ anything, please consult the source <a class="reference external" href="https://
 <dd><p>The ID of the Policy Definition to be applied at the specified Scope.</p>
 </dd></dl>
 
+<dl class="attribute">
+<dt id="pulumi_azure.policy.Assignment.scope">
+<code class="sig-name descname">scope</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.policy.Assignment.scope" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Scope at which the Policy Assignment should be applied, which must be a Resource ID (such as Subscription e.g. <code class="docutils literal notranslate"><span class="pre">/subscriptions/00000000-0000-0000-000000000000</span></code> or a Resource Group e.g.<code class="docutils literal notranslate"><span class="pre">/subscriptions/00000000-0000-0000-000000000000/resourceGroups/myResourceGroup</span></code>). Changing this forces a new resource to be created.</p>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_azure.policy.Assignment.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">display_name=None</em>, <em class="sig-param">identity=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">not_scopes=None</em>, <em class="sig-param">parameters=None</em>, <em class="sig-param">policy_definition_id=None</em>, <em class="sig-param">scope=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.policy.Assignment.get" title="Permalink to this definition">¶</a></dt>
@@ -111,6 +118,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>not_scopes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of the Policy Assignment’s excluded scopes. The list must contain Resource IDs (such as Subscriptions e.g. <code class="docutils literal notranslate"><span class="pre">/subscriptions/00000000-0000-0000-000000000000</span></code> or Resource Groups e.g.<code class="docutils literal notranslate"><span class="pre">/subscriptions/00000000-0000-0000-000000000000/resourceGroups/myResourceGroup</span></code>).</p></li>
 <li><p><strong>parameters</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Parameters for the policy definition. This field is a JSON object that maps to the Parameters field from the Policy Definition. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>policy_definition_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Policy Definition to be applied at the specified Scope.</p></li>
+<li><p><strong>scope</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Scope at which the Policy Assignment should be applied, which must be a Resource ID (such as Subscription e.g. <code class="docutils literal notranslate"><span class="pre">/subscriptions/00000000-0000-0000-000000000000</span></code> or a Resource Group e.g.<code class="docutils literal notranslate"><span class="pre">/subscriptions/00000000-0000-0000-000000000000/resourceGroups/myResourceGroup</span></code>). Changing this forces a new resource to be created.</p></li>
 </ul>
 </dd>
 </dl>
@@ -349,7 +357,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_azure.policy.GetPolicyDefintionResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.policy.GetPolicyDefintionResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -397,7 +405,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_azure.policy.GetPolicySetDefinitionResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.policy.GetPolicySetDefinitionResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
