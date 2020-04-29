@@ -67,7 +67,7 @@ main:
         - Artifact sharing best practices using Artifactory.
         - Utilizing Pulumi packages to standardize infrastructure.
         - Using Artifactory to author and manage Pulumi packages.
-        - Consuming Pulumi packages stored in Artifactory .
+        - Consuming Pulumi packages stored in Artifactory.
 
 # The right hand side form section.
 form:
