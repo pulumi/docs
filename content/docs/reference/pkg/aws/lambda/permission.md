@@ -129,7 +129,7 @@ const lambdaPermission = new aws.lambda.Permission("lambda_permission", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Permission</span><span class="p">(resource_name, opts=None, </span>action=None<span class="p">, </span>event_source_token=None<span class="p">, </span>function=None<span class="p">, </span>principal=None<span class="p">, </span>qualifier=None<span class="p">, </span>source_account=None<span class="p">, </span>source_arn=None<span class="p">, </span>statement_id=None<span class="p">, </span>statement_id_prefix=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Permission</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>action=None<span class="p">, </span>event_source_token=None<span class="p">, </span>function=None<span class="p">, </span>principal=None<span class="p">, </span>qualifier=None<span class="p">, </span>source_account=None<span class="p">, </span>source_arn=None<span class="p">, </span>statement_id=None<span class="p">, </span>statement_id_prefix=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -336,7 +336,7 @@ such as `events.amazonaws.com` or `sns.amazonaws.com`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The Event Source Token to validate.  Used with [Alexa Skills][1].
+    <dd>{{% md %}}The Event Source Token to validate.  Used with [Alexa Skills](https://developer.amazon.com/docs/custom-skills/host-a-custom-skill-as-an-aws-lambda-function.html#use-aws-cli).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -433,7 +433,7 @@ such as `events.amazonaws.com` or `sns.amazonaws.com`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Event Source Token to validate.  Used with [Alexa Skills][1].
+    <dd>{{% md %}}The Event Source Token to validate.  Used with [Alexa Skills](https://developer.amazon.com/docs/custom-skills/host-a-custom-skill-as-an-aws-lambda-function.html#use-aws-cli).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -530,7 +530,7 @@ such as `events.amazonaws.com` or `sns.amazonaws.com`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Event Source Token to validate.  Used with [Alexa Skills][1].
+    <dd>{{% md %}}The Event Source Token to validate.  Used with [Alexa Skills](https://developer.amazon.com/docs/custom-skills/host-a-custom-skill-as-an-aws-lambda-function.html#use-aws-cli).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -627,7 +627,7 @@ such as `events.amazonaws.com` or `sns.amazonaws.com`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The Event Source Token to validate.  Used with [Alexa Skills][1].
+    <dd>{{% md %}}The Event Source Token to validate.  Used with [Alexa Skills](https://developer.amazon.com/docs/custom-skills/host-a-custom-skill-as-an-aws-lambda-function.html#use-aws-cli).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -901,7 +901,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The Event Source Token to validate.  Used with [Alexa Skills][1].
+    <dd>{{% md %}}The Event Source Token to validate.  Used with [Alexa Skills](https://developer.amazon.com/docs/custom-skills/host-a-custom-skill-as-an-aws-lambda-function.html#use-aws-cli).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -998,7 +998,7 @@ API Gateway ARNs have a unique structure described
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Event Source Token to validate.  Used with [Alexa Skills][1].
+    <dd>{{% md %}}The Event Source Token to validate.  Used with [Alexa Skills](https://developer.amazon.com/docs/custom-skills/host-a-custom-skill-as-an-aws-lambda-function.html#use-aws-cli).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1095,7 +1095,7 @@ API Gateway ARNs have a unique structure described
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Event Source Token to validate.  Used with [Alexa Skills][1].
+    <dd>{{% md %}}The Event Source Token to validate.  Used with [Alexa Skills](https://developer.amazon.com/docs/custom-skills/host-a-custom-skill-as-an-aws-lambda-function.html#use-aws-cli).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1192,7 +1192,7 @@ API Gateway ARNs have a unique structure described
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The Event Source Token to validate.  Used with [Alexa Skills][1].
+    <dd>{{% md %}}The Event Source Token to validate.  Used with [Alexa Skills](https://developer.amazon.com/docs/custom-skills/host-a-custom-skill-as-an-aws-lambda-function.html#use-aws-cli).
 {{% /md %}}</dd>
 
     <dt class="property-optional"

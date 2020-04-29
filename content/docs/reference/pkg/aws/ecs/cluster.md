@@ -25,20 +25,6 @@ const foo = new aws.ecs.Cluster("foo", {});
 
 {{% /example %}}
 {{% /examples %}}
-## setting
-
-The `setting` configuration block supports the following:
-
-* `name` - (Required) Name of the setting to manage. Valid values: `containerInsights`.
-* `value` -  (Required) The value to assign to the setting. Value values are `enabled` and `disabled`.
-
-## default_capacity_provider_strategy
-
-The `default_capacity_provider_strategy` configuration block supports the following:
-
-* `capacity_provider` - (Required) The short name of the capacity provider.
-* `weight` - (Optional) The relative percentage of the total number of launched tasks that should use the specified capacity provider.
-* `base` - (Optional) The number of tasks, at a minimum, to run on the specified capacity provider. Only one capacity provider in a capacity provider strategy can have a base defined.
 
 
 
@@ -51,7 +37,7 @@ The `default_capacity_provider_strategy` configuration block supports the follow
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Cluster</span><span class="p">(resource_name, opts=None, </span>capacity_providers=None<span class="p">, </span>default_capacity_provider_strategies=None<span class="p">, </span>name=None<span class="p">, </span>settings=None<span class="p">, </span>tags=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Cluster</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>capacity_providers=None<span class="p">, </span>default_capacity_provider_strategies=None<span class="p">, </span>name=None<span class="p">, </span>settings=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -937,7 +923,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The short name of the capacity provider.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -945,7 +932,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of tasks, at a minimum, to run on the specified capacity provider. Only one capacity provider in a capacity provider strategy can have a base defined.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -953,7 +941,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The relative percentage of the total number of launched tasks that should use the specified capacity provider.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -968,7 +957,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The short name of the capacity provider.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -976,7 +966,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of tasks, at a minimum, to run on the specified capacity provider. Only one capacity provider in a capacity provider strategy can have a base defined.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -984,7 +975,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The relative percentage of the total number of launched tasks that should use the specified capacity provider.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -999,7 +991,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The short name of the capacity provider.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1007,7 +1000,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of tasks, at a minimum, to run on the specified capacity provider. Only one capacity provider in a capacity provider strategy can have a base defined.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1015,7 +1009,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The relative percentage of the total number of launched tasks that should use the specified capacity provider.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1030,7 +1025,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The short name of the capacity provider.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1038,7 +1034,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of tasks, at a minimum, to run on the specified capacity provider. Only one capacity provider in a capacity provider strategy can have a base defined.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1046,7 +1043,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The relative percentage of the total number of launched tasks that should use the specified capacity provider.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1076,7 +1074,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the cluster (up to 255 letters, numbers, hyphens, and underscores)
+    <dd>{{% md %}}Name of the setting to manage. Valid values: `containerInsights`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1085,7 +1083,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The value to assign to the setting. Value values are `enabled` and `disabled`.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1100,7 +1099,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the cluster (up to 255 letters, numbers, hyphens, and underscores)
+    <dd>{{% md %}}Name of the setting to manage. Valid values: `containerInsights`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1109,7 +1108,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The value to assign to the setting. Value values are `enabled` and `disabled`.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1124,7 +1124,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the cluster (up to 255 letters, numbers, hyphens, and underscores)
+    <dd>{{% md %}}Name of the setting to manage. Valid values: `containerInsights`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1133,7 +1133,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The value to assign to the setting. Value values are `enabled` and `disabled`.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1148,7 +1149,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the cluster (up to 255 letters, numbers, hyphens, and underscores)
+    <dd>{{% md %}}Name of the setting to manage. Valid values: `containerInsights`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1157,7 +1158,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The value to assign to the setting. Value values are `enabled` and `disabled`.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

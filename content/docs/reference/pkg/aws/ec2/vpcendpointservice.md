@@ -66,7 +66,7 @@ const example = new aws.ec2.VpcEndpointService("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">VpcEndpointService</span><span class="p">(resource_name, opts=None, </span>acceptance_required=None<span class="p">, </span>allowed_principals=None<span class="p">, </span>network_load_balancer_arns=None<span class="p">, </span>tags=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">VpcEndpointService</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>acceptance_required=None<span class="p">, </span>allowed_principals=None<span class="p">, </span>network_load_balancer_arns=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

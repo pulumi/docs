@@ -25,7 +25,7 @@ deploy the required validation records and wait for validation to complete.
 Domain validation through E-Mail is also supported but should be avoided as it requires a manual step outside
 of this provider.
 
-It's recommended to specify `create_before_destroy = true` in a [lifecycle][1] block to replace a certificate
+It's recommended to specify `create_before_destroy = true` in a [lifecycle](https://www.terraform.io/docs/configuration/resources.html#lifecycle) block to replace a certificate
 which is currently in use (eg, by `aws.lb.Listener`).
 
 {{% examples %}}
@@ -48,44 +48,7 @@ const cert = new aws.acm.Certificate("cert", {
 ```
 
 {{% /example %}}
-{{% example %}}
-### Importing an existing certificate
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-import * as tls from "@pulumi/tls";
-
-const examplePrivateKey = new tls.PrivateKey("example", {
-    algorithm: "RSA",
-});
-const exampleSelfSignedCert = new tls.SelfSignedCert("example", {
-    allowedUses: [
-        "key_encipherment",
-        "digital_signature",
-        "server_auth",
-    ],
-    keyAlgorithm: "RSA",
-    privateKeyPem: examplePrivateKey.privateKeyPem,
-    subjects: [{
-        commonName: "example.com",
-        organization: "ACME Examples, Inc",
-    }],
-    validityPeriodHours: 12,
-});
-const cert = new aws.acm.Certificate("cert", {
-    certificateBody: exampleSelfSignedCert.certPem,
-    privateKey: examplePrivateKey.privateKeyPem,
-});
-```
-
-{{% /example %}}
 {{% /examples %}}
-## options Configuration Block
-
-Supported nested arguments for the `options` configuration block:
-
-* `certificate_transparency_logging_preference` - (Optional) Specifies whether certificate details should be added to a certificate transparency log. Valid values are `ENABLED` or `DISABLED`. See https://docs.aws.amazon.com/acm/latest/userguide/acm-concepts.html#concept-transparency for more details.
 
 
 
@@ -98,7 +61,7 @@ Supported nested arguments for the `options` configuration block:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Certificate</span><span class="p">(resource_name, opts=None, </span>certificate_authority_arn=None<span class="p">, </span>certificate_body=None<span class="p">, </span>certificate_chain=None<span class="p">, </span>domain_name=None<span class="p">, </span>options=None<span class="p">, </span>private_key=None<span class="p">, </span>subject_alternative_names=None<span class="p">, </span>tags=None<span class="p">, </span>validation_method=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Certificate</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>certificate_authority_arn=None<span class="p">, </span>certificate_body=None<span class="p">, </span>certificate_chain=None<span class="p">, </span>domain_name=None<span class="p">, </span>options=None<span class="p">, </span>private_key=None<span class="p">, </span>subject_alternative_names=None<span class="p">, </span>tags=None<span class="p">, </span>validation_method=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1611,7 +1574,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies whether certificate details should be added to a certificate transparency log. Valid values are `ENABLED` or `DISABLED`. See https://docs.aws.amazon.com/acm/latest/userguide/acm-concepts.html#concept-transparency for more details.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1626,7 +1590,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies whether certificate details should be added to a certificate transparency log. Valid values are `ENABLED` or `DISABLED`. See https://docs.aws.amazon.com/acm/latest/userguide/acm-concepts.html#concept-transparency for more details.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1641,7 +1606,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies whether certificate details should be added to a certificate transparency log. Valid values are `ENABLED` or `DISABLED`. See https://docs.aws.amazon.com/acm/latest/userguide/acm-concepts.html#concept-transparency for more details.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1656,7 +1622,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies whether certificate details should be added to a certificate transparency log. Valid values are `ENABLED` or `DISABLED`. See https://docs.aws.amazon.com/acm/latest/userguide/acm-concepts.html#concept-transparency for more details.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

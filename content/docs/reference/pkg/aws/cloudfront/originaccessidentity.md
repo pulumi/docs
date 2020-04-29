@@ -13,7 +13,7 @@ meta_desc: "Explore the OriginAccessIdentity resource of the cloudfront module, 
 Creates an Amazon CloudFront origin access identity.
 
 For information about CloudFront distributions, see the
-[Amazon CloudFront Developer Guide][1]. For more information on generating
+[Amazon CloudFront Developer Guide](http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Introduction.html). For more information on generating
 origin access identities, see
 [Using an Origin Access Identity to Restrict Access to Your Amazon S3 Content][2].
 
@@ -99,7 +99,7 @@ const example = new aws.s3.BucketPolicy("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">OriginAccessIdentity</span><span class="p">(resource_name, opts=None, </span>comment=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">OriginAccessIdentity</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>comment=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

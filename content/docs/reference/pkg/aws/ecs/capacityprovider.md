@@ -16,22 +16,6 @@ Provides an ECS cluster capacity provider. More information can be found on the 
 
 {{% examples %}}
 {{% /examples %}}
-## auto_scaling_group_provider
-
-The `auto_scaling_group_provider` block supports the following:
-
-* `auto_scaling_group_arn` - (Required) - The Amazon Resource Name (ARN) of the associated auto scaling group.
-* `managed_scaling` - (Optional) - Nested argument defining the parameters of the auto scaling. Defined below.
-* `managed_termination_protection` - (Optional) - Enables or disables container-aware termination of instances in the auto scaling group when scale-in happens. Valid values are `ENABLED` and `DISABLED`.
-
-## managed_scaling
-
-The `managed_scaling` block supports the following:
-
-* `maximum_scaling_step_size` - (Optional) The maximum step adjustment size. A number between 1 and 10,000.
-* `minimum_scaling_step_size` - (Optional) The minimum step adjustment size. A number between 1 and 10,000.
-* `status` - (Optional) Whether auto scaling is managed by ECS. Valid values are `ENABLED` and `DISABLED`.
-* `target_capacity` - (Optional) The target utilization for the capacity provider. A number between 1 and 100.
 
 
 
@@ -44,7 +28,7 @@ The `managed_scaling` block supports the following:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">CapacityProvider</span><span class="p">(resource_name, opts=None, </span>auto_scaling_group_provider=None<span class="p">, </span>name=None<span class="p">, </span>tags=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">CapacityProvider</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>auto_scaling_group_provider=None<span class="p">, </span>name=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -786,7 +770,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}- The Amazon Resource Name (ARN) of the associated auto scaling group.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -794,7 +779,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#capacityproviderautoscalinggroupprovidermanagedscaling">Capacity<wbr>Provider<wbr>Auto<wbr>Scaling<wbr>Group<wbr>Provider<wbr>Managed<wbr>Scaling<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}- Nested argument defining the parameters of the auto scaling. Defined below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -802,7 +788,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}- Enables or disables container-aware termination of instances in the auto scaling group when scale-in happens. Valid values are `ENABLED` and `DISABLED`.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -817,7 +804,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}- The Amazon Resource Name (ARN) of the associated auto scaling group.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -825,7 +813,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#capacityproviderautoscalinggroupprovidermanagedscaling">Capacity<wbr>Provider<wbr>Auto<wbr>Scaling<wbr>Group<wbr>Provider<wbr>Managed<wbr>Scaling</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}- Nested argument defining the parameters of the auto scaling. Defined below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -833,7 +822,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}- Enables or disables container-aware termination of instances in the auto scaling group when scale-in happens. Valid values are `ENABLED` and `DISABLED`.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -848,7 +838,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}- The Amazon Resource Name (ARN) of the associated auto scaling group.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -856,7 +847,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#capacityproviderautoscalinggroupprovidermanagedscaling">Capacity<wbr>Provider<wbr>Auto<wbr>Scaling<wbr>Group<wbr>Provider<wbr>Managed<wbr>Scaling</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}- Nested argument defining the parameters of the auto scaling. Defined below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -864,7 +856,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}- Enables or disables container-aware termination of instances in the auto scaling group when scale-in happens. Valid values are `ENABLED` and `DISABLED`.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -879,7 +872,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}- The Amazon Resource Name (ARN) of the associated auto scaling group.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -887,7 +881,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#capacityproviderautoscalinggroupprovidermanagedscaling">Dict[Capacity<wbr>Provider<wbr>Auto<wbr>Scaling<wbr>Group<wbr>Provider<wbr>Managed<wbr>Scaling]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}- Nested argument defining the parameters of the auto scaling. Defined below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -895,7 +890,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}- Enables or disables container-aware termination of instances in the auto scaling group when scale-in happens. Valid values are `ENABLED` and `DISABLED`.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -925,7 +921,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The maximum step adjustment size. A number between 1 and 10,000.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -933,7 +930,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The minimum step adjustment size. A number between 1 and 10,000.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -941,7 +939,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether auto scaling is managed by ECS. Valid values are `ENABLED` and `DISABLED`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -949,7 +948,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The target utilization for the capacity provider. A number between 1 and 100.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -964,7 +964,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The maximum step adjustment size. A number between 1 and 10,000.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -972,7 +973,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The minimum step adjustment size. A number between 1 and 10,000.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -980,7 +982,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether auto scaling is managed by ECS. Valid values are `ENABLED` and `DISABLED`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -988,7 +991,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The target utilization for the capacity provider. A number between 1 and 100.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1003,7 +1007,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The maximum step adjustment size. A number between 1 and 10,000.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1011,7 +1016,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The minimum step adjustment size. A number between 1 and 10,000.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1019,7 +1025,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether auto scaling is managed by ECS. Valid values are `ENABLED` and `DISABLED`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1027,7 +1034,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The target utilization for the capacity provider. A number between 1 and 100.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1042,7 +1050,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The maximum step adjustment size. A number between 1 and 10,000.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1050,7 +1059,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The minimum step adjustment size. A number between 1 and 10,000.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1058,7 +1068,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether auto scaling is managed by ECS. Valid values are `ENABLED` and `DISABLED`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1066,7 +1077,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The target utilization for the capacity provider. A number between 1 and 100.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

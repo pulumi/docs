@@ -151,7 +151,7 @@ const codepipeline = new aws.codepipeline.Pipeline("codepipeline", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Pipeline</span><span class="p">(resource_name, opts=None, </span>artifact_store=None<span class="p">, </span>name=None<span class="p">, </span>role_arn=None<span class="p">, </span>stages=None<span class="p">, </span>tags=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Pipeline</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>artifact_store=None<span class="p">, </span>name=None<span class="p">, </span>role_arn=None<span class="p">, </span>stages=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -330,7 +330,6 @@ The Pipeline resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#pipelineartifactstore">Pipeline<wbr>Artifact<wbr>Store<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more artifact_store blocks. Artifact stores are documented below.
-* `stage` (Minimum of at least two `stage` blocks is required) A stage block. Stages are documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -348,7 +347,8 @@ The Pipeline resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pipelinestage">List&lt;Pipeline<wbr>Stage<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A stage block. Stages are documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -382,7 +382,6 @@ The Pipeline resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#pipelineartifactstore">Pipeline<wbr>Artifact<wbr>Store</a></span>
     </dt>
     <dd>{{% md %}}One or more artifact_store blocks. Artifact stores are documented below.
-* `stage` (Minimum of at least two `stage` blocks is required) A stage block. Stages are documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -400,7 +399,8 @@ The Pipeline resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pipelinestage">[]Pipeline<wbr>Stage</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A stage block. Stages are documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -434,7 +434,6 @@ The Pipeline resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#pipelineartifactstore">Pipeline<wbr>Artifact<wbr>Store</a></span>
     </dt>
     <dd>{{% md %}}One or more artifact_store blocks. Artifact stores are documented below.
-* `stage` (Minimum of at least two `stage` blocks is required) A stage block. Stages are documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -452,7 +451,8 @@ The Pipeline resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pipelinestage">Pipeline<wbr>Stage[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A stage block. Stages are documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -486,7 +486,6 @@ The Pipeline resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#pipelineartifactstore">Dict[Pipeline<wbr>Artifact<wbr>Store]</a></span>
     </dt>
     <dd>{{% md %}}One or more artifact_store blocks. Artifact stores are documented below.
-* `stage` (Minimum of at least two `stage` blocks is required) A stage block. Stages are documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -504,7 +503,8 @@ The Pipeline resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pipelinestage">List[Pipeline<wbr>Stage]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A stage block. Stages are documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -780,7 +780,6 @@ The following state arguments are supported:
         <span class="property-type"><a href="#pipelineartifactstore">Pipeline<wbr>Artifact<wbr>Store<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more artifact_store blocks. Artifact stores are documented below.
-* `stage` (Minimum of at least two `stage` blocks is required) A stage block. Stages are documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -807,7 +806,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pipelinestage">List&lt;Pipeline<wbr>Stage<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A stage block. Stages are documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -841,7 +841,6 @@ The following state arguments are supported:
         <span class="property-type"><a href="#pipelineartifactstore">Pipeline<wbr>Artifact<wbr>Store</a></span>
     </dt>
     <dd>{{% md %}}One or more artifact_store blocks. Artifact stores are documented below.
-* `stage` (Minimum of at least two `stage` blocks is required) A stage block. Stages are documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -868,7 +867,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pipelinestage">[]Pipeline<wbr>Stage</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A stage block. Stages are documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -902,7 +902,6 @@ The following state arguments are supported:
         <span class="property-type"><a href="#pipelineartifactstore">Pipeline<wbr>Artifact<wbr>Store</a></span>
     </dt>
     <dd>{{% md %}}One or more artifact_store blocks. Artifact stores are documented below.
-* `stage` (Minimum of at least two `stage` blocks is required) A stage block. Stages are documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -929,7 +928,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pipelinestage">Pipeline<wbr>Stage[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A stage block. Stages are documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -963,7 +963,6 @@ The following state arguments are supported:
         <span class="property-type"><a href="#pipelineartifactstore">Dict[Pipeline<wbr>Artifact<wbr>Store]</a></span>
     </dt>
     <dd>{{% md %}}One or more artifact_store blocks. Artifact stores are documented below.
-* `stage` (Minimum of at least two `stage` blocks is required) A stage block. Stages are documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -990,7 +989,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pipelinestage">List[Pipeline<wbr>Stage]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A stage block. Stages are documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">

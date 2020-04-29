@@ -90,7 +90,7 @@ const bar = new aws.elastictranscoder.Preset("bar", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Preset</span><span class="p">(resource_name, opts=None, </span>audio=None<span class="p">, </span>audio_codec_options=None<span class="p">, </span>container=None<span class="p">, </span>description=None<span class="p">, </span>name=None<span class="p">, </span>thumbnails=None<span class="p">, </span>type=None<span class="p">, </span>video=None<span class="p">, </span>video_codec_options=None<span class="p">, </span>video_watermarks=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Preset</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>audio=None<span class="p">, </span>audio_codec_options=None<span class="p">, </span>container=None<span class="p">, </span>description=None<span class="p">, </span>name=None<span class="p">, </span>thumbnails=None<span class="p">, </span>type=None<span class="p">, </span>video=None<span class="p">, </span>video_codec_options=None<span class="p">, </span>video_watermarks=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -339,7 +339,8 @@ The Preset resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Codec options for the video parameters
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -348,7 +349,6 @@ The Preset resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type"><a href="#presetvideowatermark">List&lt;Preset<wbr>Video<wbr>Watermark<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Watermark parameters for the video parameters (documented below)
-* `video_codec_options` (Optional, Forces new resource) Codec options for the video parameters
 {{% /md %}}</dd>
 
 </dl>
@@ -435,7 +435,8 @@ The Preset resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Codec options for the video parameters
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -444,7 +445,6 @@ The Preset resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type"><a href="#presetvideowatermark">[]Preset<wbr>Video<wbr>Watermark</a></span>
     </dt>
     <dd>{{% md %}}Watermark parameters for the video parameters (documented below)
-* `video_codec_options` (Optional, Forces new resource) Codec options for the video parameters
 {{% /md %}}</dd>
 
 </dl>
@@ -531,7 +531,8 @@ The Preset resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Codec options for the video parameters
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -540,7 +541,6 @@ The Preset resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type"><a href="#presetvideowatermark">Preset<wbr>Video<wbr>Watermark[]</a></span>
     </dt>
     <dd>{{% md %}}Watermark parameters for the video parameters (documented below)
-* `video_codec_options` (Optional, Forces new resource) Codec options for the video parameters
 {{% /md %}}</dd>
 
 </dl>
@@ -627,7 +627,8 @@ The Preset resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Codec options for the video parameters
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -636,7 +637,6 @@ The Preset resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type"><a href="#presetvideowatermark">List[Preset<wbr>Video<wbr>Watermark]</a></span>
     </dt>
     <dd>{{% md %}}Watermark parameters for the video parameters (documented below)
-* `video_codec_options` (Optional, Forces new resource) Codec options for the video parameters
 {{% /md %}}</dd>
 
 </dl>
@@ -960,7 +960,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Codec options for the video parameters
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -969,7 +970,6 @@ The following state arguments are supported:
         <span class="property-type"><a href="#presetvideowatermark">List&lt;Preset<wbr>Video<wbr>Watermark<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Watermark parameters for the video parameters (documented below)
-* `video_codec_options` (Optional, Forces new resource) Codec options for the video parameters
 {{% /md %}}</dd>
 
 </dl>
@@ -1064,7 +1064,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Codec options for the video parameters
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1073,7 +1074,6 @@ The following state arguments are supported:
         <span class="property-type"><a href="#presetvideowatermark">[]Preset<wbr>Video<wbr>Watermark</a></span>
     </dt>
     <dd>{{% md %}}Watermark parameters for the video parameters (documented below)
-* `video_codec_options` (Optional, Forces new resource) Codec options for the video parameters
 {{% /md %}}</dd>
 
 </dl>
@@ -1168,7 +1168,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Codec options for the video parameters
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1177,7 +1178,6 @@ The following state arguments are supported:
         <span class="property-type"><a href="#presetvideowatermark">Preset<wbr>Video<wbr>Watermark[]</a></span>
     </dt>
     <dd>{{% md %}}Watermark parameters for the video parameters (documented below)
-* `video_codec_options` (Optional, Forces new resource) Codec options for the video parameters
 {{% /md %}}</dd>
 
 </dl>
@@ -1272,7 +1272,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Codec options for the video parameters
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1281,7 +1282,6 @@ The following state arguments are supported:
         <span class="property-type"><a href="#presetvideowatermark">List[Preset<wbr>Video<wbr>Watermark]</a></span>
     </dt>
     <dd>{{% md %}}Watermark parameters for the video parameters (documented below)
-* `video_codec_options` (Optional, Forces new resource) Codec options for the video parameters
 {{% /md %}}</dd>
 
 </dl>

@@ -12,7 +12,7 @@ meta_desc: "Explore the FirehoseDeliveryStream resource of the kinesis module, i
 
 Provides a Kinesis Firehose Delivery Stream resource. Amazon Kinesis Firehose is a fully managed, elastic service to easily deliver real-time data streams to destinations such as Amazon S3 and Amazon Redshift.
 
-For more details, see the [Amazon Kinesis Firehose Documentation][1].
+For more details, see the [Amazon Kinesis Firehose Documentation](https://aws.amazon.com/documentation/firehose/).
 
 {{% examples %}}
 ## Example Usage
@@ -244,7 +244,7 @@ const testStream = new aws.kinesis.FirehoseDeliveryStream("test_stream", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">FirehoseDeliveryStream</span><span class="p">(resource_name, opts=None, </span>arn=None<span class="p">, </span>destination=None<span class="p">, </span>destination_id=None<span class="p">, </span>elasticsearch_configuration=None<span class="p">, </span>extended_s3_configuration=None<span class="p">, </span>kinesis_source_configuration=None<span class="p">, </span>name=None<span class="p">, </span>redshift_configuration=None<span class="p">, </span>s3_configuration=None<span class="p">, </span>server_side_encryption=None<span class="p">, </span>splunk_configuration=None<span class="p">, </span>tags=None<span class="p">, </span>version_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">FirehoseDeliveryStream</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>arn=None<span class="p">, </span>destination=None<span class="p">, </span>destination_id=None<span class="p">, </span>elasticsearch_configuration=None<span class="p">, </span>extended_s3_configuration=None<span class="p">, </span>kinesis_source_configuration=None<span class="p">, </span>name=None<span class="p">, </span>redshift_configuration=None<span class="p">, </span>s3_configuration=None<span class="p">, </span>server_side_encryption=None<span class="p">, </span>splunk_configuration=None<span class="p">, </span>tags=None<span class="p">, </span>version_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

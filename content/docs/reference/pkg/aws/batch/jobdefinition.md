@@ -59,17 +59,6 @@ const test = new aws.batch.JobDefinition("test", {
 
 {{% /example %}}
 {{% /examples %}}
-## retry_strategy
-
-`retry_strategy` supports the following:
-
-* `attempts` - (Optional) The number of times to move a job to the `RUNNABLE` status. You may specify between `1` and `10` attempts.
-
-## timeout
-
-`timeout` supports the following:
-
-* `attempt_duration_seconds` - (Optional) The time duration in seconds after which AWS Batch terminates your jobs if they have not finished. The minimum value for the timeout is `60` seconds.
 
 
 
@@ -82,7 +71,7 @@ const test = new aws.batch.JobDefinition("test", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">JobDefinition</span><span class="p">(resource_name, opts=None, </span>container_properties=None<span class="p">, </span>name=None<span class="p">, </span>parameters=None<span class="p">, </span>retry_strategy=None<span class="p">, </span>timeout=None<span class="p">, </span>type=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">JobDefinition</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>container_properties=None<span class="p">, </span>name=None<span class="p">, </span>parameters=None<span class="p">, </span>retry_strategy=None<span class="p">, </span>timeout=None<span class="p">, </span>type=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1128,7 +1117,8 @@ Maximum number of `retry_strategy` is `1`.  Defined below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of times to move a job to the `RUNNABLE` status. You may specify between `1` and `10` attempts.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1143,7 +1133,8 @@ Maximum number of `retry_strategy` is `1`.  Defined below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of times to move a job to the `RUNNABLE` status. You may specify between `1` and `10` attempts.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1158,7 +1149,8 @@ Maximum number of `retry_strategy` is `1`.  Defined below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of times to move a job to the `RUNNABLE` status. You may specify between `1` and `10` attempts.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1173,7 +1165,8 @@ Maximum number of `retry_strategy` is `1`.  Defined below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of times to move a job to the `RUNNABLE` status. You may specify between `1` and `10` attempts.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1203,7 +1196,8 @@ Maximum number of `retry_strategy` is `1`.  Defined below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The time duration in seconds after which AWS Batch terminates your jobs if they have not finished. The minimum value for the timeout is `60` seconds.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1218,7 +1212,8 @@ Maximum number of `retry_strategy` is `1`.  Defined below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The time duration in seconds after which AWS Batch terminates your jobs if they have not finished. The minimum value for the timeout is `60` seconds.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1233,7 +1228,8 @@ Maximum number of `retry_strategy` is `1`.  Defined below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The time duration in seconds after which AWS Batch terminates your jobs if they have not finished. The minimum value for the timeout is `60` seconds.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1248,7 +1244,8 @@ Maximum number of `retry_strategy` is `1`.  Defined below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The time duration in seconds after which AWS Batch terminates your jobs if they have not finished. The minimum value for the timeout is `60` seconds.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

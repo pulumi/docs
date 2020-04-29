@@ -58,7 +58,7 @@ const fooWithLifecylePolicy = new aws.efs.FileSystem("foo_with_lifecyle_policy",
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">FileSystem</span><span class="p">(resource_name, opts=None, </span>creation_token=None<span class="p">, </span>encrypted=None<span class="p">, </span>kms_key_id=None<span class="p">, </span>lifecycle_policy=None<span class="p">, </span>performance_mode=None<span class="p">, </span>provisioned_throughput_in_mibps=None<span class="p">, </span>tags=None<span class="p">, </span>throughput_mode=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">FileSystem</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>creation_token=None<span class="p">, </span>encrypted=None<span class="p">, </span>kms_key_id=None<span class="p">, </span>lifecycle_policy=None<span class="p">, </span>performance_mode=None<span class="p">, </span>provisioned_throughput_in_mibps=None<span class="p">, </span>tags=None<span class="p">, </span>throughput_mode=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
