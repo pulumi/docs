@@ -53,7 +53,8 @@ For example, I recently needed to refresh my AWS lab infrastructure. There were 
 
 Watch Scott's demo.
 
-{{< youtube "EWILzQ7_jMI=0" >}}
+{{< youtube "EWILzQ7_jMI" >}}
+
 ## Your Infrastructure as Code Story
 
 We appreciate Scott taking the time to share his infrastructure as code story. Let us know you’re using Pulumi on [Twitter](https://twitter.com/pulumicorp) or on [Slack](https://slack.pulumi.com/).
