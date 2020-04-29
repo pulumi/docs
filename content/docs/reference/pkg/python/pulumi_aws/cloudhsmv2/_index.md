@@ -23,7 +23,7 @@ anything, please consult the source <a class="reference external" href="https://
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.cloudhsmv2.</code><code class="sig-name descname">Cluster</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">hsm_type=None</em>, <em class="sig-param">source_backup_identifier=None</em>, <em class="sig-param">subnet_ids=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudhsmv2.Cluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates an Amazon CloudHSM v2 cluster.</p>
 <p>For information about CloudHSM v2, see the
-[AWS CloudHSM User Guide][1] and the [Amazon
+<a class="reference external" href="https://docs.aws.amazon.com/cloudhsm/latest/userguide/introduction.html">AWS CloudHSM User Guide</a> and the [Amazon
 CloudHSM API Reference][2].</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> CloudHSM can take up to several minutes to be set up.
@@ -217,7 +217,7 @@ The number of available cluster certificates may vary depending on state of the 
 <dl class="attribute">
 <dt id="pulumi_aws.cloudhsmv2.GetClusterResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudhsmv2.GetClusterResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">

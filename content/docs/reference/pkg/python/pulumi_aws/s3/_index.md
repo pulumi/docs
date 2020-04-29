@@ -674,7 +674,7 @@ The rule applies only to objects having all the tags in its tagset.</p></li>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Unique identifier for the rule.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">prefix</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Object keyname prefix identifying one or more objects to which the rule applies.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">priority</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The priority associated with the rule.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">priority</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - is optional (with a default value of <code class="docutils literal notranslate"><span class="pre">0</span></code>) but must be unique between multiple rules</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sourceSelectionCriteria</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Specifies special object selection criteria (documented below).</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">sseKmsEncryptedObjects</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Match SSE-KMS encrypted objects (documented below). If specified, <code class="docutils literal notranslate"><span class="pre">replica_kms_key_id</span></code>
@@ -905,7 +905,7 @@ The rule applies only to objects having all the tags in its tagset.</p></li>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Unique identifier for the rule.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">prefix</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Object keyname prefix identifying one or more objects to which the rule applies.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">priority</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The priority associated with the rule.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">priority</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - is optional (with a default value of <code class="docutils literal notranslate"><span class="pre">0</span></code>) but must be unique between multiple rules</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sourceSelectionCriteria</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Specifies special object selection criteria (documented below).</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">sseKmsEncryptedObjects</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Match SSE-KMS encrypted objects (documented below). If specified, <code class="docutils literal notranslate"><span class="pre">replica_kms_key_id</span></code>
@@ -1141,7 +1141,7 @@ The rule applies only to objects having all the tags in its tagset.</p></li>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Unique identifier for the rule.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">prefix</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Object keyname prefix identifying one or more objects to which the rule applies.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">priority</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The priority associated with the rule.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">priority</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - is optional (with a default value of <code class="docutils literal notranslate"><span class="pre">0</span></code>) but must be unique between multiple rules</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sourceSelectionCriteria</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Specifies special object selection criteria (documented below).</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">sseKmsEncryptedObjects</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Match SSE-KMS encrypted objects (documented below). If specified, <code class="docutils literal notranslate"><span class="pre">replica_kms_key_id</span></code>
@@ -2099,7 +2099,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.s3.GetBucketObjectResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.s3.GetBucketObjectResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -2183,7 +2183,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.s3.GetBucketObjectsResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.s3.GetBucketObjectsResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -2231,7 +2231,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.s3.GetBucketResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.s3.GetBucketResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">

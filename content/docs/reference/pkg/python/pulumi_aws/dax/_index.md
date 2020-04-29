@@ -35,7 +35,7 @@ maintenance on the cluster is performed. The format is <code class="docutils lit
 (24H Clock UTC). The minimum maintenance window is a 60 minute period. Example:
 <code class="docutils literal notranslate"><span class="pre">sun:05:00-sun:09:00</span></code></p></li>
 <li><p><strong>node_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The compute and memory capacity of the nodes. See
-[Nodes][1] for supported node types</p></li>
+<a class="reference external" href="http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DAX.concepts.cluster.html#DAX.concepts.nodes">Nodes</a> for supported node types</p></li>
 <li><p><strong>notification_topic_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An Amazon Resource Name (ARN) of an
 SNS topic to send DAX notifications to. Example:
 <code class="docutils literal notranslate"><span class="pre">arn:aws:sns:us-east-1:012345678999:my_sns_topic</span></code></p></li>
@@ -117,7 +117,7 @@ maintenance on the cluster is performed. The format is <code class="docutils lit
 <dt id="pulumi_aws.dax.Cluster.node_type">
 <code class="sig-name descname">node_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.dax.Cluster.node_type" title="Permalink to this definition">¶</a></dt>
 <dd><p>The compute and memory capacity of the nodes. See
-[Nodes][1] for supported node types</p>
+<a class="reference external" href="http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DAX.concepts.cluster.html#DAX.concepts.nodes">Nodes</a> for supported node types</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -219,8 +219,9 @@ permissions to access DynamoDB on your behalf</p></li>
 maintenance on the cluster is performed. The format is <code class="docutils literal notranslate"><span class="pre">ddd:hh24:mi-ddd:hh24:mi</span></code>
 (24H Clock UTC). The minimum maintenance window is a 60 minute period. Example:
 <code class="docutils literal notranslate"><span class="pre">sun:05:00-sun:09:00</span></code></p></li>
-<li><p><strong>node_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The compute and memory capacity of the nodes. See
-[Nodes][1] for supported node types</p></li>
+<li><p><strong>node_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The compute and memory capacity of the nodes. See
+<a class="reference external" href="http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DAX.concepts.cluster.html#DAX.concepts.nodes">Nodes</a> for supported node types</p>
+</p></li>
 <li><p><strong>nodes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of node objects including <code class="docutils literal notranslate"><span class="pre">id</span></code>, <code class="docutils literal notranslate"><span class="pre">address</span></code>, <code class="docutils literal notranslate"><span class="pre">port</span></code> and
 <code class="docutils literal notranslate"><span class="pre">availability_zone</span></code>. Referenceable e.g. as
 <code class="docutils literal notranslate"><span class="pre">${aws_dax_cluster.test.nodes.0.address}</span></code></p></li>
@@ -297,11 +298,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.dax.ParameterGroup">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.dax.</code><code class="sig-name descname">ParameterGroup</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">parameters=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.dax.ParameterGroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a DAX Parameter Group resource.</p>
-<p><code class="docutils literal notranslate"><span class="pre">parameters</span></code> supports the following:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> - (Required) The name of the parameter.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> - (Required) The value for the parameter.</p></li>
-</ul>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -315,8 +311,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 <p>The <strong>parameters</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the parameter group.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the parameter.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The value for the parameter.</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_aws.dax.ParameterGroup.description">
@@ -335,8 +331,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">parameters</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.dax.ParameterGroup.parameters" title="Permalink to this definition">¶</a></dt>
 <dd><p>The parameters of the parameter group.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the parameter group.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the parameter.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The value for the parameter.</p></li>
 </ul>
 </dd></dl>
 
@@ -359,8 +355,8 @@ properties used to qualify the lookup.</p>
 </dl>
 <p>The <strong>parameters</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the parameter group.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the parameter.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The value for the parameter.</p></li>
 </ul>
 </dd></dl>
 

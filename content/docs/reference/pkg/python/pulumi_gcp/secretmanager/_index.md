@@ -43,7 +43,7 @@ anything, please consult the source <a class="reference external" href="https://
 <dl class="attribute">
 <dt id="pulumi_gcp.secretmanager.GetSecretVersionResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.secretmanager.GetSecretVersionResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -75,28 +75,30 @@ anything, please consult the source <a class="reference external" href="https://
 <li><p><strong>resource*name</strong> (<em>str</em>) – <p>The name of the resource.</p>
 </p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The labels assigned to this Secret. Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of
-maximum 128 bytes, and must conform to the following PCRE regular expression: [p{Ll}p{Lo}][p{Ll}p{Lo}p{N}*-]{0,62}
-Label values must be between 0 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to
-the following PCRE regular expression: [p{Ll}p{Lo}p{N}_-]{0,63} No more than 64 labels can be assigned to a given
-resource. An object containing a list of “key”: value pairs. Example: { “name”: “wrench”, “mass”: “1.3kg”, “count”: “3”
-}.</p></li>
+<li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The labels assigned to this Secret.
+Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes,
+and must conform to the following PCRE regular expression: [p{Ll}p{Lo}][p{Ll}p{Lo}p{N}*-]{0,62}
+Label values must be between 0 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes,
+and must conform to the following PCRE regular expression: [p{Ll}p{Lo}p{N}_-]{0,63}
+No more than 64 labels can be assigned to a given resource.
+An object containing a list of “key”: value pairs. Example:
+{ “name”: “wrench”, “mass”: “1.3kg”, “count”: “3” }.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
-<li><p><strong>replication</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The replication policy of the secret data attached to the Secret. It cannot be changed after the Secret has been
-created.</p></li>
+<li><p><strong>replication</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The replication policy of the secret data attached to the Secret. It cannot be changed
+after the Secret has been created.  Structure is documented below.</p></li>
 <li><p><strong>secret_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – This must be unique within the project.</p></li>
 </ul>
 </dd>
 </dl>
 <p>The <strong>replication</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">automatic</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">userManaged</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">automatic</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - The Secret will automatically be replicated without any restrictions.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">userManaged</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The Secret will automatically be replicated without any restrictions.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">replicas</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">replicas</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The list of Replicas for this Secret. Cannot be empty.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">location</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">location</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The canonical IDs of the location to replicate data. For example: “us-east1”.</p></li>
 </ul>
 </li>
 </ul>
@@ -111,12 +113,14 @@ created.</p></li>
 <dl class="attribute">
 <dt id="pulumi_gcp.secretmanager.Secret.labels">
 <code class="sig-name descname">labels</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.secretmanager.Secret.labels" title="Permalink to this definition">¶</a></dt>
-<dd><p>The labels assigned to this Secret. Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of
-maximum 128 bytes, and must conform to the following PCRE regular expression: [p{Ll}p{Lo}][p{Ll}p{Lo}p{N}<em>-]{0,62}
-Label values must be between 0 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to
-the following PCRE regular expression: [p{Ll}p{Lo}p{N}</em>-]{0,63} No more than 64 labels can be assigned to a given
-resource. An object containing a list of “key”: value pairs. Example: { “name”: “wrench”, “mass”: “1.3kg”, “count”: “3”
-}.</p>
+<dd><p>The labels assigned to this Secret.
+Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes,
+and must conform to the following PCRE regular expression: [p{Ll}p{Lo}][p{Ll}p{Lo}p{N}<em>-]{0,62}
+Label values must be between 0 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes,
+and must conform to the following PCRE regular expression: [p{Ll}p{Lo}p{N}</em>-]{0,63}
+No more than 64 labels can be assigned to a given resource.
+An object containing a list of “key”: value pairs. Example:
+{ “name”: “wrench”, “mass”: “1.3kg”, “count”: “3” }.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -135,15 +139,15 @@ If it is not provided, the provider project is used.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.secretmanager.Secret.replication">
 <code class="sig-name descname">replication</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.secretmanager.Secret.replication" title="Permalink to this definition">¶</a></dt>
-<dd><p>The replication policy of the secret data attached to the Secret. It cannot be changed after the Secret has been
-created.</p>
+<dd><p>The replication policy of the secret data attached to the Secret. It cannot be changed
+after the Secret has been created.  Structure is documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">automatic</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">userManaged</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">automatic</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - The Secret will automatically be replicated without any restrictions.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">userManaged</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The Secret will automatically be replicated without any restrictions.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">replicas</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">replicas</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - The list of Replicas for this Secret. Cannot be empty.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">location</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">location</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The canonical IDs of the location to replicate data. For example: “us-east1”.</p></li>
 </ul>
 </li>
 </ul>
@@ -170,29 +174,31 @@ properties used to qualify the lookup.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>create*time</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The time at which the Secret was created.</p>
 </p></li>
-<li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The labels assigned to this Secret. Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of
-maximum 128 bytes, and must conform to the following PCRE regular expression: [p{Ll}p{Lo}][p{Ll}p{Lo}p{N}*-]{0,62}
-Label values must be between 0 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to
-the following PCRE regular expression: [p{Ll}p{Lo}p{N}_-]{0,63} No more than 64 labels can be assigned to a given
-resource. An object containing a list of “key”: value pairs. Example: { “name”: “wrench”, “mass”: “1.3kg”, “count”: “3”
-}.</p></li>
+<li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The labels assigned to this Secret.
+Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes,
+and must conform to the following PCRE regular expression: [p{Ll}p{Lo}][p{Ll}p{Lo}p{N}*-]{0,62}
+Label values must be between 0 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes,
+and must conform to the following PCRE regular expression: [p{Ll}p{Lo}p{N}_-]{0,63}
+No more than 64 labels can be assigned to a given resource.
+An object containing a list of “key”: value pairs. Example:
+{ “name”: “wrench”, “mass”: “1.3kg”, “count”: “3” }.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The resource name of the Secret. Format: ‘projects/{{project}}/secrets/{{secret_id}}’</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
-<li><p><strong>replication</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The replication policy of the secret data attached to the Secret. It cannot be changed after the Secret has been
-created.</p></li>
+<li><p><strong>replication</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The replication policy of the secret data attached to the Secret. It cannot be changed
+after the Secret has been created.  Structure is documented below.</p></li>
 <li><p><strong>secret_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – This must be unique within the project.</p></li>
 </ul>
 </dd>
 </dl>
 <p>The <strong>replication</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">automatic</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">userManaged</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">automatic</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - The Secret will automatically be replicated without any restrictions.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">userManaged</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The Secret will automatically be replicated without any restrictions.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">replicas</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">replicas</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The list of Replicas for this Secret. Cannot be empty.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">location</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">location</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The canonical IDs of the location to replicate data. For example: “us-east1”.</p></li>
 </ul>
 </li>
 </ul>

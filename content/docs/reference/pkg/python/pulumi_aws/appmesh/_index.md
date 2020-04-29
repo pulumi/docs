@@ -30,7 +30,7 @@ anything, please consult the source <a class="reference external" href="https://
 </dl>
 <p>The <strong>spec</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">egressFilter</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">egressFilter</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The egress filter rules for the service mesh.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The egress filter type. By default, the type is <code class="docutils literal notranslate"><span class="pre">DROP_ALL</span></code>.
 Valid values are <code class="docutils literal notranslate"><span class="pre">ALLOW_ALL</span></code> and <code class="docutils literal notranslate"><span class="pre">DROP_ALL</span></code>.</p></li>
@@ -66,7 +66,7 @@ Valid values are <code class="docutils literal notranslate"><span class="pre">AL
 <code class="sig-name descname">spec</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.appmesh.Mesh.spec" title="Permalink to this definition">¶</a></dt>
 <dd><p>The service mesh specification to apply.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">egressFilter</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">egressFilter</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The egress filter rules for the service mesh.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The egress filter type. By default, the type is <code class="docutils literal notranslate"><span class="pre">DROP_ALL</span></code>.
 Valid values are <code class="docutils literal notranslate"><span class="pre">ALLOW_ALL</span></code> and <code class="docutils literal notranslate"><span class="pre">DROP_ALL</span></code>.</p></li>
@@ -103,7 +103,7 @@ properties used to qualify the lookup.</p>
 </dl>
 <p>The <strong>spec</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">egressFilter</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">egressFilter</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The egress filter rules for the service mesh.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The egress filter type. By default, the type is <code class="docutils literal notranslate"><span class="pre">DROP_ALL</span></code>.
 Valid values are <code class="docutils literal notranslate"><span class="pre">ALLOW_ALL</span></code> and <code class="docutils literal notranslate"><span class="pre">DROP_ALL</span></code>.</p></li>
@@ -191,12 +191,8 @@ You can specify one or more targets and their relative weights with which to dis
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">exact</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The header value sent by the client must match the specified value exactly.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">prefix</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the path with which to match requests.
-This parameter must always start with /, which by itself matches all requests to the virtual router service name.</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">range</span></code>- (Optional) The object that specifies the range of numbers that the header value sent by the client must be included in.</p></li>
-</ul>
-</li>
-<li><p><code class="docutils literal notranslate"><span class="pre">range</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+This parameter must always start with /, which by itself matches all requests to the virtual router service name.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">range</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The object that specifies the range of numbers that the header value sent by the client must be included in.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">end</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The end of the range.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">start</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The start of the range.</p></li>
@@ -211,11 +207,7 @@ This parameter must always start with /, which by itself matches all requests to
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">method</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The client request header method to match on. Valid values: <code class="docutils literal notranslate"><span class="pre">GET</span></code>, <code class="docutils literal notranslate"><span class="pre">HEAD</span></code>, <code class="docutils literal notranslate"><span class="pre">POST</span></code>, <code class="docutils literal notranslate"><span class="pre">PUT</span></code>, <code class="docutils literal notranslate"><span class="pre">DELETE</span></code>, <code class="docutils literal notranslate"><span class="pre">CONNECT</span></code>, <code class="docutils literal notranslate"><span class="pre">OPTIONS</span></code>, <code class="docutils literal notranslate"><span class="pre">TRACE</span></code>, <code class="docutils literal notranslate"><span class="pre">PATCH</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">prefix</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the path with which to match requests.
-This parameter must always start with /, which by itself matches all requests to the virtual router service name.</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">range</span></code>- (Optional) The object that specifies the range of numbers that the header value sent by the client must be included in.</p></li>
-</ul>
-</li>
+This parameter must always start with /, which by itself matches all requests to the virtual router service name.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">scheme</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The client request header scheme to match on. Valid values: <code class="docutils literal notranslate"><span class="pre">http</span></code>, <code class="docutils literal notranslate"><span class="pre">https</span></code>.</p></li>
 </ul>
 </li>
@@ -296,12 +288,8 @@ You can specify one or more targets and their relative weights with which to dis
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">exact</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The header value sent by the client must match the specified value exactly.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">prefix</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the path with which to match requests.
-This parameter must always start with /, which by itself matches all requests to the virtual router service name.</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">range</span></code>- (Optional) The object that specifies the range of numbers that the header value sent by the client must be included in.</p></li>
-</ul>
-</li>
-<li><p><code class="docutils literal notranslate"><span class="pre">range</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+This parameter must always start with /, which by itself matches all requests to the virtual router service name.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">range</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The object that specifies the range of numbers that the header value sent by the client must be included in.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">end</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The end of the range.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">start</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The start of the range.</p></li>
@@ -316,11 +304,7 @@ This parameter must always start with /, which by itself matches all requests to
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">method</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The client request header method to match on. Valid values: <code class="docutils literal notranslate"><span class="pre">GET</span></code>, <code class="docutils literal notranslate"><span class="pre">HEAD</span></code>, <code class="docutils literal notranslate"><span class="pre">POST</span></code>, <code class="docutils literal notranslate"><span class="pre">PUT</span></code>, <code class="docutils literal notranslate"><span class="pre">DELETE</span></code>, <code class="docutils literal notranslate"><span class="pre">CONNECT</span></code>, <code class="docutils literal notranslate"><span class="pre">OPTIONS</span></code>, <code class="docutils literal notranslate"><span class="pre">TRACE</span></code>, <code class="docutils literal notranslate"><span class="pre">PATCH</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">prefix</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the path with which to match requests.
-This parameter must always start with /, which by itself matches all requests to the virtual router service name.</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">range</span></code>- (Optional) The object that specifies the range of numbers that the header value sent by the client must be included in.</p></li>
-</ul>
-</li>
+This parameter must always start with /, which by itself matches all requests to the virtual router service name.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">scheme</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The client request header scheme to match on. Valid values: <code class="docutils literal notranslate"><span class="pre">http</span></code>, <code class="docutils literal notranslate"><span class="pre">https</span></code>.</p></li>
 </ul>
 </li>
@@ -404,12 +388,8 @@ You can specify one or more targets and their relative weights with which to dis
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">exact</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The header value sent by the client must match the specified value exactly.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">prefix</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the path with which to match requests.
-This parameter must always start with /, which by itself matches all requests to the virtual router service name.</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">range</span></code>- (Optional) The object that specifies the range of numbers that the header value sent by the client must be included in.</p></li>
-</ul>
-</li>
-<li><p><code class="docutils literal notranslate"><span class="pre">range</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+This parameter must always start with /, which by itself matches all requests to the virtual router service name.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">range</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The object that specifies the range of numbers that the header value sent by the client must be included in.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">end</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The end of the range.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">start</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The start of the range.</p></li>
@@ -424,11 +404,7 @@ This parameter must always start with /, which by itself matches all requests to
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">method</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The client request header method to match on. Valid values: <code class="docutils literal notranslate"><span class="pre">GET</span></code>, <code class="docutils literal notranslate"><span class="pre">HEAD</span></code>, <code class="docutils literal notranslate"><span class="pre">POST</span></code>, <code class="docutils literal notranslate"><span class="pre">PUT</span></code>, <code class="docutils literal notranslate"><span class="pre">DELETE</span></code>, <code class="docutils literal notranslate"><span class="pre">CONNECT</span></code>, <code class="docutils literal notranslate"><span class="pre">OPTIONS</span></code>, <code class="docutils literal notranslate"><span class="pre">TRACE</span></code>, <code class="docutils literal notranslate"><span class="pre">PATCH</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">prefix</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the path with which to match requests.
-This parameter must always start with /, which by itself matches all requests to the virtual router service name.</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">range</span></code>- (Optional) The object that specifies the range of numbers that the header value sent by the client must be included in.</p></li>
-</ul>
-</li>
+This parameter must always start with /, which by itself matches all requests to the virtual router service name.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">scheme</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The client request header scheme to match on. Valid values: <code class="docutils literal notranslate"><span class="pre">http</span></code>, <code class="docutils literal notranslate"><span class="pre">https</span></code>.</p></li>
 </ul>
 </li>
@@ -530,12 +506,8 @@ setting <code class="docutils literal notranslate"><span class="pre">virtual_ser
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">health_check</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The health check information for the listener.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">healthyThreshold</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of consecutive successful health checks that must occur before declaring listener healthy.</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">interval_millis</span></code>- (Required) The time period in milliseconds between each health check execution.</p></li>
-</ul>
-</li>
-<li><p><code class="docutils literal notranslate"><span class="pre">intervalMillis</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">healthyThreshold</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of consecutive successful health checks that must occur before declaring listener healthy.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">intervalMillis</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The time period in milliseconds between each health check execution.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The destination path for the health check request. This is only required if the specified protocol is <code class="docutils literal notranslate"><span class="pre">http</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The destination port for the health check request. This port must match the port defined in the <code class="docutils literal notranslate"><span class="pre">port_mapping</span></code> for the listener.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The protocol for the health check request. Valid values are <code class="docutils literal notranslate"><span class="pre">http</span></code> and <code class="docutils literal notranslate"><span class="pre">tcp</span></code>.</p></li>
@@ -630,12 +602,8 @@ Use the <cite>``servicediscovery.HttpNamespace`</cite> &lt;<a class="reference e
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">health_check</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The health check information for the listener.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">healthyThreshold</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The number of consecutive successful health checks that must occur before declaring listener healthy.</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">interval_millis</span></code>- (Required) The time period in milliseconds between each health check execution.</p></li>
-</ul>
-</li>
-<li><p><code class="docutils literal notranslate"><span class="pre">intervalMillis</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">healthyThreshold</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The number of consecutive successful health checks that must occur before declaring listener healthy.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">intervalMillis</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The time period in milliseconds between each health check execution.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The destination path for the health check request. This is only required if the specified protocol is <code class="docutils literal notranslate"><span class="pre">http</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The destination port for the health check request. This port must match the port defined in the <code class="docutils literal notranslate"><span class="pre">port_mapping</span></code> for the listener.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The protocol for the health check request. Valid values are <code class="docutils literal notranslate"><span class="pre">http</span></code> and <code class="docutils literal notranslate"><span class="pre">tcp</span></code>.</p></li>
@@ -726,12 +694,8 @@ properties used to qualify the lookup.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">health_check</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The health check information for the listener.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">healthyThreshold</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of consecutive successful health checks that must occur before declaring listener healthy.</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">interval_millis</span></code>- (Required) The time period in milliseconds between each health check execution.</p></li>
-</ul>
-</li>
-<li><p><code class="docutils literal notranslate"><span class="pre">intervalMillis</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">healthyThreshold</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of consecutive successful health checks that must occur before declaring listener healthy.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">intervalMillis</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The time period in milliseconds between each health check execution.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The destination path for the health check request. This is only required if the specified protocol is <code class="docutils literal notranslate"><span class="pre">http</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The destination port for the health check request. This port must match the port defined in the <code class="docutils literal notranslate"><span class="pre">port_mapping</span></code> for the listener.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The protocol for the health check request. Valid values are <code class="docutils literal notranslate"><span class="pre">http</span></code> and <code class="docutils literal notranslate"><span class="pre">tcp</span></code>.</p></li>
@@ -1004,7 +968,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 <p>The <strong>spec</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">provider</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">provider</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The App Mesh object that is acting as the provider for a virtual service. You can specify a single virtual node or virtual router.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">virtualNode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The virtual node associated with a virtual service.</p>
 <ul>
@@ -1054,7 +1018,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">spec</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.appmesh.VirtualService.spec" title="Permalink to this definition">¶</a></dt>
 <dd><p>The virtual service specification to apply.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">provider</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">provider</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The App Mesh object that is acting as the provider for a virtual service. You can specify a single virtual node or virtual router.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">virtualNode</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The virtual node associated with a virtual service.</p>
 <ul>
@@ -1100,7 +1064,7 @@ properties used to qualify the lookup.</p>
 </dl>
 <p>The <strong>spec</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">provider</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">provider</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The App Mesh object that is acting as the provider for a virtual service. You can specify a single virtual node or virtual router.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">virtualNode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The virtual node associated with a virtual service.</p>
 <ul>

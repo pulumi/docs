@@ -601,88 +601,107 @@ an optional histogram of the values as specified by the bucket options.</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>bucket_options</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The bucketOptions are required when the logs-based metric is using a DISTRIBUTION value type and it describes the bucket
-boundaries used to create a histogram of the extracted values.</p></li>
-<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A description of this metric, which is used in documentation. The maximum length of the description is 8000 characters.</p></li>
-<li><p><strong>filter</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An advanced logs filter (<a class="reference external" href="https://cloud.google.com/logging/docs/view/advanced-filters">https://cloud.google.com/logging/docs/view/advanced-filters</a>) which is used to match log
-entries.</p></li>
-<li><p><strong>label_extractors</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map from a label key string to an extractor expression which is used to extract data from a log entry field and assign
-as the label value. Each label key specified in the LabelDescriptor must have an associated extractor expression in this
-map. The syntax of the extractor expression is the same as for the valueExtractor field.</p></li>
-<li><p><strong>metric_descriptor</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The metric descriptor associated with the logs-based metric.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The client-assigned metric identifier. Examples - “error<em>count”, “nginx/requests”. Metric identifiers are limited to 100
-characters and can include only the following characters A-Z, a-z, 0-9, and the special characters *-.,+!</em>’,()%/. The
-forward-slash character (/) denotes a hierarchy of name pieces, and it cannot be the first character of the name.</p></li>
+<li><p><strong>bucket_options</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The bucketOptions are required when the logs-based metric is using a DISTRIBUTION value type and it
+describes the bucket boundaries used to create a histogram of the extracted values.  Structure is documented below.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A description of this metric, which is used in documentation. The maximum length of the
+description is 8000 characters.</p></li>
+<li><p><strong>filter</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An advanced logs filter (<a class="reference external" href="https://cloud.google.com/logging/docs/view/advanced-filters">https://cloud.google.com/logging/docs/view/advanced-filters</a>) which
+is used to match log entries.</p></li>
+<li><p><strong>label_extractors</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map from a label key string to an extractor expression which is used to extract data from a log
+entry field and assign as the label value. Each label key specified in the LabelDescriptor must
+have an associated extractor expression in this map. The syntax of the extractor expression is
+the same as for the valueExtractor field.</p></li>
+<li><p><strong>metric_descriptor</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The metric descriptor associated with the logs-based metric.  Structure is documented below.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The client-assigned metric identifier. Examples - “error<em>count”, “nginx/requests”.
+Metric identifiers are limited to 100 characters and can include only the following
+characters A-Z, a-z, 0-9, and the special characters *-.,+!</em>’,()%/. The forward-slash
+character (/) denotes a hierarchy of name pieces, and it cannot be the first character
+of the name.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
-<li><p><strong>value_extractor</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A valueExtractor is required when using a distribution logs-based metric to extract the values to record from a log
-entry. Two functions are supported for value extraction - EXTRACT(field) or REGEXP_EXTRACT(field, regex). The argument
-are 1. field - The name of the log entry field from which the value is to be extracted. 2. regex - A regular expression
-using the Google RE2 syntax (<a class="reference external" href="https://github.com/google/re2/wiki/Syntax">https://github.com/google/re2/wiki/Syntax</a>) with a single capture group to extract data from
-the specified log entry field. The value of the field is converted to a string before applying the regex. It is an error
-to specify a regex that does not include exactly one capture group.</p></li>
+<li><p><strong>value_extractor</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A valueExtractor is required when using a distribution logs-based metric to extract the values to
+record from a log entry. Two functions are supported for value extraction - EXTRACT(field) or
+REGEXP_EXTRACT(field, regex). The argument are 1. field - The name of the log entry field from which
+the value is to be extracted. 2. regex - A regular expression using the Google RE2 syntax
+(<a class="reference external" href="https://github.com/google/re2/wiki/Syntax">https://github.com/google/re2/wiki/Syntax</a>) with a single capture group to extract data from the specified
+log entry field. The value of the field is converted to a string before applying the regex. It is an
+error to specify a regex that does not include exactly one capture group.</p></li>
 </ul>
 </dd>
 </dl>
 <p>The <strong>bucket_options</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">explicitBuckets</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">explicitBuckets</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Specifies a set of buckets with arbitrary widths.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">bounds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bounds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The values must be monotonically increasing.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">exponentialBuckets</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">exponentialBuckets</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Specifies an exponential sequence of buckets that have a width that is proportional to the value of
+the lower bound. Each bucket represents a constant relative uncertainty on a specific value in the bucket.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">growthFactor</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">numFiniteBuckets</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">scale</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">growthFactor</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Must be greater than 1.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">numFiniteBuckets</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Must be greater than 0.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">scale</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Must be greater than 0.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">linearBuckets</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">linearBuckets</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Specifies a linear sequence of buckets that all have the same width (except overflow and underflow).
+Each bucket represents a constant absolute uncertainty on the specific value in the bucket.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">numFiniteBuckets</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">offset</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">width</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">numFiniteBuckets</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Must be greater than 0.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">offset</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Lower bound of the first bucket.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">width</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Must be greater than 0.</p></li>
 </ul>
 </li>
 </ul>
 <p>The <strong>metric_descriptor</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">display_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">labels</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">display_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A concise name for the metric, which can be displayed in user interfaces. Use sentence case
+without an ending period, for example “Request count”. This field is optional but it is
+recommended to be set for any metrics associated with user-visible concepts, such as Quota.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">labels</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The set of labels that can be used to describe a specific instance of this metric type. For
+example, the appengine.googleapis.com/http/server/response_latencies metric type has a label
+for the HTTP response code, response_code, so you can look at latencies for successful responses
+or just for responses that failed.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">valueType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A description of this metric, which is used in documentation. The maximum length of the
+description is 8000 characters.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The label key.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">valueType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of data that can be assigned to the label.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">metricKind</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">unit</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">valueType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">metricKind</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Whether the metric records instantaneous values, changes to a value, etc.
+Some combinations of metricKind and valueType might not be supported.
+For counter metrics, set this to DELTA.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">unit</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The unit in which the metric value is reported. It is only applicable if the valueType is
+<code class="docutils literal notranslate"><span class="pre">INT64</span></code>, <code class="docutils literal notranslate"><span class="pre">DOUBLE</span></code>, or <code class="docutils literal notranslate"><span class="pre">DISTRIBUTION</span></code>. The supported units are a subset of
+<a class="reference external" href="http://unitsofmeasure.org/ucum.html">The Unified Code for Units of Measure</a> standard</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">valueType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of data that can be assigned to the label.</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_gcp.logging.Metric.bucket_options">
 <code class="sig-name descname">bucket_options</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.logging.Metric.bucket_options" title="Permalink to this definition">¶</a></dt>
-<dd><p>The bucketOptions are required when the logs-based metric is using a DISTRIBUTION value type and it describes the bucket
-boundaries used to create a histogram of the extracted values.</p>
+<dd><p>The bucketOptions are required when the logs-based metric is using a DISTRIBUTION value type and it
+describes the bucket boundaries used to create a histogram of the extracted values.  Structure is documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">explicitBuckets</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">explicitBuckets</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Specifies a set of buckets with arbitrary widths.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">bounds</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bounds</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - The values must be monotonically increasing.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">exponentialBuckets</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">exponentialBuckets</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Specifies an exponential sequence of buckets that have a width that is proportional to the value of
+the lower bound. Each bucket represents a constant relative uncertainty on a specific value in the bucket.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">growthFactor</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">numFiniteBuckets</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">scale</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">growthFactor</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Must be greater than 1.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">numFiniteBuckets</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Must be greater than 0.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">scale</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Must be greater than 0.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">linearBuckets</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">linearBuckets</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Specifies a linear sequence of buckets that all have the same width (except overflow and underflow).
+Each bucket represents a constant absolute uncertainty on the specific value in the bucket.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">numFiniteBuckets</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">offset</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">width</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">numFiniteBuckets</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Must be greater than 0.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">offset</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Lower bound of the first bucket.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">width</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Must be greater than 0.</p></li>
 </ul>
 </li>
 </ul>
@@ -691,49 +710,63 @@ boundaries used to create a histogram of the extracted values.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.logging.Metric.description">
 <code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.logging.Metric.description" title="Permalink to this definition">¶</a></dt>
-<dd><p>A description of this metric, which is used in documentation. The maximum length of the description is 8000 characters.</p>
+<dd><p>A description of this metric, which is used in documentation. The maximum length of the
+description is 8000 characters.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_gcp.logging.Metric.filter">
 <code class="sig-name descname">filter</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.logging.Metric.filter" title="Permalink to this definition">¶</a></dt>
-<dd><p>An advanced logs filter (<a class="reference external" href="https://cloud.google.com/logging/docs/view/advanced-filters">https://cloud.google.com/logging/docs/view/advanced-filters</a>) which is used to match log
-entries.</p>
+<dd><p>An advanced logs filter (<a class="reference external" href="https://cloud.google.com/logging/docs/view/advanced-filters">https://cloud.google.com/logging/docs/view/advanced-filters</a>) which
+is used to match log entries.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_gcp.logging.Metric.label_extractors">
 <code class="sig-name descname">label_extractors</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.logging.Metric.label_extractors" title="Permalink to this definition">¶</a></dt>
-<dd><p>A map from a label key string to an extractor expression which is used to extract data from a log entry field and assign
-as the label value. Each label key specified in the LabelDescriptor must have an associated extractor expression in this
-map. The syntax of the extractor expression is the same as for the valueExtractor field.</p>
+<dd><p>A map from a label key string to an extractor expression which is used to extract data from a log
+entry field and assign as the label value. Each label key specified in the LabelDescriptor must
+have an associated extractor expression in this map. The syntax of the extractor expression is
+the same as for the valueExtractor field.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_gcp.logging.Metric.metric_descriptor">
 <code class="sig-name descname">metric_descriptor</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.logging.Metric.metric_descriptor" title="Permalink to this definition">¶</a></dt>
-<dd><p>The metric descriptor associated with the logs-based metric.</p>
+<dd><p>The metric descriptor associated with the logs-based metric.  Structure is documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">display_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">labels</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">display_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A concise name for the metric, which can be displayed in user interfaces. Use sentence case
+without an ending period, for example “Request count”. This field is optional but it is
+recommended to be set for any metrics associated with user-visible concepts, such as Quota.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">labels</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - The set of labels that can be used to describe a specific instance of this metric type. For
+example, the appengine.googleapis.com/http/server/response_latencies metric type has a label
+for the HTTP response code, response_code, so you can look at latencies for successful responses
+or just for responses that failed.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">valueType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A description of this metric, which is used in documentation. The maximum length of the
+description is 8000 characters.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The label key.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">valueType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The type of data that can be assigned to the label.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">metricKind</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">unit</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">valueType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">metricKind</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Whether the metric records instantaneous values, changes to a value, etc.
+Some combinations of metricKind and valueType might not be supported.
+For counter metrics, set this to DELTA.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">unit</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The unit in which the metric value is reported. It is only applicable if the valueType is
+<code class="docutils literal notranslate"><span class="pre">INT64</span></code>, <code class="docutils literal notranslate"><span class="pre">DOUBLE</span></code>, or <code class="docutils literal notranslate"><span class="pre">DISTRIBUTION</span></code>. The supported units are a subset of
+<a class="reference external" href="http://unitsofmeasure.org/ucum.html">The Unified Code for Units of Measure</a> standard</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">valueType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The type of data that can be assigned to the label.</p></li>
 </ul>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_gcp.logging.Metric.name">
 <code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.logging.Metric.name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The client-assigned metric identifier. Examples - “error<em>count”, “nginx/requests”. Metric identifiers are limited to 100
-characters and can include only the following characters A-Z, a-z, 0-9, and the special characters *-.,+!</em>’,()%/. The
-forward-slash character (/) denotes a hierarchy of name pieces, and it cannot be the first character of the name.</p>
+<dd><p>The client-assigned metric identifier. Examples - “error<em>count”, “nginx/requests”.
+Metric identifiers are limited to 100 characters and can include only the following
+characters A-Z, a-z, 0-9, and the special characters *-.,+!</em>’,()%/. The forward-slash
+character (/) denotes a hierarchy of name pieces, and it cannot be the first character
+of the name.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -746,12 +779,13 @@ If it is not provided, the provider project is used.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.logging.Metric.value_extractor">
 <code class="sig-name descname">value_extractor</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.logging.Metric.value_extractor" title="Permalink to this definition">¶</a></dt>
-<dd><p>A valueExtractor is required when using a distribution logs-based metric to extract the values to record from a log
-entry. Two functions are supported for value extraction - EXTRACT(field) or REGEXP_EXTRACT(field, regex). The argument
-are 1. field - The name of the log entry field from which the value is to be extracted. 2. regex - A regular expression
-using the Google RE2 syntax (<a class="reference external" href="https://github.com/google/re2/wiki/Syntax">https://github.com/google/re2/wiki/Syntax</a>) with a single capture group to extract data from
-the specified log entry field. The value of the field is converted to a string before applying the regex. It is an error
-to specify a regex that does not include exactly one capture group.</p>
+<dd><p>A valueExtractor is required when using a distribution logs-based metric to extract the values to
+record from a log entry. Two functions are supported for value extraction - EXTRACT(field) or
+REGEXP_EXTRACT(field, regex). The argument are 1. field - The name of the log entry field from which
+the value is to be extracted. 2. regex - A regular expression using the Google RE2 syntax
+(<a class="reference external" href="https://github.com/google/re2/wiki/Syntax">https://github.com/google/re2/wiki/Syntax</a>) with a single capture group to extract data from the specified
+log entry field. The value of the field is converted to a string before applying the regex. It is an
+error to specify a regex that does not include exactly one capture group.</p>
 </dd></dl>
 
 <dl class="method">
@@ -765,64 +799,81 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>bucket_options</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The bucketOptions are required when the logs-based metric is using a DISTRIBUTION value type and it describes the bucket
-boundaries used to create a histogram of the extracted values.</p></li>
-<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A description of this metric, which is used in documentation. The maximum length of the description is 8000 characters.</p></li>
-<li><p><strong>filter</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An advanced logs filter (<a class="reference external" href="https://cloud.google.com/logging/docs/view/advanced-filters">https://cloud.google.com/logging/docs/view/advanced-filters</a>) which is used to match log
-entries.</p></li>
-<li><p><strong>label_extractors</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map from a label key string to an extractor expression which is used to extract data from a log entry field and assign
-as the label value. Each label key specified in the LabelDescriptor must have an associated extractor expression in this
-map. The syntax of the extractor expression is the same as for the valueExtractor field.</p></li>
-<li><p><strong>metric_descriptor</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The metric descriptor associated with the logs-based metric.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The client-assigned metric identifier. Examples - “error<em>count”, “nginx/requests”. Metric identifiers are limited to 100
-characters and can include only the following characters A-Z, a-z, 0-9, and the special characters *-.,+!</em>’,()%/. The
-forward-slash character (/) denotes a hierarchy of name pieces, and it cannot be the first character of the name.</p></li>
+<li><p><strong>bucket_options</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The bucketOptions are required when the logs-based metric is using a DISTRIBUTION value type and it
+describes the bucket boundaries used to create a histogram of the extracted values.  Structure is documented below.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A description of this metric, which is used in documentation. The maximum length of the
+description is 8000 characters.</p></li>
+<li><p><strong>filter</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An advanced logs filter (<a class="reference external" href="https://cloud.google.com/logging/docs/view/advanced-filters">https://cloud.google.com/logging/docs/view/advanced-filters</a>) which
+is used to match log entries.</p></li>
+<li><p><strong>label_extractors</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map from a label key string to an extractor expression which is used to extract data from a log
+entry field and assign as the label value. Each label key specified in the LabelDescriptor must
+have an associated extractor expression in this map. The syntax of the extractor expression is
+the same as for the valueExtractor field.</p></li>
+<li><p><strong>metric_descriptor</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The metric descriptor associated with the logs-based metric.  Structure is documented below.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The client-assigned metric identifier. Examples - “error<em>count”, “nginx/requests”.
+Metric identifiers are limited to 100 characters and can include only the following
+characters A-Z, a-z, 0-9, and the special characters *-.,+!</em>’,()%/. The forward-slash
+character (/) denotes a hierarchy of name pieces, and it cannot be the first character
+of the name.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
-<li><p><strong>value_extractor</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A valueExtractor is required when using a distribution logs-based metric to extract the values to record from a log
-entry. Two functions are supported for value extraction - EXTRACT(field) or REGEXP_EXTRACT(field, regex). The argument
-are 1. field - The name of the log entry field from which the value is to be extracted. 2. regex - A regular expression
-using the Google RE2 syntax (<a class="reference external" href="https://github.com/google/re2/wiki/Syntax">https://github.com/google/re2/wiki/Syntax</a>) with a single capture group to extract data from
-the specified log entry field. The value of the field is converted to a string before applying the regex. It is an error
-to specify a regex that does not include exactly one capture group.</p></li>
+<li><p><strong>value_extractor</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A valueExtractor is required when using a distribution logs-based metric to extract the values to
+record from a log entry. Two functions are supported for value extraction - EXTRACT(field) or
+REGEXP_EXTRACT(field, regex). The argument are 1. field - The name of the log entry field from which
+the value is to be extracted. 2. regex - A regular expression using the Google RE2 syntax
+(<a class="reference external" href="https://github.com/google/re2/wiki/Syntax">https://github.com/google/re2/wiki/Syntax</a>) with a single capture group to extract data from the specified
+log entry field. The value of the field is converted to a string before applying the regex. It is an
+error to specify a regex that does not include exactly one capture group.</p></li>
 </ul>
 </dd>
 </dl>
 <p>The <strong>bucket_options</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">explicitBuckets</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">explicitBuckets</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Specifies a set of buckets with arbitrary widths.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">bounds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bounds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The values must be monotonically increasing.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">exponentialBuckets</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">exponentialBuckets</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Specifies an exponential sequence of buckets that have a width that is proportional to the value of
+the lower bound. Each bucket represents a constant relative uncertainty on a specific value in the bucket.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">growthFactor</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">numFiniteBuckets</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">scale</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">growthFactor</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Must be greater than 1.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">numFiniteBuckets</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Must be greater than 0.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">scale</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Must be greater than 0.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">linearBuckets</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">linearBuckets</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Specifies a linear sequence of buckets that all have the same width (except overflow and underflow).
+Each bucket represents a constant absolute uncertainty on the specific value in the bucket.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">numFiniteBuckets</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">offset</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">width</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">numFiniteBuckets</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Must be greater than 0.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">offset</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Lower bound of the first bucket.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">width</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Must be greater than 0.</p></li>
 </ul>
 </li>
 </ul>
 <p>The <strong>metric_descriptor</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">display_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">labels</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">display_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A concise name for the metric, which can be displayed in user interfaces. Use sentence case
+without an ending period, for example “Request count”. This field is optional but it is
+recommended to be set for any metrics associated with user-visible concepts, such as Quota.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">labels</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The set of labels that can be used to describe a specific instance of this metric type. For
+example, the appengine.googleapis.com/http/server/response_latencies metric type has a label
+for the HTTP response code, response_code, so you can look at latencies for successful responses
+or just for responses that failed.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">valueType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A description of this metric, which is used in documentation. The maximum length of the
+description is 8000 characters.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The label key.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">valueType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of data that can be assigned to the label.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">metricKind</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">unit</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">valueType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">metricKind</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Whether the metric records instantaneous values, changes to a value, etc.
+Some combinations of metricKind and valueType might not be supported.
+For counter metrics, set this to DELTA.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">unit</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The unit in which the metric value is reported. It is only applicable if the valueType is
+<code class="docutils literal notranslate"><span class="pre">INT64</span></code>, <code class="docutils literal notranslate"><span class="pre">DOUBLE</span></code>, or <code class="docutils literal notranslate"><span class="pre">DISTRIBUTION</span></code>. The supported units are a subset of
+<a class="reference external" href="http://unitsofmeasure.org/ucum.html">The Unified Code for Units of Measure</a> standard</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">valueType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of data that can be assigned to the label.</p></li>
 </ul>
 </dd></dl>
 

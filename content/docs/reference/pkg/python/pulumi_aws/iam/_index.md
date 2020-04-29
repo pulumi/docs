@@ -465,7 +465,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.iam.GetAccountAliasResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.iam.GetAccountAliasResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 </dd></dl>
@@ -489,7 +489,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.iam.GetGroupResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.iam.GetGroupResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -526,7 +526,7 @@ was created.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.iam.GetInstanceProfileResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.iam.GetInstanceProfileResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -562,7 +562,7 @@ was created.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.iam.GetPolicyDocumentResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.iam.GetPolicyDocumentResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -592,7 +592,7 @@ was created.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.iam.GetPolicyResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.iam.GetPolicyResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -646,7 +646,7 @@ was created.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.iam.GetRoleResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.iam.GetRoleResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -688,7 +688,7 @@ was created.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.iam.GetServerCertificateResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.iam.GetServerCertificateResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 </dd></dl>
@@ -706,7 +706,7 @@ was created.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.iam.GetUserResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.iam.GetUserResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -840,8 +840,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <div><p><strong>WARNING:</strong> Multiple iam.GroupMembership resources with the same group name will produce inconsistent behavior!</p>
 </div></blockquote>
 <p>Provides a top level resource to manage IAM Group membership for IAM Users. For
-more information on managing IAM Groups or IAM Users, see [IAM Groups][1] or
-[IAM Users][2]</p>
+more information on managing IAM Groups or IAM Users, see <a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/iam_group.html">IAM Groups</a> or
+<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/iam_user.html">IAM Users</a></p>
 <blockquote>
 <div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">iam.GroupMembership</span></code> will conflict with itself if used more than once with the same group. To non-exclusively manage the users in a group, see the
 [<code class="docutils literal notranslate"><span class="pre">iam.UserGroupMembership</span></code> resource][3].</p>
@@ -2056,10 +2056,11 @@ of the chain.</p></li>
 path in this value. If omitted, this provider will assign a random, unique name.</p></li>
 <li><p><strong>name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique name beginning with the specified
 prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</p></li>
-<li><p><strong>path</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IAM path for the server certificate.  If it is not
+<li><p><strong>path</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The IAM path for the server certificate.  If it is not
 included, it defaults to a slash (/). If this certificate is for use with
 AWS CloudFront, the path must be in format <code class="docutils literal notranslate"><span class="pre">/cloudfront/your_path_here</span></code>.
-See [IAM Identifiers][1] for more details on IAM Paths.</p></li>
+See <a class="reference external" href="https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html">IAM Identifiers</a> for more details on IAM Paths.</p>
+</p></li>
 <li><p><strong>private_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The contents of the private key in PEM-encoded format.</p></li>
 </ul>
 </dd>
@@ -2105,7 +2106,7 @@ prefix. Conflicts with <code class="docutils literal notranslate"><span class="p
 <dd><p>The IAM path for the server certificate.  If it is not
 included, it defaults to a slash (/). If this certificate is for use with
 AWS CloudFront, the path must be in format <code class="docutils literal notranslate"><span class="pre">/cloudfront/your_path_here</span></code>.
-See [IAM Identifiers][1] for more details on IAM Paths.</p>
+See <a class="reference external" href="https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html">IAM Identifiers</a> for more details on IAM Paths.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -2135,10 +2136,11 @@ of the chain.</p></li>
 path in this value. If omitted, this provider will assign a random, unique name.</p></li>
 <li><p><strong>name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique name beginning with the specified
 prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</p></li>
-<li><p><strong>path</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IAM path for the server certificate.  If it is not
+<li><p><strong>path</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The IAM path for the server certificate.  If it is not
 included, it defaults to a slash (/). If this certificate is for use with
 AWS CloudFront, the path must be in format <code class="docutils literal notranslate"><span class="pre">/cloudfront/your_path_here</span></code>.
-See [IAM Identifiers][1] for more details on IAM Paths.</p></li>
+See <a class="reference external" href="https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html">IAM Identifiers</a> for more details on IAM Paths.</p>
+</p></li>
 <li><p><strong>private_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The contents of the private key in PEM-encoded format.</p></li>
 </ul>
 </dd>
@@ -2553,7 +2555,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_aws.iam.UserGroupMembership">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.iam.</code><code class="sig-name descname">UserGroupMembership</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">groups=None</em>, <em class="sig-param">user=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.UserGroupMembership" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides a resource for adding an [IAM User][2] to [IAM Groups][1]. This
+<dd><p>Provides a resource for adding an <a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/iam_user.html">IAM User</a> to <a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/iam_group.html">IAM Groups</a>. This
 resource can be used multiple times with the same user for non-overlapping
 groups.</p>
 <p>To exclusively manage the users in a group, see the
@@ -2563,21 +2565,23 @@ groups.</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>groups</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of [IAM Groups][1] to add the user to</p></li>
-<li><p><strong>user</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the [IAM User][2] to add to groups</p></li>
+<li><p><strong>groups</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – <p>A list of <a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/iam_group.html">IAM Groups</a> to add the user to</p>
+</p></li>
+<li><p><strong>user</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The name of the <a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/iam_user.html">IAM User</a> to add to groups</p>
+</p></li>
 </ul>
 </dd>
 </dl>
 <dl class="attribute">
 <dt id="pulumi_aws.iam.UserGroupMembership.groups">
 <code class="sig-name descname">groups</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.iam.UserGroupMembership.groups" title="Permalink to this definition">¶</a></dt>
-<dd><p>A list of [IAM Groups][1] to add the user to</p>
+<dd><p>A list of <a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/iam_group.html">IAM Groups</a> to add the user to</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.iam.UserGroupMembership.user">
 <code class="sig-name descname">user</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.iam.UserGroupMembership.user" title="Permalink to this definition">¶</a></dt>
-<dd><p>The name of the [IAM User][2] to add to groups</p>
+<dd><p>The name of the <a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/iam_user.html">IAM User</a> to add to groups</p>
 </dd></dl>
 
 <dl class="method">
@@ -2591,8 +2595,10 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>groups</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of [IAM Groups][1] to add the user to</p></li>
-<li><p><strong>user</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the [IAM User][2] to add to groups</p></li>
+<li><p><strong>groups</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – <p>A list of <a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/iam_group.html">IAM Groups</a> to add the user to</p>
+</p></li>
+<li><p><strong>user</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The name of the <a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/iam_user.html">IAM User</a> to add to groups</p>
+</p></li>
 </ul>
 </dd>
 </dl>
