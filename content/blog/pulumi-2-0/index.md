@@ -66,7 +66,7 @@ Expect The Pulumipus to pop up from time to time to help you out with your infra
 
 Today is an exciting day for us, our customers, and our community &mdash; your passionate support and feedback shaped this release, and we thank you.
 
-To learn more, [join us for our launch event next Wednesday]({{< relref "/webinars/pulumi-update-2020-04-29" >}}), [check out the new superpowers page]({{< relref "/superpowers" >}}) with more details and videos, or just [download Pulumi and give it a try]({{< relref "/docs/get-started" >}}). If you're upgrading from Pulumi 1.0, [please see our migration guide]({{< relref "/docs/get-started/install/migrating-2.0" >}}).
+To learn more, [join us for our launch event next Wednesday]({{< relref "/webinars/pulumi-update-2020-04-29" >}}), [check out the new superpowers page]({{< relref "/superpowers" >}}) with more details and videos, or just [download Pulumi and give it a try]({{< relref "/docs/get-started" >}}). If you're upgrading from Pulumi 1.0, [please see our migration guide]({{< relref "/docs/get-started/install/migrating-2.0.md" >}}).
 
 <div class="header-hero-actions mt-8 mb-8 text-center">
     <a class="btn btn-lg mr-2" href="{{< relref "/docs/get-started" >}}">

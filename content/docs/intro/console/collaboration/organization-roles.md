@@ -14,7 +14,7 @@ organization.
 > Organizations billed per stack have slightly different rules regarding membership.
 
 To become a member of a Pulumi organization, you must be added by an existing Pulumi
-organization administrator. However, depending on the [organization type]({{< relref "organizations#organization-kind" >}}), you must also be a member of the third-party organization or group backing the Pulumi
+organization administrator. However, depending on the [organization type]({{< relref "/docs/intro/console/accounts-and-organizations/organizations#organization-kind" >}}), you must also be a member of the third-party organization or group backing the Pulumi
 organization.
 
 For example, to become a member of a Pulumi organization backed by a GitLab Group,
@@ -27,7 +27,7 @@ There are several kinds of organization roles a user may be assigned.
 
 `**MEMBER**`
 
-A member of a Pulumi organization can be added to organization [teams]({{< relref "teams" >}}), and
+A member of a Pulumi organization can be added to organization [teams]({{< relref "/docs/intro/console/collaboration/teams" >}}), and
 depending on organization settings, may be able to create or delete stacks.
 
 `**ADMIN**`

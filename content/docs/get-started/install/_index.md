@@ -169,7 +169,7 @@ or visit https://pulumi.com/docs/reference/install/ for manual instructions and 
 
 ## Upgrading Pulumi
 
-If you are upgrading to Pulumi 2.0, please see our [migration guide]({{< relref "migrating-2.0" >}}).
+If you are upgrading to Pulumi 2.0, please see our [migration guide]({{< relref "/docs/get-started/install/migrating-2.0.md" >}}).
 
 ## Uninstalling Pulumi
 
