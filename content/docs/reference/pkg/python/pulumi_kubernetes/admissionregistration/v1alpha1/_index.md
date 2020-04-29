@@ -1,3 +1,5 @@
+---
+---
 <div class="section" id="module-pulumi_kubernetes.admissionregistration.v1alpha1">
 <span id="v1alpha1"></span><h1>v1alpha1<a class="headerlink" href="#module-pulumi_kubernetes.admissionregistration.v1alpha1" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
