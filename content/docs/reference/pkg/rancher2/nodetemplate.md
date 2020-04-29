@@ -80,7 +80,7 @@ const fooNodeTemplate = new rancher2.NodeTemplate("foo", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">NodeTemplate</span><span class="p">(resource_name, opts=None, </span>amazonec2_config=None<span class="p">, </span>annotations=None<span class="p">, </span>auth_certificate_authority=None<span class="p">, </span>auth_key=None<span class="p">, </span>azure_config=None<span class="p">, </span>cloud_credential_id=None<span class="p">, </span>description=None<span class="p">, </span>digitalocean_config=None<span class="p">, </span>driver_id=None<span class="p">, </span>engine_env=None<span class="p">, </span>engine_insecure_registries=None<span class="p">, </span>engine_install_url=None<span class="p">, </span>engine_label=None<span class="p">, </span>engine_opt=None<span class="p">, </span>engine_registry_mirrors=None<span class="p">, </span>engine_storage_driver=None<span class="p">, </span>labels=None<span class="p">, </span>linode_config=None<span class="p">, </span>name=None<span class="p">, </span>opennebula_config=None<span class="p">, </span>openstack_config=None<span class="p">, </span>use_internal_ip_address=None<span class="p">, </span>vsphere_config=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">NodeTemplate</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>amazonec2_config=None<span class="p">, </span>annotations=None<span class="p">, </span>auth_certificate_authority=None<span class="p">, </span>auth_key=None<span class="p">, </span>azure_config=None<span class="p">, </span>cloud_credential_id=None<span class="p">, </span>description=None<span class="p">, </span>digitalocean_config=None<span class="p">, </span>driver_id=None<span class="p">, </span>engine_env=None<span class="p">, </span>engine_insecure_registries=None<span class="p">, </span>engine_install_url=None<span class="p">, </span>engine_label=None<span class="p">, </span>engine_opt=None<span class="p">, </span>engine_registry_mirrors=None<span class="p">, </span>engine_storage_driver=None<span class="p">, </span>labels=None<span class="p">, </span>linode_config=None<span class="p">, </span>name=None<span class="p">, </span>opennebula_config=None<span class="p">, </span>openstack_config=None<span class="p">, </span>use_internal_ip_address=None<span class="p">, </span>vsphere_config=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -5657,7 +5657,6 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Owner of the image to use as the VM OS (string)
-* `memory`- (Optional) Size of the memory for the VM in MB (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5666,7 +5665,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Size of the memory for the VM in MB (string)
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5835,7 +5835,6 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Owner of the image to use as the VM OS (string)
-* `memory`- (Optional) Size of the memory for the VM in MB (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5844,7 +5843,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Size of the memory for the VM in MB (string)
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6013,7 +6013,6 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Owner of the image to use as the VM OS (string)
-* `memory`- (Optional) Size of the memory for the VM in MB (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6022,7 +6021,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Size of the memory for the VM in MB (string)
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6191,7 +6191,6 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Owner of the image to use as the VM OS (string)
-* `memory`- (Optional) Size of the memory for the VM in MB (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6200,7 +6199,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Size of the memory for the VM in MB (string)
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6329,7 +6329,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}OpenStack active timeout Default `200` (string)
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6596,7 +6597,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}OpenStack active timeout Default `200` (string)
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6863,7 +6865,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}OpenStack active timeout Default `200` (string)
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7130,7 +7133,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}OpenStack active timeout Default `200` (string)
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">

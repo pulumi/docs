@@ -22,7 +22,7 @@ meta_desc: "Explore the NodePool resource of the Rancher 2 package, including ex
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">NodePool</span><span class="p">(resource_name, opts=None, </span>annotations=None<span class="p">, </span>cluster_id=None<span class="p">, </span>control_plane=None<span class="p">, </span>delete_not_ready_after_secs=None<span class="p">, </span>etcd=None<span class="p">, </span>hostname_prefix=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>node_taints=None<span class="p">, </span>node_template_id=None<span class="p">, </span>quantity=None<span class="p">, </span>worker=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">NodePool</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>annotations=None<span class="p">, </span>cluster_id=None<span class="p">, </span>control_plane=None<span class="p">, </span>delete_not_ready_after_secs=None<span class="p">, </span>etcd=None<span class="p">, </span>hostname_prefix=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>node_taints=None<span class="p">, </span>node_template_id=None<span class="p">, </span>quantity=None<span class="p">, </span>worker=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

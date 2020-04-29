@@ -47,7 +47,7 @@ const foo = new rancher2.NodeDriver("foo", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">NodeDriver</span><span class="p">(resource_name, opts=None, </span>active=None<span class="p">, </span>annotations=None<span class="p">, </span>builtin=None<span class="p">, </span>checksum=None<span class="p">, </span>description=None<span class="p">, </span>external_id=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>ui_url=None<span class="p">, </span>url=None<span class="p">, </span>whitelist_domains=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">NodeDriver</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>active=None<span class="p">, </span>annotations=None<span class="p">, </span>builtin=None<span class="p">, </span>checksum=None<span class="p">, </span>description=None<span class="p">, </span>external_id=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>ui_url=None<span class="p">, </span>url=None<span class="p">, </span>whitelist_domains=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
