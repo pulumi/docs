@@ -312,6 +312,22 @@ def create_dir(*args):
     return full_path
 
 
+def encode_hugo_shortcode_delimiter_lookalikes(body: str) -> str:
+    """
+    Replaces '{{' and '}}' with HTML encoded chars when they look like Hugo shortcode delimiters,
+    to prevent Hugo from erroring when it thinks they are shortcode delimiters when they are not.
+    """
+    replacements = [
+        ("{{<", "&#x7B;&#x7B;<"),
+        (">}}", ">&#x7D;&#x7D;"),
+        ("{{%", "&#x7B;&#x7B;%"),
+        ("%}}", "%&#x7D;&#x7D;"),
+    ]
+    for old, new in replacements:
+        body = body.replace(old, new)
+    return body
+
+
 def create_markdown_file(input: CreateMarkdownInput):
     """
     Derives a Markdown file from the Sphinx output file `file` and saves the result to `out_file`.
@@ -331,7 +347,9 @@ def create_markdown_file(input: CreateMarkdownInput):
         f.write("---\n\n")
         # The "body" property of Sphinx's JSON is basically the rendered HTML of the documentation on this page. We're
         # going to slam it verbatim into a file and call it Markdown, because we're professionals.
-        f.write(contents["body"])
+        # Before we do that, we'll encode anything that looks like a Hugo shortcode delimiter.
+        body = encode_hugo_shortcode_delimiter_lookalikes(contents["body"])
+        f.write(body)
 
 
 def main():

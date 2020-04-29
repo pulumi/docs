@@ -35,7 +35,7 @@ anything, please consult the source <a class="reference external" href="https://
 <dl class="attribute">
 <dt id="pulumi_azure.servicebus.GetNamespaceAuthorizationRuleResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.servicebus.GetNamespaceAuthorizationRuleResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -103,7 +103,7 @@ authorization rule <code class="docutils literal notranslate"><span class="pre">
 <dl class="attribute">
 <dt id="pulumi_azure.servicebus.GetNamespaceResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.servicebus.GetNamespaceResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -139,7 +139,7 @@ authorization rule <code class="docutils literal notranslate"><span class="pre">
 <dl class="attribute">
 <dt id="pulumi_azure.servicebus.GetTopicAuthorizationRuleResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.servicebus.GetTopicAuthorizationRuleResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">

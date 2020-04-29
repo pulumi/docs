@@ -496,6 +496,10 @@ names can be hierarchical using slashes (e.g. “prod-variables/hostname”).</p
 variable.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.</p></li>
+<li><p><strong>text</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – or <code class="docutils literal notranslate"><span class="pre">value</span></code> - (Required) The content to associate with the variable.
+Exactly one of <code class="docutils literal notranslate"><span class="pre">text</span></code> or <code class="docutils literal notranslate"><span class="pre">variable</span></code> must be specified. If <code class="docutils literal notranslate"><span class="pre">text</span></code> is specified,
+it must be a valid UTF-8 string and less than 4096 bytes in length. If <code class="docutils literal notranslate"><span class="pre">value</span></code>
+is specified, it must be base64 encoded and less than 4096 bytes in length.</p></li>
 </ul>
 </dd>
 </dl>
@@ -518,6 +522,15 @@ variable.</p>
 <code class="sig-name descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.runtimeconfig.Variable.project" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.runtimeconfig.Variable.text">
+<code class="sig-name descname">text</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.runtimeconfig.Variable.text" title="Permalink to this definition">¶</a></dt>
+<dd><p>or <code class="docutils literal notranslate"><span class="pre">value</span></code> - (Required) The content to associate with the variable.
+Exactly one of <code class="docutils literal notranslate"><span class="pre">text</span></code> or <code class="docutils literal notranslate"><span class="pre">variable</span></code> must be specified. If <code class="docutils literal notranslate"><span class="pre">text</span></code> is specified,
+it must be a valid UTF-8 string and less than 4096 bytes in length. If <code class="docutils literal notranslate"><span class="pre">value</span></code>
+is specified, it must be base64 encoded and less than 4096 bytes in length.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -545,6 +558,10 @@ names can be hierarchical using slashes (e.g. “prod-variables/hostname”).</p
 variable.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.</p></li>
+<li><p><strong>text</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – or <code class="docutils literal notranslate"><span class="pre">value</span></code> - (Required) The content to associate with the variable.
+Exactly one of <code class="docutils literal notranslate"><span class="pre">text</span></code> or <code class="docutils literal notranslate"><span class="pre">variable</span></code> must be specified. If <code class="docutils literal notranslate"><span class="pre">text</span></code> is specified,
+it must be a valid UTF-8 string and less than 4096 bytes in length. If <code class="docutils literal notranslate"><span class="pre">value</span></code>
+is specified, it must be base64 encoded and less than 4096 bytes in length.</p></li>
 <li><p><strong>update_time</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – (Computed) The timestamp in RFC3339 UTC “Zulu” format,
 accurate to nanoseconds, representing when the variable was last updated.
 Example: “2016-10-09T12:33:37.578138407Z”.</p></li>

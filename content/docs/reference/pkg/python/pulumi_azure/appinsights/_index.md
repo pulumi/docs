@@ -280,7 +280,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_azure.appinsights.GetInsightsResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appinsights.GetInsightsResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -490,6 +490,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Is the test actively being monitored.</p></li>
 <li><p><strong>frequency</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Interval in seconds between test runs for this WebTest. Default is <code class="docutils literal notranslate"><span class="pre">300</span></code>.</p></li>
 <li><p><strong>geo_locations</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of where to physically run the tests from to give global coverage for accessibility of your application.</p></li>
+<li><p><strong>kind</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – = (Required) The kind of web test that this web test watches. Choices are <code class="docutils literal notranslate"><span class="pre">ping</span></code> and <code class="docutils literal notranslate"><span class="pre">multistep</span></code>.</p></li>
 <li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The location of the resource group.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the Application Insights WebTest. Changing this forces a
 new resource to be created.</p></li>
@@ -533,6 +534,12 @@ new resource to be created.</p></li>
 <dt id="pulumi_azure.appinsights.WebTest.geo_locations">
 <code class="sig-name descname">geo_locations</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appinsights.WebTest.geo_locations" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of where to physically run the tests from to give global coverage for accessibility of your application.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.appinsights.WebTest.kind">
+<code class="sig-name descname">kind</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appinsights.WebTest.kind" title="Permalink to this definition">¶</a></dt>
+<dd><p>= (Required) The kind of web test that this web test watches. Choices are <code class="docutils literal notranslate"><span class="pre">ping</span></code> and <code class="docutils literal notranslate"><span class="pre">multistep</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -583,6 +590,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Is the test actively being monitored.</p></li>
 <li><p><strong>frequency</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Interval in seconds between test runs for this WebTest. Default is <code class="docutils literal notranslate"><span class="pre">300</span></code>.</p></li>
 <li><p><strong>geo_locations</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of where to physically run the tests from to give global coverage for accessibility of your application.</p></li>
+<li><p><strong>kind</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – = (Required) The kind of web test that this web test watches. Choices are <code class="docutils literal notranslate"><span class="pre">ping</span></code> and <code class="docutils literal notranslate"><span class="pre">multistep</span></code>.</p></li>
 <li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The location of the resource group.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the Application Insights WebTest. Changing this forces a
 new resource to be created.</p></li>

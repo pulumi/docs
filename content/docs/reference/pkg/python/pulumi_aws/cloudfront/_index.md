@@ -23,8 +23,8 @@ anything, please consult the source <a class="reference external" href="https://
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.cloudfront.</code><code class="sig-name descname">Distribution</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">aliases=None</em>, <em class="sig-param">comment=None</em>, <em class="sig-param">custom_error_responses=None</em>, <em class="sig-param">default_cache_behavior=None</em>, <em class="sig-param">default_root_object=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">http_version=None</em>, <em class="sig-param">is_ipv6_enabled=None</em>, <em class="sig-param">logging_config=None</em>, <em class="sig-param">ordered_cache_behaviors=None</em>, <em class="sig-param">origin_groups=None</em>, <em class="sig-param">origins=None</em>, <em class="sig-param">price_class=None</em>, <em class="sig-param">restrictions=None</em>, <em class="sig-param">retain_on_delete=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">viewer_certificate=None</em>, <em class="sig-param">wait_for_deployment=None</em>, <em class="sig-param">web_acl_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudfront.Distribution" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates an Amazon CloudFront web distribution.</p>
 <p>For information about CloudFront distributions, see the
-[Amazon CloudFront Developer Guide][1]. For specific information about creating
-CloudFront web distributions, see the [POST Distribution][2] page in the Amazon
+<a class="reference external" href="http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Introduction.html">Amazon CloudFront Developer Guide</a>. For specific information about creating
+CloudFront web distributions, see the <a class="reference external" href="https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_CreateDistribution.html">POST Distribution</a> page in the Amazon
 CloudFront API Reference.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> CloudFront distributions take about 15 minutes to a deployed state
@@ -318,7 +318,7 @@ distribution of your content by country: <code class="docutils literal notransla
 </ul>
 <p>The <strong>viewer_certificate</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">acmCertificateArn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of the [AWS Certificate Manager][6]
+<li><p><code class="docutils literal notranslate"><span class="pre">acmCertificateArn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of the <a class="reference external" href="https://aws.amazon.com/certificate-manager/">AWS Certificate Manager</a>
 certificate that you wish to use with this distribution. Specify this,
 <code class="docutils literal notranslate"><span class="pre">cloudfront_default_certificate</span></code>, or <code class="docutils literal notranslate"><span class="pre">iam_certificate_id</span></code>.  The ACM
 certificate must be in  US-EAST-1.</p></li>
@@ -501,7 +501,7 @@ user requests for content.</p>
 <dt id="pulumi_aws.cloudfront.Distribution.hosted_zone_id">
 <code class="sig-name descname">hosted_zone_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudfront.Distribution.hosted_zone_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The CloudFront Route 53 zone ID that can be used to
-route an [Alias Resource Record Set][7] to. This attribute is simply an
+route an <a class="reference external" href="http://docs.aws.amazon.com/Route53/latest/APIReference/CreateAliasRRSAPI.html">Alias Resource Record Set</a> to. This attribute is simply an
 alias for the zone ID <code class="docutils literal notranslate"><span class="pre">Z2FDTNDATAQYW2</span></code>.</p>
 </dd></dl>
 
@@ -749,7 +749,7 @@ CloudFront system.</p>
 configuration for this distribution (maximum
 one).</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">acmCertificateArn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ARN of the [AWS Certificate Manager][6]
+<li><p><code class="docutils literal notranslate"><span class="pre">acmCertificateArn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ARN of the <a class="reference external" href="https://aws.amazon.com/certificate-manager/">AWS Certificate Manager</a>
 certificate that you wish to use with this distribution. Specify this,
 <code class="docutils literal notranslate"><span class="pre">cloudfront_default_certificate</span></code>, or <code class="docutils literal notranslate"><span class="pre">iam_certificate_id</span></code>.  The ACM
 certificate must be in  US-EAST-1.</p></li>
@@ -823,9 +823,10 @@ web site of your custom origin.</p></li>
 user requests for content.</p></li>
 <li><p><strong>etag</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The current version of the distribution’s information. For example:
 <code class="docutils literal notranslate"><span class="pre">E2QWRUHAPOMQZL</span></code>.</p></li>
-<li><p><strong>hosted_zone_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The CloudFront Route 53 zone ID that can be used to
-route an [Alias Resource Record Set][7] to. This attribute is simply an
-alias for the zone ID <code class="docutils literal notranslate"><span class="pre">Z2FDTNDATAQYW2</span></code>.</p></li>
+<li><p><strong>hosted_zone_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The CloudFront Route 53 zone ID that can be used to
+route an <a class="reference external" href="http://docs.aws.amazon.com/Route53/latest/APIReference/CreateAliasRRSAPI.html">Alias Resource Record Set</a> to. This attribute is simply an
+alias for the zone ID <code class="docutils literal notranslate"><span class="pre">Z2FDTNDATAQYW2</span></code>.</p>
+</p></li>
 <li><p><strong>http_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The maximum HTTP version to support on the
 distribution. Allowed values are <code class="docutils literal notranslate"><span class="pre">http1.1</span></code> and <code class="docutils literal notranslate"><span class="pre">http2</span></code>. The default is
 <code class="docutils literal notranslate"><span class="pre">http2</span></code>.</p></li>
@@ -1102,7 +1103,7 @@ distribution of your content by country: <code class="docutils literal notransla
 </ul>
 <p>The <strong>viewer_certificate</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">acmCertificateArn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of the [AWS Certificate Manager][6]
+<li><p><code class="docutils literal notranslate"><span class="pre">acmCertificateArn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of the <a class="reference external" href="https://aws.amazon.com/certificate-manager/">AWS Certificate Manager</a>
 certificate that you wish to use with this distribution. Specify this,
 <code class="docutils literal notranslate"><span class="pre">cloudfront_default_certificate</span></code>, or <code class="docutils literal notranslate"><span class="pre">iam_certificate_id</span></code>.  The ACM
 certificate must be in  US-EAST-1.</p></li>
@@ -1230,7 +1231,7 @@ CloudFront system.</p>
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.cloudfront.</code><code class="sig-name descname">OriginAccessIdentity</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">comment=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudfront.OriginAccessIdentity" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates an Amazon CloudFront origin access identity.</p>
 <p>For information about CloudFront distributions, see the
-[Amazon CloudFront Developer Guide][1]. For more information on generating
+<a class="reference external" href="http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Introduction.html">Amazon CloudFront Developer Guide</a>. For more information on generating
 origin access identities, see
 [Using an Origin Access Identity to Restrict Access to Your Amazon S3 Content][2].</p>
 <dl class="field-list simple">

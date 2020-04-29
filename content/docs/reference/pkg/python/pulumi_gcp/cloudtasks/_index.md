@@ -22,49 +22,95 @@ anything, please consult the source <a class="reference external" href="https://
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>app_engine_routing_override</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Overrides for task-level appEngineRouting. These settings apply only to App Engine tasks in this queue</p></li>
+<li><p><strong>app_engine_routing_override</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Overrides for task-level appEngineRouting. These settings apply only
+to App Engine tasks in this queue  Structure is documented below.</p></li>
 <li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The location of the queue</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The queue name.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
-<li><p><strong>rate_limits</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Rate limits for task dispatches. The queue’s actual dispatch rate is the result of: * Number of tasks in the queue *
-User-specified throttling: rateLimits, retryConfig, and the queue’s state. * System throttling due to 429 (Too Many
-Requests) or 503 (Service Unavailable) responses from the worker, high error rates, or to smooth sudden large traffic
-spikes.</p></li>
-<li><p><strong>retry_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Settings that determine the retry behavior.</p></li>
+<li><p><strong>rate_limits</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Rate limits for task dispatches.
+The queue’s actual dispatch rate is the result of:</p></li>
 </ul>
+</dd>
+</dl>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">*</span> <span class="n">Number</span> <span class="n">of</span> <span class="n">tasks</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">queue</span>
+<span class="o">*</span> <span class="n">User</span><span class="o">-</span><span class="n">specified</span> <span class="n">throttling</span><span class="p">:</span> <span class="n">rateLimits</span><span class="p">,</span> <span class="n">retryConfig</span><span class="p">,</span> <span class="ow">and</span> <span class="n">the</span> <span class="n">queue</span><span class="s1">&#39;s state.</span>
+<span class="o">*</span> <span class="n">System</span> <span class="n">throttling</span> <span class="n">due</span> <span class="n">to</span> <span class="mi">429</span> <span class="p">(</span><span class="n">Too</span> <span class="n">Many</span> <span class="n">Requests</span><span class="p">)</span> <span class="ow">or</span> <span class="mi">503</span> <span class="p">(</span><span class="n">Service</span>
+<span class="n">Unavailable</span><span class="p">)</span> <span class="n">responses</span> <span class="kn">from</span> <span class="nn">the</span> <span class="n">worker</span><span class="p">,</span> <span class="n">high</span> <span class="n">error</span> <span class="n">rates</span><span class="p">,</span> <span class="ow">or</span> <span class="n">to</span>
+<span class="n">smooth</span> <span class="n">sudden</span> <span class="n">large</span> <span class="n">traffic</span> <span class="n">spikes</span><span class="o">.</span>  <span class="n">Structure</span> <span class="ow">is</span> <span class="n">documented</span> <span class="n">below</span><span class="o">.</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>retry_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Settings that determine the retry behavior.  Structure is documented below.</p>
 </dd>
 </dl>
 <p>The <strong>app_engine_routing_override</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">host</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">instance</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">service</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">version</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">host</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - -
+The host that the task is sent to.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">instance</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - App instance.
+By default, the task is sent to an instance which is available when the task is attempted.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">service</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - App service.
+By default, the task is sent to the service which is the default service when the task is attempted.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">version</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - App version.
+By default, the task is sent to the version which is the default version when the task is attempted.</p></li>
 </ul>
 <p>The <strong>rate_limits</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">maxBurstSize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">maxConcurrentDispatches</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">maxDispatchesPerSecond</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxBurstSize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - -
+The max burst size.
+Max burst size limits how fast tasks in queue are processed when many tasks are
+in the queue and the rate is high. This field allows the queue to have a high
+rate so processing starts shortly after a task is enqueued, but still limits
+resource usage when many tasks are enqueued in a short period of time.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxConcurrentDispatches</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The maximum number of concurrent tasks that Cloud Tasks allows to
+be dispatched for this queue. After this threshold has been
+reached, Cloud Tasks stops dispatching tasks until the number of
+concurrent requests decreases.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxDispatchesPerSecond</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The maximum rate at which tasks are dispatched from this queue.
+If unspecified when the queue is created, Cloud Tasks will pick the default.</p></li>
 </ul>
 <p>The <strong>retry_config</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">maxAttempts</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">maxBackoff</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">maxDoublings</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">maxRetryDuration</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">minBackoff</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxAttempts</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Number of attempts per task.
+Cloud Tasks will attempt the task maxAttempts times (that is, if
+the first attempt fails, then there will be maxAttempts - 1
+retries). Must be &gt;= -1.
+If unspecified when the queue is created, Cloud Tasks will pick
+the default.
+-1 indicates unlimited attempts.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxBackoff</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A task will be scheduled for retry between minBackoff and
+maxBackoff duration after it fails, if the queue’s RetryConfig
+specifies that the task should be retried.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxDoublings</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The time between retries will double maxDoublings times.
+A task’s retry interval starts at minBackoff, then doubles maxDoublings times,
+then increases linearly, and finally retries retries at intervals of maxBackoff
+up to maxAttempts times.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxRetryDuration</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - If positive, maxRetryDuration specifies the time limit for
+retrying a failed task, measured from when the task was first
+attempted. Once maxRetryDuration time has passed and the task has
+been attempted maxAttempts times, no further attempts will be
+made and the task will be deleted.
+If zero, then the task age is unlimited.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">minBackoff</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A task will be scheduled for retry between minBackoff and
+maxBackoff duration after it fails, if the queue’s RetryConfig
+specifies that the task should be retried.</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_gcp.cloudtasks.Queue.app_engine_routing_override">
 <code class="sig-name descname">app_engine_routing_override</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.cloudtasks.Queue.app_engine_routing_override" title="Permalink to this definition">¶</a></dt>
-<dd><p>Overrides for task-level appEngineRouting. These settings apply only to App Engine tasks in this queue</p>
+<dd><p>Overrides for task-level appEngineRouting. These settings apply only
+to App Engine tasks in this queue  Structure is documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">host</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">instance</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">service</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">version</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">host</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - -
+The host that the task is sent to.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">instance</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - App instance.
+By default, the task is sent to an instance which is available when the task is attempted.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">service</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - App service.
+By default, the task is sent to the service which is the default service when the task is attempted.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">version</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - App version.
+By default, the task is sent to the version which is the default version when the task is attempted.</p></li>
 </ul>
 </dd></dl>
 
@@ -90,27 +136,60 @@ If it is not provided, the provider project is used.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.cloudtasks.Queue.rate_limits">
 <code class="sig-name descname">rate_limits</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.cloudtasks.Queue.rate_limits" title="Permalink to this definition">¶</a></dt>
-<dd><p>Rate limits for task dispatches. The queue’s actual dispatch rate is the result of: * Number of tasks in the queue *
-User-specified throttling: rateLimits, retryConfig, and the queue’s state. * System throttling due to 429 (Too Many
-Requests) or 503 (Service Unavailable) responses from the worker, high error rates, or to smooth sudden large traffic
-spikes.</p>
+<dd><p>Rate limits for task dispatches.
+The queue’s actual dispatch rate is the result of:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">maxBurstSize</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">maxConcurrentDispatches</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">maxDispatchesPerSecond</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p>Number of tasks in the queue</p></li>
+<li><p>User-specified throttling: rateLimits, retryConfig, and the queue’s state.</p></li>
+<li><p>System throttling due to 429 (Too Many Requests) or 503 (Service
+Unavailable) responses from the worker, high error rates, or to
+smooth sudden large traffic spikes.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxBurstSize</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - -
+The max burst size.
+Max burst size limits how fast tasks in queue are processed when many tasks are
+in the queue and the rate is high. This field allows the queue to have a high
+rate so processing starts shortly after a task is enqueued, but still limits
+resource usage when many tasks are enqueued in a short period of time.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxConcurrentDispatches</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The maximum number of concurrent tasks that Cloud Tasks allows to
+be dispatched for this queue. After this threshold has been
+reached, Cloud Tasks stops dispatching tasks until the number of
+concurrent requests decreases.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxDispatchesPerSecond</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The maximum rate at which tasks are dispatched from this queue.
+If unspecified when the queue is created, Cloud Tasks will pick the default.</p></li>
+</ul>
+</li>
 </ul>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_gcp.cloudtasks.Queue.retry_config">
 <code class="sig-name descname">retry_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.cloudtasks.Queue.retry_config" title="Permalink to this definition">¶</a></dt>
-<dd><p>Settings that determine the retry behavior.</p>
+<dd><p>Settings that determine the retry behavior.  Structure is documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">maxAttempts</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">maxBackoff</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">maxDoublings</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">maxRetryDuration</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">minBackoff</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxAttempts</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Number of attempts per task.
+Cloud Tasks will attempt the task maxAttempts times (that is, if
+the first attempt fails, then there will be maxAttempts - 1
+retries). Must be &gt;= -1.
+If unspecified when the queue is created, Cloud Tasks will pick
+the default.
+-1 indicates unlimited attempts.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxBackoff</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A task will be scheduled for retry between minBackoff and
+maxBackoff duration after it fails, if the queue’s RetryConfig
+specifies that the task should be retried.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxDoublings</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The time between retries will double maxDoublings times.
+A task’s retry interval starts at minBackoff, then doubles maxDoublings times,
+then increases linearly, and finally retries retries at intervals of maxBackoff
+up to maxAttempts times.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxRetryDuration</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - If positive, maxRetryDuration specifies the time limit for
+retrying a failed task, measured from when the task was first
+attempted. Once maxRetryDuration time has passed and the task has
+been attempted maxAttempts times, no further attempts will be
+made and the task will be deleted.
+If zero, then the task age is unlimited.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">minBackoff</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A task will be scheduled for retry between minBackoff and
+maxBackoff duration after it fails, if the queue’s RetryConfig
+specifies that the task should be retried.</p></li>
 </ul>
 </dd></dl>
 
@@ -125,39 +204,80 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>app_engine_routing_override</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Overrides for task-level appEngineRouting. These settings apply only to App Engine tasks in this queue</p></li>
+<li><p><strong>app_engine_routing_override</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Overrides for task-level appEngineRouting. These settings apply only
+to App Engine tasks in this queue  Structure is documented below.</p></li>
 <li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The location of the queue</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The queue name.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
-<li><p><strong>rate_limits</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Rate limits for task dispatches. The queue’s actual dispatch rate is the result of: * Number of tasks in the queue *
-User-specified throttling: rateLimits, retryConfig, and the queue’s state. * System throttling due to 429 (Too Many
-Requests) or 503 (Service Unavailable) responses from the worker, high error rates, or to smooth sudden large traffic
-spikes.</p></li>
-<li><p><strong>retry_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Settings that determine the retry behavior.</p></li>
+<li><p><strong>rate_limits</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Rate limits for task dispatches.
+The queue’s actual dispatch rate is the result of:</p></li>
 </ul>
+</dd>
+</dl>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">*</span> <span class="n">Number</span> <span class="n">of</span> <span class="n">tasks</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">queue</span>
+<span class="o">*</span> <span class="n">User</span><span class="o">-</span><span class="n">specified</span> <span class="n">throttling</span><span class="p">:</span> <span class="n">rateLimits</span><span class="p">,</span> <span class="n">retryConfig</span><span class="p">,</span> <span class="ow">and</span> <span class="n">the</span> <span class="n">queue</span><span class="s1">&#39;s state.</span>
+<span class="o">*</span> <span class="n">System</span> <span class="n">throttling</span> <span class="n">due</span> <span class="n">to</span> <span class="mi">429</span> <span class="p">(</span><span class="n">Too</span> <span class="n">Many</span> <span class="n">Requests</span><span class="p">)</span> <span class="ow">or</span> <span class="mi">503</span> <span class="p">(</span><span class="n">Service</span>
+<span class="n">Unavailable</span><span class="p">)</span> <span class="n">responses</span> <span class="kn">from</span> <span class="nn">the</span> <span class="n">worker</span><span class="p">,</span> <span class="n">high</span> <span class="n">error</span> <span class="n">rates</span><span class="p">,</span> <span class="ow">or</span> <span class="n">to</span>
+<span class="n">smooth</span> <span class="n">sudden</span> <span class="n">large</span> <span class="n">traffic</span> <span class="n">spikes</span><span class="o">.</span>  <span class="n">Structure</span> <span class="ow">is</span> <span class="n">documented</span> <span class="n">below</span><span class="o">.</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>retry_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Settings that determine the retry behavior.  Structure is documented below.</p>
 </dd>
 </dl>
 <p>The <strong>app_engine_routing_override</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">host</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">instance</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">service</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">version</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">host</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - -
+The host that the task is sent to.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">instance</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - App instance.
+By default, the task is sent to an instance which is available when the task is attempted.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">service</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - App service.
+By default, the task is sent to the service which is the default service when the task is attempted.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">version</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - App version.
+By default, the task is sent to the version which is the default version when the task is attempted.</p></li>
 </ul>
 <p>The <strong>rate_limits</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">maxBurstSize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">maxConcurrentDispatches</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">maxDispatchesPerSecond</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxBurstSize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - -
+The max burst size.
+Max burst size limits how fast tasks in queue are processed when many tasks are
+in the queue and the rate is high. This field allows the queue to have a high
+rate so processing starts shortly after a task is enqueued, but still limits
+resource usage when many tasks are enqueued in a short period of time.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxConcurrentDispatches</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The maximum number of concurrent tasks that Cloud Tasks allows to
+be dispatched for this queue. After this threshold has been
+reached, Cloud Tasks stops dispatching tasks until the number of
+concurrent requests decreases.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxDispatchesPerSecond</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The maximum rate at which tasks are dispatched from this queue.
+If unspecified when the queue is created, Cloud Tasks will pick the default.</p></li>
 </ul>
 <p>The <strong>retry_config</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">maxAttempts</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">maxBackoff</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">maxDoublings</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">maxRetryDuration</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">minBackoff</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxAttempts</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Number of attempts per task.
+Cloud Tasks will attempt the task maxAttempts times (that is, if
+the first attempt fails, then there will be maxAttempts - 1
+retries). Must be &gt;= -1.
+If unspecified when the queue is created, Cloud Tasks will pick
+the default.
+-1 indicates unlimited attempts.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxBackoff</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A task will be scheduled for retry between minBackoff and
+maxBackoff duration after it fails, if the queue’s RetryConfig
+specifies that the task should be retried.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxDoublings</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The time between retries will double maxDoublings times.
+A task’s retry interval starts at minBackoff, then doubles maxDoublings times,
+then increases linearly, and finally retries retries at intervals of maxBackoff
+up to maxAttempts times.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxRetryDuration</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - If positive, maxRetryDuration specifies the time limit for
+retrying a failed task, measured from when the task was first
+attempted. Once maxRetryDuration time has passed and the task has
+been attempted maxAttempts times, no further attempts will be
+made and the task will be deleted.
+If zero, then the task age is unlimited.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">minBackoff</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A task will be scheduled for retry between minBackoff and
+maxBackoff duration after it fails, if the queue’s RetryConfig
+specifies that the task should be retried.</p></li>
 </ul>
 </dd></dl>
 

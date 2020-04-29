@@ -35,7 +35,7 @@ it is applied in the next maintenance window. Because of this, this provider may
 a difference in its planning phase because the actual modification has not yet taken
 place. You can use the <code class="docutils literal notranslate"><span class="pre">apply_immediately</span></code> flag to instruct the service to apply the
 change immediately. Using <code class="docutils literal notranslate"><span class="pre">apply_immediately</span></code> can result in a brief downtime as the server reboots.
-See the AWS Docs on [Modifying an ElastiCache Cache Cluster][2] for more information.</p>
+See the AWS Docs on <a class="reference external" href="https://docs.aws.amazon.com/AmazonElastiCache/latest/UserGuide/Clusters.Modify.html">Modifying an ElastiCache Cache Cluster</a> for more information.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -44,7 +44,7 @@ See the AWS Docs on [Modifying an ElastiCache Cache Cluster][2] for more informa
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>apply_immediately</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether any database modifications
 are applied immediately, or during the next maintenance window. Default is
-<code class="docutils literal notranslate"><span class="pre">false</span></code>. See [Amazon ElastiCache Documentation for more information.][1]
+<code class="docutils literal notranslate"><span class="pre">false</span></code>. See <a class="reference external" href="https://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_ModifyCacheCluster.html">Amazon ElastiCache Documentation for more information.</a>
 (Available since v0.6.0)</p></li>
 <li><p><strong>availability_zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Availability Zone for the cache cluster. If you want to create cache nodes in multi-az, use <code class="docutils literal notranslate"><span class="pre">preferred_availability_zones</span></code> instead. Default: System chosen Availability Zone.</p></li>
 <li><p><strong>az_mode</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies whether the nodes in this Memcached node group are created in a single Availability Zone or created across multiple Availability Zones in the cluster’s region. Valid values for this parameter are <code class="docutils literal notranslate"><span class="pre">single-az</span></code> or <code class="docutils literal notranslate"><span class="pre">cross-az</span></code>, default is <code class="docutils literal notranslate"><span class="pre">single-az</span></code>. If you want to choose <code class="docutils literal notranslate"><span class="pre">cross-az</span></code>, <code class="docutils literal notranslate"><span class="pre">num_cache_nodes</span></code> must be greater than <code class="docutils literal notranslate"><span class="pre">1</span></code></p></li>
@@ -99,7 +99,7 @@ for the cache cluster.</p></li>
 <code class="sig-name descname">apply_immediately</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticache.Cluster.apply_immediately" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies whether any database modifications
 are applied immediately, or during the next maintenance window. Default is
-<code class="docutils literal notranslate"><span class="pre">false</span></code>. See [Amazon ElastiCache Documentation for more information.][1]
+<code class="docutils literal notranslate"><span class="pre">false</span></code>. See <a class="reference external" href="https://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_ModifyCacheCluster.html">Amazon ElastiCache Documentation for more information.</a>
 (Available since v0.6.0)</p>
 </dd></dl>
 
@@ -289,10 +289,11 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>apply_immediately</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether any database modifications
+<li><p><strong>apply_immediately</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – <p>Specifies whether any database modifications
 are applied immediately, or during the next maintenance window. Default is
-<code class="docutils literal notranslate"><span class="pre">false</span></code>. See [Amazon ElastiCache Documentation for more information.][1]
-(Available since v0.6.0)</p></li>
+<code class="docutils literal notranslate"><span class="pre">false</span></code>. See <a class="reference external" href="https://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_ModifyCacheCluster.html">Amazon ElastiCache Documentation for more information.</a>
+(Available since v0.6.0)</p>
+</p></li>
 <li><p><strong>availability_zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Availability Zone for the cache cluster. If you want to create cache nodes in multi-az, use <code class="docutils literal notranslate"><span class="pre">preferred_availability_zones</span></code> instead. Default: System chosen Availability Zone.</p></li>
 <li><p><strong>az_mode</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies whether the nodes in this Memcached node group are created in a single Availability Zone or created across multiple Availability Zones in the cluster’s region. Valid values for this parameter are <code class="docutils literal notranslate"><span class="pre">single-az</span></code> or <code class="docutils literal notranslate"><span class="pre">cross-az</span></code>, default is <code class="docutils literal notranslate"><span class="pre">single-az</span></code>. If you want to choose <code class="docutils literal notranslate"><span class="pre">cross-az</span></code>, <code class="docutils literal notranslate"><span class="pre">num_cache_nodes</span></code> must be greater than <code class="docutils literal notranslate"><span class="pre">1</span></code></p></li>
 <li><p><strong>cache_nodes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of node objects including <code class="docutils literal notranslate"><span class="pre">id</span></code>, <code class="docutils literal notranslate"><span class="pre">address</span></code>, <code class="docutils literal notranslate"><span class="pre">port</span></code> and <code class="docutils literal notranslate"><span class="pre">availability_zone</span></code>.
@@ -438,7 +439,7 @@ Referenceable e.g. as <code class="docutils literal notranslate"><span class="pr
 <dl class="attribute">
 <dt id="pulumi_aws.elasticache.GetClusterResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticache.GetClusterResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -551,7 +552,7 @@ begin taking a daily snapshot of the cache cluster.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.elasticache.GetReplicationGroupResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticache.GetReplicationGroupResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">

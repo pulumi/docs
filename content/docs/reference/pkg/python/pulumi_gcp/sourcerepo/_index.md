@@ -31,23 +31,34 @@ anything, please consult the source <a class="reference external" href="https://
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Resource name of the repository, of the form ‘{{repo}}’. The repo name may contain slashes. eg, ‘name/with/slash’</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Resource name of the repository, of the form <code class="docutils literal notranslate"><span class="pre">{{repo}}</span></code>.
+The repo name may contain slashes. eg, <code class="docutils literal notranslate"><span class="pre">name/with/slash</span></code></p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
-<li><p><strong>pubsub_configs</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – How this repository publishes a change in the repository through Cloud Pub/Sub. Keyed by the topic names.</p></li>
+<li><p><strong>pubsub_configs</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – How this repository publishes a change in the repository through Cloud Pub/Sub.
+Keyed by the topic names.  Structure is documented below.</p></li>
 </ul>
 </dd>
 </dl>
 <p>The <strong>pubsub_configs</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">messageFormat</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">service_account_email</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">messageFormat</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The format of the Cloud Pub/Sub messages.</p>
+<ul>
+<li><p>PROTOBUF: The message payload is a serialized protocol buffer of SourceRepoEvent.</p></li>
+<li><p>JSON: The message payload is a JSON string of SourceRepoEvent.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">service_account_email</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Email address of the service account used for publishing Cloud Pub/Sub messages.
+This service account needs to be in the same project as the PubsubConfig. When added,
+the caller needs to have iam.serviceAccounts.actAs permission on this service account.
+If unspecified, it defaults to the compute engine default service account.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">topic</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The identifier for this object. Format specified above.</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_gcp.sourcerepo.Repository.name">
 <code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.sourcerepo.Repository.name" title="Permalink to this definition">¶</a></dt>
-<dd><p>Resource name of the repository, of the form ‘{{repo}}’. The repo name may contain slashes. eg, ‘name/with/slash’</p>
+<dd><p>Resource name of the repository, of the form <code class="docutils literal notranslate"><span class="pre">{{repo}}</span></code>.
+The repo name may contain slashes. eg, <code class="docutils literal notranslate"><span class="pre">name/with/slash</span></code></p>
 </dd></dl>
 
 <dl class="attribute">
@@ -60,10 +71,19 @@ If it is not provided, the provider project is used.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.sourcerepo.Repository.pubsub_configs">
 <code class="sig-name descname">pubsub_configs</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.sourcerepo.Repository.pubsub_configs" title="Permalink to this definition">¶</a></dt>
-<dd><p>How this repository publishes a change in the repository through Cloud Pub/Sub. Keyed by the topic names.</p>
+<dd><p>How this repository publishes a change in the repository through Cloud Pub/Sub.
+Keyed by the topic names.  Structure is documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">messageFormat</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">service_account_email</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">messageFormat</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The format of the Cloud Pub/Sub messages.</p>
+<ul>
+<li><p>PROTOBUF: The message payload is a serialized protocol buffer of SourceRepoEvent.</p></li>
+<li><p>JSON: The message payload is a JSON string of SourceRepoEvent.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">service_account_email</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Email address of the service account used for publishing Cloud Pub/Sub messages.
+This service account needs to be in the same project as the PubsubConfig. When added,
+the caller needs to have iam.serviceAccounts.actAs permission on this service account.
+If unspecified, it defaults to the compute engine default service account.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">topic</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The identifier for this object. Format specified above.</p></li>
 </ul>
 </dd></dl>
@@ -91,10 +111,12 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Resource name of the repository, of the form ‘{{repo}}’. The repo name may contain slashes. eg, ‘name/with/slash’</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Resource name of the repository, of the form <code class="docutils literal notranslate"><span class="pre">{{repo}}</span></code>.
+The repo name may contain slashes. eg, <code class="docutils literal notranslate"><span class="pre">name/with/slash</span></code></p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
-<li><p><strong>pubsub_configs</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – How this repository publishes a change in the repository through Cloud Pub/Sub. Keyed by the topic names.</p></li>
+<li><p><strong>pubsub_configs</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – How this repository publishes a change in the repository through Cloud Pub/Sub.
+Keyed by the topic names.  Structure is documented below.</p></li>
 <li><p><strong>size</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The disk usage of the repo, in bytes.</p></li>
 <li><p><strong>url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – URL to clone the repository from Google Cloud Source Repositories.</p></li>
 </ul>
@@ -102,8 +124,16 @@ If it is not provided, the provider project is used.</p></li>
 </dl>
 <p>The <strong>pubsub_configs</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">messageFormat</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">service_account_email</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">messageFormat</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The format of the Cloud Pub/Sub messages.</p>
+<ul>
+<li><p>PROTOBUF: The message payload is a serialized protocol buffer of SourceRepoEvent.</p></li>
+<li><p>JSON: The message payload is a JSON string of SourceRepoEvent.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">service_account_email</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Email address of the service account used for publishing Cloud Pub/Sub messages.
+This service account needs to be in the same project as the PubsubConfig. When added,
+the caller needs to have iam.serviceAccounts.actAs permission on this service account.
+If unspecified, it defaults to the compute engine default service account.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">topic</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The identifier for this object. Format specified above.</p></li>
 </ul>
 </dd></dl>

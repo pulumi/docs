@@ -1005,7 +1005,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_azure.compute.GetAvailabilitySetResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.GetAvailabilitySetResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1047,7 +1047,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_azure.compute.GetDedicatedHostGroupResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.GetDedicatedHostGroupResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1083,7 +1083,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_azure.compute.GetDedicatedHostResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.GetDedicatedHostResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1107,7 +1107,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_azure.compute.GetDiskEncryptionSetResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.GetDiskEncryptionSetResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1137,7 +1137,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_azure.compute.GetImageResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.GetImageResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1203,7 +1203,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_azure.compute.GetManagedDiskResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.GetManagedDiskResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1257,7 +1257,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_azure.compute.GetPlatformImageResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.GetPlatformImageResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1281,7 +1281,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_azure.compute.GetSharedImageGalleryResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.GetSharedImageGalleryResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1323,7 +1323,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_azure.compute.GetSharedImageResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.GetSharedImageResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1377,7 +1377,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_azure.compute.GetSharedImageVersionResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.GetSharedImageVersionResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1425,7 +1425,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_azure.compute.GetSnapshotResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.GetSnapshotResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1455,7 +1455,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_azure.compute.GetVirtualMachineResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.GetVirtualMachineResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 </dd></dl>
@@ -1690,6 +1690,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>network_interface_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – . A list of Network Interface ID’s which should be attached to this Virtual Machine. The first Network Interface ID in this list will be the Primary Network Interface on the Virtual Machine.</p></li>
 <li><p><strong>os_disk</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">os_disk</span></code> block as defined below.</p></li>
 <li><p><strong>plan</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">plan</span></code> block as defined below. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>priority</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the priority of this Virtual Machine. Possible values are <code class="docutils literal notranslate"><span class="pre">Regular</span></code> and <code class="docutils literal notranslate"><span class="pre">Spot</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">Regular</span></code>. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>provision_vm_agent</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Should the Azure VM Agent be provisioned on this Virtual Machine? Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>proximity_placement_group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Proximity Placement Group which the Virtual Machine should be assigned to. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Resource Group in which the Linux Virtual Machine should be exist. Changing this forces a new resource to be created.</p></li>
@@ -1905,6 +1906,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_azure.compute.LinuxVirtualMachine.priority">
+<code class="sig-name descname">priority</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.LinuxVirtualMachine.priority" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the priority of this Virtual Machine. Possible values are <code class="docutils literal notranslate"><span class="pre">Regular</span></code> and <code class="docutils literal notranslate"><span class="pre">Spot</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">Regular</span></code>. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_azure.compute.LinuxVirtualMachine.private_ip_address">
 <code class="sig-name descname">private_ip_address</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.LinuxVirtualMachine.private_ip_address" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Primary Private IP Address assigned to this Virtual Machine.</p>
@@ -2032,6 +2039,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>network_interface_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – . A list of Network Interface ID’s which should be attached to this Virtual Machine. The first Network Interface ID in this list will be the Primary Network Interface on the Virtual Machine.</p></li>
 <li><p><strong>os_disk</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">os_disk</span></code> block as defined below.</p></li>
 <li><p><strong>plan</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">plan</span></code> block as defined below. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>priority</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the priority of this Virtual Machine. Possible values are <code class="docutils literal notranslate"><span class="pre">Regular</span></code> and <code class="docutils literal notranslate"><span class="pre">Spot</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">Regular</span></code>. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>private_ip_address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Primary Private IP Address assigned to this Virtual Machine.</p></li>
 <li><p><strong>private_ip_addresses</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of Private IP Addresses assigned to this Virtual Machine.</p></li>
 <li><p><strong>provision_vm_agent</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Should the Azure VM Agent be provisioned on this Virtual Machine? Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>. Changing this forces a new resource to be created.</p></li>
@@ -5181,6 +5189,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>network_interface_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – . A list of Network Interface ID’s which should be attached to this Virtual Machine. The first Network Interface ID in this list will be the Primary Network Interface on the Virtual Machine.</p></li>
 <li><p><strong>os_disk</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">os_disk</span></code> block as defined below.</p></li>
 <li><p><strong>plan</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">plan</span></code> block as defined below. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>priority</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the priority of this Virtual Machine. Possible values are <code class="docutils literal notranslate"><span class="pre">Regular</span></code> and <code class="docutils literal notranslate"><span class="pre">Spot</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">Regular</span></code>. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>provision_vm_agent</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Should the Azure VM Agent be provisioned on this Virtual Machine? Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>proximity_placement_group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Proximity Placement Group which the Virtual Machine should be assigned to. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Resource Group in which the Windows Virtual Machine should be exist. Changing this forces a new resource to be created.</p></li>
@@ -5411,6 +5420,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_azure.compute.WindowsVirtualMachine.priority">
+<code class="sig-name descname">priority</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.WindowsVirtualMachine.priority" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the priority of this Virtual Machine. Possible values are <code class="docutils literal notranslate"><span class="pre">Regular</span></code> and <code class="docutils literal notranslate"><span class="pre">Spot</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">Regular</span></code>. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_azure.compute.WindowsVirtualMachine.private_ip_address">
 <code class="sig-name descname">private_ip_address</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.WindowsVirtualMachine.private_ip_address" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Primary Private IP Address assigned to this Virtual Machine.</p>
@@ -5557,6 +5572,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>network_interface_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – . A list of Network Interface ID’s which should be attached to this Virtual Machine. The first Network Interface ID in this list will be the Primary Network Interface on the Virtual Machine.</p></li>
 <li><p><strong>os_disk</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">os_disk</span></code> block as defined below.</p></li>
 <li><p><strong>plan</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">plan</span></code> block as defined below. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>priority</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the priority of this Virtual Machine. Possible values are <code class="docutils literal notranslate"><span class="pre">Regular</span></code> and <code class="docutils literal notranslate"><span class="pre">Spot</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">Regular</span></code>. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>private_ip_address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Primary Private IP Address assigned to this Virtual Machine.</p></li>
 <li><p><strong>private_ip_addresses</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of Private IP Addresses assigned to this Virtual Machine.</p></li>
 <li><p><strong>provision_vm_agent</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Should the Azure VM Agent be provisioned on this Virtual Machine? Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>. Changing this forces a new resource to be created.</p></li>

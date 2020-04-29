@@ -26,17 +26,9 @@ anything, please consult the source <a class="reference external" href="https://
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>artifact_store</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – One or more artifact_store blocks. Artifact stores are documented below.</p></li>
-</ul>
-</dd>
-</dl>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>* `stage` (Minimum of at least two `stage` blocks is required) A stage block. Stages are documented below.
-</pre></div>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the pipeline.</p></li>
 <li><p><strong>role_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A service role Amazon Resource Name (ARN) that grants AWS CodePipeline permission to make calls to AWS services on your behalf.</p></li>
+<li><p><strong>stages</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A stage block. Stages are documented below.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
 </ul>
 </dd>
@@ -83,8 +75,6 @@ anything, please consult the source <a class="reference external" href="https://
 <code class="sig-name descname">artifact_store</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.codepipeline.Pipeline.artifact_store" title="Permalink to this definition">¶</a></dt>
 <dd><p>One or more artifact_store blocks. Artifact stores are documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">stage</span></code> (Minimum of at least two <code class="docutils literal notranslate"><span class="pre">stage</span></code> blocks is required) A stage block. Stages are documented below.</p>
-<ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">encryption_key</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The encryption key block AWS CodePipeline uses to encrypt the data in the artifact store, such as an AWS Key Management Service (AWS KMS) key. If you don’t specify a key, AWS CodePipeline uses the default key for Amazon Simple Storage Service (Amazon S3). An <code class="docutils literal notranslate"><span class="pre">encryption_key</span></code> block is documented below.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The KMS key ARN or ID</p></li>
@@ -94,8 +84,6 @@ anything, please consult the source <a class="reference external" href="https://
 <li><p><code class="docutils literal notranslate"><span class="pre">location</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The location where AWS CodePipeline stores artifacts for a pipeline; currently only <code class="docutils literal notranslate"><span class="pre">S3</span></code> is supported.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">region</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The region where the artifact store is located. Required for a cross-region CodePipeline, do not provide for a single-region CodePipeline.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The type of the artifact store, such as Amazon S3</p></li>
-</ul>
-</li>
 </ul>
 </dd></dl>
 
@@ -109,6 +97,30 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.codepipeline.Pipeline.role_arn">
 <code class="sig-name descname">role_arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.codepipeline.Pipeline.role_arn" title="Permalink to this definition">¶</a></dt>
 <dd><p>A service role Amazon Resource Name (ARN) that grants AWS CodePipeline permission to make calls to AWS services on your behalf.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.codepipeline.Pipeline.stages">
+<code class="sig-name descname">stages</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.codepipeline.Pipeline.stages" title="Permalink to this definition">¶</a></dt>
+<dd><p>A stage block. Stages are documented below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">actions</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - The action(s) to include in the stage. Defined as an <code class="docutils literal notranslate"><span class="pre">action</span></code> block below</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">category</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A category defines what kind of action can be taken in the stage, and constrains the provider type for the action. Possible values are <code class="docutils literal notranslate"><span class="pre">Approval</span></code>, <code class="docutils literal notranslate"><span class="pre">Build</span></code>, <code class="docutils literal notranslate"><span class="pre">Deploy</span></code>, <code class="docutils literal notranslate"><span class="pre">Invoke</span></code>, <code class="docutils literal notranslate"><span class="pre">Source</span></code> and <code class="docutils literal notranslate"><span class="pre">Test</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">configuration</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A Map of the action declaration’s configuration. Find out more about configuring action configurations in the <a class="reference external" href="http://docs.aws.amazon.com/codepipeline/latest/userguide/reference-pipeline-structure.html#action-requirements">Reference Pipeline Structure documentation</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">inputArtifacts</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of artifact names to be worked on.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The action declaration’s name.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">outputArtifacts</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of artifact names to output. Output artifact names must be unique within a pipeline.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">owner</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The creator of the action being called. Possible values are <code class="docutils literal notranslate"><span class="pre">AWS</span></code>, <code class="docutils literal notranslate"><span class="pre">Custom</span></code> and <code class="docutils literal notranslate"><span class="pre">ThirdParty</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">provider</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The provider of the service being called by the action. Valid providers are determined by the action category. For example, an action in the Deploy category type might have a provider of AWS CodeDeploy, which would be specified as CodeDeploy.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">region</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The region in which to run the action.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">role_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ARN of the IAM service role that will perform the declared action. This is assumed through the roleArn for the pipeline.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">runOrder</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The order in which actions are run.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">version</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A string that identifies the action type.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the stage.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -130,17 +142,9 @@ properties used to qualify the lookup.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The codepipeline ARN.</p></li>
 <li><p><strong>artifact_store</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – One or more artifact_store blocks. Artifact stores are documented below.</p></li>
-</ul>
-</dd>
-</dl>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>* `stage` (Minimum of at least two `stage` blocks is required) A stage block. Stages are documented below.
-</pre></div>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the pipeline.</p></li>
 <li><p><strong>role_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A service role Amazon Resource Name (ARN) that grants AWS CodePipeline permission to make calls to AWS services on your behalf.</p></li>
+<li><p><strong>stages</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A stage block. Stages are documented below.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
 </ul>
 </dd>
