@@ -13,9 +13,9 @@ notitle: true
 <a class="reference external" href="https://github.com/pulumi/pulumi-azure/issues">pulumi/pulumi-azure repo</a>; however, if that doesn’t turn up
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/issues">terraform-providers/terraform-provider-azurerm repo</a>.</p>
 </div></blockquote>
-<span class="target" id="module-pulumi_azure.logicapps"></span><dl class="class">
+<span class="target" id="module-pulumi_azure.logicapps"></span><dl class="py class">
 <dt id="pulumi_azure.logicapps.ActionCustom">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.logicapps.</code><code class="sig-name descname">ActionCustom</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">body=None</em>, <em class="sig-param">logic_app_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.logicapps.ActionCustom" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.logicapps.</code><code class="sig-name descname">ActionCustom</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">body</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">logic_app_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.logicapps.ActionCustom" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Custom Action within a Logic App Workflow</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -28,27 +28,27 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </dd>
 </dl>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.logicapps.ActionCustom.body">
-<code class="sig-name descname">body</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.logicapps.ActionCustom.body" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">body</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.logicapps.ActionCustom.body" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies the JSON Blob defining the Body of this Custom Action.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.logicapps.ActionCustom.logic_app_id">
-<code class="sig-name descname">logic_app_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.logicapps.ActionCustom.logic_app_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">logic_app_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.logicapps.ActionCustom.logic_app_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies the ID of the Logic App Workflow. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.logicapps.ActionCustom.name">
-<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.logicapps.ActionCustom.name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.logicapps.ActionCustom.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies the name of the HTTP Action to be created within the Logic App Workflow. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_azure.logicapps.ActionCustom.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">body=None</em>, <em class="sig-param">logic_app_id=None</em>, <em class="sig-param">name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.logicapps.ActionCustom.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">body</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">logic_app_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.logicapps.ActionCustom.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing ActionCustom resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -65,9 +65,9 @@ properties used to qualify the lookup.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_azure.logicapps.ActionCustom.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.logicapps.ActionCustom.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.logicapps.ActionCustom.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -83,9 +83,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_azure.logicapps.ActionCustom.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.logicapps.ActionCustom.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.logicapps.ActionCustom.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -103,9 +103,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_azure.logicapps.ActionHttp">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.logicapps.</code><code class="sig-name descname">ActionHttp</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">body=None</em>, <em class="sig-param">headers=None</em>, <em class="sig-param">logic_app_id=None</em>, <em class="sig-param">method=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">uri=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.logicapps.ActionHttp" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.logicapps.</code><code class="sig-name descname">ActionHttp</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">body</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">headers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">logic_app_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">method</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">uri</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.logicapps.ActionHttp" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an HTTP Action within a Logic App Workflow</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -121,45 +121,45 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.logicapps.ActionHttp.body">
-<code class="sig-name descname">body</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.logicapps.ActionHttp.body" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">body</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.logicapps.ActionHttp.body" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies the HTTP Body that should be sent to the <code class="docutils literal notranslate"><span class="pre">uri</span></code> when this HTTP Action is triggered.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.logicapps.ActionHttp.headers">
-<code class="sig-name descname">headers</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.logicapps.ActionHttp.headers" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">headers</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.logicapps.ActionHttp.headers" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies a Map of Key-Value Pairs that should be sent to the <code class="docutils literal notranslate"><span class="pre">uri</span></code> when this HTTP Action is triggered.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.logicapps.ActionHttp.logic_app_id">
-<code class="sig-name descname">logic_app_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.logicapps.ActionHttp.logic_app_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">logic_app_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.logicapps.ActionHttp.logic_app_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies the ID of the Logic App Workflow. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.logicapps.ActionHttp.method">
-<code class="sig-name descname">method</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.logicapps.ActionHttp.method" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">method</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.logicapps.ActionHttp.method" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies the HTTP Method which should be used for this HTTP Action. Possible values include <code class="docutils literal notranslate"><span class="pre">DELETE</span></code>, <code class="docutils literal notranslate"><span class="pre">GET</span></code>, <code class="docutils literal notranslate"><span class="pre">PATCH</span></code>, <code class="docutils literal notranslate"><span class="pre">POST</span></code> and <code class="docutils literal notranslate"><span class="pre">PUT</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.logicapps.ActionHttp.name">
-<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.logicapps.ActionHttp.name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.logicapps.ActionHttp.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies the name of the HTTP Action to be created within the Logic App Workflow. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.logicapps.ActionHttp.uri">
-<code class="sig-name descname">uri</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.logicapps.ActionHttp.uri" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">uri</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.logicapps.ActionHttp.uri" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies the URI which will be called when this HTTP Action is triggered.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_azure.logicapps.ActionHttp.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">body=None</em>, <em class="sig-param">headers=None</em>, <em class="sig-param">logic_app_id=None</em>, <em class="sig-param">method=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">uri=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.logicapps.ActionHttp.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">body</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">headers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">logic_app_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">method</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">uri</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.logicapps.ActionHttp.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing ActionHttp resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -179,9 +179,9 @@ properties used to qualify the lookup.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_azure.logicapps.ActionHttp.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.logicapps.ActionHttp.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.logicapps.ActionHttp.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -197,9 +197,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_azure.logicapps.ActionHttp.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.logicapps.ActionHttp.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.logicapps.ActionHttp.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -217,76 +217,76 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_azure.logicapps.AwaitableGetWorkflowResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.logicapps.</code><code class="sig-name descname">AwaitableGetWorkflowResult</code><span class="sig-paren">(</span><em class="sig-param">access_endpoint=None</em>, <em class="sig-param">connector_endpoint_ip_addresses=None</em>, <em class="sig-param">connector_outbound_ip_addresses=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">parameters=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">workflow_endpoint_ip_addresses=None</em>, <em class="sig-param">workflow_outbound_ip_addresses=None</em>, <em class="sig-param">workflow_schema=None</em>, <em class="sig-param">workflow_version=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.logicapps.AwaitableGetWorkflowResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.logicapps.</code><code class="sig-name descname">AwaitableGetWorkflowResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">access_endpoint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">connector_endpoint_ip_addresses</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">connector_outbound_ip_addresses</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">parameters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">workflow_endpoint_ip_addresses</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">workflow_outbound_ip_addresses</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">workflow_schema</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">workflow_version</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.logicapps.AwaitableGetWorkflowResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_azure.logicapps.GetWorkflowResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.logicapps.</code><code class="sig-name descname">GetWorkflowResult</code><span class="sig-paren">(</span><em class="sig-param">access_endpoint=None</em>, <em class="sig-param">connector_endpoint_ip_addresses=None</em>, <em class="sig-param">connector_outbound_ip_addresses=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">parameters=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">workflow_endpoint_ip_addresses=None</em>, <em class="sig-param">workflow_outbound_ip_addresses=None</em>, <em class="sig-param">workflow_schema=None</em>, <em class="sig-param">workflow_version=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.logicapps.GetWorkflowResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.logicapps.</code><code class="sig-name descname">GetWorkflowResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">access_endpoint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">connector_endpoint_ip_addresses</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">connector_outbound_ip_addresses</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">parameters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">workflow_endpoint_ip_addresses</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">workflow_outbound_ip_addresses</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">workflow_schema</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">workflow_version</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.logicapps.GetWorkflowResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getWorkflow.</p>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.logicapps.GetWorkflowResult.access_endpoint">
 <code class="sig-name descname">access_endpoint</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.logicapps.GetWorkflowResult.access_endpoint" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Access Endpoint for the Logic App Workflow</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.logicapps.GetWorkflowResult.connector_endpoint_ip_addresses">
 <code class="sig-name descname">connector_endpoint_ip_addresses</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.logicapps.GetWorkflowResult.connector_endpoint_ip_addresses" title="Permalink to this definition">¶</a></dt>
 <dd><p>The list of access endpoint ip addresses of connector.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.logicapps.GetWorkflowResult.connector_outbound_ip_addresses">
 <code class="sig-name descname">connector_outbound_ip_addresses</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.logicapps.GetWorkflowResult.connector_outbound_ip_addresses" title="Permalink to this definition">¶</a></dt>
 <dd><p>The list of outgoing ip addresses of connector.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.logicapps.GetWorkflowResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.logicapps.GetWorkflowResult.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.logicapps.GetWorkflowResult.location">
 <code class="sig-name descname">location</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.logicapps.GetWorkflowResult.location" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Azure location where the Logic App Workflow exists.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.logicapps.GetWorkflowResult.parameters">
 <code class="sig-name descname">parameters</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.logicapps.GetWorkflowResult.parameters" title="Permalink to this definition">¶</a></dt>
 <dd><p>A map of Key-Value pairs.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.logicapps.GetWorkflowResult.tags">
 <code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.logicapps.GetWorkflowResult.tags" title="Permalink to this definition">¶</a></dt>
 <dd><p>A mapping of tags assigned to the resource.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.logicapps.GetWorkflowResult.workflow_endpoint_ip_addresses">
 <code class="sig-name descname">workflow_endpoint_ip_addresses</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.logicapps.GetWorkflowResult.workflow_endpoint_ip_addresses" title="Permalink to this definition">¶</a></dt>
 <dd><p>The list of access endpoint ip addresses of workflow.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.logicapps.GetWorkflowResult.workflow_outbound_ip_addresses">
 <code class="sig-name descname">workflow_outbound_ip_addresses</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.logicapps.GetWorkflowResult.workflow_outbound_ip_addresses" title="Permalink to this definition">¶</a></dt>
 <dd><p>The list of outgoing ip addresses of workflow.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.logicapps.GetWorkflowResult.workflow_schema">
 <code class="sig-name descname">workflow_schema</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.logicapps.GetWorkflowResult.workflow_schema" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Schema used for this Logic App Workflow.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.logicapps.GetWorkflowResult.workflow_version">
 <code class="sig-name descname">workflow_version</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.logicapps.GetWorkflowResult.workflow_version" title="Permalink to this definition">¶</a></dt>
 <dd><p>The version of the Schema used for this Logic App Workflow. Defaults to <code class="docutils literal notranslate"><span class="pre">1.0.0.0</span></code>.</p>
@@ -294,9 +294,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_azure.logicapps.TriggerCustom">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.logicapps.</code><code class="sig-name descname">TriggerCustom</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">body=None</em>, <em class="sig-param">logic_app_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.logicapps.TriggerCustom" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.logicapps.</code><code class="sig-name descname">TriggerCustom</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">body</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">logic_app_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.logicapps.TriggerCustom" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Custom Trigger within a Logic App Workflow</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -309,27 +309,27 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.logicapps.TriggerCustom.body">
-<code class="sig-name descname">body</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.logicapps.TriggerCustom.body" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">body</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.logicapps.TriggerCustom.body" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies the JSON Blob defining the Body of this Custom Trigger.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.logicapps.TriggerCustom.logic_app_id">
-<code class="sig-name descname">logic_app_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.logicapps.TriggerCustom.logic_app_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">logic_app_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.logicapps.TriggerCustom.logic_app_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies the ID of the Logic App Workflow. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.logicapps.TriggerCustom.name">
-<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.logicapps.TriggerCustom.name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.logicapps.TriggerCustom.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies the name of the HTTP Trigger to be created within the Logic App Workflow. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_azure.logicapps.TriggerCustom.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">body=None</em>, <em class="sig-param">logic_app_id=None</em>, <em class="sig-param">name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.logicapps.TriggerCustom.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">body</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">logic_app_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.logicapps.TriggerCustom.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing TriggerCustom resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -346,9 +346,9 @@ properties used to qualify the lookup.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_azure.logicapps.TriggerCustom.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.logicapps.TriggerCustom.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.logicapps.TriggerCustom.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -364,9 +364,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_azure.logicapps.TriggerCustom.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.logicapps.TriggerCustom.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.logicapps.TriggerCustom.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -384,9 +384,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_azure.logicapps.TriggerHttpRequest">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.logicapps.</code><code class="sig-name descname">TriggerHttpRequest</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">logic_app_id=None</em>, <em class="sig-param">method=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">relative_path=None</em>, <em class="sig-param">schema=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.logicapps.TriggerHttpRequest" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.logicapps.</code><code class="sig-name descname">TriggerHttpRequest</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">logic_app_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">method</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">relative_path</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">schema</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.logicapps.TriggerHttpRequest" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a HTTP Request Trigger within a Logic App Workflow</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -401,39 +401,39 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.logicapps.TriggerHttpRequest.logic_app_id">
-<code class="sig-name descname">logic_app_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.logicapps.TriggerHttpRequest.logic_app_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">logic_app_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.logicapps.TriggerHttpRequest.logic_app_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies the ID of the Logic App Workflow. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.logicapps.TriggerHttpRequest.method">
-<code class="sig-name descname">method</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.logicapps.TriggerHttpRequest.method" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">method</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.logicapps.TriggerHttpRequest.method" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies the HTTP Method which the request be using. Possible values include <code class="docutils literal notranslate"><span class="pre">DELETE</span></code>, <code class="docutils literal notranslate"><span class="pre">GET</span></code>, <code class="docutils literal notranslate"><span class="pre">PATCH</span></code>, <code class="docutils literal notranslate"><span class="pre">POST</span></code> or <code class="docutils literal notranslate"><span class="pre">PUT</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.logicapps.TriggerHttpRequest.name">
-<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.logicapps.TriggerHttpRequest.name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.logicapps.TriggerHttpRequest.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies the name of the HTTP Request Trigger to be created within the Logic App Workflow. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.logicapps.TriggerHttpRequest.relative_path">
-<code class="sig-name descname">relative_path</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.logicapps.TriggerHttpRequest.relative_path" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">relative_path</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.logicapps.TriggerHttpRequest.relative_path" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies the Relative Path used for this Request.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.logicapps.TriggerHttpRequest.schema">
-<code class="sig-name descname">schema</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.logicapps.TriggerHttpRequest.schema" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">schema</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.logicapps.TriggerHttpRequest.schema" title="Permalink to this definition">¶</a></dt>
 <dd><p>A JSON Blob defining the Schema of the incoming request. This needs to be valid JSON.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_azure.logicapps.TriggerHttpRequest.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">logic_app_id=None</em>, <em class="sig-param">method=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">relative_path=None</em>, <em class="sig-param">schema=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.logicapps.TriggerHttpRequest.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">logic_app_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">method</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">relative_path</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">schema</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.logicapps.TriggerHttpRequest.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing TriggerHttpRequest resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -452,9 +452,9 @@ properties used to qualify the lookup.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_azure.logicapps.TriggerHttpRequest.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.logicapps.TriggerHttpRequest.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.logicapps.TriggerHttpRequest.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -470,9 +470,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_azure.logicapps.TriggerHttpRequest.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.logicapps.TriggerHttpRequest.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.logicapps.TriggerHttpRequest.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -490,9 +490,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_azure.logicapps.TriggerRecurrence">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.logicapps.</code><code class="sig-name descname">TriggerRecurrence</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">frequency=None</em>, <em class="sig-param">interval=None</em>, <em class="sig-param">logic_app_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">start_time=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.logicapps.TriggerRecurrence" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.logicapps.</code><code class="sig-name descname">TriggerRecurrence</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">frequency</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">interval</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">logic_app_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">start_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.logicapps.TriggerRecurrence" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Recurrence Trigger within a Logic App Workflow</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -507,39 +507,39 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.logicapps.TriggerRecurrence.frequency">
-<code class="sig-name descname">frequency</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.logicapps.TriggerRecurrence.frequency" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">frequency</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.logicapps.TriggerRecurrence.frequency" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies the Frequency at which this Trigger should be run. Possible values include <code class="docutils literal notranslate"><span class="pre">Month</span></code>, <code class="docutils literal notranslate"><span class="pre">Week</span></code>, <code class="docutils literal notranslate"><span class="pre">Day</span></code>, <code class="docutils literal notranslate"><span class="pre">Hour</span></code>, <code class="docutils literal notranslate"><span class="pre">Minute</span></code> and <code class="docutils literal notranslate"><span class="pre">Second</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.logicapps.TriggerRecurrence.interval">
-<code class="sig-name descname">interval</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.logicapps.TriggerRecurrence.interval" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">interval</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.logicapps.TriggerRecurrence.interval" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies interval used for the Frequency, for example a value of <code class="docutils literal notranslate"><span class="pre">4</span></code> for <code class="docutils literal notranslate"><span class="pre">interval</span></code> and <code class="docutils literal notranslate"><span class="pre">hour</span></code> for <code class="docutils literal notranslate"><span class="pre">frequency</span></code> would run the Trigger every 4 hours.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.logicapps.TriggerRecurrence.logic_app_id">
-<code class="sig-name descname">logic_app_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.logicapps.TriggerRecurrence.logic_app_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">logic_app_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.logicapps.TriggerRecurrence.logic_app_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies the ID of the Logic App Workflow. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.logicapps.TriggerRecurrence.name">
-<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.logicapps.TriggerRecurrence.name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.logicapps.TriggerRecurrence.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies the name of the Recurrence Triggers to be created within the Logic App Workflow. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.logicapps.TriggerRecurrence.start_time">
-<code class="sig-name descname">start_time</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.logicapps.TriggerRecurrence.start_time" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">start_time</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.logicapps.TriggerRecurrence.start_time" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies the start date and time for this trigger in RFC3339 format: <code class="docutils literal notranslate"><span class="pre">2000-01-02T03:04:05Z</span></code>.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_azure.logicapps.TriggerRecurrence.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">frequency=None</em>, <em class="sig-param">interval=None</em>, <em class="sig-param">logic_app_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">start_time=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.logicapps.TriggerRecurrence.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">frequency</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">interval</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">logic_app_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">start_time</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.logicapps.TriggerRecurrence.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing TriggerRecurrence resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -558,9 +558,9 @@ properties used to qualify the lookup.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_azure.logicapps.TriggerRecurrence.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.logicapps.TriggerRecurrence.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.logicapps.TriggerRecurrence.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -576,9 +576,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_azure.logicapps.TriggerRecurrence.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.logicapps.TriggerRecurrence.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.logicapps.TriggerRecurrence.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -596,9 +596,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_azure.logicapps.Workflow">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.logicapps.</code><code class="sig-name descname">Workflow</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">parameters=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">workflow_schema=None</em>, <em class="sig-param">workflow_version=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.logicapps.Workflow" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.logicapps.</code><code class="sig-name descname">Workflow</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">parameters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">workflow_schema</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">workflow_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.logicapps.Workflow" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Logic App Workflow.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -615,81 +615,81 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.logicapps.Workflow.access_endpoint">
-<code class="sig-name descname">access_endpoint</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.logicapps.Workflow.access_endpoint" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">access_endpoint</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.logicapps.Workflow.access_endpoint" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Access Endpoint for the Logic App Workflow.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.logicapps.Workflow.connector_endpoint_ip_addresses">
-<code class="sig-name descname">connector_endpoint_ip_addresses</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.logicapps.Workflow.connector_endpoint_ip_addresses" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">connector_endpoint_ip_addresses</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.logicapps.Workflow.connector_endpoint_ip_addresses" title="Permalink to this definition">¶</a></dt>
 <dd><p>The list of access endpoint ip addresses of connector.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.logicapps.Workflow.connector_outbound_ip_addresses">
-<code class="sig-name descname">connector_outbound_ip_addresses</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.logicapps.Workflow.connector_outbound_ip_addresses" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">connector_outbound_ip_addresses</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.logicapps.Workflow.connector_outbound_ip_addresses" title="Permalink to this definition">¶</a></dt>
 <dd><p>The list of outgoing ip addresses of connector.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.logicapps.Workflow.location">
-<code class="sig-name descname">location</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.logicapps.Workflow.location" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">location</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.logicapps.Workflow.location" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies the supported Azure location where the Logic App Workflow exists. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.logicapps.Workflow.name">
-<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.logicapps.Workflow.name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.logicapps.Workflow.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies the name of the Logic App Workflow. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.logicapps.Workflow.parameters">
-<code class="sig-name descname">parameters</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.logicapps.Workflow.parameters" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">parameters</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.logicapps.Workflow.parameters" title="Permalink to this definition">¶</a></dt>
 <dd><p>A map of Key-Value pairs.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.logicapps.Workflow.resource_group_name">
-<code class="sig-name descname">resource_group_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.logicapps.Workflow.resource_group_name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">resource_group_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.logicapps.Workflow.resource_group_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the Resource Group in which the Logic App Workflow should be created. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.logicapps.Workflow.tags">
-<code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.logicapps.Workflow.tags" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">tags</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.logicapps.Workflow.tags" title="Permalink to this definition">¶</a></dt>
 <dd><p>A mapping of tags to assign to the resource.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.logicapps.Workflow.workflow_endpoint_ip_addresses">
-<code class="sig-name descname">workflow_endpoint_ip_addresses</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.logicapps.Workflow.workflow_endpoint_ip_addresses" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">workflow_endpoint_ip_addresses</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.logicapps.Workflow.workflow_endpoint_ip_addresses" title="Permalink to this definition">¶</a></dt>
 <dd><p>The list of access endpoint ip addresses of workflow.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.logicapps.Workflow.workflow_outbound_ip_addresses">
-<code class="sig-name descname">workflow_outbound_ip_addresses</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.logicapps.Workflow.workflow_outbound_ip_addresses" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">workflow_outbound_ip_addresses</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.logicapps.Workflow.workflow_outbound_ip_addresses" title="Permalink to this definition">¶</a></dt>
 <dd><p>The list of outgoing ip addresses of workflow.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.logicapps.Workflow.workflow_schema">
-<code class="sig-name descname">workflow_schema</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.logicapps.Workflow.workflow_schema" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">workflow_schema</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.logicapps.Workflow.workflow_schema" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies the Schema to use for this Logic App Workflow. Defaults to <code class="docutils literal notranslate"><span class="pre">https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#</span></code>. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.logicapps.Workflow.workflow_version">
-<code class="sig-name descname">workflow_version</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.logicapps.Workflow.workflow_version" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">workflow_version</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.logicapps.Workflow.workflow_version" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies the version of the Schema used for this Logic App Workflow. Defaults to <code class="docutils literal notranslate"><span class="pre">1.0.0.0</span></code>. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_azure.logicapps.Workflow.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">access_endpoint=None</em>, <em class="sig-param">connector_endpoint_ip_addresses=None</em>, <em class="sig-param">connector_outbound_ip_addresses=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">parameters=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">workflow_endpoint_ip_addresses=None</em>, <em class="sig-param">workflow_outbound_ip_addresses=None</em>, <em class="sig-param">workflow_schema=None</em>, <em class="sig-param">workflow_version=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.logicapps.Workflow.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">access_endpoint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">connector_endpoint_ip_addresses</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">connector_outbound_ip_addresses</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">parameters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">workflow_endpoint_ip_addresses</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">workflow_outbound_ip_addresses</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">workflow_schema</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">workflow_version</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.logicapps.Workflow.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Workflow resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -715,9 +715,9 @@ properties used to qualify the lookup.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_azure.logicapps.Workflow.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.logicapps.Workflow.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.logicapps.Workflow.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -733,9 +733,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_azure.logicapps.Workflow.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.logicapps.Workflow.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.logicapps.Workflow.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -753,9 +753,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="pulumi_azure.logicapps.get_workflow">
-<code class="sig-prename descclassname">pulumi_azure.logicapps.</code><code class="sig-name descname">get_workflow</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.logicapps.get_workflow" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pulumi_azure.logicapps.</code><code class="sig-name descname">get_workflow</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.logicapps.get_workflow" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Logic App Workflow.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
