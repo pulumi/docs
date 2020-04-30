@@ -135,21 +135,31 @@ func main() {
 {{% choosable language csharp %}}
 ```csharp
 using Pulumi;
-using Pulumi.Aws.Kms;
-using System.Threading.Tasks;
+using Kms = Pulumi.Aws.Kms;
 
-class Program {
-    static Task Main() {
-        return Deployment.RunAsync(() => {
-            var key = new Key("stack-encryption-key", new KeyArgs {
-                DeletionWindowInDays = 10,
-                Description = "KMS key for encrypting Pulumi secret values"
-            });
-            var alias = new Pulumi.Aws.Kms.Alias("alias/stack-encryption-key", new AliasArgs{
-                TargetKeyId = key.KeyId
-            });
+class KeyStack : Stack
+{
+    public KeyStack()
+    {
+        // Create a new KMS key
+        var key = new Kms.Key("stack-encryption-key", new Kms.KeyArgs
+        {
+            DeletionWindowInDays = 10,
+            Description = "KMS key for encrypting Pulumi secret values"
         });
+
+        // Create a new alias to the key
+        var alias = new Kms.Alias("alias/stack-encryption-key", new Kms.AliasArgs
+        {
+            TargetKeyId = key.KeyId
+        });
+
+        this.KeyArn = key.Arn;
+        this.AliasArn = alias.Arn;
     }
+
+    [Output("keyArn")] public Output<string> KeyArn { get; set; }
+    [Output("aliasArn")] public Output<string> AliasArn { get; set; }
 }
 ```
 {{% /choosable %}}
@@ -460,7 +470,63 @@ func main() {
 
 {{% choosable language csharp %}}
 ```csharp
-<insert csharp here>
+using Pulumi;
+using Kms = Pulumi.Aws.Kms;
+
+class KeyStack : Stack
+{
+    public KeyStack()
+    {
+        var config = new Config();
+        var iamRole = config.Require("iamRole");
+        var accountID = config.Require("accountID");
+
+        var keyPolicy = $@"{{
+            ""Version"": ""2012-10-17"",
+            ""Id"": ""policy"",
+            ""Statement"": [
+            {{
+                ""Sid"": ""AllowGetKeys"",
+                ""Effect"": ""Allow"",
+                ""Action"": [""kms:Describe*"", ""kms:Get*"", ""kms:List*""],
+                ""Principal"": {{
+                    ""AWS"": [""arn:aws:iam::{accountID}:root""]
+                }},
+                ""Resource"": ""*""
+            }},
+            {{
+                ""Sid"": ""AllowIAMUserAccessKeys"",
+                ""Effect"": ""Allow"",
+                ""Action"": [""kms:*""],
+                ""Principal"": {{
+                    ""AWS"": ""{iamRole}""
+                }},
+                ""Resource"": ""*""
+            }}
+            ]
+        }}";
+
+        // Create a new KMS key
+        var key = new Kms.Key("stack-encryption-key", new Kms.KeyArgs
+        {
+            DeletionWindowInDays = 10,
+            Description = "KMS key for encrypting Pulumi secret values",
+            Policy = keyPolicy
+        });
+
+        // Create a new alias to the key
+        var alias = new Kms.Alias("alias/stack-encryption-key", new Kms.AliasArgs
+        {
+            TargetKeyId = key.KeyId
+        });
+
+        this.KeyArn = key.Arn;
+        this.AliasArn = alias.Arn;
+    }
+
+    [Output("keyArn")] public Output<string> KeyArn { get; set; }
+    [Output("aliasArn")] public Output<string> AliasArn { get; set; }
+}
 ```
 {{% /choosable %}}
 
@@ -567,7 +633,18 @@ func main() {
 {{% choosable language csharp %}}
 
 ```csharp
-<insert csharp here>
+using Pulumi;
+
+class AnotherStack : Stack
+{
+    public AnotherStack()
+    {
+        var config = new Config();
+        this.SuperSecret = Output.Create(config.Require("supersecret"));
+    }
+
+    [Output("superSecret")] public Output<string> SuperSecret { get; set; }
+}
 ```
 {{% /choosable %}}
 
