@@ -13,9 +13,9 @@ notitle: true
 <a class="reference external" href="https://github.com/pulumi/pulumi-gcp/issues">pulumi/pulumi-gcp repo</a>; however, if that doesn’t turn up
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/issues">terraform-providers/terraform-provider-google repo</a>.</p>
 </div></blockquote>
-<span class="target" id="module-pulumi_gcp.datafusion"></span><dl class="class">
+<span class="target" id="module-pulumi_gcp.datafusion"></span><dl class="py class">
 <dt id="pulumi_gcp.datafusion.Instance">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.datafusion.</code><code class="sig-name descname">Instance</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">enable_stackdriver_logging=None</em>, <em class="sig-param">enable_stackdriver_monitoring=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_config=None</em>, <em class="sig-param">options=None</em>, <em class="sig-param">private_instance=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.datafusion.Instance" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.datafusion.</code><code class="sig-name descname">Instance</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_stackdriver_logging</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_stackdriver_monitoring</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">options</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_instance</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.datafusion.Instance" title="Permalink to this definition">¶</a></dt>
 <dd><p>Represents a Data Fusion instance.</p>
 <p>To get more information about Instance, see:</p>
 <ul class="simple">
@@ -65,46 +65,46 @@ nodes. This range must not overlap with any other ranges used in the Data Fusion
 will be peered for executing pipelines. In case of shared VPC where the network resides in another host
 project the network should specified in the form of projects/{host-project-id}/global/networks/{network}</p></li>
 </ul>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.datafusion.Instance.create_time">
-<code class="sig-name descname">create_time</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.datafusion.Instance.create_time" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">create_time</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.datafusion.Instance.create_time" title="Permalink to this definition">¶</a></dt>
 <dd><p>The time the instance was created in RFC3339 UTC “Zulu” format, accurate to nanoseconds.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.datafusion.Instance.description">
-<code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.datafusion.Instance.description" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">description</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.datafusion.Instance.description" title="Permalink to this definition">¶</a></dt>
 <dd><p>An optional description of the instance.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.datafusion.Instance.enable_stackdriver_logging">
-<code class="sig-name descname">enable_stackdriver_logging</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.datafusion.Instance.enable_stackdriver_logging" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">enable_stackdriver_logging</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.datafusion.Instance.enable_stackdriver_logging" title="Permalink to this definition">¶</a></dt>
 <dd><p>Option to enable Stackdriver Logging.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.datafusion.Instance.enable_stackdriver_monitoring">
-<code class="sig-name descname">enable_stackdriver_monitoring</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.datafusion.Instance.enable_stackdriver_monitoring" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">enable_stackdriver_monitoring</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.datafusion.Instance.enable_stackdriver_monitoring" title="Permalink to this definition">¶</a></dt>
 <dd><p>Option to enable Stackdriver Monitoring.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.datafusion.Instance.labels">
-<code class="sig-name descname">labels</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.datafusion.Instance.labels" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">labels</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.datafusion.Instance.labels" title="Permalink to this definition">¶</a></dt>
 <dd><p>The resource labels for instance to use to annotate any related underlying resources,
 such as Compute Engine VMs.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.datafusion.Instance.name">
-<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.datafusion.Instance.name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.datafusion.Instance.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ID of the instance or a fully qualified identifier for the instance.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.datafusion.Instance.network_config">
-<code class="sig-name descname">network_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.datafusion.Instance.network_config" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">network_config</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.datafusion.Instance.network_config" title="Permalink to this definition">¶</a></dt>
 <dd><p>Network configuration options. These are required when a private Data Fusion instance is to be created.  Structure is documented below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">ipAllocation</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The IP range in CIDR notation to use for the managed Data Fusion instance
@@ -115,62 +115,62 @@ project the network should specified in the form of projects/{host-project-id}/g
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.datafusion.Instance.options">
-<code class="sig-name descname">options</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.datafusion.Instance.options" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">options</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.datafusion.Instance.options" title="Permalink to this definition">¶</a></dt>
 <dd><p>Map of additional options used to configure the behavior of Data Fusion instance.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.datafusion.Instance.private_instance">
-<code class="sig-name descname">private_instance</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.datafusion.Instance.private_instance" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">private_instance</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.datafusion.Instance.private_instance" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies whether the Data Fusion instance should be private. If set to
 true, all Data Fusion nodes will have private IP addresses and will not be
 able to access the public internet.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.datafusion.Instance.project">
-<code class="sig-name descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.datafusion.Instance.project" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">project</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.datafusion.Instance.project" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.datafusion.Instance.region">
-<code class="sig-name descname">region</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.datafusion.Instance.region" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">region</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.datafusion.Instance.region" title="Permalink to this definition">¶</a></dt>
 <dd><p>The region of the Data Fusion instance.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.datafusion.Instance.service_account">
-<code class="sig-name descname">service_account</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.datafusion.Instance.service_account" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">service_account</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.datafusion.Instance.service_account" title="Permalink to this definition">¶</a></dt>
 <dd><p>Service account which will be used to access resources in the customer project.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.datafusion.Instance.service_endpoint">
-<code class="sig-name descname">service_endpoint</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.datafusion.Instance.service_endpoint" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">service_endpoint</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.datafusion.Instance.service_endpoint" title="Permalink to this definition">¶</a></dt>
 <dd><p>Endpoint on which the Data Fusion UI and REST APIs are accessible.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.datafusion.Instance.state">
-<code class="sig-name descname">state</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.datafusion.Instance.state" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">state</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.datafusion.Instance.state" title="Permalink to this definition">¶</a></dt>
 <dd><p>The current state of this Data Fusion instance. - CREATING: Instance is being created - RUNNING: Instance is running and
 ready for requests - FAILED: Instance creation failed - DELETING: Instance is being deleted - UPGRADING: Instance is
 being upgraded - RESTARTING: Instance is being restarted</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.datafusion.Instance.state_message">
-<code class="sig-name descname">state_message</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.datafusion.Instance.state_message" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">state_message</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.datafusion.Instance.state_message" title="Permalink to this definition">¶</a></dt>
 <dd><p>Additional information about the current state of this Data Fusion instance if available.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.datafusion.Instance.type">
-<code class="sig-name descname">type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.datafusion.Instance.type" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">type</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.datafusion.Instance.type" title="Permalink to this definition">¶</a></dt>
 <dd><p>Represents the type of Data Fusion instance. Each type is configured with
 the default settings for processing and memory.</p>
 <ul class="simple">
@@ -182,21 +182,21 @@ available, such as support for streaming pipelines, higher number of concurrent 
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.datafusion.Instance.update_time">
-<code class="sig-name descname">update_time</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.datafusion.Instance.update_time" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">update_time</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.datafusion.Instance.update_time" title="Permalink to this definition">¶</a></dt>
 <dd><p>The time the instance was last updated in RFC3339 UTC “Zulu” format, accurate to nanoseconds.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.datafusion.Instance.version">
-<code class="sig-name descname">version</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.datafusion.Instance.version" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">version</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.datafusion.Instance.version" title="Permalink to this definition">¶</a></dt>
 <dd><p>Current version of the Data Fusion.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_gcp.datafusion.Instance.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">create_time=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">enable_stackdriver_logging=None</em>, <em class="sig-param">enable_stackdriver_monitoring=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_config=None</em>, <em class="sig-param">options=None</em>, <em class="sig-param">private_instance=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">service_account=None</em>, <em class="sig-param">service_endpoint=None</em>, <em class="sig-param">state=None</em>, <em class="sig-param">state_message=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">update_time=None</em>, <em class="sig-param">version=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.datafusion.Instance.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">create_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_stackdriver_logging</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_stackdriver_monitoring</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">options</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_instance</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_account</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_endpoint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state_message</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">update_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">version</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.datafusion.Instance.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Instance resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -256,9 +256,9 @@ project the network should specified in the form of projects/{host-project-id}/g
 </ul>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_gcp.datafusion.Instance.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.datafusion.Instance.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.datafusion.Instance.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -274,9 +274,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_gcp.datafusion.Instance.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.datafusion.Instance.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.datafusion.Instance.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">

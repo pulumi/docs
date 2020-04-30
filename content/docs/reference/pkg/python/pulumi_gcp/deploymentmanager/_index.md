@@ -13,9 +13,9 @@ notitle: true
 <a class="reference external" href="https://github.com/pulumi/pulumi-gcp/issues">pulumi/pulumi-gcp repo</a>; however, if that doesn’t turn up
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/issues">terraform-providers/terraform-provider-google repo</a>.</p>
 </div></blockquote>
-<span class="target" id="module-pulumi_gcp.deploymentmanager"></span><dl class="class">
+<span class="target" id="module-pulumi_gcp.deploymentmanager"></span><dl class="py class">
 <dt id="pulumi_gcp.deploymentmanager.Deployment">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.deploymentmanager.</code><code class="sig-name descname">Deployment</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">create_policy=None</em>, <em class="sig-param">delete_policy=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">preview=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">target=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.deploymentmanager.Deployment" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.deploymentmanager.</code><code class="sig-name descname">Deployment</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">create_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">delete_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">preview</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">target</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.deploymentmanager.Deployment" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of resources that are deployed and managed together using
 a configuration file</p>
 <blockquote>
@@ -86,9 +86,9 @@ configuration.</p></li>
 </ul>
 </li>
 </ul>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.deploymentmanager.Deployment.create_policy">
-<code class="sig-name descname">create_policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.deploymentmanager.Deployment.create_policy" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">create_policy</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.deploymentmanager.Deployment.create_policy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set the policy to use for creating new resources. Only used on
 create and update. Valid values are <code class="docutils literal notranslate"><span class="pre">CREATE_OR_ACQUIRE</span></code> (default) or
 <code class="docutils literal notranslate"><span class="pre">ACQUIRE</span></code>. If set to <code class="docutils literal notranslate"><span class="pre">ACQUIRE</span></code> and resources do not already exist,
@@ -96,9 +96,9 @@ the deployment will fail. Note that updating this field does not
 actually affect the deployment, just how it is updated.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.deploymentmanager.Deployment.delete_policy">
-<code class="sig-name descname">delete_policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.deploymentmanager.Deployment.delete_policy" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">delete_policy</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.deploymentmanager.Deployment.delete_policy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set the policy to use for deleting new resources on update/delete.
 Valid values are <code class="docutils literal notranslate"><span class="pre">DELETE</span></code> (default) or <code class="docutils literal notranslate"><span class="pre">ABANDON</span></code>. If <code class="docutils literal notranslate"><span class="pre">DELETE</span></code>,
 resource is deleted after removal from Deployment Manager. If
@@ -107,21 +107,21 @@ and is not actually deleted. Note that updating this field does not
 actually change the deployment, just how it is updated.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.deploymentmanager.Deployment.deployment_id">
-<code class="sig-name descname">deployment_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.deploymentmanager.Deployment.deployment_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">deployment_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.deploymentmanager.Deployment.deployment_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>Unique identifier for deployment. Output only.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.deploymentmanager.Deployment.description">
-<code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.deploymentmanager.Deployment.description" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">description</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.deploymentmanager.Deployment.description" title="Permalink to this definition">¶</a></dt>
 <dd><p>Optional user-provided description of deployment.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.deploymentmanager.Deployment.labels">
-<code class="sig-name descname">labels</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.deploymentmanager.Deployment.labels" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">labels</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.deploymentmanager.Deployment.labels" title="Permalink to this definition">¶</a></dt>
 <dd><p>Key-value pairs to apply to this labels.  Structure is documented below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Key for label.</p></li>
@@ -129,22 +129,22 @@ actually change the deployment, just how it is updated.</p>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.deploymentmanager.Deployment.manifest">
-<code class="sig-name descname">manifest</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.deploymentmanager.Deployment.manifest" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">manifest</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.deploymentmanager.Deployment.manifest" title="Permalink to this definition">¶</a></dt>
 <dd><p>Output only. URL of the manifest representing the last manifest that was successfully deployed.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.deploymentmanager.Deployment.name">
-<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.deploymentmanager.Deployment.name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.deploymentmanager.Deployment.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the template to import, as declared in the YAML
 configuration.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.deploymentmanager.Deployment.preview">
-<code class="sig-name descname">preview</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.deploymentmanager.Deployment.preview" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">preview</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.deploymentmanager.Deployment.preview" title="Permalink to this definition">¶</a></dt>
 <dd><p>If set to true, a deployment is created with “shell” resources
 that are not actually instantiated. This allows you to preview a
 deployment. It can be updated to false to actually deploy
@@ -155,22 +155,22 @@ the provider will force-recreate deployments if either preview is updated
 to true or if other fields are updated while preview is true.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.deploymentmanager.Deployment.project">
-<code class="sig-name descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.deploymentmanager.Deployment.project" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">project</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.deploymentmanager.Deployment.project" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.deploymentmanager.Deployment.self_link">
-<code class="sig-name descname">self_link</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.deploymentmanager.Deployment.self_link" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">self_link</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.deploymentmanager.Deployment.self_link" title="Permalink to this definition">¶</a></dt>
 <dd><p>Output only. Server defined URL for the resource.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.deploymentmanager.Deployment.target">
-<code class="sig-name descname">target</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.deploymentmanager.Deployment.target" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">target</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.deploymentmanager.Deployment.target" title="Permalink to this definition">¶</a></dt>
 <dd><p>Parameters that define your deployment, including the deployment
 configuration and relevant templates.  Structure is documented below.</p>
 <ul class="simple">
@@ -191,9 +191,9 @@ configuration.</p></li>
 </ul>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_gcp.deploymentmanager.Deployment.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">create_policy=None</em>, <em class="sig-param">delete_policy=None</em>, <em class="sig-param">deployment_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">manifest=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">preview=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">self_link=None</em>, <em class="sig-param">target=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.deploymentmanager.Deployment.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">create_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">delete_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">deployment_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">manifest</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">preview</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">self_link</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">target</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.deploymentmanager.Deployment.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Deployment resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -259,9 +259,9 @@ configuration.</p></li>
 </ul>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_gcp.deploymentmanager.Deployment.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.deploymentmanager.Deployment.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.deploymentmanager.Deployment.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -277,9 +277,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_gcp.deploymentmanager.Deployment.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.deploymentmanager.Deployment.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.deploymentmanager.Deployment.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
