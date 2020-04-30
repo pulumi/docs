@@ -15,7 +15,7 @@ easier, by removing much of the boilerplate out of the native cloud providers' d
 the YAML and configuration required for functions, and simplifies uploading code packs to the cloud. The Serverless Framework relies on
 the cloud provider's APIs or templating solutions for any provisioning or management beyond the functions themselves.
 
-Pulumi is more holistic than the Serverless Framework in its focus. In [Pulumi] ({{< relref "/" >}}), you write entire applications -- some parts of which may be serverless
+Pulumi is more holistic than the Serverless Framework in its focus. In Pulumi, you write entire applications -- some parts of which may be serverless
 functions -- but this might also include containers, databases, cloud services, or even virtual machines. It then uses
 an infrastructure-as-code approach to deploy, update, and generally manage these constellations of resources.
 
@@ -29,5 +29,3 @@ the Serverless Framework](
 https://serverless.com/blog/serverless-application-for-long-running-process-fargate-lambda/) takes about 38 pages
 of explanation, including manual steps and AWS CloudFormation; [the after code using Pulumi](
 https://github.com/pulumi/examples/tree/master/cloud-js-thumbnailer) is only about 38 lines of code.
-
-Follow our blog for updates on [new features] ({{< relref "/blog/tag/new-features" >}}), and if you have any questions about Pulumi, feel free to [contact us] ({{< relref "/contact" >}}) any time.
