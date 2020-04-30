@@ -12,17 +12,17 @@ tags:
     - security
 ---
 
-The secrets in your infrastructure are a vital part of your security model, and provisioning infrastructure is an inherently privileged process. Back in [Pulumi 0.17.12](https://www.pulumi.com/blog/managing-secrets-with-pulumi/) we introduced client-side secret encryption and started encrypting secret configuration values inside the Pulumi state so that users could be confident their passwords, tokens and other secret values were viewable only by them while managing their infrastructure.
+The secrets in your infrastructure are a vital part of your security model, and provisioning infrastructure is an inherently privileged process. [Previously](https://www.pulumi.com/blog/managing-secrets-with-pulumi/) we introduced client-side secret encryption and started encrypting secret configuration values inside the Pulumi state so that users could be confident their passwords, tokens and other secret values were viewable only by them while managing their infrastructure.
 Our first iteration of the client-side encryption used a passphrase for encrypting the secret, however, remembering that passphrase and sharing it securely with team members is less than ideal.
-That's why in our 0.17.28 release, we added support for "Cloud Secret Providers", giving users fill confidence that their sensitive values are for their eyes only.
+That's why we also added support for "Cloud Secret Providers", giving users full confidence that their sensitive values are for their eyes only.
 
 <!--more-->
 
-Pulumi supports encryption via [AWS KMS](https://aws.amazon.com/kms/), [Azure KeyVault](https://azure.microsoft.com/en-us/services/key-vault/), [Google Cloud KMS](https://cloud.google.com/kms) and [Hashicorp Vault](https://www.vaultproject.io/). This post shows you how to create an AWS KMS in a stack using Pulumi, and then use the key to encrypt values in subsequent stacks.
+Pulumi supports encryption via [AWS KMS](https://aws.amazon.com/kms/), [Azure KeyVault](https://azure.microsoft.com/en-us/services/key-vault/), [Google Cloud KMS](https://cloud.google.com/kms) and [Hashicorp Vault](https://www.vaultproject.io/). This post shows you _one_ example of using a cloud secret provider in a Pulumi stack using AWS KMS.
 
 ## Create a KMS Key
 
-First, we need to create our KMS key. We also want to set an alias on the key to make it easier to reference later:
+First, create a KMS key. We also can set an alias on the key to make it easier to reference later:
 {{< chooser language "javascript,typescript,python,go,csharp" >}}
 
 {{% choosable language typescript %}}
