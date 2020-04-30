@@ -27,3 +27,6 @@ node_modules
 # Ignore the Stencil component bundle.
 /static/js/components.js
 /static/js/components/
+
+# Python's virtual env dir.
+venv/
