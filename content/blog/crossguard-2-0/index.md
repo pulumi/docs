@@ -1,5 +1,5 @@
 ---
-title: "What's new with CrossGuard?"
+title: "New Policy as Code Capabilities with CrossGuard"
 date: 2020-05-05
 meta_desc: "New CrossGuard features part of Pulumi's 2.0 release"
 meta_image: config.png
@@ -16,17 +16,17 @@ In a [previous blog post]({{< relref "/blog/announcing-crossguard-preview" >}}),
 
 ## General Availability
 
-CrossGuard is now enabled for all enterprise organizations in the Pulumi Console and as always the open source offering is available for all to use.
+CrossGuard is enabled for enterprise organizations in the Pulumi Console, and as always, the open source offering is available for all to use.
 
 ### Improved CLI support
 
-We have added richer CLI support for CrossGuard. Organization administrators can now manage their Policy Packs from the CLI. In additional to being able to publish Policy Packs, you may now enable a Policy Pack by simply running:
+We have added richer CLI support for CrossGuard. Organization administrators can now manage their Policy Packs from the CLI. In addition to being able to publish Policy Packs, you may now enable a Policy Pack by simply running:
 
 ```bash
 $ pulumi policy enable <organization>/<pack-name> <version>
 ```
 
-This same command can be used upgrade an already enabled Policy Pack.
+This same command can be used to upgrade a previously enabled Policy Pack.
 
 Organization administrators may also disable a Policy Pack by running:
 
@@ -38,7 +38,7 @@ By default, the `enable` and `disable` commands use an organization's default Po
 
 ### Options, Parent, and Dependencies
 
-Policies now have access to more information about the resources under review. With access to the options, parent and dependencies of a resource, you can now write even more thorough policies.
+Policies now have access to more information about the resources under review. With access to the options, parent, and dependencies of a resource, you can now write even more thorough policies.
 
 You may access a [resource's options]({{< relref "/docs/intro/concepts/programming-model#resourceoptions" >}}) via the `ResourceValidationArgs` parameter. In the below example, we enforce that all DynamoDB tables be `protected` to prevent data loss.
 
@@ -59,7 +59,7 @@ new PolicyPack("aws-policies", {
 });
 ```
 
-Access to the parent and dependencies of a resource allow you to author policies about the relationship between resources. For example, you may want to make sure that each DynamoDB table in a stack has an attached scaling policy.
+Access to the parent and dependencies of a resource allows you to author policies about the relationship between resources. For example, you may want to make sure that each DynamoDB table in a stack has an attached scaling policy.
 
 ```typescript
 new PolicyPack("aws-policies", {
@@ -118,7 +118,7 @@ PolicyPack(
 
 And lastly, the feature I am most excited to share with you all is Configurable Policy Packs. Using configuration, you can author Policy Packs that are reusable and flexible for your organization's various needs.
 
-For example, you may have a policy that restricts the allowed EC2 instance types. This set of instance may vary between your non-production stack and production stacks.
+For example, you may have a policy that restricts the allowed EC2 instance types. This set of instances may vary between your non-production stack and production stacks.
 
 ```typescript
 new PolicyPack("aws-policies", {
@@ -151,7 +151,7 @@ new PolicyPack("aws-policies", {
 });
 ```
 
-Using configuration, you can make this deviation, allowing larger, more costly instances only in production. We can enable this configurable Policy Pack for our Policy Group `prod-stacks` using configuration that allows for other instance types.
+Using this configuration, you can make this deviation, allowing larger, more costly instances only in production. We can enable this configurable Policy Pack for our Policy Group `prod-stacks` using configuration that allows for other instance types.
 
 ```json
 {
@@ -181,6 +181,6 @@ We've invested in improving the user experience for authoring and managing polic
 * [Getting Started with CrossGuard]({{< relref "/docs/get-started/crossguard" >}})
 * [Example Policy Packs](https://github.com/pulumi/examples/tree/master/policy-packs)
 
-The Getting Started with Policy as Code webinar recording is also a great resource for seeing these features in action.
+The Getting Started with Policy as Code webinar recording is also a excellent resource for seeing these features in action.
 
 {{< youtube "_8YYfhtTs94" >}}
