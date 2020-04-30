@@ -13,33 +13,33 @@ notitle: true
 <a class="reference external" href="https://github.com/pulumi/pulumi-aws/issues">pulumi/pulumi-aws repo</a>; however, if that doesn’t turn up
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/issues">terraform-providers/terraform-provider-aws repo</a>.</p>
 </div></blockquote>
-<span class="target" id="module-pulumi_aws.cloudformation"></span><dl class="class">
+<span class="target" id="module-pulumi_aws.cloudformation"></span><dl class="py class">
 <dt id="pulumi_aws.cloudformation.AwaitableGetExportResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.cloudformation.</code><code class="sig-name descname">AwaitableGetExportResult</code><span class="sig-paren">(</span><em class="sig-param">exporting_stack_id=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">value=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudformation.AwaitableGetExportResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.cloudformation.</code><code class="sig-name descname">AwaitableGetExportResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">exporting_stack_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">value</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudformation.AwaitableGetExportResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_aws.cloudformation.AwaitableGetStackResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.cloudformation.</code><code class="sig-name descname">AwaitableGetStackResult</code><span class="sig-paren">(</span><em class="sig-param">capabilities=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">disable_rollback=None</em>, <em class="sig-param">iam_role_arn=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">notification_arns=None</em>, <em class="sig-param">outputs=None</em>, <em class="sig-param">parameters=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">template_body=None</em>, <em class="sig-param">timeout_in_minutes=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudformation.AwaitableGetStackResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.cloudformation.</code><code class="sig-name descname">AwaitableGetStackResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">capabilities</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">disable_rollback</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">iam_role_arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">notification_arns</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">outputs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">parameters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">template_body</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">timeout_in_minutes</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudformation.AwaitableGetStackResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_aws.cloudformation.GetExportResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.cloudformation.</code><code class="sig-name descname">GetExportResult</code><span class="sig-paren">(</span><em class="sig-param">exporting_stack_id=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">value=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudformation.GetExportResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.cloudformation.</code><code class="sig-name descname">GetExportResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">exporting_stack_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">value</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudformation.GetExportResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getExport.</p>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.cloudformation.GetExportResult.exporting_stack_id">
 <code class="sig-name descname">exporting_stack_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudformation.GetExportResult.exporting_stack_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The exporting_stack_id (AWS ARNs) equivalent <code class="docutils literal notranslate"><span class="pre">ExportingStackId</span></code> from <a class="reference external" href="http://docs.aws.amazon.com/cli/latest/reference/cloudformation/list-exports.html">list-exports</a></p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.cloudformation.GetExportResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudformation.GetExportResult.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.cloudformation.GetExportResult.value">
 <code class="sig-name descname">value</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudformation.GetExportResult.value" title="Permalink to this definition">¶</a></dt>
 <dd><p>The value from Cloudformation export identified by the export name found from <a class="reference external" href="http://docs.aws.amazon.com/cli/latest/reference/cloudformation/list-exports.html">list-exports</a></p>
@@ -47,71 +47,71 @@ anything, please consult the source <a class="reference external" href="https://
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_aws.cloudformation.GetStackResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.cloudformation.</code><code class="sig-name descname">GetStackResult</code><span class="sig-paren">(</span><em class="sig-param">capabilities=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">disable_rollback=None</em>, <em class="sig-param">iam_role_arn=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">notification_arns=None</em>, <em class="sig-param">outputs=None</em>, <em class="sig-param">parameters=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">template_body=None</em>, <em class="sig-param">timeout_in_minutes=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudformation.GetStackResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.cloudformation.</code><code class="sig-name descname">GetStackResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">capabilities</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">disable_rollback</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">iam_role_arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">notification_arns</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">outputs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">parameters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">template_body</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">timeout_in_minutes</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudformation.GetStackResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getStack.</p>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.cloudformation.GetStackResult.capabilities">
 <code class="sig-name descname">capabilities</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudformation.GetStackResult.capabilities" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of capabilities</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.cloudformation.GetStackResult.description">
 <code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudformation.GetStackResult.description" title="Permalink to this definition">¶</a></dt>
 <dd><p>Description of the stack</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.cloudformation.GetStackResult.disable_rollback">
 <code class="sig-name descname">disable_rollback</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudformation.GetStackResult.disable_rollback" title="Permalink to this definition">¶</a></dt>
 <dd><p>Whether the rollback of the stack is disabled when stack creation fails</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.cloudformation.GetStackResult.iam_role_arn">
 <code class="sig-name descname">iam_role_arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudformation.GetStackResult.iam_role_arn" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ARN of the IAM role used to create the stack.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.cloudformation.GetStackResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudformation.GetStackResult.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.cloudformation.GetStackResult.notification_arns">
 <code class="sig-name descname">notification_arns</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudformation.GetStackResult.notification_arns" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of SNS topic ARNs to publish stack related events</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.cloudformation.GetStackResult.outputs">
 <code class="sig-name descname">outputs</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudformation.GetStackResult.outputs" title="Permalink to this definition">¶</a></dt>
 <dd><p>A map of outputs from the stack.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.cloudformation.GetStackResult.parameters">
 <code class="sig-name descname">parameters</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudformation.GetStackResult.parameters" title="Permalink to this definition">¶</a></dt>
 <dd><p>A map of parameters that specify input parameters for the stack.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.cloudformation.GetStackResult.tags">
 <code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudformation.GetStackResult.tags" title="Permalink to this definition">¶</a></dt>
 <dd><p>A map of tags associated with this stack.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.cloudformation.GetStackResult.template_body">
 <code class="sig-name descname">template_body</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudformation.GetStackResult.template_body" title="Permalink to this definition">¶</a></dt>
 <dd><p>Structure containing the template body.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.cloudformation.GetStackResult.timeout_in_minutes">
 <code class="sig-name descname">timeout_in_minutes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudformation.GetStackResult.timeout_in_minutes" title="Permalink to this definition">¶</a></dt>
 <dd><p>The amount of time that can pass before the stack status becomes <code class="docutils literal notranslate"><span class="pre">CREATE_FAILED</span></code></p>
@@ -119,9 +119,9 @@ anything, please consult the source <a class="reference external" href="https://
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_aws.cloudformation.Stack">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.cloudformation.</code><code class="sig-name descname">Stack</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">capabilities=None</em>, <em class="sig-param">disable_rollback=None</em>, <em class="sig-param">iam_role_arn=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">notification_arns=None</em>, <em class="sig-param">on_failure=None</em>, <em class="sig-param">parameters=None</em>, <em class="sig-param">policy_body=None</em>, <em class="sig-param">policy_url=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">template_body=None</em>, <em class="sig-param">template_url=None</em>, <em class="sig-param">timeout_in_minutes=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudformation.Stack" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.cloudformation.</code><code class="sig-name descname">Stack</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">capabilities</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">disable_rollback</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">iam_role_arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">notification_arns</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">on_failure</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">parameters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy_body</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy_url</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">template_body</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">template_url</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">timeout_in_minutes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudformation.Stack" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a CloudFormation Stack resource.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -149,98 +149,98 @@ Conflicts w/ <code class="docutils literal notranslate"><span class="pre">policy
 </ul>
 </dd>
 </dl>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.cloudformation.Stack.capabilities">
-<code class="sig-name descname">capabilities</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudformation.Stack.capabilities" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">capabilities</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudformation.Stack.capabilities" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of capabilities.
 Valid values: <code class="docutils literal notranslate"><span class="pre">CAPABILITY_IAM</span></code>, <code class="docutils literal notranslate"><span class="pre">CAPABILITY_NAMED_IAM</span></code>, or <code class="docutils literal notranslate"><span class="pre">CAPABILITY_AUTO_EXPAND</span></code></p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.cloudformation.Stack.disable_rollback">
-<code class="sig-name descname">disable_rollback</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudformation.Stack.disable_rollback" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">disable_rollback</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudformation.Stack.disable_rollback" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set to true to disable rollback of the stack if stack creation failed.
 Conflicts with <code class="docutils literal notranslate"><span class="pre">on_failure</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.cloudformation.Stack.iam_role_arn">
-<code class="sig-name descname">iam_role_arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudformation.Stack.iam_role_arn" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">iam_role_arn</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudformation.Stack.iam_role_arn" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ARN of an IAM role that AWS CloudFormation assumes to create the stack. If you don’t specify a value, AWS CloudFormation uses the role that was previously associated with the stack. If no role is available, AWS CloudFormation uses a temporary session that is generated from your user credentials.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.cloudformation.Stack.name">
-<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudformation.Stack.name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudformation.Stack.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>Stack name.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.cloudformation.Stack.notification_arns">
-<code class="sig-name descname">notification_arns</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudformation.Stack.notification_arns" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">notification_arns</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudformation.Stack.notification_arns" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of SNS topic ARNs to publish stack related events.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.cloudformation.Stack.on_failure">
-<code class="sig-name descname">on_failure</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudformation.Stack.on_failure" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">on_failure</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudformation.Stack.on_failure" title="Permalink to this definition">¶</a></dt>
 <dd><p>Action to be taken if stack creation fails. This must be
 one of: <code class="docutils literal notranslate"><span class="pre">DO_NOTHING</span></code>, <code class="docutils literal notranslate"><span class="pre">ROLLBACK</span></code>, or <code class="docutils literal notranslate"><span class="pre">DELETE</span></code>. Conflicts with <code class="docutils literal notranslate"><span class="pre">disable_rollback</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.cloudformation.Stack.outputs">
-<code class="sig-name descname">outputs</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudformation.Stack.outputs" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">outputs</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudformation.Stack.outputs" title="Permalink to this definition">¶</a></dt>
 <dd><p>A map of outputs from the stack.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.cloudformation.Stack.parameters">
-<code class="sig-name descname">parameters</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudformation.Stack.parameters" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">parameters</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudformation.Stack.parameters" title="Permalink to this definition">¶</a></dt>
 <dd><p>A map of Parameter structures that specify input parameters for the stack.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.cloudformation.Stack.policy_body">
-<code class="sig-name descname">policy_body</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudformation.Stack.policy_body" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">policy_body</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudformation.Stack.policy_body" title="Permalink to this definition">¶</a></dt>
 <dd><p>Structure containing the stack policy body.
 Conflicts w/ <code class="docutils literal notranslate"><span class="pre">policy_url</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.cloudformation.Stack.policy_url">
-<code class="sig-name descname">policy_url</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudformation.Stack.policy_url" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">policy_url</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudformation.Stack.policy_url" title="Permalink to this definition">¶</a></dt>
 <dd><p>Location of a file containing the stack policy.
 Conflicts w/ <code class="docutils literal notranslate"><span class="pre">policy_body</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.cloudformation.Stack.tags">
-<code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudformation.Stack.tags" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">tags</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudformation.Stack.tags" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of tags to associate with this stack.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.cloudformation.Stack.template_body">
-<code class="sig-name descname">template_body</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudformation.Stack.template_body" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">template_body</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudformation.Stack.template_body" title="Permalink to this definition">¶</a></dt>
 <dd><p>Structure containing the template body (max size: 51,200 bytes).</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.cloudformation.Stack.template_url">
-<code class="sig-name descname">template_url</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudformation.Stack.template_url" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">template_url</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudformation.Stack.template_url" title="Permalink to this definition">¶</a></dt>
 <dd><p>Location of a file containing the template body (max size: 460,800 bytes).</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.cloudformation.Stack.timeout_in_minutes">
-<code class="sig-name descname">timeout_in_minutes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudformation.Stack.timeout_in_minutes" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">timeout_in_minutes</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudformation.Stack.timeout_in_minutes" title="Permalink to this definition">¶</a></dt>
 <dd><p>The amount of time that can pass before the stack status becomes <code class="docutils literal notranslate"><span class="pre">CREATE_FAILED</span></code>.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_aws.cloudformation.Stack.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">capabilities=None</em>, <em class="sig-param">disable_rollback=None</em>, <em class="sig-param">iam_role_arn=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">notification_arns=None</em>, <em class="sig-param">on_failure=None</em>, <em class="sig-param">outputs=None</em>, <em class="sig-param">parameters=None</em>, <em class="sig-param">policy_body=None</em>, <em class="sig-param">policy_url=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">template_body=None</em>, <em class="sig-param">template_url=None</em>, <em class="sig-param">timeout_in_minutes=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudformation.Stack.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">capabilities</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">disable_rollback</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">iam_role_arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">notification_arns</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">on_failure</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">outputs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">parameters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy_body</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy_url</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">template_body</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">template_url</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">timeout_in_minutes</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudformation.Stack.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Stack resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -273,9 +273,9 @@ Conflicts w/ <code class="docutils literal notranslate"><span class="pre">policy
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_aws.cloudformation.Stack.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudformation.Stack.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudformation.Stack.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -291,9 +291,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_aws.cloudformation.Stack.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudformation.Stack.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudformation.Stack.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -311,9 +311,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_aws.cloudformation.StackSet">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.cloudformation.</code><code class="sig-name descname">StackSet</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">administration_role_arn=None</em>, <em class="sig-param">capabilities=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">execution_role_name=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">parameters=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">template_body=None</em>, <em class="sig-param">template_url=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudformation.StackSet" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.cloudformation.</code><code class="sig-name descname">StackSet</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">administration_role_arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">capabilities</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">execution_role_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">parameters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">template_body</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">template_url</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudformation.StackSet" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a CloudFormation StackSet. StackSets allow CloudFormation templates to be easily deployed across multiple accounts and regions via StackSet Instances (<cite>``cloudformation.StackSetInstance`</cite> resource &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/cloudformation_stack_set_instance.html">https://www.terraform.io/docs/providers/aws/r/cloudformation_stack_set_instance.html</a>&gt;`_). Additional information about StackSets can be found in the <a class="reference external" href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/what-is-cfnstacksets.html">AWS CloudFormation User Guide</a>.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> All template parameters, including those with a <code class="docutils literal notranslate"><span class="pre">Default</span></code>, must be configured or ignored with the <code class="docutils literal notranslate"><span class="pre">lifecycle</span></code> configuration block <code class="docutils literal notranslate"><span class="pre">ignore_changes</span></code> argument.</p>
@@ -336,75 +336,75 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.cloudformation.StackSet.administration_role_arn">
-<code class="sig-name descname">administration_role_arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudformation.StackSet.administration_role_arn" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">administration_role_arn</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudformation.StackSet.administration_role_arn" title="Permalink to this definition">¶</a></dt>
 <dd><p>Amazon Resource Number (ARN) of the IAM Role in the administrator account.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.cloudformation.StackSet.arn">
-<code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudformation.StackSet.arn" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">arn</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudformation.StackSet.arn" title="Permalink to this definition">¶</a></dt>
 <dd><p>Amazon Resource Name (ARN) of the StackSet.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.cloudformation.StackSet.capabilities">
-<code class="sig-name descname">capabilities</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudformation.StackSet.capabilities" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">capabilities</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudformation.StackSet.capabilities" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of capabilities. Valid values: <code class="docutils literal notranslate"><span class="pre">CAPABILITY_IAM</span></code>, <code class="docutils literal notranslate"><span class="pre">CAPABILITY_NAMED_IAM</span></code>, <code class="docutils literal notranslate"><span class="pre">CAPABILITY_AUTO_EXPAND</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.cloudformation.StackSet.description">
-<code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudformation.StackSet.description" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">description</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudformation.StackSet.description" title="Permalink to this definition">¶</a></dt>
 <dd><p>Description of the StackSet.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.cloudformation.StackSet.execution_role_name">
-<code class="sig-name descname">execution_role_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudformation.StackSet.execution_role_name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">execution_role_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudformation.StackSet.execution_role_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>Name of the IAM Role in all target accounts for StackSet operations. Defaults to <code class="docutils literal notranslate"><span class="pre">AWSCloudFormationStackSetExecutionRole</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.cloudformation.StackSet.name">
-<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudformation.StackSet.name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudformation.StackSet.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>Name of the StackSet. The name must be unique in the region where you create your StackSet. The name can contain only alphanumeric characters (case-sensitive) and hyphens. It must start with an alphabetic character and cannot be longer than 128 characters.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.cloudformation.StackSet.parameters">
-<code class="sig-name descname">parameters</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudformation.StackSet.parameters" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">parameters</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudformation.StackSet.parameters" title="Permalink to this definition">¶</a></dt>
 <dd><p>Key-value map of input parameters for the StackSet template. All template parameters, including those with a <code class="docutils literal notranslate"><span class="pre">Default</span></code>, must be configured or ignored with <code class="docutils literal notranslate"><span class="pre">lifecycle</span></code> configuration block <code class="docutils literal notranslate"><span class="pre">ignore_changes</span></code> argument. All <code class="docutils literal notranslate"><span class="pre">NoEcho</span></code> template parameters must be ignored with the <code class="docutils literal notranslate"><span class="pre">lifecycle</span></code> configuration block <code class="docutils literal notranslate"><span class="pre">ignore_changes</span></code> argument.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.cloudformation.StackSet.stack_set_id">
-<code class="sig-name descname">stack_set_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudformation.StackSet.stack_set_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">stack_set_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudformation.StackSet.stack_set_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>Unique identifier of the StackSet.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.cloudformation.StackSet.tags">
-<code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudformation.StackSet.tags" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">tags</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudformation.StackSet.tags" title="Permalink to this definition">¶</a></dt>
 <dd><p>Key-value map of tags to associate with this StackSet and the Stacks created from it. AWS CloudFormation also propagates these tags to supported resources that are created in the Stacks. A maximum number of 50 tags can be specified.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.cloudformation.StackSet.template_body">
-<code class="sig-name descname">template_body</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudformation.StackSet.template_body" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">template_body</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudformation.StackSet.template_body" title="Permalink to this definition">¶</a></dt>
 <dd><p>String containing the CloudFormation template body. Maximum size: 51,200 bytes. Conflicts with <code class="docutils literal notranslate"><span class="pre">template_url</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.cloudformation.StackSet.template_url">
-<code class="sig-name descname">template_url</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudformation.StackSet.template_url" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">template_url</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudformation.StackSet.template_url" title="Permalink to this definition">¶</a></dt>
 <dd><p>String containing the location of a file containing the CloudFormation template body. The URL must point to a template that is located in an Amazon S3 bucket. Maximum location file size: 460,800 bytes. Conflicts with <code class="docutils literal notranslate"><span class="pre">template_body</span></code>.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_aws.cloudformation.StackSet.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">administration_role_arn=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">capabilities=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">execution_role_name=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">parameters=None</em>, <em class="sig-param">stack_set_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">template_body=None</em>, <em class="sig-param">template_url=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudformation.StackSet.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">administration_role_arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">capabilities</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">execution_role_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">parameters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">stack_set_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">template_body</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">template_url</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudformation.StackSet.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing StackSet resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -429,9 +429,9 @@ properties used to qualify the lookup.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_aws.cloudformation.StackSet.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudformation.StackSet.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudformation.StackSet.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -447,9 +447,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_aws.cloudformation.StackSet.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudformation.StackSet.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudformation.StackSet.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -467,9 +467,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_aws.cloudformation.StackSetInstance">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.cloudformation.</code><code class="sig-name descname">StackSetInstance</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">account_id=None</em>, <em class="sig-param">parameter_overrides=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">retain_stack=None</em>, <em class="sig-param">stack_set_name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudformation.StackSetInstance" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.cloudformation.</code><code class="sig-name descname">StackSetInstance</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">account_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">parameter_overrides</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">retain_stack</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">stack_set_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudformation.StackSetInstance" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a CloudFormation StackSet Instance. Instances are managed in the account and region of the StackSet after the target account permissions have been configured. Additional information about StackSets can be found in the <a class="reference external" href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/what-is-cfnstacksets.html">AWS CloudFormation User Guide</a>.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> All target accounts must have an IAM Role created that matches the name of the execution role configured in the StackSet (the <code class="docutils literal notranslate"><span class="pre">execution_role_name</span></code> argument in the <code class="docutils literal notranslate"><span class="pre">cloudformation.StackSet</span></code> resource) in a trust relationship with the administrative account or administration IAM Role. The execution role must have appropriate permissions to manage resources defined in the template along with those required for StackSets to operate. See the <a class="reference external" href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-prereqs.html">AWS CloudFormation User Guide</a> for more details.</p>
@@ -488,45 +488,45 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.cloudformation.StackSetInstance.account_id">
-<code class="sig-name descname">account_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudformation.StackSetInstance.account_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">account_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudformation.StackSetInstance.account_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>Target AWS Account ID to create a Stack based on the StackSet. Defaults to current account.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.cloudformation.StackSetInstance.parameter_overrides">
-<code class="sig-name descname">parameter_overrides</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudformation.StackSetInstance.parameter_overrides" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">parameter_overrides</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudformation.StackSetInstance.parameter_overrides" title="Permalink to this definition">¶</a></dt>
 <dd><p>Key-value map of input parameters to override from the StackSet for this Instance.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.cloudformation.StackSetInstance.region">
-<code class="sig-name descname">region</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudformation.StackSetInstance.region" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">region</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudformation.StackSetInstance.region" title="Permalink to this definition">¶</a></dt>
 <dd><p>Target AWS Region to create a Stack based on the StackSet. Defaults to current region.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.cloudformation.StackSetInstance.retain_stack">
-<code class="sig-name descname">retain_stack</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudformation.StackSetInstance.retain_stack" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">retain_stack</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudformation.StackSetInstance.retain_stack" title="Permalink to this definition">¶</a></dt>
 <dd><p>During resource destroy, remove Instance from StackSet while keeping the Stack and its associated resources. Must be enabled in the state <em>before</em> destroy operation to take effect. You cannot reassociate a retained Stack or add an existing, saved Stack to a new StackSet. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.cloudformation.StackSetInstance.stack_id">
-<code class="sig-name descname">stack_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudformation.StackSetInstance.stack_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">stack_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudformation.StackSetInstance.stack_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>Stack identifier</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.cloudformation.StackSetInstance.stack_set_name">
-<code class="sig-name descname">stack_set_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudformation.StackSetInstance.stack_set_name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">stack_set_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudformation.StackSetInstance.stack_set_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>Name of the StackSet.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_aws.cloudformation.StackSetInstance.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">account_id=None</em>, <em class="sig-param">parameter_overrides=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">retain_stack=None</em>, <em class="sig-param">stack_id=None</em>, <em class="sig-param">stack_set_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudformation.StackSetInstance.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">account_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">parameter_overrides</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">retain_stack</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">stack_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">stack_set_name</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudformation.StackSetInstance.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing StackSetInstance resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -546,9 +546,9 @@ properties used to qualify the lookup.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_aws.cloudformation.StackSetInstance.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudformation.StackSetInstance.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudformation.StackSetInstance.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -564,9 +564,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_aws.cloudformation.StackSetInstance.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudformation.StackSetInstance.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudformation.StackSetInstance.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -584,9 +584,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="pulumi_aws.cloudformation.get_export">
-<code class="sig-prename descclassname">pulumi_aws.cloudformation.</code><code class="sig-name descname">get_export</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudformation.get_export" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pulumi_aws.cloudformation.</code><code class="sig-name descname">get_export</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudformation.get_export" title="Permalink to this definition">¶</a></dt>
 <dd><p>The CloudFormation Export data source allows access to stack
 exports specified in the <a class="reference external" href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/outputs-section-structure.html">Output</a> section of the Cloudformation Template using the optional Export Property.</p>
 <blockquote>
@@ -600,9 +600,9 @@ exports specified in the <a class="reference external" href="http://docs.aws.ama
 </dl>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="pulumi_aws.cloudformation.get_stack">
-<code class="sig-prename descclassname">pulumi_aws.cloudformation.</code><code class="sig-name descname">get_stack</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudformation.get_stack" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pulumi_aws.cloudformation.</code><code class="sig-name descname">get_stack</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudformation.get_stack" title="Permalink to this definition">¶</a></dt>
 <dd><p>The CloudFormation Stack data source allows access to stack
 outputs and other useful data including the template body.</p>
 <dl class="field-list simple">
