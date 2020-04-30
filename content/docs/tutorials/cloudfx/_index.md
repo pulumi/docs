@@ -9,9 +9,9 @@ aliases: ["/docs/quickstart/cloudfx/"]
 
 The Cloud Framework for Pulumi lets you program infrastructure and application logic, side by side, using simple, high-level, cloud-agnostic building blocks.
 
-The Cloud Framework must be configured with credentials to deploy and update resources in the target cloud adoption platform.
+The Cloud Framework must be configured with credentials to deploy and update resources in the target cloud platform.
 
-See the [full API documentation]({{< relref "/docs/reference/pkg/nodejs/pulumi/cloud" >}}) for complete details of the available Cloud Framework [APIs](https://www.pulumi.com/docs/reference/pkg/).
+See the [full API documentation]({{< relref "/docs/reference/pkg/nodejs/pulumi/cloud" >}}) for complete details of the available Cloud Framework APIs.
 
 For AWS-specific use cases, see also the [awsx]({{< relref "/docs/reference/pkg/nodejs/pulumi/awsx" >}}) library which provides higher-level libraries for working with many AWS services.
 
@@ -23,7 +23,7 @@ The easiest way to start with the Cloud Framework is to follow one of the tutori
 * [A simple containerized app]({{< relref "service" >}}): Deploy cloud-agnostic containerized services
 * [Serverless + Containers + Infrastructure]({{< relref "thumbnailer" >}}): Deploy a complete cloud-agnostic application using a combination of buckets, serverless functions and containers.
 
-In addition to the tutorials, several interesting examples are available with instructions for adoption:
+In addition to the tutorials, several interesting examples are available with instructions:
 
 * [HTTP API](https://github.com/pulumi/examples/tree/master/cloud-js-api)
 * [Containers](https://github.com/pulumi/examples/tree/master/cloud-js-containers)
